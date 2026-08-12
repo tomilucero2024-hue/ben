@@ -1,0 +1,78 @@
+{
+    "instituciones": [
+        {
+            "id": 23,
+            "nombre": "IES 9-014 Profesorado de Arte (IPA)",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "contacto@profesoradodearte.edu.ar",
+                "direccion": "San Rafael, Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 2301,
+                    "nombre_carrera": "Profesorado de Danzas",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-014 Profesorado de Arte (IPA)",
+                    "link_oficial": "https://profesoradodearte.edu.ar/danzas/"
+                },
+                {
+                    "id": 2302,
+                    "nombre_carrera": "Profesorado de Música",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-014 Profesorado de Arte (IPA)",
+                    "link_oficial": "https://profesoradodearte.edu.ar/musica/"
+                },
+                {
+                    "id": 2303,
+                    "nombre_carrera": "Profesorado de Teatro",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-014 Profesorado de Arte (IPA)",
+                    "link_oficial": "https://profesoradodearte.edu.ar/teatro/"
+                },
+                {
+                    "id": 2304,
+                    "nombre_carrera": "Profesorado de Artes Visuales",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-014 Profesorado de Arte (IPA)",
+                    "link_oficial": "https://profesoradodearte.edu.ar/artes-visuales/"
+                },
+                {
+                    "id": 2305,
+                    "nombre_carrera": "Tecnicatura en Gestión Cultural y Economía de la Cultura",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-014 Profesorado de Arte (IPA)",
+                    "link_oficial": "https://profesoradodearte.edu.ar/tecnicatura/"
+                },
+                {
+                    "id": 2306,
+                    "nombre_carrera": "Profesorado para Técnicos",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-014 Profesorado de Arte (IPA)",
+                    "link_oficial": "https://profesoradodearte.edu.ar/profesorado-para-tecnicos/"
+                }
+            ]
+        }
+    ]
+}

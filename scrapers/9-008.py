@@ -1,0 +1,86 @@
+from scraper_utils import guardar_json
+
+
+print("🛠️ Cargando la flota completa del IES 9-008 Manuel Belgrano por bypass manual...")
+
+carreras_belgrano = [
+    {
+        "id": 1700,
+        "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "IES 9-008 Manuel Belgrano",
+        "link_oficial": "https://www.iesmb.edu.ar/bel/desarrollo-de-software/"
+    },
+    {
+        "id": 1701,
+        "nombre_carrera": "Técnico Superior en Diseño Diseño Gráfico",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "IES 9-008 Manuel Belgrano",
+        "link_oficial": "https://www.iesmb.edu.ar/bel/diseno-grafico-y-publicitario/"
+    },
+    {
+        "id": 1702,
+        "nombre_carrera": "Técnico Superior en IA y Ciencia de Datos",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "IES 9-008 Manuel Belgrano",
+        "link_oficial": "https://www.iesmb.edu.ar/bel/ia-y-ciencia-de-datos/"
+    },
+    {
+        "id": 1703,
+        "nombre_carrera": "Técnico Superior en Redes y Ciberseguridad",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "IES 9-008 Manuel Belgrano",
+        "link_oficial": "https://www.iesmb.edu.ar/bel/redes-y-ciberseguridad/"
+    },
+    {
+        "id": 1704,
+        "nombre_carrera": "Técnico Superior en Diseño de Indumentaria, Textil y Accesorios",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "IES 9-008 Manuel Belgrano",
+        "link_oficial": "https://www.iesmb.edu.ar/bel/indumentaria/"
+    },
+    {
+        "id": 1705,
+        "nombre_carrera": "Técnico Superior en Diseño Multimedial",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "IES 9-008 Manuel Belgrano",
+        "link_oficial": "https://www.iesmb.edu.ar/bel/diseno-multimedial/"
+    }
+]
+
+ies_data = {
+    "id": 17,
+    "nombre": "IES 9-008 Manuel Belgrano",
+    "nivel": "terciario",
+    "gestion": "pública",
+    "provincia": "Mendoza",
+    "contacto": {
+        "telefono": "0261-4233545",
+        "email": "contacto@iesmb.edu.ar",
+        "direccion": "Mendoza, Argentina"
+    },
+    "carreras": carreras_belgrano
+}
+
+base_ies = {"instituciones": [ies_data]}
+
+guardar_json(base_ies, "ies9008.json")
+print(f"🎉 ¡Éxito total! Se cargaron {len(carreras_belgrano)} carreras del Belgrano en 'ies9008.json'.")

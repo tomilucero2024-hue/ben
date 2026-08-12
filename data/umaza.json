@@ -1,0 +1,315 @@
+{
+    "instituciones": [
+        {
+            "id": 4,
+            "nombre": "Universidad Juan Agustín Maza (UMaza)",
+            "nivel": "universidad",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "4056200",
+                "email": "informes@umaza.edu.ar",
+                "direccion": "Acceso Este, Lat. Sur 2245, Guaymallén"
+            },
+            "carreras": [
+                {
+                    "id": 400,
+                    "nombre_carrera": "Abogacía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/abogacia/inicio"
+                },
+                {
+                    "id": 401,
+                    "nombre_carrera": "Ingeniería en Agrimensura",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/agrimensura/inicio"
+                },
+                {
+                    "id": 402,
+                    "nombre_carrera": "Bioquímica",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/bioquimica/inicio"
+                },
+                {
+                    "id": 403,
+                    "nombre_carrera": "Licenciatura en Comunicación Social",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/comunicacionsocial/inicio"
+                },
+                {
+                    "id": 404,
+                    "nombre_carrera": "Contador Público",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/contador/inicio"
+                },
+                {
+                    "id": 405,
+                    "nombre_carrera": "Farmacia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/farmacia/inicio"
+                },
+                {
+                    "id": 406,
+                    "nombre_carrera": "Dirección de Empresas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/direccion-empresas/inicio"
+                },
+                {
+                    "id": 407,
+                    "nombre_carrera": "Profesorado en Educación Física",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisica/inicio"
+                },
+                {
+                    "id": 408,
+                    "nombre_carrera": "Licenciatura en Enología",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/enologia/inicio"
+                },
+                {
+                    "id": 409,
+                    "nombre_carrera": "Licenciatura en Gastronomía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/gastronomia/inicio"
+                },
+                {
+                    "id": 410,
+                    "nombre_carrera": "Locución",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/locucion/inicio"
+                },
+                {
+                    "id": 411,
+                    "nombre_carrera": "Kinesiología y Fisioterapia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/kinesiologia/inicio"
+                },
+                {
+                    "id": 412,
+                    "nombre_carrera": "Licenciatura en Nutrición",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/nutricion/inicio"
+                },
+                {
+                    "id": 413,
+                    "nombre_carrera": "Periodismo",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/periodismo/inicio"
+                },
+                {
+                    "id": 414,
+                    "nombre_carrera": "Musicoterapia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/musicoterapia/inicio"
+                },
+                {
+                    "id": 415,
+                    "nombre_carrera": "Podología Universitaria",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/podologia/inicio"
+                },
+                {
+                    "id": 416,
+                    "nombre_carrera": "Publicidad",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/publicidad/inicio"
+                },
+                {
+                    "id": 417,
+                    "nombre_carrera": "Realización Audiovisual",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/realizacionaudiovisual/inicio"
+                },
+                {
+                    "id": 418,
+                    "nombre_carrera": "Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanos/inicio"
+                },
+                {
+                    "id": 419,
+                    "nombre_carrera": "Licenciatura en Terapia Ocupacional",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/terapiaocupacional/inicio"
+                },
+                {
+                    "id": 420,
+                    "nombre_carrera": "Protección Comunitaria y Seguridad Urbana",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/proteccion-comunitaria-y-seguridad-urbana/inicio"
+                },
+                {
+                    "id": 421,
+                    "nombre_carrera": "Veterinaria",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/veterinaria/inicio"
+                },
+                {
+                    "id": 422,
+                    "nombre_carrera": "Tecnicatura en Cosmetología y Cosmiatría",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/cosmetologia-y-cosmiatria/inicio"
+                },
+                {
+                    "id": 423,
+                    "nombre_carrera": "Licenciatura en Anatomía Patológica a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "A Distancia",
+                    "facultad": "UMaza - Campus Virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/anatomiapatologica/inicio"
+                },
+                {
+                    "id": 424,
+                    "nombre_carrera": "Licenciatura en Anestesiología a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "A Distancia",
+                    "facultad": "UMaza - Campus Virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/anestesiologia/inicio"
+                },
+                {
+                    "id": 425,
+                    "nombre_carrera": "Licenciatura en Educación Inicial a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "A Distancia",
+                    "facultad": "UMaza - Campus Virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacioninicial/inicio"
+                },
+                {
+                    "id": 426,
+                    "nombre_carrera": "Licenciatura en Instrumentación Quirúrgica a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "A Distancia",
+                    "facultad": "UMaza - Campus Virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/instrumentacionquirurgica/inicio"
+                },
+                {
+                    "id": 427,
+                    "nombre_carrera": "Licenciatura en Hemoterapia a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "A Distancia",
+                    "facultad": "UMaza - Campus Virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/hemoterapia/inicio"
+                },
+                {
+                    "id": 428,
+                    "nombre_carrera": "Licenciatura en Educación Física a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "A Distancia",
+                    "facultad": "UMaza - Campus Virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaadistancia/inicio"
+                },
+                {
+                    "id": 429,
+                    "nombre_carrera": "Puericultura a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "A Distancia",
+                    "facultad": "UMaza - Campus Virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/puericultura/inicio"
+                },
+                {
+                    "id": 430,
+                    "nombre_carrera": "Profesorado para Profesionales a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "A Distancia",
+                    "facultad": "UMaza - Campus Virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/profesoradoprofesionales/inicio"
+                },
+                {
+                    "id": 431,
+                    "nombre_carrera": "Licenciatura en Producción de Bioimágenes a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "A Distancia",
+                    "facultad": "UMaza - Campus Virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/bioimagenes/inicio"
+                },
+                {
+                    "id": 432,
+                    "nombre_carrera": "Licenciatura en Matemática a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "A Distancia",
+                    "facultad": "UMaza - Campus Virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/matematica/inicio"
+                }
+            ]
+        }
+    ]
+}

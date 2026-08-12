@@ -1,0 +1,108 @@
+{
+    "instituciones": [
+        {
+            "id": 31,
+            "nombre": "IES 9-024 (Lavalle)",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "contacto@ies9024.edu.ar",
+                "direccion": "Lavalle, Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 3100,
+                    "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-024 Lavalle",
+                    "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual"
+                },
+                {
+                    "id": 3101,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Lengua y Literatura",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-024 Lavalle",
+                    "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura"
+                },
+                {
+                    "id": 3102,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-024 Lavalle",
+                    "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica"
+                },
+                {
+                    "id": 3103,
+                    "nombre_carrera": "Profesorado para la educación Secundaria de la modalidad Técnico Profesional, en concurrencia con el Título de Base",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-024 Lavalle",
+                    "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-de-la-modalidad-tecnico-profesional-en-concurrencia-con-el-titulo-de-base/profesorado-de-educacion-secundaria-tecnica-en-incumbencia-con-el-titulo-de-base"
+                },
+                {
+                    "id": 3104,
+                    "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-024 Lavalle",
+                    "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-analisis-y-programacion-de-sistemas"
+                },
+                {
+                    "id": 3105,
+                    "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-024 Lavalle",
+                    "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-de-empresas"
+                },
+                {
+                    "id": 3106,
+                    "nombre_carrera": "Tecnicatura Superior en Turismo y Hotelería",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-024 Lavalle",
+                    "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-turismo-y-hoteleria"
+                },
+                {
+                    "id": 3107,
+                    "nombre_carrera": "Tecnicatura Superior en Enología e Industrias Frutihortícolas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-024 Lavalle",
+                    "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas"
+                },
+                {
+                    "id": 3108,
+                    "nombre_carrera": "Tecnicatura Superior en Higiene y Seguridad con Orientación en Calidad y Medio Ambiente",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-024 Lavalle",
+                    "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente"
+                }
+            ]
+        }
+    ]
+}

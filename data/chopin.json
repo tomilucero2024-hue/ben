@@ -1,0 +1,108 @@
+{
+    "instituciones": [
+        {
+            "id": 39,
+            "nombre": "Instituto de Arte Chopin",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "contacto@arteschopin.edu.ar",
+                "direccion": "Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 3905,
+                    "nombre_carrera": "Coreógrafo en Danzas Folclóricas y Latinoamericanas",
+                    "categoria": "Curso / Formación Profesional",
+                    "duracion": "5 meses",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto de Arte Chopin",
+                    "link_oficial": "https://arteschopin.edu.ar/instituto-privado-de-capacitacion-laboral/"
+                },
+                {
+                    "id": 3906,
+                    "nombre_carrera": "Gestor de Industrias Culturales y Creativas",
+                    "categoria": "Curso / Formación Profesional",
+                    "duracion": "5 meses",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto de Arte Chopin",
+                    "link_oficial": "https://arteschopin.edu.ar/instituto-privado-de-capacitacion-laboral/"
+                },
+                {
+                    "id": 3907,
+                    "nombre_carrera": "Intérprete en Guitarra y Lectura Musical",
+                    "categoria": "Curso / Formación Profesional",
+                    "duracion": "5 meses",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto de Arte Chopin",
+                    "link_oficial": "https://arteschopin.edu.ar/instituto-privado-de-capacitacion-laboral/"
+                },
+                {
+                    "id": 3908,
+                    "nombre_carrera": "Intérprete en Piano y Lectura Musical",
+                    "categoria": "Curso / Formación Profesional",
+                    "duracion": "5 meses",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto de Arte Chopin",
+                    "link_oficial": "https://arteschopin.edu.ar/instituto-privado-de-capacitacion-laboral/"
+                },
+                {
+                    "id": 3909,
+                    "nombre_carrera": "Tecnicatura Superior en Danza",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto de Arte Chopin",
+                    "link_oficial": "https://arteschopin.edu.ar/tecnicatura-superior-en-danza/"
+                },
+                {
+                    "id": 3910,
+                    "nombre_carrera": "Tecnicatura Superior en Dirección Coral",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto de Arte Chopin",
+                    "link_oficial": "https://arteschopin.edu.ar/tecnicatura-superior-en-direccion-coral/"
+                },
+                {
+                    "id": 3911,
+                    "nombre_carrera": "Profesorado en Música",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto de Arte Chopin",
+                    "link_oficial": "https://arteschopin.edu.ar/profesorado-en-musica/"
+                },
+                {
+                    "id": 3912,
+                    "nombre_carrera": "Profesorado en Danza",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto de Arte Chopin",
+                    "link_oficial": "https://arteschopin.edu.ar/profesorado-en-danza/"
+                },
+                {
+                    "id": 3901,
+                    "nombre_carrera": "Tecnicatura Superior en Gestión de Industrias Culturales y Creativas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto de Arte Chopin",
+                    "link_oficial": "https://arteschopin.edu.ar/tecnicatura-superior-en-gestion-de-industrias-culturales-y-creativas/"
+                }
+            ]
+        }
+    ]
+}

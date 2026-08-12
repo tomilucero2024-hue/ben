@@ -1,0 +1,118 @@
+{
+    "instituciones": [
+        {
+            "id": 19,
+            "nombre": "IES 9-010 Rosario Vera Peñaloza",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "02622-451458",
+                "email": "ies9010@infd.edu.ar",
+                "direccion": "Ruta Nacional 40 Km 3193, Eugenio Bustos, San Carlos"
+            },
+            "carreras": [
+                {
+                    "id": 1900,
+                    "nombre_carrera": "Profesorado de Artes Visuales",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/"
+                },
+                {
+                    "id": 1901,
+                    "nombre_carrera": "Profesorado de Educacion Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/"
+                },
+                {
+                    "id": 1902,
+                    "nombre_carrera": "Profesorado de Educacion Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
+                },
+                {
+                    "id": 1903,
+                    "nombre_carrera": "Profesorado de Ingles",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-ingles/"
+                },
+                {
+                    "id": 1904,
+                    "nombre_carrera": "Profesorado de Educacion Secundaria en Lengua y Literatura",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/"
+                },
+                {
+                    "id": 1905,
+                    "nombre_carrera": "Profesorado de Musica",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-musica/"
+                },
+                {
+                    "id": 1906,
+                    "nombre_carrera": "Tecnicatura Superior Agronomica",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/tecnicatura-superior-agronomica/"
+                },
+                {
+                    "id": 1907,
+                    "nombre_carrera": "Tecnicatura Superior en Computacion y Redes",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-computacion-y-redes-2/"
+                },
+                {
+                    "id": 1908,
+                    "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-desarrollo-de-software/"
+                },
+                {
+                    "id": 1909,
+                    "nombre_carrera": "Tecnicatura Superior en Gestion de Recursos Humanos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gestion-de-recursos-humanos/"
+                }
+            ]
+        }
+    ]
+}

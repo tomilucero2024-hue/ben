@@ -1,0 +1,28 @@
+{
+    "instituciones": [
+        {
+            "id": 35,
+            "nombre": "Instituto Fabián Calle",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "contacto@institutocalle.edu.ar",
+                "direccion": "Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 3501,
+                    "nombre_carrera": "Técnico Superior en Locución de Radio y Televisión",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto Fabián Calle",
+                    "link_oficial": "https://institutocalle.edu.ar/oferta-educativa/locucion/"
+                }
+            ]
+        }
+    ]
+}

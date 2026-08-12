@@ -1,0 +1,13 @@
+LOGOS DE LAS PLATAFORMAS
+========================
+
+Guardá acá el logo de cada plataforma (.svg o .png) y después anotá el nombre
+del archivo en el campo "logo" de PLATAFORMAS_INFO, arriba de todo en
+frontend/app.js. Por ejemplo:
+
+    'Coderhouse': { url: 'https://www.coderhouse.com/ar', logo: 'coderhouse.svg' },
+
+La tarjeta lo muestra sola, sin tocar nada más. Mientras el campo esté vacío,
+en su lugar aparece la inicial de la plataforma y no se rompe nada.
+
+Medida sugerida: cuadrado (por ejemplo 128x128), fondo transparente.

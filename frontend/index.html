@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buscador Educativo Nacional - Encuentra carreras, instituciones y formación online.">
+    <title>BEN - Buscador Educativo Nacional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        (() => {
+            const guardado = localStorage.getItem('ben-theme');
+            const tema = guardado || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.dataset.theme = tema;
+            document.documentElement.style.colorScheme = tema;
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <a class="skip-link" href="#cardContainer">Saltar a los resultados</a>
+    <header class="hero">
+        <div class="hero-content">
+            <!-- El documento no tenía ningún h1: el logo es un botón y el primer
+                 encabezado era "Filtrar por". Va oculto a la vista porque el logo
+                 ya cumple ese rol visualmente, pero la página necesita un título. -->
+            <h1 class="sr-only">BEN — Buscador Educativo Nacional: carreras, institutos y cursos en Mendoza</h1>
+            <button id="themeToggle" class="brand-theme-toggle" type="button" aria-label="Cambiar tema de color" aria-pressed="false">
+                <img id="brandLogo" class="brand-logo" width="1120" height="299" alt="BEN, Buscador Educativo Nacional">
+            </button>
+            <!-- El src se define acá, durante el parseo, para bajar un solo logo (antes
+                 estaban los dos en el DOM y display:none no evita la descarga) y para
+                 que no haya parpadeo del logo equivocado antes de que corra app.js. -->
+            <script>
+                document.getElementById('brandLogo').src =
+                    document.documentElement.dataset.theme === 'dark' ? 'logo-ben-dark.png' : 'logo-ben-light.png';
+            </script>
+            <div class="hero-secondary">
+                <p class="theme-hint">Tocá el logo para cambiar el modo</p>
+            </div>
+            <!-- El botón de filtros vive acá y no en .hero-actions: ese bloque colapsa
+                 al compactarse el header, y dejaba a los filtros inalcanzables en celular. -->
+            <div class="search-container">
+                <label class="sr-only" for="searchInput">Buscar carrera o institución</label>
+                <input type="search" id="searchInput" class="search-input" placeholder="Buscar por institución o carrera…">
+                <button id="mobileFilterButton" class="mobile-filter-button" type="button" aria-controls="filtersSidebar" aria-expanded="false" aria-label="Abrir filtros">
+                    <span aria-hidden="true">☰</span><span class="mobile-filter-texto">Filtrar</span>
+                </button>
+            </div>
+            <div class="hero-secondary hero-actions">
+                <button id="btn-ver-noticias" class="news-button" type="button">📰 Ver noticias</button>
+                <button id="btn-ver-deportes" class="news-button" type="button">🏀 Centros deportivos</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Primera decisión del usuario: qué tipo de oferta educativa quiere ver. -->
+    <nav class="section-tabs" aria-label="Tipo de oferta educativa">
+        <button id="tab-formal" class="section-tab section-tab-formal is-active" type="button" data-seccion="formal" aria-pressed="true">
+            <span class="section-tab-icon" aria-hidden="true">🎓</span>
+            <span class="section-tab-texto">
+                <strong>Educación Formal</strong>
+                <small>Universidades, IES y terciarios</small>
+            </span>
+        </button>
+        <button id="tab-plataformas" class="section-tab section-tab-plataformas" type="button" data-seccion="plataformas" aria-pressed="false">
+            <span class="section-tab-icon" aria-hidden="true">💻</span>
+            <span class="section-tab-texto">
+                <strong>Plataformas Online</strong>
+                <small>Coderhouse, Educación IT y más</small>
+            </span>
+        </button>
+        <button id="tab-formaciones" class="section-tab section-tab-formaciones" type="button" data-seccion="formaciones-alternativas" aria-pressed="false">
+            <span class="section-tab-icon" aria-hidden="true">🧭</span>
+            <span class="section-tab-texto">
+                <strong>Formaciones Alternativas</strong>
+                <small>Aeronáutica, buceo, montaña, oficios de nicho</small>
+            </span>
+        </button>
+        <button id="tab-oficios" class="section-tab section-tab-oficios" type="button" data-seccion="oficios-tecnicos" aria-pressed="false">
+            <span class="section-tab-icon" aria-hidden="true">🔧</span>
+            <span class="section-tab-texto">
+                <strong>Oficios Técnicos</strong>
+                <small>Electricidad, mecánica, gas, soldadura</small>
+            </span>
+        </button>
+    </nav>
+
+    <main class="catalog-layout">
+        <div id="filtersOverlay" class="filters-overlay" aria-hidden="true"></div>
+
+        <aside id="filtersSidebar" class="filters-sidebar" aria-label="Filtros de búsqueda">
+            <div class="filters-heading">
+                <h2>Filtrar por</h2>
+                <button id="closeFiltersButton" class="close-filters-button" type="button" aria-label="Cerrar filtros">×</button>
+            </div>
+
+            <section class="filter-group">
+                <h3>Tipo de formación</h3>
+                <div class="filter-options">
+                    <button class="filter-option active" data-filter="formacion" data-value="todos" type="button">Todos</button>
+                    <button class="filter-option" data-filter="formacion" data-value="grado" type="button">Grado</button>
+                    <button class="filter-option" data-filter="formacion" data-value="tecnicaturas" type="button">Tecnicaturas</button>
+                    <button class="filter-option" data-filter="formacion" data-value="profesorados" type="button">Profesorados</button>
+                    <button class="filter-option" data-filter="formacion" data-value="cursos" type="button">Cursos y formación</button>
+                </div>
+            </section>
+
+            <section class="filter-group">
+                <h3>Tipo de institución</h3>
+                <div class="filter-options">
+                    <button class="filter-option active" data-filter="institucion" data-value="todos" type="button">Todos</button>
+                    <button class="filter-option" data-filter="institucion" data-value="universidades" type="button">Universidades</button>
+                    <button class="filter-option" data-filter="institucion" data-value="ies" type="button">IES / Institutos superiores</button>
+                    <button class="filter-option" data-filter="institucion" data-value="centros" type="button">Centros de formación</button>
+                </div>
+            </section>
+
+            <section class="filter-group">
+                <h3>Gestión</h3>
+                <div class="filter-options filter-options-inline">
+                    <button class="filter-option active" data-filter="gestion" data-value="todos" type="button">Todas</button>
+                    <button class="filter-option" data-filter="gestion" data-value="pública" type="button">Públicas</button>
+                    <button class="filter-option" data-filter="gestion" data-value="privada" type="button">Privadas</button>
+                </div>
+            </section>
+
+            <section class="filter-group">
+                <h3>Modalidad</h3>
+                <div class="filter-options filter-options-inline">
+                    <button class="filter-option active" data-filter="modalidad" data-value="todos" type="button">Todas</button>
+                    <button class="filter-option" data-filter="modalidad" data-value="presencial" type="button">Presencial</button>
+                    <button class="filter-option" data-filter="modalidad" data-value="online" type="button">Online</button>
+                    <button class="filter-option" data-filter="modalidad" data-value="híbrida" type="button">Híbrida</button>
+                </div>
+            </section>
+
+            <section class="filter-group">
+                <h3>Costos</h3>
+                <div class="filter-options filter-options-inline">
+                    <button class="filter-option active" data-filter="costo" data-value="todos" type="button">Todos</button>
+                    <button class="filter-option" data-filter="costo" data-value="gratuito" type="button">Gratuito</button>
+                    <button class="filter-option" data-filter="costo" data-value="arancelado" type="button">Arancelado</button>
+                </div>
+            </section>
+
+            <section class="filter-group">
+                <h3>Duración en años</h3>
+                <div class="filter-options">
+                    <button class="filter-option active" data-filter="duracion" data-value="todos" type="button">Todas</button>
+                    <button class="filter-option" data-filter="duracion" data-value="corta" type="button">Corta duración</button>
+                    <button class="filter-option" data-filter="duracion" data-value="hasta-1" type="button">Hasta 1 año</button>
+                    <button class="filter-option" data-filter="duracion" data-value="2-3" type="button">2–3 años</button>
+                    <button class="filter-option" data-filter="duracion" data-value="4-mas" type="button">4+ años</button>
+                </div>
+                <div class="duration-range">
+                    <input id="durationMin" type="number" min="0" step="0.5" inputmode="decimal" placeholder="Mín.">
+                    <span>–</span>
+                    <input id="durationMax" type="number" min="0" step="0.5" inputmode="decimal" placeholder="Máx.">
+                    <button id="applyDurationButton" type="button" aria-label="Aplicar rango de duración">→</button>
+                </div>
+            </section>
+
+            <section class="filter-group">
+                <h3>Área de la carrera</h3>
+                <div class="filter-options filter-options-compact">
+                    <button class="filter-option active" data-filter="area" data-value="todos" type="button">Todas las áreas</button>
+                    <button class="filter-option" data-filter="area" data-value="Tecnología" type="button">Tecnología</button>
+                    <button class="filter-option" data-filter="area" data-value="Ingeniería" type="button">Ingeniería</button>
+                    <button class="filter-option" data-filter="area" data-value="Salud" type="button">Salud</button>
+                    <button class="filter-option" data-filter="area" data-value="Negocios" type="button">Negocios</button>
+                    <button class="filter-option" data-filter="area" data-value="Diseño" type="button">Diseño</button>
+                    <button class="filter-option" data-filter="area" data-value="Educación" type="button">Educación</button>
+                    <button class="filter-option" data-filter="area" data-value="Ciencias sociales" type="button">Ciencias sociales</button>
+                    <button class="filter-option" data-filter="area" data-value="Ambiente" type="button">Ambiente</button>
+                    <button class="filter-option" data-filter="area" data-value="Turismo" type="button">Turismo</button>
+                    <button class="filter-option" data-filter="area" data-value="Gastronomía" type="button">Gastronomía</button>
+                    <button class="filter-option" data-filter="area" data-value="Oficios" type="button">Oficios</button>
+                    <button class="filter-option" data-filter="area" data-value="Arte" type="button">Arte</button>
+                    <button class="filter-option" data-filter="area" data-value="Idiomas" type="button">Idiomas</button>
+                </div>
+            </section>
+            <button id="clearFiltersButton" class="clear-filters-button" type="button">Limpiar filtros</button>
+        </aside>
+
+        <!-- El aria-live NO va acá: esta sección contiene la grilla entera, las
+             plataformas, las noticias y los deportes, así que cada cambio de filtro
+             hacía que un lector de pantalla intentara leer cientos de tarjetas.
+             Va sobre el contador, que es el resumen que interesa escuchar. -->
+        <section class="results-area">
+            <div id="resultsToolbar" class="results-toolbar">
+                <p id="resultsCount" class="results-count" role="status" aria-live="polite"></p>
+                <div class="toolbar-actions">
+                    <button id="btnFavoritos" class="favoritos-toggle" type="button" aria-pressed="false">★ Solo favoritos</button>
+                    <label class="sort-control" for="sortSelect">Ordenar por
+                    <select id="sortSelect">
+                        <option value="default">Predeterminado</option>
+                        <option value="relevancia">Más relevantes</option>
+                        <option value="nombre-az">Carrera (A → Z)</option>
+                        <option value="nombre-za">Carrera (Z → A)</option>
+                        <option value="publica-primero">Pública primero</option>
+                        <option value="privada-primero">Privada primero</option>
+                    </select>
+                    </label>
+                </div>
+            </div>
+            <h2 class="sr-only">Resultados de la búsqueda</h2>
+            <div id="cardContainer" class="results-grid"></div>
+            <button id="cargarMas" class="cargar-mas" type="button" hidden>Cargar más resultados ↓</button>
+
+            <!-- Plataformas que coinciden con la búsqueda de texto, mostradas dentro
+                 de Educación Formal pero visualmente separadas por ser otra sección. -->
+            <section id="plataformas-coincidentes" class="platform-matches" hidden>
+                <h2><span aria-hidden="true">💻</span> También hay plataformas online que coinciden</h2>
+                <div id="contenedor-plataformas-busqueda" class="platforms-grid"></div>
+            </section>
+
+            <!-- Sección propia de plataformas: una tarjeta simple por plataforma, sin
+                 replicar acá su catálogo. El usuario sale al sitio oficial a explorar. -->
+            <section id="seccion-plataformas" class="platforms-section" hidden>
+                <h2>Plataformas online</h2>
+                <p class="platforms-intro">Formación online por cuenta propia. Entrá al sitio de cada plataforma para ver su catálogo completo y actualizado.</p>
+                <div id="contenedor-plataformas" class="platforms-grid"></div>
+            </section>
+
+            <!-- Formaciones alternativas: vista propia, no se mezclan con las carreras
+                 de universidades ni con las plataformas. Sin filtros de carrera. -->
+            <section id="seccion-formaciones" class="catalog-aparte" hidden>
+                <h2><span aria-hidden="true">🧭</span> Formaciones Alternativas</h2>
+                <p class="catalog-aparte-intro">Cursos y formaciones de nicho: aeronáutica, buceo, montaña, apicultura, forense, cervecería artesanal y peritaje.</p>
+                <div id="contenedor-formaciones" class="cursos-grid"></div>
+            </section>
+
+            <!-- Oficios técnicos: misma lógica, vista propia y separada. -->
+            <section id="seccion-oficios" class="catalog-aparte" hidden>
+                <h2><span aria-hidden="true">🔧</span> Oficios Técnicos</h2>
+                <p class="catalog-aparte-intro">Oficios clásicos con salida laboral: electricidad, mecánica, soldadura, gas, refrigeración, herrería, carpintería y barbería.</p>
+                <div id="contenedor-oficios" class="cursos-grid"></div>
+            </section>
+
+            <section id="seccion-noticias" class="news-section" hidden>
+                <h2>Últimas novedades estudiantiles</h2>
+                <div id="contenedor-noticias" class="news-grid"></div>
+            </section>
+            <section id="seccion-deportes" class="news-section" hidden>
+                <h2>Centros deportivos municipales</h2>
+                <div id="filtroDepartamento" class="filter-options filter-options-inline sports-filter">
+                    <button class="filter-option active" data-departamento="todos" type="button">Todos</button>
+                </div>
+                <div id="contenedor-deportes" class="news-grid sports-grid"></div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Barra flotante del comparador: aparece apenas hay algo para comparar. -->
+    <div id="compararBar" class="comparar-bar" hidden>
+        <span class="comparar-bar-texto">Tenés <strong id="compararCount">0</strong> para comparar</span>
+        <button id="compararAbrir" class="comparar-bar-btn" type="button">Comparar ↗</button>
+        <button id="compararLimpiar" class="comparar-bar-limpiar" type="button">Vaciar</button>
+    </div>
+
+    <!-- Modal de comparación lado a lado. -->
+    <div id="compararModal" class="comparar-modal" hidden>
+        <div class="comparar-modal-contenido" role="dialog" aria-modal="true" aria-label="Comparar ofertas">
+            <div class="comparar-modal-cabecera">
+                <h2>Comparar ofertas</h2>
+                <button id="compararCerrar" class="comparar-modal-cerrar" type="button" aria-label="Cerrar comparación" onclick="cerrarComparar()">✕</button>
+            </div>
+            <div id="compararCuerpo" class="comparar-modal-cuerpo"></div>
+        </div>
+    </div>
+
+    <div class="chat-widget">
+        <button id="btn-toggle-chat" class="btn-chat-toggle" type="button" aria-expanded="false" aria-controls="ventana-chat">💬 ¿No sabés qué estudiar?</button>
+        <div id="ventana-chat" class="ventana-chat" hidden role="dialog" aria-modal="false" aria-labelledby="chat-titulo">
+            <div class="chat-header"><span id="chat-titulo">🤖 Copiloto Vocacional</span><button id="btn-cerrar-chat" type="button" aria-label="Cerrar chat">✕</button></div>
+            <div id="chat-progreso" class="chat-progreso-fijo" hidden></div>
+            <div id="chat-caja" class="chat-cuerpo"></div>
+            <!-- Único punto de anuncio del chat: antes cada burbuja tenía su propio
+                 aria-live y, como el historial se re-dibuja entero en cada turno,
+                 el lector de pantalla releía toda la conversación. -->
+            <p id="chat-anuncio" class="sr-only" role="status" aria-live="polite"></p>
+            <div class="chat-input">
+                <input id="chat-input-texto" type="text" placeholder="Ej: carreras de informática" autocomplete="off" aria-label="Escribile al copiloto">
+                <button id="chat-input-enviar" type="button" aria-label="Enviar mensaje">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

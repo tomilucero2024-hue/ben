@@ -1,0 +1,72 @@
+{
+    "instituciones": [
+        {
+            "id": 9,
+            "nombre": "Instituto Univ. de Ciencias Empresariales (IUCE)",
+            "nivel": "universidad",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "4292152",
+                "email": "informes@i-uce.edu.ar",
+                "direccion": "Patricias Mendocinas 1374, Ciudad"
+            },
+            "carreras": [
+                {
+                    "id": 900,
+                    "nombre_carrera": "Licenciatura en Comercialización",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial / A distancia",
+                    "facultad": "IUCE",
+                    "link_oficial": "https://i-uce.edu.ar/careers/uce-marketing"
+                },
+                {
+                    "id": 901,
+                    "nombre_carrera": "Licenciatura en Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial / A distancia",
+                    "facultad": "IUCE",
+                    "link_oficial": "https://i-uce.edu.ar/careers/uce-recursos-humanos"
+                },
+                {
+                    "id": 902,
+                    "nombre_carrera": "Licenciatura en Comercio Exterior y Aduanas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial / A distancia",
+                    "facultad": "IUCE",
+                    "link_oficial": "https://i-uce.edu.ar/careers/uce-comercio-exterior-y-aduanas"
+                },
+                {
+                    "id": 903,
+                    "nombre_carrera": "Licenciatura en Administración de Empresas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial / A distancia",
+                    "facultad": "IUCE",
+                    "link_oficial": "https://i-uce.edu.ar/careers/administracion-de-empresas"
+                },
+                {
+                    "id": 904,
+                    "nombre_carrera": "Licenciatura en Relaciones Públicas e Institucionales",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial / A distancia",
+                    "facultad": "IUCE",
+                    "link_oficial": "https://i-uce.edu.ar/careers/uce-relaciones-publicas"
+                },
+                {
+                    "id": 905,
+                    "nombre_carrera": "Licenciatura en Logística y Transporte",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial / A distancia",
+                    "facultad": "IUCE",
+                    "link_oficial": "https://i-uce.edu.ar/careers/uce-logistica-y-transporte"
+                }
+            ]
+        }
+    ]
+}

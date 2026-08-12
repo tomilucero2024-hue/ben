@@ -1,0 +1,117 @@
+from scraper_utils import guardar_json
+
+
+print("🛠️ Rectificando el motor V22 para ISTEEC (IES 9-013)...")
+print("🧹 Limpiando la basura del filtro: Inyectando solo las 9 tecnicaturas oficiales.\n")
+
+carreras_isteec = [
+    {
+        "id": 2201,
+        "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "ISTEEC (IES 9-013)",
+        "link_oficial": "https://isteec.edu.ar/administracion-de-empresas/"
+    },
+    {
+        "id": 2202,
+        "nombre_carrera": "Tecnicatura Superior en Comercio Internacional y Aduana",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "ISTEEC (IES 9-013)",
+        "link_oficial": "https://isteec.edu.ar/comercio-internacional-y-aduana/"
+    },
+    {
+        "id": 2203,
+        "nombre_carrera": "Tecnicatura Superior en Contabilidad",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "ISTEEC (IES 9-013)",
+        "link_oficial": "https://isteec.edu.ar/contabilidad/"
+    },
+    {
+        "id": 2204,
+        "nombre_carrera": "Tecnicatura Superior en Enología e Industria de los Alimentos",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "ISTEEC (IES 9-013)",
+        "link_oficial": "https://isteec.edu.ar/enologia-e-industria-de-los-alimentos/"
+    },
+    {
+        "id": 2205,
+        "nombre_carrera": "Tecnicatura Superior en Finanzas",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "ISTEEC (IES 9-013)",
+        "link_oficial": "https://isteec.edu.ar/finanzas/"
+    },
+    {
+        "id": 2206,
+        "nombre_carrera": "Tecnicatura Superior en Logística",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "ISTEEC (IES 9-013)",
+        "link_oficial": "https://isteec.edu.ar/logistica/"
+    },
+    {
+        "id": 2207,
+        "nombre_carrera": "Tecnicatura Superior en Marketing",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "ISTEEC (IES 9-013)",
+        "link_oficial": "https://isteec.edu.ar/marketing/"
+    },
+    {
+        "id": 2208,
+        "nombre_carrera": "Tecnicatura Superior en Recursos Humanos",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "ISTEEC (IES 9-013)",
+        "link_oficial": "https://isteec.edu.ar/recursos-humanos/"
+    },
+    {
+        "id": 2209,
+        "nombre_carrera": "Tecnicatura Superior en Turismo",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "ISTEEC (IES 9-013)",
+        "link_oficial": "https://isteec.edu.ar/turismo/"
+    }
+]
+
+ies_data = {
+    "id": 22,
+    "nombre": "ISTEEC (IES 9-013)",
+    "nivel": "terciario",
+    "gestion": "pública",
+    "provincia": "Mendoza",
+    "contacto": {
+        "telefono": "A confirmar",
+        "email": "contacto@isteec.edu.ar",
+        "direccion": "Ciudad de Mendoza" 
+    },
+    "carreras": carreras_isteec
+}
+
+base_ies = {"instituciones": [ies_data]}
+
+guardar_json(base_ies, "ies9013.json")
+print(f"🎉 ¡Ahora sí, purita sangre! Se inyectaron exactamente {len(carreras_isteec)} carreras del ISTEEC.")

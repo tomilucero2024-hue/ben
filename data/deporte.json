@@ -1,0 +1,184 @@
+{
+  "centros_deportivos": [
+    {
+      "nombre": "Club Atlético Gimnasia y Esgrima",
+      "ubicacion": "Gutiérrez 261, Ciudad",
+      "departamento": "Ciudad",
+      "provincia": "Mendoza",
+      "contacto": "+54 9 2615 09-1624",
+      "deportes_destacados": ["Fútbol", "Básquet", "Esgrima", "Gimnasia", "Pelota Paleta"],
+      "link_oficial": "https://gimnasiayesgrimamza.com.ar",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Club Mendoza de Regatas",
+      "ubicacion": "Av. Las Palmeras s/n, Parque General San Martín",
+      "departamento": "Ciudad",
+      "provincia": "Mendoza",
+      "contacto": "+54 261 428-5981 / 428-8192",
+      "deportes_destacados": ["Remo", "Natación", "Tenis", "Básquet", "Esgrima", "Tenis de Mesa"],
+      "link_oficial": "https://regatasmendoza.com.ar",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Club Sportivo Independiente Rivadavia",
+      "ubicacion": "Av. Boulogne Sur Mer 778, Parque General San Martín",
+      "departamento": "Ciudad",
+      "provincia": "Mendoza",
+      "contacto": "https://independienterivadavia.com.ar/contacto",
+      "deportes_destacados": ["Fútbol", "Básquet", "Hockey", "Vóley", "Tenis"],
+      "link_oficial": "https://independienterivadavia.com.ar",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Andes Talleres Sport Club",
+      "ubicacion": "Belgrano 1547, Godoy Cruz",
+      "departamento": "Godoy Cruz",
+      "provincia": "Mendoza",
+      "contacto": "+54 261 424-5720 / andestalleres@hotmail.com",
+      "deportes_destacados": ["Fútbol", "Básquet", "Hockey sobre Patines", "Natación", "Tenis", "Taekwondo"],
+      "link_oficial": "https://www.andestalleres.com.ar",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Club Deportivo Godoy Cruz Antonio Tomba",
+      "ubicacion": "Balcarce 477, Godoy Cruz",
+      "departamento": "Godoy Cruz",
+      "provincia": "Mendoza",
+      "contacto": "https://clubgodoycruz.com.ar",
+      "deportes_destacados": ["Fútbol", "Básquet", "Hockey sobre Patines", "Vóley", "Balonmano"],
+      "link_oficial": "https://clubgodoycruz.com.ar",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Los Tordos Rugby Club",
+      "ubicacion": "Carril Urquiza s/n, San Francisco del Monte",
+      "departamento": "Guaymallén",
+      "provincia": "Mendoza",
+      "contacto": "+54 261 432-0000 / WhatsApp +54 9 261 302-8410",
+      "deportes_destacados": ["Rugby", "Hockey sobre Césped Femenino"],
+      "link_oficial": "https://lostordos.com.ar",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Club Sportivo Huracán Las Heras",
+      "ubicacion": "25 de Mayo y Balbín, Ciudad de Las Heras",
+      "departamento": "Las Heras",
+      "provincia": "Mendoza",
+      "contacto": "https://clubhuracanlasheras.com.ar",
+      "deportes_destacados": ["Fútbol", "Hockey Femenino", "Hockey Masculino"],
+      "link_oficial": "https://clubhuracanlasheras.com.ar",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Club Deportivo Maipú",
+      "ubicacion": "Vergara 185, Maipú",
+      "departamento": "Maipú",
+      "provincia": "Mendoza",
+      "contacto": "https://deportivomaipu.com",
+      "deportes_destacados": ["Fútbol", "Hockey sobre Césped", "Patín Artístico", "Futsal"],
+      "link_oficial": "https://deportivomaipu.com",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Club del Personal del Banco de Mendoza",
+      "ubicacion": "Liniers s/n, Chacras de Coria",
+      "departamento": "Luján de Cuyo",
+      "provincia": "Mendoza",
+      "contacto": "+54 261 496-0225",
+      "deportes_destacados": ["Hockey sobre Césped", "Hockey sobre Patines", "Fútbol", "Rugby", "Básquet", "Natación"],
+      "link_oficial": "https://clubbancomendoza.com",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Polideportivo Municipal N°1 \"Biritos\"",
+      "ubicacion": "Biritos y Roque Sáenz Peña",
+      "departamento": "Godoy Cruz",
+      "provincia": "Mendoza",
+      "contacto": "+54 261 442-9337 (Dirección de Deportes y Recreación de Godoy Cruz)",
+      "deportes_destacados": ["Fútbol", "Básquet", "Vóley", "Handball", "Gimnasia"],
+      "link_oficial": "https://www.godoycruz.gob.ar/deportes/",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Polideportivo Nicolino Locche",
+      "ubicacion": "Amigorena 6950, Capilla del Rosario",
+      "departamento": "Guaymallén",
+      "provincia": "Mendoza",
+      "contacto": "Dirección de Deportes de Guaymallén",
+      "deportes_destacados": ["Fútbol", "Hockey", "Vóley", "Básquet", "Patín Artístico"],
+      "link_oficial": "https://www.guaymallen.gob.ar/category/dependencias/educacion-y-deportes/centros-deportivos/",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Polideportivo Vicente Polimeni",
+      "ubicacion": "Av. General Roca esquina Sáenz Peña",
+      "departamento": "Las Heras",
+      "provincia": "Mendoza",
+      "contacto": "+54 261 430-1085",
+      "deportes_destacados": ["Básquet", "Fútbol", "Gimnasia Artística", "Boxeo"],
+      "link_oficial": "https://lasheras.gob.ar/deportes-y-bienestar/",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Polideportivo Juan Domingo Ribosqui",
+      "ubicacion": "Maza 5515, Maipú",
+      "departamento": "Maipú",
+      "provincia": "Mendoza",
+      "contacto": "+54 261 497-2448",
+      "deportes_destacados": ["Handball", "Vóley", "Básquet", "Futsal", "Hockey sobre Patines"],
+      "link_oficial": "https://www.maipu.gob.ar",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Polideportivo Municipal de Luján de Cuyo (Ciudad)",
+      "ubicacion": "Calle Valcanera esquina Guevara",
+      "departamento": "Luján de Cuyo",
+      "provincia": "Mendoza",
+      "contacto": "Subsecretaría de Deportes de Luján de Cuyo",
+      "deportes_destacados": ["Atletismo", "Básquet", "Natación", "Multideporte"],
+      "link_oficial": "https://lujandecuyo.gob.ar/usina/",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Gimnasios Municipales - Dirección de Deportes y Recreación (Ciudad de Mendoza)",
+      "ubicacion": "Barrio Alto Mendoza, 11va Sección (entre Las Verbenas, Los Chañares y Los Junquillos)",
+      "departamento": "Ciudad",
+      "provincia": "Mendoza",
+      "contacto": "https://ciudaddemendoza.gob.ar/area-municipal/direccion-de-deportes-y-recreacion/",
+      "deportes_destacados": ["Fútbol", "Básquet", "Boxeo", "Gimnasia", "Vóley"],
+      "link_oficial": "https://ciudaddemendoza.gob.ar/gimnasios-municipales/",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Parque Deportivo Provincial (Pista de Atletismo, Velódromo y Aconcagua Arena)",
+      "ubicacion": "Av. El Libertador, Parque General San Martín",
+      "departamento": "Ciudad",
+      "provincia": "Mendoza",
+      "contacto": "Ministerio de Salud y Deportes de Mendoza",
+      "deportes_destacados": ["Atletismo", "Ciclismo (Velódromo)", "Hockey sobre Césped", "Futsal"],
+      "link_oficial": "https://informacionoficial.mendoza.gob.ar/saludydeportes/ministerio-de-salud-y-deportes/deportes/deportes-infraestructura/",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Parque Deportivo de Montaña",
+      "ubicacion": "Parque General San Martín, entre la subida al Teatro Griego Frank Romero Day y Av. San Francisco de Asís",
+      "departamento": "Ciudad",
+      "provincia": "Mendoza",
+      "contacto": "https://ciudaddemendoza.gob.ar/parque-deportivo-de-montana/",
+      "deportes_destacados": ["Mountain Bike", "Trail Running", "Ciclismo de Descenso", "Senderismo"],
+      "link_oficial": "https://ciudaddemendoza.gob.ar/parque-deportivo-de-montana/",
+      "etiqueta": "deportes"
+    },
+    {
+      "nombre": "Federación Mendocina de Box",
+      "ubicacion": "Av. Bartolomé Mitre 1771",
+      "departamento": "Ciudad",
+      "provincia": "Mendoza",
+      "contacto": "+54 261 423-0401 / federacionmendocinadebox@gmail.com",
+      "deportes_destacados": ["Boxeo"],
+      "link_oficial": "https://ciudaddemendoza.gob.ar/gimnasio/federacion-mendocina-de-box/",
+      "etiqueta": "deportes"
+    }
+  ]
+}

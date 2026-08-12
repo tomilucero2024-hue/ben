@@ -1,0 +1,168 @@
+{
+    "instituciones": [
+        {
+            "id": 18,
+            "nombre": "IES 9-009 (Tupungato)",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "02622-488820",
+                "email": "ens9009@infd.edu.ar",
+                "direccion": "Secundino Gómez y Dr. Mathons, Tupungato"
+            },
+            "carreras": [
+                {
+                    "id": 1801,
+                    "nombre_carrera": "Tecnicatura Superior en Energías Renovables",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-energias-renovables/"
+                },
+                {
+                    "id": 1802,
+                    "nombre_carrera": "Tecnicatura Superior en Enología e Industrias Frutihortícolas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/general-enologia/"
+                },
+                {
+                    "id": 1803,
+                    "nombre_carrera": "Tecnicatura Superior Agronómica (Sede Central)",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-sup-en-agronomia-sc/"
+                },
+                {
+                    "id": 1804,
+                    "nombre_carrera": "Tecnicatura Superior Agronómica (Sede Agrelo)",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/general-agronomica/"
+                },
+                {
+                    "id": 1805,
+                    "nombre_carrera": "Tecnicatura Superior en Petróleo y Gas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/t-s-en-petroleo-y-gas/"
+                },
+                {
+                    "id": 1806,
+                    "nombre_carrera": "Tecnicatura Superior en Diseño Multimedial",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/t-s-diseno-multimedial/"
+                },
+                {
+                    "id": 1807,
+                    "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A Distancia",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-de-empresas-a-distancia/"
+                },
+                {
+                    "id": 1808,
+                    "nombre_carrera": "Tecnicatura Superior en Administración Pública (A Distancia)",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A Distancia",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/t-adm-publica-a-distancia/"
+                },
+                {
+                    "id": 1809,
+                    "nombre_carrera": "Tecnicatura Superior en Administración Pública (INFOPE)",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/general-administracion/"
+                },
+                {
+                    "id": 1810,
+                    "nombre_carrera": "Tecnicatura Superior en Administración Pública (Legislatura)",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-publica-con-orientacion-en-instituciones-legislativas/"
+                },
+                {
+                    "id": 1811,
+                    "nombre_carrera": "Tecnicatura Superior en Logística",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-logistica/"
+                },
+                {
+                    "id": 1812,
+                    "nombre_carrera": "Profesorado de Educación Especial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/general-profesorado-educacion-especial/"
+                },
+                {
+                    "id": 1813,
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/profesorado-de-educacion-primaria/"
+                },
+                {
+                    "id": 1814,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Química",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/profesorado-de-educacion-secundaria-en-quimica/"
+                },
+                {
+                    "id": 1815,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-009",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/profesorado-de-educacion-secundaria-en-matematica/"
+                }
+            ]
+        }
+    ]
+}

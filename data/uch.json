@@ -1,0 +1,144 @@
+{
+    "instituciones": [
+        {
+            "id": 7,
+            "nombre": "Universidad Champagnat (UCh)",
+            "nivel": "universidad",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "4243698",
+                "email": "informes@uch.edu.ar",
+                "direccion": "Belgrano 721, Godoy Cruz"
+            },
+            "carreras": [
+                {
+                    "id": 700,
+                    "nombre_carrera": "Licenciado en Administración de Empresas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-administracion-de-empresas"
+                },
+                {
+                    "id": 701,
+                    "nombre_carrera": "Licenciado en Comercio Internacional",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-comercio-internacional"
+                },
+                {
+                    "id": 702,
+                    "nombre_carrera": "Corredor Público Inmobiliario y Martillero",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en página oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/corredor-publico-inmobiliario-y-martillero"
+                },
+                {
+                    "id": 703,
+                    "nombre_carrera": "Contador Público",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/contador-publico"
+                },
+                {
+                    "id": 704,
+                    "nombre_carrera": "Licenciado en Relaciones Públicas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en página oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-relaciones-publicas"
+                },
+                {
+                    "id": 705,
+                    "nombre_carrera": "Licenciado en Relaciones Humanas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-relaciones-humanas"
+                },
+                {
+                    "id": 706,
+                    "nombre_carrera": "Licenciado en Turismo",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-turismo"
+                },
+                {
+                    "id": 707,
+                    "nombre_carrera": "Abogacía y Procuración",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Derecho",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/abogacia"
+                },
+                {
+                    "id": 708,
+                    "nombre_carrera": "Licenciado en Relaciones Internacionales",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Derecho",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-relaciones-internacionales"
+                },
+                {
+                    "id": 709,
+                    "nombre_carrera": "Licenciatura en Diseño Gráfico y Digital",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en página oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Informática y Diseño",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-diseño"
+                },
+                {
+                    "id": 710,
+                    "nombre_carrera": "Licenciado en Sistemas de Información",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Informática y Diseño",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-sistemas-de-informacion"
+                },
+                {
+                    "id": 711,
+                    "nombre_carrera": "Analista Programador Universitario",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Informática y Diseño",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/analista-programador-universitario-en-sistemas"
+                },
+                {
+                    "id": 712,
+                    "nombre_carrera": "Licenciatura en Comunicación Digital",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en página oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Educación",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-comunicacion-digital"
+                },
+                {
+                    "id": 713,
+                    "nombre_carrera": "Profesorados Universitarios en Educación Primaria y en Educación Inicial",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en página oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Educación",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/profesorados-universitarios-en-educacion-primaria-e-inicial"
+                }
+            ]
+        }
+    ]
+}

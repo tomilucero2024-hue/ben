@@ -1,0 +1,128 @@
+{
+    "instituciones": [
+        {
+            "id": 12,
+            "nombre": "IES 9-002 Tomás Godoy Cruz",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "0261-4235077",
+                "email": "contacto@institutotomasgodoycruz.com",
+                "direccion": "Mitre y Montevideo, Ciudad de Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 1200,
+                    "nombre_carrera": "Profesorado de Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "📅 4 años",
+                    "turno": "🕐 turno mañana o tarde",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Tomás Godoy Cruz",
+                    "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-inicial/"
+                },
+                {
+                    "id": 1201,
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "turno": "Turno mañana o vespertino",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Tomás Godoy Cruz",
+                    "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-primaria/"
+                },
+                {
+                    "id": 1202,
+                    "nombre_carrera": "Profesorado de Educación Especial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "turno": "Turno vespertino",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Tomás Godoy Cruz",
+                    "link_oficial": "https://institutotomasgodoycruz.com/profesorado-en-educacion-especial/"
+                },
+                {
+                    "id": 1203,
+                    "nombre_carrera": "Profesorado en Artes Visuales",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "turno": "Turno vespertino",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Tomás Godoy Cruz",
+                    "link_oficial": "https://institutotomasgodoycruz.com/profesorado-en-artes-visuales/"
+                },
+                {
+                    "id": 1204,
+                    "nombre_carrera": "Profesorado de Inglés",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "turno": "Turno vespertino",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Tomás Godoy Cruz",
+                    "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-ingles/"
+                },
+                {
+                    "id": 1205,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Biología",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "turno": "Turno vespertino",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Tomás Godoy Cruz",
+                    "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-biologia/"
+                },
+                {
+                    "id": 1206,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "turno": "Turno tarde o vespertino",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Tomás Godoy Cruz",
+                    "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-matematica/"
+                },
+                {
+                    "id": 1207,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Física",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "turno": "Turno vespertino",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Tomás Godoy Cruz",
+                    "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-fisica/"
+                },
+                {
+                    "id": 1208,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Química",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "turno": "Turno vespertino",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Tomás Godoy Cruz",
+                    "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-quimica/"
+                },
+                {
+                    "id": 1209,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Lengua y Literatura",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "turno": "A confirmar",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Tomás Godoy Cruz",
+                    "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-lengua-y-literatura/"
+                },
+                {
+                    "id": 1210,
+                    "nombre_carrera": "Tecnicatura en Producción Artística y Artesanal",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "turno": "Turno vespertino",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Tomás Godoy Cruz",
+                    "link_oficial": "https://institutotomasgodoycruz.com/tecnicatura-en-produccion-artistica-y-artesanal/"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "instituciones": [
+        {
+            "id": 26,
+            "nombre": "Escuela Regional Cuyo de Cine y Video (IES 9-017)",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "contacto@escueladecine9017.edu.ar",
+                "direccion": "Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 2601,
+                    "nombre_carrera": "Técnico Superior en Cine, Video y Televisión",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Escuela de Cine (IES 9-017)",
+                    "link_oficial": "https://escueladecine9017-infd.mendoza.edu.ar/sitio/catalogo/plan-de-estudio/"
+                }
+            ]
+        }
+    ]
+}

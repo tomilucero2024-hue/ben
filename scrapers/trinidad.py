@@ -1,0 +1,67 @@
+from scraper_utils import guardar_json
+
+
+print("🛠️ Encendiendo inyección manual V41 para el Instituto Santísima Trinidad...")
+print("🔍 Set up: Inyectando 2 Profesorados, 1 Tecnicatura y la sección de Cursos Online.\n")
+
+carreras_trinidad = [
+    {
+        "id": 4101,
+        "nombre_carrera": "Profesorado en Ciencias de la Educación",
+        "categoria": "Grado / Profesorado",
+        "duracion": "4 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "Instituto Santísima Trinidad",
+        "link_oficial": "https://santisimatrinidad.edu.ar/pce/"
+    },
+    {
+        "id": 4102,
+        "nombre_carrera": "Profesorado en Educación Física",
+        "categoria": "Grado / Profesorado",
+        "duracion": "4 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "Instituto Santísima Trinidad",
+        "link_oficial": "https://santisimatrinidad.edu.ar/pef/"
+    },
+    {
+        "id": 4103,
+        "nombre_carrera": "Tecnicatura Superior en Preceptoría Escolar",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "Instituto Santísima Trinidad",
+        "link_oficial": "https://santisimatrinidad.edu.ar/tpe/"
+    },
+    {
+        "id": 4104,
+        "nombre_carrera": "Cursos Online",
+        "categoria": "Curso / Formación Profesional",
+        "duracion": "A confirmar",
+        "modalidad": "A Distancia",
+        "turno": "A confirmar",
+        "facultad": "Instituto Santísima Trinidad",
+        "link_oficial": "https://santisimatrinidad.edu.ar/formacion-online/#cursos"
+    }
+]
+
+ies_data = {
+    "id": 41,
+    "nombre": "Instituto Santísima Trinidad",
+    "nivel": "terciario",
+    "gestion": "privada",
+    "provincia": "Mendoza",
+    "contacto": {
+        "telefono": "A confirmar",
+        "email": "contacto@santisimatrinidad.edu.ar",
+        "direccion": "Mendoza"
+    },
+    "carreras": carreras_trinidad
+}
+
+base_ies = {"instituciones": [ies_data]}
+
+guardar_json(base_ies, "trinidad.json")
+print(f"🎉 ¡Inyección perfecta! Se cargaron las opciones del Santísima Trinidad.")

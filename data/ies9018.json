@@ -1,0 +1,78 @@
+{
+    "instituciones": [
+        {
+            "id": 27,
+            "nombre": "IES 9-018 (Malargüe)",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "contacto@ies9018malargue.edu.ar",
+                "direccion": "Malargüe, Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 2701,
+                    "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-018 Malargüe",
+                    "link_oficial": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-desarrollo-de-software/"
+                },
+                {
+                    "id": 2702,
+                    "nombre_carrera": "Tecnicatura Superior en Minería",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-018 Malargüe",
+                    "link_oficial": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-mineria-2024/"
+                },
+                {
+                    "id": 2703,
+                    "nombre_carrera": "Tecnicatura Superior en Petróleo y Gas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-018 Malargüe",
+                    "link_oficial": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-petroleo-y-gas-2024/"
+                },
+                {
+                    "id": 2704,
+                    "nombre_carrera": "Tecnicatura Superior en Turismo y Hotelería",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-018 Malargüe",
+                    "link_oficial": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-turismo-y-hoteleria-2024/"
+                },
+                {
+                    "id": 2705,
+                    "nombre_carrera": "Profesorado en Educación Secundaria de Biología",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-018 Malargüe",
+                    "link_oficial": "https://ies9018malargue.edu.ar/profesorado-en-educacion-secundaria-de-biologia/"
+                },
+                {
+                    "id": 2706,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Lengua y Literatura",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-018 Malargüe",
+                    "link_oficial": "https://ies9018malargue.edu.ar/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "instituciones": [
+        {
+            "id": 15,
+            "nombre": "IES 9-005",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "0263-4442371",
+                "email": "ens9005@infd.edu.ar",
+                "direccion": "San Martín y Godoy Cruz, Junín, Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 1500,
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-005",
+                    "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria-2/"
+                },
+                {
+                    "id": 1501,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Biología",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-005",
+                    "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-biologia/"
+                },
+                {
+                    "id": 1502,
+                    "nombre_carrera": "Profesorado de Educación Especial (Sede Las Catitas)",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-005",
+                    "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/prof-de-educacion-especial/"
+                },
+                {
+                    "id": 1503,
+                    "nombre_carrera": "Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec)",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-005",
+                    "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-de-la-modalidad-tecnico-profesional-en-concurrencia-con-el-titulo-de-base/"
+                },
+                {
+                    "id": 1504,
+                    "nombre_carrera": "Formación Profesional en Apicultura",
+                    "categoria": "Formación Profesional",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-005",
+                    "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/formacion-profesional-en-agronomia/"
+                },
+                {
+                    "id": 1505,
+                    "nombre_carrera": "Formación Profesional en Software",
+                    "categoria": "Formación Profesional",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-005",
+                    "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/formacion-profesional-en-software/"
+                }
+            ]
+        }
+    ]
+}
