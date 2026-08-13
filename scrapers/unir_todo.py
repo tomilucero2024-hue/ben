@@ -101,6 +101,7 @@ def cargar_higiene(instituciones):
 GRUPOS_APARTE = {
     "formaciones_alternativas": "formaciones_alternativas.json",
     "oficios_tecnicos": "oficios_tecnicos.json",
+    "secundario": "secundario.json",
 }
 
 

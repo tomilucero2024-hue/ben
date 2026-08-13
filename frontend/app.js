@@ -108,6 +108,17 @@ const catalogosAparte = {
         seccion: 'seccion-oficios',
         contenedor: 'contenedor-oficios',
         cursos: []
+    },
+    'secundario': {
+        clave: 'secundario',
+        seccion: 'seccion-secundario',
+        contenedor: 'contenedor-secundario',
+        cursos: [],
+        // Tarjeta simple: son cuatro puertas de entrada institucionales, no cursos
+        // concretos. No tienen duración ni modalidad únicas (cada sede varía), así
+        // que se muestran solo con nombre, descripción y link, y sin favorito ni
+        // comparar: no hay nada que comparar entre "CENS" y "CEPAS" en una tabla.
+        simple: true
     }
 };
 
@@ -305,15 +316,20 @@ function crearCursoAparte(carrera, institucion) {
     const nombre = limpiarTexto(carrera.nombre_carrera || 'Formación sin nombre');
     const nombreInstitucion = limpiarTexto(institucion.nombre || 'Institución');
     const categoria = limpiarTexto(carrera.categoria || 'Formación');
+    // Opcionales: solo los traen los catálogos de tarjeta simple (ver `simple`).
+    const descripcion = limpiarTexto(carrera.descripcion || '');
+    const nombreCompleto = limpiarTexto(carrera.nombre_completo || '');
     return {
         nombre,
+        nombreCompleto,
+        descripcion,
         institucion: nombreInstitucion,
         categoria,
         modalidad: limpiarTexto(carrera.modalidad || 'A confirmar'),
         duracion: limpiarTexto(carrera.duracion || 'A confirmar'),
         provincia: limpiarTexto(institucion.provincia || ''),
         link: carrera.link_oficial || '',
-        busqueda: normalizarTexto(`${nombre} ${nombreInstitucion} ${categoria}`),
+        busqueda: normalizarTexto(`${nombre} ${nombreCompleto} ${descripcion} ${nombreInstitucion} ${categoria}`),
         _clave: `aparte:${nombreInstitucion}:${nombre}`
     };
 }
@@ -501,14 +517,15 @@ function mostrarCatalogoAparte(seccion) {
     const visibles = estado.texto
         ? catalogo.cursos.filter(c => c.busqueda.includes(estado.texto))
         : catalogo.cursos;
-    renderizarCursosAparte(document.getElementById(catalogo.contenedor), visibles);
+    renderizarCursosAparte(document.getElementById(catalogo.contenedor), visibles, catalogo.simple);
 }
 
-function renderizarCursosAparte(contenedor, lista) {
+function renderizarCursosAparte(contenedor, lista, simple = false) {
     if (!lista.length) {
         contenedor.innerHTML = '<p class="empty-state">No hay formaciones que coincidan con esa búsqueda.</p>';
         return;
     }
+    if (simple) { renderizarCursosSimples(contenedor, lista); return; }
     contenedor.innerHTML = lista.map(curso => `
         <article class="curso-card">
             <div class="card-badges">
@@ -528,6 +545,27 @@ function renderizarCursosAparte(contenedor, lista) {
                 <button type="button" class="btn-favorito${estaEnFavoritos(curso._clave) ? ' is-active' : ''}" data-clave="${curso._clave}" aria-pressed="${estaEnFavoritos(curso._clave)}" title="Guardar en favoritos">${estaEnFavoritos(curso._clave) ? '★' : '☆'} <span>Favorito</span></button>
                 <button type="button" class="btn-comparar${enComparador(curso._clave) ? ' is-active' : ''}" data-clave="${curso._clave}" aria-pressed="${enComparador(curso._clave)}" title="Agregar a comparar">${enComparador(curso._clave) ? '✓' : '+'} <span>Comparar</span></button>
             </div>
+        </article>`).join('');
+}
+
+// Variante simple de tarjeta: mismo diseño (.curso-card, con el borde y el tinte
+// de la sección) pero solo nombre, descripción y link. Sin badges, sin duración
+// ni modalidad, y sin favorito/comparar.
+// Ojo: acá NO se usa capitalizar(), que pasa todo a minúscula después de la
+// primera letra y convertiría "CEBJA" en "Cebja".
+function renderizarCursosSimples(contenedor, lista) {
+    contenedor.innerHTML = lista.map(curso => `
+        <article class="curso-card curso-card-simple">
+            <h3 class="curso-title">${escaparHTML(curso.nombre)}</h3>
+            ${curso.nombreCompleto
+                ? `<p class="curso-subtitulo">${escaparHTML(curso.nombreCompleto)}</p>`
+                : ''}
+            ${curso.descripcion
+                ? `<p class="curso-descripcion">${escaparHTML(curso.descripcion)}</p>`
+                : ''}
+            ${curso.link
+                ? `<a class="card-link" href="${curso.link}" target="_blank" rel="noopener noreferrer">Ver más en mendoza.edu.ar ↗</a>`
+                : '<span class="card-link card-link-muted">Sin link oficial</span>'}
         </article>`).join('');
 }
 

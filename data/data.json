@@ -7665,6 +7665,96 @@
             ]
         }
     ],
+    "secundario": [
+        {
+            "id": 995001,
+            "nombre": "CEBJA",
+            "nivel": "terminalidad primaria y ciclo básico de secundaria",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "(0261) 429-9280",
+                "email": "depjasecretaria@mendoza.edu.ar",
+                "direccion": "Sedes en toda la provincia. Dirección de Educación Permanente de Jóvenes y Adultos (DEPJA), DGE Mendoza."
+            },
+            "carreras": [
+                {
+                    "id": 99500101,
+                    "nombre_carrera": "CEBJA",
+                    "nombre_completo": "Centros Educativos de Educación Básica de Jóvenes y Adultos",
+                    "descripcion": "Para personas mayores de 14 años que no completaron la primaria o necesitan alfabetización. Permite finalizar la primaria y cursar el ciclo básico del nivel secundario.",
+                    "categoria": "Terminalidad Primaria",
+                    "link_oficial": "https://www.mendoza.edu.ar/cebja/"
+                }
+            ]
+        },
+        {
+            "id": 995002,
+            "nombre": "CENS",
+            "nivel": "terminalidad secundaria",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "(0261) 429-9280",
+                "email": "depjasecretaria@mendoza.edu.ar",
+                "direccion": "Hay CENS en los 18 departamentos, organizados en 18 supervisiones (públicas, privadas y técnicas). Cabecera: Patricias Mendocinas 970, 1° Piso, Ciudad de Mendoza."
+            },
+            "carreras": [
+                {
+                    "id": 99500201,
+                    "nombre_carrera": "CENS",
+                    "nombre_completo": "Centros Educativos de Nivel Secundario",
+                    "descripcion": "Para personas mayores de 18 años (o desde 16 con evaluación) que quieran terminar la secundaria. Se obtiene el título secundario en 3 años, con formato flexible (no graduado) que permite avanzar por módulos según el ritmo de cada estudiante.",
+                    "categoria": "Terminalidad Secundaria",
+                    "link_oficial": "https://www.mendoza.edu.ar/cens/"
+                }
+            ]
+        },
+        {
+            "id": 995003,
+            "nombre": "CEPAS",
+            "nivel": "terminalidad secundaria + formación profesional",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "(0261) 429-9280",
+                "email": "depjasecretaria@mendoza.edu.ar",
+                "direccion": "21 centros en Capital, Godoy Cruz, Guaymallén, Junín, Las Heras, Lavalle, Luján de Cuyo, San Martín, Gral. Alvear, Maipú, Malargüe, San Rafael y Valle de Uco (Tunuyán)."
+            },
+            "carreras": [
+                {
+                    "id": 99500301,
+                    "nombre_carrera": "CEPAS",
+                    "nombre_completo": "Centros de Educación Profesional para Adultos",
+                    "descripcion": "Para personas mayores de 18 años que quieran terminar la secundaria y formarse en un oficio. Se obtiene el título secundario con certificación profesional, en una modalidad flexible y adaptada a trayectorias personalizadas.",
+                    "categoria": "Terminalidad Secundaria con Formación Profesional",
+                    "link_oficial": "https://www.mendoza.edu.ar/cepas/"
+                }
+            ]
+        },
+        {
+            "id": 995004,
+            "nombre": "Terminalidad Educativa",
+            "nivel": "terminalidad secundaria (adeuda materias)",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "(0261) 429-9280",
+                "email": "depjasecretaria@mendoza.edu.ar",
+                "direccion": "Se cursa a través de los CENS de la provincia. Dirección de Educación Permanente de Jóvenes y Adultos (DEPJA), DGE Mendoza."
+            },
+            "carreras": [
+                {
+                    "id": 99500401,
+                    "nombre_carrera": "Terminalidad Educativa",
+                    "nombre_completo": "Programa TEM - Terminalidad Educativa Mendoza",
+                    "descripcion": "Si cursaste todo el secundario pero todavía debés materias, el programa TEM te ayuda a rendir y obtener tu título. Está destinado a jóvenes y adultos mayores de 18 años que adeudan espacios curriculares y cursaron el último año como alumnos regulares. Podés acceder luego de transcurrido un año o más de haber terminado de cursar.",
+                    "categoria": "Terminalidad Secundaria",
+                    "link_oficial": "https://www.mendoza.edu.ar/terminalidad-educativa/"
+                }
+            ]
+        }
+    ],
     "plataformas": [
         {
             "institucion": "Coderhouse",

@@ -1,0 +1,134 @@
+{
+  "_nota": "Las cuatro opciones oficiales de https://www.mendoza.edu.ar/termina-de-estudiar/. Las descripciones son textuales de cada subpágina de la DGE (ver fuentes_verificadas); no se agregan datos propios. Esta categoría se muestra con tarjetas simples (nombre + descripción + link), por eso las carreras no llevan duracion/modalidad.",
+  "instituciones": [
+    {
+      "id": 995001,
+      "nombre": "CEBJA",
+      "nivel": "terminalidad primaria y ciclo básico de secundaria",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "(0261) 429-9280",
+        "email": "depjasecretaria@mendoza.edu.ar",
+        "direccion": "Sedes en toda la provincia. Dirección de Educación Permanente de Jóvenes y Adultos (DEPJA), DGE Mendoza."
+      },
+      "carreras": [
+        {
+          "id": 99500101,
+          "nombre_carrera": "CEBJA",
+          "nombre_completo": "Centros Educativos de Educación Básica de Jóvenes y Adultos",
+          "descripcion": "Para personas mayores de 14 años que no completaron la primaria o necesitan alfabetización. Permite finalizar la primaria y cursar el ciclo básico del nivel secundario.",
+          "categoria": "Terminalidad Primaria",
+          "link_oficial": "https://www.mendoza.edu.ar/cebja/"
+        }
+      ]
+    },
+    {
+      "id": 995002,
+      "nombre": "CENS",
+      "nivel": "terminalidad secundaria",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "(0261) 429-9280",
+        "email": "depjasecretaria@mendoza.edu.ar",
+        "direccion": "Hay CENS en los 18 departamentos, organizados en 18 supervisiones (públicas, privadas y técnicas). Cabecera: Patricias Mendocinas 970, 1° Piso, Ciudad de Mendoza."
+      },
+      "carreras": [
+        {
+          "id": 99500201,
+          "nombre_carrera": "CENS",
+          "nombre_completo": "Centros Educativos de Nivel Secundario",
+          "descripcion": "Para personas mayores de 18 años (o desde 16 con evaluación) que quieran terminar la secundaria. Se obtiene el título secundario en 3 años, con formato flexible (no graduado) que permite avanzar por módulos según el ritmo de cada estudiante.",
+          "categoria": "Terminalidad Secundaria",
+          "link_oficial": "https://www.mendoza.edu.ar/cens/"
+        }
+      ]
+    },
+    {
+      "id": 995003,
+      "nombre": "CEPAS",
+      "nivel": "terminalidad secundaria + formación profesional",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "(0261) 429-9280",
+        "email": "depjasecretaria@mendoza.edu.ar",
+        "direccion": "21 centros en Capital, Godoy Cruz, Guaymallén, Junín, Las Heras, Lavalle, Luján de Cuyo, San Martín, Gral. Alvear, Maipú, Malargüe, San Rafael y Valle de Uco (Tunuyán)."
+      },
+      "carreras": [
+        {
+          "id": 99500301,
+          "nombre_carrera": "CEPAS",
+          "nombre_completo": "Centros de Educación Profesional para Adultos",
+          "descripcion": "Para personas mayores de 18 años que quieran terminar la secundaria y formarse en un oficio. Se obtiene el título secundario con certificación profesional, en una modalidad flexible y adaptada a trayectorias personalizadas.",
+          "categoria": "Terminalidad Secundaria con Formación Profesional",
+          "link_oficial": "https://www.mendoza.edu.ar/cepas/"
+        }
+      ]
+    },
+    {
+      "id": 995004,
+      "nombre": "Terminalidad Educativa",
+      "nivel": "terminalidad secundaria (adeuda materias)",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "(0261) 429-9280",
+        "email": "depjasecretaria@mendoza.edu.ar",
+        "direccion": "Se cursa a través de los CENS de la provincia. Dirección de Educación Permanente de Jóvenes y Adultos (DEPJA), DGE Mendoza."
+      },
+      "carreras": [
+        {
+          "id": 99500401,
+          "nombre_carrera": "Terminalidad Educativa",
+          "nombre_completo": "Programa TEM - Terminalidad Educativa Mendoza",
+          "descripcion": "Si cursaste todo el secundario pero todavía debés materias, el programa TEM te ayuda a rendir y obtener tu título. Está destinado a jóvenes y adultos mayores de 18 años que adeudan espacios curriculares y cursaron el último año como alumnos regulares. Podés acceder luego de transcurrido un año o más de haber terminado de cursar.",
+          "categoria": "Terminalidad Secundaria",
+          "link_oficial": "https://www.mendoza.edu.ar/terminalidad-educativa/"
+        }
+      ]
+    }
+  ],
+  "supervisiones_cens": [
+    { "numero": "01", "modalidad": "Orientado", "gestion": "Pública", "departamento": "Capital - Quinta Sección", "direccion": "Cnel. Rodríguez 499", "email": "supmedi001@mendoza.edu.ar" },
+    { "numero": "01", "modalidad": "Orientado", "gestion": "Privada", "departamento": "Guaymallén - Bermejo", "direccion": "B° Sol Andino I, D 14", "email": "roviloma@yahoo.com.ar" },
+    { "numero": "01", "modalidad": "Técnico", "gestion": "Pública", "departamento": "Maipú", "direccion": "Circunvalación Juan A. Maza 737", "email": "supervision1t@gmail.com" },
+    { "numero": "02", "modalidad": "Orientado", "gestion": "Pública", "departamento": "Guaymallén - Dorrego", "direccion": "Adolfo Calle 349", "email": "supmedi002@mendoza.edu.ar" },
+    { "numero": "02", "modalidad": "Orientado", "gestion": "Privada", "departamento": "Luján de Cuyo - Vistalba", "direccion": "Luan Luan 4130", "email": "anamarnube@gmail.com" },
+    { "numero": "02", "modalidad": "Técnico", "gestion": "Pública", "departamento": "Guaymallén - San José", "direccion": "Uruguay 670", "email": "sup2tyt@mendoza.edu.ar" },
+    { "numero": "03", "modalidad": "Orientado", "gestion": "Pública", "departamento": "Guaymallén - Dorrego", "direccion": "Ciudad de Santa Rosa 2250", "email": "supmedi003@mendoza.edu.ar" },
+    { "numero": "03", "modalidad": "Orientado", "gestion": "Privada", "departamento": "Capital - Ciudad", "direccion": "Av. Mitre 602", "email": "sedesupprivada3secundaria@gmail.com" },
+    { "numero": "03", "modalidad": "Técnico", "gestion": "Pública", "departamento": "San Martín", "direccion": "Almirante Brown 50", "email": "supervisionestec3@gmail.com" },
+    { "numero": "04", "modalidad": "Orientado", "gestion": "Pública", "departamento": "Godoy Cruz - Pte. Sarmiento", "direccion": "Mathus Hoyos, Mza. 12", "email": "supmedi004@mendoza.edu.ar" },
+    { "numero": "04", "modalidad": "Orientado", "gestion": "Privada", "departamento": "Maipú", "direccion": "Pezzutti 500", "email": "hemylyo@gmail.com" },
+    { "numero": "04", "modalidad": "Técnico", "gestion": "Pública", "departamento": "San Rafael - Ciudad", "direccion": "España 54", "email": "supmeditec004@mendoza.edu.ar" },
+    { "numero": "05", "modalidad": "Orientado", "gestion": "Pública", "departamento": "Maipú", "direccion": "Martínez Leanez esq. Fray Martín", "email": "supmedi005@mendoza.edu.ar" },
+    { "numero": "05", "modalidad": "Orientado", "gestion": "Privada", "departamento": "Capital - Ciudad", "direccion": "Córdoba 249", "email": "anibalbustos66@gmail.com" },
+    { "numero": "05", "modalidad": "Técnico", "gestion": "Pública", "departamento": "San Rafael - Ciudad", "direccion": "Cornú 341", "email": "supmeditec005@mendoza.edu.ar" },
+    { "numero": "06", "modalidad": "Orientado", "gestion": "Pública", "departamento": "Luján de Cuyo - Chacras de Coria", "direccion": "Liniers y Pannocchia", "email": "supmedi006@mendoza.edu.ar" },
+    { "numero": "06", "modalidad": "Orientado", "gestion": "Privada", "departamento": "San Rafael - Ciudad", "direccion": "España 80", "email": "racoussillan@hotmail.com" },
+    { "numero": "06", "modalidad": "Técnico", "gestion": "Pública", "departamento": "Las Heras - El Challao", "direccion": "Aconcagua s/n", "email": "supervisionestec6@gmail.com" },
+    { "numero": "07", "modalidad": "Orientado", "gestion": "Pública", "departamento": "Las Heras - El Challao", "direccion": "Adolfo Bioy Casares 2017", "email": "supmedi007@mendoza.edu.ar" },
+    { "numero": "07", "modalidad": "Orientado", "gestion": "Privada", "departamento": "A confirmar", "direccion": "A confirmar", "email": "alejandramizu2013@gmail.com" },
+    { "numero": "08", "modalidad": "Orientado", "gestion": "Pública", "departamento": "Las Heras - El Zapallar", "direccion": "Democracia 2400", "email": "supmedi008@mendoza.edu.ar" },
+    { "numero": "09", "modalidad": "Orientado", "gestion": "Pública", "departamento": "San Martín", "direccion": "Salta 86", "email": "supmedi009@mendoza.edu.ar" },
+    { "numero": "10", "modalidad": "Orientado", "gestion": "Pública", "departamento": "San Martín", "direccion": "Salta 86", "email": "supmedi010@mendoza.edu.ar" },
+    { "numero": "11", "modalidad": "Orientado", "gestion": "Pública", "departamento": "Tupungato", "direccion": "Av. Güemes 125", "email": "supmedi011@mendoza.edu.ar" },
+    { "numero": "12", "modalidad": "Orientado", "gestion": "Pública", "departamento": "San Rafael - Ciudad", "direccion": "9 de Julio 476", "email": "supmedi012@mendoza.edu.ar" },
+    { "numero": "13", "modalidad": "Orientado", "gestion": "Pública", "departamento": "San Rafael - Ciudad", "direccion": "Juan A. Maza 10", "email": "supmedi013@mendoza.edu.ar" },
+    { "numero": "14", "modalidad": "Orientado", "gestion": "Pública", "departamento": "Gral. Alvear", "direccion": "Paso de los Andes 541", "email": "supmedi014@mendoza.edu.ar" },
+    { "numero": "15", "modalidad": "Orientado", "gestion": "Pública", "departamento": "Tunuyán", "direccion": "Pueyrredón y Alte. Brown", "email": "supmedi015@mendoza.edu.ar" },
+    { "numero": "16", "modalidad": "Orientado", "gestion": "Pública", "departamento": "San Rafael - Ciudad", "direccion": "9 de Julio 476", "email": "supmedi016@mendoza.edu.ar" },
+    { "numero": "17", "modalidad": "Orientado", "gestion": "Pública", "departamento": "San Martín", "direccion": "9 de Julio y Chacabuco", "email": "supmedi017@mendoza.edu.ar" },
+    { "numero": "18", "modalidad": "Orientado", "gestion": "Pública", "departamento": "Capital - Ciudad", "direccion": "Rivadavia 350", "email": "supmedi018@mendoza.edu.ar" }
+  ],
+  "fuentes_verificadas": [
+    "https://www.mendoza.edu.ar/termina-de-estudiar/",
+    "https://www.mendoza.edu.ar/cebja/",
+    "https://www.mendoza.edu.ar/cens/",
+    "https://www.mendoza.edu.ar/cepas/",
+    "https://www.mendoza.edu.ar/terminalidad-educativa/",
+    "https://www.mendoza.edu.ar/wp-content/uploads/2024/02/listado-supervisiones.pdf"
+  ]
+}
