@@ -132,8 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
     configurarMedicionHeader();
     configurarHeaderScroll();
     cargarOfertas();
+    inicializarOrientador();
     configurarChat();
     sincronizarInertFiltros();
+    configurarBienvenida();
 });
 
 // ==========================================
@@ -240,6 +242,9 @@ function configurarTema() {
         boton.title = esOscuro ? 'Activar modo claro' : 'Activar modo oscuro';
         // Un solo <img> que cambia de fuente: así se baja un logo y no dos.
         if (logo) logo.src = esOscuro ? 'logo-ben-dark.png' : 'logo-ben-light.png';
+        // El logo de la pantalla de bienvenida sigue el mismo tema.
+        const logoBienvenida = document.getElementById('bienvenidaLogo');
+        if (logoBienvenida) logoBienvenida.src = esOscuro ? 'logo-ben-dark.png' : 'logo-ben-light.png';
     };
 
     boton.addEventListener('click', () => {
@@ -277,17 +282,30 @@ async function cargarOfertas() {
         document.getElementById('cardContainer').innerHTML = '<p class="empty-state">No se pudieron cargar las ofertas. Probá abrir la página con Live Server.</p>';
     }
 }
+// Inicializar Orientador con perfiles de carreras y ofertas
+async function inicializarOrientador() {
+    try {
+        await Orientador.cargarPerfilesCarreras();
+        Orientador.setOfertasIndex(ofertas);
+        console.log('Orientador inicializado correctamente');
+    } catch (e) {
+        console.warn('No se pudo inicializar Orientador:', e);
+    }
+}
+
 
 function crearOferta(carrera, institucion) {
     const nombre = limpiarTexto(carrera.nombre_carrera || 'Carrera sin nombre');
     const modalidad = carrera.modalidad || 'Presencial';
+    const gestion = inferirGestion(institucion);
     return {
         nombre, categoria: limpiarTexto(carrera.categoria || 'General'), duracion: limpiarTexto(carrera.duracion || 'No especificada'),
         modalidad, facultad: limpiarTexto(carrera.facultad || ''), link: carrera.link_oficial || '',
-        institucion: limpiarTexto(institucion.nombre || 'Institución'), gestion: inferirGestion(institucion),
-        tipoInstitucion: inferirTipoInstitucion(institucion), esPlataforma: false,
+        institucion: limpiarTexto(institucion.nombre || 'Institución'), gestion, tipoInstitucion: inferirTipoInstitucion(institucion),
+        esPlataforma: false,
         formacion: getFormacion(carrera), area: getArea({ nombre_carrera: nombre }),
         duracionAnios: obtenerDuracionEnAnios(carrera.duracion), modalidades: obtenerModalidades(modalidad),
+        costo: esCarreraArancelada(institucion, nombre) ? 'arancelado' : (gestion === 'pública' ? 'gratuito' : 'arancelado'),
         _clave: `institucion:${limpiarTexto(institucion.nombre || '')}:${nombre}`
     };
 }
@@ -374,12 +392,6 @@ function configurarEventos() {
         sincronizarURL();
     });
     document.getElementById('clearFiltersButton').addEventListener('click', limpiarFiltros);
-    document.getElementById('btn-ver-noticias').addEventListener('click', () => {
-        document.getElementById('seccion-noticias').hidden ? mostrarNoticias() : mostrarResultados();
-    });
-    document.getElementById('btn-ver-deportes').addEventListener('click', () => {
-        document.getElementById('seccion-deportes').hidden ? mostrarDeportes() : mostrarResultados();
-    });
 
     document.querySelectorAll('.section-tab').forEach(boton => {
         boton.addEventListener('click', () => cambiarSeccion(boton.dataset.seccion));
@@ -429,9 +441,12 @@ function configurarEventos() {
         // De más superficial a más profundo: se cierra una capa por vez.
         const m = document.getElementById('compararModal');
         if (m && !m.hidden) { cerrarComparar(); return; }
-        const chat = document.getElementById('ventana-chat');
-        if (chat && !chat.hidden) { cerrarChat(); return; }
-        if (document.body.classList.contains('filters-open')) cambiarPanelFiltros(false);
+        if (document.body.classList.contains('filters-open')) { cambiarPanelFiltros(false); return; }
+        const panel = document.getElementById('copilotoPanel');
+        if (panel && panel.classList.contains('is-test-pantalla-completa')) { salirDelTest(); return; }
+        const ventana = document.getElementById('ventana-chat');
+        if (ventana && !ventana.hidden) { cerrarChat(); return; }
+        // La bienvenida es la puerta de entrada del sitio y no se cierra con Escape.
     });
 
     actualizarBarraComparar();
@@ -500,8 +515,6 @@ function cambiarSeccion(seccion) {
 
 function mostrarCatalogoAparte(seccion) {
     const catalogo = catalogosAparte[seccion];
-    document.getElementById('seccion-noticias').hidden = true;
-    document.getElementById('seccion-deportes').hidden = true;
     document.getElementById('seccion-plataformas').hidden = true;
     document.getElementById('plataformas-coincidentes').hidden = true;
     document.getElementById('cardContainer').hidden = true;
@@ -576,8 +589,6 @@ function ocultarCatalogosAparte() {
 }
 
 function mostrarPlataformas() {
-    document.getElementById('seccion-noticias').hidden = true;
-    document.getElementById('seccion-deportes').hidden = true;
     document.getElementById('plataformas-coincidentes').hidden = true;
     ocultarCatalogosAparte();
     document.getElementById('cardContainer').hidden = true;
@@ -627,8 +638,6 @@ function mostrarResultados() {
     if (estado.seccion === 'plataformas') { mostrarPlataformas(); return; }
     if (catalogosAparte[estado.seccion]) { mostrarCatalogoAparte(estado.seccion); return; }
 
-    document.getElementById('seccion-noticias').hidden = true;
-    document.getElementById('seccion-deportes').hidden = true;
     document.getElementById('seccion-plataformas').hidden = true;
     ocultarCatalogosAparte();
     document.getElementById('filtersSidebar').hidden = false;
@@ -712,7 +721,7 @@ function puntuacionRelacion(oferta) {
     if (estado.gestion !== 'todos' && oferta.gestion === estado.gestion) score += 15;
     if (estado.modalidad !== 'todos' && oferta.modalidades.includes(estado.modalidad)) score += 15;
     if (estado.institucion !== 'todos' && oferta.tipoInstitucion === estado.institucion) score += 15;
-    if (estado.costo !== 'todos' && (oferta.gestion === 'pública' ? 'gratuito' : 'arancelado') === estado.costo) score += 10;
+    if (estado.costo !== 'todos' && (oferta.costo || (oferta.gestion === 'pública' ? 'gratuito' : 'arancelado')) === estado.costo) score += 10;
     if (estado.duracion !== 'todos') {
         const grupo = getGrupoDuracion(oferta.duracionAnios);
         if (grupo === estado.duracion) score += 10;
@@ -824,7 +833,7 @@ function filtrarYOrdenar() {
             && (estado.institucion === 'todos' || oferta.tipoInstitucion === estado.institucion)
             && (estado.gestion === 'todos' || oferta.gestion === estado.gestion)
             && (estado.modalidad === 'todos' || oferta.modalidades.includes(estado.modalidad))
-            && (estado.costo === 'todos' || (oferta.gestion === 'pública' ? 'gratuito' : 'arancelado') === estado.costo)
+            && (estado.costo === 'todos' || (oferta.costo || (oferta.gestion === 'pública' ? 'gratuito' : 'arancelado')) === estado.costo)
             && (estado.duracion === 'todos' || getGrupoDuracion(oferta.duracionAnios) === estado.duracion)
             && (estado.area === 'todos' || oferta.area === estado.area)
             && (estado.favoritos === false || favoritos.has(oferta._clave))
@@ -849,24 +858,59 @@ function filtrarYOrdenar() {
     return comparadores[estado.orden] ? resultados.sort(comparadores[estado.orden]) : resultados;
 }
 
-function estaEnFavoritos(clave) { return favoritos.has(clave); }
+// Resuelve una clave a las claves reales de oferta. Si la clave ya pertenece a
+// una oferta/plataforma/catálogo aparte, es única. Si es una carrera del
+// orientador (p.ej. "abogacia"), devuelve todas las ofertas que la dictan: así
+// favorito y comparar guardan lo mismo que filtra y muestra el catálogo.
+function clavesDeCarrera(clave) {
+    if (buscarPorClave(clave)) return [clave];
+    const carrera = (Orientador.perfilesCarreras || []).find(c => c.clave === clave);
+    if (!carrera) return [];
+    const nombreNorm = normalizarTexto(carrera.nombre);
+    return ofertas.filter(o => normalizarTexto(o.nombre) === nombreNorm).map(o => o._clave);
+}
+
+function estaEnFavoritos(clave) {
+    if (favoritos.has(clave)) return true;
+    const claves = clavesDeCarrera(clave);
+    return claves.length > 0 && claves.every(c => favoritos.has(c));
+}
 
 function toggleFavorito(clave) {
-    if (favoritos.has(clave)) favoritos.delete(clave); else favoritos.add(clave);
+    const claves = clavesDeCarrera(clave);
+    if (!claves.length) return;
+    // Si la carrera ya está guardada completa se saca entera; si no, se guarda
+    // con todas sus instituciones (para que "Solo favoritos" la encuentre).
+    const completo = claves.every(c => favoritos.has(c));
+    claves.forEach(c => { if (completo) favoritos.delete(c); else favoritos.add(c); });
     escribirGuardado(FAVORITOS_KEY, [...favoritos]);
-    const boton = document.querySelector(`.btn-favorito[data-clave="${CSS.escape(clave)}"]`);
-    if (boton) { boton.classList.toggle('is-active', favoritos.has(clave)); boton.setAttribute('aria-pressed', String(favoritos.has(clave))); }
+    // Se actualizan todos los botones de esa clave (grilla y tarjetas del chat),
+    // no solo el primero que encuentre.
+    document.querySelectorAll(`.btn-favorito[data-clave="${CSS.escape(clave)}"]`).forEach(boton => {
+        boton.classList.toggle('is-active', !completo);
+        boton.setAttribute('aria-pressed', String(!completo));
+    });
     if (estado.favoritos) mostrarResultados();
 }
 
-function enComparador(clave) { return comparador.has(clave); }
+function enComparador(clave) {
+    if (comparador.has(clave)) return true;
+    const claves = clavesDeCarrera(clave);
+    return claves.length > 0 && claves.every(c => comparador.has(c));
+}
 function cantidadComparador() { return comparador.size; }
 
 function toggleComparar(clave) {
-    if (comparador.has(clave)) comparador.delete(clave); else comparador.add(clave);
+    const claves = clavesDeCarrera(clave);
+    if (!claves.length) return;
+    const completo = claves.every(c => comparador.has(c));
+    claves.forEach(c => { if (completo) comparador.delete(c); else comparador.add(c); });
     escribirGuardado(COMPARAR_KEY, [...comparador]);
-    const boton = document.querySelector(`.btn-comparar[data-clave="${CSS.escape(clave)}"]`);
-    if (boton) { boton.classList.toggle('is-active', comparador.has(clave)); boton.setAttribute('aria-pressed', String(comparador.has(clave))); }
+    // Se actualizan todos los botones de esa clave (grilla y tarjetas del chat).
+    document.querySelectorAll(`.btn-comparar[data-clave="${CSS.escape(clave)}"]`).forEach(boton => {
+        boton.classList.toggle('is-active', !completo);
+        boton.setAttribute('aria-pressed', String(!completo));
+    });
     actualizarBarraComparar();
 }
 
@@ -909,7 +953,7 @@ function construirTablaComparar(items) {
         ['Categoría / Área', i => capitalizar(i.categoria || i.area || '—')],
         ['Modalidad', i => capitalizar(i.modalidad || '—')],
         ['Duración', i => capitalizar(i.duracion || '—')],
-        ['Gestión / Costo', i => i.gestion ? (i.gestion === 'pública' ? 'Pública (gratuita)' : 'Privada (arancelada)') : '—'],
+        ['Gestión / Costo', i => i.costo ? `${i.gestion === 'pública' ? 'Pública' : 'Privada'} · ${i.costo === 'arancelado' ? 'Arancelada' : 'Gratuita'}` : (i.gestion ? (i.gestion === 'pública' ? 'Pública (gratuita)' : 'Privada (arancelada)') : '—')],
         ['Sitio oficial', i => (i.link || i.url) ? `<a href="${i.link || i.url}" target="_blank" rel="noopener noreferrer">Ir ↗</a>` : '—']
     ];
     const encabezado = `<tr><th></th>${items.map(i => `<th>${i.nombre}</th>`).join('')}</tr>`;
@@ -941,6 +985,7 @@ function renderizarTarjetas(resultados, { mostrarMatch = false, encabezado = '' 
                 <span class="badge">${capitalizar(oferta.categoria)}</span>
                 <span class="badge badge-area">${capitalizar(oferta.area)}</span>
                 ${!oferta.fuente || oferta.fuente === 'formal' ? `<span class="badge badge-${oferta.gestion === 'pública' ? 'publica' : 'privada'}">${oferta.gestion === 'pública' ? 'Pública' : 'Privada'}</span>` : ''}
+                ${oferta.gestion === 'pública' && oferta.costo === 'arancelado' ? '<span class="badge badge-arancelada">Arancelada</span>' : ''}
                 <span class="badge badge-modalidad">${capitalizar(oferta.modalidad)}</span>
             </div>
             <h3 class="card-title">${capitalizar(oferta.nombre)}</h3>
@@ -956,6 +1001,64 @@ function renderizarTarjetas(resultados, { mostrarMatch = false, encabezado = '' 
                 <button type="button" class="btn-comparar${enComparador(oferta._clave) ? ' is-active' : ''}" data-clave="${oferta._clave}" aria-pressed="${enComparador(oferta._clave)}" title="Agregar a comparar">${enComparador(oferta._clave) ? '✓' : '+'} <span>Comparar</span></button>
             </div>
         </article>`).join('');
+}
+function renderizarTarjetasConCompatibilidad(resultados, rankings) {
+    const contenedor = document.getElementById('cardContainer');
+    if (!resultados.length) {
+        contenedor.innerHTML = '<p class="empty-state">No encontramos carreras compatibles con ese perfil. Probá rehacer el test.</p>';
+        return;
+    }
+    
+    contenedor.innerHTML = resultados.map(carrera => {
+        const compat = carrera.compatibilidad || 0;
+        const matchClass = compat >= 80 ? 'match-alto' : (compat >= 60 ? 'match-medio' : 'match-bajo');
+        const coincidencias = carrera.coincidencias || [];
+        const alertas = carrera.alertas || [];
+        const instituciones = carrera.instituciones || [];
+        const clave = carrera.clave || carrera.nombre;
+        
+        // Determinar badge de tipo de formación
+        let tipoBadge = '';
+        if (rankings.grados.some(r => r.clave === carrera.clave)) tipoBadge = '<span class="tipo-badge grado">Grado</span>';
+        else if (rankings.tecnicaturas.some(r => r.clave === carrera.clave)) tipoBadge = '<span class="tipo-badge tecnica">Tecnicatura</span>';
+        else if (rankings.cursos.some(r => r.clave === carrera.clave)) tipoBadge = '<span class="tipo-badge curso">Curso</span>';
+        
+        return `
+        <article class="carrera-card ${matchClass}" data-carrera-id="${clave}">
+            <div class="card-header">
+                <h3>${capitalizar(carrera.nombre)}</h3>
+                <div class="compatibilidad-badge ${matchClass}">${compat}% match</div>
+            </div>
+            ${tipoBadge ? '<div class="tipo-badges">' + tipoBadge : ''}
+            ${carrera.area ? '<span class="tipo-badge area">' + capitalizar(carrera.area) + '</span>' : ''}
+            ${tipoBadge ? '</div>' : ''}
+            ${coincidencias.length ? `
+            <div class="card-match-motivos">
+                <strong>Por qué coincide:</strong>
+                <ul class="motivos-list">
+                    ${coincidencias.map(c => '<li>' + c.label + ': <em>' + c.desc + '</em></li>').join('')}
+                </ul>
+            </div>` : ''}
+            ${alertas.length ? `
+            <div class="card-alertas">
+                <strong>⚠ Alertas:</strong>
+                <ul class="alertas-list">
+                    ${alertas.map(a => '<li>' + a.mensaje + '</li>').join('')}
+                </ul>
+            </div>` : ''}
+            ${instituciones.length ? `
+            <div class="card-instituciones">
+                <strong>Instituciones:</strong>
+                <ul class="instituciones-list">
+                    ${instituciones.map(i => '<li>' + i + '</li>').join('')}
+                </ul>
+            </div>` : ''}
+            <div class="card-actions">
+                <button type="button" class="btn-favorito${estaEnFavoritos(clave) ? ' is-active' : ''}" data-clave="${clave}" aria-pressed="${estaEnFavoritos(clave)}" title="Guardar en favoritos">${estaEnFavoritos(clave) ? '★' : '☆'} <span>Favorito</span></button>
+                <button type="button" class="btn-comparar${enComparador(clave) ? ' is-active' : ''}" data-clave="${clave}" aria-pressed="${enComparador(clave)}" title="Agregar a comparar">${enComparador(clave) ? '✓' : '+'} <span>Comparar</span></button>
+            </div>
+        </article>`;
+    }).join('');
 }
 
 function actualizarBotonesActivos() {
@@ -988,110 +1091,6 @@ function cambiarPanelFiltros(abrir) {
     if (destino && mqCajonFiltros.matches) destino.focus();
 }
 
-async function mostrarNoticias() {
-    ocultarCargarMas();
-    cambiarPanelFiltros(false);
-    document.getElementById('cardContainer').hidden = true;
-    document.getElementById('resultsToolbar').hidden = true;
-    document.getElementById('seccion-deportes').hidden = true;
-    document.getElementById('seccion-plataformas').hidden = true;
-    document.getElementById('plataformas-coincidentes').hidden = true;
-    ocultarCatalogosAparte();
-    const seccion = document.getElementById('seccion-noticias');
-    const contenedor = document.getElementById('contenedor-noticias');
-    seccion.hidden = false;
-    contenedor.innerHTML = '';
-    try {
-        const datos = await (await fetch('../data/noticias.json')).json();
-        const noticias = datos.noticias || [];
-        contenedor.innerHTML = noticias.length ? noticias.map(noticia => `
-            <article class="news-card"><p>${noticia.fecha_captura || ''} · ${noticia.institucion || ''}</p>
-            <h3>${noticia.titulo || 'Novedad educativa'}</h3>
-            <a href="${noticia.link}" target="_blank" rel="noopener noreferrer">Ver novedad ↗</a></article>`).join('')
-            : '<p class="empty-state">No hay novedades disponibles.</p>';
-    } catch (error) {
-        contenedor.innerHTML = '<p class="empty-state">No se pudieron cargar las novedades.</p>';
-    }
-}
-
-// ==========================================
-// 🏀 CENTROS DEPORTIVOS (vista separada de la búsqueda de carreras)
-// ==========================================
-
-let centrosDeportivos = null;
-let departamentoDeporteActivo = 'todos';
-
-async function mostrarDeportes() {
-    ocultarCargarMas();
-    cambiarPanelFiltros(false);
-    document.getElementById('cardContainer').hidden = true;
-    document.getElementById('resultsToolbar').hidden = true;
-    document.getElementById('seccion-noticias').hidden = true;
-    document.getElementById('seccion-plataformas').hidden = true;
-    document.getElementById('plataformas-coincidentes').hidden = true;
-    ocultarCatalogosAparte();
-    document.getElementById('seccion-deportes').hidden = false;
-    // Los filtros de carreras no aplican acá: se ocultan para dejar solo el
-    // filtro por departamento propio de esta vista.
-    document.getElementById('filtersSidebar').hidden = true;
-    document.getElementById('mobileFilterButton').hidden = true;
-
-    if (centrosDeportivos === null) {
-        await cargarCentrosDeportivos();
-    }
-    renderizarDeportes();
-}
-
-async function cargarCentrosDeportivos() {
-    const contenedor = document.getElementById('contenedor-deportes');
-    contenedor.innerHTML = '';
-    try {
-        const datos = await (await fetch('../data/deporte.json')).json();
-        centrosDeportivos = datos.centros_deportivos || [];
-        construirFiltroDepartamentos();
-    } catch (error) {
-        centrosDeportivos = [];
-        contenedor.innerHTML = '<p class="empty-state">No se pudieron cargar los centros deportivos.</p>';
-    }
-}
-
-function construirFiltroDepartamentos() {
-    const contenedorFiltro = document.getElementById('filtroDepartamento');
-    const departamentos = [...new Set(centrosDeportivos.map(centro => centro.departamento).filter(Boolean))].sort();
-    contenedorFiltro.innerHTML = ['todos', ...departamentos].map(departamento => `
-        <button class="filter-option${departamento === 'todos' ? ' active' : ''}" data-departamento="${departamento}" type="button">
-            ${departamento === 'todos' ? 'Todos' : departamento}
-        </button>`).join('');
-
-    contenedorFiltro.querySelectorAll('.filter-option').forEach(boton => {
-        boton.addEventListener('click', () => {
-            departamentoDeporteActivo = boton.dataset.departamento;
-            contenedorFiltro.querySelectorAll('.filter-option').forEach(b => b.classList.toggle('active', b === boton));
-            renderizarDeportes();
-        });
-    });
-}
-
-function renderizarDeportes() {
-    const contenedor = document.getElementById('contenedor-deportes');
-    if (!centrosDeportivos || !centrosDeportivos.length) return;
-
-    const filtrados = departamentoDeporteActivo === 'todos'
-        ? centrosDeportivos
-        : centrosDeportivos.filter(centro => centro.departamento === departamentoDeporteActivo);
-
-    contenedor.innerHTML = filtrados.length ? filtrados.map(centro => `
-        <article class="news-card sports-card">
-            <p>Departamento: ${capitalizar(centro.departamento || 'No especificado')}</p>
-            <h3>${capitalizar(centro.nombre || 'Centro deportivo')}</h3>
-            <p>${capitalizar(centro.ubicacion || '')}</p>
-            ${(centro.deportes_destacados || []).length ? `<div class="card-badges">${centro.deportes_destacados.map(deporte => `<span class="badge">${capitalizar(deporte)}</span>`).join('')}</div>` : ''}
-            <p>${limpiarTexto(centro.contacto || '')}</p>
-            ${centro.link_oficial ? `<a href="${centro.link_oficial}" target="_blank" rel="noopener noreferrer">Ver más ↗</a>` : ''}
-        </article>`).join('')
-        : '<p class="empty-state">No hay centros deportivos para ese departamento.</p>';
-}
-
 function limpiarTexto(texto) { return String(texto || '').replace(/\s+/g, ' ').trim(); }
 function normalizarTexto(texto) { return limpiarTexto(texto).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
 // Primera letra en mayúscula y el resto en minúscula, para uniformar el texto
@@ -1102,6 +1101,12 @@ function capitalizar(texto) {
     return t.charAt(0).toUpperCase() + t.slice(1).toLowerCase();
 }
 function inferirGestion(institucion) { const gestion = normalizarTexto(institucion.gestion); return gestion.includes('public') || normalizarTexto(institucion.nombre).includes('utn') ? 'pública' : 'privada'; }
+// Las carreras de la UTN que no son ingenierías se dictan con arancel
+// (licenciaturas, tecnicaturas, cursos); las ingenierías son gratuitas.
+function esCarreraArancelada(institucion, nombre) {
+    const esUtn = normalizarTexto(institucion.nombre || '').includes('utn');
+    return esUtn && !normalizarTexto(nombre).includes('ingenieria');
+}
 function inferirTipoInstitucion(institucion) { const nombre = normalizarTexto(institucion.nombre); return institucion.nivel === 'universidad' || nombre.includes('universidad') || nombre.includes('universitario') || nombre.includes('utn') ? 'universidades' : (nombre.includes('ies') || nombre.includes('instituto superior') ? 'ies' : 'centros'); }
 function getFormacion(carrera) { const texto = normalizarTexto(`${carrera.categoria} ${carrera.nombre_carrera}`); return texto.includes('profesorado') ? 'profesorados' : (texto.includes('tecnicatura') || texto.includes('tecnico') || texto.includes('pregrado') ? 'tecnicaturas' : (texto.includes('curso') || texto.includes('formacion profesional') ? 'cursos' : 'grado')); }
 function getCategoryGroup(carrera) { const formacion = getFormacion(carrera); return formacion === 'tecnicaturas' ? 'pregrado' : (formacion === 'cursos' ? 'cursos' : 'grado'); }
@@ -1128,112 +1133,172 @@ function obtenerDuracionEnAnios(duracion) { const texto = normalizarTexto(duraci
 function getGrupoDuracion(anios) { if (anios === null) return 'sin-definir'; if (anios < 0.5) return 'corta'; if (anios <= 1) return 'hasta-1'; if (anios < 4) return '2-3'; return '4-mas'; }
 
 // ==========================================
-// 🤖 BOT ORIENTADOR VOCACIONAL (Sistema de Scoring Inteligente)
+// 🤖 BOT ORIENTADOR VOCACIONAL - Nuevo Sistema Multidimensional
 // ==========================================
 
-// Cada pregunta tiene un `campo`: así perfilUsuario[campo] guarda la respuesta
-// y el bot puede avanzar/retroceder sin depender de números de paso hardcodeados.
-const preguntasTest = [
-    {
-        campo: 'entorno',
-        pregunta: "Vamos a buscar la carrera ideal para vos. Imaginate un lunes a la mañana en tu trabajo soñado, ¿qué estás haciendo?",
-        opciones: [
-            { texto: "Frente a la compu, analizando datos, programando o gestionando un proyecto.", valor: "oficina" },
-            { texto: "En movimiento, metiendo mano en equipos, al aire libre o viajando.", valor: "terreno" },
-            { texto: "En contacto con gente, ayudando a resolver problemas, educando o cuidando.", valor: "social" }
-        ]
-    },
-    {
-        campo: 'habilidad',
-        pregunta: "Si tuvieras que destacar tu punto fuerte o lo que te resulta más natural, ¿con cuál te quedás?",
-        opciones: [
-            { texto: "Los números, la lógica, desarmar un problema y encontrarle la solución paso a paso.", valor: "analitico" },
-            { texto: "La creatividad, el diseño, inventar cosas nuevas o pensar fuera de la caja.", valor: "creativo" },
-            { texto: "La empatía, saber escuchar, la comunicación y el trabajo en equipo.", valor: "empatico" }
-        ]
-    },
-    {
-        campo: 'modalidad',
-        pregunta: "¿Tenés preferencia de modalidad para cursar?",
-        opciones: [
-            { texto: "Presencial: me sirve tener contacto directo con el lugar y la gente.", valor: "presencial" },
-            { texto: "Online o a distancia: quiero organizar mis propios horarios.", valor: "online" },
-            { texto: "Me da igual, lo importante es que sea lo que busco.", valor: "cualquiera" }
-        ]
-    },
-    {
-        campo: 'nivel',
-        pregunta: "Seamos prácticos con el tiempo y las ganas de estudiar: ¿Cómo te proyectás de acá a unos años?",
-        opciones: [
-            { texto: "Tengo paciencia para dedicarle 5 años o más y sacar un título universitario de peso.", valor: "grado" },
-            { texto: "Busco un punto medio: una carrera de 2 o 3 años para entrar al mercado laboral más rápido.", valor: "tecnicatura" },
-            { texto: "Quiero ir directo al grano: cursos cortos y enfocados para adquirir una habilidad y aplicarla ya.", valor: "curso" }
-        ]
-    },
-    {
-        campo: 'odio',
-        pregunta: "Última pregunta para no equivocarnos: ¿Qué es lo que más te frustraría en tu día a día laboral?",
-        opciones: [
-            { texto: "Estar todo el tiempo haciendo cálculos complejos o leyendo textos teóricos larguísimos.", valor: "duro" },
-            { texto: "La rutina absoluta, que todos los días sean exactamente iguales sin dinamismo.", valor: "rutina" },
-            { texto: "Lidiar constantemente con atención al público, reclamos o tener que convencer clientes.", valor: "publico" }
-        ]
-    }
-];
-
 let pasoActual = 0;
-let perfilUsuario = {};
+let perfilUsuario = {}; // { analitico: 3, tecnologico: 2, ... } scores 0-5
+let respuestasTest = []; // Array de { preguntaId, opcionTexto, dimensionScores }
 let procesandoPasoChat = false;
 let enTestVocacional = false;
 // Historial de la conversación: cada entrada es { rol: 'bot'|'usuario', html }.
 const historialChat = [];
 let bubbleEscribiendo = null;
+let orientadorListo = false;
 
-// Cierra el chat y devuelve el foco al botón que lo abrió (si no, el foco queda
-// perdido en un panel invisible). Global para que Escape la pueda usar.
-function cerrarChat() {
+// El copiloto es una burbuja flotante en la esquina inferior derecha, igual en
+// todos los tamaños de pantalla. Comportamiento uniforme: abre y cierra por
+// click; no hay modo "escritorio siempre abierto" ni "celular plegable".
+function cambiarPanelCopiloto(abrir, { foco = true } = {}) {
     const ventana = document.getElementById('ventana-chat');
-    const abrir = document.getElementById('btn-toggle-chat');
+    const panel = document.getElementById('copilotoPanel');
+    const boton = document.getElementById('btn-toggle-chat');
     if (!ventana) return;
-    ventana.hidden = true;
-    if (abrir) {
-        abrir.setAttribute('aria-expanded', 'false');
-        abrir.focus();
+    ventana.hidden = !abrir;
+    if (panel) panel.classList.toggle('is-abierto', abrir);
+    if (boton) boton.setAttribute('aria-expanded', String(abrir));
+    if (!foco) return;
+    // El foco no puede quedarse en un elemento que se acaba de ocultar. Sin
+    // campo de texto, el foco va al primer control del chat (o a la ✕).
+    if (abrir) setTimeout(() => {
+        const cuerpo = document.getElementById('chat-caja');
+        const primerControl = cuerpo && cuerpo.querySelector('button');
+        const destino = primerControl || document.getElementById('btn-cerrar-chat');
+        if (destino) destino.focus();
+    }, 60);
+    else if (boton && !(panel && panel.classList.contains('is-test-pantalla-completa'))) boton.focus();
+}
+
+// Cierra la burbuja y vuelve a dejar solo el botón circular. Durante el test a
+// pantalla completa no aplica: ahí la ✕ (y Escape) salen del test, no pliegan.
+function cerrarChat() {
+    const panel = document.getElementById('copilotoPanel');
+    if (panel && panel.classList.contains('is-test-pantalla-completa')) return;
+    cambiarPanelCopiloto(false);
+}
+
+// Modo "test a pantalla completa": el panel se estira sobre el viewport y se
+// muestra la ventana de chat con el cuestionario guiado. Se entra desde la
+// bienvenida.
+function abrirTestPantallaCompleta() {
+    const panel = document.getElementById('copilotoPanel');
+    const ventana = document.getElementById('ventana-chat');
+    if (!ventana || !panel) return;
+    // La conversación se arma una sola vez (en configurarChat); acá solo se abre.
+    if (historialChat.length === 0) {
+        historialChat.push({ rol: 'bot', html: mensajeBienvenida() });
+        renderizarChat();
     }
+    panel.classList.add('is-test-pantalla-completa');
+    cambiarPanelCopiloto(true, { foco: true });
+}
+
+// Salir del test a pantalla completa: fade-out del panel y vuelta a la burbuja
+// cerrada. Es la transición "test → interfaz principal".
+function salirDelTest() {
+    const panel = document.getElementById('copilotoPanel');
+    if (!panel || !panel.classList.contains('is-test-pantalla-completa')) return;
+    panel.classList.add('is-saliendo-test');
+    let terminado = false;
+    const limpiar = () => {
+        if (terminado) return;
+        terminado = true;
+        panel.classList.remove('is-test-pantalla-completa', 'is-saliendo-test', 'is-abierto');
+        const ventana = document.getElementById('ventana-chat');
+        if (ventana) ventana.hidden = true;
+        const boton = document.getElementById('btn-toggle-chat');
+        if (boton) { boton.setAttribute('aria-expanded', 'false'); boton.focus(); }
+    };
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { limpiar(); return; }
+    panel.addEventListener('transitionend', limpiar, { once: true });
+    setTimeout(limpiar, 450);
 }
 
 function configurarChat() {
     const abrir = document.getElementById('btn-toggle-chat');
     const cerrar = document.getElementById('btn-cerrar-chat');
     const ventana = document.getElementById('ventana-chat');
-    const input = document.getElementById('chat-input-texto');
-    const enviar = document.getElementById('chat-input-enviar');
 
-    abrir.addEventListener('click', () => {
-        ventana.hidden = !ventana.hidden;
-        const abierto = !ventana.hidden;
-        abrir.setAttribute('aria-expanded', String(abierto));
-        // Si se abre por primera vez, le damos la bienvenida y sugerencias.
-        if (abierto && historialChat.length === 0) {
-            historialChat.push({ rol: 'bot', html: mensajeBienvenida() });
-            renderizarChat();
-        }
-        if (abierto) setTimeout(() => input && input.focus(), 60);
+    // La conversación se arma una sola vez y la burbuja arranca cerrada: el
+    // contenido queda listo para el primer click.
+    if (historialChat.length === 0) {
+        historialChat.push({ rol: 'bot', html: mensajeBienvenida() });
+    }
+    renderizarChat();
+    cambiarPanelCopiloto(false, { foco: false });
+
+    abrir.addEventListener('click', () => cambiarPanelCopiloto(ventana.hidden));
+    cerrar.addEventListener('click', () => {
+        const panel = document.getElementById('copilotoPanel');
+        if (panel && panel.classList.contains('is-test-pantalla-completa')) salirDelTest();
+        else cerrarChat();
     });
+}
 
-    cerrar.addEventListener('click', cerrarChat);
+// ==========================================
+// 🚪 PANTALLA DE BIENVENIDA
+// ==========================================
 
-    function enviarMensaje() {
-        const texto = (input.value || '').trim();
-        if (!texto) return;
-        input.value = '';
-        procesarEntradaUsuario(texto);
+// Bienvenida: puerta de entrada del sitio. Se muestra siempre que se entra SIN
+// filtros/búsqueda en la URL; un link compartido (con parámetros) va directo al
+// catálogo con esos filtros aplicados.
+function configurarBienvenida() {
+    const pantalla = document.getElementById('pantallaBienvenida');
+    if (!pantalla) return;
+
+    if (location.search.length > 0) {
+        // Link compartido: la bienvenida no se muestra ni se anima.
+        ocultarBienvenidaInstantanea();
+    } else {
+        // El catálogo queda tapado detrás: que el teclado no tabule a lo invisible.
+        alternarInertDetrasDeBienvenida(true);
     }
 
-    enviar.addEventListener('click', enviarMensaje);
-    input.addEventListener('keydown', event => {
-        if (event.key === 'Enter') enviarMensaje();
+    const btnCopiloto = document.getElementById('btnBienvenidaCopiloto');
+    const btnCatalogo = document.getElementById('btnBienvenidaCatalogo');
+    if (btnCopiloto) btnCopiloto.addEventListener('click', () => {
+        salirDeBienvenida(() => abrirTestPantallaCompleta());
     });
+    if (btnCatalogo) btnCatalogo.addEventListener('click', () => {
+        salirDeBienvenida();
+    });
+}
+
+// El catálogo (y el header con su buscador) quedan inert mientras la bienvenida
+// está encima: no hay nada visible con lo que interactuar. La burbuja del
+// copiloto también: su botón de "Empezar" es el que está en la bienvenida.
+function alternarInertDetrasDeBienvenida(activo) {
+    [document.querySelector('.hero'), document.querySelector('.catalog-layout'), document.getElementById('copilotoPanel')]
+        .forEach(el => { if (el) el.inert = activo; });
+}
+
+function ocultarBienvenidaInstantanea() {
+    const pantalla = document.getElementById('pantallaBienvenida');
+    if (!pantalla) return;
+    pantalla.hidden = true;
+    pantalla.classList.remove('is-saliendo');
+    alternarInertDetrasDeBienvenida(false);
+}
+
+// Transición de salida de la bienvenida (fade + subida leve). Al terminar se
+// oculta y se ejecuta lo que llegue en "despues" (p.ej. abrir el test).
+function salirDeBienvenida(despues) {
+    const pantalla = document.getElementById('pantallaBienvenida');
+    if (!pantalla || pantalla.hidden) { if (despues) despues(); return; }
+    if (pantalla.classList.contains('is-saliendo')) return;
+    pantalla.classList.add('is-saliendo');
+    alternarInertDetrasDeBienvenida(false);
+    let terminado = false;
+    const terminar = () => {
+        if (terminado) return;
+        terminado = true;
+        pantalla.hidden = true;
+        pantalla.classList.remove('is-saliendo');
+        if (despues) despues();
+    };
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { terminar(); return; }
+    pantalla.addEventListener('transitionend', terminar, { once: true });
+    setTimeout(terminar, 450);
 }
 
 function escaparHTML(texto) {
@@ -1268,7 +1333,7 @@ function actualizarProgresoChat() {
         return;
     }
     barra.hidden = false;
-    const total = preguntasTest.length;
+    const total = Orientador.PREGUNTAS_TEST.length;
     const pasoVisible = Math.min(pasoActual + 1, total);
     const porcentaje = Math.round((pasoActual / total) * 100);
     barra.innerHTML = `
@@ -1301,11 +1366,11 @@ function sugerenciasChips(lista) {
     ).join('')}</div>`;
 }
 
+// El camino recomendado es el test guiado, así que va primero y con el botón
+// destacado. La búsqueda libre queda como atajo para quien ya sabe qué busca.
 function mensajeBienvenida() {
-    return `<p>👋 ¡Hola! Soy el <strong>Copiloto Vocacional</strong> de BEN. Busco carreras en la oferta educativa de Mendoza según lo que te guste, y también respondo dudas. Probá escribir algo así:</p>
-        ${sugerenciasChips(['carreras de informática', '¿cuánto dura medicina?', 'qué ofrece la UNCuyo', 'carreras online'])}
-        <p class="mensaje-bot-nota">O hacé el test guiado con el botón de abajo.</p>
-        <button type="button" class="btn-chat-opcion" onclick="iniciarTestVocacional()">🎯 Hacer el test vocacional</button>`;
+    return `<p>👋 Si no sabés por dónde empezar, te hago <strong>5 preguntas cortas</strong> y al final te muestro las carreras de Mendoza que mejor encajan con vos.</p>
+        <button type="button" class="btn-chat-resultado" onclick="iniciarTestVocacional()">🎯 Empezar el test</button>`;
 }
 
 function mensajeAyuda() {
@@ -1323,38 +1388,59 @@ function mensajeAyuda() {
 function iniciarTestVocacional() {
     pasoActual = 0;
     perfilUsuario = {};
+    respuestasTest = [];
     enTestVocacional = true;
     procesandoPasoChat = false;
     historialChat.length = 0;
-    historialChat.push({ rol: 'bot', html: '<p>🎯 Perfecto. Te hago unas preguntas cortas para mapear tu perfil. Respondé con los botones o escribí tu respuesta con tus palabras.</p>' });
+    historialChat.push({ rol: 'bot', html: '<p>🎯 Perfecto. Te hago <strong>5 preguntas</strong> para mapear tu perfil multidimensional. Respondé eligiendo una de las opciones.</p>' });
     actualizarProgresoChat();
     mostrarPregunta();
 }
 
+// Preguntas del test vocacional - Usando las del módulo Orientador
+const preguntasTest = Orientador.PREGUNTAS_TEST;
+
 function mostrarPregunta() {
     const preguntaObj = preguntasTest[pasoActual];
     const opciones = preguntaObj.opciones
-        .map(opcion => `<button type="button" class="btn-chat-opcion" onclick='seleccionarOpcionChat(${JSON.stringify(opcion.valor).replace(/'/g, "&#39;")}, ${JSON.stringify(opcion.texto).replace(/'/g, "&#39;")})'>${opcion.texto}</button>`)
+        .map((opcion, idx) => `<button type="button" class="btn-chat-opcion" onclick='seleccionarOpcionChat(${idx}, ${JSON.stringify(opcion.texto).replace(/'/g, "&#39;")})'>${opcion.texto}</button>`)
         .join('');
 
     historialChat.push({ rol: 'bot', html: `
-        <p>🤖 <strong>Orientador:</strong> ${preguntaObj.pregunta}</p>
+        <p>🤖 <strong>Orientador:</strong> ${preguntaObj.texto}</p>
         <div class="opciones-usuario">${opciones}</div>
-        ${pasoActual > 0 ? '<button type="button" class="btn-chat-atras" onclick="volverPreguntaChat()">← Volver a la pregunta anterior</button>' : ''}
-        <p class="mensaje-bot-nota">💬 También podés responder con tus palabras.</p>` });
+        ${pasoActual > 0 ? '<button type="button" class="btn-chat-atras" onclick="volverPreguntaChat()">← Volver a la pregunta anterior</button>' : ''}` });
     actualizarProgresoChat();
     renderizarChat();
-}
 
+
+
+}
 // Para que se pueda llamar desde los botones inyectados en el HTML
-window.seleccionarOpcionChat = function(valor, textoOpcion) {
+window.seleccionarOpcionChat = function(opcionIdx, textoOpcion) {
     if (procesandoPasoChat) return;
     procesandoPasoChat = true;
 
-    perfilUsuario[preguntasTest[pasoActual].campo] = valor;
+    const preguntaObj = preguntasTest[pasoActual];
+    const opcion = preguntaObj.opciones[opcionIdx];
+    
+    // Acumular scores dimensionales
+    if (opcion.dimensionScores) {
+        Orientador.DIMENSIONES.forEach(d => {
+            const val = opcion.dimensionScores[d] || 0;
+            perfilUsuario[d] = (perfilUsuario[d] || 0) + val;
+        });
+    }
+    
+    respuestasTest.push({
+        preguntaId: preguntaObj.id,
+        opcionTexto: textoOpcion,
+        dimensionScores: opcion.dimensionScores
+    });
+    
     pasoActual++;
 
-    historialChat.push({ rol: 'usuario', html: `<p>${escaparHTML(textoOpcion)}</p>` });
+    historialChat.push({ rol: 'usuario', html: '<p>' + escaparHTML(textoOpcion) + '</p>' });
     mostrarEscribiendo();
 
     setTimeout(() => {
@@ -1374,7 +1460,16 @@ window.volverPreguntaChat = function() {
     historialChat.pop();
     historialChat.pop();
     pasoActual--;
-    delete perfilUsuario[preguntasTest[pasoActual].campo];
+    
+    // Revertir scores dimensionales
+    const ultimaRespuesta = respuestasTest.pop();
+    if (ultimaRespuesta && ultimaRespuesta.dimensionScores) {
+        Orientador.DIMENSIONES.forEach(d => {
+            const val = ultimaRespuesta.dimensionScores[d] || 0;
+            perfilUsuario[d] = Math.max(0, (perfilUsuario[d] || 0) - val);
+        });
+    }
+    
     actualizarProgresoChat();
     mostrarPregunta();
 };
@@ -1382,6 +1477,7 @@ window.volverPreguntaChat = function() {
 window.reiniciarChat = function() {
     pasoActual = 0;
     perfilUsuario = {};
+    respuestasTest = [];
     enTestVocacional = false;
     procesandoPasoChat = false;
     historialChat.length = 0;
@@ -1392,9 +1488,8 @@ window.reiniciarChat = function() {
 
 window.iniciarTestVocacional = iniciarTestVocacional;
 
-// ==========================================
-// 💬 CHAT DE TEXTO LIBRE (sin IA externa, todo con los datos locales)
-// ==========================================
+
+// Preguntas del test vocacional - Usando las del módulo Orientador
 
 const PALABRAS_VACIAS = new Set('a al algo alguna algunas algunos aunque asi bien como con contra cual cuales cuando cuanto cuantos de del desde donde el en entre eres es esa esas ese esos esta estas este esto estoy fue habia hay hasta la las lo los mas me mi mis muy ni no nos o para pero por porque que quien se segun ser si sin sobre su sus te tener todo todos tu tus un una uno unos va vos y ya quiero quiere necesito busco buscar encontrame mostrame estudiar estudio estudios carrera carreras algo tengo podrias podes puedo mejor tener queria gustaria otra tambien'.split(' '));
 
@@ -1889,38 +1984,77 @@ function etiquetaCompatibilidad(score) {
 }
 
 function mostrarRecomendacion() {
-    const recomendadas = obtenerRecomendaciones();
     enTestVocacional = false;
     actualizarProgresoChat();
 
-    // Nos aseguramos de estar en la sección de Educación Formal (oculta noticias/deportes/plataformas)
+    // Nos aseguramos de estar en la sección de Educación Formal (oculta plataformas)
     // antes de pisar la grilla con los resultados del test.
     cambiarSeccion('formal');
 
+    // Generar perfil usuario normalizado (0-5 cada dimensión)
+    const perfilNormalizado = Orientador.generarPerfilUsuarioDesdeRespuestas(respuestasTest);
+    
+    // Generar rankings agrupados por tipo de formación
+    const rankings = Orientador.generarRanking(perfilNormalizado, { limite: 12 });
+    const todas = rankings.todas;
+    
+    // Actualizar contador
     const contadorElem = document.getElementById('resultsCount');
     if (contadorElem) {
-        contadorElem.textContent = recomendadas.length
-            ? `${recomendadas.length.toLocaleString('es-AR')} ${recomendadas.length === 1 ? 'carrera recomendada' : 'carreras compatibles con tu perfil'}`
+        contadorElem.textContent = todas.length
+            ? `${todas.length.toLocaleString('es-AR')} ${todas.length === 1 ? 'carrera recomendada' : 'carreras compatibles con tu perfil'}`
             : '0 carreras compatibles con esa combinación';
     }
-    renderizarTarjetas(recomendadas, { mostrarMatch: true });
+    
+    // Renderizar tarjetas con datos de compatibilidad
+    renderizarTarjetasConCompatibilidad(todas, rankings);
 
     let html;
-    if (!recomendadas.length) {
+    if (!todas.length) {
         html = `
             <p>🤖 <strong>Orientador:</strong> No encontré carreras que combinen con esa mezcla de respuestas. ¡Probemos de nuevo con otra combinación!</p>
             <button type="button" class="btn-chat-reset" onclick="reiniciarChat()">Empezar el test de nuevo</button>`;
     } else {
-        const mejor = recomendadas[0];
-        const motivoMejor = mejor.motivos.length ? ` Por ejemplo, <strong>${mejor.nombre}</strong> te la sugiero porque ${mejor.motivos.join(' y ')}.` : '';
+        const mejor = todas[0];
+        const matchPct = mejor.compatibilidad ? ` (${mejor.compatibilidad}%)` : '';
+        const visibles = todas.slice(0, 6);
+        const tarjetas = visibles.map(c => tarjetaResultadoChat(c, rankings)).join('');
+        const ocultas = todas.length - visibles.length;
         html = `
-            <p>🤖 <strong>Orientador:</strong> ¡Mapeo completo! Ya analicé tu perfil y te dejé <strong>${recomendadas.length} opciones</strong> acomodadas por compatibilidad en la pantalla principal.${motivoMejor}</p>
-            <p class="mensaje-bot-nota">Cerrá esta ventanita para mirarlas tranquilo. Las mejores para vos están arriba de todo.</p>
-            <button type="button" class="btn-chat-resultado" onclick="cerrarChat()">Ver mis resultados 👀</button>
+            <p>🤖 <strong>Orientador:</strong> ¡Mapeo completo! Encontré <strong>${todas.length} carreras compatibles</strong> con tu perfil.${matchPct ? ' Tu mejor match: <strong>' + mejor.nombre + '</strong> con ' + mejor.compatibilidad + '%.' : ''}</p>
+            <p class="mensaje-bot-nota">Podés marcarlas como favoritas o sumarlas para comparar desde acá mismo.</p>
+            <div class="chat-resultados">${tarjetas}</div>
+            ${ocultas > 0 ? `<p class="mensaje-bot-nota">Mostré las primeras ${visibles.length} (las de mejor match). Cerrá esta ventana y vas a encontrar la grilla completa en la página de carreras.</p>` : ''}
             <button type="button" class="btn-chat-reset" onclick="reiniciarChat()">Empezar el test de nuevo</button>`;
     }
 
     historialChat.push({ rol: 'bot', html });
     renderizarChat();
+}
+
+// Tarjeta compacta de resultado para el chat. Los botones de favorito/comparar
+// no llevan onclick: funcionan por delegación (configurarEventos) con data-clave,
+// igual que las tarjetas de la grilla.
+function tarjetaResultadoChat(carrera, rankings) {
+    const compat = carrera.compatibilidad || 0;
+    const matchClass = compat >= 80 ? 'match-alto' : (compat >= 60 ? 'match-medio' : 'match-bajo');
+    const clave = carrera.clave || carrera.nombre;
+    let tipoBadge = '';
+    if (rankings.grados.some(r => r.clave === carrera.clave)) tipoBadge = '<span class="tipo-badge grado">Grado</span>';
+    else if (rankings.tecnicaturas.some(r => r.clave === carrera.clave)) tipoBadge = '<span class="tipo-badge tecnica">Tecnicatura</span>';
+    else if (rankings.cursos.some(r => r.clave === carrera.clave)) tipoBadge = '<span class="tipo-badge curso">Curso</span>';
+
+    return `
+        <div class="chat-resultado-card ${matchClass}">
+            <div class="chat-resultado-head">
+                <span class="chat-resultado-nombre">${capitalizar(carrera.nombre)}</span>
+                <span class="compatibilidad-badge ${matchClass}">${compat}% match</span>
+            </div>
+            ${tipoBadge || carrera.area ? '<div class="tipo-badges">' + tipoBadge + (carrera.area ? '<span class="tipo-badge area">' + capitalizar(carrera.area) + '</span>' : '') + '</div>' : ''}
+            <div class="chat-resultado-acciones">
+                <button type="button" class="btn-favorito${estaEnFavoritos(clave) ? ' is-active' : ''}" data-clave="${clave}" aria-pressed="${estaEnFavoritos(clave)}" title="Guardar en favoritos">${estaEnFavoritos(clave) ? '★' : '☆'} <span>Favorito</span></button>
+                <button type="button" class="btn-comparar${enComparador(clave) ? ' is-active' : ''}" data-clave="${clave}" aria-pressed="${enComparador(clave)}" title="Agregar a comparar">${enComparador(clave) ? '✓' : '+'} <span>Comparar</span></button>
+            </div>
+        </div>`;
 }
 

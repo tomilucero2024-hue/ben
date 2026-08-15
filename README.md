@@ -5,6 +5,24 @@ buscador/catálogo de oferta educativa de Mendoza: universidades, IES/institutos
 centros de formación y plataformas online. Incluye un feed de novedades, un "Copiloto
 Vocacional" (mini test de orientación) y una vista de centros deportivos.
 
+## Propósito
+
+El fin de la aplicación es **facilitar que cada persona encuentre la carrera que más se adapta
+a ella**. No es un catálogo para explorar por curiosidad: es una herramienta que tiene que
+llevar a alguien que no sabe qué estudiar hasta una recomendación concreta.
+
+De eso se desprenden tres criterios que mandan sobre cualquier decisión de diseño:
+
+- **Interfaz limpia.** Menos elementos en pantalla, no más. Si algo no ayuda a decidir, sobra.
+- **Fácil de usar y de entender.** Sin vocabulario técnico ni educativo que el visitante tenga
+  que descifrar; que se entienda de una leída.
+- **Paso a paso hasta la recomendación.** El recorrido ideal es guiado: una cosa a la vez,
+  cada paso angosta el universo, y el final es una recomendación — no una grilla de resultados
+  para que el usuario se arregle solo.
+
+Ante la duda entre agregar una función y simplificar el camino a la recomendación, gana lo
+segundo.
+
 ## Estructura
 
 ```

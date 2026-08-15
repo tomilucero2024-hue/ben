@@ -189,13 +189,16 @@ button { cursor: pointer; }
     right: 0;
     z-index: 40;
     contain: layout;
-    --hero-pad-top: 4.5rem;
-    --hero-pad-bottom: 3rem;
+    /* Portada deliberadamente más baja que antes (4.5/3rem y logo de 500px):
+       al abrir la página tiene que verse el catálogo, no 440px de encabezado
+       (el Copiloto es ahora una burbuja flotante, no la entrada). */
+    --hero-pad-top: 2.75rem;
+    --hero-pad-bottom: 2rem;
     --hero-pad-compacto: .6rem;
     /* Ancho del logo: de grande y centrado a chico y pegado a la izquierda.
        Se anima el ANCHO (no un transform) para que el alto del header se achique
        de verdad: el alto de la imagen sigue al ancho por su proporción. */
-    --logo-w-expandido: 500px;
+    --logo-w-expandido: 380px;
     --logo-w-compacto: 190px;
     /* El min() va POR FUERA del calc: si queda anidado dentro de una resta con
        porcentajes, Chrome lo resuelve como 0. */
@@ -293,16 +296,28 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
 
 /* ================================================================
    5. ESTRUCTURA DEL CATÁLOGO
-   En computadora muestra filtros a la izquierda y resultados a la derecha.
+   En computadora: columna izquierda con los filtros y los resultados a la
+   derecha. El Copiloto ya no vive en esta columna: es una burbuja flotante
+   (ver §10).
    ================================================================ */
 .catalog-layout {
-    display: grid; grid-template-columns: 254px minmax(0, 1fr); gap: 2.25rem;
-    width: min(100% - 3rem, var(--container)); margin: 0 auto; padding: 2.5rem 0 5rem;
+    display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 2.25rem;
+    width: min(100% - 3rem, var(--container)); margin: 0 auto; padding: 1.5rem 0 5rem;
 }
-/* Cuando el sidebar de filtros de carreras está oculto (ej. en la pestaña de
-   Centros deportivos), los resultados ocupan todo el ancho disponible. */
+/* Sin position:sticky a propósito: la columna de filtros es más alta que la
+   ventana, y un sticky sobre un bloque más alto que el viewport deja su parte
+   de abajo —los filtros— fuera de alcance para siempre. */
+.catalog-side { display: flex; flex-direction: column; gap: var(--space-7); min-width: 0; align-self: start; }
+/* En las secciones que no usan filtros (plataformas, formaciones, oficios,
+   secundario) la columna izquierda quedaría vacía: se colapsa para que los
+   resultados usen todo el ancho. */
+.catalog-side:has(#filtersSidebar[hidden]) { display: none; }
 .catalog-layout:has(#filtersSidebar[hidden]) { grid-template-columns: 1fr; }
 .results-area { min-width: 0; }
+/* El header queda fijo arriba (~117px ya compactado), así que cualquier salto a
+   la grilla —el skip link y el "Ver mis resultados" del copiloto— tiene que
+   frenar antes o las primeras tarjetas quedan tapadas. */
+#cardContainer { scroll-margin-top: 145px; }
 
 /* ================================================================
    6. PANEL DE FILTROS
@@ -360,6 +375,7 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
 .badge-publica { color: var(--blue-ink); background: color-mix(in srgb, var(--blue) 16%, transparent); }
 .badge-privada { color: var(--purple-ink); background: color-mix(in srgb, var(--purple) 16%, transparent); }
 .badge-modalidad { color: var(--green-ink); background: color-mix(in srgb, var(--green) 16%, transparent); }
+.badge-arancelada { color: var(--orange-ink); background: color-mix(in srgb, var(--orange) 16%, transparent); }
 .badge-fuente { color: var(--purple-ink); background: color-mix(in srgb, var(--purple) 16%, transparent); }
 .badge-match { color: var(--purple-ink); background: color-mix(in srgb, var(--purple) 16%, transparent); }
 .card-title { margin: var(--space-4) 0 var(--space-3); font-size: var(--fs-lg); line-height: 1.3; overflow-wrap: anywhere; }
@@ -423,21 +439,28 @@ body[data-seccion="oficios-tecnicos"]          { --seccion: var(--green);  --sec
 body[data-seccion="secundario"]                { --seccion: var(--teal);   --seccion-ink: var(--teal-ink); }
 
 .section-tabs {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: .85rem;
-    width: min(100% - 3rem, var(--container)); margin: 1.75rem auto 0;
+    /* Ya no van a lo ancho de la página sino dentro de la columna de resultados,
+       así que el ancho lo pone la columna. minmax más chico: la columna es más
+       angosta que la página entera y con 230px quedaban tres filas. */
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: .6rem;
+    width: auto; margin: 0 0 var(--space-7);
 }
+/* Ícono arriba y texto abajo (antes iban lado a lado): en la columna de
+   resultados cada pestaña tiene ~165px y compartir el ancho con el ícono le
+   dejaba al texto unos 110px, con "Formaciones Alternativas" partida y saliéndose
+   de la tarjeta. Apiladas entran las cinco en una sola fila y sin cortes. */
 .section-tab {
-    display: flex; align-items: center; gap: .85rem;
-    padding: 1.05rem 1.2rem; text-align: left;
+    display: flex; flex-direction: column; align-items: flex-start; gap: .35rem;
+    padding: .75rem .85rem; text-align: left;
     border: 2px solid var(--line); border-radius: var(--radius-lg);
     background: var(--surface); color: var(--muted);
     transition: border-color var(--dur-base) ease, color var(--dur-base) ease, background-color var(--dur-base) ease, transform var(--dur-base) ease;
 }
 .section-tab:hover { transform: translateY(-2px); }
-.section-tab-icon { font-size: var(--fs-2xl); line-height: 1; }
+.section-tab-icon { font-size: var(--fs-xl); line-height: 1; }
 .section-tab-texto { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
-.section-tab-texto strong { font-family: var(--font-title); font-size: var(--fs-lg); color: var(--text); }
-.section-tab-texto small { font-size: var(--fs-2xs); overflow-wrap: anywhere; }
+.section-tab-texto strong { font-family: var(--font-title); font-size: var(--fs-base); line-height: 1.2; color: var(--text); }
+.section-tab-texto small { font-size: var(--fs-2xs); line-height: 1.3; overflow-wrap: anywhere; }
 
 /* La pestaña activa se pinta con el color de SU sección, no con el global. */
 .section-tab-formal.is-active       { --tono: var(--blue);   --tono-ink: var(--blue-ink); }
@@ -537,16 +560,60 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .sports-card .card-badges + p { margin-top: .35rem; }
 
 /* ================================================================
-   10. CHAT FLOTANTE Y FONDO AL ABRIR FILTROS EN CELULAR.
+   10. COPILOTO VOCACIONAL (burbuja flotante) Y FONDO DE FILTROS EN CELULAR.
+   El copiloto es una burbuja fija en la esquina inferior derecha que abre una
+   ventana de chat; en el test guiado (desde la bienvenida) el panel se vuelve
+   un fondo oscuro con la página desenfocada y la ventana queda centrada.
+   Los filtros en celular siguen siendo un cajón lateral.
    ================================================================ */
 .filters-overlay { display: none; }
-/* z-index alto: el chat tiene que quedar por delante del header fijo (40) y del
-   panel de filtros (45) para poder abrirse y verse en cualquier momento. */
-.chat-widget { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 60; }
-.btn-chat-toggle { min-height: 44px; border: 0; border-radius: var(--radius-pill); padding: .78rem 1rem; color: var(--on-purple); background: var(--purple-fill); box-shadow: var(--elev-3); font-weight: 700; }
-.ventana-chat { position: absolute; right: 0; bottom: 3.75rem; width: min(440px, calc(100vw - 2rem)); min-height: 360px; max-height: min(680px, calc(100vh - 5.5rem)); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: var(--surface); box-shadow: var(--elev-4); display: flex; flex-direction: column; }
-/* El chat se oculta con el atributo [hidden] como todo lo demás; antes
-   convivían dos mecanismos (.oculto y [hidden]) para lo mismo. */
+
+.copiloto-panel {
+    position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 70;
+    display: flex; flex-direction: column; align-items: flex-end; gap: .75rem;
+}
+/* Burbuja de apertura: se oculta cuando la ventana está abierta (.is-abierto)
+   y durante el test a pantalla completa. */
+.btn-chat-toggle {
+    display: grid; place-items: center;
+    width: 60px; height: 60px; padding: 0; border: 0; border-radius: var(--radius-round);
+    color: var(--on-purple); background: var(--purple-fill);
+    box-shadow: var(--elev-3); font-size: 1.5rem; line-height: 1;
+    transition: transform var(--dur-base) ease, filter var(--dur-base) ease;
+}
+.btn-chat-toggle:hover { transform: translateY(-2px) scale(1.04); filter: brightness(1.06); }
+.copiloto-panel.is-abierto .btn-chat-toggle { display: none; }
+
+/* Ventana de chat flotante: la tarjeta que aparece sobre la burbuja. */
+.ventana-chat {
+    display: flex; flex-direction: column;
+    width: min(380px, calc(100vw - 2.5rem));
+    height: min(560px, 70vh);
+    border: 1px solid var(--line); border-radius: var(--radius-lg);
+    background: var(--surface); box-shadow: var(--elev-4); overflow: hidden;
+    animation: chat-abrir var(--dur-slow) ease;
+}
+@keyframes chat-abrir {
+    from { opacity: 0; transform: translateY(10px) scale(.98); }
+    to   { opacity: 1; transform: none; }
+}
+/* Test guiado: el panel se vuelve un fondo a pantalla completa con la página
+   principal desenfocada atrás, y la ventana de chat queda centrada y acotada
+   (antes se llevaba casi toda la pantalla y era demasiado). */
+.copiloto-panel.is-test-pantalla-completa {
+    inset: 0; z-index: 90; align-items: center; justify-content: center;
+    background: rgba(2, 6, 23, .55);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    transition: opacity var(--dur-slow) ease;
+}
+.copiloto-panel.is-test-pantalla-completa .btn-chat-toggle { display: none; }
+.copiloto-panel.is-test-pantalla-completa .ventana-chat {
+    width: min(680px, calc(100vw - 2.5rem));
+    height: min(520px, 70vh);
+}
+/* Fade-out al salir del test (lo agrega app.js en salirDelTest). */
+.copiloto-panel.is-saliendo-test { opacity: 0; }
+
 .chat-header { display: flex; align-items: center; justify-content: space-between; padding: .8rem .95rem; border-bottom: 1px solid var(--line); font-size: var(--fs-base); font-weight: 700; }
 .chat-header button { display: inline-flex; align-items: center; justify-content: center;
     min-width: 44px; min-height: 44px; margin: -.35rem -.5rem -.35rem 0;
@@ -556,15 +623,6 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 /* Barra de progreso fija del test vocacional (arriba, fuera del scroll) */
 .chat-progreso-fijo { padding: .75rem .9rem .15rem; border-bottom: 1px solid var(--line); }
 
-/* Caja de escritura libre al pie del chat */
-.chat-input { display: flex; align-items: center; gap: .45rem; padding: .6rem .7rem; border-top: 1px solid var(--line); background: var(--surface); }
-#chat-input-texto { flex: 1; min-width: 0; min-height: 44px; padding: .45rem .7rem; border: 1px solid var(--line-strong); border-radius: var(--radius-pill); color: var(--text); background: var(--surface-soft); font-size: var(--fs-xs); }
-#chat-input-texto::placeholder { color: var(--muted); }
-#chat-input-texto:focus { border-color: var(--accent); }
-#chat-input-enviar { flex: none; width: 38px; height: 38px; border: 0; border-radius: var(--radius-round); color: var(--on-accent); background: var(--accent); font-size: var(--fs-base); cursor: pointer; transition: filter var(--dur-base) ease; }
-#chat-input-enviar:hover { filter: brightness(1.1); }
-#chat-input-enviar:disabled { opacity: .5; cursor: default; }
-
 /* Burbuja del usuario: a la derecha y con el acento de la sección */
 .mensaje-usuario { align-self: flex-end; max-width: 88%; padding: .7rem .85rem; border-radius: var(--radius-md) 12px 3px 12px; background: var(--accent); color: var(--on-accent); line-height: 1.4; }
 .mensaje-usuario p { margin: 0; }
@@ -573,6 +631,21 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .chat-sugerencias { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .55rem; }
 .btn-chat-sugerencia { min-height: 36px; padding: .4rem .65rem; border: 1px dashed var(--line); border-radius: var(--radius-pill); color: var(--muted); background: transparent; font-size: var(--fs-2xs); transition: border-color var(--dur-base) ease, color var(--dur-base) ease; }
 .btn-chat-sugerencia:hover, .btn-chat-sugerencia:focus-visible { border-color: var(--accent); color: var(--accent-ink); }
+
+/* Tarjetas compactas de resultado que el copiloto muestra en el chat, con los
+   botones de favorito/comparar operativos (funcionan por delegación). */
+.chat-resultados { display: flex; flex-direction: column; gap: .5rem; margin-top: .55rem; }
+.chat-resultado-card {
+    display: flex; flex-direction: column; gap: .4rem;
+    padding: .6rem .75rem; border: 1px solid var(--line); border-radius: var(--radius-md);
+    background: var(--surface);
+}
+.chat-resultado-head { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.chat-resultado-nombre { font-weight: 700; color: var(--text); font-size: var(--fs-sm); }
+.chat-resultado-card .compatibilidad-badge { font-size: var(--fs-2xs); padding: .1rem .5rem; }
+.chat-resultado-acciones { display: flex; flex-wrap: wrap; gap: .4rem; }
+.chat-resultado-acciones .btn-favorito, .chat-resultado-acciones .btn-comparar { min-height: 32px; padding: .3rem .55rem; font-size: var(--fs-2xs); }
+.chat-resultado-acciones .tipo-badges { margin: 0; }
 
 /* Barra de progreso del test vocacional */
 .chat-progreso { height: 6px; border-radius: var(--radius-pill); background: var(--line); overflow: hidden; margin-bottom: .55rem; }
@@ -602,6 +675,16 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .btn-chat-atras { display: block; width: 100%; margin-top: .75rem; padding: .4rem; border: 0; color: var(--muted); background: none; font-size: var(--fs-2xs); text-decoration: underline; }
 .btn-chat-atras:hover { color: var(--text); }
 .btn-chat-resultado { width: 100%; min-height: 44px; margin-top: .1rem; padding: .65rem; border: 0; border-radius: var(--radius-sm); color: var(--on-accent); background: var(--accent); font-weight: 700; }
+/* En el mensaje de bienvenida el botón queda entre párrafos (.mensaje-bot p
+   tiene margin: 0), así que necesita su propio aire. */
+.mensaje-bot > p + .btn-chat-resultado { margin-top: var(--space-4); }
+.mensaje-bot > .btn-chat-resultado + .mensaje-bot-nota { margin-top: var(--space-4); }
+/* Espaciado del mensaje de resultados del test (notas + tarjetas + reset). */
+.mensaje-bot > p + .mensaje-bot-nota,
+.mensaje-bot > .mensaje-bot-nota + .chat-resultados,
+.mensaje-bot > .chat-resultados + .mensaje-bot-nota,
+.mensaje-bot > .mensaje-bot-nota + .btn-chat-reset,
+.mensaje-bot > p + .btn-chat-reset { margin-top: var(--space-4); }
 .btn-chat-reset { width: 100%; min-height: 40px; padding: .55rem; border: 1px solid var(--line); border-radius: var(--radius-sm); color: var(--text); background: transparent; font-size: var(--fs-xs); }
 
 /* ================================================================
@@ -628,10 +711,24 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     .close-filters-button { display: block; min-width: 44px; min-height: 44px; }
     .results-grid, .news-grid, .platforms-grid, .cursos-grid { grid-template-columns: 1fr; }
     .card { min-height: 0; }
-    .section-tabs { width: min(100% - 2rem, 680px); margin-top: 1.25rem; }
-    /* El chat abre como una hoja que cubre casi toda la pantalla. */
-    .ventana-chat { position: fixed; left: .6rem; right: .6rem; top: .6rem; bottom: 5rem; width: auto; min-height: 0; max-height: none; border-radius: var(--radius-lg); }
-    .btn-chat-toggle { max-width: calc(100vw - 1.5rem); }
+    .section-tabs { width: auto; }
+    /* La burbuja y la ventana del copiloto se acercan al borde y la ventana
+       pierde un poco de alto en pantallas chicas. */
+    .copiloto-panel { right: .9rem; bottom: .9rem; }
+    .ventana-chat { height: min(500px, 62vh); }
+}
+
+/* ================================================================
+   11b. DESKTOP (desde 821px): el copiloto vocacional es un poco más
+   grande. En tablets y celulares (hasta 820px) se mantienen los
+   tamaños acotados de arriba.
+   ================================================================ */
+@media (min-width: 821px) {
+    .ventana-chat { width: min(420px, calc(100vw - 2.5rem)); height: min(600px, 76vh); }
+    .copiloto-panel.is-test-pantalla-completa .ventana-chat {
+        width: min(820px, calc(100vw - 2.5rem));
+        height: min(620px, 80vh);
+    }
 }
 
 /* ================================================================
@@ -649,8 +746,10 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     .mobile-filter-button { padding-inline: .6rem; font-size: var(--fs-xs); }
     .catalog-layout { width: min(100% - 1.25rem, 680px); padding-top: 1.1rem; }
     /* En celular van apiladas: son la decisión principal, conviene que se lean grandes. */
-    .section-tabs { grid-template-columns: 1fr; gap: .6rem; width: min(100% - 1.25rem, 680px); }
-    .section-tab { padding: .85rem 1rem; }
+    .section-tabs { grid-template-columns: 1fr; gap: .6rem; width: auto; }
+    /* Acá cada pestaña ocupa el ancho completo, así que vuelve el ícono al
+       costado: apilado desperdiciaría una línea entera por pestaña. */
+    .section-tab { flex-direction: row; align-items: center; gap: .85rem; padding: .85rem 1rem; }
     .section-tab-icon { font-size: var(--fs-xl); }
     .results-toolbar { align-items: stretch; flex-direction: column; gap: .65rem; margin-bottom: 1rem; }
     .sort-control { width: 100%; justify-content: space-between; white-space: normal; }
@@ -658,18 +757,10 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     .card, .news-card { padding: var(--space-5); }
     .card-title { font-size: var(--fs-md); }
     .filter-group { padding: .9rem 1rem; }
-    .chat-widget { right: .75rem; bottom: calc(.75rem + env(safe-area-inset-bottom)); }
-    .btn-chat-toggle { padding: .7rem .8rem; font-size: var(--fs-2xs); }
-    /* Ojo: acá NO se puede redeclarar width/max-height. La hoja de ≤820px posiciona
-       con left/right/top/bottom, y volver a fijar tamaño sin resetear esos cuatro
-       dejaba el panel pegado arriba tapando el header. Hereda la hoja y listo. */
+    .copiloto-panel { right: .75rem; bottom: .75rem; }
+    .btn-chat-toggle { width: 54px; height: 54px; font-size: 1.3rem; }
     .chat-header { padding: .6rem .75rem; font-size: var(--fs-xs); }
     .chat-cuerpo { padding: .6rem; font-size: var(--fs-2xs); gap: .4rem; }
-    .chat-input { padding: .45rem .55rem; }
-    /* Solo tipografía y padding: el tamaño mínimo lo fija el bloque de
-       (pointer: coarse) y acá se achicaba por debajo de los 44px. */
-    #chat-input-texto { padding: .35rem .6rem; font-size: var(--fs-2xs); }
-    #chat-input-enviar { font-size: var(--fs-sm); }
     .chat-progreso-fijo { padding: .5rem .7rem .1rem; }
 }
 
@@ -708,10 +799,11 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .btn-favorito.is-active { color: var(--on-accent); background: var(--orange); border-color: var(--orange); }
 .btn-comparar.is-active { color: var(--on-accent); background: var(--blue); border-color: var(--blue); }
 
-/* Barra flotante del comparador, fija abajo centrada. */
+/* Barra flotante del comparador, fija abajo centrada. Va por encima del modal
+   del copiloto (z-index 90) para poder comparar desde los resultados del chat. */
 .comparar-bar {
     position: fixed; left: 50%; bottom: calc(4rem + env(safe-area-inset-bottom));
-    transform: translateX(-50%); z-index: 65;
+    transform: translateX(-50%); z-index: 95;
     display: flex; align-items: center; gap: .75rem;
     padding: .6rem .8rem; border: 1px solid var(--line); border-radius: var(--radius-pill);
     background: var(--surface); box-shadow: var(--elev-3);
@@ -728,9 +820,9 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     border-radius: var(--radius-pill); color: var(--muted); background: transparent; cursor: pointer;
 }
 
-/* Modal de comparación. */
+/* Modal de comparación. Por encima de la barra (95) y del copiloto (90). */
 .comparar-modal {
-    position: fixed; inset: 0; z-index: 60; display: flex; align-items: center; justify-content: center;
+    position: fixed; inset: 0; z-index: 96; display: flex; align-items: center; justify-content: center;
     padding: 1rem; background: color-mix(in srgb, var(--bg) 60%, transparent);
     backdrop-filter: blur(3px);
 }
@@ -813,8 +905,389 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     .comparar-bar-btn, .comparar-bar-limpiar, .comparar-modal-cerrar,
     .btn-favorito, .btn-comparar, .favoritos-toggle, .clear-filters-button,
     .btn-chat-sugerencia, .sort-control select, .news-button,
-    .card-link, .news-card a, .platform-link,
-    #chat-input-enviar, #chat-input-texto { min-height: 44px; }
-    #chat-input-enviar { width: 44px; height: 44px; }
+    .card-link, .news-card a, .platform-link { min-height: 44px; }
     .duration-range { grid-template-columns: 1fr auto 1fr 44px; }
+}
+/* ================================================================
+   ORIENTADOR VOCACIONAL - Estilos para tarjetas de compatibilidad
+   ================================================================ */
+
+.carrera-card {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    padding: var(--space-5);
+    transition: box-shadow var(--dur-base), transform var(--dur-fast);
+}
+.carrera-card:hover {
+    box-shadow: var(--elev-2);
+    transform: translateY(-2px);
+}
+
+/* Badge de compatibilidad */
+.compatibilidad-badge {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-pill);
+    display: inline-block;
+}
+.carrera-card.match-alto .compatibilidad-badge, .chat-resultado-card.match-alto .compatibilidad-badge { background: var(--green); color: var(--on-accent); }
+.carrera-card.match-medio .compatibilidad-badge, .chat-resultado-card.match-medio .compatibilidad-badge { background: var(--orange); color: var(--on-accent); }
+.carrera-card.match-bajo .compatibilidad-badge, .chat-resultado-card.match-bajo .compatibilidad-badge { background: var(--muted); color: var(--text); }
+
+/* Badges de tipo de formación */
+.tipo-badge {
+    font-size: var(--fs-2xs);
+    font-weight: 700;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-xs);
+    display: inline-block;
+    margin-right: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+.tipo-badge.grado { background: var(--blue); color: var(--on-accent); }
+.tipo-badge.tecnica { background: var(--purple); color: var(--on-purple); }
+.tipo-badge.curso { background: var(--teal); color: var(--on-accent); }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-3);
+    gap: var(--space-3);
+}
+.card-header h3 {
+    margin: 0;
+    font-size: var(--fs-lg);
+    line-height: 1.3;
+    flex: 1;
+}
+
+.card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    font-size: var(--fs-sm);
+    color: var(--muted);
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--line);
+}
+
+.card-match-motivos {
+    margin-bottom: var(--space-3);
+    font-size: var(--fs-sm);
+}
+.card-match-motivos strong {
+    display: block;
+    margin-bottom: var(--space-2);
+    color: var(--text);
+}
+.motivos-list {
+    margin: 0;
+    padding-left: var(--space-5);
+    color: var(--muted);
+}
+.motivos-list li {
+    margin-bottom: var(--space-1);
+    line-height: 1.4;
+}
+
+.card-alertas {
+    background: rgba(255, 84, 0, 0.1);
+    border: 1px solid var(--orange);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3);
+    margin-bottom: var(--space-3);
+    font-size: var(--fs-sm);
+}
+.card-alertas strong {
+    color: var(--orange);
+    display: block;
+    margin-bottom: var(--space-2);
+}
+.alertas-list {
+    margin: 0;
+    padding-left: var(--space-5);
+    color: var(--muted);
+}
+.alertas-list li {
+    margin-bottom: var(--space-1);
+    line-height: 1.4;
+}
+
+.card-instituciones {
+    margin-bottom: var(--space-3);
+    font-size: var(--fs-sm);
+}
+.card-instituciones strong {
+    display: block;
+    margin-bottom: var(--space-2);
+    color: var(--text);
+}
+.instituciones-list {
+    margin: 0;
+    padding-left: var(--space-5);
+    color: var(--muted);
+}
+.instituciones-list li {
+    margin-bottom: var(--space-1);
+    line-height: 1.4;
+}
+
+.card-actions {
+    display: flex;
+    gap: var(--space-2);
+    justify-content: flex-end;
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--line);
+}
+.card-actions button {
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--fs-sm);
+    cursor: pointer;
+    color: var(--text);
+    transition: background var(--dur-fast), border-color var(--dur-fast);
+}
+.card-actions button:hover {
+    background: var(--surface-soft);
+    border-color: var(--accent);
+}
+.card-actions .btn-favorito.activo {
+    color: var(--orange);
+    border-color: var(--orange);
+    background: rgba(255, 84, 0, 0.1);
+}
+
+/* Progreso del test */
+.progreso-test {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+    padding: var(--space-3);
+    background: var(--surface-soft);
+    border-radius: var(--radius-md);
+}
+.progreso-test .barra {
+    flex: 1;
+    height: 8px;
+    background: var(--line);
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+}
+.progreso-test .barra .fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: var(--radius-pill);
+    transition: width var(--dur-base);
+}
+.progreso-test .texto {
+    font-size: var(--fs-sm);
+    color: var(--muted);
+    min-width: 80px;
+    text-align: right;
+}
+
+/* Chat mejoras */
+.mensaje-bot-nota {
+    font-size: var(--fs-xs);
+    color: var(--muted);
+    font-style: italic;
+    margin-top: var(--space-2);
+}
+.opciones-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: var(--space-3) 0;
+}
+.btn-chat-opcion {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--fs-sm);
+    cursor: pointer;
+    transition: all var(--dur-fast);
+    color: var(--text);
+}
+.btn-chat-opcion:hover {
+    border-color: var(--accent);
+    background: var(--surface-soft);
+}
+.btn-chat-atras {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: var(--fs-sm);
+    cursor: pointer;
+    padding: var(--space-2) 0;
+    margin-top: var(--space-2);
+}
+.btn-chat-atras:hover {
+    color: var(--text);
+}
+.btn-chat-reset, .btn-chat-resultado {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--fs-sm);
+    cursor: pointer;
+    margin-right: var(--space-2);
+    margin-top: var(--space-2);
+    transition: all var(--dur-fast);
+}
+.btn-chat-resultado {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+}
+.btn-chat-resultado:hover {
+    filter: brightness(1.1);
+}
+.btn-chat-reset:hover {
+    border-color: var(--accent);
+    background: var(--surface-soft);
+}
+
+@media (max-width: 600px) {
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-actions {
+        flex-wrap: wrap;
+    }
+}
+
+/* ================================================================
+   16. PANTALLA DE BIENVENIDA
+   Overlay fijo a pantalla completa: la puerta de entrada al sitio.
+   El logo y las dos opciones entran con fade + slide escalonado
+   (cada elemento con su propio delay, todo CSS puro). El
+   ocultamiento lo maneja app.js: agrega .is-saliendo y, al
+   terminar la transición, el atributo hidden.
+   ================================================================ */
+.pantalla-bienvenida {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    background:
+        radial-gradient(circle at 50% -35%, color-mix(in srgb, var(--purple) 24%, transparent) 0, transparent 58%),
+        linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+    animation: bienvenida-entrar var(--dur-slow) ease;
+}
+@keyframes bienvenida-entrar {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Salida: fade + subida leve. El fade de entrada no usa fill-mode,
+   así que al terminar la animación la opacidad vuelve a la normal
+   (1) y la transición de salida no queda bloqueada. */
+.pantalla-bienvenida.is-saliendo {
+    opacity: 0;
+    transform: translateY(-12px);
+    transition: opacity var(--dur-slow) ease, transform var(--dur-slow) ease;
+}
+
+.bienvenida-contenido {
+    width: min(100%, 720px);
+    text-align: center;
+}
+.bienvenida-logo {
+    display: block;
+    width: min(100%, 480px);
+    height: auto;
+    margin: 0 auto var(--space-6);
+    border-radius: var(--radius-sm);
+    animation: bienvenida-deslizar var(--dur-slow) ease backwards;
+}
+.bienvenida-bajada {
+    margin: 0 0 var(--space-7);
+    color: var(--muted);
+    font-family: var(--font-detail);
+    font-size: var(--fs-sm);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    animation: bienvenida-deslizar var(--dur-slow) ease backwards;
+    animation-delay: .06s;
+}
+.bienvenida-opciones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-6);
+}
+/* La opción principal es una tarjeta clickeable: entra con delay
+   respecto al logo y se asienta con un slide corto. */
+.bienvenida-card-primaria {
+    flex: 1 1 62%;
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    min-height: 132px;
+    padding: var(--space-6);
+    border: 2px solid var(--purple);
+    border-radius: var(--radius-lg);
+    background: color-mix(in srgb, var(--purple) 12%, var(--surface));
+    color: var(--text);
+    text-align: left;
+    box-shadow: var(--elev-1);
+    animation: bienvenida-deslizar var(--dur-slow) ease backwards;
+    animation-delay: .12s;
+    transition: transform var(--dur-base) ease, box-shadow var(--dur-base) ease;
+}
+.bienvenida-card-primaria:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--elev-3);
+}
+.bienvenida-icono {
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-round);
+    background: color-mix(in srgb, var(--purple) 22%, var(--surface));
+    font-size: var(--fs-2xl);
+}
+.bienvenida-card-texto { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
+.bienvenida-card-primaria strong { font-family: var(--font-title); font-size: var(--fs-xl); line-height: 1.2; letter-spacing: -.015em; color: var(--text); }
+.bienvenida-card-desc { color: var(--muted); font-size: var(--fs-sm); line-height: 1.5; }
+.bienvenida-cta { color: var(--purple-ink); font-size: var(--fs-xs); font-weight: 700; }
+/* La opción secundaria es deliberadamente más chica: un pill simple. */
+.bienvenida-catalogo {
+    flex: 0 1 auto;
+    min-height: 44px;
+    padding: .65rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    background: var(--surface);
+    color: var(--muted);
+    font-weight: 700;
+    font-size: var(--fs-xs);
+    white-space: nowrap;
+    animation: bienvenida-deslizar var(--dur-slow) ease backwards;
+    animation-delay: .22s;
+    transition: border-color var(--dur-base) ease, color var(--dur-base) ease, transform var(--dur-base) ease;
+}
+.bienvenida-catalogo:hover { border-color: var(--accent); color: var(--accent-ink); transform: translateY(-1px); }
+
+/* En pantallas angostas las dos opciones se apilan. */
+@media (max-width: 480px) {
+    .pantalla-bienvenida { padding: 1.5rem; }
+    .bienvenida-logo { width: min(100%, 320px); }
+    .bienvenida-opciones { flex-direction: column; align-items: stretch; }
+    .bienvenida-card-primaria { flex-direction: column; text-align: center; }
+    .bienvenida-catalogo { align-self: center; min-width: 200px; }
 }

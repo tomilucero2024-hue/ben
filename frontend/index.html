@@ -50,55 +50,16 @@
                     <span aria-hidden="true">☰</span><span class="mobile-filter-texto">Filtrar</span>
                 </button>
             </div>
-            <div class="hero-secondary hero-actions">
-                <button id="btn-ver-noticias" class="news-button" type="button">📰 Ver noticias</button>
-                <button id="btn-ver-deportes" class="news-button" type="button">🏀 Centros deportivos</button>
-            </div>
         </div>
     </header>
-
-    <!-- Primera decisión del usuario: qué tipo de oferta educativa quiere ver. -->
-    <nav class="section-tabs" aria-label="Tipo de oferta educativa">
-        <button id="tab-formal" class="section-tab section-tab-formal is-active" type="button" data-seccion="formal" aria-pressed="true">
-            <span class="section-tab-icon" aria-hidden="true">🎓</span>
-            <span class="section-tab-texto">
-                <strong>Educación Formal</strong>
-                <small>Universidades, IES y terciarios</small>
-            </span>
-        </button>
-        <button id="tab-plataformas" class="section-tab section-tab-plataformas" type="button" data-seccion="plataformas" aria-pressed="false">
-            <span class="section-tab-icon" aria-hidden="true">💻</span>
-            <span class="section-tab-texto">
-                <strong>Plataformas Online</strong>
-                <small>Coderhouse, Educación IT y más</small>
-            </span>
-        </button>
-        <button id="tab-formaciones" class="section-tab section-tab-formaciones" type="button" data-seccion="formaciones-alternativas" aria-pressed="false">
-            <span class="section-tab-icon" aria-hidden="true">🧭</span>
-            <span class="section-tab-texto">
-                <strong>Formaciones Alternativas</strong>
-                <small>Aeronáutica, buceo, montaña, oficios de nicho</small>
-            </span>
-        </button>
-        <button id="tab-oficios" class="section-tab section-tab-oficios" type="button" data-seccion="oficios-tecnicos" aria-pressed="false">
-            <span class="section-tab-icon" aria-hidden="true">🔧</span>
-            <span class="section-tab-texto">
-                <strong>Oficios Técnicos</strong>
-                <small>Electricidad, mecánica, gas, soldadura</small>
-            </span>
-        </button>
-        <button id="tab-secundario" class="section-tab section-tab-secundario" type="button" data-seccion="secundario" aria-pressed="false">
-            <span class="section-tab-icon" aria-hidden="true">📘</span>
-            <span class="section-tab-texto">
-                <strong>Terminar el Secundario</strong>
-                <small>CENS, CEPAS, FinEs/TEM y CEBJA</small>
-            </span>
-        </button>
-    </nav>
 
     <main class="catalog-layout">
         <div id="filtersOverlay" class="filters-overlay" aria-hidden="true"></div>
 
+        <!-- Columna izquierda: solo los filtros manuales. El Copiloto ya no es un
+             panel fijo acá: es una burbuja flotante (ver #copilotoPanel, al final
+             del <main>). -->
+        <div class="catalog-side">
         <aside id="filtersSidebar" class="filters-sidebar" aria-label="Filtros de búsqueda">
             <div class="filters-heading">
                 <h2>Filtrar por</h2>
@@ -192,12 +153,53 @@
             </section>
             <button id="clearFiltersButton" class="clear-filters-button" type="button">Limpiar filtros</button>
         </aside>
+        </div>
 
-        <!-- El aria-live NO va acá: esta sección contiene la grilla entera, las
-             plataformas, las noticias y los deportes, así que cada cambio de filtro
-             hacía que un lector de pantalla intentara leer cientos de tarjetas.
+        <!-- El aria-live NO va acá: esta sección contiene la grilla entera y las
+             plataformas, así que cada cambio de filtro hacía que un lector de
+             pantalla intentara leer cientos de tarjetas.
              Va sobre el contador, que es el resumen que interesa escuchar. -->
         <section class="results-area">
+            <!-- Primera decisión sobre los resultados: qué tipo de oferta mirar.
+                 Vive acá, arriba de la grilla, y no arriba de toda la página. -->
+            <nav class="section-tabs" aria-label="Tipo de oferta educativa">
+            <button id="tab-formal" class="section-tab section-tab-formal is-active" type="button" data-seccion="formal" aria-pressed="true">
+                <span class="section-tab-icon" aria-hidden="true">🎓</span>
+                <span class="section-tab-texto">
+                    <strong>Educación Formal</strong>
+                    <small>Universidades, IES y terciarios</small>
+                </span>
+            </button>
+            <button id="tab-plataformas" class="section-tab section-tab-plataformas" type="button" data-seccion="plataformas" aria-pressed="false">
+                <span class="section-tab-icon" aria-hidden="true">💻</span>
+                <span class="section-tab-texto">
+                    <strong>Plataformas Online</strong>
+                    <small>Coderhouse, Educación IT y más</small>
+                </span>
+            </button>
+            <button id="tab-formaciones" class="section-tab section-tab-formaciones" type="button" data-seccion="formaciones-alternativas" aria-pressed="false">
+                <span class="section-tab-icon" aria-hidden="true">🧭</span>
+                <span class="section-tab-texto">
+                    <strong>Formaciones Alternativas</strong>
+                    <small>Aeronáutica, buceo, montaña, oficios de nicho</small>
+                </span>
+            </button>
+            <button id="tab-oficios" class="section-tab section-tab-oficios" type="button" data-seccion="oficios-tecnicos" aria-pressed="false">
+                <span class="section-tab-icon" aria-hidden="true">🔧</span>
+                <span class="section-tab-texto">
+                    <strong>Oficios Técnicos</strong>
+                    <small>Electricidad, mecánica, gas, soldadura</small>
+                </span>
+            </button>
+            <button id="tab-secundario" class="section-tab section-tab-secundario" type="button" data-seccion="secundario" aria-pressed="false">
+                <span class="section-tab-icon" aria-hidden="true">📘</span>
+                <span class="section-tab-texto">
+                    <strong>Terminar el Secundario</strong>
+                    <small>CENS, CEPAS, FinEs/TEM y CEBJA</small>
+                </span>
+            </button>
+            </nav>
+
             <div id="resultsToolbar" class="results-toolbar">
                 <p id="resultsCount" class="results-count" role="status" aria-live="polite"></p>
                 <div class="toolbar-actions">
@@ -254,20 +256,27 @@
                 <p class="catalog-aparte-intro">Opciones para completar los estudios: CENS presenciales y a distancia, CEPAS con bachiller profesional, Plan FinEs/TEM para quienes adeudan materias y CEBJA.</p>
                 <div id="contenedor-secundario" class="cursos-grid"></div>
             </section>
-
-            <section id="seccion-noticias" class="news-section" hidden>
-                <h2>Últimas novedades estudiantiles</h2>
-                <div id="contenedor-noticias" class="news-grid"></div>
-            </section>
-            <section id="seccion-deportes" class="news-section" hidden>
-                <h2>Centros deportivos municipales</h2>
-                <div id="filtroDepartamento" class="filter-options filter-options-inline sports-filter">
-                    <button class="filter-option active" data-departamento="todos" type="button">Todos</button>
-                </div>
-                <div id="contenedor-deportes" class="news-grid sports-grid"></div>
-            </section>
         </section>
     </main>
+
+    <!-- Copiloto vocacional flotante: burbuja en la esquina inferior derecha.
+         Cerrado solo se ve el botón circular (#btn-toggle-chat); al abrirlo
+         aparece la ventana de chat (#ventana-chat). Cuando el usuario entra por
+         la bienvenida, app.js le agrega .is-test-pantalla-completa: el panel
+         se vuelve un fondo oscuro con la página desenfocada y la ventana queda
+         centrada, acotada. -->
+    <aside id="copilotoPanel" class="copiloto-panel" aria-label="Copiloto vocacional">
+        <div id="ventana-chat" class="ventana-chat" role="region" aria-labelledby="chat-titulo" hidden>
+            <div class="chat-header"><span id="chat-titulo">🤖 Copiloto Vocacional</span><button id="btn-cerrar-chat" type="button" aria-label="Cerrar el copiloto">✕</button></div>
+            <div id="chat-progreso" class="chat-progreso-fijo" hidden></div>
+            <div id="chat-caja" class="chat-cuerpo"></div>
+            <!-- Único punto de anuncio del chat: antes cada burbuja tenía su propio
+                 aria-live y, como el historial se re-dibuja entero en cada turno,
+                 el lector de pantalla releía toda la conversación. -->
+            <p id="chat-anuncio" class="sr-only" role="status" aria-live="polite"></p>
+        </div>
+        <button id="btn-toggle-chat" class="btn-chat-toggle" type="button" aria-expanded="false" aria-controls="ventana-chat" aria-label="Abrir el copiloto vocacional">💬</button>
+    </aside>
 
     <!-- Barra flotante del comparador: aparece apenas hay algo para comparar. -->
     <div id="compararBar" class="comparar-bar" hidden>
@@ -287,23 +296,38 @@
         </div>
     </div>
 
-    <div class="chat-widget">
-        <button id="btn-toggle-chat" class="btn-chat-toggle" type="button" aria-expanded="false" aria-controls="ventana-chat">💬 ¿No sabés qué estudiar?</button>
-        <div id="ventana-chat" class="ventana-chat" hidden role="dialog" aria-modal="false" aria-labelledby="chat-titulo">
-            <div class="chat-header"><span id="chat-titulo">🤖 Copiloto Vocacional</span><button id="btn-cerrar-chat" type="button" aria-label="Cerrar chat">✕</button></div>
-            <div id="chat-progreso" class="chat-progreso-fijo" hidden></div>
-            <div id="chat-caja" class="chat-cuerpo"></div>
-            <!-- Único punto de anuncio del chat: antes cada burbuja tenía su propio
-                 aria-live y, como el historial se re-dibuja entero en cada turno,
-                 el lector de pantalla releía toda la conversación. -->
-            <p id="chat-anuncio" class="sr-only" role="status" aria-live="polite"></p>
-            <div class="chat-input">
-                <input id="chat-input-texto" type="text" placeholder="Ej: carreras de informática" autocomplete="off" aria-label="Escribile al copiloto">
-                <button id="chat-input-enviar" type="button" aria-label="Enviar mensaje">➤</button>
+    <!-- ============================================================
+         Pantalla de bienvenida: puerta de entrada al sitio. Es un
+         overlay fijo a pantalla completa (la posiciona el CSS), por
+         eso vive fuera del <main>, junto a los otros overlays.
+         Se muestra siempre que se entra SIN filtros en la URL; esa
+         excepción la decide app.js. -->
+    <section id="pantallaBienvenida" class="pantalla-bienvenida" aria-label="Bienvenida a BEN">
+        <div class="bienvenida-contenido">
+            <img id="bienvenidaLogo" class="bienvenida-logo" width="1120" height="299" alt="BEN, Buscador Educativo Nacional">
+            <!-- Igual que el logo del header: el src se resuelve acá, durante
+                 el parseo, para mostrar el logo correcto según el tema sin
+                 depender de que ya haya corrido app.js. -->
+            <script>
+                document.getElementById('bienvenidaLogo').src =
+                    document.documentElement.dataset.theme === 'dark' ? 'logo-ben-dark.png' : 'logo-ben-light.png';
+            </script>
+            <p class="bienvenida-bajada">¿Cómo querés empezar?</p>
+            <div class="bienvenida-opciones">
+                <button id="btnBienvenidaCopiloto" class="bienvenida-card-primaria" type="button">
+                    <span class="bienvenida-icono" aria-hidden="true">🤖</span>
+                    <span class="bienvenida-card-texto">
+                        <strong>Copiloto vocacional</strong>
+                        <span class="bienvenida-card-desc">Respondé 5 preguntas cortas y te mostramos las carreras que mejor encajan con tu perfil.</span>
+                        <span class="bienvenida-cta">Empezar el test →</span>
+                    </span>
+                </button>
+                <button id="btnBienvenidaCatalogo" class="bienvenida-catalogo" type="button">Ver carreras</button>
             </div>
         </div>
-    </div>
+    </section>
 
+    <script src="js/orientador.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
