@@ -45,97 +45,119 @@
     --fs-base: .9375rem; --fs-md: 1rem;     --fs-lg: 1.125rem;
     --fs-xl: 1.375rem;  --fs-2xl: 1.75rem;
 
-    /* ---- Paleta ------------------------------------------------------------
+    /* ---- Paleta orgánica (Fase A del rediseño neumórfico) -------------------
        El tema lo fija un script inline en el <head>. Si ese script no llega a
        correr (JS desactivado, error, CSP), sin estos valores acá var(--bg) y
        var(--text) quedaban inválidos y la página entera perdía color. Esta es
-       la paleta clara, que oficia de red de contención. */
-    --bg: #DDE1DE;
-    --surface: #F2F4F2;
-    --surface-soft: #E8ECE9;
-    --line: rgba(21, 17, 29, .15);
-    --text: #15111D;
-    --muted: #57515F;
-    --orange: #FF5400;
-    --green: #02A549;
-    --blue: #337CFF;
-    --purple: #7C1897;
-    --teal: #0E7C8C;
-    --accent: #337CFF;
-    --shadow: rgba(21, 17, 29, .15);
+       la paleta clara, que oficia de red de contención.
+
+       Familia cromática: EdTech de tres colores. Índigo para lo formal e
+       institucional, naranja para plataformas y categorías, verde jade para
+       la acción (CTAs, chat, favoritos, foco de inputs).
+
+       Los NOMBRES de las variables funcionales (--orange, --blue, --purple…)
+       se mantienen a propósito aunque el matiz
+       haya cambiado de familia: los usan ~40 reglas y el rol de cada una
+       (naranja = plataformas, --blue = formal, violeta = alternativas…) sigue
+       siendo el mismo. Renombrarlas sería una segunda refactorización sin
+       ganancia. Lo que sí cambió es el color que hay detrás del nombre. */
+    --bg: #F7F5FF;
+    --surface: #FFFFFF;
+    --surface-soft: #EEECFB;
+    --line: rgba(27, 24, 48, .14);
+    --text: #1B1830;
+    --muted: #5C5680;
+    --orange: #F97316;   /* naranja: plataformas / categorías */
+    --green: #16A34A;    /* verde */
+    --blue: #4F46E5;     /* índigo: formal / institucional */
+    --purple: #9333EA;   /* violeta */
+    --teal: #0D9488;     /* verde azulado */
+    --accent: #059669;   /* verde jade: acción (CTAs, chat, favoritos) */
+    --shadow: rgba(40, 34, 90, .14);
 
     /* Tinta de los badges. El color puro sobre su propio tinte al 16% daba ~2.5:1
        (ilegible al sol); estos son el mismo matiz con la luminancia corregida
        para pasar 4.5:1. El fondo sigue siendo el color puro tinteado. */
-    --orange-ink: #9C3300;
-    --green-ink: #015B27;
-    --blue-ink: #2253AB;
-    --purple-ink: #7C1897;
-    --teal-ink: #0A5F6B;
-    --accent-ink: var(--blue-ink);
-    /* Texto sobre relleno saturado claro (azul, naranja, verde). */
-    --on-accent: #15111D;
-    /* El violeta es el único relleno oscuro: lleva texto blanco. */
-    --purple-fill: #7C1897;
+    --orange-ink: #C2410C;
+    --green-ink: #107937;
+    --blue-ink: #4F46E5;
+    --purple-ink: #8D31E1;
+    --teal-ink: #0A766D;
+    --accent-ink: #047854;
+    /* Texto sobre relleno saturado claro. */
+    --on-accent: #1B1830;
+    /* El relleno violeta usa el índigo, que es oscuro: lleva texto claro. */
+    --purple-fill: #4F46E5;
     --on-purple: #FFFFFF;
     /* Borde de controles de formulario: --line queda en ~1.3:1 y la norma pide 3:1. */
-    --line-strong: rgba(21, 17, 29, .5);
+    --line-strong: rgba(27, 24, 48, .48);
+
+    /* Acá vivía la familia --neu-*: las dos sombras opuestas del mismo tono que
+       la superficie que le daban a cada pieza el aspecto de estar extruída del
+       fondo. El relieve se sacó de todo el sitio, así que las variables se van
+       con él en lugar de quedar como peso muerto. Las superficies ahora se
+       distinguen por su color (--surface contra --bg) y por --line; lo único que
+       conserva sombra es lo que de verdad flota sobre la página, y eso usa la
+       escalera --elev-* de más arriba. */
 }
 
 html[data-theme="dark"] {
-    --bg: #15111D;
-    --surface: #211B2C;
-    --surface-soft: #2A2335;
-    --line: rgba(221, 225, 222, .16);
-    --text: #DDE1DE;
-    --muted: #B7B8BC;
-    --orange: #FF7633;
-    --green: #35B76D;
-    --blue: #669DFF;
-    --purple: #8866C2;
-    --teal: #4FC3D4;
-    --accent: #669DFF;
-    --shadow: rgba(0, 0, 0, .34);
+    /* Noche índigo: azul-violeta profundo, ni negro puro ni gris neutro. */
+    --bg: #12111C;
+    --surface: #1B1930;
+    --surface-soft: #262244;
+    --line: rgba(237, 234, 251, .16);
+    --text: #EDEAFB;
+    --muted: #A9A3C7;
+    --orange: #F97316;
+    --green: #4ADE80;
+    --blue: #9B96F7;
+    --purple: #D4A3FF;
+    --teal: #5EEAD4;
+    --accent: #34D399;
+    --shadow: rgba(0, 0, 0, .55);
 
-    --orange-ink: #FF7D3D;
-    --green-ink: #39B870;
-    --blue-ink: #6FA3FF;
-    --purple-ink: #A991D3;
-    --teal-ink: #5FCFDF;
-    --accent-ink: var(--blue-ink);
-    --on-accent: #15111D;
-    /* Más oscuro que --purple: con el violeta del tema oscuro, el blanco encima
-       se quedaba en 4.4:1, apenas por debajo del mínimo. */
-    --purple-fill: #6B4EA8;
+    /* En oscuro el color puro ya llega a 4.5:1 sobre su propio tinte al 16%,
+       así que la tinta es el mismo valor y no una variante corregida. */
+    --orange-ink: #F97316;
+    --green-ink: #4ADE80;
+    --blue-ink: #9B96F7;
+    --purple-ink: #D4A3FF;
+    --teal-ink: #5EEAD4;
+    --accent-ink: #34D399;
+    --on-accent: #12111C;
+    /* Más oscuro que --purple: con el violeta claro del tema oscuro, el texto
+       claro encima se quedaba corto. Este es el relleno, no el texto. */
+    --purple-fill: #6D28D9;
     --on-purple: #FFFFFF;
-    --line-strong: rgba(221, 225, 222, .42);
+    --line-strong: rgba(237, 234, 251, .42);
 }
 
 html[data-theme="light"] {
-    --bg: #DDE1DE;
-    --surface: #F2F4F2;
-    --surface-soft: #E8ECE9;
-    --line: rgba(21, 17, 29, .15);
-    --text: #15111D;
-    --muted: #57515F;
-    --orange: #FF5400;
-    --green: #02A549;
-    --blue: #337CFF;
-    --purple: #7C1897;
-    --teal: #0E7C8C;
-    --accent: #337CFF;
-    --shadow: rgba(21, 17, 29, .15);
+    --bg: #F7F5FF;
+    --surface: #FFFFFF;
+    --surface-soft: #EEECFB;
+    --line: rgba(27, 24, 48, .14);
+    --text: #1B1830;
+    --muted: #5C5680;
+    --orange: #F97316;
+    --green: #16A34A;
+    --blue: #4F46E5;
+    --purple: #9333EA;
+    --teal: #0D9488;
+    --accent: #059669;
+    --shadow: rgba(40, 34, 90, .14);
 
-    --orange-ink: #9C3300;
-    --green-ink: #015B27;
-    --blue-ink: #2253AB;
-    --purple-ink: #7C1897;
-    --teal-ink: #0A5F6B;
-    --accent-ink: var(--blue-ink);
-    --on-accent: #15111D;
-    --purple-fill: #7C1897;
+    --orange-ink: #C2410C;
+    --green-ink: #107937;
+    --blue-ink: #4F46E5;
+    --purple-ink: #8D31E1;
+    --teal-ink: #0A766D;
+    --accent-ink: #047854;
+    --on-accent: #1B1830;
+    --purple-fill: #4F46E5;
     --on-purple: #FFFFFF;
-    --line-strong: rgba(21, 17, 29, .5);
+    --line-strong: rgba(27, 24, 48, .48);
 }
 
 /* 2. BASE DE LA PÁGINA: tipografía, fondo y comportamiento global. */
@@ -171,6 +193,25 @@ button { cursor: pointer; }
    navegable por teclado. Usa la variable de acento del tema, así respeta claro/oscuro. */
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
+
+/* ================================================================
+   2b. SUPERFICIES (plano)
+   El sitio no usa relieve. Una pieza se distingue del fondo por su
+   color de superficie (--surface contra --bg) y por el borde de 1px
+   de --line, no por sombras. Los estados (hover, activo, elegido) se
+   dicen con fondo y con color de tinta, nunca con volumen ni con la
+   pieza levantándose.
+
+   La única sombra que queda en el sitio es la escalera --elev-*, y va
+   solo en lo que de verdad flota por encima de la página: la ventana
+   del chat, su burbuja, la barra del comparador y el modal. Ahí la
+   sombra no es decoración — es lo que separa la capa flotante del
+   contenido que quedó abajo.
+
+   Acá había un par de clases utilitarias, .neu-raised y .neu-pressed,
+   que aplicaban el relieve. No las usaba ningún elemento del HTML, así
+   que se fueron junto con el efecto.
+   ================================================================ */
 /* ================================================================
    3. ENCABEZADO / PORTADA
    Incluye el degradado superior, el título principal y el texto.
@@ -270,18 +311,50 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
     margin: calc(var(--scroll-progress) * var(--search-lift)) 0 0 auto;
     /* Fila: el buscador se estira y el botón de filtros (solo en celular) va al lado. */
     display: flex; align-items: center; gap: .5rem;
+    /* Ancla la lupa (ver ::before). */
+    position: relative;
 }
+/* Lupa SIN tocar el HTML: un <input> no admite pseudo-elementos, así que el ícono
+   lo pone el contenedor y el input le hace lugar con el padding izquierdo.
+   Va como MÁSCARA y no como background-image porque el color de un SVG embebido
+   en un data-URI queda incrustado ahí adentro: con mask el color sale de una
+   variable del tema y sigue a claro/oscuro y al foco sin duplicar el ícono. */
+.search-container::before {
+    content: '';
+    position: absolute; left: 1.05rem; top: 50%; z-index: 1;
+    width: 18px; height: 18px; margin-top: -9px;
+    background: var(--muted);
+    --icono-lupa: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.8-3.8'/%3E%3C/svg%3E");
+    -webkit-mask: var(--icono-lupa) center / contain no-repeat;
+    mask: var(--icono-lupa) center / contain no-repeat;
+    /* Si no, el click sobre la lupa no enfoca el input que hay debajo. */
+    pointer-events: none;
+    transition: background var(--dur-base) ease;
+}
+.search-container:has(.search-input:focus)::before { background: var(--accent); }
+
+/* El buscador es el caso de manual del hundido: parece un pozo tallado en la
+   superficie, que es exactamente lo que es un campo donde se escribe. */
 .search-input {
     flex: 1; min-width: 0;
-    width: 100%; padding: 1rem 1.2rem; color: var(--text); background: var(--surface);
+    /* El padding izquierdo le deja lugar a la lupa. */
+    width: 100%; padding: 1rem 1.2rem 1rem 2.9rem; color: var(--text); background: var(--surface);
     border: 1px solid var(--line-strong);
     /* Se redondea hasta quedar en forma de píldora al achicarse. */
     border-radius: calc(12px + var(--scroll-progress) * 987px);
-    box-shadow: 0 calc(var(--scroll-progress) * 6px) calc(var(--scroll-progress) * 18px) rgba(0, 0, 0, calc(var(--scroll-progress) * .16));
+    /* Sin sombra: ni la proyectada que crecía con el scroll ni el hundido que la
+       reemplazó. El campo se lee por su borde de --line-strong, que es además lo
+       que cumple el 3:1 que pide la norma para controles. */
+    box-shadow: none;
+    transition: box-shadow var(--dur-base) ease, border-color var(--dur-base) ease;
 }
-/* El halo es decorativo y acompaña al click; el anillo de foco por teclado lo
-   sigue poniendo :focus-visible (antes un outline:none lo borraba). */
-.search-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 20%, transparent); }
+/* En foco, borde de acento más un halo. El halo es un anillo plano, no una
+   sombra de profundidad: no desplaza ni difumina, solo rodea. El anillo de
+   teclado lo sigue poniendo :focus-visible. */
+.search-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
 /* El margen también se colapsa: si no, sigue sumando alto al header achicado. */
 .hero-actions { display: flex; justify-content: center; gap: .65rem; margin-top: calc(1rem * (1 - var(--scroll-progress))); }
 .news-button, .mobile-filter-button {
@@ -323,6 +396,7 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
    6. PANEL DE FILTROS
    Estilos de los filtros laterales y de sus opciones.
    ================================================================ */
+/* El panel es plano, como todo lo demás: fondo de --surface y borde de --line. */
 .filters-sidebar { align-self: start; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; }
 .filters-heading { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1rem .8rem; border-bottom: 1px solid var(--line); }
 .filters-heading h2 { margin: 0; font-size: var(--fs-md); }
@@ -331,12 +405,26 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
 .filter-group h3 { margin: 0 0 .55rem; color: var(--text); font-family: var(--font-detail); font-size: var(--fs-md); font-weight: 400; letter-spacing: .045em; }
 .filter-options { display: flex; flex-direction: column; align-items: flex-start; gap: .18rem; }
 .filter-options-inline { gap: .12rem; }
+/* El padding horizontal va en TODAS las opciones, no solo en la activa: si se lo
+   pusiera únicamente a la elegida, la lista entera se correría cada vez que
+   cambiás de filtro. */
 .filter-option {
-    width: 100%; min-height: 30px; padding: .24rem 0; border: 0; color: var(--muted); background: transparent;
-    text-align: left; font-size: var(--fs-sm); transition: color var(--dur-base) ease;
+    width: 100%; min-height: 30px; padding: .28rem .5rem; border: 0; border-radius: var(--radius-sm);
+    color: var(--muted); background: transparent;
+    text-align: left; font-size: var(--fs-sm);
+    transition: color var(--dur-base) ease, background-color var(--dur-base) ease;
 }
-.filter-option:hover { color: var(--accent-ink); }
-.filter-option.active { color: var(--text); font-weight: 700; }
+.filter-option:hover { color: var(--accent-ink); background: color-mix(in srgb, var(--accent) 9%, transparent); }
+/* El elegido se tiñe. El fondo y la tinta de acento sostienen solos el estado;
+   antes los acompañaba un hundido suave que se fue con el resto del relieve. */
+.filter-option.active {
+    color: var(--accent-ink); font-weight: 700;
+    background: color-mix(in srgb, var(--accent) 14%, var(--surface));
+}
+/* El punto usa --accent-ink y no --accent a propósito: --accent puro sobre este
+   fondo teñido da 2.5:1 en modo claro. --accent-ink es el MISMO verde con la
+   luminancia corregida, así que el punto ya es verde (antes era celeste) y además
+   se ve. */
 .filter-option.active::before { content: '•'; display: inline-block; width: .8rem; color: var(--accent-ink); }
 .filter-option:not(.active)::before { content: ''; display: inline-block; width: .8rem; }
 .filter-options-compact { max-height: 186px; overflow-y: auto; scrollbar-width: thin; }
@@ -354,7 +442,15 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
    en Educación Formal; las plataformas tienen su propio encabezado). */
 .results-count::before { content: '🎓 '; }
 .sort-control { display: flex; align-items: center; gap: .5rem; color: var(--muted); font-size: var(--fs-xs); white-space: nowrap; }
-.sort-control select { min-height: 38px; padding: .5rem .6rem; border: 1px solid var(--line-strong); border-radius: var(--radius-xs); color: var(--text); background: var(--surface); }
+/* El borde fuerte y la flecha nativa del navegador se quedan intactos: son lo
+   que dice "esto se abre", y eso no se negocia por estética. */
+.sort-control select {
+    min-height: 38px; padding: .5rem .6rem; border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm); color: var(--text); background: var(--surface);
+    transition: border-color var(--dur-base) ease;
+}
+.sort-control select:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line-strong)); }
+.sort-control select:focus { border-color: var(--accent); }
 
 /* ================================================================
    8. TARJETAS DE CARRERAS Y CURSOS
@@ -365,9 +461,47 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
    al borde naranja de las tarjetas de plataformas. */
 /* Sin min-height: forzaba aire muerto en las tarjetas de título corto y
    desalineaba la grilla. Ahora cada una mide lo que su contenido pide. */
-.card { display: flex; flex-direction: column; padding: var(--space-6); border: 1px solid var(--line); border-left: 4px solid var(--blue); border-radius: var(--radius-lg); background: var(--surface); transition: transform var(--dur-base) ease, border-color var(--dur-base) ease; }
-.card:hover { transform: translateY(-3px); border-color: var(--blue); }
+/* --- Familia de cards ---------------------------------------------------------
+   .card, .platform-card, .curso-card y .news-card son la MISMA pieza en distintas
+   secciones. Se tratan juntas a propósito: si solo una cambiara de tratamiento,
+   cambiar de pestaña mostraría media interfaz rediseñada.
+
+   Planas: fondo de --surface, borde de 1px y nada más. El color de categoría no
+   va en un borde grueso a la izquierda sino en la marca chica de --card-tono
+   (ver ::before más abajo). */
+.card, .platform-card, .curso-card, .news-card {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    transition: border-color var(--dur-base) ease;
+}
+/* La marca de categoría: una barrita corta pegada al borde izquierdo, a la altura
+   de la primera línea de contenido. Dice lo mismo que decía el borde de 4px
+   (a qué sección pertenece esta card) ocupando una fracción del peso visual. */
+.card::before, .platform-card::before, .curso-card::before, .news-card::before {
+    content: '';
+    position: absolute; left: 0; top: var(--space-6);
+    width: 3px; height: 26px;
+    border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
+    background: var(--card-tono, var(--accent));
+}
+/* En hover la card no se levanta: se le enciende el borde con el color de su
+   categoría, que es la misma señal sin movimiento. */
+.card:hover, .platform-card:hover, .curso-card:hover, .news-card:hover {
+    border-color: color-mix(in srgb, var(--card-tono, var(--accent)) 45%, var(--line));
+}
+
+.card { display: flex; flex-direction: column; padding: var(--space-6); --card-tono: var(--seccion, var(--blue)); }
 .card-badges { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+/* Los badges se quedan SIN relieve, y es una decisión, no un olvido. Dos razones:
+   (1) las sombras neumórficas se derivan de --surface, pero un badge no es
+   --surface sino un tinte del color funcional; ponerle sombras de otro material
+   encima rompe justo la ilusión que el efecto busca — deja de parecer extruído y
+   parece pegoteado. (2) Son seis pastillas de 20px dentro de una card que YA
+   tiene relieve: sumarles otro par de sombras a cada una convierte el interior de
+   la card en ruido y compite con la jerarquía. El color funcional ya los separa
+   del fondo con 4.6:1 o más, que es lo que importa. */
 .badge { padding: .23rem .5rem; border-radius: var(--radius-pill); color: var(--muted); background: color-mix(in srgb, var(--muted) 12%, transparent); font-family: var(--font-detail); font-size: var(--fs-2xs); font-weight: 400; letter-spacing: .045em; text-transform: uppercase; }
 /* Mismo aspecto de siempre (tinte del color + texto del color), pero el texto usa
    la variante -ink: el matiz puro sobre su propio tinte no llegaba a 4.5:1. */
@@ -420,10 +554,9 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
     display: block; margin: 1.5rem auto 0; min-height: 44px; padding: .7rem 1.6rem;
     border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface);
     color: var(--accent-ink); font-family: var(--font-text); font-size: var(--fs-base); font-weight: 700;
-    cursor: pointer; transition: border-color var(--dur-base) ease, color var(--dur-base) ease, transform var(--dur-base) ease;
+    cursor: pointer; transition: border-color var(--dur-base) ease, color var(--dur-base) ease, background-color var(--dur-base) ease;
 }
-.cargar-mas:hover { border-color: var(--accent); transform: translateY(-1px); }
-.cargar-mas:active { transform: translateY(0); }
+.cargar-mas:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--surface)); }
 
 /* ================================================================
    8b. SECCIONES PRINCIPALES: EDUCACIÓN FORMAL vs PLATAFORMAS ONLINE
@@ -452,27 +585,47 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .section-tab {
     display: flex; flex-direction: column; align-items: flex-start; gap: .35rem;
     padding: .75rem .85rem; text-align: left;
-    border: 2px solid var(--line); border-radius: var(--radius-lg);
+    /* Plano: ni borde ni relieve. La pestaña se despega del fondo por su propia
+       superficie (--surface contra --bg) y nada más. El borde sigue declarado en
+       1px pero transparente para que la geometría no salte cuando la activa sí
+       lo pinta. */
+    border: 1px solid transparent; border-radius: var(--radius-lg);
     background: var(--surface); color: var(--muted);
-    transition: border-color var(--dur-base) ease, color var(--dur-base) ease, background-color var(--dur-base) ease, transform var(--dur-base) ease;
+    box-shadow: none;
+    transition: border-color var(--dur-base) ease, color var(--dur-base) ease,
+                background-color var(--dur-base) ease;
 }
-.section-tab:hover { transform: translateY(-2px); }
-.section-tab-icon { font-size: var(--fs-xl); line-height: 1; }
+/* Hover SOLO en las que no están elegidas. Sin relieve que aumentar, el hover
+   se nota por la superficie: un escalón de fondo, sin movimiento. */
+.section-tab:not(.is-active):hover { background: var(--surface-soft); }
+.section-tab-icon { display: inline-flex; line-height: 1; color: var(--muted); transition: color var(--dur-base) ease; }
+.section-tab-icon .tab-svg { width: 26px; height: 26px; display: block; }
 .section-tab-texto { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
 .section-tab-texto strong { font-family: var(--font-title); font-size: var(--fs-base); line-height: 1.2; color: var(--text); }
 .section-tab-texto small { font-size: var(--fs-2xs); line-height: 1.3; overflow-wrap: anywhere; }
 
-/* La pestaña activa se pinta con el color de SU sección, no con el global. */
+/* INERTES por ahora: la pestaña activa pasó a pintarse con --accent (pedido de
+   Fase B), no con el color de su sección. Se dejan porque son el camino de vuelta
+   de una línea si preferís recuperar el código de color por sección: alcanza con
+   cambiar --accent-ink por --tono-ink y --accent por --tono en .section-tab.is-active.
+   El color por sección SIGUE vivo en el resto de la interfaz (--seccion en body). */
 .section-tab-formal.is-active       { --tono: var(--blue);   --tono-ink: var(--blue-ink); }
 .section-tab-plataformas.is-active  { --tono: var(--orange); --tono-ink: var(--orange-ink); }
 .section-tab-formaciones.is-active  { --tono: var(--purple); --tono-ink: var(--purple-ink); }
 .section-tab-oficios.is-active      { --tono: var(--green);  --tono-ink: var(--green-ink); }
 .section-tab-secundario.is-active   { --tono: var(--teal);   --tono-ink: var(--teal-ink); }
+/* Sin relieve, el estado activo lo sostienen el fondo teñido y la tinta de
+   acento del título y el ícono. El borde de acento se queda — es el único
+   contorno que pinta alguna pestaña, así que no compite con nada. El tiñe sube
+   de 10% a 14%: era el relieve lo que hacía de piso del estado y ya no está. */
 .section-tab.is-active {
-    border-color: var(--tono);
-    background: color-mix(in srgb, var(--tono) 12%, var(--surface));
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 14%, var(--surface));
+    box-shadow: none;
+    transform: none;
 }
-.section-tab.is-active .section-tab-texto strong { color: var(--tono-ink); }
+.section-tab.is-active .section-tab-texto strong { color: var(--accent-ink); }
+.section-tab.is-active .section-tab-icon { color: var(--accent-ink); }
 .section-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* ================================================================
@@ -483,13 +636,7 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .platforms-section h2 { margin: 0 0 .4rem; font-size: var(--fs-xl); color: var(--orange-ink); }
 .platforms-intro { margin: 0 0 1.4rem; color: var(--muted); font-size: var(--fs-base); }
 .platforms-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1rem; }
-.platform-card {
-    display: flex; flex-direction: column; padding: 1.15rem;
-    border: 1px solid var(--line); border-left: 4px solid var(--orange);
-    border-radius: var(--radius-lg); background: var(--surface);
-    transition: transform var(--dur-base) ease, border-color var(--dur-base) ease;
-}
-.platform-card:hover { transform: translateY(-3px); border-color: var(--orange); }
+.platform-card { display: flex; flex-direction: column; padding: 1.15rem; --card-tono: var(--orange); }
 .platform-head { display: flex; align-items: center; gap: .7rem; margin-bottom: .7rem; }
 /* Espacio del logo: si se agrega la imagen, ocupa este mismo lugar (ver app.js). */
 .platform-logo {
@@ -520,13 +667,7 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .catalog-aparte h2 { margin: 0 0 .4rem; font-size: var(--fs-xl); color: var(--seccion-ink); }
 .catalog-aparte-intro { margin: 0 0 1.4rem; color: var(--muted); font-size: var(--fs-base); }
 .cursos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(265px, 1fr)); gap: 1rem; }
-.curso-card {
-    display: flex; flex-direction: column; padding: 1.15rem;
-    border: 1px solid var(--line); border-left: 4px solid var(--seccion);
-    border-radius: var(--radius-lg); background: var(--surface);
-    transition: transform var(--dur-base) ease, border-color var(--dur-base) ease;
-}
-.curso-card:hover { transform: translateY(-3px); border-color: var(--seccion); }
+.curso-card { display: flex; flex-direction: column; padding: 1.15rem; --card-tono: var(--seccion); }
 .curso-title { margin: var(--space-4) 0 var(--space-3); font-family: var(--font-title); font-size: var(--fs-lg); line-height: 1.3; overflow-wrap: anywhere; }
 
 /* Tarjeta simple (Terminar el Secundario): sin badges arriba, así que el título
@@ -547,7 +688,7 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .news-section h2 { margin: 0 0 1rem; font-size: var(--fs-xl); }
 .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
 /* Borde izquierdo como el resto de las tarjetas: era la única sin acento. */
-.news-card { display: flex; flex-direction: column; min-height: 190px; padding: var(--space-6); border: 1px solid var(--line); border-left: 4px solid var(--seccion, var(--blue)); border-radius: var(--radius-lg); background: var(--surface); }
+.news-card { display: flex; flex-direction: column; min-height: 190px; padding: var(--space-6); --card-tono: var(--seccion, var(--blue)); }
 .news-card p { margin: 0; color: var(--muted); font-size: var(--fs-2xs); }
 .news-card h3 { margin: .75rem 0; font-size: var(--fs-md); }
 .news-card a { margin-top: auto; color: var(--accent-ink); font-size: var(--fs-sm); font-weight: 700; text-decoration: none; }
@@ -687,6 +828,164 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .mensaje-bot > p + .btn-chat-reset { margin-top: var(--space-4); }
 .btn-chat-reset { width: 100%; min-height: 40px; padding: .55rem; border: 1px solid var(--line); border-radius: var(--radius-sm); color: var(--text); background: transparent; font-size: var(--fs-xs); }
 
+/* ---- 10b. Portada del copiloto -----------------------------------------
+   La bienvenida del chat es la primera pantalla del test, no un mensaje mas:
+   ocupa la ventana entera y muestra el proceso en tres pasos en vez de
+   explicarlo con un parrafo. Vive dentro de una .mensaje-bot, asi que lo
+   primero es sacarle el disfraz de burbuja. */
+.mensaje-bot:has(.copiloto-bienvenida) {
+    padding: 0; background: none; border-radius: 0;
+    /* El contenedor de consulta es el wrapper, no la portada: un elemento no
+       puede consultar su propio tamano. La portada se acomoda al ancho REAL
+       del modal, no al del viewport, porque la misma pantalla se usa a
+       pantalla completa (680px) y en la burbuja flotante (380px). */
+    container-type: inline-size;
+    container-name: portada-copiloto;
+}
+/* Con la portada puesta el header queda como cromo minimo: solo la X. El
+   titulo se esconde sin salir del arbol de accesibilidad, porque es el que
+   nombra la region (aria-labelledby). */
+.ventana-chat:has(.copiloto-bienvenida) .chat-header { border-bottom: 0; padding-bottom: 0; }
+.ventana-chat:has(.copiloto-bienvenida) #chat-titulo {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap;
+}
+/* Profundidad: un degradado muy suave de --surface a --surface-soft en vez de
+   un plano. */
+.ventana-chat:has(.copiloto-bienvenida) {
+    background: linear-gradient(163deg, var(--surface) 0%, var(--surface-soft) 100%);
+}
+
+.copiloto-bienvenida {
+    display: flex; flex-direction: column;
+    gap: var(--space-6);
+    padding: var(--space-3) var(--space-4) var(--space-4);
+    color: var(--text);
+}
+.cb-svg { width: 100%; height: 100%; display: block; }
+
+/* ---- Header: icono en placa + titulo con subtitulo ---- */
+.cb-header { display: flex; align-items: center; gap: var(--space-4); }
+.cb-icono {
+    flex: none; display: grid; place-items: center;
+    width: 48px; height: 48px; padding: 11px;
+    border-radius: var(--radius-md);
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 26%, transparent);
+}
+.cb-titulos { display: flex; flex-direction: column; gap: var(--space-1); min-width: 0; }
+.cb-titulo {
+    margin: 0;
+    font-family: var(--font-title); font-weight: var(--peso-title);
+    font-size: var(--fs-xl); line-height: 1.15; color: var(--text);
+    letter-spacing: -.01em;
+}
+.cb-subtitulo { margin: 0; color: var(--muted); font-size: var(--fs-sm); line-height: 1.3; }
+
+/* ---- Los tres pasos ---- */
+.cb-pasos {
+    display: grid; gap: var(--space-3);
+    margin: 0; padding: 0; list-style: none;
+}
+.cb-paso {
+    display: flex; align-items: flex-start; gap: var(--space-4);
+    padding: var(--space-4);
+    border: 1px solid var(--line); border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--surface) 55%, transparent);
+}
+.cb-paso-icono {
+    flex: none; display: grid; place-items: center;
+    width: 32px; height: 32px; padding: 6px;
+    border-radius: var(--radius-sm);
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.cb-paso-cuerpo { display: flex; flex-direction: column; gap: var(--space-1); min-width: 0; }
+.cb-paso-num {
+    font-family: var(--font-detail); font-size: var(--fs-2xs);
+    letter-spacing: .09em; text-transform: uppercase; color: var(--muted);
+}
+.cb-paso-texto { color: var(--text); font-size: var(--fs-sm); line-height: 1.35; }
+
+
+/* ---- Badge de tiempo: baja la friccion de arrancar ---- */
+.cb-tiempo {
+    display: inline-flex; align-items: center; align-self: center; gap: var(--space-2);
+    margin: 0; padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-pill);
+    color: var(--muted); background: color-mix(in srgb, var(--text) 6%, transparent);
+    font-size: var(--fs-2xs);
+}
+.cb-tiempo .cb-svg { width: 14px; height: 14px; flex: none; }
+
+/* ---- Boton principal ---- */
+.cb-cta {
+    display: flex; align-items: center; justify-content: center; gap: var(--space-3);
+    width: 100%; min-height: 52px; padding: var(--space-4) var(--space-5);
+    border: 0; border-radius: var(--radius-md);
+    color: var(--on-accent);
+    background: linear-gradient(180deg,
+        color-mix(in srgb, var(--accent) 92%, #fff) 0%, var(--accent) 100%);
+    font-family: var(--font-title); font-weight: 700; font-size: var(--fs-md);
+    cursor: pointer;
+    transition: filter var(--dur-base) ease;
+}
+.cb-cta .cb-svg { width: 20px; height: 20px; flex: none; transition: transform var(--dur-base) ease; }
+/* El botón no se levanta ni proyecta sombra: aclara, y la flecha se corre. El
+   movimiento se lo queda la flecha, que es la que indica hacia dónde lleva. */
+.cb-cta:hover { filter: brightness(1.04); }
+.cb-cta:hover .cb-svg { transform: translateX(3px); }
+.cb-cta:active { filter: brightness(.96); }
+
+/* ---- Salida discreta ---- */
+.cb-salida {
+    align-self: center; min-height: 36px; padding: var(--space-2) var(--space-3);
+    border: 0; border-radius: var(--radius-sm);
+    color: var(--muted); background: none;
+    font-size: var(--fs-xs); text-decoration: underline;
+    text-underline-offset: 3px; text-decoration-color: var(--line-strong);
+    cursor: pointer;
+    transition: color var(--dur-base) ease;
+}
+.cb-salida:hover, .cb-salida:focus-visible { color: var(--text); }
+
+/* La X del header pasa a tener estado hover propio, en vez de ser un icono
+   suelto. Aplica a todo el chat, no solo a la portada. */
+.chat-header button {
+    border-radius: var(--radius-round);
+    transition: color var(--dur-base) ease, background var(--dur-base) ease;
+}
+.chat-header button:hover, .chat-header button:focus-visible {
+    color: var(--text); background: color-mix(in srgb, var(--text) 9%, transparent);
+}
+
+/* Modal ancho: los tres pasos pasan a fila, cada uno en columna. Por debajo de
+   este ancho quedan apilados, que es el valor por defecto. */
+@container portada-copiloto (min-width: 440px) {
+    .cb-pasos { grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+    .cb-paso { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+}
+
+/* Modal angosto (burbuja flotante y celular): se aprieta el aire para que el
+   boton principal siga entrando sin scroll. Una pantalla que promete "menos de
+   2 minutos" no puede pedir que scrollees para encontrar el boton. */
+@container portada-copiloto (max-width: 439px) {
+    .copiloto-bienvenida { gap: var(--space-3); padding-bottom: var(--space-3); }
+    .cb-icono { width: 44px; height: 44px; padding: 10px; }
+    .cb-titulo { font-size: var(--fs-lg); }
+    .cb-pasos { gap: var(--space-2); }
+    .cb-paso { padding: var(--space-3); gap: var(--space-3); }
+    .cb-tiempo { padding: var(--space-1) var(--space-3); }
+    .cb-cta { min-height: 48px; padding: var(--space-3) var(--space-4); }
+    .cb-salida { min-height: 32px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cb-cta, .cb-cta .cb-svg { transition: none; }
+    .cb-cta:hover .cb-svg { transform: none; }
+}
+
 /* ================================================================
    11. DISEÑO PARA TABLETS Y CELULARES (hasta 820px).
    Convierte el filtro lateral en un panel deslizante y deja una tarjeta
@@ -738,7 +1037,10 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 @media (max-width: 480px) {
     body { padding-top: var(--hero-alto, 390px); }
     .hero { --hero-pad-top: 2.5rem; --hero-pad-bottom: 1.75rem; --logo-w-compacto: 120px; --search-lift: -45px; --bar-gap: 10px; --blur-max: 16px; }
-    .search-input { min-height: 48px; padding: .8rem 1rem; }
+    /* El padding izquierdo NO baja a 1rem: la lupa sigue estando y el texto le
+       quedaba encima. Solo se ajusta lo demás. */
+    .search-input { min-height: 48px; padding: .8rem 1rem .8rem 2.7rem; }
+    .search-container::before { left: .95rem; width: 17px; height: 17px; margin-top: -8.5px; }
     .hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
     /* Solo los de .hero-actions se estiran en la grilla; el de filtros vive en la
        fila del buscador y tiene que conservar su ancho propio. */
@@ -780,12 +1082,20 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 
 .favoritos-toggle {
     min-height: 38px; padding: .5rem .8rem; border: 1px solid var(--line);
-    border-radius: var(--radius-xs); color: var(--text); background: var(--surface);
+    border-radius: var(--radius-sm); color: var(--text); background: var(--surface);
     font-family: var(--font-text); font-size: var(--fs-xs); font-weight: 700; cursor: pointer;
-    transition: border-color var(--dur-base) ease, color var(--dur-base) ease;
+    transition: border-color var(--dur-base) ease, color var(--dur-base) ease,
+                background-color var(--dur-base) ease;
 }
-.favoritos-toggle:hover { border-color: var(--orange); color: var(--orange-ink); }
-.favoritos-toggle.active { color: var(--on-accent); background: var(--orange); border-color: var(--orange); }
+.favoritos-toggle:hover:not(.active) { border-color: var(--orange); color: var(--orange-ink); }
+/* Activado = teñido de naranja, con el borde y la tinta al tono. Sin el hundido
+   que lo acompañaba, el tinte y el borde son toda la señal, así que se quedan
+   fuertes (18% y 60%) para que el estado se lea de un vistazo. */
+.favoritos-toggle.active {
+    color: var(--orange-ink);
+    background: color-mix(in srgb, var(--orange) 18%, var(--surface));
+    border-color: color-mix(in srgb, var(--orange) 60%, var(--line));
+}
 
 .card-actions { display: flex; gap: .5rem; margin-top: 1rem; }
 .btn-favorito, .btn-comparar {
@@ -891,9 +1201,10 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
         transition-duration: .001ms !important;
         scroll-behavior: auto !important;
     }
-    /* Los "levantarse" del hover no aportan información, solo movimiento. */
-    .card:hover, .platform-card:hover, .curso-card:hover,
-    .section-tab:hover, .cargar-mas:hover { transform: none; }
+    /* Las cards, las pestañas y los botones ya no se levantan en hover — el
+       relieve se sacó de todo el sitio, así que no queda transform que anular.
+       El único que sobrevive es la burbuja del chat, que sí flota. */
+    .btn-chat-toggle:hover { transform: none; }
 }
 
 /* Área táctil mínima de 44px donde se toca con el dedo. Se decide por tipo de
@@ -918,11 +1229,10 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     border-radius: var(--radius-md);
     background: var(--surface);
     padding: var(--space-5);
-    transition: box-shadow var(--dur-base), transform var(--dur-fast);
+    transition: border-color var(--dur-base);
 }
 .carrera-card:hover {
-    box-shadow: var(--elev-2);
-    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
 }
 
 /* Badge de compatibilidad */
@@ -1242,14 +1552,13 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     background: color-mix(in srgb, var(--purple) 12%, var(--surface));
     color: var(--text);
     text-align: left;
-    box-shadow: var(--elev-1);
     animation: bienvenida-deslizar var(--dur-slow) ease backwards;
     animation-delay: .12s;
-    transition: transform var(--dur-base) ease, box-shadow var(--dur-base) ease;
+    transition: background-color var(--dur-base) ease, border-color var(--dur-base) ease;
 }
+/* Sin levantarse: en hover se profundiza el tinte violeta que ya tiene. */
 .bienvenida-card-primaria:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--elev-3);
+    background: color-mix(in srgb, var(--purple) 20%, var(--surface));
 }
 .bienvenida-icono {
     flex: 0 0 auto;
@@ -1281,7 +1590,7 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     animation-delay: .22s;
     transition: border-color var(--dur-base) ease, color var(--dur-base) ease, transform var(--dur-base) ease;
 }
-.bienvenida-catalogo:hover { border-color: var(--accent); color: var(--accent-ink); transform: translateY(-1px); }
+.bienvenida-catalogo:hover { border-color: var(--accent); color: var(--accent-ink); }
 
 /* En pantallas angostas las dos opciones se apilan. */
 @media (max-width: 480px) {

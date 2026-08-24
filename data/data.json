@@ -7809,6 +7809,36 @@
             "modalidad": "100% Online",
             "oferta": "Tecnicaturas superiores co-creadas con empresas (Programación, Cloud, Data)",
             "duracion": "2 años"
+        },
+        {
+            "institucion": "Fundación YPF",
+            "modalidad": "100% Online (en vivo o autoasistido)",
+            "oferta": "IA, Data Analytics, Programación, Ciberseguridad, Excel, Power BI",
+            "duracion": "De 3 hs a 3 meses según curso"
+        },
+        {
+            "institucion": "Santander Open Academy",
+            "modalidad": "100% Online, a tu ritmo",
+            "oferta": "Python, IA, inglés de negocios, emprendimiento, habilidades digitales",
+            "duracion": "Variable, sin límite de cursos"
+        },
+        {
+            "institucion": "ProgramON",
+            "modalidad": "100% Online, autoguiado",
+            "oferta": "Programación, habilidades blandas, armado de CV, LinkedIn",
+            "duracion": "Corta, a tu ritmo"
+        },
+        {
+            "institucion": "Microsoft Learn",
+            "modalidad": "100% Online, autoasistido",
+            "oferta": "Azure, IA, ciberseguridad, análisis de datos, certificaciones oficiales",
+            "duracion": "Variable según ruta de aprendizaje"
+        },
+        {
+            "institucion": "Enlace 2.0 (Gobierno de Mendoza)",
+            "modalidad": "100% Online, autogestionado",
+            "oferta": "Alfabetización digital, marketing, trabajos rurales, atención al público, drones",
+            "duracion": "Variable según curso"
         }
     ]
 }

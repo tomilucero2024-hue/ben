@@ -87,7 +87,14 @@ const PLATAFORMAS_INFO = {
     'Mindhub':          { url: 'https://www.mindhub.la',           logo: '' },
     'Image Campus':     { url: 'https://www.imagecampus.edu.ar',   logo: '' },
     'Escuela Da Vinci': { url: 'https://www.davinci.edu.ar',       logo: '' },
-    'Teclab':           { url: 'https://www.teclab.edu.ar',        logo: '' }
+    'Teclab':           { url: 'https://www.teclab.edu.ar',        logo: '' },
+    // Plataformas de acceso libre: se entra y se empieza cuando uno quiera, sin
+    // convocatoria ni cupo por selección.
+    'Fundación YPF':                    { url: 'https://lab.fundacionypf.org/formacion-digital',                  logo: '' },
+    'Santander Open Academy':           { url: 'https://www.santanderopenacademy.com/es/index.html',              logo: '' },
+    'ProgramON':                        { url: 'https://www.chicos.net/programon',                                logo: '' },
+    'Microsoft Learn':                  { url: 'https://www.microsoft.com/es-ar/microsoft-learn',                 logo: '' },
+    'Enlace 2.0 (Gobierno de Mendoza)': { url: 'https://www.mendoza.gov.ar/economia/entornodecapacitacion-enlace/', logo: '' }
 };
 
 const CARPETA_LOGOS = 'img/plataformas/';
@@ -1366,11 +1373,67 @@ function sugerenciasChips(lista) {
     ).join('')}</div>`;
 }
 
+// Pantalla de bienvenida del copiloto: en vez de explicar el test con un
+// párrafo, lo muestra. Es la única burbuja del chat que no se ve como burbuja
+// (el CSS le saca el fondo vía :has), porque hace de portada del modal.
+// Los SVG son inline y de trazo: siguen a currentColor y al tema solos.
+function iconoCopiloto(nombre) {
+    const trazos = {
+        // Brújula: "te ayudo a encontrar tu dirección".
+        brujula: '<circle cx="12" cy="12" r="9"/><path d="m15.6 8.4-2.2 5-5 2.2 2.2-5z"/>',
+        // Paso 1: lista de preguntas con un tilde.
+        lista: '<path d="M10 7h9M10 12h9M10 17h5"/><path d="m4 7 1.4 1.4L8 5.8"/><path d="M4.5 12h1M4.5 17h1"/>',
+        // Paso 2: análisis, barras que crecen más un destello.
+        analisis: '<path d="M5 19V13M10 19V9M15 19v-4"/><path d="M19.5 4.5v4M17.5 6.5h4"/><path d="M4 21h16"/>',
+        // Paso 3: la diana, el resultado.
+        diana: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/>',
+        // Reloj del badge de tiempo.
+        reloj: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 1.8"/>',
+        // Flecha del botón principal.
+        flecha: '<path d="M4 12h15"/><path d="m13 6 6 6-6 6"/>'
+    };
+    return `<svg class="cb-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+        aria-hidden="true" focusable="false">${trazos[nombre] || ''}</svg>`;
+}
+
+// Un paso del mini timeline. El número es decorativo: el <ol> ya numera para
+// quien usa lector de pantalla.
+function pasoCopiloto(n, icono, texto) {
+    return `<li class="cb-paso">
+            <span class="cb-paso-icono" aria-hidden="true">${iconoCopiloto(icono)}</span>
+            <span class="cb-paso-cuerpo">
+                <span class="cb-paso-num" aria-hidden="true">Paso ${n}</span>
+                <span class="cb-paso-texto">${texto}</span>
+            </span>
+        </li>`;
+}
+
 // El camino recomendado es el test guiado, así que va primero y con el botón
-// destacado. La búsqueda libre queda como atajo para quien ya sabe qué busca.
+// destacado. La búsqueda libre queda como atajo para quien ya sabe qué busca:
+// el botón secundario delega en el ✕ del header, que ya sabe si hay que cerrar
+// la ventanita o salir del modo pantalla completa.
 function mensajeBienvenida() {
-    return `<p>👋 Si no sabés por dónde empezar, te hago <strong>5 preguntas cortas</strong> y al final te muestro las carreras de Mendoza que mejor encajan con vos.</p>
-        <button type="button" class="btn-chat-resultado" onclick="iniciarTestVocacional()">🎯 Empezar el test</button>`;
+    return `<div class="copiloto-bienvenida">
+            <div class="cb-header">
+                <span class="cb-icono" aria-hidden="true">${iconoCopiloto('brujula')}</span>
+                <span class="cb-titulos">
+                    <h2 class="cb-titulo">Copiloto Vocacional</h2>
+                    <p class="cb-subtitulo">Encontrá tu carrera ideal en 2 minutos</p>
+                </span>
+            </div>
+            <ol class="cb-pasos">
+                ${pasoCopiloto(1, 'lista', 'Respondés 5 preguntas cortas')}
+                ${pasoCopiloto(2, 'analisis', 'Analizamos tus intereses')}
+                ${pasoCopiloto(3, 'diana', 'Te mostramos las carreras que más encajan')}
+            </ol>
+            <p class="cb-tiempo">${iconoCopiloto('reloj')}<span>Toma menos de 2 minutos</span></p>
+            <button type="button" class="cb-cta" onclick="iniciarTestVocacional()">
+                <span>Empezar el test</span>${iconoCopiloto('flecha')}
+            </button>
+            <button type="button" class="cb-salida"
+                onclick="document.getElementById('btn-cerrar-chat').click()">Prefiero buscar por mi cuenta</button>
+        </div>`;
 }
 
 function mensajeAyuda() {
