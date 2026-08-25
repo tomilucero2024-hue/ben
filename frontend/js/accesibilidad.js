@@ -205,19 +205,32 @@
         });
     }
 
-    // Construye el texto narrativo de una tarjeta para el lector
+    // Elimina emojis e íconos para que el sintetizador de voz no los lea en voz alta
+    function limpiarEmojis(texto) {
+        if (!texto) return '';
+        return texto
+            // Rango de emojis Unicode, dingbats, símbolos y selectores de variación
+            .replace(/[\u{1F300}-\u{1FAFF}\u{1F600}-\u{1F64F}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{FE00}-\u{FE0F}\u{1F1E6}-\u{1F1FF}🏛🏫📍⏳☆★✓+↗🤖]/gu, '')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+
+    // Construye el texto narrativo de una tarjeta para el lector (sin narrar emojis)
     function extraerTextoTarjeta(cardEl) {
-        const titulo = cardEl.querySelector('.card-title, h3, h2')?.textContent?.trim() || '';
-        const institucion = cardEl.querySelector('.card-info p:first-child, .institucion-tag')?.textContent?.trim() || '';
-        const badges = Array.from(cardEl.querySelectorAll('.badge, .tipo-badge')).map(b => b.textContent.trim()).join(', ');
-        const duracion = cardEl.querySelector('[data-duracion], .card-info p:last-child')?.textContent?.trim() || '';
+        const titulo = limpiarEmojis(cardEl.querySelector('.card-title, h3, h2')?.textContent || '');
+        const institucion = limpiarEmojis(cardEl.querySelector('.card-info p:first-child, .institucion-tag')?.textContent || '');
+        const badges = Array.from(cardEl.querySelectorAll('.badge, .tipo-badge'))
+            .map(b => limpiarEmojis(b.textContent))
+            .filter(Boolean)
+            .join(', ');
+        const duracion = limpiarEmojis(cardEl.querySelector('[data-duracion], .card-info p:last-child')?.textContent || '');
 
         let speech = `Carrera: ${titulo}. `;
         if (institucion) speech += `Institución: ${institucion}. `;
         if (badges) speech += `Características: ${badges}. `;
         if (duracion) speech += `Duración: ${duracion}.`;
 
-        return speech;
+        return speech.trim();
     }
 
     // ================================================================
