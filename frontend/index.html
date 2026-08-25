@@ -17,7 +17,7 @@
             document.documentElement.style.colorScheme = tema;
         })();
     </script>
-    <link rel="stylesheet" href="style.css?v=11">
+    <link rel="stylesheet" href="style.css?v=12">
 
 </head>
 <body>
@@ -327,7 +327,90 @@
         </div>
     </section>
 
+    <!-- Panel y botón flotante de Accesibilidad -->
+    <aside id="a11yWidget" class="a11y-widget" aria-label="Herramientas de accesibilidad">
+        <button id="btnAccesibilidad" class="btn-a11y-toggle" type="button" aria-expanded="false" aria-controls="panelAccesibilidad" aria-label="Abrir panel de accesibilidad (Atajo: Alt + A)">
+            <span class="a11y-icon" aria-hidden="true">♿</span>
+            <span class="sr-only">Opciones de accesibilidad</span>
+        </button>
+
+        <div id="panelAccesibilidad" class="a11y-panel" role="dialog" aria-modal="true" aria-labelledby="a11yTitulo" hidden>
+            <div id="a11yOverlay" class="a11y-overlay" aria-hidden="true"></div>
+            <div class="a11y-panel-card">
+                <div class="a11y-header">
+                    <h2 id="a11yTitulo" class="a11y-titulo"><span aria-hidden="true">♿</span> Accesibilidad</h2>
+                    <button id="a11yCloseButton" class="a11y-close-btn" type="button" aria-label="Cerrar panel de accesibilidad">✕</button>
+                </div>
+
+                <div class="a11y-body">
+                    <!-- Tamaño de texto -->
+                    <div class="a11y-grupo">
+                        <span class="a11y-label">Tamaño del texto</span>
+                        <div class="a11y-opciones-fuente" role="group" aria-label="Tamaño del texto">
+                            <button type="button" class="a11y-btn-font is-active" data-a11y-font="1" aria-pressed="true">A <span>Normal</span></button>
+                            <button type="button" class="a11y-btn-font" data-a11y-font="1.15" aria-pressed="false">A+ <span>Grande</span></button>
+                            <button type="button" class="a11y-btn-font" data-a11y-font="1.30" aria-pressed="false">A++ <span>Extra</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Alto contraste -->
+                    <div class="a11y-grupo">
+                        <label class="a11y-switch-row" for="a11yToggleContrast">
+                            <span class="a11y-switch-text">
+                                <strong>Alto contraste</strong>
+                                <small>Contraste reforzado y bordes sólidos</small>
+                            </span>
+                            <input type="checkbox" id="a11yToggleContrast" class="a11y-switch-input" role="switch">
+                            <span class="a11y-switch-slider" aria-hidden="true"></span>
+                        </label>
+                    </div>
+
+                    <!-- Lector por voz -->
+                    <div class="a11y-grupo">
+                        <label class="a11y-switch-row" for="a11yToggleTTS">
+                            <span class="a11y-switch-text">
+                                <strong>Lector por voz (Audio)</strong>
+                                <small>Botones para escuchar tarjetas en voz alta</small>
+                            </span>
+                            <input type="checkbox" id="a11yToggleTTS" class="a11y-switch-input" role="switch">
+                            <span class="a11y-switch-slider" aria-hidden="true"></span>
+                        </label>
+                    </div>
+
+                    <!-- Lectura fácil / Dislexia -->
+                    <div class="a11y-grupo">
+                        <label class="a11y-switch-row" for="a11yToggleDyslexia">
+                            <span class="a11y-switch-text">
+                                <strong>Lectura fácil</strong>
+                                <small>Mayor espacio entre letras y renglones</small>
+                            </span>
+                            <input type="checkbox" id="a11yToggleDyslexia" class="a11y-switch-input" role="switch">
+                            <span class="a11y-switch-slider" aria-hidden="true"></span>
+                        </label>
+                    </div>
+
+                    <!-- Destacar enlaces y botones -->
+                    <div class="a11y-grupo">
+                        <label class="a11y-switch-row" for="a11yToggleHighlight">
+                            <span class="a11y-switch-text">
+                                <strong>Destacar enlaces y botones</strong>
+                                <small>Subrayado visible y bordes activos</small>
+                            </span>
+                            <input type="checkbox" id="a11yToggleHighlight" class="a11y-switch-input" role="switch">
+                            <span class="a11y-switch-slider" aria-hidden="true"></span>
+                        </label>
+                    </div>
+
+                    <div class="a11y-footer">
+                        <button id="a11yResetButton" class="a11y-reset-btn" type="button">Restablecer valores por defecto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
     <script src="js/orientador.js"></script>
+    <script src="js/accesibilidad.js"></script>
     <script src="app.js?v=2"></script>
 </body>
 </html>

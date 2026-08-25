@@ -573,6 +573,7 @@ function renderizarCursosAparte(contenedor, lista, simple = false) {
             <div class="card-actions">
                 <button type="button" class="btn-favorito${estaEnFavoritos(curso._clave) ? ' is-active' : ''}" data-clave="${curso._clave}" aria-pressed="${estaEnFavoritos(curso._clave)}" title="Guardar en favoritos">${estaEnFavoritos(curso._clave) ? '★' : '☆'} <span>Favorito</span></button>
                 <button type="button" class="btn-comparar${enComparador(curso._clave) ? ' is-active' : ''}" data-clave="${curso._clave}" aria-pressed="${enComparador(curso._clave)}" title="Agregar a comparar">${enComparador(curso._clave) ? '✓' : '+'} <span>Comparar</span></button>
+                <button type="button" class="btn-escuchar-card" data-card-id="${curso._clave}" aria-label="Escuchar formación"><span aria-hidden="true">🔊</span> <span>Escuchar</span></button>
             </div>
         </article>`).join('');
 }
@@ -644,6 +645,7 @@ function renderizarPlataformas(contenedor, lista) {
             <div class="card-actions">
                 <button type="button" class="btn-favorito${estaEnFavoritos(plataforma._clave) ? ' is-active' : ''}" data-clave="${plataforma._clave}" aria-pressed="${estaEnFavoritos(plataforma._clave)}" title="Guardar en favoritos">${estaEnFavoritos(plataforma._clave) ? '★' : '☆'} <span>Favorito</span></button>
                 <button type="button" class="btn-comparar${enComparador(plataforma._clave) ? ' is-active' : ''}" data-clave="${plataforma._clave}" aria-pressed="${enComparador(plataforma._clave)}" title="Agregar a comparar">${enComparador(plataforma._clave) ? '✓' : '+'} <span>Comparar</span></button>
+                <button type="button" class="btn-escuchar-card" data-card-id="${plataforma._clave}" aria-label="Escuchar plataforma"><span aria-hidden="true">🔊</span> <span>Escuchar</span></button>
             </div>
         </article>`).join('');
 }
@@ -1015,6 +1017,7 @@ function renderizarTarjetas(resultados, { mostrarMatch = false, encabezado = '' 
             <div class="card-actions">
                 <button type="button" class="btn-favorito${estaEnFavoritos(oferta._clave) ? ' is-active' : ''}" data-clave="${oferta._clave}" aria-pressed="${estaEnFavoritos(oferta._clave)}" title="Guardar en favoritos">${estaEnFavoritos(oferta._clave) ? '★' : '☆'} <span>Favorito</span></button>
                 <button type="button" class="btn-comparar${enComparador(oferta._clave) ? ' is-active' : ''}" data-clave="${oferta._clave}" aria-pressed="${enComparador(oferta._clave)}" title="Agregar a comparar">${enComparador(oferta._clave) ? '✓' : '+'} <span>Comparar</span></button>
+                <button type="button" class="btn-escuchar-card" data-card-id="${oferta._clave}" aria-label="Escuchar carrera"><span aria-hidden="true">🔊</span> <span>Escuchar</span></button>
             </div>
         </article>`).join('');
 }
@@ -1072,6 +1075,7 @@ function renderizarTarjetasConCompatibilidad(resultados, rankings) {
             <div class="card-actions">
                 <button type="button" class="btn-favorito${estaEnFavoritos(clave) ? ' is-active' : ''}" data-clave="${clave}" aria-pressed="${estaEnFavoritos(clave)}" title="Guardar en favoritos">${estaEnFavoritos(clave) ? '★' : '☆'} <span>Favorito</span></button>
                 <button type="button" class="btn-comparar${enComparador(clave) ? ' is-active' : ''}" data-clave="${clave}" aria-pressed="${enComparador(clave)}" title="Agregar a comparar">${enComparador(clave) ? '✓' : '+'} <span>Comparar</span></button>
+                <button type="button" class="btn-escuchar-card" data-card-id="${clave}" aria-label="Escuchar carrera"><span aria-hidden="true">🔊</span> <span>Escuchar</span></button>
             </div>
         </article>`;
     }).join('');
@@ -2126,6 +2130,7 @@ function tarjetaResultadoChat(carrera, rankings) {
             <div class="chat-resultado-acciones">
                 <button type="button" class="btn-favorito${estaEnFavoritos(clave) ? ' is-active' : ''}" data-clave="${clave}" aria-pressed="${estaEnFavoritos(clave)}" title="Guardar en favoritos">${estaEnFavoritos(clave) ? '★' : '☆'} <span>Favorito</span></button>
                 <button type="button" class="btn-comparar${enComparador(clave) ? ' is-active' : ''}" data-clave="${clave}" aria-pressed="${enComparador(clave)}" title="Agregar a comparar">${enComparador(clave) ? '✓' : '+'} <span>Comparar</span></button>
+                <button type="button" class="btn-escuchar-card" data-card-id="${clave}" aria-label="Escuchar carrera"><span aria-hidden="true">🔊</span> <span>Escuchar</span></button>
             </div>
         </div>`;
 }
