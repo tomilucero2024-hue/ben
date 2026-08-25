@@ -1657,8 +1657,8 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     border: 1px solid color-mix(in srgb, var(--purple) 35%, transparent);
 }
 .bienvenida-copiloto-img {
-    width: 38px;
-    height: 38px;
+    width: 44px;
+    height: 44px;
     object-fit: contain;
     display: block;
 }
@@ -1678,8 +1678,8 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     display: inline-block;
 }
 .btn-chat-icono-img {
-    width: 28px;
-    height: 28px;
+    width: 38px;
+    height: 38px;
     object-fit: contain;
     display: block;
 }
@@ -1747,8 +1747,8 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     transition: transform var(--dur-base) ease, background var(--dur-base) ease, color var(--dur-base) ease;
 }
 .a11y-btn-svg {
-    width: 28px;
-    height: 28px;
+    width: 34px;
+    height: 34px;
     display: block;
     color: currentColor;
     transition: transform var(--dur-base) ease;
