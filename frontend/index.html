@@ -259,6 +259,20 @@
         </section>
     </main>
 
+    <!-- Pie de página con enlace de Feedback / Sugerencias -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="footer-copy">
+                <strong>BEN</strong> — Buscador Educativo Nacional
+            </p>
+            <div class="footer-actions">
+                <button id="btnAbrirFeedback" class="btn-footer-feedback" type="button" aria-haspopup="dialog" aria-controls="modalFeedback">
+                    <span aria-hidden="true">💬</span> Sugerir mejora o reportar fallo
+                </button>
+            </div>
+        </div>
+    </footer>
+
     <!-- Copiloto vocacional flotante: burbuja en la esquina inferior derecha.
          Cerrado solo se ve el botón circular (#btn-toggle-chat); al abrirlo
          aparece la ventana de chat (#ventana-chat). Cuando el usuario entra por
@@ -293,6 +307,71 @@
                 <button id="compararCerrar" class="comparar-modal-cerrar" type="button" aria-label="Cerrar comparación" onclick="cerrarComparar()">✕</button>
             </div>
             <div id="compararCuerpo" class="comparar-modal-cuerpo"></div>
+        </div>
+    </div>
+
+    <!-- Modal de Feedback (Sugerencias y Reporte de Fallos) -->
+    <div id="modalFeedback" class="modal-feedback" hidden>
+        <div id="overlayFeedback" class="modal-feedback-overlay" aria-hidden="true"></div>
+        <div class="modal-feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="feedbackTitulo">
+            <div class="modal-feedback-header">
+                <h2 id="feedbackTitulo">
+                    <span id="feedbackIcono" aria-hidden="true">💬</span>
+                    <span>Sugerencias o Reporte de Fallos</span>
+                </h2>
+                <button id="btnCerrarFeedback" class="modal-feedback-cerrar" type="button" aria-label="Cerrar ventana de sugerencias">✕</button>
+            </div>
+            <div class="modal-feedback-body">
+                <!-- Selector de tipo (Sugerencia vs Fallo) -->
+                <div class="feedback-tipo-selector" role="radiogroup" aria-label="Tipo de mensaje">
+                    <button type="button" class="btn-tipo-feedback is-active" data-tipo="sugerencia" role="radio" aria-checked="true">
+                        <span aria-hidden="true">💡</span> Sugerencia
+                    </button>
+                    <button type="button" class="btn-tipo-feedback" data-tipo="fallo" role="radio" aria-checked="false">
+                        <span aria-hidden="true">⚠️</span> Reportar un fallo
+                    </button>
+                </div>
+
+                <form id="formFeedback" class="feedback-form" novalidate>
+                    <!-- Campo Mensaje -->
+                    <div class="feedback-grupo">
+                        <label for="feedbackMensaje" id="labelFeedbackMensaje">¿Qué te gustaría sugerir o mejorar en BEN?</label>
+                        <textarea id="feedbackMensaje" name="mensaje" rows="4" required placeholder="Escribí tu sugerencia o recomendación aquí..."></textarea>
+                        <span id="feedbackErrorMensaje" class="feedback-error-texto" hidden>Por favor, ingresá tu mensaje.</span>
+                    </div>
+
+                    <!-- Campo Email (Opcional) -->
+                    <div class="feedback-grupo">
+                        <label for="feedbackEmail">Tu email <small>(opcional, por si querés respuesta)</small></label>
+                        <input type="email" id="feedbackEmail" name="email" placeholder="ejemplo@correo.com">
+                        <span id="feedbackErrorEmail" class="feedback-error-texto" hidden>Ingresá un correo electrónico válido.</span>
+                    </div>
+
+                    <!-- Botón Enviar -->
+                    <div class="feedback-footer-acciones">
+                        <button type="submit" id="btnEnviarFeedback" class="btn-feedback-submit">
+                            <span class="btn-feedback-texto">Enviar mensaje</span>
+                            <span class="btn-feedback-spinner" aria-hidden="true" hidden></span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Estado de éxito -->
+                <div id="feedbackExito" class="feedback-estado-mensaje feedback-exito" hidden>
+                    <span class="feedback-estado-icono" aria-hidden="true">✅</span>
+                    <h3>¡Muchas gracias por tu mensaje!</h3>
+                    <p>Tu aporte nos ayuda a seguir mejorando BEN para todos.</p>
+                    <button type="button" id="btnFeedbackAceptarExito" class="btn-feedback-submit">Listo</button>
+                </div>
+
+                <!-- Estado de error -->
+                <div id="feedbackErrorEnvio" class="feedback-estado-mensaje feedback-error" hidden>
+                    <span class="feedback-estado-icono" aria-hidden="true">❌</span>
+                    <h3>No pudimos enviar tu mensaje</h3>
+                    <p>Hubo un problema de conexión. Podés intentar nuevamente en unos instantes.</p>
+                    <button type="button" id="btnFeedbackReintentar" class="btn-feedback-submit">Reintentar</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -422,6 +501,7 @@
 
     <script src="js/orientador.js?v=20260825_1"></script>
     <script src="js/accesibilidad.js?v=20260825_1"></script>
+    <script src="js/feedback.js?v=20260825_1"></script>
     <script src="app.js?v=20260825_1"></script>
 </body>
 </html>
