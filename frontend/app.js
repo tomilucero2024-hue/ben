@@ -417,7 +417,16 @@ function configurarEventos() {
     });
 
     const btnCargarMas = document.getElementById('cargarMas');
-    if (btnCargarMas) btnCargarMas.addEventListener('click', cargarMas);
+    if (btnCargarMas) {
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !btnCargarMas.hidden) {
+                cargarMas();
+            }
+        }, { rootMargin: '200px' });
+        observer.observe(btnCargarMas);
+        // Fallback click
+        btnCargarMas.addEventListener('click', cargarMas);
+    }
 
     // Delegación para los botones de las tarjetas (favorito / comparar), que se
     // re-renderizan con frecuencia: un solo listener en document alcanza para todas.
