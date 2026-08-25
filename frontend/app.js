@@ -1450,7 +1450,7 @@ function mensajeBienvenida() {
 }
 
 function mensajeAyuda() {
-    return `<p>🤖 Puedo ayudarte con la <strong>oferta educativa de Mendoza</strong>. Por ejemplo:</p>
+    return `<p><img class="chat-bot-icon" src="img/copiloto-icono.png" alt="" width="16" height="16"> Puedo ayudarte con la <strong>oferta educativa de Mendoza</strong>. Por ejemplo:</p>
         <ul>
             <li>🎓 <strong>Carreras por tema:</strong> "carreras de informática", "algo de salud", "diseño"</li>
             <li>⏳ <strong>Dudas sobre una carrera:</strong> "¿cuánto dura medicina?", "¿enfermería es online?"</li>
@@ -1483,7 +1483,7 @@ function mostrarPregunta() {
         .join('');
 
     historialChat.push({ rol: 'bot', html: `
-        <p>🤖 <strong>Orientador:</strong> ${preguntaObj.texto}</p>
+        <p><img class="chat-bot-icon" src="img/copiloto-icono.png" alt="" width="16" height="16"> <strong>Orientador:</strong> ${preguntaObj.texto}</p>
         <div class="opciones-usuario">${opciones}</div>
         ${pasoActual > 0 ? '<button type="button" class="btn-chat-atras" onclick="volverPreguntaChat()">← Volver a la pregunta anterior</button>' : ''}` });
     actualizarProgresoChat();
@@ -1874,7 +1874,7 @@ function responderTextoLibre(texto) {
                 return `<li><strong>${c.nombre}</strong> — ${dato}</li>`;
             }).join('');
             return {
-                html: `<p>🤖 Sobre eso encontré esto en nuestra base:</p><ul>${items}</ul><p class="mensaje-bot-nota">También te las dejo en la pantalla principal.</p>`,
+                html: `<p><img class="chat-bot-icon" src="img/copiloto-icono.png" alt="" width="16" height="16"> Sobre eso encontré esto en nuestra base:</p><ul>${items}</ul><p class="mensaje-bot-nota">También te las dejo en la pantalla principal.</p>`,
                 resultados: coincidencias.slice(0, 40).map(c => { c.score = 6; c.motivos = []; return c; }),
                 seccion: 'formal'
             };
@@ -1901,7 +1901,7 @@ function responderTextoLibre(texto) {
     const resultados = obtenerResultadosGlobales(texto, contexto);
 
     if (!resultados.length) {
-        return { html: `<p>🤖 Hmm, no encontré coincidencias con "<strong>${escaparHTML(texto)}</strong>". Probá con palabras más generales (ej: <em>salud</em>, <em>tecnología</em>, <em>oficios</em>) o contame qué te gusta hacer.</p>
+        return { html: `<p><img class="chat-bot-icon" src="img/copiloto-icono.png" alt="" width="16" height="16"> Hmm, no encontré coincidencias con "<strong>${escaparHTML(texto)}</strong>". Probá con palabras más generales (ej: <em>salud</em>, <em>tecnología</em>, <em>oficios</em>) o contame qué te gusta hacer.</p>
             ${sugerenciasChips(['quiero algo de salud', 'carreras de tecnología', 'cursos de oficios', 'hacer el test vocacional'])}` };
     }
 
@@ -1917,7 +1917,7 @@ function responderTextoLibre(texto) {
         .map(f => ETIQUETAS_FUENTE[f] || f).join(', ');
 
     return {
-        html: `<p>🤖 Encontré <strong>${n} ${n === 1 ? 'opción' : 'opciones'}</strong>${detalle}, entre ${fuentes}. Las más destacadas:</p><ul>${lista}</ul><p class="mensaje-bot-nota">Te las dejé en la pantalla principal, ordenadas por compatibilidad y con su origen marcado.</p>`,
+        html: `<p><img class="chat-bot-icon" src="img/copiloto-icono.png" alt="" width="16" height="16"> Encontré <strong>${n} ${n === 1 ? 'opción' : 'opciones'}</strong>${detalle}, entre ${fuentes}. Las más destacadas:</p><ul>${lista}</ul><p class="mensaje-bot-nota">Te las dejé en la pantalla principal, ordenadas por compatibilidad y con su origen marcado.</p>`,
         resultados,
         seccion: 'formal'
     };
@@ -2088,7 +2088,7 @@ function mostrarRecomendacion() {
     let html;
     if (!todas.length) {
         html = `
-            <p>🤖 <strong>Orientador:</strong> No encontré carreras que combinen con esa mezcla de respuestas. ¡Probemos de nuevo con otra combinación!</p>
+            <p><img class="chat-bot-icon" src="img/copiloto-icono.png" alt="" width="16" height="16"> <strong>Orientador:</strong> No encontré carreras que combinen con esa mezcla de respuestas. ¡Probemos de nuevo con otra combinación!</p>
             <button type="button" class="btn-chat-reset" onclick="reiniciarChat()">Empezar el test de nuevo</button>`;
     } else {
         const mejor = todas[0];
@@ -2097,7 +2097,7 @@ function mostrarRecomendacion() {
         const tarjetas = visibles.map(c => tarjetaResultadoChat(c, rankings)).join('');
         const ocultas = todas.length - visibles.length;
         html = `
-            <p>🤖 <strong>Orientador:</strong> ¡Mapeo completo! Encontré <strong>${todas.length} carreras compatibles</strong> con tu perfil.${matchPct ? ' Tu mejor match: <strong>' + mejor.nombre + '</strong> con ' + mejor.compatibilidad + '%.' : ''}</p>
+            <p><img class="chat-bot-icon" src="img/copiloto-icono.png" alt="" width="16" height="16"> <strong>Orientador:</strong> ¡Mapeo completo! Encontré <strong>${todas.length} carreras compatibles</strong> con tu perfil.${matchPct ? ' Tu mejor match: <strong>' + mejor.nombre + '</strong> con ' + mejor.compatibilidad + '%.' : ''}</p>
             <p class="mensaje-bot-nota">Podés marcarlas como favoritas o sumarlas para comparar desde acá mismo.</p>
             <div class="chat-resultados">${tarjetas}</div>
             ${ocultas > 0 ? `<p class="mensaje-bot-nota">Mostré las primeras ${visibles.length} (las de mejor match). Cerrá esta ventana y vas a encontrar la grilla completa en la página de carreras.</p>` : ''}

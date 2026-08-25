@@ -17,7 +17,7 @@
             document.documentElement.style.colorScheme = tema;
         })();
     </script>
-    <link rel="stylesheet" href="style.css?v=14">
+    <link rel="stylesheet" href="style.css?v=16">
 
 </head>
 <body>
@@ -267,7 +267,7 @@
          centrada, acotada. -->
     <aside id="copilotoPanel" class="copiloto-panel" aria-label="Copiloto vocacional">
         <div id="ventana-chat" class="ventana-chat" role="region" aria-labelledby="chat-titulo" hidden>
-            <div class="chat-header"><span id="chat-titulo">🤖 Copiloto Vocacional</span><button id="btn-cerrar-chat" type="button" aria-label="Cerrar el copiloto">✕</button></div>
+            <div class="chat-header"><span id="chat-titulo"><img src="img/copiloto-icono.png" alt="" class="chat-titulo-img" aria-hidden="true"> Copiloto Vocacional</span><button id="btn-cerrar-chat" type="button" aria-label="Cerrar el copiloto">✕</button></div>
             <div id="chat-progreso" class="chat-progreso-fijo" hidden></div>
             <div id="chat-caja" class="chat-cuerpo"></div>
             <!-- Único punto de anuncio del chat: antes cada burbuja tenía su propio
@@ -275,7 +275,7 @@
                  el lector de pantalla releía toda la conversación. -->
             <p id="chat-anuncio" class="sr-only" role="status" aria-live="polite"></p>
         </div>
-        <button id="btn-toggle-chat" class="btn-chat-toggle" type="button" aria-expanded="false" aria-controls="ventana-chat" aria-label="Abrir el copiloto vocacional">💬</button>
+        <button id="btn-toggle-chat" class="btn-chat-toggle" type="button" aria-expanded="false" aria-controls="ventana-chat" aria-label="Abrir el copiloto vocacional"><img src="img/copiloto-icono.png" alt="" class="btn-chat-icono-img" aria-hidden="true"></button>
     </aside>
 
     <!-- Barra flotante del comparador: aparece apenas hay algo para comparar. -->
@@ -315,7 +315,9 @@
             <p class="bienvenida-bajada">¿Cómo querés empezar?</p>
             <div class="bienvenida-opciones">
                 <button id="btnBienvenidaCopiloto" class="bienvenida-card-primaria" type="button">
-                    <span class="bienvenida-icono" aria-hidden="true">🤖</span>
+                    <span class="bienvenida-icono" aria-hidden="true">
+                        <img src="img/copiloto-icono.png" alt="" class="bienvenida-copiloto-img">
+                    </span>
                     <span class="bienvenida-card-texto">
                         <strong>Copiloto vocacional</strong>
                         <span class="bienvenida-card-desc">Respondé 5 preguntas cortas y te mostramos las carreras que mejor encajan con tu perfil.</span>
@@ -330,10 +332,10 @@
     <!-- Panel y botón flotante de Accesibilidad -->
     <aside id="a11yWidget" class="a11y-widget" aria-label="Herramientas de accesibilidad">
         <button id="btnAccesibilidad" class="btn-a11y-toggle" type="button" aria-expanded="false" aria-controls="panelAccesibilidad" aria-label="Abrir panel de accesibilidad (Atajo: Alt + A)">
-            <svg class="a11y-btn-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                <circle cx="50" cy="50" r="44" />
-                <circle cx="50" cy="30" r="8" />
-                <path d="M 46 38.5 C 46 38.5 35 34 31 34.5 C 28 34.8 26.5 37 27.5 39.5 C 28.5 42 32 44.5 39 46.5 C 43 47.5 44 49 43 54 C 42 58 39 71 37 77 C 35.5 81.5 39 84 42.5 83 C 45 82 48 71 50 63 C 52 71 55 82 57.5 83 C 61 84 64.5 81.5 63 77 C 61 71 58 58 57 54 C 56 49 57 47.5 61 46.5 C 68 44.5 71.5 42 72.5 39.5 C 73.5 37 72 34.8 69 34.5 C 65 34 54 38.5 54 38.5 Z" />
+            <svg class="a11y-btn-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="50" cy="50" r="45" />
+                <circle cx="50" cy="22" r="11" />
+                <path d="M 44 36 C 44 36 30 31.5 20 32.5 C 15.5 33 13.5 36.5 15 40 C 16.5 43.5 22 47 33 49 C 38.5 50 39.5 53 38.5 59 C 36.5 65 31.5 81 28.5 88 C 26 93 30.5 96.5 35 95 C 38.5 93.5 43 78 50 67 C 57 78 61.5 93.5 65 95 C 69.5 96.5 74 93 71.5 88 C 68.5 81 63.5 65 61.5 59 C 60.5 53 61.5 50 67 49 C 78 47 83.5 43.5 85 40 C 86.5 36.5 84.5 33 80 32.5 C 70 31.5 56 36 56 36 Z" />
             </svg>
             <span class="sr-only">Opciones de accesibilidad</span>
         </button>
@@ -343,10 +345,10 @@
             <div class="a11y-panel-card">
                 <div class="a11y-header">
                     <h2 id="a11yTitulo" class="a11y-titulo">
-                        <svg class="a11y-title-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                            <circle cx="50" cy="50" r="44" />
-                            <circle cx="50" cy="30" r="8" />
-                            <path d="M 46 38.5 C 46 38.5 35 34 31 34.5 C 28 34.8 26.5 37 27.5 39.5 C 28.5 42 32 44.5 39 46.5 C 43 47.5 44 49 43 54 C 42 58 39 71 37 77 C 35.5 81.5 39 84 42.5 83 C 45 82 48 71 50 63 C 52 71 55 82 57.5 83 C 61 84 64.5 81.5 63 77 C 61 71 58 58 57 54 C 56 49 57 47.5 61 46.5 C 68 44.5 71.5 42 72.5 39.5 C 73.5 37 72 34.8 69 34.5 C 65 34 54 38.5 54 38.5 Z" />
+                        <svg class="a11y-title-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <circle cx="50" cy="50" r="45" />
+                            <circle cx="50" cy="22" r="11" />
+                            <path d="M 44 36 C 44 36 30 31.5 20 32.5 C 15.5 33 13.5 36.5 15 40 C 16.5 43.5 22 47 33 49 C 38.5 50 39.5 53 38.5 59 C 36.5 65 31.5 81 28.5 88 C 26 93 30.5 96.5 35 95 C 38.5 93.5 43 78 50 67 C 57 78 61.5 93.5 65 95 C 69.5 96.5 74 93 71.5 88 C 68.5 81 63.5 65 61.5 59 C 60.5 53 61.5 50 67 49 C 78 47 83.5 43.5 85 40 C 86.5 36.5 84.5 33 80 32.5 C 70 31.5 56 36 56 36 Z" />
                         </svg>
                         <span>Accesibilidad</span>
                     </h2>
