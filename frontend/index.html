@@ -17,7 +17,7 @@
             document.documentElement.style.colorScheme = tema;
         })();
     </script>
-    <link rel="stylesheet" href="style.css?v=12">
+    <link rel="stylesheet" href="style.css?v=14">
 
 </head>
 <body>
@@ -330,7 +330,11 @@
     <!-- Panel y botón flotante de Accesibilidad -->
     <aside id="a11yWidget" class="a11y-widget" aria-label="Herramientas de accesibilidad">
         <button id="btnAccesibilidad" class="btn-a11y-toggle" type="button" aria-expanded="false" aria-controls="panelAccesibilidad" aria-label="Abrir panel de accesibilidad (Atajo: Alt + A)">
-            <span class="a11y-icon" aria-hidden="true">♿</span>
+            <svg class="a11y-btn-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="50" cy="50" r="44" />
+                <circle cx="50" cy="30" r="8" />
+                <path d="M 46 38.5 C 46 38.5 35 34 31 34.5 C 28 34.8 26.5 37 27.5 39.5 C 28.5 42 32 44.5 39 46.5 C 43 47.5 44 49 43 54 C 42 58 39 71 37 77 C 35.5 81.5 39 84 42.5 83 C 45 82 48 71 50 63 C 52 71 55 82 57.5 83 C 61 84 64.5 81.5 63 77 C 61 71 58 58 57 54 C 56 49 57 47.5 61 46.5 C 68 44.5 71.5 42 72.5 39.5 C 73.5 37 72 34.8 69 34.5 C 65 34 54 38.5 54 38.5 Z" />
+            </svg>
             <span class="sr-only">Opciones de accesibilidad</span>
         </button>
 
@@ -338,7 +342,14 @@
             <div id="a11yOverlay" class="a11y-overlay" aria-hidden="true"></div>
             <div class="a11y-panel-card">
                 <div class="a11y-header">
-                    <h2 id="a11yTitulo" class="a11y-titulo"><span aria-hidden="true">♿</span> Accesibilidad</h2>
+                    <h2 id="a11yTitulo" class="a11y-titulo">
+                        <svg class="a11y-title-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <circle cx="50" cy="50" r="44" />
+                            <circle cx="50" cy="30" r="8" />
+                            <path d="M 46 38.5 C 46 38.5 35 34 31 34.5 C 28 34.8 26.5 37 27.5 39.5 C 28.5 42 32 44.5 39 46.5 C 43 47.5 44 49 43 54 C 42 58 39 71 37 77 C 35.5 81.5 39 84 42.5 83 C 45 82 48 71 50 63 C 52 71 55 82 57.5 83 C 61 84 64.5 81.5 63 77 C 61 71 58 58 57 54 C 56 49 57 47.5 61 46.5 C 68 44.5 71.5 42 72.5 39.5 C 73.5 37 72 34.8 69 34.5 C 65 34 54 38.5 54 38.5 Z" />
+                        </svg>
+                        <span>Accesibilidad</span>
+                    </h2>
                     <button id="a11yCloseButton" class="a11y-close-btn" type="button" aria-label="Cerrar panel de accesibilidad">✕</button>
                 </div>
 

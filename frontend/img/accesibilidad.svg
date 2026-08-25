@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Círculo exterior -->
+    <circle cx="50" cy="50" r="44" />
+    <!-- Cabeza -->
+    <circle cx="50" cy="30" r="8" />
+    <!-- Figura humana con contorno redondeado -->
+    <path d="M 46 38.5
+             C 46 38.5 35 34 31 34.5
+             C 28 34.8 26.5 37 27.5 39.5
+             C 28.5 42 32 44.5 39 46.5
+             C 43 47.5 44 49 43 54
+             C 42 58 39 71 37 77
+             C 35.5 81.5 39 84 42.5 83
+             C 45 82 48 71 50 63
+             C 52 71 55 82 57.5 83
+             C 61 84 64.5 81.5 63 77
+             C 61 71 58 58 57 54
+             C 56 49 57 47.5 61 46.5
+             C 68 44.5 71.5 42 72.5 39.5
+             C 73.5 37 72 34.8 69 34.5
+             C 65 34 54 38.5 54 38.5
+             Z" />
+</svg>

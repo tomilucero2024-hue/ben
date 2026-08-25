@@ -1710,15 +1710,31 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     border-radius: var(--radius-round);
     background: var(--surface);
     color: var(--accent);
-    font-size: 1.4rem;
     cursor: pointer;
     box-shadow: var(--elev-3);
     transition: transform var(--dur-base) ease, background var(--dur-base) ease, color var(--dur-base) ease;
+}
+.a11y-btn-svg {
+    width: 28px;
+    height: 28px;
+    display: block;
+    color: currentColor;
+    transition: transform var(--dur-base) ease;
+}
+.a11y-title-svg {
+    width: 26px;
+    height: 26px;
+    display: block;
+    color: var(--accent);
+    flex-shrink: 0;
 }
 .btn-a11y-toggle:hover {
     transform: scale(1.08);
     background: var(--accent);
     color: var(--on-accent);
+}
+.btn-a11y-toggle:hover .a11y-btn-svg {
+    transform: scale(1.05);
 }
 .btn-a11y-toggle:focus-visible {
     outline: 3px solid var(--accent);
