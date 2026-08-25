@@ -571,7 +571,6 @@ function renderizarCursosAparte(contenedor, lista, simple = false) {
                 ? `<a class="card-link" href="${curso.link}" target="_blank" rel="noopener noreferrer">Ir al sitio oficial ↗</a>`
                 : '<span class="card-link card-link-muted">Sin link oficial</span>'}
             <div class="card-actions">
-                <button type="button" class="btn-favorito${estaEnFavoritos(curso._clave) ? ' is-active' : ''}" data-clave="${curso._clave}" aria-pressed="${estaEnFavoritos(curso._clave)}" title="Guardar en favoritos">${estaEnFavoritos(curso._clave) ? '★' : '☆'} <span>Favorito</span></button>
                 <button type="button" class="btn-comparar${enComparador(curso._clave) ? ' is-active' : ''}" data-clave="${curso._clave}" aria-pressed="${enComparador(curso._clave)}" title="Agregar a comparar">${enComparador(curso._clave) ? '✓' : '+'} <span>Comparar</span></button>
                 <button type="button" class="btn-escuchar-card" data-card-id="${curso._clave}" aria-label="Escuchar formación"><span aria-hidden="true">🔊</span> <span>Escuchar</span></button>
             </div>
@@ -643,7 +642,6 @@ function renderizarPlataformas(contenedor, lista) {
                 ? `<a class="platform-link" href="${plataforma.url}" target="_blank" rel="noopener noreferrer">Ver oferta en ${capitalizar(plataforma.nombre)} ↗</a>`
                 : '<span class="platform-link platform-link-muted">Sitio oficial no disponible</span>'}
             <div class="card-actions">
-                <button type="button" class="btn-favorito${estaEnFavoritos(plataforma._clave) ? ' is-active' : ''}" data-clave="${plataforma._clave}" aria-pressed="${estaEnFavoritos(plataforma._clave)}" title="Guardar en favoritos">${estaEnFavoritos(plataforma._clave) ? '★' : '☆'} <span>Favorito</span></button>
                 <button type="button" class="btn-comparar${enComparador(plataforma._clave) ? ' is-active' : ''}" data-clave="${plataforma._clave}" aria-pressed="${enComparador(plataforma._clave)}" title="Agregar a comparar">${enComparador(plataforma._clave) ? '✓' : '+'} <span>Comparar</span></button>
                 <button type="button" class="btn-escuchar-card" data-card-id="${plataforma._clave}" aria-label="Escuchar plataforma"><span aria-hidden="true">🔊</span> <span>Escuchar</span></button>
             </div>
