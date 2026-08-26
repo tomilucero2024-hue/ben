@@ -1,0 +1,28 @@
+{
+    "name": "BEN — Buscador Educativo Nacional",
+    "short_name": "BEN",
+    "description": "Encontrá la carrera que más se adapta a vos: universidades, institutos, oficios y plataformas online de Mendoza, con un test de orientación vocacional.",
+    "lang": "es-AR",
+    "dir": "ltr",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#ffffff",
+    "theme_color": "#1d4ed8",
+    "categories": ["education"],
+    "icons": [
+        {
+            "src": "favicon.png",
+            "sizes": "256x256",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "favicon.png",
+            "sizes": "256x256",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

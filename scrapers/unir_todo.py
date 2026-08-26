@@ -1,7 +1,10 @@
 import json
 import os
+import re
+import shutil
 import subprocess
 import sys
+import unicodedata
 from pathlib import Path
 
 from scraper_utils import guardar_json
@@ -62,6 +65,7 @@ ARCHIVOS_SIMPLES = [
     ("psicosocial.json", "✅ Datos de la Escuela de Psicología Social cargados al chasis.", "⚠️ Faltan los datos de Psicología Social. Corré scraper_psicosocial.py primero."),
     ("malvinas.json", "✅ Datos del Instituto cargados al chasis.", "⚠️ Faltan los datos del archivo. Corré el script correspondiente primero."),
     ("insrp.json", "✅ Datos del Instituto cargados al chasis.", "⚠️ Faltan los datos del instituto. Corré scraper_insrp.py primero."),
+    ("cultural_mendoza.json", "✅ Datos de Cultural Mendoza cargados al chasis.", "⚠️ Faltan los datos de Cultural Mendoza. Corré scrapers/ingles.py primero."),
 ]
 
 
@@ -121,6 +125,68 @@ def cargar_grupos_aparte():
 
 # Unificamos todo en el data.json maestro y encadenamos la inyección de
 # plataformas online para que data.json nunca quede sin la sección "plataformas".
+def normalizar_nombre(texto):
+    """Misma normalizacion que usa generar-perfiles.js para armar la clave."""
+    texto = unicodedata.normalize("NFD", str(texto or ""))
+    texto = "".join(c for c in texto if unicodedata.category(c) != "Mn")
+    return re.sub(r"\s+", " ", texto).lower().strip()
+
+
+# Regenera data/carreras-perfiles.json, que es lo que consume el Copiloto
+# Vocacional. Va encadenado aca a proposito: los perfiles se calculan A PARTIR
+# de data.json, asi que si se regenera uno sin el otro el Copiloto queda
+# recomendando carreras viejas (o ignorando las nuevas) sin ningun aviso.
+def regenerar_perfiles():
+    print("\n\U0001F9ED Regenerando perfiles de carrera para el Copiloto...")
+    guion = Path(__file__).resolve().parents[1] / "generar-perfiles.js"
+    if not guion.exists():
+        print(f"\u26a0\ufe0f No encuentro {guion.name}. Los perfiles quedan como estaban.")
+        return False
+
+    node = shutil.which("node")
+    if not node:
+        print("\u26a0\ufe0f No encontre Node.js en el PATH, asi que NO se regeneraron los perfiles.")
+        print("   data.json quedo actualizado igual; cuando instales Node corre:")
+        print("   node generar-perfiles.js")
+        return False
+
+    try:
+        subprocess.run([node, str(guion)], check=True)
+        return True
+    except subprocess.CalledProcessError as error:
+        print(f"\u26a0\ufe0f generar-perfiles.js fallo (codigo {error.returncode}). Los perfiles quedaron sin actualizar.")
+        return False
+
+
+# Red de seguridad: toda carrera con perfil tiene que existir en data.json. Si
+# los dos archivos se desincronizan, esto lo dice en vez de dejarlo pasar.
+def verificar_coherencia():
+    archivo_perfiles = DIR_DATOS / "carreras-perfiles.json"
+    if not archivo_perfiles.exists():
+        print("\u26a0\ufe0f Todavia no hay carreras-perfiles.json.")
+        return
+
+    with open(DIR_DATOS / "data.json", "r", encoding="utf-8") as f:
+        datos = json.load(f)
+    with open(archivo_perfiles, "r", encoding="utf-8") as f:
+        perfiles = json.load(f).get("carreras", [])
+
+    grupos = [datos.get("instituciones", [])]
+    grupos += [datos.get(clave, []) for clave in ("formaciones_alternativas", "oficios_tecnicos")]
+    nombres = {
+        normalizar_nombre(carrera.get("nombre_carrera") or carrera.get("nombre"))
+        for grupo in grupos
+        for institucion in grupo
+        for carrera in institucion.get("carreras", [])
+    }
+    huerfanas = [p["nombre"] for p in perfiles if normalizar_nombre(p["nombre"]) not in nombres]
+
+    if huerfanas:
+        print(f"\u26a0\ufe0f {len(huerfanas)} carrera(s) con perfil pero sin lugar en data.json. Ejemplo: {huerfanas[:3]}")
+    else:
+        print(f"\u2705 Coherencia OK: las {len(perfiles)} carreras con perfil existen en data.json.")
+
+
 def guardar_y_plataformas(instituciones, grupos_aparte):
     base_final = {"instituciones": instituciones, **grupos_aparte}
     guardar_json(base_final, "data.json")
@@ -128,6 +194,9 @@ def guardar_y_plataformas(instituciones, grupos_aparte):
 
     print("\n🔌 Inyectando plataformas online...")
     subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "plataforma.py")], check=True)
+
+    if regenerar_perfiles():
+        verificar_coherencia()
 
 
 def main():

@@ -98,29 +98,37 @@ function calcularCompatibilidad(perfilUsuario, carrera) {
   });
   const coseno = (normU > 0 && normC > 0) ? dot / (Math.sqrt(normU) * Math.sqrt(normC)) : 0;
 
-  // 2. Normalizar a porcentaje base (coseno 0-1 → 0-100)
-  let compatibilidad = Math.round(coseno * 100);
+  // 2. Reescalado del rango dinámico:
+  // En vectores de preferencias positivos (0-5), el coseno rara vez baja de 0.45.
+  // Mapeamos el intervalo [0.45, 0.98] al rango [0, 95] para aprovechar todo el espectro.
+  let scoreBase = ((coseno - 0.45) / 0.53) * 95;
+  scoreBase = Math.max(0, Math.min(95, scoreBase));
 
-  // 3. Bonus por dimensiones fuertes del usuario que la carrera satisface bien
+  // 3. Modificadores contextuales
+  let bonus = 0;
+  let penalizacion = 0;
+
   DIMENSIONES.forEach(d => {
     const u = perfilUsuario[d] || 0;
     const c = perfilCarrera[d] || 0;
-    if (u >= 4 && c >= 4) compatibilidad += 3; // Match fuerte en dimensión importante
-    else if (u >= 3 && c >= 3) compatibilidad += 1;
+
+    // Bonus por coincidencia en fortalezas destacadas
+    if (u >= 4 && c >= 4) bonus += 2;
+    else if (u >= 3 && c >= 3) bonus += 0.5;
+
+    // Penalización por discordancias críticas (la carrera exige mucho de algo que el usuario descartó)
+    if (u <= 1 && c >= 4) {
+      penalizacion += (c >= 5) ? 6 : 4;
+    } else if (u === 0 && c >= 3) {
+      penalizacion += 3;
+    }
   });
 
-  // 4. Penalización por incompatibilidades fuertes (usuario quiere evitar, carrera tiene alto)
-  DIMENSIONES.forEach(d => {
-    const u = perfilUsuario[d] || 0;
-    const c = perfilCarrera[d] || 0;
-    if (u <= 1 && c >= 4) compatibilidad -= 5; // Usuario rechaza lo que la carrera exige
-    else if (u <= 2 && c >= 5) compatibilidad -= 3;
-  });
+  // 4. Score final acotado entre 0 y 98% (evita saturación en 100% y preserva orden de mérito)
+  let compatibilidad = Math.round(scoreBase + bonus - penalizacion);
+  compatibilidad = Math.max(0, Math.min(98, compatibilidad));
 
-  // 5. Clamp 0-100
-  compatibilidad = Math.max(0, Math.min(100, compatibilidad));
-
-  // 6. Generar explicaciones
+  // 5. Generar explicaciones detalladas y alertas de incompatibilidad
   const coincidencias = [];
   const alertas = [];
 
@@ -136,7 +144,7 @@ function calcularCompatibilidad(perfilUsuario, carrera) {
         carreraScore: c
       });
     }
-    if (u <= 2 && c >= 4) {
+    if (u <= 1 && c >= 4) {
       alertas.push({
         dimension: d,
         label: DIMENSION_LABELS[d],
@@ -169,7 +177,7 @@ function calcularCompatibilidad(perfilUsuario, carrera) {
 }
 
 function generarRanking(perfilUsuario, opciones = {}) {
-  const { limite = 10, agruparPorFormacion = true } = opciones;
+  const { limite = 10, agruparPorFormacion = false } = opciones;
   
   if (!perfilesCarreras || !perfilesCarreras.length) {
     console.warn('[Orientador] Perfiles no cargados');
@@ -187,20 +195,27 @@ function generarRanking(perfilUsuario, opciones = {}) {
     };
   });
 
-  // Filtrar solo los que tienen cierta compatibilidad mínima
-  const filtrados = resultados.filter(r => r.compatibilidad > 15);
+  // Ordenar por compatibilidad descendente de forma estricta
+  resultados.sort((a, b) => b.compatibilidad - a.compatibilidad);
 
-  // Ordenar por compatibilidad descendente
-  filtrados.sort((a, b) => b.compatibilidad - a.compatibilidad);
+  // Filtrar solo las que tienen afinidad real (>= 45%).
+  // Si pocas superan 45%, relajar a >= 30% para asegurar recomendaciones.
+  let filtrados = resultados.filter(r => r.compatibilidad >= 45);
+  if (filtrados.length < 6) {
+    filtrados = resultados.filter(r => r.compatibilidad >= 30);
+  }
+  if (!filtrados.length) {
+    filtrados = resultados.slice(0, limite);
+  }
 
   const grupos = {
-    grados: filtrados.filter(r => r.formacion === 'grado' || r.formacion === 'profesorados').slice(0, Math.ceil(limite / 3)),
-    tecnicaturas: filtrados.filter(r => r.formacion === 'tecnicaturas').slice(0, Math.ceil(limite / 3)),
-    cursos: filtrados.filter(r => r.formacion === 'cursos').slice(0, Math.ceil(limite / 3))
+    grados: filtrados.filter(r => r.formacion === 'grado' || r.formacion === 'profesorados'),
+    tecnicaturas: filtrados.filter(r => r.formacion === 'tecnicaturas'),
+    cursos: filtrados.filter(r => r.formacion === 'cursos')
   };
 
   if (agruparPorFormacion) {
-    // Intercalar para mostrar variedad
+    // Intercalar si se solicita explícitamente
     const intercalados = [];
     const maxLen = Math.max(grupos.grados.length, grupos.tecnicaturas.length, grupos.cursos.length);
     for (let i = 0; i < maxLen; i++) {
@@ -213,16 +228,19 @@ function generarRanking(perfilUsuario, opciones = {}) {
       grados: grupos.grados,
       tecnicaturas: grupos.tecnicaturas,
       cursos: grupos.cursos,
-      todas
+      todas,
+      total: filtrados.length
     };
   }
 
+  // Orden estrictamente descendente por compatibilidad
   const todas = filtrados.slice(0, limite);
   return {
     grados: grupos.grados,
     tecnicaturas: grupos.tecnicaturas,
     cursos: grupos.cursos,
-    todas
+    todas,
+    total: filtrados.length
   };
 }
 

@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="manifest" href="manifest.json?v=20260826_5">
+    <meta name="theme-color" content="#1d4ed8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="BEN">
+    <link rel="apple-touch-icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Buscador Educativo Nacional - Encuentra carreras, instituciones y formación online.">
     <title>BEN - Buscador Educativo Nacional</title>
@@ -17,7 +22,7 @@
             document.documentElement.style.colorScheme = tema;
         })();
     </script>
-    <link rel="stylesheet" href="style.css?v=20260825_1">
+    <link rel="stylesheet" href="style.css?v=20260826_5">
 
 </head>
 <body>
@@ -33,7 +38,7 @@
             </button>
             <!-- El src se define acá, durante el parseo, para bajar un solo logo (antes
                  estaban los dos en el DOM y display:none no evita la descarga) y para
-                 que no haya parpadeo del logo equivocado antes de que corra app.js. -->
+                 que no haya parpadeo del logo equivocado antes de que corran los módulos. -->
             <script>
                 document.getElementById('brandLogo').src =
                     document.documentElement.dataset.theme === 'dark' ? 'logo-ben-dark.png' : 'logo-ben-light.png';
@@ -202,6 +207,12 @@
 
             <div id="resultsToolbar" class="results-toolbar">
                 <p id="resultsCount" class="results-count" role="status" aria-live="polite"></p>
+                <!-- Aparece solo cuando la grilla muestra el ranking del test
+                     vocacional; la ✕ devuelve al catálogo completo. -->
+                <p id="chapaRecomendacion" class="chapa-recomendacion" hidden>
+                    <span>🧭 Recomendaciones del Copiloto</span>
+                    <button id="chapaRecomendacionCerrar" type="button" aria-label="Volver al catálogo completo">✕</button>
+                </p>
                 <div class="toolbar-actions">
                     <button id="btnFavoritos" class="favoritos-toggle" type="button" aria-pressed="false">★ Solo favoritos</button>
                     <label class="sort-control" for="sortSelect">Ordenar por
@@ -276,7 +287,7 @@
     <!-- Copiloto vocacional flotante: burbuja en la esquina inferior derecha.
          Cerrado solo se ve el botón circular (#btn-toggle-chat); al abrirlo
          aparece la ventana de chat (#ventana-chat). Cuando el usuario entra por
-         la bienvenida, app.js le agrega .is-test-pantalla-completa: el panel
+         la bienvenida, js/copiloto.js le agrega .is-test-pantalla-completa: el panel
          se vuelve un fondo oscuro con la página desenfocada y la ventana queda
          centrada, acotada. -->
     <aside id="copilotoPanel" class="copiloto-panel" aria-label="Copiloto vocacional">
@@ -304,7 +315,7 @@
         <div class="comparar-modal-contenido" role="dialog" aria-modal="true" aria-label="Comparar ofertas">
             <div class="comparar-modal-cabecera">
                 <h2>Comparar ofertas</h2>
-                <button id="compararCerrar" class="comparar-modal-cerrar" type="button" aria-label="Cerrar comparación" onclick="cerrarComparar()">✕</button>
+                <button id="compararCerrar" class="comparar-modal-cerrar" type="button" aria-label="Cerrar comparación">✕</button>
             </div>
             <div id="compararCuerpo" class="comparar-modal-cuerpo"></div>
         </div>
@@ -380,13 +391,13 @@
          overlay fijo a pantalla completa (la posiciona el CSS), por
          eso vive fuera del <main>, junto a los otros overlays.
          Se muestra siempre que se entra SIN filtros en la URL; esa
-         excepción la decide app.js. -->
+         excepción la decide js/render.js. -->
     <section id="pantallaBienvenida" class="pantalla-bienvenida" aria-label="Bienvenida a BEN">
         <div class="bienvenida-contenido">
             <img id="bienvenidaLogo" class="bienvenida-logo" width="1120" height="299" alt="BEN, Buscador Educativo Nacional">
             <!-- Igual que el logo del header: el src se resuelve acá, durante
                  el parseo, para mostrar el logo correcto según el tema sin
-                 depender de que ya haya corrido app.js. -->
+                 depender de que ya hayan corrido los módulos. -->
             <script>
                 document.getElementById('bienvenidaLogo').src =
                     document.documentElement.dataset.theme === 'dark' ? 'logo-ben-dark.png' : 'logo-ben-light.png';
@@ -499,9 +510,24 @@
         </div>
     </aside>
 
-    <script src="js/orientador.js?v=20260825_1"></script>
-    <script src="js/accesibilidad.js?v=20260825_1"></script>
-    <script src="js/feedback.js?v=20260825_1"></script>
-    <script src="app.js?v=20260825_1"></script>
+    <!-- Scripts clasicos: son autonomos (IIFE) y tienen que correr antes que el
+         modulo, que espera encontrar window.Orientador ya definido. -->
+    <script src="js/orientador.js?v=20260826_5"></script>
+    <script src="js/accesibilidad.js?v=20260826_5"></script>
+    <script src="js/feedback.js?v=20260826_5"></script>
+    <!-- El resto de la app vive en modulos ES; main.js es el punto de entrada. -->
+    <script type="module" src="js/main.js?v=20260826_5"></script>
+
+    <!-- Service worker para que el sitio abra sin conexión. Vive en la raíz del
+         proyecto (no en frontend/) porque su scope tiene que alcanzar ../data/,
+         que es de donde salen el catálogo y los perfiles del Copiloto. -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('../sw.js')
+                    .catch(error => console.warn('[SW] no se pudo registrar:', error));
+            });
+        }
+    </script>
 </body>
 </html>

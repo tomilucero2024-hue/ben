@@ -1,0 +1,144 @@
+// ==========================================
+// 🛰️ SERVICE WORKER DE BEN
+// ==========================================
+//
+// Por qué vive en la raíz y no en frontend/:
+// un service worker solo puede interceptar pedidos que estén DENTRO de su
+// scope, y el scope no puede ser más ancho que la carpeta donde está el
+// archivo. El sitio se sirve desde /frontend/ pero lee sus datos de ../data/,
+// así que un sw.js dentro de frontend/ dejaría justamente los JSON afuera —
+// que es lo único sin lo cual la página no puede funcionar offline.
+//
+// Todas las rutas se resuelven contra self.registration.scope, así que esto
+// anda igual servido desde la raíz de un dominio que desde un subdirectorio
+// (por ejemplo GitHub Pages en /usuario.github.io/repo/).
+
+// ⚠️ Este sello tiene que moverse junto con los ?v=... de index.html. Es lo que
+// hace que un usuario con la versión vieja cacheada reciba la nueva: al cambiar
+// el nombre del caché, el activate de abajo borra todo lo anterior. Si se
+// actualiza el HTML y no esto, el service worker sigue sirviendo lo viejo.
+const VERSION = '20260826_6';
+const CACHE = `ben-${VERSION}`;
+
+// El esqueleto mínimo para que la app abra sin red.
+// copiloto-icono.png entra a pesar de sus 550 KB porque es el ícono del botón
+// flotante del Copiloto, que está siempre en pantalla: sin precachearlo se veía
+// roto offline. El resto de las imágenes se cachean solas al usarse.
+const SHELL = [
+    'index.html',
+    'frontend/',
+    'frontend/index.html',
+    'frontend/style.css',
+    'frontend/js/orientador.js',
+    'frontend/js/accesibilidad.js',
+    'frontend/js/feedback.js',
+    'frontend/js/util.js',
+    'frontend/js/datos.js',
+    'frontend/js/estado.js',
+    'frontend/js/filtros.js',
+    'frontend/js/render.js',
+    'frontend/js/copiloto.js',
+    'frontend/js/main.js',
+    'frontend/favicon.png',
+    'frontend/logo-ben-dark.png',
+    'frontend/logo-ben-light.png',
+    'frontend/img/copiloto-icono.png',
+    'data/data.json',
+    'data/carreras-perfiles.json'
+];
+
+const url = ruta => new URL(ruta, self.registration.scope).toString();
+
+self.addEventListener('install', evento => {
+    evento.waitUntil((async () => {
+        const cache = await caches.open(CACHE);
+        // De a uno y tolerando fallas: con cache.addAll(), un solo 404 aborta la
+        // instalación entera y el usuario se queda sin service worker.
+        await Promise.all(SHELL.map(async ruta => {
+            try {
+                await cache.add(new Request(url(ruta), { cache: 'reload' }));
+            } catch (e) {
+                console.warn('[SW] no pude precachear', ruta, e);
+            }
+        }));
+        // Sin esto la versión nueva espera a que se cierren todas las pestañas.
+        await self.skipWaiting();
+    })());
+});
+
+self.addEventListener('activate', evento => {
+    evento.waitUntil((async () => {
+        const nombres = await caches.keys();
+        await Promise.all(nombres
+            .filter(n => n.startsWith('ben-') && n !== CACHE)
+            .map(n => caches.delete(n)));
+        await self.clients.claim();
+    })());
+});
+
+// Los ?v=... de index.html hacen que la URL pedida no sea igual a la
+// precacheada. ignoreSearch hace que igual matcheen, así no hay que mantener
+// los sellos duplicados en dos lugares.
+const buscarEnCache = (cache, request) => cache.match(request, { ignoreSearch: true });
+
+async function staleWhileRevalidate(request) {
+    const cache = await caches.open(CACHE);
+    const guardada = await buscarEnCache(cache, request);
+    const red = fetch(request).then(respuesta => {
+        if (respuesta && respuesta.ok) cache.put(request, respuesta.clone());
+        return respuesta;
+    }).catch(() => null);
+    // Si hay copia, se devuelve al toque y la red se resuelve por detrás.
+    return guardada || red.then(r => r || Response.error());
+}
+
+async function cachePrimero(request) {
+    const cache = await caches.open(CACHE);
+    const guardada = await buscarEnCache(cache, request);
+    if (guardada) {
+        fetch(request).then(r => { if (r && r.ok) cache.put(request, r.clone()); }).catch(() => {});
+        return guardada;
+    }
+    try {
+        const respuesta = await fetch(request);
+        if (respuesta && respuesta.ok) cache.put(request, respuesta.clone());
+        return respuesta;
+    } catch (e) {
+        return Response.error();
+    }
+}
+
+self.addEventListener('fetch', evento => {
+    const request = evento.request;
+    if (request.method !== 'GET') return;
+
+    const destino = new URL(request.url);
+    // Lo de afuera (tipografías de Google) va derecho a la red: cachearlo acá
+    // solo agregaría respuestas opacas que no se pueden inspeccionar.
+    if (destino.origin !== self.location.origin) return;
+
+    // Navegación: red primero para no dejar a nadie clavado en una versión
+    // vieja, con el index cacheado como red de contención si no hay conexión.
+    if (request.mode === 'navigate') {
+        evento.respondWith((async () => {
+            try {
+                return await fetch(request);
+            } catch (e) {
+                const cache = await caches.open(CACHE);
+                return (await buscarEnCache(cache, request))
+                    || (await cache.match(url('frontend/index.html')))
+                    || Response.error();
+            }
+        })());
+        return;
+    }
+
+    // Los datos cambian cuando se vuelven a correr los scrapers: conviene
+    // mostrar lo que hay al instante y refrescar por detrás.
+    if (destino.pathname.includes('/data/') && destino.pathname.endsWith('.json')) {
+        evento.respondWith(staleWhileRevalidate(request));
+        return;
+    }
+
+    evento.respondWith(cachePrimero(request));
+});

@@ -8,10 +8,30 @@ lo ya guardado y escribir el JSON— vive acá.
 import json
 import os
 import re
+import sys
 from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
+
+
+def configurar_consola():
+    """Deja stdout/stderr en UTF-8.
+
+    Los mensajes de los scripts usan emojis (✅, ⚠️) y la consola de Windows
+    arranca en cp1252: al imprimirlos el script muere con UnicodeEncodeError
+    DESPUÉS de haber escrito el JSON, y encima devuelve código 1, que corta
+    cualquier encadenado con subprocess(check=True). Con errors='replace' el
+    peor caso es un '?' en pantalla, nunca una corrida abortada.
+    """
+    for flujo in (sys.stdout, sys.stderr):
+        try:
+            flujo.reconfigure(encoding='utf-8', errors='replace', line_buffering=True)
+        except (AttributeError, OSError):
+            pass
+
+
+configurar_consola()
 
 # Rutas resueltas desde la ubicación de este archivo, para que los scripts
 # funcionen sin importar desde qué carpeta se los ejecute.

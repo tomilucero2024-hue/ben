@@ -1,6 +1,16 @@
 import json
 import os
+import sys
 from pathlib import Path
+
+# Los mensajes de abajo usan emojis y la consola de Windows arranca en cp1252:
+# sin esto el script muere con UnicodeEncodeError DESPUÉS de escribir el JSON y
+# devuelve código 1, cortando el encadenado desde unir_todo.py.
+for _flujo in (sys.stdout, sys.stderr):
+    try:
+        _flujo.reconfigure(encoding='utf-8', errors='replace', line_buffering=True)
+    except (AttributeError, OSError):
+        pass
 
 # Rutas resueltas desde la ubicación de este archivo, para que los scripts
 # funcionen sin importar desde qué carpeta se los ejecute.
@@ -64,6 +74,39 @@ plataformas_online = [
         "modalidad": "100% Online",
         "oferta": "Tecnicaturas superiores co-creadas con empresas (Programación, Cloud, Data)",
         "duracion": "2 años"
+    },
+    # Plataformas de acceso libre: se entra y se empieza cuando uno quiera, sin
+    # convocatoria ni cupo por selección. El frontend ya las conoce en
+    # PLATAFORMAS_INFO (frontend/app.js); si faltan acá, unir_todo.py las borra.
+    {
+        "institucion": "Fundación YPF",
+        "modalidad": "100% Online (en vivo o autoasistido)",
+        "oferta": "IA, Data Analytics, Programación, Ciberseguridad, Excel, Power BI",
+        "duracion": "De 3 hs a 3 meses según curso"
+    },
+    {
+        "institucion": "Santander Open Academy",
+        "modalidad": "100% Online, a tu ritmo",
+        "oferta": "Python, IA, inglés de negocios, emprendimiento, habilidades digitales",
+        "duracion": "Variable, sin límite de cursos"
+    },
+    {
+        "institucion": "ProgramON",
+        "modalidad": "100% Online, autoguiado",
+        "oferta": "Programación, habilidades blandas, armado de CV, LinkedIn",
+        "duracion": "Corta, a tu ritmo"
+    },
+    {
+        "institucion": "Microsoft Learn",
+        "modalidad": "100% Online, autoasistido",
+        "oferta": "Azure, IA, ciberseguridad, análisis de datos, certificaciones oficiales",
+        "duracion": "Variable según ruta de aprendizaje"
+    },
+    {
+        "institucion": "Enlace 2.0 (Gobierno de Mendoza)",
+        "modalidad": "100% Online, autogestionado",
+        "oferta": "Alfabetización digital, marketing, trabajos rurales, atención al público, drones",
+        "duracion": "Variable según curso"
     }
 ]
 
@@ -76,6 +119,19 @@ if os.path.exists(archivo_maestro):
             datos = json.load(f)
         
         # 3. Le inyectamos la pestaña nueva de plataformas (como agregarle GNC al baúl)
+        # Antes avisamos si la lista de acá quedó corta respecto de lo que ya
+        # estaba guardado: este script PISA la clave entera, así que una lista
+        # desactualizada borra plataformas sin dejar rastro (ya pasó una vez).
+        anteriores = datos.get('plataformas', [])
+        if len(anteriores) > len(plataformas_online):
+            nombres_nuevos = {p['institucion'] for p in plataformas_online}
+            perdidas = [p.get('institucion') for p in anteriores
+                        if p.get('institucion') not in nombres_nuevos]
+            print(f"⚠️ ¡Ojo! data.json tenía {len(anteriores)} plataformas y esta lista trae {len(plataformas_online)}.")
+            if perdidas:
+                print("   Se perderían: " + ", ".join(perdidas))
+            print("   Agregalas a 'plataformas_online' en este archivo antes de seguir.")
+
         datos['plataformas'] = plataformas_online
 
         # 4. Guardamos todo ensamblado en el mismo archivo

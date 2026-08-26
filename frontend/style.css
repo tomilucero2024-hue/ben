@@ -365,11 +365,11 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
 }
 /* El margen también se colapsa: si no, sigue sumando alto al header achicado. */
 .hero-actions { display: flex; justify-content: center; gap: .65rem; margin-top: calc(1rem * (1 - var(--scroll-progress))); }
-.news-button, .mobile-filter-button {
+.mobile-filter-button {
     min-height: 42px; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .62rem .85rem;
     color: var(--text); background: var(--surface-soft); font-family: var(--font-detail); font-size: var(--fs-base); letter-spacing: .035em;
 }
-.news-button:hover, .mobile-filter-button:hover { border-color: var(--accent); color: var(--accent-ink); }
+.mobile-filter-button:hover { border-color: var(--accent); color: var(--accent-ink); }
 /* Solo aparece en celular (ver breakpoints). No se encoge: es el único acceso
    a los filtros y tiene que sobrevivir a que el buscador se angoste. */
 .mobile-filter-button { display: none; flex-shrink: 0; align-items: center; gap: .35rem; white-space: nowrap; }
@@ -475,14 +475,14 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
 /* Sin min-height: forzaba aire muerto en las tarjetas de título corto y
    desalineaba la grilla. Ahora cada una mide lo que su contenido pide. */
 /* --- Familia de cards ---------------------------------------------------------
-   .card, .platform-card, .curso-card y .news-card son la MISMA pieza en distintas
+   .card, .platform-card y .curso-card son la MISMA pieza en distintas
    secciones. Se tratan juntas a propósito: si solo una cambiara de tratamiento,
    cambiar de pestaña mostraría media interfaz rediseñada.
 
    Planas: fondo de --surface, borde de 1px y nada más. El color de categoría no
    va en un borde grueso a la izquierda sino en la marca chica de --card-tono
    (ver ::before más abajo). */
-.card, .platform-card, .curso-card, .news-card {
+.card, .platform-card, .curso-card {
     position: relative;
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
@@ -492,7 +492,7 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
 /* La marca de categoría: una barrita corta pegada al borde izquierdo, a la altura
    de la primera línea de contenido. Dice lo mismo que decía el borde de 4px
    (a qué sección pertenece esta card) ocupando una fracción del peso visual. */
-.card::before, .platform-card::before, .curso-card::before, .news-card::before {
+.card::before, .platform-card::before, .curso-card::before {
     content: '';
     position: absolute; left: 0; top: var(--space-6);
     width: 3px; height: 26px;
@@ -501,7 +501,7 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
 }
 /* En hover la card no se levanta: se le enciende el borde con el color de su
    categoría, que es la misma señal sin movimiento. */
-.card:hover, .platform-card:hover, .curso-card:hover, .news-card:hover {
+.card:hover, .platform-card:hover, .curso-card:hover {
     border-color: color-mix(in srgb, var(--card-tono, var(--accent)) 45%, var(--line));
 }
 
@@ -696,21 +696,7 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .platform-matches h3 { margin: 0 0 1rem; font-size: var(--fs-lg); color: var(--orange-ink); }
 
 /* 9. SECCIÓN DE NOTICIAS Y SUS TARJETAS. */
-.news-section h2 { margin: 0 0 1rem; font-size: var(--fs-xl); }
-.news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
 /* Borde izquierdo como el resto de las tarjetas: era la única sin acento. */
-.news-card { display: flex; flex-direction: column; min-height: 190px; padding: var(--space-6); --card-tono: var(--seccion, var(--blue)); }
-.news-card p { margin: 0; color: var(--muted); font-size: var(--fs-2xs); }
-.news-card h3 { margin: .75rem 0; font-size: var(--fs-md); }
-.news-card a { margin-top: auto; color: var(--accent-ink); font-size: var(--fs-sm); font-weight: 700; text-decoration: none; }
-
-/* 9b. CENTROS DEPORTIVOS (vista separada, reutiliza estilos de noticias). */
-.sports-filter { margin-bottom: 1.25rem; }
-.sports-card p + p { margin-top: .35rem; }
-.sports-card h3 { margin: .35rem 0 .5rem; }
-.sports-card .card-badges { margin: .5rem 0; }
-.sports-card .card-badges + p { margin-top: .35rem; }
-
 /* ================================================================
    10. COPILOTO VOCACIONAL (burbuja flotante) Y FONDO DE FILTROS EN CELULAR.
    El copiloto es una burbuja fija en la esquina inferior derecha que abre una
@@ -826,11 +812,8 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .btn-chat-opcion:hover, .btn-chat-opcion:focus-visible { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
 .btn-chat-atras { display: block; width: 100%; margin-top: .75rem; padding: .4rem; border: 0; color: var(--muted); background: none; font-size: var(--fs-2xs); text-decoration: underline; }
 .btn-chat-atras:hover { color: var(--text); }
-.btn-chat-resultado { width: 100%; min-height: 44px; margin-top: .1rem; padding: .65rem; border: 0; border-radius: var(--radius-sm); color: var(--on-accent); background: var(--accent); font-weight: 700; }
 /* En el mensaje de bienvenida el botón queda entre párrafos (.mensaje-bot p
    tiene margin: 0), así que necesita su propio aire. */
-.mensaje-bot > p + .btn-chat-resultado { margin-top: var(--space-4); }
-.mensaje-bot > .btn-chat-resultado + .mensaje-bot-nota { margin-top: var(--space-4); }
 /* Espaciado del mensaje de resultados del test (notas + tarjetas + reset). */
 .mensaje-bot > p + .mensaje-bot-nota,
 .mensaje-bot > .mensaje-bot-nota + .chat-resultados,
@@ -1033,7 +1016,7 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     .filters-open .filters-overlay { display: block; opacity: 1; pointer-events: auto; }
     .filters-open { overflow: hidden; }
     .close-filters-button { display: block; min-width: 44px; min-height: 44px; }
-    .results-grid, .news-grid, .platforms-grid, .cursos-grid { grid-template-columns: 1fr; }
+    .results-grid, .platforms-grid, .cursos-grid { grid-template-columns: 1fr; }
     .card { min-height: 0; }
     .section-tabs {
         display: flex;
@@ -1086,7 +1069,6 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     .hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
     /* Solo los de .hero-actions se estiran en la grilla; el de filtros vive en la
        fila del buscador y tiene que conservar su ancho propio. */
-    .news-button { width: 100%; padding-inline: .5rem; font-size: var(--fs-xs); }
     .mobile-filter-button { padding-inline: .6rem; font-size: var(--fs-xs); }
     
     .catalog-layout {
@@ -1136,7 +1118,7 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
         font-size: var(--fs-xs);
         padding: .4rem .5rem;
     }
-    .card, .news-card { padding: var(--space-4); }
+    .card { padding: var(--space-4); }
     .card-title { font-size: var(--fs-md); }
     .filter-group { padding: .9rem 1rem; }
     .copiloto-panel { right: .75rem; bottom: .75rem; }
@@ -1312,8 +1294,8 @@ html[data-tts="true"] .btn-escuchar-card {
     .duration-range button, .duration-range input,
     .comparar-bar-btn, .comparar-bar-limpiar, .comparar-modal-cerrar,
     .btn-favorito, .btn-comparar, .favoritos-toggle, .clear-filters-button,
-    .btn-chat-sugerencia, .sort-control select, .news-button,
-    .card-link, .news-card a, .platform-link { min-height: 44px; }
+    .btn-chat-sugerencia, .sort-control select,
+    .card-link, .platform-link { min-height: 44px; }
     .duration-range { grid-template-columns: 1fr auto 1fr 44px; }
 }
 /* ================================================================
@@ -1370,17 +1352,6 @@ html[data-tts="true"] .btn-escuchar-card {
     font-size: var(--fs-lg);
     line-height: 1.3;
     flex: 1;
-}
-
-.card-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-4);
-    font-size: var(--fs-sm);
-    color: var(--muted);
-    margin-bottom: var(--space-4);
-    padding-bottom: var(--space-3);
-    border-bottom: 1px solid var(--line);
 }
 
 .card-match-motivos {
@@ -1472,35 +1443,6 @@ html[data-tts="true"] .btn-escuchar-card {
 }
 
 /* Progreso del test */
-.progreso-test {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    margin-bottom: var(--space-4);
-    padding: var(--space-3);
-    background: var(--surface-soft);
-    border-radius: var(--radius-md);
-}
-.progreso-test .barra {
-    flex: 1;
-    height: 8px;
-    background: var(--line);
-    border-radius: var(--radius-pill);
-    overflow: hidden;
-}
-.progreso-test .barra .fill {
-    height: 100%;
-    background: var(--accent);
-    border-radius: var(--radius-pill);
-    transition: width var(--dur-base);
-}
-.progreso-test .texto {
-    font-size: var(--fs-sm);
-    color: var(--muted);
-    min-width: 80px;
-    text-align: right;
-}
-
 /* Chat mejoras */
 .mensaje-bot-nota {
     font-size: var(--fs-xs);
@@ -1540,7 +1482,7 @@ html[data-tts="true"] .btn-escuchar-card {
 .btn-chat-atras:hover {
     color: var(--text);
 }
-.btn-chat-reset, .btn-chat-resultado {
+.btn-chat-reset {
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--radius-pill);
@@ -1550,14 +1492,6 @@ html[data-tts="true"] .btn-escuchar-card {
     margin-right: var(--space-2);
     margin-top: var(--space-2);
     transition: all var(--dur-fast);
-}
-.btn-chat-resultado {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: var(--on-accent);
-}
-.btn-chat-resultado:hover {
-    filter: brightness(1.1);
 }
 .btn-chat-reset:hover {
     border-color: var(--accent);
@@ -2496,3 +2430,38 @@ html[data-contrast="high"] .btn-tipo-feedback.is-active {
         max-height: 94vh;
     }
 }
+
+/* 9c. CHAPITA DE RECOMENDACIONES DEL COPILOTO.
+   Avisa que la grilla no es el catálogo completo sino el ranking del test, y da
+   la salida de vuelta. Sin ella, filtrar sobre las recomendaciones se sentiría
+   como un catálogo roto ("¿por qué solo hay 24 carreras?"). */
+.chapa-recomendacion {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin: 0;
+    padding: .3rem .35rem .3rem .7rem;
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+    background: var(--superficie-2, var(--superficie));
+    color: var(--texto);
+    font-size: var(--fs-2xs);
+    font-weight: 600;
+}
+.chapa-recomendacion[hidden] { display: none; }
+.chapa-recomendacion button {
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    color: inherit;
+    background: transparent;
+    font-size: var(--fs-2xs);
+    line-height: 1;
+    cursor: pointer;
+}
+.chapa-recomendacion button:hover { background: var(--accent); color: var(--on-accent); }
+.chapa-recomendacion button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }

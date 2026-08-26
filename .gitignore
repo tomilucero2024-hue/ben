@@ -1,0 +1,13 @@
+# Bytecode de Python: se regenera solo en cada corrida de los scrapers.
+__pycache__/
+*.py[cod]
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Basura del sistema y de los editores
+Thumbs.db
+desktop.ini
+.DS_Store
