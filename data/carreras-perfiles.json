@@ -791,7 +791,8 @@
         "Universidad del Aconcagua (UDA)",
         "Universidad Champagnat (UCh)",
         "Universidad Católica Argentina (UCA)",
-        "Universidad Siglo 21 (S21)"
+        "Universidad Siglo 21 (S21)",
+        "Universidad de la Defensa Nacional (UNDEF)"
       ],
       "perfil": {
         "analitico": 5,
@@ -2048,7 +2049,7 @@
       "nombre": "Gestión de Recursos Hídricos",
       "categoria": "Grado / Carrera",
       "area": "Ambiente",
-      "formacion": "cursos",
+      "formacion": "grado",
       "instituciones": [
         "Universidad de Congreso (UC)"
       ],
@@ -2060,7 +2061,7 @@
         "creativo": 2,
         "terreno": 5,
         "liderazgo": 4,
-        "teorico": 2,
+        "teorico": 4,
         "matematico": 2,
         "movilidad": 4
       }
@@ -2647,19 +2648,19 @@
       "nombre": "Ingeniería Recursos Naturales Renovables",
       "categoria": "Grado / Carrera",
       "area": "Ingeniería",
-      "formacion": "cursos",
+      "formacion": "grado",
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)"
       ],
       "perfil": {
         "analitico": 5,
         "tecnologico": 4,
-        "practico": 5,
+        "practico": 4,
         "social": 1,
         "creativo": 2,
         "terreno": 1,
         "liderazgo": 2,
-        "teorico": 2,
+        "teorico": 4,
         "matematico": 5,
         "movilidad": 2
       }
@@ -3157,7 +3158,8 @@
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)",
         "Universidad del Aconcagua (UDA)",
-        "Universidad Siglo 21 (S21)"
+        "Universidad Siglo 21 (S21)",
+        "Universidad de la Defensa Nacional (UNDEF)"
       ],
       "perfil": {
         "analitico": 5,
@@ -3655,6 +3657,28 @@
         "teorico": 2,
         "matematico": 2,
         "movilidad": 3
+      }
+    },
+    {
+      "clave": "licenciatura en ciberdefensa",
+      "nombre": "Licenciatura en Ciberdefensa",
+      "categoria": "Grado / Licenciatura",
+      "area": "Tecnología",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de la Defensa Nacional (UNDEF)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 5,
+        "practico": 4,
+        "social": 1,
+        "creativo": 3,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 4,
+        "matematico": 3,
+        "movilidad": 2
       }
     },
     {
@@ -4723,19 +4747,19 @@
       "nombre": "Licenciatura en Gestión de Recursos Humanos",
       "categoria": "Grado / Carrera",
       "area": "Negocios",
-      "formacion": "cursos",
+      "formacion": "grado",
       "instituciones": [
         "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
         "analitico": 5,
         "tecnologico": 2,
-        "practico": 5,
+        "practico": 4,
         "social": 5,
         "creativo": 2,
         "terreno": 1,
         "liderazgo": 5,
-        "teorico": 1,
+        "teorico": 3,
         "matematico": 3,
         "movilidad": 3
       }
@@ -4778,6 +4802,28 @@
         "social": 5,
         "creativo": 2,
         "terreno": 1,
+        "liderazgo": 5,
+        "teorico": 5,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "licenciatura en gestion publica",
+      "nombre": "Licenciatura en Gestión Pública",
+      "categoria": "Grado / Licenciatura",
+      "area": "Ciencias sociales",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de la Defensa Nacional (UNDEF)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 1,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 2,
         "liderazgo": 5,
         "teorico": 5,
         "matematico": 1,
@@ -5166,7 +5212,8 @@
       "area": "Negocios",
       "formacion": "grado",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "Universidad Nacional de Cuyo (UNCuyo)",
+        "Universidad de la Defensa Nacional (UNDEF)"
       ],
       "perfil": {
         "analitico": 5,
@@ -5657,19 +5704,20 @@
       "nombre": "Licenciatura en Recursos Humanos",
       "categoria": "Grado / Carrera",
       "area": "Negocios",
-      "formacion": "cursos",
+      "formacion": "grado",
       "instituciones": [
-        "Instituto Univ. de Ciencias Empresariales (IUCE)"
+        "Instituto Univ. de Ciencias Empresariales (IUCE)",
+        "Universidad de la Defensa Nacional (UNDEF)"
       ],
       "perfil": {
-        "analitico": 4,
+        "analitico": 5,
         "tecnologico": 2,
-        "practico": 5,
+        "practico": 4,
         "social": 4,
         "creativo": 2,
         "terreno": 1,
         "liderazgo": 4,
-        "teorico": 1,
+        "teorico": 3,
         "matematico": 3,
         "movilidad": 3
       }
@@ -5682,7 +5730,8 @@
       "formacion": "grado",
       "instituciones": [
         "Universidad Católica Argentina (UCA)",
-        "Universidad Siglo 21 (S21)"
+        "Universidad Siglo 21 (S21)",
+        "Universidad de la Defensa Nacional (UNDEF)"
       ],
       "perfil": {
         "analitico": 5,
@@ -8281,20 +8330,20 @@
       "nombre": "Recursos Humanos",
       "categoria": "Grado / Carrera",
       "area": "Negocios",
-      "formacion": "cursos",
+      "formacion": "grado",
       "instituciones": [
         "Universidad Juan Agustín Maza (UMaza)",
         "Universidad de Congreso (UC)"
       ],
       "perfil": {
-        "analitico": 4,
+        "analitico": 5,
         "tecnologico": 2,
-        "practico": 5,
+        "practico": 4,
         "social": 4,
         "creativo": 2,
         "terreno": 1,
         "liderazgo": 4,
-        "teorico": 1,
+        "teorico": 3,
         "matematico": 3,
         "movilidad": 3
       }
@@ -9252,7 +9301,8 @@
       "area": "Ciencias sociales",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "Universidad Nacional de Cuyo (UNCuyo)",
+        "Universidad de la Defensa Nacional (UNDEF)"
       ],
       "perfil": {
         "analitico": 5,
@@ -11239,6 +11289,28 @@
         "liderazgo": 4,
         "teorico": 4,
         "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "tecnicatura universitaria en desarrollo de aplicaciones informaticas",
+      "nombre": "Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Tecnología",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad de la Defensa Nacional (UNDEF)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 5,
+        "practico": 5,
+        "social": 1,
+        "creativo": 3,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 2,
+        "matematico": 3,
         "movilidad": 2
       }
     },

@@ -6716,6 +6716,101 @@
             ]
         },
         {
+            "id": 47,
+            "nombre": "Universidad de la Defensa Nacional (UNDEF)",
+            "nivel": "universidad",
+            "gestion": "pública",
+            "provincia": "Nacional (a distancia)",
+            "contacto": {
+                "telefono": "",
+                "email": "informes@iua.edu.ar",
+                "direccion": "Modalidad a distancia - Sede central Córdoba"
+            },
+            "carreras": [
+                {
+                    "id": 1,
+                    "nombre_carrera": "Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
+                    "link_oficial": "https://undef.edu.ar/a-distancia-2/"
+                },
+                {
+                    "id": 2,
+                    "nombre_carrera": "Tecnicatura en Higiene y Seguridad en el Trabajo",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de Ingeniería del Ejército",
+                    "link_oficial": "https://undef.edu.ar/a-distancia-2/"
+                },
+                {
+                    "id": 3,
+                    "nombre_carrera": "Licenciatura en Relaciones Internacionales",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad del Ejército",
+                    "link_oficial": "https://undef.edu.ar/a-distancia-2/"
+                },
+                {
+                    "id": 4,
+                    "nombre_carrera": "Contador Público",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años y medio",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
+                    "link_oficial": "https://undef.edu.ar/a-distancia-2/"
+                },
+                {
+                    "id": 5,
+                    "nombre_carrera": "Licenciatura en Administración",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años y medio",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
+                    "link_oficial": "https://undef.edu.ar/a-distancia-2/"
+                },
+                {
+                    "id": 6,
+                    "nombre_carrera": "Licenciatura en Logística",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
+                    "link_oficial": "https://undef.edu.ar/a-distancia-2/"
+                },
+                {
+                    "id": 7,
+                    "nombre_carrera": "Licenciatura en Recursos Humanos",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años y medio",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
+                    "link_oficial": "https://undef.edu.ar/a-distancia-2/"
+                },
+                {
+                    "id": 8,
+                    "nombre_carrera": "Licenciatura en Ciberdefensa",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de la Defensa Nacional",
+                    "link_oficial": "https://undef.edu.ar/a-distancia-2/"
+                },
+                {
+                    "id": 9,
+                    "nombre_carrera": "Licenciatura en Gestión Pública",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de la Defensa Nacional",
+                    "link_oficial": "https://undef.edu.ar/a-distancia-2/"
+                }
+            ]
+        },
+        {
             "id": 401,
             "nombre": "ITU - Instituto Tecnológico Universitario (UNCuyo)",
             "nivel": "universitario (pregrado)",

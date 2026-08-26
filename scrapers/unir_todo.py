@@ -66,6 +66,7 @@ ARCHIVOS_SIMPLES = [
     ("malvinas.json", "✅ Datos del Instituto cargados al chasis.", "⚠️ Faltan los datos del archivo. Corré el script correspondiente primero."),
     ("insrp.json", "✅ Datos del Instituto cargados al chasis.", "⚠️ Faltan los datos del instituto. Corré scraper_insrp.py primero."),
     ("cultural_mendoza.json", "✅ Datos de Cultural Mendoza cargados al chasis.", "⚠️ Faltan los datos de Cultural Mendoza. Corré scrapers/ingles.py primero."),
+    ("undef.json", "✅ Datos de la UNDEF cargados al chasis.", "⚠️ Faltan los datos de la UNDEF. Corré scrapers/undef.py primero."),
 ]
 
 

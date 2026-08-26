@@ -39,13 +39,13 @@ export function esCarreraArancelada(institucion, nombre) {
     return esUtn && !normalizarTexto(nombre).includes('ingenieria');
 }
 export function inferirTipoInstitucion(institucion) { const nombre = normalizarTexto(institucion.nombre); return institucion.nivel === 'universidad' || nombre.includes('universidad') || nombre.includes('universitario') || nombre.includes('utn') ? 'universidades' : (nombre.includes('ies') || nombre.includes('instituto superior') ? 'ies' : 'centros'); }
-export function getFormacion(carrera) { const texto = normalizarTexto(`${carrera.categoria} ${carrera.nombre_carrera}`); return texto.includes('profesorado') ? 'profesorados' : (texto.includes('tecnicatura') || texto.includes('tecnico') || texto.includes('pregrado') ? 'tecnicaturas' : (texto.includes('curso') || texto.includes('formacion profesional') ? 'cursos' : 'grado')); }
+export function getFormacion(carrera) { const texto = normalizarTexto(`${carrera.categoria} ${carrera.nombre_carrera}`); const sinRecursos = texto.replace(/\brecursos\b/g, ''); return texto.includes('profesorado') ? 'profesorados' : (texto.includes('tecnicatura') || texto.includes('tecnico') || texto.includes('pregrado') ? 'tecnicaturas' : (sinRecursos.includes('curso') || texto.includes('formacion profesional') ? 'cursos' : 'grado')); }
 function getCategoryGroup(carrera) { const formacion = getFormacion(carrera); return formacion === 'tecnicaturas' ? 'pregrado' : (formacion === 'cursos' ? 'cursos' : 'grado'); }
 export function getArea(carrera) {
     const nombre = normalizarTexto(carrera.nombre_carrera);
     const tiene = (...terminos) => terminos.some(termino => nombre.includes(termino));
     if (tiene('ingenier')) return 'Ingeniería';
-    if (tiene('program', 'sistema', 'informat', 'comput', 'software', 'datos', 'data', 'inteligencia artificial', 'ciberseguridad', 'robotica', 'videojuego', 'web', 'cloud')) return 'Tecnología';
+    if (tiene('program', 'sistema', 'informat', 'comput', 'software', 'datos', 'data', 'inteligencia artificial', 'ciberseguridad', 'ciberdefensa', 'ciber', 'robotica', 'videojuego', 'web', 'cloud')) return 'Tecnología';
     if (tiene('medicin', 'enfermer', 'kinesi', 'nutric', 'odont', 'farmac', 'fonoaudi', 'obstetric', 'terapia', 'radiolog', 'bioquim', 'salud', 'anestesia', 'instrumentacion quirurg')) return 'Salud';
     if (tiene('administracion', 'contador', 'contad', 'marketing', 'comercio', 'negocio', 'finanza', 'econom', 'recursos humanos', 'logistica', 'secretariado', 'gestion empresarial')) return 'Negocios';
     if (tiene('diseno', 'arquitect', 'multimedia', 'interiorismo', 'indumentaria', 'animacion')) return 'Diseño';

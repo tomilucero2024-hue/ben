@@ -45,7 +45,7 @@ function tienePalabra(texto, ...palabras) {
 function getArea(nombre) {
   const n = normalizar(nombre);
   if (tienePalabra(n, 'ingenier')) return 'Ingeniería';
-  if (tienePalabra(n, 'program', 'sistema', 'informat', 'comput', 'software', 'datos', 'data', 'inteligencia artificial', 'ciberseguridad', 'robotica', 'videojuego', 'web', 'cloud', 'telecomunicacion', 'ia desde cero', 'desarrollo de software', 'seguridad informatica')) return 'Tecnología';
+  if (tienePalabra(n, 'program', 'sistema', 'informat', 'comput', 'software', 'datos', 'data', 'inteligencia artificial', 'ciberseguridad', 'ciberdefensa', 'ciber', 'robotica', 'videojuego', 'web', 'cloud', 'telecomunicacion', 'ia desde cero', 'desarrollo de software', 'seguridad informatica')) return 'Tecnología';
   if (tienePalabra(n, 'medicin', 'enfermer', 'kinesi', 'nutric', 'odont', 'farmac', 'fonoaudi', 'obstetric', 'terapia', 'radiolog', 'bioquim', 'salud', 'anestesia', 'instrumentacion quirurg', 'diagnostico por imagenes', 'quirofano', 'podolog', 'terapeutico', 'anatomia patologica', 'bioimagenes', 'gerontolog', 'primeros auxilios', 'salud mental', 'psicologia')) return 'Salud';
   if (tienePalabra(n, 'administracion', 'contador', 'contad', 'marketing', 'comercio', 'negocio', 'finanza', 'econom', 'recursos humanos', 'logistica', 'secretariado', 'gestion empresarial', 'ventas', 'seguros', 'banc', 'comercializacion', 'community manager', 'martillero', 'corredor inmobiliario', 'inmobiliari', 'aduan', 'despachante de aduana', 'gestion aeroportuaria', 'siniestro', 'emprendimiento', 'gestion del liderazgo')) return 'Negocios';
   if (tienePalabra(n, 'diseno', 'arquitect', 'multimedia', 'interiorismo', 'indumentaria', 'animacion', 'fotograf', 'grafic', 'audiovisual', 'publicidad')) return 'Diseño';
@@ -63,7 +63,8 @@ function getFormacion(categoria, nombre) {
   const t = normalizar(`${categoria} ${nombre}`);
   if (tienePalabra(t, 'profesorado')) return 'profesorados';
   if (tienePalabra(t, 'tecnicatura', 'tecnico', 'pregrado')) return 'tecnicaturas';
-  if (tienePalabra(t, 'curso', 'formacion profesional', 'capacitacion', 'taller', 'diplomatura')) return 'cursos';
+  const tSinRecursos = t.replace(/\brecursos\b/g, '');
+  if (tienePalabra(tSinRecursos, 'curso', 'formacion profesional', 'capacitacion', 'taller', 'diplomatura')) return 'cursos';
   return 'grado';
 }
 
@@ -107,7 +108,7 @@ function calcularPerfilCarrera(carrera) {
 
   const ajustesPorPalabra = [
     { palabras: ['matematica', 'calculo', 'estadistica', 'fisica', 'quimica', 'matematic'], dims: { matematico: +2, analitico: +1, teorico: +1 } },
-    { palabras: ['programacion', 'software', 'desarrollo', 'codigo', 'algoritmo', 'base de datos', 'redes', 'ciberseguridad', 'program', 'sistema', 'informatic', 'comput', 'data', 'inteligencia artificial', 'robotica', 'videojuego', 'web', 'cloud', 'analista', 'telecomunicacion'], dims: { tecnologico: +2, analitico: +1, practico: +1 } },
+    { palabras: ['programacion', 'software', 'desarrollo', 'codigo', 'algoritmo', 'base de datos', 'redes', 'ciberseguridad', 'ciberdefensa', 'ciber', 'program', 'sistema', 'informatic', 'comput', 'data', 'inteligencia artificial', 'robotica', 'videojuego', 'web', 'cloud', 'analista', 'telecomunicacion'], dims: { tecnologico: +2, analitico: +1, practico: +1 } },
     { palabras: ['diseño', 'creativo', 'artist', 'grafic', 'multimedia', 'animacion', 'ux', 'ui', 'diseno', 'arquitect', 'indumentaria', 'interiorismo'], dims: { creativo: +2, practico: +1 } },
     { palabras: ['gestion', 'direccion', 'liderazgo', 'gerencia', 'jefe', 'coordinador', 'emprendedor', 'administracion', 'negocio', 'empresa'], dims: { liderazgo: +2, social: +1, analitico: +1 } },
     { palabras: ['terreno', 'campo', 'obra', 'construccion', 'agronom', 'mineria', 'petroleo', 'topograf', 'ambiental', 'montaña', 'guia', 'trekking', 'forestal', 'veterin', 'hidric', 'apicultur'], dims: { terreno: +2, practico: +1, movilidad: +1 } },
