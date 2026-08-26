@@ -79,6 +79,32 @@ const PLURALES_FORMACION = {
     cursos: 'Cursos y formación profesional'
 };
 
+const DIMENSION_LABELS = {
+    analitico: 'Pensamiento analítico',
+    tecnologico: 'Afinidad tecnológica',
+    practico: 'Trabajo práctico',
+    social: 'Interacción social',
+    creativo: 'Creatividad',
+    terreno: 'Trabajo de campo y al aire libre',
+    liderazgo: 'Liderazgo y gestión',
+    teorico: 'Base teórica y académica',
+    matematico: 'Carga matemática y cuantitativa',
+    movilidad: 'Movilidad geográfica'
+};
+
+const DIMENSION_DESC = {
+    analitico: 'Capacidad para resolver problemas complejos, razonamiento lógico y análisis de datos.',
+    tecnologico: 'Manejo e interés en herramientas digitales, innovación técnica y desarrollo.',
+    practico: 'Destreza manual, aplicación técnica y trabajo práctico experimental.',
+    social: 'Habilidad de trato con personas, trabajo en equipo, docencia y cuidado comunitario.',
+    creativo: 'Pensamiento lateral, diseño, creación de contenido y propuesta de soluciones originales.',
+    terreno: 'Gusto por el trabajo dinámico en territorio, obras o actividades al aire libre.',
+    liderazgo: 'Coordinación de proyectos, toma de decisiones estratégicas y liderazgo de grupos.',
+    teorico: 'Interés por el estudio conceptual profundo, la investigación y el rigor científico.',
+    matematico: 'Facilidad para el cálculo numérico, la estadística y el modelado cuantitativo.',
+    movilidad: 'Flexibilidad para traslados, viajes, trabajo remoto o adaptación a diferentes sedes.'
+};
+
 // ---------------------------------------------------------------------------
 // Utilidades
 // ---------------------------------------------------------------------------
@@ -468,6 +494,7 @@ function unificarDuplicadas(carreras) {
 
         yaEsta.ofertas = yaEsta.ofertas.concat(c.ofertas);
         yaEsta.clavesFusionadas = (yaEsta.clavesFusionadas || [yaEsta.clave]).concat(c.clave);
+        yaEsta.perfil = yaEsta.perfil || c.perfil;
     });
     return [...porHuella.values()];
 }
@@ -560,6 +587,7 @@ function construirModelo() {
             categoria: limpiar(p.categoria),
             area: limpiar(p.area),
             formacion: p.formacion,
+            perfil: p.perfil || null,
             ofertas: (porNombre.get(p.clave) || [])
         })).filter(c => c.ofertas.length > 0));
 
@@ -758,6 +786,101 @@ function paginaCarrera(carrera) {
         duraciones.length ? ['Duración', esc(duraciones.slice(0, 4).join(' · '))] : null
     ].filter(Boolean);
 
+    const dimensionesTop = carrera.perfil
+        ? Object.entries(carrera.perfil)
+            .filter(([, score]) => score >= 3)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 4)
+            .map(([dim, score]) => ({
+                dim,
+                score,
+                nombre: DIMENSION_LABELS[dim] || dim,
+                desc: DIMENSION_DESC[dim] || ''
+            }))
+        : [];
+
+    const seccionPerfil = dimensionesTop.length ? `
+    <h2>Perfil y aptitudes recomendadas</h2>
+    <p>Quienes eligen estudiar <strong>${esc(carrera.nombre)}</strong> suelen presentar afinidad con las siguientes habilidades y características vocacionales:</p>
+    <ul class="lista-aptitudes">
+${dimensionesTop.map(d => `        <li class="aptitud-item">
+            <div class="aptitud-encabezado">
+                <strong>${esc(d.nombre)}</strong>
+                <span class="aptitud-score">Nivel ${d.score}/5</span>
+            </div>
+            <p class="aptitud-desc">${esc(d.desc)}</p>
+        </li>`).join('\n')}
+    </ul>
+    <div class="nota-test">
+        <p>¿Querés saber qué tan compatible sos con esta carrera? <a href="/?copiloto=1">Hacé el test vocacional de BEN</a> para comparar tus intereses con más de 500 formaciones.</p>
+    </div>` : '';
+
+    // Generación dinámica de Preguntas Frecuentes para Google y usuarios
+    const nombresInst = [...new Set(carrera.ofertas.map(o => o.institucion.nombre))];
+    const provs = [...new Set(carrera.ofertas.map(o => o.institucion.provincia).filter(Boolean))];
+    const ubicacionStr = provs.length ? (provs.length === 1 ? `en ${provs[0]}` : `en ${listaEnEspanol(provs)}`) : 'en Argentina';
+    const listaInstTxt = listaEnEspanol(nombresInst);
+
+    const cuantasInstTxt = nombresInst.length === 1 ? 'la siguiente institución' : `${nombresInst.length} instituciones`;
+    const respDonde = `Podés estudiar ${carrera.nombre} ${ubicacionStr} en ${cuantasInstTxt}: ${listaInstTxt}. En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una.`;
+
+    const anios = carrera.ofertas.map(o => aniosDe(o.duracion)).filter(a => a && a > 0);
+    let duracionesTxt = '';
+    if (anios.length) {
+        const min = Math.min(...anios);
+        const max = Math.max(...anios);
+        const fmt = a => a >= 1
+            ? `${Number.isInteger(a) ? a : a.toFixed(1)} ${a === 1 ? 'año' : 'años'}`
+            : `${Math.round(a * 12)} meses`;
+        const mismaUnidad = (min >= 1) === (max >= 1);
+        const desde = mismaUnidad ? fmt(min).replace(/ (años?|meses)$/, '') : fmt(min);
+        duracionesTxt = min === max
+            ? `La carrera tiene una duración estimada de ${fmt(min)}.`
+            : `La duración de la carrera varía de ${desde} a ${fmt(max)} según el plan de estudio de la institución elegida.`;
+    } else {
+        duracionesTxt = `La duración estimada depende de la institución y modalidad elegida (típicamente entre 4 y 5 años para carreras de grado, o de 2 a 3 años para tecnicaturas).`;
+    }
+
+    const modsTxt = modalidades.length
+        ? `Actualmente se puede cursar en modalidad ${listaEnEspanol(modalidades.map(m => m.toLowerCase()))}, según la institución que elijas.`
+        : `Las modalidades típicas son presencial o a distancia según la institución educativa.`;
+
+    const tipoTxt = NOMBRES_FORMACION[carrera.formacion] || carrera.categoria || 'carrera';
+    const afinesTxt = dimensionesTop.length
+        ? ` Entre sus aptitudes más afines se destacan: ${listaEnEspanol(dimensionesTop.map(d => d.nombre.toLowerCase()))}.`
+        : '';
+    const respTitulo = `${carrera.nombre} es una ${tipoTxt.toLowerCase()} perteneciente al área de ${carrera.area}.${afinesTxt}`;
+
+    const faqs = [
+        {
+            pregunta: `¿Dónde estudiar ${carrera.nombre} ${ubicacionStr}?`,
+            respuesta: respDonde
+        },
+        {
+            pregunta: `¿Cuánto dura la carrera de ${carrera.nombre}?`,
+            respuesta: duracionesTxt
+        },
+        {
+            pregunta: `¿Qué modalidades de cursado hay para ${carrera.nombre}?`,
+            respuesta: modsTxt
+        },
+        {
+            pregunta: `¿Qué perfil y habilidades se recomiendan para ${carrera.nombre}?`,
+            respuesta: respTitulo
+        }
+    ];
+
+    const seccionFaq = `
+    <h2>Preguntas frecuentes sobre ${esc(carrera.nombre)}</h2>
+    <div class="faq-lista">
+${faqs.map(f => `        <details class="faq-item">
+            <summary class="faq-pregunta"><strong>${esc(f.pregunta)}</strong></summary>
+            <div class="faq-respuesta">
+                <p>${esc(f.respuesta)}</p>
+            </div>
+        </details>`).join('\n')}
+    </div>`;
+
     const cuerpo = `    <p class="entrada">${esc(descripcion)}</p>
 
     <dl class="ficha">
@@ -770,6 +893,8 @@ ${ficha.map(([k, v]) => `        <dt>${k}</dt><dd>${v}</dd>`).join('\n')}
     <ul class="ofertas">
 ${carrera.ofertas.map(o => tarjetaOferta(o)).join('\n')}
     </ul>
+${seccionPerfil}
+${seccionFaq}
 ${relacionadas.length ? `
     <h2>Otras carreras del área ${esc(carrera.area)}</h2>
     <ul class="enlaces">
@@ -801,6 +926,19 @@ ${relacionadas.map(c => `        <li><a href="/carrera/${c.slug}/">${esc(c.nombr
         }))
     };
 
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map(f => ({
+            '@type': 'Question',
+            name: f.pregunta,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: f.respuesta
+            }
+        }))
+    };
+
     const provincias = [...new Set(carrera.ofertas.map(o => o.institucion.provincia).filter(Boolean))].sort();
     const complementoTitulo = provincias.length === 1
         ? `: dónde estudiarla en ${provincias[0]}`
@@ -820,7 +958,7 @@ ${relacionadas.map(c => `        <li><a href="/carrera/${c.slug}/">${esc(c.nombr
                 { nombre: carrera.area, url: `/area/${carrera.areaRef ? carrera.areaRef.slug : ''}/` },
                 { nombre: carrera.nombre, url: ruta }
             ],
-            ldExtra: [ld]
+            ldExtra: [ld, faqSchema]
         })
     };
 }

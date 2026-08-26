@@ -530,6 +530,10 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
 .card-info p { margin: 0; display: inline-flex; align-items: center; gap: var(--space-1); padding: var(--space-1) var(--space-3); border-radius: var(--radius-xs); background: color-mix(in srgb, var(--muted) 9%, transparent); }
 .card-link { display: block; margin-top: auto; padding-top: var(--space-5); color: var(--accent-ink); font-size: var(--fs-xs); font-weight: 700; text-decoration: none; }
 .card-link:hover { color: var(--purple-ink); }
+.card-info a.link-institucion { color: inherit; text-decoration: none; }
+.card-info a.link-institucion:hover { text-decoration: underline; color: var(--accent-ink); }
+.instituciones-list a.link-institucion { color: var(--accent-ink); text-decoration: none; }
+.instituciones-list a.link-institucion:hover { text-decoration: underline; }
 .card-link-muted { color: var(--muted); }
 /* Enlace a la ficha propia de BEN. Queda arriba del enlace al sitio oficial:
    es el que mantiene a la persona adentro del buscador. Cuando estan los dos,

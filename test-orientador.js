@@ -1,5 +1,5 @@
 const fs = require('fs');
-const O = require('./frontend/js/orientador.js');
+const O = require('./js/orientador.js');
 
 (async () => {
   // Simulate loading profiles like the browser does

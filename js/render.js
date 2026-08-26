@@ -21,6 +21,14 @@ function enlaceFichaBEN(nombre) {
         : '';
 }
 
+function enlaceInstitucionBEN(nombre) {
+    if (!nombre) return '';
+    const slug = enlacesBEN.instituciones && enlacesBEN.instituciones[normalizarTexto(nombre)];
+    return slug
+        ? `<a href="/institucion/${slug}/" class="link-institucion">${escaparHTML(capSeguro(nombre))}</a>`
+        : escaparHTML(capSeguro(nombre));
+}
+
 let resultadosActuales = [];
 export let visibles = LIMITE_PAGINA;
 
@@ -88,7 +96,7 @@ export function renderizarCursosAparte(contenedor, lista, simple = false) {
             </div>
             <h3 class="curso-title">${capSeguro(curso.nombre)}</h3>
             <div class="card-info">
-                <p>🏛️ <strong>${capSeguro(curso.institucion)}</strong></p>
+                <p>🏛️ <strong>${enlaceInstitucionBEN(curso.institucion)}</strong></p>
                 ${curso.provincia ? `<p>📍 ${capSeguro(curso.provincia)}</p>` : ''}
                 <p>⏳ ${capSeguro(curso.duracion)}</p>
             </div>
@@ -420,7 +428,7 @@ export function renderizarTarjetas(resultados, { mostrarMatch = false, encabezad
             </div>
             <h3 class="card-title">${capSeguro(oferta.nombre)}</h3>
             <div class="card-info">
-                <p>🏛️ <strong>${capSeguro(oferta.institucion)}</strong></p>
+                <p>🏛️ <strong>${enlaceInstitucionBEN(oferta.institucion)}</strong></p>
                 ${oferta.facultad ? `<p>🏫 ${capSeguro(oferta.facultad)}</p>` : ''}
                 <p>📍 ${capSeguro(oferta.modalidad)}</p>
                 <p>⏳ ${capSeguro(oferta.duracion)}</p>
@@ -480,7 +488,7 @@ export function renderizarTarjetasConCompatibilidad(resultados, rankings) {
             <div class="card-instituciones">
                 <strong>Instituciones:</strong>
                 <ul class="instituciones-list">
-                    ${instituciones.map(i => '<li>' + escaparHTML(i) + '</li>').join('')}
+                    ${instituciones.map(i => '<li>' + enlaceInstitucionBEN(i) + '</li>').join('')}
                 </ul>
             </div>` : ''}
             <div class="card-actions">
