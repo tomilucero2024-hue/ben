@@ -730,7 +730,7 @@ function enlaceBuscador(carrera) {
 // Páginas
 // ---------------------------------------------------------------------------
 
-function tarjetaOferta(oferta, { mostrarInstitucion = true } = {}) {
+function tarjetaOferta(oferta, { mostrarInstitucion = true, id = null } = {}) {
     const inst = oferta.institucion;
     const titulo = mostrarInstitucion
         ? `<a href="/institucion/${inst.slug}/">${esc(inst.nombre)}</a>`
@@ -753,8 +753,9 @@ function tarjetaOferta(oferta, { mostrarInstitucion = true } = {}) {
         : '';
 
     const descripcion = oferta.descripcion ? `<p>${esc(oferta.descripcion)}</p>` : '';
+    const idAttr = id ? ` id="${esc(id)}"` : '';
 
-    return `        <li class="oferta">
+    return `        <li class="oferta"${idAttr}>
             <h3>${etiqueta}${titulo}</h3>
             ${descripcion}<ul class="oferta-datos">${datos.map(d => `<li>${d}</li>`).join('')}</ul>
             ${oficial}
@@ -891,7 +892,7 @@ ${ficha.map(([k, v]) => `        <dt>${k}</dt><dd>${v}</dd>`).join('\n')}
 
     <h2>Dónde estudiar ${esc(carrera.nombre)}</h2>
     <ul class="ofertas">
-${carrera.ofertas.map(o => tarjetaOferta(o)).join('\n')}
+${carrera.ofertas.map((o, i) => tarjetaOferta(o, { id: `oferta-${i + 1}` })).join('\n')}
     </ul>
 ${seccionPerfil}
 ${seccionFaq}
@@ -903,28 +904,48 @@ ${relacionadas.map(c => `        <li><a href="/carrera/${c.slug}/">${esc(c.nombr
     <p><a href="/area/${carrera.areaRef.slug}/">Ver las ${carrera.areaRef.carreras.length} carreras del área ${esc(carrera.area)} →</a></p>` : ''}
 `;
 
-    const ld = {
-        '@context': 'https://schema.org',
-        '@type': 'ItemList',
-        name: `Dónde estudiar ${carrera.nombre}`,
-        numberOfItems: carrera.ofertas.length,
-        itemListElement: carrera.ofertas.map((o, i) => ({
-            '@type': 'ListItem',
-            position: i + 1,
-            item: {
-                '@type': 'Course',
-                name: carrera.nombre,
-                description: `${carrera.nombre} en ${o.institucion.nombre}.${o.duracion ? ` Duración: ${o.duracion}.` : ''}${o.modalidad ? ` Modalidad: ${o.modalidad}.` : ''}`,
-                url: DOMINIO + ruta,
-                ...(o.link ? { sameAs: o.link } : {}),
-                provider: {
+    const ld = carrera.ofertas.length >= 3
+        ? {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: `Dónde estudiar ${carrera.nombre}`,
+            numberOfItems: carrera.ofertas.length,
+            itemListElement: carrera.ofertas.map((o, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                url: `${DOMINIO}${ruta}#oferta-${i + 1}`,
+                item: {
+                    '@type': 'Course',
+                    name: `${carrera.nombre} — ${o.institucion.nombre}`,
+                    description: `${carrera.nombre} en ${o.institucion.nombre}.${o.duracion ? ` Duración: ${o.duracion}.` : ''}${o.modalidad ? ` Modalidad: ${o.modalidad}.` : ''}`,
+                    url: `${DOMINIO}${ruta}#oferta-${i + 1}`,
+                    ...(o.link ? { sameAs: o.link } : {}),
+                    provider: {
+                        '@type': 'EducationalOrganization',
+                        name: o.institucion.nombre,
+                        url: `${DOMINIO}/institucion/${o.institucion.slug}/`
+                    }
+                }
+            }))
+        }
+        : {
+            '@context': 'https://schema.org',
+            '@type': 'Course',
+            name: carrera.nombre,
+            description: descripcion,
+            url: DOMINIO + ruta,
+            provider: carrera.ofertas.length === 1
+                ? {
+                    '@type': 'EducationalOrganization',
+                    name: carrera.ofertas[0].institucion.nombre,
+                    url: `${DOMINIO}/institucion/${carrera.ofertas[0].institucion.slug}/`
+                }
+                : carrera.ofertas.map(o => ({
                     '@type': 'EducationalOrganization',
                     name: o.institucion.nombre,
                     url: `${DOMINIO}/institucion/${o.institucion.slug}/`
-                }
-            }
-        }))
-    };
+                }))
+        };
 
     const faqSchema = {
         '@context': 'https://schema.org',
