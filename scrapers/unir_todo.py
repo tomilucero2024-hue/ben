@@ -158,6 +158,34 @@ def regenerar_perfiles():
         return False
 
 
+# Las ~650 paginas de /carrera/, /area/, /institucion/ y /provincia/ se arman a
+# partir de data.json + carreras-perfiles.json, asi que se rehacen DESPUES de
+# los dos. Son las paginas que lee Google: la app pinta el catalogo con
+# JavaScript y para un buscador eso es una sola direccion casi vacia.
+#
+# Si este paso no corre, el sitio anda igual: lo que queda desactualizado es lo
+# que ve el buscador, no lo que ve la gente.
+def regenerar_paginas():
+    print("\n\U0001F5FA\uFE0F Regenerando las paginas estaticas para buscadores...")
+    guion = Path(__file__).resolve().parents[1] / "generar-paginas.js"
+    if not guion.exists():
+        print(f"\u26a0\ufe0f No encuentro {guion.name}. Las paginas quedan como estaban.")
+        return False
+
+    node = shutil.which("node")
+    if not node:
+        print("\u26a0\ufe0f No encontre Node.js en el PATH, asi que NO se regeneraron las paginas.")
+        print("   Cuando instales Node corre:  node generar-paginas.js")
+        return False
+
+    try:
+        subprocess.run([node, str(guion)], check=True)
+        return True
+    except subprocess.CalledProcessError as error:
+        print(f"\u26a0\ufe0f generar-paginas.js fallo (codigo {error.returncode}). Las paginas quedaron sin actualizar.")
+        return False
+
+
 # Red de seguridad: toda carrera con perfil tiene que existir en data.json. Si
 # los dos archivos se desincronizan, esto lo dice en vez de dejarlo pasar.
 def verificar_coherencia():
@@ -197,6 +225,7 @@ def guardar_y_plataformas(instituciones, grupos_aparte):
 
     if regenerar_perfiles():
         verificar_coherencia()
+        regenerar_paginas()
 
 
 def main():

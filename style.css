@@ -1,0 +1,2496 @@
+/* ================================================================
+   1. COLORES, MEDIDAS Y AJUSTES GENERALES
+   Cambiá estos valores para modificar el fondo, los colores globales,
+   los bordes redondeados y el ancho máximo del contenido.
+   ================================================================ */
+:root {
+    --container: 1280px;
+    /* Montserrat 800. La familia ya se descarga con ese peso incluido (ver el
+       <link> de Google Fonts), así que no cuesta un byte extra. Antes acá decía
+       "Sifonn Pro", que no está en el proyecto ni en Google Fonts: los títulos
+       caían a Montserrat normal y la jerarquía título/cuerpo no existía. */
+    --font-title: Montserrat, sans-serif;
+    --peso-title: 800;
+    --font-detail: "Bebas Neue", sans-serif;
+    --font-text: Montserrat, sans-serif;
+    /* Progreso de scroll del header (0 = arriba del todo, 1 = header ya achicado).
+       Lo actualiza app.js en cada cuadro mientras se hace scroll. */
+    --scroll-progress: 0;
+    /* Versión escalonada del progreso, solo para el desenfoque (ver app.js). */
+    --blur-progress: 0;
+    --blur-max: 34px;
+
+    /* ---- Escalas ----------------------------------------------------------
+       Todo el CSS sale de acá. Antes había 27 tamaños de fuente, 46 paddings y
+       11 radios distintos: valores que no eran decisiones sino acumulación.
+       Si algo necesita un valor intermedio, casi siempre conviene elegir el
+       paso de al lado antes que inventar uno nuevo. */
+    --space-1: .25rem;  --space-2: .375rem; --space-3: .5rem;
+    --space-4: .75rem;  --space-5: 1rem;    --space-6: 1.25rem;
+    --space-7: 1.5rem;  --space-8: 2rem;    --space-9: 2.5rem;
+
+    --radius-xs: 6px;   --radius-sm: 8px;   --radius-md: 12px;
+    --radius-lg: 16px;  --radius-pill: 999px; --radius-round: 50%;
+
+    /* Escalera de elevación. Referencian var(--shadow), que cambia por tema:
+       las custom properties se resuelven al usarse, así que siguen al tema. */
+    --elev-1: 0 1px 2px var(--shadow);
+    --elev-2: 0 6px 18px var(--shadow);
+    --elev-3: 0 12px 30px var(--shadow);
+    --elev-4: 0 22px 60px var(--shadow);
+
+    --dur-fast: 120ms;  --dur-base: 180ms;  --dur-slow: 260ms;
+
+    --font-scale: 1;
+    --fs-2xs: calc(.75rem * var(--font-scale, 1));
+    --fs-xs: calc(.8125rem * var(--font-scale, 1));
+    --fs-sm: calc(.875rem * var(--font-scale, 1));
+    --fs-base: calc(.9375rem * var(--font-scale, 1));
+    --fs-md: calc(1rem * var(--font-scale, 1));
+    --fs-lg: calc(1.125rem * var(--font-scale, 1));
+    --fs-xl: calc(1.375rem * var(--font-scale, 1));
+    --fs-2xl: calc(1.75rem * var(--font-scale, 1));
+
+    /* ---- Paleta orgánica (Fase A del rediseño neumórfico) -------------------
+       El tema lo fija un script inline en el <head>. Si ese script no llega a
+       correr (JS desactivado, error, CSP), sin estos valores acá var(--bg) y
+       var(--text) quedaban inválidos y la página entera perdía color. Esta es
+       la paleta clara, que oficia de red de contención.
+
+       Familia cromática: EdTech de tres colores. Índigo para lo formal e
+       institucional, naranja para plataformas y categorías, verde jade para
+       la acción (CTAs, chat, favoritos, foco de inputs).
+
+       Los NOMBRES de las variables funcionales (--orange, --blue, --purple…)
+       se mantienen a propósito aunque el matiz
+       haya cambiado de familia: los usan ~40 reglas y el rol de cada una
+       (naranja = plataformas, --blue = formal, violeta = alternativas…) sigue
+       siendo el mismo. Renombrarlas sería una segunda refactorización sin
+       ganancia. Lo que sí cambió es el color que hay detrás del nombre. */
+    --bg: #F7F5FF;
+    --surface: #FFFFFF;
+    --surface-soft: #EEECFB;
+    --line: rgba(27, 24, 48, .14);
+    --text: #1B1830;
+    --muted: #5C5680;
+    --orange: #F97316;   /* naranja: plataformas / categorías */
+    --green: #16A34A;    /* verde */
+    --blue: #4F46E5;     /* índigo: formal / institucional */
+    --purple: #9333EA;   /* violeta */
+    --teal: #0D9488;     /* verde azulado */
+    --accent: #059669;   /* verde jade: acción (CTAs, chat, favoritos) */
+    --shadow: rgba(40, 34, 90, .14);
+
+    /* Tinta de los badges. El color puro sobre su propio tinte al 16% daba ~2.5:1
+       (ilegible al sol); estos son el mismo matiz con la luminancia corregida
+       para pasar 4.5:1. El fondo sigue siendo el color puro tinteado. */
+    --orange-ink: #C2410C;
+    --green-ink: #107937;
+    --blue-ink: #4F46E5;
+    --purple-ink: #8D31E1;
+    --teal-ink: #0A766D;
+    --accent-ink: #047854;
+    /* Texto sobre relleno saturado claro. */
+    --on-accent: #1B1830;
+    /* El relleno violeta usa el índigo, que es oscuro: lleva texto claro. */
+    --purple-fill: #4F46E5;
+    --on-purple: #FFFFFF;
+    /* Borde de controles de formulario: --line queda en ~1.3:1 y la norma pide 3:1. */
+    --line-strong: rgba(27, 24, 48, .48);
+
+    /* Acá vivía la familia --neu-*: las dos sombras opuestas del mismo tono que
+       la superficie que le daban a cada pieza el aspecto de estar extruída del
+       fondo. El relieve se sacó de todo el sitio, así que las variables se van
+       con él en lugar de quedar como peso muerto. Las superficies ahora se
+       distinguen por su color (--surface contra --bg) y por --line; lo único que
+       conserva sombra es lo que de verdad flota sobre la página, y eso usa la
+       escalera --elev-* de más arriba. */
+}
+
+html[data-theme="dark"] {
+    --bg: #09101c;
+    --surface: #121c2f;
+    --surface-soft: #1e293b;
+    --line: rgba(255, 255, 255, 0.08);
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+
+    --accent: #818cf8; 
+    --accent-ink: #818cf8;
+    --on-accent: #09101c;
+    --shadow: rgba(0, 0, 0, 0.4);
+
+    --orange-ink: #fdba74;
+    --green-ink:  #86efac;
+    --blue-ink:   #93c5fd;
+    --purple-ink: #d8b4fe;
+    --teal-ink:   #5eead4;
+    
+    --badge-orange: color-mix(in srgb, #fdba74 15%, transparent);
+    --badge-green:  color-mix(in srgb, #86efac 15%, transparent);
+    --badge-blue:   color-mix(in srgb, #93c5fd 15%, transparent);
+    --badge-purple: color-mix(in srgb, #d8b4fe 15%, transparent);
+    --badge-teal:   color-mix(in srgb, #5eead4 15%, transparent);
+    
+    --purple-fill: #d8b4fe;
+    --on-purple: #09101c;
+    --line-strong: rgba(255, 255, 255, 0.2);
+}
+
+html[data-theme="light"] {
+    --bg: #fdfaf5;
+    --surface: #ffffff;
+    --surface-soft: #f3f0ea;
+    --line: rgba(0, 0, 0, 0.08);
+    --text: #1f1d1a;
+    --muted: #6b6863;
+
+    --accent: #6366f1;
+    --accent-ink: #4338ca;
+    --on-accent: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.04);
+
+    --orange-ink: #c2410c;
+    --green-ink:  #15803d;
+    --blue-ink:   #1d4ed8;
+    --purple-ink: #6d28d9;
+    --teal-ink:   #0f766e;
+    
+    --badge-orange: #ffedd5;
+    --badge-green:  #dcfce7;
+    --badge-blue:   #dbeafe;
+    --badge-purple: #f3e8ff;
+    --badge-teal:   #ccfbf1;
+    
+    --purple-fill: #5b21b6;
+    --on-purple: #ffffff;
+    --line-strong: rgba(0, 0, 0, 0.15);
+}
+
+/* 2. BASE DE LA PÁGINA: tipografía, fondo y comportamiento global. */
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    min-width: 320px;
+    /* Reserva el alto del header expandido (lo mide app.js). El valor de reserva
+       es solo por si el JS no llega a correr. */
+    padding-top: var(--hero-alto, 440px);
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-text);
+    line-height: 1.5;
+    transition: background-color var(--dur-slow) ease, color var(--dur-slow) ease;
+}
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* Con el header fijo y 35 filtros antes de los resultados en el orden del DOM,
+   sin esto no había forma de saltearlos con el teclado. Solo se ve al enfocarlo. */
+.skip-link {
+    position: absolute; left: .5rem; top: -100px; z-index: 100;
+    padding: .7rem 1rem; border-radius: var(--radius-sm);
+    color: var(--on-accent); background: var(--accent);
+    font-weight: 700; text-decoration: none;
+}
+.skip-link:focus { top: .5rem; }
+
+/* #7 Accesibilidad de foco: anillo visible y de alto contraste para todo elemento
+   navegable por teclado. Usa la variable de acento del tema, así respeta claro/oscuro. */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+
+/* ================================================================
+   2b. SUPERFICIES (plano)
+   El sitio no usa relieve. Una pieza se distingue del fondo por su
+   color de superficie (--surface contra --bg) y por el borde de 1px
+   de --line, no por sombras. Los estados (hover, activo, elegido) se
+   dicen con fondo y con color de tinta, nunca con volumen ni con la
+   pieza levantándose.
+
+   La única sombra que queda en el sitio es la escalera --elev-*, y va
+   solo en lo que de verdad flota por encima de la página: la ventana
+   del chat, su burbuja, la barra del comparador y el modal. Ahí la
+   sombra no es decoración — es lo que separa la capa flotante del
+   contenido que quedó abajo.
+
+   Acá había un par de clases utilitarias, .neu-raised y .neu-pressed,
+   que aplicaban el relieve. No las usaba ningún elemento del HTML, así
+   que se fueron junto con el efecto.
+   ================================================================ */
+/* ================================================================
+   3. ENCABEZADO / PORTADA
+   Incluye el degradado superior, el título principal y el texto.
+   ================================================================ */
+.hero {
+    /* Fijo arriba siempre: a medida que --scroll-progress avanza (lo actualiza app.js
+       mientras se hace scroll), el logo y el buscador se convierten en dos "píldoras"
+       (una gris con el logo a la izquierda, una clara con el buscador a la derecha)
+       flotando sobre un fondo con blur estilo vidrio esmerilado (iOS). */
+    /* Fijo (no sticky): al achicarse, su alto ya no empuja al contenido, así que
+       no se reflota la página entera en cada cuadro. El espacio que ocuparía
+       expandido lo reserva el padding-top del body (--hero-alto, lo mide app.js). */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    contain: layout;
+    /* Portada deliberadamente más baja que antes (4.5/3rem y logo de 500px):
+       al abrir la página tiene que verse el catálogo, no 440px de encabezado
+       (el Copiloto es ahora una burbuja flotante, no la entrada). */
+    --hero-pad-top: 2.75rem;
+    --hero-pad-bottom: 2rem;
+    --hero-pad-compacto: 1rem;
+    /* Ancho del logo: de grande y centrado a chico y pegado a la izquierda.
+       Se anima el ANCHO (no un transform) para que el alto del header se achique
+       de verdad: el alto de la imagen sigue al ancho por su proporción. */
+    --logo-w-expandido: 380px;
+    --logo-w-compacto: 190px;
+    /* El min() va POR FUERA del calc: si queda anidado dentro de una resta con
+       porcentajes, Chrome lo resuelve como 0. */
+    --logo-w: min(100%, calc(var(--logo-w-expandido) - var(--scroll-progress) * (var(--logo-w-expandido) - var(--logo-w-compacto))));
+    --bar-gap: 18px;
+    /* Cuánto sube el buscador para ponerse al lado del logo (margen negativo:
+       también recorta el alto del header, cosa que un translateY no hace). */
+    --search-lift: -58px;
+    /* El padding incorpora env(safe-area-inset-top) para no chocar con el notch/status bar en iOS */
+    padding:
+        calc(var(--hero-pad-top) + env(safe-area-inset-top, 0px) - var(--scroll-progress) * (var(--hero-pad-top) - var(--hero-pad-compacto)))
+        1.5rem
+        calc(var(--hero-pad-bottom) - var(--scroll-progress) * (var(--hero-pad-bottom) - var(--hero-pad-compacto)));
+    text-align: center;
+    /* El fondo se vuelve TRANSLÚCIDO al achicarse: si quedara opaco, el
+       backdrop-filter no tendría nada para desenfocar y no se vería el efecto. */
+    background:
+        radial-gradient(circle at 50% -35%, color-mix(in srgb, var(--purple) calc(24% * (1 - var(--scroll-progress))), transparent) 0, transparent 58%),
+        linear-gradient(180deg,
+            color-mix(in srgb, var(--surface) calc((1 - var(--scroll-progress)) * 100%), transparent),
+            color-mix(in srgb, var(--bg) calc((1 - var(--scroll-progress)) * 100%), transparent)),
+        color-mix(in srgb, var(--surface) calc(var(--scroll-progress) * 55%), transparent);
+    /* Blur + saturate emula el "vidrio esmerilado" de iOS en vez de un blur plano.
+       Usa --blur-progress (escalonado) para no recalcular el filtro en cada cuadro. */
+    backdrop-filter: blur(calc(var(--blur-progress) * var(--blur-max))) saturate(calc(1 + var(--blur-progress) * .8));
+    -webkit-backdrop-filter: blur(calc(var(--blur-progress) * var(--blur-max))) saturate(calc(1 + var(--blur-progress) * .8));
+    will-change: backdrop-filter;
+    border-bottom: 1px solid color-mix(in srgb, var(--line) calc(var(--scroll-progress) * 100%), transparent);
+}
+/* Al achicarse, el contenido se ensancha para que el logo llegue al borde. */
+.hero-content { width: min(100%, calc(850px + var(--scroll-progress) * 700px)); margin: auto; }
+.brand-theme-toggle {
+    position: relative; display: block; border: 0; background: transparent; outline-offset: 7px;
+    width: var(--logo-w);
+    /* De centrado (progreso 0) a pegado a la izquierda (progreso 1). El margen
+       de abajo se va a 0 para que el header no conserve alto de más. */
+    margin: 0 auto calc(1rem * (1 - var(--scroll-progress))) calc((100% - var(--logo-w)) * (1 - var(--scroll-progress)) / 2);
+    /* Se convierte en una píldora gris a medida que se achica. */
+    padding: calc(var(--scroll-progress) * .5rem) calc(var(--scroll-progress) * 1rem);
+    border-radius: calc(12px + var(--scroll-progress) * 90px);
+    background-color: color-mix(in srgb, var(--surface-soft) calc(var(--scroll-progress) * 100%), transparent);
+    box-shadow: 0 calc(var(--scroll-progress) * 6px) calc(var(--scroll-progress) * 18px) rgba(0, 0, 0, calc(var(--scroll-progress) * .16));
+}
+.brand-theme-toggle:focus-visible { outline: 2px solid var(--accent); }
+/* El width/height del HTML reserva la proporción antes de que cargue la imagen
+   (evita que la página salte); acá se lo deja fluido dentro del botón. */
+.brand-logo { display: block; width: 100%; height: auto; border-radius: var(--radius-sm); }
+.theme-hint { margin: .35rem 0 1.6rem; color: var(--muted); font-family: var(--font-detail); font-size: var(--fs-2xs); letter-spacing: .09em; text-transform: uppercase; }
+/* Montserrat 800 en tamaños de título: el tracking negativo evita que se vea
+   suelta y apelmazada, que es lo que pasa con las geométricas pesadas. */
+h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
+    font-family: var(--font-title); font-weight: var(--peso-title); letter-spacing: -.015em;
+}
+
+/* Contenido secundario del header (texto de bienvenida y botones): se desvanece
+   y colapsa a medida que se hace scroll, dejando solo el logo y el buscador fijos. */
+.hero-secondary {
+    opacity: calc(1 - var(--scroll-progress) * 1.6);
+    max-height: calc((1 - var(--scroll-progress)) * 210px);
+    overflow: hidden;
+}
+.hero--compacto .hero-secondary { pointer-events: none; visibility: hidden; }
+
+/* 4. BUSCADOR Y BOTONES DEL ENCABEZADO. */
+.search-container {
+    /* Se angosta y sube (con margen negativo, que sí recorta el alto del header)
+       hasta quedar a la derecha del logo, en la misma fila. La reducción se
+       calcula en px puros: multiplicar un grupo que contiene min() da mal. */
+    width: calc(100% - var(--scroll-progress) * (var(--logo-w-compacto) + var(--bar-gap)));
+    margin: calc(var(--scroll-progress) * var(--search-lift)) 0 0 auto;
+    /* Fila: el buscador se estira y el botón de filtros (solo en celular) va al lado. */
+    display: flex; align-items: center; gap: .5rem;
+    /* Ancla la lupa (ver ::before). */
+    position: relative;
+}
+/* Lupa SIN tocar el HTML: un <input> no admite pseudo-elementos, así que el ícono
+   lo pone el contenedor y el input le hace lugar con el padding izquierdo.
+   Va como MÁSCARA y no como background-image porque el color de un SVG embebido
+   en un data-URI queda incrustado ahí adentro: con mask el color sale de una
+   variable del tema y sigue a claro/oscuro y al foco sin duplicar el ícono. */
+.search-container::before {
+    content: '';
+    position: absolute; left: 1.05rem; top: 50%; z-index: 1;
+    width: 18px; height: 18px; margin-top: -9px;
+    background: var(--muted);
+    --icono-lupa: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.8-3.8'/%3E%3C/svg%3E");
+    -webkit-mask: var(--icono-lupa) center / contain no-repeat;
+    mask: var(--icono-lupa) center / contain no-repeat;
+    /* Si no, el click sobre la lupa no enfoca el input que hay debajo. */
+    pointer-events: none;
+    transition: background var(--dur-base) ease;
+}
+.search-container:has(.search-input:focus)::before { background: var(--accent); }
+
+/* El buscador es el caso de manual del hundido: parece un pozo tallado en la
+   superficie, que es exactamente lo que es un campo donde se escribe. */
+.search-input {
+    flex: 1; min-width: 0;
+    /* El padding izquierdo le deja lugar a la lupa. */
+    width: 100%; padding: 1rem 1.2rem 1rem 2.9rem; color: var(--text); background: var(--surface);
+    border: 1px solid var(--line-strong);
+    /* Se redondea hasta quedar en forma de píldora al achicarse. */
+    border-radius: calc(12px + var(--scroll-progress) * 987px);
+    /* Sin sombra: ni la proyectada que crecía con el scroll ni el hundido que la
+       reemplazó. El campo se lee por su borde de --line-strong, que es además lo
+       que cumple el 3:1 que pide la norma para controles. */
+    box-shadow: none;
+    transition: box-shadow var(--dur-base) ease, border-color var(--dur-base) ease;
+}
+/* En foco, borde de acento más un halo. El halo es un anillo plano, no una
+   sombra de profundidad: no desplaza ni difumina, solo rodea. El anillo de
+   teclado lo sigue poniendo :focus-visible. */
+.search-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+/* El margen también se colapsa: si no, sigue sumando alto al header achicado. */
+.hero-actions { display: flex; justify-content: center; gap: .65rem; margin-top: calc(1rem * (1 - var(--scroll-progress))); }
+.mobile-filter-button {
+    min-height: 42px; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .62rem .85rem;
+    color: var(--text); background: var(--surface-soft); font-family: var(--font-detail); font-size: var(--fs-base); letter-spacing: .035em;
+}
+.mobile-filter-button:hover { border-color: var(--accent); color: var(--accent-ink); }
+/* Solo aparece en celular (ver breakpoints). No se encoge: es el único acceso
+   a los filtros y tiene que sobrevivir a que el buscador se angoste. */
+.mobile-filter-button { display: none; flex-shrink: 0; align-items: center; gap: .35rem; white-space: nowrap; }
+.mobile-filter-texto { display: inline; }
+
+/* ================================================================
+   5. ESTRUCTURA DEL CATÁLOGO
+   En computadora: columna izquierda con los filtros y los resultados a la
+   derecha. El Copiloto ya no vive en esta columna: es una burbuja flotante
+   (ver §10).
+   ================================================================ */
+.catalog-layout {
+    display: grid; 
+    grid-template-columns: 280px minmax(0, 1fr); 
+    grid-template-areas: 
+        "tabs tabs"
+        "sidebar results";
+    gap: 2.25rem;
+    width: min(100% - 3rem, var(--container)); margin: 0 auto; padding: 1.5rem 0 5rem;
+}
+/* Sin position:sticky a propósito: la columna de filtros es más alta que la
+   ventana, y un sticky sobre un bloque más alto que el viewport deja su parte
+   de abajo —los filtros— fuera de alcance para siempre. */
+.catalog-side { grid-area: sidebar; display: flex; flex-direction: column; gap: var(--space-7); min-width: 0; align-self: start; }
+/* En las secciones que no usan filtros (plataformas, formaciones, oficios,
+   secundario) la columna izquierda quedaría vacía: se colapsa para que los
+   resultados usen todo el ancho. */
+.catalog-side:has(#filtersSidebar[hidden]) { display: none; }
+.catalog-layout:has(#filtersSidebar[hidden]) { grid-template-columns: 1fr; grid-template-areas: "tabs" "results"; }
+.results-area { grid-area: results; min-width: 0; }
+/* El header queda fijo arriba (~117px ya compactado), así que cualquier salto a
+   la grilla —el skip link y el "Ver mis resultados" del copiloto— tiene que
+   frenar antes o las primeras tarjetas quedan tapadas. */
+#cardContainer { scroll-margin-top: 145px; }
+
+/* ================================================================
+   6. PANEL DE FILTROS
+   Estilos de los filtros laterales y de sus opciones.
+   ================================================================ */
+/* El panel es plano, como todo lo demás: fondo de --surface y borde de --line. */
+.filters-sidebar { align-self: start; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; }
+.filters-heading { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1rem .8rem; border-bottom: 1px solid var(--line); }
+.filters-heading h2 { margin: 0; font-size: var(--fs-md); }
+.close-filters-button { display: none; padding: 0; color: var(--muted); background: none; border: 0; font-size: var(--fs-xl); line-height: 1; }
+.filter-group { padding: 1rem; border-bottom: 1px solid var(--line); }
+.filter-group h3 { margin: 0 0 .55rem; color: var(--text); font-family: var(--font-detail); font-size: var(--fs-md); font-weight: 400; letter-spacing: .045em; }
+.filter-options { display: flex; flex-direction: column; align-items: flex-start; gap: .18rem; }
+.filter-options-inline { gap: .12rem; }
+/* El padding horizontal va en TODAS las opciones, no solo en la activa: si se lo
+   pusiera únicamente a la elegida, la lista entera se correría cada vez que
+   cambiás de filtro. */
+.filter-option {
+    width: 100%; min-height: 30px; padding: .28rem .5rem; border: 0; border-radius: var(--radius-sm);
+    color: var(--muted); background: transparent;
+    text-align: left; font-size: var(--fs-sm);
+    transition: color var(--dur-base) ease, background-color var(--dur-base) ease;
+}
+.filter-option:hover { color: var(--accent-ink); background: color-mix(in srgb, var(--accent) 9%, transparent); }
+/* El elegido se tiñe. El fondo y la tinta de acento sostienen solos el estado;
+   antes los acompañaba un hundido suave que se fue con el resto del relieve. */
+.filter-option.active {
+    color: var(--accent-ink); font-weight: 700;
+    background: color-mix(in srgb, var(--accent) 14%, var(--surface));
+}
+/* El punto usa --accent-ink y no --accent a propósito: --accent puro sobre este
+   fondo teñido da 2.5:1 en modo claro. --accent-ink es el MISMO verde con la
+   luminancia corregida, así que el punto ya es verde (antes era celeste) y además
+   se ve. */
+.filter-option.active::before { content: '•'; display: inline-block; width: .8rem; color: var(--accent-ink); }
+.filter-option:not(.active)::before { content: ''; display: inline-block; width: .8rem; }
+.filter-options-compact { max-height: 186px; overflow-y: auto; scrollbar-width: thin; }
+.duration-range { display: grid; grid-template-columns: 1fr auto 1fr 30px; align-items: center; gap: .35rem; margin-top: .8rem; color: var(--muted); }
+.duration-range input { min-width: 0; width: 100%; min-height: 34px; padding: .42rem .35rem; border: 1px solid var(--line-strong); border-radius: var(--radius-xs); color: var(--text); background: var(--bg); font-size: var(--fs-2xs); }
+.duration-range input:focus { border-color: var(--accent); }
+.duration-range button { height: 34px; border: 0; border-radius: var(--radius-xs); color: var(--on-accent); background: var(--blue); font-weight: 800; }
+.clear-filters-button { width: calc(100% - 2rem); min-height: 38px; margin: 1rem; padding: .55rem; border: 1px solid var(--line); border-radius: var(--radius-xs); color: var(--muted); background: transparent; font-size: var(--fs-xs); }
+.clear-filters-button:hover { border-color: var(--accent); color: var(--accent-ink); }
+
+/* 7. BARRA SOBRE LOS RESULTADOS: cantidad encontrada y selector de orden. */
+.results-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
+.results-count { margin: 0; color: var(--muted); font-size: var(--fs-base); font-weight: 600; }
+/* El ícono recuerda en qué sección está parado el usuario (la barra solo se ve
+   en Educación Formal; las plataformas tienen su propio encabezado). */
+.results-count::before { content: '🎓 '; }
+.sort-control { display: flex; align-items: center; gap: .5rem; color: var(--muted); font-size: var(--fs-xs); white-space: nowrap; }
+/* El borde fuerte y la flecha nativa del navegador se quedan intactos: son lo
+   que dice "esto se abre", y eso no se negocia por estética. */
+.sort-control select {
+    min-height: 38px; padding: .5rem .6rem; border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm); color: var(--text); background: var(--surface);
+    transition: border-color var(--dur-base) ease;
+}
+.sort-control select:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line-strong)); }
+.sort-control select:focus { border-color: var(--accent); }
+
+/* ================================================================
+   8. TARJETAS DE CARRERAS Y CURSOS
+   Cambiá aquí el tamaño, color, bordes y distribución de cada tarjeta.
+   ================================================================ */
+.results-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 1rem; }
+/* Borde izquierdo azul: marca que la tarjeta es de Educación Formal, en paralelo
+   al borde naranja de las tarjetas de plataformas. */
+/* Sin min-height: forzaba aire muerto en las tarjetas de título corto y
+   desalineaba la grilla. Ahora cada una mide lo que su contenido pide. */
+/* --- Familia de cards ---------------------------------------------------------
+   .card, .platform-card y .curso-card son la MISMA pieza en distintas
+   secciones. Se tratan juntas a propósito: si solo una cambiara de tratamiento,
+   cambiar de pestaña mostraría media interfaz rediseñada.
+
+   Planas: fondo de --surface, borde de 1px y nada más. El color de categoría no
+   va en un borde grueso a la izquierda sino en la marca chica de --card-tono
+   (ver ::before más abajo). */
+.card, .platform-card, .curso-card {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    transition: border-color var(--dur-base) ease;
+}
+/* La marca de categoría: una barrita corta pegada al borde izquierdo, a la altura
+   de la primera línea de contenido. Dice lo mismo que decía el borde de 4px
+   (a qué sección pertenece esta card) ocupando una fracción del peso visual. */
+.card::before, .platform-card::before, .curso-card::before {
+    content: '';
+    position: absolute; left: 0; top: var(--space-6);
+    width: 3px; height: 26px;
+    border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
+    background: var(--card-tono, var(--accent));
+}
+/* En hover la card no se levanta: se le enciende el borde con el color de su
+   categoría, que es la misma señal sin movimiento. */
+.card:hover, .platform-card:hover, .curso-card:hover {
+    border-color: color-mix(in srgb, var(--card-tono, var(--accent)) 45%, var(--line));
+}
+
+.card { display: flex; flex-direction: column; padding: var(--space-6); --card-tono: var(--seccion, var(--blue)); }
+.card-badges { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+/* Los badges se quedan SIN relieve, y es una decisión, no un olvido. Dos razones:
+   (1) las sombras neumórficas se derivan de --surface, pero un badge no es
+   --surface sino un tinte del color funcional; ponerle sombras de otro material
+   encima rompe justo la ilusión que el efecto busca — deja de parecer extruído y
+   parece pegoteado. (2) Son seis pastillas de 20px dentro de una card que YA
+   tiene relieve: sumarles otro par de sombras a cada una convierte el interior de
+   la card en ruido y compite con la jerarquía. El color funcional ya los separa
+   del fondo con 4.6:1 o más, que es lo que importa. */
+.badge { padding: .23rem .5rem; border-radius: var(--radius-pill); color: var(--muted); background: color-mix(in srgb, var(--muted) 12%, transparent); font-family: var(--font-detail); font-size: var(--fs-2xs); font-weight: 400; letter-spacing: .045em; text-transform: uppercase; }
+/* Mismo aspecto de siempre (tinte del color + texto del color), pero el texto usa
+   la variante -ink: el matiz puro sobre su propio tinte no llegaba a 4.5:1. */
+.badge-area { color: var(--orange-ink); background: var(--badge-orange); }
+.badge-publica { color: var(--blue-ink); background: var(--badge-blue); }
+.badge-privada { color: var(--purple-ink); background: var(--badge-purple); }
+.badge-modalidad { color: var(--green-ink); background: var(--badge-green); }
+.badge-arancelada { color: var(--orange-ink); background: var(--badge-orange); }
+.badge-fuente { color: var(--purple-ink); background: var(--badge-purple); }
+.badge-match { color: var(--purple-ink); background: var(--badge-purple); }
+.card-title { margin: var(--space-4) 0 var(--space-3); font-size: var(--fs-lg); line-height: 1.3; overflow-wrap: anywhere; }
+.card-info { color: var(--muted); font-size: var(--fs-xs); display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+.card-info p { margin: 0; display: inline-flex; align-items: center; gap: var(--space-1); padding: var(--space-1) var(--space-3); border-radius: var(--radius-xs); background: color-mix(in srgb, var(--muted) 9%, transparent); }
+.card-link { display: block; margin-top: auto; padding-top: var(--space-5); color: var(--accent-ink); font-size: var(--fs-xs); font-weight: 700; text-decoration: none; }
+.card-link:hover { color: var(--purple-ink); }
+.card-link-muted { color: var(--muted); }
+/* Enlace a la ficha propia de BEN. Queda arriba del enlace al sitio oficial:
+   es el que mantiene a la persona adentro del buscador. Cuando estan los dos,
+   el interno se lleva el margin-top:auto que empuja el par al pie de la
+   tarjeta y el oficial lo pierde, asi se leen juntos y no como dos bloques. */
+.card-link-ben { color: var(--purple-ink); }
+.card-link-ben:hover { color: var(--accent-ink); }
+.card-link-ben + .card-link, .card-link-ben + span.card-link { margin-top: 0; padding-top: var(--space-3); }
+.empty-state {
+    grid-column: 1 / -1; padding: 3rem 1rem; color: var(--muted);
+    text-align: center; font-size: var(--fs-base);
+}
+/* Ilustración de los estados vacíos. Va por mask-image y no background-image:
+   dentro de un data-URI, currentColor no tiene de quién heredar y se resolvía a
+   negro, así que en tema oscuro el ícono era invisible. Con máscara, el color lo
+   aporta background-color y sí acompaña al tema. */
+.empty-state::before {
+    content: ""; display: block; width: 72px; height: 72px; margin: 0 auto 1.1rem;
+    background-color: currentColor;
+    mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2224%22%20r%3D%229%22%2F%3E%3Cline%20x1%3D%2236%22%20y1%3D%2236%22%20x2%3D%2254%22%20y2%3D%2254%22%2F%3E%3Cline%20x1%3D%222%22%20y1%3D%2238%22%20x2%3D%2214%22%20y2%3D%2238%22%2F%3E%3Cline%20x1%3D%222%22%20y1%3D%2244%22%20x2%3D%2220%22%20y2%3D%2244%22%2F%3E%3Cline%20x1%3D%222%22%20y1%3D%2250%22%20x2%3D%2212%22%20y2%3D%2250%22%2F%3E%3C%2Fsvg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2224%22%20r%3D%229%22%2F%3E%3Cline%20x1%3D%2236%22%20y1%3D%2236%22%20x2%3D%2254%22%20y2%3D%2254%22%2F%3E%3Cline%20x1%3D%222%22%20y1%3D%2238%22%20x2%3D%2214%22%20y2%3D%2238%22%2F%3E%3Cline%20x1%3D%222%22%20y1%3D%2244%22%20x2%3D%2220%22%20y2%3D%2244%22%2F%3E%3Cline%20x1%3D%222%22%20y1%3D%2250%22%20x2%3D%2212%22%20y2%3D%2250%22%2F%3E%3C%2Fsvg%3E");
+    mask-size: contain; mask-repeat: no-repeat; mask-position: center;
+    -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;
+    opacity: .85;
+}
+/* Empty de favoritos: ícono de estrella vacía a juego con el mensaje. */
+.empty-favoritos::before {
+    width: 64px; height: 64px;
+    mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M32%208l7.9%2016.4L56%2024.4l-12%2011.6%202.8%2016.3L32%2044.6l-14.8%207.7%202.8-16.3L8%2024.4z%22%2F%3E%3C%2Fsvg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M32%208l7.9%2016.4L56%2024.4l-12%2011.6%202.8%2016.3L32%2044.6l-14.8%207.7%202.8-16.3L8%2024.4z%22%2F%3E%3C%2Fsvg%3E");
+}
+.empty-favoritos strong { color: var(--orange-ink); }
+.results-suggest {
+    grid-column: 1 / -1; margin: 0 0 .25rem; padding: 1rem 1.1rem;
+    border: 1px solid var(--line); border-left: 4px solid var(--orange);
+    border-radius: var(--radius-lg); background: var(--surface);
+    color: var(--text); font-size: var(--fs-base);
+}
+.results-suggest strong { color: var(--orange-ink); }
+
+.cargar-mas {
+    display: block; margin: 1.5rem auto 0; min-height: 44px; padding: .7rem 1.6rem;
+    border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface);
+    color: var(--accent-ink); font-family: var(--font-text); font-size: var(--fs-base); font-weight: 700;
+    cursor: pointer; transition: border-color var(--dur-base) ease, color var(--dur-base) ease, background-color var(--dur-base) ease;
+}
+.cargar-mas:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--surface)); }
+
+/* ================================================================
+   8b. SECCIONES PRINCIPALES: EDUCACIÓN FORMAL vs PLATAFORMAS ONLINE
+   Es la primera decisión del usuario. Cada sección tiene su color e ícono,
+   y --seccion tiñe todo lo que depende de dónde está parado.
+   ================================================================ */
+/* --seccion es el relleno/borde; --seccion-ink es su tinta legible. Van siempre
+   en pareja, igual que los badges. */
+body[data-seccion="formal"]                    { --seccion: var(--blue);   --seccion-ink: var(--blue-ink); }
+body[data-seccion="plataformas"]               { --seccion: var(--orange); --seccion-ink: var(--orange-ink); }
+body[data-seccion="formaciones-alternativas"]  { --seccion: var(--purple); --seccion-ink: var(--purple-ink); }
+body[data-seccion="oficios-tecnicos"]          { --seccion: var(--green);  --seccion-ink: var(--green-ink); }
+body[data-seccion="secundario"]                { --seccion: var(--teal);   --seccion-ink: var(--teal-ink); }
+
+.section-tabs {
+    grid-area: tabs;
+    display: flex; flex-wrap: wrap; gap: .6rem; width: 100%;
+    margin: 0 0 var(--space-7);
+}
+/* Ícono arriba y texto abajo (antes iban lado a lado): en la columna de
+   resultados cada pestaña tiene ~165px y compartir el ancho con el ícono le
+   dejaba al texto unos 110px, con "Formaciones Alternativas" partida y saliéndose
+   de la tarjeta. Apiladas entran las cinco en una sola fila y sin cortes. */
+.section-tab {
+    display: flex; flex-direction: column; align-items: flex-start; gap: .35rem;
+    padding: .75rem .85rem; text-align: left;
+    /* Plano: ni borde ni relieve. La pestaña se despega del fondo por su propia
+       superficie (--surface contra --bg) y nada más. El borde sigue declarado en
+       1px pero transparente para que la geometría no salte cuando la activa sí
+       lo pinta. */
+    border: 1px solid transparent; border-radius: var(--radius-lg);
+    background: var(--surface); color: var(--muted);
+    box-shadow: none;
+    transition: border-color var(--dur-base) ease, color var(--dur-base) ease,
+                background-color var(--dur-base) ease;
+}
+/* Hover SOLO en las que no están elegidas. Sin relieve que aumentar, el hover
+   se nota por la superficie: un escalón de fondo, sin movimiento. */
+.section-tab:not(.is-active):hover { background: var(--surface-soft); }
+.section-tab-icon { display: inline-flex; line-height: 1; color: var(--muted); transition: color var(--dur-base) ease; }
+.section-tab-icon .tab-svg { width: 26px; height: 26px; display: block; }
+.section-tab-texto { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+.section-tab-texto strong { font-family: var(--font-title); font-size: var(--fs-base); line-height: 1.2; color: var(--text); }
+.section-tab-texto small { font-size: var(--fs-2xs); line-height: 1.3; overflow-wrap: anywhere; }
+
+/* INERTES por ahora: la pestaña activa pasó a pintarse con --accent (pedido de
+   Fase B), no con el color de su sección. Se dejan porque son el camino de vuelta
+   de una línea si preferís recuperar el código de color por sección: alcanza con
+   cambiar --accent-ink por --tono-ink y --accent por --tono en .section-tab.is-active.
+   El color por sección SIGUE vivo en el resto de la interfaz (--seccion en body). */
+.section-tab-formal.is-active       { --tono: var(--blue);   --tono-ink: var(--blue-ink); }
+.section-tab-plataformas.is-active  { --tono: var(--orange); --tono-ink: var(--orange-ink); }
+.section-tab-formaciones.is-active  { --tono: var(--purple); --tono-ink: var(--purple-ink); }
+.section-tab-oficios.is-active      { --tono: var(--green);  --tono-ink: var(--green-ink); }
+.section-tab-secundario.is-active   { --tono: var(--teal);   --tono-ink: var(--teal-ink); }
+/* Sin relieve, el estado activo lo sostienen el fondo teñido y la tinta de
+   acento del título y el ícono. El borde de acento se queda — es el único
+   contorno que pinta alguna pestaña, así que no compite con nada. El tiñe sube
+   de 10% a 14%: era el relieve lo que hacía de piso del estado y ya no está. */
+.section-tab.is-active {
+    border-color: var(--tono);
+    background: color-mix(in srgb, var(--tono) 14%, var(--surface));
+    box-shadow: none;
+    transform: none;
+}
+.section-tab.is-active .section-tab-texto strong { color: var(--tono-ink); }
+.section-tab.is-active .section-tab-icon { color: var(--tono-ink); }
+.section-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ================================================================
+   8c. TARJETAS DE PLATAFORMAS ONLINE
+   Una tarjeta por plataforma (no por curso): quién es, qué enseña y
+   un botón que lleva a su sitio oficial a ver el catálogo completo.
+   ================================================================ */
+.platforms-section h2 { margin: 0 0 .4rem; font-size: var(--fs-xl); color: var(--orange-ink); }
+.platforms-intro { margin: 0 0 1.4rem; color: var(--muted); font-size: var(--fs-base); }
+.platforms-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1rem; }
+.platform-card { display: flex; flex-direction: column; padding: 1.15rem; --card-tono: var(--orange); }
+.platform-head { display: flex; align-items: center; gap: .7rem; margin-bottom: .7rem; }
+/* Espacio del logo: si se agrega la imagen, ocupa este mismo lugar (ver app.js). */
+.platform-logo {
+    flex: 0 0 auto; width: 44px; height: 44px; border-radius: var(--radius-sm);
+    object-fit: contain; background: var(--surface-soft);
+}
+.platform-logo-vacio {
+    display: grid; place-items: center;
+    color: var(--orange-ink); font-family: var(--font-title); font-size: var(--fs-xl);
+    border: 1px dashed color-mix(in srgb, var(--orange) 45%, transparent);
+}
+.platform-name { margin: 0; font-family: var(--font-title); font-size: var(--fs-lg); overflow-wrap: anywhere; }
+.platform-summary { margin: 0 0 .85rem; color: var(--muted); font-size: var(--fs-sm); line-height: 1.45; }
+.platform-meta { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: 1rem; }
+.platform-link {
+    margin-top: auto; padding: .6rem .8rem; border-radius: var(--radius-sm); text-align: center;
+    color: var(--on-accent); background: var(--orange);
+    font-size: var(--fs-sm); font-weight: 700; text-decoration: none;
+}
+.platform-link:hover { background: color-mix(in srgb, var(--orange) 82%, var(--text)); }
+.platform-link-muted { color: var(--muted); background: var(--surface-soft); }
+
+/* ================================================================
+   8d. CATÁLOGOS APARTE: FORMACIONES ALTERNATIVAS Y OFICIOS TÉCNICOS
+   Vista propia por sección, sin los filtros de carreras. El color sale
+   de --seccion, que cambia según la pestaña activa.
+   ================================================================ */
+.catalog-aparte h2 { margin: 0 0 .4rem; font-size: var(--fs-xl); color: var(--seccion-ink); }
+.catalog-aparte-intro { margin: 0 0 1.4rem; color: var(--muted); font-size: var(--fs-base); }
+.cursos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(265px, 1fr)); gap: 1rem; }
+.curso-card { display: flex; flex-direction: column; padding: 1.15rem; --card-tono: var(--seccion); }
+.curso-title { margin: var(--space-4) 0 var(--space-3); font-family: var(--font-title); font-size: var(--fs-lg); line-height: 1.3; overflow-wrap: anywhere; }
+
+/* Tarjeta simple (Terminar el Secundario): sin badges arriba, así que el título
+   no necesita el margen superior que lo separaba de ellos. */
+.curso-card-simple .curso-title { margin-top: 0; margin-bottom: var(--space-1); }
+.curso-subtitulo { margin: 0 0 var(--space-3); color: var(--seccion-ink); font-family: var(--font-detail); font-size: var(--fs-base); letter-spacing: .03em; }
+.curso-descripcion { margin: 0 0 var(--space-5); color: var(--muted); font-size: var(--fs-sm); line-height: 1.5; }
+.badge-seccion { color: var(--seccion-ink); background: color-mix(in srgb, var(--seccion) 16%, transparent); }
+
+/* Plataformas que aparecen al buscar dentro de Educación Formal. */
+.platform-matches {
+    margin-top: 2.25rem; padding-top: 1.35rem;
+    border-top: 2px dashed color-mix(in srgb, var(--orange) 45%, transparent);
+}
+.platform-matches h3 { margin: 0 0 1rem; font-size: var(--fs-lg); color: var(--orange-ink); }
+
+/* 9. SECCIÓN DE NOTICIAS Y SUS TARJETAS. */
+/* Borde izquierdo como el resto de las tarjetas: era la única sin acento. */
+/* ================================================================
+   10. COPILOTO VOCACIONAL (burbuja flotante) Y FONDO DE FILTROS EN CELULAR.
+   El copiloto es una burbuja fija en la esquina inferior derecha que abre una
+   ventana de chat; en el test guiado (desde la bienvenida) el panel se vuelve
+   un fondo oscuro con la página desenfocada y la ventana queda centrada.
+   Los filtros en celular siguen siendo un cajón lateral.
+   ================================================================ */
+.filters-overlay { display: none; }
+
+.copiloto-panel {
+    position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 70;
+    display: flex; flex-direction: column; align-items: flex-end; gap: .75rem;
+}
+/* Burbuja de apertura: se oculta cuando la ventana está abierta (.is-abierto)
+   y durante el test a pantalla completa. */
+.btn-chat-toggle {
+    display: grid; place-items: center;
+    width: 60px; height: 60px; padding: 0; border: 0; border-radius: var(--radius-round);
+    color: var(--on-purple); background: var(--purple-fill);
+    box-shadow: var(--elev-3); font-size: 1.5rem; line-height: 1;
+    transition: transform var(--dur-base) ease, filter var(--dur-base) ease;
+}
+.btn-chat-toggle:hover { transform: translateY(-2px) scale(1.04); filter: brightness(1.06); }
+.copiloto-panel.is-abierto .btn-chat-toggle { display: none; }
+
+/* Ventana de chat flotante: la tarjeta que aparece sobre la burbuja. */
+.ventana-chat {
+    display: flex; flex-direction: column;
+    width: min(380px, calc(100vw - 2.5rem));
+    height: min(560px, 70vh);
+    border: 1px solid var(--line); border-radius: var(--radius-lg);
+    background: var(--surface); box-shadow: var(--elev-4); overflow: hidden;
+    animation: chat-abrir var(--dur-slow) ease;
+}
+@keyframes chat-abrir {
+    from { opacity: 0; transform: translateY(10px) scale(.98); }
+    to   { opacity: 1; transform: none; }
+}
+/* Test guiado: el panel se vuelve un fondo a pantalla completa con la página
+   principal desenfocada atrás, y la ventana de chat queda centrada y acotada
+   (antes se llevaba casi toda la pantalla y era demasiado). */
+.copiloto-panel.is-test-pantalla-completa {
+    inset: 0; z-index: 90; align-items: center; justify-content: center;
+    background: rgba(2, 6, 23, .55);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    transition: opacity var(--dur-slow) ease;
+}
+.copiloto-panel.is-test-pantalla-completa .btn-chat-toggle { display: none; }
+.copiloto-panel.is-test-pantalla-completa .ventana-chat {
+    width: min(680px, calc(100vw - 2.5rem));
+    height: min(520px, 70vh);
+}
+/* Fade-out al salir del test (lo agrega app.js en salirDelTest). */
+.copiloto-panel.is-saliendo-test { opacity: 0; }
+
+.chat-header { display: flex; align-items: center; justify-content: space-between; padding: .8rem .95rem; border-bottom: 1px solid var(--line); font-size: var(--fs-base); font-weight: 700; }
+.chat-header button { display: inline-flex; align-items: center; justify-content: center;
+    min-width: 44px; min-height: 44px; margin: -.35rem -.5rem -.35rem 0;
+    border: 0; border-radius: var(--radius-sm); color: var(--muted); background: none; font-size: var(--fs-md); }
+.chat-cuerpo { flex: 1; min-height: 0; padding: .9rem; overflow-y: auto; color: var(--muted); font-size: var(--fs-sm); display: flex; flex-direction: column; gap: .55rem; }
+
+/* Barra de progreso fija del test vocacional (arriba, fuera del scroll) */
+.chat-progreso-fijo { padding: .75rem .9rem .15rem; border-bottom: 1px solid var(--line); }
+
+/* Burbuja del usuario: a la derecha y con el acento de la sección */
+.mensaje-usuario { align-self: flex-end; max-width: 88%; padding: .7rem .85rem; border-radius: var(--radius-md) 12px 3px 12px; background: var(--accent); color: var(--on-accent); line-height: 1.4; }
+.mensaje-usuario p { margin: 0; }
+
+/* Sugerencias rápidas que el bot propone como botones */
+.chat-sugerencias { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .55rem; }
+.btn-chat-sugerencia { min-height: 36px; padding: .4rem .65rem; border: 1px dashed var(--line); border-radius: var(--radius-pill); color: var(--muted); background: transparent; font-size: var(--fs-2xs); transition: border-color var(--dur-base) ease, color var(--dur-base) ease; }
+.btn-chat-sugerencia:hover, .btn-chat-sugerencia:focus-visible { border-color: var(--accent); color: var(--accent-ink); }
+
+/* Tarjetas compactas de resultado que el copiloto muestra en el chat, con los
+   botones de favorito/comparar operativos (funcionan por delegación). */
+.chat-resultados { display: flex; flex-direction: column; gap: .5rem; margin-top: .55rem; }
+.chat-resultado-card {
+    display: flex; flex-direction: column; gap: .4rem;
+    padding: .6rem .75rem; border: 1px solid var(--line); border-radius: var(--radius-md);
+    background: var(--surface);
+}
+.chat-resultado-head { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.chat-resultado-nombre { font-weight: 700; color: var(--text); font-size: var(--fs-sm); }
+.chat-resultado-card .compatibilidad-badge { font-size: var(--fs-2xs); padding: .1rem .5rem; }
+.chat-resultado-acciones { display: flex; flex-wrap: wrap; gap: .4rem; }
+.chat-resultado-acciones .btn-favorito, .chat-resultado-acciones .btn-comparar { min-height: 32px; padding: .3rem .55rem; font-size: var(--fs-2xs); }
+.chat-resultado-acciones .tipo-badges { margin: 0; }
+
+/* Barra de progreso del test vocacional */
+.chat-progreso { height: 6px; border-radius: var(--radius-pill); background: var(--line); overflow: hidden; margin-bottom: .55rem; }
+.chat-progreso span { display: block; height: 100%; background: var(--accent); transition: width var(--dur-slow) ease; }
+.chat-progreso-texto { margin: 0 0 .75rem; color: var(--muted); font-family: var(--font-detail); font-size: var(--fs-2xs); letter-spacing: .07em; text-transform: uppercase; }
+
+/* Burbujas de mensaje del bot */
+.mensaje-bot { padding: .7rem .85rem; border-radius: var(--radius-md) 12px 12px 3px; background: var(--surface-soft); color: var(--text); }
+.mensaje-bot p { margin: 0; line-height: 1.45; }
+.mensaje-bot ul { margin: .4rem 0 0; padding-left: 1.15rem; display: flex; flex-direction: column; gap: .3rem; }
+.mensaje-bot li { line-height: 1.4; }
+.mensaje-bot strong { color: var(--accent-ink); }
+.mensaje-bot.final { display: flex; flex-direction: column; gap: .55rem; }
+.mensaje-bot-nota { margin: 0; color: var(--muted); font-size: var(--fs-2xs); }
+
+/* Indicador de "escribiendo…" mientras se procesa la respuesta */
+.mensaje-escribiendo { display: flex; align-items: center; gap: 4px; width: fit-content; padding: .85rem 1rem; }
+.mensaje-escribiendo span { width: 6px; height: 6px; border-radius: var(--radius-round); background: var(--muted); animation: chat-typing 1s infinite ease-in-out; }
+.mensaje-escribiendo span:nth-child(2) { animation-delay: .15s; }
+.mensaje-escribiendo span:nth-child(3) { animation-delay: .3s; }
+@keyframes chat-typing { 0%, 60%, 100% { transform: translateY(0); opacity: .4; } 30% { transform: translateY(-4px); opacity: 1; } }
+
+/* Opciones de respuesta y navegación del test */
+.opciones-usuario { display: flex; flex-direction: column; gap: .5rem; margin-top: .75rem; }
+.btn-chat-opcion { min-height: 44px; padding: .6rem .75rem; border: 1px solid var(--line); border-radius: var(--radius-sm); color: var(--text); background: var(--surface); font-size: var(--fs-xs); line-height: 1.35; text-align: left; transition: border-color var(--dur-base) ease, background var(--dur-base) ease; }
+.btn-chat-opcion:hover, .btn-chat-opcion:focus-visible { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.btn-chat-atras { display: block; width: 100%; margin-top: .75rem; padding: .4rem; border: 0; color: var(--muted); background: none; font-size: var(--fs-2xs); text-decoration: underline; }
+.btn-chat-atras:hover { color: var(--text); }
+/* En el mensaje de bienvenida el botón queda entre párrafos (.mensaje-bot p
+   tiene margin: 0), así que necesita su propio aire. */
+/* Espaciado del mensaje de resultados del test (notas + tarjetas + reset). */
+.mensaje-bot > p + .mensaje-bot-nota,
+.mensaje-bot > .mensaje-bot-nota + .chat-resultados,
+.mensaje-bot > .chat-resultados + .mensaje-bot-nota,
+.mensaje-bot > .mensaje-bot-nota + .btn-chat-reset,
+.mensaje-bot > p + .btn-chat-reset { margin-top: var(--space-4); }
+.btn-chat-reset { width: 100%; min-height: 40px; padding: .55rem; border: 1px solid var(--line); border-radius: var(--radius-sm); color: var(--text); background: transparent; font-size: var(--fs-xs); }
+
+/* ---- 10b. Portada del copiloto -----------------------------------------
+   La bienvenida del chat es la primera pantalla del test, no un mensaje mas:
+   ocupa la ventana entera y muestra el proceso en tres pasos en vez de
+   explicarlo con un parrafo. Vive dentro de una .mensaje-bot, asi que lo
+   primero es sacarle el disfraz de burbuja. */
+.mensaje-bot:has(.copiloto-bienvenida) {
+    padding: 0; background: none; border-radius: 0;
+    /* El contenedor de consulta es el wrapper, no la portada: un elemento no
+       puede consultar su propio tamano. La portada se acomoda al ancho REAL
+       del modal, no al del viewport, porque la misma pantalla se usa a
+       pantalla completa (680px) y en la burbuja flotante (380px). */
+    container-type: inline-size;
+    container-name: portada-copiloto;
+}
+/* Con la portada puesta el header queda como cromo minimo: solo la X. El
+   titulo se esconde sin salir del arbol de accesibilidad, porque es el que
+   nombra la region (aria-labelledby). */
+.ventana-chat:has(.copiloto-bienvenida) .chat-header { border-bottom: 0; padding-bottom: 0; }
+.ventana-chat:has(.copiloto-bienvenida) #chat-titulo {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap;
+}
+/* Profundidad: un degradado muy suave de --surface a --surface-soft en vez de
+   un plano. */
+.ventana-chat:has(.copiloto-bienvenida) {
+    background: linear-gradient(163deg, var(--surface) 0%, var(--surface-soft) 100%);
+}
+
+.copiloto-bienvenida {
+    display: flex; flex-direction: column;
+    gap: var(--space-6);
+    padding: var(--space-3) var(--space-4) var(--space-4);
+    color: var(--text);
+}
+.cb-svg { width: 100%; height: 100%; display: block; }
+
+/* ---- Header: icono en placa + titulo con subtitulo ---- */
+.cb-header { display: flex; align-items: center; gap: var(--space-4); }
+.cb-icono {
+    flex: none; display: grid; place-items: center;
+    width: 48px; height: 48px; padding: 11px;
+    border-radius: var(--radius-md);
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 26%, transparent);
+}
+.cb-titulos { display: flex; flex-direction: column; gap: var(--space-1); min-width: 0; }
+.cb-titulo {
+    margin: 0;
+    font-family: var(--font-title); font-weight: var(--peso-title);
+    font-size: var(--fs-xl); line-height: 1.15; color: var(--text);
+    letter-spacing: -.01em;
+}
+.cb-subtitulo { margin: 0; color: var(--muted); font-size: var(--fs-sm); line-height: 1.3; }
+
+/* ---- Los tres pasos ---- */
+.cb-pasos {
+    display: grid; gap: var(--space-3);
+    margin: 0; padding: 0; list-style: none;
+}
+.cb-paso {
+    display: flex; align-items: flex-start; gap: var(--space-4);
+    padding: var(--space-4);
+    border: 1px solid var(--line); border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--surface) 55%, transparent);
+}
+.cb-paso-icono {
+    flex: none; display: grid; place-items: center;
+    width: 32px; height: 32px; padding: 6px;
+    border-radius: var(--radius-sm);
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.cb-paso-cuerpo { display: flex; flex-direction: column; gap: var(--space-1); min-width: 0; }
+.cb-paso-num {
+    font-family: var(--font-detail); font-size: var(--fs-2xs);
+    letter-spacing: .09em; text-transform: uppercase; color: var(--muted);
+}
+.cb-paso-texto { color: var(--text); font-size: var(--fs-sm); line-height: 1.35; }
+
+
+/* ---- Badge de tiempo: baja la friccion de arrancar ---- */
+.cb-tiempo {
+    display: inline-flex; align-items: center; align-self: center; gap: var(--space-2);
+    margin: 0; padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-pill);
+    color: var(--muted); background: color-mix(in srgb, var(--text) 6%, transparent);
+    font-size: var(--fs-2xs);
+}
+.cb-tiempo .cb-svg { width: 14px; height: 14px; flex: none; }
+
+/* ---- Boton principal ---- */
+.cb-cta {
+    display: flex; align-items: center; justify-content: center; gap: var(--space-3);
+    width: 100%; min-height: 52px; padding: var(--space-4) var(--space-5);
+    border: 0; border-radius: var(--radius-md);
+    color: var(--on-accent);
+    background: linear-gradient(180deg,
+        color-mix(in srgb, var(--accent) 92%, #fff) 0%, var(--accent) 100%);
+    font-family: var(--font-title); font-weight: 700; font-size: var(--fs-md);
+    cursor: pointer;
+    transition: filter var(--dur-base) ease;
+}
+.cb-cta .cb-svg { width: 20px; height: 20px; flex: none; transition: transform var(--dur-base) ease; }
+/* El botón no se levanta ni proyecta sombra: aclara, y la flecha se corre. El
+   movimiento se lo queda la flecha, que es la que indica hacia dónde lleva. */
+.cb-cta:hover { filter: brightness(1.04); }
+.cb-cta:hover .cb-svg { transform: translateX(3px); }
+.cb-cta:active { filter: brightness(.96); }
+
+/* ---- Salida discreta ---- */
+.cb-salida {
+    align-self: center; min-height: 36px; padding: var(--space-2) var(--space-3);
+    border: 0; border-radius: var(--radius-sm);
+    color: var(--muted); background: none;
+    font-size: var(--fs-xs); text-decoration: underline;
+    text-underline-offset: 3px; text-decoration-color: var(--line-strong);
+    cursor: pointer;
+    transition: color var(--dur-base) ease;
+}
+.cb-salida:hover, .cb-salida:focus-visible { color: var(--text); }
+
+/* La X del header pasa a tener estado hover propio, en vez de ser un icono
+   suelto. Aplica a todo el chat, no solo a la portada. */
+.chat-header button {
+    border-radius: var(--radius-round);
+    transition: color var(--dur-base) ease, background var(--dur-base) ease;
+}
+.chat-header button:hover, .chat-header button:focus-visible {
+    color: var(--text); background: color-mix(in srgb, var(--text) 9%, transparent);
+}
+
+/* Modal ancho: los tres pasos pasan a fila, cada uno en columna. Por debajo de
+   este ancho quedan apilados, que es el valor por defecto. */
+@container portada-copiloto (min-width: 440px) {
+    .cb-pasos { grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+    .cb-paso { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+}
+
+/* Modal angosto (burbuja flotante y celular): se aprieta el aire para que el
+   boton principal siga entrando sin scroll. Una pantalla que promete "menos de
+   2 minutos" no puede pedir que scrollees para encontrar el boton. */
+@container portada-copiloto (max-width: 439px) {
+    .copiloto-bienvenida { gap: var(--space-3); padding-bottom: var(--space-3); }
+    .cb-icono { width: 44px; height: 44px; padding: 10px; }
+    .cb-titulo { font-size: var(--fs-lg); }
+    .cb-pasos { gap: var(--space-2); }
+    .cb-paso { padding: var(--space-3); gap: var(--space-3); }
+    .cb-tiempo { padding: var(--space-1) var(--space-3); }
+    .cb-cta { min-height: 48px; padding: var(--space-3) var(--space-4); }
+    .cb-salida { min-height: 32px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cb-cta, .cb-cta .cb-svg { transition: none; }
+    .cb-cta:hover .cb-svg { transform: none; }
+}
+
+/* ================================================================
+   11. DISEÑO PARA TABLETS Y CELULARES (hasta 820px).
+   Convierte el filtro lateral en un panel deslizante y deja una tarjeta
+   por fila para facilitar la lectura y los toques.
+   ================================================================ */
+@media (max-width: 820px) {
+    body { padding-top: var(--hero-alto, 380px); }
+    /* Desenfoque más chico: en celulares es la operación más cara del scroll. */
+    .hero { --hero-pad-top: 2.75rem; --hero-pad-bottom: 2rem; --logo-w-compacto: 140px; --search-lift: -54px; --bar-gap: 12px; --blur-max: 20px; }
+    .mobile-filter-button { display: inline-flex; justify-content: center; min-width: 44px; min-height: 44px; }
+    /* Compactado queda poco ancho al lado del logo: se deja solo el ícono. */
+    .hero--compacto .mobile-filter-texto { display: none; }
+    
+    .catalog-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "tabs"
+            "results";
+        gap: 1.5rem;
+        width: min(100% - 2rem, var(--container));
+        margin: 0 auto;
+        padding: 1rem 0 4rem;
+    }
+    .catalog-side {
+        display: contents;
+    }
+    /* z-index por encima del header fijo (.hero, z-index 40): si se scrollea y se abre
+       el panel de filtros, tiene que taparlo, no quedar debajo. */
+    .filters-sidebar { position: fixed; z-index: 45; top: 0; bottom: 0; left: 0; width: min(320px, 85vw); height: 100dvh; max-height: 100dvh; padding-bottom: calc(1rem + env(safe-area-inset-bottom)); overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-y; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; transform: translateX(-105%); transition: transform var(--dur-slow) ease; scrollbar-color: var(--accent) var(--surface); scrollbar-width: thin; }
+    .filters-heading { position: sticky; z-index: 2; top: 0; background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(10px); }
+    .filters-open .filters-sidebar { transform: translateX(0); }
+    .filters-overlay { position: fixed; z-index: 42; inset: 0; background: rgba(2, 6, 23, .72); opacity: 0; transition: opacity var(--dur-slow) ease; pointer-events: none; }
+    .filters-open .filters-overlay { display: block; opacity: 1; pointer-events: auto; }
+    .filters-open { overflow: hidden; }
+    .close-filters-button { display: block; min-width: 44px; min-height: 44px; }
+    .results-grid, .platforms-grid, .cursos-grid { grid-template-columns: 1fr; }
+    .card { min-height: 0; }
+    .section-tabs {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 0.25rem 0.25rem 0.75rem;
+        margin-bottom: var(--space-4);
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+        gap: 0.6rem;
+        width: 100%;
+    }
+    .section-tabs::-webkit-scrollbar { display: none; }
+    .section-tabs .section-tab {
+        flex: 0 0 210px;
+        scroll-snap-align: start;
+    }
+    /* La burbuja y la ventana del copiloto se acercan al borde y la ventana
+       pierde un poco de alto en pantallas chicas. */
+    .copiloto-panel { right: .9rem; bottom: .9rem; }
+    .ventana-chat { height: min(500px, 62vh); }
+}
+
+/* ================================================================
+   11b. DESKTOP (desde 821px): el copiloto vocacional es un poco más
+   grande. En tablets y celulares (hasta 820px) se mantienen los
+   tamaños acotados de arriba.
+   ================================================================ */
+@media (min-width: 821px) {
+    .ventana-chat { width: min(420px, calc(100vw - 2.5rem)); height: min(600px, 76vh); }
+    .copiloto-panel.is-test-pantalla-completa .ventana-chat {
+        width: min(820px, calc(100vw - 2.5rem));
+        height: min(620px, 80vh);
+    }
+}
+
+/* ================================================================
+   12. DISEÑO PARA CELULARES PEQUEÑOS (hasta 480px).
+   Ajusta espacios, botones y controles para pantallas angostas.
+   ================================================================ */
+@media (max-width: 480px) {
+    body { padding-top: var(--hero-alto, 360px); }
+    .hero { --hero-pad-top: 2rem; --hero-pad-bottom: 1.5rem; --logo-w-expandido: 300px; --logo-w-compacto: 110px; --search-lift: -45px; --bar-gap: 8px; --blur-max: 16px; padding-inline: 1rem; }
+    /* El padding izquierdo NO baja a 1rem: la lupa sigue estando y el texto le
+       quedaba encima. Solo se ajusta lo demás. */
+    .search-input { min-height: 44px; padding: .75rem 1rem .75rem 2.6rem; font-size: var(--fs-sm); }
+    .search-container::before { left: .85rem; width: 16px; height: 16px; margin-top: -8px; }
+    .hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+    /* Solo los de .hero-actions se estiran en la grilla; el de filtros vive en la
+       fila del buscador y tiene que conservar su ancho propio. */
+    .mobile-filter-button { padding-inline: .6rem; font-size: var(--fs-xs); }
+    
+    .catalog-layout {
+        width: min(100% - 1.5rem, var(--container));
+        gap: 1rem;
+        padding: 0.75rem 0 3.5rem;
+    }
+    
+    .section-tabs .section-tab {
+        flex: 0 0 185px;
+        padding: .7rem .8rem;
+    }
+    .section-tab-texto strong { font-size: var(--fs-sm); }
+    .section-tab-icon .tab-svg { width: 22px; height: 22px; }
+
+    .results-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+        gap: .65rem;
+        margin-bottom: 1rem;
+    }
+    .results-count {
+        font-size: var(--fs-sm);
+        line-height: 1.35;
+    }
+    .toolbar-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+        width: 100%;
+    }
+    .favoritos-toggle {
+        flex: 1;
+        text-align: center;
+        padding: .45rem .6rem;
+    }
+    .sort-control {
+        flex: 1.2;
+        justify-content: flex-end;
+        white-space: nowrap;
+        font-size: var(--fs-2xs);
+    }
+    .sort-control select {
+        width: 100%;
+        max-width: 150px;
+        font-size: var(--fs-xs);
+        padding: .4rem .5rem;
+    }
+    .card { padding: var(--space-4); }
+    .card-title { font-size: var(--fs-md); }
+    .filter-group { padding: .9rem 1rem; }
+    .copiloto-panel { right: .75rem; bottom: .75rem; }
+    .btn-chat-toggle { width: 52px; height: 52px; font-size: 1.25rem; }
+    .chat-header { padding: .6rem .75rem; font-size: var(--fs-xs); }
+    .chat-cuerpo { padding: .6rem; font-size: var(--fs-2xs); gap: .4rem; }
+    .chat-progreso-fijo { padding: .5rem .7rem .1rem; }
+}
+
+/* 13. CELULARES MUY ANGOSTOS (hasta 360px): evita que los botones se corten. */
+@media (max-width: 360px) {
+    .hero-actions { grid-template-columns: 1fr; }
+    .toolbar-actions { flex-direction: column; align-items: stretch; }
+    .sort-control { width: 100%; justify-content: space-between; }
+    .sort-control select { max-width: none; width: 60%; }
+}
+
+/* ================================================================
+   14. FAVORITOS Y COMPARADOR
+   Botones de tarjeta, toggle de favoritos en la toolbar y el modal
+   de comparación lado a lado.
+   ================================================================ */
+.toolbar-actions { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+
+.favoritos-toggle {
+    min-height: 38px; padding: .5rem .8rem; border: 1px solid var(--line);
+    border-radius: var(--radius-sm); color: var(--text); background: var(--surface);
+    font-family: var(--font-text); font-size: var(--fs-xs); font-weight: 700; cursor: pointer;
+    transition: border-color var(--dur-base) ease, color var(--dur-base) ease,
+                background-color var(--dur-base) ease;
+}
+.favoritos-toggle:hover:not(.active) { border-color: var(--orange); color: var(--orange-ink); }
+/* Activado = teñido de naranja, con el borde y la tinta al tono. Sin el hundido
+   que lo acompañaba, el tinte y el borde son toda la señal, así que se quedan
+   fuertes (18% y 60%) para que el estado se lea de un vistazo. */
+.favoritos-toggle.active {
+    color: var(--orange-ink);
+    background: color-mix(in srgb, var(--orange) 18%, var(--surface));
+    border-color: color-mix(in srgb, var(--orange) 60%, var(--line));
+}
+
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+    margin-top: auto;
+    padding-top: var(--space-4);
+    width: 100%;
+}
+.btn-favorito, .btn-comparar, .btn-escuchar-card {
+    flex: 1 1 calc(50% - .25rem);
+    min-width: 0;
+    display: inline-flex; align-items: center; justify-content: center; gap: .35rem;
+    min-height: 36px; padding: .4rem .5rem; border: 1px solid var(--line);
+    border-radius: var(--radius-sm); color: var(--muted); background: var(--surface-soft);
+    font-family: var(--font-text); font-size: var(--fs-2xs); font-weight: 700; cursor: pointer;
+    white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+    transition: border-color var(--dur-base) ease, color var(--dur-base) ease, background var(--dur-base) ease;
+}
+.btn-favorito:hover, .btn-comparar:hover, .btn-escuchar-card:hover { border-color: var(--accent); color: var(--accent-ink); }
+.btn-favorito.is-active { color: var(--on-accent); background: var(--orange); border-color: var(--orange); }
+.btn-comparar.is-active { color: var(--on-accent); background: var(--blue); border-color: var(--blue); }
+
+.btn-escuchar-card { display: none; }
+html[data-tts="true"] .btn-escuchar-card {
+    display: inline-flex;
+    flex: 1 1 100%;
+}
+
+/* Barra flotante del comparador, fija abajo centrada. Va por encima del modal
+   del copiloto (z-index 90) para poder comparar desde los resultados del chat. */
+.comparar-bar {
+    position: fixed; left: 50%; bottom: calc(4rem + env(safe-area-inset-bottom));
+    transform: translateX(-50%); z-index: 95;
+    display: flex; align-items: center; gap: .75rem;
+    padding: .6rem .8rem; border: 1px solid var(--line); border-radius: var(--radius-pill);
+    background: var(--surface); box-shadow: var(--elev-3);
+    font-family: var(--font-text); font-size: var(--fs-sm);
+}
+.comparar-bar-texto { color: var(--text); }
+.comparar-bar-btn {
+    min-height: 34px; padding: .35rem .9rem; border: none; border-radius: var(--radius-pill);
+    color: var(--on-accent); background: var(--blue); font-weight: 700; cursor: pointer;
+}
+.comparar-bar-btn:hover { background: color-mix(in srgb, var(--blue) 82%, #000); }
+.comparar-bar-limpiar {
+    min-height: 34px; padding: .35rem .7rem; border: 1px solid var(--line);
+    border-radius: var(--radius-pill); color: var(--muted); background: transparent; cursor: pointer;
+}
+
+/* Modal de comparación. Por encima de la barra (95) y del copiloto (90). */
+.comparar-modal {
+    position: fixed; inset: 0; z-index: 96; display: flex; align-items: center; justify-content: center;
+    padding: 1rem; background: color-mix(in srgb, var(--bg) 60%, transparent);
+    backdrop-filter: blur(3px);
+}
+.comparar-modal-contenido {
+    width: min(100%, 860px); max-height: 86vh; overflow: auto;
+    border: 1px solid var(--line); border-radius: var(--radius-lg);
+    background: var(--surface); box-shadow: var(--elev-4);
+}
+.comparar-modal-cabecera {
+    position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 1.25rem; border-bottom: 1px solid var(--line); background: var(--surface);
+}
+.comparar-modal-cabecera h2 { margin: 0; font-family: var(--font-detail); font-weight: 400; font-size: var(--fs-xl); letter-spacing: .04em; }
+.comparar-modal-cerrar {
+    width: 38px; height: 38px; border: 1px solid var(--line); border-radius: var(--radius-sm);
+    color: var(--text); background: var(--surface-soft); font-size: var(--fs-md); cursor: pointer;
+}
+.comparar-modal-cuerpo { padding: 1rem 1.25rem 1.5rem; }
+/* Contenedor de scroll de la tabla: sin esto, comparar muchas carreras desbordaba
+   el modal a lo ancho y se llevaba puesto el botón de cerrar. */
+.comparar-responsive { max-width: 100%; overflow-x: auto; }
+.tabla-comparar { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+.tabla-comparar th, .tabla-comparar td { padding: .65rem .75rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.tabla-comparar thead th { font-family: var(--font-detail); font-weight: 400; font-size: var(--fs-md); letter-spacing: .03em; color: var(--text); }
+.tabla-comparar tbody th[scope="row"] { color: var(--muted); font-weight: 600; white-space: nowrap; }
+
+/* Vista apilada (móvil): una tarjeta por ítem, cada atributo como fila
+   etiqueta/valor. La tabla de al lado queda oculta en pantallas angostas. */
+.comparar-movil { display: none; }
+.comparar-item {
+    border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface-soft);
+    padding: .9rem 1rem; margin-bottom: .9rem;
+}
+.comparar-item-titulo { margin: 0 0 .6rem; font-size: var(--fs-lg); line-height: 1.3; }
+.comparar-item-lista { margin: 0; }
+.comparar-fila { display: flex; gap: .6rem; padding: .35rem 0; border-top: 1px solid var(--line); }
+.comparar-fila:first-child { border-top: none; }
+.comparar-fila dt { flex: 0 0 42%; color: var(--muted); font-weight: 600; font-size: var(--fs-xs); }
+.comparar-fila dd { margin: 0; flex: 1; font-size: var(--fs-xs); }
+
+/* 820px, no 600: es el mismo punto en que el layout pasa a una columna. Con 600
+   quedaba una franja de 601-820px con la tabla ancha (y sus <th> nowrap) metida
+   en un modal angosto. */
+@media (max-width: 820px) {
+    .comparar-bar { left: .75rem; right: .75rem; transform: none; flex-wrap: wrap; justify-content: center; }
+    .tabla-comparar { display: none; }
+    .comparar-movil { display: block; }
+}
+
+
+/* ================================================================
+   15. PREFERENCIAS DEL SISTEMA
+   Van al final a propósito: las media queries no suman especificidad, así que
+   para ganarle a reglas como `.filter-option { min-height: 30px }` tienen que
+   venir después en el archivo.
+   ================================================================ */
+/* Movimiento reducido. Lo más agresivo de la página es el header, que se
+   reescala entero (logo, padding, radios y un blur de hasta 34px) en cada cuadro
+   del scroll. Con esta preferencia activa se congela en su estado compacto:
+   --scroll-progress queda fijo en 1 y no hay nada que animar. */
+@media (prefers-reduced-motion: reduce) {
+    :root { --scroll-progress: 1; --blur-progress: 0; }
+    *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+        scroll-behavior: auto !important;
+    }
+    /* Las cards, las pestañas y los botones ya no se levantan en hover — el
+       relieve se sacó de todo el sitio, así que no queda transform que anular.
+       El único que sobrevive es la burbuja del chat, que sí flota. */
+    .btn-chat-toggle:hover { transform: none; }
+}
+
+/* Área táctil mínima de 44px donde se toca con el dedo. Se decide por tipo de
+   puntero y no por ancho: un tablet grande también se toca, y en escritorio con
+   mouse llevar todo a 44px estiraría de más la lista de filtros. */
+@media (pointer: coarse) {
+    .filter-option { min-height: 44px; }
+    .duration-range button, .duration-range input,
+    .comparar-bar-btn, .comparar-bar-limpiar, .comparar-modal-cerrar,
+    .btn-favorito, .btn-comparar, .favoritos-toggle, .clear-filters-button,
+    .btn-chat-sugerencia, .sort-control select,
+    .card-link, .platform-link { min-height: 44px; }
+    .duration-range { grid-template-columns: 1fr auto 1fr 44px; }
+}
+/* ================================================================
+   ORIENTADOR VOCACIONAL - Estilos para tarjetas de compatibilidad
+   ================================================================ */
+
+.carrera-card {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    padding: var(--space-5);
+    transition: border-color var(--dur-base);
+}
+.carrera-card:hover {
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+}
+
+/* Badge de compatibilidad */
+.compatibilidad-badge {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-pill);
+    display: inline-block;
+}
+.carrera-card.match-alto .compatibilidad-badge, .chat-resultado-card.match-alto .compatibilidad-badge { background: var(--green); color: var(--on-accent); }
+.carrera-card.match-medio .compatibilidad-badge, .chat-resultado-card.match-medio .compatibilidad-badge { background: var(--orange); color: var(--on-accent); }
+.carrera-card.match-bajo .compatibilidad-badge, .chat-resultado-card.match-bajo .compatibilidad-badge { background: var(--muted); color: var(--text); }
+
+/* Badges de tipo de formación */
+.tipo-badge {
+    font-size: var(--fs-2xs);
+    font-weight: 700;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-xs);
+    display: inline-block;
+    margin-right: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+.tipo-badge.grado { background: var(--blue); color: var(--on-accent); }
+.tipo-badge.tecnica { background: var(--purple); color: var(--on-purple); }
+.tipo-badge.curso { background: var(--teal); color: var(--on-accent); }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-3);
+    gap: var(--space-3);
+}
+.card-header h3 {
+    margin: 0;
+    font-size: var(--fs-lg);
+    line-height: 1.3;
+    flex: 1;
+}
+
+.card-match-motivos {
+    margin-bottom: var(--space-3);
+    font-size: var(--fs-sm);
+}
+.card-match-motivos strong {
+    display: block;
+    margin-bottom: var(--space-2);
+    color: var(--text);
+}
+.motivos-list {
+    margin: 0;
+    padding-left: var(--space-5);
+    color: var(--muted);
+}
+.motivos-list li {
+    margin-bottom: var(--space-1);
+    line-height: 1.4;
+}
+
+.card-alertas {
+    background: rgba(255, 84, 0, 0.1);
+    border: 1px solid var(--orange);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3);
+    margin-bottom: var(--space-3);
+    font-size: var(--fs-sm);
+}
+.card-alertas strong {
+    color: var(--orange);
+    display: block;
+    margin-bottom: var(--space-2);
+}
+.alertas-list {
+    margin: 0;
+    padding-left: var(--space-5);
+    color: var(--muted);
+}
+.alertas-list li {
+    margin-bottom: var(--space-1);
+    line-height: 1.4;
+}
+
+.card-instituciones {
+    margin-bottom: var(--space-3);
+    font-size: var(--fs-sm);
+}
+.card-instituciones strong {
+    display: block;
+    margin-bottom: var(--space-2);
+    color: var(--text);
+}
+.instituciones-list {
+    margin: 0;
+    padding-left: var(--space-5);
+    color: var(--muted);
+}
+.instituciones-list li {
+    margin-bottom: var(--space-1);
+    line-height: 1.4;
+}
+
+.card-actions {
+    display: flex;
+    gap: var(--space-2);
+    justify-content: flex-end;
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--line);
+}
+.card-actions button {
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--fs-sm);
+    cursor: pointer;
+    color: var(--text);
+    transition: background var(--dur-fast), border-color var(--dur-fast);
+}
+.card-actions button:hover {
+    background: var(--surface-soft);
+    border-color: var(--accent);
+}
+.card-actions .btn-favorito.activo {
+    color: var(--orange);
+    border-color: var(--orange);
+    background: rgba(255, 84, 0, 0.1);
+}
+
+/* Progreso del test */
+/* Chat mejoras */
+.mensaje-bot-nota {
+    font-size: var(--fs-xs);
+    color: var(--muted);
+    font-style: italic;
+    margin-top: var(--space-2);
+}
+.opciones-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: var(--space-3) 0;
+}
+.btn-chat-opcion {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--fs-sm);
+    cursor: pointer;
+    transition: all var(--dur-fast);
+    color: var(--text);
+}
+.btn-chat-opcion:hover {
+    border-color: var(--accent);
+    background: var(--surface-soft);
+}
+.btn-chat-atras {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: var(--fs-sm);
+    cursor: pointer;
+    padding: var(--space-2) 0;
+    margin-top: var(--space-2);
+}
+.btn-chat-atras:hover {
+    color: var(--text);
+}
+.btn-chat-reset {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--fs-sm);
+    cursor: pointer;
+    margin-right: var(--space-2);
+    margin-top: var(--space-2);
+    transition: all var(--dur-fast);
+}
+.btn-chat-reset:hover {
+    border-color: var(--accent);
+    background: var(--surface-soft);
+}
+
+@media (max-width: 600px) {
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-actions {
+        flex-wrap: wrap;
+    }
+}
+
+/* ================================================================
+   16. PANTALLA DE BIENVENIDA
+   Overlay fijo a pantalla completa: la puerta de entrada al sitio.
+   El logo y las dos opciones entran con fade + slide escalonado
+   (cada elemento con su propio delay, todo CSS puro). El
+   ocultamiento lo maneja app.js: agrega .is-saliendo y, al
+   terminar la transición, el atributo hidden.
+   ================================================================ */
+.pantalla-bienvenida {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    background:
+        radial-gradient(circle at 50% -35%, color-mix(in srgb, var(--purple) 24%, transparent) 0, transparent 58%),
+        linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+    animation: bienvenida-entrar var(--dur-slow) ease;
+}
+@keyframes bienvenida-entrar {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Salida: fade + subida leve. El fade de entrada no usa fill-mode,
+   así que al terminar la animación la opacidad vuelve a la normal
+   (1) y la transición de salida no queda bloqueada. */
+.pantalla-bienvenida.is-saliendo {
+    opacity: 0;
+    transform: translateY(-12px);
+    transition: opacity var(--dur-slow) ease, transform var(--dur-slow) ease;
+}
+
+.bienvenida-contenido {
+    width: min(100%, 720px);
+    text-align: center;
+}
+.bienvenida-logo {
+    display: block;
+    width: min(100%, 480px);
+    height: auto;
+    margin: 0 auto var(--space-6);
+    border-radius: var(--radius-sm);
+    animation: bienvenida-deslizar var(--dur-slow) ease backwards;
+}
+.bienvenida-bajada {
+    margin: 0 0 var(--space-7);
+    color: var(--muted);
+    font-family: var(--font-detail);
+    font-size: var(--fs-sm);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    animation: bienvenida-deslizar var(--dur-slow) ease backwards;
+    animation-delay: .06s;
+}
+.bienvenida-opciones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-6);
+}
+/* La opción principal es una tarjeta clickeable: entra con delay
+   respecto al logo y se asienta con un slide corto. */
+.bienvenida-card-primaria {
+    flex: 1 1 62%;
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    min-height: 132px;
+    padding: var(--space-6);
+    border: 2px solid var(--purple);
+    border-radius: var(--radius-lg);
+    background: color-mix(in srgb, var(--purple) 12%, var(--surface));
+    color: var(--text);
+    text-align: left;
+    animation: bienvenida-deslizar var(--dur-slow) ease backwards;
+    animation-delay: .12s;
+    transition: background-color var(--dur-base) ease, border-color var(--dur-base) ease;
+}
+/* Sin levantarse: en hover se profundiza el tinte violeta que ya tiene. */
+.bienvenida-card-primaria:hover {
+    background: color-mix(in srgb, var(--purple) 20%, var(--surface));
+}
+.bienvenida-icono {
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 66px;
+    height: 66px;
+    border-radius: var(--radius-round);
+    background: transparent;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.bienvenida-copiloto-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.chat-titulo-img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 0.4rem;
+}
+.chat-bot-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: cover;
+    border-radius: 50%;
+    vertical-align: -3px;
+    margin-right: 5px;
+    display: inline-block;
+}
+.btn-chat-icono-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+.btn-chat-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+    border: 2px solid var(--purple);
+    box-shadow: var(--elev-3);
+    transition: transform var(--dur-base) ease;
+}
+.btn-chat-toggle:hover {
+    transform: scale(1.08);
+}
+.bienvenida-card-texto { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
+.bienvenida-card-primaria strong { font-family: var(--font-title); font-size: var(--fs-xl); line-height: 1.2; letter-spacing: -.015em; color: var(--text); }
+.bienvenida-card-desc { color: var(--muted); font-size: var(--fs-sm); line-height: 1.5; }
+.bienvenida-cta { color: var(--purple-ink); font-size: var(--fs-xs); font-weight: 700; }
+/* La opción secundaria es deliberadamente más chica: un pill simple. */
+.bienvenida-catalogo {
+    flex: 0 1 auto;
+    min-height: 44px;
+    padding: .65rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    background: var(--surface);
+    color: var(--muted);
+    font-weight: 700;
+    font-size: var(--fs-xs);
+    white-space: nowrap;
+    animation: bienvenida-deslizar var(--dur-slow) ease backwards;
+    animation-delay: .22s;
+    transition: border-color var(--dur-base) ease, color var(--dur-base) ease, transform var(--dur-base) ease;
+}
+.bienvenida-catalogo:hover { border-color: var(--accent); color: var(--accent-ink); }
+
+/* En pantallas angostas las dos opciones se apilan. */
+@media (max-width: 480px) {
+    .pantalla-bienvenida { padding: 1.5rem; }
+    .bienvenida-logo { width: min(100%, 320px); }
+    .bienvenida-opciones { flex-direction: column; align-items: stretch; }
+    .bienvenida-card-primaria { flex-direction: column; text-align: center; }
+    .bienvenida-catalogo { align-self: center; min-width: 200px; }
+}
+
+/* ================================================================
+   17. ACCESIBILIDAD (A11Y) - WCAG 2.1 AA/AAA
+   Botón flotante, panel de configuración, alto contraste,
+   resaltado de enlaces y lector de voz.
+   ================================================================ */
+
+/* Botón flotante de accesibilidad (Esquina inferior izquierda) */
+.a11y-widget {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 70;
+}
+.btn-a11y-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-round);
+    background: var(--surface);
+    color: var(--accent);
+    cursor: pointer;
+    box-shadow: var(--elev-3);
+    transition: transform var(--dur-base) ease, background var(--dur-base) ease, color var(--dur-base) ease;
+}
+.a11y-btn-svg {
+    width: 34px;
+    height: 34px;
+    display: block;
+    color: currentColor;
+    transition: transform var(--dur-base) ease;
+}
+.a11y-title-svg {
+    width: 26px;
+    height: 26px;
+    display: block;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+.btn-a11y-toggle:hover {
+    transform: scale(1.08);
+    background: var(--accent);
+    color: var(--on-accent);
+}
+.btn-a11y-toggle:hover .a11y-btn-svg {
+    transform: scale(1.05);
+}
+.btn-a11y-toggle:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* Panel Modal de Accesibilidad */
+.a11y-panel {
+    position: fixed;
+    inset: 0;
+    z-index: 95;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.a11y-panel[hidden] {
+    display: none !important;
+}
+.a11y-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+.a11y-panel-card {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 460px);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--elev-4);
+    display: flex;
+    flex-direction: column;
+}
+.a11y-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--line);
+}
+.a11y-titulo {
+    margin: 0;
+    font-size: var(--fs-lg);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.a11y-close-btn {
+    padding: 0.25rem 0.5rem;
+    background: transparent;
+    border: 0;
+    color: var(--muted);
+    font-size: var(--fs-xl);
+    line-height: 1;
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+}
+.a11y-close-btn:hover {
+    color: var(--text);
+    background: var(--surface-soft);
+}
+.a11y-body {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.a11y-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.a11y-label {
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.a11y-opciones-fuente {
+    display: flex;
+    gap: 0.5rem;
+}
+.a11y-btn-font {
+    flex: 1;
+    padding: 0.6rem 0.5rem;
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    color: var(--text);
+    font-weight: 700;
+    font-size: var(--fs-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    cursor: pointer;
+    transition: all var(--dur-base) ease;
+}
+.a11y-btn-font span {
+    font-size: var(--fs-2xs);
+    font-weight: 400;
+    color: var(--muted);
+}
+.a11y-btn-font:hover {
+    border-color: var(--accent);
+}
+.a11y-btn-font.is-active {
+    background: color-mix(in srgb, var(--accent) 15%, var(--surface));
+    border-color: var(--accent);
+    color: var(--accent-ink);
+}
+.a11y-btn-font.is-active span {
+    color: var(--accent-ink);
+    font-weight: 600;
+}
+
+/* Switch toggles */
+.a11y-switch-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0.9rem;
+    background: var(--surface-soft);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    user-select: none;
+    gap: 1rem;
+}
+.a11y-switch-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+.a11y-switch-text strong {
+    font-size: var(--fs-sm);
+    color: var(--text);
+}
+.a11y-switch-text small {
+    font-size: var(--fs-2xs);
+    color: var(--muted);
+}
+.a11y-switch-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.a11y-switch-slider {
+    position: relative;
+    flex: 0 0 46px;
+    height: 26px;
+    background-color: color-mix(in srgb, var(--muted) 35%, transparent);
+    border-radius: 999px;
+    transition: background-color var(--dur-base) ease;
+}
+.a11y-switch-slider::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: transform var(--dur-base) ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.a11y-switch-input:checked + .a11y-switch-slider {
+    background-color: var(--accent);
+}
+.a11y-switch-input:checked + .a11y-switch-slider::before {
+    transform: translateX(20px);
+}
+.a11y-switch-input:focus-visible + .a11y-switch-slider {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.a11y-footer {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+.a11y-reset-btn {
+    width: 100%;
+    padding: 0.6rem;
+    background: transparent;
+    border: 1px dashed var(--line);
+    border-radius: var(--radius-md);
+    color: var(--muted);
+    font-size: var(--fs-xs);
+    cursor: pointer;
+    transition: all var(--dur-base) ease;
+}
+.a11y-reset-btn:hover {
+    color: var(--orange-ink);
+    border-color: var(--orange);
+    background: color-mix(in srgb, var(--orange) 10%, transparent);
+}
+
+/* ================================================================
+   MODO ALTO CONTRASTE (WCAG AAA - Ratio > 7:1)
+   ================================================================ */
+html[data-contrast="high"] {
+    --line: rgba(255, 255, 255, 0.45);
+    --line-strong: #ffffff;
+}
+html[data-theme="dark"][data-contrast="high"] {
+    --bg: #000000;
+    --surface: #0a0a0a;
+    --surface-soft: #141414;
+    --text: #ffffff;
+    --muted: #e2e8f0;
+    --accent: #38bdf8;
+    --accent-ink: #38bdf8;
+    --orange-ink: #fb923c;
+    --blue-ink: #60a5fa;
+    --green-ink: #4ade80;
+    --purple-ink: #c084fc;
+}
+html[data-theme="light"][data-contrast="high"] {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-soft: #f1f5f9;
+    --text: #000000;
+    --muted: #1e293b;
+    --line: rgba(0, 0, 0, 0.45);
+    --line-strong: #000000;
+    --accent: #1d4ed8;
+    --accent-ink: #1d4ed8;
+}
+html[data-contrast="high"] .card,
+html[data-contrast="high"] .platform-card,
+html[data-contrast="high"] .curso-card,
+html[data-contrast="high"] .filters-sidebar,
+html[data-contrast="high"] .search-input,
+html[data-contrast="high"] .section-tab {
+    border: 2px solid var(--line-strong) !important;
+}
+
+/* ================================================================
+   MODO LECTURA FÁCIL / DISLEXIA
+   ================================================================ */
+html[data-dyslexia="true"] {
+    line-height: 1.8 !important;
+    letter-spacing: 0.05em !important;
+    word-spacing: 0.12em !important;
+}
+html[data-dyslexia="true"] p,
+html[data-dyslexia="true"] span,
+html[data-dyslexia="true"] button,
+html[data-dyslexia="true"] input,
+html[data-dyslexia="true"] strong,
+html[data-dyslexia="true"] a {
+    letter-spacing: 0.04em !important;
+    word-spacing: 0.08em !important;
+}
+
+/* ================================================================
+   DESTACAR ENLACES Y ELEMENTOS INTERACTIVOS
+   ================================================================ */
+html[data-highlight="true"] a {
+    text-decoration: underline 2px solid var(--accent) !important;
+    text-underline-offset: 3px !important;
+}
+html[data-highlight="true"] button:not(.a11y-btn-font):not(.btn-a11y-toggle) {
+    outline: 2px solid var(--accent) !important;
+    outline-offset: 1px !important;
+}
+
+/* ================================================================
+   BOTÓN ESCUCHAR CARRERA (TTS)
+   ================================================================ */
+.btn-escuchar-card {
+    display: none;
+}
+html[data-tts="true"] .btn-escuchar-card {
+    display: inline-flex;
+}
+.btn-escuchar-card.is-playing {
+    color: #ffffff !important;
+    background: var(--green) !important;
+    border-color: var(--green) !important;
+    animation: a11y-pulse 1.4s infinite;
+}
+@keyframes a11y-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+    .a11y-widget {
+        bottom: 0.75rem;
+        left: 0.75rem;
+    }
+    .btn-a11y-toggle {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+    }
+    .a11y-panel-card {
+        max-height: 85vh;
+    }
+}
+
+/* ================================================================
+   PIE DE PÁGINA (FOOTER) Y FEEDBACK / REPORTE DE FALLOS
+   ================================================================ */
+.site-footer {
+    width: 100%;
+    margin-top: 3rem;
+    padding: 2.5rem 1.5rem 6rem;
+    border-top: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--muted);
+    font-size: var(--fs-sm);
+}
+
+.footer-container {
+    max-width: var(--container);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.footer-copy {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer-copy strong {
+    color: var(--text);
+    font-weight: 700;
+}
+
+.footer-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.btn-footer-feedback {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.15rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--line);
+    background: var(--surface-soft);
+    color: var(--text);
+    font-family: var(--font-text);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform var(--dur-fast), border-color var(--dur-fast), background-color var(--dur-fast), box-shadow var(--dur-fast);
+}
+
+.btn-footer-feedback:hover {
+    border-color: var(--accent);
+    background: var(--surface);
+    color: var(--accent-ink);
+    transform: translateY(-1px);
+    box-shadow: var(--elev-1);
+}
+
+.btn-footer-feedback:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Modal de Feedback */
+.modal-feedback {
+    position: fixed;
+    inset: 0;
+    z-index: 105;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modal-feedback[hidden] {
+    display: none;
+}
+
+.modal-feedback-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 12, 30, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    animation: fadeInFeedback var(--dur-fast) ease-out;
+}
+
+.modal-feedback-dialog {
+    position: relative;
+    width: min(100%, 460px);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--elev-4);
+    animation: scaleUpFeedback var(--dur-fast) cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeInFeedback {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUpFeedback {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-feedback-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.15rem 1.25rem;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    background: var(--surface);
+    z-index: 2;
+}
+
+.modal-feedback-header h2 {
+    margin: 0;
+    font-family: var(--font-title);
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modal-feedback-cerrar {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--surface-soft);
+    color: var(--muted);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color var(--dur-fast), background-color var(--dur-fast);
+}
+
+.modal-feedback-cerrar:hover {
+    color: var(--text);
+    background: var(--surface);
+    border-color: var(--line-strong);
+}
+
+.modal-feedback-cerrar:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.modal-feedback-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+/* Selector de tipo (Pills) */
+.feedback-tipo-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    background: var(--surface-soft);
+    padding: 0.35rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--line);
+}
+
+.btn-tipo-feedback {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.6rem 0.75rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--muted);
+    font-family: var(--font-text);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--dur-fast);
+}
+
+.btn-tipo-feedback:hover {
+    color: var(--text);
+}
+
+.btn-tipo-feedback.is-active {
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--elev-1);
+}
+
+.btn-tipo-feedback:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+}
+
+/* Formulario */
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feedback-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.feedback-grupo label {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+}
+
+.feedback-grupo label small {
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.feedback-grupo textarea,
+.feedback-grupo input {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--line);
+    background: var(--surface-soft);
+    color: var(--text);
+    font-family: var(--font-text);
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+    transition: border-color var(--dur-fast), box-shadow var(--dur-fast), background-color var(--dur-fast);
+}
+
+.feedback-grupo textarea {
+    resize: vertical;
+    min-height: 95px;
+    max-height: 220px;
+}
+
+.feedback-grupo textarea:focus,
+.feedback-grupo input:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: var(--surface);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.feedback-grupo textarea[aria-invalid="true"],
+.feedback-grupo input[aria-invalid="true"] {
+    border-color: #EF4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.feedback-error-texto {
+    font-size: var(--fs-2xs);
+    color: #EF4444;
+    font-weight: 500;
+}
+
+.feedback-footer-acciones {
+    margin-top: 0.5rem;
+}
+
+.btn-feedback-submit {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-md);
+    border: none;
+    background: var(--accent);
+    color: #FFFFFF;
+    font-family: var(--font-text);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity var(--dur-fast), transform var(--dur-fast), box-shadow var(--dur-fast);
+    box-shadow: var(--elev-1);
+}
+
+.btn-feedback-submit:hover:not(:disabled) {
+    opacity: 0.94;
+    transform: translateY(-1px);
+    box-shadow: var(--elev-2);
+}
+
+.btn-feedback-submit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.btn-feedback-submit:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+}
+
+/* Spinner de carga */
+.btn-feedback-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #FFFFFF;
+    border-radius: 50%;
+    animation: feedbackSpin 0.7s linear infinite;
+}
+
+@keyframes feedbackSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* Pantallas de estado (éxito y error) */
+.feedback-estado-mensaje {
+    padding: 1.5rem 0.5rem 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.feedback-estado-icono {
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+.feedback-estado-mensaje h3 {
+    margin: 0;
+    font-family: var(--font-title);
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--text);
+}
+
+.feedback-estado-mensaje p {
+    margin: 0 0 1rem;
+    font-size: var(--fs-sm);
+    color: var(--muted);
+    line-height: 1.5;
+    max-width: 320px;
+}
+
+/* Soporte de Alto Contraste */
+html[data-contrast="high"] .site-footer {
+    border-top: 2px solid var(--text);
+}
+
+html[data-contrast="high"] .btn-footer-feedback,
+html[data-contrast="high"] .modal-feedback-dialog,
+html[data-contrast="high"] .modal-feedback-cerrar,
+html[data-contrast="high"] .feedback-tipo-selector,
+html[data-contrast="high"] .feedback-grupo textarea,
+html[data-contrast="high"] .feedback-grupo input {
+    border: 2px solid var(--text) !important;
+}
+
+html[data-contrast="high"] .btn-tipo-feedback.is-active {
+    background: var(--text) !important;
+    color: var(--surface) !important;
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .modal-feedback-dialog {
+        width: 100%;
+        max-height: 94vh;
+    }
+}
+
+/* 9c. CHAPITA DE RECOMENDACIONES DEL COPILOTO.
+   Avisa que la grilla no es el catálogo completo sino el ranking del test, y da
+   la salida de vuelta. Sin ella, filtrar sobre las recomendaciones se sentiría
+   como un catálogo roto ("¿por qué solo hay 24 carreras?"). */
+.chapa-recomendacion {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin: 0;
+    padding: .3rem .35rem .3rem .7rem;
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+    background: var(--superficie-2, var(--superficie));
+    color: var(--texto);
+    font-size: var(--fs-2xs);
+    font-weight: 600;
+}
+.chapa-recomendacion[hidden] { display: none; }
+.chapa-recomendacion button {
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    color: inherit;
+    background: transparent;
+    font-size: var(--fs-2xs);
+    line-height: 1;
+    cursor: pointer;
+}
+.chapa-recomendacion button:hover { background: var(--accent); color: var(--on-accent); }
+.chapa-recomendacion button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+
+/* Enlaces del pie hacia el catálogo estático (/carreras/, /instituciones/).
+   Ver el comentario en index.html: existen para que el catálogo sea recorrible
+   sin JavaScript, tanto por una persona como por un buscador. */
+.footer-mapa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-6);
+    font-size: var(--fs-sm);
+}
+
+.footer-mapa a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.footer-mapa a:hover,
+.footer-mapa a:focus-visible {
+    color: var(--text);
+    text-decoration: underline;
+}

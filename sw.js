@@ -2,12 +2,11 @@
 // 🛰️ SERVICE WORKER DE BEN
 // ==========================================
 //
-// Por qué vive en la raíz y no en frontend/:
+// Por qué vive en la raíz:
 // un service worker solo puede interceptar pedidos que estén DENTRO de su
 // scope, y el scope no puede ser más ancho que la carpeta donde está el
-// archivo. El sitio se sirve desde /frontend/ pero lee sus datos de ../data/,
-// así que un sw.js dentro de frontend/ dejaría justamente los JSON afuera —
-// que es lo único sin lo cual la página no puede funcionar offline.
+// archivo. Estando en la raíz cubre todo el sitio de una: la app, los JSON de
+// data/ y las páginas estáticas de /carrera/, /area/ e /institucion/.
 //
 // Todas las rutas se resuelven contra self.registration.scope, así que esto
 // anda igual servido desde la raíz de un dominio que desde un subdirectorio
@@ -17,7 +16,7 @@
 // hace que un usuario con la versión vieja cacheada reciba la nueva: al cambiar
 // el nombre del caché, el activate de abajo borra todo lo anterior. Si se
 // actualiza el HTML y no esto, el service worker sigue sirviendo lo viejo.
-const VERSION = '20260826_6';
+const VERSION = '20260826_10';
 const CACHE = `ben-${VERSION}`;
 
 // El esqueleto mínimo para que la app abra sin red.
@@ -25,26 +24,30 @@ const CACHE = `ben-${VERSION}`;
 // flotante del Copiloto, que está siempre en pantalla: sin precachearlo se veía
 // roto offline. El resto de las imágenes se cachean solas al usarse.
 const SHELL = [
+    './',
     'index.html',
-    'frontend/',
-    'frontend/index.html',
-    'frontend/style.css',
-    'frontend/js/orientador.js',
-    'frontend/js/accesibilidad.js',
-    'frontend/js/feedback.js',
-    'frontend/js/util.js',
-    'frontend/js/datos.js',
-    'frontend/js/estado.js',
-    'frontend/js/filtros.js',
-    'frontend/js/render.js',
-    'frontend/js/copiloto.js',
-    'frontend/js/main.js',
-    'frontend/favicon.png',
-    'frontend/logo-ben-dark.png',
-    'frontend/logo-ben-light.png',
-    'frontend/img/copiloto-icono.png',
+    'style.css',
+    'paginas.css',
+    'manifest.json',
+    'js/orientador.js',
+    'js/accesibilidad.js',
+    'js/feedback.js',
+    'js/util.js',
+    'js/datos.js',
+    'js/estado.js',
+    'js/filtros.js',
+    'js/render.js',
+    'js/copiloto.js',
+    'js/main.js',
+    'favicon.png',
+    'icon-192.png',
+    'icon-512.png',
+    'logo-ben-dark.png',
+    'logo-ben-light.png',
+    'img/copiloto-icono.png',
     'data/data.json',
-    'data/carreras-perfiles.json'
+    'data/carreras-perfiles.json',
+    'data/enlaces-ben.json'
 ];
 
 const url = ruta => new URL(ruta, self.registration.scope).toString();
@@ -126,7 +129,7 @@ self.addEventListener('fetch', evento => {
             } catch (e) {
                 const cache = await caches.open(CACHE);
                 return (await buscarEnCache(cache, request))
-                    || (await cache.match(url('frontend/index.html')))
+                    || (await cache.match(url('index.html')))
                     || Response.error();
             }
         })());
