@@ -44,15 +44,24 @@ export function obtenerRelacionadas(limite = 6) {
 
 // Si el usuario busca texto dentro de Educación Formal, las plataformas que
 // coincidan aparecen igual, en su propio bloque y con el color de su sección.
+const CONECTORES = new Set(['de', 'del', 'en', 'la', 'el', 'los', 'las', 'y', 'e', 'o', 'u', 'a', 'para', 'con']);
+
 function puntuarPar(palabra, token) {
-    if (!token) return 0;
+    if (!token || !palabra) return 0;
     if (palabra === token) return 100;
-    if (palabra.startsWith(token) || token.startsWith(palabra)) return 85;
-    if (palabra.includes(token) || token.includes(palabra)) return 65;
-    const d = distanciaLevenshtein(palabra, token);
-    const maxLen = Math.max(palabra.length, token.length, 1);
-    const tolerancia = Math.max(1, Math.round(maxLen * 0.34));
-    if (d <= tolerancia) return Math.round(45 * (1 - d / (tolerancia + 1)));
+    // Prefijo: el usuario escribe el comienzo de la palabra (ej: 'ciber' -> 'ciberdefensa')
+    if (palabra.startsWith(token)) return 85;
+    // Raíz común: el catálogo tiene la raíz y el usuario escribió un derivado (ej: 'abogac' -> 'abogacia')
+    if (palabra.length >= 4 && token.startsWith(palabra)) return 80;
+    // Subcadena: el token está dentro de una palabra compuesta (ej: 'defensa' en 'ciberdefensa')
+    if (token.length >= 3 && palabra.includes(token)) return 65;
+    // Distancia difusa: solo entre palabras de longitud similar para corregir tipeos menores
+    if (Math.min(palabra.length, token.length) >= 3 && Math.abs(palabra.length - token.length) <= 3) {
+        const d = distanciaLevenshtein(palabra, token);
+        const maxLen = Math.max(palabra.length, token.length, 1);
+        const tolerancia = Math.max(1, Math.floor(maxLen * 0.28));
+        if (d <= tolerancia) return Math.round(45 * (1 - d / (tolerancia + 1)));
+    }
     return 0;
 }
 
@@ -65,6 +74,7 @@ function puntuacionBusqueda(oferta) {
     const tokens = texto.split(/\s+/).filter(Boolean);
     let score = 0;
     for (const token of tokens) {
+        if (CONECTORES.has(token) && tokens.length > 1) continue;
         let mejor = 0;
         if (token.length >= 2) {
             for (const pal of palabras) mejor = Math.max(mejor, puntuarPar(pal, token));
@@ -74,18 +84,23 @@ function puntuacionBusqueda(oferta) {
         if (hay.includes(token)) mejor = Math.max(mejor, 70);
         score += mejor;
     }
+    // Bonificación si el nombre de la carrera contiene exactamente la frase buscada
+    if (normalizarTexto(oferta.nombre).includes(texto)) score += 150;
     return score;
 }
 
-// Filtro de texto tolerante: la oferta pasa si algún token de la búsqueda tiene
-// alguna coincidencia (exacta, prefijo, subcadena o difusa) en su texto.
+// Filtro de texto: para una búsqueda multi-palabra (ej: "licenciatura ciberdefensa" o "undef logistica"),
+// cada término significativo debe estar presente en los datos de la oferta.
 function coincideTexto(oferta) {
     const texto = estado.texto;
     if (!texto) return true;
     const hay = normalizarTexto(`${oferta.nombre} ${oferta.institucion} ${oferta.facultad} ${oferta.area} ${oferta.categoria}`);
     const palabras = hay.split(/\s+/).filter(Boolean);
     const tokens = texto.split(/\s+/).filter(Boolean);
-    return tokens.some(token => {
+    const significativos = tokens.filter(t => !CONECTORES.has(t));
+    const tokensAValidar = significativos.length ? significativos : tokens;
+
+    return tokensAValidar.every(token => {
         if (token.length < 2) return palabras.includes(token);
         return palabras.some(pal => puntuarPar(pal, token) > 0);
     });
