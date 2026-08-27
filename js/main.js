@@ -8,6 +8,7 @@ import { cargarOfertas, catalogosAparte, inicializarOrientador } from './datos.j
 import { COMPARAR_KEY, actualizarBarraComparar, comparador, escribirGuardado, estado, favoritos, restaurarDesdeURL, sincronizarURL, toggleComparar, toggleFavorito } from './estado.js';
 import { abrirComparar, actualizarBotonesActivos, cambiarPanelFiltros, cambiarSeccion, cargarMas, cerrarComparar, limpiarRecomendacion, mostrarCatalogoAparte, mostrarPlataformas, mostrarResultados, sincronizarInertFiltros } from './render.js';
 import { normalizarTexto } from './util.js';
+import { inicializarAutocompletado } from './autocompletado.js';
 
 function arrancar() {
     document.body.dataset.seccion = estado.seccion;
@@ -146,8 +147,25 @@ function configurarTema() {
 }
 
 function configurarEventos() {
+    const inputBusqueda = document.getElementById('searchInput');
+    const dropdownBusqueda = document.getElementById('searchDropdown');
+
+    if (inputBusqueda && dropdownBusqueda) {
+        inicializarAutocompletado({
+            inputElem: inputBusqueda,
+            dropdownElem: dropdownBusqueda,
+            onSeleccionar: (textoSeleccionado) => {
+                estado.texto = normalizarTexto(textoSeleccionado);
+                if (estado.seccion === 'plataformas') mostrarPlataformas();
+                else if (catalogosAparte[estado.seccion]) mostrarCatalogoAparte(estado.seccion);
+                else mostrarResultados();
+                sincronizarURL();
+            }
+        });
+    }
+
     let esperaBusqueda;
-    document.getElementById('searchInput').addEventListener('input', event => {
+    inputBusqueda.addEventListener('input', event => {
         clearTimeout(esperaBusqueda);
         esperaBusqueda = setTimeout(() => {
             estado.texto = normalizarTexto(event.target.value.trim());

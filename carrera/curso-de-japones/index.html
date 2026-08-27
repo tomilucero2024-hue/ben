@@ -38,7 +38,7 @@
         } catch (e) {}
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260826_12">
+<link rel="stylesheet" href="/paginas.css?v=20260827_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Idiomas","item":"https://buscadoreducativo.com.ar/area/idiomas/"},{"@type":"ListItem","position":4,"name":"Curso de Japonés","item":"https://buscadoreducativo.com.ar/carrera/curso-de-japones/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Curso de Japonés","description":"Dónde estudiar Curso de Japonés en Mendoza: curso o formación profesional del área Idiomas, dictada por 1 institución (1 privada). Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/curso-de-japones/","provider":{"@type":"EducationalOrganization","name":"Intercultural Cursos de Idiomas","url":"https://buscadoreducativo.com.ar/institucion/intercultural-cursos-de-idiomas/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Curso de Japonés en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Curso de Japonés en Mendoza en la siguiente institución: Intercultural Cursos de Idiomas. En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Curso de Japonés?","acceptedAnswer":{"@type":"Answer","text":"La duración estimada depende de la institución y modalidad elegida (típicamente entre 4 y 5 años para carreras de grado, o de 2 a 3 años para tecnicaturas)."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Curso de Japonés?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Curso de Japonés?","acceptedAnswer":{"@type":"Answer","text":"Curso de Japonés es una curso o formación profesional perteneciente al área de Idiomas. Entre sus aptitudes más afines se destacan: interacción social, movilidad geográfica, trabajo práctico y creatividad."}}]}</script>
@@ -50,8 +50,9 @@
             <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
-            <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras">
+            <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
+            <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
 </header>
@@ -165,7 +166,7 @@
 
 <footer class="pie">
     <div class="envoltorio">
-        <p>BEN reúne la oferta educativa en un solo lugar para que elegir qué estudiar no dependa de saber dónde buscar. Los datos se toman de los sitios oficiales de cada institución; antes de inscribirte, confirmá con ellos.</p>
+        <p>BEN es una iniciativa independiente que reúne la oferta educativa en un solo lugar. Los datos se toman de sitios públicos con fines orientativos e informativos; antes de inscribirte, confirmá siempre los datos vigentes con la institución emisora.</p>
         <nav aria-label="Secciones del sitio">
             <a href="/">Buscador</a>
             <a href="/carreras/">Todas las carreras</a>
@@ -179,6 +180,62 @@
     if (document.documentElement.dataset.theme === 'dark') {
         document.querySelector('.marca img').src = '/logo-ben-dark.png';
     }
+
+    // Autocompletado en vivo en la barra de búsqueda estática
+    (() => {
+        const inp = document.getElementById('q');
+        const drop = document.getElementById('miniDropdown');
+        if (!inp || !drop) return;
+        let dataIndex = null;
+
+        async function cargarIndex() {
+            if (dataIndex) return dataIndex;
+            try {
+                const res = await fetch('/data/enlaces-ben.json');
+                if (res.ok) dataIndex = await res.json();
+            } catch (e) {}
+            return dataIndex;
+        }
+
+        inp.addEventListener('input', async () => {
+            const val = inp.value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+            if (val.length < 2) { drop.hidden = true; drop.innerHTML = ''; return; }
+            const idx = await cargarIndex();
+            if (!idx) return;
+
+            const matchesCarreras = Object.entries(idx.carreras || {})
+                .filter(([nombre]) => nombre.includes(val))
+                .slice(0, 5);
+            const matchesInst = Object.entries(idx.instituciones || {})
+                .filter(([nombre]) => nombre.includes(val))
+                .slice(0, 3);
+
+            if (!matchesCarreras.length && !matchesInst.length) {
+                drop.hidden = true;
+                drop.innerHTML = '';
+                return;
+            }
+
+            let html = '';
+            matchesCarreras.forEach(([nombre, slug]) => {
+                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            });
+            matchesInst.forEach(([nombre, slug]) => {
+                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            });
+
+            drop.innerHTML = html;
+            drop.hidden = false;
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!inp.contains(e.target) && !drop.contains(e.target)) {
+                drop.hidden = true;
+            }
+        });
+    })();
 </script>
 </body>
 </html>

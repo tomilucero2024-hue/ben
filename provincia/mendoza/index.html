@@ -38,7 +38,7 @@
         } catch (e) {}
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260826_12">
+<link rel="stylesheet" href="/paginas.css?v=20260827_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Dónde estudiar en Mendoza","description":"Dónde estudiar en Mendoza: 75 instituciones y 545 carreras distintas entre universidades, terciarios, oficios y formación profesional.","url":"https://buscadoreducativo.com.ar/provincia/mendoza/"}</script>
 </head>
@@ -49,8 +49,9 @@
             <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
-            <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras">
+            <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
+            <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
 </header>
@@ -65,18 +66,9 @@
         <a class="cta" href="/provincia/mendoza/carreras/">Ver todas las Carreras en Mendoza →</a>
     </div>
 
-    <h2>Universidades (19)</h2>
+    <h2>Universidades (10)</h2>
     <ul class="enlaces">
-        <li><a href="/institucion/ief-instituto-de-educacion-fisica-ies-9-016/">IEF - Instituto de Educación Física (IES 9-016)</a> <span class="cuantas">(4 carreras)</span></li>
-        <li><a href="/institucion/ies-9-030-instituto-del-bicentenario/">IES 9-030 (Instituto del Bicentenario)</a> <span class="cuantas">(10 carreras)</span></li>
-        <li><a href="/institucion/instituto-de-arte-chopin/">Instituto de Arte Chopin</a> <span class="cuantas">(9 carreras)</span></li>
-        <li><a href="/institucion/instituto-fabian-calle/">Instituto Fabián Calle</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/instituto-juan-gutenberg/">Instituto Juan Gutenberg</a> <span class="cuantas">(9 carreras)</span></li>
-        <li><a href="/institucion/instituto-maipu-de-educacion-integral-imei/">Instituto Maipú de Educación Integral (IMEI)</a> <span class="cuantas">(6 carreras)</span></li>
-        <li><a href="/institucion/instituto-santisima-trinidad/">Instituto Santísima Trinidad</a> <span class="cuantas">(4 carreras)</span></li>
-        <li><a href="/institucion/instituto-superior/">Instituto Superior</a> <span class="cuantas">(2 carreras)</span></li>
         <li><a href="/institucion/instituto-univ-de-ciencias-empresariales-iuce/">Instituto Univ. de Ciencias Empresariales (IUCE)</a> <span class="cuantas">(6 carreras)</span></li>
-        <li><a href="/institucion/insutec-instituto-superior-de-educacion-tecnologica/">INSUTEC (Instituto Superior de Educación Tecnológica)</a> <span class="cuantas">(7 carreras)</span></li>
         <li><a href="/institucion/itu-instituto-tecnologico-universitario-uncuyo/">ITU - Instituto Tecnológico Universitario (UNCuyo)</a> <span class="cuantas">(1 carrera)</span></li>
         <li><a href="/institucion/universidad-catolica-argentina-uca/">Universidad Católica Argentina (UCA)</a> <span class="cuantas">(17 carreras)</span></li>
         <li><a href="/institucion/universidad-champagnat-uch/">Universidad Champagnat (UCh)</a> <span class="cuantas">(14 carreras)</span></li>
@@ -88,13 +80,14 @@
         <li><a href="/institucion/universidad-siglo-21-s21/">Universidad Siglo 21 (S21)</a> <span class="cuantas">(77 carreras)</span></li>
     </ul>
 
-    <h2>Institutos Superiores y Terciarios (IES) (25)</h2>
+    <h2>Institutos Superiores y Terciarios (IES) (34)</h2>
     <ul class="enlaces">
         <li><a href="/institucion/escuela-de-periodismo-deportivo-de-mendoza-epd/">Escuela de Periodismo Deportivo de Mendoza (EPD)</a> <span class="cuantas">(1 carrera)</span></li>
         <li><a href="/institucion/escuela-de-psicologia-social/">Escuela de Psicología Social</a> <span class="cuantas">(7 carreras)</span></li>
         <li><a href="/institucion/escuela-internacional-islas-malvinas/">Escuela Internacional Islas Malvinas</a> <span class="cuantas">(5 carreras)</span></li>
         <li><a href="/institucion/escuela-regional-cuyo-de-cine-y-video-ies-9-017/">Escuela Regional Cuyo de Cine y Video (IES 9-017)</a> <span class="cuantas">(1 carrera)</span></li>
         <li><a href="/institucion/fundacion-rayuela/">Fundación Rayuela</a> <span class="cuantas">(6 carreras)</span></li>
+        <li><a href="/institucion/ief-instituto-de-educacion-fisica-ies-9-016/">IEF - Instituto de Educación Física (IES 9-016)</a> <span class="cuantas">(4 carreras)</span></li>
         <li><a href="/institucion/ies-9-001-gral-jose-de-san-martin/">IES 9-001 Gral. José de San Martín</a> <span class="cuantas">(14 carreras)</span></li>
         <li><a href="/institucion/ies-9-002-tomas-godoy-cruz/">IES 9-002 Tomás Godoy Cruz</a> <span class="cuantas">(11 carreras)</span></li>
         <li><a href="/institucion/ies-9-003-normal-san-rafael/">IES 9-003 Normal (San Rafael)</a> <span class="cuantas">(5 carreras)</span></li>
@@ -113,7 +106,15 @@
         <li><a href="/institucion/ies-9-024-lavalle/">IES 9-024 (Lavalle)</a> <span class="cuantas">(9 carreras)</span></li>
         <li><a href="/institucion/ies-9-028-santa-rosa/">IES 9-028 (Santa Rosa)</a> <span class="cuantas">(4 carreras)</span></li>
         <li><a href="/institucion/ies-9-029-lujan-de-cuyo/">IES 9-029 (Luján de Cuyo)</a> <span class="cuantas">(8 carreras)</span></li>
+        <li><a href="/institucion/ies-9-030-instituto-del-bicentenario/">IES 9-030 (Instituto del Bicentenario)</a> <span class="cuantas">(10 carreras)</span></li>
         <li><a href="/institucion/iesvu-ies-9-015-valle-de-uco/">IESVU (IES 9-015 Valle de Uco)</a> <span class="cuantas">(20 carreras)</span></li>
+        <li><a href="/institucion/instituto-de-arte-chopin/">Instituto de Arte Chopin</a> <span class="cuantas">(9 carreras)</span></li>
+        <li><a href="/institucion/instituto-fabian-calle/">Instituto Fabián Calle</a> <span class="cuantas">(1 carrera)</span></li>
+        <li><a href="/institucion/instituto-juan-gutenberg/">Instituto Juan Gutenberg</a> <span class="cuantas">(9 carreras)</span></li>
+        <li><a href="/institucion/instituto-maipu-de-educacion-integral-imei/">Instituto Maipú de Educación Integral (IMEI)</a> <span class="cuantas">(6 carreras)</span></li>
+        <li><a href="/institucion/instituto-santisima-trinidad/">Instituto Santísima Trinidad</a> <span class="cuantas">(4 carreras)</span></li>
+        <li><a href="/institucion/instituto-superior/">Instituto Superior</a> <span class="cuantas">(2 carreras)</span></li>
+        <li><a href="/institucion/insutec-instituto-superior-de-educacion-tecnologica/">INSUTEC (Instituto Superior de Educación Tecnológica)</a> <span class="cuantas">(7 carreras)</span></li>
         <li><a href="/institucion/isteec-ies-9-013/">ISTEEC (IES 9-013)</a> <span class="cuantas">(9 carreras)</span></li>
     </ul>
 
@@ -160,7 +161,7 @@
 
 <footer class="pie">
     <div class="envoltorio">
-        <p>BEN reúne la oferta educativa en un solo lugar para que elegir qué estudiar no dependa de saber dónde buscar. Los datos se toman de los sitios oficiales de cada institución; antes de inscribirte, confirmá con ellos.</p>
+        <p>BEN es una iniciativa independiente que reúne la oferta educativa en un solo lugar. Los datos se toman de sitios públicos con fines orientativos e informativos; antes de inscribirte, confirmá siempre los datos vigentes con la institución emisora.</p>
         <nav aria-label="Secciones del sitio">
             <a href="/">Buscador</a>
             <a href="/carreras/">Todas las carreras</a>
@@ -174,6 +175,62 @@
     if (document.documentElement.dataset.theme === 'dark') {
         document.querySelector('.marca img').src = '/logo-ben-dark.png';
     }
+
+    // Autocompletado en vivo en la barra de búsqueda estática
+    (() => {
+        const inp = document.getElementById('q');
+        const drop = document.getElementById('miniDropdown');
+        if (!inp || !drop) return;
+        let dataIndex = null;
+
+        async function cargarIndex() {
+            if (dataIndex) return dataIndex;
+            try {
+                const res = await fetch('/data/enlaces-ben.json');
+                if (res.ok) dataIndex = await res.json();
+            } catch (e) {}
+            return dataIndex;
+        }
+
+        inp.addEventListener('input', async () => {
+            const val = inp.value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+            if (val.length < 2) { drop.hidden = true; drop.innerHTML = ''; return; }
+            const idx = await cargarIndex();
+            if (!idx) return;
+
+            const matchesCarreras = Object.entries(idx.carreras || {})
+                .filter(([nombre]) => nombre.includes(val))
+                .slice(0, 5);
+            const matchesInst = Object.entries(idx.instituciones || {})
+                .filter(([nombre]) => nombre.includes(val))
+                .slice(0, 3);
+
+            if (!matchesCarreras.length && !matchesInst.length) {
+                drop.hidden = true;
+                drop.innerHTML = '';
+                return;
+            }
+
+            let html = '';
+            matchesCarreras.forEach(([nombre, slug]) => {
+                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            });
+            matchesInst.forEach(([nombre, slug]) => {
+                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            });
+
+            drop.innerHTML = html;
+            drop.hidden = false;
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!inp.contains(e.target) && !drop.contains(e.target)) {
+                drop.hidden = true;
+            }
+        });
+    })();
 </script>
 </body>
 </html>

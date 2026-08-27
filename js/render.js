@@ -491,6 +491,7 @@ export function renderizarTarjetasConCompatibilidad(resultados, rankings) {
                     ${instituciones.map(i => '<li>' + enlaceInstitucionBEN(i) + '</li>').join('')}
                 </ul>
             </div>` : ''}
+            ${enlaceFichaBEN(carrera.nombre)}
             <div class="card-actions">
                 <button type="button" class="btn-favorito${estaEnFavoritos(clave) ? ' is-active' : ''}" data-clave="${escaparHTML(clave)}" aria-pressed="${estaEnFavoritos(clave)}" title="Guardar en favoritos">${estaEnFavoritos(clave) ? '★' : '☆'} <span>Favorito</span></button>
                 <button type="button" class="btn-comparar${enComparador(clave) ? ' is-active' : ''}" data-clave="${escaparHTML(clave)}" aria-pressed="${enComparador(clave)}" title="Agregar a comparar">${enComparador(clave) ? '✓' : '+'} <span>Comparar</span></button>

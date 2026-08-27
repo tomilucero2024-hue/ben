@@ -81,21 +81,79 @@ body {
 .marca { display: inline-flex; align-items: center; }
 .marca img { height: 34px; width: auto; display: block; }
 
-.buscador-mini { display: flex; gap: var(--space-3); flex: 1 1 240px; max-width: 340px; }
+.buscador-mini {
+    position: relative;
+    display: flex;
+    gap: var(--space-3);
+    flex: 1 1 240px;
+    max-width: 360px;
+}
 .buscador-mini input {
     flex: 1; min-width: 0;
-    padding: var(--space-3) var(--space-4);
+    min-height: 44px;
+    padding: var(--space-2) var(--space-4);
     border: 1px solid var(--line); border-radius: var(--radius-pill);
     background: var(--bg); color: var(--text);
     font: inherit; font-size: .9375rem;
 }
 .buscador-mini button {
-    padding: var(--space-3) var(--space-6);
+    min-height: 44px; min-width: 44px;
+    padding: var(--space-2) var(--space-5);
     border: 0; border-radius: var(--radius-pill);
     background: var(--accent); color: var(--on-accent);
     font: inherit; font-weight: 600; cursor: pointer;
 }
 .buscador-mini button:hover { filter: brightness(1.08); }
+
+/* Dropdown flotante en páginas estáticas */
+.mini-search-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    max-height: 320px;
+    overflow-y: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .14);
+    z-index: 50;
+    padding: var(--space-2) 0;
+    display: flex;
+    flex-direction: column;
+}
+.mini-search-dropdown[hidden] {
+    display: none !important;
+}
+.mini-search-item {
+    padding: var(--space-3) var(--space-4);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    color: var(--text);
+    text-decoration: none;
+    font-size: .875rem;
+    line-height: 1.3;
+    cursor: pointer;
+    transition: background .15s ease;
+}
+.mini-search-item:hover, .mini-search-item.is-selected {
+    background: var(--surface-soft);
+    color: var(--accent-ink);
+}
+.mini-search-item-title {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mini-search-item-badge {
+    font-size: .75rem;
+    color: var(--muted);
+    flex-shrink: 0;
+}
 
 /* ---- Miga de pan ------------------------------------------------------- */
 .miga { font-size: .8125rem; color: var(--muted); margin-bottom: var(--space-5); }
@@ -150,7 +208,25 @@ a:hover { text-decoration: none; }
 }
 .oferta-datos li::before { content: "· "; }
 .oferta-datos li:first-child::before { content: ""; }
-.oferta .oficial { display: inline-block; margin-top: var(--space-3); font-size: .875rem; }
+.oferta .oficial {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    margin-top: var(--space-4);
+    padding: var(--space-2) var(--space-5);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--surface-soft);
+    color: var(--accent-ink);
+    font-size: .875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .2s ease, border-color .2s ease;
+}
+.oferta .oficial:hover {
+    background: var(--surface);
+    border-color: var(--accent);
+}
 
 .etiqueta {
     display: inline-block; font-size: .75rem; font-weight: 700;
@@ -168,12 +244,22 @@ a:hover { text-decoration: none; }
     font-size: .9375rem;
 }
 .enlaces li { break-inside: avoid; }
+.enlaces li a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: var(--space-1) 0;
+}
 .enlaces .cuantas { color: var(--muted); font-size: .8125rem; }
 
 /* ---- Llamado a la acción ---------------------------------------------- */
 .cta {
-    display: inline-block; margin: var(--space-3) 0 var(--space-8);
-    padding: var(--space-4) var(--space-7);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin: var(--space-3) 0 var(--space-8);
+    padding: var(--space-3) var(--space-7);
     background: var(--accent); color: var(--on-accent);
     border-radius: var(--radius-pill);
     font-weight: 700; text-decoration: none;

@@ -375,8 +375,9 @@ ${bloques}
             <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
-            <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras">
+            <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
+            <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
 </header>
@@ -403,6 +404,62 @@ ${cuerpo}
     if (document.documentElement.dataset.theme === 'dark') {
         document.querySelector('.marca img').src = '/logo-ben-dark.png';
     }
+
+    // Autocompletado en vivo en la barra de búsqueda estática
+    (() => {
+        const inp = document.getElementById('q');
+        const drop = document.getElementById('miniDropdown');
+        if (!inp || !drop) return;
+        let dataIndex = null;
+
+        async function cargarIndex() {
+            if (dataIndex) return dataIndex;
+            try {
+                const res = await fetch('/data/enlaces-ben.json');
+                if (res.ok) dataIndex = await res.json();
+            } catch (e) {}
+            return dataIndex;
+        }
+
+        inp.addEventListener('input', async () => {
+            const val = inp.value.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            if (val.length < 2) { drop.hidden = true; drop.innerHTML = ''; return; }
+            const idx = await cargarIndex();
+            if (!idx) return;
+
+            const matchesCarreras = Object.entries(idx.carreras || {})
+                .filter(([nombre]) => nombre.includes(val))
+                .slice(0, 5);
+            const matchesInst = Object.entries(idx.instituciones || {})
+                .filter(([nombre]) => nombre.includes(val))
+                .slice(0, 3);
+
+            if (!matchesCarreras.length && !matchesInst.length) {
+                drop.hidden = true;
+                drop.innerHTML = '';
+                return;
+            }
+
+            let html = '';
+            matchesCarreras.forEach(([nombre, slug]) => {
+                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            });
+            matchesInst.forEach(([nombre, slug]) => {
+                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            });
+
+            drop.innerHTML = html;
+            drop.hidden = false;
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!inp.contains(e.target) && !drop.contains(e.target)) {
+                drop.hidden = true;
+            }
+        });
+    })();
 </script>
 </body>
 </html>
@@ -1122,11 +1179,15 @@ function clasificarInstitucion(inst) {
     if (f === 'Oficio técnico' || f === 'Formación alternativa') {
         return 'Centros de Formación Profesional y Oficios';
     }
+    // Si explícitamente es terciario o instituto superior/terciario/ies
+    if (/^terciario|superior/.test(niv) || /^ies\b|instituto de educacion fisica|instituto superior|instituto de arte|instituto maipu|instituto juan|instituto santisima|insutec|instituto fabian calle/i.test(n)) {
+        return 'Institutos Superiores y Terciarios (IES)';
+    }
     // Dentro de Educación formal:
-    if (/universidad|facultad|instituto univ|instituto tecnologico universitario|itu/.test(n)) {
+    if (/universidad|facultad|\binstituto univ|\binstituto tecnologico universitario\b|\bitu\b/.test(n) || niv === 'universidad') {
         return 'Universidades';
     }
-    if (/ies |iesvu|instituto superior|terciario|profesorado|instituto de educacion fisica|instituto/i.test(n) || /superior|terciari/i.test(niv)) {
+    if (/ies |iesvu|instituto superior|terciario|profesorado|instituto/i.test(n) || /superior|terciari/i.test(niv)) {
         return 'Institutos Superiores y Terciarios (IES)';
     }
     return 'Centros de Formación Profesional y Oficios';
