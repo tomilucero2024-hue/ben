@@ -296,6 +296,7 @@ function mensajeBienvenida() {
             </button>
             <button type="button" class="cb-salida"
                 data-chat-accion="cerrar">Prefiero buscar por mi cuenta</button>
+            <p class="cb-aviso-legal"><small>Herramienta orientativa de exploración. No constituye un diagnóstico psicopedagógico.</small></p>
         </div>`;
 }
 
@@ -959,6 +960,7 @@ function mostrarRecomendacion() {
             <p class="mensaje-bot-nota">Podés marcarlas como favoritas o sumarlas para comparar desde acá mismo.</p>
             <div class="chat-resultados">${tarjetas}</div>
             <p class="mensaje-bot-nota">Acá te muestro las ${visibles.length} de mejor match. Cerrá esta ventana y vas a encontrar ${todas.length} en la grilla, donde además podés filtrarlas sin perder el orden por compatibilidad.</p>
+            <p class="mensaje-bot-nota"><small>⚖️ <em>Resultado de compatibilidad preliminar basado en intereses. Consultá siempre con un profesional de la orientación vocacional.</em></small></p>
             <button type="button" class="btn-chat-reset" data-chat-accion="reiniciar">Empezar el test de nuevo</button>`;
     }
 

@@ -955,6 +955,15 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 }
 .cb-salida:hover, .cb-salida:focus-visible { color: var(--text); }
 
+.cb-aviso-legal {
+    margin: var(--space-2) 0 0;
+    font-size: var(--fs-2xs);
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.35;
+    opacity: 0.85;
+}
+
 /* La X del header pasa a tener estado hover propio, en vez de ser un icono
    suelto. Aplica a todo el chat, no solo a la portada. */
 .chat-header button {
@@ -2116,6 +2125,25 @@ html[data-tts="true"] .btn-escuchar-card {
     outline-offset: 2px;
 }
 
+.footer-legal {
+    max-width: var(--container);
+    margin: 1.5rem auto 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    font-size: var(--fs-2xs);
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.footer-legal p {
+    margin: 0;
+}
+
+.footer-legal strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
 /* Modal de Feedback */
 .modal-feedback {
     position: fixed;
@@ -2326,6 +2354,14 @@ html[data-tts="true"] .btn-escuchar-card {
     font-size: var(--fs-2xs);
     color: #EF4444;
     font-weight: 500;
+}
+
+.feedback-privacidad-aviso {
+    margin: 0.35rem 0 0;
+    font-size: var(--fs-2xs);
+    color: var(--muted);
+    line-height: 1.35;
+    opacity: 0.9;
 }
 
 .feedback-footer-acciones {

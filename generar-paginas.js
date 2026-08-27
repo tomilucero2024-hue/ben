@@ -389,7 +389,7 @@ ${cuerpo}
 
 <footer class="pie">
     <div class="envoltorio">
-        <p>BEN reúne la oferta educativa en un solo lugar para que elegir qué estudiar no dependa de saber dónde buscar. Los datos se toman de los sitios oficiales de cada institución; antes de inscribirte, confirmá con ellos.</p>
+        <p>BEN es una iniciativa independiente que reúne la oferta educativa en un solo lugar. Los datos se toman de sitios públicos con fines orientativos e informativos; antes de inscribirte, confirmá siempre los datos vigentes con la institución emisora.</p>
         <nav aria-label="Secciones del sitio">
             <a href="/">Buscador</a>
             <a href="/carreras/">Todas las carreras</a>
