@@ -2049,7 +2049,7 @@
       "nombre": "Gestión de Recursos Hídricos",
       "categoria": "Grado / Carrera",
       "area": "Ambiente",
-      "formacion": "grado",
+      "formacion": "cursos",
       "instituciones": [
         "Universidad de Congreso (UC)"
       ],
@@ -2061,7 +2061,7 @@
         "creativo": 2,
         "terreno": 5,
         "liderazgo": 4,
-        "teorico": 4,
+        "teorico": 2,
         "matematico": 2,
         "movilidad": 4
       }
@@ -2648,19 +2648,19 @@
       "nombre": "Ingeniería Recursos Naturales Renovables",
       "categoria": "Grado / Carrera",
       "area": "Ingeniería",
-      "formacion": "grado",
+      "formacion": "cursos",
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)"
       ],
       "perfil": {
         "analitico": 5,
         "tecnologico": 4,
-        "practico": 4,
+        "practico": 5,
         "social": 1,
         "creativo": 2,
         "terreno": 1,
         "liderazgo": 2,
-        "teorico": 4,
+        "teorico": 2,
         "matematico": 5,
         "movilidad": 2
       }
@@ -4747,19 +4747,19 @@
       "nombre": "Licenciatura en Gestión de Recursos Humanos",
       "categoria": "Grado / Carrera",
       "area": "Negocios",
-      "formacion": "grado",
+      "formacion": "cursos",
       "instituciones": [
         "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
         "analitico": 5,
         "tecnologico": 2,
-        "practico": 4,
+        "practico": 5,
         "social": 5,
         "creativo": 2,
         "terreno": 1,
         "liderazgo": 5,
-        "teorico": 3,
+        "teorico": 1,
         "matematico": 3,
         "movilidad": 3
       }
@@ -5704,20 +5704,20 @@
       "nombre": "Licenciatura en Recursos Humanos",
       "categoria": "Grado / Carrera",
       "area": "Negocios",
-      "formacion": "grado",
+      "formacion": "cursos",
       "instituciones": [
         "Instituto Univ. de Ciencias Empresariales (IUCE)",
         "Universidad de la Defensa Nacional (UNDEF)"
       ],
       "perfil": {
-        "analitico": 5,
+        "analitico": 4,
         "tecnologico": 2,
-        "practico": 4,
+        "practico": 5,
         "social": 4,
         "creativo": 2,
         "terreno": 1,
         "liderazgo": 4,
-        "teorico": 3,
+        "teorico": 1,
         "matematico": 3,
         "movilidad": 3
       }
@@ -8330,20 +8330,20 @@
       "nombre": "Recursos Humanos",
       "categoria": "Grado / Carrera",
       "area": "Negocios",
-      "formacion": "grado",
+      "formacion": "cursos",
       "instituciones": [
         "Universidad Juan Agustín Maza (UMaza)",
         "Universidad de Congreso (UC)"
       ],
       "perfil": {
-        "analitico": 5,
+        "analitico": 4,
         "tecnologico": 2,
-        "practico": 4,
+        "practico": 5,
         "social": 4,
         "creativo": 2,
         "terreno": 1,
         "liderazgo": 4,
-        "teorico": 3,
+        "teorico": 1,
         "matematico": 3,
         "movilidad": 3
       }

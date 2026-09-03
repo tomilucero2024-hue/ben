@@ -4,13 +4,14 @@
 // ==========================================
 
 import { cerrarChat, configurarBienvenida, configurarChat, salirDelTest } from './copiloto.js';
-import { cargarOfertas, catalogosAparte, inicializarOrientador } from './datos.js';
-import { COMPARAR_KEY, actualizarBarraComparar, comparador, escribirGuardado, estado, favoritos, restaurarDesdeURL, sincronizarURL, toggleComparar, toggleFavorito } from './estado.js';
+import { cargarOfertas, catalogosAparte, inicializarOrientadorDiferido } from './datos.js';
+import { COMPARAR_KEY, actualizarBarraComparar, comparador, escribirGuardado, estado, favoritos, registrarCambioFavoritos, restaurarDesdeURL, sincronizarURL, toggleComparar, toggleFavorito } from './estado.js';
 import { abrirComparar, actualizarBotonesActivos, cambiarPanelFiltros, cambiarSeccion, cargarMas, cerrarComparar, limpiarRecomendacion, mostrarCatalogoAparte, mostrarPlataformas, mostrarResultados, sincronizarInertFiltros } from './render.js';
 import { normalizarTexto } from './util.js';
 import { inicializarAutocompletado } from './autocompletado.js';
 
-function arrancar() {
+async function arrancar() {
+    registrarCambioFavoritos(mostrarResultados);
     document.body.dataset.seccion = estado.seccion;
     // Restaura filtros/sección/búsqueda desde la URL ANTES de arrancar, para que
     // el primer render ya respete un link compartido.
@@ -19,8 +20,8 @@ function arrancar() {
     configurarEventos();
     configurarMedicionHeader();
     configurarHeaderScroll();
-    cargarOfertas();
-    inicializarOrientador();
+    await cargarOfertas();
+    inicializarOrientadorDiferido();
     configurarChat();
     sincronizarInertFiltros();
     configurarBienvenida();
@@ -149,6 +150,35 @@ function configurarTema() {
 function configurarEventos() {
     const inputBusqueda = document.getElementById('searchInput');
     const dropdownBusqueda = document.getElementById('searchDropdown');
+
+    const brandHomeLink = document.getElementById('brandHomeLink');
+    if (brandHomeLink) {
+        brandHomeLink.addEventListener('click', (e) => {
+            if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                e.preventDefault();
+                limpiarRecomendacion();
+                if (inputBusqueda) inputBusqueda.value = '';
+                estado.texto = '';
+                estado.formacion = 'todos';
+                estado.institucion = 'todos';
+                estado.gestion = 'todos';
+                estado.modalidad = 'todos';
+                estado.costo = 'todos';
+                estado.duracionMin = null;
+                estado.duracionMax = null;
+                estado.area = 'todos';
+                estado.favoritos = false;
+                estado.orden = 'default';
+                const minInput = document.getElementById('durationMin');
+                const maxInput = document.getElementById('durationMax');
+                if (minInput) minInput.value = '';
+                if (maxInput) maxInput.value = '';
+                cambiarSeccion('formal');
+                history.pushState(null, '', '/');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    }
 
     if (inputBusqueda && dropdownBusqueda) {
         inicializarAutocompletado({

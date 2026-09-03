@@ -100,14 +100,36 @@ export async function cargarOfertas() {
         document.getElementById('cardContainer').innerHTML = '<p class="empty-state">No se pudieron cargar las ofertas. Probá abrir la página con Live Server.</p>';
     }
 }
-// Inicializar Orientador con perfiles de carreras y ofertas
-export async function inicializarOrientador() {
-    try {
-        await Orientador.cargarPerfilesCarreras();
-        Orientador.setOfertasIndex(ofertas);
-        console.log('Orientador inicializado correctamente');
-    } catch (e) {
-        console.warn('No se pudo inicializar Orientador:', e);
+let promesaOrientador = null;
+
+// Inicializar Orientador bajo demanda o en segundo plano (lazy loading de 322 KB)
+export async function asegurarOrientadorListo() {
+    if (promesaOrientador) return promesaOrientador;
+    promesaOrientador = (async () => {
+        try {
+            if (typeof Orientador === 'undefined') {
+                console.warn('[Orientador] Script global no disponible aún.');
+                return false;
+            }
+            await Orientador.cargarPerfilesCarreras();
+            Orientador.setOfertasIndex(ofertas);
+            return true;
+        } catch (e) {
+            console.warn('[Orientador] No se pudo inicializar:', e);
+            promesaOrientador = null; // permitir reintento
+            return false;
+        }
+    })();
+    return promesaOrientador;
+}
+
+export const inicializarOrientador = asegurarOrientadorListo;
+
+export function inicializarOrientadorDiferido() {
+    if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(() => asegurarOrientadorListo(), { timeout: 3500 });
+    } else {
+        setTimeout(() => asegurarOrientadorListo(), 1500);
     }
 }
 

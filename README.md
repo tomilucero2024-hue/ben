@@ -42,6 +42,7 @@ paginas.css  estilos de las páginas estáticas (mucho más liviano, ver más ab
     filtros.js         búsqueda difusa, filtrado y orden
     render.js          todo lo que pinta HTML
     copiloto.js        chat, test vocacional y búsqueda por texto libre
+    autocompletado.js  sugerencias en vivo al escribir en el buscador
     main.js            arranque y delegación de eventos
     orientador.js      motor de compatibilidad (script clásico, expone window.Orientador)
     accesibilidad.js   panel de accesibilidad (script clásico, autónomo)

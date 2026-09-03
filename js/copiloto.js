@@ -3,7 +3,7 @@
 // texto libre.
 // ==========================================
 
-import { ETIQUETAS_FUENTE, catalogosAparte, ofertas, plataformas } from './datos.js';
+import { ETIQUETAS_FUENTE, asegurarOrientadorListo, catalogosAparte, ofertas, plataformas } from './datos.js';
 import { LIMITE_PAGINA, enComparador, estaEnFavoritos, estado } from './estado.js';
 import { cambiarSeccion, mostrarResultados, renderizarCursosAparte, renderizarPlataformas, renderizarTarjetas, renderizarTarjetasConCompatibilidad } from './render.js';
 import { capSeguro, escaparHTML, normalizarTexto, obtenerModalidades } from './util.js';
@@ -118,20 +118,33 @@ export function configurarBienvenida() {
     const pantalla = document.getElementById('pantallaBienvenida');
     if (!pantalla) return;
 
-    if (location.search.length > 0) {
-        // Link compartido: la bienvenida no se muestra ni se anima.
+    let yaVista = false;
+    try {
+        yaVista = localStorage.getItem('ben-bienvenida-vista') === 'true';
+    } catch (e) {
+        yaVista = false;
+    }
+
+    if (location.search.length > 0 || yaVista) {
+        // Link compartido o usuario recurrente: la bienvenida no bloquea el catálogo.
         ocultarBienvenidaInstantanea();
     } else {
-        // El catálogo queda tapado detrás: que el teclado no tabule a lo invisible.
+        // Primera visita: se muestra la bienvenida guiada.
         alternarInertDetrasDeBienvenida(true);
     }
+
+    const guardarVista = () => {
+        try { localStorage.setItem('ben-bienvenida-vista', 'true'); } catch (e) {}
+    };
 
     const btnCopiloto = document.getElementById('btnBienvenidaCopiloto');
     const btnCatalogo = document.getElementById('btnBienvenidaCatalogo');
     if (btnCopiloto) btnCopiloto.addEventListener('click', () => {
+        guardarVista();
         salirDeBienvenida(() => abrirTestPantallaCompleta());
     });
     if (btnCatalogo) btnCatalogo.addEventListener('click', () => {
+        guardarVista();
         salirDeBienvenida();
     });
 }
@@ -203,7 +216,8 @@ function actualizarProgresoChat() {
         return;
     }
     barra.hidden = false;
-    const total = Orientador.PREGUNTAS_TEST.length;
+    const preguntas = obtenerPreguntasTest();
+    const total = preguntas.length || 5;
     const pasoVisible = Math.min(pasoActual + 1, total);
     const porcentaje = Math.round((pasoActual / total) * 100);
     barra.innerHTML = `
@@ -312,7 +326,11 @@ function mensajeAyuda() {
         ${sugerenciasChips(['carreras de informática', '¿cuánto dura medicina?', 'qué ofrece la UNCuyo', 'hacer el test vocacional'])}`;
 }
 
-function iniciarTestVocacional() {
+function obtenerPreguntasTest() {
+    return (typeof Orientador !== 'undefined' && Orientador.PREGUNTAS_TEST) ? Orientador.PREGUNTAS_TEST : [];
+}
+
+async function iniciarTestVocacional() {
     pasoActual = 0;
     perfilUsuario = {};
     respuestasTest = [];
@@ -320,16 +338,21 @@ function iniciarTestVocacional() {
     procesandoPasoChat = false;
     historialChat.length = 0;
     historialChat.push({ rol: 'bot', html: '<p>🎯 Perfecto. Te hago <strong>5 preguntas</strong> para mapear tu perfil multidimensional. Respondé eligiendo una de las opciones.</p>' });
+    
+    // Asegurar que Orientador cargó los perfiles (lazy loading)
+    mostrarEscribiendo();
+    await asegurarOrientadorListo();
+    quitarEscribiendo();
+
     actualizarProgresoChat();
     mostrarPregunta();
 }
 
-// Preguntas del test vocacional - Usando las del módulo Orientador
-const preguntasTest = Orientador.PREGUNTAS_TEST;
-
 function mostrarPregunta() {
+    const preguntasTest = obtenerPreguntasTest();
     const preguntaObj = preguntasTest[pasoActual];
-    const opciones = preguntaObj.opciones
+    if (!preguntaObj) return;
+    const opciones = (preguntaObj.opciones || [])
         .map((opcion, idx) => `<button type="button" class="btn-chat-opcion" data-chat-opcion="${idx}" data-chat-opcion-texto="${escaparHTML(opcion.texto)}">${escaparHTML(opcion.texto)}</button>`)
         .join('');
 
@@ -339,10 +362,8 @@ function mostrarPregunta() {
         ${pasoActual > 0 ? '<button type="button" class="btn-chat-atras" data-chat-accion="atras">← Volver a la pregunta anterior</button>' : ''}` });
     actualizarProgresoChat();
     renderizarChat();
-
-
-
 }
+
 // Para que se pueda llamar desde los botones inyectados en el HTML
 function seleccionarOpcionChat(opcionIdx, textoOpcion) {
     if (procesandoPasoChat) return;
@@ -351,6 +372,7 @@ function seleccionarOpcionChat(opcionIdx, textoOpcion) {
     // botones intactos: si el usuario sube y toca uno cuando el test ya terminó,
     // preguntasTest[pasoActual] es undefined y reventaba con un TypeError.
     // Fuera del test esos botones simplemente no hacen nada.
+    const preguntasTest = obtenerPreguntasTest();
     const preguntaObj = preguntasTest[pasoActual];
     if (!enTestVocacional || !preguntaObj) return;
     const opcion = preguntaObj.opciones[opcionIdx];
@@ -359,7 +381,7 @@ function seleccionarOpcionChat(opcionIdx, textoOpcion) {
     procesandoPasoChat = true;
     
     // Acumular scores dimensionales
-    if (opcion.dimensionScores) {
+    if (opcion.dimensionScores && typeof Orientador !== 'undefined') {
         Orientador.DIMENSIONES.forEach(d => {
             const val = opcion.dimensionScores[d] || 0;
             perfilUsuario[d] = (perfilUsuario[d] || 0) + val;
@@ -988,9 +1010,9 @@ function tarjetaResultadoChat(carrera, rankings) {
             </div>
             ${tipoBadge || carrera.area ? '<div class="tipo-badges">' + tipoBadge + (carrera.area ? '<span class="tipo-badge area">' + capSeguro(carrera.area) + '</span>' : '') + '</div>' : ''}
             <div class="chat-resultado-acciones">
-                <button type="button" class="btn-favorito${estaEnFavoritos(clave) ? ' is-active' : ''}" data-clave="${escaparHTML(clave)}" aria-pressed="${estaEnFavoritos(clave)}" title="Guardar en favoritos">${estaEnFavoritos(clave) ? '★' : '☆'} <span>Favorito</span></button>
-                <button type="button" class="btn-comparar${enComparador(clave) ? ' is-active' : ''}" data-clave="${escaparHTML(clave)}" aria-pressed="${enComparador(clave)}" title="Agregar a comparar">${enComparador(clave) ? '✓' : '+'} <span>Comparar</span></button>
-                <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(clave)}" aria-label="Escuchar carrera"><span aria-hidden="true">🔊</span> <span>Escuchar</span></button>
+                <button type="button" class="btn-favorito${estaEnFavoritos(clave) ? ' is-active' : ''}" data-clave="${escaparHTML(clave)}" aria-pressed="${estaEnFavoritos(clave)}" title="Guardar en favoritos"><svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <span>Favorito</span></button>
+                <button type="button" class="btn-comparar${enComparador(clave) ? ' is-active' : ''}" data-clave="${escaparHTML(clave)}" aria-pressed="${enComparador(clave)}" title="Agregar a comparar"><svg class="btn-svg btn-svg-add" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><svg class="btn-svg btn-svg-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> <span>Comparar</span></button>
+                <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(clave)}" aria-label="Escuchar carrera"><svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg> <span>Escuchar</span></button>
             </div>
         </div>`;
 }
@@ -1006,22 +1028,24 @@ function tarjetaResultadoChat(carrera, rankings) {
 // funciones en window (y a serializar argumentos dentro de un atributo). Con la
 // app en módulos las funciones ya no son globales, así que un único listener en
 // el contenedor del chat atiende todos los botones, presentes y futuros.
-document.addEventListener('click', event => {
-    const enviar = event.target.closest('[data-chat-enviar]');
-    if (enviar) { procesarEntradaUsuario(enviar.dataset.chatEnviar); return; }
+if (typeof document !== 'undefined') {
+    document.addEventListener('click', event => {
+        const enviar = event.target.closest('[data-chat-enviar]');
+        if (enviar) { procesarEntradaUsuario(enviar.dataset.chatEnviar); return; }
 
-    const opcion = event.target.closest('[data-chat-opcion]');
-    if (opcion) {
-        seleccionarOpcionChat(Number(opcion.dataset.chatOpcion), opcion.dataset.chatOpcionTexto);
-        return;
-    }
+        const opcion = event.target.closest('[data-chat-opcion]');
+        if (opcion) {
+            seleccionarOpcionChat(Number(opcion.dataset.chatOpcion), opcion.dataset.chatOpcionTexto);
+            return;
+        }
 
-    const accion = event.target.closest('[data-chat-accion]');
-    if (!accion) return;
-    switch (accion.dataset.chatAccion) {
-        case 'test': iniciarTestVocacional(); break;
-        case 'atras': volverPreguntaChat(); break;
-        case 'reiniciar': reiniciarChat(); break;
-        case 'cerrar': document.getElementById('btn-cerrar-chat')?.click(); break;
-    }
-});
+        const accion = event.target.closest('[data-chat-accion]');
+        if (!accion) return;
+        switch (accion.dataset.chatAccion) {
+            case 'test': iniciarTestVocacional(); break;
+            case 'atras': volverPreguntaChat(); break;
+            case 'reiniciar': reiniciarChat(); break;
+            case 'cerrar': document.getElementById('btn-cerrar-chat')?.click(); break;
+        }
+    });
+}

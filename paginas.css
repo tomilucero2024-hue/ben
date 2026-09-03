@@ -25,18 +25,18 @@
 
     --radius-sm: 8px;   --radius-md: 12px;  --radius-pill: 999px;
 
-    --bg: #F7F5FF;
-    --surface: #FFFFFF;
-    --surface-soft: #EEECFB;
-    --line: rgba(27, 24, 48, .14);
-    --text: #1B1830;
-    --muted: #5C5680;
-    --blue-ink: #4F46E5;
-    --orange-ink: #C2410C;
-    --green-ink: #107937;
-    --accent: #059669;
-    --accent-ink: #047854;
-    --on-accent: #FFFFFF;
+    --bg: #fdfaf5;
+    --surface: #ffffff;
+    --surface-soft: #f3f0ea;
+    --line: rgba(0, 0, 0, 0.08);
+    --text: #1f1d1a;
+    --muted: #6b6863;
+    --blue-ink: #1d4ed8;
+    --orange-ink: #c2410c;
+    --green-ink: #15803d;
+    --accent: #6366f1;
+    --accent-ink: #4338ca;
+    --on-accent: #ffffff;
 }
 
 html[data-theme="dark"] {

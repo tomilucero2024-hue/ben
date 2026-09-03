@@ -4,8 +4,12 @@
 // ==========================================
 
 import { buscarPorClave, ofertas } from './datos.js';
-import { mostrarResultados } from './render.js';
 import { normalizarTexto } from './util.js';
+
+let alCambiarFavoritos = null;
+export function registrarCambioFavoritos(fn) {
+    alCambiarFavoritos = fn;
+}
 
 export const estado = {
     seccion: 'formal',
@@ -22,8 +26,29 @@ export const estado = {
 // Favoritos y comparador, persistidos en localStorage (si el navegador lo permite).
 const FAVORITOS_KEY = 'ben-favoritos';
 export const COMPARAR_KEY = 'ben-comparar';
-function leerGuardado(clave) { try { return JSON.parse(localStorage.getItem(clave) || '[]'); } catch (e) { return []; } }
-export function escribirGuardado(clave, valor) { try { localStorage.setItem(clave, JSON.stringify(valor)); } catch (e) {} }
+const SECCIONES_PERMITIDAS = new Set(['formal', 'plataformas', 'formaciones-alternativas', 'oficios-tecnicos', 'secundario']);
+const GESTIONES_PERMITIDAS = new Set(['todos', 'pública', 'privada']);
+const COSTOS_PERMITIDOS = new Set(['todos', 'gratuito', 'arancelado']);
+const MODALIDADES_PERMITIDAS = new Set(['todos', 'presencial', 'online', 'híbrida']);
+const ORDENES_PERMITIDOS = new Set(['default', 'relevancia', 'nombre-az', 'nombre-za', 'publica-primero', 'privada-primero']);
+const FORMACIONES_PERMITIDAS = new Set(['todos', 'grado', 'tecnicaturas', 'profesorados', 'cursos']);
+const INSTITUCIONES_PERMITIDAS = new Set(['todos', 'universidades', 'ies', 'centros']);
+const DURACIONES_PERMITIDAS = new Set(['todos', 'corta', 'hasta-1', '2-3', '4-mas', 'sin-definir']);
+
+function leerGuardado(clave) {
+    try {
+        if (typeof localStorage === 'undefined') return [];
+        const raw = JSON.parse(localStorage.getItem(clave) || '[]');
+        return Array.isArray(raw) ? raw.filter(item => typeof item === 'string' && item.length > 0) : [];
+    } catch (e) {
+        return [];
+    }
+}
+export function escribirGuardado(clave, valor) {
+    try {
+        if (typeof localStorage !== 'undefined') localStorage.setItem(clave, JSON.stringify(valor));
+    } catch (e) {}
+}
 export const favoritos = new Set(leerGuardado(FAVORITOS_KEY));
 export const comparador = new Set(leerGuardado(COMPARAR_KEY));
 
@@ -31,10 +56,12 @@ export const comparador = new Set(leerGuardado(COMPARAR_KEY));
 // tarjetas de una. El botón "Cargar más" revela la siguiente tanda.
 export const LIMITE_PAGINA = 24;
 export function sincronizarURL() {
+    if (typeof history === 'undefined' || typeof location === 'undefined') return;
     const p = new URLSearchParams();
     const seccion = estado.seccion;
     if (seccion !== 'formal') p.set('seccion', seccion);
-    const q = document.getElementById('searchInput').value.trim();
+    const searchInput = typeof document !== 'undefined' ? document.getElementById('searchInput') : null;
+    const q = searchInput ? searchInput.value.trim() : '';
     if (q) p.set('q', q);
     ['formacion', 'institucion', 'gestion', 'modalidad', 'costo', 'duracion', 'area', 'orden']
         .forEach(campo => { if (estado[campo] !== 'todos' && estado[campo] !== 'default') p.set(campo, estado[campo]); });
@@ -46,14 +73,40 @@ export function sincronizarURL() {
 }
 
 export function restaurarDesdeURL() {
+    if (typeof location === 'undefined') return;
     const p = new URLSearchParams(location.search);
-    if (p.has('seccion')) estado.seccion = p.get('seccion');
-    if (p.has('q')) { const q = p.get('q'); document.getElementById('searchInput').value = q; estado.texto = normalizarTexto(q); }
-    ['formacion', 'institucion', 'gestion', 'modalidad', 'costo', 'duracion', 'area', 'orden']
-        .forEach(campo => { if (p.has(campo)) estado[campo] = p.get(campo); });
-    if (p.has('dmin')) estado.duracionMin = parseFloat(p.get('dmin'));
-    if (p.has('dmax')) estado.duracionMax = parseFloat(p.get('dmax'));
+    if (p.has('seccion')) {
+        const s = p.get('seccion');
+        if (SECCIONES_PERMITIDAS.has(s)) estado.seccion = s;
+    }
+    if (p.has('q')) {
+        const q = p.get('q');
+        const input = document.getElementById('searchInput');
+        if (input) input.value = q;
+        estado.texto = normalizarTexto(q);
+    }
+    if (p.has('formacion') && FORMACIONES_PERMITIDAS.has(p.get('formacion'))) estado.formacion = p.get('formacion');
+    if (p.has('institucion') && INSTITUCIONES_PERMITIDAS.has(p.get('institucion'))) estado.institucion = p.get('institucion');
+    if (p.has('gestion') && GESTIONES_PERMITIDAS.has(p.get('gestion'))) estado.gestion = p.get('gestion');
+    if (p.has('modalidad') && MODALIDADES_PERMITIDAS.has(p.get('modalidad'))) estado.modalidad = p.get('modalidad');
+    if (p.has('costo') && COSTOS_PERMITIDOS.has(p.get('costo'))) estado.costo = p.get('costo');
+    if (p.has('duracion') && DURACIONES_PERMITIDAS.has(p.get('duracion'))) estado.duracion = p.get('duracion');
+    if (p.has('area')) estado.area = p.get('area');
+    if (p.has('orden') && ORDENES_PERMITIDOS.has(p.get('orden'))) estado.orden = p.get('orden');
+
+    if (p.has('dmin')) {
+        const minVal = parseFloat(p.get('dmin'));
+        if (Number.isFinite(minVal) && minVal >= 0) estado.duracionMin = minVal;
+    }
+    if (p.has('dmax')) {
+        const maxVal = parseFloat(p.get('dmax'));
+        if (Number.isFinite(maxVal) && maxVal >= 0) estado.duracionMax = maxVal;
+    }
+    if (estado.duracionMin !== null && estado.duracionMax !== null && estado.duracionMin > estado.duracionMax) {
+        [estado.duracionMin, estado.duracionMax] = [estado.duracionMax, estado.duracionMin];
+    }
     if (p.has('favoritos')) estado.favoritos = p.get('favoritos') === '1' || p.get('favoritos') === 'true';
+
     const sort = document.getElementById('sortSelect');
     if (sort) sort.value = estado.orden;
     const dMin = document.getElementById('durationMin');
@@ -107,11 +160,13 @@ export function toggleFavorito(clave) {
     escribirGuardado(FAVORITOS_KEY, [...favoritos]);
     // Se actualizan todos los botones de esa clave (grilla y tarjetas del chat),
     // no solo el primero que encuentre.
-    document.querySelectorAll(`.btn-favorito[data-clave="${CSS.escape(clave)}"]`).forEach(boton => {
-        boton.classList.toggle('is-active', !completo);
-        boton.setAttribute('aria-pressed', String(!completo));
-    });
-    if (estado.favoritos) mostrarResultados();
+    if (typeof document !== 'undefined') {
+        document.querySelectorAll(`.btn-favorito[data-clave="${CSS.escape(clave)}"]`).forEach(boton => {
+            boton.classList.toggle('is-active', !completo);
+            boton.setAttribute('aria-pressed', String(!completo));
+        });
+    }
+    if (estado.favoritos && alCambiarFavoritos) alCambiarFavoritos();
 }
 
 export function enComparador(clave) {

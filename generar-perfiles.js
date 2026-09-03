@@ -37,36 +37,8 @@ function normalizar(texto) {
     .trim();
 }
 
-function tienePalabra(texto, ...palabras) {
-  const t = normalizar(texto);
-  return palabras.some(p => t.includes(normalizar(p)));
-}
-
-function getArea(nombre) {
-  const n = normalizar(nombre);
-  if (tienePalabra(n, 'ingenier')) return 'Ingeniería';
-  if (tienePalabra(n, 'program', 'sistema', 'informat', 'comput', 'software', 'datos', 'data', 'inteligencia artificial', 'ciberseguridad', 'ciberdefensa', 'ciber', 'robotica', 'videojuego', 'web', 'cloud', 'telecomunicacion', 'ia desde cero', 'desarrollo de software', 'seguridad informatica')) return 'Tecnología';
-  if (tienePalabra(n, 'medicin', 'enfermer', 'kinesi', 'nutric', 'odont', 'farmac', 'fonoaudi', 'obstetric', 'terapia', 'radiolog', 'bioquim', 'salud', 'anestesia', 'instrumentacion quirurg', 'diagnostico por imagenes', 'quirofano', 'podolog', 'terapeutico', 'anatomia patologica', 'bioimagenes', 'gerontolog', 'primeros auxilios', 'salud mental', 'psicologia')) return 'Salud';
-  if (tienePalabra(n, 'administracion', 'contador', 'contad', 'marketing', 'comercio', 'negocio', 'finanza', 'econom', 'recursos humanos', 'logistica', 'secretariado', 'gestion empresarial', 'ventas', 'seguros', 'banc', 'comercializacion', 'community manager', 'martillero', 'corredor inmobiliario', 'inmobiliari', 'aduan', 'despachante de aduana', 'gestion aeroportuaria', 'siniestro', 'emprendimiento', 'gestion del liderazgo')) return 'Negocios';
-  if (tienePalabra(n, 'diseno', 'arquitect', 'multimedia', 'interiorismo', 'indumentaria', 'animacion', 'fotograf', 'grafic', 'audiovisual', 'publicidad')) return 'Diseño';
-  if (tienePalabra(n, 'profesorado', 'educacion', 'pedagog', 'didact', 'docencia', 'ensenanza')) return 'Educación';
-  if (tienePalabra(n, 'turismo', 'hoteler', 'guia de turismo', 'hospitalidad', 'viajes', 'recreacion', 'guia de alta montana', 'trekking', 'gestion de recursos turisticos', 'gestion turistica')) return 'Turismo';
-  if (tienePalabra(n, 'gastronom', 'cocina', 'pasteler', 'panader', 'chef', 'sommelier', 'enolog', 'vino', 'cocteler', 'bartender', 'sensorial de vinos', 'cata de vinos', 'finca vitivinicola', 'vitivinicola', 'laboratorio vitivinicola', 'bromatolog')) return 'Gastronomía';
-  if (tienePalabra(n, 'ingles', 'idioma', 'portugues', 'frances', 'traduccion', 'interpretacion', 'italiano', 'chino', 'coreano', 'aleman', 'japones', 'lengua de senas', 'lengua extranjera')) return 'Idiomas';
-  if (tienePalabra(n, 'arte', 'musica', 'teatro', 'escenograf', 'danza', 'cine', 'ilustracion', 'canto', 'coral', 'organo', 'instrumento', 'ceramica artistica', 'actor', 'actriz', 'artes visuales', 'artes plasticas', 'piano', 'guitarra', 'composicion musical', 'bellas artes')) return 'Arte';
-  if (tienePalabra(n, 'ambient', 'agronom', 'biolog', 'geolog', 'forestal', 'veterin', 'quimic', 'hidric', 'ecolog', 'apicultur', 'paisajis', 'agro', 'recursos naturales', 'botanica', 'zoolog', 'ciencias de la tierra', 'geografia', 'geografo', 'fisica', 'matematica')) return 'Ambiente';
-  if (tienePalabra(n, 'mecanic', 'electric', 'carpinter', 'refrigeracion', 'soldadur', 'construccion', 'automotor', 'gasista', 'plomer', 'cerrajeri', 'torner', 'herreri', 'pintur', 'albanil', 'mantenimiento', 'instalacion', 'oficio', 'pilot', 'buceo', 'drone', 'drones', 'aeronaut', 'chofer', 'conductor', 'barberia', 'peluqueri', 'electricista', 'ceramica industrial')) return 'Oficios';
-  return 'Ciencias sociales';
-}
-
-function getFormacion(categoria, nombre) {
-  const t = normalizar(`${categoria} ${nombre}`);
-  if (tienePalabra(t, 'profesorado')) return 'profesorados';
-  if (tienePalabra(t, 'tecnicatura', 'tecnico', 'pregrado')) return 'tecnicaturas';
-  const tSinRecursos = t.replace(/\brecursos\b/g, '');
-  if (tienePalabra(tSinRecursos, 'curso', 'formacion profesional', 'capacitacion', 'taller', 'diplomatura')) return 'cursos';
-  return 'grado';
-}
+// Única fuente de verdad: importamos clasificadores compartidos desde js/util.js
+let getArea, getFormacion;
 
 function calcularPerfilCarrera(carrera) {
   const nombre = normalizar(carrera.nombre);
@@ -169,7 +141,11 @@ function calcularPerfilCarrera(carrera) {
   return perfil;
 }
 
-function main() {
+async function main() {
+  const util = await import('./js/util.js');
+  getArea = util.getArea;
+  getFormacion = util.getFormacion;
+
   console.log('📖 Leyendo data.json...');
   const raw = fs.readFileSync(DATA_PATH, 'utf8');
   const data = JSON.parse(raw);
@@ -268,4 +244,7 @@ function main() {
   });
 }
 
-main();
+main().catch(error => {
+  console.error('❌ Error en generar-perfiles:', error);
+  process.exit(1);
+});

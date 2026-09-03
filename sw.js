@@ -16,7 +16,7 @@
 // hace que un usuario con la versión vieja cacheada reciba la nueva: al cambiar
 // el nombre del caché, el activate de abajo borra todo lo anterior. Si se
 // actualiza el HTML y no esto, el service worker sigue sirviendo lo viejo.
-const VERSION = '20260826_12';
+const VERSION = '20260903_10';
 const CACHE = `ben-${VERSION}`;
 
 // El esqueleto mínimo para que la app abra sin red.
@@ -38,6 +38,7 @@ const SHELL = [
     'js/filtros.js',
     'js/render.js',
     'js/copiloto.js',
+    'js/autocompletado.js',
     'js/main.js',
     'favicon.png',
     'icon-192.png',
@@ -111,6 +112,20 @@ async function cachePrimero(request) {
     }
 }
 
+async function redPrimero(request) {
+    const cache = await caches.open(CACHE);
+    try {
+        const respuesta = await fetch(request);
+        if (respuesta && respuesta.ok) {
+            cache.put(request, respuesta.clone());
+        }
+        return respuesta;
+    } catch (e) {
+        const guardada = await buscarEnCache(cache, request);
+        return guardada || Response.error();
+    }
+}
+
 self.addEventListener('fetch', evento => {
     const request = evento.request;
     if (request.method !== 'GET') return;
@@ -140,6 +155,13 @@ self.addEventListener('fetch', evento => {
     // mostrar lo que hay al instante y refrescar por detrás.
     if (destino.pathname.includes('/data/') && destino.pathname.endsWith('.json')) {
         evento.respondWith(staleWhileRevalidate(request));
+        return;
+    }
+
+    // CSS y JS con versionado (?v=...): red primero para ver cambios de código
+    // de inmediato, con caché como respaldo offline.
+    if (destino.pathname.endsWith('.css') || destino.pathname.endsWith('.js')) {
+        evento.respondWith(redPrimero(request));
         return;
     }
 

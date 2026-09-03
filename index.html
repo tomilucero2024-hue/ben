@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="manifest" href="/manifest.json?v=20260826_12">
+    <link rel="manifest" href="/manifest.json?v=20260903_10">
     <meta name="theme-color" content="#1d4ed8">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="BEN">
@@ -68,20 +68,22 @@
             document.documentElement.style.colorScheme = tema;
         })();
     </script>
-    <link rel="stylesheet" href="/style.css?v=20260827_01">
+    <link rel="stylesheet" href="/style.css?v=20260903_10">
 
 </head>
 <body>
     <a class="skip-link" href="#cardContainer">Saltar a los resultados</a>
     <header class="hero">
+        <button id="themeToggle" class="btn-theme-toggle" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <div class="hero-content">
-            <!-- El documento no tenía ningún h1: el logo es un botón y el primer
-                 encabezado era "Filtrar por". Va oculto a la vista porque el logo
-                 ya cumple ese rol visualmente, pero la página necesita un título. -->
+            <!-- El logo es el enlace principal al inicio que resetea la vista -->
             <h1 class="sr-only">BEN — Buscador Educativo Nacional: carreras, institutos, oficios y cursos</h1>
-            <button id="themeToggle" class="brand-theme-toggle" type="button" aria-label="Cambiar tema de color" aria-pressed="false">
+            <a id="brandHomeLink" class="brand-link" href="/" aria-label="BEN — Buscador Educativo Nacional (Volver al inicio)">
                 <img id="brandLogo" class="brand-logo" src="/logo-ben-light.png" width="1120" height="299" alt="BEN, Buscador Educativo Nacional" fetchpriority="high">
-            </button>
+            </a>
             <!-- El src por defecto es el logo claro. Si el tema guardado o del sistema es oscuro,
                  se intercambia inmediatamente durante el parseo. -->
             <script>
@@ -90,7 +92,7 @@
                 }
             </script>
             <div class="hero-secondary">
-                <p class="theme-hint">Carreras y oficios en Mendoza y Argentina · Tocá el logo para cambiar el modo</p>
+                <p class="hero-bajada">Carreras y oficios en Mendoza y Argentina</p>
             </div>
             <!-- El botón de filtros vive acá y no en .hero-actions: ese bloque colapsa
                  al compactarse el header, y dejaba a los filtros inalcanzables en celular. -->
@@ -98,7 +100,7 @@
                 <label class="sr-only" for="searchInput">Buscar carrera o institución</label>
                 <input type="search" id="searchInput" class="search-input" placeholder="Buscar por institución o carrera…" autocomplete="off">
                 <button id="mobileFilterButton" class="mobile-filter-button" type="button" aria-controls="filtersSidebar" aria-expanded="false" aria-label="Abrir filtros">
-                    <span aria-hidden="true">☰</span><span class="mobile-filter-texto">Filtrar</span>
+                    <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg><span class="mobile-filter-texto">Filtrar</span>
                 </button>
                 <div id="searchDropdown" class="search-dropdown" role="listbox" hidden></div>
             </div>
@@ -257,11 +259,11 @@
                 <!-- Aparece solo cuando la grilla muestra el ranking del test
                      vocacional; la ✕ devuelve al catálogo completo. -->
                 <p id="chapaRecomendacion" class="chapa-recomendacion" hidden>
-                    <span>🧭 Recomendaciones del Copiloto</span>
+                    <span class="chapa-texto"><svg class="meta-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.6 8.4-2.2 5-5 2.2 2.2-5z"/></svg> Recomendaciones del Copiloto</span>
                     <button id="chapaRecomendacionCerrar" type="button" aria-label="Volver al catálogo completo">✕</button>
                 </p>
                 <div class="toolbar-actions">
-                    <button id="btnFavoritos" class="favoritos-toggle" type="button" aria-pressed="false">★ Solo favoritos</button>
+                    <button id="btnFavoritos" class="favoritos-toggle" type="button" aria-pressed="false"><svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <span>Solo favoritos</span></button>
                     <label class="sort-control" for="sortSelect">Ordenar por
                     <select id="sortSelect">
                         <option value="default">Predeterminado</option>
@@ -281,7 +283,7 @@
             <!-- Plataformas que coinciden con la búsqueda de texto, mostradas dentro
                  de Educación Formal pero visualmente separadas por ser otra sección. -->
             <section id="plataformas-coincidentes" class="platform-matches" hidden>
-                <h2><span aria-hidden="true">💻</span> También hay plataformas online que coinciden</h2>
+                <h2><svg class="section-title-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="12.5" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg> También hay plataformas online que coinciden</h2>
                 <div id="contenedor-plataformas-busqueda" class="platforms-grid"></div>
             </section>
 
@@ -296,21 +298,21 @@
             <!-- Formaciones alternativas: vista propia, no se mezclan con las carreras
                  de universidades ni con las plataformas. Sin filtros de carrera. -->
             <section id="seccion-formaciones" class="catalog-aparte" hidden>
-                <h2><span aria-hidden="true">🧭</span> Formaciones Alternativas</h2>
+                <h2><svg class="section-title-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.6 8.4-2.2 5-5 2.2 2.2-5z"/></svg> Formaciones Alternativas</h2>
                 <p class="catalog-aparte-intro">Cursos y formaciones de nicho: aeronáutica, buceo, montaña, apicultura, forense, cervecería artesanal y peritaje.</p>
                 <div id="contenedor-formaciones" class="cursos-grid"></div>
             </section>
 
             <!-- Oficios técnicos: misma lógica, vista propia y separada. -->
             <section id="seccion-oficios" class="catalog-aparte" hidden>
-                <h2><span aria-hidden="true">🔧</span> Oficios Técnicos</h2>
+                <h2><svg class="section-title-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.6 3.2a5.5 5.5 0 0 0-6.9 6.9l-5.3 5.3a2 2 0 0 0 0 2.8l1.4 1.4a2 2 0 0 0 2.8 0l5.3-5.3a5.5 5.5 0 0 0 6.9-6.9l-3 3-2.6-.7-.7-2.6z"/></svg> Oficios Técnicos</h2>
                 <p class="catalog-aparte-intro">Oficios clásicos con salida laboral: electricidad, mecánica, soldadura, gas, refrigeración, herrería, carpintería y barbería.</p>
                 <div id="contenedor-oficios" class="cursos-grid"></div>
             </section>
 
             <!-- Terminalidad de secundaria y primaria para jóvenes y adultos. -->
             <section id="seccion-secundario" class="catalog-aparte" hidden>
-                <h2><span aria-hidden="true">📘</span> Terminar el Secundario</h2>
+                <h2><svg class="section-title-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19v15H5.5A1.5 1.5 0 0 0 4 19.5z"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 18H19v3H5.5A1.5 1.5 0 0 1 4 19.5z"/></svg> Terminar el Secundario</h2>
                 <p class="catalog-aparte-intro">Opciones para completar los estudios: CENS presenciales y a distancia, CEPAS con bachiller profesional, Plan FinEs/TEM para quienes adeudan materias y CEBJA.</p>
                 <div id="contenedor-secundario" class="cursos-grid"></div>
             </section>
@@ -573,11 +575,11 @@
 
     <!-- Scripts clasicos: son autonomos (IIFE) y tienen que correr antes que el
          modulo, que espera encontrar window.Orientador ya definido. -->
-    <script src="/js/orientador.js?v=20260827_01"></script>
-    <script src="/js/accesibilidad.js?v=20260827_01"></script>
-    <script src="/js/feedback.js?v=20260827_01"></script>
+    <script src="/js/orientador.js?v=20260903_10"></script>
+    <script src="/js/accesibilidad.js?v=20260903_10"></script>
+    <script src="/js/feedback.js?v=20260903_10"></script>
     <!-- El resto de la app vive en modulos ES; main.js es el punto de entrada. -->
-    <script type="module" src="/js/main.js?v=20260827_01"></script>
+    <script type="module" src="/js/main.js?v=20260903_10"></script>
 
     <!-- Service worker para que el sitio abra sin conexión. Vive en la raíz,
          igual que esta página, así su scope cubre todo el sitio: la app, los JSON

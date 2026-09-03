@@ -39,24 +39,37 @@ export function esCarreraArancelada(institucion, nombre) {
     return esUtn && !normalizarTexto(nombre).includes('ingenieria');
 }
 export function inferirTipoInstitucion(institucion) { const nombre = normalizarTexto(institucion.nombre); return institucion.nivel === 'universidad' || nombre.includes('universidad') || nombre.includes('universitario') || nombre.includes('utn') ? 'universidades' : (nombre.includes('ies') || nombre.includes('instituto superior') ? 'ies' : 'centros'); }
-export function getFormacion(carrera) { const texto = normalizarTexto(`${carrera.categoria} ${carrera.nombre_carrera}`); const sinRecursos = texto.replace(/\brecursos\b/g, ''); return texto.includes('profesorado') ? 'profesorados' : (texto.includes('tecnicatura') || texto.includes('tecnico') || texto.includes('pregrado') ? 'tecnicaturas' : (sinRecursos.includes('curso') || texto.includes('formacion profesional') ? 'cursos' : 'grado')); }
+export function getFormacion(carrera, nombreOpcional = '') {
+    const raw = typeof carrera === 'object' && carrera !== null
+        ? `${carrera.categoria || ''} ${carrera.nombre_carrera || carrera.nombre || ''}`
+        : `${carrera || ''} ${nombreOpcional || ''}`;
+    const texto = normalizarTexto(raw);
+    const tiene = (...terminos) => terminos.some(termino => texto.includes(normalizarTexto(termino)));
+    if (tiene('profesorado')) return 'profesorados';
+    if (tiene('tecnicatura', 'tecnico', 'pregrado')) return 'tecnicaturas';
+    const sinRecursos = texto.replace(/\brecursos\b/g, '');
+    if (tiene('curso', 'formacion profesional', 'capacitacion', 'taller', 'diplomatura') || sinRecursos.includes('curso')) return 'cursos';
+    return 'grado';
+}
 function getCategoryGroup(carrera) { const formacion = getFormacion(carrera); return formacion === 'tecnicaturas' ? 'pregrado' : (formacion === 'cursos' ? 'cursos' : 'grado'); }
 export function getArea(carrera) {
-    const nombre = normalizarTexto(carrera.nombre_carrera);
-    const tiene = (...terminos) => terminos.some(termino => nombre.includes(termino));
+    const raw = typeof carrera === 'object' && carrera !== null
+        ? (carrera.nombre_carrera || carrera.nombre || '')
+        : (carrera || '');
+    const nombre = normalizarTexto(raw);
+    const tiene = (...terminos) => terminos.some(termino => nombre.includes(normalizarTexto(termino)));
     if (tiene('ingenier')) return 'Ingeniería';
-    if (tiene('program', 'sistema', 'informat', 'comput', 'software', 'datos', 'data', 'inteligencia artificial', 'ciberseguridad', 'ciberdefensa', 'ciber', 'robotica', 'videojuego', 'web', 'cloud')) return 'Tecnología';
-    if (tiene('medicin', 'enfermer', 'kinesi', 'nutric', 'odont', 'farmac', 'fonoaudi', 'obstetric', 'terapia', 'radiolog', 'bioquim', 'salud', 'anestesia', 'instrumentacion quirurg')) return 'Salud';
-    if (tiene('administracion', 'contador', 'contad', 'marketing', 'comercio', 'negocio', 'finanza', 'econom', 'recursos humanos', 'logistica', 'secretariado', 'gestion empresarial')) return 'Negocios';
-    if (tiene('diseno', 'arquitect', 'multimedia', 'interiorismo', 'indumentaria', 'animacion')) return 'Diseño';
-    if (tiene('profesorado', 'educacion', 'pedagog', 'didact')) return 'Educación';
-    if (tiene('turismo', 'hoteler', 'guia de turismo')) return 'Turismo';
-    if (tiene('gastronom', 'cocina', 'pasteler', 'panader')) return 'Gastronomía';
-    if (tiene('ingles', 'idioma', 'portugues', 'frances', 'traduccion', 'interpretacion', 'italiano', 'chino', 'coreano', 'aleman', 'japones')) return 'Idiomas';
-    if (tiene('arte', 'musica', 'teatro', 'escenograf', 'danza', 'cine', 'fotograf', 'audiovisual', 'ilustracion', 'canto', 'coral', 'organo', 'instrumento', 'ceramica artistica')) return 'Arte';
-    if (tiene('diagnostico por imagenes', 'quirofano', 'podolog')) return 'Salud';
-    if (tiene('ambient', 'agronom', 'biolog', 'geolog', 'forestal', 'veterin', 'quimic', 'hidric')) return 'Ambiente';
-    if (tiene('mecanic', 'electric', 'carpinter', 'refrigeracion', 'soldadur', 'construccion', 'automotor', 'gasista', 'plomer')) return 'Oficios';
+    if (tiene('program', 'sistema', 'informat', 'comput', 'software', 'datos', 'data', 'inteligencia artificial', 'ciberseguridad', 'ciberdefensa', 'ciber', 'robotica', 'videojuego', 'web', 'cloud', 'telecomunicacion', 'ia desde cero', 'desarrollo de software', 'seguridad informatica')) return 'Tecnología';
+    if (tiene('medicin', 'enfermer', 'kinesi', 'nutric', 'odont', 'farmac', 'fonoaudi', 'obstetric', 'terapia', 'radiolog', 'bioquim', 'salud', 'anestesia', 'instrumentacion quirurg', 'diagnostico por imagenes', 'quirofano', 'podolog', 'terapeutico', 'anatomia patologica', 'bioimagenes', 'gerontolog', 'primeros auxilios', 'salud mental', 'psicologia')) return 'Salud';
+    if (tiene('administracion', 'contador', 'contad', 'marketing', 'comercio', 'negocio', 'finanza', 'econom', 'recursos humanos', 'logistica', 'secretariado', 'gestion empresarial', 'ventas', 'seguros', 'banc', 'comercializacion', 'community manager', 'martillero', 'corredor inmobiliario', 'inmobiliari', 'aduan', 'despachante de aduana', 'gestion aeroportuaria', 'siniestro', 'emprendimiento', 'gestion del liderazgo')) return 'Negocios';
+    if (tiene('diseno', 'arquitect', 'multimedia', 'interiorismo', 'indumentaria', 'animacion', 'fotograf', 'grafic', 'audiovisual', 'publicidad')) return 'Diseño';
+    if (tiene('profesorado', 'educacion', 'pedagog', 'didact', 'docencia', 'ensenanza')) return 'Educación';
+    if (tiene('turismo', 'hoteler', 'guia de turismo', 'hospitalidad', 'viajes', 'recreacion', 'guia de alta montana', 'trekking', 'gestion de recursos turisticos', 'gestion turistica')) return 'Turismo';
+    if (tiene('gastronom', 'cocina', 'pasteler', 'panader', 'chef', 'sommelier', 'enolog', 'vino', 'cocteler', 'bartender', 'sensorial de vinos', 'cata de vinos', 'finca vitivinicola', 'vitivinicola', 'laboratorio vitivinicola', 'bromatolog')) return 'Gastronomía';
+    if (tiene('ingles', 'idioma', 'portugues', 'frances', 'traduccion', 'interpretacion', 'italiano', 'chino', 'coreano', 'aleman', 'japones', 'lengua de senas', 'lengua extranjera')) return 'Idiomas';
+    if (tiene('arte', 'musica', 'teatro', 'escenograf', 'danza', 'cine', 'ilustracion', 'canto', 'coral', 'organo', 'instrumento', 'ceramica artistica', 'actor', 'actriz', 'artes visuales', 'artes plasticas', 'piano', 'guitarra', 'composicion musical', 'bellas artes')) return 'Arte';
+    if (tiene('ambient', 'agronom', 'biolog', 'geolog', 'forestal', 'veterin', 'quimic', 'hidric', 'ecolog', 'apicultur', 'paisajis', 'agro', 'recursos naturales', 'botanica', 'zoolog', 'ciencias de la tierra', 'geografia', 'geografo', 'fisica', 'matematica')) return 'Ambiente';
+    if (tiene('mecanic', 'electric', 'carpinter', 'refrigeracion', 'soldadur', 'construccion', 'automotor', 'gasista', 'plomer', 'cerrajeri', 'torner', 'herreri', 'pintur', 'albanil', 'mantenimiento', 'instalacion', 'oficio', 'pilot', 'buceo', 'drone', 'drones', 'aeronaut', 'chofer', 'conductor', 'barberia', 'peluqueri', 'electricista', 'ceramica industrial')) return 'Oficios';
     return 'Ciencias sociales';
 }
 export function obtenerModalidades(modalidad) { const texto = normalizarTexto(modalidad); const valores = []; if (texto.includes('presencial')) valores.push('presencial'); if (texto.includes('online') || texto.includes('virtual') || texto.includes('distancia')) valores.push('online'); if (texto.includes('hibrid')) valores.push('híbrida'); return valores.length ? valores : ['presencial']; }

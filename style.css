@@ -11,7 +11,7 @@
        caían a Montserrat normal y la jerarquía título/cuerpo no existía. */
     --font-title: Montserrat, sans-serif;
     --peso-title: 800;
-    --font-detail: "Bebas Neue", sans-serif;
+    --font-detail: Montserrat, sans-serif;
     --font-text: Montserrat, sans-serif;
     /* Progreso de scroll del header (0 = arriba del todo, 1 = header ya achicado).
        Lo actualiza app.js en cada cuadro mientras se hace scroll. */
@@ -97,14 +97,6 @@
     --on-purple: #FFFFFF;
     /* Borde de controles de formulario: --line queda en ~1.3:1 y la norma pide 3:1. */
     --line-strong: rgba(27, 24, 48, .48);
-
-    /* Acá vivía la familia --neu-*: las dos sombras opuestas del mismo tono que
-       la superficie que le daban a cada pieza el aspecto de estar extruída del
-       fondo. El relieve se sacó de todo el sitio, así que las variables se van
-       con él en lugar de quedar como peso muerto. Las superficies ahora se
-       distinguen por su color (--surface contra --bg) y por --line; lo único que
-       conserva sombra es lo que de verdad flota sobre la página, y eso usa la
-       escalera --elev-* de más arriba. */
 }
 
 html[data-theme="dark"] {
@@ -120,17 +112,23 @@ html[data-theme="dark"] {
     --on-accent: #09101c;
     --shadow: rgba(0, 0, 0, 0.4);
 
+    --purple: #a855f7;
+    --orange: #fb923c;
+    --green:  #4ade80;
+    --blue:   #818cf8;
+    --teal:   #2dd4bf;
+
     --orange-ink: #fdba74;
     --green-ink:  #86efac;
     --blue-ink:   #93c5fd;
-    --purple-ink: #d8b4fe;
+    --purple-ink: #e9d5ff;
     --teal-ink:   #5eead4;
     
-    --badge-orange: color-mix(in srgb, #fdba74 15%, transparent);
-    --badge-green:  color-mix(in srgb, #86efac 15%, transparent);
-    --badge-blue:   color-mix(in srgb, #93c5fd 15%, transparent);
-    --badge-purple: color-mix(in srgb, #d8b4fe 15%, transparent);
-    --badge-teal:   color-mix(in srgb, #5eead4 15%, transparent);
+    --badge-orange: color-mix(in srgb, #fb923c 24%, transparent);
+    --badge-green:  color-mix(in srgb, #22c55e 24%, transparent);
+    --badge-blue:   color-mix(in srgb, #3b82f6 24%, transparent);
+    --badge-purple: color-mix(in srgb, #a855f7 24%, transparent);
+    --badge-teal:   color-mix(in srgb, #14b8a6 24%, transparent);
     
     --purple-fill: #d8b4fe;
     --on-purple: #09101c;
@@ -174,7 +172,7 @@ body {
     min-width: 320px;
     /* Reserva el alto del header expandido (lo mide app.js). El valor de reserva
        es solo por si el JS no llega a correr. */
-    padding-top: var(--hero-alto, 440px);
+    padding-top: var(--hero-alto, 360px);
     background: var(--bg);
     color: var(--text);
     font-family: var(--font-text);
@@ -252,6 +250,9 @@ button { cursor: pointer; }
        porcentajes, Chrome lo resuelve como 0. */
     --logo-w: min(100%, calc(var(--logo-w-expandido) - var(--scroll-progress) * (var(--logo-w-expandido) - var(--logo-w-compacto))));
     --bar-gap: 18px;
+    --search-w-expandido: 640px;
+    --search-w-compacto: 480px;
+    --search-w: min(calc(100% - var(--scroll-progress) * (var(--logo-w-compacto) + var(--bar-gap) + 60px)), calc(var(--search-w-expandido) - var(--scroll-progress) * (var(--search-w-expandido) - var(--search-w-compacto))));
     /* Cuánto sube el buscador para ponerse al lado del logo (margen negativo:
        también recorta el alto del header, cosa que un translateY no hace). */
     --search-lift: -58px;
@@ -278,9 +279,12 @@ button { cursor: pointer; }
 }
 /* Al achicarse, el contenido se ensancha para que el logo llegue al borde. */
 .hero-content { width: min(100%, calc(850px + var(--scroll-progress) * 700px)); margin: auto; }
+.brand-link,
 .brand-theme-toggle {
     position: relative; display: block; border: 0; background: transparent; outline-offset: 7px;
+    text-decoration: none;
     width: var(--logo-w);
+    max-width: var(--logo-w-expandido, 380px);
     /* De centrado (progreso 0) a pegado a la izquierda (progreso 1). El margen
        de abajo se va a 0 para que el header no conserve alto de más. */
     margin: 0 auto calc(1rem * (1 - var(--scroll-progress))) calc((100% - var(--logo-w)) * (1 - var(--scroll-progress)) / 2);
@@ -290,15 +294,86 @@ button { cursor: pointer; }
     background-color: color-mix(in srgb, var(--surface-soft) calc(var(--scroll-progress) * 100%), transparent);
     box-shadow: 0 calc(var(--scroll-progress) * 6px) calc(var(--scroll-progress) * 18px) rgba(0, 0, 0, calc(var(--scroll-progress) * .16));
 }
+.brand-link:focus-visible,
 .brand-theme-toggle:focus-visible { outline: 2px solid var(--accent); }
 /* El width/height del HTML reserva la proporción antes de que cargue la imagen
    (evita que la página salte); acá se lo deja fluido dentro del botón. */
-.brand-logo { display: block; width: 100%; height: auto; border-radius: var(--radius-sm); }
-.theme-hint { margin: .35rem 0 1.6rem; color: var(--muted); font-family: var(--font-detail); font-size: var(--fs-2xs); letter-spacing: .09em; text-transform: uppercase; }
+.brand-logo { display: block; width: 100%; max-width: 100%; height: auto; border-radius: var(--radius-sm); }
+
+/* Botón para alternar modo claro / oscuro: arriba a la derecha y centrado verticalmente al compactarse */
+.btn-theme-toggle {
+    position: absolute;
+    top: calc((1rem + env(safe-area-inset-top, 0px)) * (1 - var(--scroll-progress)) + 50% * var(--scroll-progress));
+    right: 1.25rem;
+    z-index: 100;
+    transform: translateY(calc(var(--scroll-progress) * -50%));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-round);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: var(--elev-1);
+    transition: background-color var(--dur-fast), border-color var(--dur-fast), transform var(--dur-fast), box-shadow var(--dur-fast);
+}
+@media (max-width: 600px) {
+    .btn-theme-toggle {
+        top: calc((0.65rem + env(safe-area-inset-top, 0px)) * (1 - var(--scroll-progress)) + 50% * var(--scroll-progress));
+        right: 0.75rem;
+        width: 38px;
+        height: 38px;
+    }
+}
+.hero--compacto .btn-theme-toggle {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btn-theme-toggle:hover {
+    background: var(--surface-soft);
+    border-color: var(--line-strong);
+    transform: translateY(calc(var(--scroll-progress) * -50%)) scale(1.06);
+}
+.hero--compacto .btn-theme-toggle:hover {
+    transform: translateY(-50%) scale(1.06);
+}
+.btn-theme-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+.btn-theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    flex-shrink: 0;
+    margin: auto;
+}
+html[data-theme="dark"] .theme-icon-sun { display: block; color: #facc15; }
+html[data-theme="dark"] .theme-icon-moon { display: none; }
+html[data-theme="light"] .theme-icon-sun { display: none; }
+html[data-theme="light"] .theme-icon-moon { display: block; color: #6366f1; }
+
+.hero-bajada {
+    margin: .35rem 0 1.5rem;
+    color: var(--muted);
+    font-size: var(--fs-xs);
+    font-weight: 500;
+    letter-spacing: .02em;
+}
+.theme-hint { margin: .35rem 0 1.6rem; color: var(--muted); font-size: var(--fs-2xs); letter-spacing: .04em; }
 /* Montserrat 800 en tamaños de título: el tracking negativo evita que se vea
    suelta y apelmazada, que es lo que pasa con las geométricas pesadas. */
-h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
+h1, h2, .section-tab-texto strong {
     font-family: var(--font-title); font-weight: var(--peso-title); letter-spacing: -.015em;
+}
+.card-title, .curso-title, .platform-name {
+    font-family: var(--font-title); font-weight: 700; letter-spacing: -.01em;
 }
 
 /* Contenido secundario del header (texto de bienvenida y botones): se desvanece
@@ -309,14 +384,20 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
     overflow: hidden;
 }
 .hero--compacto .hero-secondary { pointer-events: none; visibility: hidden; }
+.hero--compacto .search-container {
+    margin-left: calc(var(--logo-w-compacto) + var(--bar-gap));
+    margin-right: auto;
+    margin-top: var(--search-lift);
+    width: var(--search-w);
+}
 
 /* 4. BUSCADOR Y BOTONES DEL ENCABEZADO. */
 .search-container {
-    /* Se angosta y sube (con margen negativo, que sí recorta el alto del header)
-       hasta quedar a la derecha del logo, en la misma fila. La reducción se
-       calcula en px puros: multiplicar un grupo que contiene min() da mal. */
-    width: calc(100% - var(--scroll-progress) * (var(--logo-w-compacto) + var(--bar-gap)));
-    margin: calc(var(--scroll-progress) * var(--search-lift)) 0 0 auto;
+    /* Se angosta, reduce su ancho para no saturar la pantalla y sube
+       hasta quedar a la derecha del logo, en la misma fila sin superponerse. */
+    width: var(--search-w);
+    max-width: var(--search-w-expandido, 640px);
+    margin: calc(var(--scroll-progress) * var(--search-lift)) auto 0 calc((100% - var(--search-w)) * (1 - var(--scroll-progress)) / 2 + var(--scroll-progress) * (var(--logo-w-compacto) + var(--bar-gap)));
     /* Fila: el buscador se estira y el botón de filtros (solo en celular) va al lado. */
     display: flex; align-items: center; gap: .5rem;
     /* Ancla la lupa (ver ::before). */
@@ -602,19 +683,189 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
    tiene relieve: sumarles otro par de sombras a cada una convierte el interior de
    la card en ruido y compite con la jerarquía. El color funcional ya los separa
    del fondo con 4.6:1 o más, que es lo que importa. */
-.badge { padding: .23rem .5rem; border-radius: var(--radius-pill); color: var(--muted); background: color-mix(in srgb, var(--muted) 12%, transparent); font-family: var(--font-detail); font-size: var(--fs-2xs); font-weight: 400; letter-spacing: .045em; text-transform: uppercase; }
-/* Mismo aspecto de siempre (tinte del color + texto del color), pero el texto usa
-   la variante -ink: el matiz puro sobre su propio tinte no llegaba a 4.5:1. */
-.badge-area { color: var(--orange-ink); background: var(--badge-orange); }
-.badge-publica { color: var(--blue-ink); background: var(--badge-blue); }
-.badge-privada { color: var(--purple-ink); background: var(--badge-purple); }
-.badge-modalidad { color: var(--green-ink); background: var(--badge-green); }
-.badge-arancelada { color: var(--orange-ink); background: var(--badge-orange); }
-.badge-fuente { color: var(--purple-ink); background: var(--badge-purple); }
-.badge-match { color: var(--purple-ink); background: var(--badge-purple); }
-.card-title { margin: var(--space-4) 0 var(--space-3); font-size: var(--fs-lg); line-height: 1.3; overflow-wrap: anywhere; }
-.card-info { color: var(--muted); font-size: var(--fs-xs); display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
-.card-info p { margin: 0; display: inline-flex; align-items: center; gap: var(--space-1); padding: var(--space-1) var(--space-3); border-radius: var(--radius-xs); background: color-mix(in srgb, var(--muted) 9%, transparent); }
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    padding: .28rem .65rem;
+    border-radius: var(--radius-pill);
+    color: var(--text);
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    font-family: var(--font-text);
+    font-size: var(--fs-2xs);
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+.badge-categoria {
+    color: var(--blue-ink);
+    background: var(--badge-blue);
+    border-color: color-mix(in srgb, var(--blue-ink) 35%, transparent);
+}
+.badge-publica {
+    color: var(--green-ink);
+    background: var(--badge-green);
+    border-color: color-mix(in srgb, var(--green-ink) 35%, transparent);
+}
+.badge-privada {
+    color: var(--purple-ink);
+    background: var(--badge-purple);
+    border-color: color-mix(in srgb, var(--purple-ink) 35%, transparent);
+}
+.badge-modalidad {
+    color: var(--teal-ink);
+    background: var(--badge-teal);
+    border-color: color-mix(in srgb, var(--teal-ink) 35%, transparent);
+}
+.badge-area {
+    color: var(--orange-ink);
+    background: var(--badge-orange);
+    border-color: color-mix(in srgb, var(--orange-ink) 35%, transparent);
+}
+.badge-arancelada {
+    color: var(--orange-ink);
+    background: var(--badge-orange);
+    border-color: color-mix(in srgb, var(--orange-ink) 35%, transparent);
+}
+.badge-fuente {
+    color: var(--purple-ink);
+    background: var(--badge-purple);
+    border-color: color-mix(in srgb, var(--purple-ink) 35%, transparent);
+}
+.badge-match {
+    color: #ffffff;
+    background: linear-gradient(135deg, #059669, #10b981);
+    border-color: rgba(52, 211, 153, 0.6);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+}
+.card-title {
+    margin: var(--space-3) 0 var(--space-2);
+    font-size: 1.0625rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+.card-info {
+    color: var(--muted);
+    font-size: var(--fs-xs);
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    margin-bottom: auto;
+}
+.card-institucion-row {
+    margin: 0;
+    font-size: var(--fs-sm);
+    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+}
+.card-institucion-row .meta-svg {
+    color: var(--accent-ink);
+    width: 16px;
+    height: 16px;
+}
+.card-facultad-row {
+    margin: 0;
+    font-size: var(--fs-2xs);
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+}
+.card-facultad-row .meta-svg {
+    color: var(--muted);
+    width: 14px;
+    height: 14px;
+}
+.card-meta-row {
+    margin: .25rem 0 0;
+    font-size: var(--fs-xs);
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    flex-wrap: wrap;
+}
+.card-meta-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+}
+.card-meta-row .meta-svg {
+    color: var(--muted);
+    width: 14px;
+    height: 14px;
+}
+.card-meta-sep {
+    color: var(--line-strong);
+    font-weight: 700;
+    opacity: .5;
+}
+
+/* Iconos vectoriales en tarjetas y botones */
+.meta-svg {
+    width: 14px;
+    height: 14px;
+    max-width: 14px;
+    max-height: 14px;
+    display: inline-block;
+    flex-shrink: 0;
+    vertical-align: -2px;
+}
+.badge .meta-svg {
+    width: 13px;
+    height: 13px;
+    max-width: 13px;
+    max-height: 13px;
+    color: currentColor;
+    vertical-align: -1px;
+}
+.btn-svg {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    flex-shrink: 0;
+    vertical-align: -1px;
+    transition: transform var(--dur-fast) ease, fill var(--dur-fast) ease, stroke var(--dur-fast) ease;
+}
+.btn-favorito.is-active .btn-svg {
+    fill: currentColor;
+}
+.btn-comparar:not(.is-active) .btn-svg-check {
+    display: none;
+}
+.btn-comparar.is-active .btn-svg-add {
+    display: none;
+}
+.card-cta-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--line);
+}
+.card-cta-group .card-link-ben {
+    margin-top: 0;
+}
+.card-link-oficial {
+    font-size: var(--fs-2xs);
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+    padding: .35rem .6rem;
+    border-radius: var(--radius-xs);
+    background: var(--surface-soft);
+    transition: color var(--dur-fast), background var(--dur-fast);
+}
+.card-link-oficial:hover {
+    color: var(--text);
+    background: color-mix(in srgb, var(--accent) 15%, var(--surface));
+}
 .card-link {
     display: inline-flex;
     align-items: center;
@@ -633,19 +884,11 @@ h1, h2, .card-title, .curso-title, .platform-name, .section-tab-texto strong {
 .instituciones-list a.link-institucion { color: var(--accent-ink); text-decoration: none; }
 .instituciones-list a.link-institucion:hover { text-decoration: underline; }
 .card-link-muted { color: var(--muted); min-height: 32px; display: inline-flex; align-items: center; }
-/* Enlace a la ficha propia de BEN. Queda arriba del enlace al sitio oficial:
-   es el que mantiene a la persona adentro del buscador. Ambos enlaces cuentan
-   con touch targets mínimos de 44px y separación para evitar clics accidentales
-   en navegadores móviles (Instagram WebView). */
 .card-link-ben {
     color: var(--purple-ink);
     margin-top: auto;
 }
 .card-link-ben:hover { color: var(--accent-ink); }
-.card-link-ben + .card-link,
-.card-link-ben + span.card-link {
-    margin-top: var(--space-2);
-}
 .empty-state {
     grid-column: 1 / -1; padding: 3rem 1rem; color: var(--muted);
     text-align: center; font-size: var(--fs-base);
@@ -774,7 +1017,7 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     color: var(--orange-ink); font-family: var(--font-title); font-size: var(--fs-xl);
     border: 1px dashed color-mix(in srgb, var(--orange) 45%, transparent);
 }
-.platform-name { margin: 0; font-family: var(--font-title); font-size: var(--fs-lg); overflow-wrap: anywhere; }
+.platform-name { margin: 0; font-size: 1.0625rem; line-height: 1.35; overflow-wrap: anywhere; }
 .platform-summary { margin: 0 0 .85rem; color: var(--muted); font-size: var(--fs-sm); line-height: 1.45; }
 .platform-meta { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: 1rem; }
 .platform-link {
@@ -794,14 +1037,14 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .catalog-aparte-intro { margin: 0 0 1.4rem; color: var(--muted); font-size: var(--fs-base); }
 .cursos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(265px, 1fr)); gap: 1rem; }
 .curso-card { display: flex; flex-direction: column; padding: 1.15rem; --card-tono: var(--seccion); }
-.curso-title { margin: var(--space-4) 0 var(--space-3); font-family: var(--font-title); font-size: var(--fs-lg); line-height: 1.3; overflow-wrap: anywhere; }
+.curso-title { margin: var(--space-3) 0 var(--space-2); font-size: 1.0625rem; line-height: 1.35; overflow-wrap: anywhere; }
 
 /* Tarjeta simple (Terminar el Secundario): sin badges arriba, así que el título
    no necesita el margen superior que lo separaba de ellos. */
 .curso-card-simple .curso-title { margin-top: 0; margin-bottom: var(--space-1); }
 .curso-subtitulo { margin: 0 0 var(--space-3); color: var(--seccion-ink); font-family: var(--font-detail); font-size: var(--fs-base); letter-spacing: .03em; }
 .curso-descripcion { margin: 0 0 var(--space-5); color: var(--muted); font-size: var(--fs-sm); line-height: 1.5; }
-.badge-seccion { color: var(--seccion-ink); background: color-mix(in srgb, var(--seccion) 16%, transparent); }
+.badge-seccion { color: var(--seccion-ink); background: color-mix(in srgb, var(--seccion) 22%, transparent); border-color: color-mix(in srgb, var(--seccion-ink) 35%, transparent); }
 
 /* Plataformas que aparecen al buscar dentro de Educación Formal. */
 .platform-matches {
@@ -825,16 +1068,30 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 70;
     display: flex; flex-direction: column; align-items: flex-end; gap: .75rem;
 }
-/* Burbuja de apertura: se oculta cuando la ventana está abierta (.is-abierto)
-   y durante el test a pantalla completa. */
 .btn-chat-toggle {
-    display: grid; place-items: center;
-    width: 60px; height: 60px; padding: 0; border: 0; border-radius: var(--radius-round);
-    color: var(--on-purple); background: var(--purple-fill);
-    box-shadow: var(--elev-3); font-size: 1.5rem; line-height: 1;
-    transition: transform var(--dur-base) ease, filter var(--dur-base) ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid var(--purple);
+    border-radius: var(--radius-round);
+    background: var(--surface);
+    box-shadow: var(--elev-3);
+    cursor: pointer;
+    transition: transform var(--dur-base) ease, filter var(--dur-base) ease, box-shadow var(--dur-base) ease;
 }
-.btn-chat-toggle:hover { transform: translateY(-2px) scale(1.04); filter: brightness(1.06); }
+.btn-chat-toggle:hover {
+    transform: translateY(-2px) scale(1.06);
+    filter: brightness(1.04);
+    box-shadow: var(--elev-4);
+}
+.btn-chat-toggle:focus-visible {
+    outline: 2px solid var(--purple);
+    outline-offset: 3px;
+}
 .copiloto-panel.is-abierto .btn-chat-toggle { display: none; }
 
 /* Ventana de chat flotante: la tarjeta que aparece sobre la burbuja. */
@@ -1112,7 +1369,16 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 @media (max-width: 820px) {
     body { padding-top: var(--hero-alto, 380px); }
     /* Desenfoque más chico: en celulares es la operación más cara del scroll. */
-    .hero { --hero-pad-top: 2.75rem; --hero-pad-bottom: 2rem; --logo-w-compacto: 140px; --search-lift: -54px; --bar-gap: 12px; --blur-max: 20px; }
+    .hero {
+        --hero-pad-top: 2.75rem;
+        --hero-pad-bottom: 2rem;
+        --logo-w-compacto: 140px;
+        --search-w-expandido: 600px;
+        --search-w-compacto: 440px;
+        --search-lift: -54px;
+        --bar-gap: 12px;
+        --blur-max: 20px;
+    }
     .mobile-filter-button { display: inline-flex; justify-content: center; min-width: 44px; min-height: 44px; }
     /* Compactado queda poco ancho al lado del logo: se deja solo el ícono. */
     .hero--compacto .mobile-filter-texto { display: none; }
@@ -1210,7 +1476,18 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
    ================================================================ */
 @media (max-width: 480px) {
     body { padding-top: var(--hero-alto, 360px); }
-    .hero { --hero-pad-top: 2rem; --hero-pad-bottom: 1.5rem; --logo-w-expandido: 300px; --logo-w-compacto: 110px; --search-lift: -45px; --bar-gap: 8px; --blur-max: 16px; padding-inline: 1rem; }
+    .hero {
+        --hero-pad-top: 2rem;
+        --hero-pad-bottom: 1.5rem;
+        --logo-w-expandido: 300px;
+        --logo-w-compacto: 110px;
+        --search-w-expandido: 100%;
+        --search-w-compacto: 280px;
+        --search-lift: -45px;
+        --bar-gap: 8px;
+        --blur-max: 16px;
+        padding-inline: 1rem;
+    }
     /* El padding izquierdo NO baja a 1rem: la lupa sigue estando y el texto le
        quedaba encima. Solo se ajusta lo demás. */
     .search-input { min-height: 44px; padding: .75rem 1rem .75rem 2.6rem; font-size: var(--fs-sm); }
@@ -1780,20 +2057,6 @@ html[data-tts="true"] .btn-escuchar-card {
     object-fit: cover;
     border-radius: 50%;
     display: block;
-}
-.btn-chat-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    overflow: hidden;
-    background: transparent;
-    border: 2px solid var(--purple);
-    box-shadow: var(--elev-3);
-    transition: transform var(--dur-base) ease;
-}
-.btn-chat-toggle:hover {
-    transform: scale(1.08);
 }
 .bienvenida-card-texto { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
 .bienvenida-card-primaria strong { font-family: var(--font-title); font-size: var(--fs-xl); line-height: 1.2; letter-spacing: -.015em; color: var(--text); }
@@ -2617,10 +2880,10 @@ html[data-contrast="high"] .btn-tipo-feedback.is-active {
     gap: .5rem;
     margin: 0;
     padding: .3rem .35rem .3rem .7rem;
-    border: 1px solid var(--borde);
-    border-radius: 999px;
-    background: var(--superficie-2, var(--superficie));
-    color: var(--texto);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    background: var(--surface-soft);
+    color: var(--text);
     font-size: var(--fs-2xs);
     font-weight: 600;
 }
@@ -2641,6 +2904,32 @@ html[data-contrast="high"] .btn-tipo-feedback.is-active {
 }
 .chapa-recomendacion button:hover { background: var(--accent); color: var(--on-accent); }
 .chapa-recomendacion button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.section-title-svg {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: -4px;
+    margin-right: .45rem;
+    color: currentColor;
+    flex-shrink: 0;
+}
+.chapa-texto {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+}
+.favoritos-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+}
+.favoritos-toggle .btn-svg {
+    color: var(--orange-ink);
+}
+.favoritos-toggle.is-active .btn-svg {
+    fill: currentColor;
+}
 
 
 /* Enlaces del pie hacia el catálogo estático (/carreras/, /instituciones/).

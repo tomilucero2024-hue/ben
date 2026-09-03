@@ -5,9 +5,11 @@
 
 import { etiquetaCompatibilidad } from './copiloto.js';
 import { ETIQUETAS_FUENTE, buscarPorClave, catalogosAparte, enlacesBEN, ofertas, plataformas } from './datos.js';
-import { LIMITE_PAGINA, comparador, enComparador, estaEnFavoritos, estado, favoritos, sincronizarURL } from './estado.js';
+import { comparador, enComparador, estaEnFavoritos, estado, favoritos, sincronizarURL } from './estado.js';
 import { FILTROS_SOLO_FORMALES, cumpleFiltros, filtrarYOrdenar, obtenerRelacionadas } from './filtros.js';
 import { capSeguro, escaparHTML, normalizarTexto, urlSegura } from './util.js';
+
+export const LIMITE_PAGINA = 24;
 
 // Enlace interno a la ficha que BEN tiene de esa carrera. Va antes que el del
 // sitio oficial porque es el que mantiene a la persona adentro y el unico que
@@ -28,6 +30,18 @@ function enlaceInstitucionBEN(nombre) {
         ? `<a href="/institucion/${slug}/" class="link-institucion">${escaparHTML(capSeguro(nombre))}</a>`
         : escaparHTML(capSeguro(nombre));
 }
+
+// Iconos vectoriales limpios (SVG) para evitar emojis del sistema
+const SVG_INSTITUCION = `<svg class="meta-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10.5 12 5l9 5.5"/><path d="M5 10.5V19M9 10.5V19M15 10.5V19M19 10.5V19"/><path d="M3 19h18M2 22h20"/></svg>`;
+const SVG_FACULTAD = `<svg class="meta-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18"/><path d="M16 10h4a2 2 0 0 1 2 2v10"/><path d="M8 6h2M8 10h2M8 14h2M8 18h2M18 14h2M18 18h2"/></svg>`;
+const SVG_MODALIDAD = `<svg class="meta-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/></svg>`;
+const SVG_DURACION = `<svg class="meta-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><polyline points="12 6 12 12 16 14"/></svg>`;
+const ICONO_FAVORITO = `<svg class="btn-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+const ICONO_COMPARAR = `<svg class="btn-svg btn-svg-add" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg><svg class="btn-svg btn-svg-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg>`;
+const ICONO_ESCUCHAR = `<svg class="btn-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>`;
+const SVG_FAVORITO = ICONO_FAVORITO;
+const SVG_COMPARAR = ICONO_COMPARAR;
+const SVG_ESCUCHAR = ICONO_ESCUCHAR;
 
 let resultadosActuales = [];
 export let visibles = LIMITE_PAGINA;
@@ -96,17 +110,17 @@ export function renderizarCursosAparte(contenedor, lista, simple = false) {
             </div>
             <h3 class="curso-title">${capSeguro(curso.nombre)}</h3>
             <div class="card-info">
-                <p>🏛️ <strong>${enlaceInstitucionBEN(curso.institucion)}</strong></p>
-                ${curso.provincia ? `<p>📍 ${capSeguro(curso.provincia)}</p>` : ''}
-                <p>⏳ ${capSeguro(curso.duracion)}</p>
+                <p class="card-institucion-row">${SVG_INSTITUCION} <strong>${enlaceInstitucionBEN(curso.institucion)}</strong></p>
+                ${curso.provincia ? `<p class="card-meta-row">${SVG_MODALIDAD} <span>${capSeguro(curso.provincia)}</span></p>` : ''}
+                <p class="card-meta-row">${SVG_DURACION} <span>${capSeguro(curso.duracion)}</span></p>
             </div>
             ${enlaceFichaBEN(curso.nombre)}
             ${urlSegura(curso.link)
                 ? `<a class="card-link" href="${escaparHTML(urlSegura(curso.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ir al sitio oficial ↗</a>`
                 : '<span class="card-link card-link-muted">Sin link oficial</span>'}
             <div class="card-actions">
-                <button type="button" class="btn-comparar${enComparador(curso._clave) ? ' is-active' : ''}" data-clave="${escaparHTML(curso._clave)}" aria-pressed="${enComparador(curso._clave)}" title="Agregar a comparar">${enComparador(curso._clave) ? '✓' : '+'} <span>Comparar</span></button>
-                <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(curso._clave)}" aria-label="Escuchar formación"><span aria-hidden="true">🔊</span> <span>Escuchar</span></button>
+                <button type="button" class="btn-comparar${enComparador(curso._clave) ? ' is-active' : ''}" data-clave="${escaparHTML(curso._clave)}" aria-pressed="${enComparador(curso._clave)}" title="Agregar a comparar">${ICONO_COMPARAR} <span>Comparar</span></button>
+                <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(curso._clave)}" aria-label="Escuchar formación">${ICONO_ESCUCHAR} <span>Escuchar</span></button>
             </div>
         </article>`).join('');
 }
@@ -169,15 +183,15 @@ export function renderizarPlataformas(contenedor, lista) {
             </div>
             <p class="platform-summary">${capSeguro(plataforma.resumen)}</p>
             <div class="platform-meta">
-                <span class="badge badge-modalidad">${capSeguro(plataforma.modalidad)}</span>
-                <span class="badge">⏳ ${capSeguro(plataforma.duracion)}</span>
+                <span class="badge badge-modalidad">${SVG_MODALIDAD} ${capSeguro(plataforma.modalidad)}</span>
+                <span class="badge">${SVG_DURACION} ${capSeguro(plataforma.duracion)}</span>
             </div>
             ${urlSegura(plataforma.url)
                 ? `<a class="platform-link" href="${escaparHTML(urlSegura(plataforma.url))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ver oferta en ${capSeguro(plataforma.nombre)} ↗</a>`
                 : '<span class="platform-link platform-link-muted">Sitio oficial no disponible</span>'}
             <div class="card-actions">
-                <button type="button" class="btn-comparar${enComparador(plataforma._clave) ? ' is-active' : ''}" data-clave="${escaparHTML(plataforma._clave)}" aria-pressed="${enComparador(plataforma._clave)}" title="Agregar a comparar">${enComparador(plataforma._clave) ? '✓' : '+'} <span>Comparar</span></button>
-                <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(plataforma._clave)}" aria-label="Escuchar plataforma"><span aria-hidden="true">🔊</span> <span>Escuchar</span></button>
+                <button type="button" class="btn-comparar${enComparador(plataforma._clave) ? ' is-active' : ''}" data-clave="${escaparHTML(plataforma._clave)}" aria-pressed="${enComparador(plataforma._clave)}" title="Agregar a comparar">${ICONO_COMPARAR} <span>Comparar</span></button>
+                <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(plataforma._clave)}" aria-label="Escuchar plataforma">${ICONO_ESCUCHAR} <span>Escuchar</span></button>
             </div>
         </article>`).join('');
 }
@@ -326,7 +340,7 @@ export function mostrarResultados() {
     }
 
     const btnFav = document.getElementById('btnFavoritos');
-    if (btnFav) btnFav.classList.toggle('active', estado.favoritos);
+    if (btnFav && btnFav.classList) btnFav.classList.toggle('active', estado.favoritos);
     mostrarPlataformasCoincidentes();
 }
 
@@ -419,26 +433,23 @@ export function renderizarTarjetas(resultados, { mostrarMatch = false, encabezad
         <article class="card">
             <div class="card-badges">
                 ${mostrarMatch ? `<span class="badge badge-match">${etiquetaCompatibilidad(oferta.score)}</span>` : ''}
-                ${oferta.fuente ? `<span class="badge badge-fuente">${escaparHTML(ETIQUETAS_FUENTE[oferta.fuente] || oferta.fuente)}</span>` : ''}
-                <span class="badge">${capSeguro(oferta.categoria)}</span>
-                <span class="badge badge-area">${capSeguro(oferta.area)}</span>
-                ${!oferta.fuente || oferta.fuente === 'formal' ? `<span class="badge badge-${oferta.gestion === 'pública' ? 'publica' : 'privada'}">${oferta.gestion === 'pública' ? 'Pública' : 'Privada'}</span>` : ''}
-                ${oferta.gestion === 'pública' && oferta.costo === 'arancelado' ? '<span class="badge badge-arancelada">Arancelada</span>' : ''}
-                <span class="badge badge-modalidad">${capSeguro(oferta.modalidad)}</span>
+                <span class="badge badge-categoria">${capSeguro(oferta.categoria)}</span>
+                ${!oferta.fuente || oferta.fuente === 'formal' ? `<span class="badge badge-${oferta.gestion === 'pública' ? 'publica' : 'privada'}">${oferta.gestion === 'pública' ? (oferta.costo === 'arancelado' ? 'Pública · Aranc.' : 'Pública') : 'Privada'}</span>` : ''}
             </div>
             <h3 class="card-title">${capSeguro(oferta.nombre)}</h3>
             <div class="card-info">
-                <p>🏛️ <strong>${enlaceInstitucionBEN(oferta.institucion)}</strong></p>
-                ${oferta.facultad ? `<p>🏫 ${capSeguro(oferta.facultad)}</p>` : ''}
-                <p>📍 ${capSeguro(oferta.modalidad)}</p>
-                <p>⏳ ${capSeguro(oferta.duracion)}</p>
+                <p class="card-institucion-row">${SVG_INSTITUCION} <strong>${enlaceInstitucionBEN(oferta.institucion)}</strong></p>
+                ${oferta.facultad ? `<p class="card-facultad-row">${SVG_FACULTAD} <span>${capSeguro(oferta.facultad)}</span></p>` : ''}
+                <p class="card-meta-row"><span>${SVG_MODALIDAD} ${capSeguro(oferta.modalidad)}</span> <span class="card-meta-sep">·</span> <span>${SVG_DURACION} ${capSeguro(oferta.duracion)}</span></p>
             </div>
-            ${enlaceFichaBEN(oferta.nombre)}
-            ${urlSegura(oferta.link) ? `<a class="card-link" href="${escaparHTML(urlSegura(oferta.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ir al sitio oficial ↗</a>` : '<span class="card-link card-link-muted">Formación online</span>'}
+            <div class="card-cta-group">
+                ${enlaceFichaBEN(oferta.nombre)}
+                ${urlSegura(oferta.link) ? `<a class="card-link-oficial" href="${escaparHTML(urlSegura(oferta.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Sitio oficial ↗</a>` : ''}
+            </div>
             <div class="card-actions">
-                <button type="button" class="btn-favorito${estaEnFavoritos(oferta._clave) ? ' is-active' : ''}" data-clave="${escaparHTML(oferta._clave)}" aria-pressed="${estaEnFavoritos(oferta._clave)}" title="Guardar en favoritos">${estaEnFavoritos(oferta._clave) ? '★' : '☆'} <span>Favorito</span></button>
-                <button type="button" class="btn-comparar${enComparador(oferta._clave) ? ' is-active' : ''}" data-clave="${escaparHTML(oferta._clave)}" aria-pressed="${enComparador(oferta._clave)}" title="Agregar a comparar">${enComparador(oferta._clave) ? '✓' : '+'} <span>Comparar</span></button>
-                <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(oferta._clave)}" aria-label="Escuchar carrera"><span aria-hidden="true">🔊</span> <span>Escuchar</span></button>
+                <button type="button" class="btn-favorito${estaEnFavoritos(oferta._clave) ? ' is-active' : ''}" data-clave="${escaparHTML(oferta._clave)}" aria-pressed="${estaEnFavoritos(oferta._clave)}" title="Guardar en favoritos">${ICONO_FAVORITO} <span>Favorito</span></button>
+                <button type="button" class="btn-comparar${enComparador(oferta._clave) ? ' is-active' : ''}" data-clave="${escaparHTML(oferta._clave)}" aria-pressed="${enComparador(oferta._clave)}" title="Agregar a comparar">${ICONO_COMPARAR} <span>Comparar</span></button>
+                <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(oferta._clave)}" aria-label="Escuchar carrera">${ICONO_ESCUCHAR} <span>Escuchar</span></button>
             </div>
         </article>`).join('');
 }
@@ -493,9 +504,9 @@ export function renderizarTarjetasConCompatibilidad(resultados, rankings) {
             </div>` : ''}
             ${enlaceFichaBEN(carrera.nombre)}
             <div class="card-actions">
-                <button type="button" class="btn-favorito${estaEnFavoritos(clave) ? ' is-active' : ''}" data-clave="${escaparHTML(clave)}" aria-pressed="${estaEnFavoritos(clave)}" title="Guardar en favoritos">${estaEnFavoritos(clave) ? '★' : '☆'} <span>Favorito</span></button>
-                <button type="button" class="btn-comparar${enComparador(clave) ? ' is-active' : ''}" data-clave="${escaparHTML(clave)}" aria-pressed="${enComparador(clave)}" title="Agregar a comparar">${enComparador(clave) ? '✓' : '+'} <span>Comparar</span></button>
-                <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(clave)}" aria-label="Escuchar carrera"><span aria-hidden="true">🔊</span> <span>Escuchar</span></button>
+                <button type="button" class="btn-favorito${estaEnFavoritos(clave) ? ' is-active' : ''}" data-clave="${escaparHTML(clave)}" aria-pressed="${estaEnFavoritos(clave)}" title="Guardar en favoritos">${ICONO_FAVORITO} <span>Favorito</span></button>
+                <button type="button" class="btn-comparar${enComparador(clave) ? ' is-active' : ''}" data-clave="${escaparHTML(clave)}" aria-pressed="${enComparador(clave)}" title="Agregar a comparar">${ICONO_COMPARAR} <span>Comparar</span></button>
+                <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(clave)}" aria-label="Escuchar carrera">${ICONO_ESCUCHAR} <span>Escuchar</span></button>
             </div>
         </article>`;
     }).join('');
@@ -511,15 +522,20 @@ export function actualizarBotonesActivos() {
 // del orden de tabulación: sin esto, en celular se tabulaba por ~35 botones
 // invisibles antes de llegar a los resultados. Solo aplica en modo cajón; en
 // escritorio el panel está a la vista y tiene que seguir siendo navegable.
-const mqCajonFiltros = window.matchMedia('(max-width: 820px)');
+const mqCajonFiltros = typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+    ? window.matchMedia('(max-width: 820px)')
+    : { matches: false, addEventListener() {}, removeEventListener() {} };
 
 export function sincronizarInertFiltros() {
+    if (typeof document === 'undefined') return;
     const panel = document.getElementById('filtersSidebar');
     if (!panel) return;
     panel.inert = mqCajonFiltros.matches && !document.body.classList.contains('filters-open');
 }
 
-mqCajonFiltros.addEventListener('change', sincronizarInertFiltros);
+if (mqCajonFiltros && mqCajonFiltros.addEventListener) {
+    mqCajonFiltros.addEventListener('change', sincronizarInertFiltros);
+}
 
 export function cambiarPanelFiltros(abrir) {
     document.body.classList.toggle('filters-open', abrir);
