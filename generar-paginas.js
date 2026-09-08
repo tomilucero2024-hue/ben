@@ -229,16 +229,13 @@ function modalidadCanonica(texto) {
 
 // Devuelve los años que dura, o null si el texto no lo dice con claridad.
 // Se usa solo para redactar el resumen; el dato crudo siempre se muestra igual.
-function aniosDe(texto) {
-    const n = normalizar(texto);
-    const anios = n.match(/(\d+(?:[.,]\d+)?)\s*a[nñ]os?/);
-    if (anios) return parseFloat(anios[1].replace(',', '.'));
-    const meses = n.match(/(\d+(?:[.,]\d+)?)\s*meses?/);
-    if (meses) return parseFloat(meses[1].replace(',', '.')) / 12;
-    const cuatri = n.match(/(\d+)\s*cuatrimestres?/);
-    if (cuatri) return parseInt(cuatri[1], 10) / 2;
-    return null;
-}
+// La duración se interpreta y se resume con las MISMAS funciones que usa la
+// app (js/util.js). Antes había acá una copia propia (aniosDe) que no entendía
+// los números escritos con letras —"cinco años" no contaba para nada— así que
+// la app y estas páginas podían decir cosas distintas de la misma carrera.
+// Se completan en main(), que es donde se puede await-ear el módulo ES.
+let duracionCorta;
+let obtenerDuracionEnAnios;
 
 function listaEnEspanol(items) {
     const l = items.filter(Boolean);
@@ -357,12 +354,22 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : `<link rel="canon
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
     (() => {
+        let t = 'light';
         try {
             const g = localStorage.getItem('ben-theme');
-            const t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
         } catch (e) {}
+        // El logo se elige acá, antes de que el parser vea el <img>: antes venía
+        // el claro en el src y se cambiaba al oscuro después, con lo cual en
+        // tema oscuro se bajaban los dos archivos (~150 KB en vez de 75).
+        window.LOGO_BEN = t === 'dark' ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+        const pre = document.createElement('link');
+        pre.rel = 'preload';
+        pre.as = 'image';
+        pre.href = window.LOGO_BEN;
+        document.head.appendChild(pre);
     })();
 </script>
 <link rel="stylesheet" href="/paginas.css?v=${SELLO}">
@@ -372,7 +379,8 @@ ${bloques}
 <header class="cabecera">
     <div class="envoltorio">
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
-            <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
@@ -399,12 +407,6 @@ ${cuerpo}
     </div>
 </footer>
 <script>
-    // El logo claro es el que viene en el HTML (así se ve bien sin JS). Si el
-    // tema es oscuro se cambia por el suyo.
-    if (document.documentElement.dataset.theme === 'dark') {
-        document.querySelector('.marca img').src = '/logo-ben-dark.png';
-    }
-
     // Autocompletado en vivo en la barra de búsqueda estática
     (() => {
         const inp = document.getElementById('q');
@@ -415,7 +417,7 @@ ${cuerpo}
         async function cargarIndex() {
             if (dataIndex) return dataIndex;
             try {
-                const res = await fetch('/data/enlaces-ben.json');
+                const res = await fetch('/data/autocompletado-ben.json');
                 if (res.ok) dataIndex = await res.json();
             } catch (e) {}
             return dataIndex;
@@ -440,14 +442,15 @@ ${cuerpo}
                 return;
             }
 
+            // El indice guarda [slug, nombre]: la clave sirve para buscar y el
+            // nombre es el que se muestra, con sus tildes y mayusculas.
+            const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let html = '';
-            matchesCarreras.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            matchesCarreras.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + esc(titulo) + '</span><span class="mini-search-item-badge">Carrera</span></a>';
             });
-            matchesInst.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            matchesInst.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + esc(titulo) + '</span><span class="mini-search-item-badge">Institución</span></a>';
             });
 
             drop.innerHTML = html;
@@ -722,7 +725,7 @@ function resumenCarrera(carrera) {
     // Primera frase directa y optimizada para el fragmento de Google (CTR)
     partes.push(`Dónde estudiar ${carrera.nombre}${donde}: ${tipoFormacion} del área ${carrera.area}, dictada por ${cuantasInst}${detalleGestion}.`);
 
-    const anios = carrera.ofertas.map(o => aniosDe(o.duracion)).filter(a => a && a > 0);
+    const anios = carrera.ofertas.map(o => obtenerDuracionEnAnios(o.duracion)).filter(a => a && a > 0);
     if (anios.length) {
         const min = Math.min(...anios);
         const max = Math.max(...anios);
@@ -794,7 +797,7 @@ function tarjetaOferta(oferta, { mostrarInstitucion = true, id = null } = {}) {
         : (oferta.carrera ? `<a href="/carrera/${oferta.carrera.slug}/">${esc(oferta.nombre)}</a>` : esc(oferta.nombre));
 
     const datos = [];
-    if (oferta.duracion) datos.push(`Duración: ${esc(oferta.duracion)}`);
+    if (oferta.duracion) datos.push(`Duración: ${esc(duracionCorta(oferta.duracion))}`);
     if (oferta.modalidad) datos.push(`Modalidad: ${esc(oferta.modalidad)}`);
     if (oferta.turno) datos.push(`Turno: ${esc(oferta.turno)}`);
     if (mostrarInstitucion && inst.provincia) datos.push(esc(inst.provincia));
@@ -827,9 +830,13 @@ function paginaCarrera(carrera) {
     // "A confirmar" / "No especificada" son ausencia de dato, no una duracion.
     // En la lista de cada institucion se muestran igual (ahi decir "no sabemos"
     // es informacion), pero en el resumen de arriba solo ensucian.
+    // Se resume cada duracion antes de deduplicar. Con los textos crudos, "4
+    // años" y "La carrera se cursa en cuatro años." contaban como dos valores
+    // distintos y la ficha terminaba mostrando la oracion entera al lado del
+    // numero, separadas por un punto medio.
     const duraciones = [...new Set(carrera.ofertas
-        .map(o => o.duracion)
-        .filter(d => d && !/^(a confirmar|no especificad[ao]|sin especificar|-+)$/i.test(normalizar(d))))];
+        .map(o => duracionCorta(o.duracion))
+        .filter(d => d && normalizar(d) !== 'a confirmar'))];
 
     const relacionadas = (carrera.areaRef ? carrera.areaRef.carreras : [])
         .filter(c => c.clave !== carrera.clave)
@@ -882,7 +889,7 @@ ${dimensionesTop.map(d => `        <li class="aptitud-item">
     const cuantasInstTxt = nombresInst.length === 1 ? 'la siguiente institución' : `${nombresInst.length} instituciones`;
     const respDonde = `Podés estudiar ${carrera.nombre} ${ubicacionStr} en ${cuantasInstTxt}: ${listaInstTxt}. En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una.`;
 
-    const anios = carrera.ofertas.map(o => aniosDe(o.duracion)).filter(a => a && a > 0);
+    const anios = carrera.ofertas.map(o => obtenerDuracionEnAnios(o.duracion)).filter(a => a && a > 0);
     let duracionesTxt = '';
     if (anios.length) {
         const min = Math.min(...anios);
@@ -974,7 +981,7 @@ ${relacionadas.map(c => `        <li><a href="/carrera/${c.slug}/">${esc(c.nombr
                 item: {
                     '@type': 'Course',
                     name: `${carrera.nombre} — ${o.institucion.nombre}`,
-                    description: `${carrera.nombre} en ${o.institucion.nombre}.${o.duracion ? ` Duración: ${o.duracion}.` : ''}${o.modalidad ? ` Modalidad: ${o.modalidad}.` : ''}`,
+                    description: `${carrera.nombre} en ${o.institucion.nombre}.${o.duracion ? ` Duración: ${duracionCorta(o.duracion)}.` : ''}${o.modalidad ? ` Modalidad: ${o.modalidad}.` : ''}`,
                     url: `${DOMINIO}${ruta}#oferta-${i + 1}`,
                     ...(o.link ? { sameAs: o.link } : {}),
                     provider: {
@@ -1522,11 +1529,33 @@ function mapaEnlaces(modelo) {
     return JSON.stringify({ carreras, instituciones }, null, 0);
 }
 
+// Índice del autocompletado de las páginas estáticas: clave de búsqueda -> [slug, nombre].
+//
+// Va en su propio archivo y no dentro de enlaces-ben.json a propósito. Ese lo
+// carga la app en cada visita y solo necesita el slug; sumarle los nombres lo
+// llevaba de 50 KB a 102 KB para todos. Acá los nombres los pagan únicamente
+// las páginas estáticas, y recién cuando alguien escribe en el buscador chico.
+//
+// Hacen falta porque las claves de enlaces-ben.json están normalizadas (sin
+// tildes, en minúscula) para poder buscar, y el autocompletado las estaba
+// usando también como texto a mostrar: ofrecía "Enfermeria profesional" y
+// "Universidad nacional de cuyo".
+function mapaAutocompletado(modelo) {
+    const carreras = {};
+    modelo.carreras.forEach(c => (c.clavesFusionadas || [c.clave]).forEach(k => { carreras[k] = [c.slug, c.nombre]; }));
+    const instituciones = {};
+    modelo.instituciones.forEach(i => { instituciones[normalizar(i.nombre)] = [i.slug, i.nombre]; });
+    return JSON.stringify({ carreras, instituciones }, null, 0);
+}
+
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 
-function main() {
+async function main() {
+    // js/util.js es un modulo ES y este script es CommonJS, asi que el import
+    // va aca adentro. Se resuelve antes de generar la primera pagina.
+    ({ duracionCorta, obtenerDuracionEnAnios } = await import('./js/util.js'));
     console.log('Generando paginas estaticas...');
 
     SALIDAS.forEach(dir => fs.rmSync(path.join(RAIZ, dir), { recursive: true, force: true }));
@@ -1552,6 +1581,7 @@ function main() {
     emitir(modelo.carreras.map(paginaCarrera), '0.6');
 
     escribir('data/enlaces-ben.json', mapaEnlaces(modelo));
+    escribir('data/autocompletado-ben.json', mapaAutocompletado(modelo));
     escribir('404.html', paginaError());
     escribir('sitemap.xml', sitemap(rutas));
     escribir('robots.txt', robots());
@@ -1559,7 +1589,7 @@ function main() {
     const peso = rutas.slice(1).reduce((total, { ruta }) =>
         total + fs.statSync(path.join(RAIZ, ruta.replace(/^\//, ''), 'index.html')).size, 0);
 
-    console.log(`OK: ${rutas.length - 1} paginas + 404.html + sitemap.xml + robots.txt + data/enlaces-ben.json (${(peso / 1024 / 1024).toFixed(1)} MB)`);
+    console.log(`OK: ${rutas.length - 1} paginas + 404.html + sitemap.xml + robots.txt + data/enlaces-ben.json + data/autocompletado-ben.json (${(peso / 1024 / 1024).toFixed(1)} MB)`);
 }
 
 main();

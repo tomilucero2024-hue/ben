@@ -30,15 +30,25 @@
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
     (() => {
+        let t = 'light';
         try {
             const g = localStorage.getItem('ben-theme');
-            const t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
         } catch (e) {}
+        // El logo se elige acá, antes de que el parser vea el <img>: antes venía
+        // el claro en el src y se cambiaba al oscuro después, con lo cual en
+        // tema oscuro se bajaban los dos archivos (~150 KB en vez de 75).
+        window.LOGO_BEN = t === 'dark' ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+        const pre = document.createElement('link');
+        pre.rel = 'preload';
+        pre.as = 'image';
+        pre.href = window.LOGO_BEN;
+        document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260903_10">
+<link rel="stylesheet" href="/paginas.css?v=20260908_06">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Turismo","item":"https://buscadoreducativo.com.ar/area/turismo/"},{"@type":"ListItem","position":4,"name":"Tecnicatura Superior en Turismo y Hotelería","item":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-turismo-y-hoteleria/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Tecnicatura Superior en Turismo y Hotelería","numberOfItems":4,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-turismo-y-hoteleria/#oferta-1","item":{"@type":"Course","name":"Tecnicatura Superior en Turismo y Hotelería — IES 9-006 Francisco H. Tolosa","description":"Tecnicatura Superior en Turismo y Hotelería en IES 9-006 Francisco H. Tolosa. Duración: 3 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-turismo-y-hoteleria/#oferta-1","sameAs":"https://ens9006-infd.mendoza.edu.ar/sitio/turismo/","provider":{"@type":"EducationalOrganization","name":"IES 9-006 Francisco H. Tolosa","url":"https://buscadoreducativo.com.ar/institucion/ies-9-006-francisco-h-tolosa/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-turismo-y-hoteleria/#oferta-2","item":{"@type":"Course","name":"Tecnicatura Superior en Turismo y Hotelería — IES 9-018 (Malargüe)","description":"Tecnicatura Superior en Turismo y Hotelería en IES 9-018 (Malargüe). Duración: 3 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-turismo-y-hoteleria/#oferta-2","sameAs":"https://ies9018malargue.edu.ar/tecnicatura-superior-en-turismo-y-hoteleria-2024/","provider":{"@type":"EducationalOrganization","name":"IES 9-018 (Malargüe)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-018-malargue/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-turismo-y-hoteleria/#oferta-3","item":{"@type":"Course","name":"Tecnicatura Superior en Turismo y Hotelería — IES 9-024 (Lavalle)","description":"Tecnicatura Superior en Turismo y Hotelería en IES 9-024 (Lavalle). Duración: 3 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-turismo-y-hoteleria/#oferta-3","sameAs":"https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-turismo-y-hoteleria","provider":{"@type":"EducationalOrganization","name":"IES 9-024 (Lavalle)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-024-lavalle/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-turismo-y-hoteleria/#oferta-4","item":{"@type":"Course","name":"Tecnicatura Superior en Turismo y Hotelería — Instituto Maipú de Educación Integral (IMEI)","description":"Tecnicatura Superior en Turismo y Hotelería en Instituto Maipú de Educación Integral (IMEI). Duración: 3 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-turismo-y-hoteleria/#oferta-4","sameAs":"https://maipu-infd.mendoza.edu.ar/sitio/","provider":{"@type":"EducationalOrganization","name":"Instituto Maipú de Educación Integral (IMEI)","url":"https://buscadoreducativo.com.ar/institucion/instituto-maipu-de-educacion-integral-imei/"}}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Tecnicatura Superior en Turismo y Hotelería en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Tecnicatura Superior en Turismo y Hotelería en Mendoza en 4 instituciones: IES 9-006 Francisco H. Tolosa, IES 9-018 (Malargüe), IES 9-024 (Lavalle) y Instituto Maipú de Educación Integral (IMEI). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Tecnicatura Superior en Turismo y Hotelería?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 3 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Tecnicatura Superior en Turismo y Hotelería?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Tecnicatura Superior en Turismo y Hotelería?","acceptedAnswer":{"@type":"Answer","text":"Tecnicatura Superior en Turismo y Hotelería es una tecnicatura perteneciente al área de Turismo. Entre sus aptitudes más afines se destacan: trabajo práctico, interacción social, trabajo de campo y al aire libre y movilidad geográfica."}}]}</script>
@@ -47,7 +57,8 @@
 <header class="cabecera">
     <div class="envoltorio">
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
-            <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
@@ -164,10 +175,10 @@
     <ul class="enlaces">
         <li><a href="/carrera/tecnicatura-superior-en-turismo/">Tecnicatura Superior en Turismo</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/licenciatura-en-turismo/">Licenciatura en Turismo</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/lic-en-turismo-y-hoteleria/">Lic. en Turismo y Hotelería</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/gestion-de-empresas-hoteleras/">Gestión de Empresas Hoteleras</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/guia-de-alta-montana-y-trekking/">Guía de Alta Montaña y Trekking</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/hoteleria/">Hotelería</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/lic-en-turismo-y-hoteleria/">Lic. en Turismo y Hotelería</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-gestion-turistica/">Licenciatura en Gestión Turística</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-universitaria-en-gestion-de-recursos-turisticos/">Tecnicatura Universitaria en Gestión de Recursos Turísticos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-universitaria-en-turismo-y-hoteleria/">Tecnicatura Universitaria en Turismo y Hotelería</a> <span class="cuantas">(1)</span></li>
@@ -189,12 +200,6 @@
     </div>
 </footer>
 <script>
-    // El logo claro es el que viene en el HTML (así se ve bien sin JS). Si el
-    // tema es oscuro se cambia por el suyo.
-    if (document.documentElement.dataset.theme === 'dark') {
-        document.querySelector('.marca img').src = '/logo-ben-dark.png';
-    }
-
     // Autocompletado en vivo en la barra de búsqueda estática
     (() => {
         const inp = document.getElementById('q');
@@ -205,7 +210,7 @@
         async function cargarIndex() {
             if (dataIndex) return dataIndex;
             try {
-                const res = await fetch('/data/enlaces-ben.json');
+                const res = await fetch('/data/autocompletado-ben.json');
                 if (res.ok) dataIndex = await res.json();
             } catch (e) {}
             return dataIndex;
@@ -230,14 +235,15 @@
                 return;
             }
 
+            // El indice guarda [slug, nombre]: la clave sirve para buscar y el
+            // nombre es el que se muestra, con sus tildes y mayusculas.
+            const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let html = '';
-            matchesCarreras.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            matchesCarreras.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + esc(titulo) + '</span><span class="mini-search-item-badge">Carrera</span></a>';
             });
-            matchesInst.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            matchesInst.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + esc(titulo) + '</span><span class="mini-search-item-badge">Institución</span></a>';
             });
 
             drop.innerHTML = html;

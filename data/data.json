@@ -1471,15 +1471,6 @@
                     "modalidad": "Presencial",
                     "facultad": "UM - Sede Central / Sede San Rafael",
                     "link_oficial": "https://um.edu.ar/carreras/medicina/"
-                },
-                {
-                    "id": 331,
-                    "nombre_carrera": "Entradas anteriores",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "UM",
-                    "link_oficial": "https://um.edu.ar/carreras/page/2/"
                 }
             ]
         },
@@ -1499,31 +1490,67 @@
                     "id": 400,
                     "nombre_carrera": "Abogacía",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
+                    "duracion": "4 años",
                     "modalidad": "Presencial",
                     "facultad": "UMaza - Sede Gran Mendoza",
                     "link_oficial": "https://www.umaza.edu.ar/landings/abogacia/inicio"
                 },
                 {
                     "id": 401,
+                    "nombre_carrera": "Abogacía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/abogaciaVDU/inicio"
+                },
+                {
+                    "id": 402,
                     "nombre_carrera": "Ingeniería en Agrimensura",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
+                    "duracion": "5 años",
                     "modalidad": "Presencial",
                     "facultad": "UMaza - Sede Gran Mendoza",
                     "link_oficial": "https://www.umaza.edu.ar/landings/agrimensura/inicio"
                 },
                 {
-                    "id": 402,
-                    "nombre_carrera": "Bioquímica",
+                    "id": 403,
+                    "nombre_carrera": "Licenciatura en Anatomía Patológica a distancia",
                     "categoria": "Grado / Carrera",
                     "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/anatomiapatologica/inicio"
+                },
+                {
+                    "id": 404,
+                    "nombre_carrera": "Licenciatura en Anestesiología a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/anestesiologia/inicio"
+                },
+                {
+                    "id": 405,
+                    "nombre_carrera": "Bioquímica",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
                     "modalidad": "Presencial",
                     "facultad": "UMaza - Sede Gran Mendoza",
                     "link_oficial": "https://www.umaza.edu.ar/landings/bioquimica/inicio"
                 },
                 {
-                    "id": 403,
+                    "id": 406,
+                    "nombre_carrera": "Licenciatura en Producción de Bioimágenes",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/bioimagenes"
+                },
+                {
+                    "id": 407,
                     "nombre_carrera": "Licenciatura en Comunicación Social",
                     "categoria": "Grado / Carrera",
                     "duracion": "Verificar en web oficial",
@@ -1532,265 +1559,409 @@
                     "link_oficial": "https://www.umaza.edu.ar/landings/comunicacionsocial/inicio"
                 },
                 {
-                    "id": 404,
+                    "id": 408,
                     "nombre_carrera": "Contador Público",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
+                    "duracion": "4 años",
                     "modalidad": "Presencial",
                     "facultad": "UMaza - Sede Gran Mendoza",
                     "link_oficial": "https://www.umaza.edu.ar/landings/contador/inicio"
                 },
                 {
-                    "id": 405,
-                    "nombre_carrera": "Farmacia",
+                    "id": 409,
+                    "nombre_carrera": "Contador Público",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
+                    "duracion": "4 años",
                     "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/farmacia/inicio"
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/contadorVDU/inicio"
                 },
                 {
-                    "id": 406,
+                    "id": 410,
+                    "nombre_carrera": "Tecnicatura en Cosmetología y Cosmiatría",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/cosmetologia-y-cosmiatria"
+                },
+                {
+                    "id": 411,
                     "nombre_carrera": "Dirección de Empresas",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
+                    "duracion": "5 años",
                     "modalidad": "Presencial",
                     "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/direccion-empresas/inicio"
+                    "link_oficial": "https://www.umaza.edu.ar/landings/direccion-empresas"
                 },
                 {
-                    "id": 407,
+                    "id": 412,
+                    "nombre_carrera": "Dirección de Empresas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/direccionempresasVDU/inicio"
+                },
+                {
+                    "id": 413,
+                    "nombre_carrera": "Dirección de Empresas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Sur",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/direcciondeempresasSSUR"
+                },
+                {
+                    "id": 414,
                     "nombre_carrera": "Profesorado en Educación Física",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
+                    "duracion": "4 años",
                     "modalidad": "Presencial",
                     "facultad": "UMaza - Sede Gran Mendoza",
                     "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisica/inicio"
                 },
                 {
-                    "id": 408,
+                    "id": 415,
+                    "nombre_carrera": "Profesorado en Educación Física",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaVDU/inicio"
+                },
+                {
+                    "id": 416,
+                    "nombre_carrera": "Profesorado en Educación Física",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Este",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaSE/inicio"
+                },
+                {
+                    "id": 417,
+                    "nombre_carrera": "Profesorado en Educación Física",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Sur",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaSS/inicio"
+                },
+                {
+                    "id": 418,
+                    "nombre_carrera": "Profesorado en Educación Física",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Malargüe",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicamalargue/inicio"
+                },
+                {
+                    "id": 419,
+                    "nombre_carrera": "Profesorado en Educación Física",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - General Alvear",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicagralalvear"
+                },
+                {
+                    "id": 420,
+                    "nombre_carrera": "Licenciatura en Educación Física a Distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaadistancia/inicio"
+                },
+                {
+                    "id": 421,
+                    "nombre_carrera": "Licenciatura en Educación Inicial a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacioninicial/inicio"
+                },
+                {
+                    "id": 422,
                     "nombre_carrera": "Licenciatura en Enología",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
+                    "duracion": "4 años",
                     "modalidad": "Presencial",
                     "facultad": "UMaza - Sede Gran Mendoza",
                     "link_oficial": "https://www.umaza.edu.ar/landings/enologia/inicio"
                 },
                 {
-                    "id": 409,
+                    "id": 423,
+                    "nombre_carrera": "Farmacia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/farmacia/inicio"
+                },
+                {
+                    "id": 424,
                     "nombre_carrera": "Licenciatura en Gastronomía",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
+                    "duracion": "4 años",
                     "modalidad": "Presencial",
                     "facultad": "UMaza - Sede Gran Mendoza",
                     "link_oficial": "https://www.umaza.edu.ar/landings/gastronomia/inicio"
                 },
                 {
-                    "id": 410,
-                    "nombre_carrera": "Locución",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/locucion/inicio"
-                },
-                {
-                    "id": 411,
-                    "nombre_carrera": "Kinesiología y Fisioterapia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/kinesiologia/inicio"
-                },
-                {
-                    "id": 412,
-                    "nombre_carrera": "Licenciatura en Nutrición",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/nutricion/inicio"
-                },
-                {
-                    "id": 413,
-                    "nombre_carrera": "Periodismo",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/periodismo/inicio"
-                },
-                {
-                    "id": 414,
-                    "nombre_carrera": "Musicoterapia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/musicoterapia/inicio"
-                },
-                {
-                    "id": 415,
-                    "nombre_carrera": "Podología Universitaria",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/podologia/inicio"
-                },
-                {
-                    "id": 416,
-                    "nombre_carrera": "Publicidad",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/publicidad/inicio"
-                },
-                {
-                    "id": 417,
-                    "nombre_carrera": "Realización Audiovisual",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/realizacionaudiovisual/inicio"
-                },
-                {
-                    "id": 418,
-                    "nombre_carrera": "Recursos Humanos",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanos/inicio"
-                },
-                {
-                    "id": 419,
-                    "nombre_carrera": "Licenciatura en Terapia Ocupacional",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/terapiaocupacional/inicio"
-                },
-                {
-                    "id": 420,
-                    "nombre_carrera": "Protección Comunitaria y Seguridad Urbana",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/proteccion-comunitaria-y-seguridad-urbana/inicio"
-                },
-                {
-                    "id": 421,
-                    "nombre_carrera": "Veterinaria",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/veterinaria/inicio"
-                },
-                {
-                    "id": 422,
-                    "nombre_carrera": "Tecnicatura en Cosmetología y Cosmiatría",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UMaza - Sede Gran Mendoza",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/cosmetologia-y-cosmiatria/inicio"
-                },
-                {
-                    "id": 423,
-                    "nombre_carrera": "Licenciatura en Anatomía Patológica a distancia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "A Distancia",
-                    "facultad": "UMaza - Campus Virtual",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/anatomiapatologica/inicio"
-                },
-                {
-                    "id": 424,
-                    "nombre_carrera": "Licenciatura en Anestesiología a distancia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "A Distancia",
-                    "facultad": "UMaza - Campus Virtual",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/anestesiologia/inicio"
-                },
-                {
                     "id": 425,
-                    "nombre_carrera": "Licenciatura en Educación Inicial a distancia",
+                    "nombre_carrera": "Licenciatura en Hemoterapia a distancia",
                     "categoria": "Grado / Carrera",
                     "duracion": "Verificar en web oficial",
-                    "modalidad": "A Distancia",
-                    "facultad": "UMaza - Campus Virtual",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/educacioninicial/inicio"
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/hemoterapia/inicio"
                 },
                 {
                     "id": 426,
                     "nombre_carrera": "Licenciatura en Instrumentación Quirúrgica a distancia",
                     "categoria": "Grado / Carrera",
                     "duracion": "Verificar en web oficial",
-                    "modalidad": "A Distancia",
-                    "facultad": "UMaza - Campus Virtual",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
                     "link_oficial": "https://www.umaza.edu.ar/landings/instrumentacionquirurgica/inicio"
                 },
                 {
                     "id": 427,
-                    "nombre_carrera": "Licenciatura en Hemoterapia a distancia",
+                    "nombre_carrera": "Kinesiología y Fisioterapia",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "A Distancia",
-                    "facultad": "UMaza - Campus Virtual",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/hemoterapia/inicio"
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/kinesiologia/inicio"
                 },
                 {
                     "id": 428,
-                    "nombre_carrera": "Licenciatura en Educación Física a distancia",
+                    "nombre_carrera": "Kinesiología y Fisioterapia",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "A Distancia",
-                    "facultad": "UMaza - Campus Virtual",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaadistancia/inicio"
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/kinesiologiaVDU/inicio"
                 },
                 {
                     "id": 429,
-                    "nombre_carrera": "Puericultura a distancia",
+                    "nombre_carrera": "Kinesiología y Fisioterapia",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "A Distancia",
-                    "facultad": "UMaza - Campus Virtual",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/puericultura/inicio"
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Este",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/kinesiologiaSE/inicio"
                 },
                 {
                     "id": 430,
-                    "nombre_carrera": "Profesorado para Profesionales a distancia",
+                    "nombre_carrera": "Locución",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "A Distancia",
-                    "facultad": "UMaza - Campus Virtual",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/profesoradoprofesionales/inicio"
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/locucion/inicio"
                 },
                 {
                     "id": 431,
-                    "nombre_carrera": "Licenciatura en Producción de Bioimágenes a distancia",
+                    "nombre_carrera": "Licenciatura en Matemática a distancia",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "A Distancia",
+                    "duracion": "1 año",
+                    "modalidad": "Presencial",
                     "facultad": "UMaza - Campus Virtual",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/bioimagenes/inicio"
+                    "link_oficial": "https://www.umaza.edu.ar/landings/matematica/inicio"
                 },
                 {
                     "id": 432,
-                    "nombre_carrera": "Licenciatura en Matemática a distancia",
+                    "nombre_carrera": "Musicoterapia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/musicoterapia/inicio"
+                },
+                {
+                    "id": 433,
+                    "nombre_carrera": "Licenciatura en Nutrición",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/nutricion/inicio"
+                },
+                {
+                    "id": 434,
+                    "nombre_carrera": "Licenciatura en Nutrición",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/nutricionVDU/inicio"
+                },
+                {
+                    "id": 435,
+                    "nombre_carrera": "Licenciatura en Nutrición",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Este",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/nutricionSE/inicio"
+                },
+                {
+                    "id": 436,
+                    "nombre_carrera": "Licenciatura en Nutrición",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Sur",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/nutricionSS/inicio"
+                },
+                {
+                    "id": 437,
+                    "nombre_carrera": "Periodismo",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/periodismo/inicio"
+                },
+                {
+                    "id": 438,
+                    "nombre_carrera": "Podología Universitaria",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/podologia/inicio"
+                },
+                {
+                    "id": 439,
+                    "nombre_carrera": "Podología Universitaria",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Ciclo de Complementación a distancia",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/ccc-podologia/inicio"
+                },
+                {
+                    "id": 440,
+                    "nombre_carrera": "Profesorado para Profesionales",
                     "categoria": "Grado / Carrera",
                     "duracion": "Verificar en web oficial",
-                    "modalidad": "A Distancia",
-                    "facultad": "UMaza - Campus Virtual",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/matematica/inicio"
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/profesoradoprofesionales/inicio"
+                },
+                {
+                    "id": 441,
+                    "nombre_carrera": "Protección Comunitaria y Seguridad Urbana",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/proteccion-comunitaria-y-seguridad-urbana"
+                },
+                {
+                    "id": 442,
+                    "nombre_carrera": "Publicidad",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/publicidad/inicio"
+                },
+                {
+                    "id": 443,
+                    "nombre_carrera": "Puericultura a Distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/puericultura/inicio"
+                },
+                {
+                    "id": 444,
+                    "nombre_carrera": "Realización Audiovisual",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/realizacionaudiovisual/inicio"
+                },
+                {
+                    "id": 445,
+                    "nombre_carrera": "Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanos/inicio"
+                },
+                {
+                    "id": 446,
+                    "nombre_carrera": "Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Este",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanosSE/inicio"
+                },
+                {
+                    "id": 447,
+                    "nombre_carrera": "Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Sur",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanosSS/inicio"
+                },
+                {
+                    "id": 448,
+                    "nombre_carrera": "Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanosuco"
+                },
+                {
+                    "id": 449,
+                    "nombre_carrera": "Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Ciclo de Complementación a distancia",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanos-ciclo-de-complementacion-a-distancia"
+                },
+                {
+                    "id": 450,
+                    "nombre_carrera": "Licenciatura en Terapia Ocupacional",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/terapiaocupacional/inicio"
+                },
+                {
+                    "id": 451,
+                    "nombre_carrera": "Licenciatura en Terapia Ocupacional",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Sur",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/terapiaocupacionalSS/inicio"
+                },
+                {
+                    "id": 452,
+                    "nombre_carrera": "Veterinaria",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/veterinaria/inicio"
                 }
             ]
         },
@@ -2055,49 +2226,265 @@
             },
             "carreras": [
                 {
-                    "id": 600,
-                    "nombre_carrera": "Abogacía",
+                    "id": 615,
+                    "nombre_carrera": "Licenciatura en Psicología",
                     "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
+                    "duracion": "5 año",
                     "modalidad": "Presencial",
                     "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia"
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-psicologia"
                 },
                 {
-                    "id": 601,
-                    "nombre_carrera": "Contador Público",
+                    "id": 616,
+                    "nombre_carrera": "Profesorado de Grado Universitario en Psicología para Nivel Secundario y Superior",
                     "categoria": "Grado / Carrera",
                     "duracion": "4 año",
                     "modalidad": "Presencial",
                     "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico"
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/profesorado-de-grado-universitario-en-psicologia-para-nivel-secundario-y-superior"
                 },
                 {
-                    "id": 602,
-                    "nombre_carrera": "Escribanía",
+                    "id": 617,
+                    "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia",
                     "categoria": "Grado / Carrera",
                     "duracion": "4 año",
                     "modalidad": "Presencial",
                     "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania"
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia"
                 },
                 {
-                    "id": 603,
-                    "nombre_carrera": "Licenciatura en Administración",
+                    "id": 618,
+                    "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia",
                     "categoria": "Grado / Carrera",
                     "duracion": "4 año",
-                    "modalidad": "Presencial",
+                    "modalidad": "A Distancia",
                     "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion"
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia"
                 },
                 {
-                    "id": 604,
-                    "nombre_carrera": "Licenciatura en Economía",
+                    "id": 619,
+                    "nombre_carrera": "Licenciatura en Criminalística",
                     "categoria": "Grado / Carrera",
                     "duracion": "4 año",
                     "modalidad": "Presencial",
                     "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia"
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica"
+                },
+                {
+                    "id": 631,
+                    "nombre_carrera": "Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia",
+                    "categoria": "Pregrado",
+                    "duracion": "3 año",
+                    "modalidad": "A Distancia",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
+                },
+                {
+                    "id": 632,
+                    "nombre_carrera": "Tecnicatura universitaria en Accidentología Vial",
+                    "categoria": "Pregrado",
+                    "duracion": "3 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-accidentologia-vial"
+                },
+                {
+                    "id": 634,
+                    "nombre_carrera": "Tecnicatura universitaria en Seguridad Ciudadana - Modalidad a Distancia",
+                    "categoria": "Pregrado",
+                    "duracion": "2 año",
+                    "modalidad": "A Distancia",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana"
+                },
+                {
+                    "id": 608,
+                    "nombre_carrera": "Profesorado de Grado Universitario",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario"
+                },
+                {
+                    "id": 609,
+                    "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana"
+                },
+                {
+                    "id": 610,
+                    "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral | A distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia"
+                },
+                {
+                    "id": 620,
+                    "nombre_carrera": "Profesorado Universitario en Lengua y Cultura Inglesa",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/profesorado-universitario-en-lengua-y-cultura-inglesa"
+                },
+                {
+                    "id": 621,
+                    "nombre_carrera": "Traductorado Público de Inglés",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles"
+                },
+                {
+                    "id": 622,
+                    "nombre_carrera": "Traductorado Público de Italiano",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano"
+                },
+                {
+                    "id": 623,
+                    "nombre_carrera": "Traductor Público de Portugués",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductor-publico-de-portugues"
+                },
+                {
+                    "id": 635,
+                    "nombre_carrera": "Sommelier Universitario",
+                    "categoria": "Pregrado",
+                    "duracion": "2 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-pregrado/sommelier-universitario"
+                },
+                {
+                    "id": 616,
+                    "nombre_carrera": "Licenciatura en Inglés",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/ciclos-de-complementacion-curricular/licenciatura-en-ingles"
+                },
+                {
+                    "id": 611,
+                    "nombre_carrera": "Licenciatura en Fonoaudiología",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-fonoaudiologia"
+                },
+                {
+                    "id": 612,
+                    "nombre_carrera": "Licenciatura en Obstetricia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-obstetricia"
+                },
+                {
+                    "id": 613,
+                    "nombre_carrera": "Medicina",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "6 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/medicina"
+                },
+                {
+                    "id": 614,
+                    "nombre_carrera": "Licenciatura en Calidad, Medio Ambiente e Higiene y Seguridad en el Trabajo",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-calidad-medio-ambiente-e-higiene-y-seguridad-en-el-trabajo"
+                },
+                {
+                    "id": 621,
+                    "nombre_carrera": "Maestría en Salud Pública y Seguridad Social",
+                    "categoria": "Pregrado",
+                    "duracion": "1 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-salud-publica-y-seguridad-social"
+                },
+                {
+                    "id": 622,
+                    "nombre_carrera": "Maestría en Ejercicio Físico y Salud",
+                    "categoria": "Pregrado",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-ejercicio-fisico-y-salud"
+                },
+                {
+                    "id": 623,
+                    "nombre_carrera": "Licenciatura en Enfermería",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "18 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-enfermeria"
+                },
+                {
+                    "id": 624,
+                    "nombre_carrera": "Licenciatura en Producción de Bioimágenes",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "18 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-produccion-de-bioimagenes"
+                },
+                {
+                    "id": 625,
+                    "nombre_carrera": "Licenciatura en Educación Física con Orientación en Fisiología del Trabajo Físico y Rendimiento Humano",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-educacion-fisica-con-orientacion-en-fisiologia-del-trabajo-fisico-y-rendimiento-humano"
+                },
+                {
+                    "id": 626,
+                    "nombre_carrera": "Licenciado en Educación Física (Salud)",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciado-en-educacion-fisica-salud"
+                },
+                {
+                    "id": 627,
+                    "nombre_carrera": "Licenciatura en Tecnologías de la Salud",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "18 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-tecnologias-de-la-salud"
+                },
+                {
+                    "id": 636,
+                    "nombre_carrera": "Tecnicatura Universitaria en Emergentología",
+                    "categoria": "Pregrado",
+                    "duracion": "2 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrados/tecnicatura-universitaria-en-emergentologia"
                 },
                 {
                     "id": 605,
@@ -2154,123 +2541,6 @@
                     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-turismo-y-hoteleria"
                 },
                 {
-                    "id": 611,
-                    "nombre_carrera": "Licenciatura en Fonoaudiología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-fonoaudiologia"
-                },
-                {
-                    "id": 612,
-                    "nombre_carrera": "Licenciatura en Obstetricia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-obstetricia"
-                },
-                {
-                    "id": 613,
-                    "nombre_carrera": "Medicina",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "6 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/medicina"
-                },
-                {
-                    "id": 614,
-                    "nombre_carrera": "Licenciatura en Calidad, Medio Ambiente e Higiene y Seguridad en el Trabajo",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-calidad-medio-ambiente-e-higiene-y-seguridad-en-el-trabajo"
-                },
-                {
-                    "id": 615,
-                    "nombre_carrera": "Licenciatura en Psicología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "5 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-psicologia"
-                },
-                {
-                    "id": 616,
-                    "nombre_carrera": "Profesorado de Grado Universitario en Psicología para Nivel Secundario y Superior",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/profesorado-de-grado-universitario-en-psicologia-para-nivel-secundario-y-superior"
-                },
-                {
-                    "id": 617,
-                    "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia"
-                },
-                {
-                    "id": 618,
-                    "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "A Distancia",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia"
-                },
-                {
-                    "id": 619,
-                    "nombre_carrera": "Licenciatura en Criminalística",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica"
-                },
-                {
-                    "id": 620,
-                    "nombre_carrera": "Profesorado Universitario en Lengua y Cultura Inglesa",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/profesorado-universitario-en-lengua-y-cultura-inglesa"
-                },
-                {
-                    "id": 621,
-                    "nombre_carrera": "Traductorado Público de Inglés",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles"
-                },
-                {
-                    "id": 622,
-                    "nombre_carrera": "Traductorado Público de Italiano",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano"
-                },
-                {
-                    "id": 623,
-                    "nombre_carrera": "Traductor Público de Portugués",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductor-publico-de-portugues"
-                },
-                {
                     "id": 624,
                     "nombre_carrera": "Técnico en Telecomunicaciones",
                     "categoria": "Pregrado",
@@ -2325,13 +2595,130 @@
                     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnicatura-universitaria-en-turismo-y-hoteleria"
                 },
                 {
-                    "id": 630,
-                    "nombre_carrera": "Tec. en Niñez, Adolescencia y Familia",
-                    "categoria": "Pregrado",
-                    "duracion": "3 año",
+                    "id": 641,
+                    "nombre_carrera": "Licenciatura en Administración Gastronómica",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "18 meses",
                     "modalidad": "Presencial",
                     "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-gastronomica"
+                },
+                {
+                    "id": 642,
+                    "nombre_carrera": "Licenciatura en Administración Hotelera",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "18 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-hotelera"
+                },
+                {
+                    "id": 643,
+                    "nombre_carrera": "Licenciatura en Dirección Creativa de Diseño y Publicidad",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-direccion-creativa-de-diseno-y-publicidad"
+                },
+                {
+                    "id": 644,
+                    "nombre_carrera": "Licenciatura en Turismo",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "18 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-turismo"
+                },
+                {
+                    "id": 610,
+                    "nombre_carrera": "Lic. en Turismo y Hotelería",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-turismo-y-hoteleria"
+                },
+                {
+                    "id": 626,
+                    "nombre_carrera": "Técnico/a Universitario/a en Ceremonial y Organización de Eventos",
+                    "categoria": "Pregrado",
+                    "duracion": "2 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos"
+                },
+                {
+                    "id": 600,
+                    "nombre_carrera": "Abogacía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia"
+                },
+                {
+                    "id": 601,
+                    "nombre_carrera": "Contador Público",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico"
+                },
+                {
+                    "id": 602,
+                    "nombre_carrera": "Escribanía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania"
+                },
+                {
+                    "id": 603,
+                    "nombre_carrera": "Licenciatura en Administración",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion"
+                },
+                {
+                    "id": 604,
+                    "nombre_carrera": "Licenciatura en Economía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia"
+                },
+                {
+                    "id": 652,
+                    "nombre_carrera": "Licenciatura en Administración de Salud",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud"
+                },
+                {
+                    "id": 653,
+                    "nombre_carrera": "Licenciatura en Analítica de Negocios",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios"
+                },
+                {
+                    "id": 654,
+                    "nombre_carrera": "Licenciatura en Seguridad Ciudadana",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana"
                 },
                 {
                     "id": 631,
@@ -2343,22 +2730,58 @@
                     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
                 },
                 {
-                    "id": 632,
-                    "nombre_carrera": "Tecnicatura universitaria en Accidentología Vial",
-                    "categoria": "Pregrado",
-                    "duracion": "3 año",
+                    "id": 621,
+                    "nombre_carrera": "Traductorado Público de Inglés",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
                     "modalidad": "Presencial",
                     "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-accidentologia-vial"
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles"
                 },
                 {
-                    "id": 633,
-                    "nombre_carrera": "Tecnicatura universitaria en Seguridad Ciudadana",
-                    "categoria": "Pregrado",
-                    "duracion": "2 año",
+                    "id": 622,
+                    "nombre_carrera": "Traductorado Público de Italiano",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
                     "modalidad": "Presencial",
                     "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana"
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano"
+                },
+                {
+                    "id": 617,
+                    "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia"
+                },
+                {
+                    "id": 618,
+                    "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "A Distancia",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia"
+                },
+                {
+                    "id": 619,
+                    "nombre_carrera": "Licenciatura en Criminalística",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica"
+                },
+                {
+                    "id": 631,
+                    "nombre_carrera": "Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia",
+                    "categoria": "Pregrado",
+                    "duracion": "3 año",
+                    "modalidad": "A Distancia",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
                 },
                 {
                     "id": 634,
@@ -2370,157 +2793,85 @@
                     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana"
                 },
                 {
-                    "id": 635,
-                    "nombre_carrera": "Sommelier Universitario",
-                    "categoria": "Pregrado",
-                    "duracion": "2 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-pregrado/sommelier-universitario"
-                },
-                {
-                    "id": 636,
-                    "nombre_carrera": "Tecnicatura Universitaria en Emergentología",
-                    "categoria": "Pregrado",
-                    "duracion": "2 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrados/tecnicatura-universitaria-en-emergentologia"
-                },
-                {
-                    "id": 637,
-                    "nombre_carrera": "Licenciatura en Enfermería",
+                    "id": 663,
+                    "nombre_carrera": "PROFESORADO DE GRADO UNIVERSITARIO",
                     "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-enfermeria"
-                },
-                {
-                    "id": 638,
-                    "nombre_carrera": "Licenciatura en Producción de Bioimágenes",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-produccion-de-bioimagenes"
-                },
-                {
-                    "id": 639,
-                    "nombre_carrera": "Licenciatura en Educación Física con Orientación en Fisiología del Trabajo Físico y Rendimiento Humano",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-educacion-fisica-con-orientacion-en-fisiologia-del-trabajo-fisico-y-rendimiento-humano"
-                },
-                {
-                    "id": 640,
-                    "nombre_carrera": "Licenciado en Educación Física (Salud)",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciado-en-educacion-fisica-salud"
-                },
-                {
-                    "id": 641,
-                    "nombre_carrera": "Licenciatura en Tecnologías de la Salud",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-tecnologias-de-la-salud"
-                },
-                {
-                    "id": 642,
-                    "nombre_carrera": "Licenciatura en Administración de Salud",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud"
-                },
-                {
-                    "id": 643,
-                    "nombre_carrera": "Licenciatura en Analítica de Negocios",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/licenciatura-en-analitica-de-negocios"
-                },
-                {
-                    "id": 644,
-                    "nombre_carrera": "Licenciatura en Inglés",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/ciclos-de-complementacion-curricular/licenciatura-en-ingles"
-                },
-                {
-                    "id": 645,
-                    "nombre_carrera": "Profesorado de Grado Universitario (Ciclo de Complementación - Psicología)",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
+                    "duracion": "2 años",
                     "modalidad": "Presencial",
                     "facultad": "UDA",
                     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario"
                 },
                 {
-                    "id": 646,
-                    "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral",
+                    "id": 664,
+                    "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral - Modalidad a distancia",
                     "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
+                    "duracion": "2 años",
                     "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana"
-                },
-                {
-                    "id": 647,
-                    "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral - Modalidad a Distancia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
-                    "modalidad": "A Distancia",
                     "facultad": "UDA",
                     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia"
                 },
                 {
-                    "id": 648,
-                    "nombre_carrera": "Licenciatura en Administración Gastronómica",
+                    "id": 600,
+                    "nombre_carrera": "Abogacía",
                     "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
+                    "duracion": "4 año",
                     "modalidad": "Presencial",
                     "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-gastronomica"
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia"
                 },
                 {
-                    "id": 649,
-                    "nombre_carrera": "Licenciatura en Administración Hotelera",
+                    "id": 603,
+                    "nombre_carrera": "Licenciatura en Administración",
                     "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
+                    "duracion": "4 año",
                     "modalidad": "Presencial",
                     "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-hotelera"
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion"
                 },
                 {
-                    "id": 650,
-                    "nombre_carrera": "Licenciatura en Dirección Creativa de Diseño y Publicidad",
+                    "id": 601,
+                    "nombre_carrera": "Contador Público",
                     "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
+                    "duracion": "4 año",
                     "modalidad": "Presencial",
                     "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-direccion-creativa-de-diseno-y-publicidad"
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico"
                 },
                 {
-                    "id": 651,
-                    "nombre_carrera": "Licenciatura en Turismo",
+                    "id": 604,
+                    "nombre_carrera": "Licenciatura en Economía",
                     "categoria": "Grado / Carrera",
-                    "duracion": "A confirmar",
+                    "duracion": "4 año",
                     "modalidad": "Presencial",
                     "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-turismo"
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia"
+                },
+                {
+                    "id": 602,
+                    "nombre_carrera": "Escribanía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania"
+                },
+                {
+                    "id": 670,
+                    "nombre_carrera": "LICENCIATURA EN ADMINISTRACIÓN DE SALUD",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud"
+                },
+                {
+                    "id": 671,
+                    "nombre_carrera": "LICENCIATURA EN ANALÍTICA DE NEGOCIOS",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "UDA",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios"
                 }
             ]
         },
@@ -2932,8 +3283,8 @@
                 {
                     "id": 1002,
                     "nombre_carrera": "Contador Público",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
+                    "categoria": "Pregrado",
+                    "duracion": "4 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/contador-publico?hsLang=es"
@@ -2951,7 +3302,7 @@
                     "id": 1004,
                     "nombre_carrera": "Tecnicatura Universitaria en Marketing y Publicidad Digital",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-marketing-y-publicidad-digital?hsLang=es"
@@ -2960,7 +3311,7 @@
                     "id": 1005,
                     "nombre_carrera": "Licenciatura en Comercialización - Marketing",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "4 años",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-comercializacion-marketing?hsLang=es"
@@ -2987,19 +3338,10 @@
                     "id": 1008,
                     "nombre_carrera": "Licenciatura en Criminología y Seguridad",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "4 años",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-criminologia-y-seguridad?hsLang=es"
-                },
-                {
-                    "id": 1009,
-                    "nombre_carrera": "Profesorado Universitario para el Nivel Secundario y Superior",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "1 año y medio",
-                    "modalidad": "Distancia",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/profesorado-universitario-para-el-nivel-secundario-y-superior?hsLang=es"
                 },
                 {
                     "id": 1011,
@@ -3020,11 +3362,11 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/escribania?hsLang=es"
                 },
                 {
-                    "id": 1012,
+                    "id": 1011,
                     "nombre_carrera": "Ingeniería en Innovación y Desarrollo",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/ingenieria-en-innovacion-y-desarrollo?hsLang=es"
                 },
@@ -3045,15 +3387,6 @@
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-agraria?hsLang=es"
-                },
-                {
-                    "id": 1015,
-                    "nombre_carrera": "Licenciatura en Administración de Servicios de Salud",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Presencial o Virtual",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-servicios-de-salud?hsLang=es"
                 },
                 {
                     "id": 1016,
@@ -3083,22 +3416,13 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-ciencia-politica-y-gobierno?hsLang=es"
                 },
                 {
-                    "id": 1019,
+                    "id": 1017,
                     "nombre_carrera": "Licenciatura en Comercio Internacional",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
+                    "categoria": "Pregrado",
+                    "duracion": "4 años",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-comercio-internacional?hsLang=es"
-                },
-                {
-                    "id": 1020,
-                    "nombre_carrera": "Licenciatura en Desarrollo de Negocios Inmobiliarios - CCC",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Virtual",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-desarrollo-de-negocios-inmobiliarios?hsLang=es"
                 },
                 {
                     "id": 1021,
@@ -3137,15 +3461,6 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-y-animacion-digital?hsLang=es"
                 },
                 {
-                    "id": 1025,
-                    "nombre_carrera": "Licenciatura en Educación",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Virtual",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-educacion?hsLang=es"
-                },
-                {
                     "id": 1026,
                     "nombre_carrera": "Licenciatura en Educación y Nuevas Tecnologías",
                     "categoria": "Grado / Carrera",
@@ -3153,24 +3468,6 @@
                     "modalidad": "Virtual",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-educacion-y-nuevas-tecnologias?hsLang=es"
-                },
-                {
-                    "id": 1027,
-                    "nombre_carrera": "Licenciatura en Emprendimiento - CCC",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Virtual",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-emprendimiento?hsLang=es"
-                },
-                {
-                    "id": 1028,
-                    "nombre_carrera": "Licenciatura en Gerontología - CCC",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Virtual",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-gerontologia?hsLang=es"
                 },
                 {
                     "id": 1029,
@@ -3209,10 +3506,10 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-informatica?hsLang=es"
                 },
                 {
-                    "id": 1033,
+                    "id": 1027,
                     "nombre_carrera": "Licenciatura en Instrumentación Quirúrgica",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "4 años",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-instrumentacion-quirurgica?hsLang=es"
@@ -3236,11 +3533,11 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-de-negocios-digitales?hsLang=es"
                 },
                 {
-                    "id": 1036,
+                    "id": 1030,
                     "nombre_carrera": "Licenciatura en Kinesiología y Fisioterapia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "categoria": "Pregrado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial en Campus Córdoba",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-kinesiologia-y-fisioterapia?hsLang=es"
                 },
@@ -3263,11 +3560,11 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-matematica?hsLang=es"
                 },
                 {
-                    "id": 1039,
+                    "id": 1033,
                     "nombre_carrera": "Licenciatura en Nutrición",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial en Campus Córdoba",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-nutricion?hsLang=es"
                 },
@@ -3290,11 +3587,11 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-produccion-de-bioimagenes?hsLang=es"
                 },
                 {
-                    "id": 1042,
+                    "id": 1036,
                     "nombre_carrera": "Licenciatura en Psicología",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "duracion": "4 años y medio",
+                    "modalidad": "Presencial en Campus Córdoba.",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-psicologia?hsLang=es"
                 },
@@ -3353,6 +3650,15 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-terapia-ocupacional-y-desarrollo-humano?hsLang=es"
                 },
                 {
+                    "id": 1009,
+                    "nombre_carrera": "Profesorado Universitario para el Nivel Secundario y Superior",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Distancia",
+                    "facultad": "S21",
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/profesorado-universitario-para-el-nivel-secundario-y-superior?hsLang=es"
+                },
+                {
                     "id": 1049,
                     "nombre_carrera": "Carrera de Medicina",
                     "categoria": "Grado / Carrera",
@@ -3380,16 +3686,52 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-deportiva?hsLang=es"
                 },
                 {
-                    "id": 1052,
-                    "nombre_carrera": "Licenciatura en Psicopedagogía - CCC",
+                    "id": 1047,
+                    "nombre_carrera": "Licenciatura en Administración Hotelera",
                     "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
+                    "duracion": "4 años",
                     "modalidad": "Virtual",
                     "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-psicopedagogia-ccc?hsLang=es"
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-hotelera?hsLang=es"
                 },
                 {
-                    "id": 1053,
+                    "id": 1048,
+                    "nombre_carrera": "Licenciatura en Administración de Infraestructura Tecnológica",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Virtual",
+                    "facultad": "S21",
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-infraestructura-tecnologica?hsLang=es"
+                },
+                {
+                    "id": 1049,
+                    "nombre_carrera": "Licenciatura en Administración Pública",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Virtual",
+                    "facultad": "S21",
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-publica?hsLang=es"
+                },
+                {
+                    "id": 1050,
+                    "nombre_carrera": "Licenciatura en Antropología Organizacional",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Virtual",
+                    "facultad": "S21",
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-antropologia-organizacional?hsLang=es"
+                },
+                {
+                    "id": 1051,
+                    "nombre_carrera": "Licenciatura en Fonoaudiología",
+                    "categoria": "Pregrado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "facultad": "S21",
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-fonoaudiologia?hsLang=es"
+                },
+                {
+                    "id": 1052,
                     "nombre_carrera": "Procurador",
                     "categoria": "Pregrado",
                     "duracion": "Verificar en página oficial",
@@ -3416,19 +3758,19 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-equipos-de-ventas?hsLang=es"
                 },
                 {
-                    "id": 1056,
+                    "id": 1055,
                     "nombre_carrera": "Tecnicatura en Dirección de Protocolo, Organización de Eventos y Relaciones Públicas",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-protocolo-organizacion-de-eventos-y-rrpp?hsLang=es"
                 },
                 {
-                    "id": 1057,
+                    "id": 1056,
                     "nombre_carrera": "Tecnicatura en Gestión Contable e Impositiva",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-contable-e-impositiva?hsLang=es"
@@ -3470,11 +3812,11 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-administracion-publica-y-gestion-de-politicas-publicas?hsLang=es"
                 },
                 {
-                    "id": 1062,
+                    "id": 1061,
                     "nombre_carrera": "Tecnicatura Universitaria en Atención Prehospitalaria de Emergencias",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "categoria": "Pregrado",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial en Campus Córdoba",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-atencion-prehospitalaria-de-emergencias?hsLang=es"
                 },
@@ -3497,11 +3839,11 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-desarrollo-de-videojuegos?hsLang=es"
                 },
                 {
-                    "id": 1065,
+                    "id": 1064,
                     "nombre_carrera": "Tecnicatura Universitaria en Enfermería",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "categoria": "Pregrado",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial en Campus Córdoba",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-enfermeria?hsLang=es"
                 },
@@ -3542,67 +3884,67 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-y-auditorias-ambientales?hsLang=es"
                 },
                 {
-                    "id": 1070,
+                    "id": 1069,
                     "nombre_carrera": "Tecnicatura Universitaria en Hidrocarburos y Geociencia",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-hidrocarburos-y-geociencia?hsLang=es"
                 },
                 {
-                    "id": 1071,
+                    "id": 1070,
                     "nombre_carrera": "Tecnicatura Universitaria en Promoción Comunitaria en Niñez y Adolescencia",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-promoci%C3%B3n-comunitaria-en-ni%C3%B1ez-y-adolescencia?hsLang=es"
                 },
                 {
-                    "id": 1072,
+                    "id": 1071,
                     "nombre_carrera": "Tecnicatura Universitaria en Redes Informáticas y Telecomunicaciones",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-redes-informaticas-y-telecomunicaciones?hsLang=es"
                 },
                 {
-                    "id": 1073,
+                    "id": 1072,
                     "nombre_carrera": "Tecnicatura Universitaria en Gestión de Clima Laboral en la Organización",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-de-clima-laboral-en-la-organizacion?hsLang=es"
                 },
                 {
-                    "id": 1074,
-                    "nombre_carrera": "Tecnicatura en Higiene y Seguridad Laboral",
+                    "id": 1073,
+                    "nombre_carrera": "Tecnicatura en Negocios Agroecológicos",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en web oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Virtual",
                     "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-higiene-y-seguridad-laboral?hsLang=es"
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-negocios-agroecologicos?hsLang=es"
+                },
+                {
+                    "id": 1074,
+                    "nombre_carrera": "Tecnicatura en Responsabilidad y Gestión Social",
+                    "categoria": "Pregrado",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Virtual",
+                    "facultad": "S21",
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-responsabilidad-y-gestion-social?hsLang=es"
                 },
                 {
                     "id": 1075,
-                    "nombre_carrera": "Licenciatura en Administración de Infraestructura Tecnológica",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
+                    "nombre_carrera": "Tecnicatura Universitaria en Estadística Aplicada y Análisis",
+                    "categoria": "Pregrado",
+                    "duracion": "2 años y medio",
                     "modalidad": "Virtual",
                     "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-infraestructura-tecnologica?hsLang=es"
-                },
-                {
-                    "id": 1076,
-                    "nombre_carrera": "Licenciatura en Administración Pública",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Virtual",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-publica?hsLang=es"
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-estadistica-aplicada-y-analisis-avanzado?hsLang=es"
                 }
             ]
         },

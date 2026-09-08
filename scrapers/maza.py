@@ -2,7 +2,31 @@ import json
 import os
 from pathlib import Path
 
-from scraper_utils import guardar_json, pedir_sopa
+import time
+
+from scraper_utils import duracion_por_plan, extraer_duracion, guardar_json, pedir_sopa
+
+# La landing de cada carrera no dice "duración" en ninguna parte, pero publica el
+# plan de estudios entero separado por año ("1er año … 5to año"): el último año
+# que aparece ES la duración. Antes esto ni se intentaba y las 33 carreras de la
+# UMaza salían todas con "Verificar en web oficial".
+SIN_DATO = "Verificar en web oficial"
+
+
+def duracion_de_landing(url, cache):
+    """Duración de una carrera leyendo su landing. Cachea por URL."""
+    if not url:
+        return SIN_DATO
+    if url in cache:
+        return cache[url]
+    time.sleep(0.4)  # no martillar el sitio: son ~40 fichas
+    sopa = pedir_sopa(url)
+    valor = SIN_DATO
+    if sopa is not None:
+        texto = sopa.get_text(" ")
+        valor = extraer_duracion(texto) or duracion_por_plan(texto) or SIN_DATO
+    cache[url] = valor
+    return valor
 
 # Rutas resueltas desde la ubicación de este archivo, para que los scripts
 # funcionen sin importar desde qué carpeta se los ejecute.
@@ -48,6 +72,7 @@ try:
     
     id_global = 400 # Arrancamos en 400 para no chocar con las otras facus
     contador = 0
+    cache_duracion = {}  # varias sedes pueden compartir landing
     
     for tarjeta in tarjetas:
         titulo = tarjeta.find('h5', class_='card-title')
@@ -73,17 +98,21 @@ try:
                     facultad_texto = f"UMaza - {sede}"
                     clave_memoria = f"{nombre_carrera} - {facultad_texto}"
                     
-                    # Verificamos si ya estaba guardada de antes
-                    if clave_memoria in carreras_viejas:
-                        umaza_data["carreras"].append(carreras_viejas[clave_memoria])
-                        print(f"  ⏭️ Recuperada: {nombre_carrera} ({sede})")
+                    # Solo se reusa lo guardado si ya traía una duración de
+                    # verdad; si quedó en el placeholder se vuelve a intentar.
+                    guardada = carreras_viejas.get(clave_memoria)
+                    if guardada and guardada.get("duracion") not in (SIN_DATO, "A confirmar", ""):
+                        umaza_data["carreras"].append(guardada)
+                        print(f"  ⏭️ Recuperada: {nombre_carrera} ({sede}) — {guardada['duracion']}")
                     else:
-                        print(f"  🔍 Cazada: {nombre_carrera} ({sede})")
+                        duracion = duracion_de_landing(link_real, cache_duracion)
+                        marca = "✅" if duracion != SIN_DATO else "❔"
+                        print(f"  {marca} Cazada: {nombre_carrera} ({sede}) — {duracion}")
                         umaza_data["carreras"].append({
                             "id": id_global,
                             "nombre_carrera": nombre_carrera,
                             "categoria": "Grado / Carrera",
-                            "duracion": "Verificar en web oficial", # Corta la bocha
+                            "duracion": duracion,
                             "modalidad": "Presencial",
                             "facultad": facultad_texto,
                             "link_oficial": link_real

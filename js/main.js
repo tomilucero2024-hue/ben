@@ -157,24 +157,18 @@ function configurarEventos() {
             if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
                 e.preventDefault();
                 limpiarRecomendacion();
-                if (inputBusqueda) inputBusqueda.value = '';
-                estado.texto = '';
-                estado.formacion = 'todos';
-                estado.institucion = 'todos';
-                estado.gestion = 'todos';
-                estado.modalidad = 'todos';
-                estado.costo = 'todos';
-                estado.duracionMin = null;
-                estado.duracionMax = null;
-                estado.area = 'todos';
+                // Antes esto repetía a mano el cuerpo de limpiarFiltros() y se
+                // olvidaba de actualizarBotonesActivos(): la grilla volvía a los
+                // 658 resultados pero los chips seguían resaltados en "Grado" y
+                // "Salud", así que el panel mostraba filtros que ya no estaban
+                // aplicados. Ahora los dos caminos comparten resetearFiltros().
+                resetearFiltros();
                 estado.favoritos = false;
-                estado.orden = 'default';
-                const minInput = document.getElementById('durationMin');
-                const maxInput = document.getElementById('durationMax');
-                if (minInput) minInput.value = '';
-                if (maxInput) maxInput.value = '';
+                // cambiarSeccion() ya repinta y llama a sincronizarURL(), que
+                // deja la URL en "/" con replaceState. Un pushState acá encima
+                // solo agregaba una entrada duplicada al historial: el botón
+                // Atrás cambiaba la URL sin cambiar la vista (no hay popstate).
                 cambiarSeccion('formal');
-                history.pushState(null, '', '/');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
@@ -328,7 +322,10 @@ function aplicarRangoDuracion() {
     sincronizarURL();
 }
 
-function limpiarFiltros() {
+// Deja el estado y los controles del panel como si se acabara de entrar al
+// sitio, pero no pinta nada: cada quien decide con qué vista sigue. Lo usan el
+// botón "Limpiar filtros" y el logo de BEN, que antes duplicaban este bloque.
+function resetearFiltros() {
     Object.assign(estado, {
         texto: '', formacion: 'todos', institucion: 'todos', gestion: 'todos', modalidad: 'todos',
         costo: 'todos', duracion: 'todos', area: 'todos', duracionMin: null, duracionMax: null, orden: 'default'
@@ -338,6 +335,10 @@ function limpiarFiltros() {
     document.getElementById('durationMax').value = '';
     document.getElementById('sortSelect').value = 'default';
     actualizarBotonesActivos();
+}
+
+function limpiarFiltros() {
+    resetearFiltros();
     mostrarResultados();
     sincronizarURL();
 }

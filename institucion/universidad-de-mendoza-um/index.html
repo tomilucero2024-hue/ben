@@ -30,15 +30,25 @@
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
     (() => {
+        let t = 'light';
         try {
             const g = localStorage.getItem('ben-theme');
-            const t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
         } catch (e) {}
+        // El logo se elige acá, antes de que el parser vea el <img>: antes venía
+        // el claro en el src y se cambiaba al oscuro después, con lo cual en
+        // tema oscuro se bajaban los dos archivos (~150 KB en vez de 75).
+        window.LOGO_BEN = t === 'dark' ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+        const pre = document.createElement('link');
+        pre.rel = 'preload';
+        pre.as = 'image';
+        pre.href = window.LOGO_BEN;
+        document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260903_10">
+<link rel="stylesheet" href="/paginas.css?v=20260908_06">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Universidad de Mendoza (UM)","item":"https://buscadoreducativo.com.ar/institucion/universidad-de-mendoza-um/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad de Mendoza (UM)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-mendoza-um/","email":"informes@um.edu.ar","telephone":"4202017","address":{"@type":"PostalAddress","streetAddress":"Boulogne Sur Mer 683, Ciudad","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -46,7 +56,8 @@
 <header class="cabecera">
     <div class="envoltorio">
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
-            <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
@@ -97,17 +108,17 @@
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-radiologia/">Tecnicatura Universitaria en Radiología</a></h3>
-            <ul class="oferta-datos"><li>Duración: Tres años (2 años y medio, más la Practica Preprofesional)</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/tecnicatura-universitaria-en-radiologia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-instrumentacion-quirurgica/">Tecnicatura Universitaria en Instrumentación Quirúrgica</a></h3>
-            <ul class="oferta-datos"><li>Duración: Tres años (2 años y medio, más la Práctica)</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/tecnicatura-universitaria-en-instrumentacion-quirurgica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/medicina/">Medicina</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años de cursado, más un 1 año de Práctica Final Obligatoria</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/medicina/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -116,32 +127,32 @@
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-en-computacion/">Ingeniería en Computación</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 año</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/ingenieria-en-computacion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-electronica/">Ingeniería Electrónica</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 año</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/ingenieria-electronica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-industrial/">Ingeniería Industrial</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 año</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/ingenieria-industrial/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-en-informatica/">Ingeniería en Informática</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 año</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/ingenieria-en-informatica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-electrica/">Ingeniería Eléctrica</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 año</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/ingenieria-electrica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/bioingenieria/">Bioingeniería</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 año</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/bioingenieria/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -155,7 +166,7 @@
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-emprendimientos-inmobiliarios/">Licenciatura en Emprendimientos Inmobiliarios</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años (además del Examen de graduación, previo cumplimiento de los REQUISITOS DE ADMISIÓN correspondientes)</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/licenciatura-en-emprendimientos-inmobiliarios/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
@@ -165,7 +176,7 @@
         </li>
         <li class="oferta">
             <h3><a href="/carrera/corredor-inmobiliario-titulo-complementario-de-arquitectura/">Corredor Inmobiliario. Título complementario de Arquitectura</a></h3>
-            <ul class="oferta-datos"><li>Duración: Tres semestres académicos consecutivos + examen de PRÁCTICA INTEGRADA 1</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/corredor-inmobiliario-titulo-complementario-de-arquitectura/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
@@ -213,7 +224,7 @@
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/abogacia/">Abogacía</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 año</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/abogacia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
@@ -251,7 +262,7 @@
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/profesorado-para-profesionales-con-titulo-de-grado/">Profesorado para Profesionales con Título de Grado</a></h3>
-            <ul class="oferta-datos"><li>Duración: 3 semestre</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/profesorado-para-profesionales-con-titulo-de-grado/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -269,12 +280,6 @@
     </div>
 </footer>
 <script>
-    // El logo claro es el que viene en el HTML (así se ve bien sin JS). Si el
-    // tema es oscuro se cambia por el suyo.
-    if (document.documentElement.dataset.theme === 'dark') {
-        document.querySelector('.marca img').src = '/logo-ben-dark.png';
-    }
-
     // Autocompletado en vivo en la barra de búsqueda estática
     (() => {
         const inp = document.getElementById('q');
@@ -285,7 +290,7 @@
         async function cargarIndex() {
             if (dataIndex) return dataIndex;
             try {
-                const res = await fetch('/data/enlaces-ben.json');
+                const res = await fetch('/data/autocompletado-ben.json');
                 if (res.ok) dataIndex = await res.json();
             } catch (e) {}
             return dataIndex;
@@ -310,14 +315,15 @@
                 return;
             }
 
+            // El indice guarda [slug, nombre]: la clave sirve para buscar y el
+            // nombre es el que se muestra, con sus tildes y mayusculas.
+            const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let html = '';
-            matchesCarreras.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            matchesCarreras.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + esc(titulo) + '</span><span class="mini-search-item-badge">Carrera</span></a>';
             });
-            matchesInst.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            matchesInst.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + esc(titulo) + '</span><span class="mini-search-item-badge">Institución</span></a>';
             });
 
             drop.innerHTML = html;

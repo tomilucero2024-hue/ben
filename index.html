@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="manifest" href="/manifest.json?v=20260903_10">
+    <link rel="manifest" href="/manifest.json?v=20260908_06">
     <meta name="theme-color" content="#1d4ed8">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="BEN">
@@ -66,9 +66,21 @@
             const tema = guardado || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = tema;
             document.documentElement.style.colorScheme = tema;
+            // El logo se elige ACÁ, antes de que el parser vea los <img>. Antes cada
+            // <img> traía el logo claro en el src y un script lo cambiaba a oscuro
+            // después: para entonces el navegador ya había empezado a bajar el
+            // claro, así que en tema oscuro se descargaban los dos (~150 KB en vez
+            // de 75). El preload le devuelve la prioridad alta que tenía el <img>.
+            window.LOGO_BEN = tema === 'dark' ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            const pre = document.createElement('link');
+            pre.rel = 'preload';
+            pre.as = 'image';
+            pre.href = window.LOGO_BEN;
+            pre.setAttribute('fetchpriority', 'high');
+            document.head.appendChild(pre);
         })();
     </script>
-    <link rel="stylesheet" href="/style.css?v=20260903_10">
+    <link rel="stylesheet" href="/style.css?v=20260908_06">
 
 </head>
 <body>
@@ -82,14 +94,13 @@
             <!-- El logo es el enlace principal al inicio que resetea la vista -->
             <h1 class="sr-only">BEN — Buscador Educativo Nacional: carreras, institutos, oficios y cursos</h1>
             <a id="brandHomeLink" class="brand-link" href="/" aria-label="BEN — Buscador Educativo Nacional (Volver al inicio)">
-                <img id="brandLogo" class="brand-logo" src="/logo-ben-light.png" width="1120" height="299" alt="BEN, Buscador Educativo Nacional" fetchpriority="high">
+                <img id="brandLogo" class="brand-logo" width="1120" height="299" alt="BEN, Buscador Educativo Nacional" fetchpriority="high">
             </a>
-            <!-- El src por defecto es el logo claro. Si el tema guardado o del sistema es oscuro,
-                 se intercambia inmediatamente durante el parseo. -->
+            <!-- El src lo pone el script, con el logo que ya eligió y precargó el
+                 bloque del <head>: así se baja uno solo. El width/height están en el
+                 tag, así que el espacio queda reservado y no hay salto de layout. -->
             <script>
-                if (document.documentElement.dataset.theme === 'dark') {
-                    document.getElementById('brandLogo').src = '/logo-ben-dark.png';
-                }
+                document.getElementById('brandLogo').src = window.LOGO_BEN;
             </script>
             <div class="hero-secondary">
                 <p class="hero-bajada">Carreras y oficios en Mendoza y Argentina</p>
@@ -215,10 +226,14 @@
                     <button class="filter-option" data-filter="duracion" data-value="2-3" type="button">2–3 años</button>
                     <button class="filter-option" data-filter="duracion" data-value="4-mas" type="button">4+ años</button>
                 </div>
+                <!-- El placeholder no es un nombre accesible: desaparece al escribir
+                     y varios lectores de pantalla no lo anuncian. Estos dos campos
+                     eran los únicos controles del sitio que se leían como "cuadro de
+                     edición" a secas. -->
                 <div class="duration-range">
-                    <input id="durationMin" type="number" min="0" step="0.5" inputmode="decimal" placeholder="Mín.">
-                    <span>–</span>
-                    <input id="durationMax" type="number" min="0" step="0.5" inputmode="decimal" placeholder="Máx.">
+                    <input id="durationMin" type="number" min="0" step="0.5" inputmode="decimal" placeholder="Mín." aria-label="Duración mínima en años">
+                    <span aria-hidden="true">–</span>
+                    <input id="durationMax" type="number" min="0" step="0.5" inputmode="decimal" placeholder="Máx." aria-label="Duración máxima en años">
                     <button id="applyDurationButton" type="button" aria-label="Aplicar rango de duración">→</button>
                 </div>
             </section>
@@ -264,7 +279,10 @@
                 </p>
                 <div class="toolbar-actions">
                     <button id="btnFavoritos" class="favoritos-toggle" type="button" aria-pressed="false"><svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <span>Solo favoritos</span></button>
-                    <label class="sort-control" for="sortSelect">Ordenar por
+                    <!-- El rótulo va en un <span> propio para que en celular se pueda
+                         esconder visualmente sin sacarlo del árbol de accesibilidad:
+                         sigue siendo el nombre del <select> para un lector de pantalla. -->
+                    <label class="sort-control" for="sortSelect"><span class="sort-control-label">Ordenar por</span>
                     <select id="sortSelect">
                         <option value="default">Predeterminado</option>
                         <option value="relevancia">Más relevantes</option>
@@ -457,13 +475,10 @@
          excepción la decide js/render.js. -->
     <section id="pantallaBienvenida" class="pantalla-bienvenida" aria-label="Bienvenida a BEN">
         <div class="bienvenida-contenido">
-            <img id="bienvenidaLogo" class="bienvenida-logo" src="/logo-ben-light.png" width="1120" height="299" alt="BEN, Buscador Educativo Nacional">
-            <!-- Igual que el logo del header: el src por defecto es claro y se alterna
-                 inmediatamente durante el parseo si el tema es oscuro. -->
+            <img id="bienvenidaLogo" class="bienvenida-logo" width="1120" height="299" alt="BEN, Buscador Educativo Nacional">
+            <!-- Igual que el logo del header: el archivo ya lo eligió el <head>. -->
             <script>
-                if (document.documentElement.dataset.theme === 'dark') {
-                    document.getElementById('bienvenidaLogo').src = '/logo-ben-dark.png';
-                }
+                document.getElementById('bienvenidaLogo').src = window.LOGO_BEN;
             </script>
             <p class="bienvenida-bajada">Carreras y oficios en Mendoza y Argentina · ¿Cómo querés empezar?</p>
             <div class="bienvenida-opciones">
@@ -575,11 +590,11 @@
 
     <!-- Scripts clasicos: son autonomos (IIFE) y tienen que correr antes que el
          modulo, que espera encontrar window.Orientador ya definido. -->
-    <script src="/js/orientador.js?v=20260903_10"></script>
-    <script src="/js/accesibilidad.js?v=20260903_10"></script>
-    <script src="/js/feedback.js?v=20260903_10"></script>
+    <script src="/js/orientador.js?v=20260908_06"></script>
+    <script src="/js/accesibilidad.js?v=20260908_06"></script>
+    <script src="/js/feedback.js?v=20260908_06"></script>
     <!-- El resto de la app vive en modulos ES; main.js es el punto de entrada. -->
-    <script type="module" src="/js/main.js?v=20260903_10"></script>
+    <script type="module" src="/js/main.js?v=20260908_06"></script>
 
     <!-- Service worker para que el sitio abra sin conexión. Vive en la raíz,
          igual que esta página, así su scope cubre todo el sitio: la app, los JSON

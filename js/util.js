@@ -24,12 +24,21 @@ export function distanciaLevenshtein(a, b) {
 // Cuánto se parece una palabra del índice a un token de la búsqueda.
 export function limpiarTexto(texto) { return String(texto || '').replace(/\s+/g, ' ').trim(); }
 export function normalizarTexto(texto) { return limpiarTexto(texto).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
-// Primera letra en mayúscula y el resto en minúscula, para uniformar el texto
-// de las tarjetas sin romper acentos ni palabras con tilde.
+// Uniforma el texto de las tarjetas SIN destruir las mayúsculas que el dato ya
+// traía bien. Bajar todo a minúscula a ciegas convertía "UTN Facultad Regional
+// Mendoza" en "Utn facultad regional mendoza" y "Técnico Superior en IA" en
+// "...en ia": las siglas del catálogo son parte del nombre, no ruido.
+//
+// Solo se aplana el texto que viene GRITADO entero (sin una sola minúscula),
+// que es el caso real que había que arreglar: las 8 carreras de la UTN cargadas
+// como "INGENIERÍA CIVIL". Si el texto ya mezcla mayúsculas y minúsculas, el
+// scraper lo trajo con su capitalización propia y se respeta tal cual.
 function capitalizar(texto) {
     const t = limpiarTexto(texto);
     if (!t) return t;
-    return t.charAt(0).toUpperCase() + t.slice(1).toLowerCase();
+    const gritado = t === t.toUpperCase() && t !== t.toLowerCase();
+    const base = gritado ? t.toLowerCase() : t;
+    return base.charAt(0).toUpperCase() + base.slice(1);
 }
 export function inferirGestion(institucion) { const gestion = normalizarTexto(institucion.gestion); return gestion.includes('public') || normalizarTexto(institucion.nombre).includes('utn') ? 'pública' : 'privada'; }
 // Las carreras de la UTN que no son ingenierías se dictan con arancel
@@ -73,8 +82,89 @@ export function getArea(carrera) {
     return 'Ciencias sociales';
 }
 export function obtenerModalidades(modalidad) { const texto = normalizarTexto(modalidad); const valores = []; if (texto.includes('presencial')) valores.push('presencial'); if (texto.includes('online') || texto.includes('virtual') || texto.includes('distancia')) valores.push('online'); if (texto.includes('hibrid')) valores.push('híbrida'); return valores.length ? valores : ['presencial']; }
-export function obtenerDuracionEnAnios(duracion) { const texto = normalizarTexto(duracion); const numero = texto.match(/\d+(?:[.,]\d+)?/); const valor = numero ? Number(numero[0].replace(',', '.')) : ({ uno: 1, un: 1, dos: 2, tres: 3, cuatro: 4, cinco: 5, seis: 6 }[Object.keys({ uno: 1, un: 1, dos: 2, tres: 3, cuatro: 4, cinco: 5, seis: 6 }).find(p => new RegExp(`\\b${p}\\b`).test(texto))] || null); if (valor === null) return null; if (texto.includes('mes')) return valor / 12; if (texto.includes('semana') || texto.includes('dia')) return valor / 52; return texto.includes('medio') ? valor + .5 : valor; }
+// El campo "duracion" del catálogo es texto libre escrapeado: conviven "4 años",
+// "4 año", "Cuatro (4) años", "2 años y 1/2" y oraciones enteras como "La carrera
+// tiene una duración de tres años, con una carga horaria total de 3000 hs.".
+//
+// La versión anterior agarraba el PRIMER número del texto, así que esa última
+// devolvía 3000 años y la carrera terminaba clasificada en "4+ años". Acá el
+// número tiene que estar pegado a una unidad de tiempo: una carga horaria en
+// "hs" no matchea con nada y queda ignorada, que es lo correcto.
+const NUMEROS_ESCRITOS = { un: 1, uno: 1, una: 1, dos: 2, tres: 3, cuatro: 4, cinco: 5, seis: 6, siete: 7, ocho: 8, nueve: 9, diez: 10, once: 11, doce: 12 };
+// Las alternativas van de la palabra más larga a la más corta: con "un" primero,
+// la alternancia cortaría ahí y "uno" nunca llegaría a matchear.
+const ORDEN_NUMEROS = Object.keys(NUMEROS_ESCRITOS).sort((a, b) => b.length - a.length);
+// String.raw en todos los fragmentos de regex: son patrones, no texto, y así la
+// barra invertida se lee igual acá que dentro de un /.../ .
+const NUMERO = String.raw`(\d+(?:[.,]\d+)?|${ORDEN_NUMEROS.join('|')})`;
+// "Un medio" se escribe de varias formas y cae antes o después de la unidad:
+// "4 años y medio", "2 años y 1/2", "5 1/2 años".
+const MEDIO = String.raw`(?:\s*y)?\s*(?:medio|media|1/2)`;
+
+function valorNumerico(bruto) {
+    if (bruto in NUMEROS_ESCRITOS) return NUMEROS_ESCRITOS[bruto];
+    const n = Number(bruto.replace(',', '.'));
+    return Number.isFinite(n) ? n : null;
+}
+
+// Cada unidad con cuánto vale en años. El orden importa: se prueba de la más
+// específica y confiable a la menos, y gana la primera que aparezca.
+const UNIDADES_DURACION = [
+    { patron: 'anos?', factor: 1 },
+    { patron: 'cuatrimestres?', factor: 1 / 3 },
+    { patron: 'semestres?', factor: 1 / 2 },
+    { patron: 'mes(?:es)?', factor: 1 / 12 },
+    { patron: 'semanas?', factor: 1 / 52 },
+    { patron: 'dias?', factor: 1 / 365 }
+];
+
+export function obtenerDuracionEnAnios(duracion) {
+    // Lo que va entre paréntesis solo repite el número en letras o en dígitos
+    // ("Cuatro (4) años", "3 (tres) años") y corta la vecindad número-unidad.
+    const texto = normalizarTexto(duracion).replace(/\([^)]*\)/g, ' ');
+    if (!texto) return null;
+    for (const { patron, factor } of UNIDADES_DURACION) {
+        const re = new RegExp(String.raw`${NUMERO}(${MEDIO})?\s*(?:${patron})\b(${MEDIO})?`);
+        const m = texto.match(re);
+        if (!m) continue;
+        const valor = valorNumerico(m[1]);
+        if (valor === null) continue;
+        return (valor + (m[2] || m[3] ? 0.5 : 0)) * factor;
+    }
+    return null;
+}
 export function getGrupoDuracion(anios) { if (anios === null) return 'sin-definir'; if (anios < 0.5) return 'corta'; if (anios <= 1) return 'hasta-1'; if (anios < 4) return '2-3'; return '4-mas'; }
+
+// Las cuatro maneras en que el catálogo dice "no sabemos". Son ausencia de dato,
+// no una duración, y conviene que se lean todas igual.
+const DURACION_SIN_DATO = /^(a confirmar|no especificad[ao]|sin especificar|sin datos?|verificar en (la )?(web|pagina)( oficial)?|consultar en (la )?(web|pagina)|consultar|variable|-+)\.?$/;
+
+// La etiqueta breve que va en la tarjeta. El dato crudo es texto libre y en 149
+// de 658 carreras es una oración entera ("La carrera se cursa en cuatro años.",
+// "El ciclo tiene una carga horaria de 840 horas reloj, distribuidas en seis
+// espacios curriculares. El cursado de estos es de 1 año y medio."), que en un
+// chip de tarjeta no se puede leer. Se muestra la duración ya interpretada y el
+// texto completo queda en el title; el detalle fino vive en la ficha de la
+// carrera y en el sitio oficial, que la tarjeta ya enlaza.
+export function duracionCorta(duracion) {
+    const texto = limpiarTexto(duracion);
+    if (!texto) return 'A confirmar';
+    if (DURACION_SIN_DATO.test(normalizarTexto(texto))) return 'A confirmar';
+    const anios = obtenerDuracionEnAnios(texto);
+    // Sin poder interpretarlo no se inventa nada: se devuelve lo que vino.
+    if (anios === null) return texto;
+    if (anios < 1) {
+        const meses = Math.max(1, Math.round(anios * 12));
+        return `${meses} ${meses === 1 ? 'mes' : 'meses'}`;
+    }
+    const enteros = Math.floor(anios);
+    const resto = anios - enteros;
+    const base = `${enteros} ${enteros === 1 ? 'año' : 'años'}`;
+    if (resto === 0) return base;
+    if (Math.abs(resto - 0.5) < 0.01) return `${base} y medio`;
+    const meses = Math.round(resto * 12);
+    return meses ? `${base} y ${meses} ${meses === 1 ? 'mes' : 'meses'}` : base;
+}
 
 // ==========================================
 // 🤖 BOT ORIENTADOR VOCACIONAL - Nuevo Sistema Multidimensional
@@ -89,6 +179,14 @@ export function escaparHTML(texto) {
 // Atajo para el caso más común en las tarjetas: capitalizar y escapar de una.
 export function capSeguro(texto) {
     return escaparHTML(capitalizar(texto));
+}
+
+// Nombres propios (instituciones y facultades): se escapan pero NO se tocan las
+// mayúsculas. Acá capitalizar() no sirve ni con la regla de "gritado": hay
+// nombres legítimos sin ninguna minúscula ("IES 9-005", "CEBJA", "UTN FRM") que
+// aplanaría a "Ies 9-005", "Cebja" y "Utn frm". El dato ya viene bien escrito.
+export function nombreSeguro(texto) {
+    return escaparHTML(limpiarTexto(texto));
 }
 
 // Escapar no alcanza para href/src: "javascript:alert(1)" no tiene ningún

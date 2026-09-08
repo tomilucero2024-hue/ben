@@ -30,15 +30,25 @@
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
     (() => {
+        let t = 'light';
         try {
             const g = localStorage.getItem('ben-theme');
-            const t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
         } catch (e) {}
+        // El logo se elige acá, antes de que el parser vea el <img>: antes venía
+        // el claro en el src y se cambiaba al oscuro después, con lo cual en
+        // tema oscuro se bajaban los dos archivos (~150 KB en vez de 75).
+        window.LOGO_BEN = t === 'dark' ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+        const pre = document.createElement('link');
+        pre.rel = 'preload';
+        pre.as = 'image';
+        pre.href = window.LOGO_BEN;
+        document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260903_10">
+<link rel="stylesheet" href="/paginas.css?v=20260908_06">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Escuela de Buceo Potrerillos","item":"https://buscadoreducativo.com.ar/institucion/escuela-de-buceo-potrerillos/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Escuela de Buceo Potrerillos","url":"https://buscadoreducativo.com.ar/institucion/escuela-de-buceo-potrerillos/","address":{"@type":"PostalAddress","streetAddress":"Dique Potrerillos, Mendoza","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -46,7 +56,8 @@
 <header class="cabecera">
     <div class="envoltorio">
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
-            <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
@@ -93,12 +104,6 @@
     </div>
 </footer>
 <script>
-    // El logo claro es el que viene en el HTML (así se ve bien sin JS). Si el
-    // tema es oscuro se cambia por el suyo.
-    if (document.documentElement.dataset.theme === 'dark') {
-        document.querySelector('.marca img').src = '/logo-ben-dark.png';
-    }
-
     // Autocompletado en vivo en la barra de búsqueda estática
     (() => {
         const inp = document.getElementById('q');
@@ -109,7 +114,7 @@
         async function cargarIndex() {
             if (dataIndex) return dataIndex;
             try {
-                const res = await fetch('/data/enlaces-ben.json');
+                const res = await fetch('/data/autocompletado-ben.json');
                 if (res.ok) dataIndex = await res.json();
             } catch (e) {}
             return dataIndex;
@@ -134,14 +139,15 @@
                 return;
             }
 
+            // El indice guarda [slug, nombre]: la clave sirve para buscar y el
+            // nombre es el que se muestra, con sus tildes y mayusculas.
+            const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let html = '';
-            matchesCarreras.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            matchesCarreras.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + esc(titulo) + '</span><span class="mini-search-item-badge">Carrera</span></a>';
             });
-            matchesInst.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            matchesInst.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + esc(titulo) + '</span><span class="mini-search-item-badge">Institución</span></a>';
             });
 
             drop.innerHTML = html;

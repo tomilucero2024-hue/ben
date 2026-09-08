@@ -4,13 +4,14 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from scraper_utils import carreras_guardadas, guardar_json
+from scraper_utils import (carreras_por_link, es_duracion_real, extraer_duracion,
+                           guardar_json, mejor_duracion)
 
 
 print("🛠️ Encendiendo el escáner V10.1 para la Universidad Siglo 21 (S21)...")
 print("🔍 Ajustando la caja de cambios (Paginación) y limpiando el filtro de nafta.\n")
 
-carreras_viejas = carreras_guardadas("s21.json")
+carreras_viejas = carreras_por_link("s21.json")
 s21_data = {
     "id": 10,
     "nombre": "Universidad Siglo 21 (S21)",
@@ -68,9 +69,14 @@ for pagina in range(1, 8):
             # Limpiamos el nombre usando la URL para que quede lindo ("licenciatura-en-marketing" -> "Licenciatura En Marketing")
             nombre_temporal = link_real.split('/')[-1].split('?')[0].replace('-', ' ').title()
             
-            if nombre_temporal in carreras_viejas and carreras_viejas[nombre_temporal].get("duracion") not in ["Verificar en página oficial", "A confirmar", ""]:
-                s21_data["carreras"].append(carreras_viejas[nombre_temporal])
-                print(f"  ⏭️ Recuperada: {nombre_temporal[:35]}...")
+            # La memoria se busca por LINK, no por nombre: el nombre de acá sale
+            # del slug ("Contador Publico") y el guardado es el del <h1>
+            # ("Contador Público"), así que nunca coincidían y cada corrida
+            # re-scrapeaba todo — y lo que fallaba se perdía.
+            guardada = carreras_viejas.get(link_real)
+            if guardada and es_duracion_real(guardada.get("duracion")):
+                s21_data["carreras"].append(guardada)
+                print(f"  ⏭️ Recuperada: {nombre_temporal[:35]} — {guardada['duracion']}")
             else:
                 print(f"  🔍 Entrando a la fosa: {nombre_temporal[:35]}...")
                 
@@ -94,9 +100,12 @@ for pagina in range(1, 8):
                     texto_completo = sopa_det.get_text(separator='\n').strip()
                     
                     # 2. Duración
-                    match_dur = re.search(r'Duraci[óo]n:\s*([^\n]+)', texto_completo, re.IGNORECASE)
-                    if match_dur:
-                        duracion_texto = match_dur.group(1).strip()
+                    # El regex de antes exigía "Duración:" con dos puntos. La web
+                    # pasó a escribirlo en prosa ("tiene una duración aproximada
+                    # de 4 años y medio") y dejó de matchear en las 23 carreras.
+                    hallada = extraer_duracion(texto_completo)
+                    if hallada:
+                        duracion_texto = hallada
                         
                     # 3. Modalidad
                     match_mod = re.search(r'Modalidad:\s*([^\n]+)', texto_completo, re.IGNORECASE)
@@ -114,7 +123,9 @@ for pagina in range(1, 8):
                     "id": id_global,
                     "nombre_carrera": nombre_carrera,
                     "categoria": categoria,
-                    "duracion": duracion_texto,
+                    # Si esta corrida no la consiguió pero el JSON ya tenía una
+                    # buena, se conserva: nunca se degrada a placeholder.
+                    "duracion": mejor_duracion(duracion_texto, guardada),
                     "modalidad": modalidad_texto,
                     "facultad": facultad,
                     "link_oficial": link_real

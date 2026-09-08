@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Qué estudiar en Educación | BEN</title>
-<meta name="description" content="66 carreras del área Educación en BEN, dictadas por 30 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta name="description" content="64 carreras del área Educación en BEN, dictadas por 30 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/area/educacion/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Qué estudiar en Educación | BEN">
-<meta property="og:description" content="66 carreras del área Educación en BEN, dictadas por 30 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta property="og:description" content="64 carreras del área Educación en BEN, dictadas por 30 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/area/educacion/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Qué estudiar en Educación | BEN">
-<meta name="twitter:description" content="66 carreras del área Educación en BEN, dictadas por 30 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta name="twitter:description" content="64 carreras del área Educación en BEN, dictadas por 30 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -30,23 +30,34 @@
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
     (() => {
+        let t = 'light';
         try {
             const g = localStorage.getItem('ben-theme');
-            const t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
         } catch (e) {}
+        // El logo se elige acá, antes de que el parser vea el <img>: antes venía
+        // el claro en el src y se cambiaba al oscuro después, con lo cual en
+        // tema oscuro se bajaban los dos archivos (~150 KB en vez de 75).
+        window.LOGO_BEN = t === 'dark' ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+        const pre = document.createElement('link');
+        pre.rel = 'preload';
+        pre.as = 'image';
+        pre.href = window.LOGO_BEN;
+        document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260903_10">
+<link rel="stylesheet" href="/paginas.css?v=20260908_06">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Educación","item":"https://buscadoreducativo.com.ar/area/educacion/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Carreras del área Educación","description":"66 carreras del área Educación en BEN, dictadas por 30 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.","url":"https://buscadoreducativo.com.ar/area/educacion/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Carreras del área Educación","description":"64 carreras del área Educación en BEN, dictadas por 30 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.","url":"https://buscadoreducativo.com.ar/area/educacion/"}</script>
 </head>
 <body>
 <header class="cabecera">
     <div class="envoltorio">
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
-            <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
@@ -59,20 +70,18 @@
 <main class="envoltorio">
     <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <span aria-current="page">Educación</span></nav>
     <h1>Qué estudiar en Educación</h1>
-    <p class="entrada">66 carreras del área Educación en BEN, dictadas por 30 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.</p>
+    <p class="entrada">64 carreras del área Educación en BEN, dictadas por 30 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.</p>
 
     <a class="cta" href="/?area=Educaci%C3%B3n">Filtrar Educación en el buscador →</a>
 
-    <h2>Carreras de grado (8)</h2>
+    <h2>Carreras de grado (6)</h2>
     <ul class="enlaces">
         <li><a href="/carrera/licenciatura-en-ciencias-de-la-educacion/">Licenciatura en Ciencias de la Educación</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/licenciatura-en-educacion/">Licenciatura en Educación</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/licenciatura-en-educacion-fisica-a-distancia/">Licenciatura en Educación Física a distancia</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/licenciatura-en-educacion-fisica-a-distancia/">Licenciatura en Educación Física a Distancia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-educacion-fisica-con-orientacion-en-fisiologia-del-trabajo/">Licenciatura en Educación Física con Orientación en Fisiología del Trabajo Físico y Rendimiento Humano</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-educacion-inicial-a-distancia/">Licenciatura en Educación Inicial a distancia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-educacion-y-nuevas-tecnologias/">Licenciatura en Educación y Nuevas Tecnologías</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-psicopedagogia/">Licenciatura en Psicopedagogía</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-psicopedagogia-ccc/">Licenciatura en Psicopedagogía - CCC</a> <span class="cuantas">(1)</span></li>
     </ul>
 
     <h2>Tecnicaturas (1)</h2>
@@ -105,6 +114,7 @@
         <li><a href="/carrera/profesorado-de-educacion-secundaria-lengua-y-literatura/">Profesorado de Educación Secundaria Lengua y Literatura</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/profesorado-de-educacion-secundaria-para-tecnicos/">Profesorado de Educación Secundaria para Técnicos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/profesorado-de-geografia/">Profesorado de Geografía</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/profesorado-de-grado-universitario/">Profesorado de Grado Universitario</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/profesorado-de-lengua-y-literatura-francesas/">Profesorado de Lengua y Literatura Francesas</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/profesorado-de-pedagogia-terapeutica-en-discapacidad-intelectual-motora/">Profesorado de Pedagogía Terapéutica en Discapacidad Intelectual - Motora</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/profesorado-de-pedagogia-terapeutica-en-discapacidad-visual/">Profesorado de Pedagogía Terapéutica en Discapacidad Visual</a> <span class="cuantas">(1)</span></li>
@@ -113,7 +123,7 @@
         <li><a href="/carrera/profesorado-en-ceramica-artistica/">Profesorado en Cerámica Artística</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/profesorado-en-ciencias-de-la-educacion/">Profesorado en Ciencias de la Educación</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/profesorado-en-danza/">Profesorado en Danza</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/profesorado-en-educacion-fisica/">Profesorado en Educación Física</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/profesorado-en-educacion-fisica/">Profesorado en Educación Física</a> <span class="cuantas">(8)</span></li>
         <li><a href="/carrera/profesorado-en-educacion-secundaria-de-biologia/">Profesorado en Educación Secundaria de Biología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/profesorado-en-filosofia/">Profesorado en Filosofía</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/profesorado-en-fisica/">Profesorado en Física</a> <span class="cuantas">(1)</span></li>
@@ -126,8 +136,7 @@
         <li><a href="/carrera/profesorado-en-portugues/">Profesorado en Portugués</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/profesorado-en-quimica/">Profesorado en Química</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/profesorado-para-la-educacion-secundaria-de-la-modalidad-tecnico-profesional-en/">Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional en Concurrencia con el Título de Base</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/profesorado-para-profesionales/">Profesorado para profesionales</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/profesorado-para-profesionales-a-distancia/">Profesorado para Profesionales a distancia</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/profesorado-para-profesionales/">Profesorado para profesionales</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/profesorado-para-profesionales-con-titulo-de-grado/">Profesorado para Profesionales con Título de Grado</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/profesorado-para-tecnicos/">Profesorado para Técnicos</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/profesorado-universitario-de-educacion-inicial/">Profesorado Universitario de Educación Inicial</a> <span class="cuantas">(1)</span></li>
@@ -154,12 +163,6 @@
     </div>
 </footer>
 <script>
-    // El logo claro es el que viene en el HTML (así se ve bien sin JS). Si el
-    // tema es oscuro se cambia por el suyo.
-    if (document.documentElement.dataset.theme === 'dark') {
-        document.querySelector('.marca img').src = '/logo-ben-dark.png';
-    }
-
     // Autocompletado en vivo en la barra de búsqueda estática
     (() => {
         const inp = document.getElementById('q');
@@ -170,7 +173,7 @@
         async function cargarIndex() {
             if (dataIndex) return dataIndex;
             try {
-                const res = await fetch('/data/enlaces-ben.json');
+                const res = await fetch('/data/autocompletado-ben.json');
                 if (res.ok) dataIndex = await res.json();
             } catch (e) {}
             return dataIndex;
@@ -195,14 +198,15 @@
                 return;
             }
 
+            // El indice guarda [slug, nombre]: la clave sirve para buscar y el
+            // nombre es el que se muestra, con sus tildes y mayusculas.
+            const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let html = '';
-            matchesCarreras.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            matchesCarreras.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + esc(titulo) + '</span><span class="mini-search-item-badge">Carrera</span></a>';
             });
-            matchesInst.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            matchesInst.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + esc(titulo) + '</span><span class="mini-search-item-badge">Institución</span></a>';
             });
 
             drop.innerHTML = html;

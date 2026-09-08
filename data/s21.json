@@ -33,8 +33,8 @@
                 {
                     "id": 1002,
                     "nombre_carrera": "Contador Público",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
+                    "categoria": "Pregrado",
+                    "duracion": "4 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/contador-publico?hsLang=es"
@@ -52,7 +52,7 @@
                     "id": 1004,
                     "nombre_carrera": "Tecnicatura Universitaria en Marketing y Publicidad Digital",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-marketing-y-publicidad-digital?hsLang=es"
@@ -61,7 +61,7 @@
                     "id": 1005,
                     "nombre_carrera": "Licenciatura en Comercialización - Marketing",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "4 años",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-comercializacion-marketing?hsLang=es"
@@ -88,19 +88,10 @@
                     "id": 1008,
                     "nombre_carrera": "Licenciatura en Criminología y Seguridad",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "4 años",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-criminologia-y-seguridad?hsLang=es"
-                },
-                {
-                    "id": 1009,
-                    "nombre_carrera": "Profesorado Universitario para el Nivel Secundario y Superior",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "1 año y medio",
-                    "modalidad": "Distancia",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/profesorado-universitario-para-el-nivel-secundario-y-superior?hsLang=es"
                 },
                 {
                     "id": 1011,
@@ -121,11 +112,11 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/escribania?hsLang=es"
                 },
                 {
-                    "id": 1012,
+                    "id": 1011,
                     "nombre_carrera": "Ingeniería en Innovación y Desarrollo",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/ingenieria-en-innovacion-y-desarrollo?hsLang=es"
                 },
@@ -146,15 +137,6 @@
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-agraria?hsLang=es"
-                },
-                {
-                    "id": 1015,
-                    "nombre_carrera": "Licenciatura en Administración de Servicios de Salud",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Presencial o Virtual",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-servicios-de-salud?hsLang=es"
                 },
                 {
                     "id": 1016,
@@ -184,22 +166,13 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-ciencia-politica-y-gobierno?hsLang=es"
                 },
                 {
-                    "id": 1019,
+                    "id": 1017,
                     "nombre_carrera": "Licenciatura en Comercio Internacional",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
+                    "categoria": "Pregrado",
+                    "duracion": "4 años",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-comercio-internacional?hsLang=es"
-                },
-                {
-                    "id": 1020,
-                    "nombre_carrera": "Licenciatura en Desarrollo de Negocios Inmobiliarios - CCC",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Virtual",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-desarrollo-de-negocios-inmobiliarios?hsLang=es"
                 },
                 {
                     "id": 1021,
@@ -238,15 +211,6 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-y-animacion-digital?hsLang=es"
                 },
                 {
-                    "id": 1025,
-                    "nombre_carrera": "Licenciatura en Educación",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Virtual",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-educacion?hsLang=es"
-                },
-                {
                     "id": 1026,
                     "nombre_carrera": "Licenciatura en Educación y Nuevas Tecnologías",
                     "categoria": "Grado / Carrera",
@@ -254,24 +218,6 @@
                     "modalidad": "Virtual",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-educacion-y-nuevas-tecnologias?hsLang=es"
-                },
-                {
-                    "id": 1027,
-                    "nombre_carrera": "Licenciatura en Emprendimiento - CCC",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Virtual",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-emprendimiento?hsLang=es"
-                },
-                {
-                    "id": 1028,
-                    "nombre_carrera": "Licenciatura en Gerontología - CCC",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Virtual",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-gerontologia?hsLang=es"
                 },
                 {
                     "id": 1029,
@@ -310,10 +256,10 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-informatica?hsLang=es"
                 },
                 {
-                    "id": 1033,
+                    "id": 1027,
                     "nombre_carrera": "Licenciatura en Instrumentación Quirúrgica",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "4 años",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-instrumentacion-quirurgica?hsLang=es"
@@ -337,11 +283,11 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-de-negocios-digitales?hsLang=es"
                 },
                 {
-                    "id": 1036,
+                    "id": 1030,
                     "nombre_carrera": "Licenciatura en Kinesiología y Fisioterapia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "categoria": "Pregrado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial en Campus Córdoba",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-kinesiologia-y-fisioterapia?hsLang=es"
                 },
@@ -364,11 +310,11 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-matematica?hsLang=es"
                 },
                 {
-                    "id": 1039,
+                    "id": 1033,
                     "nombre_carrera": "Licenciatura en Nutrición",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial en Campus Córdoba",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-nutricion?hsLang=es"
                 },
@@ -391,11 +337,11 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-produccion-de-bioimagenes?hsLang=es"
                 },
                 {
-                    "id": 1042,
+                    "id": 1036,
                     "nombre_carrera": "Licenciatura en Psicología",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "duracion": "4 años y medio",
+                    "modalidad": "Presencial en Campus Córdoba.",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-psicologia?hsLang=es"
                 },
@@ -454,6 +400,15 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-terapia-ocupacional-y-desarrollo-humano?hsLang=es"
                 },
                 {
+                    "id": 1009,
+                    "nombre_carrera": "Profesorado Universitario para el Nivel Secundario y Superior",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Distancia",
+                    "facultad": "S21",
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/profesorado-universitario-para-el-nivel-secundario-y-superior?hsLang=es"
+                },
+                {
                     "id": 1049,
                     "nombre_carrera": "Carrera de Medicina",
                     "categoria": "Grado / Carrera",
@@ -481,16 +436,52 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-deportiva?hsLang=es"
                 },
                 {
-                    "id": 1052,
-                    "nombre_carrera": "Licenciatura en Psicopedagogía - CCC",
+                    "id": 1047,
+                    "nombre_carrera": "Licenciatura en Administración Hotelera",
                     "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
+                    "duracion": "4 años",
                     "modalidad": "Virtual",
                     "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-psicopedagogia-ccc?hsLang=es"
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-hotelera?hsLang=es"
                 },
                 {
-                    "id": 1053,
+                    "id": 1048,
+                    "nombre_carrera": "Licenciatura en Administración de Infraestructura Tecnológica",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Virtual",
+                    "facultad": "S21",
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-infraestructura-tecnologica?hsLang=es"
+                },
+                {
+                    "id": 1049,
+                    "nombre_carrera": "Licenciatura en Administración Pública",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Virtual",
+                    "facultad": "S21",
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-publica?hsLang=es"
+                },
+                {
+                    "id": 1050,
+                    "nombre_carrera": "Licenciatura en Antropología Organizacional",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Virtual",
+                    "facultad": "S21",
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-antropologia-organizacional?hsLang=es"
+                },
+                {
+                    "id": 1051,
+                    "nombre_carrera": "Licenciatura en Fonoaudiología",
+                    "categoria": "Pregrado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "facultad": "S21",
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-fonoaudiologia?hsLang=es"
+                },
+                {
+                    "id": 1052,
                     "nombre_carrera": "Procurador",
                     "categoria": "Pregrado",
                     "duracion": "Verificar en página oficial",
@@ -517,19 +508,19 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-equipos-de-ventas?hsLang=es"
                 },
                 {
-                    "id": 1056,
+                    "id": 1055,
                     "nombre_carrera": "Tecnicatura en Dirección de Protocolo, Organización de Eventos y Relaciones Públicas",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-protocolo-organizacion-de-eventos-y-rrpp?hsLang=es"
                 },
                 {
-                    "id": 1057,
+                    "id": 1056,
                     "nombre_carrera": "Tecnicatura en Gestión Contable e Impositiva",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-contable-e-impositiva?hsLang=es"
@@ -571,11 +562,11 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-administracion-publica-y-gestion-de-politicas-publicas?hsLang=es"
                 },
                 {
-                    "id": 1062,
+                    "id": 1061,
                     "nombre_carrera": "Tecnicatura Universitaria en Atención Prehospitalaria de Emergencias",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "categoria": "Pregrado",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial en Campus Córdoba",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-atencion-prehospitalaria-de-emergencias?hsLang=es"
                 },
@@ -598,11 +589,11 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-desarrollo-de-videojuegos?hsLang=es"
                 },
                 {
-                    "id": 1065,
+                    "id": 1064,
                     "nombre_carrera": "Tecnicatura Universitaria en Enfermería",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial, Híbrida o Distancia",
+                    "categoria": "Pregrado",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial en Campus Córdoba",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-enfermeria?hsLang=es"
                 },
@@ -643,67 +634,67 @@
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-y-auditorias-ambientales?hsLang=es"
                 },
                 {
-                    "id": 1070,
+                    "id": 1069,
                     "nombre_carrera": "Tecnicatura Universitaria en Hidrocarburos y Geociencia",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-hidrocarburos-y-geociencia?hsLang=es"
                 },
                 {
-                    "id": 1071,
+                    "id": 1070,
                     "nombre_carrera": "Tecnicatura Universitaria en Promoción Comunitaria en Niñez y Adolescencia",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-promoci%C3%B3n-comunitaria-en-ni%C3%B1ez-y-adolescencia?hsLang=es"
                 },
                 {
-                    "id": 1072,
+                    "id": 1071,
                     "nombre_carrera": "Tecnicatura Universitaria en Redes Informáticas y Telecomunicaciones",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-redes-informaticas-y-telecomunicaciones?hsLang=es"
                 },
                 {
-                    "id": 1073,
+                    "id": 1072,
                     "nombre_carrera": "Tecnicatura Universitaria en Gestión de Clima Laboral en la Organización",
                     "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-de-clima-laboral-en-la-organizacion?hsLang=es"
                 },
                 {
-                    "id": 1074,
-                    "nombre_carrera": "Tecnicatura en Higiene y Seguridad Laboral",
+                    "id": 1073,
+                    "nombre_carrera": "Tecnicatura en Negocios Agroecológicos",
                     "categoria": "Pregrado",
-                    "duracion": "Verificar en web oficial",
+                    "duracion": "2 años y medio",
                     "modalidad": "Virtual",
                     "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-higiene-y-seguridad-laboral?hsLang=es"
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-negocios-agroecologicos?hsLang=es"
+                },
+                {
+                    "id": 1074,
+                    "nombre_carrera": "Tecnicatura en Responsabilidad y Gestión Social",
+                    "categoria": "Pregrado",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Virtual",
+                    "facultad": "S21",
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-responsabilidad-y-gestion-social?hsLang=es"
                 },
                 {
                     "id": 1075,
-                    "nombre_carrera": "Licenciatura en Administración de Infraestructura Tecnológica",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
+                    "nombre_carrera": "Tecnicatura Universitaria en Estadística Aplicada y Análisis",
+                    "categoria": "Pregrado",
+                    "duracion": "2 años y medio",
                     "modalidad": "Virtual",
                     "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-infraestructura-tecnologica?hsLang=es"
-                },
-                {
-                    "id": 1076,
-                    "nombre_carrera": "Licenciatura en Administración Pública",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Virtual",
-                    "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-publica?hsLang=es"
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-estadistica-aplicada-y-analisis-avanzado?hsLang=es"
                 }
             ]
         }

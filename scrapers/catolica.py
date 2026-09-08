@@ -4,7 +4,8 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from scraper_utils import carreras_guardadas, guardar_json, pedir_sopa
+from scraper_utils import (carreras_guardadas, es_duracion_real, extraer_duracion,
+                           guardar_json, pedir_sopa)
 
 # Rutas resueltas desde la ubicación de este archivo, para que los scripts
 # funcionen sin importar desde qué carpeta se los ejecute.
@@ -57,12 +58,27 @@ def procesar_sopa(sopa):
             link_real = "https://uca.edu.ar/es/ingreso"
             
             if fila_detalle:
-                # Sacar duración (Captura 2)
+                # Sacar duración: primero el par <p>Duración</p><p>valor</p> del
+                # diseño viejo, y si no está, buscándola en el texto de la fila.
+                #
+                # OJO — hoy esto no encuentra nada, y no es culpa del selector:
+                # uca.edu.ar es una app Angular y el volcado guardado en
+                # fuentes/uca_codigo.html tiene las filas de detalle VACÍAS,
+                # porque el sitio las rellena recién cuando el usuario expande
+                # cada carrera. Con requests+BeautifulSoup no hay forma de
+                # llegar a ese contenido (todas las rutas del sitio devuelven el
+                # mismo shell de 117 KB sin datos). Para que estas 17 carreras
+                # tengan duración hay que volver a guardar el HTML CON las filas
+                # ya expandidas, o sumar un navegador headless al proyecto.
                 p_duracion = fila_detalle.find('p', string=re.compile('Duración', re.IGNORECASE))
                 if p_duracion:
                     p_valor = p_duracion.find_next_sibling('p')
                     if p_valor:
                         duracion_texto = p_valor.text.strip()
+                if not es_duracion_real(duracion_texto):
+                    hallada = extraer_duracion(fila_detalle.get_text(" "))
+                    if hallada:
+                        duracion_texto = hallada
                 
                 # Sacar Link (Captura 1)
                 link_btn = fila_detalle.find('a', string=re.compile('MÁS INFO', re.IGNORECASE))

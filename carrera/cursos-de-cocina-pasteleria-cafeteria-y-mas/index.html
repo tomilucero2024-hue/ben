@@ -30,15 +30,25 @@
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
     (() => {
+        let t = 'light';
         try {
             const g = localStorage.getItem('ben-theme');
-            const t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
         } catch (e) {}
+        // El logo se elige acá, antes de que el parser vea el <img>: antes venía
+        // el claro en el src y se cambiaba al oscuro después, con lo cual en
+        // tema oscuro se bajaban los dos archivos (~150 KB en vez de 75).
+        window.LOGO_BEN = t === 'dark' ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+        const pre = document.createElement('link');
+        pre.rel = 'preload';
+        pre.as = 'image';
+        pre.href = window.LOGO_BEN;
+        document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260903_10">
+<link rel="stylesheet" href="/paginas.css?v=20260908_06">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Gastronomía","item":"https://buscadoreducativo.com.ar/area/gastronomia/"},{"@type":"ListItem","position":4,"name":"Cursos de cocina, pastelería, cafetería y más","item":"https://buscadoreducativo.com.ar/carrera/cursos-de-cocina-pasteleria-cafeteria-y-mas/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Cursos de cocina, pastelería, cafetería y más","description":"Dónde estudiar Cursos de cocina, pastelería, cafetería y más en Mendoza: curso o formación profesional del área Gastronomía, dictada por 1 institución (1 privada). Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/cursos-de-cocina-pasteleria-cafeteria-y-mas/","provider":{"@type":"EducationalOrganization","name":"Escuela Internacional Islas Malvinas","url":"https://buscadoreducativo.com.ar/institucion/escuela-internacional-islas-malvinas/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Cursos de cocina, pastelería, cafetería y más en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Cursos de cocina, pastelería, cafetería y más en Mendoza en la siguiente institución: Escuela Internacional Islas Malvinas. En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Cursos de cocina, pastelería, cafetería y más?","acceptedAnswer":{"@type":"Answer","text":"La duración estimada depende de la institución y modalidad elegida (típicamente entre 4 y 5 años para carreras de grado, o de 2 a 3 años para tecnicaturas)."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Cursos de cocina, pastelería, cafetería y más?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Cursos de cocina, pastelería, cafetería y más?","acceptedAnswer":{"@type":"Answer","text":"Cursos de cocina, pastelería, cafetería y más es una curso o formación profesional perteneciente al área de Gastronomía. Entre sus aptitudes más afines se destacan: trabajo práctico, creatividad y interacción social."}}]}</script>
@@ -47,7 +57,8 @@
 <header class="cabecera">
     <div class="envoltorio">
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
-            <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
@@ -67,7 +78,6 @@
         <dt>Tipo de formación</dt><dd>Curso o formación profesional</dd>
         <dt>Dónde se dicta</dt><dd>1 institución</dd>
         <dt>Modalidad</dt><dd>Presencial</dd>
-        <dt>Duración</dt><dd>Consultar en la web</dd>
     </dl>
 
     <a class="cta" href="/?q=Cursos+de+cocina%2C+pasteler%C3%ADa%2C+cafeter%C3%ADa+y+m%C3%A1s&amp;area=Gastronom%C3%ADa&amp;formacion=cursos">Ver Cursos de cocina, pastelería, cafetería y más en el buscador →</a>
@@ -76,7 +86,7 @@
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/escuela-internacional-islas-malvinas/">Escuela Internacional Islas Malvinas</a></h3>
-            <ul class="oferta-datos"><li>Duración: Consultar en la web</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
             <a class="oficial" href="https://eim.esc.edu.ar/index.php/oferta-educativa/cursos" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -168,12 +178,6 @@
     </div>
 </footer>
 <script>
-    // El logo claro es el que viene en el HTML (así se ve bien sin JS). Si el
-    // tema es oscuro se cambia por el suyo.
-    if (document.documentElement.dataset.theme === 'dark') {
-        document.querySelector('.marca img').src = '/logo-ben-dark.png';
-    }
-
     // Autocompletado en vivo en la barra de búsqueda estática
     (() => {
         const inp = document.getElementById('q');
@@ -184,7 +188,7 @@
         async function cargarIndex() {
             if (dataIndex) return dataIndex;
             try {
-                const res = await fetch('/data/enlaces-ben.json');
+                const res = await fetch('/data/autocompletado-ben.json');
                 if (res.ok) dataIndex = await res.json();
             } catch (e) {}
             return dataIndex;
@@ -209,14 +213,15 @@
                 return;
             }
 
+            // El indice guarda [slug, nombre]: la clave sirve para buscar y el
+            // nombre es el que se muestra, con sus tildes y mayusculas.
+            const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let html = '';
-            matchesCarreras.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            matchesCarreras.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + esc(titulo) + '</span><span class="mini-search-item-badge">Carrera</span></a>';
             });
-            matchesInst.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            matchesInst.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + esc(titulo) + '</span><span class="mini-search-item-badge">Institución</span></a>';
             });
 
             drop.innerHTML = html;

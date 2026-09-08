@@ -167,6 +167,15 @@ html[data-theme="light"] {
 
 /* 2. BASE DE LA PÁGINA: tipografía, fondo y comportamiento global. */
 * { box-sizing: border-box; }
+/* El canal de la barra de scroll se reserva siempre. Así, cuando la bienvenida
+   bloquea el scroll (abajo), esconder la barra no corre el contenido ~15px y
+   vuelve a correrlo al soltarlo. */
+html { scrollbar-gutter: stable; }
+/* Mientras la bienvenida cubre la pantalla no hay nada que scrollear: es un
+   overlay fijo. Sin esto la rueda seguía moviendo el catálogo por detrás y, al
+   tocar "Ver carreras", el usuario aterrizaba a mitad de la grilla con el
+   header todavía expandido, como si el sitio hubiera saltado solo. */
+html.bienvenida-abierta, html.bienvenida-abierta body { overflow: hidden; }
 body {
     margin: 0;
     min-width: 320px;
@@ -1184,6 +1193,12 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .btn-chat-opcion:hover, .btn-chat-opcion:focus-visible { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
 .btn-chat-atras { display: block; width: 100%; margin-top: .75rem; padding: .4rem; border: 0; color: var(--muted); background: none; font-size: var(--fs-2xs); text-decoration: underline; }
 .btn-chat-atras:hover { color: var(--text); }
+/* Preguntas ya contestadas: quedan en el chat como transcripcion de lo que
+   paso, no como controles. Se apagan (js/copiloto.js las pone disabled) y se
+   ven apagadas, para que nadie vuelva a tocarlas esperando que hagan algo. */
+.btn-chat-opcion:disabled, .btn-chat-atras:disabled { opacity: .55; cursor: default; }
+.btn-chat-opcion:disabled:hover { border-color: var(--line); background: var(--surface); }
+.btn-chat-atras:disabled:hover { color: var(--muted); }
 /* En el mensaje de bienvenida el botón queda entre párrafos (.mensaje-bot p
    tiene margin: 0), así que necesita su propio aire. */
 /* Espaciado del mensaje de resultados del test (notas + tarjetas + reset). */
@@ -1527,20 +1542,42 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
         gap: .5rem;
         width: 100%;
     }
+    /* El reparto de esta fila lo manda el <select>: entre el rótulo "Ordenar
+       por" y el toggle de favoritos quedaba en ~88px, y "Predeterminado"
+       necesita 119, así que el orden activo se leía cortado ("Predeterm…") y en
+       celular no había forma de saber cómo estaba ordenada la grilla. Ahora el
+       select reserva lo suyo y el que cede es el toggle, que se sigue
+       entendiendo con la estrella. */
     .favoritos-toggle {
-        flex: 1;
+        flex: 0 1 auto;
+        min-width: 0;
         text-align: center;
         padding: .45rem .6rem;
     }
+    /* En 375px no entran los tres: "Solo favoritos" + "Ordenar por" + el
+       selector suman más que el ancho de pantalla. Se esconde el rótulo, que es
+       el más prescindible de los tres —las propias opciones dicen que eso
+       ordena—, pero se esconde VISUALMENTE: sigue en el árbol de accesibilidad
+       como nombre del <select>. */
+    .sort-control-label {
+        position: absolute;
+        width: 1px; height: 1px;
+        margin: -1px; padding: 0; border: 0;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
     .sort-control {
-        flex: 1.2;
+        flex: 0 1 auto;
+        min-width: 0;
         justify-content: flex-end;
         white-space: nowrap;
         font-size: var(--fs-2xs);
     }
     .sort-control select {
-        width: 100%;
-        max-width: 150px;
+        flex: 0 0 auto;
+        min-width: 8.5rem;
+        max-width: 11rem;
         font-size: var(--fs-xs);
         padding: .4rem .5rem;
     }
@@ -2396,7 +2433,15 @@ html[data-dyslexia="true"] span,
 html[data-dyslexia="true"] button,
 html[data-dyslexia="true"] input,
 html[data-dyslexia="true"] strong,
-html[data-dyslexia="true"] a {
+html[data-dyslexia="true"] a,
+/* Los títulos también. Faltaban en esta lista y, como los de tarjeta llevan un
+   tracking negativo propio (-.015em, que es lindo pero apretado), en modo
+   lectura fácil quedaban MÁS juntos que el resto del texto: exactamente lo
+   contrario de lo que la opción promete. */
+html[data-dyslexia="true"] h1,
+html[data-dyslexia="true"] h2,
+html[data-dyslexia="true"] h3,
+html[data-dyslexia="true"] h4 {
     letter-spacing: 0.04em !important;
     word-spacing: 0.08em !important;
 }

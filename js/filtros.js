@@ -6,16 +6,39 @@ import { ofertas } from './datos.js';
 import { estado, favoritos } from './estado.js';
 import { distanciaLevenshtein, getGrupoDuracion, normalizarTexto } from './util.js';
 
+// Qué tanto se parece una oferta a lo que el usuario tipeó, de 0 a 100. A
+// diferencia de coincideTexto() —que es todo o nada: exige que TODOS los
+// términos estén— acá cada término suma por separado, que es justamente lo que
+// hace falta para responder "esto no está, pero mirá esto otro" cuando la
+// búsqueda tiene una palabra de más ("ingeniería cuántica" encuentra las
+// ingenierías). Usa el mismo puntuarPar() que la búsqueda principal, así que
+// tolera los mismos errores de tipeo.
+function afinidadDeTexto(oferta) {
+    const texto = estado.texto;
+    if (!texto) return 0;
+    const hay = normalizarTexto(`${oferta.nombre} ${oferta.institucion} ${oferta.facultad} ${oferta.area}`);
+    const palabras = hay.split(/\s+/).filter(Boolean);
+    const tokens = texto.split(/\s+/).filter(Boolean);
+    const significativos = tokens.filter(t => !CONECTORES.has(t));
+    const aEvaluar = significativos.length ? significativos : tokens;
+    if (!aEvaluar.length) return 0;
+    const acertados = aEvaluar.reduce((suma, token) => {
+        const mejor = palabras.reduce((m, pal) => Math.max(m, puntuarPar(pal, token)), 0);
+        return suma + Math.min(mejor, 100) / 100;
+    }, 0);
+    return (acertados / aEvaluar.length) * 100;
+}
+
 function puntuacionRelacion(oferta) {
     let score = 0;
-    const texto = estado.texto;
-    if (texto) {
-        const hay = normalizarTexto(`${oferta.nombre} ${oferta.institucion} ${oferta.facultad} ${oferta.area}`);
-        const palabras = texto.split(/\s+/).filter(Boolean);
-        if (palabras.length) {
-            const presentes = palabras.filter(p => hay.includes(p)).length;
-            score += (presentes / palabras.length) * 100;
-        }
+    if (estado.texto) {
+        const afinidad = afinidadDeTexto(oferta);
+        // Si el usuario escribió algo y NADA de eso coincide, esta oferta no es
+        // "parecida a su búsqueda" por más filtros que cumpla. Sin este corte,
+        // cumplir un filtro alcanzaba para presentar cualquier carrera como
+        // sugerencia de un texto con el que no tiene nada que ver.
+        if (afinidad === 0) return 0;
+        score += afinidad;
     }
     if (estado.area !== 'todos' && oferta.area === estado.area) score += 30;
     if (estado.formacion !== 'todos' && oferta.formacion === estado.formacion) score += 20;
@@ -30,16 +53,20 @@ function puntuacionRelacion(oferta) {
     return score;
 }
 
+// Devuelve solo lo que de verdad tiene algo que ver con la búsqueda o los
+// filtros activos; si no hay nada parecido devuelve una lista vacía y la vista
+// muestra el estado vacío. Antes, cuando todo puntuaba 0, caía al principio del
+// catálogo "para no dejar la pantalla vacía": buscar "xyzqwe" contestaba
+// "6 sugerencias parecidas" y listaba Ingeniería civil, electromecánica y
+// electrónica bajo el título "Lo más parecido a tu búsqueda". Prefiero decir
+// que no hay nada antes que llamar "parecido" a lo primero de la lista.
 export function obtenerRelacionadas(limite = 6) {
-    const puntuadas = ofertas
+    return ofertas
         .map(oferta => ({ oferta, score: puntuacionRelacion(oferta) }))
-        .sort((a, b) => b.score - a.score);
-    // Si hay algo de texto o filtros, priorizamos las que sumaron puntos; si todo
-    // dio 0 (filtros imposibles entre sí), igual devolvemos las primeras para no
-    // dejar la pantalla vacía.
-    const conPuntos = puntuadas.filter(p => p.score > 0);
-    const elegidas = (conPuntos.length ? conPuntos : puntuadas).slice(0, limite);
-    return elegidas.map(p => p.oferta);
+        .filter(p => p.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, limite)
+        .map(p => p.oferta);
 }
 
 // Si el usuario busca texto dentro de Educación Formal, las plataformas que

@@ -1800,28 +1800,6 @@
       }
     },
     {
-      "clave": "entradas anteriores",
-      "nombre": "Entradas anteriores",
-      "categoria": "Grado / Carrera",
-      "area": "Ciencias sociales",
-      "formacion": "grado",
-      "instituciones": [
-        "Universidad de Mendoza (UM)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 1,
-        "practico": 2,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 5,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "escribania",
       "nombre": "Escribanía",
       "categoria": "Grado / Carrera",
@@ -3264,28 +3242,6 @@
       }
     },
     {
-      "clave": "licenciatura en administracion de servicios de salud",
-      "nombre": "Licenciatura en Administración de Servicios de Salud",
-      "categoria": "Grado / Carrera",
-      "area": "Salud",
-      "formacion": "grado",
-      "instituciones": [
-        "Universidad Siglo 21 (S21)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 2,
-        "practico": 5,
-        "social": 5,
-        "creativo": 1,
-        "terreno": 0,
-        "liderazgo": 4,
-        "teorico": 5,
-        "matematico": 2,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "licenciatura en administracion gastronomica",
       "nombre": "Licenciatura en Administración Gastronómica",
       "categoria": "Grado / Carrera",
@@ -3314,7 +3270,8 @@
       "area": "Negocios",
       "formacion": "grado",
       "instituciones": [
-        "Universidad del Aconcagua (UDA)"
+        "Universidad del Aconcagua (UDA)",
+        "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
         "analitico": 5,
@@ -3437,6 +3394,28 @@
         "teorico": 5,
         "matematico": 1,
         "movilidad": 3
+      }
+    },
+    {
+      "clave": "licenciatura en antropologia organizacional",
+      "nombre": "Licenciatura en Antropología Organizacional",
+      "categoria": "Grado / Carrera",
+      "area": "Ciencias sociales",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad Siglo 21 (S21)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 1,
+        "practico": 2,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 5,
+        "matematico": 1,
+        "movilidad": 2
       }
     },
     {
@@ -4036,28 +4015,6 @@
       }
     },
     {
-      "clave": "licenciatura en desarrollo de negocios inmobiliarios - ccc",
-      "nombre": "Licenciatura en Desarrollo de Negocios Inmobiliarios - CCC",
-      "categoria": "Grado / Carrera",
-      "area": "Negocios",
-      "formacion": "grado",
-      "instituciones": [
-        "Universidad Siglo 21 (S21)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 4,
-        "practico": 4,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 5,
-        "teorico": 4,
-        "matematico": 3,
-        "movilidad": 3
-      }
-    },
-    {
       "clave": "licenciatura en direccion coral",
       "nombre": "Licenciatura en Dirección Coral",
       "categoria": "Grado / Carrera",
@@ -4257,30 +4214,8 @@
       }
     },
     {
-      "clave": "licenciatura en educacion",
-      "nombre": "Licenciatura en Educación",
-      "categoria": "Grado / Carrera",
-      "area": "Educación",
-      "formacion": "grado",
-      "instituciones": [
-        "Universidad Siglo 21 (S21)"
-      ],
-      "perfil": {
-        "analitico": 3,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
-        "creativo": 3,
-        "terreno": 1,
-        "liderazgo": 4,
-        "teorico": 5,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "licenciatura en educacion fisica a distancia",
-      "nombre": "Licenciatura en Educación Física a distancia",
+      "nombre": "Licenciatura en Educación Física a Distancia",
       "categoria": "Grado / Carrera",
       "area": "Educación",
       "formacion": "grado",
@@ -4364,28 +4299,6 @@
         "teorico": 5,
         "matematico": 1,
         "movilidad": 2
-      }
-    },
-    {
-      "clave": "licenciatura en emprendimiento - ccc",
-      "nombre": "Licenciatura en Emprendimiento - CCC",
-      "categoria": "Grado / Carrera",
-      "area": "Negocios",
-      "formacion": "grado",
-      "instituciones": [
-        "Universidad Siglo 21 (S21)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 2,
-        "practico": 3,
-        "social": 4,
-        "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 4,
-        "teorico": 4,
-        "matematico": 3,
-        "movilidad": 3
       }
     },
     {
@@ -4550,7 +4463,8 @@
       "area": "Salud",
       "formacion": "grado",
       "instituciones": [
-        "Universidad del Aconcagua (UDA)"
+        "Universidad del Aconcagua (UDA)",
+        "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
         "analitico": 5,
@@ -4652,28 +4566,6 @@
         "teorico": 5,
         "matematico": 3,
         "movilidad": 3
-      }
-    },
-    {
-      "clave": "licenciatura en gerontologia - ccc",
-      "nombre": "Licenciatura en Gerontología - CCC",
-      "categoria": "Grado / Carrera",
-      "area": "Salud",
-      "formacion": "grado",
-      "instituciones": [
-        "Universidad Siglo 21 (S21)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 2,
-        "practico": 5,
-        "social": 5,
-        "creativo": 1,
-        "terreno": 1,
-        "liderazgo": 2,
-        "teorico": 5,
-        "matematico": 2,
-        "movilidad": 2
       }
     },
     {
@@ -5164,9 +5056,9 @@
     {
       "clave": "licenciatura en kinesiologia y fisioterapia",
       "nombre": "Licenciatura en Kinesiología y Fisioterapia",
-      "categoria": "Grado / Carrera",
+      "categoria": "Pregrado",
       "area": "Salud",
-      "formacion": "grado",
+      "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Siglo 21 (S21)"
       ],
@@ -5178,7 +5070,7 @@
         "creativo": 1,
         "terreno": 1,
         "liderazgo": 3,
-        "teorico": 5,
+        "teorico": 4,
         "matematico": 2,
         "movilidad": 2
       }
@@ -5525,6 +5417,7 @@
       "area": "Salud",
       "formacion": "grado",
       "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)",
         "Universidad del Aconcagua (UDA)",
         "Universidad Siglo 21 (S21)"
       ],
@@ -5564,28 +5457,6 @@
       }
     },
     {
-      "clave": "licenciatura en produccion de bioimagenes a distancia",
-      "nombre": "Licenciatura en Producción de Bioimágenes a distancia",
-      "categoria": "Grado / Carrera",
-      "area": "Salud",
-      "formacion": "grado",
-      "instituciones": [
-        "Universidad Juan Agustín Maza (UMaza)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 2,
-        "practico": 5,
-        "social": 5,
-        "creativo": 1,
-        "terreno": 0,
-        "liderazgo": 2,
-        "teorico": 5,
-        "matematico": 2,
-        "movilidad": 3
-      }
-    },
-    {
       "clave": "licenciatura en psicologia",
       "nombre": "Licenciatura en Psicología",
       "categoria": "Grado / Carrera",
@@ -5618,28 +5489,6 @@
       "formacion": "grado",
       "instituciones": [
         "Universidad Católica Argentina (UCA)",
-        "Universidad Siglo 21 (S21)"
-      ],
-      "perfil": {
-        "analitico": 3,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
-        "creativo": 3,
-        "terreno": 1,
-        "liderazgo": 4,
-        "teorico": 5,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
-      "clave": "licenciatura en psicopedagogia - ccc",
-      "nombre": "Licenciatura en Psicopedagogía - CCC",
-      "categoria": "Grado / Carrera",
-      "area": "Educación",
-      "formacion": "grado",
-      "instituciones": [
         "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
@@ -5770,6 +5619,28 @@
       }
     },
     {
+      "clave": "licenciatura en seguridad ciudadana",
+      "nombre": "Licenciatura en Seguridad Ciudadana",
+      "categoria": "Grado / Carrera",
+      "area": "Ciencias sociales",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad del Aconcagua (UDA)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 1,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 2,
+        "liderazgo": 4,
+        "teorico": 5,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "licenciatura en seguridad ciudadana integral",
       "nombre": "Licenciatura en Seguridad Ciudadana Integral",
       "categoria": "Grado / Carrera",
@@ -5793,7 +5664,29 @@
     },
     {
       "clave": "licenciatura en seguridad ciudadana integral - modalidad a distancia",
-      "nombre": "Licenciatura en Seguridad Ciudadana Integral - Modalidad a Distancia",
+      "nombre": "Licenciatura en Seguridad Ciudadana Integral - Modalidad a distancia",
+      "categoria": "Grado / Carrera",
+      "area": "Ciencias sociales",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad del Aconcagua (UDA)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 1,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 4,
+        "teorico": 5,
+        "matematico": 1,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "licenciatura en seguridad ciudadana integral | a distancia",
+      "nombre": "Licenciatura en Seguridad Ciudadana Integral | A distancia",
       "categoria": "Grado / Carrera",
       "area": "Ciencias sociales",
       "formacion": "grado",
@@ -6076,6 +5969,50 @@
         "liderazgo": 3,
         "teorico": 5,
         "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "maestria en ejercicio fisico y salud",
+      "nombre": "Maestría en Ejercicio Físico y Salud",
+      "categoria": "Pregrado",
+      "area": "Salud",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad del Aconcagua (UDA)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 1,
+        "terreno": 0,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 2,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "maestria en salud publica y seguridad social",
+      "nombre": "Maestría en Salud Pública y Seguridad Social",
+      "categoria": "Pregrado",
+      "area": "Salud",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad del Aconcagua (UDA)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 1,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -7121,24 +7058,24 @@
       }
     },
     {
-      "clave": "profesorado de grado universitario (ciclo de complementacion - psicologia)",
-      "nombre": "Profesorado de Grado Universitario (Ciclo de Complementación - Psicología)",
+      "clave": "profesorado de grado universitario",
+      "nombre": "Profesorado de Grado Universitario",
       "categoria": "Grado / Carrera",
-      "area": "Salud",
+      "area": "Educación",
       "formacion": "profesorados",
       "instituciones": [
         "Universidad del Aconcagua (UDA)"
       ],
       "perfil": {
-        "analitico": 5,
-        "tecnologico": 2,
-        "practico": 5,
+        "analitico": 3,
+        "tecnologico": 1,
+        "practico": 4,
         "social": 5,
-        "creativo": 1,
+        "creativo": 3,
         "terreno": 1,
-        "liderazgo": 3,
+        "liderazgo": 4,
         "teorico": 5,
-        "matematico": 2,
+        "matematico": 1,
         "movilidad": 2
       }
     },
@@ -7913,7 +7850,8 @@
       "area": "Educación",
       "formacion": "profesorados",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "Universidad Nacional de Cuyo (UNCuyo)",
+        "Universidad Juan Agustín Maza (UMaza)"
       ],
       "perfil": {
         "analitico": 3,
@@ -7926,28 +7864,6 @@
         "teorico": 5,
         "matematico": 1,
         "movilidad": 2
-      }
-    },
-    {
-      "clave": "profesorado para profesionales a distancia",
-      "nombre": "Profesorado para Profesionales a distancia",
-      "categoria": "Grado / Carrera",
-      "area": "Educación",
-      "formacion": "profesorados",
-      "instituciones": [
-        "Universidad Juan Agustín Maza (UMaza)"
-      ],
-      "perfil": {
-        "analitico": 3,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
-        "creativo": 3,
-        "terreno": 0,
-        "liderazgo": 4,
-        "teorico": 5,
-        "matematico": 1,
-        "movilidad": 3
       }
     },
     {
@@ -8283,7 +8199,7 @@
     },
     {
       "clave": "puericultura a distancia",
-      "nombre": "Puericultura a distancia",
+      "nombre": "Puericultura a Distancia",
       "categoria": "Grado / Carrera",
       "area": "Ciencias sociales",
       "formacion": "grado",
@@ -8652,28 +8568,6 @@
         "terreno": 1,
         "liderazgo": 3,
         "teorico": 3,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
-      "clave": "tec. en ninez, adolescencia y familia",
-      "nombre": "Tec. en Niñez, Adolescencia y Familia",
-      "categoria": "Pregrado",
-      "area": "Ciencias sociales",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "Universidad del Aconcagua (UDA)"
-      ],
-      "perfil": {
-        "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
         "matematico": 1,
         "movilidad": 2
       }
@@ -9318,28 +9212,6 @@
       }
     },
     {
-      "clave": "tecnicatura en higiene y seguridad laboral",
-      "nombre": "Tecnicatura en Higiene y Seguridad Laboral",
-      "categoria": "Pregrado",
-      "area": "Ciencias sociales",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "Universidad Siglo 21 (S21)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 2,
-        "liderazgo": 4,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "tecnicatura en higiene, seguridad y ambiente",
       "nombre": "Tecnicatura en Higiene, Seguridad y Ambiente",
       "categoria": "Pregrado / Tecnicatura",
@@ -9538,6 +9410,28 @@
       }
     },
     {
+      "clave": "tecnicatura en negocios agroecologicos",
+      "nombre": "Tecnicatura en Negocios Agroecológicos",
+      "categoria": "Pregrado",
+      "area": "Negocios",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Siglo 21 (S21)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 4,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 5,
+        "teorico": 2,
+        "matematico": 3,
+        "movilidad": 3
+      }
+    },
+    {
       "clave": "tecnicatura en operaciones mineras",
       "nombre": "Tecnicatura en Operaciones Mineras",
       "categoria": "Grado / Carrera",
@@ -9708,6 +9602,28 @@
         "creativo": 2,
         "terreno": 1,
         "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "tecnicatura en responsabilidad y gestion social",
+      "nombre": "Tecnicatura en Responsabilidad y Gestión Social",
+      "categoria": "Pregrado",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Siglo 21 (S21)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 1,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 5,
         "teorico": 4,
         "matematico": 1,
         "movilidad": 2
@@ -11273,7 +11189,7 @@
     {
       "clave": "tecnicatura universitaria en atencion prehospitalaria de emergencias",
       "nombre": "Tecnicatura Universitaria en Atención Prehospitalaria de Emergencias",
-      "categoria": "Grado / Carrera",
+      "categoria": "Pregrado",
       "area": "Ciencias sociales",
       "formacion": "tecnicaturas",
       "instituciones": [
@@ -11427,7 +11343,7 @@
     {
       "clave": "tecnicatura universitaria en enfermeria",
       "nombre": "Tecnicatura Universitaria en Enfermería",
-      "categoria": "Grado / Carrera",
+      "categoria": "Pregrado",
       "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
@@ -11443,6 +11359,28 @@
         "liderazgo": 2,
         "teorico": 3,
         "matematico": 2,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "tecnicatura universitaria en estadistica aplicada y analisis",
+      "nombre": "Tecnicatura Universitaria en Estadística Aplicada y Análisis",
+      "categoria": "Pregrado",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Siglo 21 (S21)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 1,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 4,
         "movilidad": 2
       }
     },
@@ -11729,28 +11667,6 @@
         "liderazgo": 3,
         "teorico": 2,
         "matematico": 3,
-        "movilidad": 2
-      }
-    },
-    {
-      "clave": "tecnicatura universitaria en seguridad ciudadana",
-      "nombre": "Tecnicatura universitaria en Seguridad Ciudadana",
-      "categoria": "Pregrado",
-      "area": "Ciencias sociales",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "Universidad del Aconcagua (UDA)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 2,
-        "liderazgo": 4,
-        "teorico": 4,
-        "matematico": 1,
         "movilidad": 2
       }
     },

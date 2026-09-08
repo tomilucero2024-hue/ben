@@ -30,15 +30,25 @@
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
     (() => {
+        let t = 'light';
         try {
             const g = localStorage.getItem('ben-theme');
-            const t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
         } catch (e) {}
+        // El logo se elige acá, antes de que el parser vea el <img>: antes venía
+        // el claro en el src y se cambiaba al oscuro después, con lo cual en
+        // tema oscuro se bajaban los dos archivos (~150 KB en vez de 75).
+        window.LOGO_BEN = t === 'dark' ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+        const pre = document.createElement('link');
+        pre.rel = 'preload';
+        pre.as = 'image';
+        pre.href = window.LOGO_BEN;
+        document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260903_10">
+<link rel="stylesheet" href="/paginas.css?v=20260908_06">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ciencias sociales","item":"https://buscadoreducativo.com.ar/area/ciencias-sociales/"},{"@type":"ListItem","position":4,"name":"Tecnicatura Universitaria en Emergentología","item":"https://buscadoreducativo.com.ar/carrera/tecnicatura-universitaria-en-emergentologia/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Tecnicatura Universitaria en Emergentología","description":"Dónde estudiar Tecnicatura Universitaria en Emergentología en Mendoza: tecnicatura del área Ciencias sociales, dictada por 1 institución (1 privada). Dura 2 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-universitaria-en-emergentologia/","provider":{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Tecnicatura Universitaria en Emergentología en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Tecnicatura Universitaria en Emergentología en Mendoza en la siguiente institución: Universidad del Aconcagua (UDA). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Tecnicatura Universitaria en Emergentología?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 2 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Tecnicatura Universitaria en Emergentología?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Tecnicatura Universitaria en Emergentología?","acceptedAnswer":{"@type":"Answer","text":"Tecnicatura Universitaria en Emergentología es una tecnicatura perteneciente al área de Ciencias sociales. Entre sus aptitudes más afines se destacan: interacción social, pensamiento analítico, base teórica y académica y trabajo práctico."}}]}</script>
@@ -47,7 +57,8 @@
 <header class="cabecera">
     <div class="envoltorio">
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
-            <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
@@ -67,7 +78,7 @@
         <dt>Tipo de formación</dt><dd>Tecnicatura</dd>
         <dt>Dónde se dicta</dt><dd>1 institución</dd>
         <dt>Modalidad</dt><dd>Presencial</dd>
-        <dt>Duración</dt><dd>2 año</dd>
+        <dt>Duración</dt><dd>2 años</dd>
     </dl>
 
     <a class="cta" href="/?q=Tecnicatura+Universitaria+en+Emergentolog%C3%ADa&amp;area=Ciencias+sociales&amp;formacion=tecnicaturas">Ver Tecnicatura Universitaria en Emergentología en el buscador →</a>
@@ -76,7 +87,7 @@
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 año</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrados/tecnicatura-universitaria-en-emergentologia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -147,20 +158,20 @@
 
     <h2>Otras carreras del área Ciencias sociales</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(6)</span></li>
+        <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(8)</span></li>
+        <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/licenciatura-en-relaciones-internacionales/">Licenciatura en Relaciones Internacionales</a> <span class="cuantas">(4)</span></li>
-        <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-petroleo-y-gas/">Tecnicatura Superior en Petróleo y Gas</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/tecnicatura-universitaria-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/despachante-de-aeronaves/">Despachante de Aeronaves</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-comunicacion-social/">Licenciatura en Comunicación Social</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/licenciatura-en-criminalistica/">Licenciatura en Criminalística</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia/">Licenciatura en Niñez, Adolescencia y Familia</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-relaciones-publicas-e-institucionales/">Licenciatura en Relaciones Públicas e Institucionales</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/locucion/">Locución</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/periodismo/">Periodismo</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-en-higiene-y-seguridad-en-el-trabajo/">Tecnicatura en Higiene y Seguridad en el Trabajo</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-actividades-de-montana/">Tecnicatura Superior en Actividades de Montaña</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-conservacion-de-la-naturaleza/">Tecnicatura Superior en Conservación de la Naturaleza</a> <span class="cuantas">(2)</span></li>
     </ul>
-    <p><a href="/area/ciencias-sociales/">Ver las 112 carreras del área Ciencias sociales →</a></p>
+    <p><a href="/area/ciencias-sociales/">Ver las 114 carreras del área Ciencias sociales →</a></p>
 
 </main>
 
@@ -175,12 +186,6 @@
     </div>
 </footer>
 <script>
-    // El logo claro es el que viene en el HTML (así se ve bien sin JS). Si el
-    // tema es oscuro se cambia por el suyo.
-    if (document.documentElement.dataset.theme === 'dark') {
-        document.querySelector('.marca img').src = '/logo-ben-dark.png';
-    }
-
     // Autocompletado en vivo en la barra de búsqueda estática
     (() => {
         const inp = document.getElementById('q');
@@ -191,7 +196,7 @@
         async function cargarIndex() {
             if (dataIndex) return dataIndex;
             try {
-                const res = await fetch('/data/enlaces-ben.json');
+                const res = await fetch('/data/autocompletado-ben.json');
                 if (res.ok) dataIndex = await res.json();
             } catch (e) {}
             return dataIndex;
@@ -216,14 +221,15 @@
                 return;
             }
 
+            // El indice guarda [slug, nombre]: la clave sirve para buscar y el
+            // nombre es el que se muestra, con sus tildes y mayusculas.
+            const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let html = '';
-            matchesCarreras.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            matchesCarreras.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + esc(titulo) + '</span><span class="mini-search-item-badge">Carrera</span></a>';
             });
-            matchesInst.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            matchesInst.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + esc(titulo) + '</span><span class="mini-search-item-badge">Institución</span></a>';
             });
 
             drop.innerHTML = html;

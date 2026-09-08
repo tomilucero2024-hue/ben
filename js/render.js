@@ -7,7 +7,7 @@ import { etiquetaCompatibilidad } from './copiloto.js';
 import { ETIQUETAS_FUENTE, buscarPorClave, catalogosAparte, enlacesBEN, ofertas, plataformas } from './datos.js';
 import { comparador, enComparador, estaEnFavoritos, estado, favoritos, sincronizarURL } from './estado.js';
 import { FILTROS_SOLO_FORMALES, cumpleFiltros, filtrarYOrdenar, obtenerRelacionadas } from './filtros.js';
-import { capSeguro, escaparHTML, normalizarTexto, urlSegura } from './util.js';
+import { capSeguro, duracionCorta, escaparHTML, limpiarTexto, nombreSeguro, normalizarTexto, urlSegura } from './util.js';
 
 export const LIMITE_PAGINA = 24;
 
@@ -27,8 +27,8 @@ function enlaceInstitucionBEN(nombre) {
     if (!nombre) return '';
     const slug = enlacesBEN.instituciones && enlacesBEN.instituciones[normalizarTexto(nombre)];
     return slug
-        ? `<a href="/institucion/${slug}/" class="link-institucion">${escaparHTML(capSeguro(nombre))}</a>`
-        : escaparHTML(capSeguro(nombre));
+        ? `<a href="/institucion/${slug}/" class="link-institucion">${nombreSeguro(nombre)}</a>`
+        : nombreSeguro(nombre);
 }
 
 // Iconos vectoriales limpios (SVG) para evitar emojis del sistema
@@ -179,7 +179,7 @@ export function renderizarPlataformas(contenedor, lista) {
                 ${plataforma.logo
                     ? `<img class="platform-logo" src="${escaparHTML(CARPETA_LOGOS + plataforma.logo)}" alt="Logo de ${escaparHTML(plataforma.nombre)}" loading="lazy">`
                     : `<span class="platform-logo platform-logo-vacio" aria-hidden="true">${escaparHTML(String(plataforma.nombre).charAt(0))}</span>`}
-                <h3 class="platform-name">${capSeguro(plataforma.nombre)}</h3>
+                <h3 class="platform-name">${nombreSeguro(plataforma.nombre)}</h3>
             </div>
             <p class="platform-summary">${capSeguro(plataforma.resumen)}</p>
             <div class="platform-meta">
@@ -187,7 +187,7 @@ export function renderizarPlataformas(contenedor, lista) {
                 <span class="badge">${SVG_DURACION} ${capSeguro(plataforma.duracion)}</span>
             </div>
             ${urlSegura(plataforma.url)
-                ? `<a class="platform-link" href="${escaparHTML(urlSegura(plataforma.url))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ver oferta en ${capSeguro(plataforma.nombre)} ↗</a>`
+                ? `<a class="platform-link" href="${escaparHTML(urlSegura(plataforma.url))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ver oferta en ${nombreSeguro(plataforma.nombre)} ↗</a>`
                 : '<span class="platform-link platform-link-muted">Sitio oficial no disponible</span>'}
             <div class="card-actions">
                 <button type="button" class="btn-comparar${enComparador(plataforma._clave) ? ' is-active' : ''}" data-clave="${escaparHTML(plataforma._clave)}" aria-pressed="${enComparador(plataforma._clave)}" title="Agregar a comparar">${ICONO_COMPARAR} <span>Comparar</span></button>
@@ -326,12 +326,28 @@ export function mostrarResultados() {
         } else {
             const relacionadas = obtenerRelacionadas();
             if (relacionadas.length) {
-                if (contador) contador.textContent = `0 resultados exactos · ${relacionadas.length} sugerencias parecidas`;
+                const n = relacionadas.length;
+                if (contador) contador.textContent = `0 resultados exactos · ${n} ${n === 1 ? 'sugerencia parecida' : 'sugerencias parecidas'}`;
+                // El texto se adapta a lo que el usuario hizo: hablar de "tu
+                // búsqueda" cuando solo tocó filtros, o de "esos filtros" cuando
+                // solo escribió, sonaba a mensaje puesto de apuro.
+                const hayTexto = Boolean(estado.texto);
                 renderizarTarjetas(relacionadas, {
-                    encabezado: '<p class="results-suggest">No encontramos coincidencias exactas con esos filtros. <strong>Lo más parecido a tu búsqueda:</strong></p>'
+                    encabezado: hayTexto
+                        ? '<p class="results-suggest">No encontramos coincidencias exactas. <strong>Lo más parecido a lo que buscaste:</strong></p>'
+                        : '<p class="results-suggest">No hay ofertas que cumplan todos esos filtros. <strong>Lo que más se acerca:</strong></p>'
                 });
             } else {
-                renderizarTarjetas([]);
+                // Nada exacto y nada parecido. Antes acá se listaba el principio
+                // del catálogo como si fueran sugerencias; ahora se dice lo que
+                // pasa, y con la palabra buscada a la vista para que se note si
+                // el problema es un tipeo.
+                const escrito = (document.getElementById('searchInput')?.value || '').trim();
+                if (contenedor) {
+                    contenedor.innerHTML = escrito
+                        ? `<p class="empty-state">No encontramos nada parecido a <strong>«${escaparHTML(escrito)}»</strong>. Probá con otra palabra o revisá los filtros que tenés puestos.</p>`
+                        : '<p class="empty-state">No hay ofertas que cumplan todos esos filtros a la vez. Probá quitar alguno.</p>';
+                }
                 if (contador) contador.textContent = '0 resultados encontrados';
             }
         }
@@ -401,14 +417,19 @@ export function cerrarComparar() {
 
 function construirTablaComparar(items) {
     const filas = [
-        ['Institución', i => capSeguro(i.institucion || '—')],
+        ['Institución', i => nombreSeguro(i.institucion || '—')],
         ['Categoría / Área', i => capSeguro(i.categoria || i.area || '—')],
         ['Modalidad', i => capSeguro(i.modalidad || '—')],
-        ['Duración', i => capSeguro(i.duracion || '—')],
+        // Mismo criterio que el chip de la tarjeta: se resume la duración de las
+        // carreras formales, y se deja el texto crudo en las que no lo son
+        // (plataformas y formaciones alternativas suelen dar un rango).
+        ['Duración', i => !i.duracion ? '—' : ((!i.fuente || i.fuente === 'formal') ? escaparHTML(duracionCorta(i.duracion)) : capSeguro(i.duracion))],
         ['Gestión / Costo', i => i.costo ? `${i.gestion === 'pública' ? 'Pública' : 'Privada'} · ${i.costo === 'arancelado' ? 'Arancelada' : 'Gratuita'}` : (i.gestion ? (i.gestion === 'pública' ? 'Pública (gratuita)' : 'Privada (arancelada)') : '—')],
         ['Sitio oficial', i => urlSegura(i.link || i.url) ? `<a href="${escaparHTML(urlSegura(i.link || i.url))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ir ↗</a>` : '—']
     ];
-    const encabezado = `<tr><th></th>${items.map(i => `<th>${escaparHTML(i.nombre)}</th>`).join('')}</tr>`;
+    // capSeguro y no escaparHTML a secas: si no, la misma carrera se leía
+    // "Ingeniería civil" en la tarjeta y "INGENIERÍA CIVIL" acá.
+    const encabezado = `<tr><th></th>${items.map(i => `<th>${capSeguro(i.nombre)}</th>`).join('')}</tr>`;
     const cuerpo = filas.map(([etiqueta, fn]) => `<tr><th scope="row">${etiqueta}</th>${items.map(i => `<td>${fn(i)}</td>`).join('')}</tr>`).join('');
     const tabla = `<table class="tabla-comparar"><thead>${encabezado}</thead><tbody>${cuerpo}</tbody></table>`;
     // En móvil la tabla ancha no sirve: generamos una tarjeta por ítem, con cada
@@ -421,6 +442,22 @@ function construirTablaComparar(items) {
             </dl>
         </div>`).join('');
     return `<div class="comparar-responsive">${tabla}<div class="comparar-movil">${movil}</div></div>`;
+}
+
+// El chip de duración de las tarjetas del catálogo formal. Muestra la duración
+// ya interpretada ("4 años") en vez del texto crudo, que en 149 de 658 carreras
+// era una oración entera y desbordaba la tarjeta. Cuando el original decía algo
+// más, queda accesible en el title.
+//
+// Ojo: esto es solo para el catálogo formal. En plataformas y formaciones
+// alternativas la duración es descriptiva y suele ser un rango ("De 2 a 6
+// meses", "A ritmo propio"): ahí resumir a un número tergiversa el dato, así que
+// esas tarjetas siguen mostrando el texto tal cual.
+function chipDuracion(duracion) {
+    const corta = duracionCorta(duracion);
+    const original = limpiarTexto(duracion);
+    const titulo = original && original !== corta ? ` title="${escaparHTML(original)}"` : '';
+    return `<span${titulo}>${SVG_DURACION} ${escaparHTML(corta)}</span>`;
 }
 
 export function renderizarTarjetas(resultados, { mostrarMatch = false, encabezado = '' } = {}) {
@@ -439,8 +476,8 @@ export function renderizarTarjetas(resultados, { mostrarMatch = false, encabezad
             <h3 class="card-title">${capSeguro(oferta.nombre)}</h3>
             <div class="card-info">
                 <p class="card-institucion-row">${SVG_INSTITUCION} <strong>${enlaceInstitucionBEN(oferta.institucion)}</strong></p>
-                ${oferta.facultad ? `<p class="card-facultad-row">${SVG_FACULTAD} <span>${capSeguro(oferta.facultad)}</span></p>` : ''}
-                <p class="card-meta-row"><span>${SVG_MODALIDAD} ${capSeguro(oferta.modalidad)}</span> <span class="card-meta-sep">·</span> <span>${SVG_DURACION} ${capSeguro(oferta.duracion)}</span></p>
+                ${oferta.facultad ? `<p class="card-facultad-row">${SVG_FACULTAD} <span>${nombreSeguro(oferta.facultad)}</span></p>` : ''}
+                <p class="card-meta-row"><span>${SVG_MODALIDAD} ${capSeguro(oferta.modalidad)}</span> <span class="card-meta-sep">·</span> ${chipDuracion(oferta.duracion)}</p>
             </div>
             <div class="card-cta-group">
                 ${enlaceFichaBEN(oferta.nombre)}

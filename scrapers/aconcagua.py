@@ -7,7 +7,8 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-from scraper_utils import guardar_json
+from scraper_utils import (carreras_por_link, es_duracion_real, extraer_duracion,
+                           guardar_json, mejor_duracion, parece_carrera)
 
 # Rutas resueltas desde la ubicación de este archivo, para que los scripts
 # funcionen sin importar desde qué carpeta se los ejecute.
@@ -17,17 +18,11 @@ DIR_DATOS = Path(__file__).resolve().parents[1] / "data"
 print("🛠️ Encendiendo el escáner V6 para la Universidad del Aconcagua (UDA)...\n")
 
 archivo_uda = DIR_DATOS / "uda.json"
-carreras_viejas = {}
-
-# Memoria del taller
-if os.path.exists(archivo_uda):
-    try:
-        with open(archivo_uda, "r", encoding="utf-8") as f:
-            datos = json.load(f)
-            for c in datos["instituciones"][0].get("carreras", []):
-                carreras_viejas[c["nombre_carrera"]] = c
-    except:
-        pass
+# Memoria del taller, indexada por link: el nombre que trae el listado puede
+# cambiar de una corrida a otra (mayúsculas, tildes, un "a Distancia" agregado)
+# y la URL no. Como el scraper reescribe el archivo entero, una clave que no
+# acierta significa perder las duraciones ya conseguidas.
+carreras_viejas = carreras_por_link("uda.json")
 
 uda_data = {
     "id": 6,
@@ -76,7 +71,15 @@ try:
                 nombre_carrera = a.text.strip()
                 
                 # Filtramos por las URLs que mostraste en las capturas 2 y 3
-                if ("carreras-de-grado" in href_c or "carreras-de-pregrado" in href_c) and len(nombre_carrera) > 4:
+                # Los ciclos de complementación estaban fuera del filtro, así que
+                # sus 15 carreras nunca se destripaban y quedaban con el "A
+                # confirmar" del arranque — aunque su ficha publica la duración
+                # igual de clara que las de grado ("DURACIÓN 18 meses").
+                RUTAS_DE_CARRERA = ("carreras-de-grado", "carreras-de-pregrado", "ciclos-de-complementacion")
+                # parece_carrera() saca los avisos que cuelgan del mismo listado
+                # (en el de ciclos había un "Fecha de Próxima Inscripción: Jueves
+                # 14 de mayo…" que entró al catálogo como si fuera una carrera).
+                if any(r in href_c for r in RUTAS_DE_CARRERA) and parece_carrera(nombre_carrera):
                     if not href_c.startswith("http"):
                         link_real = "https://www.uda.edu.ar" + href_c
                     else:
@@ -89,9 +92,10 @@ try:
                     # Etiquetamos dinámicamente si es Grado o Pregrado leyendo la URL
                     categoria = "Pregrado" if "pregrado" in href_c else "Grado / Carrera"
                     
-                    if nombre_carrera in carreras_viejas and carreras_viejas[nombre_carrera].get("duracion") not in ["A confirmar", ""]:
-                        uda_data["carreras"].append(carreras_viejas[nombre_carrera])
-                        print(f"  ⏭️ Recuperada: {nombre_carrera[:30]}...")
+                    guardada = carreras_viejas.get(link_real)
+                    if guardada and es_duracion_real(guardada.get("duracion")):
+                        uda_data["carreras"].append(guardada)
+                        print(f"  ⏭️ Recuperada: {nombre_carrera[:30]} — {guardada['duracion']}")
                     else:
                         print(f"  🔍 Destripando datos de: {nombre_carrera[:30]}...")
                         duracion_texto = "A confirmar"
@@ -102,10 +106,13 @@ try:
                             req_c = requests.get(link_real, headers={'User-Agent': 'Mozilla/5.0'}, timeout=15)
                             sopa_c = BeautifulSoup(req_c.text, 'html.parser')
                             
-                            texto_pagina = sopa_c.get_text()
-                            match_duracion = re.search(r'duraci[óo]n\s*[:\-]?\s*([0-9]+\s*(?:año|años|semestre|semestres))', texto_pagina, re.IGNORECASE)
-                            if match_duracion:
-                                duracion_texto = match_duracion.group(1).capitalize()
+                            texto_pagina = sopa_c.get_text(" ")
+                            # El regex de antes solo aceptaba años y semestres, y
+                            # la UDA publica varias carreras en meses ("DURACIÓN
+                            # 18 meses"): esas caían todas en "A confirmar".
+                            hallada = extraer_duracion(texto_pagina)
+                            if hallada:
+                                duracion_texto = hallada
                         except:
                             pass
                             
@@ -113,7 +120,8 @@ try:
                             "id": id_global,
                             "nombre_carrera": nombre_carrera,
                             "categoria": categoria,
-                            "duracion": duracion_texto,
+                            # Nunca se degrada una duración buena a placeholder.
+                            "duracion": mejor_duracion(duracion_texto, guardada),
                             "modalidad": "Presencial",
                             "facultad": "UDA",
                             "link_oficial": link_real

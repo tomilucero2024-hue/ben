@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Licenciatura en Psicología: dónde estudiarla en Mendoza | BEN</title>
-<meta name="description" content="Dónde estudiar Licenciatura en Psicología en Mendoza: carrera de grado del área Salud, dictada por 4 instituciones (4 privadas). Dura 5 años.">
+<meta name="description" content="Dónde estudiar Licenciatura en Psicología en Mendoza: carrera de grado del área Salud, dictada por 4 instituciones (4 privadas). Dura de 4.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Licenciatura en Psicología: dónde estudiarla en Mendoza | BEN">
-<meta property="og:description" content="Dónde estudiar Licenciatura en Psicología en Mendoza: carrera de grado del área Salud, dictada por 4 instituciones (4 privadas). Dura 5 años.">
+<meta property="og:description" content="Dónde estudiar Licenciatura en Psicología en Mendoza: carrera de grado del área Salud, dictada por 4 instituciones (4 privadas). Dura de 4.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Licenciatura en Psicología: dónde estudiarla en Mendoza | BEN">
-<meta name="twitter:description" content="Dónde estudiar Licenciatura en Psicología en Mendoza: carrera de grado del área Salud, dictada por 4 instituciones (4 privadas). Dura 5 años.">
+<meta name="twitter:description" content="Dónde estudiar Licenciatura en Psicología en Mendoza: carrera de grado del área Salud, dictada por 4 instituciones (4 privadas). Dura de 4.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -30,24 +30,35 @@
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
     (() => {
+        let t = 'light';
         try {
             const g = localStorage.getItem('ben-theme');
-            const t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
         } catch (e) {}
+        // El logo se elige acá, antes de que el parser vea el <img>: antes venía
+        // el claro en el src y se cambiaba al oscuro después, con lo cual en
+        // tema oscuro se bajaban los dos archivos (~150 KB en vez de 75).
+        window.LOGO_BEN = t === 'dark' ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+        const pre = document.createElement('link');
+        pre.rel = 'preload';
+        pre.as = 'image';
+        pre.href = window.LOGO_BEN;
+        document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260903_10">
+<link rel="stylesheet" href="/paginas.css?v=20260908_06">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Salud","item":"https://buscadoreducativo.com.ar/area/salud/"},{"@type":"ListItem","position":4,"name":"Licenciatura en Psicología","item":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Licenciatura en Psicología","numberOfItems":4,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-1","item":{"@type":"Course","name":"Licenciatura en Psicología — Universidad de Mendoza (UM)","description":"Licenciatura en Psicología en Universidad de Mendoza (UM). Duración: 5 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-1","sameAs":"https://um.edu.ar/carreras/licenciatura-en-psicologia/","provider":{"@type":"EducationalOrganization","name":"Universidad de Mendoza (UM)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-mendoza-um/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-2","item":{"@type":"Course","name":"Licenciatura en Psicología — Universidad del Aconcagua (UDA)","description":"Licenciatura en Psicología en Universidad del Aconcagua (UDA). Duración: 5 año. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-2","sameAs":"https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-psicologia","provider":{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-3","item":{"@type":"Course","name":"Licenciatura en Psicología — Universidad Católica Argentina (UCA)","description":"Licenciatura en Psicología en Universidad Católica Argentina (UCA). Duración: Verificar en web oficial. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-3","sameAs":"https://uca.edu.ar/es/ingreso","provider":{"@type":"EducationalOrganization","name":"Universidad Católica Argentina (UCA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-catolica-argentina-uca/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-4","item":{"@type":"Course","name":"Licenciatura en Psicología — Universidad Siglo 21 (S21)","description":"Licenciatura en Psicología en Universidad Siglo 21 (S21). Duración: Verificar en página oficial. Modalidad: Presencial, Híbrida o Distancia.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-4","sameAs":"https://21.edu.ar/carreras-y-programas/licenciatura-en-psicologia?hsLang=es","provider":{"@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Licenciatura en Psicología en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Licenciatura en Psicología en Mendoza en 4 instituciones: Universidad de Mendoza (UM), Universidad del Aconcagua (UDA), Universidad Católica Argentina (UCA) y Universidad Siglo 21 (S21). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Licenciatura en Psicología?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 5 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Licenciatura en Psicología?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, a distancia y semipresencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Licenciatura en Psicología?","acceptedAnswer":{"@type":"Answer","text":"Licenciatura en Psicología es una carrera de grado perteneciente al área de Salud. Entre sus aptitudes más afines se destacan: pensamiento analítico, trabajo práctico, interacción social y base teórica y académica."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Licenciatura en Psicología","numberOfItems":4,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-1","item":{"@type":"Course","name":"Licenciatura en Psicología — Universidad de Mendoza (UM)","description":"Licenciatura en Psicología en Universidad de Mendoza (UM). Duración: 5 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-1","sameAs":"https://um.edu.ar/carreras/licenciatura-en-psicologia/","provider":{"@type":"EducationalOrganization","name":"Universidad de Mendoza (UM)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-mendoza-um/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-2","item":{"@type":"Course","name":"Licenciatura en Psicología — Universidad del Aconcagua (UDA)","description":"Licenciatura en Psicología en Universidad del Aconcagua (UDA). Duración: 5 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-2","sameAs":"https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-psicologia","provider":{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-3","item":{"@type":"Course","name":"Licenciatura en Psicología — Universidad Católica Argentina (UCA)","description":"Licenciatura en Psicología en Universidad Católica Argentina (UCA). Duración: A confirmar. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-3","sameAs":"https://uca.edu.ar/es/ingreso","provider":{"@type":"EducationalOrganization","name":"Universidad Católica Argentina (UCA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-catolica-argentina-uca/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-4","item":{"@type":"Course","name":"Licenciatura en Psicología — Universidad Siglo 21 (S21)","description":"Licenciatura en Psicología en Universidad Siglo 21 (S21). Duración: 4 años y medio. Modalidad: Presencial en Campus Córdoba..","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicologia/#oferta-4","sameAs":"https://21.edu.ar/carreras-y-programas/licenciatura-en-psicologia?hsLang=es","provider":{"@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Licenciatura en Psicología en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Licenciatura en Psicología en Mendoza en 4 instituciones: Universidad de Mendoza (UM), Universidad del Aconcagua (UDA), Universidad Católica Argentina (UCA) y Universidad Siglo 21 (S21). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Licenciatura en Psicología?","acceptedAnswer":{"@type":"Answer","text":"La duración de la carrera varía de 4.5 a 5 años según el plan de estudio de la institución elegida."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Licenciatura en Psicología?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Licenciatura en Psicología?","acceptedAnswer":{"@type":"Answer","text":"Licenciatura en Psicología es una carrera de grado perteneciente al área de Salud. Entre sus aptitudes más afines se destacan: pensamiento analítico, trabajo práctico, interacción social y base teórica y académica."}}]}</script>
 </head>
 <body>
 <header class="cabecera">
     <div class="envoltorio">
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
-            <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
@@ -60,14 +71,14 @@
 <main class="envoltorio">
     <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/salud/">Salud</a> <span aria-hidden="true">›</span> <span aria-current="page">Licenciatura en Psicología</span></nav>
     <h1>Licenciatura en Psicología</h1>
-    <p class="entrada">Dónde estudiar Licenciatura en Psicología en Mendoza: carrera de grado del área Salud, dictada por 4 instituciones (4 privadas). Dura 5 años. Modalidades disponibles: presencial, a distancia y semipresencial.</p>
+    <p class="entrada">Dónde estudiar Licenciatura en Psicología en Mendoza: carrera de grado del área Salud, dictada por 4 instituciones (4 privadas). Dura de 4.5 a 5 años según la institución. Modalidades disponibles: presencial.</p>
 
     <dl class="ficha">
         <dt>Área</dt><dd>Salud</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
         <dt>Dónde se dicta</dt><dd>4 instituciones</dd>
-        <dt>Modalidad</dt><dd>Presencial, A distancia y Semipresencial</dd>
-        <dt>Duración</dt><dd>5 años · 5 año · Verificar en web oficial · Verificar en página oficial</dd>
+        <dt>Modalidad</dt><dd>Presencial</dd>
+        <dt>Duración</dt><dd>5 años · 4 años y medio</dd>
     </dl>
 
     <a class="cta" href="/?q=Licenciatura+en+Psicolog%C3%ADa&amp;area=Salud&amp;formacion=grado">Ver Licenciatura en Psicología en el buscador →</a>
@@ -81,17 +92,17 @@
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 año</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-psicologia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-3">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-catolica-argentina-uca/">Universidad Católica Argentina (UCA)</a></h3>
-            <ul class="oferta-datos"><li>Duración: Verificar en web oficial</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-4">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-siglo-21-s21/">Universidad Siglo 21 (S21)</a></h3>
-            <ul class="oferta-datos"><li>Duración: Verificar en página oficial</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Mendoza</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial en Campus Córdoba.</li><li>Mendoza</li></ul>
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-psicologia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -143,13 +154,13 @@
         <details class="faq-item">
             <summary class="faq-pregunta"><strong>¿Cuánto dura la carrera de Licenciatura en Psicología?</strong></summary>
             <div class="faq-respuesta">
-                <p>La carrera tiene una duración estimada de 5 años.</p>
+                <p>La duración de la carrera varía de 4.5 a 5 años según el plan de estudio de la institución elegida.</p>
             </div>
         </details>
         <details class="faq-item">
             <summary class="faq-pregunta"><strong>¿Qué modalidades de cursado hay para Licenciatura en Psicología?</strong></summary>
             <div class="faq-respuesta">
-                <p>Actualmente se puede cursar en modalidad presencial, a distancia y semipresencial, según la institución que elijas.</p>
+                <p>Actualmente se puede cursar en modalidad presencial, según la institución que elijas.</p>
             </div>
         </details>
         <details class="faq-item">
@@ -162,20 +173,20 @@
 
     <h2>Otras carreras del área Salud</h2>
     <ul class="enlaces">
+        <li><a href="/carrera/licenciatura-en-nutricion/">Licenciatura en Nutrición</a> <span class="cuantas">(6)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-acompanamiento-terapeutico/">Tecnicatura Superior en Acompañamiento Terapéutico</a> <span class="cuantas">(5)</span></li>
         <li><a href="/carrera/medicina/">Medicina</a> <span class="cuantas">(4)</span></li>
-        <li><a href="/carrera/licenciatura-en-nutricion/">Licenciatura en Nutrición</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/kinesiologia-y-fisioterapia/">Kinesiología y Fisioterapia</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/licenciatura-en-produccion-de-bioimagenes/">Licenciatura en Producción de Bioimágenes</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/licenciatura-en-administracion-de-salud/">Licenciatura en Administración de Salud</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-enfermeria/">Licenciatura en Enfermería</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/licenciatura-en-fonoaudiologia/">Licenciatura en Fonoaudiología</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-instrumentacion-quirurgica/">Licenciatura en Instrumentación Quirúrgica</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-produccion-de-bioimagenes/">Licenciatura en Producción de Bioimágenes</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/licenciatura-en-terapia-ocupacional/">Licenciatura en Terapia Ocupacional</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/odontologia/">Odontología</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/acompanante-terapeutico/">Acompañante Terapéutico</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/auxiliar-de-farmacia/">Auxiliar de Farmacia</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/bioquimica/">Bioquímica</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/diplomatura-en-primeros-auxilios-y-maniobras-de-rescate-en-zonas-inhospitas/">Diplomatura en Primeros Auxilios y Maniobras de Rescate en Zonas Inhóspitas</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/enfermeria-profesional/">Enfermería Profesional</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/podologia-universitaria/">Podología Universitaria</a> <span class="cuantas">(2)</span></li>
     </ul>
-    <p><a href="/area/salud/">Ver las 54 carreras del área Salud →</a></p>
+    <p><a href="/area/salud/">Ver las 52 carreras del área Salud →</a></p>
 
 </main>
 
@@ -190,12 +201,6 @@
     </div>
 </footer>
 <script>
-    // El logo claro es el que viene en el HTML (así se ve bien sin JS). Si el
-    // tema es oscuro se cambia por el suyo.
-    if (document.documentElement.dataset.theme === 'dark') {
-        document.querySelector('.marca img').src = '/logo-ben-dark.png';
-    }
-
     // Autocompletado en vivo en la barra de búsqueda estática
     (() => {
         const inp = document.getElementById('q');
@@ -206,7 +211,7 @@
         async function cargarIndex() {
             if (dataIndex) return dataIndex;
             try {
-                const res = await fetch('/data/enlaces-ben.json');
+                const res = await fetch('/data/autocompletado-ben.json');
                 if (res.ok) dataIndex = await res.json();
             } catch (e) {}
             return dataIndex;
@@ -231,14 +236,15 @@
                 return;
             }
 
+            // El indice guarda [slug, nombre]: la clave sirve para buscar y el
+            // nombre es el que se muestra, con sus tildes y mayusculas.
+            const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let html = '';
-            matchesCarreras.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            matchesCarreras.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + esc(titulo) + '</span><span class="mini-search-item-badge">Carrera</span></a>';
             });
-            matchesInst.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            matchesInst.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + esc(titulo) + '</span><span class="mini-search-item-badge">Institución</span></a>';
             });
 
             drop.innerHTML = html;

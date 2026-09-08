@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abogacía: dónde estudiarla en Mendoza | BEN</title>
-<meta name="description" content="Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (1 pública y 5 privadas).">
+<meta name="description" content="Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (1 pública y 7 privadas).">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/carrera/abogacia/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Abogacía: dónde estudiarla en Mendoza | BEN">
-<meta property="og:description" content="Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (1 pública y 5 privadas).">
+<meta property="og:description" content="Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (1 pública y 7 privadas).">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/carrera/abogacia/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Abogacía: dónde estudiarla en Mendoza | BEN">
-<meta name="twitter:description" content="Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (1 pública y 5 privadas).">
+<meta name="twitter:description" content="Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (1 pública y 7 privadas).">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -30,24 +30,35 @@
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
     (() => {
+        let t = 'light';
         try {
             const g = localStorage.getItem('ben-theme');
-            const t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
         } catch (e) {}
+        // El logo se elige acá, antes de que el parser vea el <img>: antes venía
+        // el claro en el src y se cambiaba al oscuro después, con lo cual en
+        // tema oscuro se bajaban los dos archivos (~150 KB en vez de 75).
+        window.LOGO_BEN = t === 'dark' ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+        const pre = document.createElement('link');
+        pre.rel = 'preload';
+        pre.as = 'image';
+        pre.href = window.LOGO_BEN;
+        document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260903_10">
+<link rel="stylesheet" href="/paginas.css?v=20260908_06">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ciencias sociales","item":"https://buscadoreducativo.com.ar/area/ciencias-sociales/"},{"@type":"ListItem","position":4,"name":"Abogacía","item":"https://buscadoreducativo.com.ar/carrera/abogacia/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Abogacía","numberOfItems":6,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-1","item":{"@type":"Course","name":"Abogacía — Universidad Nacional de Cuyo (UNCuyo)","description":"Abogacía en Universidad Nacional de Cuyo (UNCuyo). Duración: La carrera se cursa en cinco años (10 semestres) y para recibirte tenés que aprobar las materias obligatorias. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-1","sameAs":"https://www.uncuyo.edu.ar/estudios/carrera/abogacia","provider":{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-2","item":{"@type":"Course","name":"Abogacía — Universidad de Mendoza (UM)","description":"Abogacía en Universidad de Mendoza (UM). Duración: 5 año. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-2","sameAs":"https://um.edu.ar/carreras/abogacia/","provider":{"@type":"EducationalOrganization","name":"Universidad de Mendoza (UM)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-mendoza-um/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-3","item":{"@type":"Course","name":"Abogacía — Universidad Juan Agustín Maza (UMaza)","description":"Abogacía en Universidad Juan Agustín Maza (UMaza). Duración: Verificar en web oficial. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-3","sameAs":"https://www.umaza.edu.ar/landings/abogacia/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-4","item":{"@type":"Course","name":"Abogacía — Universidad de Congreso (UC)","description":"Abogacía en Universidad de Congreso (UC). Duración: 4 Años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-4","sameAs":"https://www.ucongreso.edu.ar/carrera/abogacia/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}},{"@type":"ListItem","position":5,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-5","item":{"@type":"Course","name":"Abogacía — Universidad del Aconcagua (UDA)","description":"Abogacía en Universidad del Aconcagua (UDA). Duración: 4 año. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-5","sameAs":"https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia","provider":{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"}}},{"@type":"ListItem","position":6,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-6","item":{"@type":"Course","name":"Abogacía — Universidad Siglo 21 (S21)","description":"Abogacía en Universidad Siglo 21 (S21). Duración: 4 años y medio. Modalidad: Presencial, híbrida o a distancia.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-6","sameAs":"https://21.edu.ar/carreras-y-programas/abogacia?hsLang=es","provider":{"@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Abogacía","numberOfItems":8,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-1","item":{"@type":"Course","name":"Abogacía — Universidad Nacional de Cuyo (UNCuyo)","description":"Abogacía en Universidad Nacional de Cuyo (UNCuyo). Duración: 5 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-1","sameAs":"https://www.uncuyo.edu.ar/estudios/carrera/abogacia","provider":{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-2","item":{"@type":"Course","name":"Abogacía — Universidad de Mendoza (UM)","description":"Abogacía en Universidad de Mendoza (UM). Duración: 5 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-2","sameAs":"https://um.edu.ar/carreras/abogacia/","provider":{"@type":"EducationalOrganization","name":"Universidad de Mendoza (UM)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-mendoza-um/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-3","item":{"@type":"Course","name":"Abogacía — Universidad Juan Agustín Maza (UMaza)","description":"Abogacía en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-3","sameAs":"https://www.umaza.edu.ar/landings/abogacia/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-4","item":{"@type":"Course","name":"Abogacía — Universidad Juan Agustín Maza (UMaza)","description":"Abogacía en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-4","sameAs":"https://www.umaza.edu.ar/landings/abogaciaVDU/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":5,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-5","item":{"@type":"Course","name":"Abogacía — Universidad de Congreso (UC)","description":"Abogacía en Universidad de Congreso (UC). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-5","sameAs":"https://www.ucongreso.edu.ar/carrera/abogacia/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}},{"@type":"ListItem","position":6,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-6","item":{"@type":"Course","name":"Abogacía — Universidad del Aconcagua (UDA)","description":"Abogacía en Universidad del Aconcagua (UDA). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-6","sameAs":"https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia","provider":{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"}}},{"@type":"ListItem","position":7,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-7","item":{"@type":"Course","name":"Abogacía — Universidad del Aconcagua (UDA)","description":"Abogacía en Universidad del Aconcagua (UDA). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-7","sameAs":"https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia","provider":{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"}}},{"@type":"ListItem","position":8,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-8","item":{"@type":"Course","name":"Abogacía — Universidad Siglo 21 (S21)","description":"Abogacía en Universidad Siglo 21 (S21). Duración: 4 años y medio. Modalidad: Presencial, híbrida o a distancia.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-8","sameAs":"https://21.edu.ar/carreras-y-programas/abogacia?hsLang=es","provider":{"@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Abogacía en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Abogacía en Mendoza en 6 instituciones: Universidad Nacional de Cuyo (UNCuyo), Universidad de Mendoza (UM), Universidad Juan Agustín Maza (UMaza), Universidad de Congreso (UC), Universidad del Aconcagua (UDA) y Universidad Siglo 21 (S21). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Abogacía?","acceptedAnswer":{"@type":"Answer","text":"La duración de la carrera varía de 4 a 5 años según el plan de estudio de la institución elegida."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Abogacía?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, a distancia y semipresencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Abogacía?","acceptedAnswer":{"@type":"Answer","text":"Abogacía es una carrera de grado perteneciente al área de Ciencias sociales. Entre sus aptitudes más afines se destacan: pensamiento analítico, interacción social, base teórica y académica y liderazgo y gestión."}}]}</script>
 </head>
 <body>
 <header class="cabecera">
     <div class="envoltorio">
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
-            <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
@@ -60,14 +71,14 @@
 <main class="envoltorio">
     <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ciencias-sociales/">Ciencias sociales</a> <span aria-hidden="true">›</span> <span aria-current="page">Abogacía</span></nav>
     <h1>Abogacía</h1>
-    <p class="entrada">Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (1 pública y 5 privadas). Dura de 4 a 5 años según la institución. Modalidades disponibles: presencial, a distancia y semipresencial.</p>
+    <p class="entrada">Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (1 pública y 7 privadas). Dura de 4 a 5 años según la institución. Modalidades disponibles: presencial, a distancia y semipresencial.</p>
 
     <dl class="ficha">
         <dt>Área</dt><dd>Ciencias sociales</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
         <dt>Dónde se dicta</dt><dd>6 instituciones</dd>
         <dt>Modalidad</dt><dd>Presencial, A distancia y Semipresencial</dd>
-        <dt>Duración</dt><dd>La carrera se cursa en cinco años (10 semestres) y para recibirte tenés que aprobar las materias obligatorias · 5 año · Verificar en web oficial · 4 Años</dd>
+        <dt>Duración</dt><dd>5 años · 4 años · 4 años y medio</dd>
     </dl>
 
     <a class="cta" href="/?q=Abogac%C3%ADa&amp;area=Ciencias+sociales&amp;formacion=grado">Ver Abogacía en el buscador →</a>
@@ -76,30 +87,40 @@
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
-            <ul class="oferta-datos"><li>Duración: La carrera se cursa en cinco años (10 semestres) y para recibirte tenés que aprobar las materias obligatorias</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/abogacia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-mendoza-um/">Universidad de Mendoza (UM)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 año</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
             <a class="oficial" href="https://um.edu.ar/carreras/abogacia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-3">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
-            <ul class="oferta-datos"><li>Duración: Verificar en web oficial</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/abogacia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-4">
-            <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-congreso-uc/">Universidad de Congreso (UC)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/abogacia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <a class="oficial" href="https://www.umaza.edu.ar/landings/abogaciaVDU/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-5">
-            <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 año</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-congreso-uc/">Universidad de Congreso (UC)</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/abogacia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-6">
+            <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta" id="oferta-7">
+            <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta" id="oferta-8">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-siglo-21-s21/">Universidad Siglo 21 (S21)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial, híbrida o a distancia</li><li>Mendoza</li></ul>
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/abogacia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
@@ -172,20 +193,20 @@
 
     <h2>Otras carreras del área Ciencias sociales</h2>
     <ul class="enlaces">
+        <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/licenciatura-en-relaciones-internacionales/">Licenciatura en Relaciones Internacionales</a> <span class="cuantas">(4)</span></li>
-        <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-petroleo-y-gas/">Tecnicatura Superior en Petróleo y Gas</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/tecnicatura-universitaria-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/despachante-de-aeronaves/">Despachante de Aeronaves</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-comunicacion-social/">Licenciatura en Comunicación Social</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/licenciatura-en-criminalistica/">Licenciatura en Criminalística</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia/">Licenciatura en Niñez, Adolescencia y Familia</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-relaciones-publicas-e-institucionales/">Licenciatura en Relaciones Públicas e Institucionales</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/locucion/">Locución</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/periodismo/">Periodismo</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-en-higiene-y-seguridad-en-el-trabajo/">Tecnicatura en Higiene y Seguridad en el Trabajo</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-actividades-de-montana/">Tecnicatura Superior en Actividades de Montaña</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-conservacion-de-la-naturaleza/">Tecnicatura Superior en Conservación de la Naturaleza</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-energias-renovables/">Tecnicatura Superior en Energías Renovables</a> <span class="cuantas">(2)</span></li>
     </ul>
-    <p><a href="/area/ciencias-sociales/">Ver las 112 carreras del área Ciencias sociales →</a></p>
+    <p><a href="/area/ciencias-sociales/">Ver las 114 carreras del área Ciencias sociales →</a></p>
 
 </main>
 
@@ -200,12 +221,6 @@
     </div>
 </footer>
 <script>
-    // El logo claro es el que viene en el HTML (así se ve bien sin JS). Si el
-    // tema es oscuro se cambia por el suyo.
-    if (document.documentElement.dataset.theme === 'dark') {
-        document.querySelector('.marca img').src = '/logo-ben-dark.png';
-    }
-
     // Autocompletado en vivo en la barra de búsqueda estática
     (() => {
         const inp = document.getElementById('q');
@@ -216,7 +231,7 @@
         async function cargarIndex() {
             if (dataIndex) return dataIndex;
             try {
-                const res = await fetch('/data/enlaces-ben.json');
+                const res = await fetch('/data/autocompletado-ben.json');
                 if (res.ok) dataIndex = await res.json();
             } catch (e) {}
             return dataIndex;
@@ -241,14 +256,15 @@
                 return;
             }
 
+            // El indice guarda [slug, nombre]: la clave sirve para buscar y el
+            // nombre es el que se muestra, con sus tildes y mayusculas.
+            const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let html = '';
-            matchesCarreras.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            matchesCarreras.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + esc(titulo) + '</span><span class="mini-search-item-badge">Carrera</span></a>';
             });
-            matchesInst.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            matchesInst.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + esc(titulo) + '</span><span class="mini-search-item-badge">Institución</span></a>';
             });
 
             drop.innerHTML = html;

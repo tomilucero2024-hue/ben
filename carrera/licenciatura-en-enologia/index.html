@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Licenciatura en Enología: dónde estudiarla en Mendoza | BEN</title>
-<meta name="description" content="Dónde estudiar Licenciatura en Enología en Mendoza: carrera de grado del área Gastronomía, dictada por 1 institución (1 privada).">
+<meta name="description" content="Dónde estudiar Licenciatura en Enología en Mendoza: carrera de grado del área Gastronomía, dictada por 1 institución (1 privada). Dura 4 años.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/carrera/licenciatura-en-enologia/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Licenciatura en Enología: dónde estudiarla en Mendoza | BEN">
-<meta property="og:description" content="Dónde estudiar Licenciatura en Enología en Mendoza: carrera de grado del área Gastronomía, dictada por 1 institución (1 privada).">
+<meta property="og:description" content="Dónde estudiar Licenciatura en Enología en Mendoza: carrera de grado del área Gastronomía, dictada por 1 institución (1 privada). Dura 4 años.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/carrera/licenciatura-en-enologia/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Licenciatura en Enología: dónde estudiarla en Mendoza | BEN">
-<meta name="twitter:description" content="Dónde estudiar Licenciatura en Enología en Mendoza: carrera de grado del área Gastronomía, dictada por 1 institución (1 privada).">
+<meta name="twitter:description" content="Dónde estudiar Licenciatura en Enología en Mendoza: carrera de grado del área Gastronomía, dictada por 1 institución (1 privada). Dura 4 años.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -30,24 +30,35 @@
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
     (() => {
+        let t = 'light';
         try {
             const g = localStorage.getItem('ben-theme');
-            const t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
         } catch (e) {}
+        // El logo se elige acá, antes de que el parser vea el <img>: antes venía
+        // el claro en el src y se cambiaba al oscuro después, con lo cual en
+        // tema oscuro se bajaban los dos archivos (~150 KB en vez de 75).
+        window.LOGO_BEN = t === 'dark' ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+        const pre = document.createElement('link');
+        pre.rel = 'preload';
+        pre.as = 'image';
+        pre.href = window.LOGO_BEN;
+        document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260903_10">
+<link rel="stylesheet" href="/paginas.css?v=20260908_06">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Gastronomía","item":"https://buscadoreducativo.com.ar/area/gastronomia/"},{"@type":"ListItem","position":4,"name":"Licenciatura en Enología","item":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-enologia/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Licenciatura en Enología","description":"Dónde estudiar Licenciatura en Enología en Mendoza: carrera de grado del área Gastronomía, dictada por 1 institución (1 privada). Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-enologia/","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Licenciatura en Enología en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Licenciatura en Enología en Mendoza en la siguiente institución: Universidad Juan Agustín Maza (UMaza). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Licenciatura en Enología?","acceptedAnswer":{"@type":"Answer","text":"La duración estimada depende de la institución y modalidad elegida (típicamente entre 4 y 5 años para carreras de grado, o de 2 a 3 años para tecnicaturas)."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Licenciatura en Enología?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Licenciatura en Enología?","acceptedAnswer":{"@type":"Answer","text":"Licenciatura en Enología es una carrera de grado perteneciente al área de Gastronomía. Entre sus aptitudes más afines se destacan: trabajo práctico, interacción social y creatividad."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Licenciatura en Enología","description":"Dónde estudiar Licenciatura en Enología en Mendoza: carrera de grado del área Gastronomía, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-enologia/","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Licenciatura en Enología en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Licenciatura en Enología en Mendoza en la siguiente institución: Universidad Juan Agustín Maza (UMaza). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Licenciatura en Enología?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Licenciatura en Enología?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Licenciatura en Enología?","acceptedAnswer":{"@type":"Answer","text":"Licenciatura en Enología es una carrera de grado perteneciente al área de Gastronomía. Entre sus aptitudes más afines se destacan: trabajo práctico, interacción social y creatividad."}}]}</script>
 </head>
 <body>
 <header class="cabecera">
     <div class="envoltorio">
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
-            <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
@@ -60,14 +71,14 @@
 <main class="envoltorio">
     <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/gastronomia/">Gastronomía</a> <span aria-hidden="true">›</span> <span aria-current="page">Licenciatura en Enología</span></nav>
     <h1>Licenciatura en Enología</h1>
-    <p class="entrada">Dónde estudiar Licenciatura en Enología en Mendoza: carrera de grado del área Gastronomía, dictada por 1 institución (1 privada). Modalidades disponibles: presencial.</p>
+    <p class="entrada">Dónde estudiar Licenciatura en Enología en Mendoza: carrera de grado del área Gastronomía, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: presencial.</p>
 
     <dl class="ficha">
         <dt>Área</dt><dd>Gastronomía</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
         <dt>Dónde se dicta</dt><dd>1 institución</dd>
         <dt>Modalidad</dt><dd>Presencial</dd>
-        <dt>Duración</dt><dd>Verificar en web oficial</dd>
+        <dt>Duración</dt><dd>4 años</dd>
     </dl>
 
     <a class="cta" href="/?q=Licenciatura+en+Enolog%C3%ADa&amp;area=Gastronom%C3%ADa&amp;formacion=grado">Ver Licenciatura en Enología en el buscador →</a>
@@ -76,7 +87,7 @@
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
-            <ul class="oferta-datos"><li>Duración: Verificar en web oficial</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/enologia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -121,7 +132,7 @@
         <details class="faq-item">
             <summary class="faq-pregunta"><strong>¿Cuánto dura la carrera de Licenciatura en Enología?</strong></summary>
             <div class="faq-respuesta">
-                <p>La duración estimada depende de la institución y modalidad elegida (típicamente entre 4 y 5 años para carreras de grado, o de 2 a 3 años para tecnicaturas).</p>
+                <p>La carrera tiene una duración estimada de 4 años.</p>
             </div>
         </details>
         <details class="faq-item">
@@ -168,12 +179,6 @@
     </div>
 </footer>
 <script>
-    // El logo claro es el que viene en el HTML (así se ve bien sin JS). Si el
-    // tema es oscuro se cambia por el suyo.
-    if (document.documentElement.dataset.theme === 'dark') {
-        document.querySelector('.marca img').src = '/logo-ben-dark.png';
-    }
-
     // Autocompletado en vivo en la barra de búsqueda estática
     (() => {
         const inp = document.getElementById('q');
@@ -184,7 +189,7 @@
         async function cargarIndex() {
             if (dataIndex) return dataIndex;
             try {
-                const res = await fetch('/data/enlaces-ben.json');
+                const res = await fetch('/data/autocompletado-ben.json');
                 if (res.ok) dataIndex = await res.json();
             } catch (e) {}
             return dataIndex;
@@ -209,14 +214,15 @@
                 return;
             }
 
+            // El indice guarda [slug, nombre]: la clave sirve para buscar y el
+            // nombre es el que se muestra, con sus tildes y mayusculas.
+            const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let html = '';
-            matchesCarreras.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            matchesCarreras.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + esc(titulo) + '</span><span class="mini-search-item-badge">Carrera</span></a>';
             });
-            matchesInst.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            matchesInst.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + esc(titulo) + '</span><span class="mini-search-item-badge">Institución</span></a>';
             });
 
             drop.innerHTML = html;

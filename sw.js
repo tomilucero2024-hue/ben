@@ -16,7 +16,7 @@
 // hace que un usuario con la versión vieja cacheada reciba la nueva: al cambiar
 // el nombre del caché, el activate de abajo borra todo lo anterior. Si se
 // actualiza el HTML y no esto, el service worker sigue sirviendo lo viejo.
-const VERSION = '20260903_10';
+const VERSION = '20260908_06';
 const CACHE = `ben-${VERSION}`;
 
 // El esqueleto mínimo para que la app abra sin red.

@@ -54,7 +54,8 @@ async function cargarPerfilesCarreras() {
     if (!resp.ok) throw new Error('No se pudo cargar carreras-perfiles.json');
     const data = await resp.json();
     perfilesCarreras = data.carreras || [];
-    console.log(`[Orientador] ${perfilesCarreras.length} perfiles de carrera cargados`);
+    // Un caso exitoso no tiene por que dejar rastro en la consola del visitante;
+    // los console.error/warn de abajo sí, porque ahí algo salió mal.
     return perfilesCarreras;
   } catch (e) {
     console.error('[Orientador] Error cargando perfiles:', e);
@@ -314,7 +315,7 @@ const PREGUNTAS_TEST = [
         dimensionScores: { terreno: 3, movilidad: 3, practico: 2, liderazgo: 1 }
       },
       {
-        texto: 'En contacto directo con personas: enseñando, cuidando, aseslando o atendiendo público.',
+        texto: 'En contacto directo con personas: enseñando, cuidando, asesorando o atendiendo público.',
         dimensionScores: { social: 3, liderazgo: 2, creativo: 1, practico: 1 }
       },
       {

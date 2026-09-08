@@ -30,15 +30,25 @@
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
     (() => {
+        let t = 'light';
         try {
             const g = localStorage.getItem('ben-theme');
-            const t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
         } catch (e) {}
+        // El logo se elige acá, antes de que el parser vea el <img>: antes venía
+        // el claro en el src y se cambiaba al oscuro después, con lo cual en
+        // tema oscuro se bajaban los dos archivos (~150 KB en vez de 75).
+        window.LOGO_BEN = t === 'dark' ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+        const pre = document.createElement('link');
+        pre.rel = 'preload';
+        pre.as = 'image';
+        pre.href = window.LOGO_BEN;
+        document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260903_10">
+<link rel="stylesheet" href="/paginas.css?v=20260908_06">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Universidad de Congreso (UC)","item":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/","email":"informes@ucongreso.edu.ar","telephone":"4230630","address":{"@type":"PostalAddress","streetAddress":"Colón 90, Ciudad","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -46,7 +56,8 @@
 <header class="cabecera">
     <div class="envoltorio">
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
-            <img src="/logo-ben-light.png" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
+            <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
@@ -77,17 +88,17 @@
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/comercio-exterior/">Comercio Exterior</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/comercio-exterior/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/marketing-internacional/">Marketing Internacional</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/comercializacion-con-orientacion-internacionales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/relaciones-economicas-internacionales/">Relaciones Económicas Internacionales</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
@@ -97,27 +108,27 @@
         </li>
         <li class="oferta">
             <h3><a href="/carrera/comercializacion/">Comercialización</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/comercializacion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/contador-publico/">Contador Público</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años y 6 meses</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/contador-publico/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/economia/">Economía</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/economia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/recursos-humanos/">Recursos Humanos</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/recursos-humanos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/administracion-de-negocios-digitales/">Administración de Negocios Digitales</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: A Distancia</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: A Distancia</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/administracion-de-negocios-digitales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -126,32 +137,32 @@
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/relaciones-internacionales-y-gobernanza-global/">Relaciones Internacionales y Gobernanza Global</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/comunicacion/">Comunicación</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/comunicacion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/locucion/">Locución</a></h3>
-            <ul class="oferta-datos"><li>Duración: 3 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/locucion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/periodismo/">Periodismo</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/periodismo/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/abogacia/">Abogacía</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/abogacia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/ciencias-del-comportamiento/">Ciencias del Comportamiento</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: A Distancia</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: A Distancia</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/ciencias-del-comportamiento/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -165,17 +176,17 @@
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-produccion-de-bioimagenes-radiologia/">Licenciatura en Producción de Bioimágenes (Radiología)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/radiologia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/psicologia/">Psicología</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/psicologia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-acompanante-terapeutico/">Tecnicatura en Acompañante Terapéutico</a></h3>
-            <ul class="oferta-datos"><li>Duración: 3 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/acompanante-terapeutico/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -184,12 +195,12 @@
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/gestion-ambiental/">Gestión Ambiental</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/gestion-ambiental/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/gestion-de-recursos-hidricos/">Gestión de Recursos Hídricos</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/gestion-de-recursos-hidricos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -203,7 +214,7 @@
         </li>
         <li class="oferta">
             <h3><a href="/carrera/arquitectura/">Arquitectura</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/arquitectura/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -212,12 +223,12 @@
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/hoteleria/">Hotelería</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/hoteleria/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/turismo/">Turismo</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 Años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/turismo/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -226,7 +237,7 @@
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/profesorado-universitario-para-profesionales/">Profesorado Universitario para Profesionales</a></h3>
-            <ul class="oferta-datos"><li>Duración: Cuatro semestres</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/profesorado-universitario-para-profesionales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -244,12 +255,6 @@
     </div>
 </footer>
 <script>
-    // El logo claro es el que viene en el HTML (así se ve bien sin JS). Si el
-    // tema es oscuro se cambia por el suyo.
-    if (document.documentElement.dataset.theme === 'dark') {
-        document.querySelector('.marca img').src = '/logo-ben-dark.png';
-    }
-
     // Autocompletado en vivo en la barra de búsqueda estática
     (() => {
         const inp = document.getElementById('q');
@@ -260,7 +265,7 @@
         async function cargarIndex() {
             if (dataIndex) return dataIndex;
             try {
-                const res = await fetch('/data/enlaces-ben.json');
+                const res = await fetch('/data/autocompletado-ben.json');
                 if (res.ok) dataIndex = await res.json();
             } catch (e) {}
             return dataIndex;
@@ -285,14 +290,15 @@
                 return;
             }
 
+            // El indice guarda [slug, nombre]: la clave sirve para buscar y el
+            // nombre es el que se muestra, con sus tildes y mayusculas.
+            const esc = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let html = '';
-            matchesCarreras.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + title + '</span><span class="mini-search-item-badge">Carrera</span></a>';
+            matchesCarreras.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/carrera/' + slug + '/"><span class="mini-search-item-title">🎓 ' + esc(titulo) + '</span><span class="mini-search-item-badge">Carrera</span></a>';
             });
-            matchesInst.forEach(([nombre, slug]) => {
-                const title = nombre.charAt(0).toUpperCase() + nombre.slice(1);
-                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + title + '</span><span class="mini-search-item-badge">Institución</span></a>';
+            matchesInst.forEach(([, [slug, titulo]]) => {
+                html += '<a class="mini-search-item" href="/institucion/' + slug + '/"><span class="mini-search-item-title">🏛️ ' + esc(titulo) + '</span><span class="mini-search-item-badge">Institución</span></a>';
             });
 
             drop.innerHTML = html;

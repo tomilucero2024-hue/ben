@@ -155,6 +155,10 @@ export function configurarBienvenida() {
 function alternarInertDetrasDeBienvenida(activo) {
     [document.querySelector('.hero'), document.querySelector('.catalog-layout'), document.getElementById('copilotoPanel')]
         .forEach(el => { if (el) el.inert = activo; });
+    // Y con el catálogo inert tampoco tiene sentido que se pueda scrollear:
+    // la clase apaga el scroll de la página entera (ver style.css).
+    document.documentElement.classList.toggle('bienvenida-abierta', activo);
+    if (activo) window.scrollTo(0, 0);
 }
 
 function ocultarBienvenidaInstantanea() {
@@ -172,6 +176,11 @@ function salirDeBienvenida(despues) {
     if (!pantalla || pantalla.hidden) { if (despues) despues(); return; }
     if (pantalla.classList.contains('is-saliendo')) return;
     pantalla.classList.add('is-saliendo');
+    // Se entra al catálogo por arriba, siempre. El bloqueo de scroll ya evita
+    // que el usuario se corra de lugar mientras mira la bienvenida, pero el
+    // navegador puede restaurar una posición vieja al refrescar; sin esto se
+    // aterriza a mitad de la grilla con el header todavía expandido.
+    window.scrollTo(0, 0);
     alternarInertDetrasDeBienvenida(false);
     let terminado = false;
     const terminar = () => {
@@ -190,11 +199,24 @@ function salirDeBienvenida(despues) {
 // sitios de terceros, así que no son confiables: un nombre de carrera con un
 // "<img onerror=...>" se ejecutaría como HTML. Escapa también las comillas, así
 // que sirve igual para contenido de texto y para valores de atributo.
+// Las preguntas ya contestadas siguen en el chat como transcripcion, con sus
+// botones. Hay que dejarlos inertes: el handler aplica el INDICE del boton a la
+// pregunta en curso, asi que tocar la 5a opcion de la pregunta 1 mientras se
+// esta en la 2 contestaba la 2 con una opcion que el usuario nunca vio, y ademas
+// guardaba en el historial el texto del boton viejo junto al puntaje de la
+// pregunta nueva. Solo quedan vivos los controles del paso actual.
+function apagarControlesViejos(chatCaja) {
+    chatCaja.querySelectorAll('[data-chat-paso]').forEach(boton => {
+        boton.disabled = !enTestVocacional || Number(boton.dataset.chatPaso) !== pasoActual;
+    });
+}
+
 function renderizarChat() {
     const chatCaja = document.getElementById('chat-caja');
     chatCaja.innerHTML = historialChat.map(m => m.rol === 'bot'
         ? `<div class="mensaje-bot">${m.html}</div>`
         : `<div class="mensaje-usuario">${m.html}</div>`).join('');
+    apagarControlesViejos(chatCaja);
     chatCaja.scrollTop = chatCaja.scrollHeight;
 
     // Se anuncia solo la última respuesta del bot, no el historial entero.
@@ -353,19 +375,19 @@ function mostrarPregunta() {
     const preguntaObj = preguntasTest[pasoActual];
     if (!preguntaObj) return;
     const opciones = (preguntaObj.opciones || [])
-        .map((opcion, idx) => `<button type="button" class="btn-chat-opcion" data-chat-opcion="${idx}" data-chat-opcion-texto="${escaparHTML(opcion.texto)}">${escaparHTML(opcion.texto)}</button>`)
+        .map((opcion, idx) => `<button type="button" class="btn-chat-opcion" data-chat-paso="${pasoActual}" data-chat-opcion="${idx}" data-chat-opcion-texto="${escaparHTML(opcion.texto)}">${escaparHTML(opcion.texto)}</button>`)
         .join('');
 
     historialChat.push({ rol: 'bot', html: `
         <p><img class="chat-bot-icon" src="/img/copiloto-icono.png" alt="" width="16" height="16"> <strong>Orientador:</strong> ${escaparHTML(preguntaObj.texto)}</p>
         <div class="opciones-usuario">${opciones}</div>
-        ${pasoActual > 0 ? '<button type="button" class="btn-chat-atras" data-chat-accion="atras">← Volver a la pregunta anterior</button>' : ''}` });
+        ${pasoActual > 0 ? `<button type="button" class="btn-chat-atras" data-chat-paso="${pasoActual}" data-chat-accion="atras">← Volver a la pregunta anterior</button>` : ''}` });
     actualizarProgresoChat();
     renderizarChat();
 }
 
 // Para que se pueda llamar desde los botones inyectados en el HTML
-function seleccionarOpcionChat(opcionIdx, textoOpcion) {
+function seleccionarOpcionChat(opcionIdx, textoOpcion, pasoOpcion) {
     if (procesandoPasoChat) return;
 
     // Las preguntas ya respondidas siguen en el historial del chat, con sus
@@ -375,6 +397,11 @@ function seleccionarOpcionChat(opcionIdx, textoOpcion) {
     const preguntasTest = obtenerPreguntasTest();
     const preguntaObj = preguntasTest[pasoActual];
     if (!enTestVocacional || !preguntaObj) return;
+    // Y con el test en curso hay que mirar de QUÉ pregunta salió el botón: el
+    // índice de una opción solo significa algo dentro de su propia pregunta.
+    // apagarControlesViejos() ya los deja disabled; esto cubre el caso de que
+    // el clic llegue igual (por ejemplo si el bloque se pintó fuera de tiempo).
+    if (Number.isFinite(pasoOpcion) && pasoOpcion !== pasoActual) return;
     const opcion = preguntaObj.opciones[opcionIdx];
     if (!opcion) return;
 
@@ -412,7 +439,11 @@ function seleccionarOpcionChat(opcionIdx, textoOpcion) {
 
 function volverPreguntaChat() {
     if (procesandoPasoChat || pasoActual === 0) return;
-    // Descarta la respuesta del usuario y la pregunta actual del historial.
+    // Descarta del historial la pregunta actual, la respuesta del usuario Y la
+    // pregunta a la que se vuelve: mostrarPregunta() la vuelve a pintar al
+    // final. Con solo dos pop() quedaba la vieja + la nueva y la pregunta se
+    // veía repetida dos veces seguidas en el chat.
+    historialChat.pop();
     historialChat.pop();
     historialChat.pop();
     pasoActual--;
@@ -1035,7 +1066,7 @@ if (typeof document !== 'undefined') {
 
         const opcion = event.target.closest('[data-chat-opcion]');
         if (opcion) {
-            seleccionarOpcionChat(Number(opcion.dataset.chatOpcion), opcion.dataset.chatOpcionTexto);
+            seleccionarOpcionChat(Number(opcion.dataset.chatOpcion), opcion.dataset.chatOpcionTexto, Number(opcion.dataset.chatPaso));
             return;
         }
 

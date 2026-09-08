@@ -34,6 +34,11 @@ const ORDENES_PERMITIDOS = new Set(['default', 'relevancia', 'nombre-az', 'nombr
 const FORMACIONES_PERMITIDAS = new Set(['todos', 'grado', 'tecnicaturas', 'profesorados', 'cursos']);
 const INSTITUCIONES_PERMITIDAS = new Set(['todos', 'universidades', 'ies', 'centros']);
 const DURACIONES_PERMITIDAS = new Set(['todos', 'corta', 'hasta-1', '2-3', '4-mas', 'sin-definir']);
+// Las mismas áreas que devuelve getArea() y que ofrece el panel de filtros. Era
+// el único filtro que se tomaba de la URL sin validar: con ?area=cualquier-cosa
+// el chip "Todas las áreas" quedaba marcado pero la grilla salía vacía, sin que
+// nada en pantalla explicara por qué.
+const AREAS_PERMITIDAS = new Set(['todos', 'Tecnología', 'Ingeniería', 'Salud', 'Negocios', 'Diseño', 'Educación', 'Ciencias sociales', 'Ambiente', 'Turismo', 'Gastronomía', 'Oficios', 'Arte', 'Idiomas']);
 
 function leerGuardado(clave) {
     try {
@@ -91,7 +96,7 @@ export function restaurarDesdeURL() {
     if (p.has('modalidad') && MODALIDADES_PERMITIDAS.has(p.get('modalidad'))) estado.modalidad = p.get('modalidad');
     if (p.has('costo') && COSTOS_PERMITIDOS.has(p.get('costo'))) estado.costo = p.get('costo');
     if (p.has('duracion') && DURACIONES_PERMITIDAS.has(p.get('duracion'))) estado.duracion = p.get('duracion');
-    if (p.has('area')) estado.area = p.get('area');
+    if (p.has('area') && AREAS_PERMITIDAS.has(p.get('area'))) estado.area = p.get('area');
     if (p.has('orden') && ORDENES_PERMITIDOS.has(p.get('orden'))) estado.orden = p.get('orden');
 
     if (p.has('dmin')) {
