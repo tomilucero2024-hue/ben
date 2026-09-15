@@ -118,33 +118,22 @@ export function configurarBienvenida() {
     const pantalla = document.getElementById('pantallaBienvenida');
     if (!pantalla) return;
 
-    let yaVista = false;
-    try {
-        yaVista = localStorage.getItem('ben-bienvenida-vista') === 'true';
-    } catch (e) {
-        yaVista = false;
-    }
-
-    if (location.search.length > 0 || yaVista) {
-        // Link compartido o usuario recurrente: la bienvenida no bloquea el catálogo.
+    // La bienvenida es la puerta de entrada del sitio y se muestra en CADA
+    // visita, no solo en la primera. La unica excepcion es un link compartido o
+    // una busqueda con parametros en la URL (?q=, ?area=…): ahi el visitante
+    // quiere los resultados, no la portada.
+    if (location.search.length > 0) {
         ocultarBienvenidaInstantanea();
     } else {
-        // Primera visita: se muestra la bienvenida guiada.
         alternarInertDetrasDeBienvenida(true);
     }
-
-    const guardarVista = () => {
-        try { localStorage.setItem('ben-bienvenida-vista', 'true'); } catch (e) {}
-    };
 
     const btnCopiloto = document.getElementById('btnBienvenidaCopiloto');
     const btnCatalogo = document.getElementById('btnBienvenidaCatalogo');
     if (btnCopiloto) btnCopiloto.addEventListener('click', () => {
-        guardarVista();
         salirDeBienvenida(() => abrirTestPantallaCompleta());
     });
     if (btnCatalogo) btnCatalogo.addEventListener('click', () => {
-        guardarVista();
         salirDeBienvenida();
     });
 }

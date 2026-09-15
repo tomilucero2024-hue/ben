@@ -8,12 +8,4 @@ Allow: /
 Disallow: /scrapers/
 Disallow: /assets-originales/
 
-# /frontend/ tampoco se bloquea, y es a proposito. Es la direccion vieja de la
-# app, la que Google pudo haber indexado antes de la mudanza a la raiz. Ese
-# archivo tiene adentro un redirect, una canonica hacia / y un noindex: son las
-# tres senales que le dicen al buscador "esto se mudo, pasa el credito a la
-# raiz y sacame del indice". Un Disallow aca seria contraproducente, porque el
-# robot no llega a LEER el archivo y entonces nunca se entera de nada: la
-# direccion vieja se quedaria en el indice sin forma de resolverse.
-
 Sitemap: https://buscadoreducativo.com.ar/sitemap.xml

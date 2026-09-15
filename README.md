@@ -28,8 +28,8 @@ segundo.
 ## Estructura
 
 El sitio se sirve **desde la raíz del repositorio**: `index.html` de la raíz *es* la
-aplicación. (Antes vivía en `frontend/` y la raíz era un redirect; quedó
-`frontend/index.html` como puente para los enlaces viejos.)
+aplicación. (Antes vivía en `frontend/` y la raíz era un redirect; `frontend/` se
+eliminó: era un puente para enlaces viejos que ya solo armaba rebotes.)
 
 ```
 index.html   la aplicación
@@ -62,7 +62,6 @@ generar-paginas.js   genera las ~650 páginas estáticas para buscadores
 carrera/  area/  institucion/  provincia/  carreras/  instituciones/
              GENERADAS. Se borran y se rehacen enteras en cada build:
              no editar nada ahí adentro. Lo mismo sitemap.xml y robots.txt.
-frontend/    solo un redirect a la raíz, para los enlaces viejos
 ```
 
 ## Cómo levantar el sitio
@@ -187,16 +186,14 @@ La genera `generar-paginas.js` como todas las demás, y no a mano, para que comp
 pie y estilos: si mañana cambia el logo, cambia sola. Va con `noindex` y sin canónica (una
 pantalla de error no representa ningún contenido) y no entra al sitemap.
 
-### Por qué `/frontend/` NO está en el `Disallow`
+### Por qué ya no existe `/frontend/`
 
-Es contraintuitivo y por eso está explicado también dentro del `robots.txt`. `/frontend/` es la
-dirección vieja de la app, la que Google pudo haber indexado antes de la mudanza a la raíz.
-Ese archivo tiene adentro tres señales: un redirect, una canónica hacia `/` y un `noindex`.
-
-Si lo bloqueáramos en `robots.txt`, el robot **nunca llegaría a leer el archivo**, así que no
-se enteraría de ninguna de las tres: la dirección vieja se quedaría en el índice sin forma de
-resolverse, y la autoridad que hubiera acumulado no pasaría a la raíz. Bloquear e indicar
-`noindex` son cosas incompatibles: para obedecer un `noindex` hay que poder leerlo primero.
+`/frontend/` era la dirección vieja de la app: un `index.html` que solo redirigía a
+la raíz con `noindex` + canónica hacia `/`. Quedó como puente tras la mudanza, pero
+ese redirect era la otra mitad del bucle que se armaba con una copia vieja del
+`index.html` raíz cacheada (raíz → `/frontend/` → raíz). Se eliminó: cualquier
+enlace viejo o favorito que caiga ahí termina en el `404.html` estático, sin
+rebotes.
 
 Dos detalles más que conviene conocer antes de tocar nada:
 
