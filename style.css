@@ -16,7 +16,7 @@
     /* Progreso de scroll del header (0 = arriba del todo, 1 = header ya achicado).
        Lo actualiza app.js en cada cuadro mientras se hace scroll. */
     --scroll-progress: 0;
-    /* Versión escalonada del progreso, solo para el desenfoque (ver app.js). */
+    /* Mismo progreso para el desenfoque, escalonado para cuidar el scroll móvil. */
     --blur-progress: 0;
     --blur-max: 34px;
 
@@ -274,16 +274,14 @@ button { cursor: pointer; }
     /* El fondo se vuelve TRANSLÚCIDO al achicarse: si quedara opaco, el
        backdrop-filter no tendría nada para desenfocar y no se vería el efecto. */
     background:
-        radial-gradient(circle at 50% -35%, color-mix(in srgb, var(--purple) calc(24% * (1 - var(--scroll-progress))), transparent) 0, transparent 58%),
         linear-gradient(180deg,
             color-mix(in srgb, var(--surface) calc((1 - var(--scroll-progress)) * 100%), transparent),
             color-mix(in srgb, var(--bg) calc((1 - var(--scroll-progress)) * 100%), transparent)),
         color-mix(in srgb, var(--surface) calc(var(--scroll-progress) * 55%), transparent);
     /* Blur + saturate emula el "vidrio esmerilado" de iOS en vez de un blur plano.
-       Usa --blur-progress (escalonado) para no recalcular el filtro en cada cuadro. */
+       Va sobre --blur-progress, que sigue al scroll sin escalones. */
     backdrop-filter: blur(calc(var(--blur-progress) * var(--blur-max))) saturate(calc(1 + var(--blur-progress) * .8));
     -webkit-backdrop-filter: blur(calc(var(--blur-progress) * var(--blur-max))) saturate(calc(1 + var(--blur-progress) * .8));
-    will-change: backdrop-filter;
     border-bottom: 1px solid color-mix(in srgb, var(--line) calc(var(--scroll-progress) * 100%), transparent);
 }
 /* Al achicarse, el contenido se ensancha para que el logo llegue al borde. */
@@ -340,17 +338,10 @@ button { cursor: pointer; }
         height: 38px;
     }
 }
-.hero--compacto .btn-theme-toggle {
-    top: 50%;
-    transform: translateY(-50%);
-}
 .btn-theme-toggle:hover {
     background: var(--surface-soft);
     border-color: var(--line-strong);
     transform: translateY(calc(var(--scroll-progress) * -50%)) scale(1.06);
-}
-.hero--compacto .btn-theme-toggle:hover {
-    transform: translateY(-50%) scale(1.06);
 }
 .btn-theme-toggle:focus-visible {
     outline: 2px solid var(--accent);
@@ -386,18 +377,14 @@ h1, h2, .section-tab-texto strong {
 }
 
 /* Contenido secundario del header (texto de bienvenida y botones): se desvanece
-   y colapsa a medida que se hace scroll, dejando solo el logo y el buscador fijos. */
+   y colapsa a medida que se hace scroll, dejando solo el logo y el buscador fijos.
+   El contenido es solo texto (sin controles), así que no hace falta ocultarlo por
+   accesibilidad: alcanza con desactivarle la interacción. */
 .hero-secondary {
+    pointer-events: none;
     opacity: calc(1 - var(--scroll-progress) * 1.6);
     max-height: calc((1 - var(--scroll-progress)) * 210px);
     overflow: hidden;
-}
-.hero--compacto .hero-secondary { pointer-events: none; visibility: hidden; }
-.hero--compacto .search-container {
-    margin-left: calc(var(--logo-w-compacto) + var(--bar-gap));
-    margin-right: auto;
-    margin-top: var(--search-lift);
-    width: var(--search-w);
 }
 
 /* 4. BUSCADOR Y BOTONES DEL ENCABEZADO. */
@@ -550,7 +537,10 @@ h1, h2, .section-tab-texto strong {
 /* Solo aparece en celular (ver breakpoints). No se encoge: es el único acceso
    a los filtros y tiene que sobrevivir a que el buscador se angoste. */
 .mobile-filter-button { display: none; flex-shrink: 0; align-items: center; gap: .35rem; white-space: nowrap; }
-.mobile-filter-texto { display: inline; }
+/* El texto se oculta por opacidad (no display): ocultarlo durante el scroll
+   reflotaba el layout del botón en el mismo frame y contribuía a que el header
+   se viera bugueado al bajar rápido. Al desvanecer, el botón conserva su ancho. */
+.mobile-filter-texto { display: inline; transition: opacity var(--dur-base) ease; }
 
 /* ================================================================
    5. ESTRUCTURA DEL CATÁLOGO
@@ -1395,8 +1385,10 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
         --blur-max: 20px;
     }
     .mobile-filter-button { display: inline-flex; justify-content: center; min-width: 44px; min-height: 44px; }
-    /* Compactado queda poco ancho al lado del logo: se deja solo el ícono. */
-    .hero--compacto .mobile-filter-texto { display: none; }
+    /* Compactado queda poco ancho al lado del logo: se deja solo el ícono. El
+       texto se desvanece (opacity) sin tocar el layout, para no reflotar el
+       botón en el mismo frame del encogido. */
+    .hero--compacto .mobile-filter-texto { opacity: 0; }
     
     .catalog-layout {
         display: grid;

@@ -31,60 +31,57 @@ async function arrancar() {
 // 🪄 HEADER COLAPSABLE AL HACER SCROLL
 // ==========================================
 
-// El progreso depende de la posición en la página: el header se despliega solo
-// al volver al principio, no a mitad de página (expandido ocupa mucho lugar).
-// Se mantiene compacto durante todo el resto del recorrido.
-const UMBRAL = 170;
-
-function calcularObjetivoHeader(y) {
-    return Math.min(1, Math.max(0, y / UMBRAL));
-}
+// El encogido sigue al scroll de forma continua (relación 1:1: hace falta 170px
+// para completar el pliegue), sin umbrales ni clases que flipen. Para que el
+// scroll rápido no teletransporte el layout (logo/buscador), el progreso visual
+// persigue al objetivo con un tope por frame: lento queda 1:1 con el dedo,
+// rápido se reparte en ~3-4 frames en vez de saltar de golpe.
+const RANGO_CONTRACCION = 170;
+// Tope de avance del progreso visual por frame. Alto a propósito: si el tope es
+// demasiado bajo, el header va atrás del dedo y se siente "trabado". Este valor
+// solo frena los saltos brutos de un flick, no el scroll normal.
+const PASO_VISUAL_MAX = 0.25;
 
 function configurarHeaderScroll() {
     const hero = document.querySelector('.hero');
-    let progreso = 0;
-    let objetivo = 0;
-    let animando = false;
+    if (!hero) return;
+    const raiz = document.documentElement;
+    // `objetivo` es dónde está el scroll; `visual` es dónde está dibujado el
+    // header. El paso visual converge a exacto cero y el loop se apaga cuando
+    // no queda remanente ni nuevos eventos de scroll.
+    let objetivo = Math.min(1, Math.max(0, window.scrollY / RANGO_CONTRACCION));
+    let visual = objetivo;
+    let raf = 0;
 
-    const aplicar = valor => {
-        document.documentElement.style.setProperty('--scroll-progress', valor.toFixed(3));
-        // El desenfoque se actualiza en escalones (6 valores) en vez de en cada
-        // cuadro: recalcular el backdrop-filter 60 veces por segundo es lo más
-        // caro para la GPU y era lo que trababa el scroll en celulares.
-        document.documentElement.style.setProperty('--blur-progress', (Math.round(valor * 5) / 5).toFixed(1));
-        hero.classList.toggle('hero--compacto', valor > 0.985);
+    const escribir = () => {
+        raiz.style.setProperty('--scroll-progress', visual.toFixed(3));
+        // El blur se mantiene escalonado: recalcular el backdrop-filter en cada
+        // frame es lo más caro del header en iOS.
+        raiz.style.setProperty('--blur-progress', (Math.round(visual * 5) / 5).toFixed(1));
+        hero.classList.toggle('hero--compacto', visual > 0.985);
     };
 
-    function paso() {
-        progreso += (objetivo - progreso) * 0.22;
-        if (Math.abs(objetivo - progreso) < 0.002) progreso = objetivo;
-        aplicar(progreso);
-
-        if (progreso !== objetivo) {
-            requestAnimationFrame(paso);
-        } else {
-            animando = false;
+    const ciclo = () => {
+        raf = 0;
+        const delta = objetivo - visual;
+        if (delta !== 0) {
+            visual += Math.max(-PASO_VISUAL_MAX, Math.min(PASO_VISUAL_MAX, delta));
+            escribir();
         }
-    }
+        if (Math.abs(objetivo - visual) > 0.0005) raf = requestAnimationFrame(ciclo);
+    };
 
-    function alHacerScroll() {
-        objetivo = calcularObjetivoHeader(window.scrollY);
-
-        if (!animando) {
-            animando = true;
-            requestAnimationFrame(paso);
-        }
-    }
+    const alHacerScroll = () => {
+        objetivo = Math.min(1, Math.max(0, window.scrollY / RANGO_CONTRACCION));
+        if (!raf) raf = requestAnimationFrame(ciclo);
+    };
 
     window.addEventListener('scroll', alHacerScroll, { passive: true });
 
-    // Si la página carga con scroll ya restaurado (ej. al refrescar en mitad de
-    // la página), sincroniza el header sin esperar al próximo scroll del usuario.
-    if (window.scrollY > 0) {
-        objetivo = calcularObjetivoHeader(window.scrollY);
-        animando = true;
-        requestAnimationFrame(paso);
-    }
+    // Estado inicial: si el navegador restaura el scroll, se dibuja directo sin
+    // animar desde el principio.
+    escribir();
+    void hero.offsetHeight;
 }
 
 // El header pasa a position: fixed, así que su alto ya no empuja al contenido.
@@ -96,9 +93,13 @@ function medirAltoHeader() {
     if (!hero) return;
     const raiz = document.documentElement;
     const progresoActual = raiz.style.getPropertyValue('--scroll-progress');
+    // Medimos con el header expandido (progreso 0). Sin transición no hay
+    // intermedio que dibujar durante la medición.
+    raiz.style.transition = 'none';
     raiz.style.setProperty('--scroll-progress', '0');
     const alto = hero.offsetHeight;
     raiz.style.setProperty('--scroll-progress', progresoActual || '0');
+    raiz.style.transition = '';
     raiz.style.setProperty('--hero-alto', `${alto}px`);
 }
 
