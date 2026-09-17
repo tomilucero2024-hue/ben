@@ -1,88 +1,89 @@
 {
-    "instituciones": [
-        {
-            "id": 43,
-            "nombre": "Escuela de Psicología Social",
-            "nivel": "terciario",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "contacto@espsicosocial.com.ar",
-                "direccion": "Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 4300,
-                    "nombre_carrera": "Tecnicatura Superior En Psicologia Social Presencial",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "A confirmar",
-                    "turno": "A confirmar",
-                    "facultad": "Escuela de Psicología Social",
-                    "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-psicologia-social-presencial/"
-                },
-                {
-                    "id": 4301,
-                    "nombre_carrera": "Tecnicatura Superior En Psicologia Social A Distancia",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "A confirmar",
-                    "turno": "A confirmar",
-                    "facultad": "Escuela de Psicología Social",
-                    "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-psicologia-social-a-distancia/"
-                },
-                {
-                    "id": 4302,
-                    "nombre_carrera": "Tecnicatura Superior En Desarrollo Humano Presencial",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "A confirmar",
-                    "turno": "A confirmar",
-                    "facultad": "Escuela de Psicología Social",
-                    "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-desarrollo-humano-presencial/"
-                },
-                {
-                    "id": 4303,
-                    "nombre_carrera": "Tecnicatura Superior En Acompanamiento Terapeutico",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "2 años y 1/2",
-                    "modalidad": "A confirmar",
-                    "turno": "A confirmar",
-                    "facultad": "Escuela de Psicología Social",
-                    "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico/"
-                },
-                {
-                    "id": 4304,
-                    "nombre_carrera": "Tecnicatura Superior En Grafologia",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "A confirmar",
-                    "turno": "A confirmar",
-                    "facultad": "Escuela de Psicología Social",
-                    "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-grafologia/"
-                },
-                {
-                    "id": 4305,
-                    "nombre_carrera": "Tecnicatura Superior En Acompanamiento Terapeutico Presencial",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "2 años y 1/2",
-                    "modalidad": "A confirmar",
-                    "turno": "A confirmar",
-                    "facultad": "Escuela de Psicología Social",
-                    "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico-presencial/"
-                },
-                {
-                    "id": 4306,
-                    "nombre_carrera": "Tecnicatura Superior En Acompanamiento Terapeutico A Distancia",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "2 años y 1/2",
-                    "modalidad": "A confirmar",
-                    "turno": "A confirmar",
-                    "facultad": "Escuela de Psicología Social",
-                    "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico-a-distancia/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 43,
+   "nombre": "Escuela de Psicología Social",
+   "nivel": "terciario",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "contacto@espsicosocial.com.ar",
+    "direccion": "Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 4300,
+     "nombre_carrera": "Tecnicatura Superior En Psicologia Social Presencial",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "A confirmar",
+     "turno": "A confirmar",
+     "facultad": "Escuela de Psicología Social",
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-psicologia-social-presencial/"
+    },
+    {
+     "id": 4301,
+     "nombre_carrera": "Tecnicatura Superior En Psicologia Social A Distancia",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "A confirmar",
+     "turno": "A confirmar",
+     "facultad": "Escuela de Psicología Social",
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-psicologia-social-a-distancia/"
+    },
+    {
+     "id": 4302,
+     "nombre_carrera": "Tecnicatura Superior En Desarrollo Humano Presencial",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "A confirmar",
+     "turno": "A confirmar",
+     "facultad": "Escuela de Psicología Social",
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-desarrollo-humano-presencial/"
+    },
+    {
+     "id": 4303,
+     "nombre_carrera": "Tecnicatura Superior En Acompanamiento Terapeutico",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 años y 1/2",
+     "modalidad": "A confirmar",
+     "turno": "A confirmar",
+     "facultad": "Escuela de Psicología Social",
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico/"
+    },
+    {
+     "id": 4304,
+     "nombre_carrera": "Tecnicatura Superior En Grafologia",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "A confirmar",
+     "turno": "A confirmar",
+     "facultad": "Escuela de Psicología Social",
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-grafologia/"
+    },
+    {
+     "id": 4305,
+     "nombre_carrera": "Tecnicatura Superior En Acompanamiento Terapeutico Presencial",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 años y 1/2",
+     "modalidad": "A confirmar",
+     "turno": "A confirmar",
+     "facultad": "Escuela de Psicología Social",
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico-presencial/"
+    },
+    {
+     "id": 4306,
+     "nombre_carrera": "Tecnicatura Superior En Acompanamiento Terapeutico A Distancia",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 años y 1/2",
+     "modalidad": "A confirmar",
+     "turno": "A confirmar",
+     "facultad": "Escuela de Psicología Social",
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico-a-distancia/"
+    }
+   ],
+   "departamento": "Capital"
+  }
+ ]
 }

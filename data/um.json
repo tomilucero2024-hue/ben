@@ -1,297 +1,298 @@
 {
-  "instituciones": [
+ "instituciones": [
+  {
+   "id": 3,
+   "nombre": "Universidad de Mendoza (UM)",
+   "nivel": "universidad",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "4202017",
+    "email": "informes@um.edu.ar",
+    "direccion": "Boulogne Sur Mer 683, Ciudad"
+   },
+   "carreras": [
     {
-      "id": 3,
-      "nombre": "Universidad de Mendoza (UM)",
-      "nivel": "universidad",
-      "gestion": "privada",
-      "provincia": "Mendoza",
-      "contacto": {
-        "telefono": "4202017",
-        "email": "informes@um.edu.ar",
-        "direccion": "Boulogne Sur Mer 683, Ciudad"
-      },
-      "carreras": [
-        {
-          "id": 300,
-          "nombre_carrera": "Abogacía",
-          "categoria": "Grado / Carrera",
-          "duracion": "5 año",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Mendoza / Sede San Rafael",
-          "link_oficial": "https://um.edu.ar/carreras/abogacia/"
-        },
-        {
-          "id": 301,
-          "nombre_carrera": "Corredor Inmobiliario",
-          "categoria": "Grado / Carrera",
-          "duracion": "2 años y medio",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/corredor-inmobiliario/"
-        },
-        {
-          "id": 302,
-          "nombre_carrera": "Escribanía",
-          "categoria": "Grado / Carrera",
-          "duracion": "4 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / Sede San Rafael",
-          "link_oficial": "https://um.edu.ar/carreras/escribania/"
-        },
-        {
-          "id": 303,
-          "nombre_carrera": "Licenciatura en Emprendimientos Inmobiliarios",
-          "categoria": "Grado / Carrera",
-          "duracion": "2 años (además del Examen de graduación, previo cumplimiento de los REQUISITOS DE ADMISIÓN correspondientes)",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-emprendimientos-inmobiliarios/"
-        },
-        {
-          "id": 304,
-          "nombre_carrera": "Martillero Público",
-          "categoria": "Grado / Carrera",
-          "duracion": "3 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/martillero-publico/"
-        },
-        {
-          "id": 305,
-          "nombre_carrera": "Procuración",
-          "categoria": "Grado / Carrera",
-          "duracion": "3 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / Sede San Rafael",
-          "link_oficial": "https://um.edu.ar/carreras/procuracion/"
-        },
-        {
-          "id": 306,
-          "nombre_carrera": "Arquitectura y Urbanismo",
-          "categoria": "Grado / Carrera",
-          "duracion": "5 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/arquitectura-y-urbanismo/"
-        },
-        {
-          "id": 307,
-          "nombre_carrera": "Diseño Gráfico",
-          "categoria": "Grado / Carrera",
-          "duracion": "3 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/diseno-grafico/"
-        },
-        {
-          "id": 308,
-          "nombre_carrera": "Diseño de Interiores",
-          "categoria": "Grado / Carrera",
-          "duracion": "3 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / Sede San Rafael",
-          "link_oficial": "https://um.edu.ar/carreras/diseno-de-interiores/"
-        },
-        {
-          "id": 309,
-          "nombre_carrera": "Diseño de Indumentaria y Textil",
-          "categoria": "Grado / Carrera",
-          "duracion": "3 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/diseno-de-indumentaria-y-textil/"
-        },
-        {
-          "id": 310,
-          "nombre_carrera": "Licenciatura en Diseño",
-          "categoria": "Grado / Carrera",
-          "duracion": "4 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-diseno/"
-        },
-        {
-          "id": 311,
-          "nombre_carrera": "Corredor Inmobiliario. Título complementario de Arquitectura",
-          "categoria": "Grado / Carrera",
-          "duracion": "Tres semestres académicos consecutivos + examen de PRÁCTICA INTEGRADA 1",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central",
-          "link_oficial": "https://um.edu.ar/carreras/corredor-inmobiliario-titulo-complementario-de-arquitectura/"
-        },
-        {
-          "id": 312,
-          "nombre_carrera": "Ingeniería en Computación",
-          "categoria": "Grado / Carrera",
-          "duracion": "5 año",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central",
-          "link_oficial": "https://um.edu.ar/carreras/ingenieria-en-computacion/"
-        },
-        {
-          "id": 313,
-          "nombre_carrera": "Ingeniería Electrónica",
-          "categoria": "Grado / Carrera",
-          "duracion": "5 año",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central",
-          "link_oficial": "https://um.edu.ar/carreras/ingenieria-electronica/"
-        },
-        {
-          "id": 314,
-          "nombre_carrera": "Ingeniería Industrial",
-          "categoria": "Grado / Carrera",
-          "duracion": "5 año",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central",
-          "link_oficial": "https://um.edu.ar/carreras/ingenieria-industrial/"
-        },
-        {
-          "id": 315,
-          "nombre_carrera": "Ingeniería en Informática",
-          "categoria": "Grado / Carrera",
-          "duracion": "5 año",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / San Rafael",
-          "link_oficial": "https://um.edu.ar/carreras/ingenieria-en-informatica/"
-        },
-        {
-          "id": 316,
-          "nombre_carrera": "Ingeniería Eléctrica",
-          "categoria": "Grado / Carrera",
-          "duracion": "5 año",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central",
-          "link_oficial": "https://um.edu.ar/carreras/ingenieria-electrica/"
-        },
-        {
-          "id": 317,
-          "nombre_carrera": "Bioingeniería",
-          "categoria": "Grado / Carrera",
-          "duracion": "5 año",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central",
-          "link_oficial": "https://um.edu.ar/carreras/bioingenieria/"
-        },
-        {
-          "id": 318,
-          "nombre_carrera": "Tecnicatura en Desarrollo de Videojuegos",
-          "categoria": "Grado / Carrera",
-          "duracion": "A confirmar",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central",
-          "link_oficial": "https://um.edu.ar/carreras/tecnicatura-en-desarrollo-de-videojuegos/"
-        },
-        {
-          "id": 319,
-          "nombre_carrera": "Profesorado para Profesionales con Título de Grado",
-          "categoria": "Grado / Carrera",
-          "duracion": "3 semestre",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/profesorado-para-profesionales-con-titulo-de-grado/"
-        },
-        {
-          "id": 320,
-          "nombre_carrera": "Tecnicatura Universitaria en Desarrollo de Software",
-          "categoria": "Grado / Carrera",
-          "duracion": "A confirmar",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-desarrollo-de-software/"
-        },
-        {
-          "id": 321,
-          "nombre_carrera": "Odontología",
-          "categoria": "Grado / Carrera",
-          "duracion": "5 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central",
-          "link_oficial": "https://um.edu.ar/carreras/odontologia/"
-        },
-        {
-          "id": 322,
-          "nombre_carrera": "Licenciatura en Kinesiología",
-          "categoria": "Grado / Carrera",
-          "duracion": "4 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / San Rafael / Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-kinesiologia/"
-        },
-        {
-          "id": 323,
-          "nombre_carrera": "Licenciatura en Psicología",
-          "categoria": "Grado / Carrera",
-          "duracion": "5 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / San Rafael / Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-psicologia/"
-        },
-        {
-          "id": 324,
-          "nombre_carrera": "Licenciatura en Nutrición",
-          "categoria": "Grado / Carrera",
-          "duracion": "5 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-nutricion/"
-        },
-        {
-          "id": 325,
-          "nombre_carrera": "Tecnicatura Universitaria en Radiología",
-          "categoria": "Grado / Carrera",
-          "duracion": "Tres años (2 años y medio, más la Practica Preprofesional)",
-          "modalidad": "Presencial",
-          "facultad": "UM - Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-radiologia/"
-        },
-        {
-          "id": 326,
-          "nombre_carrera": "Tecnicatura Universitaria en Instrumentación Quirúrgica",
-          "categoria": "Grado / Carrera",
-          "duracion": "Tres años (2 años y medio, más la Práctica)",
-          "modalidad": "Presencial",
-          "facultad": "UM - Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-instrumentacion-quirurgica/"
-        },
-        {
-          "id": 327,
-          "nombre_carrera": "Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo",
-          "categoria": "Grado / Carrera",
-          "duracion": "3 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Río Cuarto",
-          "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo/"
-        },
-        {
-          "id": 328,
-          "nombre_carrera": "Contador Público",
-          "categoria": "Grado / Carrera",
-          "duracion": "4 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / Sede San Rafael",
-          "link_oficial": "https://um.edu.ar/carreras/contador-publico/"
-        },
-        {
-          "id": 329,
-          "nombre_carrera": "Licenciado en Administración de Negocios",
-          "categoria": "Grado / Carrera",
-          "duracion": "4 años",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / Sede San Rafael",
-          "link_oficial": "https://um.edu.ar/carreras/licenciado-en-administracion-de-negocios/"
-        },
-        {
-          "id": 330,
-          "nombre_carrera": "Medicina",
-          "categoria": "Grado / Carrera",
-          "duracion": "5 años de cursado, más un 1 año de Práctica Final Obligatoria",
-          "modalidad": "Presencial",
-          "facultad": "UM - Sede Central / Sede San Rafael",
-          "link_oficial": "https://um.edu.ar/carreras/medicina/"
-        }
-      ]
+     "id": 300,
+     "nombre_carrera": "Abogacía",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 año",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Mendoza / Sede San Rafael",
+     "link_oficial": "https://um.edu.ar/carreras/abogacia/"
+    },
+    {
+     "id": 301,
+     "nombre_carrera": "Corredor Inmobiliario",
+     "categoria": "Grado / Carrera",
+     "duracion": "2 años y medio",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/corredor-inmobiliario/"
+    },
+    {
+     "id": 302,
+     "nombre_carrera": "Escribanía",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / Sede San Rafael",
+     "link_oficial": "https://um.edu.ar/carreras/escribania/"
+    },
+    {
+     "id": 303,
+     "nombre_carrera": "Licenciatura en Emprendimientos Inmobiliarios",
+     "categoria": "Grado / Carrera",
+     "duracion": "2 años (además del Examen de graduación, previo cumplimiento de los REQUISITOS DE ADMISIÓN correspondientes)",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-emprendimientos-inmobiliarios/"
+    },
+    {
+     "id": 304,
+     "nombre_carrera": "Martillero Público",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/martillero-publico/"
+    },
+    {
+     "id": 305,
+     "nombre_carrera": "Procuración",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / Sede San Rafael",
+     "link_oficial": "https://um.edu.ar/carreras/procuracion/"
+    },
+    {
+     "id": 306,
+     "nombre_carrera": "Arquitectura y Urbanismo",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/arquitectura-y-urbanismo/"
+    },
+    {
+     "id": 307,
+     "nombre_carrera": "Diseño Gráfico",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/diseno-grafico/"
+    },
+    {
+     "id": 308,
+     "nombre_carrera": "Diseño de Interiores",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / Sede San Rafael",
+     "link_oficial": "https://um.edu.ar/carreras/diseno-de-interiores/"
+    },
+    {
+     "id": 309,
+     "nombre_carrera": "Diseño de Indumentaria y Textil",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/diseno-de-indumentaria-y-textil/"
+    },
+    {
+     "id": 310,
+     "nombre_carrera": "Licenciatura en Diseño",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-diseno/"
+    },
+    {
+     "id": 311,
+     "nombre_carrera": "Corredor Inmobiliario. Título complementario de Arquitectura",
+     "categoria": "Grado / Carrera",
+     "duracion": "Tres semestres académicos consecutivos + examen de PRÁCTICA INTEGRADA 1",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central",
+     "link_oficial": "https://um.edu.ar/carreras/corredor-inmobiliario-titulo-complementario-de-arquitectura/"
+    },
+    {
+     "id": 312,
+     "nombre_carrera": "Ingeniería en Computación",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 año",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central",
+     "link_oficial": "https://um.edu.ar/carreras/ingenieria-en-computacion/"
+    },
+    {
+     "id": 313,
+     "nombre_carrera": "Ingeniería Electrónica",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 año",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central",
+     "link_oficial": "https://um.edu.ar/carreras/ingenieria-electronica/"
+    },
+    {
+     "id": 314,
+     "nombre_carrera": "Ingeniería Industrial",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 año",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central",
+     "link_oficial": "https://um.edu.ar/carreras/ingenieria-industrial/"
+    },
+    {
+     "id": 315,
+     "nombre_carrera": "Ingeniería en Informática",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 año",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / San Rafael",
+     "link_oficial": "https://um.edu.ar/carreras/ingenieria-en-informatica/"
+    },
+    {
+     "id": 316,
+     "nombre_carrera": "Ingeniería Eléctrica",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 año",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central",
+     "link_oficial": "https://um.edu.ar/carreras/ingenieria-electrica/"
+    },
+    {
+     "id": 317,
+     "nombre_carrera": "Bioingeniería",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 año",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central",
+     "link_oficial": "https://um.edu.ar/carreras/bioingenieria/"
+    },
+    {
+     "id": 318,
+     "nombre_carrera": "Tecnicatura en Desarrollo de Videojuegos",
+     "categoria": "Grado / Carrera",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central",
+     "link_oficial": "https://um.edu.ar/carreras/tecnicatura-en-desarrollo-de-videojuegos/"
+    },
+    {
+     "id": 319,
+     "nombre_carrera": "Profesorado para Profesionales con Título de Grado",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 semestre",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/profesorado-para-profesionales-con-titulo-de-grado/"
+    },
+    {
+     "id": 320,
+     "nombre_carrera": "Tecnicatura Universitaria en Desarrollo de Software",
+     "categoria": "Grado / Carrera",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-desarrollo-de-software/"
+    },
+    {
+     "id": 321,
+     "nombre_carrera": "Odontología",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central",
+     "link_oficial": "https://um.edu.ar/carreras/odontologia/"
+    },
+    {
+     "id": 322,
+     "nombre_carrera": "Licenciatura en Kinesiología",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / San Rafael / Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-kinesiologia/"
+    },
+    {
+     "id": 323,
+     "nombre_carrera": "Licenciatura en Psicología",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / San Rafael / Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-psicologia/"
+    },
+    {
+     "id": 324,
+     "nombre_carrera": "Licenciatura en Nutrición",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-nutricion/"
+    },
+    {
+     "id": 325,
+     "nombre_carrera": "Tecnicatura Universitaria en Radiología",
+     "categoria": "Grado / Carrera",
+     "duracion": "Tres años (2 años y medio, más la Practica Preprofesional)",
+     "modalidad": "Presencial",
+     "facultad": "UM - Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-radiologia/"
+    },
+    {
+     "id": 326,
+     "nombre_carrera": "Tecnicatura Universitaria en Instrumentación Quirúrgica",
+     "categoria": "Grado / Carrera",
+     "duracion": "Tres años (2 años y medio, más la Práctica)",
+     "modalidad": "Presencial",
+     "facultad": "UM - Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-instrumentacion-quirurgica/"
+    },
+    {
+     "id": 327,
+     "nombre_carrera": "Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Río Cuarto",
+     "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo/"
+    },
+    {
+     "id": 328,
+     "nombre_carrera": "Contador Público",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / Sede San Rafael",
+     "link_oficial": "https://um.edu.ar/carreras/contador-publico/"
+    },
+    {
+     "id": 329,
+     "nombre_carrera": "Licenciado en Administración de Negocios",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / Sede San Rafael",
+     "link_oficial": "https://um.edu.ar/carreras/licenciado-en-administracion-de-negocios/"
+    },
+    {
+     "id": 330,
+     "nombre_carrera": "Medicina",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 años de cursado, más un 1 año de Práctica Final Obligatoria",
+     "modalidad": "Presencial",
+     "facultad": "UM - Sede Central / Sede San Rafael",
+     "link_oficial": "https://um.edu.ar/carreras/medicina/"
     }
-  ]
+   ],
+   "departamento": "Capital"
+  }
+ ]
 }

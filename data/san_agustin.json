@@ -1,108 +1,109 @@
 {
-    "instituciones": [
-        {
-            "id": 48,
-            "nombre": "Instituto San Agustín",
-            "nivel": "terciario",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "(0261) 424-0314",
-                "email": "sanagustinpt170@gmail.com",
-                "direccion": "Almirante Brown 1545, Godoy Cruz, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 4801,
-                    "nombre_carrera": "Tecnicatura Superior en Anestesiología",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto San Agustín",
-                    "link_oficial": "https://instsanagustin.com/2024/09/22/tecnicatura-superior-en-anestesiologia/"
-                },
-                {
-                    "id": 4802,
-                    "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto San Agustín",
-                    "link_oficial": "https://instsanagustin.com/2024/10/01/tecnicatura-superior-en-enfermeria-profesional/"
-                },
-                {
-                    "id": 4803,
-                    "nombre_carrera": "Tecnicatura Superior en Esterilización",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto San Agustín",
-                    "link_oficial": "https://instsanagustin.com/2024/10/01/tecnicatura-superior-en-esterilizacion/"
-                },
-                {
-                    "id": 4804,
-                    "nombre_carrera": "Tecnicatura Superior en Hemoterapia",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto San Agustín",
-                    "link_oficial": "https://instsanagustin.com/2024/10/08/tecnicatura-superior-en-hemoterapia/"
-                },
-                {
-                    "id": 4805,
-                    "nombre_carrera": "Tecnicatura Superior en Instrumentación Quirúrgica",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto San Agustín",
-                    "link_oficial": "https://instsanagustin.com/2024/10/15/tecnicatura-superior-en-instrumentacion-quirurgica/"
-                },
-                {
-                    "id": 4806,
-                    "nombre_carrera": "Tecnicatura Superior en Laboratorio de Análisis Clínicos",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto San Agustín",
-                    "link_oficial": "https://instsanagustin.com/2025/04/16/tecnicatura-superior-en-laboratorio-de-analisis-clinicos/"
-                },
-                {
-                    "id": 4807,
-                    "nombre_carrera": "Tecnicatura Superior en Radiología e Imágenes para el Diagnóstico",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto San Agustín",
-                    "link_oficial": "https://instsanagustin.com/2024/09/12/tecnicatura-superior-en-radiologia-e-imagenes-para-el-diagnostico/"
-                },
-                {
-                    "id": 4808,
-                    "nombre_carrera": "Tecnicatura Superior en Cosmetología y Cosmiatría",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto San Agustín",
-                    "link_oficial": "https://instsanagustin.com/2025/04/16/tecnicatura-superior-en-cosmetologia-cosmiatria-y-estetica/"
-                },
-                {
-                    "id": 4809,
-                    "nombre_carrera": "Tecnicatura Superior en Diálisis",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto San Agustín",
-                    "link_oficial": "https://instsanagustin.com/2026/07/29/tecnicatura-superior-en-dialisis/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 48,
+   "nombre": "Instituto San Agustín",
+   "nivel": "terciario",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "(0261) 424-0314",
+    "email": "sanagustinpt170@gmail.com",
+    "direccion": "Almirante Brown 1545, Godoy Cruz, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 4801,
+     "nombre_carrera": "Tecnicatura Superior en Anestesiología",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Instituto San Agustín",
+     "link_oficial": "https://instsanagustin.com/2024/09/22/tecnicatura-superior-en-anestesiologia/"
+    },
+    {
+     "id": 4802,
+     "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Instituto San Agustín",
+     "link_oficial": "https://instsanagustin.com/2024/10/01/tecnicatura-superior-en-enfermeria-profesional/"
+    },
+    {
+     "id": 4803,
+     "nombre_carrera": "Tecnicatura Superior en Esterilización",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Instituto San Agustín",
+     "link_oficial": "https://instsanagustin.com/2024/10/01/tecnicatura-superior-en-esterilizacion/"
+    },
+    {
+     "id": 4804,
+     "nombre_carrera": "Tecnicatura Superior en Hemoterapia",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Instituto San Agustín",
+     "link_oficial": "https://instsanagustin.com/2024/10/08/tecnicatura-superior-en-hemoterapia/"
+    },
+    {
+     "id": 4805,
+     "nombre_carrera": "Tecnicatura Superior en Instrumentación Quirúrgica",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Instituto San Agustín",
+     "link_oficial": "https://instsanagustin.com/2024/10/15/tecnicatura-superior-en-instrumentacion-quirurgica/"
+    },
+    {
+     "id": 4806,
+     "nombre_carrera": "Tecnicatura Superior en Laboratorio de Análisis Clínicos",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Instituto San Agustín",
+     "link_oficial": "https://instsanagustin.com/2025/04/16/tecnicatura-superior-en-laboratorio-de-analisis-clinicos/"
+    },
+    {
+     "id": 4807,
+     "nombre_carrera": "Tecnicatura Superior en Radiología e Imágenes para el Diagnóstico",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Instituto San Agustín",
+     "link_oficial": "https://instsanagustin.com/2024/09/12/tecnicatura-superior-en-radiologia-e-imagenes-para-el-diagnostico/"
+    },
+    {
+     "id": 4808,
+     "nombre_carrera": "Tecnicatura Superior en Cosmetología y Cosmiatría",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Instituto San Agustín",
+     "link_oficial": "https://instsanagustin.com/2025/04/16/tecnicatura-superior-en-cosmetologia-cosmiatria-y-estetica/"
+    },
+    {
+     "id": 4809,
+     "nombre_carrera": "Tecnicatura Superior en Diálisis",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Instituto San Agustín",
+     "link_oficial": "https://instsanagustin.com/2026/07/29/tecnicatura-superior-en-dialisis/"
+    }
+   ],
+   "departamento": "Godoy Cruz"
+  }
+ ]
 }

@@ -1,98 +1,99 @@
 {
-    "instituciones": [
-        {
-            "id": 33,
-            "nombre": "IES 9-029 (Luján de Cuyo)",
-            "nivel": "terciario",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "contacto@ies9029.edu.ar",
-                "direccion": "Luján de Cuyo, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 3301,
-                    "nombre_carrera": "Tecnicatura Superior en Conservación de la Naturaleza",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-029",
-                    "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/conservacion%20naturaleza/"
-                },
-                {
-                    "id": 3302,
-                    "nombre_carrera": "Tecnicatura Superior en Enología",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-029",
-                    "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/enologia/"
-                },
-                {
-                    "id": 3303,
-                    "nombre_carrera": "Tecnicatura Superior en Turismo",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-029",
-                    "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/turismo/"
-                },
-                {
-                    "id": 3304,
-                    "nombre_carrera": "Tecnicatura Superior en Higiene y Ambiente",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-029",
-                    "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/higiene%20ambiente/"
-                },
-                {
-                    "id": 3305,
-                    "nombre_carrera": "Tecnicatura Superior en Recursos Humanos",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-029",
-                    "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/recursos%20humanos/"
-                },
-                {
-                    "id": 3306,
-                    "nombre_carrera": "Profesorado de Geografía",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-029",
-                    "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/profesorados/geografia/"
-                },
-                {
-                    "id": 3307,
-                    "nombre_carrera": "Profesorado de Educación Primaria",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-029",
-                    "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/profesorados/primaria/"
-                },
-                {
-                    "id": 3308,
-                    "nombre_carrera": "Profesorado para Técnicos",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-029",
-                    "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/profesorados/tecnicos/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 33,
+   "nombre": "IES 9-029 (Luján de Cuyo)",
+   "nivel": "terciario",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "contacto@ies9029.edu.ar",
+    "direccion": "Luján de Cuyo, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 3301,
+     "nombre_carrera": "Tecnicatura Superior en Conservación de la Naturaleza",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-029",
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/conservacion%20naturaleza/"
+    },
+    {
+     "id": 3302,
+     "nombre_carrera": "Tecnicatura Superior en Enología",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-029",
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/enologia/"
+    },
+    {
+     "id": 3303,
+     "nombre_carrera": "Tecnicatura Superior en Turismo",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-029",
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/turismo/"
+    },
+    {
+     "id": 3304,
+     "nombre_carrera": "Tecnicatura Superior en Higiene y Ambiente",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-029",
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/higiene%20ambiente/"
+    },
+    {
+     "id": 3305,
+     "nombre_carrera": "Tecnicatura Superior en Recursos Humanos",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-029",
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/recursos%20humanos/"
+    },
+    {
+     "id": 3306,
+     "nombre_carrera": "Profesorado de Geografía",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-029",
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/profesorados/geografia/"
+    },
+    {
+     "id": 3307,
+     "nombre_carrera": "Profesorado de Educación Primaria",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-029",
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/profesorados/primaria/"
+    },
+    {
+     "id": 3308,
+     "nombre_carrera": "Profesorado para Técnicos",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-029",
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/profesorados/tecnicos/"
+    }
+   ],
+   "departamento": "Luján de Cuyo"
+  }
+ ]
 }

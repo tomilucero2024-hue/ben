@@ -47,7 +47,16 @@ export function esCarreraArancelada(institucion, nombre) {
     const esUtn = normalizarTexto(institucion.nombre || '').includes('utn');
     return esUtn && !normalizarTexto(nombre).includes('ingenieria');
 }
-export function inferirTipoInstitucion(institucion) { const nombre = normalizarTexto(institucion.nombre); return institucion.nivel === 'universidad' || nombre.includes('universidad') || nombre.includes('universitario') || nombre.includes('utn') ? 'universidades' : (nombre.includes('ies') || nombre.includes('instituto superior') ? 'ies' : 'centros'); }
+export function inferirTipoInstitucion(institucion) {
+    const nombre = normalizarTexto(institucion.nombre);
+    const nivel = normalizarTexto(institucion.nivel || '');
+    if (nivel === 'universidad' || nombre.includes('universidad') || nombre.includes('universitario') || nombre.includes('utn')) return 'universidades';
+    // La categoría sale del nivel, no del nombre: un terciario que no se llame
+    // "instituto superior" (Ej. "Instituto Fabián Calle", "EPD", "San Agustín")
+    // sigue siendo una institución de educación superior, no un centro de cursos.
+    if (nivel === 'terciario' || nombre.includes('ies') || nombre.includes('instituto superior')) return 'ies';
+    return 'centros';
+}
 export function getFormacion(carrera, nombreOpcional = '') {
     const raw = typeof carrera === 'object' && carrera !== null
         ? `${carrera.categoria || ''} ${carrera.nombre_carrera || carrera.nombre || ''}`

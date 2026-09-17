@@ -1,144 +1,145 @@
 {
-    "instituciones": [
-        {
-            "id": 11,
-            "nombre": "IES 9-001 Gral. José de San Martín",
-            "nivel": "terciario",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "02623-420750",
-                "email": "consultas@ens9001.edu.ar",
-                "direccion": "Chubut y Balcarce, Gral. San Martín"
-            },
-            "carreras": [
-                {
-                    "id": 1100,
-                    "nombre_carrera": "Profesorado de Educación PRIMARIA",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-primaria/"
-                },
-                {
-                    "id": 1101,
-                    "nombre_carrera": "Profesorado de Educación INICIAL",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-inicial/"
-                },
-                {
-                    "id": 1102,
-                    "nombre_carrera": "Profesorado de Educación ESPECIAL con ORIENTACIÓN en DISCAPACIDAD INTELECT UAL",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-especial/"
-                },
-                {
-                    "id": 1103,
-                    "nombre_carrera": "Profesorado de INGLÉS",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/ingles-2/"
-                },
-                {
-                    "id": 1104,
-                    "nombre_carrera": "Profesorado de Educación Secundaria en LENGUA y LITERATURA",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/lengua-y-literatura/"
-                },
-                {
-                    "id": 1105,
-                    "nombre_carrera": "Profesorado de Educación Secundaria en GEOGRAFÍA",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/geografia-3/"
-                },
-                {
-                    "id": 1106,
-                    "nombre_carrera": "Profesorado de Educación Secundaria en HISTORIA",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/historia-3/"
-                },
-                {
-                    "id": 1107,
-                    "nombre_carrera": "Profesorado de Educación Secundaria en BIOLOGÍA",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/biologia/"
-                },
-                {
-                    "id": 1108,
-                    "nombre_carrera": "Profesorado de Educación Secundaria de la MODALIDAD TÉCNICO PROFESIONAL EN CONC. CON EL TÍTULO DE BASE",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/protec/"
-                },
-                {
-                    "id": 1109,
-                    "nombre_carrera": "Tecnicatura Superior en ADMINISTRACIÓN PÚBLICA",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/publica/"
-                },
-                {
-                    "id": 1110,
-                    "nombre_carrera": "Tecnicatura Superior en COMUNICACIÓN SOCIAL",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/comunicacion-social/"
-                },
-                {
-                    "id": 1111,
-                    "nombre_carrera": "Tecnicatura Superior en DISEÑO DE INDUMENTARIA, TEXTIL y ACCESORIOS",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/ingreso-pre-inscripcion/"
-                },
-                {
-                    "id": 1112,
-                    "nombre_carrera": "Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-laboral/"
-                },
-                {
-                    "id": 1113,
-                    "nombre_carrera": "Tecnicatura Superior en Acompañamiento Terapéutico",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-001 San Martín",
-                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/ingreso-pre-inscripcion/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 11,
+   "nombre": "IES 9-001 Gral. José de San Martín",
+   "nivel": "terciario",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "02623-420750",
+    "email": "consultas@ens9001.edu.ar",
+    "direccion": "Chubut y Balcarce, Gral. San Martín"
+   },
+   "carreras": [
+    {
+     "id": 1100,
+     "nombre_carrera": "Profesorado de Educación PRIMARIA",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-primaria/"
+    },
+    {
+     "id": 1101,
+     "nombre_carrera": "Profesorado de Educación INICIAL",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-inicial/"
+    },
+    {
+     "id": 1102,
+     "nombre_carrera": "Profesorado de Educación ESPECIAL con ORIENTACIÓN en DISCAPACIDAD INTELECT UAL",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-especial/"
+    },
+    {
+     "id": 1103,
+     "nombre_carrera": "Profesorado de INGLÉS",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/ingles-2/"
+    },
+    {
+     "id": 1104,
+     "nombre_carrera": "Profesorado de Educación Secundaria en LENGUA y LITERATURA",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/lengua-y-literatura/"
+    },
+    {
+     "id": 1105,
+     "nombre_carrera": "Profesorado de Educación Secundaria en GEOGRAFÍA",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/geografia-3/"
+    },
+    {
+     "id": 1106,
+     "nombre_carrera": "Profesorado de Educación Secundaria en HISTORIA",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/historia-3/"
+    },
+    {
+     "id": 1107,
+     "nombre_carrera": "Profesorado de Educación Secundaria en BIOLOGÍA",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/biologia/"
+    },
+    {
+     "id": 1108,
+     "nombre_carrera": "Profesorado de Educación Secundaria de la MODALIDAD TÉCNICO PROFESIONAL EN CONC. CON EL TÍTULO DE BASE",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/protec/"
+    },
+    {
+     "id": 1109,
+     "nombre_carrera": "Tecnicatura Superior en ADMINISTRACIÓN PÚBLICA",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/publica/"
+    },
+    {
+     "id": 1110,
+     "nombre_carrera": "Tecnicatura Superior en COMUNICACIÓN SOCIAL",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/comunicacion-social/"
+    },
+    {
+     "id": 1111,
+     "nombre_carrera": "Tecnicatura Superior en DISEÑO DE INDUMENTARIA, TEXTIL y ACCESORIOS",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/ingreso-pre-inscripcion/"
+    },
+    {
+     "id": 1112,
+     "nombre_carrera": "Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-laboral/"
+    },
+    {
+     "id": 1113,
+     "nombre_carrera": "Tecnicatura Superior en Acompañamiento Terapéutico",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-001 San Martín",
+     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/ingreso-pre-inscripcion/"
+    }
+   ],
+   "departamento": "San Martín"
+  }
+ ]
 }

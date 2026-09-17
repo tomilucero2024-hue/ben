@@ -1,171 +1,172 @@
 {
-    "instituciones": [
-        {
-            "id": 8,
-            "nombre": "Universidad Católica Argentina (UCA)",
-            "nivel": "universidad",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "4429400",
-                "email": "ingresomendoza@uca.edu.ar",
-                "direccion": "Uruguay 750, Godoy Cruz"
-            },
-            "carreras": [
-                {
-                    "id": 800,
-                    "nombre_carrera": "Ciclo de Licenciatura en Comunicación Digital e Interactiva",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 801,
-                    "nombre_carrera": "Contador Público",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 802,
-                    "nombre_carrera": "Licenciatura en Administración de Empresas",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 803,
-                    "nombre_carrera": "Licenciatura en Ciencias del Comportamiento",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 804,
-                    "nombre_carrera": "Licenciatura en Comunicación Digital e Interactiva",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 805,
-                    "nombre_carrera": "Licenciatura en Economía Empresarial",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 806,
-                    "nombre_carrera": "Licenciatura en Gestión de Negocios Digitales",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 807,
-                    "nombre_carrera": "Licenciatura en Gestión del Liderazgo y Desarrollo Organizacional",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 808,
-                    "nombre_carrera": "Licenciatura en Marketing",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 809,
-                    "nombre_carrera": "Licenciatura en Psicología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 810,
-                    "nombre_carrera": "Licenciatura en Psicopedagogía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 811,
-                    "nombre_carrera": "Licenciatura en Relaciones Internacionales",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 812,
-                    "nombre_carrera": "Martillero Público, Corredor (Inmobiliario y Mobiliario), Administrador de Consorcios y Tasador",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 813,
-                    "nombre_carrera": "Profesorado Universitario de Educación Inicial",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 814,
-                    "nombre_carrera": "Profesorado Universitario de Educación Primaria",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/ingreso"
-                },
-                {
-                    "id": 815,
-                    "nombre_carrera": "Profesorado Universitario en Educación Física y Deportes",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "UCA - Facultad de Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/profesorado/profesorado-universitario-en-educacion-fisica-y-deportes"
-                },
-                {
-                    "id": 816,
-                    "nombre_carrera": "Ciclo de Licenciatura en Higiene y Seguridad, Calidad y Medio Ambiente",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en web oficial",
-                    "modalidad": "A Distancia",
-                    "facultad": "UCA - Facultad de Humanidades y Ciencias Económicas",
-                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 8,
+   "nombre": "Universidad Católica Argentina (UCA)",
+   "nivel": "universidad",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "4429400",
+    "email": "ingresomendoza@uca.edu.ar",
+    "direccion": "Uruguay 750, Godoy Cruz"
+   },
+   "carreras": [
+    {
+     "id": 800,
+     "nombre_carrera": "Ciclo de Licenciatura en Comunicación Digital e Interactiva",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 801,
+     "nombre_carrera": "Contador Público",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 802,
+     "nombre_carrera": "Licenciatura en Administración de Empresas",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 803,
+     "nombre_carrera": "Licenciatura en Ciencias del Comportamiento",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 804,
+     "nombre_carrera": "Licenciatura en Comunicación Digital e Interactiva",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 805,
+     "nombre_carrera": "Licenciatura en Economía Empresarial",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 806,
+     "nombre_carrera": "Licenciatura en Gestión de Negocios Digitales",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 807,
+     "nombre_carrera": "Licenciatura en Gestión del Liderazgo y Desarrollo Organizacional",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 808,
+     "nombre_carrera": "Licenciatura en Marketing",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 809,
+     "nombre_carrera": "Licenciatura en Psicología",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 810,
+     "nombre_carrera": "Licenciatura en Psicopedagogía",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 811,
+     "nombre_carrera": "Licenciatura en Relaciones Internacionales",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 812,
+     "nombre_carrera": "Martillero Público, Corredor (Inmobiliario y Mobiliario), Administrador de Consorcios y Tasador",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 813,
+     "nombre_carrera": "Profesorado Universitario de Educación Inicial",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 814,
+     "nombre_carrera": "Profesorado Universitario de Educación Primaria",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/ingreso"
+    },
+    {
+     "id": 815,
+     "nombre_carrera": "Profesorado Universitario en Educación Física y Deportes",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "Presencial",
+     "facultad": "UCA - Facultad de Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/profesorado/profesorado-universitario-en-educacion-fisica-y-deportes"
+    },
+    {
+     "id": 816,
+     "nombre_carrera": "Ciclo de Licenciatura en Higiene y Seguridad, Calidad y Medio Ambiente",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en web oficial",
+     "modalidad": "A Distancia",
+     "facultad": "UCA - Facultad de Humanidades y Ciencias Económicas",
+     "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas"
+    }
+   ],
+   "departamento": "Godoy Cruz"
+  }
+ ]
 }

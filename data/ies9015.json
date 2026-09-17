@@ -1,218 +1,219 @@
 {
-    "instituciones": [
-        {
-            "id": 24,
-            "nombre": "IESVU (IES 9-015 Valle de Uco)",
-            "nivel": "terciario",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "contacto@iesvu.edu.ar",
-                "direccion": "Valle de Uco, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 2400,
-                    "nombre_carrera": "Tecnicatura en Agronomía",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "2 años y medio (5 cuatrimestres)",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-agronomica/"
-                },
-                {
-                    "id": 2401,
-                    "nombre_carrera": "Tecnicatura en Comercio Internacional y Aduana",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años de duración",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-comercio-internacional-y-aduanas/"
-                },
-                {
-                    "id": 2402,
-                    "nombre_carrera": "Tecnicatura en Enología e Industrias Frutihortícolas",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años (6 cuatrimestres )",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/"
-                },
-                {
-                    "id": 2403,
-                    "nombre_carrera": "Tecnicatura en Estadística y Análisis de Datos",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "Tres años",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-en-estadistica-y-analisis-de-datos/"
-                },
-                {
-                    "id": 2404,
-                    "nombre_carrera": "Tecnicatura en Higiene, Seguridad y Ambiente",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "2 años y medio",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-higiene-seguridad-y-ambiente/"
-                },
-                {
-                    "id": 2405,
-                    "nombre_carrera": "Tecnicatura en Administración de Empresas",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "2 años y medio",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-administracion-de-empresas/"
-                },
-                {
-                    "id": 2406,
-                    "nombre_carrera": "Tecnicatura en Gastronomía",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "5 cuatrimestres – 2 años y medio",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-gastronomia/"
-                },
-                {
-                    "id": 2407,
-                    "nombre_carrera": "Tecnicatura en Laboratorio de Análisis Clínicos",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 Años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-laboratorio-de-analisis-clinicos/"
-                },
-                {
-                    "id": 2408,
-                    "nombre_carrera": "Tecnicatura en Mecatrónica",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años (6 cuatrimestres)",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-mecatronica/"
-                },
-                {
-                    "id": 2409,
-                    "nombre_carrera": "Enfermería Profesional",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 (tres) años.",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/enfermeria-profesional/"
-                },
-                {
-                    "id": 2409,
-                    "nombre_carrera": "Tecnicatura en Gestión Integral de Recursos Hídricos",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 (tres) años.",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-gestion-integral-de-recursos-hidricos/"
-                },
-                {
-                    "id": 2410,
-                    "nombre_carrera": "Tecnicatura en Administración Pública",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 (tres) años.",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-administracion-publica-4/"
-                },
-                {
-                    "id": 2411,
-                    "nombre_carrera": "Tecnicatura en Viticultura y Enología",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 (tres) años.",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-viticultura-y-enologia-ead/"
-                },
-                {
-                    "id": 2413,
-                    "nombre_carrera": "Administrador/a de finca vitivinícola",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "2 cuatrimestres",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/administrador-de-finca-vitivinicola/"
-                },
-                {
-                    "id": 2414,
-                    "nombre_carrera": "Analista Sensorial de Vinos",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "10 meses",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/analista-sensorial-de-vinos/"
-                },
-                {
-                    "id": 2415,
-                    "nombre_carrera": "Asistente en Laboratorio Vitivinícola",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "10 meses",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/asistente-en-laboratorio-vitivinicola/"
-                },
-                {
-                    "id": 2416,
-                    "nombre_carrera": "Laboratorista Hídrico",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "10 meses",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/laboratorista-hidrico/"
-                },
-                {
-                    "id": 2417,
-                    "nombre_carrera": "Curso Inglés – Nivel A1",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/curso-ingles-nivel-a1/"
-                },
-                {
-                    "id": 2418,
-                    "nombre_carrera": "Curso de Portugués 2026",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "A confirmar",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/curso-de-portugues-2026/"
-                },
-                {
-                    "id": 2419,
-                    "nombre_carrera": "Curso de Italiano 2026",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "A confirmar",
-                    "turno": "A confirmar",
-                    "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/curso-de-italiano-2026/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 24,
+   "nombre": "IESVU (IES 9-015 Valle de Uco)",
+   "nivel": "terciario",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "contacto@iesvu.edu.ar",
+    "direccion": "Valle de Uco, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 2400,
+     "nombre_carrera": "Tecnicatura en Agronomía",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 años y medio (5 cuatrimestres)",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-agronomica/"
+    },
+    {
+     "id": 2401,
+     "nombre_carrera": "Tecnicatura en Comercio Internacional y Aduana",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años de duración",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-comercio-internacional-y-aduanas/"
+    },
+    {
+     "id": 2402,
+     "nombre_carrera": "Tecnicatura en Enología e Industrias Frutihortícolas",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años (6 cuatrimestres )",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/"
+    },
+    {
+     "id": 2403,
+     "nombre_carrera": "Tecnicatura en Estadística y Análisis de Datos",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "Tres años",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-en-estadistica-y-analisis-de-datos/"
+    },
+    {
+     "id": 2404,
+     "nombre_carrera": "Tecnicatura en Higiene, Seguridad y Ambiente",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 años y medio",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-higiene-seguridad-y-ambiente/"
+    },
+    {
+     "id": 2405,
+     "nombre_carrera": "Tecnicatura en Administración de Empresas",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 años y medio",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-administracion-de-empresas/"
+    },
+    {
+     "id": 2406,
+     "nombre_carrera": "Tecnicatura en Gastronomía",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "5 cuatrimestres – 2 años y medio",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-gastronomia/"
+    },
+    {
+     "id": 2407,
+     "nombre_carrera": "Tecnicatura en Laboratorio de Análisis Clínicos",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 Años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-laboratorio-de-analisis-clinicos/"
+    },
+    {
+     "id": 2408,
+     "nombre_carrera": "Tecnicatura en Mecatrónica",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años (6 cuatrimestres)",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-mecatronica/"
+    },
+    {
+     "id": 2409,
+     "nombre_carrera": "Enfermería Profesional",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 (tres) años.",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/enfermeria-profesional/"
+    },
+    {
+     "id": 2409,
+     "nombre_carrera": "Tecnicatura en Gestión Integral de Recursos Hídricos",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 (tres) años.",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-gestion-integral-de-recursos-hidricos/"
+    },
+    {
+     "id": 2410,
+     "nombre_carrera": "Tecnicatura en Administración Pública",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 (tres) años.",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-administracion-publica-4/"
+    },
+    {
+     "id": 2411,
+     "nombre_carrera": "Tecnicatura en Viticultura y Enología",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 (tres) años.",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-viticultura-y-enologia-ead/"
+    },
+    {
+     "id": 2413,
+     "nombre_carrera": "Administrador/a de finca vitivinícola",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "2 cuatrimestres",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/administrador-de-finca-vitivinicola/"
+    },
+    {
+     "id": 2414,
+     "nombre_carrera": "Analista Sensorial de Vinos",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "10 meses",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/analista-sensorial-de-vinos/"
+    },
+    {
+     "id": 2415,
+     "nombre_carrera": "Asistente en Laboratorio Vitivinícola",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "10 meses",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/asistente-en-laboratorio-vitivinicola/"
+    },
+    {
+     "id": 2416,
+     "nombre_carrera": "Laboratorista Hídrico",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "10 meses",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/laboratorista-hidrico/"
+    },
+    {
+     "id": 2417,
+     "nombre_carrera": "Curso Inglés – Nivel A1",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/curso-ingles-nivel-a1/"
+    },
+    {
+     "id": 2418,
+     "nombre_carrera": "Curso de Portugués 2026",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "A confirmar",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/curso-de-portugues-2026/"
+    },
+    {
+     "id": 2419,
+     "nombre_carrera": "Curso de Italiano 2026",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "A confirmar",
+     "turno": "A confirmar",
+     "facultad": "IESVU (IES 9-015)",
+     "link_oficial": "https://iesvu.edu.ar/estudio/curso-de-italiano-2026/"
+    }
+   ],
+   "departamento": "San Carlos"
+  }
+ ]
 }

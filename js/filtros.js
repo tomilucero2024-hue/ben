@@ -45,6 +45,7 @@ function puntuacionRelacion(oferta) {
     if (estado.gestion !== 'todos' && oferta.gestion === estado.gestion) score += 15;
     if (estado.modalidad !== 'todos' && oferta.modalidades.includes(estado.modalidad)) score += 15;
     if (estado.institucion !== 'todos' && oferta.tipoInstitucion === estado.institucion) score += 15;
+    if (estado.departamento !== 'todos' && oferta.departamento === estado.departamento) score += 15;
     if (estado.costo !== 'todos' && (oferta.costo || (oferta.gestion === 'pública' ? 'gratuito' : 'arancelado')) === estado.costo) score += 10;
     if (estado.duracion !== 'todos') {
         const grupo = getGrupoDuracion(oferta.duracionAnios);
@@ -144,6 +145,7 @@ export function cumpleFiltros(oferta) {
     return coincideTexto(oferta)
         && (estado.formacion === 'todos' || oferta.formacion === estado.formacion)
         && (estado.institucion === 'todos' || oferta.tipoInstitucion === estado.institucion)
+        && (estado.departamento === 'todos' || oferta.departamento === estado.departamento)
         && (estado.gestion === 'todos' || oferta.gestion === estado.gestion)
         && (estado.modalidad === 'todos' || oferta.modalidades.includes(estado.modalidad))
         && (estado.costo === 'todos' || (oferta.costo || (oferta.gestion === 'pública' ? 'gratuito' : 'arancelado')) === estado.costo)
@@ -157,7 +159,7 @@ export function cumpleFiltros(oferta) {
 // por una institucion concreta). Una carrera que solo existe en los catalogos
 // aparte no tiene gestion, costo ni duracion en años: si alguno de estos esta
 // activo, simplemente no aplica.
-export const FILTROS_SOLO_FORMALES = ['institucion', 'gestion', 'modalidad', 'costo', 'duracion'];
+export const FILTROS_SOLO_FORMALES = ['institucion', 'departamento', 'gestion', 'modalidad', 'costo', 'duracion'];
 
 export function filtrarYOrdenar() {
     const resultados = ofertas.filter(cumpleFiltros);

@@ -1,252 +1,253 @@
 {
-    "instituciones": [
-        {
-            "id": 500,
-            "nombre": "Universidad de Congreso (UC)",
-            "nivel": "universidad",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "4230630",
-                "email": "informes@ucongreso.edu.ar",
-                "direccion": "Colón 90, Ciudad"
-            },
-            "carreras": [
-                {
-                    "id": 500,
-                    "nombre_carrera": "Comercio Exterior",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Estudios Internacionales",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/comercio-exterior/"
-                },
-                {
-                    "id": 501,
-                    "nombre_carrera": "Marketing Internacional",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Estudios Internacionales",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/comercializacion-con-orientacion-internacionales/"
-                },
-                {
-                    "id": 502,
-                    "nombre_carrera": "Relaciones Económicas Internacionales",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Estudios Internacionales",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/"
-                },
-                {
-                    "id": 536,
-                    "nombre_carrera": "Relaciones Internacionales y Gobernanza Global",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Estudios Internacionales",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/"
-                },
-                {
-                    "id": 504,
-                    "nombre_carrera": "Comunicación",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Humanidades",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/comunicacion/"
-                },
-                {
-                    "id": 505,
-                    "nombre_carrera": "Locución",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "3 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Humanidades",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/locucion/"
-                },
-                {
-                    "id": 506,
-                    "nombre_carrera": "Periodismo",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Humanidades",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/periodismo/"
-                },
-                {
-                    "id": 507,
-                    "nombre_carrera": "Profesorado Universitario para Profesionales",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Cuatro semestres",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Humanidades",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/profesorado-universitario-para-profesionales/"
-                },
-                {
-                    "id": 509,
-                    "nombre_carrera": "Tecnicatura Universitaria en Dirección y Producción Audiovisual",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Humanidades",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/direccion-y-produccion-audiovisual/"
-                },
-                {
-                    "id": 510,
-                    "nombre_carrera": "Arquitectura",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "5 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ambiente, Arquitectura y Urbanismo",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/arquitectura/"
-                },
-                {
-                    "id": 511,
-                    "nombre_carrera": "Gestión Ambiental",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ambiente, Arquitectura y Urbanismo",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/gestion-ambiental/"
-                },
-                {
-                    "id": 512,
-                    "nombre_carrera": "Gestión de Recursos Hídricos",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ambiente, Arquitectura y Urbanismo",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/gestion-de-recursos-hidricos/"
-                },
-                {
-                    "id": 516,
-                    "nombre_carrera": "Licenciatura en Instrumentación Quirúrgica",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ciencias de la Salud",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/instrumentacion-quirurgica/"
-                },
-                {
-                    "id": 517,
-                    "nombre_carrera": "Licenciatura en Producción de Bioimágenes (Radiología)",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ciencias de la Salud",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/radiologia/"
-                },
-                {
-                    "id": 519,
-                    "nombre_carrera": "Psicología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "5 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ciencias de la Salud",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/psicologia/"
-                },
-                {
-                    "id": 520,
-                    "nombre_carrera": "Tecnicatura en Acompañante Terapéutico",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "3 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ciencias de la Salud",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/acompanante-terapeutico/"
-                },
-                {
-                    "id": 523,
-                    "nombre_carrera": "Administración",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ciencias Económicas y de la Administración",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/administracion/"
-                },
-                {
-                    "id": 527,
-                    "nombre_carrera": "Comercialización",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ciencias Económicas y de la Administración",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/comercializacion/"
-                },
-                {
-                    "id": 528,
-                    "nombre_carrera": "Contador Público",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 años y 6 meses",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ciencias Económicas y de la Administración",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/contador-publico/"
-                },
-                {
-                    "id": 529,
-                    "nombre_carrera": "Economía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ciencias Económicas y de la Administración",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/economia/"
-                },
-                {
-                    "id": 530,
-                    "nombre_carrera": "Hotelería",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ciencias Económicas y de la Administración",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/hoteleria/"
-                },
-                {
-                    "id": 533,
-                    "nombre_carrera": "Recursos Humanos",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ciencias Económicas y de la Administración",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/recursos-humanos/"
-                },
-                {
-                    "id": 534,
-                    "nombre_carrera": "Turismo",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ciencias Económicas y de la Administración",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/turismo/"
-                },
-                {
-                    "id": 535,
-                    "nombre_carrera": "Abogacía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "Presencial",
-                    "facultad": "UC - Ciencias Jurídicas",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/abogacia/"
-                },
-                {
-                    "id": 537,
-                    "nombre_carrera": "Administración de Negocios Digitales",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "A Distancia",
-                    "facultad": "UC - Ciencias Económicas y de la Administración",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/administracion-de-negocios-digitales/"
-                },
-                {
-                    "id": 538,
-                    "nombre_carrera": "Ciencias del Comportamiento",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 Años",
-                    "modalidad": "A Distancia",
-                    "facultad": "UC - Ciencias Económicas y de la Administración",
-                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/ciencias-del-comportamiento/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 500,
+   "nombre": "Universidad de Congreso (UC)",
+   "nivel": "universidad",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "4230630",
+    "email": "informes@ucongreso.edu.ar",
+    "direccion": "Colón 90, Ciudad"
+   },
+   "carreras": [
+    {
+     "id": 500,
+     "nombre_carrera": "Comercio Exterior",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Estudios Internacionales",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/comercio-exterior/"
+    },
+    {
+     "id": 501,
+     "nombre_carrera": "Marketing Internacional",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Estudios Internacionales",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/comercializacion-con-orientacion-internacionales/"
+    },
+    {
+     "id": 502,
+     "nombre_carrera": "Relaciones Económicas Internacionales",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Estudios Internacionales",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/"
+    },
+    {
+     "id": 536,
+     "nombre_carrera": "Relaciones Internacionales y Gobernanza Global",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Estudios Internacionales",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/"
+    },
+    {
+     "id": 504,
+     "nombre_carrera": "Comunicación",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Humanidades",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/comunicacion/"
+    },
+    {
+     "id": 505,
+     "nombre_carrera": "Locución",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Humanidades",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/locucion/"
+    },
+    {
+     "id": 506,
+     "nombre_carrera": "Periodismo",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Humanidades",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/periodismo/"
+    },
+    {
+     "id": 507,
+     "nombre_carrera": "Profesorado Universitario para Profesionales",
+     "categoria": "Grado / Carrera",
+     "duracion": "Cuatro semestres",
+     "modalidad": "Presencial",
+     "facultad": "UC - Humanidades",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/profesorado-universitario-para-profesionales/"
+    },
+    {
+     "id": 509,
+     "nombre_carrera": "Tecnicatura Universitaria en Dirección y Producción Audiovisual",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Humanidades",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/direccion-y-produccion-audiovisual/"
+    },
+    {
+     "id": 510,
+     "nombre_carrera": "Arquitectura",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ambiente, Arquitectura y Urbanismo",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/arquitectura/"
+    },
+    {
+     "id": 511,
+     "nombre_carrera": "Gestión Ambiental",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ambiente, Arquitectura y Urbanismo",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/gestion-ambiental/"
+    },
+    {
+     "id": 512,
+     "nombre_carrera": "Gestión de Recursos Hídricos",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ambiente, Arquitectura y Urbanismo",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/gestion-de-recursos-hidricos/"
+    },
+    {
+     "id": 516,
+     "nombre_carrera": "Licenciatura en Instrumentación Quirúrgica",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ciencias de la Salud",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/instrumentacion-quirurgica/"
+    },
+    {
+     "id": 517,
+     "nombre_carrera": "Licenciatura en Producción de Bioimágenes (Radiología)",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ciencias de la Salud",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/radiologia/"
+    },
+    {
+     "id": 519,
+     "nombre_carrera": "Psicología",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ciencias de la Salud",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/psicologia/"
+    },
+    {
+     "id": 520,
+     "nombre_carrera": "Tecnicatura en Acompañante Terapéutico",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ciencias de la Salud",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/acompanante-terapeutico/"
+    },
+    {
+     "id": 523,
+     "nombre_carrera": "Administración",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ciencias Económicas y de la Administración",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/administracion/"
+    },
+    {
+     "id": 527,
+     "nombre_carrera": "Comercialización",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ciencias Económicas y de la Administración",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/comercializacion/"
+    },
+    {
+     "id": 528,
+     "nombre_carrera": "Contador Público",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años y 6 meses",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ciencias Económicas y de la Administración",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/contador-publico/"
+    },
+    {
+     "id": 529,
+     "nombre_carrera": "Economía",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ciencias Económicas y de la Administración",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/economia/"
+    },
+    {
+     "id": 530,
+     "nombre_carrera": "Hotelería",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ciencias Económicas y de la Administración",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/hoteleria/"
+    },
+    {
+     "id": 533,
+     "nombre_carrera": "Recursos Humanos",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ciencias Económicas y de la Administración",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/recursos-humanos/"
+    },
+    {
+     "id": 534,
+     "nombre_carrera": "Turismo",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ciencias Económicas y de la Administración",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/turismo/"
+    },
+    {
+     "id": 535,
+     "nombre_carrera": "Abogacía",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "Presencial",
+     "facultad": "UC - Ciencias Jurídicas",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/abogacia/"
+    },
+    {
+     "id": 537,
+     "nombre_carrera": "Administración de Negocios Digitales",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "A Distancia",
+     "facultad": "UC - Ciencias Económicas y de la Administración",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/administracion-de-negocios-digitales/"
+    },
+    {
+     "id": 538,
+     "nombre_carrera": "Ciencias del Comportamiento",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 Años",
+     "modalidad": "A Distancia",
+     "facultad": "UC - Ciencias Económicas y de la Administración",
+     "link_oficial": "https://www.ucongreso.edu.ar/carrera/ciencias-del-comportamiento/"
+    }
+   ],
+   "departamento": "Capital"
+  }
+ ]
 }

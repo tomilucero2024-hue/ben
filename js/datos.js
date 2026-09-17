@@ -142,6 +142,7 @@ function crearOferta(carrera, institucion) {
         nombre, categoria: limpiarTexto(carrera.categoria || 'General'), duracion: limpiarTexto(carrera.duracion || 'No especificada'),
         modalidad, facultad: limpiarTexto(carrera.facultad || ''), link: carrera.link_oficial || '',
         institucion: limpiarTexto(institucion.nombre || 'Institución'), gestion, tipoInstitucion: inferirTipoInstitucion(institucion),
+        departamento: limpiarTexto(institucion.departamento || ''),
         esPlataforma: false,
         formacion: getFormacion(carrera), area: getArea({ nombre_carrera: nombre }),
         duracionAnios: obtenerDuracionEnAnios(carrera.duracion), modalidades: obtenerModalidades(modalidad),

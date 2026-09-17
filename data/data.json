@@ -130,7 +130,8 @@
                     "facultad": "UTN FRM",
                     "link_oficial": "https://frm.utn.edu.ar/ingenieria-minas/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 1,
@@ -1188,7 +1189,8 @@
                     "facultad": "Filosofía y Letras",
                     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/traductorado-publico-en-ingles"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 3,
@@ -1481,7 +1483,8 @@
                     "facultad": "UM - Sede Central / Sede San Rafael",
                     "link_oficial": "https://um.edu.ar/carreras/medicina/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 4,
@@ -1972,7 +1975,8 @@
                     "facultad": "UMaza - Sede Gran Mendoza",
                     "link_oficial": "https://www.umaza.edu.ar/landings/veterinaria/inicio"
                 }
-            ]
+            ],
+            "departamento": "Guaymallén"
         },
         {
             "id": 500,
@@ -2220,7 +2224,8 @@
                     "facultad": "UC - Ciencias Económicas y de la Administración",
                     "link_oficial": "https://www.ucongreso.edu.ar/carrera/ciencias-del-comportamiento/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 6,
@@ -2882,7 +2887,8 @@
                     "facultad": "UDA",
                     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 7,
@@ -3022,7 +3028,8 @@
                     "facultad": "Facultad de Educación",
                     "link_oficial": "https://www.uch.edu.ar/carrera/profesorados-universitarios-en-educacion-primaria-e-inicial"
                 }
-            ]
+            ],
+            "departamento": "Godoy Cruz"
         },
         {
             "id": 8,
@@ -3189,7 +3196,8 @@
                     "facultad": "UCA - Facultad de Humanidades y Ciencias Económicas",
                     "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas"
                 }
-            ]
+            ],
+            "departamento": "Godoy Cruz"
         },
         {
             "id": 9,
@@ -3257,7 +3265,8 @@
                     "facultad": "IUCE",
                     "link_oficial": "https://i-uce.edu.ar/careers/uce-logistica-y-transporte"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 10,
@@ -3955,7 +3964,8 @@
                     "facultad": "S21",
                     "link_oficial": "https://21.edu.ar/carreras-y-programas/tecnicatura-en-estadistica-aplicada-y-analisis-avanzado?hsLang=es"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 11,
@@ -4095,7 +4105,8 @@
                     "facultad": "IES 9-001 San Martín",
                     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/ingreso-pre-inscripcion/"
                 }
-            ]
+            ],
+            "departamento": "San Martín"
         },
         {
             "id": 12,
@@ -4219,7 +4230,8 @@
                     "facultad": "IES Tomás Godoy Cruz",
                     "link_oficial": "https://institutotomasgodoycruz.com/tecnicatura-en-produccion-artistica-y-artesanal/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 13,
@@ -4283,7 +4295,8 @@
                     "facultad": "IES 9-003 Normal (San Rafael)",
                     "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico-2/"
                 }
-            ]
+            ],
+            "departamento": "San Rafael"
         },
         {
             "id": 14,
@@ -4367,7 +4380,8 @@
                     "facultad": "IES 9-004 Toribio de Luzuriaga",
                     "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/"
                 }
-            ]
+            ],
+            "departamento": "Tunuyán"
         },
         {
             "id": 15,
@@ -4441,7 +4455,8 @@
                     "facultad": "IES 9-005",
                     "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/formacion-profesional-en-software/"
                 }
-            ]
+            ],
+            "departamento": "Junín"
         },
         {
             "id": 16,
@@ -4575,7 +4590,8 @@
                     "facultad": "IES 9-006 Francisco H. Tolosa",
                     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/produccion-artistica-artesanal/"
                 }
-            ]
+            ],
+            "departamento": "Rivadavia"
         },
         {
             "id": 17,
@@ -4649,7 +4665,8 @@
                     "facultad": "IES 9-008 Manuel Belgrano",
                     "link_oficial": "https://www.iesmb.edu.ar/bel/diseno-multimedial/"
                 }
-            ]
+            ],
+            "departamento": "Godoy Cruz"
         },
         {
             "id": 18,
@@ -4813,7 +4830,8 @@
                     "facultad": "IES 9-009",
                     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/profesorado-de-educacion-secundaria-en-matematica/"
                 }
-            ]
+            ],
+            "departamento": "Tupungato"
         },
         {
             "id": 19,
@@ -4927,7 +4945,8 @@
                     "facultad": "IES 9-010 Rosario Vera Peñaloza",
                     "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gestion-de-recursos-humanos/"
                 }
-            ]
+            ],
+            "departamento": "San Carlos"
         },
         {
             "id": 20,
@@ -5031,7 +5050,8 @@
                     "facultad": "IES 9-011 Del Atuel",
                     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gastronomia/"
                 }
-            ]
+            ],
+            "departamento": "San Rafael"
         },
         {
             "id": 21,
@@ -5095,7 +5115,8 @@
                     "facultad": "IES 9-012 (San Rafael)",
                     "link_oficial": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-redes-y-ciberseguridad"
                 }
-            ]
+            ],
+            "departamento": "San Rafael"
         },
         {
             "id": 22,
@@ -5199,7 +5220,8 @@
                     "facultad": "ISTEEC (IES 9-013)",
                     "link_oficial": "https://isteec.edu.ar/turismo/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 23,
@@ -5273,7 +5295,8 @@
                     "facultad": "IES 9-014 Profesorado de Arte (IPA)",
                     "link_oficial": "https://profesoradodearte.edu.ar/profesorado-para-tecnicos/"
                 }
-            ]
+            ],
+            "departamento": "San Rafael"
         },
         {
             "id": 24,
@@ -5487,7 +5510,8 @@
                     "facultad": "IESVU (IES 9-015)",
                     "link_oficial": "https://iesvu.edu.ar/estudio/curso-de-italiano-2026/"
                 }
-            ]
+            ],
+            "departamento": "San Carlos"
         },
         {
             "id": 25,
@@ -5541,7 +5565,8 @@
                     "facultad": "IEF (IES 9-016)",
                     "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-conservacion-de-la-naturaleza/"
                 }
-            ]
+            ],
+            "departamento": "Godoy Cruz"
         },
         {
             "id": 26,
@@ -5565,7 +5590,8 @@
                     "facultad": "Escuela de Cine (IES 9-017)",
                     "link_oficial": "https://escueladecine9017-infd.mendoza.edu.ar/sitio/catalogo/plan-de-estudio/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 27,
@@ -5639,7 +5665,8 @@
                     "facultad": "IES 9-018 Malargüe",
                     "link_oficial": "https://ies9018malargue.edu.ar/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/"
                 }
-            ]
+            ],
+            "departamento": "Malargüe"
         },
         {
             "id": 28,
@@ -5722,7 +5749,8 @@
                     "facultad": "INSUTEC",
                     "link_oficial": "https://expoeducativa.mendoza.edu.ar/carreras/767/tecnicatura-superior-en-higiene-y-seguridad-laboral-con-orientaci%C3%B3n-en-calidad-y-medio-ambiente"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 29,
@@ -5816,7 +5844,8 @@
                     "facultad": "IES 9-021",
                     "link_oficial": "https://ies9021.edu.ar/carreras/"
                 }
-            ]
+            ],
+            "departamento": "Junín"
         },
         {
             "id": 30,
@@ -5930,7 +5959,8 @@
                     "facultad": "IES 9-023",
                     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-mecatronica-2/"
                 }
-            ]
+            ],
+            "departamento": "Maipú"
         },
         {
             "id": 31,
@@ -6034,7 +6064,8 @@
                     "facultad": "IES 9-024 Lavalle",
                     "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente"
                 }
-            ]
+            ],
+            "departamento": "Lavalle"
         },
         {
             "id": 32,
@@ -6088,7 +6119,8 @@
                     "facultad": "IES 9-028",
                     "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-industria-de-los-alimentos/"
                 }
-            ]
+            ],
+            "departamento": "Santa Rosa"
         },
         {
             "id": 33,
@@ -6182,7 +6214,8 @@
                     "facultad": "IES 9-029",
                     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/profesorados/tecnicos/"
                 }
-            ]
+            ],
+            "departamento": "Luján de Cuyo"
         },
         {
             "id": 34,
@@ -6296,7 +6329,8 @@
                     "facultad": "IES 9-030",
                     "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-logistica/"
                 }
-            ]
+            ],
+            "departamento": "Godoy Cruz"
         },
         {
             "id": 35,
@@ -6320,7 +6354,8 @@
                     "facultad": "Instituto Fabián Calle",
                     "link_oficial": "https://institutocalle.edu.ar/oferta-educativa/locucion/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 36,
@@ -6424,7 +6459,8 @@
                     "facultad": "Instituto Juan Gutenberg",
                     "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 37,
@@ -6498,7 +6534,8 @@
                     "facultad": "Fundación Rayuela",
                     "link_oficial": "https://fundacionrayuela.org.ar/sitio/profesor-primaria/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 38,
@@ -6602,7 +6639,8 @@
                     "facultad": "Intercultural",
                     "link_oficial": "https://intercultural.com.ar/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 39,
@@ -6706,7 +6744,8 @@
                     "facultad": "Instituto de Arte Chopin",
                     "link_oficial": "https://arteschopin.edu.ar/tecnicatura-superior-en-gestion-de-industrias-culturales-y-creativas/"
                 }
-            ]
+            ],
+            "departamento": "Godoy Cruz"
         },
         {
             "id": 40,
@@ -6780,7 +6819,8 @@
                     "facultad": "Instituto Maipú de Educación Integral",
                     "link_oficial": "https://maipu-infd.mendoza.edu.ar/sitio/"
                 }
-            ]
+            ],
+            "departamento": "Maipú"
         },
         {
             "id": 41,
@@ -6834,7 +6874,8 @@
                     "facultad": "Instituto Santísima Trinidad",
                     "link_oficial": "https://santisimatrinidad.edu.ar/formacion-online/#cursos"
                 }
-            ]
+            ],
+            "departamento": "San Rafael"
         },
         {
             "id": 42,
@@ -6858,7 +6899,8 @@
                     "facultad": "Escuela de Periodismo Deportivo de Mendoza",
                     "link_oficial": "https://epdmendoza.com.ar/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 43,
@@ -6942,7 +6984,8 @@
                     "facultad": "Escuela de Psicología Social",
                     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico-a-distancia/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 45,
@@ -7006,7 +7049,8 @@
                     "facultad": "Instituto de Educación Integral de Maipú",
                     "link_oficial": "https://eim.esc.edu.ar/index.php/oferta-educativa/cursos"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 46,
@@ -7040,7 +7084,8 @@
                     "facultad": "Instituto Superior",
                     "link_oficial": "https://insrp-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-asistencia-gerontologica/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 47,
@@ -7064,7 +7109,8 @@
                     "facultad": "Cultural Mendoza",
                     "link_oficial": "https://culturalmendoza.com/ensenanza-de-ingles/"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         },
         {
             "id": 47,
@@ -7159,7 +7205,8 @@
                     "facultad": "Facultad de la Defensa Nacional",
                     "link_oficial": "https://undef.edu.ar/a-distancia-2/"
                 }
-            ]
+            ],
+            "departamento": "A distancia"
         },
         {
             "id": 44,
@@ -7253,7 +7300,8 @@
                     "facultad": "IES 9-026",
                     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/"
                 }
-            ]
+            ],
+            "departamento": "Las Heras"
         },
         {
             "id": 48,
@@ -7357,7 +7405,8 @@
                     "facultad": "Instituto San Agustín",
                     "link_oficial": "https://instsanagustin.com/2026/07/29/tecnicatura-superior-en-dialisis/"
                 }
-            ]
+            ],
+            "departamento": "Godoy Cruz"
         },
         {
             "id": 50,
@@ -7411,7 +7460,8 @@
                     "facultad": "IES 9-027",
                     "link_oficial": "https://ies9027-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-transporte-ferroviario/"
                 }
-            ]
+            ],
+            "departamento": "Guaymallén"
         },
         {
             "id": 49,
@@ -7515,7 +7565,8 @@
                     "facultad": "IES 9-007",
                     "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/"
                 }
-            ]
+            ],
+            "departamento": "General Alvear"
         },
         {
             "id": 51,
@@ -7559,7 +7610,8 @@
                     "facultad": "IDESA (UGACOOP)",
                     "link_oficial": "https://idesaugacoop.com.ar/tecnicatura-superior-en-mecatronica-aplicada-a-la-industria/"
                 }
-            ]
+            ],
+            "departamento": "General Alvear"
         },
         {
             "id": 401,
@@ -7582,7 +7634,8 @@
                     "facultad": "ITU-UNCuyo",
                     "link_oficial": "https://itu.uncuyo.edu.ar/estudios/titulo/tecnico-universitario-en-higiene-y-seguridad-laboral"
                 }
-            ]
+            ],
+            "departamento": "Capital"
         }
     ],
     "formaciones_alternativas": [

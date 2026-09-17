@@ -1,28 +1,29 @@
 {
-    "instituciones": [
-        {
-            "id": 42,
-            "nombre": "Escuela de Periodismo Deportivo de Mendoza (EPD)",
-            "nivel": "terciario",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "contacto@epdmendoza.com.ar",
-                "direccion": "Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 4201,
-                    "nombre_carrera": "Tecnicatura Superior en Periodismo Deportivo",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Escuela de Periodismo Deportivo de Mendoza",
-                    "link_oficial": "https://epdmendoza.com.ar/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 42,
+   "nombre": "Escuela de Periodismo Deportivo de Mendoza (EPD)",
+   "nivel": "terciario",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "contacto@epdmendoza.com.ar",
+    "direccion": "Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 4201,
+     "nombre_carrera": "Tecnicatura Superior en Periodismo Deportivo",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Escuela de Periodismo Deportivo de Mendoza",
+     "link_oficial": "https://epdmendoza.com.ar/"
+    }
+   ],
+   "departamento": "Capital"
+  }
+ ]
 }

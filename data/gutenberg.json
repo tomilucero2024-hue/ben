@@ -1,108 +1,109 @@
 {
-    "instituciones": [
-        {
-            "id": 36,
-            "nombre": "Instituto Juan Gutenberg",
-            "nivel": "terciario",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "contacto@institutojgutenberg.edu.ar",
-                "direccion": "Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 3601,
-                    "nombre_carrera": "Tecnicatura Superior en Diseño Multimedial",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto Juan Gutenberg",
-                    "link_oficial": "https://institutojgutenberg2.lovable.app/"
-                },
-                {
-                    "id": 3602,
-                    "nombre_carrera": "Secretariado Médico",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "6 meses",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto Juan Gutenberg",
-                    "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
-                },
-                {
-                    "id": 3603,
-                    "nombre_carrera": "Auxiliar de Farmacia",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "6 meses",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto Juan Gutenberg",
-                    "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
-                },
-                {
-                    "id": 3604,
-                    "nombre_carrera": "Lengua de Señas",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "6 meses",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto Juan Gutenberg",
-                    "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
-                },
-                {
-                    "id": 3605,
-                    "nombre_carrera": "Administrativo Veterinaria",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "6 meses",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto Juan Gutenberg",
-                    "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
-                },
-                {
-                    "id": 3606,
-                    "nombre_carrera": "Acompañante Terapéutico",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "6 meses",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto Juan Gutenberg",
-                    "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
-                },
-                {
-                    "id": 3607,
-                    "nombre_carrera": "Ia Desde Cero",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "6 meses",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto Juan Gutenberg",
-                    "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
-                },
-                {
-                    "id": 3608,
-                    "nombre_carrera": "Community Manager",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "6 meses",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto Juan Gutenberg",
-                    "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
-                },
-                {
-                    "id": 3609,
-                    "nombre_carrera": "Diseño Digital",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "6 meses",
-                    "modalidad": "A Distancia",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto Juan Gutenberg",
-                    "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 36,
+   "nombre": "Instituto Juan Gutenberg",
+   "nivel": "terciario",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "contacto@institutojgutenberg.edu.ar",
+    "direccion": "Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 3601,
+     "nombre_carrera": "Tecnicatura Superior en Diseño Multimedial",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "Instituto Juan Gutenberg",
+     "link_oficial": "https://institutojgutenberg2.lovable.app/"
+    },
+    {
+     "id": 3602,
+     "nombre_carrera": "Secretariado Médico",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "6 meses",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "Instituto Juan Gutenberg",
+     "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
+    },
+    {
+     "id": 3603,
+     "nombre_carrera": "Auxiliar de Farmacia",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "6 meses",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "Instituto Juan Gutenberg",
+     "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
+    },
+    {
+     "id": 3604,
+     "nombre_carrera": "Lengua de Señas",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "6 meses",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "Instituto Juan Gutenberg",
+     "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
+    },
+    {
+     "id": 3605,
+     "nombre_carrera": "Administrativo Veterinaria",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "6 meses",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "Instituto Juan Gutenberg",
+     "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
+    },
+    {
+     "id": 3606,
+     "nombre_carrera": "Acompañante Terapéutico",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "6 meses",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "Instituto Juan Gutenberg",
+     "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
+    },
+    {
+     "id": 3607,
+     "nombre_carrera": "Ia Desde Cero",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "6 meses",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "Instituto Juan Gutenberg",
+     "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
+    },
+    {
+     "id": 3608,
+     "nombre_carrera": "Community Manager",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "6 meses",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "Instituto Juan Gutenberg",
+     "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
+    },
+    {
+     "id": 3609,
+     "nombre_carrera": "Diseño Digital",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "6 meses",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "Instituto Juan Gutenberg",
+     "link_oficial": "https://institutojgutenberg.edu.ar/cursos-online-gutenberg/"
+    }
+   ],
+   "departamento": "Capital"
+  }
+ ]
 }

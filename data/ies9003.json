@@ -1,68 +1,69 @@
 {
-    "instituciones": [
-        {
-            "id": 13,
-            "nombre": "IES 9-003 Normal (San Rafael)",
-            "nivel": "terciario",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "0260-4422262",
-                "email": "ens9003@gmail.com",
-                "direccion": "Julio Silva y Barcala, San Rafael"
-            },
-            "carreras": [
-                {
-                    "id": 1300,
-                    "nombre_carrera": "Profesorado de Educación Primaria",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años modalidad combinada (50% virtual-50% presencial)",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-003 Normal (San Rafael)",
-                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
-                },
-                {
-                    "id": 1301,
-                    "nombre_carrera": "Profesorado de Educación Inicial",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años modalidad combinada (50% virtual-50%presencial)",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-003 Normal (San Rafael)",
-                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/profesorado-de-nivel-inicial/"
-                },
-                {
-                    "id": 1302,
-                    "nombre_carrera": "Profesorado de Educación Especial",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años modalidad combinada (50% virtual-50%presencial)",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-003 Normal (San Rafael)",
-                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/"
-                },
-                {
-                    "id": 1303,
-                    "nombre_carrera": "Tecnicatura Superior en Acompañamiento Terapéutico",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años modalidad combinada (50% virtual-50%presencial)",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-003 Normal (San Rafael)",
-                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/"
-                },
-                {
-                    "id": 1304,
-                    "nombre_carrera": "Tecnicatura Superior en Comunicación Digital Convergente",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años modalidad Distancia (100% presencial)",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-003 Normal (San Rafael)",
-                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico-2/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 13,
+   "nombre": "IES 9-003 Normal (San Rafael)",
+   "nivel": "terciario",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "0260-4422262",
+    "email": "ens9003@gmail.com",
+    "direccion": "Julio Silva y Barcala, San Rafael"
+   },
+   "carreras": [
+    {
+     "id": 1300,
+     "nombre_carrera": "Profesorado de Educación Primaria",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años modalidad combinada (50% virtual-50% presencial)",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-003 Normal (San Rafael)",
+     "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
+    },
+    {
+     "id": 1301,
+     "nombre_carrera": "Profesorado de Educación Inicial",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años modalidad combinada (50% virtual-50%presencial)",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-003 Normal (San Rafael)",
+     "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/profesorado-de-nivel-inicial/"
+    },
+    {
+     "id": 1302,
+     "nombre_carrera": "Profesorado de Educación Especial",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años modalidad combinada (50% virtual-50%presencial)",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-003 Normal (San Rafael)",
+     "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/"
+    },
+    {
+     "id": 1303,
+     "nombre_carrera": "Tecnicatura Superior en Acompañamiento Terapéutico",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años modalidad combinada (50% virtual-50%presencial)",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-003 Normal (San Rafael)",
+     "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/"
+    },
+    {
+     "id": 1304,
+     "nombre_carrera": "Tecnicatura Superior en Comunicación Digital Convergente",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años modalidad Distancia (100% presencial)",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-003 Normal (San Rafael)",
+     "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico-2/"
+    }
+   ],
+   "departamento": "San Rafael"
+  }
+ ]
 }

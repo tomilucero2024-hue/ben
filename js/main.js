@@ -328,7 +328,7 @@ function aplicarRangoDuracion() {
 // botón "Limpiar filtros" y el logo de BEN, que antes duplicaban este bloque.
 function resetearFiltros() {
     Object.assign(estado, {
-        texto: '', formacion: 'todos', institucion: 'todos', gestion: 'todos', modalidad: 'todos',
+        texto: '', formacion: 'todos', institucion: 'todos', departamento: 'todos', gestion: 'todos', modalidad: 'todos',
         costo: 'todos', duracion: 'todos', area: 'todos', duracionMin: null, duracionMax: null, orden: 'default'
     });
     document.getElementById('searchInput').value = '';

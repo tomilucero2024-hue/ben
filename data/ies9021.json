@@ -1,98 +1,99 @@
 {
-    "instituciones": [
-        {
-            "id": 29,
-            "nombre": "IES 9-021 Tecnológico",
-            "nivel": "terciario",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "contacto@ies9021.edu.ar",
-                "direccion": "Junín, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 2900,
-                    "nombre_carrera": "Tecnicatura Superior en Farmacia",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-021",
-                    "link_oficial": "https://ies9021.edu.ar/carreras/"
-                },
-                {
-                    "id": 2901,
-                    "nombre_carrera": "Tecnicatura Superior en Gastronomía",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-021",
-                    "link_oficial": "https://ies9021.edu.ar/carreras/"
-                },
-                {
-                    "id": 2902,
-                    "nombre_carrera": "Tecnicatura Superior en Óptica y Contactología",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-021",
-                    "link_oficial": "https://ies9021.edu.ar/carreras/"
-                },
-                {
-                    "id": 2903,
-                    "nombre_carrera": "Tecnicatura Superior en Mecatrónica",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-021",
-                    "link_oficial": "https://ies9021.edu.ar/carreras/"
-                },
-                {
-                    "id": 2904,
-                    "nombre_carrera": "Tecnicatura Superior en Agronomía",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-021",
-                    "link_oficial": "https://ies9021.edu.ar/carreras/"
-                },
-                {
-                    "id": 2905,
-                    "nombre_carrera": "Tecnicatura Superior en Enología",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-021",
-                    "link_oficial": "https://ies9021.edu.ar/carreras/"
-                },
-                {
-                    "id": 2906,
-                    "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-021",
-                    "link_oficial": "https://ies9021.edu.ar/carreras/"
-                },
-                {
-                    "id": 2907,
-                    "nombre_carrera": "Tecnicatura Superior en Podología",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-021",
-                    "link_oficial": "https://ies9021.edu.ar/carreras/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 29,
+   "nombre": "IES 9-021 Tecnológico",
+   "nivel": "terciario",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "contacto@ies9021.edu.ar",
+    "direccion": "Junín, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 2900,
+     "nombre_carrera": "Tecnicatura Superior en Farmacia",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-021",
+     "link_oficial": "https://ies9021.edu.ar/carreras/"
+    },
+    {
+     "id": 2901,
+     "nombre_carrera": "Tecnicatura Superior en Gastronomía",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-021",
+     "link_oficial": "https://ies9021.edu.ar/carreras/"
+    },
+    {
+     "id": 2902,
+     "nombre_carrera": "Tecnicatura Superior en Óptica y Contactología",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-021",
+     "link_oficial": "https://ies9021.edu.ar/carreras/"
+    },
+    {
+     "id": 2903,
+     "nombre_carrera": "Tecnicatura Superior en Mecatrónica",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-021",
+     "link_oficial": "https://ies9021.edu.ar/carreras/"
+    },
+    {
+     "id": 2904,
+     "nombre_carrera": "Tecnicatura Superior en Agronomía",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-021",
+     "link_oficial": "https://ies9021.edu.ar/carreras/"
+    },
+    {
+     "id": 2905,
+     "nombre_carrera": "Tecnicatura Superior en Enología",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-021",
+     "link_oficial": "https://ies9021.edu.ar/carreras/"
+    },
+    {
+     "id": 2906,
+     "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-021",
+     "link_oficial": "https://ies9021.edu.ar/carreras/"
+    },
+    {
+     "id": 2907,
+     "nombre_carrera": "Tecnicatura Superior en Podología",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-021",
+     "link_oficial": "https://ies9021.edu.ar/carreras/"
+    }
+   ],
+   "departamento": "Junín"
+  }
+ ]
 }

@@ -1,118 +1,119 @@
 {
-    "instituciones": [
-        {
-            "id": 30,
-            "nombre": "IES 9-023",
-            "nivel": "terciario",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "contacto@ies9023.edu.ar",
-                "direccion": "Maipú, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 3000,
-                    "nombre_carrera": "Profesorado de Educación Primaria",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-023",
-                    "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-primaria-res-n-6868-dge-2023/"
-                },
-                {
-                    "id": 3001,
-                    "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-023",
-                    "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-secundaria-matematica/"
-                },
-                {
-                    "id": 3002,
-                    "nombre_carrera": "Profesorado de Educación Secundaria Lengua y Literatura",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-023",
-                    "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-secundaria-lengua-y-literatura/"
-                },
-                {
-                    "id": 3003,
-                    "nombre_carrera": "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional en Concurrencia con el Título de Base",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-023",
-                    "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-para-la-educacion-secundaria-en-concurrencia-con-el-titulo-de-base/"
-                },
-                {
-                    "id": 3004,
-                    "nombre_carrera": "Tecnicatura Superior en Administración Pública",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-023",
-                    "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-administracion-publica-4/"
-                },
-                {
-                    "id": 3005,
-                    "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-023",
-                    "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-desarrollo-de-software/"
-                },
-                {
-                    "id": 3006,
-                    "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-023",
-                    "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-enfermeria-2/"
-                },
-                {
-                    "id": 3007,
-                    "nombre_carrera": "Tecnicatura Superior en Enología E Industrias Frutihortícolas",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-023",
-                    "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-enologia-e-industrias-alimentarias/"
-                },
-                {
-                    "id": 3008,
-                    "nombre_carrera": "Tecnicatura Superior en Marketing Digital",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-023",
-                    "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-marketing-digital/"
-                },
-                {
-                    "id": 3009,
-                    "nombre_carrera": "Tecnicatura Superior en Mecatrónica",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-023",
-                    "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-mecatronica-2/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 30,
+   "nombre": "IES 9-023",
+   "nivel": "terciario",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "contacto@ies9023.edu.ar",
+    "direccion": "Maipú, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 3000,
+     "nombre_carrera": "Profesorado de Educación Primaria",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-023",
+     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-primaria-res-n-6868-dge-2023/"
+    },
+    {
+     "id": 3001,
+     "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-023",
+     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-secundaria-matematica/"
+    },
+    {
+     "id": 3002,
+     "nombre_carrera": "Profesorado de Educación Secundaria Lengua y Literatura",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-023",
+     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-secundaria-lengua-y-literatura/"
+    },
+    {
+     "id": 3003,
+     "nombre_carrera": "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional en Concurrencia con el Título de Base",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-023",
+     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-para-la-educacion-secundaria-en-concurrencia-con-el-titulo-de-base/"
+    },
+    {
+     "id": 3004,
+     "nombre_carrera": "Tecnicatura Superior en Administración Pública",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-023",
+     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-administracion-publica-4/"
+    },
+    {
+     "id": 3005,
+     "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-023",
+     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-desarrollo-de-software/"
+    },
+    {
+     "id": 3006,
+     "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-023",
+     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-enfermeria-2/"
+    },
+    {
+     "id": 3007,
+     "nombre_carrera": "Tecnicatura Superior en Enología E Industrias Frutihortícolas",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-023",
+     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-enologia-e-industrias-alimentarias/"
+    },
+    {
+     "id": 3008,
+     "nombre_carrera": "Tecnicatura Superior en Marketing Digital",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-023",
+     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-marketing-digital/"
+    },
+    {
+     "id": 3009,
+     "nombre_carrera": "Tecnicatura Superior en Mecatrónica",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-023",
+     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-mecatronica-2/"
+    }
+   ],
+   "departamento": "Maipú"
+  }
+ ]
 }

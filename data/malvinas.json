@@ -1,68 +1,69 @@
 {
-    "instituciones": [
-        {
-            "id": 45,
-            "nombre": "Escuela Internacional Islas Malvinas",
-            "nivel": "terciario",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "contacto@eim.esc.edu.ar",
-                "direccion": "Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 4501,
-                    "nombre_carrera": "Técnico Superior en Turismo",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Escuela Internacional Islas Malvinas",
-                    "link_oficial": "https://www.eim.esc.edu.ar/index.php/oferta-educativa/carreras/tst-2"
-                },
-                {
-                    "id": 4502,
-                    "nombre_carrera": "Técnico Superior en Hotelería",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Escuela Internacional Islas Malvinas",
-                    "link_oficial": "https://www.eim.esc.edu.ar/index.php/oferta-educativa/carreras/tsh"
-                },
-                {
-                    "id": 4503,
-                    "nombre_carrera": "Técnico Superior en Gastronomía",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Escuela Internacional Islas Malvinas",
-                    "link_oficial": "https://www.eim.esc.edu.ar/index.php/oferta-educativa/carreras/tsg"
-                },
-                {
-                    "id": 4504,
-                    "nombre_carrera": "Licenciatura en Gastronomía",
-                    "categoria": "Grado / Licenciatura",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Escuela Internacional Islas Malvinas",
-                    "link_oficial": "https://www.eim.esc.edu.ar/index.php/oferta-educativa/carreras/tsg-2"
-                },
-                {
-                    "id": 4407,
-                    "nombre_carrera": "Cursos de cocina, pastelería, cafetería y más",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "Consultar en la web",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Instituto de Educación Integral de Maipú",
-                    "link_oficial": "https://eim.esc.edu.ar/index.php/oferta-educativa/cursos"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 45,
+   "nombre": "Escuela Internacional Islas Malvinas",
+   "nivel": "terciario",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "contacto@eim.esc.edu.ar",
+    "direccion": "Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 4501,
+     "nombre_carrera": "Técnico Superior en Turismo",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Escuela Internacional Islas Malvinas",
+     "link_oficial": "https://www.eim.esc.edu.ar/index.php/oferta-educativa/carreras/tst-2"
+    },
+    {
+     "id": 4502,
+     "nombre_carrera": "Técnico Superior en Hotelería",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Escuela Internacional Islas Malvinas",
+     "link_oficial": "https://www.eim.esc.edu.ar/index.php/oferta-educativa/carreras/tsh"
+    },
+    {
+     "id": 4503,
+     "nombre_carrera": "Técnico Superior en Gastronomía",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Escuela Internacional Islas Malvinas",
+     "link_oficial": "https://www.eim.esc.edu.ar/index.php/oferta-educativa/carreras/tsg"
+    },
+    {
+     "id": 4504,
+     "nombre_carrera": "Licenciatura en Gastronomía",
+     "categoria": "Grado / Licenciatura",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Escuela Internacional Islas Malvinas",
+     "link_oficial": "https://www.eim.esc.edu.ar/index.php/oferta-educativa/carreras/tsg-2"
+    },
+    {
+     "id": 4407,
+     "nombre_carrera": "Cursos de cocina, pastelería, cafetería y más",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "Consultar en la web",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Instituto de Educación Integral de Maipú",
+     "link_oficial": "https://eim.esc.edu.ar/index.php/oferta-educativa/cursos"
+    }
+   ],
+   "departamento": "Capital"
+  }
+ ]
 }

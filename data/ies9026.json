@@ -1,98 +1,99 @@
 {
-    "instituciones": [
-        {
-            "id": 44,
-            "nombre": "IES 9-026 Instituto de la Patria Grande",
-            "nivel": "terciario",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "261-5743937",
-                "email": "A confirmar",
-                "direccion": "Alte. Brown 2600, Las Heras, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 4401,
-                    "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-026",
-                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/"
-                },
-                {
-                    "id": 4402,
-                    "nombre_carrera": "Programa de Tec. Superior en Diálisis",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-026",
-                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-tec-superior-en-dialisis/"
-                },
-                {
-                    "id": 4403,
-                    "nombre_carrera": "Programa de Tec. Superior en Gestión de las Organizaciones de la Salud",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "2 1/2 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-026",
-                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-tec-superior-en-administracion-de-empresas-de-la-salud/"
-                },
-                {
-                    "id": 4404,
-                    "nombre_carrera": "Programa de la Tec. Superior en Laboratorio de Análisis Clínicos",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-026",
-                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-la-tec-superior-en-laboratorio-de-analisis-clinicos/"
-                },
-                {
-                    "id": 4405,
-                    "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-026",
-                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-enfermeria-profesional/"
-                },
-                {
-                    "id": 4406,
-                    "nombre_carrera": "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-026",
-                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-para-la-educacion-secundaria-de-la-modalidad-tecnico-profesional/"
-                },
-                {
-                    "id": 4407,
-                    "nombre_carrera": "Profesorado de Educación Primaria",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-026",
-                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
-                },
-                {
-                    "id": 4408,
-                    "nombre_carrera": "Profesorado de Educación Inicial",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-026",
-                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 44,
+   "nombre": "IES 9-026 Instituto de la Patria Grande",
+   "nivel": "terciario",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "261-5743937",
+    "email": "A confirmar",
+    "direccion": "Alte. Brown 2600, Las Heras, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 4401,
+     "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-026",
+     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/"
+    },
+    {
+     "id": 4402,
+     "nombre_carrera": "Programa de Tec. Superior en Diálisis",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-026",
+     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-tec-superior-en-dialisis/"
+    },
+    {
+     "id": 4403,
+     "nombre_carrera": "Programa de Tec. Superior en Gestión de las Organizaciones de la Salud",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 1/2 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-026",
+     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-tec-superior-en-administracion-de-empresas-de-la-salud/"
+    },
+    {
+     "id": 4404,
+     "nombre_carrera": "Programa de la Tec. Superior en Laboratorio de Análisis Clínicos",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-026",
+     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-la-tec-superior-en-laboratorio-de-analisis-clinicos/"
+    },
+    {
+     "id": 4405,
+     "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-026",
+     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-enfermeria-profesional/"
+    },
+    {
+     "id": 4406,
+     "nombre_carrera": "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional",
+     "categoria": "Grado / Profesorado",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-026",
+     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-para-la-educacion-secundaria-de-la-modalidad-tecnico-profesional/"
+    },
+    {
+     "id": 4407,
+     "nombre_carrera": "Profesorado de Educación Primaria",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-026",
+     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
+    },
+    {
+     "id": 4408,
+     "nombre_carrera": "Profesorado de Educación Inicial",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-026",
+     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/"
+    }
+   ],
+   "departamento": "Las Heras"
+  }
+ ]
 }

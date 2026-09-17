@@ -1,108 +1,109 @@
 {
-    "instituciones": [
-        {
-            "id": 20,
-            "nombre": "IES 9-011 Del Atuel",
-            "nivel": "terciario",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "0260-4422794",
-                "email": "ies9011@infd.edu.ar",
-                "direccion": "Maza 750, San Rafael, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 2000,
-                    "nombre_carrera": "Profesorado de Educacion Secundaria en Biologia",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-011 Del Atuel",
-                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-biologia/"
-                },
-                {
-                    "id": 2001,
-                    "nombre_carrera": "Profesorado de Educacion Secundaria en Geografia",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-011 Del Atuel",
-                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-geografia/"
-                },
-                {
-                    "id": 2002,
-                    "nombre_carrera": "Profesorado de Educacion Secundaria en Historia",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-011 Del Atuel",
-                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/"
-                },
-                {
-                    "id": 2003,
-                    "nombre_carrera": "Profesorado en Informatica",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-011 Del Atuel",
-                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-informatica/"
-                },
-                {
-                    "id": 2004,
-                    "nombre_carrera": "Profesorado en Ingles",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-011 Del Atuel",
-                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-ingles-2/"
-                },
-                {
-                    "id": 2005,
-                    "nombre_carrera": "Profesorado de Educacion Secundaria en Lengua y Literatura",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-011 Del Atuel",
-                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/"
-                },
-                {
-                    "id": 2006,
-                    "nombre_carrera": "Profesorado de Educacion Secundaria en Matematica",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-011 Del Atuel",
-                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica/"
-                },
-                {
-                    "id": 2007,
-                    "nombre_carrera": "Tecnicatura Superior en Turismo",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-011 Del Atuel",
-                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-turismo/"
-                },
-                {
-                    "id": 2008,
-                    "nombre_carrera": "Tecnicatura Superior en Gastronomia",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-011 Del Atuel",
-                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gastronomia/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 20,
+   "nombre": "IES 9-011 Del Atuel",
+   "nivel": "terciario",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "0260-4422794",
+    "email": "ies9011@infd.edu.ar",
+    "direccion": "Maza 750, San Rafael, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 2000,
+     "nombre_carrera": "Profesorado de Educacion Secundaria en Biologia",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-011 Del Atuel",
+     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-biologia/"
+    },
+    {
+     "id": 2001,
+     "nombre_carrera": "Profesorado de Educacion Secundaria en Geografia",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-011 Del Atuel",
+     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-geografia/"
+    },
+    {
+     "id": 2002,
+     "nombre_carrera": "Profesorado de Educacion Secundaria en Historia",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-011 Del Atuel",
+     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/"
+    },
+    {
+     "id": 2003,
+     "nombre_carrera": "Profesorado en Informatica",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-011 Del Atuel",
+     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-informatica/"
+    },
+    {
+     "id": 2004,
+     "nombre_carrera": "Profesorado en Ingles",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-011 Del Atuel",
+     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-ingles-2/"
+    },
+    {
+     "id": 2005,
+     "nombre_carrera": "Profesorado de Educacion Secundaria en Lengua y Literatura",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-011 Del Atuel",
+     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/"
+    },
+    {
+     "id": 2006,
+     "nombre_carrera": "Profesorado de Educacion Secundaria en Matematica",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-011 Del Atuel",
+     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica/"
+    },
+    {
+     "id": 2007,
+     "nombre_carrera": "Tecnicatura Superior en Turismo",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-011 Del Atuel",
+     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-turismo/"
+    },
+    {
+     "id": 2008,
+     "nombre_carrera": "Tecnicatura Superior en Gastronomia",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-011 Del Atuel",
+     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gastronomia/"
+    }
+   ],
+   "departamento": "San Rafael"
+  }
+ ]
 }

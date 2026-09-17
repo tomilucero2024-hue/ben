@@ -13,7 +13,7 @@ export function registrarCambioFavoritos(fn) {
 
 export const estado = {
     seccion: 'formal',
-    texto: '', formacion: 'todos', institucion: 'todos', gestion: 'todos',
+    texto: '', formacion: 'todos', institucion: 'todos', departamento: 'todos', gestion: 'todos',
     modalidad: 'todos', costo: 'todos', duracion: 'todos', area: 'todos',
     duracionMin: null, duracionMax: null, orden: 'default', favoritos: false,
     // Resultados del test vocacional, cuando hay: { carreras, rankings, total }.
@@ -33,6 +33,9 @@ const MODALIDADES_PERMITIDAS = new Set(['todos', 'presencial', 'online', 'híbri
 const ORDENES_PERMITIDOS = new Set(['default', 'relevancia', 'nombre-az', 'nombre-za', 'publica-primero', 'privada-primero']);
 const FORMACIONES_PERMITIDAS = new Set(['todos', 'grado', 'tecnicaturas', 'profesorados', 'cursos']);
 const INSTITUCIONES_PERMITIDAS = new Set(['todos', 'universidades', 'ies', 'centros']);
+// Los 18 departamentos de Mendoza. La opción 'A distancia' cubre las
+// instituciones sin sede fija en la provincia (hoy: UNDEF).
+const DEPARTAMENTOS_PERMITIDOS = new Set(['todos', 'A distancia', 'Capital', 'Godoy Cruz', 'Guaymallén', 'Las Heras', 'Lavalle', 'Luján de Cuyo', 'Maipú', 'San Martín', 'Junín', 'La Paz', 'Rivadavia', 'Santa Rosa', 'San Carlos', 'San Rafael', 'General Alvear', 'Tunuyán', 'Tupungato', 'Malargüe']);
 const DURACIONES_PERMITIDAS = new Set(['todos', 'corta', 'hasta-1', '2-3', '4-mas', 'sin-definir']);
 // Las mismas áreas que devuelve getArea() y que ofrece el panel de filtros. Era
 // el único filtro que se tomaba de la URL sin validar: con ?area=cualquier-cosa
@@ -68,7 +71,7 @@ export function sincronizarURL() {
     const searchInput = typeof document !== 'undefined' ? document.getElementById('searchInput') : null;
     const q = searchInput ? searchInput.value.trim() : '';
     if (q) p.set('q', q);
-    ['formacion', 'institucion', 'gestion', 'modalidad', 'costo', 'duracion', 'area', 'orden']
+    ['formacion', 'institucion', 'departamento', 'gestion', 'modalidad', 'costo', 'duracion', 'area', 'orden']
         .forEach(campo => { if (estado[campo] !== 'todos' && estado[campo] !== 'default') p.set(campo, estado[campo]); });
     if (estado.duracionMin !== null) p.set('dmin', estado.duracionMin);
     if (estado.duracionMax !== null) p.set('dmax', estado.duracionMax);
@@ -92,6 +95,7 @@ export function restaurarDesdeURL() {
     }
     if (p.has('formacion') && FORMACIONES_PERMITIDAS.has(p.get('formacion'))) estado.formacion = p.get('formacion');
     if (p.has('institucion') && INSTITUCIONES_PERMITIDAS.has(p.get('institucion'))) estado.institucion = p.get('institucion');
+    if (p.has('departamento') && DEPARTAMENTOS_PERMITIDOS.has(p.get('departamento'))) estado.departamento = p.get('departamento');
     if (p.has('gestion') && GESTIONES_PERMITIDAS.has(p.get('gestion'))) estado.gestion = p.get('gestion');
     if (p.has('modalidad') && MODALIDADES_PERMITIDAS.has(p.get('modalidad'))) estado.modalidad = p.get('modalidad');
     if (p.has('costo') && COSTOS_PERMITIDOS.has(p.get('costo'))) estado.costo = p.get('costo');

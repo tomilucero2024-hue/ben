@@ -1183,12 +1183,14 @@ function clasificarInstitucion(inst) {
     if (f === 'Terminalidad educativa' || /cens|cebja|cepas|fines/.test(n)) {
         return 'Terminalidad educativa';
     }
-    if (f === 'Oficio técnico' || f === 'Formación alternativa') {
-        return 'Centros de Formación Profesional y Oficios';
-    }
-    // Si explícitamente es terciario o instituto superior/terciario/ies
+    // Primero el nivel de la institución, después el origen de los datos: una
+    // IES que llegó por un catálogo "aparté" (Ej. IES 9016 "Dr. Jorge Col", IES
+    // 9-005 "Fidela Amparán") es educación superior, no un centro de oficios.
     if (/^terciario|superior/.test(niv) || /^ies\b|instituto de educacion fisica|instituto superior|instituto de arte|instituto maipu|instituto juan|instituto santisima|insutec|instituto fabian calle/i.test(n)) {
         return 'Institutos Superiores y Terciarios (IES)';
+    }
+    if (f === 'Oficio técnico' || f === 'Formación alternativa') {
+        return 'Centros de Formación Profesional y Oficios';
     }
     // Dentro de Educación formal:
     if (/universidad|facultad|\binstituto univ|\binstituto tecnologico universitario\b|\bitu\b/.test(n) || niv === 'universidad') {

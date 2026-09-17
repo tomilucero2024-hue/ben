@@ -1,58 +1,59 @@
 {
-    "instituciones": [
-        {
-            "id": 32,
-            "nombre": "IES 9-028 (Santa Rosa)",
-            "nivel": "terciario",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "contacto@ies9028.edu.ar",
-                "direccion": "Santa Rosa, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 3201,
-                    "nombre_carrera": "Profesorado en Educación Primaria",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-028",
-                    "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/profesorado-en-educacion-primaria/"
-                },
-                {
-                    "id": 3202,
-                    "nombre_carrera": "Profesorado de Teatro",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-028",
-                    "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/profesorado-de-teatro/"
-                },
-                {
-                    "id": 3203,
-                    "nombre_carrera": "Profesorado en Música",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-028",
-                    "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/profesorado-de-musica/"
-                },
-                {
-                    "id": 3204,
-                    "nombre_carrera": "Tecnicatura Superior en Enología e Industrias de los Alimentos",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-028",
-                    "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-industria-de-los-alimentos/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 32,
+   "nombre": "IES 9-028 (Santa Rosa)",
+   "nivel": "terciario",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "contacto@ies9028.edu.ar",
+    "direccion": "Santa Rosa, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 3201,
+     "nombre_carrera": "Profesorado en Educación Primaria",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-028",
+     "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/profesorado-en-educacion-primaria/"
+    },
+    {
+     "id": 3202,
+     "nombre_carrera": "Profesorado de Teatro",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-028",
+     "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/profesorado-de-teatro/"
+    },
+    {
+     "id": 3203,
+     "nombre_carrera": "Profesorado en Música",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-028",
+     "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/profesorado-de-musica/"
+    },
+    {
+     "id": 3204,
+     "nombre_carrera": "Tecnicatura Superior en Enología e Industrias de los Alimentos",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-028",
+     "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-industria-de-los-alimentos/"
+    }
+   ],
+   "departamento": "Santa Rosa"
+  }
+ ]
 }

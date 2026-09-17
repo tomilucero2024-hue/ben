@@ -1,28 +1,29 @@
 {
-    "instituciones": [
-        {
-            "id": 47,
-            "nombre": "Cultural Mendoza",
-            "nivel": "cursos",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "contacto@culturalmendoza.com",
-                "direccion": "Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 4701,
-                    "nombre_carrera": "Curso de Inglés para Todas las Edades",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "Cultural Mendoza",
-                    "link_oficial": "https://culturalmendoza.com/ensenanza-de-ingles/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 47,
+   "nombre": "Cultural Mendoza",
+   "nivel": "cursos",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "contacto@culturalmendoza.com",
+    "direccion": "Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 4701,
+     "nombre_carrera": "Curso de Inglés para Todas las Edades",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Cultural Mendoza",
+     "link_oficial": "https://culturalmendoza.com/ensenanza-de-ingles/"
+    }
+   ],
+   "departamento": "Capital"
+  }
+ ]
 }

@@ -1,1062 +1,1063 @@
 {
-    "instituciones": [
-        {
-            "id": 1,
-            "nombre": "Universidad Nacional de Cuyo (UNCuyo)",
-            "nivel": "universidad",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "4135000",
-                "email": "informes@uncu.edu.ar",
-                "direccion": "Centro Universitario, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 1,
-                    "nombre_carrera": "Ciclo de Profesorado en Escenografía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "El ciclo tiene una carga horaria de 840 horas reloj, distribuidas en seis espacios curriculares. El cursado de estos es de 1 año y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-profesorado-de-grado-universitario-en-escenografia_1850"
-                },
-                {
-                    "id": 2,
-                    "nombre_carrera": "Ciclo de Profesorado en Música",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "El ciclo tiene una carga horaria de 840 horas reloj, distribuidas en siete espacios curriculares. El cursado es de 1 año y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-profesorado-de-grado-universitario-en-musica-canto-instrumentos-direccion-coral-composicion-y-musica-popular"
-                },
-                {
-                    "id": 3,
-                    "nombre_carrera": "Diseño Escenográfico",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/diseno-escenografico_7960"
-                },
-                {
-                    "id": 4,
-                    "nombre_carrera": "Diseño Gráfico",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/diseno-grafico"
-                },
-                {
-                    "id": 5,
-                    "nombre_carrera": "Diseño Industrial",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/diseno-industrial_2693"
-                },
-                {
-                    "id": 6,
-                    "nombre_carrera": "Licenciatura en Arte Dramático",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-arte-dramatico_8488"
-                },
-                {
-                    "id": 7,
-                    "nombre_carrera": "Licenciatura en Artes Plásticas",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-artes-plasticas"
-                },
-                {
-                    "id": 8,
-                    "nombre_carrera": "Licenciatura en Canto",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-canto"
-                },
-                {
-                    "id": 9,
-                    "nombre_carrera": "Licenciatura en Cerámica Artística",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ceramica-artistica"
-                },
-                {
-                    "id": 10,
-                    "nombre_carrera": "Licenciatura en Cerámica Industrial",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ceramica-industrial"
-                },
-                {
-                    "id": 11,
-                    "nombre_carrera": "Licenciatura en Composición Musical",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-composicion-musical_4284"
-                },
-                {
-                    "id": 12,
-                    "nombre_carrera": "Licenciatura en Dirección Coral",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-direccion-coral"
-                },
-                {
-                    "id": 13,
-                    "nombre_carrera": "Licenciatura en Historia de las Artes Plásticas",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-historia-de-las-artes-plasticas"
-                },
-                {
-                    "id": 14,
-                    "nombre_carrera": "Licenciatura en Instrumento",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-instrumento-violin-viola-violoncello-contrabajo-arpa-flauta-oboe-clarinete-fagot-saxofon-trompa-trompeta-trombon-o-percusion_9943"
-                },
-                {
-                    "id": 15,
-                    "nombre_carrera": "Licenciatura en Música Popular",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cuatro años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-musica-popular_7383"
-                },
-                {
-                    "id": 16,
-                    "nombre_carrera": "Licenciatura en Órgano",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-organo"
-                },
-                {
-                    "id": 17,
-                    "nombre_carrera": "Licenciatura en Piano o Guitarra",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-piano-o-guitarra"
-                },
-                {
-                    "id": 18,
-                    "nombre_carrera": "Profesorado de Teorías Musicales",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-de-teorias-musicales_4037"
-                },
-                {
-                    "id": 19,
-                    "nombre_carrera": "Profesorado en Artes Visuales",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-artes-visuales"
-                },
-                {
-                    "id": 20,
-                    "nombre_carrera": "Profesorado en Cerámica Artística",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-ceramica-artistica_4979"
-                },
-                {
-                    "id": 21,
-                    "nombre_carrera": "Profesorado de Grado Universitario en Diseño",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "El cursado es de un año y medio. El ciclo tiene una carga horaria de 840 horas reloj, distribuidas en seis espacios curriculares.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-diseno_3860"
-                },
-                {
-                    "id": 22,
-                    "nombre_carrera": "Profesorado en Historia del Arte",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-historia-del-arte_4350"
-                },
-                {
-                    "id": 23,
-                    "nombre_carrera": "Profesorado en Música",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cuatro años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-musica_6413"
-                },
-                {
-                    "id": 24,
-                    "nombre_carrera": "Profesorado en Teatro",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Artes y Diseño",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-teatro"
-                },
-                {
-                    "id": 25,
-                    "nombre_carrera": "Licenciatura en Higiene y Seguridad en el Trabajo",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "El ciclo tiene una duración de dos (2) años, con una carga horaria total de 1.690 horas.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Médicas",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-en-el-trabajo_6922"
-                },
-                {
-                    "id": 26,
-                    "nombre_carrera": "Licenciatura en Enfermería",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cinco años, con una carga horaria total: 4060 hs.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Médicas",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-enfermeria_4945"
-                },
-                {
-                    "id": 27,
-                    "nombre_carrera": "Medicina",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera de medicina tiene una duración de seis años, carga horaria total 6834 horas",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Médicas",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/medicina_8869"
-                },
-                {
-                    "id": 28,
-                    "nombre_carrera": "Tecnicatura en Anestesia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de tres años, con una carga horaria total de 3000 hs.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Médicas",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-anestesia"
-                },
-                {
-                    "id": 29,
-                    "nombre_carrera": "Tecnicatura en Diagnóstico por Imágenes",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de tres años, con una carga horaria total de 3050 hs.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Médicas",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-diagnostico-por-imagenes_1245"
-                },
-                {
-                    "id": 30,
-                    "nombre_carrera": "Tecnicatura en Laboratorio",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de tres años, con una carga horaria total de 3050 hs.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Médicas",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-laboratorio"
-                },
-                {
-                    "id": 31,
-                    "nombre_carrera": "Tecnicatura en Quirófano",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de tres años, con una carga horaria total de 3000 hs.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Médicas",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-quirofano_2437"
-                },
-                {
-                    "id": 32,
-                    "nombre_carrera": "Odontología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Odontología",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/odontologia"
-                },
-                {
-                    "id": 33,
-                    "nombre_carrera": "Licenciatura en Gestión de Negocios Regionales",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de dos años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Económicas",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-licenciatura-en-gestion-de-negocios-regionales"
-                },
-                {
-                    "id": 34,
-                    "nombre_carrera": "Contador Público",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera dura 4 años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Económicas",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/contador-publico-_9301"
-                },
-                {
-                    "id": 35,
-                    "nombre_carrera": "Licenciatura en Administración",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cuatro años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Económicas",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-administracion"
-                },
-                {
-                    "id": 36,
-                    "nombre_carrera": "Licenciatura en Economía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La duración de la carrera es de cuatro años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Económicas",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-economia"
-                },
-                {
-                    "id": 37,
-                    "nombre_carrera": "Licenciatura en Gestión Tecnológica de las Organizaciones",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Dos (2) años o cuatro semestres",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Económicas",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-gestion-tecnologica-de-las-organizaciones_6247"
-                },
-                {
-                    "id": 38,
-                    "nombre_carrera": "Licenciatura en Logística",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La duración de la carrera es de cuatro años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Económicas",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-logistica"
-                },
-                {
-                    "id": 39,
-                    "nombre_carrera": "Abogacía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años (10 semestres) y para recibirte tenés que aprobar las materias obligatorias",
-                    "modalidad": "Presencial",
-                    "facultad": "Derecho",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/abogacia"
-                },
-                {
-                    "id": 40,
-                    "nombre_carrera": "Licenciatura en Seguridad Penitenciaria",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cuatro años. Para recibirte tenés que aprobar todas las materias obligatorias y el trabajo de Tesis de Grado.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Universitario de Seguridad Pública",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-seguridad-penitenciaria_3648"
-                },
-                {
-                    "id": 41,
-                    "nombre_carrera": "Licenciatura en Seguridad Pública",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cuatro años. Para recibirte tenés que aprobar todas las materias obligatorias y el trabajo de Tesis de Grado",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Universitario de Seguridad Pública",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-seguridad-publica_7557"
-                },
-                {
-                    "id": 42,
-                    "nombre_carrera": "Tecnicatura en Seguridad Penitenciaria",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de dos años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Universitario de Seguridad Pública",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-seguridad-penitenciaria"
-                },
-                {
-                    "id": 43,
-                    "nombre_carrera": "Tecnicatura en Seguridad Pública",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de 2 años. Para recibirte tenés que aprobar la totalidad de las materias obligatorias y las prácticas profesionales.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Universitario de Seguridad Pública",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-seguridad-publica_4710"
-                },
-                {
-                    "id": 44,
-                    "nombre_carrera": "Bromatología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en tres años. En el primer año se cursan las materias básicas y de introducción a la ciencia de los alimentos. En segundo y tercer año se cursan materias técnicas.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Agrarias",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/bromatologia"
-                },
-                {
-                    "id": 45,
-                    "nombre_carrera": "Ingeniería Agronómica",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años y cinco meses.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Agrarias",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-agronomica_2546"
-                },
-                {
-                    "id": 46,
-                    "nombre_carrera": "Ingeniería Recursos Naturales Renovables",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Agrarias",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-en-recursos-naturales-renovables"
-                },
-                {
-                    "id": 47,
-                    "nombre_carrera": "Licenciatura en Bromatología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cuatro años y nueve meses.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Agrarias",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-bromatologia_1681"
-                },
-                {
-                    "id": 48,
-                    "nombre_carrera": "Tecnicatura en Enología y Viticultura",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de 2 años y 8 meses. Para recibirte tenés que aprobar las materias obligatorias, dos espacios seminarizados, las pasantías y el trabajo final.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Agrarias",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-enologia-y-viticultura"
-                },
-                {
-                    "id": 49,
-                    "nombre_carrera": "Ciclo de Licenciatura en Enología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Dos (2) años y seis (6) meses",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Aplicadas a la Industria",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-complementacion-curricular-licenciatura-en-enologia"
-                },
-                {
-                    "id": 50,
-                    "nombre_carrera": "Ingeniería en Alimentos",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Aplicadas a la Industria",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-en-alimentos"
-                },
-                {
-                    "id": 51,
-                    "nombre_carrera": "Ingeniería Mecánica",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La duración de la carrera es de cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Aplicadas a la Industria",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-mecanica"
-                },
-                {
-                    "id": 52,
-                    "nombre_carrera": "Ingeniería Química",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Aplicadas a la Industria",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-quimica-"
-                },
-                {
-                    "id": 53,
-                    "nombre_carrera": "Profesorado en Química",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Cuatro (4) años",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Aplicadas a la Industria",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-quimica"
-                },
-                {
-                    "id": 54,
-                    "nombre_carrera": "Tecnicatura en Operaciones Mineras",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "3 años (6 semestres)",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Aplicadas a la Industria",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-operaciones-mineras"
-                },
-                {
-                    "id": 55,
-                    "nombre_carrera": "Arquitectura",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cinco años y medio. Cuenta con materias obligatorias, materias optativas obligatorias, materias electivas y se finaliza con el trabajo de tesis.",
-                    "modalidad": "Presencial",
-                    "facultad": "Ingeniería",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/arquitectura"
-                },
-                {
-                    "id": 56,
-                    "nombre_carrera": "Ingeniería Civil",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera de Ingeniería Civil tiene una duración de cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Ingeniería",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-civil"
-                },
-                {
-                    "id": 57,
-                    "nombre_carrera": "Ingeniería en Mecatrónica",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera de Ingeniería en Mecatrónica tiene una duración de cinco años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Ingeniería",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-en-mecatronica_5556"
-                },
-                {
-                    "id": 58,
-                    "nombre_carrera": "Ingeniería en Petróleo",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cinco años. Para recibirte debés aprobar todas las materias obligatorias y optativas, además de la Práctica de Campo.",
-                    "modalidad": "Presencial",
-                    "facultad": "Ingeniería",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-en-petroleo_2573"
-                },
-                {
-                    "id": 59,
-                    "nombre_carrera": "Ingeniería Industrial",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Ingeniería",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-industrial"
-                },
-                {
-                    "id": 60,
-                    "nombre_carrera": "Licenciatura en Computación",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años y para recibirte tenés que aprobar las materias obligatorias que encontrás más abajo.",
-                    "modalidad": "Presencial",
-                    "facultad": "Ingeniería",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ciencias-de-la-computacion_9802"
-                },
-                {
-                    "id": 61,
-                    "nombre_carrera": "Ingeniería en Telecomunicaciones",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera dura 3 años y medio que se cursan en el IB, luego de haber aprobado determinadas materias de los primeros dos años en otra facultad o instituto de cualquier universidad.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Balseiro",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-en-telecomunicaciones"
-                },
-                {
-                    "id": 62,
-                    "nombre_carrera": "Ingeniería Nuclear",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La duración es de 3 años que se cursan en el IB, luego de haber aprobado determinadas materias de los primeros dos años en otra facultad o instituto de cualquier universidad.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Balseiro",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-nuclear_3277"
-                },
-                {
-                    "id": 63,
-                    "nombre_carrera": "Licenciatura en Física",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La duración es de 3 años y medio que se cursan en el Balseiro, luego de haber aprobado determinadas materias de los primeros dos años en otra facultad o instituto de cualquier universidad.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Balseiro",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-fisica_3653"
-                },
-                {
-                    "id": 64,
-                    "nombre_carrera": "Ciencia de Datos",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Dos (2) años",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Tecnológico Universitario",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-ciencia-de-datos"
-                },
-                {
-                    "id": 65,
-                    "nombre_carrera": "Tecnicatura en Desarrollo de Software",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La duración de la carrera es de dos años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Tecnológico Universitario",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-desarrollo-de-software_4964"
-                },
-                {
-                    "id": 66,
-                    "nombre_carrera": "Tecnicatura en Electricidad y Sistemas de Control Industriales",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de dos años y medio. Además, tiene un cursado vespertino, adaptado para trabajadores.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Tecnológico Universitario",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-electricidad-y-sistemas-de-control-industriales_8997"
-                },
-                {
-                    "id": 67,
-                    "nombre_carrera": "Tecnicatura en Gestión de Empresas",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de dos años y medio. Además, tiene un cursado vespertino adaptado a los trabajadores.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Tecnológico Universitario",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-gestion-de-empresas"
-                },
-                {
-                    "id": 68,
-                    "nombre_carrera": "Tecnicatura en Higiene y Seguridad en el Trabajo",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en dos años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Tecnológico Universitario",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo_8442"
-                },
-                {
-                    "id": 69,
-                    "nombre_carrera": "Tecnicatura en Logística y Transporte",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en dos años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Tecnológico Universitario",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-logistica-y-transporte"
-                },
-                {
-                    "id": 70,
-                    "nombre_carrera": "Tecnicatura en Mantenimiento e Instalaciones Industriales",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en dos años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Tecnológico Universitario",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-mantenimiento-e-instalaciones-industriales_3181"
-                },
-                {
-                    "id": 71,
-                    "nombre_carrera": "Tecnicatura en Marketing",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en dos años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Tecnológico Universitario",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-marketing_5022"
-                },
-                {
-                    "id": 72,
-                    "nombre_carrera": "Tecnicatura en Producción Industrial y Automatización",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en dos años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Tecnológico Universitario",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-industrial-y-automatizacion_9658"
-                },
-                {
-                    "id": 73,
-                    "nombre_carrera": "Tecnicatura en Redes y Telecomunicaciones",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de dos años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Inst. Tecnológico Universitario",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-redes-de-datos-y-telecomunicaciones_7082"
-                },
-                {
-                    "id": 74,
-                    "nombre_carrera": "Licenciatura en Biología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de 5 años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Exactas y Naturales",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ciencias-basicas-con-orientacion-en-biologia_4511"
-                },
-                {
-                    "id": 75,
-                    "nombre_carrera": "Licenciatura en Matemática",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de 5 años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Exactas y Naturales",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ciencias-basicas-con-orientacion-en-matematica_7016"
-                },
-                {
-                    "id": 76,
-                    "nombre_carrera": "Licenciatura en Química",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Exactas y Naturales",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ciencias-basicas-con-orientacion-en-quimica"
-                },
-                {
-                    "id": 77,
-                    "nombre_carrera": "Licenciatura en Geología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de 5 años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Exactas y Naturales",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-geologia"
-                },
-                {
-                    "id": 78,
-                    "nombre_carrera": "Profesorado en Biología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Exactas y Naturales",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-ciencias-basicas-con-orientacion-en-biologia"
-                },
-                {
-                    "id": 79,
-                    "nombre_carrera": "Profesorado en Física",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Exactas y Naturales",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-ciencias-basicas-con-orientacion-en-fisica"
-                },
-                {
-                    "id": 80,
-                    "nombre_carrera": "Profesorado en Matemática",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Exactas y Naturales",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-ciencias-basicas-con-orientacion-en-matematica"
-                },
-                {
-                    "id": 81,
-                    "nombre_carrera": "Licenciatura en Ciencia Política y Administración Pública",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Políticas y Sociales",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ciencia-politica-y-administracion-publica"
-                },
-                {
-                    "id": 82,
-                    "nombre_carrera": "Licenciatura en Comunicación Social",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "El Plan de Estudios de la Licenciatura en Comunicación Social se desarrolla en cuatro (4) años con la posibilidad de elegir entre tres trayectos finales de especialización.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Políticas y Sociales",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-comunicacion-social"
-                },
-                {
-                    "id": 83,
-                    "nombre_carrera": "Licenciatura en Sociología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Políticas y Sociales",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-sociologia_7951"
-                },
-                {
-                    "id": 84,
-                    "nombre_carrera": "Licenciatura en Trabajo Social",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Políticas y Sociales",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-trabajo-social_7634"
-                },
-                {
-                    "id": 85,
-                    "nombre_carrera": "Tecnicatura en Gestión de Políticas Públicas",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La Tecnicatura tiene una duración de tres años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Políticas y Sociales",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-gestion-de-politicas-publicas"
-                },
-                {
-                    "id": 86,
-                    "nombre_carrera": "Tecnicatura en Producción Audiovisual TUPA",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en dos años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Cs. Políticas y Sociales",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-audiovisual_6585"
-                },
-                {
-                    "id": 87,
-                    "nombre_carrera": "Licenciatura en Terapia del Lenguaje",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro (4) años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Educación",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-terapia-del-lenguaje_5417"
-                },
-                {
-                    "id": 88,
-                    "nombre_carrera": "Profesorado de Educación Inicial",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro (4) años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Educación",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-de-educacion-inicial_2686"
-                },
-                {
-                    "id": 89,
-                    "nombre_carrera": "Profesorado de Educación para Personas Sordas",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro (4) años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Educación",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-de-educacion-para-personas-sordas"
-                },
-                {
-                    "id": 90,
-                    "nombre_carrera": "Profesorado de Educación Primaria",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro (4) años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Educación",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-de-educacion-primaria_7815"
-                },
-                {
-                    "id": 91,
-                    "nombre_carrera": "Profesorado de Pedagogía Terapéutica en Discapacidad Intelectual - Motora",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro (4) años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Educación",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-de-pedagogia-terapeutica-en-discapacidad-intelectual-con-orientacion-en-discapacidad-motora_9217"
-                },
-                {
-                    "id": 92,
-                    "nombre_carrera": "Profesorado de Pedagogía Terapéutica en Discapacidad Visual",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro (4) años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Educación",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-de-pedagogia-terapeutica-en-discapacidad-visual_1779"
-                },
-                {
-                    "id": 93,
-                    "nombre_carrera": "Tecnicatura en Interpretación de Lengua de Señas",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en tres (3) años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Educación",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-en-interpretacion-de-lengua-de-senas"
-                },
-                {
-                    "id": 94,
-                    "nombre_carrera": "Tecnicatura en Educación Social",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en dos años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Educación",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-educacion-social_6974"
-                },
-                {
-                    "id": 95,
-                    "nombre_carrera": "Profesorado para profesionales",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "El cursado es de dos años. El ciclo tiene una carga horaria de 840 horas reloj, distribuidas en nueve espacios curriculares en una estructura de tres campos: Formación General, Formación Especializada y Formación Orientada.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-profesorado-para-profesionales-universitarios"
-                },
-                {
-                    "id": 96,
-                    "nombre_carrera": "Geógrafo/a",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/geografoa_5787"
-                },
-                {
-                    "id": 97,
-                    "nombre_carrera": "Licenciatura en Arqueología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de 5 años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-arqueologia_8663"
-                },
-                {
-                    "id": 98,
-                    "nombre_carrera": "Licenciatura en Ciencias de la Educación",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ciencias-de-la-educacion"
-                },
-                {
-                    "id": 99,
-                    "nombre_carrera": "Licenciatura en Filología Inglesa",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-filologia-inglesa"
-                },
-                {
-                    "id": 100,
-                    "nombre_carrera": "Licenciatura en Filosofía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-filosofia_4627"
-                },
-                {
-                    "id": 101,
-                    "nombre_carrera": "Licenciatura en Francés",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-frances_9860"
-                },
-                {
-                    "id": 102,
-                    "nombre_carrera": "Licenciatura en Geografía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-geografia_4879"
-                },
-                {
-                    "id": 103,
-                    "nombre_carrera": "Licenciatura en Historia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cinco años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-historia_7031"
-                },
-                {
-                    "id": 104,
-                    "nombre_carrera": "Licenciatura en Letras",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-letras"
-                },
-                {
-                    "id": 105,
-                    "nombre_carrera": "Licenciatura en Turismo",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La duración de la licenciatura es de cuatro años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-turismo_4654"
-                },
-                {
-                    "id": 106,
-                    "nombre_carrera": "Profesorado en Ciencias de la Educación",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-ciencias-de-la-educacion"
-                },
-                {
-                    "id": 107,
-                    "nombre_carrera": "Profesorado en Portugués",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-portugues"
-                },
-                {
-                    "id": 108,
-                    "nombre_carrera": "Profesorado en Filosofía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y un semestre.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-filosofia_7586"
-                },
-                {
-                    "id": 109,
-                    "nombre_carrera": "Profesorado en Geografía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-geografia_5339"
-                },
-                {
-                    "id": 110,
-                    "nombre_carrera": "Profesorado en Historia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-historia_9489"
-                },
-                {
-                    "id": 111,
-                    "nombre_carrera": "Profesorado en Inglés",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera tiene una duración de cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-lengua-inglesa_9721"
-                },
-                {
-                    "id": 112,
-                    "nombre_carrera": "Profesorado de Lengua y Literatura Francesas",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-lengua-y-literatura-francesas"
-                },
-                {
-                    "id": 113,
-                    "nombre_carrera": "Profesorado en Letras",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y medio.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-letras_6864"
-                },
-                {
-                    "id": 114,
-                    "nombre_carrera": "Tecnicatura en Francés",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en tres años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-frances_2614"
-                },
-                {
-                    "id": 115,
-                    "nombre_carrera": "Tecnicatura en Geotecnologías",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en tres años.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-geotecnologias"
-                },
-                {
-                    "id": 116,
-                    "nombre_carrera": "Traductorado en Inglés",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "La carrera se cursa en cuatro años y un semestre.",
-                    "modalidad": "Presencial",
-                    "facultad": "Filosofía y Letras",
-                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/traductorado-publico-en-ingles"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 1,
+   "nombre": "Universidad Nacional de Cuyo (UNCuyo)",
+   "nivel": "universidad",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "4135000",
+    "email": "informes@uncu.edu.ar",
+    "direccion": "Centro Universitario, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 1,
+     "nombre_carrera": "Ciclo de Profesorado en Escenografía",
+     "categoria": "Grado / Carrera",
+     "duracion": "El ciclo tiene una carga horaria de 840 horas reloj, distribuidas en seis espacios curriculares. El cursado de estos es de 1 año y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-profesorado-de-grado-universitario-en-escenografia_1850"
+    },
+    {
+     "id": 2,
+     "nombre_carrera": "Ciclo de Profesorado en Música",
+     "categoria": "Grado / Carrera",
+     "duracion": "El ciclo tiene una carga horaria de 840 horas reloj, distribuidas en siete espacios curriculares. El cursado es de 1 año y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-profesorado-de-grado-universitario-en-musica-canto-instrumentos-direccion-coral-composicion-y-musica-popular"
+    },
+    {
+     "id": 3,
+     "nombre_carrera": "Diseño Escenográfico",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/diseno-escenografico_7960"
+    },
+    {
+     "id": 4,
+     "nombre_carrera": "Diseño Gráfico",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/diseno-grafico"
+    },
+    {
+     "id": 5,
+     "nombre_carrera": "Diseño Industrial",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/diseno-industrial_2693"
+    },
+    {
+     "id": 6,
+     "nombre_carrera": "Licenciatura en Arte Dramático",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-arte-dramatico_8488"
+    },
+    {
+     "id": 7,
+     "nombre_carrera": "Licenciatura en Artes Plásticas",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-artes-plasticas"
+    },
+    {
+     "id": 8,
+     "nombre_carrera": "Licenciatura en Canto",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-canto"
+    },
+    {
+     "id": 9,
+     "nombre_carrera": "Licenciatura en Cerámica Artística",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ceramica-artistica"
+    },
+    {
+     "id": 10,
+     "nombre_carrera": "Licenciatura en Cerámica Industrial",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ceramica-industrial"
+    },
+    {
+     "id": 11,
+     "nombre_carrera": "Licenciatura en Composición Musical",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-composicion-musical_4284"
+    },
+    {
+     "id": 12,
+     "nombre_carrera": "Licenciatura en Dirección Coral",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-direccion-coral"
+    },
+    {
+     "id": 13,
+     "nombre_carrera": "Licenciatura en Historia de las Artes Plásticas",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-historia-de-las-artes-plasticas"
+    },
+    {
+     "id": 14,
+     "nombre_carrera": "Licenciatura en Instrumento",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-instrumento-violin-viola-violoncello-contrabajo-arpa-flauta-oboe-clarinete-fagot-saxofon-trompa-trompeta-trombon-o-percusion_9943"
+    },
+    {
+     "id": 15,
+     "nombre_carrera": "Licenciatura en Música Popular",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cuatro años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-musica-popular_7383"
+    },
+    {
+     "id": 16,
+     "nombre_carrera": "Licenciatura en Órgano",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-organo"
+    },
+    {
+     "id": 17,
+     "nombre_carrera": "Licenciatura en Piano o Guitarra",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-piano-o-guitarra"
+    },
+    {
+     "id": 18,
+     "nombre_carrera": "Profesorado de Teorías Musicales",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-de-teorias-musicales_4037"
+    },
+    {
+     "id": 19,
+     "nombre_carrera": "Profesorado en Artes Visuales",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-artes-visuales"
+    },
+    {
+     "id": 20,
+     "nombre_carrera": "Profesorado en Cerámica Artística",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-ceramica-artistica_4979"
+    },
+    {
+     "id": 21,
+     "nombre_carrera": "Profesorado de Grado Universitario en Diseño",
+     "categoria": "Grado / Carrera",
+     "duracion": "El cursado es de un año y medio. El ciclo tiene una carga horaria de 840 horas reloj, distribuidas en seis espacios curriculares.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-diseno_3860"
+    },
+    {
+     "id": 22,
+     "nombre_carrera": "Profesorado en Historia del Arte",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-historia-del-arte_4350"
+    },
+    {
+     "id": 23,
+     "nombre_carrera": "Profesorado en Música",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cuatro años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-musica_6413"
+    },
+    {
+     "id": 24,
+     "nombre_carrera": "Profesorado en Teatro",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años.",
+     "modalidad": "Presencial",
+     "facultad": "Artes y Diseño",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-teatro"
+    },
+    {
+     "id": 25,
+     "nombre_carrera": "Licenciatura en Higiene y Seguridad en el Trabajo",
+     "categoria": "Grado / Carrera",
+     "duracion": "El ciclo tiene una duración de dos (2) años, con una carga horaria total de 1.690 horas.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Médicas",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-en-el-trabajo_6922"
+    },
+    {
+     "id": 26,
+     "nombre_carrera": "Licenciatura en Enfermería",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cinco años, con una carga horaria total: 4060 hs.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Médicas",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-enfermeria_4945"
+    },
+    {
+     "id": 27,
+     "nombre_carrera": "Medicina",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera de medicina tiene una duración de seis años, carga horaria total 6834 horas",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Médicas",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/medicina_8869"
+    },
+    {
+     "id": 28,
+     "nombre_carrera": "Tecnicatura en Anestesia",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de tres años, con una carga horaria total de 3000 hs.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Médicas",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-anestesia"
+    },
+    {
+     "id": 29,
+     "nombre_carrera": "Tecnicatura en Diagnóstico por Imágenes",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de tres años, con una carga horaria total de 3050 hs.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Médicas",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-diagnostico-por-imagenes_1245"
+    },
+    {
+     "id": 30,
+     "nombre_carrera": "Tecnicatura en Laboratorio",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de tres años, con una carga horaria total de 3050 hs.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Médicas",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-laboratorio"
+    },
+    {
+     "id": 31,
+     "nombre_carrera": "Tecnicatura en Quirófano",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de tres años, con una carga horaria total de 3000 hs.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Médicas",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-quirofano_2437"
+    },
+    {
+     "id": 32,
+     "nombre_carrera": "Odontología",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Odontología",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/odontologia"
+    },
+    {
+     "id": 33,
+     "nombre_carrera": "Licenciatura en Gestión de Negocios Regionales",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de dos años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Económicas",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-licenciatura-en-gestion-de-negocios-regionales"
+    },
+    {
+     "id": 34,
+     "nombre_carrera": "Contador Público",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera dura 4 años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Económicas",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/contador-publico-_9301"
+    },
+    {
+     "id": 35,
+     "nombre_carrera": "Licenciatura en Administración",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cuatro años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Económicas",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-administracion"
+    },
+    {
+     "id": 36,
+     "nombre_carrera": "Licenciatura en Economía",
+     "categoria": "Grado / Carrera",
+     "duracion": "La duración de la carrera es de cuatro años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Económicas",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-economia"
+    },
+    {
+     "id": 37,
+     "nombre_carrera": "Licenciatura en Gestión Tecnológica de las Organizaciones",
+     "categoria": "Grado / Carrera",
+     "duracion": "Dos (2) años o cuatro semestres",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Económicas",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-gestion-tecnologica-de-las-organizaciones_6247"
+    },
+    {
+     "id": 38,
+     "nombre_carrera": "Licenciatura en Logística",
+     "categoria": "Grado / Carrera",
+     "duracion": "La duración de la carrera es de cuatro años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Económicas",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-logistica"
+    },
+    {
+     "id": 39,
+     "nombre_carrera": "Abogacía",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años (10 semestres) y para recibirte tenés que aprobar las materias obligatorias",
+     "modalidad": "Presencial",
+     "facultad": "Derecho",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/abogacia"
+    },
+    {
+     "id": 40,
+     "nombre_carrera": "Licenciatura en Seguridad Penitenciaria",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cuatro años. Para recibirte tenés que aprobar todas las materias obligatorias y el trabajo de Tesis de Grado.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Universitario de Seguridad Pública",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-seguridad-penitenciaria_3648"
+    },
+    {
+     "id": 41,
+     "nombre_carrera": "Licenciatura en Seguridad Pública",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cuatro años. Para recibirte tenés que aprobar todas las materias obligatorias y el trabajo de Tesis de Grado",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Universitario de Seguridad Pública",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-seguridad-publica_7557"
+    },
+    {
+     "id": 42,
+     "nombre_carrera": "Tecnicatura en Seguridad Penitenciaria",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de dos años.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Universitario de Seguridad Pública",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-seguridad-penitenciaria"
+    },
+    {
+     "id": 43,
+     "nombre_carrera": "Tecnicatura en Seguridad Pública",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de 2 años. Para recibirte tenés que aprobar la totalidad de las materias obligatorias y las prácticas profesionales.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Universitario de Seguridad Pública",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-seguridad-publica_4710"
+    },
+    {
+     "id": 44,
+     "nombre_carrera": "Bromatología",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en tres años. En el primer año se cursan las materias básicas y de introducción a la ciencia de los alimentos. En segundo y tercer año se cursan materias técnicas.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Agrarias",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/bromatologia"
+    },
+    {
+     "id": 45,
+     "nombre_carrera": "Ingeniería Agronómica",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años y cinco meses.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Agrarias",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-agronomica_2546"
+    },
+    {
+     "id": 46,
+     "nombre_carrera": "Ingeniería Recursos Naturales Renovables",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Agrarias",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-en-recursos-naturales-renovables"
+    },
+    {
+     "id": 47,
+     "nombre_carrera": "Licenciatura en Bromatología",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cuatro años y nueve meses.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Agrarias",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-bromatologia_1681"
+    },
+    {
+     "id": 48,
+     "nombre_carrera": "Tecnicatura en Enología y Viticultura",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de 2 años y 8 meses. Para recibirte tenés que aprobar las materias obligatorias, dos espacios seminarizados, las pasantías y el trabajo final.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Agrarias",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-enologia-y-viticultura"
+    },
+    {
+     "id": 49,
+     "nombre_carrera": "Ciclo de Licenciatura en Enología",
+     "categoria": "Grado / Carrera",
+     "duracion": "Dos (2) años y seis (6) meses",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Aplicadas a la Industria",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-complementacion-curricular-licenciatura-en-enologia"
+    },
+    {
+     "id": 50,
+     "nombre_carrera": "Ingeniería en Alimentos",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Aplicadas a la Industria",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-en-alimentos"
+    },
+    {
+     "id": 51,
+     "nombre_carrera": "Ingeniería Mecánica",
+     "categoria": "Grado / Carrera",
+     "duracion": "La duración de la carrera es de cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Aplicadas a la Industria",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-mecanica"
+    },
+    {
+     "id": 52,
+     "nombre_carrera": "Ingeniería Química",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Aplicadas a la Industria",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-quimica-"
+    },
+    {
+     "id": 53,
+     "nombre_carrera": "Profesorado en Química",
+     "categoria": "Grado / Carrera",
+     "duracion": "Cuatro (4) años",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Aplicadas a la Industria",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-quimica"
+    },
+    {
+     "id": 54,
+     "nombre_carrera": "Tecnicatura en Operaciones Mineras",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 años (6 semestres)",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Aplicadas a la Industria",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-operaciones-mineras"
+    },
+    {
+     "id": 55,
+     "nombre_carrera": "Arquitectura",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cinco años y medio. Cuenta con materias obligatorias, materias optativas obligatorias, materias electivas y se finaliza con el trabajo de tesis.",
+     "modalidad": "Presencial",
+     "facultad": "Ingeniería",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/arquitectura"
+    },
+    {
+     "id": 56,
+     "nombre_carrera": "Ingeniería Civil",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera de Ingeniería Civil tiene una duración de cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Ingeniería",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-civil"
+    },
+    {
+     "id": 57,
+     "nombre_carrera": "Ingeniería en Mecatrónica",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera de Ingeniería en Mecatrónica tiene una duración de cinco años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Ingeniería",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-en-mecatronica_5556"
+    },
+    {
+     "id": 58,
+     "nombre_carrera": "Ingeniería en Petróleo",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cinco años. Para recibirte debés aprobar todas las materias obligatorias y optativas, además de la Práctica de Campo.",
+     "modalidad": "Presencial",
+     "facultad": "Ingeniería",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-en-petroleo_2573"
+    },
+    {
+     "id": 59,
+     "nombre_carrera": "Ingeniería Industrial",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Ingeniería",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-industrial"
+    },
+    {
+     "id": 60,
+     "nombre_carrera": "Licenciatura en Computación",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años y para recibirte tenés que aprobar las materias obligatorias que encontrás más abajo.",
+     "modalidad": "Presencial",
+     "facultad": "Ingeniería",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ciencias-de-la-computacion_9802"
+    },
+    {
+     "id": 61,
+     "nombre_carrera": "Ingeniería en Telecomunicaciones",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera dura 3 años y medio que se cursan en el IB, luego de haber aprobado determinadas materias de los primeros dos años en otra facultad o instituto de cualquier universidad.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Balseiro",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-en-telecomunicaciones"
+    },
+    {
+     "id": 62,
+     "nombre_carrera": "Ingeniería Nuclear",
+     "categoria": "Grado / Carrera",
+     "duracion": "La duración es de 3 años que se cursan en el IB, luego de haber aprobado determinadas materias de los primeros dos años en otra facultad o instituto de cualquier universidad.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Balseiro",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-nuclear_3277"
+    },
+    {
+     "id": 63,
+     "nombre_carrera": "Licenciatura en Física",
+     "categoria": "Grado / Carrera",
+     "duracion": "La duración es de 3 años y medio que se cursan en el Balseiro, luego de haber aprobado determinadas materias de los primeros dos años en otra facultad o instituto de cualquier universidad.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Balseiro",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-fisica_3653"
+    },
+    {
+     "id": 64,
+     "nombre_carrera": "Ciencia de Datos",
+     "categoria": "Grado / Carrera",
+     "duracion": "Dos (2) años",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Tecnológico Universitario",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-ciencia-de-datos"
+    },
+    {
+     "id": 65,
+     "nombre_carrera": "Tecnicatura en Desarrollo de Software",
+     "categoria": "Grado / Carrera",
+     "duracion": "La duración de la carrera es de dos años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Tecnológico Universitario",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-desarrollo-de-software_4964"
+    },
+    {
+     "id": 66,
+     "nombre_carrera": "Tecnicatura en Electricidad y Sistemas de Control Industriales",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de dos años y medio. Además, tiene un cursado vespertino, adaptado para trabajadores.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Tecnológico Universitario",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-electricidad-y-sistemas-de-control-industriales_8997"
+    },
+    {
+     "id": 67,
+     "nombre_carrera": "Tecnicatura en Gestión de Empresas",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de dos años y medio. Además, tiene un cursado vespertino adaptado a los trabajadores.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Tecnológico Universitario",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-gestion-de-empresas"
+    },
+    {
+     "id": 68,
+     "nombre_carrera": "Tecnicatura en Higiene y Seguridad en el Trabajo",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en dos años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Tecnológico Universitario",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo_8442"
+    },
+    {
+     "id": 69,
+     "nombre_carrera": "Tecnicatura en Logística y Transporte",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en dos años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Tecnológico Universitario",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-logistica-y-transporte"
+    },
+    {
+     "id": 70,
+     "nombre_carrera": "Tecnicatura en Mantenimiento e Instalaciones Industriales",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en dos años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Tecnológico Universitario",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-mantenimiento-e-instalaciones-industriales_3181"
+    },
+    {
+     "id": 71,
+     "nombre_carrera": "Tecnicatura en Marketing",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en dos años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Tecnológico Universitario",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-marketing_5022"
+    },
+    {
+     "id": 72,
+     "nombre_carrera": "Tecnicatura en Producción Industrial y Automatización",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en dos años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Tecnológico Universitario",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-industrial-y-automatizacion_9658"
+    },
+    {
+     "id": 73,
+     "nombre_carrera": "Tecnicatura en Redes y Telecomunicaciones",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de dos años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Inst. Tecnológico Universitario",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-redes-de-datos-y-telecomunicaciones_7082"
+    },
+    {
+     "id": 74,
+     "nombre_carrera": "Licenciatura en Biología",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de 5 años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Exactas y Naturales",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ciencias-basicas-con-orientacion-en-biologia_4511"
+    },
+    {
+     "id": 75,
+     "nombre_carrera": "Licenciatura en Matemática",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de 5 años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Exactas y Naturales",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ciencias-basicas-con-orientacion-en-matematica_7016"
+    },
+    {
+     "id": 76,
+     "nombre_carrera": "Licenciatura en Química",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Exactas y Naturales",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ciencias-basicas-con-orientacion-en-quimica"
+    },
+    {
+     "id": 77,
+     "nombre_carrera": "Licenciatura en Geología",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de 5 años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Exactas y Naturales",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-geologia"
+    },
+    {
+     "id": 78,
+     "nombre_carrera": "Profesorado en Biología",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Exactas y Naturales",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-ciencias-basicas-con-orientacion-en-biologia"
+    },
+    {
+     "id": 79,
+     "nombre_carrera": "Profesorado en Física",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Exactas y Naturales",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-ciencias-basicas-con-orientacion-en-fisica"
+    },
+    {
+     "id": 80,
+     "nombre_carrera": "Profesorado en Matemática",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Exactas y Naturales",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-ciencias-basicas-con-orientacion-en-matematica"
+    },
+    {
+     "id": 81,
+     "nombre_carrera": "Licenciatura en Ciencia Política y Administración Pública",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Políticas y Sociales",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ciencia-politica-y-administracion-publica"
+    },
+    {
+     "id": 82,
+     "nombre_carrera": "Licenciatura en Comunicación Social",
+     "categoria": "Grado / Carrera",
+     "duracion": "El Plan de Estudios de la Licenciatura en Comunicación Social se desarrolla en cuatro (4) años con la posibilidad de elegir entre tres trayectos finales de especialización.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Políticas y Sociales",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-comunicacion-social"
+    },
+    {
+     "id": 83,
+     "nombre_carrera": "Licenciatura en Sociología",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Políticas y Sociales",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-sociologia_7951"
+    },
+    {
+     "id": 84,
+     "nombre_carrera": "Licenciatura en Trabajo Social",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Políticas y Sociales",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-trabajo-social_7634"
+    },
+    {
+     "id": 85,
+     "nombre_carrera": "Tecnicatura en Gestión de Políticas Públicas",
+     "categoria": "Grado / Carrera",
+     "duracion": "La Tecnicatura tiene una duración de tres años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Políticas y Sociales",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-gestion-de-politicas-publicas"
+    },
+    {
+     "id": 86,
+     "nombre_carrera": "Tecnicatura en Producción Audiovisual TUPA",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en dos años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Políticas y Sociales",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-audiovisual_6585"
+    },
+    {
+     "id": 87,
+     "nombre_carrera": "Licenciatura en Terapia del Lenguaje",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro (4) años.",
+     "modalidad": "Presencial",
+     "facultad": "Educación",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-terapia-del-lenguaje_5417"
+    },
+    {
+     "id": 88,
+     "nombre_carrera": "Profesorado de Educación Inicial",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro (4) años.",
+     "modalidad": "Presencial",
+     "facultad": "Educación",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-de-educacion-inicial_2686"
+    },
+    {
+     "id": 89,
+     "nombre_carrera": "Profesorado de Educación para Personas Sordas",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro (4) años.",
+     "modalidad": "Presencial",
+     "facultad": "Educación",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-de-educacion-para-personas-sordas"
+    },
+    {
+     "id": 90,
+     "nombre_carrera": "Profesorado de Educación Primaria",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro (4) años.",
+     "modalidad": "Presencial",
+     "facultad": "Educación",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-de-educacion-primaria_7815"
+    },
+    {
+     "id": 91,
+     "nombre_carrera": "Profesorado de Pedagogía Terapéutica en Discapacidad Intelectual - Motora",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro (4) años.",
+     "modalidad": "Presencial",
+     "facultad": "Educación",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-de-pedagogia-terapeutica-en-discapacidad-intelectual-con-orientacion-en-discapacidad-motora_9217"
+    },
+    {
+     "id": 92,
+     "nombre_carrera": "Profesorado de Pedagogía Terapéutica en Discapacidad Visual",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro (4) años.",
+     "modalidad": "Presencial",
+     "facultad": "Educación",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-de-pedagogia-terapeutica-en-discapacidad-visual_1779"
+    },
+    {
+     "id": 93,
+     "nombre_carrera": "Tecnicatura en Interpretación de Lengua de Señas",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en tres (3) años.",
+     "modalidad": "Presencial",
+     "facultad": "Educación",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-en-interpretacion-de-lengua-de-senas"
+    },
+    {
+     "id": 94,
+     "nombre_carrera": "Tecnicatura en Educación Social",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en dos años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Educación",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-educacion-social_6974"
+    },
+    {
+     "id": 95,
+     "nombre_carrera": "Profesorado para profesionales",
+     "categoria": "Grado / Carrera",
+     "duracion": "El cursado es de dos años. El ciclo tiene una carga horaria de 840 horas reloj, distribuidas en nueve espacios curriculares en una estructura de tres campos: Formación General, Formación Especializada y Formación Orientada.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-profesorado-para-profesionales-universitarios"
+    },
+    {
+     "id": 96,
+     "nombre_carrera": "Geógrafo/a",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/geografoa_5787"
+    },
+    {
+     "id": 97,
+     "nombre_carrera": "Licenciatura en Arqueología",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de 5 años.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-arqueologia_8663"
+    },
+    {
+     "id": 98,
+     "nombre_carrera": "Licenciatura en Ciencias de la Educación",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ciencias-de-la-educacion"
+    },
+    {
+     "id": 99,
+     "nombre_carrera": "Licenciatura en Filología Inglesa",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-filologia-inglesa"
+    },
+    {
+     "id": 100,
+     "nombre_carrera": "Licenciatura en Filosofía",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-filosofia_4627"
+    },
+    {
+     "id": 101,
+     "nombre_carrera": "Licenciatura en Francés",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-frances_9860"
+    },
+    {
+     "id": 102,
+     "nombre_carrera": "Licenciatura en Geografía",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-geografia_4879"
+    },
+    {
+     "id": 103,
+     "nombre_carrera": "Licenciatura en Historia",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-historia_7031"
+    },
+    {
+     "id": 104,
+     "nombre_carrera": "Licenciatura en Letras",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-letras"
+    },
+    {
+     "id": 105,
+     "nombre_carrera": "Licenciatura en Turismo",
+     "categoria": "Grado / Carrera",
+     "duracion": "La duración de la licenciatura es de cuatro años.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-turismo_4654"
+    },
+    {
+     "id": 106,
+     "nombre_carrera": "Profesorado en Ciencias de la Educación",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-ciencias-de-la-educacion"
+    },
+    {
+     "id": 107,
+     "nombre_carrera": "Profesorado en Portugués",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-portugues"
+    },
+    {
+     "id": 108,
+     "nombre_carrera": "Profesorado en Filosofía",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y un semestre.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-filosofia_7586"
+    },
+    {
+     "id": 109,
+     "nombre_carrera": "Profesorado en Geografía",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-geografia_5339"
+    },
+    {
+     "id": 110,
+     "nombre_carrera": "Profesorado en Historia",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-historia_9489"
+    },
+    {
+     "id": 111,
+     "nombre_carrera": "Profesorado en Inglés",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-lengua-inglesa_9721"
+    },
+    {
+     "id": 112,
+     "nombre_carrera": "Profesorado de Lengua y Literatura Francesas",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-lengua-y-literatura-francesas"
+    },
+    {
+     "id": 113,
+     "nombre_carrera": "Profesorado en Letras",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y medio.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/profesorado-universitario-en-letras_6864"
+    },
+    {
+     "id": 114,
+     "nombre_carrera": "Tecnicatura en Francés",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en tres años.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-frances_2614"
+    },
+    {
+     "id": 115,
+     "nombre_carrera": "Tecnicatura en Geotecnologías",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en tres años.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-geotecnologias"
+    },
+    {
+     "id": 116,
+     "nombre_carrera": "Traductorado en Inglés",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cuatro años y un semestre.",
+     "modalidad": "Presencial",
+     "facultad": "Filosofía y Letras",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/traductorado-publico-en-ingles"
+    }
+   ],
+   "departamento": "Capital"
+  }
+ ]
 }

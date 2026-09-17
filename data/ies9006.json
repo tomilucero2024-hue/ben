@@ -1,138 +1,139 @@
 {
-    "instituciones": [
-        {
-            "id": 16,
-            "nombre": "IES 9-006 Francisco H. Tolosa",
-            "nivel": "terciario",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "0263-4422582",
-                "email": "ens9006@infd.edu.ar",
-                "direccion": "Aristóbulo del Valle y Lavalle, Rivadavia"
-            },
-            "carreras": [
-                {
-                    "id": 1600,
-                    "nombre_carrera": "Profesorados",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-006 Francisco H. Tolosa",
-                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/profesorados/"
-                },
-                {
-                    "id": 1601,
-                    "nombre_carrera": "Profesorado de Educación Inicial",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-006 Francisco H. Tolosa",
-                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-inicial/"
-                },
-                {
-                    "id": 1602,
-                    "nombre_carrera": "Profesorado de Educación Primaria",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-006 Francisco H. Tolosa",
-                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-primaria/"
-                },
-                {
-                    "id": 1603,
-                    "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-006 Francisco H. Tolosa",
-                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/matematica/"
-                },
-                {
-                    "id": 1604,
-                    "nombre_carrera": "Profesorado de Educación Secundaria en Física",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-006 Francisco H. Tolosa",
-                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/fisica/"
-                },
-                {
-                    "id": 1605,
-                    "nombre_carrera": "Profesorado de Educación Secundaria en Química",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-006 Francisco H. Tolosa",
-                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/quimica/"
-                },
-                {
-                    "id": 1606,
-                    "nombre_carrera": "Profesorado de Artes Visuales",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-006 Francisco H. Tolosa",
-                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/artes/"
-                },
-                {
-                    "id": 1607,
-                    "nombre_carrera": "Tecnicaturas",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-006 Francisco H. Tolosa",
-                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/?page_id=916"
-                },
-                {
-                    "id": 1608,
-                    "nombre_carrera": "Tecnicatura Superior en Turismo y Hotelería",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-006 Francisco H. Tolosa",
-                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/turismo/"
-                },
-                {
-                    "id": 1609,
-                    "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-006 Francisco H. Tolosa",
-                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-de-empresas/"
-                },
-                {
-                    "id": 1610,
-                    "nombre_carrera": "Tecnicatura Superior en Higiene y Seguridad con Orientación en Calidad y Medio Ambiente",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-006 Francisco H. Tolosa",
-                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente/"
-                },
-                {
-                    "id": 1611,
-                    "nombre_carrera": "Tecnicatura Superior en Producción Artística Artesanal",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IES 9-006 Francisco H. Tolosa",
-                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/produccion-artistica-artesanal/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 16,
+   "nombre": "IES 9-006 Francisco H. Tolosa",
+   "nivel": "terciario",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "0263-4422582",
+    "email": "ens9006@infd.edu.ar",
+    "direccion": "Aristóbulo del Valle y Lavalle, Rivadavia"
+   },
+   "carreras": [
+    {
+     "id": 1600,
+     "nombre_carrera": "Profesorados",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-006 Francisco H. Tolosa",
+     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/profesorados/"
+    },
+    {
+     "id": 1601,
+     "nombre_carrera": "Profesorado de Educación Inicial",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-006 Francisco H. Tolosa",
+     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-inicial/"
+    },
+    {
+     "id": 1602,
+     "nombre_carrera": "Profesorado de Educación Primaria",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-006 Francisco H. Tolosa",
+     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-primaria/"
+    },
+    {
+     "id": 1603,
+     "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-006 Francisco H. Tolosa",
+     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/matematica/"
+    },
+    {
+     "id": 1604,
+     "nombre_carrera": "Profesorado de Educación Secundaria en Física",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-006 Francisco H. Tolosa",
+     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/fisica/"
+    },
+    {
+     "id": 1605,
+     "nombre_carrera": "Profesorado de Educación Secundaria en Química",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-006 Francisco H. Tolosa",
+     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/quimica/"
+    },
+    {
+     "id": 1606,
+     "nombre_carrera": "Profesorado de Artes Visuales",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-006 Francisco H. Tolosa",
+     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/artes/"
+    },
+    {
+     "id": 1607,
+     "nombre_carrera": "Tecnicaturas",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-006 Francisco H. Tolosa",
+     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/?page_id=916"
+    },
+    {
+     "id": 1608,
+     "nombre_carrera": "Tecnicatura Superior en Turismo y Hotelería",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-006 Francisco H. Tolosa",
+     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/turismo/"
+    },
+    {
+     "id": 1609,
+     "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-006 Francisco H. Tolosa",
+     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-de-empresas/"
+    },
+    {
+     "id": 1610,
+     "nombre_carrera": "Tecnicatura Superior en Higiene y Seguridad con Orientación en Calidad y Medio Ambiente",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-006 Francisco H. Tolosa",
+     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente/"
+    },
+    {
+     "id": 1611,
+     "nombre_carrera": "Tecnicatura Superior en Producción Artística Artesanal",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IES 9-006 Francisco H. Tolosa",
+     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/produccion-artistica-artesanal/"
+    }
+   ],
+   "departamento": "Rivadavia"
+  }
+ ]
 }

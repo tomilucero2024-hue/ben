@@ -1,666 +1,667 @@
 {
-    "instituciones": [
-        {
-            "id": 6,
-            "nombre": "Universidad del Aconcagua (UDA)",
-            "nivel": "universidad",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "5201620",
-                "email": "informes@uda.edu.ar",
-                "direccion": "Catamarca 147, Ciudad"
-            },
-            "carreras": [
-                {
-                    "id": 615,
-                    "nombre_carrera": "Licenciatura en Psicología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "5 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-psicologia"
-                },
-                {
-                    "id": 616,
-                    "nombre_carrera": "Profesorado de Grado Universitario en Psicología para Nivel Secundario y Superior",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/profesorado-de-grado-universitario-en-psicologia-para-nivel-secundario-y-superior"
-                },
-                {
-                    "id": 617,
-                    "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia"
-                },
-                {
-                    "id": 618,
-                    "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "A Distancia",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia"
-                },
-                {
-                    "id": 619,
-                    "nombre_carrera": "Licenciatura en Criminalística",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica"
-                },
-                {
-                    "id": 631,
-                    "nombre_carrera": "Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia",
-                    "categoria": "Pregrado",
-                    "duracion": "3 año",
-                    "modalidad": "A Distancia",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
-                },
-                {
-                    "id": 632,
-                    "nombre_carrera": "Tecnicatura universitaria en Accidentología Vial",
-                    "categoria": "Pregrado",
-                    "duracion": "3 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-accidentologia-vial"
-                },
-                {
-                    "id": 634,
-                    "nombre_carrera": "Tecnicatura universitaria en Seguridad Ciudadana - Modalidad a Distancia",
-                    "categoria": "Pregrado",
-                    "duracion": "2 año",
-                    "modalidad": "A Distancia",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana"
-                },
-                {
-                    "id": 608,
-                    "nombre_carrera": "Profesorado de Grado Universitario",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario"
-                },
-                {
-                    "id": 609,
-                    "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana"
-                },
-                {
-                    "id": 610,
-                    "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral | A distancia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia"
-                },
-                {
-                    "id": 620,
-                    "nombre_carrera": "Profesorado Universitario en Lengua y Cultura Inglesa",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/profesorado-universitario-en-lengua-y-cultura-inglesa"
-                },
-                {
-                    "id": 621,
-                    "nombre_carrera": "Traductorado Público de Inglés",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles"
-                },
-                {
-                    "id": 622,
-                    "nombre_carrera": "Traductorado Público de Italiano",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano"
-                },
-                {
-                    "id": 623,
-                    "nombre_carrera": "Traductor Público de Portugués",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductor-publico-de-portugues"
-                },
-                {
-                    "id": 635,
-                    "nombre_carrera": "Sommelier Universitario",
-                    "categoria": "Pregrado",
-                    "duracion": "2 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-pregrado/sommelier-universitario"
-                },
-                {
-                    "id": 616,
-                    "nombre_carrera": "Licenciatura en Inglés",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/ciclos-de-complementacion-curricular/licenciatura-en-ingles"
-                },
-                {
-                    "id": 611,
-                    "nombre_carrera": "Licenciatura en Fonoaudiología",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-fonoaudiologia"
-                },
-                {
-                    "id": 612,
-                    "nombre_carrera": "Licenciatura en Obstetricia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-obstetricia"
-                },
-                {
-                    "id": 613,
-                    "nombre_carrera": "Medicina",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "6 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/medicina"
-                },
-                {
-                    "id": 614,
-                    "nombre_carrera": "Licenciatura en Calidad, Medio Ambiente e Higiene y Seguridad en el Trabajo",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-calidad-medio-ambiente-e-higiene-y-seguridad-en-el-trabajo"
-                },
-                {
-                    "id": 621,
-                    "nombre_carrera": "Maestría en Salud Pública y Seguridad Social",
-                    "categoria": "Pregrado",
-                    "duracion": "1 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-salud-publica-y-seguridad-social"
-                },
-                {
-                    "id": 622,
-                    "nombre_carrera": "Maestría en Ejercicio Físico y Salud",
-                    "categoria": "Pregrado",
-                    "duracion": "2 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-ejercicio-fisico-y-salud"
-                },
-                {
-                    "id": 623,
-                    "nombre_carrera": "Licenciatura en Enfermería",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "18 meses",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-enfermeria"
-                },
-                {
-                    "id": 624,
-                    "nombre_carrera": "Licenciatura en Producción de Bioimágenes",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "18 meses",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-produccion-de-bioimagenes"
-                },
-                {
-                    "id": 625,
-                    "nombre_carrera": "Licenciatura en Educación Física con Orientación en Fisiología del Trabajo Físico y Rendimiento Humano",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-educacion-fisica-con-orientacion-en-fisiologia-del-trabajo-fisico-y-rendimiento-humano"
-                },
-                {
-                    "id": 626,
-                    "nombre_carrera": "Licenciado en Educación Física (Salud)",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciado-en-educacion-fisica-salud"
-                },
-                {
-                    "id": 627,
-                    "nombre_carrera": "Licenciatura en Tecnologías de la Salud",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "18 meses",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-tecnologias-de-la-salud"
-                },
-                {
-                    "id": 636,
-                    "nombre_carrera": "Tecnicatura Universitaria en Emergentología",
-                    "categoria": "Pregrado",
-                    "duracion": "2 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrados/tecnicatura-universitaria-en-emergentologia"
-                },
-                {
-                    "id": 605,
-                    "nombre_carrera": "Licenciatura en Comercio Internacional",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-comercio-internacional"
-                },
-                {
-                    "id": 606,
-                    "nombre_carrera": "Lic. en Informática y Desarrollo de Software",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-informatica-y-desarrollo-de-software"
-                },
-                {
-                    "id": 607,
-                    "nombre_carrera": "Licenciatura en Marketing",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-marketing"
-                },
-                {
-                    "id": 608,
-                    "nombre_carrera": "Lic. en Relaciones Institucionales, Ceremonial y Comunicación Corporativa",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-relaciones-institucionales-ceremonial-y-comunicacion-corporativa"
-                },
-                {
-                    "id": 609,
-                    "nombre_carrera": "Licenciatura en Telecomunicaciones",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-telecomunicaciones"
-                },
-                {
-                    "id": 610,
-                    "nombre_carrera": "Lic. en Turismo y Hotelería",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-turismo-y-hoteleria"
-                },
-                {
-                    "id": 624,
-                    "nombre_carrera": "Técnico en Telecomunicaciones",
-                    "categoria": "Pregrado",
-                    "duracion": "3 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-en-telecomunicaciones"
-                },
-                {
-                    "id": 625,
-                    "nombre_carrera": "Técnico Universitario en Diseño Gráfico y Publicidad",
-                    "categoria": "Pregrado",
-                    "duracion": "2 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-diseno-grafico-y-publicidad"
-                },
-                {
-                    "id": 626,
-                    "nombre_carrera": "Técnico/a Universitario/a en Ceremonial y Organización de Eventos",
-                    "categoria": "Pregrado",
-                    "duracion": "2 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos"
-                },
-                {
-                    "id": 627,
-                    "nombre_carrera": "Técnico Universitario en Desarrollo de Software",
-                    "categoria": "Pregrado",
-                    "duracion": "3 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-desarrollo-de-software"
-                },
-                {
-                    "id": 628,
-                    "nombre_carrera": "Técnico Universitario en Marketing y Ventas",
-                    "categoria": "Pregrado",
-                    "duracion": "2 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-marketing-y-ventas"
-                },
-                {
-                    "id": 629,
-                    "nombre_carrera": "Tecnicatura Universitaria en Turismo y Hotelería",
-                    "categoria": "Pregrado",
-                    "duracion": "2 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnicatura-universitaria-en-turismo-y-hoteleria"
-                },
-                {
-                    "id": 641,
-                    "nombre_carrera": "Licenciatura en Administración Gastronómica",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "18 meses",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-gastronomica"
-                },
-                {
-                    "id": 642,
-                    "nombre_carrera": "Licenciatura en Administración Hotelera",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "18 meses",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-hotelera"
-                },
-                {
-                    "id": 643,
-                    "nombre_carrera": "Licenciatura en Dirección Creativa de Diseño y Publicidad",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-direccion-creativa-de-diseno-y-publicidad"
-                },
-                {
-                    "id": 644,
-                    "nombre_carrera": "Licenciatura en Turismo",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "18 meses",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-turismo"
-                },
-                {
-                    "id": 610,
-                    "nombre_carrera": "Lic. en Turismo y Hotelería",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-turismo-y-hoteleria"
-                },
-                {
-                    "id": 626,
-                    "nombre_carrera": "Técnico/a Universitario/a en Ceremonial y Organización de Eventos",
-                    "categoria": "Pregrado",
-                    "duracion": "2 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos"
-                },
-                {
-                    "id": 600,
-                    "nombre_carrera": "Abogacía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia"
-                },
-                {
-                    "id": 601,
-                    "nombre_carrera": "Contador Público",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico"
-                },
-                {
-                    "id": 602,
-                    "nombre_carrera": "Escribanía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania"
-                },
-                {
-                    "id": 603,
-                    "nombre_carrera": "Licenciatura en Administración",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion"
-                },
-                {
-                    "id": 604,
-                    "nombre_carrera": "Licenciatura en Economía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia"
-                },
-                {
-                    "id": 652,
-                    "nombre_carrera": "Licenciatura en Administración de Salud",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "1 año y medio",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud"
-                },
-                {
-                    "id": 653,
-                    "nombre_carrera": "Licenciatura en Analítica de Negocios",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "1 año y medio",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios"
-                },
-                {
-                    "id": 654,
-                    "nombre_carrera": "Licenciatura en Seguridad Ciudadana",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana"
-                },
-                {
-                    "id": 631,
-                    "nombre_carrera": "Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia",
-                    "categoria": "Pregrado",
-                    "duracion": "3 año",
-                    "modalidad": "A Distancia",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
-                },
-                {
-                    "id": 621,
-                    "nombre_carrera": "Traductorado Público de Inglés",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles"
-                },
-                {
-                    "id": 622,
-                    "nombre_carrera": "Traductorado Público de Italiano",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano"
-                },
-                {
-                    "id": 617,
-                    "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia"
-                },
-                {
-                    "id": 618,
-                    "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "A Distancia",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia"
-                },
-                {
-                    "id": 619,
-                    "nombre_carrera": "Licenciatura en Criminalística",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica"
-                },
-                {
-                    "id": 631,
-                    "nombre_carrera": "Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia",
-                    "categoria": "Pregrado",
-                    "duracion": "3 año",
-                    "modalidad": "A Distancia",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
-                },
-                {
-                    "id": 634,
-                    "nombre_carrera": "Tecnicatura universitaria en Seguridad Ciudadana - Modalidad a Distancia",
-                    "categoria": "Pregrado",
-                    "duracion": "2 año",
-                    "modalidad": "A Distancia",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana"
-                },
-                {
-                    "id": 663,
-                    "nombre_carrera": "PROFESORADO DE GRADO UNIVERSITARIO",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario"
-                },
-                {
-                    "id": 664,
-                    "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral - Modalidad a distancia",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "2 años",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia"
-                },
-                {
-                    "id": 600,
-                    "nombre_carrera": "Abogacía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia"
-                },
-                {
-                    "id": 603,
-                    "nombre_carrera": "Licenciatura en Administración",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion"
-                },
-                {
-                    "id": 601,
-                    "nombre_carrera": "Contador Público",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico"
-                },
-                {
-                    "id": 604,
-                    "nombre_carrera": "Licenciatura en Economía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia"
-                },
-                {
-                    "id": 602,
-                    "nombre_carrera": "Escribanía",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 año",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania"
-                },
-                {
-                    "id": 670,
-                    "nombre_carrera": "LICENCIATURA EN ADMINISTRACIÓN DE SALUD",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "1 año y medio",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud"
-                },
-                {
-                    "id": 671,
-                    "nombre_carrera": "LICENCIATURA EN ANALÍTICA DE NEGOCIOS",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "1 año y medio",
-                    "modalidad": "Presencial",
-                    "facultad": "UDA",
-                    "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 6,
+   "nombre": "Universidad del Aconcagua (UDA)",
+   "nivel": "universidad",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "5201620",
+    "email": "informes@uda.edu.ar",
+    "direccion": "Catamarca 147, Ciudad"
+   },
+   "carreras": [
+    {
+     "id": 615,
+     "nombre_carrera": "Licenciatura en Psicología",
+     "categoria": "Grado / Carrera",
+     "duracion": "5 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-psicologia"
+    },
+    {
+     "id": 616,
+     "nombre_carrera": "Profesorado de Grado Universitario en Psicología para Nivel Secundario y Superior",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/profesorado-de-grado-universitario-en-psicologia-para-nivel-secundario-y-superior"
+    },
+    {
+     "id": 617,
+     "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia"
+    },
+    {
+     "id": 618,
+     "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "A Distancia",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia"
+    },
+    {
+     "id": 619,
+     "nombre_carrera": "Licenciatura en Criminalística",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica"
+    },
+    {
+     "id": 631,
+     "nombre_carrera": "Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia",
+     "categoria": "Pregrado",
+     "duracion": "3 año",
+     "modalidad": "A Distancia",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
+    },
+    {
+     "id": 632,
+     "nombre_carrera": "Tecnicatura universitaria en Accidentología Vial",
+     "categoria": "Pregrado",
+     "duracion": "3 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-accidentologia-vial"
+    },
+    {
+     "id": 634,
+     "nombre_carrera": "Tecnicatura universitaria en Seguridad Ciudadana - Modalidad a Distancia",
+     "categoria": "Pregrado",
+     "duracion": "2 año",
+     "modalidad": "A Distancia",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana"
+    },
+    {
+     "id": 608,
+     "nombre_carrera": "Profesorado de Grado Universitario",
+     "categoria": "Grado / Carrera",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario"
+    },
+    {
+     "id": 609,
+     "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral",
+     "categoria": "Grado / Carrera",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana"
+    },
+    {
+     "id": 610,
+     "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral | A distancia",
+     "categoria": "Grado / Carrera",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia"
+    },
+    {
+     "id": 620,
+     "nombre_carrera": "Profesorado Universitario en Lengua y Cultura Inglesa",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/profesorado-universitario-en-lengua-y-cultura-inglesa"
+    },
+    {
+     "id": 621,
+     "nombre_carrera": "Traductorado Público de Inglés",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles"
+    },
+    {
+     "id": 622,
+     "nombre_carrera": "Traductorado Público de Italiano",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano"
+    },
+    {
+     "id": 623,
+     "nombre_carrera": "Traductor Público de Portugués",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductor-publico-de-portugues"
+    },
+    {
+     "id": 635,
+     "nombre_carrera": "Sommelier Universitario",
+     "categoria": "Pregrado",
+     "duracion": "2 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-pregrado/sommelier-universitario"
+    },
+    {
+     "id": 616,
+     "nombre_carrera": "Licenciatura en Inglés",
+     "categoria": "Grado / Carrera",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/ciclos-de-complementacion-curricular/licenciatura-en-ingles"
+    },
+    {
+     "id": 611,
+     "nombre_carrera": "Licenciatura en Fonoaudiología",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-fonoaudiologia"
+    },
+    {
+     "id": 612,
+     "nombre_carrera": "Licenciatura en Obstetricia",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-obstetricia"
+    },
+    {
+     "id": 613,
+     "nombre_carrera": "Medicina",
+     "categoria": "Grado / Carrera",
+     "duracion": "6 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/medicina"
+    },
+    {
+     "id": 614,
+     "nombre_carrera": "Licenciatura en Calidad, Medio Ambiente e Higiene y Seguridad en el Trabajo",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-calidad-medio-ambiente-e-higiene-y-seguridad-en-el-trabajo"
+    },
+    {
+     "id": 621,
+     "nombre_carrera": "Maestría en Salud Pública y Seguridad Social",
+     "categoria": "Pregrado",
+     "duracion": "1 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-salud-publica-y-seguridad-social"
+    },
+    {
+     "id": 622,
+     "nombre_carrera": "Maestría en Ejercicio Físico y Salud",
+     "categoria": "Pregrado",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-ejercicio-fisico-y-salud"
+    },
+    {
+     "id": 623,
+     "nombre_carrera": "Licenciatura en Enfermería",
+     "categoria": "Grado / Carrera",
+     "duracion": "18 meses",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-enfermeria"
+    },
+    {
+     "id": 624,
+     "nombre_carrera": "Licenciatura en Producción de Bioimágenes",
+     "categoria": "Grado / Carrera",
+     "duracion": "18 meses",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-produccion-de-bioimagenes"
+    },
+    {
+     "id": 625,
+     "nombre_carrera": "Licenciatura en Educación Física con Orientación en Fisiología del Trabajo Físico y Rendimiento Humano",
+     "categoria": "Grado / Carrera",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-educacion-fisica-con-orientacion-en-fisiologia-del-trabajo-fisico-y-rendimiento-humano"
+    },
+    {
+     "id": 626,
+     "nombre_carrera": "Licenciado en Educación Física (Salud)",
+     "categoria": "Grado / Carrera",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciado-en-educacion-fisica-salud"
+    },
+    {
+     "id": 627,
+     "nombre_carrera": "Licenciatura en Tecnologías de la Salud",
+     "categoria": "Grado / Carrera",
+     "duracion": "18 meses",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-tecnologias-de-la-salud"
+    },
+    {
+     "id": 636,
+     "nombre_carrera": "Tecnicatura Universitaria en Emergentología",
+     "categoria": "Pregrado",
+     "duracion": "2 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrados/tecnicatura-universitaria-en-emergentologia"
+    },
+    {
+     "id": 605,
+     "nombre_carrera": "Licenciatura en Comercio Internacional",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-comercio-internacional"
+    },
+    {
+     "id": 606,
+     "nombre_carrera": "Lic. en Informática y Desarrollo de Software",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-informatica-y-desarrollo-de-software"
+    },
+    {
+     "id": 607,
+     "nombre_carrera": "Licenciatura en Marketing",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-marketing"
+    },
+    {
+     "id": 608,
+     "nombre_carrera": "Lic. en Relaciones Institucionales, Ceremonial y Comunicación Corporativa",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-relaciones-institucionales-ceremonial-y-comunicacion-corporativa"
+    },
+    {
+     "id": 609,
+     "nombre_carrera": "Licenciatura en Telecomunicaciones",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-telecomunicaciones"
+    },
+    {
+     "id": 610,
+     "nombre_carrera": "Lic. en Turismo y Hotelería",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-turismo-y-hoteleria"
+    },
+    {
+     "id": 624,
+     "nombre_carrera": "Técnico en Telecomunicaciones",
+     "categoria": "Pregrado",
+     "duracion": "3 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-en-telecomunicaciones"
+    },
+    {
+     "id": 625,
+     "nombre_carrera": "Técnico Universitario en Diseño Gráfico y Publicidad",
+     "categoria": "Pregrado",
+     "duracion": "2 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-diseno-grafico-y-publicidad"
+    },
+    {
+     "id": 626,
+     "nombre_carrera": "Técnico/a Universitario/a en Ceremonial y Organización de Eventos",
+     "categoria": "Pregrado",
+     "duracion": "2 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos"
+    },
+    {
+     "id": 627,
+     "nombre_carrera": "Técnico Universitario en Desarrollo de Software",
+     "categoria": "Pregrado",
+     "duracion": "3 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-desarrollo-de-software"
+    },
+    {
+     "id": 628,
+     "nombre_carrera": "Técnico Universitario en Marketing y Ventas",
+     "categoria": "Pregrado",
+     "duracion": "2 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-marketing-y-ventas"
+    },
+    {
+     "id": 629,
+     "nombre_carrera": "Tecnicatura Universitaria en Turismo y Hotelería",
+     "categoria": "Pregrado",
+     "duracion": "2 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnicatura-universitaria-en-turismo-y-hoteleria"
+    },
+    {
+     "id": 641,
+     "nombre_carrera": "Licenciatura en Administración Gastronómica",
+     "categoria": "Grado / Carrera",
+     "duracion": "18 meses",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-gastronomica"
+    },
+    {
+     "id": 642,
+     "nombre_carrera": "Licenciatura en Administración Hotelera",
+     "categoria": "Grado / Carrera",
+     "duracion": "18 meses",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-hotelera"
+    },
+    {
+     "id": 643,
+     "nombre_carrera": "Licenciatura en Dirección Creativa de Diseño y Publicidad",
+     "categoria": "Grado / Carrera",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-direccion-creativa-de-diseno-y-publicidad"
+    },
+    {
+     "id": 644,
+     "nombre_carrera": "Licenciatura en Turismo",
+     "categoria": "Grado / Carrera",
+     "duracion": "18 meses",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-turismo"
+    },
+    {
+     "id": 610,
+     "nombre_carrera": "Lic. en Turismo y Hotelería",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-turismo-y-hoteleria"
+    },
+    {
+     "id": 626,
+     "nombre_carrera": "Técnico/a Universitario/a en Ceremonial y Organización de Eventos",
+     "categoria": "Pregrado",
+     "duracion": "2 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos"
+    },
+    {
+     "id": 600,
+     "nombre_carrera": "Abogacía",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia"
+    },
+    {
+     "id": 601,
+     "nombre_carrera": "Contador Público",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico"
+    },
+    {
+     "id": 602,
+     "nombre_carrera": "Escribanía",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania"
+    },
+    {
+     "id": 603,
+     "nombre_carrera": "Licenciatura en Administración",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion"
+    },
+    {
+     "id": 604,
+     "nombre_carrera": "Licenciatura en Economía",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia"
+    },
+    {
+     "id": 652,
+     "nombre_carrera": "Licenciatura en Administración de Salud",
+     "categoria": "Grado / Carrera",
+     "duracion": "1 año y medio",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud"
+    },
+    {
+     "id": 653,
+     "nombre_carrera": "Licenciatura en Analítica de Negocios",
+     "categoria": "Grado / Carrera",
+     "duracion": "1 año y medio",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios"
+    },
+    {
+     "id": 654,
+     "nombre_carrera": "Licenciatura en Seguridad Ciudadana",
+     "categoria": "Grado / Carrera",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana"
+    },
+    {
+     "id": 631,
+     "nombre_carrera": "Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia",
+     "categoria": "Pregrado",
+     "duracion": "3 año",
+     "modalidad": "A Distancia",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
+    },
+    {
+     "id": 621,
+     "nombre_carrera": "Traductorado Público de Inglés",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles"
+    },
+    {
+     "id": 622,
+     "nombre_carrera": "Traductorado Público de Italiano",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano"
+    },
+    {
+     "id": 617,
+     "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia"
+    },
+    {
+     "id": 618,
+     "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "A Distancia",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia"
+    },
+    {
+     "id": 619,
+     "nombre_carrera": "Licenciatura en Criminalística",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica"
+    },
+    {
+     "id": 631,
+     "nombre_carrera": "Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia",
+     "categoria": "Pregrado",
+     "duracion": "3 año",
+     "modalidad": "A Distancia",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
+    },
+    {
+     "id": 634,
+     "nombre_carrera": "Tecnicatura universitaria en Seguridad Ciudadana - Modalidad a Distancia",
+     "categoria": "Pregrado",
+     "duracion": "2 año",
+     "modalidad": "A Distancia",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana"
+    },
+    {
+     "id": 663,
+     "nombre_carrera": "PROFESORADO DE GRADO UNIVERSITARIO",
+     "categoria": "Grado / Carrera",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario"
+    },
+    {
+     "id": 664,
+     "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral - Modalidad a distancia",
+     "categoria": "Grado / Carrera",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia"
+    },
+    {
+     "id": 600,
+     "nombre_carrera": "Abogacía",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia"
+    },
+    {
+     "id": 603,
+     "nombre_carrera": "Licenciatura en Administración",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion"
+    },
+    {
+     "id": 601,
+     "nombre_carrera": "Contador Público",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico"
+    },
+    {
+     "id": 604,
+     "nombre_carrera": "Licenciatura en Economía",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia"
+    },
+    {
+     "id": 602,
+     "nombre_carrera": "Escribanía",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 año",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania"
+    },
+    {
+     "id": 670,
+     "nombre_carrera": "LICENCIATURA EN ADMINISTRACIÓN DE SALUD",
+     "categoria": "Grado / Carrera",
+     "duracion": "1 año y medio",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud"
+    },
+    {
+     "id": 671,
+     "nombre_carrera": "LICENCIATURA EN ANALÍTICA DE NEGOCIOS",
+     "categoria": "Grado / Carrera",
+     "duracion": "1 año y medio",
+     "modalidad": "Presencial",
+     "facultad": "UDA",
+     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios"
+    }
+   ],
+   "departamento": "Capital"
+  }
+ ]
 }

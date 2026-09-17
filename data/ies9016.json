@@ -1,58 +1,59 @@
 {
-    "instituciones": [
-        {
-            "id": 25,
-            "nombre": "IEF - Instituto de Educación Física (IES 9-016)",
-            "nivel": "terciario",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "contacto@ief9016.edu.ar",
-                "direccion": "Godoy Cruz, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 2501,
-                    "nombre_carrera": "Profesorado de Educación Física",
-                    "categoria": "Grado / Profesorado",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IEF (IES 9-016)",
-                    "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-fisica/"
-                },
-                {
-                    "id": 2502,
-                    "nombre_carrera": "Tecnicatura Superior en Actividades de Montaña",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IEF (IES 9-016)",
-                    "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-actividades-de-montana-modalidad-presencial/"
-                },
-                {
-                    "id": 2503,
-                    "nombre_carrera": "Tecnicatura Superior en Preparación Física",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IEF (IES 9-016)",
-                    "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-preparacion-fisica/"
-                },
-                {
-                    "id": 2504,
-                    "nombre_carrera": "Tecnicatura Superior en Conservación de la Naturaleza",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "turno": "A confirmar",
-                    "facultad": "IEF (IES 9-016)",
-                    "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-conservacion-de-la-naturaleza/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 25,
+   "nombre": "IEF - Instituto de Educación Física (IES 9-016)",
+   "nivel": "terciario",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "contacto@ief9016.edu.ar",
+    "direccion": "Godoy Cruz, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 2501,
+     "nombre_carrera": "Profesorado de Educación Física",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IEF (IES 9-016)",
+     "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-fisica/"
+    },
+    {
+     "id": 2502,
+     "nombre_carrera": "Tecnicatura Superior en Actividades de Montaña",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IEF (IES 9-016)",
+     "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-actividades-de-montana-modalidad-presencial/"
+    },
+    {
+     "id": 2503,
+     "nombre_carrera": "Tecnicatura Superior en Preparación Física",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IEF (IES 9-016)",
+     "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-preparacion-fisica/"
+    },
+    {
+     "id": 2504,
+     "nombre_carrera": "Tecnicatura Superior en Conservación de la Naturaleza",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "IEF (IES 9-016)",
+     "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-conservacion-de-la-naturaleza/"
+    }
+   ],
+   "departamento": "Godoy Cruz"
+  }
+ ]
 }
