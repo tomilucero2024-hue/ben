@@ -120,6 +120,15 @@
                     "modalidad": "Presencial",
                     "facultad": "UTN FRM",
                     "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-en-sistemas-informacion/"
+},
+                {
+                    "id": 14,
+                    "nombre_carrera": "INGENIERÍA EN MINAS",
+                    "categoria": "Ingeniería",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://frm.utn.edu.ar/ingenieria-minas/"
 }
             ]
         }

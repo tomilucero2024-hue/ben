@@ -2443,6 +2443,28 @@
       }
     },
     {
+      "clave": "ingenieria en minas",
+      "nombre": "INGENIERÍA EN MINAS",
+      "categoria": "Ingeniería",
+      "area": "Ingeniería",
+      "formacion": "grado",
+      "instituciones": [
+        "UTN Facultad Regional Mendoza"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 4,
+        "practico": 3,
+        "social": 1,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 5,
+        "matematico": 5,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "ingenieria en petroleo",
       "nombre": "Ingeniería en Petróleo",
       "categoria": "Grado / Carrera",
@@ -6650,7 +6672,8 @@
       "area": "Educación",
       "formacion": "profesorados",
       "instituciones": [
-        "IES 9-024 (Lavalle)"
+        "IES 9-024 (Lavalle)",
+        "IES 9-026 Instituto de la Patria Grande"
       ],
       "perfil": {
         "analitico": 3,
@@ -6702,7 +6725,8 @@
         "IES 9-006 Francisco H. Tolosa",
         "IES 9-010 Rosario Vera Peñaloza",
         "IES 9-030 (Instituto del Bicentenario)",
-        "Fundación Rayuela"
+        "Fundación Rayuela",
+        "IES 9-026 Instituto de la Patria Grande"
       ],
       "perfil": {
         "analitico": 3,
@@ -6757,7 +6781,8 @@
         "IES 9-023",
         "IES 9-029 (Luján de Cuyo)",
         "IES 9-030 (Instituto del Bicentenario)",
-        "Fundación Rayuela"
+        "Fundación Rayuela",
+        "IES 9-026 Instituto de la Patria Grande"
       ],
       "perfil": {
         "analitico": 3,
@@ -7800,6 +7825,28 @@
       }
     },
     {
+      "clave": "profesorado para la educacion secundaria de la modalidad tecnico profesional",
+      "nombre": "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "IES 9-026 Instituto de la Patria Grande"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 3,
+        "terreno": 1,
+        "liderazgo": 4,
+        "teorico": 5,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "profesorado para la educacion secundaria de la modalidad tecnico profesional en concurrencia con el titulo de base",
       "nombre": "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional en Concurrencia con el Título de Base",
       "categoria": "Grado / Profesorado",
@@ -8106,6 +8153,72 @@
         "liderazgo": 4,
         "teorico": 5,
         "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "programa de la tec. superior en laboratorio de analisis clinicos",
+      "nombre": "Programa de la Tec. Superior en Laboratorio de Análisis Clínicos",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Tecnología",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IES 9-026 Instituto de la Patria Grande"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 5,
+        "practico": 5,
+        "social": 1,
+        "creativo": 3,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 4,
+        "matematico": 4,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "programa de tec. superior en dialisis",
+      "nombre": "Programa de Tec. Superior en Diálisis",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Tecnología",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IES 9-026 Instituto de la Patria Grande"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 5,
+        "practico": 5,
+        "social": 1,
+        "creativo": 3,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 2,
+        "matematico": 3,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "programa de tec. superior en gestion de las organizaciones de la salud",
+      "nombre": "Programa de Tec. Superior en Gestión de las Organizaciones de la Salud",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Tecnología",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IES 9-026 Instituto de la Patria Grande"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 5,
+        "practico": 5,
+        "social": 4,
+        "creativo": 3,
+        "terreno": 0,
+        "liderazgo": 4,
+        "teorico": 2,
+        "matematico": 3,
         "movilidad": 2
       }
     },
@@ -10013,6 +10126,28 @@
       }
     },
     {
+      "clave": "tecnicatura superior en anestesiologia",
+      "nombre": "Tecnicatura Superior en Anestesiología",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto San Agustín"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "tecnicatura superior en asistencia gerontologica",
       "nombre": "Tecnicatura Superior en Asistencia Gerontológica",
       "categoria": "Pregrado / Tecnicatura",
@@ -10212,6 +10347,28 @@
       }
     },
     {
+      "clave": "tecnicatura superior en cosmetologia y cosmiatria",
+      "nombre": "Tecnicatura Superior en Cosmetología y Cosmiatría",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto San Agustín"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "tecnicatura superior en danza",
       "nombre": "Tecnicatura Superior en Danza",
       "categoria": "Pregrado / Tecnicatura",
@@ -10274,6 +10431,28 @@
         "analitico": 5,
         "tecnologico": 3,
         "practico": 4,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "tecnicatura superior en dialisis",
+      "nombre": "Tecnicatura Superior en Diálisis",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto San Agustín"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 3,
         "social": 5,
         "creativo": 2,
         "terreno": 1,
@@ -10380,7 +10559,9 @@
       "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "IES 9-023"
+        "IES 9-023",
+        "IES 9-026 Instituto de la Patria Grande",
+        "Instituto San Agustín"
       ],
       "perfil": {
         "analitico": 5,
@@ -10482,6 +10663,28 @@
         "terreno": 2,
         "liderazgo": 2,
         "teorico": 0,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "tecnicatura superior en esterilizacion",
+      "nombre": "Tecnicatura Superior en Esterilización",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto San Agustín"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 4,
         "matematico": 1,
         "movilidad": 2
       }
@@ -10621,6 +10824,28 @@
       }
     },
     {
+      "clave": "tecnicatura superior en hemoterapia",
+      "nombre": "Tecnicatura Superior en Hemoterapia",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Salud",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto San Agustín"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 1,
+        "terreno": 0,
+        "liderazgo": 2,
+        "teorico": 4,
+        "matematico": 2,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "tecnicatura superior en higiene y ambiente",
       "nombre": "Tecnicatura Superior en Higiene y Ambiente",
       "categoria": "Pregrado / Tecnicatura",
@@ -10709,6 +10934,50 @@
         "teorico": 3,
         "matematico": 2,
         "movilidad": 3
+      }
+    },
+    {
+      "clave": "tecnicatura superior en instrumentacion quirurgica",
+      "nombre": "Tecnicatura Superior en Instrumentación Quirúrgica",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Salud",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto San Agustín"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 3,
+        "terreno": 0,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 2,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "tecnicatura superior en laboratorio de analisis clinicos",
+      "nombre": "Tecnicatura Superior en Laboratorio de Análisis Clínicos",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto San Agustín"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 1,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 2,
+        "movilidad": 2
       }
     },
     {
@@ -11044,6 +11313,28 @@
         "terreno": 1,
         "liderazgo": 2,
         "teorico": 4,
+        "matematico": 2,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "tecnicatura superior en radiologia e imagenes para el diagnostico",
+      "nombre": "Tecnicatura Superior en Radiología e Imágenes para el Diagnóstico",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Salud",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto San Agustín"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 5,
+        "creativo": 3,
+        "terreno": 0,
+        "liderazgo": 2,
+        "teorico": 3,
         "matematico": 2,
         "movilidad": 2
       }

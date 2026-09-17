@@ -120,6 +120,15 @@
                     "modalidad": "Presencial",
                     "facultad": "UTN FRM",
                     "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-en-sistemas-informacion/"
+                },
+                {
+                    "id": 14,
+                    "nombre_carrera": "INGENIERÍA EN MINAS",
+                    "categoria": "Ingeniería",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://frm.utn.edu.ar/ingenieria-minas/"
                 }
             ]
         },
@@ -7149,6 +7158,204 @@
                     "modalidad": "A Distancia",
                     "facultad": "Facultad de la Defensa Nacional",
                     "link_oficial": "https://undef.edu.ar/a-distancia-2/"
+                }
+            ]
+        },
+        {
+            "id": 44,
+            "nombre": "IES 9-026 Instituto de la Patria Grande",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "261-5743937",
+                "email": "A confirmar",
+                "direccion": "Alte. Brown 2600, Las Heras, Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 4401,
+                    "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-026",
+                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/"
+                },
+                {
+                    "id": 4402,
+                    "nombre_carrera": "Programa de Tec. Superior en Diálisis",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-026",
+                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-tec-superior-en-dialisis/"
+                },
+                {
+                    "id": 4403,
+                    "nombre_carrera": "Programa de Tec. Superior en Gestión de las Organizaciones de la Salud",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 1/2 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-026",
+                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-tec-superior-en-administracion-de-empresas-de-la-salud/"
+                },
+                {
+                    "id": 4404,
+                    "nombre_carrera": "Programa de la Tec. Superior en Laboratorio de Análisis Clínicos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-026",
+                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-la-tec-superior-en-laboratorio-de-analisis-clinicos/"
+                },
+                {
+                    "id": 4405,
+                    "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-026",
+                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-enfermeria-profesional/"
+                },
+                {
+                    "id": 4406,
+                    "nombre_carrera": "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-026",
+                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-para-la-educacion-secundaria-de-la-modalidad-tecnico-profesional/"
+                },
+                {
+                    "id": 4407,
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-026",
+                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
+                },
+                {
+                    "id": 4408,
+                    "nombre_carrera": "Profesorado de Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-026",
+                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/"
+                }
+            ]
+        },
+        {
+            "id": 48,
+            "nombre": "Instituto San Agustín",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "(0261) 424-0314",
+                "email": "sanagustinpt170@gmail.com",
+                "direccion": "Almirante Brown 1545, Godoy Cruz, Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 4801,
+                    "nombre_carrera": "Tecnicatura Superior en Anestesiología",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto San Agustín",
+                    "link_oficial": "https://instsanagustin.com/2024/09/22/tecnicatura-superior-en-anestesiologia/"
+                },
+                {
+                    "id": 4802,
+                    "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto San Agustín",
+                    "link_oficial": "https://instsanagustin.com/2024/10/01/tecnicatura-superior-en-enfermeria-profesional/"
+                },
+                {
+                    "id": 4803,
+                    "nombre_carrera": "Tecnicatura Superior en Esterilización",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto San Agustín",
+                    "link_oficial": "https://instsanagustin.com/2024/10/01/tecnicatura-superior-en-esterilizacion/"
+                },
+                {
+                    "id": 4804,
+                    "nombre_carrera": "Tecnicatura Superior en Hemoterapia",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto San Agustín",
+                    "link_oficial": "https://instsanagustin.com/2024/10/08/tecnicatura-superior-en-hemoterapia/"
+                },
+                {
+                    "id": 4805,
+                    "nombre_carrera": "Tecnicatura Superior en Instrumentación Quirúrgica",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto San Agustín",
+                    "link_oficial": "https://instsanagustin.com/2024/10/15/tecnicatura-superior-en-instrumentacion-quirurgica/"
+                },
+                {
+                    "id": 4806,
+                    "nombre_carrera": "Tecnicatura Superior en Laboratorio de Análisis Clínicos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto San Agustín",
+                    "link_oficial": "https://instsanagustin.com/2025/04/16/tecnicatura-superior-en-laboratorio-de-analisis-clinicos/"
+                },
+                {
+                    "id": 4807,
+                    "nombre_carrera": "Tecnicatura Superior en Radiología e Imágenes para el Diagnóstico",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto San Agustín",
+                    "link_oficial": "https://instsanagustin.com/2024/09/12/tecnicatura-superior-en-radiologia-e-imagenes-para-el-diagnostico/"
+                },
+                {
+                    "id": 4808,
+                    "nombre_carrera": "Tecnicatura Superior en Cosmetología y Cosmiatría",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto San Agustín",
+                    "link_oficial": "https://instsanagustin.com/2025/04/16/tecnicatura-superior-en-cosmetologia-cosmiatria-y-estetica/"
+                },
+                {
+                    "id": 4809,
+                    "nombre_carrera": "Tecnicatura Superior en Diálisis",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Instituto San Agustín",
+                    "link_oficial": "https://instsanagustin.com/2026/07/29/tecnicatura-superior-en-dialisis/"
                 }
             ]
         },

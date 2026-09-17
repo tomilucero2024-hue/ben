@@ -67,6 +67,8 @@ ARCHIVOS_SIMPLES = [
     ("insrp.json", "✅ Datos del Instituto cargados al chasis.", "⚠️ Faltan los datos del instituto. Corré scraper_insrp.py primero."),
     ("cultural_mendoza.json", "✅ Datos de Cultural Mendoza cargados al chasis.", "⚠️ Faltan los datos de Cultural Mendoza. Corré scrapers/ingles.py primero."),
     ("undef.json", "✅ Datos de la UNDEF cargados al chasis.", "⚠️ Faltan los datos de la UNDEF. Corré scrapers/undef.py primero."),
+    ("ies9026.json", "✅ Datos del IES 9-026 (Instituto de la Patria Grande) cargados al chasis.", "⚠️ Faltan los datos del IES 9-026. Corré el script correspondiente primero."),
+    ("san_agustin.json", "✅ Datos del Instituto San Agustín cargados al chasis.", "⚠️ Faltan los datos del Instituto San Agustín. Corré el script correspondiente primero."),
 ]
 
 
