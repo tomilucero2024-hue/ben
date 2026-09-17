@@ -1,0 +1,58 @@
+{
+    "instituciones": [
+        {
+            "id": 50,
+            "nombre": "IES 9-027 (Guaymallén)",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "261-4327633",
+                "email": "secretaria9027@gmail.com",
+                "direccion": "Joaquín V. González 429, Dorrego, Guaymallén, Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 5001,
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-027",
+                    "link_oficial": "https://ies9027-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
+                },
+                {
+                    "id": 5002,
+                    "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-027",
+                    "link_oficial": "https://ies9027-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/"
+                },
+                {
+                    "id": 5003,
+                    "nombre_carrera": "Profesorado de Inglés",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-027",
+                    "link_oficial": "https://ies9027-infd.mendoza.edu.ar/sitio/profesorado-de-ingles/"
+                },
+                {
+                    "id": 5004,
+                    "nombre_carrera": "Tecnicatura Superior en Transporte Ferroviario",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-027",
+                    "link_oficial": "https://ies9027-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-transporte-ferroviario/"
+                }
+            ]
+        }
+    ]
+}

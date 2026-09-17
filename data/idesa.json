@@ -1,0 +1,48 @@
+{
+    "instituciones": [
+        {
+            "id": 51,
+            "nombre": "IDESA - Instituto de Educación Superior Alvear (UGACOOP)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "02625-425831",
+                "email": "informes@idesaugacoop.com.ar",
+                "direccion": "Silvio Tricherri y Ruta 188, Gral. Alvear, Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 5101,
+                    "nombre_carrera": "Tecnicatura Superior en Diseño de Indumentaria, Textil y Accesorios",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IDESA (UGACOOP)",
+                    "link_oficial": "https://idesaugacoop.com.ar/tecnicatura-superior-en-diseno-de-indumentaria-textil-y-accesorios/"
+                },
+                {
+                    "id": 5102,
+                    "nombre_carrera": "Tecnicatura Superior en Biotecnología",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IDESA (UGACOOP)",
+                    "link_oficial": "https://idesaugacoop.com.ar/tecnicatura-superior-en-biotecnologia/"
+                },
+                {
+                    "id": 5103,
+                    "nombre_carrera": "Tecnicatura Superior en Mecatrónica Aplicada a la Industria",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IDESA (UGACOOP)",
+                    "link_oficial": "https://idesaugacoop.com.ar/tecnicatura-superior-en-mecatronica-aplicada-a-la-industria/"
+                }
+            ]
+        }
+    ]
+}

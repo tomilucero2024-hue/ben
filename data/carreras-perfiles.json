@@ -6673,7 +6673,8 @@
       "formacion": "profesorados",
       "instituciones": [
         "IES 9-024 (Lavalle)",
-        "IES 9-026 Instituto de la Patria Grande"
+        "IES 9-026 Instituto de la Patria Grande",
+        "IES 9-027 (Guaymallén)"
       ],
       "perfil": {
         "analitico": 3,
@@ -6782,7 +6783,8 @@
         "IES 9-029 (Luján de Cuyo)",
         "IES 9-030 (Instituto del Bicentenario)",
         "Fundación Rayuela",
-        "IES 9-026 Instituto de la Patria Grande"
+        "IES 9-026 Instituto de la Patria Grande",
+        "IES 9-027 (Guaymallén)"
       ],
       "perfil": {
         "analitico": 3,
@@ -6976,7 +6978,8 @@
         "IES 9-009 (Tupungato)",
         "IES 9-011 Del Atuel",
         "IES 9-023",
-        "IES 9-024 (Lavalle)"
+        "IES 9-024 (Lavalle)",
+        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
       ],
       "perfil": {
         "analitico": 4,
@@ -7180,7 +7183,8 @@
         "IES 9-001 Gral. José de San Martín",
         "IES 9-002 Tomás Godoy Cruz",
         "IES 9-010 Rosario Vera Peñaloza",
-        "IES 9-030 (Instituto del Bicentenario)"
+        "IES 9-030 (Instituto del Bicentenario)",
+        "IES 9-027 (Guaymallén)"
       ],
       "perfil": {
         "analitico": 3,
@@ -7338,7 +7342,8 @@
       "formacion": "profesorados",
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)",
-        "IES 9-002 Tomás Godoy Cruz"
+        "IES 9-002 Tomás Godoy Cruz",
+        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
       ],
       "perfil": {
         "analitico": 3,
@@ -7534,6 +7539,28 @@
       }
     },
     {
+      "clave": "profesorado en educacion secundaria para tecnicos",
+      "nombre": "Profesorado en Educación Secundaria para Técnicos",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 3,
+        "terreno": 1,
+        "liderazgo": 4,
+        "teorico": 5,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "profesorado en filosofia",
       "nombre": "Profesorado en Filosofía",
       "categoria": "Grado / Carrera",
@@ -7691,6 +7718,28 @@
       }
     },
     {
+      "clave": "profesorado en lengua y literatura",
+      "nombre": "Profesorado en Lengua y Literatura",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 1,
+        "practico": 5,
+        "social": 5,
+        "creativo": 5,
+        "terreno": 1,
+        "liderazgo": 4,
+        "teorico": 5,
+        "matematico": 1,
+        "movilidad": 4
+      }
+    },
+    {
       "clave": "profesorado en letras",
       "nombre": "Profesorado en Letras",
       "categoria": "Grado / Carrera",
@@ -7743,7 +7792,8 @@
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)",
         "IES 9-028 (Santa Rosa)",
-        "Instituto de Arte Chopin"
+        "Instituto de Arte Chopin",
+        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
       ],
       "perfil": {
         "analitico": 3,
@@ -10126,6 +10176,28 @@
       }
     },
     {
+      "clave": "tecnicatura superior en agronomia e industrias frutihorticolas",
+      "nombre": "Tecnicatura Superior en Agronomía e Industrias Frutihortícolas",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ambiente",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 2,
+        "creativo": 2,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 2,
+        "movilidad": 4
+      }
+    },
+    {
       "clave": "tecnicatura superior en anestesiologia",
       "nombre": "Tecnicatura Superior en Anestesiología",
       "categoria": "Pregrado / Tecnicatura",
@@ -10192,13 +10264,36 @@
       }
     },
     {
+      "clave": "tecnicatura superior en biotecnologia",
+      "nombre": "Tecnicatura Superior en Biotecnología",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IDESA - Instituto de Educación Superior Alvear (UGACOOP)"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "tecnicatura superior en comercio internacional y aduana",
       "nombre": "Tecnicatura Superior en Comercio Internacional y Aduana",
       "categoria": "Pregrado / Tecnicatura",
       "area": "Negocios",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "ISTEEC (IES 9-013)"
+        "ISTEEC (IES 9-013)",
+        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
       ],
       "perfil": {
         "analitico": 4,
@@ -10491,7 +10586,8 @@
       "area": "Diseño",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "IES 9-001 Gral. José de San Martín"
+        "IES 9-001 Gral. José de San Martín",
+        "IDESA - Instituto de Educación Superior Alvear (UGACOOP)"
       ],
       "perfil": {
         "analitico": 2,
@@ -10561,7 +10657,8 @@
       "instituciones": [
         "IES 9-023",
         "IES 9-026 Instituto de la Patria Grande",
-        "Instituto San Agustín"
+        "Instituto San Agustín",
+        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
       ],
       "perfil": {
         "analitico": 5,
@@ -10786,7 +10883,8 @@
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-010 Rosario Vera Peñaloza",
-        "IES 9-012 Informática"
+        "IES 9-012 Informática",
+        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
       ],
       "perfil": {
         "analitico": 5,
@@ -11058,6 +11156,28 @@
       "instituciones": [
         "IES 9-021 Tecnológico",
         "IES 9-023"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "tecnicatura superior en mecatronica aplicada a la industria",
+      "nombre": "Tecnicatura Superior en Mecatrónica Aplicada a la Industria",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IDESA - Instituto de Educación Superior Alvear (UGACOOP)"
       ],
       "perfil": {
         "analitico": 4,
@@ -11381,6 +11501,28 @@
         "liderazgo": 3,
         "teorico": 2,
         "matematico": 3,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "tecnicatura superior en transporte ferroviario",
+      "nombre": "Tecnicatura Superior en Transporte Ferroviario",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IES 9-027 (Guaymallén)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
         "movilidad": 2
       }
     },

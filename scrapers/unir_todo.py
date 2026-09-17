@@ -69,6 +69,9 @@ ARCHIVOS_SIMPLES = [
     ("undef.json", "✅ Datos de la UNDEF cargados al chasis.", "⚠️ Faltan los datos de la UNDEF. Corré scrapers/undef.py primero."),
     ("ies9026.json", "✅ Datos del IES 9-026 (Instituto de la Patria Grande) cargados al chasis.", "⚠️ Faltan los datos del IES 9-026. Corré el script correspondiente primero."),
     ("san_agustin.json", "✅ Datos del Instituto San Agustín cargados al chasis.", "⚠️ Faltan los datos del Instituto San Agustín. Corré el script correspondiente primero."),
+    ("ies9027.json", "✅ Datos del IES 9-027 (Guaymallén) cargados al chasis.", "⚠️ Faltan los datos del IES 9-027. Corré el script correspondiente primero."),
+    ("ies9007.json", "✅ Datos del IES 9-007 (Dr. Salvador Calafat) cargados al chasis.", "⚠️ Faltan los datos del IES 9-007. Corré el script correspondiente primero."),
+    ("idesa.json", "✅ Datos del IDESA (Instituto de Educación Superior Alvear) cargados al chasis.", "⚠️ Faltan los datos del IDESA. Corré el script correspondiente primero."),
 ]
 
 
