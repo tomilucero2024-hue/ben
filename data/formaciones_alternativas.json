@@ -1,640 +1,640 @@
 {
-    "instituciones": [
-        {
-            "id": 201,
-            "nombre": "ICA - Instituto de Capacitación Aeronáutica (Sede Mendoza)",
-            "nivel": "capacitación profesional",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "info@incasrl.com.ar",
-                "direccion": "Arístides Villanueva 430, Ciudad de Mendoza (también sede San Rafael, Av. del Libertador 78)"
-            },
-            "carreras": [
-                {
-                    "id": 20101,
-                    "nombre_carrera": "Tripulante de Cabina de Pasajeros",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "De 2 a 16 meses según curso",
-                    "modalidad": "Presencial / A Distancia",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/tripulante-de-cabina-de-pasajeros/"
-                },
-                {
-                    "id": 20102,
-                    "nombre_carrera": "Piloto Comercial de Avión",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/piloto-comercial-de-avion/"
-                },
-                {
-                    "id": 20103,
-                    "nombre_carrera": "Piloto Privado de Avión",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/piloto-privado-de-avion/"
-                },
-                {
-                    "id": 20104,
-                    "nombre_carrera": "Piloto de Drone",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/piloto-de-drone/"
-                },
-                {
-                    "id": 20105,
-                    "nombre_carrera": "Despachante de Aeronaves",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/despachante-de-aeronaves/"
-                },
-                {
-                    "id": 20106,
-                    "nombre_carrera": "Operador de Servicios de Rampa",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/operador-de-servicios-de-rampa/"
-                },
-                {
-                    "id": 20107,
-                    "nombre_carrera": "Supervisor de Servicio de Rampa",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/supervisor-de-servicio-de-rampa/"
-                },
-                {
-                    "id": 20108,
-                    "nombre_carrera": "Señalero de Aeródromo",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/senalero-de-aerodromo/"
-                },
-                {
-                    "id": 20109,
-                    "nombre_carrera": "Diplomatura en Gestión Aeroportuaria",
-                    "categoria": "Diplomatura",
-                    "duracion": "A confirmar",
-                    "modalidad": "A confirmar",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/diplomatura-en-gestion-aeroportuaria/"
-                },
-                {
-                    "id": 20110,
-                    "nombre_carrera": "Check In",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "A confirmar",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/check-in/"
-                },
-                {
-                    "id": 20111,
-                    "nombre_carrera": "Operador Radiotelefonista Restringido",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "A confirmar",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/radio-operador-telefonista-restringido/"
-                },
-                {
-                    "id": 20112,
-                    "nombre_carrera": "Inglés Operacional",
-                    "categoria": "Curso / Idiomas",
-                    "duracion": "A confirmar",
-                    "modalidad": "A confirmar",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/ingles-operacional/"
-                },
-                {
-                    "id": 20113,
-                    "nombre_carrera": "Diplomatura en Primeros Auxilios y Maniobras de Rescate en Zonas Inhóspitas",
-                    "categoria": "Diplomatura",
-                    "duracion": "A confirmar",
-                    "modalidad": "A confirmar",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/diplomatura-en-primeros-auxilios-y-maniobras-de-rescate-en-zonas-inhospitas/"
-                },
-                {
-                    "id": 20114,
-                    "nombre_carrera": "Diplomado en Comercio Exterior",
-                    "categoria": "Diplomatura",
-                    "duracion": "A confirmar",
-                    "modalidad": "A confirmar",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/diplomado-en-comercio-exterior/"
-                },
-                {
-                    "id": 20115,
-                    "nombre_carrera": "Asistente de Despachante de Aduana",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "A confirmar",
-                    "facultad": "ICA",
-                    "link_oficial": "https://incasrl.com.ar/cursos/asistente-despachantede-aduanas/"
-                }
-            ]
-        },
-        {
-            "id": 202,
-            "nombre": "CENEAS - Centro Nacional de Estudios Aeronáuticos (Filial Mendoza + Virtual)",
-            "nivel": "capacitación profesional",
-            "gestion": "privada",
-            "provincia": "Buenos Aires (con Filial Mendoza y modalidad 100% virtual)",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Filial Mendoza (dirección a confirmar) / Sede Central CABA"
-            },
-            "carreras": [
-                {
-                    "id": 20201,
-                    "nombre_carrera": "Tripulante de Cabina de Pasajeros (TCP) - Curso Regular",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "12 meses",
-                    "modalidad": "Presencial (Sede Central CABA o Filial Mendoza)",
-                    "facultad": "CENEAS",
-                    "link_oficial": "https://ceneas.com.ar/tripulante_cabina_de_pasajeros.html"
-                },
-                {
-                    "id": 20202,
-                    "nombre_carrera": "Tripulante de Cabina de Pasajeros (TCP) - Curso Intensivo Virtual",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "6 meses",
-                    "modalidad": "100% Virtual/Online",
-                    "facultad": "CENEAS",
-                    "link_oficial": "https://ceneas.com.ar/tripulante_cabina_de_pasajeros.html"
-                },
-                {
-                    "id": 20203,
-                    "nombre_carrera": "Despachante de Aeronaves",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "12 meses",
-                    "modalidad": "Semipresencial",
-                    "facultad": "CENEAS",
-                    "link_oficial": "https://ceneas.com.ar/despachante_aeronaves.html"
-                }
-            ]
-        },
-        {
-            "id": 203,
-            "nombre": "Campus Norte UNC",
-            "nivel": "capacitación profesional",
-            "gestion": "pública (extensión universitaria)",
-            "provincia": "Córdoba",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Córdoba (verificar si cursada es a distancia)"
-            },
-            "carreras": [
-                {
-                    "id": 20301,
-                    "nombre_carrera": "Tripulante de Cabina de Pasajeros (TCP)",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "A confirmar (verificar si es a distancia)",
-                    "facultad": "Campus Norte UNC",
-                    "link_oficial": "https://campusnorte.unc.edu.ar/modulos/tripulante-de-cabina-de-pasajeros/"
-                }
-            ]
-        },
-        {
-            "id": 204,
-            "nombre": "DronesVIP - CIAC Tipo III",
-            "nivel": "capacitación profesional",
-            "gestion": "privada",
-            "provincia": "Buenos Aires (teoría online/asincrónica, accesible desde Mendoza)",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "A confirmar"
-            },
-            "carreras": [
-                {
-                    "id": 20401,
-                    "nombre_carrera": "Piloto de Drones (RPA) Multirrotor Categoría Abierta - Certificación ANAC",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "30 días aprox. (asincrónico, a ritmo propio)",
-                    "modalidad": "Online (teoría asincrónica)",
-                    "facultad": "DronesVIP",
-                    "link_oficial": "https://drones-vip.com/courses/categoria-abierta/"
-                }
-            ]
-        },
-        {
-            "id": 205,
-            "nombre": "Oceánica Buceo - Escuela de Buceo en Mendoza",
-            "nivel": "capacitación profesional",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Mendoza (con actividad en San Rafael y Potrerillos)"
-            },
-            "carreras": [
-                {
-                    "id": 20501,
-                    "nombre_carrera": "Cursos de Buceo (niveles inicial a Dive Master e Instructor)",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "Variable según nivel",
-                    "modalidad": "Presencial",
-                    "facultad": "Oceánica Buceo",
-                    "link_oficial": "https://www.oceanicabuceo.com.ar/buceo_mendoza/"
-                }
-            ]
-        },
-        {
-            "id": 206,
-            "nombre": "Aquanautas MDZ",
-            "nivel": "capacitación profesional",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Luján de Cuyo, Mendoza (Dique Potrerillos)"
-            },
-            "carreras": [
-                {
-                    "id": 20601,
-                    "nombre_carrera": "Cursos de Buceo PADI (incluye Rescue Diver)",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "Variable según nivel",
-                    "modalidad": "Presencial",
-                    "facultad": "Aquanautas MDZ",
-                    "link_oficial": "https://www.mdzol.com/sociedad/2024/8/11/buceo-en-mendoza-una-disciplina-distinta-en-un-lugar-muy-particular-450274.html"
-                }
-            ]
-        },
-        {
-            "id": 207,
-            "nombre": "Escuela de Buceo Potrerillos",
-            "nivel": "capacitación profesional",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Dique Potrerillos, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 20701,
-                    "nombre_carrera": "Cursos de Buceo (incluye Nitrox)",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "Variable según nivel",
-                    "modalidad": "Presencial",
-                    "facultad": "Escuela de Buceo Potrerillos",
-                    "link_oficial": "https://www.losandes.com.ar/buceo-en-potrerillos-una-practica-que-gana-cada-vez-mas-adeptos/"
-                }
-            ]
-        },
-        {
-            "id": 208,
-            "nombre": "PDA Argentina (Professional Diving Association) - Mendoza",
-            "nivel": "capacitación profesional",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Mendoza (Los Reyunos, Potrerillos, Caverna de la Niña Encantada, Valle Hermoso)"
-            },
-            "carreras": [
-                {
-                    "id": 20801,
-                    "nombre_carrera": "Cursos de Buceo - Certificación internacional PDA (Alemania)",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "Variable según nivel",
-                    "modalidad": "Presencial",
-                    "facultad": "PDA Argentina",
-                    "link_oficial": "https://pdascuba.com/buceo-en-mendoza/"
-                }
-            ]
-        },
-        {
-            "id": 209,
-            "nombre": "SAK Wine & Travel",
-            "nivel": "capacitación / experiencia enoturística",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Mendoza (recorrido por bodegas)"
-            },
-            "carreras": [
-                {
-                    "id": 20901,
-                    "nombre_carrera": "Curso de Cata de Vinos",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "1 jornada (experiencia intensiva)",
-                    "modalidad": "Presencial",
-                    "facultad": "SAK Wine & Travel",
-                    "link_oficial": "https://sakwinetravel.com/es/viajes-mendoza/curso-degustacion-vinos/"
-                }
-            ]
-        },
-        {
-            "id": 210,
-            "nombre": "Escuela Gourmet Online",
-            "nivel": "capacitación profesional",
-            "gestion": "privada",
-            "provincia": "A confirmar (online, accesible desde Mendoza)",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Online"
-            },
-            "carreras": [
-                {
-                    "id": 21001,
-                    "nombre_carrera": "Sommelier de Vinos / Catador de Vinos",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Online",
-                    "facultad": "Escuela Gourmet Online",
-                    "link_oficial": "https://escuelagourmetonline.com.ar/curso-de-sommelier-de-vinos/"
-                }
-            ]
-        },
-        {
-            "id": 211,
-            "nombre": "IES 9016 \"Dr. Jorge Col\"",
-            "nivel": "terciario",
-            "gestion": "pública (DGE)",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 21101,
-                    "nombre_carrera": "Tecnicatura Superior en Actividades de Montaña",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Híbrida (70% a distancia + 30% talleres/salidas de campo presenciales)",
-                    "facultad": "IES 9016 \"Dr. Jorge Col\"",
-                    "link_oficial": "https://ciudadano.news/sociedad/nueva-carrera-guia-montana-mendoza-n120167"
-                }
-            ]
-        },
-        {
-            "id": 212,
-            "nombre": "EPGAMT - Escuela de Guías de Alta Montaña y Trekking",
-            "nivel": "capacitación profesional",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Ing. Huergo y Güemes, Godoy Cruz, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 21201,
-                    "nombre_carrera": "Guía de Alta Montaña y Trekking",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial (con plataforma a distancia disponible)",
-                    "facultad": "EPGAMT",
-                    "link_oficial": "https://escueladeguias.net.ar/"
-                }
-            ]
-        },
-        {
-            "id": 213,
-            "nombre": "IES 9-005 \"Fidela Amparán\"",
-            "nivel": "terciario / formación profesional",
-            "gestion": "pública (DGE)",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "La Paz, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 21301,
-                    "nombre_carrera": "Formación Profesional en Apicultura",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Presencial",
-                    "facultad": "IES 9-005 \"Fidela Amparán\"",
-                    "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/formacion-profesional-en-agronomia/"
-                }
-            ]
-        },
-        {
-            "id": 214,
-            "nombre": "INTA Mendoza",
-            "nivel": "capacitación (extensión)",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 21401,
-                    "nombre_carrera": "Curso de Apicultura Online (gratuito)",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Online",
-                    "facultad": "INTA Mendoza",
-                    "link_oficial": "https://www.facebook.com/INTA.Mendoza/photos/curso-de-apicultura-online-gratuito"
-                }
-            ]
-        },
-        {
-            "id": 215,
-            "nombre": "Instituto Ateneo",
-            "nivel": "capacitación profesional",
-            "gestion": "privada",
-            "provincia": "A confirmar (online, accesible desde Mendoza)",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Online"
-            },
-            "carreras": [
-                {
-                    "id": 21501,
-                    "nombre_carrera": "Tanatopraxia y Tanatoestética - Certificación Nacional",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Online",
-                    "facultad": "Instituto Ateneo",
-                    "link_oficial": "https://www.ateneoinstituto.com/cursos-completos/tanatopraxia-y-tanatoestetica-certificacion-nacional-completo"
-                }
-            ]
-        },
-        {
-            "id": 216,
-            "nombre": "Instituto CEF - Centro de Especialización Forense",
-            "nivel": "capacitación profesional",
-            "gestion": "privada",
-            "provincia": "A confirmar (online, accesible desde Mendoza)",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Online"
-            },
-            "carreras": [
-                {
-                    "id": 21601,
-                    "nombre_carrera": "Tanatopraxia y su Aplicación Forense",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "4 semanas",
-                    "modalidad": "Online (asincrónico)",
-                    "facultad": "Instituto CEF",
-                    "link_oficial": "https://institutocef.com.ar/pagina-de-cursos/tanatopraxia-y-su-aplicacion-forense/"
-                }
-            ]
-        },
-        {
-            "id": 217,
-            "nombre": "ISE Cursos - Educación a Distancia",
-            "nivel": "capacitación profesional",
-            "gestion": "privada",
-            "provincia": "A confirmar (online, accesible desde Mendoza)",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Online"
-            },
-            "carreras": [
-                {
-                    "id": 21701,
-                    "nombre_carrera": "Embalsamador y Taxidermizado + IA",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "Hasta 365 días para completar (sin fechas fijas)",
-                    "modalidad": "Online",
-                    "facultad": "ISE Cursos",
-                    "link_oficial": "https://www.isecursos.com/detalle-3105"
-                },
-                {
-                    "id": 21702,
-                    "nombre_carrera": "Capacitación en Apicultura",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A ritmo propio",
-                    "modalidad": "Online",
-                    "facultad": "ISE Cursos",
-                    "link_oficial": "https://www.isecursos.com/detalle-272"
-                }
-            ]
-        },
-        {
-            "id": 218,
-            "nombre": "ITU - Instituto Tecnológico Universitario (UNCuyo) / CIBART",
-            "nivel": "capacitación (extensión universitaria)",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "ITU Sede Luján, Alte. Brown 500, Chacras de Coria, Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 21801,
-                    "nombre_carrera": "Elaboración de Cerveza Artesanal",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "Programa intensivo (2 días)",
-                    "modalidad": "Presencial",
-                    "facultad": "ITU-UNCuyo / CIBART",
-                    "link_oficial": "https://itu.uncuyo.edu.ar/cursos/curso/elaboracion-de-cerveza-artesanal"
-                }
-            ]
-        },
-        {
-            "id": 219,
-            "nombre": "Facultad de Ciencias Agrarias - UNCuyo",
-            "nivel": "capacitación (extensión universitaria)",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "extension@fca.uncu.edu.ar",
-                "direccion": "Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 21901,
-                    "nombre_carrera": "Curso de Cerveza Artesanal",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "2 jornadas (10 horas)",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Ciencias Agrarias - UNCuyo",
-                    "link_oficial": "https://fca.uncuyo.edu.ar/cursos/item/curso-de-cerveza-artesanal"
-                }
-            ]
-        },
-        {
-            "id": 220,
-            "nombre": "CESVI Argentina",
-            "nivel": "capacitación profesional",
-            "gestion": "privada",
-            "provincia": "A confirmar (online, accesible desde Mendoza)",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Online"
-            },
-            "carreras": [
-                {
-                    "id": 22001,
-                    "nombre_carrera": "Introducción a la Peritación (Perito de Siniestros Automotor)",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "Online (e-learning + webinars)",
-                    "facultad": "CESVI Argentina",
-                    "link_oficial": "https://home.cesvi.com.ar/Posts/ViewPost/Peritos2"
-                }
-            ]
-        },
-        {
-            "id": 221,
-            "nombre": "AALPS - Asociación Argentina de Liquidadores y Peritos de Seguros",
-            "nivel": "capacitación profesional",
-            "gestion": "privada (asociación)",
-            "provincia": "A confirmar (online, accesible desde Mendoza)",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "aalps@aalps.org.ar",
-                "direccion": "Online"
-            },
-            "carreras": [
-                {
-                    "id": 22101,
-                    "nombre_carrera": "Curso de Gestión de Siniestros (Liquidador de Siniestros y Averías)",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "8 meses",
-                    "modalidad": "Online",
-                    "facultad": "AALPS",
-                    "link_oficial": "https://aalps.org.ar/quienes-curso/"
-                }
-            ]
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 201,
+   "nombre": "ICA - Instituto de Capacitación Aeronáutica (Sede Mendoza)",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "info@incasrl.com.ar",
+    "direccion": "Arístides Villanueva 430, Ciudad de Mendoza (también sede San Rafael, Av. del Libertador 78)"
+   },
+   "carreras": [
+    {
+     "id": 20101,
+     "nombre_carrera": "Tripulante de Cabina de Pasajeros",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "De 2 a 16 meses según curso",
+     "modalidad": "Presencial / A Distancia",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/tripulante-de-cabina-de-pasajeros/"
+    },
+    {
+     "id": 20102,
+     "nombre_carrera": "Piloto Comercial de Avión",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/piloto-comercial-de-avion/"
+    },
+    {
+     "id": 20103,
+     "nombre_carrera": "Piloto Privado de Avión",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/piloto-privado-de-avion/"
+    },
+    {
+     "id": 20104,
+     "nombre_carrera": "Piloto de Drone",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/piloto-de-drone/"
+    },
+    {
+     "id": 20105,
+     "nombre_carrera": "Despachante de Aeronaves",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/despachante-de-aeronaves/"
+    },
+    {
+     "id": 20106,
+     "nombre_carrera": "Operador de Servicios de Rampa",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/operador-de-servicios-de-rampa/"
+    },
+    {
+     "id": 20107,
+     "nombre_carrera": "Supervisor de Servicio de Rampa",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/supervisor-de-servicio-de-rampa/"
+    },
+    {
+     "id": 20108,
+     "nombre_carrera": "Señalero de Aeródromo",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/senalero-de-aerodromo/"
+    },
+    {
+     "id": 20109,
+     "nombre_carrera": "Diplomatura en Gestión Aeroportuaria",
+     "categoria": "Diplomatura",
+     "duracion": "A confirmar",
+     "modalidad": "A confirmar",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/diplomatura-en-gestion-aeroportuaria/"
+    },
+    {
+     "id": 20110,
+     "nombre_carrera": "Check In",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "A confirmar",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/check-in/"
+    },
+    {
+     "id": 20111,
+     "nombre_carrera": "Operador Radiotelefonista Restringido",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "A confirmar",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/radio-operador-telefonista-restringido/"
+    },
+    {
+     "id": 20112,
+     "nombre_carrera": "Inglés Operacional",
+     "categoria": "Curso / Idiomas",
+     "duracion": "A confirmar",
+     "modalidad": "A confirmar",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/ingles-operacional/"
+    },
+    {
+     "id": 20113,
+     "nombre_carrera": "Diplomatura en Primeros Auxilios y Maniobras de Rescate en Zonas Inhóspitas",
+     "categoria": "Diplomatura",
+     "duracion": "A confirmar",
+     "modalidad": "A confirmar",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/diplomatura-en-primeros-auxilios-y-maniobras-de-rescate-en-zonas-inhospitas/"
+    },
+    {
+     "id": 20114,
+     "nombre_carrera": "Diplomado en Comercio Exterior",
+     "categoria": "Diplomatura",
+     "duracion": "A confirmar",
+     "modalidad": "A confirmar",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/diplomado-en-comercio-exterior/"
+    },
+    {
+     "id": 20115,
+     "nombre_carrera": "Asistente de Despachante de Aduana",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "A confirmar",
+     "facultad": "ICA",
+     "link_oficial": "https://incasrl.com.ar/cursos/asistente-despachantede-aduanas/"
+    }
+   ]
+  },
+  {
+   "id": 202,
+   "nombre": "CENEAS - Centro Nacional de Estudios Aeronáuticos (Filial Mendoza + Virtual)",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "Buenos Aires (con Filial Mendoza y modalidad 100% virtual)",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Filial Mendoza (dirección a confirmar) / Sede Central CABA"
+   },
+   "carreras": [
+    {
+     "id": 20201,
+     "nombre_carrera": "Tripulante de Cabina de Pasajeros (TCP) - Curso Regular",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "12 meses",
+     "modalidad": "Presencial (Sede Central CABA o Filial Mendoza)",
+     "facultad": "CENEAS",
+     "link_oficial": "https://ceneas.com.ar/tripulante_cabina_de_pasajeros.html"
+    },
+    {
+     "id": 20202,
+     "nombre_carrera": "Tripulante de Cabina de Pasajeros (TCP) - Curso Intensivo Virtual",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "6 meses",
+     "modalidad": "100% Virtual/Online",
+     "facultad": "CENEAS",
+     "link_oficial": "https://ceneas.com.ar/tripulante_cabina_de_pasajeros.html"
+    },
+    {
+     "id": 20203,
+     "nombre_carrera": "Despachante de Aeronaves",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "12 meses",
+     "modalidad": "Semipresencial",
+     "facultad": "CENEAS",
+     "link_oficial": "https://ceneas.com.ar/despachante_aeronaves.html"
+    }
+   ]
+  },
+  {
+   "id": 203,
+   "nombre": "Campus Norte UNC",
+   "nivel": "capacitación profesional",
+   "gestion": "pública (extensión universitaria)",
+   "provincia": "Córdoba",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Córdoba (verificar si cursada es a distancia)"
+   },
+   "carreras": [
+    {
+     "id": 20301,
+     "nombre_carrera": "Tripulante de Cabina de Pasajeros (TCP)",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "A confirmar (verificar si es a distancia)",
+     "facultad": "Campus Norte UNC",
+     "link_oficial": "https://campusnorte.unc.edu.ar/modulos/tripulante-de-cabina-de-pasajeros/"
+    }
+   ]
+  },
+  {
+   "id": 204,
+   "nombre": "DronesVIP - CIAC Tipo III",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "Buenos Aires (teoría online/asincrónica, accesible desde Mendoza)",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "A confirmar"
+   },
+   "carreras": [
+    {
+     "id": 20401,
+     "nombre_carrera": "Piloto de Drones (RPA) Multirrotor Categoría Abierta - Certificación ANAC",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "30 días aprox. (asincrónico, a ritmo propio)",
+     "modalidad": "Online (teoría asincrónica)",
+     "facultad": "DronesVIP",
+     "link_oficial": "https://drones-vip.com/courses/categoria-abierta/"
+    }
+   ]
+  },
+  {
+   "id": 205,
+   "nombre": "Oceánica Buceo - Escuela de Buceo en Mendoza",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Mendoza (con actividad en San Rafael y Potrerillos)"
+   },
+   "carreras": [
+    {
+     "id": 20501,
+     "nombre_carrera": "Cursos de Buceo (niveles inicial a Dive Master e Instructor)",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "Variable según nivel",
+     "modalidad": "Presencial",
+     "facultad": "Oceánica Buceo",
+     "link_oficial": "https://www.oceanicabuceo.com.ar/buceo_mendoza/"
+    }
+   ]
+  },
+  {
+   "id": 206,
+   "nombre": "Aquanautas MDZ",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Luján de Cuyo, Mendoza (Dique Potrerillos)"
+   },
+   "carreras": [
+    {
+     "id": 20601,
+     "nombre_carrera": "Cursos de Buceo PADI (incluye Rescue Diver)",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "Variable según nivel",
+     "modalidad": "Presencial",
+     "facultad": "Aquanautas MDZ",
+     "link_oficial": "https://www.mdzol.com/sociedad/2024/8/11/buceo-en-mendoza-una-disciplina-distinta-en-un-lugar-muy-particular-450274.html"
+    }
+   ]
+  },
+  {
+   "id": 207,
+   "nombre": "Escuela de Buceo Potrerillos",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Dique Potrerillos, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 20701,
+     "nombre_carrera": "Cursos de Buceo (incluye Nitrox)",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "Variable según nivel",
+     "modalidad": "Presencial",
+     "facultad": "Escuela de Buceo Potrerillos",
+     "link_oficial": "https://www.losandes.com.ar/buceo-en-potrerillos-una-practica-que-gana-cada-vez-mas-adeptos/"
+    }
+   ]
+  },
+  {
+   "id": 208,
+   "nombre": "PDA Argentina (Professional Diving Association) - Mendoza",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Mendoza (Los Reyunos, Potrerillos, Caverna de la Niña Encantada, Valle Hermoso)"
+   },
+   "carreras": [
+    {
+     "id": 20801,
+     "nombre_carrera": "Cursos de Buceo - Certificación internacional PDA (Alemania)",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "Variable según nivel",
+     "modalidad": "Presencial",
+     "facultad": "PDA Argentina",
+     "link_oficial": "https://pdascuba.com/buceo-en-mendoza/"
+    }
+   ]
+  },
+  {
+   "id": 209,
+   "nombre": "SAK Wine & Travel",
+   "nivel": "capacitación / experiencia enoturística",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Mendoza (recorrido por bodegas)"
+   },
+   "carreras": [
+    {
+     "id": 20901,
+     "nombre_carrera": "Curso de Cata de Vinos",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "1 jornada (experiencia intensiva)",
+     "modalidad": "Presencial",
+     "facultad": "SAK Wine & Travel",
+     "link_oficial": "https://sakwinetravel.com/es/viajes-mendoza/curso-degustacion-vinos/"
+    }
+   ]
+  },
+  {
+   "id": 210,
+   "nombre": "Escuela Gourmet Online",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "A confirmar (online, accesible desde Mendoza)",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Online"
+   },
+   "carreras": [
+    {
+     "id": 21001,
+     "nombre_carrera": "Sommelier de Vinos / Catador de Vinos",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Online",
+     "facultad": "Escuela Gourmet Online",
+     "link_oficial": "https://escuelagourmetonline.com.ar/curso-de-sommelier-de-vinos/"
+    }
+   ]
+  },
+  {
+   "id": 211,
+   "nombre": "IES 9016 \"Dr. Jorge Col\"",
+   "nivel": "terciario",
+   "gestion": "pública (DGE)",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 21101,
+     "nombre_carrera": "Tecnicatura Superior en Actividades de Montaña",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Híbrida (70% a distancia + 30% talleres/salidas de campo presenciales)",
+     "facultad": "IES 9016 \"Dr. Jorge Col\"",
+     "link_oficial": "https://ciudadano.news/sociedad/nueva-carrera-guia-montana-mendoza-n120167"
+    }
+   ]
+  },
+  {
+   "id": 212,
+   "nombre": "EPGAMT - Escuela de Guías de Alta Montaña y Trekking",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Ing. Huergo y Güemes, Godoy Cruz, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 21201,
+     "nombre_carrera": "Guía de Alta Montaña y Trekking",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial (con plataforma a distancia disponible)",
+     "facultad": "EPGAMT",
+     "link_oficial": "https://escueladeguias.net.ar/"
+    }
+   ]
+  },
+  {
+   "id": 213,
+   "nombre": "IES 9-005 \"Fidela Amparán\"",
+   "nivel": "terciario / formación profesional",
+   "gestion": "pública (DGE)",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "La Paz, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 21301,
+     "nombre_carrera": "Formación Profesional en Apicultura",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "IES 9-005 \"Fidela Amparán\"",
+     "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/formacion-profesional-en-agronomia/"
+    }
+   ]
+  },
+  {
+   "id": 214,
+   "nombre": "INTA Mendoza",
+   "nivel": "capacitación (extensión)",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 21401,
+     "nombre_carrera": "Curso de Apicultura Online (gratuito)",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Online",
+     "facultad": "INTA Mendoza",
+     "link_oficial": "https://www.facebook.com/INTA.Mendoza/photos/curso-de-apicultura-online-gratuito"
+    }
+   ]
+  },
+  {
+   "id": 215,
+   "nombre": "Instituto Ateneo",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "A confirmar (online, accesible desde Mendoza)",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Online"
+   },
+   "carreras": [
+    {
+     "id": 21501,
+     "nombre_carrera": "Tanatopraxia y Tanatoestética - Certificación Nacional",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Online",
+     "facultad": "Instituto Ateneo",
+     "link_oficial": "https://www.ateneoinstituto.com/cursos-completos/tanatopraxia-y-tanatoestetica-certificacion-nacional-completo"
+    }
+   ]
+  },
+  {
+   "id": 216,
+   "nombre": "Instituto CEF - Centro de Especialización Forense",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "A confirmar (online, accesible desde Mendoza)",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Online"
+   },
+   "carreras": [
+    {
+     "id": 21601,
+     "nombre_carrera": "Tanatopraxia y su Aplicación Forense",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "4 semanas",
+     "modalidad": "Online (asincrónico)",
+     "facultad": "Instituto CEF",
+     "link_oficial": "https://institutocef.com.ar/pagina-de-cursos/tanatopraxia-y-su-aplicacion-forense/"
+    }
+   ]
+  },
+  {
+   "id": 217,
+   "nombre": "ISE Cursos - Educación a Distancia",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "A confirmar (online, accesible desde Mendoza)",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Online"
+   },
+   "carreras": [
+    {
+     "id": 21701,
+     "nombre_carrera": "Embalsamador y Taxidermizado + IA",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "Hasta 365 días para completar (sin fechas fijas)",
+     "modalidad": "Online",
+     "facultad": "ISE Cursos",
+     "link_oficial": "https://www.isecursos.com/detalle-3105"
+    },
+    {
+     "id": 21702,
+     "nombre_carrera": "Capacitación en Apicultura",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A ritmo propio",
+     "modalidad": "Online",
+     "facultad": "ISE Cursos",
+     "link_oficial": "https://www.isecursos.com/detalle-272"
+    }
+   ]
+  },
+  {
+   "id": 218,
+   "nombre": "ITU - Instituto Tecnológico Universitario (UNCuyo) / CIBART",
+   "nivel": "capacitación (extensión universitaria)",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "ITU Sede Luján, Alte. Brown 500, Chacras de Coria, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 21801,
+     "nombre_carrera": "Elaboración de Cerveza Artesanal",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "Programa intensivo (2 días)",
+     "modalidad": "Presencial",
+     "facultad": "ITU-UNCuyo / CIBART",
+     "link_oficial": "https://itu.uncuyo.edu.ar/cursos/curso/elaboracion-de-cerveza-artesanal"
+    }
+   ]
+  },
+  {
+   "id": 219,
+   "nombre": "Facultad de Ciencias Agrarias - Extensión (UNCuyo)",
+   "nivel": "capacitación (extensión universitaria)",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "extension@fca.uncu.edu.ar",
+    "direccion": "Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 21901,
+     "nombre_carrera": "Curso de Cerveza Artesanal",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "2 jornadas (10 horas)",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Ciencias Agrarias - UNCuyo",
+     "link_oficial": "https://fca.uncuyo.edu.ar/cursos/item/curso-de-cerveza-artesanal"
+    }
+   ]
+  },
+  {
+   "id": 220,
+   "nombre": "CESVI Argentina",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "A confirmar (online, accesible desde Mendoza)",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Online"
+   },
+   "carreras": [
+    {
+     "id": 22001,
+     "nombre_carrera": "Introducción a la Peritación (Perito de Siniestros Automotor)",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Online (e-learning + webinars)",
+     "facultad": "CESVI Argentina",
+     "link_oficial": "https://home.cesvi.com.ar/Posts/ViewPost/Peritos2"
+    }
+   ]
+  },
+  {
+   "id": 221,
+   "nombre": "AALPS - Asociación Argentina de Liquidadores y Peritos de Seguros",
+   "nivel": "capacitación profesional",
+   "gestion": "privada (asociación)",
+   "provincia": "A confirmar (online, accesible desde Mendoza)",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "aalps@aalps.org.ar",
+    "direccion": "Online"
+   },
+   "carreras": [
+    {
+     "id": 22101,
+     "nombre_carrera": "Curso de Gestión de Siniestros (Liquidador de Siniestros y Averías)",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "8 meses",
+     "modalidad": "Online",
+     "facultad": "AALPS",
+     "link_oficial": "https://aalps.org.ar/quienes-curso/"
+    }
+   ]
+  }
+ ]
 }

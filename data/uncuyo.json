@@ -400,51 +400,6 @@
      "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-seguridad-publica_4710"
     },
     {
-     "id": 44,
-     "nombre_carrera": "Bromatología",
-     "categoria": "Grado / Carrera",
-     "duracion": "La carrera se cursa en tres años. En el primer año se cursan las materias básicas y de introducción a la ciencia de los alimentos. En segundo y tercer año se cursan materias técnicas.",
-     "modalidad": "Presencial",
-     "facultad": "Cs. Agrarias",
-     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/bromatologia"
-    },
-    {
-     "id": 45,
-     "nombre_carrera": "Ingeniería Agronómica",
-     "categoria": "Grado / Carrera",
-     "duracion": "La carrera se cursa en cinco años y cinco meses.",
-     "modalidad": "Presencial",
-     "facultad": "Cs. Agrarias",
-     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-agronomica_2546"
-    },
-    {
-     "id": 46,
-     "nombre_carrera": "Ingeniería Recursos Naturales Renovables",
-     "categoria": "Grado / Carrera",
-     "duracion": "La carrera se cursa en cinco años.",
-     "modalidad": "Presencial",
-     "facultad": "Cs. Agrarias",
-     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-en-recursos-naturales-renovables"
-    },
-    {
-     "id": 47,
-     "nombre_carrera": "Licenciatura en Bromatología",
-     "categoria": "Grado / Carrera",
-     "duracion": "La carrera tiene una duración de cuatro años y nueve meses.",
-     "modalidad": "Presencial",
-     "facultad": "Cs. Agrarias",
-     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-bromatologia_1681"
-    },
-    {
-     "id": 48,
-     "nombre_carrera": "Tecnicatura en Enología y Viticultura",
-     "categoria": "Grado / Carrera",
-     "duracion": "La carrera tiene una duración de 2 años y 8 meses. Para recibirte tenés que aprobar las materias obligatorias, dos espacios seminarizados, las pasantías y el trabajo final.",
-     "modalidad": "Presencial",
-     "facultad": "Cs. Agrarias",
-     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-enologia-y-viticultura"
-    },
-    {
      "id": 49,
      "nombre_carrera": "Ciclo de Licenciatura en Enología",
      "categoria": "Grado / Carrera",
@@ -1058,6 +1013,66 @@
     }
    ],
    "departamento": "Capital"
+  },
+  {
+   "id": 402,
+   "nombre": "Facultad de Ciencias Agrarias (UNCuyo)",
+   "nivel": "universidad",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "extension@fca.uncu.edu.ar",
+    "direccion": "Alte. Brown 500, Chacras de Coria, Luján de Cuyo, Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 44,
+     "nombre_carrera": "Bromatología",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en tres años. En el primer año se cursan las materias básicas y de introducción a la ciencia de los alimentos. En segundo y tercer año se cursan materias técnicas.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Agrarias",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/bromatologia"
+    },
+    {
+     "id": 45,
+     "nombre_carrera": "Ingeniería Agronómica",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años y cinco meses.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Agrarias",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-agronomica_2546"
+    },
+    {
+     "id": 46,
+     "nombre_carrera": "Ingeniería Recursos Naturales Renovables",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera se cursa en cinco años.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Agrarias",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-en-recursos-naturales-renovables"
+    },
+    {
+     "id": 47,
+     "nombre_carrera": "Licenciatura en Bromatología",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de cuatro años y nueve meses.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Agrarias",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-bromatologia_1681"
+    },
+    {
+     "id": 48,
+     "nombre_carrera": "Tecnicatura en Enología y Viticultura",
+     "categoria": "Grado / Carrera",
+     "duracion": "La carrera tiene una duración de 2 años y 8 meses. Para recibirte tenés que aprobar las materias obligatorias, dos espacios seminarizados, las pasantías y el trabajo final.",
+     "modalidad": "Presencial",
+     "facultad": "Cs. Agrarias",
+     "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-enologia-y-viticultura"
+    }
+   ],
+   "departamento": "Luján de Cuyo"
   }
  ]
 }
