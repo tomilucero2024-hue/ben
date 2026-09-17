@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ciencias sociales","item":"https://buscadoreducativo.com.ar/area/ciencias-sociales/"},{"@type":"ListItem","position":4,"name":"Higiene y Seguridad","item":"https://buscadoreducativo.com.ar/carrera/higiene-y-seguridad/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Higiene y Seguridad","description":"Dónde estudiar Higiene y Seguridad: tecnicatura del área Ciencias sociales, dictada por 1 institución (1 pública). Dura 3 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/higiene-y-seguridad/","provider":{"@type":"EducationalOrganization","name":"UTN Facultad Regional Mendoza","url":"https://buscadoreducativo.com.ar/institucion/utn-facultad-regional-mendoza/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Higiene y Seguridad en Argentina?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Higiene y Seguridad en Argentina en la siguiente institución: UTN Facultad Regional Mendoza. En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Higiene y Seguridad?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 3 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Higiene y Seguridad?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Higiene y Seguridad?","acceptedAnswer":{"@type":"Answer","text":"Higiene y Seguridad es una tecnicatura perteneciente al área de Ciencias sociales. Entre sus aptitudes más afines se destacan: pensamiento analítico, interacción social, trabajo práctico y liderazgo y gestión."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ciencias-sociales/">Ciencias sociales</a> <span aria-hidden="true">›</span> <span aria-current="page">Higiene y Seguridad</span></nav>
-    <h1>Higiene y Seguridad</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ciencias-sociales/">Ciencias sociales</a> <span aria-hidden="true">›</span> <span aria-current="page">Higiene y Seguridad</span></nav>
+        <h1>Higiene y Seguridad</h1>
     <p class="entrada">Dónde estudiar Higiene y Seguridad: tecnicatura del área Ciencias sociales, dictada por 1 institución (1 pública). Dura 3 años. Modalidades disponibles: presencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Ciencias sociales</dd>
         <dt>Tipo de formación</dt><dd>Tecnicatura</dd>
@@ -82,12 +93,31 @@
     </dl>
 
     <a class="cta" href="/?q=Higiene+y+Seguridad&amp;area=Ciencias+sociales&amp;formacion=tecnicaturas">Ver Higiene y Seguridad en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Higiene y Seguridad</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta publica">Pública</span> <a href="/institucion/utn-facultad-regional-mendoza/">UTN Facultad Regional Mendoza</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Análisis Matemático (1° Semestre)</li><li>Química (1° Semestre)</li><li>Fisica (1° Semestre)</li><li>Conocimiento de Materiales (1° Semestre)</li><li>Trabajo y Metodologia de la Investigación (2° Semestre)</li><li>Medicina Laboral Avanzada (2° Semestre)</li><li>Sociología y Psicología Laboral (2° Semestre)</li><li>Higiene Laboral Avanzanda (2° Semestre)</li><li>Taller de Integración I (Anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Toxicología Laboral (1° Semestre)</li><li>Ergonomía (1° Semestre)</li><li>Legislación Laboral (1° Semestre)</li><li>Seguridad Industrial Avanzada (1° Semestre)</li><li>Diseño y Práctica de Capacitación (2° Semestre)</li><li>Incendio y Explosiones (2° Semestre)</li><li>Riesgología (2° Semestre)</li><li>Proyecto Final (2° Semestre)</li><li>Taller de Integración II (1° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Seguridad IV (2° Semestre)</li><li>Selección y Capacitación del Personal (1° Semestre)</li><li>Didáctica y Metodología de la Investigación (1° Semestre)</li><li>Derecho del Trabajo (1° Semestre)</li><li>Ética y Deontología Profesional (2° Semestre)</li><li>Trabajo Final (2° Semestre)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-tec-univ-higiene-y-seguridad/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-superior-higiene-y-seguridad/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -156,6 +186,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Ciencias sociales</h2>
     <ul class="enlaces">
         <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(8)</span></li>
@@ -172,7 +203,9 @@
         <li><a href="/carrera/licenciatura-en-relaciones-publicas-e-institucionales/">Licenciatura en Relaciones Públicas e Institucionales</a> <span class="cuantas">(2)</span></li>
     </ul>
     <p><a href="/area/ciencias-sociales/">Ver las 122 carreras del área Ciencias sociales →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

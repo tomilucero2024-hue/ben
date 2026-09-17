@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ingeniería Mecánica: dónde estudiarla en Mendoza | BEN</title>
-<meta name="description" content="Dónde estudiar Ingeniería Mecánica en Mendoza: carrera de grado del área Ingeniería, dictada por 1 institución (1 pública). Dura 5 años.">
+<title>Ingeniería Mecánica: dónde estudiarla | BEN</title>
+<meta name="description" content="Dónde estudiar Ingeniería Mecánica: carrera de grado del área Ingeniería, dictada por 1 institución (2 privadas). Dura 5 años.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/carrera/ingenieria-mecanica/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
-<meta property="og:title" content="Ingeniería Mecánica: dónde estudiarla en Mendoza | BEN">
-<meta property="og:description" content="Dónde estudiar Ingeniería Mecánica en Mendoza: carrera de grado del área Ingeniería, dictada por 1 institución (1 pública). Dura 5 años.">
+<meta property="og:title" content="Ingeniería Mecánica: dónde estudiarla | BEN">
+<meta property="og:description" content="Dónde estudiar Ingeniería Mecánica: carrera de grado del área Ingeniería, dictada por 1 institución (2 privadas). Dura 5 años.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/carrera/ingenieria-mecanica/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ingeniería Mecánica: dónde estudiarla en Mendoza | BEN">
-<meta name="twitter:description" content="Dónde estudiar Ingeniería Mecánica en Mendoza: carrera de grado del área Ingeniería, dictada por 1 institución (1 pública). Dura 5 años.">
+<meta name="twitter:title" content="Ingeniería Mecánica: dónde estudiarla | BEN">
+<meta name="twitter:description" content="Dónde estudiar Ingeniería Mecánica: carrera de grado del área Ingeniería, dictada por 1 institución (2 privadas). Dura 5 años.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,10 +56,10 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ingeniería","item":"https://buscadoreducativo.com.ar/area/ingenieria/"},{"@type":"ListItem","position":4,"name":"Ingeniería Mecánica","item":"https://buscadoreducativo.com.ar/carrera/ingenieria-mecanica/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Ingeniería Mecánica","description":"Dónde estudiar Ingeniería Mecánica en Mendoza: carrera de grado del área Ingeniería, dictada por 1 institución (1 pública). Dura 5 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/ingenieria-mecanica/","provider":{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Ingeniería Mecánica en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Ingeniería Mecánica en Mendoza en la siguiente institución: Universidad Nacional de Cuyo (UNCuyo). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Ingeniería Mecánica?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 5 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Ingeniería Mecánica?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Ingeniería Mecánica?","acceptedAnswer":{"@type":"Answer","text":"Ingeniería Mecánica es una carrera de grado perteneciente al área de Ingeniería. Entre sus aptitudes más afines se destacan: pensamiento analítico, afinidad tecnológica, trabajo práctico y base teórica y académica."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Ingeniería Mecánica","description":"Dónde estudiar Ingeniería Mecánica: carrera de grado del área Ingeniería, dictada por 1 institución (2 privadas). Dura 5 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/ingenieria-mecanica/","provider":[{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"},{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Ingeniería Mecánica en Argentina?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Ingeniería Mecánica en Argentina en la siguiente institución: Universidad Nacional de Cuyo (UNCuyo). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Ingeniería Mecánica?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 5 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Ingeniería Mecánica?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Ingeniería Mecánica?","acceptedAnswer":{"@type":"Answer","text":"Ingeniería Mecánica es una carrera de grado perteneciente al área de Ingeniería. Entre sus aptitudes más afines se destacan: pensamiento analítico, afinidad tecnológica, trabajo práctico y base teórica y académica."}}]}</script>
 </head>
 <body>
 <header class="cabecera">
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ingenieria/">Ingeniería</a> <span aria-hidden="true">›</span> <span aria-current="page">Ingeniería Mecánica</span></nav>
-    <h1>Ingeniería Mecánica</h1>
-    <p class="entrada">Dónde estudiar Ingeniería Mecánica en Mendoza: carrera de grado del área Ingeniería, dictada por 1 institución (1 pública). Dura 5 años. Modalidades disponibles: presencial.</p>
-
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ingenieria/">Ingeniería</a> <span aria-hidden="true">›</span> <span aria-current="page">Ingeniería Mecánica</span></nav>
+        <h1>Ingeniería Mecánica</h1>
+    <p class="entrada">Dónde estudiar Ingeniería Mecánica: carrera de grado del área Ingeniería, dictada por 1 institución (2 privadas). Dura 5 años. Modalidades disponibles: presencial.</p>
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Ingeniería</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
@@ -82,13 +93,83 @@
     </dl>
 
     <a class="cta" href="/?q=Ingenier%C3%ADa+Mec%C3%A1nica&amp;area=Ingenier%C3%ADa&amp;formacion=grado">Ver Ingeniería Mecánica en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Ingeniería Mecánica</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
-            <h3><span class="etiqueta publica">pública</span> <a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <h3><a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Química General</li><li>Matemática I</li><li>Introducción a la ingeniería</li><li>Prácticas de Actividad Física Saludable I</li><li>Estática</li><li>Matemática II</li><li>Informática y Programación</li><li>Sistemas de Representación</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Matemática III</li><li>Relaciones Laborales y Gestión del Capital Humano</li><li>Física I</li><li>Introducción a la Probabilidad y la Estadística</li><li>Física II</li><li>Mecánica y Vibraciones</li><li>Matemática IV</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Termodinámica</li><li>Introducción a la Mecánica del Contínuo</li><li>Laboratorio de Mecánica I</li><li>Métodos Numéricos</li><li>Introducción a la Electrónica</li><li>Inglés II</li><li>Resistencia de Materiales</li><li>Laboratorio de Mecánica II</li><li>Desarrollo Emprendedor</li><li>Ciencias de los materiales</li><li>Tecnología del Calor</li><li>Inglés III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Electrotecnia</li><li>Mecánica de los Fluidos</li><li>Laboratorio de Tecnología de los Materiales</li><li>Inglés IV</li><li>Sistemas Electromecánicos y Máquina Eléctricas</li><li>Mecanismos y Elementos de Máquinas</li><li>Máquinas Térmicas e Hidráulicas</li><li>Economía</li><li>Gestión y Planificación de Empresas</li><li>Tecnología y Mantenimiento de los Servicios</li><li>Prácticas de Actividad Física Saludable II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Electrónica Industrial y Sistemas Embebidos</li><li>Diseño Mecánico</li><li>Dinámica de Sistemas de Control I</li><li>Transferencia de Energía y Masa</li><li>Métodos Estadísticos</li><li>Gestión Ambiental</li><li>Dinámica de Sistemas de Control II</li><li>Laboratorio de Sistemas Mecánicos y Termohidráulicos</li><li>Física Aplicada a los Materiales</li><li>Espacios Curriculares Optativos</li><li>Práctica Profesional Supervisada</li><li>Proyecto Integrador</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-mecanica" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-mecanica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta" id="oferta-2">
+            <h3><a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 8 semestres</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er semestre</h4>
+            <ul><li>Mecánica Racional</li><li>Matemática I</li><li>Laboratorio I</li><li>Electrónica</li><li>Programación</li><li>Introducción a la ingeniería mecánica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do semestre</h4>
+            <ul><li>Termodinámica</li><li>Métodos Numéricos</li><li>Mecánica del Continuo</li><li>Física Moderna</li><li>Laboratorio de procesamiento de señales</li><li>Matemática II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er semestre</h4>
+            <ul><li>Mecánica de Fluidos</li><li>Materiales I</li><li>Mecánica del Sólido</li><li>Laboratorio de sólidos y fluidos</li><li>Electrónica: sensores y actuadores</li><li>Proyecto en ingeniería I</li><li>Diseño asistido por computadora</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to semestre</h4>
+            <ul><li>Transferencia de Energía y Masa</li><li>Mecanismos y elementos de máquinas</li><li>Materiales II</li><li>Laboratorio de transferencia de energía y de materiales</li><li>Electrónica: autómatas programables</li><li>Proyecto en ingeniería II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to semestre</h4>
+            <ul><li>Diseño Mecánico</li><li>Máquinas Térmicas e Hidráulicas</li><li>Métodos de fabricación y metrología</li><li>Electrotecnia y sistemas electromecánicos y máquinas eléctricas</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>6to semestre</h4>
+            <ul><li>Gestión Ambiental y calidad</li><li>Diseño mecánico II</li><li>Dinámica de sistemas y control</li><li>Dinámica de estructuras</li><li>Laboratorio de dinámica de estructuras y control</li><li>Métodos numéricos avanzados. Opción 1: FEM; Opción 2: CFD</li><li>Laboratorio máquinas térmicas e hidráulicas y de métodos de fabricación</li><li>Gestión de proyectos</li><li>Mantenimiento</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>7mo semestre</h4>
+            <ul><li>Proyecto integrador I</li><li>Instalaciones industriales y nucleares</li><li>Economía y organización industrial</li><li>Electiva I</li><li>Electiva II</li><li>Electiva III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>8vo semestre</h4>
+            <ul><li>Proyecto integrador II</li><li>Ética y legislación</li><li>Higiene y seguridad</li><li>Electiva IV</li><li>Electiva V</li><li>Inglés se cursa a lo largo de la carrera hasta aprobar el nivel 6.</li><li>Actividad física saludable</li><li>Prácticas Socio-educativas</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-mecanica_9636" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-mecanica_9636" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 
@@ -131,9 +212,9 @@
     <h2>Preguntas frecuentes sobre Ingeniería Mecánica</h2>
     <div class="faq-lista">
         <details class="faq-item">
-            <summary class="faq-pregunta"><strong>¿Dónde estudiar Ingeniería Mecánica en Mendoza?</strong></summary>
+            <summary class="faq-pregunta"><strong>¿Dónde estudiar Ingeniería Mecánica en Argentina?</strong></summary>
             <div class="faq-respuesta">
-                <p>Podés estudiar Ingeniería Mecánica en Mendoza en la siguiente institución: Universidad Nacional de Cuyo (UNCuyo). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una.</p>
+                <p>Podés estudiar Ingeniería Mecánica en Argentina en la siguiente institución: Universidad Nacional de Cuyo (UNCuyo). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una.</p>
             </div>
         </details>
         <details class="faq-item">
@@ -156,6 +237,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Ingeniería</h2>
     <ul class="enlaces">
         <li><a href="/carrera/ingenieria-civil/">INGENIERÍA CIVIL</a> <span class="cuantas">(2)</span></li>
@@ -172,7 +254,9 @@
         <li><a href="/carrera/ingenieria-en-computacion/">Ingeniería en Computación</a> <span class="cuantas">(1)</span></li>
     </ul>
     <p><a href="/area/ingenieria/">Ver las 22 carreras del área Ingeniería →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ciencias sociales","item":"https://buscadoreducativo.com.ar/area/ciencias-sociales/"},{"@type":"ListItem","position":4,"name":"Tecnicatura en Gestión de Empresas Familiares","item":"https://buscadoreducativo.com.ar/carrera/tecnicatura-en-gestion-de-empresas-familiares/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Tecnicatura en Gestión de Empresas Familiares","description":"Dónde estudiar Tecnicatura en Gestión de Empresas Familiares en Mendoza: tecnicatura del área Ciencias sociales, dictada por 1 institución (1 privada). Dura 2.5 años. Modalidades disponibles: a distancia.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-en-gestion-de-empresas-familiares/","provider":{"@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Tecnicatura en Gestión de Empresas Familiares en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Tecnicatura en Gestión de Empresas Familiares en Mendoza en la siguiente institución: Universidad Siglo 21 (S21). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Tecnicatura en Gestión de Empresas Familiares?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 2.5 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Tecnicatura en Gestión de Empresas Familiares?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad a distancia, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Tecnicatura en Gestión de Empresas Familiares?","acceptedAnswer":{"@type":"Answer","text":"Tecnicatura en Gestión de Empresas Familiares es una tecnicatura perteneciente al área de Ciencias sociales. Entre sus aptitudes más afines se destacan: pensamiento analítico, interacción social, liderazgo y gestión y base teórica y académica."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ciencias-sociales/">Ciencias sociales</a> <span aria-hidden="true">›</span> <span aria-current="page">Tecnicatura en Gestión de Empresas Familiares</span></nav>
-    <h1>Tecnicatura en Gestión de Empresas Familiares</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ciencias-sociales/">Ciencias sociales</a> <span aria-hidden="true">›</span> <span aria-current="page">Tecnicatura en Gestión de Empresas Familiares</span></nav>
+        <h1>Tecnicatura en Gestión de Empresas Familiares</h1>
     <p class="entrada">Dónde estudiar Tecnicatura en Gestión de Empresas Familiares en Mendoza: tecnicatura del área Ciencias sociales, dictada por 1 institución (1 privada). Dura 2.5 años. Modalidades disponibles: a distancia.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Ciencias sociales</dd>
         <dt>Tipo de formación</dt><dd>Tecnicatura</dd>
@@ -82,12 +93,14 @@
     </dl>
 
     <a class="cta" href="/?q=Tecnicatura+en+Gesti%C3%B3n+de+Empresas+Familiares&amp;area=Ciencias+sociales&amp;formacion=tecnicaturas">Ver Tecnicatura en Gestión de Empresas Familiares en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Tecnicatura en Gestión de Empresas Familiares</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-siglo-21-s21/">Universidad Siglo 21 (S21)</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-empresas-familiares?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -156,6 +169,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Ciencias sociales</h2>
     <ul class="enlaces">
         <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(8)</span></li>
@@ -172,7 +186,9 @@
         <li><a href="/carrera/licenciatura-en-relaciones-publicas-e-institucionales/">Licenciatura en Relaciones Públicas e Institucionales</a> <span class="cuantas">(2)</span></li>
     </ul>
     <p><a href="/area/ciencias-sociales/">Ver las 122 carreras del área Ciencias sociales →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

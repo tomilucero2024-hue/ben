@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Idiomas","item":"https://buscadoreducativo.com.ar/area/idiomas/"},{"@type":"ListItem","position":4,"name":"Curso de Chino","item":"https://buscadoreducativo.com.ar/carrera/curso-de-chino/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Curso de Chino","description":"Dónde estudiar Curso de Chino en Mendoza: curso o formación profesional del área Idiomas, dictada por 1 institución (1 privada). Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/curso-de-chino/","provider":{"@type":"EducationalOrganization","name":"Intercultural Cursos de Idiomas","url":"https://buscadoreducativo.com.ar/institucion/intercultural-cursos-de-idiomas/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Curso de Chino en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Curso de Chino en Mendoza en la siguiente institución: Intercultural Cursos de Idiomas. En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Curso de Chino?","acceptedAnswer":{"@type":"Answer","text":"La duración estimada depende de la institución y modalidad elegida (típicamente entre 4 y 5 años para carreras de grado, o de 2 a 3 años para tecnicaturas)."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Curso de Chino?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Curso de Chino?","acceptedAnswer":{"@type":"Answer","text":"Curso de Chino es una curso o formación profesional perteneciente al área de Idiomas. Entre sus aptitudes más afines se destacan: interacción social, movilidad geográfica, trabajo práctico y creatividad."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/idiomas/">Idiomas</a> <span aria-hidden="true">›</span> <span aria-current="page">Curso de Chino</span></nav>
-    <h1>Curso de Chino</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/idiomas/">Idiomas</a> <span aria-hidden="true">›</span> <span aria-current="page">Curso de Chino</span></nav>
+        <h1>Curso de Chino</h1>
     <p class="entrada">Dónde estudiar Curso de Chino en Mendoza: curso o formación profesional del área Idiomas, dictada por 1 institución (1 privada). Modalidades disponibles: presencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Idiomas</dd>
         <dt>Tipo de formación</dt><dd>Curso o formación profesional</dd>
@@ -81,12 +92,14 @@
     </dl>
 
     <a class="cta" href="/?q=Curso+de+Chino&amp;area=Idiomas&amp;formacion=cursos">Ver Curso de Chino en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Curso de Chino</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/intercultural-cursos-de-idiomas/">Intercultural Cursos de Idiomas</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://intercultural.com.ar/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -155,6 +168,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Idiomas</h2>
     <ul class="enlaces">
         <li><a href="/carrera/traductorado-publico-de-ingles/">Traductorado Público de Inglés</a> <span class="cuantas">(2)</span></li>
@@ -171,7 +185,9 @@
         <li><a href="/carrera/curso-de-portugues/">Curso de Portugués</a> <span class="cuantas">(1)</span></li>
     </ul>
     <p><a href="/area/idiomas/">Ver las 25 carreras del área Idiomas →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arquitectura: dónde estudiarla en Mendoza | BEN</title>
-<meta name="description" content="Dónde estudiar Arquitectura en Mendoza: carrera de grado del área Diseño, dictada por 2 instituciones (1 pública y 1 privada). Dura de 5 a 5.">
+<meta name="description" content="Dónde estudiar Arquitectura en Mendoza: carrera de grado del área Diseño, dictada por 2 instituciones (2 privadas). Dura de 5 a 5.5 años según la institución.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/carrera/arquitectura/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Arquitectura: dónde estudiarla en Mendoza | BEN">
-<meta property="og:description" content="Dónde estudiar Arquitectura en Mendoza: carrera de grado del área Diseño, dictada por 2 instituciones (1 pública y 1 privada). Dura de 5 a 5.">
+<meta property="og:description" content="Dónde estudiar Arquitectura en Mendoza: carrera de grado del área Diseño, dictada por 2 instituciones (2 privadas). Dura de 5 a 5.5 años según la institución.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/carrera/arquitectura/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Arquitectura: dónde estudiarla en Mendoza | BEN">
-<meta name="twitter:description" content="Dónde estudiar Arquitectura en Mendoza: carrera de grado del área Diseño, dictada por 2 instituciones (1 pública y 1 privada). Dura de 5 a 5.">
+<meta name="twitter:description" content="Dónde estudiar Arquitectura en Mendoza: carrera de grado del área Diseño, dictada por 2 instituciones (2 privadas). Dura de 5 a 5.5 años según la institución.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,9 +56,9 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Diseño","item":"https://buscadoreducativo.com.ar/area/diseno/"},{"@type":"ListItem","position":4,"name":"Arquitectura","item":"https://buscadoreducativo.com.ar/carrera/arquitectura/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Arquitectura","description":"Dónde estudiar Arquitectura en Mendoza: carrera de grado del área Diseño, dictada por 2 instituciones (1 pública y 1 privada). Dura de 5 a 5.5 años según la institución. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/arquitectura/","provider":[{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"},{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Arquitectura","description":"Dónde estudiar Arquitectura en Mendoza: carrera de grado del área Diseño, dictada por 2 instituciones (2 privadas). Dura de 5 a 5.5 años según la institución. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/arquitectura/","provider":[{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"},{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Arquitectura en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Arquitectura en Mendoza en 2 instituciones: Universidad Nacional de Cuyo (UNCuyo) y Universidad de Congreso (UC). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Arquitectura?","acceptedAnswer":{"@type":"Answer","text":"La duración de la carrera varía de 5 a 5.5 años según el plan de estudio de la institución elegida."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Arquitectura?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Arquitectura?","acceptedAnswer":{"@type":"Answer","text":"Arquitectura es una carrera de grado perteneciente al área de Diseño. Entre sus aptitudes más afines se destacan: trabajo práctico, creatividad, pensamiento analítico y afinidad tecnológica."}}]}</script>
 </head>
 <body>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/diseno/">Diseño</a> <span aria-hidden="true">›</span> <span aria-current="page">Arquitectura</span></nav>
-    <h1>Arquitectura</h1>
-    <p class="entrada">Dónde estudiar Arquitectura en Mendoza: carrera de grado del área Diseño, dictada por 2 instituciones (1 pública y 1 privada). Dura de 5 a 5.5 años según la institución. Modalidades disponibles: presencial.</p>
-
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/diseno/">Diseño</a> <span aria-hidden="true">›</span> <span aria-current="page">Arquitectura</span></nav>
+        <h1>Arquitectura</h1>
+    <p class="entrada">Dónde estudiar Arquitectura en Mendoza: carrera de grado del área Diseño, dictada por 2 instituciones (2 privadas). Dura de 5 a 5.5 años según la institución. Modalidades disponibles: presencial.</p>
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Diseño</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
@@ -82,17 +93,49 @@
     </dl>
 
     <a class="cta" href="/?q=Arquitectura&amp;area=Dise%C3%B1o&amp;formacion=grado">Ver Arquitectura en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Arquitectura</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
-            <h3><span class="etiqueta publica">pública</span> <a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años y medio</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <h3><a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años y medio</li><li>Modalidad: Presencial</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 6 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Arquitectura I</li><li>Construcciones I</li><li>Morfología I</li><li>Matemática</li><li>Teoría I - Arquitectura y Ambiente</li><li>Física Aplicada</li><li>Historia de la Arquitectura I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Arquitectura II – Taller de Integración Proyectual</li><li>Diseño Estructural I</li><li>Historia de la Arquitectura II</li><li>Morfología II - Sistema de Comunicación Digital I</li><li>Construcciones II</li><li>Teoría II - Arquitectura y Ambiente</li><li>Diseño de Interiores</li><li>Instalaciones I - Acondicionamiento Natural</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Arquitectura III – Taller de Integración Proyectual</li><li>Diseño del Paisaje</li><li>Diseño Estructural II</li><li>Historia de la Arquitectura III</li><li>Morfología III - Sistema de Comunicación Digital II</li><li>Análisis Antropológico del Hábitat</li><li>Ingles Técnico</li><li>Topografía</li><li>Instalaciones II - Acondicionamiento Artificial</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Arquitectura IV – Taller de Integración Proyectual</li><li>Diseño Urbano Sustentable I</li><li>Instalaciones III</li><li>Estadística</li><li>Inglés Coloquial</li><li>Organización de Proyectos y Obras</li><li>Intervención en el Patrimonio</li><li>Modelización Digital</li><li>Vivienda de Interés Social</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Arquitectura V – Taller de Integración Proyectual</li><li>Diseño Urbano Sustentable II</li><li>Seminario de Investigación Aplicada al Trabajo Final</li><li>Administración Gerencial y Económica</li><li>Higiene Seguridad y Medio Ambiente</li><li>Arquitectura Bioclimática</li><li>Crítica de la Arquitectura</li><li>Legislación</li><li>Proyecto Ejecutivo</li><li>Estudio de Impacto Ambiental</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>6to año</h4>
+            <ul><li>Práctica Profesional Supervisada</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/arquitectura" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/arquitectura" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-congreso-uc/">Universidad de Congreso (UC)</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/arquitectura/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -161,6 +204,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Diseño</h2>
     <ul class="enlaces">
         <li><a href="/carrera/tecnicatura-superior-en-diseno-multimedial/">Tecnicatura Superior en Diseño Multimedial</a> <span class="cuantas">(3)</span></li>
@@ -177,7 +221,9 @@
         <li><a href="/carrera/licenciatura-en-diseno/">Licenciatura en Diseño</a> <span class="cuantas">(1)</span></li>
     </ul>
     <p><a href="/area/diseno/">Ver las 26 carreras del área Diseño →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

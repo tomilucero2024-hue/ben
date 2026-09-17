@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ingeniería Industrial: dónde estudiarla en Mendoza | BEN</title>
-<meta name="description" content="Dónde estudiar Ingeniería Industrial en Mendoza: carrera de grado del área Ingeniería, dictada por 2 instituciones (1 pública y 1 privada). Dura 5 años.">
+<meta name="description" content="Dónde estudiar Ingeniería Industrial en Mendoza: carrera de grado del área Ingeniería, dictada por 2 instituciones (2 privadas). Dura 5 años.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/carrera/ingenieria-industrial/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Ingeniería Industrial: dónde estudiarla en Mendoza | BEN">
-<meta property="og:description" content="Dónde estudiar Ingeniería Industrial en Mendoza: carrera de grado del área Ingeniería, dictada por 2 instituciones (1 pública y 1 privada). Dura 5 años.">
+<meta property="og:description" content="Dónde estudiar Ingeniería Industrial en Mendoza: carrera de grado del área Ingeniería, dictada por 2 instituciones (2 privadas). Dura 5 años.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/carrera/ingenieria-industrial/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ingeniería Industrial: dónde estudiarla en Mendoza | BEN">
-<meta name="twitter:description" content="Dónde estudiar Ingeniería Industrial en Mendoza: carrera de grado del área Ingeniería, dictada por 2 instituciones (1 pública y 1 privada). Dura 5 años.">
+<meta name="twitter:description" content="Dónde estudiar Ingeniería Industrial en Mendoza: carrera de grado del área Ingeniería, dictada por 2 instituciones (2 privadas). Dura 5 años.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,9 +56,9 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ingeniería","item":"https://buscadoreducativo.com.ar/area/ingenieria/"},{"@type":"ListItem","position":4,"name":"Ingeniería Industrial","item":"https://buscadoreducativo.com.ar/carrera/ingenieria-industrial/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Ingeniería Industrial","description":"Dónde estudiar Ingeniería Industrial en Mendoza: carrera de grado del área Ingeniería, dictada por 2 instituciones (1 pública y 1 privada). Dura 5 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/ingenieria-industrial/","provider":[{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"},{"@type":"EducationalOrganization","name":"Universidad de Mendoza (UM)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-mendoza-um/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Ingeniería Industrial","description":"Dónde estudiar Ingeniería Industrial en Mendoza: carrera de grado del área Ingeniería, dictada por 2 instituciones (2 privadas). Dura 5 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/ingenieria-industrial/","provider":[{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"},{"@type":"EducationalOrganization","name":"Universidad de Mendoza (UM)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-mendoza-um/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Ingeniería Industrial en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Ingeniería Industrial en Mendoza en 2 instituciones: Universidad Nacional de Cuyo (UNCuyo) y Universidad de Mendoza (UM). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Ingeniería Industrial?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 5 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Ingeniería Industrial?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Ingeniería Industrial?","acceptedAnswer":{"@type":"Answer","text":"Ingeniería Industrial es una carrera de grado perteneciente al área de Ingeniería. Entre sus aptitudes más afines se destacan: pensamiento analítico, base teórica y académica, carga matemática y cuantitativa y afinidad tecnológica."}}]}</script>
 </head>
 <body>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ingenieria/">Ingeniería</a> <span aria-hidden="true">›</span> <span aria-current="page">Ingeniería Industrial</span></nav>
-    <h1>Ingeniería Industrial</h1>
-    <p class="entrada">Dónde estudiar Ingeniería Industrial en Mendoza: carrera de grado del área Ingeniería, dictada por 2 instituciones (1 pública y 1 privada). Dura 5 años. Modalidades disponibles: presencial.</p>
-
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ingenieria/">Ingeniería</a> <span aria-hidden="true">›</span> <span aria-current="page">Ingeniería Industrial</span></nav>
+        <h1>Ingeniería Industrial</h1>
+    <p class="entrada">Dónde estudiar Ingeniería Industrial en Mendoza: carrera de grado del área Ingeniería, dictada por 2 instituciones (2 privadas). Dura 5 años. Modalidades disponibles: presencial.</p>
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Ingeniería</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
@@ -82,17 +93,45 @@
     </dl>
 
     <a class="cta" href="/?q=Ingenier%C3%ADa+Industrial&amp;area=Ingenier%C3%ADa&amp;formacion=grado">Ver Ingeniería Industrial en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Ingeniería Industrial</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
-            <h3><span class="etiqueta publica">pública</span> <a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <h3><a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Álgebra</li><li>Análisis Matemático I</li><li>Geometría Analítica</li><li>Inglés I</li><li>Introducción a la Ingeniería</li><li>Análisis Matemático II</li><li>Física I</li><li>Fundamentos Ambientales en Ingeniería</li><li>Inglés II</li><li>Sistema de Representación Gráfica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Física II</li><li>Inglés III</li><li>Métodos Numéricos y Programación</li><li>Química General e Inorgánica</li><li>Electrotecnia y Máquinas Eléctricas</li><li>Legislación y Ética Profesional</li><li>Probabilidad y Estadística</li><li>Química Orgánica</li><li>Termodinámica General</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Ciencia y Tecnología de los Materiales</li><li>Estática y Resistencia de Materiales</li><li>Gestión y Desarrollo de las Personas</li><li>Mecánica de los Fluidos y Máquinas Hidráulicas</li><li>Técnicas y Herramientas Modernas I</li><li>Construcciones y Montajes Industriales</li><li>Electrónica General y Aplicada</li><li>Elementos de Máquinas</li><li>Operaciones Unitarias</li><li>Optativa/Electiva I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Economía y Evaluación de Proyectos</li><li>Equipos e Instalaciones Industriales</li><li>Investigación Operativa</li><li>Máquinas e Instalaciones Térmicas</li><li>Optativa/Electiva II</li><li>Administración de Operaciones y Mantenimiento</li><li>Industrias y Servicios I</li><li>Instrumentación y Control Automático</li><li>Optativa/Electiva III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Comercialización</li><li>Finanzas de Empresas</li><li>Práctica Profesional Supervisada</li><li>Sistemas de Información</li><li>Tecnología Industrial</li><li>Emprendedorismo e Innovación</li><li>Gestión Ambiental</li><li>Gestión de la Calidad</li><li>Higiene y Seguridad</li><li>Planificación de Operaciones y Gestión de la Cadena de Suministro</li><li>Proyecto Final de Estudios</li><li>Práctica de Actividades Físicas Saludables</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-industrial" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-industrial" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-mendoza-um/">Universidad de Mendoza (UM)</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://um.edu.ar/carreras/ingenieria-industrial/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -161,11 +200,13 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Ingeniería</h2>
     <ul class="enlaces">
         <li><a href="/carrera/ingenieria-civil/">INGENIERÍA CIVIL</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/ingenieria-electronica/">INGENIERÍA ELECTRÓNICA</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/ingenieria-en-telecomunicaciones/">INGENIERÍA EN TELECOMUNICACIONES</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/ingenieria-mecanica/">Ingeniería Mecánica</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/ingenieria-quimica/">INGENIERÍA QUÍMICA</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/bioingenieria/">Bioingeniería</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ingenieria-agronomica/">Ingeniería Agronómica</a> <span class="cuantas">(1)</span></li>
@@ -174,10 +215,11 @@
         <li><a href="/carrera/ingenieria-en-agrimensura/">Ingeniería en Agrimensura</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ingenieria-en-alimentos/">Ingeniería en Alimentos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ingenieria-en-computacion/">Ingeniería en Computación</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/ingenieria-en-informatica/">Ingeniería en Informática</a> <span class="cuantas">(1)</span></li>
     </ul>
     <p><a href="/area/ingenieria/">Ver las 22 carreras del área Ingeniería →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

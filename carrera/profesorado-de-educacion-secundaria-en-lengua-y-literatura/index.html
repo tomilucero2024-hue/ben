@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Educación","item":"https://buscadoreducativo.com.ar/area/educacion/"},{"@type":"ListItem","position":4,"name":"Profesorado de Educación Secundaria en LENGUA y LITERATURA","item":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Profesorado de Educación Secundaria en LENGUA y LITERATURA","numberOfItems":7,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-1","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en LENGUA y LITERATURA — IES 9-001 Gral. José de San Martín","description":"Profesorado de Educación Secundaria en LENGUA y LITERATURA en IES 9-001 Gral. José de San Martín. Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-1","sameAs":"https://ens9001-infd.mendoza.edu.ar/sitio/lengua-y-literatura/","provider":{"@type":"EducationalOrganization","name":"IES 9-001 Gral. José de San Martín","url":"https://buscadoreducativo.com.ar/institucion/ies-9-001-gral-jose-de-san-martin/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-2","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en LENGUA y LITERATURA — IES 9-002 Tomás Godoy Cruz","description":"Profesorado de Educación Secundaria en LENGUA y LITERATURA en IES 9-002 Tomás Godoy Cruz. Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-2","sameAs":"https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-lengua-y-literatura/","provider":{"@type":"EducationalOrganization","name":"IES 9-002 Tomás Godoy Cruz","url":"https://buscadoreducativo.com.ar/institucion/ies-9-002-tomas-godoy-cruz/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-3","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en LENGUA y LITERATURA — IES 9-010 Rosario Vera Peñaloza","description":"Profesorado de Educación Secundaria en LENGUA y LITERATURA en IES 9-010 Rosario Vera Peñaloza. Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-3","sameAs":"https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/","provider":{"@type":"EducationalOrganization","name":"IES 9-010 Rosario Vera Peñaloza","url":"https://buscadoreducativo.com.ar/institucion/ies-9-010-rosario-vera-penaloza/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-4","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en LENGUA y LITERATURA — IES 9-011 Del Atuel","description":"Profesorado de Educación Secundaria en LENGUA y LITERATURA en IES 9-011 Del Atuel. Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-4","sameAs":"https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/","provider":{"@type":"EducationalOrganization","name":"IES 9-011 Del Atuel","url":"https://buscadoreducativo.com.ar/institucion/ies-9-011-del-atuel/"}}},{"@type":"ListItem","position":5,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-5","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en LENGUA y LITERATURA — IES 9-018 (Malargüe)","description":"Profesorado de Educación Secundaria en LENGUA y LITERATURA en IES 9-018 (Malargüe). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-5","sameAs":"https://ies9018malargue.edu.ar/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/","provider":{"@type":"EducationalOrganization","name":"IES 9-018 (Malargüe)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-018-malargue/"}}},{"@type":"ListItem","position":6,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-6","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en LENGUA y LITERATURA — IES 9-024 (Lavalle)","description":"Profesorado de Educación Secundaria en LENGUA y LITERATURA en IES 9-024 (Lavalle). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-6","sameAs":"https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura","provider":{"@type":"EducationalOrganization","name":"IES 9-024 (Lavalle)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-024-lavalle/"}}},{"@type":"ListItem","position":7,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-7","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en LENGUA y LITERATURA — IES 9-030 (Instituto del Bicentenario)","description":"Profesorado de Educación Secundaria en LENGUA y LITERATURA en IES 9-030 (Instituto del Bicentenario). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/#oferta-7","sameAs":"https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/","provider":{"@type":"EducationalOrganization","name":"IES 9-030 (Instituto del Bicentenario)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-030-instituto-del-bicentenario/"}}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Profesorado de Educación Secundaria en LENGUA y LITERATURA en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Profesorado de Educación Secundaria en LENGUA y LITERATURA en Mendoza en 7 instituciones: IES 9-001 Gral. José de San Martín, IES 9-002 Tomás Godoy Cruz, IES 9-010 Rosario Vera Peñaloza, IES 9-011 Del Atuel, IES 9-018 (Malargüe), IES 9-024 (Lavalle) y IES 9-030 (Instituto del Bicentenario). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Profesorado de Educación Secundaria en LENGUA y LITERATURA?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Profesorado de Educación Secundaria en LENGUA y LITERATURA?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Profesorado de Educación Secundaria en LENGUA y LITERATURA?","acceptedAnswer":{"@type":"Answer","text":"Profesorado de Educación Secundaria en LENGUA y LITERATURA es una profesorado perteneciente al área de Educación. Entre sus aptitudes más afines se destacan: trabajo práctico, interacción social, creatividad y base teórica y académica."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/educacion/">Educación</a> <span aria-hidden="true">›</span> <span aria-current="page">Profesorado de Educación Secundaria en LENGUA y LITERATURA</span></nav>
-    <h1>Profesorado de Educación Secundaria en LENGUA y LITERATURA</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/educacion/">Educación</a> <span aria-hidden="true">›</span> <span aria-current="page">Profesorado de Educación Secundaria en LENGUA y LITERATURA</span></nav>
+        <h1>Profesorado de Educación Secundaria en LENGUA y LITERATURA</h1>
     <p class="entrada">Dónde estudiar Profesorado de Educación Secundaria en LENGUA y LITERATURA en Mendoza: profesorado del área Educación, dictada por 7 instituciones (7 públicas). Dura 4 años. Modalidades disponibles: presencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Educación</dd>
         <dt>Tipo de formación</dt><dd>Profesorado</dd>
@@ -82,42 +93,50 @@
     </dl>
 
     <a class="cta" href="/?q=Profesorado+de+Educaci%C3%B3n+Secundaria+en+LENGUA+y+LITERATURA&amp;area=Educaci%C3%B3n&amp;formacion=profesorados">Ver Profesorado de Educación Secundaria en LENGUA y LITERATURA en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Profesorado de Educación Secundaria en LENGUA y LITERATURA</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-001-gral-jose-de-san-martin/">IES 9-001 Gral. José de San Martín</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/lengua-y-literatura/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-002-tomas-godoy-cruz/">IES 9-002 Tomás Godoy Cruz</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-lengua-y-literatura/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-3">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-010-rosario-vera-penaloza/">IES 9-010 Rosario Vera Peñaloza</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-4">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-011-del-atuel/">IES 9-011 Del Atuel</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-5">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-018-malargue/">IES 9-018 (Malargüe)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ies9018malargue.edu.ar/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-6">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-024-lavalle/">IES 9-024 (Lavalle)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-7">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-030-instituto-del-bicentenario/">IES 9-030 (Instituto del Bicentenario)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -186,6 +205,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Educación</h2>
     <ul class="enlaces">
         <li><a href="/carrera/profesorado-de-educacion-primaria/">Profesorado de Educación Primaria</a> <span class="cuantas">(17)</span></li>
@@ -202,7 +222,9 @@
         <li><a href="/carrera/profesorado-de-educacion-secundaria-en-historia/">Profesorado de Educación Secundaria en HISTORIA</a> <span class="cuantas">(3)</span></li>
     </ul>
     <p><a href="/area/educacion/">Ver las 66 carreras del área Educación →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

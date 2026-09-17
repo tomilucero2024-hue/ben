@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ambiente","item":"https://buscadoreducativo.com.ar/area/ambiente/"},{"@type":"ListItem","position":4,"name":"Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE","item":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE","numberOfItems":3,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio/#oferta-1","item":{"@type":"Course","name":"Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE — IES 9-001 Gral. José de San Martín","description":"Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE en IES 9-001 Gral. José de San Martín. Duración: 3 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio/#oferta-1","sameAs":"https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-laboral/","provider":{"@type":"EducationalOrganization","name":"IES 9-001 Gral. José de San Martín","url":"https://buscadoreducativo.com.ar/institucion/ies-9-001-gral-jose-de-san-martin/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio/#oferta-2","item":{"@type":"Course","name":"Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE — IES 9-006 Francisco H. Tolosa","description":"Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE en IES 9-006 Francisco H. Tolosa. Duración: 3 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio/#oferta-2","sameAs":"https://ens9006-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente/","provider":{"@type":"EducationalOrganization","name":"IES 9-006 Francisco H. Tolosa","url":"https://buscadoreducativo.com.ar/institucion/ies-9-006-francisco-h-tolosa/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio/#oferta-3","item":{"@type":"Course","name":"Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE — IES 9-024 (Lavalle)","description":"Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE en IES 9-024 (Lavalle). Duración: 3 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio/#oferta-3","sameAs":"https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente","provider":{"@type":"EducationalOrganization","name":"IES 9-024 (Lavalle)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-024-lavalle/"}}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE en Mendoza en 3 instituciones: IES 9-001 Gral. José de San Martín, IES 9-006 Francisco H. Tolosa y IES 9-024 (Lavalle). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 3 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE?","acceptedAnswer":{"@type":"Answer","text":"Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE es una tecnicatura perteneciente al área de Ambiente. Entre sus aptitudes más afines se destacan: pensamiento analítico, trabajo práctico, trabajo de campo y al aire libre y afinidad tecnológica."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ambiente/">Ambiente</a> <span aria-hidden="true">›</span> <span aria-current="page">Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE</span></nav>
-    <h1>Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ambiente/">Ambiente</a> <span aria-hidden="true">›</span> <span aria-current="page">Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE</span></nav>
+        <h1>Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE</h1>
     <p class="entrada">Dónde estudiar Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE en Mendoza: tecnicatura del área Ambiente, dictada por 3 instituciones (3 públicas). Dura 3 años. Modalidades disponibles: presencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Ambiente</dd>
         <dt>Tipo de formación</dt><dd>Tecnicatura</dd>
@@ -82,22 +93,26 @@
     </dl>
 
     <a class="cta" href="/?q=Tecnicatura+Superior+en+HIGIENE+y+SEGURIDAD+con+ORIENTACI%C3%93N+en+CALIDAD+y+MEDIO+AMBIENTE&amp;area=Ambiente&amp;formacion=tecnicaturas">Ver Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-001-gral-jose-de-san-martin/">IES 9-001 Gral. José de San Martín</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-laboral/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-006-francisco-h-tolosa/">IES 9-006 Francisco H. Tolosa</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ens9006-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-3">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-024-lavalle/">IES 9-024 (Lavalle)</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -166,9 +181,11 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Ambiente</h2>
     <ul class="enlaces">
         <li><a href="/carrera/formacion-profesional-en-apicultura/">Formación Profesional en Apicultura</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/licenciatura-en-fisica/">Licenciatura en Física</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-matematica/">Licenciatura en Matemática</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-higiene-seguridad-y-ambiente/">Tecnicatura Superior en Higiene, Seguridad y Ambiente</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/administrativo-veterinaria/">Administrativo Veterinaria</a> <span class="cuantas">(1)</span></li>
@@ -179,10 +196,11 @@
         <li><a href="/carrera/gestion-ambiental/">Gestión Ambiental</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/gestion-de-recursos-hidricos/">Gestión de Recursos Hídricos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/laboratorista-hidrico/">Laboratorista Hídrico</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/licenciatura-en-ambiente-y-energias-renovables/">Licenciatura en Ambiente y Energías Renovables</a> <span class="cuantas">(1)</span></li>
     </ul>
     <p><a href="/area/ambiente/">Ver las 36 carreras del área Ambiente →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Educación","item":"https://buscadoreducativo.com.ar/area/educacion/"},{"@type":"ListItem","position":4,"name":"Profesorado en Educación Física","item":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Profesorado en Educación Física","numberOfItems":8,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-1","item":{"@type":"Course","name":"Profesorado en Educación Física — IEF - Instituto de Educación Física (IES 9-016)","description":"Profesorado en Educación Física en IEF - Instituto de Educación Física (IES 9-016). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-1","sameAs":"https://ief9016-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-fisica/","provider":{"@type":"EducationalOrganization","name":"IEF - Instituto de Educación Física (IES 9-016)","url":"https://buscadoreducativo.com.ar/institucion/ief-instituto-de-educacion-fisica-ies-9-016/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-2","item":{"@type":"Course","name":"Profesorado en Educación Física — Universidad Juan Agustín Maza (UMaza)","description":"Profesorado en Educación Física en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-2","sameAs":"https://www.umaza.edu.ar/landings/educacionfisica/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-3","item":{"@type":"Course","name":"Profesorado en Educación Física — Universidad Juan Agustín Maza (UMaza)","description":"Profesorado en Educación Física en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-3","sameAs":"https://www.umaza.edu.ar/landings/educacionfisicaVDU/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-4","item":{"@type":"Course","name":"Profesorado en Educación Física — Universidad Juan Agustín Maza (UMaza)","description":"Profesorado en Educación Física en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-4","sameAs":"https://www.umaza.edu.ar/landings/educacionfisicaSE/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":5,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-5","item":{"@type":"Course","name":"Profesorado en Educación Física — Universidad Juan Agustín Maza (UMaza)","description":"Profesorado en Educación Física en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-5","sameAs":"https://www.umaza.edu.ar/landings/educacionfisicaSS/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":6,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-6","item":{"@type":"Course","name":"Profesorado en Educación Física — Universidad Juan Agustín Maza (UMaza)","description":"Profesorado en Educación Física en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-6","sameAs":"https://www.umaza.edu.ar/landings/educacionfisicamalargue/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":7,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-7","item":{"@type":"Course","name":"Profesorado en Educación Física — Universidad Juan Agustín Maza (UMaza)","description":"Profesorado en Educación Física en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-7","sameAs":"https://www.umaza.edu.ar/landings/educacionfisicagralalvear","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":8,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-8","item":{"@type":"Course","name":"Profesorado en Educación Física — Instituto Santísima Trinidad","description":"Profesorado en Educación Física en Instituto Santísima Trinidad. Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-fisica/#oferta-8","sameAs":"https://santisimatrinidad.edu.ar/pef/","provider":{"@type":"EducationalOrganization","name":"Instituto Santísima Trinidad","url":"https://buscadoreducativo.com.ar/institucion/instituto-santisima-trinidad/"}}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Profesorado en Educación Física en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Profesorado en Educación Física en Mendoza en 3 instituciones: IEF - Instituto de Educación Física (IES 9-016), Universidad Juan Agustín Maza (UMaza) y Instituto Santísima Trinidad. En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Profesorado en Educación Física?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Profesorado en Educación Física?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Profesorado en Educación Física?","acceptedAnswer":{"@type":"Answer","text":"Profesorado en Educación Física es una profesorado perteneciente al área de Educación. Entre sus aptitudes más afines se destacan: pensamiento analítico, trabajo práctico, interacción social y liderazgo y gestión."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/educacion/">Educación</a> <span aria-hidden="true">›</span> <span aria-current="page">Profesorado en Educación Física</span></nav>
-    <h1>Profesorado en Educación Física</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/educacion/">Educación</a> <span aria-hidden="true">›</span> <span aria-current="page">Profesorado en Educación Física</span></nav>
+        <h1>Profesorado en Educación Física</h1>
     <p class="entrada">Dónde estudiar Profesorado en Educación Física en Mendoza: profesorado del área Educación, dictada por 3 instituciones (1 pública y 7 privadas). Dura 4 años. Modalidades disponibles: presencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Educación</dd>
         <dt>Tipo de formación</dt><dd>Profesorado</dd>
@@ -82,47 +93,182 @@
     </dl>
 
     <a class="cta" href="/?q=Profesorado+en+Educaci%C3%B3n+F%C3%ADsica&amp;area=Educaci%C3%B3n&amp;formacion=profesorados">Ver Profesorado en Educación Física en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Profesorado en Educación Física</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ief-instituto-de-educacion-fisica-ies-9-016/">IEF - Instituto de Educación Física (IES 9-016)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ief9016-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-fisica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía Funcional I</li><li>Aprendizaje y Desarrollo Motor</li><li>Psicología General</li><li>Gimnasia Formativa</li><li>Fútbol</li><li>Balonmano</li><li>Taller I</li><li>Inglés I</li><li>Anatomía Funcional II</li><li>Historia y Teoría de la Educación Física</li><li>Sujeto del Aprendizaje</li><li>Gimnasia Funcional</li><li>Hockey</li><li>Atletismo</li><li>Taller II</li><li>Entornos Virtuales de Aprendizaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Institución y Sistemas Educativos</li><li>Actividades Lúdicas y Recreativas</li><li>Didáctica y Currículo</li><li>Fisiología General</li><li>Natación I</li><li>Vóleibol</li><li>Taller III</li><li>Didáctica de la Educación Física de Nivel Inicial y Primario</li><li>Fisiología del Ejercicio</li><li>Natación II</li><li>Gimnasia Artística</li><li>Básquetbol</li><li>Taller IV</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Gestión de Prácticas Deportivas Emergentes</li><li>Formación para la Salud</li><li>Didáctica de la Educación Física de Nivel Secundario y Superior</li><li>Evalución de la Aptitud Física</li><li>Taller V</li><li>Biomecánica</li><li>Rugby</li><li>Sociología de la Actividad Física y el Deporte</li><li>Actividad Física Adaptada</li><li>Entrenamiento de la Aptitud Física</li><li>Taller VI</li><li>Actividades Regionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Sobrecarga y Musculación</li><li>Residencia Nivel Inicial y Primario</li><li>Ética y Legislación Aplicada</li><li>Residencia Nivel Secundario y Superior</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacionfisica/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacionfisica/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-3">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía Funcional I</li><li>Aprendizaje y Desarrollo Motor</li><li>Psicología General</li><li>Gimnasia Formativa</li><li>Fútbol</li><li>Balonmano</li><li>Taller I</li><li>Inglés I</li><li>Anatomía Funcional II</li><li>Historia y Teoría de la Educación Física</li><li>Sujeto del Aprendizaje</li><li>Gimnasia Funcional</li><li>Hockey</li><li>Atletismo</li><li>Taller II</li><li>Entornos Virtuales de Aprendizaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Institución y Sistemas Educativos</li><li>Actividades Lúdicas y Recreativas</li><li>Didáctica y Currículo</li><li>Fisiología General</li><li>Natación I</li><li>Vóleibol</li><li>Taller III</li><li>Didáctica de la Educación Física de Nivel Inicial y Primario</li><li>Fisiología del Ejercicio</li><li>Natación II</li><li>Gimnasia Artística</li><li>Básquetbol</li><li>Taller IV</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Gestión de Prácticas Deportivas Emergentes</li><li>Formación para la Salud</li><li>Didáctica de la Educación Física de Nivel Secundario y Superior</li><li>Evalución de la Aptitud Física</li><li>Taller V</li><li>Biomecánica</li><li>Rugby</li><li>Sociología de la Actividad Física y el Deporte</li><li>Actividad Física Adaptada</li><li>Entrenamiento de la Aptitud Física</li><li>Taller VI</li><li>Actividades Regionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Sobrecarga y Musculación</li><li>Residencia Nivel Inicial y Primario</li><li>Ética y Legislación Aplicada</li><li>Residencia Nivel Secundario y Superior</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacionfisicaVDU/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacionfisicaVDU/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-4">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía Funcional I</li><li>Aprendizaje y Desarrollo Motor</li><li>Psicología General</li><li>Gimnasia Formativa</li><li>Fútbol</li><li>Balonmano</li><li>Taller I</li><li>Inglés I</li><li>Anatomía Funcional II</li><li>Historia y Teoría de la Educación Física</li><li>Sujeto del Aprendizaje</li><li>Gimnasia Funcional</li><li>Hockey</li><li>Atletismo</li><li>Taller II</li><li>Entornos Virtuales de Aprendizaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Institución y Sistemas Educativos</li><li>Actividades Lúdicas y Recreativas</li><li>Didáctica y Currículo</li><li>Fisiología General</li><li>Natación I</li><li>Vóleibol</li><li>Taller III</li><li>Didáctica de la Educación Física de Nivel Inicial y Primario</li><li>Fisiología del Ejercicio</li><li>Natación II</li><li>Gimnasia Artística</li><li>Básquetbol</li><li>Taller IV</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Gestión de Prácticas Deportivas Emergentes</li><li>Formación para la Salud</li><li>Didáctica de la Educación Física de Nivel Secundario y Superior</li><li>Evalución de la Aptitud Física</li><li>Taller V</li><li>Biomecánica</li><li>Rugby</li><li>Sociología de la Actividad Física y el Deporte</li><li>Actividad Física Adaptada</li><li>Entrenamiento de la Aptitud Física</li><li>Taller VI</li><li>Actividades Regionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Sobrecarga y Musculación</li><li>Residencia Nivel Inicial y Primario</li><li>Ética y Legislación Aplicada</li><li>Residencia Nivel Secundario y Superior</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacionfisicaSE/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacionfisicaSE/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-5">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía Funcional I</li><li>Aprendizaje y Desarrollo Motor</li><li>Psicología General</li><li>Gimnasia Formativa</li><li>Fútbol</li><li>Balonmano</li><li>Taller I</li><li>Inglés I</li><li>Anatomía Funcional II</li><li>Historia y Teoría de la Educación Física</li><li>Sujeto del Aprendizaje</li><li>Gimnasia Funcional</li><li>Hockey</li><li>Atletismo</li><li>Taller II</li><li>Entornos Virtuales de Aprendizaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Institución y Sistemas Educativos</li><li>Actividades Lúdicas y Recreativas</li><li>Didáctica y Currículo</li><li>Fisiología General</li><li>Natación I</li><li>Vóleibol</li><li>Taller III</li><li>Didáctica de la Educación Física de Nivel Inicial y Primario</li><li>Fisiología del Ejercicio</li><li>Natación II</li><li>Gimnasia Artística</li><li>Básquetbol</li><li>Taller IV</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Gestión de Prácticas Deportivas Emergentes</li><li>Formación para la Salud</li><li>Didáctica de la Educación Física de Nivel Secundario y Superior</li><li>Evalución de la Aptitud Física</li><li>Taller V</li><li>Biomecánica</li><li>Rugby</li><li>Sociología de la Actividad Física y el Deporte</li><li>Actividad Física Adaptada</li><li>Entrenamiento de la Aptitud Física</li><li>Taller VI</li><li>Actividades Regionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Sobrecarga y Musculación</li><li>Residencia Nivel Inicial y Primario</li><li>Ética y Legislación Aplicada</li><li>Residencia Nivel Secundario y Superior</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacionfisicaSS/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacionfisicaSS/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-6">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía Funcional I</li><li>Aprendizaje y Desarrollo Motor</li><li>Psicología General</li><li>Gimnasia Formativa</li><li>Fútbol</li><li>Balonmano</li><li>Taller I</li><li>Inglés I</li><li>Anatomía Funcional II</li><li>Historia y Teoría de la Educación Física</li><li>Sujeto del Aprendizaje</li><li>Gimnasia Funcional</li><li>Hockey</li><li>Atletismo</li><li>Taller II</li><li>Entornos Virtuales de Aprendizaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Institución y Sistemas Educativos</li><li>Actividades Lúdicas y Recreativas</li><li>Didáctica y Currículo</li><li>Fisiología General</li><li>Natación I</li><li>Vóleibol</li><li>Taller III</li><li>Didáctica de la Educación Física de Nivel Inicial y Primario</li><li>Fisiología del Ejercicio</li><li>Natación II</li><li>Gimnasia Artística</li><li>Básquetbol</li><li>Taller IV</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Gestión de Prácticas Deportivas Emergentes</li><li>Formación para la Salud</li><li>Didáctica de la Educación Física de Nivel Secundario y Superior</li><li>Evalución de la Aptitud Física</li><li>Taller V</li><li>Biomecánica</li><li>Rugby</li><li>Sociología de la Actividad Física y el Deporte</li><li>Actividad Física Adaptada</li><li>Entrenamiento de la Aptitud Física</li><li>Taller VI</li><li>Actividades Regionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Sobrecarga y Musculación</li><li>Residencia Nivel Inicial y Primario</li><li>Ética y Legislación Aplicada</li><li>Residencia Nivel Secundario y Superior</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacionfisicamalargue/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacionfisicamalargue/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-7">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía Funcional I</li><li>Aprendizaje y Desarrollo Motor</li><li>Psicología General</li><li>Gimnasia Formativa</li><li>Fútbol</li><li>Balonmano</li><li>Taller I</li><li>Inglés I</li><li>Anatomía Funcional II</li><li>Historia y Teoría de la Educación Física</li><li>Sujeto del Aprendizaje</li><li>Gimnasia Funcional</li><li>Hockey</li><li>Atletismo</li><li>Taller II</li><li>Entornos Virtuales de Aprendizaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Institución y Sistemas Educativos</li><li>Actividades Lúdicas y Recreativas</li><li>Didáctica y Currículo</li><li>Fisiología General</li><li>Natación I</li><li>Vóleibol</li><li>Taller III</li><li>Didáctica de la Educación Física de Nivel Inicial y Primario</li><li>Fisiología del Ejercicio</li><li>Natación II</li><li>Gimnasia Artística</li><li>Básquetbol</li><li>Taller IV</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Gestión de Prácticas Deportivas Emergentes</li><li>Formación para la Salud</li><li>Didáctica de la Educación Física de Nivel Secundario y Superior</li><li>Evalución de la Aptitud Física</li><li>Taller V</li><li>Biomecánica</li><li>Rugby</li><li>Sociología de la Actividad Física y el Deporte</li><li>Actividad Física Adaptada</li><li>Entrenamiento de la Aptitud Física</li><li>Taller VI</li><li>Actividades Regionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Sobrecarga y Musculación</li><li>Residencia Nivel Inicial y Primario</li><li>Ética y Legislación Aplicada</li><li>Residencia Nivel Secundario y Superior</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacionfisicagralalvear" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacionfisicagralalvear" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-8">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/instituto-santisima-trinidad/">Instituto Santísima Trinidad</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://santisimatrinidad.edu.ar/pef/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -191,6 +337,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Educación</h2>
     <ul class="enlaces">
         <li><a href="/carrera/profesorado-de-educacion-primaria/">Profesorado de Educación Primaria</a> <span class="cuantas">(17)</span></li>
@@ -207,7 +354,9 @@
         <li><a href="/carrera/profesorado-de-educacion-secundaria-en-historia/">Profesorado de Educación Secundaria en HISTORIA</a> <span class="cuantas">(3)</span></li>
     </ul>
     <p><a href="/area/educacion/">Ver las 66 carreras del área Educación →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

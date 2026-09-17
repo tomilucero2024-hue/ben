@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"ICA - Instituto de Capacitación Aeronáutica (Sede Mendoza)","item":"https://buscadoreducativo.com.ar/institucion/ica-instituto-de-capacitacion-aeronautica-sede-mendoza/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"ICA - Instituto de Capacitación Aeronáutica (Sede Mendoza)","url":"https://buscadoreducativo.com.ar/institucion/ica-instituto-de-capacitacion-aeronautica-sede-mendoza/","email":"info@incasrl.com.ar","address":{"@type":"PostalAddress","streetAddress":"Arístides Villanueva 430, Ciudad de Mendoza (también sede San Rafael, Av. del Libertador 78)","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -68,10 +76,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">ICA - Instituto de Capacitación Aeronáutica (Sede Mendoza)</span></nav>
-    <h1>ICA - Instituto de Capacitación Aeronáutica (Sede Mendoza)</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">ICA - Instituto de Capacitación Aeronáutica (Sede Mendoza)</span></nav>
+        <h1>ICA - Instituto de Capacitación Aeronáutica (Sede Mendoza)</h1>
     <p class="entrada">ICA - Instituto de Capacitación Aeronáutica (Sede Mendoza): 15 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Gestión</dt><dd>privada</dd>
         <dt>Nivel</dt><dd>capacitación profesional</dd>
@@ -82,42 +93,51 @@
     </dl>
 
     <a class="cta" href="/?institucion=ICA%20-%20Instituto%20de%20Capacitaci%C3%B3n%20Aeron%C3%A1utica%20(Sede%20Mendoza)">Ver esta institución en el buscador →</a>
+    </aside>
+    <div class="contenido-pagina">
 
     <h2>Ciencias sociales (7)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/tripulante-de-cabina-de-pasajeros/">Tripulante de Cabina de Pasajeros</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año y 4 meses</li><li>Modalidad: Presencial / A Distancia</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/tripulante-de-cabina-de-pasajeros/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/despachante-de-aeronaves/">Despachante de Aeronaves</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/despachante-de-aeronaves/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/operador-de-servicios-de-rampa/">Operador de Servicios de Rampa</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/operador-de-servicios-de-rampa/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/supervisor-de-servicio-de-rampa/">Supervisor de Servicio de Rampa</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/supervisor-de-servicio-de-rampa/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/senalero-de-aerodromo/">Señalero de Aeródromo</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/senalero-de-aerodromo/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/check-in/">Check In</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/check-in/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/operador-radiotelefonista-restringido/">Operador Radiotelefonista Restringido</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/radio-operador-telefonista-restringido/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -127,16 +147,19 @@
         <li class="oferta">
             <h3><a href="/carrera/diplomatura-en-gestion-aeroportuaria/">Diplomatura en Gestión Aeroportuaria</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: A confirmar</li><li>Diplomatura</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/diplomatura-en-gestion-aeroportuaria/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/diplomado-en-comercio-exterior/">Diplomado en Comercio Exterior</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: A confirmar</li><li>Diplomatura</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/diplomado-en-comercio-exterior/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/asistente-de-despachante-de-aduana/">Asistente de Despachante de Aduana</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/asistente-despachantede-aduanas/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -146,16 +169,19 @@
         <li class="oferta">
             <h3><a href="/carrera/piloto-comercial-de-avion/">Piloto Comercial de Avión</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/piloto-comercial-de-avion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/piloto-privado-de-avion/">Piloto Privado de Avión</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/piloto-privado-de-avion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/piloto-de-drone/">Piloto de Drone</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/piloto-de-drone/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -165,6 +191,7 @@
         <li class="oferta">
             <h3><a href="/carrera/ingles-operacional/">Inglés Operacional</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: A confirmar</li><li>Curso / Idiomas</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/ingles-operacional/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -174,10 +201,12 @@
         <li class="oferta">
             <h3><a href="/carrera/diplomatura-en-primeros-auxilios-y-maniobras-de-rescate-en-zonas-inhospitas/">Diplomatura en Primeros Auxilios y Maniobras de Rescate en Zonas Inhóspitas</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: A confirmar</li><li>Diplomatura</li></ul>
+
             <a class="oficial" href="https://incasrl.com.ar/cursos/diplomatura-en-primeros-auxilios-y-maniobras-de-rescate-en-zonas-inhospitas/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
-
+    </div>
+</div>
 </main>
 
 <footer class="pie">

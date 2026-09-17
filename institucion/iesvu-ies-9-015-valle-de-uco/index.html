@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"IESVU (IES 9-015 Valle de Uco)","item":"https://buscadoreducativo.com.ar/institucion/iesvu-ies-9-015-valle-de-uco/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"IESVU (IES 9-015 Valle de Uco)","url":"https://buscadoreducativo.com.ar/institucion/iesvu-ies-9-015-valle-de-uco/","email":"contacto@iesvu.edu.ar","address":{"@type":"PostalAddress","streetAddress":"Valle de Uco, Mendoza","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -68,10 +76,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">IESVU (IES 9-015 Valle de Uco)</span></nav>
-    <h1>IESVU (IES 9-015 Valle de Uco)</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">IESVU (IES 9-015 Valle de Uco)</span></nav>
+        <h1>IESVU (IES 9-015 Valle de Uco)</h1>
     <p class="entrada">IESVU (IES 9-015 Valle de Uco): 20 carreras en Mendoza, gestión pública. Duración, modalidad y links oficiales de cada una.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Gestión</dt><dd>pública</dd>
         <dt>Nivel</dt><dd>terciario</dd>
@@ -82,37 +93,45 @@
     </dl>
 
     <a class="cta" href="/?institucion=IESVU%20(IES%209-015%20Valle%20de%20Uco)">Ver esta institución en el buscador →</a>
+    </aside>
+    <div class="contenido-pagina">
 
     <h2>Gastronomía (6)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-enologia-e-industrias-frutihorticolas/">Tecnicatura en Enología e Industrias Frutihortícolas</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-gastronomia/">Tecnicatura en Gastronomía</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/tecnicatura-superior-en-gastronomia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-viticultura-y-enologia/">Tecnicatura en Viticultura y Enología</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/tecnicatura-superior-en-viticultura-y-enologia-ead/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/administrador-a-de-finca-vitivinicola/">Administrador/a de finca vitivinícola</a></h3>
             <ul class="oferta-datos"><li>Duración: 8 meses</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/administrador-de-finca-vitivinicola/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/analista-sensorial-de-vinos/">Analista Sensorial de Vinos</a></h3>
             <ul class="oferta-datos"><li>Duración: 10 meses</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/analista-sensorial-de-vinos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/asistente-en-laboratorio-vitivinicola/">Asistente en Laboratorio Vitivinícola</a></h3>
             <ul class="oferta-datos"><li>Duración: 10 meses</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/asistente-en-laboratorio-vitivinicola/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -122,21 +141,25 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-agronomia/">Tecnicatura en Agronomía</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/tecnicatura-superior-agronomica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-higiene-seguridad-y-ambiente/">Tecnicatura en Higiene, Seguridad y Ambiente</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/tecnicatura-superior-en-higiene-seguridad-y-ambiente/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-gestion-integral-de-recursos-hidricos/">Tecnicatura en Gestión Integral de Recursos Hídricos</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/tecnicatura-superior-en-gestion-integral-de-recursos-hidricos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/laboratorista-hidrico/">Laboratorista Hídrico</a></h3>
             <ul class="oferta-datos"><li>Duración: 10 meses</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/laboratorista-hidrico/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -146,16 +169,19 @@
         <li class="oferta">
             <h3><a href="/carrera/curso-ingles-nivel-a1/">Curso Inglés – Nivel A1</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/curso-ingles-nivel-a1/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/curso-de-portugues-2026/">Curso de Portugués 2026</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: A confirmar</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/curso-de-portugues-2026/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/curso-de-italiano-2026/">Curso de Italiano 2026</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: A confirmar</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/curso-de-italiano-2026/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -165,16 +191,19 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-comercio-internacional-y-aduana/">Tecnicatura en Comercio Internacional y Aduana</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/tecnicatura-superior-en-comercio-internacional-y-aduanas/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-administracion-de-empresas/">Tecnicatura en Administración de Empresas</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/tecnicatura-superior-en-administracion-de-empresas/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-administracion-publica/">Tecnicatura en Administración Pública</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/tecnicatura-superior-en-administracion-publica-4/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -184,11 +213,13 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-laboratorio-de-analisis-clinicos/">Tecnicatura en Laboratorio de Análisis Clínicos</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/tecnicatura-superior-en-laboratorio-de-analisis-clinicos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-mecatronica/">Tecnicatura en Mecatrónica</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/tecnicatura-superior-en-mecatronica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -198,6 +229,7 @@
         <li class="oferta">
             <h3><a href="/carrera/enfermeria-profesional/">Enfermería Profesional</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/enfermeria-profesional/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -207,10 +239,12 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-estadistica-y-analisis-de-datos/">Tecnicatura en Estadística y Análisis de Datos</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/tecnicatura-en-estadistica-y-analisis-de-datos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
-
+    </div>
+</div>
 </main>
 
 <footer class="pie">

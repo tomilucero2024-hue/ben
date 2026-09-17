@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,10 +56,10 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Negocios","item":"https://buscadoreducativo.com.ar/area/negocios/"},{"@type":"ListItem","position":4,"name":"Recursos Humanos","item":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Recursos Humanos","numberOfItems":6,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-1","item":{"@type":"Course","name":"Recursos Humanos — Universidad Juan Agustín Maza (UMaza)","description":"Recursos Humanos en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-1","sameAs":"https://www.umaza.edu.ar/landings/recursoshumanos/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-2","item":{"@type":"Course","name":"Recursos Humanos — Universidad Juan Agustín Maza (UMaza)","description":"Recursos Humanos en Universidad Juan Agustín Maza (UMaza). Duración: 2 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-2","sameAs":"https://www.umaza.edu.ar/landings/recursoshumanosSE/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-3","item":{"@type":"Course","name":"Recursos Humanos — Universidad Juan Agustín Maza (UMaza)","description":"Recursos Humanos en Universidad Juan Agustín Maza (UMaza). Duración: 2 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-3","sameAs":"https://www.umaza.edu.ar/landings/recursoshumanosSS/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-4","item":{"@type":"Course","name":"Recursos Humanos — Universidad Juan Agustín Maza (UMaza)","description":"Recursos Humanos en Universidad Juan Agustín Maza (UMaza). Duración: 2 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-4","sameAs":"https://www.umaza.edu.ar/landings/recursoshumanosuco","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":5,"url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-5","item":{"@type":"Course","name":"Recursos Humanos — Universidad Juan Agustín Maza (UMaza)","description":"Recursos Humanos en Universidad Juan Agustín Maza (UMaza). Duración: A confirmar. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-5","sameAs":"https://www.umaza.edu.ar/landings/recursoshumanos-ciclo-de-complementacion-a-distancia","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":6,"url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-6","item":{"@type":"Course","name":"Recursos Humanos — Universidad de Congreso (UC)","description":"Recursos Humanos en Universidad de Congreso (UC). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-6","sameAs":"https://www.ucongreso.edu.ar/carrera/recursos-humanos/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Recursos Humanos en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Recursos Humanos en Mendoza en 2 instituciones: Universidad Juan Agustín Maza (UMaza) y Universidad de Congreso (UC). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Recursos Humanos?","acceptedAnswer":{"@type":"Answer","text":"La duración de la carrera varía de 2 a 4 años según el plan de estudio de la institución elegida."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Recursos Humanos?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Recursos Humanos?","acceptedAnswer":{"@type":"Answer","text":"Recursos Humanos es una curso o formación profesional perteneciente al área de Negocios. Entre sus aptitudes más afines se destacan: trabajo práctico, pensamiento analítico, interacción social y liderazgo y gestión."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Recursos Humanos","numberOfItems":6,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-1","item":{"@type":"Course","name":"Recursos Humanos — Universidad Juan Agustín Maza (UMaza)","description":"Recursos Humanos en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-1","sameAs":"https://www.umaza.edu.ar/landings/recursoshumanos/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-2","item":{"@type":"Course","name":"Recursos Humanos — Universidad Juan Agustín Maza (UMaza)","description":"Recursos Humanos en Universidad Juan Agustín Maza (UMaza). Duración: 2 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-2","sameAs":"https://www.umaza.edu.ar/landings/recursoshumanosSE/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-3","item":{"@type":"Course","name":"Recursos Humanos — Universidad Juan Agustín Maza (UMaza)","description":"Recursos Humanos en Universidad Juan Agustín Maza (UMaza). Duración: 2 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-3","sameAs":"https://www.umaza.edu.ar/landings/recursoshumanosSS/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-4","item":{"@type":"Course","name":"Recursos Humanos — Universidad Juan Agustín Maza (UMaza)","description":"Recursos Humanos en Universidad Juan Agustín Maza (UMaza). Duración: 2 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-4","sameAs":"https://www.umaza.edu.ar/landings/recursoshumanosuco","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":5,"url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-5","item":{"@type":"Course","name":"Recursos Humanos — Universidad Juan Agustín Maza (UMaza)","description":"Recursos Humanos en Universidad Juan Agustín Maza (UMaza). Duración: 1 año. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-5","sameAs":"https://www.umaza.edu.ar/landings/recursoshumanos-ciclo-de-complementacion-a-distancia","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":6,"url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-6","item":{"@type":"Course","name":"Recursos Humanos — Universidad de Congreso (UC)","description":"Recursos Humanos en Universidad de Congreso (UC). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/recursos-humanos/#oferta-6","sameAs":"https://www.ucongreso.edu.ar/carrera/recursos-humanos/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Recursos Humanos en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Recursos Humanos en Mendoza en 2 instituciones: Universidad Juan Agustín Maza (UMaza) y Universidad de Congreso (UC). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Recursos Humanos?","acceptedAnswer":{"@type":"Answer","text":"La duración de la carrera varía de 1 a 4 años según el plan de estudio de la institución elegida."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Recursos Humanos?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Recursos Humanos?","acceptedAnswer":{"@type":"Answer","text":"Recursos Humanos es una curso o formación profesional perteneciente al área de Negocios. Entre sus aptitudes más afines se destacan: trabajo práctico, pensamiento analítico, interacción social y liderazgo y gestión."}}]}</script>
 </head>
 <body>
 <header class="cabecera">
@@ -69,50 +77,129 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/negocios/">Negocios</a> <span aria-hidden="true">›</span> <span aria-current="page">Recursos Humanos</span></nav>
-    <h1>Recursos Humanos</h1>
-    <p class="entrada">Dónde estudiar Recursos Humanos en Mendoza: curso o formación profesional del área Negocios, dictada por 2 instituciones (6 privadas). Dura de 2 a 4 años según la institución. Modalidades disponibles: presencial.</p>
-
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/negocios/">Negocios</a> <span aria-hidden="true">›</span> <span aria-current="page">Recursos Humanos</span></nav>
+        <h1>Recursos Humanos</h1>
+    <p class="entrada">Dónde estudiar Recursos Humanos en Mendoza: curso o formación profesional del área Negocios, dictada por 2 instituciones (6 privadas). Dura de 1 a 4 años según la institución. Modalidades disponibles: presencial.</p>
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Negocios</dd>
         <dt>Tipo de formación</dt><dd>Curso o formación profesional</dd>
         <dt>Dónde se dicta</dt><dd>2 instituciones</dd>
         <dt>Modalidad</dt><dd>Presencial</dd>
-        <dt>Duración</dt><dd>4 años · 2 años</dd>
+        <dt>Duración</dt><dd>4 años · 2 años · 1 año</dd>
     </dl>
 
     <a class="cta" href="/?q=Recursos+Humanos&amp;area=Negocios&amp;formacion=cursos">Ver Recursos Humanos en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Recursos Humanos</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Recursos humanos I</li><li>Psicología general e individual</li><li>Administración de las organizaciones</li><li>Informática de las organizaciones (extracurricular)</li><li>Comunicación social e institucional</li><li>Matemática</li><li>Sociología de las organizaciones</li><li>Técnicas de Aplicación – Nivel I</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización empresarial y sistemas de información</li><li>Derecho laboral</li><li>Probabilidad y estadística</li><li>Economía</li><li>Marketing</li><li>Recursos humanos II</li><li>Comportamiento organizacional</li><li>Técnicas de Aplicación – Nivel II</li><li>Práctica Final</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Psicología laboral</li><li>Recursos humanos III</li><li>Prevención y seguridad laboral</li><li>Metodología de la investigación social I</li><li>Dinámica de grupos</li><li>Entrevista y selección de personal</li><li>Capacitación y desarrollo de recursos humanos</li><li>Recursos humanos IV</li><li>Práctica Final</li><li>Inglés III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Gestión de calidad</li><li>Filosofía y ética profesional</li><li>Política de las remuneraciones</li><li>Metodología de la investigación social II</li><li>Creatividad e innovación</li><li>Planeamiento estratégico de recursos humanos</li><li>Negociación y resolución de conflictos</li><li>Auditoría de recursos humanos</li><li>Práctica profesional</li><li>Trabajo final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/recursoshumanos/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/recursoshumanos/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Recursos humanos I</li><li>Psicología general e individual</li><li>Administración de las organizaciones</li><li>Informática de las organizaciones (extracurricular)</li><li>Comunicación social e institucional</li><li>Matemática</li><li>Sociología de las organizaciones</li><li>Técnicas de Aplicación – Nivel I</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización empresarial y sistemas de información</li><li>Derecho laboral</li><li>Probabilidad y estadística</li><li>Economía</li><li>Marketing</li><li>Recursos humanos II</li><li>Comportamiento organizacional</li><li>Técnicas de Aplicación – Nivel II</li><li>Práctica Final</li><li>Inglés II</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/recursoshumanosSE/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/recursoshumanosSE/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-3">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Recursos humanos I</li><li>Psicología general e individual</li><li>Administración de las organizaciones</li><li>Informática de las organizaciones (extracurricular)</li><li>Comunicación social e institucional</li><li>Matemática</li><li>Sociología de las organizaciones</li><li>Técnicas de Aplicación – Nivel I</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización empresarial y sistemas de información</li><li>Derecho laboral</li><li>Probabilidad y estadística</li><li>Economía</li><li>Marketing</li><li>Recursos humanos II</li><li>Comportamiento organizacional</li><li>Técnicas de Aplicación – Nivel II</li><li>Práctica Final</li><li>Inglés II</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/recursoshumanosSS/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/recursoshumanosSS/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-4">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Recursos humanos I</li><li>Psicología general e individual</li><li>Administración de las organizaciones</li><li>Informática de las organizaciones (extracurricular)</li><li>Comunicación social e institucional</li><li>Matemática</li><li>Sociología de las organizaciones</li><li>Técnicas de Aplicación – Nivel I</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización empresarial y sistemas de información</li><li>Derecho laboral</li><li>Probabilidad y estadística</li><li>Economía</li><li>Marketing</li><li>Recursos humanos II</li><li>Comportamiento organizacional</li><li>Técnicas de Aplicación – Nivel II</li><li>Práctica Final</li><li>Inglés II</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/recursoshumanosuco" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/recursoshumanosuco" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-5">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
-            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <ul class="oferta-datos"><li>Duración: 1 año</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Psicología Laboral</li><li>Gestión de Relaciones Laborales</li><li>Planeamiento Estratégico de Recursos Humanos</li><li>Metodología de la Investigación</li><li>Filosofía y Ética Profesional</li><li>Creatividad e Innovación</li><li>Gestión de la Calidad</li><li>Política de Remuneraciones</li><li>Auditoría de Recursos Humanos</li><li>Práctica Profesional</li><li>Materia Optativa 1</li><li>Materia Optativa 2</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/recursoshumanos-ciclo-de-complementacion-a-distancia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/recursoshumanos-ciclo-de-complementacion-a-distancia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-6">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-congreso-uc/">Universidad de Congreso (UC)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/recursos-humanos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -164,7 +251,7 @@
         <details class="faq-item">
             <summary class="faq-pregunta"><strong>¿Cuánto dura la carrera de Recursos Humanos?</strong></summary>
             <div class="faq-respuesta">
-                <p>La duración de la carrera varía de 2 a 4 años según el plan de estudio de la institución elegida.</p>
+                <p>La duración de la carrera varía de 1 a 4 años según el plan de estudio de la institución elegida.</p>
             </div>
         </details>
         <details class="faq-item">
@@ -181,6 +268,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Negocios</h2>
     <ul class="enlaces">
         <li><a href="/carrera/contador-publico/">Contador Público</a> <span class="cuantas">(11)</span></li>
@@ -197,7 +285,9 @@
         <li><a href="/carrera/licenciatura-en-logistica/">Licenciatura en Logística</a> <span class="cuantas">(2)</span></li>
     </ul>
     <p><a href="/area/negocios/">Ver las 75 carreras del área Negocios →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

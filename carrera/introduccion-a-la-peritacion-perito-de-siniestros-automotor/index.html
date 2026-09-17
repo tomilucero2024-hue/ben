@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Negocios","item":"https://buscadoreducativo.com.ar/area/negocios/"},{"@type":"ListItem","position":4,"name":"Introducción a la Peritación (Perito de Siniestros Automotor)","item":"https://buscadoreducativo.com.ar/carrera/introduccion-a-la-peritacion-perito-de-siniestros-automotor/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Introducción a la Peritación (Perito de Siniestros Automotor)","description":"Dónde estudiar Introducción a la Peritación (Perito de Siniestros Automotor) en Mendoza: curso o formación profesional del área Negocios, dictada por 1 institución (1 privada). Modalidades disponibles: a distancia.","url":"https://buscadoreducativo.com.ar/carrera/introduccion-a-la-peritacion-perito-de-siniestros-automotor/","provider":{"@type":"EducationalOrganization","name":"CESVI Argentina","url":"https://buscadoreducativo.com.ar/institucion/cesvi-argentina/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Introducción a la Peritación (Perito de Siniestros Automotor) en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Introducción a la Peritación (Perito de Siniestros Automotor) en Mendoza en la siguiente institución: CESVI Argentina. En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Introducción a la Peritación (Perito de Siniestros Automotor)?","acceptedAnswer":{"@type":"Answer","text":"La duración estimada depende de la institución y modalidad elegida (típicamente entre 4 y 5 años para carreras de grado, o de 2 a 3 años para tecnicaturas)."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Introducción a la Peritación (Perito de Siniestros Automotor)?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad a distancia, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Introducción a la Peritación (Perito de Siniestros Automotor)?","acceptedAnswer":{"@type":"Answer","text":"Introducción a la Peritación (Perito de Siniestros Automotor) es una curso o formación profesional perteneciente al área de Negocios. Entre sus aptitudes más afines se destacan: pensamiento analítico, trabajo práctico, interacción social y liderazgo y gestión."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/negocios/">Negocios</a> <span aria-hidden="true">›</span> <span aria-current="page">Introducción a la Peritación (Perito de Siniestros Automotor)</span></nav>
-    <h1>Introducción a la Peritación (Perito de Siniestros Automotor)</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/negocios/">Negocios</a> <span aria-hidden="true">›</span> <span aria-current="page">Introducción a la Peritación (Perito de Siniestros Automotor)</span></nav>
+        <h1>Introducción a la Peritación (Perito de Siniestros Automotor)</h1>
     <p class="entrada">Dónde estudiar Introducción a la Peritación (Perito de Siniestros Automotor) en Mendoza: curso o formación profesional del área Negocios, dictada por 1 institución (1 privada). Modalidades disponibles: a distancia.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Negocios</dd>
         <dt>Tipo de formación</dt><dd>Curso o formación profesional</dd>
@@ -81,12 +92,14 @@
     </dl>
 
     <a class="cta" href="/?seccion=formaciones-alternativas&amp;q=Introducci%C3%B3n+a+la+Peritaci%C3%B3n+%28Perito+de+Siniestros+Automotor%29">Ver Introducción a la Peritación (Perito de Siniestros Automotor) en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Introducción a la Peritación (Perito de Siniestros Automotor)</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/cesvi-argentina/">CESVI Argentina</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Online (e-learning + webinars)</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://home.cesvi.com.ar/Posts/ViewPost/Peritos2" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -155,6 +168,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Negocios</h2>
     <ul class="enlaces">
         <li><a href="/carrera/contador-publico/">Contador Público</a> <span class="cuantas">(11)</span></li>
@@ -171,7 +185,9 @@
         <li><a href="/carrera/licenciatura-en-analitica-de-negocios/">Licenciatura en Analítica de Negocios</a> <span class="cuantas">(2)</span></li>
     </ul>
     <p><a href="/area/negocios/">Ver las 75 carreras del área Negocios →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Instituto Juan Gutenberg","item":"https://buscadoreducativo.com.ar/institucion/instituto-juan-gutenberg/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Instituto Juan Gutenberg","url":"https://buscadoreducativo.com.ar/institucion/instituto-juan-gutenberg/","email":"contacto@institutojgutenberg.edu.ar","address":{"@type":"PostalAddress","streetAddress":"Mendoza","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -68,10 +76,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">Instituto Juan Gutenberg</span></nav>
-    <h1>Instituto Juan Gutenberg</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">Instituto Juan Gutenberg</span></nav>
+        <h1>Instituto Juan Gutenberg</h1>
     <p class="entrada">Instituto Juan Gutenberg: 9 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Gestión</dt><dd>privada</dd>
         <dt>Nivel</dt><dd>terciario</dd>
@@ -82,17 +93,21 @@
     </dl>
 
     <a class="cta" href="/?institucion=Instituto%20Juan%20Gutenberg">Ver esta institución en el buscador →</a>
+    </aside>
+    <div class="contenido-pagina">
 
     <h2>Diseño (2)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-superior-en-diseno-multimedial/">Tecnicatura Superior en Diseño Multimedial</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://institutojgutenberg2.lovable.app/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/diseno-digital/">Diseño Digital</a></h3>
             <ul class="oferta-datos"><li>Duración: 6 meses</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://institutojgutenberg.edu.ar/cursos-online-gutenberg/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -102,11 +117,13 @@
         <li class="oferta">
             <h3><a href="/carrera/secretariado-medico/">Secretariado Médico</a></h3>
             <ul class="oferta-datos"><li>Duración: 6 meses</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://institutojgutenberg.edu.ar/cursos-online-gutenberg/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/community-manager/">Community Manager</a></h3>
             <ul class="oferta-datos"><li>Duración: 6 meses</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://institutojgutenberg.edu.ar/cursos-online-gutenberg/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -116,11 +133,13 @@
         <li class="oferta">
             <h3><a href="/carrera/auxiliar-de-farmacia/">Auxiliar de Farmacia</a></h3>
             <ul class="oferta-datos"><li>Duración: 6 meses</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://institutojgutenberg.edu.ar/cursos-online-gutenberg/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/acompanante-terapeutico/">Acompañante Terapéutico</a></h3>
             <ul class="oferta-datos"><li>Duración: 6 meses</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://institutojgutenberg.edu.ar/cursos-online-gutenberg/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -130,6 +149,7 @@
         <li class="oferta">
             <h3><a href="/carrera/administrativo-veterinaria/">Administrativo Veterinaria</a></h3>
             <ul class="oferta-datos"><li>Duración: 6 meses</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://institutojgutenberg.edu.ar/cursos-online-gutenberg/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -139,6 +159,7 @@
         <li class="oferta">
             <h3><a href="/carrera/lengua-de-senas/">Lengua de Señas</a></h3>
             <ul class="oferta-datos"><li>Duración: 6 meses</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://institutojgutenberg.edu.ar/cursos-online-gutenberg/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -148,10 +169,12 @@
         <li class="oferta">
             <h3><a href="/carrera/ia-desde-cero/">Ia Desde Cero</a></h3>
             <ul class="oferta-datos"><li>Duración: 6 meses</li><li>Modalidad: A Distancia</li><li>Turno: A confirmar</li><li>Curso / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://institutojgutenberg.edu.ar/cursos-online-gutenberg/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
-
+    </div>
+</div>
 </main>
 
 <footer class="pie">

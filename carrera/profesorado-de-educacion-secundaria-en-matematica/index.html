@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Educación","item":"https://buscadoreducativo.com.ar/area/educacion/"},{"@type":"ListItem","position":4,"name":"Profesorado de Educación Secundaria en Matemática","item":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Profesorado de Educación Secundaria en Matemática","numberOfItems":7,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-1","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en Matemática — IES 9-002 Tomás Godoy Cruz","description":"Profesorado de Educación Secundaria en Matemática en IES 9-002 Tomás Godoy Cruz. Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-1","sameAs":"https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-matematica/","provider":{"@type":"EducationalOrganization","name":"IES 9-002 Tomás Godoy Cruz","url":"https://buscadoreducativo.com.ar/institucion/ies-9-002-tomas-godoy-cruz/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-2","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en Matemática — IES 9-006 Francisco H. Tolosa","description":"Profesorado de Educación Secundaria en Matemática en IES 9-006 Francisco H. Tolosa. Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-2","sameAs":"https://ens9006-infd.mendoza.edu.ar/sitio/matematica/","provider":{"@type":"EducationalOrganization","name":"IES 9-006 Francisco H. Tolosa","url":"https://buscadoreducativo.com.ar/institucion/ies-9-006-francisco-h-tolosa/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-3","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en Matemática — IES 9-009 (Tupungato)","description":"Profesorado de Educación Secundaria en Matemática en IES 9-009 (Tupungato). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-3","sameAs":"https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/profesorado-de-educacion-secundaria-en-matematica/","provider":{"@type":"EducationalOrganization","name":"IES 9-009 (Tupungato)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-009-tupungato/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-4","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en Matemática — IES 9-011 Del Atuel","description":"Profesorado de Educación Secundaria en Matemática en IES 9-011 Del Atuel. Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-4","sameAs":"https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica/","provider":{"@type":"EducationalOrganization","name":"IES 9-011 Del Atuel","url":"https://buscadoreducativo.com.ar/institucion/ies-9-011-del-atuel/"}}},{"@type":"ListItem","position":5,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-5","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en Matemática — IES 9-023","description":"Profesorado de Educación Secundaria en Matemática en IES 9-023. Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-5","sameAs":"https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-secundaria-matematica/","provider":{"@type":"EducationalOrganization","name":"IES 9-023","url":"https://buscadoreducativo.com.ar/institucion/ies-9-023/"}}},{"@type":"ListItem","position":6,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-6","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en Matemática — IES 9-024 (Lavalle)","description":"Profesorado de Educación Secundaria en Matemática en IES 9-024 (Lavalle). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-6","sameAs":"https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica","provider":{"@type":"EducationalOrganization","name":"IES 9-024 (Lavalle)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-024-lavalle/"}}},{"@type":"ListItem","position":7,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-7","item":{"@type":"Course","name":"Profesorado de Educación Secundaria en Matemática — IES 9-007 Dr. Salvador Calafat (Gral. Alvear)","description":"Profesorado de Educación Secundaria en Matemática en IES 9-007 Dr. Salvador Calafat (Gral. Alvear). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-en-matematica/#oferta-7","sameAs":"https://ies9007-infd.mendoza.edu.ar/sitio/","provider":{"@type":"EducationalOrganization","name":"IES 9-007 Dr. Salvador Calafat (Gral. Alvear)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-007-dr-salvador-calafat-gral-alvear/"}}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Profesorado de Educación Secundaria en Matemática en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Profesorado de Educación Secundaria en Matemática en Mendoza en 7 instituciones: IES 9-002 Tomás Godoy Cruz, IES 9-006 Francisco H. Tolosa, IES 9-009 (Tupungato), IES 9-011 Del Atuel, IES 9-023, IES 9-024 (Lavalle) y IES 9-007 Dr. Salvador Calafat (Gral. Alvear). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Profesorado de Educación Secundaria en Matemática?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Profesorado de Educación Secundaria en Matemática?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Profesorado de Educación Secundaria en Matemática?","acceptedAnswer":{"@type":"Answer","text":"Profesorado de Educación Secundaria en Matemática es una profesorado perteneciente al área de Educación. Entre sus aptitudes más afines se destacan: interacción social, base teórica y académica, pensamiento analítico y trabajo práctico."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/educacion/">Educación</a> <span aria-hidden="true">›</span> <span aria-current="page">Profesorado de Educación Secundaria en Matemática</span></nav>
-    <h1>Profesorado de Educación Secundaria en Matemática</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/educacion/">Educación</a> <span aria-hidden="true">›</span> <span aria-current="page">Profesorado de Educación Secundaria en Matemática</span></nav>
+        <h1>Profesorado de Educación Secundaria en Matemática</h1>
     <p class="entrada">Dónde estudiar Profesorado de Educación Secundaria en Matemática en Mendoza: profesorado del área Educación, dictada por 7 instituciones (7 públicas). Dura 4 años. Modalidades disponibles: presencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Educación</dd>
         <dt>Tipo de formación</dt><dd>Profesorado</dd>
@@ -82,42 +93,50 @@
     </dl>
 
     <a class="cta" href="/?q=Profesorado+de+Educaci%C3%B3n+Secundaria+en+Matem%C3%A1tica&amp;area=Educaci%C3%B3n&amp;formacion=profesorados">Ver Profesorado de Educación Secundaria en Matemática en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Profesorado de Educación Secundaria en Matemática</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-002-tomas-godoy-cruz/">IES 9-002 Tomás Godoy Cruz</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: Turno tarde o vespertino</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-matematica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-006-francisco-h-tolosa/">IES 9-006 Francisco H. Tolosa</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ens9006-infd.mendoza.edu.ar/sitio/matematica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-3">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-009-tupungato/">IES 9-009 (Tupungato)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/profesorado-de-educacion-secundaria-en-matematica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-4">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-011-del-atuel/">IES 9-011 Del Atuel</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-5">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-023/">IES 9-023</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-secundaria-matematica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-6">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-024-lavalle/">IES 9-024 (Lavalle)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-7">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-007-dr-salvador-calafat-gral-alvear/">IES 9-007 Dr. Salvador Calafat (Gral. Alvear)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ies9007-infd.mendoza.edu.ar/sitio/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -186,6 +205,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Educación</h2>
     <ul class="enlaces">
         <li><a href="/carrera/profesorado-de-educacion-primaria/">Profesorado de Educación Primaria</a> <span class="cuantas">(17)</span></li>
@@ -202,7 +222,9 @@
         <li><a href="/carrera/profesorado-de-educacion-secundaria-en-historia/">Profesorado de Educación Secundaria en HISTORIA</a> <span class="cuantas">(3)</span></li>
     </ul>
     <p><a href="/area/educacion/">Ver las 66 carreras del área Educación →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

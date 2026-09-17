@@ -15,7 +15,8 @@
    ========================================================================== */
 
 :root {
-    --container: 900px;
+    --container: 1280px;
+    --font-scale: 1;
     --font-title: Montserrat, sans-serif;
     --font-text: Montserrat, sans-serif;
 
@@ -61,7 +62,7 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: var(--font-text);
-    font-size: 1rem;
+    font-size: calc(1rem * var(--font-scale));
     line-height: 1.65;
     -webkit-text-size-adjust: 100%;
 }
@@ -94,7 +95,7 @@ body {
     padding: var(--space-2) var(--space-4);
     border: 1px solid var(--line); border-radius: var(--radius-pill);
     background: var(--bg); color: var(--text);
-    font: inherit; font-size: .9375rem;
+    font: inherit; font-size: calc(.9375rem * var(--font-scale));
 }
 .buscador-mini button {
     min-height: 44px; min-width: 44px;
@@ -134,7 +135,7 @@ body {
     gap: var(--space-3);
     color: var(--text);
     text-decoration: none;
-    font-size: .875rem;
+    font-size: calc(.875rem * var(--font-scale));
     line-height: 1.3;
     cursor: pointer;
     transition: background .15s ease;
@@ -150,33 +151,33 @@ body {
     text-overflow: ellipsis;
 }
 .mini-search-item-badge {
-    font-size: .75rem;
+    font-size: calc(.75rem * var(--font-scale));
     color: var(--muted);
     flex-shrink: 0;
 }
 
 /* ---- Miga de pan ------------------------------------------------------- */
-.miga { font-size: .8125rem; color: var(--muted); margin-bottom: var(--space-5); }
+.miga { font-size: calc(.8125rem * var(--font-scale)); color: var(--muted); margin-bottom: var(--space-5); }
 .miga a { color: var(--muted); }
 .miga span[aria-current] { color: var(--text); }
 
 /* ---- Tipografía -------------------------------------------------------- */
 h1 {
     font-family: var(--font-title); font-weight: 800;
-    font-size: clamp(1.6rem, 4.5vw, 2.25rem);
+    font-size: clamp(calc(1.6rem * var(--font-scale)), calc(4.5vw * var(--font-scale)), calc(2.25rem * var(--font-scale)));
     line-height: 1.2; margin: 0 0 var(--space-4);
 }
 h2 {
     font-family: var(--font-title); font-weight: 700;
-    font-size: 1.3rem; line-height: 1.3;
+    font-size: calc(1.3rem * var(--font-scale)); line-height: 1.3;
     margin: var(--space-9) 0 var(--space-5);
 }
-h3 { font-size: 1.05rem; font-weight: 700; margin: var(--space-7) 0 var(--space-3); }
+h3 { font-size: calc(1.05rem * var(--font-scale)); font-weight: 700; margin: var(--space-7) 0 var(--space-3); }
 p { margin: 0 0 var(--space-5); }
 a { color: var(--accent-ink); }
 a:hover { text-decoration: none; }
 
-.entrada { font-size: 1.0625rem; color: var(--muted); }
+.entrada { font-size: calc(1.0625rem * var(--font-scale)); color: var(--muted); }
 
 /* ---- Ficha de datos ---------------------------------------------------- */
 .ficha {
@@ -186,7 +187,7 @@ a:hover { text-decoration: none; }
     border-radius: var(--radius-md);
     padding: var(--space-6);
     margin: 0 0 var(--space-7);
-    font-size: .9375rem;
+    font-size: calc(.9375rem * var(--font-scale));
 }
 .ficha dt { font-weight: 700; color: var(--muted); }
 .ficha dd { margin: 0; }
@@ -198,13 +199,13 @@ a:hover { text-decoration: none; }
     border-radius: var(--radius-md);
     padding: var(--space-6);
 }
-.oferta h3 { margin: 0 0 var(--space-2); font-size: 1rem; }
+.oferta h3 { margin: 0 0 var(--space-2); font-size: calc(1rem * var(--font-scale)); }
 .oferta h3 a { text-decoration: none; }
 .oferta h3 a:hover { text-decoration: underline; }
 .oferta-datos {
     margin: 0; padding: 0; list-style: none;
     display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5);
-    font-size: .875rem; color: var(--muted);
+    font-size: calc(.875rem * var(--font-scale)); color: var(--muted);
 }
 .oferta-datos li::before { content: "· "; }
 .oferta-datos li:first-child::before { content: ""; }
@@ -218,7 +219,7 @@ a:hover { text-decoration: none; }
     border-radius: var(--radius-sm);
     background: var(--surface-soft);
     color: var(--accent-ink);
-    font-size: .875rem;
+    font-size: calc(.875rem * var(--font-scale));
     font-weight: 600;
     text-decoration: none;
     transition: background .2s ease, border-color .2s ease;
@@ -228,8 +229,63 @@ a:hover { text-decoration: none; }
     border-color: var(--accent);
 }
 
+/* ---- Layout amplio de fichas ------------------------------------------- */
+@media (min-width: 821px) {
+    .pagina-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 320px;
+        grid-template-areas:
+            "principal lateral"
+            "contenido lateral";
+        gap: 2.25rem;
+        align-items: start;
+    }
+
+    .principal { grid-area: principal; min-width: 0; }
+    .contenido-pagina { grid-area: contenido; min-width: 0; }
+
+    .lateral {
+        grid-area: lateral;
+        position: sticky;
+        top: 1.5rem;
+        min-width: 0;
+        max-height: calc(100dvh - 3rem);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-7);
+        scrollbar-width: thin;
+    }
+
+    .lateral .ficha {
+        grid-template-columns: 1fr;
+        gap: var(--space-2);
+        margin: 0;
+    }
+
+    .lateral .ficha dt {
+        font-size: calc(.75rem * var(--font-scale));
+        letter-spacing: .03em;
+        text-transform: uppercase;
+    }
+
+    .lateral .ficha dd { margin-bottom: var(--space-3); }
+    .lateral .cta { margin: 0; width: 100%; }
+    .lateral h2 { margin-top: 0; font-size: calc(1.05rem * var(--font-scale)); }
+    .lateral .enlaces { grid-template-columns: 1fr; }
+
+    .contenido-pagina .ofertas {
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    }
+
+    .principal .entrada,
+    .contenido-pagina > p,
+    .faq-respuesta p,
+    .nota-test p { max-width: 68ch; }
+}
+
 .etiqueta {
-    display: inline-block; font-size: .75rem; font-weight: 700;
+    display: inline-block; font-size: calc(.75rem * var(--font-scale)); font-weight: 700;
     padding: 2px var(--space-3); border-radius: var(--radius-pill);
     background: var(--surface-soft); color: var(--muted);
 }
@@ -241,7 +297,7 @@ a:hover { text-decoration: none; }
     list-style: none; margin: 0 0 var(--space-7); padding: 0;
     display: grid; gap: var(--space-2) var(--space-6);
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    font-size: .9375rem;
+    font-size: calc(.9375rem * var(--font-scale));
 }
 .enlaces li { break-inside: avoid; }
 .enlaces li a {
@@ -250,7 +306,7 @@ a:hover { text-decoration: none; }
     min-height: 44px;
     padding: var(--space-1) 0;
 }
-.enlaces .cuantas { color: var(--muted); font-size: .8125rem; }
+.enlaces .cuantas { color: var(--muted); font-size: calc(.8125rem * var(--font-scale)); }
 
 /* ---- Llamado a la acción ---------------------------------------------- */
 .cta {
@@ -271,7 +327,7 @@ a:hover { text-decoration: none; }
     margin-top: var(--space-9);
     background: var(--surface);
     padding: var(--space-8) 0;
-    font-size: .875rem; color: var(--muted);
+    font-size: calc(.875rem * var(--font-scale)); color: var(--muted);
 }
 /* ---- Aptitudes Vocacionales ------------------------------------------- */
 .lista-aptitudes {
@@ -288,21 +344,21 @@ a:hover { text-decoration: none; }
     display: flex; justify-content: space-between; align-items: center;
     gap: var(--space-3); margin-bottom: var(--space-2);
 }
-.aptitud-encabezado strong { font-size: .9375rem; color: var(--text); }
+.aptitud-encabezado strong { font-size: calc(.9375rem * var(--font-scale)); color: var(--text); }
 .aptitud-score {
-    font-size: .75rem; font-weight: 700;
+    font-size: calc(.75rem * var(--font-scale)); font-weight: 700;
     padding: 2px var(--space-3); border-radius: var(--radius-pill);
     background: var(--surface-soft); color: var(--blue-ink);
 }
 .aptitud-desc {
-    margin: 0; font-size: .875rem; color: var(--muted); line-height: 1.5;
+    margin: 0; font-size: calc(.875rem * var(--font-scale)); color: var(--muted); line-height: 1.5;
 }
 .nota-test {
     background: var(--surface-soft);
     padding: var(--space-4) var(--space-6);
     border-radius: var(--radius-md);
     margin: 0 0 var(--space-8);
-    font-size: .9375rem;
+    font-size: calc(.9375rem * var(--font-scale));
 }
 .nota-test p { margin: 0; }
 .nota-test a { font-weight: 700; color: var(--blue-ink); }
@@ -319,13 +375,13 @@ a:hover { text-decoration: none; }
     transition: background .2s ease;
 }
 .faq-pregunta {
-    cursor: pointer; font-size: 1rem; color: var(--text);
+    cursor: pointer; font-size: calc(1rem * var(--font-scale)); color: var(--text);
     list-style: none; display: flex; justify-content: space-between; align-items: center;
     user-select: none;
 }
 .faq-pregunta::-webkit-details-marker { display: none; }
 .faq-pregunta::after {
-    content: "+"; font-size: 1.25rem; font-weight: 700; color: var(--muted);
+    content: "+"; font-size: calc(1.25rem * var(--font-scale)); font-weight: 700; color: var(--muted);
     transition: transform .2s ease;
 }
 .faq-item[open] .faq-pregunta::after {
@@ -333,9 +389,53 @@ a:hover { text-decoration: none; }
 }
 .faq-respuesta {
     margin-top: var(--space-3);
-    font-size: .9375rem; color: var(--text); line-height: 1.6;
+    font-size: calc(.9375rem * var(--font-scale)); color: var(--text); line-height: 1.6;
 }
 .faq-respuesta p { margin: 0; }
+
+/* ---- Plan de estudio (dentro de cada oferta) --------------------------- */
+.plan-de-estudio {
+    margin-top: var(--space-4);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--surface-soft);
+}
+.plan-de-estudio summary {
+    cursor: pointer; list-style: none; user-select: none;
+    display: flex; justify-content: space-between; align-items: center;
+    min-height: 44px; padding: var(--space-3) var(--space-5);
+    font-size: calc(.9375rem * var(--font-scale)); font-weight: 700; color: var(--accent-ink);
+}
+.plan-de-estudio summary::-webkit-details-marker { display: none; }
+.plan-de-estudio summary::after {
+    content: "+"; font-size: calc(1.25rem * var(--font-scale)); font-weight: 700; color: var(--muted);
+}
+.plan-de-estudio[open] summary::after { content: "−"; }
+.plan-contenido {
+    padding: 0 var(--space-5) var(--space-5);
+    display: grid; gap: var(--space-5);
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.plan-anio h4 {
+    margin: 0 0 var(--space-2);
+    font-size: calc(.875rem * var(--font-scale)); text-transform: uppercase; letter-spacing: .03em;
+    color: var(--muted);
+}
+.plan-anio ul { margin: 0; padding: 0; list-style: none; }
+.plan-anio li {
+    font-size: calc(.875rem * var(--font-scale)); line-height: 1.5;
+    padding: var(--space-1) 0 var(--space-1) var(--space-4);
+    position: relative;
+}
+.plan-anio li::before {
+    content: "·"; position: absolute; left: var(--space-1); color: var(--accent);
+    font-weight: 700;
+}
+.plan-fuente {
+    grid-column: 1 / -1; margin: 0;
+    font-size: calc(.8125rem * var(--font-scale)); color: var(--muted);
+}
+.plan-fuente a { color: var(--accent-ink); }
 
 @media (max-width: 640px) {
     .ficha { grid-template-columns: 1fr; gap: var(--space-1) 0; }

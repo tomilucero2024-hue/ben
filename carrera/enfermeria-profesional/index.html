@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Salud","item":"https://buscadoreducativo.com.ar/area/salud/"},{"@type":"ListItem","position":4,"name":"Enfermería Profesional","item":"https://buscadoreducativo.com.ar/carrera/enfermeria-profesional/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Enfermería Profesional","description":"Dónde estudiar Enfermería Profesional en Mendoza: tecnicatura del área Salud, dictada por 1 institución (1 pública). Dura 3 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/enfermeria-profesional/","provider":{"@type":"EducationalOrganization","name":"IESVU (IES 9-015 Valle de Uco)","url":"https://buscadoreducativo.com.ar/institucion/iesvu-ies-9-015-valle-de-uco/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Enfermería Profesional en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Enfermería Profesional en Mendoza en la siguiente institución: IESVU (IES 9-015 Valle de Uco). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Enfermería Profesional?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 3 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Enfermería Profesional?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Enfermería Profesional?","acceptedAnswer":{"@type":"Answer","text":"Enfermería Profesional es una tecnicatura perteneciente al área de Salud. Entre sus aptitudes más afines se destacan: pensamiento analítico, trabajo práctico, interacción social y base teórica y académica."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/salud/">Salud</a> <span aria-hidden="true">›</span> <span aria-current="page">Enfermería Profesional</span></nav>
-    <h1>Enfermería Profesional</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/salud/">Salud</a> <span aria-hidden="true">›</span> <span aria-current="page">Enfermería Profesional</span></nav>
+        <h1>Enfermería Profesional</h1>
     <p class="entrada">Dónde estudiar Enfermería Profesional en Mendoza: tecnicatura del área Salud, dictada por 1 institución (1 pública). Dura 3 años. Modalidades disponibles: presencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Salud</dd>
         <dt>Tipo de formación</dt><dd>Tecnicatura</dd>
@@ -82,12 +93,14 @@
     </dl>
 
     <a class="cta" href="/?q=Enfermer%C3%ADa+Profesional&amp;area=Salud&amp;formacion=tecnicaturas">Ver Enfermería Profesional en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Enfermería Profesional</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/iesvu-ies-9-015-valle-de-uco/">IESVU (IES 9-015 Valle de Uco)</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://iesvu.edu.ar/estudio/enfermeria-profesional/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -156,6 +169,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Salud</h2>
     <ul class="enlaces">
         <li><a href="/carrera/licenciatura-en-nutricion/">Licenciatura en Nutrición</a> <span class="cuantas">(6)</span></li>
@@ -172,7 +186,9 @@
         <li><a href="/carrera/licenciatura-en-terapia-ocupacional/">Licenciatura en Terapia Ocupacional</a> <span class="cuantas">(2)</span></li>
     </ul>
     <p><a href="/area/salud/">Ver las 55 carreras del área Salud →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

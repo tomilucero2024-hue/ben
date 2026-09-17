@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Profesorado de Artes Visuales: dónde estudiarla en Mendoza | BEN</title>
-<meta name="description" content="Dónde estudiar Profesorado de Artes Visuales en Mendoza: profesorado del área Educación, dictada por 7 instituciones (7 públicas). Dura de 4 a 4.">
+<meta name="description" content="Dónde estudiar Profesorado de Artes Visuales en Mendoza: profesorado del área Educación, dictada por 7 instituciones (6 públicas y 1 privada). Dura de 4 a 4.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Profesorado de Artes Visuales: dónde estudiarla en Mendoza | BEN">
-<meta property="og:description" content="Dónde estudiar Profesorado de Artes Visuales en Mendoza: profesorado del área Educación, dictada por 7 instituciones (7 públicas). Dura de 4 a 4.">
+<meta property="og:description" content="Dónde estudiar Profesorado de Artes Visuales en Mendoza: profesorado del área Educación, dictada por 7 instituciones (6 públicas y 1 privada). Dura de 4 a 4.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Profesorado de Artes Visuales: dónde estudiarla en Mendoza | BEN">
-<meta name="twitter:description" content="Dónde estudiar Profesorado de Artes Visuales en Mendoza: profesorado del área Educación, dictada por 7 instituciones (7 públicas). Dura de 4 a 4.">
+<meta name="twitter:description" content="Dónde estudiar Profesorado de Artes Visuales en Mendoza: profesorado del área Educación, dictada por 7 instituciones (6 públicas y 1 privada). Dura de 4 a 4.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Educación","item":"https://buscadoreducativo.com.ar/area/educacion/"},{"@type":"ListItem","position":4,"name":"Profesorado de Artes Visuales","item":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Profesorado de Artes Visuales","numberOfItems":7,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-1","item":{"@type":"Course","name":"Profesorado de Artes Visuales — IES 9-006 Francisco H. Tolosa","description":"Profesorado de Artes Visuales en IES 9-006 Francisco H. Tolosa. Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-1","sameAs":"https://ens9006-infd.mendoza.edu.ar/sitio/artes/","provider":{"@type":"EducationalOrganization","name":"IES 9-006 Francisco H. Tolosa","url":"https://buscadoreducativo.com.ar/institucion/ies-9-006-francisco-h-tolosa/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-2","item":{"@type":"Course","name":"Profesorado de Artes Visuales — IES 9-010 Rosario Vera Peñaloza","description":"Profesorado de Artes Visuales en IES 9-010 Rosario Vera Peñaloza. Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-2","sameAs":"https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/","provider":{"@type":"EducationalOrganization","name":"IES 9-010 Rosario Vera Peñaloza","url":"https://buscadoreducativo.com.ar/institucion/ies-9-010-rosario-vera-penaloza/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-3","item":{"@type":"Course","name":"Profesorado de Artes Visuales — IES 9-014 Profesorado de Arte (IPA)","description":"Profesorado de Artes Visuales en IES 9-014 Profesorado de Arte (IPA). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-3","sameAs":"https://profesoradodearte.edu.ar/artes-visuales/","provider":{"@type":"EducationalOrganization","name":"IES 9-014 Profesorado de Arte (IPA)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-014-profesorado-de-arte-ipa/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-4","item":{"@type":"Course","name":"Profesorado de Artes Visuales — IES 9-030 (Instituto del Bicentenario)","description":"Profesorado de Artes Visuales en IES 9-030 (Instituto del Bicentenario). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-4","sameAs":"https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/","provider":{"@type":"EducationalOrganization","name":"IES 9-030 (Instituto del Bicentenario)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-030-instituto-del-bicentenario/"}}},{"@type":"ListItem","position":5,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-5","item":{"@type":"Course","name":"Profesorado de Artes Visuales — Universidad Nacional de Cuyo (UNCuyo)","description":"Profesorado de Artes Visuales en Universidad Nacional de Cuyo (UNCuyo). Duración: 4 años y medio. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-5","sameAs":"https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-artes-visuales","provider":{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"}}},{"@type":"ListItem","position":6,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-6","item":{"@type":"Course","name":"Profesorado de Artes Visuales — IES 9-002 Tomás Godoy Cruz","description":"Profesorado de Artes Visuales en IES 9-002 Tomás Godoy Cruz. Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-6","sameAs":"https://institutotomasgodoycruz.com/profesorado-en-artes-visuales/","provider":{"@type":"EducationalOrganization","name":"IES 9-002 Tomás Godoy Cruz","url":"https://buscadoreducativo.com.ar/institucion/ies-9-002-tomas-godoy-cruz/"}}},{"@type":"ListItem","position":7,"url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-7","item":{"@type":"Course","name":"Profesorado de Artes Visuales — IES 9-007 Dr. Salvador Calafat (Gral. Alvear)","description":"Profesorado de Artes Visuales en IES 9-007 Dr. Salvador Calafat (Gral. Alvear). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-artes-visuales/#oferta-7","sameAs":"https://ies9007-infd.mendoza.edu.ar/sitio/","provider":{"@type":"EducationalOrganization","name":"IES 9-007 Dr. Salvador Calafat (Gral. Alvear)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-007-dr-salvador-calafat-gral-alvear/"}}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Profesorado de Artes Visuales en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Profesorado de Artes Visuales en Mendoza en 7 instituciones: IES 9-006 Francisco H. Tolosa, IES 9-010 Rosario Vera Peñaloza, IES 9-014 Profesorado de Arte (IPA), IES 9-030 (Instituto del Bicentenario), Universidad Nacional de Cuyo (UNCuyo), IES 9-002 Tomás Godoy Cruz y IES 9-007 Dr. Salvador Calafat (Gral. Alvear). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Profesorado de Artes Visuales?","acceptedAnswer":{"@type":"Answer","text":"La duración de la carrera varía de 4 a 4.5 años según el plan de estudio de la institución elegida."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Profesorado de Artes Visuales?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Profesorado de Artes Visuales?","acceptedAnswer":{"@type":"Answer","text":"Profesorado de Artes Visuales es una profesorado perteneciente al área de Educación. Entre sus aptitudes más afines se destacan: trabajo práctico, interacción social, creatividad y base teórica y académica."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/educacion/">Educación</a> <span aria-hidden="true">›</span> <span aria-current="page">Profesorado de Artes Visuales</span></nav>
-    <h1>Profesorado de Artes Visuales</h1>
-    <p class="entrada">Dónde estudiar Profesorado de Artes Visuales en Mendoza: profesorado del área Educación, dictada por 7 instituciones (7 públicas). Dura de 4 a 4.5 años según la institución. Modalidades disponibles: presencial.</p>
-
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/educacion/">Educación</a> <span aria-hidden="true">›</span> <span aria-current="page">Profesorado de Artes Visuales</span></nav>
+        <h1>Profesorado de Artes Visuales</h1>
+    <p class="entrada">Dónde estudiar Profesorado de Artes Visuales en Mendoza: profesorado del área Educación, dictada por 7 instituciones (6 públicas y 1 privada). Dura de 4 a 4.5 años según la institución. Modalidades disponibles: presencial.</p>
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Educación</dd>
         <dt>Tipo de formación</dt><dd>Profesorado</dd>
@@ -82,42 +93,59 @@
     </dl>
 
     <a class="cta" href="/?q=Profesorado+de+Artes+Visuales&amp;area=Educaci%C3%B3n&amp;formacion=profesorados">Ver Profesorado de Artes Visuales en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Profesorado de Artes Visuales</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-006-francisco-h-tolosa/">IES 9-006 Francisco H. Tolosa</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ens9006-infd.mendoza.edu.ar/sitio/artes/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-010-rosario-vera-penaloza/">IES 9-010 Rosario Vera Peñaloza</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-3">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-014-profesorado-de-arte-ipa/">IES 9-014 Profesorado de Arte (IPA)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://profesoradodearte.edu.ar/artes-visuales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-4">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-030-instituto-del-bicentenario/">IES 9-030 (Instituto del Bicentenario)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-5">
-            <h3><span class="etiqueta publica">pública</span> <a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <h3><a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Introducción a las Artes Visuales</li><li>Dibujo I</li><li>Dibujo II</li><li>Dibujo III</li><li>Dibujo Técnico</li><li>Taller de Rotación I: Pintura</li><li>Taller de Rotación I: Escultura</li><li>Taller de Rotación I: Grabado</li><li>Taller de Rotación II: Pintura</li><li>Taller de Rotación II: Escultura</li><li>Taller de Rotación II: Grabado</li><li>Taller I para Profesorado (con opción a Pintura, Escultura o Grabado)</li><li>Taller II para Profesorado (continúa la opción de Taller I)</li><li>Visión I</li><li>Visión II</li><li>Historia del Arte I</li><li>Historia del Arte II</li><li>Historia del Arte III</li><li>Historia del Arte IV</li><li>Historia del Arte Americano y Argentino</li><li>Filosofía del Arte</li><li>Problemática Educativa</li><li>Didáctica y Currículum</li><li>Psicología del desarrollo</li><li>Enseñanza y aprendizaje de las Artes Visuales</li><li>Medios de Comunicación</li><li>Tecnología y Expresión de los Materiales y Procesos Estructurales</li><li>Análisis de las Formas</li><li>Práctica de la Enseñanza</li><li>Historia de las Corrientes Literarias</li><li>Sistemas de Representación</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-artes-visuales" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/profesorado-de-grado-universitario-en-artes-visuales" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-6">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-002-tomas-godoy-cruz/">IES 9-002 Tomás Godoy Cruz</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: Turno vespertino</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://institutotomasgodoycruz.com/profesorado-en-artes-visuales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-7">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-007-dr-salvador-calafat-gral-alvear/">IES 9-007 Dr. Salvador Calafat (Gral. Alvear)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ies9007-infd.mendoza.edu.ar/sitio/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -186,6 +214,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Educación</h2>
     <ul class="enlaces">
         <li><a href="/carrera/profesorado-de-educacion-primaria/">Profesorado de Educación Primaria</a> <span class="cuantas">(17)</span></li>
@@ -202,7 +231,9 @@
         <li><a href="/carrera/profesorado-de-educacion-secundaria-en-historia/">Profesorado de Educación Secundaria en HISTORIA</a> <span class="cuantas">(3)</span></li>
     </ul>
     <p><a href="/area/educacion/">Ver las 66 carreras del área Educación →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

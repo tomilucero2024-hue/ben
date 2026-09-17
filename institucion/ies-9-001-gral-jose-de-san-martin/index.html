@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"IES 9-001 Gral. José de San Martín","item":"https://buscadoreducativo.com.ar/institucion/ies-9-001-gral-jose-de-san-martin/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"IES 9-001 Gral. José de San Martín","url":"https://buscadoreducativo.com.ar/institucion/ies-9-001-gral-jose-de-san-martin/","email":"consultas@ens9001.edu.ar","telephone":"02623-420750","address":{"@type":"PostalAddress","streetAddress":"Chubut y Balcarce, Gral. San Martín","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -68,10 +76,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">IES 9-001 Gral. José de San Martín</span></nav>
-    <h1>IES 9-001 Gral. José de San Martín</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">IES 9-001 Gral. José de San Martín</span></nav>
+        <h1>IES 9-001 Gral. José de San Martín</h1>
     <p class="entrada">IES 9-001 Gral. José de San Martín: 14 carreras en Mendoza, gestión pública. Duración, modalidad y links oficiales de cada una.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Gestión</dt><dd>pública</dd>
         <dt>Nivel</dt><dd>terciario</dd>
@@ -83,52 +94,63 @@
     </dl>
 
     <a class="cta" href="/?institucion=IES%209-001%20Gral.%20Jos%C3%A9%20de%20San%20Mart%C3%ADn">Ver esta institución en el buscador →</a>
+    </aside>
+    <div class="contenido-pagina">
 
     <h2>Educación (9)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-primaria/">Profesorado de Educación PRIMARIA</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Profesorado</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/educacion-primaria/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-inicial/">Profesorado de Educación INICIAL</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Profesorado</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/educacion-inicial/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual/">Profesorado de Educación ESPECIAL con ORIENTACIÓN en DISCAPACIDAD INTELECT UAL</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Profesorado</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/educacion-especial/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-en-ingles/">Profesorado de INGLÉS</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Profesorado</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/ingles-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/">Profesorado de Educación Secundaria en LENGUA y LITERATURA</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Profesorado</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/lengua-y-literatura/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-secundaria-en-geografia/">Profesorado de Educación Secundaria en GEOGRAFÍA</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Profesorado</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/geografia-3/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-secundaria-en-historia/">Profesorado de Educación Secundaria en HISTORIA</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Profesorado</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/historia-3/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-secundaria-en-biologia/">Profesorado de Educación Secundaria en BIOLOGÍA</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Profesorado</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/biologia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-secundaria-de-la-modalidad-tecnico-profesional-en-conc/">Profesorado de Educación Secundaria de la MODALIDAD TÉCNICO PROFESIONAL EN CONC. CON EL TÍTULO DE BASE</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Profesorado</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/protec/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -138,6 +160,7 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio/">Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-laboral/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -147,6 +170,7 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-superior-en-comunicacion-social/">Tecnicatura Superior en COMUNICACIÓN SOCIAL</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/comunicacion-social/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -156,6 +180,7 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnico-superior-en-diseno-de-indumentaria-textil-y-accesorios/">Tecnicatura Superior en DISEÑO DE INDUMENTARIA, TEXTIL y ACCESORIOS</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/ingreso-pre-inscripcion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -165,6 +190,7 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-superior-en-administracion-publica/">Tecnicatura Superior en ADMINISTRACIÓN PÚBLICA</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/publica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -174,10 +200,12 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-superior-en-acompanamiento-terapeutico/">Tecnicatura Superior en Acompañamiento Terapéutico</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/ingreso-pre-inscripcion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
-
+    </div>
+</div>
 </main>
 
 <footer class="pie">

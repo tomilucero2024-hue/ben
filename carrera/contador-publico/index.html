@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contador Público: dónde estudiarla en Mendoza | BEN</title>
-<meta name="description" content="Dónde estudiar Contador Público en Mendoza: carrera de grado del área Negocios, dictada por 9 instituciones (2 públicas y 9 privadas). Dura de 4 a 4.">
+<meta name="description" content="Dónde estudiar Contador Público en Mendoza: carrera de grado del área Negocios, dictada por 9 instituciones (1 pública y 10 privadas). Dura de 4 a 4.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/carrera/contador-publico/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Contador Público: dónde estudiarla en Mendoza | BEN">
-<meta property="og:description" content="Dónde estudiar Contador Público en Mendoza: carrera de grado del área Negocios, dictada por 9 instituciones (2 públicas y 9 privadas). Dura de 4 a 4.">
+<meta property="og:description" content="Dónde estudiar Contador Público en Mendoza: carrera de grado del área Negocios, dictada por 9 instituciones (1 pública y 10 privadas). Dura de 4 a 4.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/carrera/contador-publico/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contador Público: dónde estudiarla en Mendoza | BEN">
-<meta name="twitter:description" content="Dónde estudiar Contador Público en Mendoza: carrera de grado del área Negocios, dictada por 9 instituciones (2 públicas y 9 privadas). Dura de 4 a 4.">
+<meta name="twitter:description" content="Dónde estudiar Contador Público en Mendoza: carrera de grado del área Negocios, dictada por 9 instituciones (1 pública y 10 privadas). Dura de 4 a 4.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Negocios","item":"https://buscadoreducativo.com.ar/area/negocios/"},{"@type":"ListItem","position":4,"name":"Contador Público","item":"https://buscadoreducativo.com.ar/carrera/contador-publico/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Contador Público","numberOfItems":11,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-1","item":{"@type":"Course","name":"Contador Público — Universidad Nacional de Cuyo (UNCuyo)","description":"Contador Público en Universidad Nacional de Cuyo (UNCuyo). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-1","sameAs":"https://www.uncuyo.edu.ar/estudios/carrera/contador-publico-_9301","provider":{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-2","item":{"@type":"Course","name":"Contador Público — Universidad de Mendoza (UM)","description":"Contador Público en Universidad de Mendoza (UM). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-2","sameAs":"https://um.edu.ar/carreras/contador-publico/","provider":{"@type":"EducationalOrganization","name":"Universidad de Mendoza (UM)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-mendoza-um/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-3","item":{"@type":"Course","name":"Contador Público — Universidad Juan Agustín Maza (UMaza)","description":"Contador Público en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-3","sameAs":"https://www.umaza.edu.ar/landings/contador/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-4","item":{"@type":"Course","name":"Contador Público — Universidad Juan Agustín Maza (UMaza)","description":"Contador Público en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-4","sameAs":"https://www.umaza.edu.ar/landings/contadorVDU/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":5,"url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-5","item":{"@type":"Course","name":"Contador Público — Universidad de Congreso (UC)","description":"Contador Público en Universidad de Congreso (UC). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-5","sameAs":"https://www.ucongreso.edu.ar/carrera/contador-publico/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}},{"@type":"ListItem","position":6,"url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-6","item":{"@type":"Course","name":"Contador Público — Universidad del Aconcagua (UDA)","description":"Contador Público en Universidad del Aconcagua (UDA). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-6","sameAs":"https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico","provider":{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"}}},{"@type":"ListItem","position":7,"url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-7","item":{"@type":"Course","name":"Contador Público — Universidad del Aconcagua (UDA)","description":"Contador Público en Universidad del Aconcagua (UDA). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-7","sameAs":"https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico","provider":{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"}}},{"@type":"ListItem","position":8,"url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-8","item":{"@type":"Course","name":"Contador Público — Universidad Champagnat (UCh)","description":"Contador Público en Universidad Champagnat (UCh). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-8","sameAs":"https://www.uch.edu.ar/carrera/contador-publico","provider":{"@type":"EducationalOrganization","name":"Universidad Champagnat (UCh)","url":"https://buscadoreducativo.com.ar/institucion/universidad-champagnat-uch/"}}},{"@type":"ListItem","position":9,"url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-9","item":{"@type":"Course","name":"Contador Público — Universidad Católica Argentina (UCA)","description":"Contador Público en Universidad Católica Argentina (UCA). Duración: A confirmar. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-9","sameAs":"https://uca.edu.ar/es/ingreso","provider":{"@type":"EducationalOrganization","name":"Universidad Católica Argentina (UCA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-catolica-argentina-uca/"}}},{"@type":"ListItem","position":10,"url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-10","item":{"@type":"Course","name":"Contador Público — Universidad Siglo 21 (S21)","description":"Contador Público en Universidad Siglo 21 (S21). Duración: 4 años y medio. Modalidad: Presencial, Híbrida o Distancia.","url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-10","sameAs":"https://21.edu.ar/carreras-y-programas/contador-publico?hsLang=es","provider":{"@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}}},{"@type":"ListItem","position":11,"url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-11","item":{"@type":"Course","name":"Contador Público — Universidad de la Defensa Nacional (UNDEF)","description":"Contador Público en Universidad de la Defensa Nacional (UNDEF). Duración: 4 años y medio. Modalidad: A Distancia.","url":"https://buscadoreducativo.com.ar/carrera/contador-publico/#oferta-11","sameAs":"https://undef.edu.ar/a-distancia-2/","provider":{"@type":"EducationalOrganization","name":"Universidad de la Defensa Nacional (UNDEF)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-la-defensa-nacional-undef/"}}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Contador Público en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Contador Público en Mendoza en 9 instituciones: Universidad Nacional de Cuyo (UNCuyo), Universidad de Mendoza (UM), Universidad Juan Agustín Maza (UMaza), Universidad de Congreso (UC), Universidad del Aconcagua (UDA), Universidad Champagnat (UCh), Universidad Católica Argentina (UCA), Universidad Siglo 21 (S21) y Universidad de la Defensa Nacional (UNDEF). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Contador Público?","acceptedAnswer":{"@type":"Answer","text":"La duración de la carrera varía de 4 a 4.5 años según el plan de estudio de la institución elegida."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Contador Público?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, a distancia y semipresencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Contador Público?","acceptedAnswer":{"@type":"Answer","text":"Contador Público es una carrera de grado perteneciente al área de Negocios. Entre sus aptitudes más afines se destacan: pensamiento analítico, base teórica y académica, carga matemática y cuantitativa y interacción social."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/negocios/">Negocios</a> <span aria-hidden="true">›</span> <span aria-current="page">Contador Público</span></nav>
-    <h1>Contador Público</h1>
-    <p class="entrada">Dónde estudiar Contador Público en Mendoza: carrera de grado del área Negocios, dictada por 9 instituciones (2 públicas y 9 privadas). Dura de 4 a 4.5 años según la institución. Modalidades disponibles: presencial, a distancia y semipresencial.</p>
-
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/negocios/">Negocios</a> <span aria-hidden="true">›</span> <span aria-current="page">Contador Público</span></nav>
+        <h1>Contador Público</h1>
+    <p class="entrada">Dónde estudiar Contador Público en Mendoza: carrera de grado del área Negocios, dictada por 9 instituciones (1 pública y 10 privadas). Dura de 4 a 4.5 años según la institución. Modalidades disponibles: presencial, a distancia y semipresencial.</p>
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Negocios</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
@@ -82,62 +93,137 @@
     </dl>
 
     <a class="cta" href="/?q=Contador+P%C3%BAblico&amp;area=Negocios&amp;formacion=grado">Ver Contador Público en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Contador Público</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
-            <h3><span class="etiqueta publica">pública</span> <a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <h3><a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Derecho Público</li><li>Sistemas y Tecnologías de Información I</li><li>Introducción a la Economía</li><li>Comportamiento Organizacional</li><li>Administración</li><li>Matemática aplicada a la gestión contable</li><li>Fundamentos de Contabilidad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Contabilidad Intermedia</li><li>Régimen del Trabajo y Seguridad Social</li><li>Estadística</li><li>Filosofía y Ética</li><li>Derecho civil y comercial</li><li>Contabilidad de costos</li><li>Macroeconomía</li><li>Matemática financiera</li><li>Práctica laboral I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Contabilidad Superior</li><li>Sistemas y Tecnologías de Información II</li><li>Derecho societario</li><li>Espacio Optativo/Electivo I</li><li>Costos para la gestión</li><li>Contabilidad Avanzada</li><li>Teoría y Técnica impositiva I</li><li>Derecho Sucesorio</li><li>Espacio Optativo/Electivo II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Teoría y Técnica impositiva II</li><li>Control estratégico y gestión financiera</li><li>Auditoría</li><li>Derecho Concursal</li><li>Trabajo final integrador</li><li>Administración financiera del sector publico</li><li>Práctica Profesional</li><li>Espacio Optativo/Electivo III</li><li>Anual</li><li>Taller de Integración SI/TI</li><li>Operatoria de comercio exterior</li><li>Seguridad de sistemas de información.</li><li>Finanzas públicas</li><li>Contabilidad Internacional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/contador-publico-_9301" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/contador-publico-_9301" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-mendoza-um/">Universidad de Mendoza (UM)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://um.edu.ar/carreras/contador-publico/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-3">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Administración</li><li>Contabilidad I - General</li><li>Matemática</li><li>Derecho Público y Administrativo</li><li>Economía I - Microeconomía</li><li>Sociología de las Organizaciones</li><li>PAFU Programa de Actividad Física Universitaria opcional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización Empresarial y Sistemas de Información</li><li>Contabilidad II - Valuación y Exposición</li><li>Probabilidad y Estadística</li><li>Matemática Financiera</li><li>Economía II - Macroeconomía</li><li>Costos</li><li>Derecho Civil y Comercial</li><li>Marketing</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Finanzas Públicas</li><li>Contabilidad III - Análisis e Interpretación de Estados Contables</li><li>Régimen y Práctica Tributaria I</li><li>Derecho del Trabajo y de la Seguridad Social</li><li>Administración Financiera</li><li>Negociación y Mediación</li><li>Régimen y Práctica Tributaria II</li><li>Sociedades</li><li>Administración de Recursos Humanos</li><li>Desarrollo de Emprendimientos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Control de Gestión</li><li>Auditoría Operativa y de Sistemas</li><li>Concursos y Quiebras</li><li>Metodología de la Investigación</li><li>Comercio Internacional</li><li>Derecho de Familia y Sucesiones</li><li>Auditoría Contable</li><li>Actuación Profesional</li><li>Contabilidad Pública</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/contador/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/contador/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-4">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Administración</li><li>Contabilidad I - General</li><li>Matemática</li><li>Derecho Público y Administrativo</li><li>Economía I - Microeconomía</li><li>Sociología de las Organizaciones</li><li>PAFU Programa de Actividad Física Universitaria opcional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización Empresarial y Sistemas de Información</li><li>Contabilidad II - Valuación y Exposición</li><li>Probabilidad y Estadística</li><li>Matemática Financiera</li><li>Economía II - Macroeconomía</li><li>Costos</li><li>Derecho Civil y Comercial</li><li>Marketing</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Finanzas Públicas</li><li>Contabilidad III - Análisis e Interpretación de Estados Contables</li><li>Régimen y Práctica Tributaria I</li><li>Derecho del Trabajo y de la Seguridad Social</li><li>Administración Financiera</li><li>Negociación y Mediación</li><li>Régimen y Práctica Tributaria II</li><li>Sociedades</li><li>Administración de Recursos Humanos</li><li>Desarrollo de Emprendimientos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Control de Gestión</li><li>Auditoría Operativa y de Sistemas</li><li>Concursos y Quiebras</li><li>Metodología de la Investigación</li><li>Comercio Internacional</li><li>Derecho de Familia y Sucesiones</li><li>Auditoría Contable</li><li>Actuación Profesional</li><li>Contabilidad Pública</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/contadorVDU/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/contadorVDU/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-5">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-congreso-uc/">Universidad de Congreso (UC)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/contador-publico/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-6">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-7">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-8">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-champagnat-uch/">Universidad Champagnat (UCh)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://www.uch.edu.ar/carrera/contador-publico" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-9">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-catolica-argentina-uca/">Universidad Católica Argentina (UCA)</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-10">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-siglo-21-s21/">Universidad Siglo 21 (S21)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/contador-publico?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-11">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/universidad-de-la-defensa-nacional-undef/">Universidad de la Defensa Nacional (UNDEF)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: A Distancia</li></ul>
+
             <a class="oficial" href="https://undef.edu.ar/a-distancia-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -206,6 +292,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Negocios</h2>
     <ul class="enlaces">
         <li><a href="/carrera/recursos-humanos/">Recursos Humanos</a> <span class="cuantas">(6)</span></li>
@@ -222,7 +309,9 @@
         <li><a href="/carrera/licenciatura-en-logistica/">Licenciatura en Logística</a> <span class="cuantas">(2)</span></li>
     </ul>
     <p><a href="/area/negocios/">Ver las 75 carreras del área Negocios →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

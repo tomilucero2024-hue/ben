@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Qué estudiar en Gastronomía | BEN</title>
-<meta name="description" content="23 carreras del área Gastronomía en BEN, dictadas por 18 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta name="description" content="23 carreras del área Gastronomía en BEN, dictadas por 17 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/area/gastronomia/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Qué estudiar en Gastronomía | BEN">
-<meta property="og:description" content="23 carreras del área Gastronomía en BEN, dictadas por 18 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta property="og:description" content="23 carreras del área Gastronomía en BEN, dictadas por 17 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/area/gastronomia/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Qué estudiar en Gastronomía | BEN">
-<meta name="twitter:description" content="23 carreras del área Gastronomía en BEN, dictadas por 18 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta name="twitter:description" content="23 carreras del área Gastronomía en BEN, dictadas por 17 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,9 +56,9 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Gastronomía","item":"https://buscadoreducativo.com.ar/area/gastronomia/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Carreras del área Gastronomía","description":"23 carreras del área Gastronomía en BEN, dictadas por 18 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.","url":"https://buscadoreducativo.com.ar/area/gastronomia/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Carreras del área Gastronomía","description":"23 carreras del área Gastronomía en BEN, dictadas por 17 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.","url":"https://buscadoreducativo.com.ar/area/gastronomia/"}</script>
 </head>
 <body>
 <header class="cabecera">
@@ -70,13 +78,13 @@
 <main class="envoltorio">
     <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <span aria-current="page">Gastronomía</span></nav>
     <h1>Qué estudiar en Gastronomía</h1>
-    <p class="entrada">23 carreras del área Gastronomía en BEN, dictadas por 18 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.</p>
+    <p class="entrada">23 carreras del área Gastronomía en BEN, dictadas por 17 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.</p>
 
     <a class="cta" href="/?area=Gastronom%C3%ADa">Filtrar Gastronomía en el buscador →</a>
 
     <h2>Carreras de grado (5)</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/bromatologia/">Bromatología</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/bromatologia/">Bromatología</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/ciclo-de-licenciatura-en-enologia/">Ciclo de Licenciatura en Enología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-bromatologia/">Licenciatura en Bromatología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-enologia/">Licenciatura en Enología</a> <span class="cuantas">(1)</span></li>
@@ -88,7 +96,7 @@
         <li><a href="/carrera/enologia/">Enología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/sommelier-universitario/">Sommelier Universitario</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-enologia-e-industrias-frutihorticolas/">Tecnicatura en Enología e Industrias Frutihortícolas</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-enologia-y-viticultura/">Tecnicatura en Enología y Viticultura</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-en-enologia-y-viticultura/">Tecnicatura en Enología y Viticultura</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/tecnicatura-en-gastronomia/">Tecnicatura en Gastronomía</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-viticultura-y-enologia/">Tecnicatura en Viticultura y Enología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-enologia/">Tecnicatura Superior en Enología</a> <span class="cuantas">(2)</span></li>

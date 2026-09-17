@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Todas las carreras","description":"Listado completo de las 548 carreras que reúne BEN, ordenadas por área: grado, tecnicaturas, profesorados, oficios y cursos.","url":"https://buscadoreducativo.com.ar/carreras/"}</script>
 </head>
@@ -88,7 +96,7 @@
         <li><a href="/carrera/licenciatura-en-ambiente-y-energias-renovables/">Licenciatura en Ambiente y Energías Renovables</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-biologia/">Licenciatura en Biología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-calidad-medio-ambiente-e-higiene-y-seguridad-en-el-trabajo/">Licenciatura en Calidad, Medio Ambiente e Higiene y Seguridad en el Trabajo</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/licenciatura-en-fisica/">Licenciatura en Física</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/licenciatura-en-fisica/">Licenciatura en Física</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-geografia/">Licenciatura en Geografía</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-geologia/">Licenciatura en Geología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-gestion-ambiental/">Licenciatura en Gestión Ambiental</a> <span class="cuantas">(1)</span></li>
@@ -348,7 +356,7 @@
         <li><a href="/carrera/profesorado-en-matematica/">Profesorado en Matemática</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/profesorado-en-musica/">Profesorado en Música</a> <span class="cuantas">(6)</span></li>
         <li><a href="/carrera/profesorado-en-portugues/">Profesorado en Portugués</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/profesorado-en-quimica/">Profesorado en Química</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/profesorado-en-quimica/">Profesorado en Química</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/profesorado-para-la-educacion-secundaria-de-la-modalidad-tecnico-profesional/">Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/profesorado-para-la-educacion-secundaria-de-la-modalidad-tecnico-profesional-en/">Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional en Concurrencia con el Título de Base</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/profesorado-para-profesionales/">Profesorado para profesionales</a> <span class="cuantas">(2)</span></li>
@@ -371,7 +379,7 @@
         <li><a href="/carrera/administrador-a-de-finca-vitivinicola/">Administrador/a de finca vitivinícola</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/analista-sensorial-de-vinos/">Analista Sensorial de Vinos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/asistente-en-laboratorio-vitivinicola/">Asistente en Laboratorio Vitivinícola</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/bromatologia/">Bromatología</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/bromatologia/">Bromatología</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/ciclo-de-licenciatura-en-enologia/">Ciclo de Licenciatura en Enología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/cocinero-panadero-pastelero-gratuito/">Cocinero / Panadero / Pastelero (gratuito)</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/curso-de-cata-de-vinos/">Curso de Cata de Vinos</a> <span class="cuantas">(1)</span></li>
@@ -383,7 +391,7 @@
         <li><a href="/carrera/sommelier-de-vinos-catador-de-vinos/">Sommelier de Vinos / Catador de Vinos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/sommelier-universitario/">Sommelier Universitario</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-enologia-e-industrias-frutihorticolas/">Tecnicatura en Enología e Industrias Frutihortícolas</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-enologia-y-viticultura/">Tecnicatura en Enología y Viticultura</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-en-enologia-y-viticultura/">Tecnicatura en Enología y Viticultura</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/tecnicatura-en-gastronomia/">Tecnicatura en Gastronomía</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-viticultura-y-enologia/">Tecnicatura en Viticultura y Enología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-enologia/">Tecnicatura Superior en Enología</a> <span class="cuantas">(2)</span></li>
@@ -442,7 +450,7 @@
         <li><a href="/carrera/ingenieria-en-software/">Ingeniería en Software</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ingenieria-en-telecomunicaciones/">INGENIERÍA EN TELECOMUNICACIONES</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/ingenieria-industrial/">Ingeniería Industrial</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/ingenieria-mecanica/">Ingeniería Mecánica</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/ingenieria-mecanica/">Ingeniería Mecánica</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/ingenieria-nuclear/">Ingeniería Nuclear</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ingenieria-quimica/">INGENIERÍA QUÍMICA</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/ingenieria-recursos-naturales-renovables/">Ingeniería Recursos Naturales Renovables</a> <span class="cuantas">(1)</span></li>

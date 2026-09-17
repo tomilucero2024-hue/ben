@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Universidad Siglo 21 (S21)","item":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/","email":"informes@21.edu.ar","telephone":"0810-555-0202","address":{"@type":"PostalAddress","streetAddress":"San Lorenzo 258, Ciudad (Sede Mendoza)","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -68,10 +76,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">Universidad Siglo 21 (S21)</span></nav>
-    <h1>Universidad Siglo 21 (S21)</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">Universidad Siglo 21 (S21)</span></nav>
+        <h1>Universidad Siglo 21 (S21)</h1>
     <p class="entrada">Universidad Siglo 21 (S21): 76 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Gestión</dt><dd>privada</dd>
         <dt>Nivel</dt><dd>universidad</dd>
@@ -83,122 +94,147 @@
     </dl>
 
     <a class="cta" href="/?institucion=Universidad%20Siglo%2021%20(S21)">Ver esta institución en el buscador →</a>
+    </aside>
+    <div class="contenido-pagina">
 
     <h2>Ciencias sociales (23)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/abogacia/">Abogacía</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial, híbrida o a distancia</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/abogacia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-criminologia-y-seguridad/">Licenciatura en Criminología y Seguridad</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-criminologia-y-seguridad?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/actuario/">Actuario</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/actuario?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/escribania/">Escribanía</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/escribania?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-ciencia-politica-y-gobierno/">Licenciatura En Ciencia Política Y Gobierno</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ciencia-politica-y-gobierno?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-periodismo/">Licenciatura en Periodismo</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-periodismo?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-relaciones-internacionales/">Licenciatura en Relaciones Internacionales</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial y Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-relaciones-internacionales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-relaciones-publicas-e-institucionales/">Licenciatura en Relaciones Públicas e Institucionales</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial o Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-relaciones-publicas-e-institucionales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-gestion-deportiva/">Licenciatura en Gestión Deportiva</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-deportiva?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-antropologia-organizacional/">Licenciatura en Antropología Organizacional</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-antropologia-organizacional?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/procurador/">Procurador</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/procurador?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-direccion-de-protocolo-organizacion-de-eventos-y-relaciones/">Tecnicatura en Dirección de Protocolo, Organización de Eventos y Relaciones Públicas</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-protocolo-organizacion-de-eventos-y-rrpp?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-gestion-contable-e-impositiva/">Tecnicatura en Gestión Contable e Impositiva</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-contable-e-impositiva?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-gestion-de-empresas-familiares/">Tecnicatura en Gestión de Empresas Familiares</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-empresas-familiares?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-investigacion-de-la-escena-del-crimen/">Tecnicatura en Investigación de la Escena del Crimen</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-investigacion-de-la-escena-del-crimen?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-relaciones-laborales/">Tecnicatura en Relaciones Laborales</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-relaciones-laborales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-atencion-prehospitalaria-de-emergencias/">Tecnicatura Universitaria en Atención Prehospitalaria de Emergencias</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial en Campus Córdoba</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-atencion-prehospitalaria-de-emergencias?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-gestion-de-moda/">Tecnicatura Universitaria en Gestión de Moda</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-moda?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-hidrocarburos-y-geociencia/">Tecnicatura Universitaria en Hidrocarburos y Geociencia</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-hidrocarburos-y-geociencia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-promocion-comunitaria-en-ninez-y-adolescencia/">Tecnicatura Universitaria en Promoción Comunitaria en Niñez y Adolescencia</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-promoci%C3%B3n-comunitaria-en-ni%C3%B1ez-y-adolescencia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-gestion-de-clima-laboral-en-la-organizacion/">Tecnicatura Universitaria en Gestión de Clima Laboral en la Organización</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-de-clima-laboral-en-la-organizacion?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-responsabilidad-y-gestion-social/">Tecnicatura en Responsabilidad y Gestión Social</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-responsabilidad-y-gestion-social?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-estadistica-aplicada-y-analisis/">Tecnicatura Universitaria en Estadística Aplicada y Análisis</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-estadistica-aplicada-y-analisis-avanzado?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -208,91 +244,109 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/contador-publico/">Contador Público</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/contador-publico?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/martillero-corredor-publico-y-corredor-inmobiliario/">Martillero, Corredor Público Y Corredor Inmobiliario</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/martillero-corredor-publico-y-corredor-inmobiliario?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-marketing-y-publicidad-digital/">Tecnicatura Universitaria en Marketing y Publicidad Digital</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-marketing-y-publicidad-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-comercializacion-marketing/">Licenciatura en Comercialización - Marketing</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercializacion-marketing?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-finanzas/">Licenciatura en Finanzas</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-finanzas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-gestion-de-recursos-humanos/">Licenciatura en Gestión de Recursos Humanos</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial o Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-de-recursos-humanos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion-agraria/">Licenciatura en Administración Agraria</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-agraria?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-comercio-internacional/">Licenciatura en Comercio Internacional</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercio-internacional?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-inteligencia-de-negocios-digitales/">Licenciatura en Inteligencia de Negocios Digitales</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-de-negocios-digitales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-logistica-global/">Licenciatura en Logística Global</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-logistica-global?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion-hotelera/">Licenciatura en Administración Hotelera</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-hotelera?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion-de-infraestructura-tecnologica/">Licenciatura en Administración de Infraestructura Tecnológica</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-infraestructura-tecnologica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion-publica/">Licenciatura en Administración Pública</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-publica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-administracion-y-gestion-tributaria/">Tecnicatura en Administración y Gestión Tributaria</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-administracion-y-gestion-tributaria?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-direccion-de-equipos-de-ventas/">Tecnicatura en Dirección de Equipos de Ventas</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-equipos-de-ventas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-administracion-y-gestion-de-politicas-publicas/">Tecnicatura Universitaria En Administración Y Gestión De Políticas Públicas</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-administracion-publica-y-gestion-de-politicas-publicas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-negocios-agroecologicos/">Tecnicatura en Negocios Agroecológicos</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-negocios-agroecologicos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -302,51 +356,61 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-instrumentacion-quirurgica/">Licenciatura en Instrumentación Quirúrgica</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-instrumentacion-quirurgica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-kinesiologia-y-fisioterapia/">Licenciatura en Kinesiología y Fisioterapia</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial en Campus Córdoba</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-kinesiologia-y-fisioterapia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-nutricion/">Licenciatura en Nutrición</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial en Campus Córdoba</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-nutricion?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-produccion-de-bioimagenes/">Licenciatura en Producción de Bioimágenes</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-produccion-de-bioimagenes?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-psicologia/">Licenciatura en Psicología</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial en Campus Córdoba.</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-psicologia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-terapia-ocupacional-y-desarrollo-humano/">Licenciatura en Terapia Ocupacional y Desarrollo Humano</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual, Presencia o Híbrida</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-terapia-ocupacional-y-desarrollo-humano?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/medicina/">Carrera de Medicina</a></h3>
             <ul class="oferta-datos"><li>Duración: 6 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/medicina?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-fonoaudiologia/">Licenciatura en Fonoaudiología</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-fonoaudiologia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-enfermeria/">Tecnicatura Universitaria en Enfermería</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial en Campus Córdoba</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-enfermeria?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-gestion-administrativa-de-servicios-de-salud/">Tecnicatura Universitaria en Gestión Administrativa de Servicios De Salud</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-administrativa-de-servicios-de-salud?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -356,36 +420,43 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-bioinformatica/">Licenciatura en Bioinformática</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-bioinformatica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-ciencia-de-datos/">Licenciatura en Ciencia de Datos</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ciencia-de-datos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-informatica/">Licenciatura en Informática</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-informatica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-inteligencia-artificial-y-robotica/">Licenciatura en Inteligencia Artificial y Robótica</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-artificial-y-robotica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-seguridad-informatica/">Licenciatura en Seguridad Informática</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-seguridad-informatica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-diseno-y-desarrollo-de-videojuegos/">Tecnicatura Universitaria en Diseño y Desarrollo de Videojuegos</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-desarrollo-de-videojuegos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-redes-informaticas-y-telecomunicaciones/">Tecnicatura Universitaria en Redes Informáticas y Telecomunicaciones</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-redes-informaticas-y-telecomunicaciones?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -395,31 +466,37 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-diseno-de-indumentaria-y-textil/">Licenciatura en Diseño de Indumentaria y Textil</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-de-indumentaria-y-textil?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/lic-en-diseno-grafico/">Lic. en Diseño Gráfico</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-grafico?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-diseno-industrial/">Licenciatura en Diseño Industrial</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-industrial?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-diseno-y-animacion-digital/">Licenciatura en Diseño y Animación Digital</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial o Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-publicidad/">Licenciatura en Publicidad</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial o Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-publicidad?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-diseno-y-animacion-digital/">Tecnicatura Universitaria en Diseño y Animación Digital</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -429,26 +506,31 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-gestion-ambiental/">Licenciatura en Gestión Ambiental</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-ambiental?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-higiene-seguridad-y-medio-ambiente-del-trabajo/">Licenciatura en Higiene, Seguridad y Medio Ambiente del Trabajo</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-higiene-seguridad-y-medio-ambiente-del-trabajo?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-matematica/">Licenciatura en Matemática</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-matematica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-ambiente-y-energias-renovables/">Licenciatura en Ambiente y Energías Renovables</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ambiente-y-energias-renovables?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-gestion-y-auditorias-ambientales/">Tecnicatura Universitaria en Gestión y Auditorías Ambientales</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-y-auditorias-ambientales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -458,16 +540,19 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-educacion-y-nuevas-tecnologias/">Licenciatura en Educación y Nuevas Tecnologías</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-educacion-y-nuevas-tecnologias?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-psicopedagogia/">Licenciatura en Psicopedagogía</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-psicopedagogia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-universitario-para-el-nivel-secundario-y-superior/">Profesorado Universitario para el Nivel Secundario y Superior</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Distancia</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/profesorado-universitario-para-el-nivel-secundario-y-superior?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -477,11 +562,13 @@
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-en-innovacion-y-desarrollo/">Ingeniería en Innovación y Desarrollo</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/ingenieria-en-innovacion-y-desarrollo?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-en-software/">Ingeniería en Software</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial e Híbrida</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/ingenieria-en-software?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -491,15 +578,18 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-gestion-turistica/">Licenciatura en Gestión Turística</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-turistica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-gestion-de-recursos-turisticos/">Tecnicatura Universitaria en Gestión de Recursos Turísticos</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+
             <a class="oficial" href="http://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-de-recursos-turisticos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
-
+    </div>
+</div>
 </main>
 
 <footer class="pie">

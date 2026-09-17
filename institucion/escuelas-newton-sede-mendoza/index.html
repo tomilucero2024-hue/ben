@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Escuelas Newton (Sede Mendoza)","item":"https://buscadoreducativo.com.ar/institucion/escuelas-newton-sede-mendoza/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Escuelas Newton (Sede Mendoza)","url":"https://buscadoreducativo.com.ar/institucion/escuelas-newton-sede-mendoza/","telephone":"(0261) 420-46xx","address":{"@type":"PostalAddress","streetAddress":"Entre Ríos 158, Ciudad de Mendoza","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -68,10 +76,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">Escuelas Newton (Sede Mendoza)</span></nav>
-    <h1>Escuelas Newton (Sede Mendoza)</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">Escuelas Newton (Sede Mendoza)</span></nav>
+        <h1>Escuelas Newton (Sede Mendoza)</h1>
     <p class="entrada">Escuelas Newton (Sede Mendoza): 10 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Gestión</dt><dd>privada</dd>
         <dt>Nivel</dt><dd>capacitación laboral / oficio</dd>
@@ -82,52 +93,63 @@
     </dl>
 
     <a class="cta" href="/?institucion=Escuelas%20Newton%20(Sede%20Mendoza)">Ver esta institución en el buscador →</a>
+    </aside>
+    <div class="contenido-pagina">
 
     <h2>Oficios (9)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/montador-electricista-domiciliario-electricista-industrial/">Montador Electricista Domiciliario - Electricista Industrial</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año</li><li>Modalidad: Presencial</li><li>Oficio / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://escuelasnewton.com.ar/tecnica/montador-electricista-domiciliario-electricista-industrial/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/mecanica-automotriz/">Mecánica Automotriz</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Oficio / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://escuelasnewton.com.ar/tecnica/mecanica-automotriz/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/mecanica-electricidad-y-electronica-de-motos/">Mecánica, Electricidad y Electrónica de Motos</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Oficio / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://escuelasnewton.com.ar/tecnica/mecanica-electricidad-y-electronica-de-motos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/soldadura-en-aluminio-tig/">Soldadura en Aluminio (TIG)</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Oficio / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://escuelasnewton.com.ar/tecnica/soldadura-en-aluminio/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/soldadura-alta-presion-combinado/">Soldadura Alta Presión Combinado</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Oficio / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://escuelasnewton.com.ar/tecnica/soldadura-alta-presion-combinado/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/procesos-metalurgicos-y-de-soldadura-en-general/">Procesos Metalúrgicos y de Soldadura en General</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Oficio / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://escuelasnewton.com.ar/tecnica/procesos-metalurgicos-y-de-soldadura-en-general/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/instalacion-de-gas-instalador-de-gas-matricula-ecogas-2-categoria/">Instalación de Gas (Instalador de Gas - Matrícula ECOGAS 2ª Categoría)</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Oficio / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://escuelasnewton.com.ar/servicios/instalacion-de-gas/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/refrigeracion-y-aire-acondicionado/">Refrigeración y Aire Acondicionado</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Oficio / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://escuelasnewton.com.ar/tecnica/refrigeracion-y-aire-acondicionado/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/carpinteria-en-madera/">Carpintería en Madera</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Oficio / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://escuelasnewton.com.ar/tecnica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -137,10 +159,12 @@
         <li class="oferta">
             <h3><a href="/carrera/electronica/">Electrónica</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Oficio / Formación Profesional</li></ul>
+
             <a class="oficial" href="https://escuelasnewton.com.ar/tecnica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
-
+    </div>
+</div>
 </main>
 
 <footer class="pie">

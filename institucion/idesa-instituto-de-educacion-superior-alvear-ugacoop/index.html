@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"IDESA - Instituto de Educación Superior Alvear (UGACOOP)","item":"https://buscadoreducativo.com.ar/institucion/idesa-instituto-de-educacion-superior-alvear-ugacoop/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"IDESA - Instituto de Educación Superior Alvear (UGACOOP)","url":"https://buscadoreducativo.com.ar/institucion/idesa-instituto-de-educacion-superior-alvear-ugacoop/","email":"informes@idesaugacoop.com.ar","telephone":"02625-425831","address":{"@type":"PostalAddress","streetAddress":"Silvio Tricherri y Ruta 188, Gral. Alvear, Mendoza","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -68,10 +76,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">IDESA - Instituto de Educación Superior Alvear (UGACOOP)</span></nav>
-    <h1>IDESA - Instituto de Educación Superior Alvear (UGACOOP)</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">IDESA - Instituto de Educación Superior Alvear (UGACOOP)</span></nav>
+        <h1>IDESA - Instituto de Educación Superior Alvear (UGACOOP)</h1>
     <p class="entrada">IDESA - Instituto de Educación Superior Alvear (UGACOOP): 3 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Gestión</dt><dd>privada</dd>
         <dt>Nivel</dt><dd>terciario</dd>
@@ -83,17 +94,21 @@
     </dl>
 
     <a class="cta" href="/?institucion=IDESA%20-%20Instituto%20de%20Educaci%C3%B3n%20Superior%20Alvear%20(UGACOOP)">Ver esta institución en el buscador →</a>
+    </aside>
+    <div class="contenido-pagina">
 
     <h2>Ciencias sociales (2)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-superior-en-biotecnologia/">Tecnicatura Superior en Biotecnología</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://idesaugacoop.com.ar/tecnicatura-superior-en-biotecnologia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-superior-en-mecatronica-aplicada-a-la-industria/">Tecnicatura Superior en Mecatrónica Aplicada a la Industria</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://idesaugacoop.com.ar/tecnicatura-superior-en-mecatronica-aplicada-a-la-industria/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -103,10 +118,12 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnico-superior-en-diseno-de-indumentaria-textil-y-accesorios/">Tecnicatura Superior en Diseño de Indumentaria, Textil y Accesorios</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+
             <a class="oficial" href="https://idesaugacoop.com.ar/tecnicatura-superior-en-diseno-de-indumentaria-textil-y-accesorios/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
-
+    </div>
+</div>
 </main>
 
 <footer class="pie">

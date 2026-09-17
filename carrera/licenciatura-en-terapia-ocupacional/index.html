@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Salud","item":"https://buscadoreducativo.com.ar/area/salud/"},{"@type":"ListItem","position":4,"name":"Licenciatura en Terapia Ocupacional","item":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-terapia-ocupacional/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Licenciatura en Terapia Ocupacional","description":"Dónde estudiar Licenciatura en Terapia Ocupacional en Mendoza: carrera de grado del área Salud, dictada por 1 institución (2 privadas). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-terapia-ocupacional/","provider":[{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"},{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Licenciatura en Terapia Ocupacional en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Licenciatura en Terapia Ocupacional en Mendoza en la siguiente institución: Universidad Juan Agustín Maza (UMaza). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Licenciatura en Terapia Ocupacional?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Licenciatura en Terapia Ocupacional?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Licenciatura en Terapia Ocupacional?","acceptedAnswer":{"@type":"Answer","text":"Licenciatura en Terapia Ocupacional es una carrera de grado perteneciente al área de Salud. Entre sus aptitudes más afines se destacan: pensamiento analítico, trabajo práctico, interacción social y base teórica y académica."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/salud/">Salud</a> <span aria-hidden="true">›</span> <span aria-current="page">Licenciatura en Terapia Ocupacional</span></nav>
-    <h1>Licenciatura en Terapia Ocupacional</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/salud/">Salud</a> <span aria-hidden="true">›</span> <span aria-current="page">Licenciatura en Terapia Ocupacional</span></nav>
+        <h1>Licenciatura en Terapia Ocupacional</h1>
     <p class="entrada">Dónde estudiar Licenciatura en Terapia Ocupacional en Mendoza: carrera de grado del área Salud, dictada por 1 institución (2 privadas). Dura 4 años. Modalidades disponibles: presencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Salud</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
@@ -82,17 +93,62 @@
     </dl>
 
     <a class="cta" href="/?q=Licenciatura+en+Terapia+Ocupacional&amp;area=Salud&amp;formacion=grado">Ver Licenciatura en Terapia Ocupacional en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Licenciatura en Terapia Ocupacional</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía</li><li>Dinámica de grupos</li><li>Fundamentos Teóricos de la Terapia Ocupacional I</li><li>Desempeño Ocupacional I</li><li>Salud Pública y Atención Primaria de la Salud</li><li>Neuroanatomía</li><li>Fundamentos Teóricos de la Terapia Ocupacional II</li><li>Desempeño Ocupacional II</li><li>Psicología General</li><li>Sistemas Digitales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Fisiología I</li><li>Gerontología</li><li>Biomecánica</li><li>Psicología del Desarrollo</li><li>Desempeño Ocupacional III</li><li>Salud Laboral y Ergonomía</li><li>Fisiología II</li><li>Semiopatología Clínica</li><li>Terapia Ocupacional en Salud Comunitaria</li><li>Psiquiatría y Psicopatología</li><li>Practica Supervisada en Geriatría</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Neurología</li><li>Terapia Ocupacional Laboral</li><li>Traumatología y Ortopedia Aplicada</li><li>Metodología de la Investigación</li><li>Ingles I</li><li>Práctica Supervisada en Salud Comunitaria</li><li>Terapia Ocupacional en Disfunciones Físicas</li><li>Ortesis y Prótesis</li><li>Organización y Administración de Servicios de Terapia Ocupacional</li><li>Ingles II</li><li>Práctica Supervisada en Terapia Ocupacional Laboral</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Terapia Ocupacional en Disfunciones Psicosociales</li><li>Tecnología e Innovación en Terapia Ocupacional</li><li>Ética Profesional</li><li>Psicomotricidad</li><li>Práctica Clínica en Disfunciones Físicas</li><li>Pedagogía</li><li>Investigación y Bioestadística</li><li>Práctica Clínica en Disfunciones Psicosociales</li><li>Trabajo Integrador Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/terapiaocupacional/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/terapiaocupacional/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía</li><li>Dinámica de grupos</li><li>Fundamentos Teóricos de la Terapia Ocupacional I</li><li>Desempeño Ocupacional I</li><li>Salud Pública y Atención Primaria de la Salud</li><li>Neuroanatomía</li><li>Fundamentos Teóricos de la Terapia Ocupacional II</li><li>Desempeño Ocupacional II</li><li>Psicología General</li><li>Sistemas Digitales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Fisiología I</li><li>Gerontología</li><li>Biomecánica</li><li>Psicología del Desarrollo</li><li>Desempeño Ocupacional III</li><li>Salud Laboral y Ergonomía</li><li>Fisiología II</li><li>Semiopatología Clínica</li><li>Terapia Ocupacional en Salud Comunitaria</li><li>Psiquiatría y Psicopatología</li><li>Practica Supervisada en Geriatría</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Neurología</li><li>Terapia Ocupacional Laboral</li><li>Traumatología y Ortopedia Aplicada</li><li>Metodología de la Investigación</li><li>Ingles I</li><li>Práctica Supervisada en Salud Comunitaria</li><li>Terapia Ocupacional en Disfunciones Físicas</li><li>Ortesis y Prótesis</li><li>Organización y Administración de Servicios de Terapia Ocupacional</li><li>Ingles II</li><li>Práctica Supervisada en Terapia Ocupacional Laboral</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Terapia Ocupacional en Disfunciones Psicosociales</li><li>Tecnología e Innovación en Terapia Ocupacional</li><li>Ética Profesional</li><li>Psicomotricidad</li><li>Práctica Clínica en Disfunciones Físicas</li><li>Pedagogía</li><li>Investigación y Bioestadística</li><li>Práctica Clínica en Disfunciones Psicosociales</li><li>Trabajo Integrador Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/terapiaocupacionalSS/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/terapiaocupacionalSS/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -161,6 +217,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Salud</h2>
     <ul class="enlaces">
         <li><a href="/carrera/licenciatura-en-nutricion/">Licenciatura en Nutrición</a> <span class="cuantas">(6)</span></li>
@@ -177,7 +234,9 @@
         <li><a href="/carrera/odontologia/">Odontología</a> <span class="cuantas">(2)</span></li>
     </ul>
     <p><a href="/area/salud/">Ver las 55 carreras del área Salud →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

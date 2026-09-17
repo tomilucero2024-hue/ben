@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Negocios","item":"https://buscadoreducativo.com.ar/area/negocios/"},{"@type":"ListItem","position":4,"name":"Licenciatura en Logística y Transporte","item":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-logistica-y-transporte/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Licenciatura en Logística y Transporte","description":"Dónde estudiar Licenciatura en Logística y Transporte en Mendoza: carrera de grado del área Negocios, dictada por 1 institución (1 privada). Dura 3 años. Modalidades disponibles: presencial y a distancia.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-logistica-y-transporte/","provider":{"@type":"EducationalOrganization","name":"Instituto Univ. de Ciencias Empresariales (IUCE)","url":"https://buscadoreducativo.com.ar/institucion/instituto-univ-de-ciencias-empresariales-iuce/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Licenciatura en Logística y Transporte en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Licenciatura en Logística y Transporte en Mendoza en la siguiente institución: Instituto Univ. de Ciencias Empresariales (IUCE). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Licenciatura en Logística y Transporte?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 3 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Licenciatura en Logística y Transporte?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial y a distancia, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Licenciatura en Logística y Transporte?","acceptedAnswer":{"@type":"Answer","text":"Licenciatura en Logística y Transporte es una carrera de grado perteneciente al área de Negocios. Entre sus aptitudes más afines se destacan: pensamiento analítico, trabajo práctico, interacción social y liderazgo y gestión."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/negocios/">Negocios</a> <span aria-hidden="true">›</span> <span aria-current="page">Licenciatura en Logística y Transporte</span></nav>
-    <h1>Licenciatura en Logística y Transporte</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/negocios/">Negocios</a> <span aria-hidden="true">›</span> <span aria-current="page">Licenciatura en Logística y Transporte</span></nav>
+        <h1>Licenciatura en Logística y Transporte</h1>
     <p class="entrada">Dónde estudiar Licenciatura en Logística y Transporte en Mendoza: carrera de grado del área Negocios, dictada por 1 institución (1 privada). Dura 3 años. Modalidades disponibles: presencial y a distancia.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Negocios</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
@@ -82,12 +93,14 @@
     </dl>
 
     <a class="cta" href="/?q=Licenciatura+en+Log%C3%ADstica+y+Transporte&amp;area=Negocios&amp;formacion=grado">Ver Licenciatura en Logística y Transporte en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Licenciatura en Logística y Transporte</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/instituto-univ-de-ciencias-empresariales-iuce/">Instituto Univ. de Ciencias Empresariales (IUCE)</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial / A distancia</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://i-uce.edu.ar/careers/uce-logistica-y-transporte" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -156,6 +169,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Negocios</h2>
     <ul class="enlaces">
         <li><a href="/carrera/contador-publico/">Contador Público</a> <span class="cuantas">(11)</span></li>
@@ -172,7 +186,9 @@
         <li><a href="/carrera/licenciatura-en-analitica-de-negocios/">Licenciatura en Analítica de Negocios</a> <span class="cuantas">(2)</span></li>
     </ul>
     <p><a href="/area/negocios/">Ver las 75 carreras del área Negocios →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Gastronomía","item":"https://buscadoreducativo.com.ar/area/gastronomia/"},{"@type":"ListItem","position":4,"name":"Licenciatura en Gastronomía","item":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-gastronomia/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Licenciatura en Gastronomía","description":"Dónde estudiar Licenciatura en Gastronomía en Mendoza: carrera de grado del área Gastronomía, dictada por 2 instituciones (2 privadas). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-gastronomia/","provider":[{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"},{"@type":"EducationalOrganization","name":"Escuela Internacional Islas Malvinas","url":"https://buscadoreducativo.com.ar/institucion/escuela-internacional-islas-malvinas/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Licenciatura en Gastronomía en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Licenciatura en Gastronomía en Mendoza en 2 instituciones: Universidad Juan Agustín Maza (UMaza) y Escuela Internacional Islas Malvinas. En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Licenciatura en Gastronomía?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Licenciatura en Gastronomía?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Licenciatura en Gastronomía?","acceptedAnswer":{"@type":"Answer","text":"Licenciatura en Gastronomía es una carrera de grado perteneciente al área de Gastronomía. Entre sus aptitudes más afines se destacan: trabajo práctico, creatividad y interacción social."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/gastronomia/">Gastronomía</a> <span aria-hidden="true">›</span> <span aria-current="page">Licenciatura en Gastronomía</span></nav>
-    <h1>Licenciatura en Gastronomía</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/gastronomia/">Gastronomía</a> <span aria-hidden="true">›</span> <span aria-current="page">Licenciatura en Gastronomía</span></nav>
+        <h1>Licenciatura en Gastronomía</h1>
     <p class="entrada">Dónde estudiar Licenciatura en Gastronomía en Mendoza: carrera de grado del área Gastronomía, dictada por 2 instituciones (2 privadas). Dura 4 años. Modalidades disponibles: presencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Gastronomía</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
@@ -82,17 +93,29 @@
     </dl>
 
     <a class="cta" href="/?q=Licenciatura+en+Gastronom%C3%ADa&amp;area=Gastronom%C3%ADa&amp;formacion=grado">Ver Licenciatura en Gastronomía en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Licenciatura en Gastronomía</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Alimentos y bebidas</li><li>Tecnologías alimentarias</li><li>Conservación de alimentos</li><li>Toxicología de los alimentos</li><li>Inocuidad alimentaria</li><li>Sistemas de calidad</li><li>Metodología de la investigación</li><li>Estadística aplicada</li><li>Análisis sensorial</li><li>Administración</li><li>Formulación y evaluación de proyectos</li><li>Comunicación</li><li>Marketing</li><li>Ética</li><li>Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/gastronomia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/gastronomia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/escuela-internacional-islas-malvinas/">Escuela Internacional Islas Malvinas</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://www.eim.esc.edu.ar/index.php/oferta-educativa/carreras/tsg-2" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -154,23 +177,26 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Gastronomía</h2>
     <ul class="enlaces">
         <li><a href="/carrera/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/">Tecnicatura Superior en Enología e Industrias Frutihortícolas</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-gastronomia/">Tecnicatura Superior en Gastronomia</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/bromatologia/">Bromatología</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/tecnicatura-en-enologia-y-viticultura/">Tecnicatura en Enología y Viticultura</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-enologia/">Tecnicatura Superior en Enología</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/administrador-a-de-finca-vitivinicola/">Administrador/a de finca vitivinícola</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/analista-sensorial-de-vinos/">Analista Sensorial de Vinos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/asistente-en-laboratorio-vitivinicola/">Asistente en Laboratorio Vitivinícola</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/bromatologia/">Bromatología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ciclo-de-licenciatura-en-enologia/">Ciclo de Licenciatura en Enología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/cocinero-panadero-pastelero-gratuito/">Cocinero / Panadero / Pastelero (gratuito)</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/curso-de-cata-de-vinos/">Curso de Cata de Vinos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/cursos-de-cocina-pasteleria-cafeteria-y-mas/">Cursos de cocina, pastelería, cafetería y más</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/enologia/">Enología</a> <span class="cuantas">(1)</span></li>
     </ul>
     <p><a href="/area/gastronomia/">Ver las 23 carreras del área Gastronomía →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

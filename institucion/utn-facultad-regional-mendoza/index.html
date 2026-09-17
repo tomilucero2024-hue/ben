@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"UTN Facultad Regional Mendoza","item":"https://buscadoreducativo.com.ar/institucion/utn-facultad-regional-mendoza/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"UTN Facultad Regional Mendoza","url":"https://buscadoreducativo.com.ar/institucion/utn-facultad-regional-mendoza/"}</script>
 </head>
@@ -68,52 +76,247 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <span aria-current="page">UTN Facultad Regional Mendoza</span></nav>
-    <h1>UTN Facultad Regional Mendoza</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <span aria-current="page">UTN Facultad Regional Mendoza</span></nav>
+        <h1>UTN Facultad Regional Mendoza</h1>
     <p class="entrada">UTN Facultad Regional Mendoza: 14 carreras, gestión Pública. Duración, modalidad y links oficiales de cada una.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Gestión</dt><dd>Pública</dd>
         <dt>Oferta en BEN</dt><dd>14 carreras</dd>
     </dl>
 
     <a class="cta" href="/?institucion=UTN%20Facultad%20Regional%20Mendoza">Ver esta institución en el buscador →</a>
+    </aside>
+    <div class="contenido-pagina">
 
     <h2>Ingeniería (7)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-civil/">INGENIERÍA CIVIL</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 6 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Análisis Matemático I (1° Semestre)</li><li>Álgebra y Geometría Analítica (1° Semestre)</li><li>Ingeniería y Sociedad (1° Semestre)</li><li>Ingeniería Civil I (Anual)</li><li>Sistema de Representación (Anual)</li><li>Química General (2° Semestre)</li><li>Física I (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Análisis Matemático II (1° Semestre)</li><li>Estabilidad (Anual)</li><li>Ingeniería Civil II (Anual)</li><li>Tecnología de los Materiales (Anual)</li><li>Física II (2° Semestre)</li><li>Probabilidad y Estadística (2° Semestre)</li><li>Inglés I (1° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Resistencia de Materiales (Anual)</li><li>Tecnología del Hormigón (1° Semestre)</li><li>Tecnología de la Construcción (Anual)</li><li>Geotopografía (2° Semestre)</li><li>Hidráulica General y Aplicada (Anual)</li><li>Cálculo Avanzado (2° Semestre)</li><li>Instalaciones Eléctricas y Acústica (1° Semestre)</li><li>Instalaciones Termomecánicas (1° Semestre)</li><li>Economía (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Geotecnia (2° Semestre)</li><li>Instalaciones Sanitarias y de gas (1° Semestre)</li><li>Diseño arquitectonico, Planeamiento y Urbanismo (E.I.) (Anual)</li><li>Análisis Estructural I (1° Semestre)</li><li>Estructuras de hormigón (2° Semestre)</li><li>Hidrología y Obras hidráulicas (Anual)</li><li>Ingeniería legal (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Construcciones Metálicas y de Madera (2° Semestre)</li><li>Cimentaciones (1° Semestre)</li><li>Ingeniería Sanitaria (1° Semestre)</li><li>Organización y Cond.de Obras (Anual)</li><li>Vías de Comunicación I (2° Semestre)</li><li>Análisis Estructural II (2° Semestre)</li><li>Vías de Comunicación II (2° Semestre)</li><li>Gestión Ambiental y Desarrollo Sustentable (Anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>6to año</h4>
+            <ul><li>Proyecto Final (E.I) (Anual)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-ing-civil/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www4.frm.utn.edu.ar/ingenieria-civil/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-electromecanica/">INGENIERÍA ELECTROMECÁNICA</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Análisis Matemático (1° Semestre)</li><li>Química General (2° Semestre)</li><li>Física I (2° Semestre)</li><li>Ingeniería Electromecánica I (Anual)</li><li>Algebra y Geometría Analítica (1° Semestre)</li><li>Ingeniería y Sociedad (2° Semestre)</li><li>Sistemas de Representación (1° Semestre)</li><li>Representación Gráfica (200 hs)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Fisica II (1° Semestre)</li><li>Estabilidad (Anual)</li><li>Ingeniería Electromecánica II (Anual)</li><li>Conocimiento de Materiales (Anual)</li><li>Análisis Matemático II (1° Semestre)</li><li>Programación en Computación (2° Semestre)</li><li>Probabilidad y Estadística (2° Semestre)</li><li>Inglés I (Anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Tecnología Mecánica (Anual)</li><li>Ingeniería Electromecánica III (Anual)</li><li>Mecánica y Mecanismos (Anual)</li><li>Electrotecnia (Anual)</li><li>Termodinámica Técnica (1° Semestre)</li><li>Matemática para Ing. Electromecánica (1° Semestre)</li><li>Higiene y Seguridad Industrial (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Elementos de Máquinas (Anual)</li><li>Electrónica Industrial (2° Semestre)</li><li>Mecánica de los Fluidos y Máquinas Fluidodinámicas (Anual)</li><li>Maquinarias Eléctricas (Anual)</li><li>Mediciones Eléctricas (1° Semestre)</li><li>Máquinas Térmicas (Anual)</li><li>Economía (2° Semestre)</li><li>Legislación (1° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Redes de Distribución e Instalaciones Eléctricas (Anual)</li><li>Instalaciones Térmicas, Mecánicas y Frigoríficas (1° Semestre)</li><li>Máquinas y Equipos de Transporte (Anual)</li><li>Gestión y Mantenimiento Electromecánico (1° Semestre)</li><li>Organización Industrial (2° Semestre)</li><li>Automatización y Control Industrial (1° Semestre)</li><li>Proyecto Final (2° Semestre)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-ing-electromecanica/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www4.frm.utn.edu.ar/ingenieria-electromecanica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-electronica/">INGENIERÍA ELECTRÓNICA</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años y medio</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 6 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Informática I (Anual)</li><li>Álgebra y Geometría Analítica (Anual)</li><li>Análisis Matemático I (Anual)</li><li>Ingeniería y Sociedad (1° Semestre)</li><li>Fisica I (Anual)</li><li>Diseño Asistido por Computadoras (2° Semestre)</li><li>Química (1° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Análisis Matemático II (Anual)</li><li>Informática II (Anual)</li><li>Análisis de Señales y Sistemas 2026 (es solo para alumnos que tengan cursada Analisis matemático II) (Anual)</li><li>Física II (Anual)</li><li>Probabilidad y Estadística (2° Semestre)</li><li>Técnicas Digitales I (Anual)</li><li>Ingles I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Física Electrónica (1° Semestre)</li><li>Teoría de los Circuitos I (Anual)</li><li>Dispositivos Electrónicos (2026) (1° Semestre)</li><li>Legislación (1° Semestre)</li><li>Electrónica Aplicada I (2° Semestre)</li><li>Medios de Enlace (2° Semestre)</li><li>Seguridad, Higiene y Medio Ambiente (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Ingés II</li><li>Técnicas Digitales II (Anual)</li><li>Medidas Electrónicas I (Anual)</li><li>Teoría de los Circuitos II (Anual)</li><li>Máquinas e Instalaciones Eléctricas (Anual)</li><li>Sistemas de Comunicaciones (Anual)</li><li>Electrónica Aplicada II (Anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Técnicas Digitales III (Anual)</li><li>Medidas Electrónicas II (Anual)</li><li>Sistemas de Control (Anual)</li><li>Electrónica Aplicada III (Anual)</li><li>Tecnología Electrónica (Anual)</li><li>Electrónica de Potencia (Anual)</li><li>Organización Industrial (Anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>6to año</h4>
+            <ul><li>Economía (1° Semestre)</li><li>Proyecto Final (1° Semestre)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-ing-electronica/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www4.frm.utn.edu.ar/ingenieria-electronica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-quimica/">INGENIERÍA QUÍMICA</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción a la Ingeniería Química (Anual)</li><li>Sistemas de representación (Anual)</li><li>Ingeniería y Sociedad (1° Semestre)</li><li>Algebra y Geometría Analítica (1° Semestre)</li><li>Análisis Matemático I (1° Semestre)</li><li>Física I (2° Semestre)</li><li>Química (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Introducción a Equipos y Procesos (Anual)</li><li>Química Organica (Anual)</li><li>Probabilidad y Estadística (1° Semestre)</li><li>Química Inorgánica (1° Semestre)</li><li>Análisis Matemático II (1° Semestre)</li><li>Fìsica II (2° Semestre)</li><li>Legislación (2° Semestre)</li><li>Inglés I (2° Semestre)</li><li>Fundamentos de Informática (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Balance de Masa y Energía (Anual)</li><li>Termodinámica (1° Semestre)</li><li>Matemática Superior Aplicada (1° Semestre)</li><li>Microbiología y Química Biológica (1° Semestre)</li><li>Química Analítica (1° Semestre)</li><li>Físicoquímica (2° Semestre)</li><li>Fenómenos de Transporte (2° Semestre)</li><li>Ciencia de loa Materiales (2° Semestre)</li><li>Química Aplicada (2° Semestre)</li><li>Inglés II (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Diseño, simulación, optimización y seguridad de procesos (Anual)</li><li>Operaciones Unitarias I (Anual)</li><li>Ingeniería de las Reacciones Químicas (Anual)</li><li>Tecnología de la Energía Térmica (1° Semestre)</li><li>Economia (1° Semestre)</li><li>Calidad y Control Estadístico de Procesos (1° Semestre)</li><li>Operaciones Unitarias II (2° Semestre)</li><li>Organizacion Industrial (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Control Automático de Procesos (Anual)</li><li>Ingeniería Ambiental (Anual)</li><li>Proyecto Final (Anual)</li><li>Mecánica Industrial (1° Semestre)</li><li>Procesos Biotecnológicos (2° Semestre)</li><li>Higiene y Seguridad en el Trabajo (2° Semestre)</li><li>Máquinas e Instalaciones Eléctricas (2° Semestre)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-ing-quimica/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www4.frm.utn.edu.ar/ingenieria-quimica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/ingenieria-en-telecomunicaciones/">INGENIERÍA EN TELECOMUNICACIONES</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
-            <a class="oficial" href="https://www4.frm.utn.edu.ar/ingenieria-en-telecomunicaciones/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-en-sistemas-de-informacion/">INGENIERÍA EN SISTEMAS DE INFORMACIÓN</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Análisis Matemático I (1° Semestre)</li><li>Algebra y Geometría Analítica (1° Semestre)</li><li>Fisica I (2° Semestre)</li><li>Inglés I (1° Semestre / 2° Semestre)</li><li>Lógica y Estructuras Discretas (1° Semestre)</li><li>Algoritmos y Estructuras de Datos (2° Semestre)</li><li>Arquitectura de Computadores (2° Semestre)</li><li>Sistemas y Procesos de Negocio (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Análisis Matemático II (1° Semestre)</li><li>Física II (2° Semestre)</li><li>Ingeniería y Sociedad (1° Semestre)</li><li>Inglés II (1° Semestre / 2° Semestre)</li><li>Sintaxis y Semántica de los Lenguajes (1° Semestre)</li><li>Paradigmas de Programación (2° Semestre)</li><li>Sistemas Operativos (2° Semestre)</li><li>Análisis de Sistemas de Información (Integradora) (Anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Probabilidades y Estadísticas (1° Semestre)</li><li>Economía (1° Semestre)</li><li>Bases de Datos (1° Semestre)</li><li>Desarrollo de Software (2° Semestre)</li><li>Comunicación de Datos (1° Semestre)</li><li>Análisis Numérico (2° Semestre)</li><li>Diseño de Sistemas de Información (integradora) (Anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Legislación (1° Semestre)</li><li>Ingeniería y Calidad de Software (Anual)</li><li>Redes de Datos (2° Semestre)</li><li>Investigación Operativa (1° Semestre)</li><li>Simulación (1° Semestre)</li><li>Tecnologías para la automatización (2° Semestre)</li><li>Administración de Sistemas de Información (integradora) (Anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Inteligencia Artificial (2° Semestre)</li><li>Ciencia de Datos (2° Semestre)</li><li>Sistemas de Gestión (1° Semestre)</li><li>Gestión Gerencial (1° Semestre)</li><li>Seguridad en los Sistemas de Información (1° Semestre)</li><li>Proyecto Final (integradora) (Anual)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-ing-sistemas-de-informacion/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www4.frm.utn.edu.ar/ingenieria-en-sistemas-informacion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/ingenieria-en-telecomunicaciones/">INGENIERÍA EN TELECOMUNICACIONES</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Informática I (Anual)</li><li>Álgebra y Geometría Analítica. (Anual)</li><li>Análisis Matemático I (Anual)</li><li>Ingeniería y Sociedad (1° Semestre)</li><li>Diseño Asistido por Computadoras (2° Semestre)</li><li>Física I (Anual)</li><li>Técnicas Digitales (Anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Química General (1° Semestre)</li><li>Física II (Anual)</li><li>Análisis de Señales y Sistemas (Anual)</li><li>Taller de Redes y Comunicaciones (2° Semestre)</li><li>Informática II (Anual)</li><li>Ingles I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Probabilidad y Estadística (2° Semestre)</li><li>Teoría de los Circuitos (Anual)</li><li>Dispositivos Electrónicos y Electrónica General (Anual)</li><li>Física Electrónica (1° Semestre)</li><li>Medios de Enlace (2° Semestre)</li><li>Seguridad Higiene y Medio Ambiente (2° Semestre)</li><li>Sistemas de Comunicaciones (Anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Redes de Comunicaciones y Datos (Anual)</li><li>Medidas Electrónicas (Anual)</li><li>Administración de Redes de Datos (1° Semestre)</li><li>Tecnología Electrónica e introducción al Control (Anual)</li><li>Inglés II</li><li>Electrónica Aplicada a las Comunicaciones (Anual)</li><li>Telecomunicaciones Móviles (1° Semestre)</li><li>Sistemas Operativos de Red (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Comunicaciones Opticas (2° Semestre)</li><li>Sistemas Multimedia, Audio y Video Digital (1° Semestre)</li><li>Antenas y Propagación Electromagnética (1° Semestre)</li><li>Comunicaciones y Protocolos Industriales (2° Semestre)</li><li>Economia (2° Semestre)</li><li>Proyecto Final (1° Semestre)</li><li>Organización Industrial (Anual)</li><li>Legislación para Comunicaciones (1° Semestre)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-de-ing-en-telecomunicaciones/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www4.frm.utn.edu.ar/ingenieria-en-telecomunicaciones/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-en-minas/">INGENIERÍA EN MINAS</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Álgebra y Geometría Analítica (Anual)</li><li>Análisis Matemático I (Anual)</li><li>Química General (1° Semestre)</li><li>Sistema de Representación (1° Semestre)</li><li>Introducción a la Ingeniería en Minas (Anual)</li><li>Física I (Anual)</li><li>Ingeniería y Sociedad (2° Semestre)</li><li>Fundamentos de Informática (2° Semestre)</li><li>Inglés I (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Física II (1° Semestre)</li><li>Geología Aplicada y Ambiental (1° Semestre)</li><li>Química Inorgánica (1° Semestre)</li><li>Inglés II (1° Semestre)</li><li>Yacimientos Minerales (2° Semestre)</li><li>Geotopografía (2° Semestre)</li><li>Probabilidad y Estadística (2° Semestre)</li><li>Análisis Matemático II (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Minerología I (1° Semestre)</li><li>Estática y Resistencia de Materiales (1° Semestre)</li><li>Electrotécnia (1° Semestre)</li><li>Fisicoquímica (1° Semestre)</li><li>Minerología II (2° Semestre)</li><li>Derecho Minero y Legislación (2° Semestre)</li><li>Exploración (2° Semestre)</li><li>Procesamiento de Minerales. (2° Semestre)</li><li>Seguridad, Higiene y medio Ambiente (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Economía (1° Semestre)</li><li>Voladuras de Rocas y Explosivos (1° Semestre)</li><li>Química Analítica (1° Semestre)</li><li>Gestión Ambiental y Desarrollo Sustentable (1° Semestre)</li><li>Mecánica de Rocas y suelos (1° Semestre)</li><li>Calculo Avanzado (2° Semestre)</li><li>Explotación de Minas (2° Semestre)</li><li>Software de aplicación minera (2° Semestre)</li><li>Electiva I (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Evaluación de Proyectos Mineros. (1° Semestre)</li><li>Planificación Minera y Gestión de Relaves (1° Semestre)</li><li>Prevención y Remediación Impactos (2° Semestre)</li><li>Construcciones Mineras (2° Semestre)</li><li>Proyecto Final (Anual)</li><li>Electiva II (1° Semestre)</li><li>Electiva III (2° Semestre)</li><li>Práctica Profesional Supervisada (150 hs)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-ing-minas/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://frm.utn.edu.ar/ingenieria-minas/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -123,11 +326,47 @@
         <li class="oferta">
             <h3><a href="/carrera/gestion-de-empresas-turisticas/">Gestión de Empresas Turísticas</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción al Turismo (1° Semestre)</li><li>Administración de empresas (1° Semestre)</li><li>Tecnologías aplicadas a gestión de empresas turísticas I (1° Semestre)</li><li>Idioma I (1° Semestre)</li><li>Economía y políticas turísticas (2° Semestre)</li><li>Técnicas de comunicación (2° Semestre)</li><li>Servicios Turísticos I (2° Semestre)</li><li>Idioma II (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Tecnologías aplicadas a gestión de empresas turísticas II (1° Semestre)</li><li>Contabilidad (1° Semestre)</li><li>Servicios Turísticos II (1° Semestre)</li><li>Idioma III (1° Semestre)</li><li>Costos operativos turísticos (2° Semestre)</li><li>Comercialización I (2° Semestre)</li><li>Idioma IV (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Probabilidad y estadística (1° Semestre)</li><li>Circuitos Turísticos (1° Semestre)</li><li>Comercialización II (1° Semestre)</li><li>Legislación Turística (2° Semestre)</li><li>Práctica Profesional Supervisada (2° Semestre)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-tec-univ-gestion-de-empresas-turisticas/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-superior-gestion-de-empresas-turisticas/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/higiene-y-seguridad/">Higiene y Seguridad</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Análisis Matemático (1° Semestre)</li><li>Química (1° Semestre)</li><li>Fisica (1° Semestre)</li><li>Conocimiento de Materiales (1° Semestre)</li><li>Trabajo y Metodologia de la Investigación (2° Semestre)</li><li>Medicina Laboral Avanzada (2° Semestre)</li><li>Sociología y Psicología Laboral (2° Semestre)</li><li>Higiene Laboral Avanzanda (2° Semestre)</li><li>Taller de Integración I (Anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Toxicología Laboral (1° Semestre)</li><li>Ergonomía (1° Semestre)</li><li>Legislación Laboral (1° Semestre)</li><li>Seguridad Industrial Avanzada (1° Semestre)</li><li>Diseño y Práctica de Capacitación (2° Semestre)</li><li>Incendio y Explosiones (2° Semestre)</li><li>Riesgología (2° Semestre)</li><li>Proyecto Final (2° Semestre)</li><li>Taller de Integración II (1° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Seguridad IV (2° Semestre)</li><li>Selección y Capacitación del Personal (1° Semestre)</li><li>Didáctica y Metodología de la Investigación (1° Semestre)</li><li>Derecho del Trabajo (1° Semestre)</li><li>Ética y Deontología Profesional (2° Semestre)</li><li>Trabajo Final (2° Semestre)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-tec-univ-higiene-y-seguridad/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-superior-higiene-y-seguridad/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -137,11 +376,13 @@
         <li class="oferta">
             <h3><a href="/carrera/programacion/">Programación</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
+
             <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-superior-programacion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/videojuegos/">Videojuegos</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
+
             <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-universitaria-en-desarrollo-y-produccion-de-videojuegos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -151,6 +392,24 @@
         <li class="oferta">
             <h3><a href="/carrera/enologia/">Enología</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Matemática (1° Semestre)</li><li>Química General (1° Semestre)</li><li>Física I (1° Semestre)</li><li>Analisis Sensorial I (1° Semestre)</li><li>Introducción a la Vitivinicultura (1° Semestre)</li><li>Fisica II (2° Semestre)</li><li>Química Inorgánica (2° Semestre)</li><li>Vitivinicultura (2° Semestre)</li><li>Análisis Sensorial II (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Química Orgánica Orientada (Anual)</li><li>Microbiología Enológica (Anual)</li><li>Química Analítica (1° Semestre)</li><li>Enología I (1° Semestre)</li><li>Química Analítica Instrumental (2° Semestre)</li><li>Legislación y Normativa Vitivinícola (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Enología II (Anual)</li><li>Gestión de Empresas Vitivinícolas (Anual)</li><li>Higiene y Seguridad Ambiental (Anual)</li><li>Practica Supervisada (2° Semestre)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-tec-univ-enologia/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-superior-enologia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -160,6 +419,7 @@
         <li class="oferta">
             <h3><a href="/carrera/administracion/">ADMINISTRACIÓN</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
+
             <a class="oficial" href="https://frm.utn.edu.ar/tecnicatura-universitaria-en-administracion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -169,10 +429,29 @@
         <li class="oferta">
             <h3><a href="/carrera/gestion-de-empresas-hoteleras/">Gestión de Empresas Hoteleras</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción a la Industria de la hospitalidad (1° Semestre)</li><li>Administración de empresas (1° Semestre)</li><li>Tecnologías aplicadas a la gestión de empresas I (1° Semestre)</li><li>Idioma I (1° Semestre)</li><li>Economía y políticas turísticas (2° Semestre)</li><li>Técnicas de Venta (2° Semestre)</li><li>Recepción y Reservas (2° Semestre)</li><li>Idioma II (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Housekeeping (1° Semestre)</li><li>Contabilidad (1° Semestre)</li><li>Alimentos y bebidas (1° Semestre)</li><li>Idioma III (1° Semestre)</li><li>Costos (2° Semestre)</li><li>Comercialización I (2° Semestre)</li><li>Idioma IV (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Organización de eventos (1° Semestre)</li><li>Probabilidades y Estadísticas (1° Semestre)</li><li>Comercialización II (1° Semestre)</li><li>Relaciones Públicas (2° Semestre)</li><li>Práctica Profesional Supervisada (2° Semestre)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-tec-univ-gestion-de-empresas-hoteleras/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-superior-gestion-de-empresas-hoteleras/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
-
+    </div>
+</div>
 </main>
 
 <footer class="pie">

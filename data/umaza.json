@@ -1,496 +1,3332 @@
 {
- "instituciones": [
-  {
-   "id": 4,
-   "nombre": "Universidad Juan Agustín Maza (UMaza)",
-   "nivel": "universidad",
-   "gestion": "privada",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "4056200",
-    "email": "informes@umaza.edu.ar",
-    "direccion": "Acceso Este, Lat. Sur 2245, Guaymallén"
-   },
-   "carreras": [
-    {
-     "id": 400,
-     "nombre_carrera": "Abogacía",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/abogacia/inicio"
-    },
-    {
-     "id": 401,
-     "nombre_carrera": "Abogacía",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Valle de Uco",
-     "link_oficial": "https://www.umaza.edu.ar/landings/abogaciaVDU/inicio"
-    },
-    {
-     "id": 402,
-     "nombre_carrera": "Ingeniería en Agrimensura",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/agrimensura/inicio"
-    },
-    {
-     "id": 403,
-     "nombre_carrera": "Licenciatura en Anatomía Patológica a distancia",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Campus virtual",
-     "link_oficial": "https://www.umaza.edu.ar/landings/anatomiapatologica/inicio"
-    },
-    {
-     "id": 404,
-     "nombre_carrera": "Licenciatura en Anestesiología a distancia",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Campus virtual",
-     "link_oficial": "https://www.umaza.edu.ar/landings/anestesiologia/inicio"
-    },
-    {
-     "id": 405,
-     "nombre_carrera": "Bioquímica",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/bioquimica/inicio"
-    },
-    {
-     "id": 406,
-     "nombre_carrera": "Licenciatura en Producción de Bioimágenes",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Campus virtual",
-     "link_oficial": "https://www.umaza.edu.ar/landings/bioimagenes"
-    },
-    {
-     "id": 407,
-     "nombre_carrera": "Licenciatura en Comunicación Social",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/comunicacionsocial/inicio"
-    },
-    {
-     "id": 408,
-     "nombre_carrera": "Contador Público",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/contador/inicio"
-    },
-    {
-     "id": 409,
-     "nombre_carrera": "Contador Público",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Valle de Uco",
-     "link_oficial": "https://www.umaza.edu.ar/landings/contadorVDU/inicio"
-    },
-    {
-     "id": 410,
-     "nombre_carrera": "Tecnicatura en Cosmetología y Cosmiatría",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/cosmetologia-y-cosmiatria"
-    },
-    {
-     "id": 411,
-     "nombre_carrera": "Dirección de Empresas",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/direccion-empresas"
-    },
-    {
-     "id": 412,
-     "nombre_carrera": "Dirección de Empresas",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Valle de Uco",
-     "link_oficial": "https://www.umaza.edu.ar/landings/direccionempresasVDU/inicio"
-    },
-    {
-     "id": 413,
-     "nombre_carrera": "Dirección de Empresas",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Sur",
-     "link_oficial": "https://www.umaza.edu.ar/landings/direcciondeempresasSSUR"
-    },
-    {
-     "id": 414,
-     "nombre_carrera": "Profesorado en Educación Física",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisica/inicio"
-    },
-    {
-     "id": 415,
-     "nombre_carrera": "Profesorado en Educación Física",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Valle de Uco",
-     "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaVDU/inicio"
-    },
-    {
-     "id": 416,
-     "nombre_carrera": "Profesorado en Educación Física",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Este",
-     "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaSE/inicio"
-    },
-    {
-     "id": 417,
-     "nombre_carrera": "Profesorado en Educación Física",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Sur",
-     "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaSS/inicio"
-    },
-    {
-     "id": 418,
-     "nombre_carrera": "Profesorado en Educación Física",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Malargüe",
-     "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicamalargue/inicio"
-    },
-    {
-     "id": 419,
-     "nombre_carrera": "Profesorado en Educación Física",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - General Alvear",
-     "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicagralalvear"
-    },
-    {
-     "id": 420,
-     "nombre_carrera": "Licenciatura en Educación Física a Distancia",
-     "categoria": "Grado / Carrera",
-     "duracion": "1 año",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Campus virtual",
-     "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaadistancia/inicio"
-    },
-    {
-     "id": 421,
-     "nombre_carrera": "Licenciatura en Educación Inicial a distancia",
-     "categoria": "Grado / Carrera",
-     "duracion": "1 año y medio",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Campus virtual",
-     "link_oficial": "https://www.umaza.edu.ar/landings/educacioninicial/inicio"
-    },
-    {
-     "id": 422,
-     "nombre_carrera": "Licenciatura en Enología",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/enologia/inicio"
-    },
-    {
-     "id": 423,
-     "nombre_carrera": "Farmacia",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/farmacia/inicio"
-    },
-    {
-     "id": 424,
-     "nombre_carrera": "Licenciatura en Gastronomía",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/gastronomia/inicio"
-    },
-    {
-     "id": 425,
-     "nombre_carrera": "Licenciatura en Hemoterapia a distancia",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Campus virtual",
-     "link_oficial": "https://www.umaza.edu.ar/landings/hemoterapia/inicio"
-    },
-    {
-     "id": 426,
-     "nombre_carrera": "Licenciatura en Instrumentación Quirúrgica a distancia",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Campus virtual",
-     "link_oficial": "https://www.umaza.edu.ar/landings/instrumentacionquirurgica/inicio"
-    },
-    {
-     "id": 427,
-     "nombre_carrera": "Kinesiología y Fisioterapia",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/kinesiologia/inicio"
-    },
-    {
-     "id": 428,
-     "nombre_carrera": "Kinesiología y Fisioterapia",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Valle de Uco",
-     "link_oficial": "https://www.umaza.edu.ar/landings/kinesiologiaVDU/inicio"
-    },
-    {
-     "id": 429,
-     "nombre_carrera": "Kinesiología y Fisioterapia",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Este",
-     "link_oficial": "https://www.umaza.edu.ar/landings/kinesiologiaSE/inicio"
-    },
-    {
-     "id": 430,
-     "nombre_carrera": "Locución",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/locucion/inicio"
-    },
-    {
-     "id": 431,
-     "nombre_carrera": "Licenciatura en Matemática a distancia",
-     "categoria": "Grado / Carrera",
-     "duracion": "1 año",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Campus Virtual",
-     "link_oficial": "https://www.umaza.edu.ar/landings/matematica/inicio"
-    },
-    {
-     "id": 432,
-     "nombre_carrera": "Musicoterapia",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/musicoterapia/inicio"
-    },
-    {
-     "id": 433,
-     "nombre_carrera": "Licenciatura en Nutrición",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/nutricion/inicio"
-    },
-    {
-     "id": 434,
-     "nombre_carrera": "Licenciatura en Nutrición",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Valle de Uco",
-     "link_oficial": "https://www.umaza.edu.ar/landings/nutricionVDU/inicio"
-    },
-    {
-     "id": 435,
-     "nombre_carrera": "Licenciatura en Nutrición",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Este",
-     "link_oficial": "https://www.umaza.edu.ar/landings/nutricionSE/inicio"
-    },
-    {
-     "id": 436,
-     "nombre_carrera": "Licenciatura en Nutrición",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Sur",
-     "link_oficial": "https://www.umaza.edu.ar/landings/nutricionSS/inicio"
-    },
-    {
-     "id": 437,
-     "nombre_carrera": "Periodismo",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/periodismo/inicio"
-    },
-    {
-     "id": 438,
-     "nombre_carrera": "Podología Universitaria",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/podologia/inicio"
-    },
-    {
-     "id": 439,
-     "nombre_carrera": "Podología Universitaria",
-     "categoria": "Grado / Carrera",
-     "duracion": "1 año",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Ciclo de Complementación a distancia",
-     "link_oficial": "https://www.umaza.edu.ar/landings/ccc-podologia/inicio"
-    },
-    {
-     "id": 440,
-     "nombre_carrera": "Profesorado para Profesionales",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Campus virtual",
-     "link_oficial": "https://www.umaza.edu.ar/landings/profesoradoprofesionales/inicio"
-    },
-    {
-     "id": 441,
-     "nombre_carrera": "Protección Comunitaria y Seguridad Urbana",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/proteccion-comunitaria-y-seguridad-urbana"
-    },
-    {
-     "id": 442,
-     "nombre_carrera": "Publicidad",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/publicidad/inicio"
-    },
-    {
-     "id": 443,
-     "nombre_carrera": "Puericultura a Distancia",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Campus virtual",
-     "link_oficial": "https://www.umaza.edu.ar/landings/puericultura/inicio"
-    },
-    {
-     "id": 444,
-     "nombre_carrera": "Realización Audiovisual",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/realizacionaudiovisual/inicio"
-    },
-    {
-     "id": 445,
-     "nombre_carrera": "Recursos Humanos",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanos/inicio"
-    },
-    {
-     "id": 446,
-     "nombre_carrera": "Recursos Humanos",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Este",
-     "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanosSE/inicio"
-    },
-    {
-     "id": 447,
-     "nombre_carrera": "Recursos Humanos",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Sur",
-     "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanosSS/inicio"
-    },
-    {
-     "id": 448,
-     "nombre_carrera": "Recursos Humanos",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Valle de Uco",
-     "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanosuco"
-    },
-    {
-     "id": 449,
-     "nombre_carrera": "Recursos Humanos",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Ciclo de Complementación a distancia",
-     "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanos-ciclo-de-complementacion-a-distancia"
-    },
-    {
-     "id": 450,
-     "nombre_carrera": "Licenciatura en Terapia Ocupacional",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/terapiaocupacional/inicio"
-    },
-    {
-     "id": 451,
-     "nombre_carrera": "Licenciatura en Terapia Ocupacional",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Sur",
-     "link_oficial": "https://www.umaza.edu.ar/landings/terapiaocupacionalSS/inicio"
-    },
-    {
-     "id": 452,
-     "nombre_carrera": "Veterinaria",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 años",
-     "modalidad": "Presencial",
-     "facultad": "UMaza - Sede Gran Mendoza",
-     "link_oficial": "https://www.umaza.edu.ar/landings/veterinaria/inicio"
-    }
-   ],
-   "departamento": "Guaymallén"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 4,
+            "nombre": "Universidad Juan Agustín Maza (UMaza)",
+            "nivel": "universidad",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "4056200",
+                "email": "informes@umaza.edu.ar",
+                "direccion": "Acceso Este, Lat. Sur 2245, Guaymallén"
+            },
+            "carreras": [
+                {
+                    "id": 400,
+                    "nombre_carrera": "Abogacía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/abogacia/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Introducción al Derecho",
+                                "Derecho Privado I - Parte General",
+                                "Introducción a la Filosofía",
+                                "Economía I - Microeconomía",
+                                "Administración I",
+                                "Derecho Constitucional",
+                                "Técnicas de Expresión Oral y Escrita",
+                                "Derechos Humanos",
+                                "Organización Empresarial y Sistemas de Información"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Obligaciones Civiles y Comerciales",
+                                "Derecho Penal I - Parte General",
+                                "Contratos I - Parte General",
+                                "Derecho Internacional Público y de la Integración",
+                                "Marketing",
+                                "Contratos II - Parte Especial",
+                                "Derecho Penal II - Parte Especial",
+                                "Derecho Laboral y de la Seguridad Social",
+                                "Derecho del Consumidor",
+                                "Economía II - Macroeconomía"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Derecho de Familia",
+                                "Derecho Comercial y Societario",
+                                "Derecho Reales e Intelectuales",
+                                "Administración de los Recusos Humanos",
+                                "Sucesiones",
+                                "Concursos y Quiebras",
+                                "Derecho de los Recursos Naturales y Ambiental",
+                                "Práctica Profesional I",
+                                "Derecho Administrativo"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Derecho Procesal Penal",
+                                "Derecho Procesal Civil, Comercial y Tributario",
+                                "Finanzas Públicas",
+                                "Derecho Tributario",
+                                "Derecho Empresario",
+                                "Ética Profesional y Habilitación Civil",
+                                "Técnicas de Negociación y Mediación",
+                                "Derecho Internacional Privado",
+                                "Práctica Profesional II",
+                                "Trabajo Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/abogacia/inicio"
+                },
+                {
+                    "id": 401,
+                    "nombre_carrera": "Abogacía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/abogaciaVDU/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Introducción al Derecho",
+                                "Derecho Privado I - Parte General",
+                                "Introducción a la Filosofía",
+                                "Economía I - Microeconomía",
+                                "Administración I",
+                                "Derecho Constitucional",
+                                "Técnicas de Expresión Oral y Escrita",
+                                "Derechos Humanos",
+                                "Organización Empresarial y Sistemas de Información"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Obligaciones Civiles y Comerciales",
+                                "Derecho Penal I - Parte General",
+                                "Contratos I - Parte General",
+                                "Derecho Internacional Público y de la Integración",
+                                "Marketing",
+                                "Contratos II - Parte Especial",
+                                "Derecho Penal II - Parte Especial",
+                                "Derecho Laboral y de la Seguridad Social",
+                                "Derecho del Consumidor",
+                                "Economía II - Macroeconomía"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Derecho de Familia",
+                                "Derecho Comercial y Societario",
+                                "Derecho Reales e Intelectuales",
+                                "Administración de los Recursos Humanos",
+                                "Sucesiones",
+                                "Concursos y Quiebras",
+                                "Derecho de los Recursos Naturales y Ambiental",
+                                "Práctica Profesional I",
+                                "Derecho Administrativo"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Derecho Procesal Penal",
+                                "Derecho Procesal Civil, Comercial y Tributario",
+                                "Finanzas Públicas",
+                                "Derecho Tributario",
+                                "Derecho Empresario",
+                                "Ética Profesional y Habilitación Civil",
+                                "Técnicas de Negociación y Mediación",
+                                "Derecho Internacional Privado",
+                                "Práctica Profesional II",
+                                "Trabajo Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/abogaciaVDU/inicio"
+                },
+                {
+                    "id": 402,
+                    "nombre_carrera": "Ingeniería en Agrimensura",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/agrimensura/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Álgebra Lineal",
+                                "Sistemas de Representación Gráfica",
+                                "Geometría Analítica",
+                                "Introducción a la Agrimensura",
+                                "Cálculo I",
+                                "Física I",
+                                "Informática"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Cálculo II",
+                                "Física II",
+                                "Sistemas de Medición Topográfica",
+                                "Probabilidad y Estadística",
+                                "Teoría de Errores",
+                                "Elementos de Geología y Geofísica",
+                                "Dibujo Topográfico y Cartográfico",
+                                "Inglés I"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Cartografía",
+                                "Topografía",
+                                "Derecho Público",
+                                "Teledetección",
+                                "Geodesia I",
+                                "Derecho Privado",
+                                "Geografía Urbana y Rural",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Sistemas de Información Territorial",
+                                "Geodesia II",
+                                "Fotogrametría",
+                                "Derecho Real y Registral",
+                                "Mensura I",
+                                "Catastro Territorial",
+                                "Valuaciones",
+                                "Cartografía Aplicada",
+                                "Optativa"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Mensura II",
+                                "Planeamiento y Ordenamiento Territorial",
+                                "Agrimensura Aplicada",
+                                "Mediciones Especiales",
+                                "Prácticas Profesionales Supervisadas",
+                                "Optativa"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/agrimensura/inicio"
+                },
+                {
+                    "id": 403,
+                    "nombre_carrera": "Licenciatura en Anatomía Patológica a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/anatomiapatologica/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er semestre",
+                            "materias": [
+                                "Salud Pública",
+                                "Introducción a la Química Biológica",
+                                "Microbiología y Control de Infecciones",
+                                "Seguridad del paciente",
+                                "Bioestadística"
+                            ]
+                        },
+                        {
+                            "anio": "2do semestre",
+                            "materias": [
+                                "Gestión y organización del servicio de Anatomía Patológica",
+                                "Formulación y Evaluación de Proyectos",
+                                "Gestión de calidad del servicio de Anatomía Patológica",
+                                "Inteligencia Artificial en Salud",
+                                "Introducción a la Genética Molecular aplicada al laboratorio"
+                            ]
+                        },
+                        {
+                            "anio": "3er semestre",
+                            "materias": [
+                                "Metodología de la Investigación",
+                                "Patología Forense",
+                                "Ética y Bioética",
+                                "Higiene y Bioseguridad"
+                            ]
+                        },
+                        {
+                            "anio": "4to semestre",
+                            "materias": [
+                                "Telesalud y Telemedicina",
+                                "Tesina"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/anatomiapatologica/inicio"
+                },
+                {
+                    "id": 404,
+                    "nombre_carrera": "Licenciatura en Anestesiología a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/anestesiologia/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er semestre",
+                            "materias": [
+                                "Salud Pública",
+                                "Introducción a la Química Biológica",
+                                "Microbiología y Control de Infecciones",
+                                "Seguridad del paciente",
+                                "Bioestadística"
+                            ]
+                        },
+                        {
+                            "anio": "2do semestre",
+                            "materias": [
+                                "Gestión y organización del servicio de Anestesiología",
+                                "Formulación y Evaluación de Proyectos",
+                                "Gestión de calidad del servicio de Anestesiología",
+                                "Inteligencia Artificial en Salud",
+                                "Clínica del Dolor"
+                            ]
+                        },
+                        {
+                            "anio": "3er semestre",
+                            "materias": [
+                                "Metodología de la Investigación",
+                                "Avances tecnológicos en Anestesiología",
+                                "Ética y Bioética",
+                                "Higiene y Bioseguridad"
+                            ]
+                        },
+                        {
+                            "anio": "4to semestre",
+                            "materias": [
+                                "Telesalud y Telemedicina",
+                                "Tesina"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/anestesiologia/inicio"
+                },
+                {
+                    "id": 405,
+                    "nombre_carrera": "Bioquímica",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/bioquimica/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Química general I",
+                                "Matemática I",
+                                "Biología general",
+                                "Química general II",
+                                "Matemática II",
+                                "Anatomía",
+                                "Física I",
+                                "Informática (extracurricular)",
+                                "Taller de orientación profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Química inorgánica",
+                                "Física II",
+                                "Química analítica general",
+                                "Inglés",
+                                "Química orgánica I",
+                                "Fisicoquímica",
+                                "Histología",
+                                "Taller de orientación profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Fisiología",
+                                "Química orgánica II",
+                                "Estadística",
+                                "Química analítica instrumental",
+                                "Microbiología general",
+                                "Química biológica I",
+                                "Farmacología general",
+                                "Taller de orientación profesional III"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Inmunología",
+                                "Bacteriología y micología",
+                                "Química biológica II",
+                                "Ética y bioética",
+                                "Bromatología y nutrición",
+                                "Epistemología y metodología de la investigación",
+                                "Parasitología",
+                                "Biotecnología",
+                                "Virología"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Bioquímica clínica I",
+                                "Fisiopatología",
+                                "Hematología e inmunohematología",
+                                "Laboratorio clínico I",
+                                "Química toxicológica y legal",
+                                "Biología molecular y celular",
+                                "Bioquímica clínica II",
+                                "Laboratorio clínico II",
+                                "Práctica profesional supervisad intramuros",
+                                "Práctica profesional supervisada extramuros",
+                                "Materias optativas"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/bioquimica/inicio"
+                },
+                {
+                    "id": 406,
+                    "nombre_carrera": "Licenciatura en Producción de Bioimágenes",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/bioimagenes"
+                },
+                {
+                    "id": 407,
+                    "nombre_carrera": "Licenciatura en Comunicación Social",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/comunicacionsocial/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Teoría de la comunicación II",
+                                "Estudio de la realidad histórico-social",
+                                "Comunicación organizativa e institucional",
+                                "Metodología de la investigación I",
+                                "Comunicación cinematográfica",
+                                "Crítica artística y literaria",
+                                "Comunicación científica",
+                                "Metodología de la investigación II",
+                                "Tesina",
+                                "Práctica profesional"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/comunicacionsocial/inicio"
+                },
+                {
+                    "id": 408,
+                    "nombre_carrera": "Contador Público",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/contador/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Administración",
+                                "Contabilidad I - General",
+                                "Matemática",
+                                "Derecho Público y Administrativo",
+                                "Economía I - Microeconomía",
+                                "Sociología de las Organizaciones",
+                                "PAFU Programa de Actividad Física Universitaria opcional"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Organización Empresarial y Sistemas de Información",
+                                "Contabilidad II - Valuación y Exposición",
+                                "Probabilidad y Estadística",
+                                "Matemática Financiera",
+                                "Economía II - Macroeconomía",
+                                "Costos",
+                                "Derecho Civil y Comercial",
+                                "Marketing"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Finanzas Públicas",
+                                "Contabilidad III - Análisis e Interpretación de Estados Contables",
+                                "Régimen y Práctica Tributaria I",
+                                "Derecho del Trabajo y de la Seguridad Social",
+                                "Administración Financiera",
+                                "Negociación y Mediación",
+                                "Régimen y Práctica Tributaria II",
+                                "Sociedades",
+                                "Administración de Recursos Humanos",
+                                "Desarrollo de Emprendimientos"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Control de Gestión",
+                                "Auditoría Operativa y de Sistemas",
+                                "Concursos y Quiebras",
+                                "Metodología de la Investigación",
+                                "Comercio Internacional",
+                                "Derecho de Familia y Sucesiones",
+                                "Auditoría Contable",
+                                "Actuación Profesional",
+                                "Contabilidad Pública",
+                                "Práctica Profesional Supervisada"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/contador/inicio"
+                },
+                {
+                    "id": 409,
+                    "nombre_carrera": "Contador Público",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/contadorVDU/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Administración",
+                                "Contabilidad I - General",
+                                "Matemática",
+                                "Derecho Público y Administrativo",
+                                "Economía I - Microeconomía",
+                                "Sociología de las Organizaciones",
+                                "PAFU Programa de Actividad Física Universitaria opcional"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Organización Empresarial y Sistemas de Información",
+                                "Contabilidad II - Valuación y Exposición",
+                                "Probabilidad y Estadística",
+                                "Matemática Financiera",
+                                "Economía II - Macroeconomía",
+                                "Costos",
+                                "Derecho Civil y Comercial",
+                                "Marketing"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Finanzas Públicas",
+                                "Contabilidad III - Análisis e Interpretación de Estados Contables",
+                                "Régimen y Práctica Tributaria I",
+                                "Derecho del Trabajo y de la Seguridad Social",
+                                "Administración Financiera",
+                                "Negociación y Mediación",
+                                "Régimen y Práctica Tributaria II",
+                                "Sociedades",
+                                "Administración de Recursos Humanos",
+                                "Desarrollo de Emprendimientos"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Control de Gestión",
+                                "Auditoría Operativa y de Sistemas",
+                                "Concursos y Quiebras",
+                                "Metodología de la Investigación",
+                                "Comercio Internacional",
+                                "Derecho de Familia y Sucesiones",
+                                "Auditoría Contable",
+                                "Actuación Profesional",
+                                "Contabilidad Pública",
+                                "Práctica Profesional Supervisada"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/contadorVDU/inicio"
+                },
+                {
+                    "id": 410,
+                    "nombre_carrera": "Tecnicatura en Cosmetología y Cosmiatría",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/cosmetologia-y-cosmiatria",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Introducción a la cosmetología",
+                                "Biología celular, histología y genética",
+                                "Anatomía y fisiología",
+                                "Fundamentos técnicos de aparatología cosmética",
+                                "Biología de la piel",
+                                "Introducción a la química cosmética",
+                                "Dermatología I",
+                                "Bioseguridad y medio ambiente",
+                                "Cosmetología facial y anexos",
+                                "Inglés"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Introducción a la cosmiatría",
+                                "Química cosmética",
+                                "Dermatología II",
+                                "Marketing",
+                                "Microbiología aplicada",
+                                "Maquillaje terapéutico",
+                                "Telemedicina",
+                                "Estética elemental aplicada",
+                                "Nutrición aplicada a la cosmiatría",
+                                "Bioética y legislación",
+                                "Gestión y organización del servicio de cosmetología y cosmiatría",
+                                "Tratamientos cosmetológicos"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Prácticas preprofesionales supervisadas",
+                                "Trabajo final integrador"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/cosmetologia-y-cosmiatria"
+                },
+                {
+                    "id": 411,
+                    "nombre_carrera": "Dirección de Empresas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/direccion-empresas",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Economía I – Microeconomía",
+                                "Administración",
+                                "Matemática",
+                                "Informática para gestión empresaria (extracurricular)",
+                                "Derecho público y administrativo",
+                                "Contabilidad I – general",
+                                "Sociología de las organizaciones",
+                                "PAFU Programa de Actividad Física Universitaria opcional en 1º Año",
+                                "Inglés I"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Organización empresarial y sistemas de información",
+                                "Contabilidad II - Valuación y exposición",
+                                "Matemática financiera",
+                                "Probabilidad y estadística",
+                                "Economía II – Macroeconomía",
+                                "Costos",
+                                "Derecho civil y comercial",
+                                "Marketing I",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Contabilidad III - Análisis e interpretación de estados contables",
+                                "Derecho del trabajo y la seguridad social",
+                                "Administración financiera",
+                                "Marketing II",
+                                "Investigación operativa",
+                                "Sociedades, concursos y quiebras",
+                                "Administración de recursos humanos",
+                                "Inglés III"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Control de gestión",
+                                "Desarrollo de emprendimientos",
+                                "Comercio y negociación internacional",
+                                "Teoría de las decisiones",
+                                "Metodología de la investigación",
+                                "Formulación y evaluación de proyectos",
+                                "Administración de operaciones I",
+                                "Gerenciamiento I",
+                                "Práctica profesional",
+                                "Trabajo Final (Licenciatura)"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Psicología laboral",
+                                "Higiene y seguridad industrial",
+                                "Gestión de la calidad",
+                                "Administración de operaciones II",
+                                "Dirección estratégica",
+                                "Gerenciamiento II",
+                                "Trabajo final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/direccion-empresas"
+                },
+                {
+                    "id": 412,
+                    "nombre_carrera": "Dirección de Empresas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/direccionempresasVDU/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Economía I – Microeconomía",
+                                "Administración",
+                                "Matemática",
+                                "Informática para gestión empresaria (extracurricular)",
+                                "Derecho público y administrativo",
+                                "Contabilidad I – general",
+                                "Sociología de las organizaciones",
+                                "PAFU Programa de Actividad Física Universitaria opcional en 1º Año",
+                                "Inglés I"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Organización empresarial y sistemas de información",
+                                "Contabilidad II - Valuación y exposición",
+                                "Matemática financiera",
+                                "Probabilidad y estadística",
+                                "Economía II – Macroeconomía",
+                                "Costos",
+                                "Derecho civil y comercial",
+                                "Marketing I",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Contabilidad III - Análisis e interpretación de estados contables",
+                                "Derecho del trabajo y la seguridad social",
+                                "Administración financiera",
+                                "Marketing II",
+                                "Investigación operativa",
+                                "Sociedades, concursos y quiebras",
+                                "Administración de recursos humanos",
+                                "Inglés III"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Control de gestión",
+                                "Desarrollo de emprendimientos",
+                                "Comercio y negociación internacional",
+                                "Teoría de las decisiones",
+                                "Metodología de la investigación",
+                                "Formulación y evaluación de proyectos",
+                                "Administración de operaciones I",
+                                "Gerenciamiento I",
+                                "Práctica profesional",
+                                "Trabajo Final (Licenciatura)"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Psicología laboral",
+                                "Higiene y seguridad industrial",
+                                "Gestión de la calidad",
+                                "Administración de operaciones II",
+                                "Dirección estratégica",
+                                "Gerenciamiento II",
+                                "Trabajo final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/direccionempresasVDU/inicio"
+                },
+                {
+                    "id": 413,
+                    "nombre_carrera": "Dirección de Empresas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Sur",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/direcciondeempresasSSUR",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Economía I – Microeconomía",
+                                "Administración",
+                                "Matemática",
+                                "Informática para gestión empresaria (extracurricular)",
+                                "Derecho público y administrativo",
+                                "Contabilidad I – general",
+                                "Sociología de las organizaciones",
+                                "PAFU Programa de Actividad Física Universitaria opcional en 1º Año",
+                                "Inglés I"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Organización empresarial y sistemas de información",
+                                "Contabilidad II - Valuación y exposición",
+                                "Matemática financiera",
+                                "Probabilidad y estadística",
+                                "Economía II – Macroeconomía",
+                                "Costos",
+                                "Derecho civil y comercial",
+                                "Marketing I",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Contabilidad III - Análisis e interpretación de estados contables",
+                                "Derecho del trabajo y la seguridad social",
+                                "Administración financiera",
+                                "Marketing II",
+                                "Investigación operativa",
+                                "Sociedades, concursos y quiebras",
+                                "Administración de recursos humanos",
+                                "Inglés III"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Control de gestión",
+                                "Desarrollo de emprendimientos",
+                                "Comercio y negociación internacional",
+                                "Teoría de las decisiones",
+                                "Metodología de la investigación",
+                                "Formulación y evaluación de proyectos",
+                                "Administración de operaciones I",
+                                "Gerenciamiento I",
+                                "Práctica profesional",
+                                "Trabajo Final (Licenciatura)"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Psicología laboral",
+                                "Higiene y seguridad industrial",
+                                "Gestión de la calidad",
+                                "Administración de operaciones II",
+                                "Dirección estratégica",
+                                "Gerenciamiento II",
+                                "Trabajo final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/direcciondeempresasSSUR"
+                },
+                {
+                    "id": 414,
+                    "nombre_carrera": "Profesorado en Educación Física",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisica/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía Funcional I",
+                                "Aprendizaje y Desarrollo Motor",
+                                "Psicología General",
+                                "Gimnasia Formativa",
+                                "Fútbol",
+                                "Balonmano",
+                                "Taller I",
+                                "Inglés I",
+                                "Anatomía Funcional II",
+                                "Historia y Teoría de la Educación Física",
+                                "Sujeto del Aprendizaje",
+                                "Gimnasia Funcional",
+                                "Hockey",
+                                "Atletismo",
+                                "Taller II",
+                                "Entornos Virtuales de Aprendizaje"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Institución y Sistemas Educativos",
+                                "Actividades Lúdicas y Recreativas",
+                                "Didáctica y Currículo",
+                                "Fisiología General",
+                                "Natación I",
+                                "Vóleibol",
+                                "Taller III",
+                                "Didáctica de la Educación Física de Nivel Inicial y Primario",
+                                "Fisiología del Ejercicio",
+                                "Natación II",
+                                "Gimnasia Artística",
+                                "Básquetbol",
+                                "Taller IV",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Gestión de Prácticas Deportivas Emergentes",
+                                "Formación para la Salud",
+                                "Didáctica de la Educación Física de Nivel Secundario y Superior",
+                                "Evalución de la Aptitud Física",
+                                "Taller V",
+                                "Biomecánica",
+                                "Rugby",
+                                "Sociología de la Actividad Física y el Deporte",
+                                "Actividad Física Adaptada",
+                                "Entrenamiento de la Aptitud Física",
+                                "Taller VI",
+                                "Actividades Regionales"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Sobrecarga y Musculación",
+                                "Residencia Nivel Inicial y Primario",
+                                "Ética y Legislación Aplicada",
+                                "Residencia Nivel Secundario y Superior"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/educacionfisica/inicio"
+                },
+                {
+                    "id": 415,
+                    "nombre_carrera": "Profesorado en Educación Física",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaVDU/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía Funcional I",
+                                "Aprendizaje y Desarrollo Motor",
+                                "Psicología General",
+                                "Gimnasia Formativa",
+                                "Fútbol",
+                                "Balonmano",
+                                "Taller I",
+                                "Inglés I",
+                                "Anatomía Funcional II",
+                                "Historia y Teoría de la Educación Física",
+                                "Sujeto del Aprendizaje",
+                                "Gimnasia Funcional",
+                                "Hockey",
+                                "Atletismo",
+                                "Taller II",
+                                "Entornos Virtuales de Aprendizaje"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Institución y Sistemas Educativos",
+                                "Actividades Lúdicas y Recreativas",
+                                "Didáctica y Currículo",
+                                "Fisiología General",
+                                "Natación I",
+                                "Vóleibol",
+                                "Taller III",
+                                "Didáctica de la Educación Física de Nivel Inicial y Primario",
+                                "Fisiología del Ejercicio",
+                                "Natación II",
+                                "Gimnasia Artística",
+                                "Básquetbol",
+                                "Taller IV",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Gestión de Prácticas Deportivas Emergentes",
+                                "Formación para la Salud",
+                                "Didáctica de la Educación Física de Nivel Secundario y Superior",
+                                "Evalución de la Aptitud Física",
+                                "Taller V",
+                                "Biomecánica",
+                                "Rugby",
+                                "Sociología de la Actividad Física y el Deporte",
+                                "Actividad Física Adaptada",
+                                "Entrenamiento de la Aptitud Física",
+                                "Taller VI",
+                                "Actividades Regionales"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Sobrecarga y Musculación",
+                                "Residencia Nivel Inicial y Primario",
+                                "Ética y Legislación Aplicada",
+                                "Residencia Nivel Secundario y Superior"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/educacionfisicaVDU/inicio"
+                },
+                {
+                    "id": 416,
+                    "nombre_carrera": "Profesorado en Educación Física",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Este",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaSE/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía Funcional I",
+                                "Aprendizaje y Desarrollo Motor",
+                                "Psicología General",
+                                "Gimnasia Formativa",
+                                "Fútbol",
+                                "Balonmano",
+                                "Taller I",
+                                "Inglés I",
+                                "Anatomía Funcional II",
+                                "Historia y Teoría de la Educación Física",
+                                "Sujeto del Aprendizaje",
+                                "Gimnasia Funcional",
+                                "Hockey",
+                                "Atletismo",
+                                "Taller II",
+                                "Entornos Virtuales de Aprendizaje"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Institución y Sistemas Educativos",
+                                "Actividades Lúdicas y Recreativas",
+                                "Didáctica y Currículo",
+                                "Fisiología General",
+                                "Natación I",
+                                "Vóleibol",
+                                "Taller III",
+                                "Didáctica de la Educación Física de Nivel Inicial y Primario",
+                                "Fisiología del Ejercicio",
+                                "Natación II",
+                                "Gimnasia Artística",
+                                "Básquetbol",
+                                "Taller IV",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Gestión de Prácticas Deportivas Emergentes",
+                                "Formación para la Salud",
+                                "Didáctica de la Educación Física de Nivel Secundario y Superior",
+                                "Evalución de la Aptitud Física",
+                                "Taller V",
+                                "Biomecánica",
+                                "Rugby",
+                                "Sociología de la Actividad Física y el Deporte",
+                                "Actividad Física Adaptada",
+                                "Entrenamiento de la Aptitud Física",
+                                "Taller VI",
+                                "Actividades Regionales"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Sobrecarga y Musculación",
+                                "Residencia Nivel Inicial y Primario",
+                                "Ética y Legislación Aplicada",
+                                "Residencia Nivel Secundario y Superior"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/educacionfisicaSE/inicio"
+                },
+                {
+                    "id": 417,
+                    "nombre_carrera": "Profesorado en Educación Física",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Sur",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaSS/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía Funcional I",
+                                "Aprendizaje y Desarrollo Motor",
+                                "Psicología General",
+                                "Gimnasia Formativa",
+                                "Fútbol",
+                                "Balonmano",
+                                "Taller I",
+                                "Inglés I",
+                                "Anatomía Funcional II",
+                                "Historia y Teoría de la Educación Física",
+                                "Sujeto del Aprendizaje",
+                                "Gimnasia Funcional",
+                                "Hockey",
+                                "Atletismo",
+                                "Taller II",
+                                "Entornos Virtuales de Aprendizaje"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Institución y Sistemas Educativos",
+                                "Actividades Lúdicas y Recreativas",
+                                "Didáctica y Currículo",
+                                "Fisiología General",
+                                "Natación I",
+                                "Vóleibol",
+                                "Taller III",
+                                "Didáctica de la Educación Física de Nivel Inicial y Primario",
+                                "Fisiología del Ejercicio",
+                                "Natación II",
+                                "Gimnasia Artística",
+                                "Básquetbol",
+                                "Taller IV",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Gestión de Prácticas Deportivas Emergentes",
+                                "Formación para la Salud",
+                                "Didáctica de la Educación Física de Nivel Secundario y Superior",
+                                "Evalución de la Aptitud Física",
+                                "Taller V",
+                                "Biomecánica",
+                                "Rugby",
+                                "Sociología de la Actividad Física y el Deporte",
+                                "Actividad Física Adaptada",
+                                "Entrenamiento de la Aptitud Física",
+                                "Taller VI",
+                                "Actividades Regionales"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Sobrecarga y Musculación",
+                                "Residencia Nivel Inicial y Primario",
+                                "Ética y Legislación Aplicada",
+                                "Residencia Nivel Secundario y Superior"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/educacionfisicaSS/inicio"
+                },
+                {
+                    "id": 418,
+                    "nombre_carrera": "Profesorado en Educación Física",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Malargüe",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicamalargue/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía Funcional I",
+                                "Aprendizaje y Desarrollo Motor",
+                                "Psicología General",
+                                "Gimnasia Formativa",
+                                "Fútbol",
+                                "Balonmano",
+                                "Taller I",
+                                "Inglés I",
+                                "Anatomía Funcional II",
+                                "Historia y Teoría de la Educación Física",
+                                "Sujeto del Aprendizaje",
+                                "Gimnasia Funcional",
+                                "Hockey",
+                                "Atletismo",
+                                "Taller II",
+                                "Entornos Virtuales de Aprendizaje"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Institución y Sistemas Educativos",
+                                "Actividades Lúdicas y Recreativas",
+                                "Didáctica y Currículo",
+                                "Fisiología General",
+                                "Natación I",
+                                "Vóleibol",
+                                "Taller III",
+                                "Didáctica de la Educación Física de Nivel Inicial y Primario",
+                                "Fisiología del Ejercicio",
+                                "Natación II",
+                                "Gimnasia Artística",
+                                "Básquetbol",
+                                "Taller IV",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Gestión de Prácticas Deportivas Emergentes",
+                                "Formación para la Salud",
+                                "Didáctica de la Educación Física de Nivel Secundario y Superior",
+                                "Evalución de la Aptitud Física",
+                                "Taller V",
+                                "Biomecánica",
+                                "Rugby",
+                                "Sociología de la Actividad Física y el Deporte",
+                                "Actividad Física Adaptada",
+                                "Entrenamiento de la Aptitud Física",
+                                "Taller VI",
+                                "Actividades Regionales"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Sobrecarga y Musculación",
+                                "Residencia Nivel Inicial y Primario",
+                                "Ética y Legislación Aplicada",
+                                "Residencia Nivel Secundario y Superior"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/educacionfisicamalargue/inicio"
+                },
+                {
+                    "id": 419,
+                    "nombre_carrera": "Profesorado en Educación Física",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - General Alvear",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicagralalvear",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía Funcional I",
+                                "Aprendizaje y Desarrollo Motor",
+                                "Psicología General",
+                                "Gimnasia Formativa",
+                                "Fútbol",
+                                "Balonmano",
+                                "Taller I",
+                                "Inglés I",
+                                "Anatomía Funcional II",
+                                "Historia y Teoría de la Educación Física",
+                                "Sujeto del Aprendizaje",
+                                "Gimnasia Funcional",
+                                "Hockey",
+                                "Atletismo",
+                                "Taller II",
+                                "Entornos Virtuales de Aprendizaje"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Institución y Sistemas Educativos",
+                                "Actividades Lúdicas y Recreativas",
+                                "Didáctica y Currículo",
+                                "Fisiología General",
+                                "Natación I",
+                                "Vóleibol",
+                                "Taller III",
+                                "Didáctica de la Educación Física de Nivel Inicial y Primario",
+                                "Fisiología del Ejercicio",
+                                "Natación II",
+                                "Gimnasia Artística",
+                                "Básquetbol",
+                                "Taller IV",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Gestión de Prácticas Deportivas Emergentes",
+                                "Formación para la Salud",
+                                "Didáctica de la Educación Física de Nivel Secundario y Superior",
+                                "Evalución de la Aptitud Física",
+                                "Taller V",
+                                "Biomecánica",
+                                "Rugby",
+                                "Sociología de la Actividad Física y el Deporte",
+                                "Actividad Física Adaptada",
+                                "Entrenamiento de la Aptitud Física",
+                                "Taller VI",
+                                "Actividades Regionales"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Sobrecarga y Musculación",
+                                "Residencia Nivel Inicial y Primario",
+                                "Ética y Legislación Aplicada",
+                                "Residencia Nivel Secundario y Superior"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/educacionfisicagralalvear"
+                },
+                {
+                    "id": 420,
+                    "nombre_carrera": "Licenciatura en Educación Física a Distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacionfisicaadistancia/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan de estudios",
+                            "materias": [
+                                "Actividad Física, Salud y Calidad de Vida - Semestral",
+                                "M arketing del Deporte - Semestral",
+                                "Salud y fitness - Semestral",
+                                "Equipamiento , Instalaciones y Seguridad Deportiva - Semestral",
+                                "Psicología del Deporte - Semestral",
+                                "Kinefilaxia - Semestral",
+                                "Formulación y Evaluación de Proyectos - Semestral",
+                                "Nutrición de la Actividad Física y el Deporte - Semestral",
+                                "Organización y Gestión Institucional - Semestral",
+                                "Medicina del Deporte - Semestral",
+                                "Esta dística Aplicada - Semestral",
+                                "Metodología de la Investigación - Anual",
+                                "Trabajo Final Integrador"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/educacionfisicaadistancia/inicio"
+                },
+                {
+                    "id": 421,
+                    "nombre_carrera": "Licenciatura en Educación Inicial a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/educacioninicial/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er semestre",
+                            "materias": [
+                                "Metodología de la investigación",
+                                "Neuropsicosociología del desarrollo I",
+                                "Acompañamiento temprano del desarrollo infantil I",
+                                "Atención primaria de la salud",
+                                "Taller de observación sistemática",
+                                "Taller de integración: trabajo de campo. Proceso de observación."
+                            ]
+                        },
+                        {
+                            "anio": "2do semestre",
+                            "materias": [
+                                "Metodología de la investigación",
+                                "Neuropsicosociología del desarrollo II",
+                                "Acompañamiento temprano del desarrollo infantil II",
+                                "Contexto socio histórico. Inclusión. DUA",
+                                "Taller de formación personal",
+                                "Taller de integración: trabajo de campo. Proceso de observación."
+                            ]
+                        },
+                        {
+                            "anio": "3er semestre",
+                            "materias": [
+                                "Estrategias de intervención",
+                                "Institución y desarrollo emocional",
+                                "Gestión institucional y estrategia de comunicación",
+                                "Seminario de tesina - Trabajo Final Integrador"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/educacioninicial/inicio"
+                },
+                {
+                    "id": 422,
+                    "nombre_carrera": "Licenciatura en Enología",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/enologia/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Matemática",
+                                "Operaciones básicas de laboratorio",
+                                "Introducción a la vitivinicultura",
+                                "Introducción al análisis sensorial",
+                                "Física",
+                                "Química",
+                                "Química orgánica",
+                                "Informática",
+                                "Inglés Elemental"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Química analítica",
+                                "Estadística",
+                                "Microbiología general",
+                                "Taller vitivinícola",
+                                "Bioquímica",
+                                "Fisicoquímica",
+                                "Viticultura: ecofisiología de la vid",
+                                "Análisis sensorial",
+                                "Inglés Pre-intermedio (1º semestre)",
+                                "Inglés Intermedio (2º semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Química Analítica Instrumental",
+                                "Enología de la elaboración",
+                                "Análisis organoléptico y tecnología de la cata",
+                                "Química enológica",
+                                "Análisis y control químico enológico",
+                                "Francés vitivinícola",
+                                "Enología de la estabilización",
+                                "Ingeniería enológica",
+                                "Microbiología enológica",
+                                "Normativa y legislación vitivinícola",
+                                "Prácticas integradas enológicas"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Viticultura: manejo de viñedos",
+                                "Ingeniería en procesos",
+                                "Formulación y evaluación de proyectos",
+                                "Metodología de la investigación",
+                                "Tecnología enológica",
+                                "Cata profesional de vinos",
+                                "Control de calidad y seguridad alimentaria",
+                                "Viticultura: material vegetal y biotecnología de la vid",
+                                "Taller de tesis",
+                                "Costos y Finanzas",
+                                "Prácticas enológicas avanzadas",
+                                "Trabajo de fin de grado – Tesina"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/enologia/inicio"
+                },
+                {
+                    "id": 423,
+                    "nombre_carrera": "Farmacia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/farmacia/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Química General I",
+                                "Matemática I",
+                                "Biología General",
+                                "Química General II",
+                                "Matemática II",
+                                "Anatomía",
+                                "Física I",
+                                "Informática (Extracurricular)",
+                                "Taller de Orientación Profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Química Inorgánica",
+                                "Física II",
+                                "Química Analítica General",
+                                "Inglés",
+                                "Portugués",
+                                "Química Orgánica I",
+                                "Fisicoquímica",
+                                "Histología",
+                                "Taller de Orientación Profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Fisiología",
+                                "Química orgánica II",
+                                "Química Analítica Instrumental",
+                                "Estadística",
+                                "Microbiología General e inmunología",
+                                "Química Biológica",
+                                "Farmacobotánica",
+                                "Salud Pública",
+                                "Taller de Orientación Profesional III"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Fisiopatología",
+                                "Tecnología Farmacéutica y Biofarmacia I",
+                                "Farmacognosia y Fitoquímica",
+                                "Nutrición y Bromatología",
+                                "Epistemología y Metodología de la Investigación",
+                                "Tecnología Farmacéutica y Biofarmacia II",
+                                "Biotecnología",
+                                "Farmacología y Toxicología I",
+                                "Química Medicinal"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Garantía de Calidad de Medicamentos",
+                                "Farmacología y Toxicología II",
+                                "Ética y Bioética",
+                                "Legislación Farmacéutica",
+                                "Farmacia Clínica y asistencial",
+                                "Higiene y sanidad",
+                                "Optativa I",
+                                "Optativa II",
+                                "Práctica Profesional Supervisada"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/farmacia/inicio"
+                },
+                {
+                    "id": 424,
+                    "nombre_carrera": "Licenciatura en Gastronomía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/gastronomia/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan de estudios",
+                            "materias": [
+                                "Alimentos y bebidas",
+                                "Tecnologías alimentarias",
+                                "Conservación de alimentos",
+                                "Toxicología de los alimentos",
+                                "Inocuidad alimentaria",
+                                "Sistemas de calidad",
+                                "Metodología de la investigación",
+                                "Estadística aplicada",
+                                "Análisis sensorial",
+                                "Administración",
+                                "Formulación y evaluación de proyectos",
+                                "Comunicación",
+                                "Marketing",
+                                "Ética",
+                                "Tesina"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/gastronomia/inicio"
+                },
+                {
+                    "id": 425,
+                    "nombre_carrera": "Licenciatura en Hemoterapia a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/hemoterapia/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er semestre",
+                            "materias": [
+                                "Salud Pública",
+                                "Introducción a la Química Biológica",
+                                "Microbiología y Control de Infecciones",
+                                "Seguridad del paciente",
+                                "Bioestadística"
+                            ]
+                        },
+                        {
+                            "anio": "2do semestre",
+                            "materias": [
+                                "Gestión y organización de los servicios de Hemoterapia",
+                                "Formulación y Evaluación de Proyectos",
+                                "Gestión de calidad en el servicio de Hemoterapia",
+                                "Inteligencia Artificial en Salud",
+                                "Genética"
+                            ]
+                        },
+                        {
+                            "anio": "3er semestre",
+                            "materias": [
+                                "Metodología de la Investigación",
+                                "Bancos de sangre",
+                                "Taller de Formación de Promotores de la Donación Voluntaria de Sangre",
+                                "Ética y Bioética",
+                                "Higiene y Bioseguridad"
+                            ]
+                        },
+                        {
+                            "anio": "4to semestre",
+                            "materias": [
+                                "Telesalud y Telemedicina",
+                                "Tesina"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/hemoterapia/inicio"
+                },
+                {
+                    "id": 426,
+                    "nombre_carrera": "Licenciatura en Instrumentación Quirúrgica a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/instrumentacionquirurgica/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er semestre",
+                            "materias": [
+                                "Salud Pública",
+                                "Introducción a la Química Biológica",
+                                "Microbiología y Control de Infecciones",
+                                "Seguridad del paciente",
+                                "Bioestadística"
+                            ]
+                        },
+                        {
+                            "anio": "2do semestre",
+                            "materias": [
+                                "Gestión y organización del servicio de Instrumentación Quirúrgica",
+                                "Formulación y Evaluación de Proyectos",
+                                "Gestión de calidad del servicio de Instrumentación Quirúrgica",
+                                "Inteligencia Artificial en Salud",
+                                "Nuevas tendencias en Instrumentación Quirúrgica"
+                            ]
+                        },
+                        {
+                            "anio": "3er semestre",
+                            "materias": [
+                                "Metodología de la Investigación",
+                                "Taller de Formación de Promotores de la Donación Voluntaria de Órganos",
+                                "Ética y Bioética",
+                                "Higiene y Bioseguridad"
+                            ]
+                        },
+                        {
+                            "anio": "4to semestre",
+                            "materias": [
+                                "Telesalud y Telemedicina",
+                                "Tesina"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/instrumentacionquirurgica/inicio"
+                },
+                {
+                    "id": 427,
+                    "nombre_carrera": "Kinesiología y Fisioterapia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/kinesiologia/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía normal y funcional",
+                                "Psicología médica",
+                                "Histología y embriología",
+                                "Biofísica",
+                                "Química",
+                                "Informática aplicada (extracurricular)",
+                                "Medicina Preventiva y Salud Pública",
+                                "PAFU Programa de Actividad Física Universitaria obligatoria en 1º Año."
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Kinesioterapia",
+                                "Fisiología humana",
+                                "Biomecánica",
+                                "Semiopatología kinésica médica",
+                                "Neuroanatomía",
+                                "Neurología",
+                                "Patología quirúrgica",
+                                "Kinefilaxia",
+                                "Inglés I",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Fisioterapia",
+                                "Diagnóstico por imágenes",
+                                "Clínica fisiokinésica",
+                                "Psicomotricidad",
+                                "Kinesiología pediátrica",
+                                "Kinesiología neurológica",
+                                "Kinesiología traumatológica",
+                                "Farmacología aplicada",
+                                "Prácticas profesionales supervisadas en hospitales (300hs)"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Metodología de la investigación",
+                                "Salud mental",
+                                "Kinesiología legal y bioética",
+                                "Kinesiología cardiorrespiratoria",
+                                "Geriatría",
+                                "Fisiokinesiología del deporte",
+                                "Ortesis y prótesis",
+                                "Ergonomía y fisioterapia laboral",
+                                "Kinesiología dermoestética",
+                                "Bioestadística",
+                                "Gestión sanitaria",
+                                "Prácticas profesionales supervisadas en hospitales (400hs)",
+                                "Tesina de licenciatura"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/kinesiologia/inicio"
+                },
+                {
+                    "id": 428,
+                    "nombre_carrera": "Kinesiología y Fisioterapia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/kinesiologiaVDU/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía normal y funcional",
+                                "Psicología médica",
+                                "Histología y embriología",
+                                "Biofísica",
+                                "Química",
+                                "Informática aplicada (extracurricular)",
+                                "Medicina preventiva y salud pública",
+                                "PAFU Programa de Actividad Física Universitaria obligatoria en 1º Año."
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Kinesioterapia",
+                                "Fisiología humana",
+                                "Biomecánica",
+                                "Semiopatología kinésica médica",
+                                "Neuroanatomía",
+                                "Neurología",
+                                "Patología quirúrgica",
+                                "Kinefilaxia",
+                                "Inglés I",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Fisioterapia",
+                                "Diagnóstico por imágenes",
+                                "Clínica fisiokinésica",
+                                "Psicomotricidad",
+                                "Kinesiología pediátrica",
+                                "Kinesiología neurológica",
+                                "Kinesiología traumatológica",
+                                "Farmacología aplicada",
+                                "Informática aplicada (extracurricular) va en primer año",
+                                "Prácticas profesionales supervisadas en hospitales (300hs)"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Metodología de la investigación",
+                                "Salud mental",
+                                "Kinesiología legal y bioética",
+                                "Kinesiología cardiorrespiratoria",
+                                "Geriatría",
+                                "Fisiokinesiología del deporte",
+                                "Ortesis y prótesis",
+                                "Ergonomía y fisioterapia laboral",
+                                "Kinesiología dermoestética",
+                                "Bioestadística",
+                                "Gestión sanitaria",
+                                "Prácticas profesionales supervisadas en hospitales (400hs)",
+                                "Tesina de licenciatura"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/kinesiologiaVDU/inicio"
+                },
+                {
+                    "id": 429,
+                    "nombre_carrera": "Kinesiología y Fisioterapia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Este",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/kinesiologiaSE/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía normal y funcional",
+                                "Psicología médica",
+                                "Histología y embriología",
+                                "Biofísica",
+                                "Química",
+                                "Informática aplicada (extracurricular)",
+                                "Medicina preventiva y salud pública",
+                                "PAFU Programa de Actividad Física Universitaria obligatoria en 1º Año."
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Kinesioterapia",
+                                "Fisiología humana",
+                                "Biomecánica",
+                                "Semiopatología kinésica médica",
+                                "Neuroanatomía",
+                                "Neurología",
+                                "Patología quirúrgica",
+                                "Kinefilaxia",
+                                "Inglés I",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Fisioterapia",
+                                "Diagnóstico por imágenes",
+                                "Clínica fisiokinésica",
+                                "Psicomotricidad",
+                                "Kinesiología pediátrica",
+                                "Kinesiología neurológica",
+                                "Kinesiología traumatológica",
+                                "Farmacología aplicada",
+                                "Informática aplicada (extracurricular) va en primer año",
+                                "Prácticas profesionales supervisadas en hospitales (300hs)"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Metodología de la investigación",
+                                "Salud mental",
+                                "Kinesiología legal y bioética",
+                                "Kinesiología cardiorrespiratoria",
+                                "Geriatría",
+                                "Fisiokinesiología del deporte",
+                                "Ortesis y prótesis",
+                                "Ergonomía y fisioterapia laboral",
+                                "Kinesiología dermoestética",
+                                "Bioestadística",
+                                "Gestión sanitaria",
+                                "Prácticas profesionales supervisadas en hospitales (400hs)",
+                                "Tesina de licenciatura"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/kinesiologiaSE/inicio"
+                },
+                {
+                    "id": 430,
+                    "nombre_carrera": "Locución",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/locucion/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Introducción a la comunicación",
+                                "Lengua y expresión",
+                                "Historia americana y argentina",
+                                "Periodismo informativo",
+                                "Corrientes del pensamiento contemporáneo",
+                                "Expresión corporal",
+                                "Actuación dramática",
+                                "Práctica integral de radio I",
+                                "Práctica integral de radio II",
+                                "Práctica integral de televisión I",
+                                "Práctica integral de televisión II",
+                                "Locución I",
+                                "Locución II",
+                                "Foniatría I",
+                                "Foniatría II",
+                                "PAFU Programa de Actividad Física Universitaria opcional en 1º Año."
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Teoría de la comunicación I",
+                                "Pronunciación del Italiano",
+                                "Portugués",
+                                "Psicología de la comunicación",
+                                "Literatura",
+                                "Periodismo de investigación",
+                                "Lenguaje y estética de la música",
+                                "Foniatría III",
+                                "Práctica integral de televisión III",
+                                "Práctica integral de radio III",
+                                "Locución III y oratoria",
+                                "Tecnología de la radio y de la televisión",
+                                "Informática (extracurricular)"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Legislación aplicada",
+                                "Relaciones públicas",
+                                "Sociología de la comunicación",
+                                "Historia de las ideas políticas modernas y contemporáneas",
+                                "Economía",
+                                "Ética de la comunicación",
+                                "Pronunciación del francés",
+                                "Pronunciación del alemán",
+                                "Locución IV",
+                                "Foniatría IV",
+                                "Práctica integral de televisión IV",
+                                "Práctica integral de radio IV",
+                                "Doblaje",
+                                "Práctica profesional",
+                                "Media Lab",
+                                "Estudio de Radio",
+                                "Estudio de TV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/locucion/inicio"
+                },
+                {
+                    "id": 431,
+                    "nombre_carrera": "Licenciatura en Matemática a distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus Virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/matematica/inicio"
+                },
+                {
+                    "id": 432,
+                    "nombre_carrera": "Musicoterapia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/musicoterapia/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Psicología General – Corrientes psicológicas",
+                                "Psicología del desarrollo humano I",
+                                "Psicología Social y Dinámica de grupos en Musicoterapia",
+                                "Fundamentos de la Musicoterapia",
+                                "Psicoacústica",
+                                "Biología y Fisiología humana",
+                                "Taller musical I",
+                                "Técnicas corporales I",
+                                "Experiencia personal y grupal en Musicoterapia I (Sujeto y lenguaje córporo-sonoro-musical)",
+                                "Inglés técnico (extracurricular)",
+                                "PAFU Programa de Actividad Física Universitaria obligatoria en 1º Año.",
+                                "Informática"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Neurociencias I",
+                                "Neurociencias II",
+                                "Neuromúsica",
+                                "Psicología del desarrollo humano II",
+                                "Psicomotricidad",
+                                "Historia de las producciones musicales",
+                                "Teoría de la Musicoterapia",
+                                "Folklore, Etnomusicología y Antropología",
+                                "Experiencia personal y grupal en Musicoterapia II (Procesos vinculares)",
+                                "Taller musical II",
+                                "Técnicas corporales II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Musicoterapia en infancia con y sin morbilidad",
+                                "Musicoterapia en ámbitos sociales y comunitarios",
+                                "Musicoterapia en adolescencia con y sin morbilidad",
+                                "Musicoterapia en adultos con y sin morbilidad",
+                                "Musicoterapia en geriatría con y sin morbilidad",
+                                "Psicopatología",
+                                "Taller Musical III (Voz, conjunto vocal e instrumental)",
+                                "Experiencia personal y grupal en Musicoterapia III (Transferencia y contratransferencia)"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Terapias Artísticas",
+                                "Taller musical IV (Informática aplicada a lamúsica)",
+                                "Experiencia personal y grupal en Musicoterapia IV (roles, escenarios,encuadres)",
+                                "Metodología de la Investigación",
+                                "Prácticas profesionales supervisadas",
+                                "Portugués técnico (extracurricular)",
+                                "Tesina de Licenciatura"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/musicoterapia/inicio"
+                },
+                {
+                    "id": 433,
+                    "nombre_carrera": "Licenciatura en Nutrición",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/nutricion/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Introducción a la Nutrición",
+                                "Medioambiente y Nutrición",
+                                "Anatomía I",
+                                "Sociología y Antropología Alimentaria",
+                                "Nutrición Humana",
+                                "Microbiología y Parasitología",
+                                "Química II",
+                                "Anatomía II",
+                                "Nutrición en Salud Pública",
+                                "Economía Alimentaria",
+                                "Optativa I"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Fisiología",
+                                "Bioquímica de la Nutrición",
+                                "Bromatología",
+                                "Nutrición Materno Infanto Juvenil",
+                                "Evaluación Nutricional",
+                                "Psicología Aplicada a la Nutrición",
+                                "Técnicas del manejo de los alimentos",
+                                "Fisiopatología en el adulto",
+                                "Inglés Técnico",
+                                "Optativa II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Fisiopatología en Infancia y Adolescencia",
+                                "Epidemiología Nutricional",
+                                "Educación Nutricional y Didáctica General",
+                                "Tecnología Alimentaria",
+                                "Terapia Clínica Nutricional en el Adulto I",
+                                "Terapia Clínica Nutricional en Infancia y Adolescencia",
+                                "Laboratorio de Investigación y Nutrición Aplicada",
+                                "Nutrición en el Deporte",
+                                "Terapia Clínica Nutricional en el Adulto II",
+                                "Terapia Clínica Nutricional en el Adulto con patología compleja",
+                                "Administración de Servicios de Alimentación y Nutrición",
+                                "Optativa III"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Bioestadística",
+                                "Políticas y gestión alimentario nutricional",
+                                "Toxicología de los alimentos",
+                                "Nutrición para personas mayores",
+                                "Ética y Bioética",
+                                "Metodología de la Investigación Científica",
+                                "Comunicación Nutricional",
+                                "Optativa IV",
+                                "Práctica Profesional",
+                                "TFI"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/nutricion/inicio"
+                },
+                {
+                    "id": 434,
+                    "nombre_carrera": "Licenciatura en Nutrición",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/nutricionVDU/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Introducción a la Nutrición",
+                                "Medioambiente y Nutrición",
+                                "Anatomía I",
+                                "Sociología y Antropología Alimentaria",
+                                "Nutrición Humana",
+                                "Microbiología y Parasitología",
+                                "Química II",
+                                "Anatomía II",
+                                "Nutrición en Salud Pública",
+                                "Economía Alimentaria",
+                                "Optativa I"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Fisiología",
+                                "Bioquímica de la Nutrición",
+                                "Bromatología",
+                                "Nutrición Materno Infanto Juvenil",
+                                "Evaluación Nutricional",
+                                "Psicología Aplicada a la Nutrición",
+                                "Técnicas del manejo de los alimentos",
+                                "Fisiopatología en el adulto",
+                                "Inglés Técnico",
+                                "Optativa II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Fisiopatología en Infancia y Adolescencia",
+                                "Epidemiología Nutricional",
+                                "Educación Nutricional y Didáctica General",
+                                "Tecnología Alimentaria",
+                                "Terapia Clínica Nutricional en el Adulto I",
+                                "Terapia Clínica Nutricional en Infancia y Adolescencia",
+                                "Laboratorio de Investigación y Nutrición Aplicada",
+                                "Nutrición en el Deporte",
+                                "Terapia Clínica Nutricional en el Adulto II",
+                                "Terapia Clínica Nutricional en el Adulto con patología compleja",
+                                "Administración de Servicios de Alimentación y Nutrición",
+                                "Optativa III"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Bioestadística",
+                                "Políticas y gestión alimentario nutricional",
+                                "Toxicología de los alimentos",
+                                "Nutrición para personas mayores",
+                                "Ética y Bioética",
+                                "Metodología de la Investigación Científica",
+                                "Comunicación Nutricional",
+                                "Optativa IV",
+                                "Práctica Profesional",
+                                "TFI"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/nutricionVDU/inicio"
+                },
+                {
+                    "id": 435,
+                    "nombre_carrera": "Licenciatura en Nutrición",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Este",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/nutricionSE/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Introducción a la Nutrición",
+                                "Medioambiente y Nutrición",
+                                "Anatomía I",
+                                "Sociología y Antropología Alimentaria",
+                                "Nutrición Humana",
+                                "Microbiología y Parasitología",
+                                "Química II",
+                                "Anatomía II",
+                                "Nutrición en Salud Pública",
+                                "Economía Alimentaria",
+                                "Optativa I"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Fisiología",
+                                "Bioquímica de la Nutrición",
+                                "Bromatología",
+                                "Nutrición Materno Infanto Juvenil",
+                                "Evaluación Nutricional",
+                                "Psicología Aplicada a la Nutrición",
+                                "Técnicas del manejo de los alimentos",
+                                "Fisiopatología en el adulto",
+                                "Inglés Técnico",
+                                "Optativa II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Fisiopatología en Infancia y Adolescencia",
+                                "Epidemiología Nutricional",
+                                "Educación Nutricional y Didáctica General",
+                                "Tecnología Alimentaria",
+                                "Terapia Clínica Nutricional en el Adulto I",
+                                "Terapia Clínica Nutricional en Infancia y Adolescencia",
+                                "Laboratorio de Investigación y Nutrición Aplicada",
+                                "Nutrición en el Deporte",
+                                "Terapia Clínica Nutricional en el Adulto II",
+                                "Terapia Clínica Nutricional en el Adulto con patología compleja",
+                                "Administración de Servicios de Alimentación y Nutrición",
+                                "Optativa III"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Bioestadística",
+                                "Políticas y gestión alimentario nutricional",
+                                "Toxicología de los alimentos",
+                                "Nutrición para personas mayores",
+                                "Ética y Bioética",
+                                "Metodología de la Investigación Científica",
+                                "Comunicación Nutricional",
+                                "Optativa IV",
+                                "Práctica Profesional",
+                                "TFI"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/nutricionSE/inicio"
+                },
+                {
+                    "id": 436,
+                    "nombre_carrera": "Licenciatura en Nutrición",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Sur",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/nutricionSS/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Introducción a la Nutrición",
+                                "Medioambiente y Nutrición",
+                                "Anatomía I",
+                                "Sociología y Antropología Alimentaria",
+                                "Nutrición Humana",
+                                "Microbiología y Parasitología",
+                                "Química II",
+                                "Anatomía II",
+                                "Nutrición en Salud Pública",
+                                "Economía Alimentaria",
+                                "Optativa I"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Fisiología",
+                                "Bioquímica de la Nutrición",
+                                "Bromatología",
+                                "Nutrición Materno Infanto Juvenil",
+                                "Evaluación Nutricional",
+                                "Psicología Aplicada a la Nutrición",
+                                "Técnicas del manejo de los alimentos",
+                                "Fisiopatología en el adulto",
+                                "Inglés Técnico",
+                                "Optativa II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Fisiopatología en Infancia y Adolescencia",
+                                "Epidemiología Nutricional",
+                                "Educación Nutricional y Didáctica General",
+                                "Tecnología Alimentaria",
+                                "Terapia Clínica Nutricional en el Adulto I",
+                                "Terapia Clínica Nutricional en Infancia y Adolescencia",
+                                "Laboratorio de Investigación y Nutrición Aplicada",
+                                "Nutrición en el Deporte",
+                                "Terapia Clínica Nutricional en el Adulto II",
+                                "Terapia Clínica Nutricional en el Adulto con patología compleja",
+                                "Administración de Servicios de Alimentación y Nutrición",
+                                "Optativa III"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Bioestadística",
+                                "Políticas y gestión alimentario nutricional",
+                                "Toxicología de los alimentos",
+                                "Nutrición para personas mayores",
+                                "Ética y Bioética",
+                                "Metodología de la Investigación Científica",
+                                "Comunicación Nutricional",
+                                "Optativa IV",
+                                "Práctica Profesional",
+                                "TFI"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/nutricionSS/inicio"
+                },
+                {
+                    "id": 437,
+                    "nombre_carrera": "Periodismo",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/periodismo/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Introducción a la comunicación",
+                                "Lengua y expresión",
+                                "Historia americana y argentina",
+                                "Periodismo informativo",
+                                "Corrientes del pensamiento contemporáneo",
+                                "Periodismo y medios (prensa gráfica)",
+                                "Práctica integral de radio I",
+                                "Práctica integral de radio II",
+                                "Práctica integral de televisión I",
+                                "Práctica integral de televisión II",
+                                "Locución I",
+                                "Locución II",
+                                "Foniatría I",
+                                "Foniatría II",
+                                "PAFU Programa de Actividad Física Universitaria opcional en 1º Año."
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Teoría de la comunicación I",
+                                "Comunicación visual",
+                                "Pronunciación del italiano",
+                                "Portugués",
+                                "Psicología de la comunicación",
+                                "Literatura",
+                                "Periodismo de investigación",
+                                "Lenguaje y estética de la música",
+                                "Práctica integral de televisión III",
+                                "Práctica integral de radio III",
+                                "Tecnología de la radio y de la televisión",
+                                "Informática (extracurricular)",
+                                "Técnicas de diagramación e impresión",
+                                "Inglés I",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Legislación aplicada",
+                                "Relaciones públicas",
+                                "Periodismo de opinión",
+                                "Sociología de la comunicación",
+                                "Historia de las ideas políticas modernas y contemporáneas",
+                                "Economía",
+                                "Ética de la comunicación",
+                                "Pronunciación del francés",
+                                "Pronunciación del alemán",
+                                "Práctica integral de televisión IV",
+                                "Práctica Integral de radio IV",
+                                "Fotoperiodismo",
+                                "Práctica profesional",
+                                "Inglés III"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Teoría de la comunicación II",
+                                "Estudio de la realidad histórico-social",
+                                "Comunicación organizativa e institucional",
+                                "Metodología de la investigación I",
+                                "Comunicación cinematográfica",
+                                "Crítica artística y literaria",
+                                "Comunicación científica",
+                                "Metodología de la investigación II",
+                                "Tesina",
+                                "Práctica profesional",
+                                "Media Lab",
+                                "Estudio de Radio",
+                                "Estudio de TV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/periodismo/inicio"
+                },
+                {
+                    "id": 438,
+                    "nombre_carrera": "Podología Universitaria",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/podologia/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía normal y funcional",
+                                "Psicología",
+                                "Química",
+                                "Fundamentos de la Quiropodología",
+                                "Fisiología",
+                                "Biomecánica y Cinemática",
+                                "Semiología Podólogica",
+                                "Histología aplicada a la podología",
+                                "Farmacología Aplicada",
+                                "Informática",
+                                "PAFU Programa de Actividad Física Universitaria obligatoria en 1º Año."
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Clínica Podológica",
+                                "Quiropodología Aplicada",
+                                "Ortopodología I",
+                                "Dermatología",
+                                "Microbiología y Parasitología",
+                                "Onicología",
+                                "Ortopodología II",
+                                "Terapéutica Podológica",
+                                "Traumatología",
+                                "Podología legal y Bioética"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Podología Deportiva",
+                                "Podología Preventiva y Cosmetológica",
+                                "Podología Infanto- juvenil",
+                                "Administración y Emprendimientos en salud",
+                                "Primeros auxilios",
+                                "Metodología de la Investigación",
+                                "Prácticas Profesionales Supervisada"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/podologia/inicio"
+                },
+                {
+                    "id": 439,
+                    "nombre_carrera": "Podología Universitaria",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Ciclo de Complementación a distancia",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/ccc-podologia/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er semestre",
+                            "materias": [
+                                "Salud pública, gestión y organización sanitaria",
+                                "Bioestadística",
+                                "Clínica podológica",
+                                "Seguridad del paciente",
+                                "Tecnologías de avanzada en gestión"
+                            ]
+                        },
+                        {
+                            "anio": "2do semestre",
+                            "materias": [
+                                "Inteligencia artificial en salud",
+                                "Terapias complementarias de aplicación en podología",
+                                "Biomecánica exploratoria",
+                                "Tecnologías aplicadas a la biomecánica",
+                                "Imagen diagnóstica",
+                                "Abordaje integral del pie de riesgo"
+                            ]
+                        },
+                        {
+                            "anio": "3er semestre",
+                            "materias": [
+                                "Metodología de la investigación",
+                                "Tesina"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/ccc-podologia/inicio"
+                },
+                {
+                    "id": 440,
+                    "nombre_carrera": "Profesorado para Profesionales",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/profesoradoprofesionales/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er semestre",
+                            "materias": [
+                                "Didáctica y Currículo",
+                                "Psicología Educativa",
+                                "Pedagogía",
+                                "Práctica Profesional Docente"
+                            ]
+                        },
+                        {
+                            "anio": "2do semestre",
+                            "materias": [
+                                "Didáctica Especial y Específica",
+                                "Entornos Virtuales de Aprendizaje",
+                                "Evaluación del Aprendizaje",
+                                "Investigación Educativa",
+                                "Sociología de la Educación",
+                                "Residencia Educativa"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/profesoradoprofesionales/inicio"
+                },
+                {
+                    "id": 441,
+                    "nombre_carrera": "Protección Comunitaria y Seguridad Urbana",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/proteccion-comunitaria-y-seguridad-urbana",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Derecho I (Penal, Procesal, Convencional, y Administrativo)",
+                                "Derechos Humanos y Constitucional",
+                                "Estadística descriptiva e Interpelación de datos",
+                                "Normas y Procedimientos en Seguridad (Criminalística)",
+                                "Atención Básica a la Salud (Primeros Auxilios)",
+                                "Acondicionamiento Físico I",
+                                "Protocolo General de Actuación Comunitaria",
+                                "Investigación Criminal",
+                                "Técnicas y Tácticas de Defensa Personal I",
+                                "Balística y Armas I",
+                                "Seguridad Vial",
+                                "Taller de Resolución de Casos",
+                                "Informática"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Derecho II (Penal, Procesal, Contravencional, y Administrativo)",
+                                "Derecho de Minoridad y Familia",
+                                "Gestión de Recursos Humanos",
+                                "Informática Aplicada",
+                                "Técnicas de Mediación, Resolución de Conflictos, y Negociación",
+                                "Balística y Armas II",
+                                "Acondicionamiento Físico II",
+                                "Medicina Legal",
+                                "Doctrina Institucional y Conducción de Personal",
+                                "Estrategia, Táctica y Planificación",
+                                "Técnicas y Tácticas de Defensa Personal II",
+                                "Defensa Civil y Prevención de Riesgos",
+                                "Inglés I"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Sociologia Criminal",
+                                "Inteligencia Criminal",
+                                "Políticas y Estrategias en Prevención del Delito y la Violencia",
+                                "Prácticas Profesionalizantes",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Seguridad e Higiene en el Trabajo",
+                                "Seguridad y Comunicación Social",
+                                "Seguridad Física y Electrónica",
+                                "Seguridad Bancaria",
+                                "El sistema de Seguridad Privada",
+                                "Seminario I: Muerte violenta",
+                                "Legislación sobre Seguridad Ciudadana",
+                                "Taller: Práctica en Seguridad I",
+                                "Etica Profesional",
+                                "Accidentología y Seguridad Vial",
+                                "Administración de los Recursos Materiales"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Metodología de la Investigación",
+                                "Tecnología aplicada a la Seguridad",
+                                "Seguridad Informática",
+                                "Seguridad en Medios de Transporte",
+                                "Seminario II: Mapeo del delito",
+                                "Tráficos Ilícitos y Crimen"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/proteccion-comunitaria-y-seguridad-urbana"
+                },
+                {
+                    "id": 442,
+                    "nombre_carrera": "Publicidad",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/publicidad/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Introducción a la comunicación",
+                                "Escritura transmedia",
+                                "Creatividad e innovación",
+                                "Introducción de la publicidad",
+                                "Herramientas publicitarias: Imagen digital",
+                                "Taller de edición I (Photoshop virtual)",
+                                "Marketing",
+                                "Herramientas publicitarias: Diseño vectorial",
+                                "Teoría de la publicidad",
+                                "Taller de edición II (Ilustrator - virtual)",
+                                "Psicología y Neuromarketing"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Redacción publicitaria (offline y online)",
+                                "Brief y brieffing",
+                                "Comportamiento del target",
+                                "Laboratorio digital",
+                                "Fotografía publicitaria",
+                                "Arte y cultura",
+                                "Producción publicitaria en radio y podcast",
+                                "Imagen publicitaria",
+                                "Creatividad e inteligencia artificial",
+                                "Redes y comunicación digital",
+                                "Inglés I y II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Publicidad en medios (estrategia online-offline)",
+                                "Investigación publicitaria",
+                                "Sociología de la comunicación",
+                                "Análisis de datos",
+                                "Desarrollo de videojuegos",
+                                "Producción audiovisual (TV-Redes)",
+                                "Campañas institucionales y de bien público",
+                                "Publicidad VI: Estrategia publicitaria",
+                                "Desarrollo de emprendimientos",
+                                "Imagen multimedia",
+                                "Práctica profesional inicial"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Comunicación organizativa e institucional",
+                                "Relaciones públicas",
+                                "Neuro oratoria",
+                                "Metodología de la investigación",
+                                "Campañas 360",
+                                "Ética y derecho publicitario",
+                                "Dirección creativa",
+                                "Dirección de arte",
+                                "Práctica profesional avanzada",
+                                "Trabajo final integrador"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/publicidad/inicio"
+                },
+                {
+                    "id": 443,
+                    "nombre_carrera": "Puericultura a Distancia",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Campus virtual",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/puericultura/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía y fisiología del embarazo, parto y puerperio",
+                                "Puericultura I",
+                                "Lactancia Materna I",
+                                "Fundamentos psicosociales para la salud de la mujer y el recién nacido",
+                                "Observación de lactantes I",
+                                "Educación y Orientación en las Instituciones",
+                                "Psicología Evolutiva I",
+                                "Crianza y relación vincular"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Patologías durante el embarazo y del neonato",
+                                "Puericultura y Nutrición",
+                                "Pedagogía y educación maternal",
+                                "Observación de lactantes II",
+                                "Psicología Evolutiva II",
+                                "Atención Integral de la mujer y el recién nacido",
+                                "Lactancia Materna II",
+                                "Psicología de las relaciones familiares",
+                                "Organización y Administración de Centros de Puericultura"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Técnicas de Comunicación",
+                                "Dinámica de grupos",
+                                "Educación corporal de la mamá y del niño",
+                                "Bioética",
+                                "Práctica Técnica: en Hospitales o Centros materno-infantiles",
+                                "Práctica Técnica: Concurrencia de una mañana o una tarde a un Hospital o Centro Materno Infantil (anual) y a un Jardín Maternal que se designen (cuatrimestral)."
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/puericultura/inicio"
+                },
+                {
+                    "id": 444,
+                    "nombre_carrera": "Realización Audiovisual",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/realizacionaudiovisual/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Realización Audiovisual I",
+                                "Taller de Guión Audiovisual I",
+                                "Producción de Campo",
+                                "Sonido",
+                                "Tecnología del Video",
+                                "Fotografía Fija",
+                                "Edición",
+                                "Visualización",
+                                "Taller de Iluminación y Cámara",
+                                "Historia del Cine"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Realización Audiovisual II",
+                                "Televisión",
+                                "Dirección de Fotografía",
+                                "Taller de Guión Audiovisual II",
+                                "Dirección de Arte",
+                                "Post-Producción de Sonido I",
+                                "Historia del Arte I",
+                                "Historia del Cine II",
+                                "Post-Producción de Video I",
+                                "Producción y Legislación"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Dirección Cinematográfica",
+                                "Montaje",
+                                "Formatos Televisivos",
+                                "Semiótica Visual",
+                                "Post-Producción de Video II",
+                                "Historia del Arte II",
+                                "Post-Producción de Sonido II",
+                                "Historia del cine argentino y latinoamericano",
+                                "Maquillaje y vestuario",
+                                "Práctica profesional",
+                                "Trabajo Final Integrador"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Teoría del Cine",
+                                "Crítica Cinematográfica",
+                                "Metodología de la Investigación",
+                                "Teoría de la Comunicación",
+                                "Post-Producción de Video III",
+                                "Animación",
+                                "Desarrollo de videojuegos",
+                                "Tesina"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/realizacionaudiovisual/inicio"
+                },
+                {
+                    "id": 445,
+                    "nombre_carrera": "Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanos/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Recursos humanos I",
+                                "Psicología general e individual",
+                                "Administración de las organizaciones",
+                                "Informática de las organizaciones (extracurricular)",
+                                "Comunicación social e institucional",
+                                "Matemática",
+                                "Sociología de las organizaciones",
+                                "Técnicas de Aplicación – Nivel I",
+                                "Inglés I"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Organización empresarial y sistemas de información",
+                                "Derecho laboral",
+                                "Probabilidad y estadística",
+                                "Economía",
+                                "Marketing",
+                                "Recursos humanos II",
+                                "Comportamiento organizacional",
+                                "Técnicas de Aplicación – Nivel II",
+                                "Práctica Final",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Psicología laboral",
+                                "Recursos humanos III",
+                                "Prevención y seguridad laboral",
+                                "Metodología de la investigación social I",
+                                "Dinámica de grupos",
+                                "Entrevista y selección de personal",
+                                "Capacitación y desarrollo de recursos humanos",
+                                "Recursos humanos IV",
+                                "Práctica Final",
+                                "Inglés III"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Gestión de calidad",
+                                "Filosofía y ética profesional",
+                                "Política de las remuneraciones",
+                                "Metodología de la investigación social II",
+                                "Creatividad e innovación",
+                                "Planeamiento estratégico de recursos humanos",
+                                "Negociación y resolución de conflictos",
+                                "Auditoría de recursos humanos",
+                                "Práctica profesional",
+                                "Trabajo final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/recursoshumanos/inicio"
+                },
+                {
+                    "id": 446,
+                    "nombre_carrera": "Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Este",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanosSE/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Recursos humanos I",
+                                "Psicología general e individual",
+                                "Administración de las organizaciones",
+                                "Informática de las organizaciones (extracurricular)",
+                                "Comunicación social e institucional",
+                                "Matemática",
+                                "Sociología de las organizaciones",
+                                "Técnicas de Aplicación – Nivel I",
+                                "Inglés I"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Organización empresarial y sistemas de información",
+                                "Derecho laboral",
+                                "Probabilidad y estadística",
+                                "Economía",
+                                "Marketing",
+                                "Recursos humanos II",
+                                "Comportamiento organizacional",
+                                "Técnicas de Aplicación – Nivel II",
+                                "Práctica Final",
+                                "Inglés II"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/recursoshumanosSE/inicio"
+                },
+                {
+                    "id": 447,
+                    "nombre_carrera": "Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Sur",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanosSS/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Recursos humanos I",
+                                "Psicología general e individual",
+                                "Administración de las organizaciones",
+                                "Informática de las organizaciones (extracurricular)",
+                                "Comunicación social e institucional",
+                                "Matemática",
+                                "Sociología de las organizaciones",
+                                "Técnicas de Aplicación – Nivel I",
+                                "Inglés I"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Organización empresarial y sistemas de información",
+                                "Derecho laboral",
+                                "Probabilidad y estadística",
+                                "Economía",
+                                "Marketing",
+                                "Recursos humanos II",
+                                "Comportamiento organizacional",
+                                "Técnicas de Aplicación – Nivel II",
+                                "Práctica Final",
+                                "Inglés II"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/recursoshumanosSS/inicio"
+                },
+                {
+                    "id": 448,
+                    "nombre_carrera": "Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Valle de Uco",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanosuco",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Recursos humanos I",
+                                "Psicología general e individual",
+                                "Administración de las organizaciones",
+                                "Informática de las organizaciones (extracurricular)",
+                                "Comunicación social e institucional",
+                                "Matemática",
+                                "Sociología de las organizaciones",
+                                "Técnicas de Aplicación – Nivel I",
+                                "Inglés I"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Organización empresarial y sistemas de información",
+                                "Derecho laboral",
+                                "Probabilidad y estadística",
+                                "Economía",
+                                "Marketing",
+                                "Recursos humanos II",
+                                "Comportamiento organizacional",
+                                "Técnicas de Aplicación – Nivel II",
+                                "Práctica Final",
+                                "Inglés II"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/recursoshumanosuco"
+                },
+                {
+                    "id": 449,
+                    "nombre_carrera": "Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Ciclo de Complementación a distancia",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/recursoshumanos-ciclo-de-complementacion-a-distancia",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan de estudios",
+                            "materias": [
+                                "Psicología Laboral",
+                                "Gestión de Relaciones Laborales",
+                                "Planeamiento Estratégico de Recursos Humanos",
+                                "Metodología de la Investigación",
+                                "Filosofía y Ética Profesional",
+                                "Creatividad e Innovación",
+                                "Gestión de la Calidad",
+                                "Política de Remuneraciones",
+                                "Auditoría de Recursos Humanos",
+                                "Práctica Profesional",
+                                "Materia Optativa 1",
+                                "Materia Optativa 2",
+                                "Trabajo Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/recursoshumanos-ciclo-de-complementacion-a-distancia"
+                },
+                {
+                    "id": 450,
+                    "nombre_carrera": "Licenciatura en Terapia Ocupacional",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/terapiaocupacional/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía",
+                                "Dinámica de grupos",
+                                "Fundamentos Teóricos de la Terapia Ocupacional I",
+                                "Desempeño Ocupacional I",
+                                "Salud Pública y Atención Primaria de la Salud",
+                                "Neuroanatomía",
+                                "Fundamentos Teóricos de la Terapia Ocupacional II",
+                                "Desempeño Ocupacional II",
+                                "Psicología General",
+                                "Sistemas Digitales"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Fisiología I",
+                                "Gerontología",
+                                "Biomecánica",
+                                "Psicología del Desarrollo",
+                                "Desempeño Ocupacional III",
+                                "Salud Laboral y Ergonomía",
+                                "Fisiología II",
+                                "Semiopatología Clínica",
+                                "Terapia Ocupacional en Salud Comunitaria",
+                                "Psiquiatría y Psicopatología",
+                                "Practica Supervisada en Geriatría"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Neurología",
+                                "Terapia Ocupacional Laboral",
+                                "Traumatología y Ortopedia Aplicada",
+                                "Metodología de la Investigación",
+                                "Ingles I",
+                                "Práctica Supervisada en Salud Comunitaria",
+                                "Terapia Ocupacional en Disfunciones Físicas",
+                                "Ortesis y Prótesis",
+                                "Organización y Administración de Servicios de Terapia Ocupacional",
+                                "Ingles II",
+                                "Práctica Supervisada en Terapia Ocupacional Laboral"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Terapia Ocupacional en Disfunciones Psicosociales",
+                                "Tecnología e Innovación en Terapia Ocupacional",
+                                "Ética Profesional",
+                                "Psicomotricidad",
+                                "Práctica Clínica en Disfunciones Físicas",
+                                "Pedagogía",
+                                "Investigación y Bioestadística",
+                                "Práctica Clínica en Disfunciones Psicosociales",
+                                "Trabajo Integrador Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/terapiaocupacional/inicio"
+                },
+                {
+                    "id": 451,
+                    "nombre_carrera": "Licenciatura en Terapia Ocupacional",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Sur",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/terapiaocupacionalSS/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía",
+                                "Dinámica de grupos",
+                                "Fundamentos Teóricos de la Terapia Ocupacional I",
+                                "Desempeño Ocupacional I",
+                                "Salud Pública y Atención Primaria de la Salud",
+                                "Neuroanatomía",
+                                "Fundamentos Teóricos de la Terapia Ocupacional II",
+                                "Desempeño Ocupacional II",
+                                "Psicología General",
+                                "Sistemas Digitales"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Fisiología I",
+                                "Gerontología",
+                                "Biomecánica",
+                                "Psicología del Desarrollo",
+                                "Desempeño Ocupacional III",
+                                "Salud Laboral y Ergonomía",
+                                "Fisiología II",
+                                "Semiopatología Clínica",
+                                "Terapia Ocupacional en Salud Comunitaria",
+                                "Psiquiatría y Psicopatología",
+                                "Practica Supervisada en Geriatría"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Neurología",
+                                "Terapia Ocupacional Laboral",
+                                "Traumatología y Ortopedia Aplicada",
+                                "Metodología de la Investigación",
+                                "Ingles I",
+                                "Práctica Supervisada en Salud Comunitaria",
+                                "Terapia Ocupacional en Disfunciones Físicas",
+                                "Ortesis y Prótesis",
+                                "Organización y Administración de Servicios de Terapia Ocupacional",
+                                "Ingles II",
+                                "Práctica Supervisada en Terapia Ocupacional Laboral"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Terapia Ocupacional en Disfunciones Psicosociales",
+                                "Tecnología e Innovación en Terapia Ocupacional",
+                                "Ética Profesional",
+                                "Psicomotricidad",
+                                "Práctica Clínica en Disfunciones Físicas",
+                                "Pedagogía",
+                                "Investigación y Bioestadística",
+                                "Práctica Clínica en Disfunciones Psicosociales",
+                                "Trabajo Integrador Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/terapiaocupacionalSS/inicio"
+                },
+                {
+                    "id": 452,
+                    "nombre_carrera": "Veterinaria",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UMaza - Sede Gran Mendoza",
+                    "link_oficial": "https://www.umaza.edu.ar/landings/veterinaria/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Anatomía veterinaria I",
+                                "Química Aplicada",
+                                "Biología Celular y Embriología",
+                                "Física Biológica",
+                                "Introducción a la ética y Deontología",
+                                "Histología",
+                                "Anatomía veterinaria II",
+                                "Ecología y Conservación",
+                                "Bioquímica Metabólica",
+                                "Inglés"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Anatomía III",
+                                "Fisiología Animal I",
+                                "Microbiología",
+                                "Sociología Rural y Urbana",
+                                "Bioseguridad",
+                                "Virología",
+                                "Etología y Bienestar animal",
+                                "Fisiología Animal II",
+                                "Genética básica",
+                                "Patología General",
+                                "Parasitología",
+                                "Inmunología Veterinaria"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Diagnóstico por imágenes",
+                                "Farmacología y Terapéutica",
+                                "Semiología y Propedéutica",
+                                "Análisis clínicos",
+                                "Nutrición y Alimentación animal",
+                                "Genética Aplicada",
+                                "Enfermedades infecciosas",
+                                "Enfermedades parasitarias",
+                                "Patología Especial",
+                                "Técnicas Quirúrgicas",
+                                "Bioestadistica"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Epidemiología",
+                                "Patología Médica Pequeños Animales",
+                                "Producción Animal y Neonatología",
+                                "Recursos Forrajeros en Producción ganadera",
+                                "Toxicología Veterinaria",
+                                "Patología Quirúrgica Grandes Animales",
+                                "Patología de la Reproducción y Obstetricia",
+                                "Producción Ovina y Caprina",
+                                "Producción Avícola",
+                                "Producción Porcina",
+                                "Patología Quirúrgica Pequeños Animales",
+                                "Producción Apícola",
+                                "Optativa I Electiva",
+                                "Optativa II Electiva"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Clínica de Pequeños animales",
+                                "Bromatología, Inocuidad y Tecnología de Alimentos",
+                                "Producción Bovina",
+                                "Salud Pública",
+                                "Gerenciamiento y Gestión de Proyectos",
+                                "Impacto ambiental y desarrollo sustentable",
+                                "Producción Equina",
+                                "Medicina Legal y Forense",
+                                "Clínica de grandes animales",
+                                "Clínica y Zootecnia de Exóticos y no convencionales",
+                                "Relación Veterinario Cliente",
+                                "Metodología de la investigación",
+                                "Práctica Profesional Orientada"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/veterinaria/inicio"
+                }
+            ]
+        }
+    ]
 }

@@ -315,12 +315,29 @@ function miga(pasos) {
     return { html: `<nav class="miga" aria-label="Ruta de navegación">${html}</nav>`, ld };
 }
 
-function documento({ ruta, titulo, descripcion, h1, cuerpo, pasos, ldExtra = [], noindex = false }) {
+function documento({ ruta, titulo, descripcion, h1, cuerpo, contenido = '', pasos, ldExtra = [], noindex = false, lateral = '' }) {
     const canonica = DOMINIO + ruta;
     const meta = recortarMeta(descripcion);
     const { html: migaHtml, ld: migaLd } = miga(pasos);
     const esquemas = noindex ? ldExtra : [migaLd, ...ldExtra];
     const bloques = esquemas.map(jsonLd).join('\n');
+    const contenidoPagina = lateral
+        ? `<div class="pagina-layout">
+    <div class="principal">
+        ${migaHtml}
+        <h1>${esc(h1)}</h1>
+${cuerpo}
+    </div>
+    <aside class="lateral">
+${lateral}
+    </aside>
+    <div class="contenido-pagina">
+${contenido}
+    </div>
+</div>`
+        : `${migaHtml}
+    <h1>${esc(h1)}</h1>
+${cuerpo}`;
 
     return `<!DOCTYPE html>
 <html lang="es">
@@ -360,6 +377,14 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : `<link rel="canon
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -391,9 +416,7 @@ ${bloques}
 </header>
 
 <main class="envoltorio">
-    ${migaHtml}
-    <h1>${esc(h1)}</h1>
-${cuerpo}
+    ${contenidoPagina}
 </main>
 
 <footer class="pie">
@@ -472,6 +495,10 @@ ${cuerpo}
 function escribir(ruta, contenido) {
     const destino = path.join(RAIZ, ruta.replace(/^\//, '').replace(/\//g, path.sep));
     fs.mkdirSync(path.dirname(destino), { recursive: true });
+    if (destino.endsWith('.html')) {
+        // Los placeholders vacios de la plantilla dejan lineas de solo espacios.
+        contenido = contenido.replace(/[ \t]+(?=\n)/g, '');
+    }
     fs.writeFileSync(destino, contenido);
 }
 
@@ -620,6 +647,8 @@ function construirModelo() {
                     modalidad: limpiar(c.modalidad),
                     turno: limpiar(c.turno),
                     link: urlSegura(c.link_oficial),
+                    plan_estudio: Array.isArray(c.plan_estudio) ? c.plan_estudio : null,
+                    plan_fuente: urlSegura(c.plan_fuente),
                     institucion
                 };
                 if (!oferta.nombre) return;
@@ -790,6 +819,27 @@ function enlaceBuscador(carrera) {
 // Páginas
 // ---------------------------------------------------------------------------
 
+// Rotula el acordeón según el tramo real del plan: los ciclos de complementación
+// y varias carreras a distancia vienen por semestre/cuatrimestre, no por año.
+function resumenPlan(plan) {
+    const etiquetas = plan.map(a => String(a.anio || ''));
+    if (etiquetas.length === 1) {
+        return /plan de estudios/i.test(etiquetas[0])
+            ? 'Plan de estudio'
+            : `Plan de estudio — ${etiquetas[0]}`;
+    }
+    const unidades = [
+        ['semestre', 'semestre'], ['cuatrimestre', 'cuatrimestre'],
+        ['trimestre', 'trimestre'], ['módulo', 'módulo'],
+    ];
+    for (const [clave, nombre] of unidades) {
+        if (etiquetas.every(e => e.toLowerCase().includes(clave))) {
+            return `Plan de estudio — ${plan.length} ${nombre}${plan.length === 1 ? '' : 's'}`;
+        }
+    }
+    return `Plan de estudio — ${plan.length} año${plan.length === 1 ? '' : 's'}`;
+}
+
 function tarjetaOferta(oferta, { mostrarInstitucion = true, id = null } = {}) {
     const inst = oferta.institucion;
     const titulo = mostrarInstitucion
@@ -815,9 +865,23 @@ function tarjetaOferta(oferta, { mostrarInstitucion = true, id = null } = {}) {
     const descripcion = oferta.descripcion ? `<p>${esc(oferta.descripcion)}</p>` : '';
     const idAttr = id ? ` id="${esc(id)}"` : '';
 
+    const plan = Array.isArray(oferta.plan_estudio) ? oferta.plan_estudio : null;
+    const seccionPlan = plan && plan.length
+        ? `<details class="plan-de-estudio">
+    <summary>${esc(resumenPlan(plan))}</summary>
+    <div class="plan-contenido">
+${plan.map(a => `        <div class="plan-anio">
+            <h4>${esc(a.anio)}</h4>
+            <ul>${(a.materias || []).map(m => `<li>${esc(m)}</li>`).join('')}</ul>
+        </div>`).join('\n')}
+${oferta.plan_fuente ? `        <p class="plan-fuente">Fuente: <a href="${esc(oferta.plan_fuente)}" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>` : ''}
+    </div>
+</details>` : '';
+
     return `        <li class="oferta"${idAttr}>
             <h3>${etiqueta}${titulo}</h3>
             ${descripcion}<ul class="oferta-datos">${datos.map(d => `<li>${d}</li>`).join('')}</ul>
+            ${seccionPlan}
             ${oficial}
         </li>`;
 }
@@ -946,27 +1010,28 @@ ${faqs.map(f => `        <details class="faq-item">
         </details>`).join('\n')}
     </div>`;
 
-    const cuerpo = `    <p class="entrada">${esc(descripcion)}</p>
+    const cuerpo = `    <p class="entrada">${esc(descripcion)}</p>`;
 
-    <dl class="ficha">
-${ficha.map(([k, v]) => `        <dt>${k}</dt><dd>${v}</dd>`).join('\n')}
-    </dl>
-
-    <a class="cta" href="${esc(enlaceBuscador(carrera))}">Ver ${esc(carrera.nombre)} en el buscador →</a>
-
-    <h2>Dónde estudiar ${esc(carrera.nombre)}</h2>
+    const contenido = `    <h2>Dónde estudiar ${esc(carrera.nombre)}</h2>
     <ul class="ofertas">
 ${carrera.ofertas.map((o, i) => tarjetaOferta(o, { id: `oferta-${i + 1}` })).join('\n')}
     </ul>
 ${seccionPerfil}
 ${seccionFaq}
 ${relacionadas.length ? `
+    <section class="relacionadas">
     <h2>Otras carreras del área ${esc(carrera.area)}</h2>
     <ul class="enlaces">
 ${relacionadas.map(c => `        <li><a href="/carrera/${c.slug}/">${esc(c.nombre)}</a> <span class="cuantas">(${c.ofertas.length})</span></li>`).join('\n')}
     </ul>
-    <p><a href="/area/${carrera.areaRef.slug}/">Ver las ${carrera.areaRef.carreras.length} carreras del área ${esc(carrera.area)} →</a></p>` : ''}
-`;
+    <p><a href="/area/${carrera.areaRef.slug}/">Ver las ${carrera.areaRef.carreras.length} carreras del área ${esc(carrera.area)} →</a></p>
+    </section>` : ''}`;
+
+    const lateral = `    <dl class="ficha">
+${ficha.map(([k, v]) => `        <dt>${k}</dt><dd>${v}</dd>`).join('\n')}
+    </dl>
+
+    <a class="cta" href="${esc(enlaceBuscador(carrera))}">Ver ${esc(carrera.nombre)} en el buscador →</a>`;
 
     const ld = carrera.ofertas.length >= 3
         ? {
@@ -1037,6 +1102,8 @@ ${relacionadas.map(c => `        <li><a href="/carrera/${c.slug}/">${esc(c.nombr
             descripcion,
             h1: carrera.nombre,
             cuerpo,
+            contenido,
+            lateral,
             pasos: [
                 { nombre: 'Inicio', url: '/' },
                 { nombre: 'Carreras', url: '/carreras/' },
@@ -1123,19 +1190,19 @@ function paginaInstitucion(institucion) {
         dato(contacto.email) ? ['Email', esc(contacto.email)] : null
     ].filter(Boolean);
 
-    const cuerpo = `    <p class="entrada">${esc(descripcion)}</p>
+    const cuerpo = `    <p class="entrada">${esc(descripcion)}</p>`;
 
-    <dl class="ficha">
-${ficha.map(([k, v]) => `        <dt>${k}</dt><dd>${v}</dd>`).join('\n')}
-    </dl>
-
-    <a class="cta" href="/?institucion=${encodeURIComponent(institucion.nombre)}">Ver esta institución en el buscador →</a>
-${grupos.map(([area, lista]) => `
+    const contenido = `${grupos.map(([area, lista]) => `
     <h2>${esc(area)} (${lista.length})</h2>
     <ul class="ofertas">
 ${lista.map(o => tarjetaOferta(o, { mostrarInstitucion: false })).join('\n')}
-    </ul>`).join('\n')}
-`;
+    </ul>`).join('\n')}`;
+
+    const lateral = `    <dl class="ficha">
+${ficha.map(([k, v]) => `        <dt>${k}</dt><dd>${v}</dd>`).join('\n')}
+    </dl>
+
+    <a class="cta" href="/?institucion=${encodeURIComponent(institucion.nombre)}">Ver esta institución en el buscador →</a>`;
 
     const ld = {
         '@context': 'https://schema.org',
@@ -1162,6 +1229,8 @@ ${lista.map(o => tarjetaOferta(o, { mostrarInstitucion: false })).join('\n')}
             descripcion,
             h1: institucion.nombre,
             cuerpo,
+            contenido,
+            lateral,
             pasos: [
                 { nombre: 'Inicio', url: '/' },
                 { nombre: 'Instituciones', url: '/instituciones/' },

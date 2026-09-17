@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Educación","item":"https://buscadoreducativo.com.ar/area/educacion/"},{"@type":"ListItem","position":4,"name":"Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec)","item":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-de-la-modalidad-tecnico-profesional-en/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec)","description":"Dónde estudiar Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec) en Mendoza: profesorado del área Educación, dictada por 1 institución (1 pública). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-de-educacion-secundaria-de-la-modalidad-tecnico-profesional-en/","provider":{"@type":"EducationalOrganization","name":"IES 9-005","url":"https://buscadoreducativo.com.ar/institucion/ies-9-005/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec) en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec) en Mendoza en la siguiente institución: IES 9-005. En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec)?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec)?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec)?","acceptedAnswer":{"@type":"Answer","text":"Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec) es una profesorado perteneciente al área de Educación. Entre sus aptitudes más afines se destacan: interacción social, base teórica y académica, trabajo práctico y liderazgo y gestión."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/educacion/">Educación</a> <span aria-hidden="true">›</span> <span aria-current="page">Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec)</span></nav>
-    <h1>Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec)</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/educacion/">Educación</a> <span aria-hidden="true">›</span> <span aria-current="page">Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec)</span></nav>
+        <h1>Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec)</h1>
     <p class="entrada">Dónde estudiar Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec) en Mendoza: profesorado del área Educación, dictada por 1 institución (1 pública). Dura 4 años. Modalidades disponibles: presencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Educación</dd>
         <dt>Tipo de formación</dt><dd>Profesorado</dd>
@@ -82,12 +93,14 @@
     </dl>
 
     <a class="cta" href="/?q=Profesorado+de+Educaci%C3%B3n+Secundaria+de+la+Modalidad+T%C3%A9cnico+Profesional+en+concurrencia+con+el+t%C3%ADtulo+de+base+%28ProTec%29&amp;area=Educaci%C3%B3n&amp;formacion=profesorados">Ver Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec) en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec)</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-005/">IES 9-005</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://ens9005-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-de-la-modalidad-tecnico-profesional-en-concurrencia-con-el-titulo-de-base/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -156,6 +169,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Educación</h2>
     <ul class="enlaces">
         <li><a href="/carrera/profesorado-de-educacion-primaria/">Profesorado de Educación Primaria</a> <span class="cuantas">(17)</span></li>
@@ -172,7 +186,9 @@
         <li><a href="/carrera/profesorado-de-teatro/">Profesorado de Teatro</a> <span class="cuantas">(4)</span></li>
     </ul>
     <p><a href="/area/educacion/">Ver las 66 carreras del área Educación →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

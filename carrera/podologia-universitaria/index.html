@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Salud","item":"https://buscadoreducativo.com.ar/area/salud/"},{"@type":"ListItem","position":4,"name":"Podología Universitaria","item":"https://buscadoreducativo.com.ar/carrera/podologia-universitaria/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Podología Universitaria","description":"Dónde estudiar Podología Universitaria en Mendoza: carrera de grado del área Salud, dictada por 1 institución (2 privadas). Dura de 1 a 3 años según la institución. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/podologia-universitaria/","provider":[{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"},{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Podología Universitaria en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Podología Universitaria en Mendoza en la siguiente institución: Universidad Juan Agustín Maza (UMaza). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Podología Universitaria?","acceptedAnswer":{"@type":"Answer","text":"La duración de la carrera varía de 1 a 3 años según el plan de estudio de la institución elegida."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Podología Universitaria?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Podología Universitaria?","acceptedAnswer":{"@type":"Answer","text":"Podología Universitaria es una carrera de grado perteneciente al área de Salud. Entre sus aptitudes más afines se destacan: pensamiento analítico, trabajo práctico, interacción social y base teórica y académica."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/salud/">Salud</a> <span aria-hidden="true">›</span> <span aria-current="page">Podología Universitaria</span></nav>
-    <h1>Podología Universitaria</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/salud/">Salud</a> <span aria-hidden="true">›</span> <span aria-current="page">Podología Universitaria</span></nav>
+        <h1>Podología Universitaria</h1>
     <p class="entrada">Dónde estudiar Podología Universitaria en Mendoza: carrera de grado del área Salud, dictada por 1 institución (2 privadas). Dura de 1 a 3 años según la institución. Modalidades disponibles: presencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Salud</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
@@ -82,17 +93,54 @@
     </dl>
 
     <a class="cta" href="/?q=Podolog%C3%ADa+Universitaria&amp;area=Salud&amp;formacion=grado">Ver Podología Universitaria en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Podología Universitaria</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía normal y funcional</li><li>Psicología</li><li>Química</li><li>Fundamentos de la Quiropodología</li><li>Fisiología</li><li>Biomecánica y Cinemática</li><li>Semiología Podólogica</li><li>Histología aplicada a la podología</li><li>Farmacología Aplicada</li><li>Informática</li><li>PAFU Programa de Actividad Física Universitaria obligatoria en 1º Año.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Clínica Podológica</li><li>Quiropodología Aplicada</li><li>Ortopodología I</li><li>Dermatología</li><li>Microbiología y Parasitología</li><li>Onicología</li><li>Ortopodología II</li><li>Terapéutica Podológica</li><li>Traumatología</li><li>Podología legal y Bioética</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Podología Deportiva</li><li>Podología Preventiva y Cosmetológica</li><li>Podología Infanto- juvenil</li><li>Administración y Emprendimientos en salud</li><li>Primeros auxilios</li><li>Metodología de la Investigación</li><li>Prácticas Profesionales Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/podologia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/podologia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 semestres</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er semestre</h4>
+            <ul><li>Salud pública, gestión y organización sanitaria</li><li>Bioestadística</li><li>Clínica podológica</li><li>Seguridad del paciente</li><li>Tecnologías de avanzada en gestión</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do semestre</h4>
+            <ul><li>Inteligencia artificial en salud</li><li>Terapias complementarias de aplicación en podología</li><li>Biomecánica exploratoria</li><li>Tecnologías aplicadas a la biomecánica</li><li>Imagen diagnóstica</li><li>Abordaje integral del pie de riesgo</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er semestre</h4>
+            <ul><li>Metodología de la investigación</li><li>Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/ccc-podologia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/ccc-podologia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -161,6 +209,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Salud</h2>
     <ul class="enlaces">
         <li><a href="/carrera/licenciatura-en-nutricion/">Licenciatura en Nutrición</a> <span class="cuantas">(6)</span></li>
@@ -177,7 +226,9 @@
         <li><a href="/carrera/licenciatura-en-terapia-ocupacional/">Licenciatura en Terapia Ocupacional</a> <span class="cuantas">(2)</span></li>
     </ul>
     <p><a href="/area/salud/">Ver las 55 carreras del área Salud →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

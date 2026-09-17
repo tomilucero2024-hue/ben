@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Universidad Juan Agustín Maza (UMaza)","item":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/","email":"informes@umaza.edu.ar","telephone":"4056200","address":{"@type":"PostalAddress","streetAddress":"Acceso Este, Lat. Sur 2245, Guaymallén","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -68,10 +76,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">Universidad Juan Agustín Maza (UMaza)</span></nav>
-    <h1>Universidad Juan Agustín Maza (UMaza)</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">Universidad Juan Agustín Maza (UMaza)</span></nav>
+        <h1>Universidad Juan Agustín Maza (UMaza)</h1>
     <p class="entrada">Universidad Juan Agustín Maza (UMaza): 53 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Gestión</dt><dd>privada</dd>
         <dt>Nivel</dt><dd>universidad</dd>
@@ -83,97 +94,474 @@
     </dl>
 
     <a class="cta" href="/?institucion=Universidad%20Juan%20Agust%C3%ADn%20Maza%20(UMaza)">Ver esta institución en el buscador →</a>
+    </aside>
+    <div class="contenido-pagina">
 
     <h2>Salud (18)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-anatomia-patologica-a-distancia/">Licenciatura en Anatomía Patológica a distancia</a></h3>
-            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 semestres</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er semestre</h4>
+            <ul><li>Salud Pública</li><li>Introducción a la Química Biológica</li><li>Microbiología y Control de Infecciones</li><li>Seguridad del paciente</li><li>Bioestadística</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do semestre</h4>
+            <ul><li>Gestión y organización del servicio de Anatomía Patológica</li><li>Formulación y Evaluación de Proyectos</li><li>Gestión de calidad del servicio de Anatomía Patológica</li><li>Inteligencia Artificial en Salud</li><li>Introducción a la Genética Molecular aplicada al laboratorio</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er semestre</h4>
+            <ul><li>Metodología de la Investigación</li><li>Patología Forense</li><li>Ética y Bioética</li><li>Higiene y Bioseguridad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to semestre</h4>
+            <ul><li>Telesalud y Telemedicina</li><li>Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/anatomiapatologica/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/anatomiapatologica/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/bioquimica/">Bioquímica</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Química general I</li><li>Matemática I</li><li>Biología general</li><li>Química general II</li><li>Matemática II</li><li>Anatomía</li><li>Física I</li><li>Informática (extracurricular)</li><li>Taller de orientación profesional I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Química inorgánica</li><li>Física II</li><li>Química analítica general</li><li>Inglés</li><li>Química orgánica I</li><li>Fisicoquímica</li><li>Histología</li><li>Taller de orientación profesional II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Fisiología</li><li>Química orgánica II</li><li>Estadística</li><li>Química analítica instrumental</li><li>Microbiología general</li><li>Química biológica I</li><li>Farmacología general</li><li>Taller de orientación profesional III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Inmunología</li><li>Bacteriología y micología</li><li>Química biológica II</li><li>Ética y bioética</li><li>Bromatología y nutrición</li><li>Epistemología y metodología de la investigación</li><li>Parasitología</li><li>Biotecnología</li><li>Virología</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Bioquímica clínica I</li><li>Fisiopatología</li><li>Hematología e inmunohematología</li><li>Laboratorio clínico I</li><li>Química toxicológica y legal</li><li>Biología molecular y celular</li><li>Bioquímica clínica II</li><li>Laboratorio clínico II</li><li>Práctica profesional supervisad intramuros</li><li>Práctica profesional supervisada extramuros</li><li>Materias optativas</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/bioquimica/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/bioquimica/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-produccion-de-bioimagenes/">Licenciatura en Producción de Bioimágenes</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://www.umaza.edu.ar/landings/bioimagenes" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/farmacia/">Farmacia</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Química General I</li><li>Matemática I</li><li>Biología General</li><li>Química General II</li><li>Matemática II</li><li>Anatomía</li><li>Física I</li><li>Informática (Extracurricular)</li><li>Taller de Orientación Profesional I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Química Inorgánica</li><li>Física II</li><li>Química Analítica General</li><li>Inglés</li><li>Portugués</li><li>Química Orgánica I</li><li>Fisicoquímica</li><li>Histología</li><li>Taller de Orientación Profesional II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Fisiología</li><li>Química orgánica II</li><li>Química Analítica Instrumental</li><li>Estadística</li><li>Microbiología General e inmunología</li><li>Química Biológica</li><li>Farmacobotánica</li><li>Salud Pública</li><li>Taller de Orientación Profesional III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Fisiopatología</li><li>Tecnología Farmacéutica y Biofarmacia I</li><li>Farmacognosia y Fitoquímica</li><li>Nutrición y Bromatología</li><li>Epistemología y Metodología de la Investigación</li><li>Tecnología Farmacéutica y Biofarmacia II</li><li>Biotecnología</li><li>Farmacología y Toxicología I</li><li>Química Medicinal</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Garantía de Calidad de Medicamentos</li><li>Farmacología y Toxicología II</li><li>Ética y Bioética</li><li>Legislación Farmacéutica</li><li>Farmacia Clínica y asistencial</li><li>Higiene y sanidad</li><li>Optativa I</li><li>Optativa II</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/farmacia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/farmacia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-hemoterapia-a-distancia/">Licenciatura en Hemoterapia a distancia</a></h3>
-            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 semestres</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er semestre</h4>
+            <ul><li>Salud Pública</li><li>Introducción a la Química Biológica</li><li>Microbiología y Control de Infecciones</li><li>Seguridad del paciente</li><li>Bioestadística</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do semestre</h4>
+            <ul><li>Gestión y organización de los servicios de Hemoterapia</li><li>Formulación y Evaluación de Proyectos</li><li>Gestión de calidad en el servicio de Hemoterapia</li><li>Inteligencia Artificial en Salud</li><li>Genética</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er semestre</h4>
+            <ul><li>Metodología de la Investigación</li><li>Bancos de sangre</li><li>Taller de Formación de Promotores de la Donación Voluntaria de Sangre</li><li>Ética y Bioética</li><li>Higiene y Bioseguridad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to semestre</h4>
+            <ul><li>Telesalud y Telemedicina</li><li>Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/hemoterapia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/hemoterapia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-instrumentacion-quirurgica-a-distancia/">Licenciatura en Instrumentación Quirúrgica a distancia</a></h3>
-            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 semestres</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er semestre</h4>
+            <ul><li>Salud Pública</li><li>Introducción a la Química Biológica</li><li>Microbiología y Control de Infecciones</li><li>Seguridad del paciente</li><li>Bioestadística</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do semestre</h4>
+            <ul><li>Gestión y organización del servicio de Instrumentación Quirúrgica</li><li>Formulación y Evaluación de Proyectos</li><li>Gestión de calidad del servicio de Instrumentación Quirúrgica</li><li>Inteligencia Artificial en Salud</li><li>Nuevas tendencias en Instrumentación Quirúrgica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er semestre</h4>
+            <ul><li>Metodología de la Investigación</li><li>Taller de Formación de Promotores de la Donación Voluntaria de Órganos</li><li>Ética y Bioética</li><li>Higiene y Bioseguridad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to semestre</h4>
+            <ul><li>Telesalud y Telemedicina</li><li>Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/instrumentacionquirurgica/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/instrumentacionquirurgica/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/kinesiologia-y-fisioterapia/">Kinesiología y Fisioterapia</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía normal y funcional</li><li>Psicología médica</li><li>Histología y embriología</li><li>Biofísica</li><li>Química</li><li>Informática aplicada (extracurricular)</li><li>Medicina Preventiva y Salud Pública</li><li>PAFU Programa de Actividad Física Universitaria obligatoria en 1º Año.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Kinesioterapia</li><li>Fisiología humana</li><li>Biomecánica</li><li>Semiopatología kinésica médica</li><li>Neuroanatomía</li><li>Neurología</li><li>Patología quirúrgica</li><li>Kinefilaxia</li><li>Inglés I</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Fisioterapia</li><li>Diagnóstico por imágenes</li><li>Clínica fisiokinésica</li><li>Psicomotricidad</li><li>Kinesiología pediátrica</li><li>Kinesiología neurológica</li><li>Kinesiología traumatológica</li><li>Farmacología aplicada</li><li>Prácticas profesionales supervisadas en hospitales (300hs)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Metodología de la investigación</li><li>Salud mental</li><li>Kinesiología legal y bioética</li><li>Kinesiología cardiorrespiratoria</li><li>Geriatría</li><li>Fisiokinesiología del deporte</li><li>Ortesis y prótesis</li><li>Ergonomía y fisioterapia laboral</li><li>Kinesiología dermoestética</li><li>Bioestadística</li><li>Gestión sanitaria</li><li>Prácticas profesionales supervisadas en hospitales (400hs)</li><li>Tesina de licenciatura</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/kinesiologia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/kinesiologia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/kinesiologia-y-fisioterapia/">Kinesiología y Fisioterapia</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía normal y funcional</li><li>Psicología médica</li><li>Histología y embriología</li><li>Biofísica</li><li>Química</li><li>Informática aplicada (extracurricular)</li><li>Medicina preventiva y salud pública</li><li>PAFU Programa de Actividad Física Universitaria obligatoria en 1º Año.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Kinesioterapia</li><li>Fisiología humana</li><li>Biomecánica</li><li>Semiopatología kinésica médica</li><li>Neuroanatomía</li><li>Neurología</li><li>Patología quirúrgica</li><li>Kinefilaxia</li><li>Inglés I</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Fisioterapia</li><li>Diagnóstico por imágenes</li><li>Clínica fisiokinésica</li><li>Psicomotricidad</li><li>Kinesiología pediátrica</li><li>Kinesiología neurológica</li><li>Kinesiología traumatológica</li><li>Farmacología aplicada</li><li>Informática aplicada (extracurricular) va en primer año</li><li>Prácticas profesionales supervisadas en hospitales (300hs)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Metodología de la investigación</li><li>Salud mental</li><li>Kinesiología legal y bioética</li><li>Kinesiología cardiorrespiratoria</li><li>Geriatría</li><li>Fisiokinesiología del deporte</li><li>Ortesis y prótesis</li><li>Ergonomía y fisioterapia laboral</li><li>Kinesiología dermoestética</li><li>Bioestadística</li><li>Gestión sanitaria</li><li>Prácticas profesionales supervisadas en hospitales (400hs)</li><li>Tesina de licenciatura</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/kinesiologiaVDU/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/kinesiologiaVDU/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/kinesiologia-y-fisioterapia/">Kinesiología y Fisioterapia</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía normal y funcional</li><li>Psicología médica</li><li>Histología y embriología</li><li>Biofísica</li><li>Química</li><li>Informática aplicada (extracurricular)</li><li>Medicina preventiva y salud pública</li><li>PAFU Programa de Actividad Física Universitaria obligatoria en 1º Año.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Kinesioterapia</li><li>Fisiología humana</li><li>Biomecánica</li><li>Semiopatología kinésica médica</li><li>Neuroanatomía</li><li>Neurología</li><li>Patología quirúrgica</li><li>Kinefilaxia</li><li>Inglés I</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Fisioterapia</li><li>Diagnóstico por imágenes</li><li>Clínica fisiokinésica</li><li>Psicomotricidad</li><li>Kinesiología pediátrica</li><li>Kinesiología neurológica</li><li>Kinesiología traumatológica</li><li>Farmacología aplicada</li><li>Informática aplicada (extracurricular) va en primer año</li><li>Prácticas profesionales supervisadas en hospitales (300hs)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Metodología de la investigación</li><li>Salud mental</li><li>Kinesiología legal y bioética</li><li>Kinesiología cardiorrespiratoria</li><li>Geriatría</li><li>Fisiokinesiología del deporte</li><li>Ortesis y prótesis</li><li>Ergonomía y fisioterapia laboral</li><li>Kinesiología dermoestética</li><li>Bioestadística</li><li>Gestión sanitaria</li><li>Prácticas profesionales supervisadas en hospitales (400hs)</li><li>Tesina de licenciatura</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/kinesiologiaSE/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/kinesiologiaSE/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/musicoterapia/">Musicoterapia</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Psicología General – Corrientes psicológicas</li><li>Psicología del desarrollo humano I</li><li>Psicología Social y Dinámica de grupos en Musicoterapia</li><li>Fundamentos de la Musicoterapia</li><li>Psicoacústica</li><li>Biología y Fisiología humana</li><li>Taller musical I</li><li>Técnicas corporales I</li><li>Experiencia personal y grupal en Musicoterapia I (Sujeto y lenguaje córporo-sonoro-musical)</li><li>Inglés técnico (extracurricular)</li><li>PAFU Programa de Actividad Física Universitaria obligatoria en 1º Año.</li><li>Informática</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Neurociencias I</li><li>Neurociencias II</li><li>Neuromúsica</li><li>Psicología del desarrollo humano II</li><li>Psicomotricidad</li><li>Historia de las producciones musicales</li><li>Teoría de la Musicoterapia</li><li>Folklore, Etnomusicología y Antropología</li><li>Experiencia personal y grupal en Musicoterapia II (Procesos vinculares)</li><li>Taller musical II</li><li>Técnicas corporales II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Musicoterapia en infancia con y sin morbilidad</li><li>Musicoterapia en ámbitos sociales y comunitarios</li><li>Musicoterapia en adolescencia con y sin morbilidad</li><li>Musicoterapia en adultos con y sin morbilidad</li><li>Musicoterapia en geriatría con y sin morbilidad</li><li>Psicopatología</li><li>Taller Musical III (Voz, conjunto vocal e instrumental)</li><li>Experiencia personal y grupal en Musicoterapia III (Transferencia y contratransferencia)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Terapias Artísticas</li><li>Taller musical IV (Informática aplicada a lamúsica)</li><li>Experiencia personal y grupal en Musicoterapia IV (roles, escenarios,encuadres)</li><li>Metodología de la Investigación</li><li>Prácticas profesionales supervisadas</li><li>Portugués técnico (extracurricular)</li><li>Tesina de Licenciatura</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/musicoterapia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/musicoterapia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-nutricion/">Licenciatura en Nutrición</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción a la Nutrición</li><li>Medioambiente y Nutrición</li><li>Anatomía I</li><li>Sociología y Antropología Alimentaria</li><li>Nutrición Humana</li><li>Microbiología y Parasitología</li><li>Química II</li><li>Anatomía II</li><li>Nutrición en Salud Pública</li><li>Economía Alimentaria</li><li>Optativa I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Fisiología</li><li>Bioquímica de la Nutrición</li><li>Bromatología</li><li>Nutrición Materno Infanto Juvenil</li><li>Evaluación Nutricional</li><li>Psicología Aplicada a la Nutrición</li><li>Técnicas del manejo de los alimentos</li><li>Fisiopatología en el adulto</li><li>Inglés Técnico</li><li>Optativa II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Fisiopatología en Infancia y Adolescencia</li><li>Epidemiología Nutricional</li><li>Educación Nutricional y Didáctica General</li><li>Tecnología Alimentaria</li><li>Terapia Clínica Nutricional en el Adulto I</li><li>Terapia Clínica Nutricional en Infancia y Adolescencia</li><li>Laboratorio de Investigación y Nutrición Aplicada</li><li>Nutrición en el Deporte</li><li>Terapia Clínica Nutricional en el Adulto II</li><li>Terapia Clínica Nutricional en el Adulto con patología compleja</li><li>Administración de Servicios de Alimentación y Nutrición</li><li>Optativa III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Bioestadística</li><li>Políticas y gestión alimentario nutricional</li><li>Toxicología de los alimentos</li><li>Nutrición para personas mayores</li><li>Ética y Bioética</li><li>Metodología de la Investigación Científica</li><li>Comunicación Nutricional</li><li>Optativa IV</li><li>Práctica Profesional</li><li>TFI</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/nutricion/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/nutricion/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-nutricion/">Licenciatura en Nutrición</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción a la Nutrición</li><li>Medioambiente y Nutrición</li><li>Anatomía I</li><li>Sociología y Antropología Alimentaria</li><li>Nutrición Humana</li><li>Microbiología y Parasitología</li><li>Química II</li><li>Anatomía II</li><li>Nutrición en Salud Pública</li><li>Economía Alimentaria</li><li>Optativa I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Fisiología</li><li>Bioquímica de la Nutrición</li><li>Bromatología</li><li>Nutrición Materno Infanto Juvenil</li><li>Evaluación Nutricional</li><li>Psicología Aplicada a la Nutrición</li><li>Técnicas del manejo de los alimentos</li><li>Fisiopatología en el adulto</li><li>Inglés Técnico</li><li>Optativa II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Fisiopatología en Infancia y Adolescencia</li><li>Epidemiología Nutricional</li><li>Educación Nutricional y Didáctica General</li><li>Tecnología Alimentaria</li><li>Terapia Clínica Nutricional en el Adulto I</li><li>Terapia Clínica Nutricional en Infancia y Adolescencia</li><li>Laboratorio de Investigación y Nutrición Aplicada</li><li>Nutrición en el Deporte</li><li>Terapia Clínica Nutricional en el Adulto II</li><li>Terapia Clínica Nutricional en el Adulto con patología compleja</li><li>Administración de Servicios de Alimentación y Nutrición</li><li>Optativa III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Bioestadística</li><li>Políticas y gestión alimentario nutricional</li><li>Toxicología de los alimentos</li><li>Nutrición para personas mayores</li><li>Ética y Bioética</li><li>Metodología de la Investigación Científica</li><li>Comunicación Nutricional</li><li>Optativa IV</li><li>Práctica Profesional</li><li>TFI</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/nutricionVDU/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/nutricionVDU/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-nutricion/">Licenciatura en Nutrición</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción a la Nutrición</li><li>Medioambiente y Nutrición</li><li>Anatomía I</li><li>Sociología y Antropología Alimentaria</li><li>Nutrición Humana</li><li>Microbiología y Parasitología</li><li>Química II</li><li>Anatomía II</li><li>Nutrición en Salud Pública</li><li>Economía Alimentaria</li><li>Optativa I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Fisiología</li><li>Bioquímica de la Nutrición</li><li>Bromatología</li><li>Nutrición Materno Infanto Juvenil</li><li>Evaluación Nutricional</li><li>Psicología Aplicada a la Nutrición</li><li>Técnicas del manejo de los alimentos</li><li>Fisiopatología en el adulto</li><li>Inglés Técnico</li><li>Optativa II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Fisiopatología en Infancia y Adolescencia</li><li>Epidemiología Nutricional</li><li>Educación Nutricional y Didáctica General</li><li>Tecnología Alimentaria</li><li>Terapia Clínica Nutricional en el Adulto I</li><li>Terapia Clínica Nutricional en Infancia y Adolescencia</li><li>Laboratorio de Investigación y Nutrición Aplicada</li><li>Nutrición en el Deporte</li><li>Terapia Clínica Nutricional en el Adulto II</li><li>Terapia Clínica Nutricional en el Adulto con patología compleja</li><li>Administración de Servicios de Alimentación y Nutrición</li><li>Optativa III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Bioestadística</li><li>Políticas y gestión alimentario nutricional</li><li>Toxicología de los alimentos</li><li>Nutrición para personas mayores</li><li>Ética y Bioética</li><li>Metodología de la Investigación Científica</li><li>Comunicación Nutricional</li><li>Optativa IV</li><li>Práctica Profesional</li><li>TFI</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/nutricionSE/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/nutricionSE/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-nutricion/">Licenciatura en Nutrición</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción a la Nutrición</li><li>Medioambiente y Nutrición</li><li>Anatomía I</li><li>Sociología y Antropología Alimentaria</li><li>Nutrición Humana</li><li>Microbiología y Parasitología</li><li>Química II</li><li>Anatomía II</li><li>Nutrición en Salud Pública</li><li>Economía Alimentaria</li><li>Optativa I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Fisiología</li><li>Bioquímica de la Nutrición</li><li>Bromatología</li><li>Nutrición Materno Infanto Juvenil</li><li>Evaluación Nutricional</li><li>Psicología Aplicada a la Nutrición</li><li>Técnicas del manejo de los alimentos</li><li>Fisiopatología en el adulto</li><li>Inglés Técnico</li><li>Optativa II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Fisiopatología en Infancia y Adolescencia</li><li>Epidemiología Nutricional</li><li>Educación Nutricional y Didáctica General</li><li>Tecnología Alimentaria</li><li>Terapia Clínica Nutricional en el Adulto I</li><li>Terapia Clínica Nutricional en Infancia y Adolescencia</li><li>Laboratorio de Investigación y Nutrición Aplicada</li><li>Nutrición en el Deporte</li><li>Terapia Clínica Nutricional en el Adulto II</li><li>Terapia Clínica Nutricional en el Adulto con patología compleja</li><li>Administración de Servicios de Alimentación y Nutrición</li><li>Optativa III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Bioestadística</li><li>Políticas y gestión alimentario nutricional</li><li>Toxicología de los alimentos</li><li>Nutrición para personas mayores</li><li>Ética y Bioética</li><li>Metodología de la Investigación Científica</li><li>Comunicación Nutricional</li><li>Optativa IV</li><li>Práctica Profesional</li><li>TFI</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/nutricionSS/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/nutricionSS/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/podologia-universitaria/">Podología Universitaria</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía normal y funcional</li><li>Psicología</li><li>Química</li><li>Fundamentos de la Quiropodología</li><li>Fisiología</li><li>Biomecánica y Cinemática</li><li>Semiología Podólogica</li><li>Histología aplicada a la podología</li><li>Farmacología Aplicada</li><li>Informática</li><li>PAFU Programa de Actividad Física Universitaria obligatoria en 1º Año.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Clínica Podológica</li><li>Quiropodología Aplicada</li><li>Ortopodología I</li><li>Dermatología</li><li>Microbiología y Parasitología</li><li>Onicología</li><li>Ortopodología II</li><li>Terapéutica Podológica</li><li>Traumatología</li><li>Podología legal y Bioética</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Podología Deportiva</li><li>Podología Preventiva y Cosmetológica</li><li>Podología Infanto- juvenil</li><li>Administración y Emprendimientos en salud</li><li>Primeros auxilios</li><li>Metodología de la Investigación</li><li>Prácticas Profesionales Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/podologia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/podologia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/podologia-universitaria/">Podología Universitaria</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 semestres</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er semestre</h4>
+            <ul><li>Salud pública, gestión y organización sanitaria</li><li>Bioestadística</li><li>Clínica podológica</li><li>Seguridad del paciente</li><li>Tecnologías de avanzada en gestión</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do semestre</h4>
+            <ul><li>Inteligencia artificial en salud</li><li>Terapias complementarias de aplicación en podología</li><li>Biomecánica exploratoria</li><li>Tecnologías aplicadas a la biomecánica</li><li>Imagen diagnóstica</li><li>Abordaje integral del pie de riesgo</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er semestre</h4>
+            <ul><li>Metodología de la investigación</li><li>Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/ccc-podologia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/ccc-podologia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-terapia-ocupacional/">Licenciatura en Terapia Ocupacional</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía</li><li>Dinámica de grupos</li><li>Fundamentos Teóricos de la Terapia Ocupacional I</li><li>Desempeño Ocupacional I</li><li>Salud Pública y Atención Primaria de la Salud</li><li>Neuroanatomía</li><li>Fundamentos Teóricos de la Terapia Ocupacional II</li><li>Desempeño Ocupacional II</li><li>Psicología General</li><li>Sistemas Digitales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Fisiología I</li><li>Gerontología</li><li>Biomecánica</li><li>Psicología del Desarrollo</li><li>Desempeño Ocupacional III</li><li>Salud Laboral y Ergonomía</li><li>Fisiología II</li><li>Semiopatología Clínica</li><li>Terapia Ocupacional en Salud Comunitaria</li><li>Psiquiatría y Psicopatología</li><li>Practica Supervisada en Geriatría</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Neurología</li><li>Terapia Ocupacional Laboral</li><li>Traumatología y Ortopedia Aplicada</li><li>Metodología de la Investigación</li><li>Ingles I</li><li>Práctica Supervisada en Salud Comunitaria</li><li>Terapia Ocupacional en Disfunciones Físicas</li><li>Ortesis y Prótesis</li><li>Organización y Administración de Servicios de Terapia Ocupacional</li><li>Ingles II</li><li>Práctica Supervisada en Terapia Ocupacional Laboral</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Terapia Ocupacional en Disfunciones Psicosociales</li><li>Tecnología e Innovación en Terapia Ocupacional</li><li>Ética Profesional</li><li>Psicomotricidad</li><li>Práctica Clínica en Disfunciones Físicas</li><li>Pedagogía</li><li>Investigación y Bioestadística</li><li>Práctica Clínica en Disfunciones Psicosociales</li><li>Trabajo Integrador Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/terapiaocupacional/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/terapiaocupacional/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-terapia-ocupacional/">Licenciatura en Terapia Ocupacional</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía</li><li>Dinámica de grupos</li><li>Fundamentos Teóricos de la Terapia Ocupacional I</li><li>Desempeño Ocupacional I</li><li>Salud Pública y Atención Primaria de la Salud</li><li>Neuroanatomía</li><li>Fundamentos Teóricos de la Terapia Ocupacional II</li><li>Desempeño Ocupacional II</li><li>Psicología General</li><li>Sistemas Digitales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Fisiología I</li><li>Gerontología</li><li>Biomecánica</li><li>Psicología del Desarrollo</li><li>Desempeño Ocupacional III</li><li>Salud Laboral y Ergonomía</li><li>Fisiología II</li><li>Semiopatología Clínica</li><li>Terapia Ocupacional en Salud Comunitaria</li><li>Psiquiatría y Psicopatología</li><li>Practica Supervisada en Geriatría</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Neurología</li><li>Terapia Ocupacional Laboral</li><li>Traumatología y Ortopedia Aplicada</li><li>Metodología de la Investigación</li><li>Ingles I</li><li>Práctica Supervisada en Salud Comunitaria</li><li>Terapia Ocupacional en Disfunciones Físicas</li><li>Ortesis y Prótesis</li><li>Organización y Administración de Servicios de Terapia Ocupacional</li><li>Ingles II</li><li>Práctica Supervisada en Terapia Ocupacional Laboral</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Terapia Ocupacional en Disfunciones Psicosociales</li><li>Tecnología e Innovación en Terapia Ocupacional</li><li>Ética Profesional</li><li>Psicomotricidad</li><li>Práctica Clínica en Disfunciones Físicas</li><li>Pedagogía</li><li>Investigación y Bioestadística</li><li>Práctica Clínica en Disfunciones Psicosociales</li><li>Trabajo Integrador Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/terapiaocupacionalSS/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/terapiaocupacionalSS/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -183,61 +571,317 @@
         <li class="oferta">
             <h3><a href="/carrera/abogacia/">Abogacía</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción al Derecho</li><li>Derecho Privado I - Parte General</li><li>Introducción a la Filosofía</li><li>Economía I - Microeconomía</li><li>Administración I</li><li>Derecho Constitucional</li><li>Técnicas de Expresión Oral y Escrita</li><li>Derechos Humanos</li><li>Organización Empresarial y Sistemas de Información</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Obligaciones Civiles y Comerciales</li><li>Derecho Penal I - Parte General</li><li>Contratos I - Parte General</li><li>Derecho Internacional Público y de la Integración</li><li>Marketing</li><li>Contratos II - Parte Especial</li><li>Derecho Penal II - Parte Especial</li><li>Derecho Laboral y de la Seguridad Social</li><li>Derecho del Consumidor</li><li>Economía II - Macroeconomía</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Derecho de Familia</li><li>Derecho Comercial y Societario</li><li>Derecho Reales e Intelectuales</li><li>Administración de los Recusos Humanos</li><li>Sucesiones</li><li>Concursos y Quiebras</li><li>Derecho de los Recursos Naturales y Ambiental</li><li>Práctica Profesional I</li><li>Derecho Administrativo</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Derecho Procesal Penal</li><li>Derecho Procesal Civil, Comercial y Tributario</li><li>Finanzas Públicas</li><li>Derecho Tributario</li><li>Derecho Empresario</li><li>Ética Profesional y Habilitación Civil</li><li>Técnicas de Negociación y Mediación</li><li>Derecho Internacional Privado</li><li>Práctica Profesional II</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/abogacia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/abogacia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/abogacia/">Abogacía</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción al Derecho</li><li>Derecho Privado I - Parte General</li><li>Introducción a la Filosofía</li><li>Economía I - Microeconomía</li><li>Administración I</li><li>Derecho Constitucional</li><li>Técnicas de Expresión Oral y Escrita</li><li>Derechos Humanos</li><li>Organización Empresarial y Sistemas de Información</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Obligaciones Civiles y Comerciales</li><li>Derecho Penal I - Parte General</li><li>Contratos I - Parte General</li><li>Derecho Internacional Público y de la Integración</li><li>Marketing</li><li>Contratos II - Parte Especial</li><li>Derecho Penal II - Parte Especial</li><li>Derecho Laboral y de la Seguridad Social</li><li>Derecho del Consumidor</li><li>Economía II - Macroeconomía</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Derecho de Familia</li><li>Derecho Comercial y Societario</li><li>Derecho Reales e Intelectuales</li><li>Administración de los Recursos Humanos</li><li>Sucesiones</li><li>Concursos y Quiebras</li><li>Derecho de los Recursos Naturales y Ambiental</li><li>Práctica Profesional I</li><li>Derecho Administrativo</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Derecho Procesal Penal</li><li>Derecho Procesal Civil, Comercial y Tributario</li><li>Finanzas Públicas</li><li>Derecho Tributario</li><li>Derecho Empresario</li><li>Ética Profesional y Habilitación Civil</li><li>Técnicas de Negociación y Mediación</li><li>Derecho Internacional Privado</li><li>Práctica Profesional II</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/abogaciaVDU/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/abogaciaVDU/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-anestesiologia-a-distancia/">Licenciatura en Anestesiología a distancia</a></h3>
-            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 semestres</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er semestre</h4>
+            <ul><li>Salud Pública</li><li>Introducción a la Química Biológica</li><li>Microbiología y Control de Infecciones</li><li>Seguridad del paciente</li><li>Bioestadística</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do semestre</h4>
+            <ul><li>Gestión y organización del servicio de Anestesiología</li><li>Formulación y Evaluación de Proyectos</li><li>Gestión de calidad del servicio de Anestesiología</li><li>Inteligencia Artificial en Salud</li><li>Clínica del Dolor</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er semestre</h4>
+            <ul><li>Metodología de la Investigación</li><li>Avances tecnológicos en Anestesiología</li><li>Ética y Bioética</li><li>Higiene y Bioseguridad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to semestre</h4>
+            <ul><li>Telesalud y Telemedicina</li><li>Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/anestesiologia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/anestesiologia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-comunicacion-social/">Licenciatura en Comunicación Social</a></h3>
-            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 1 año</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4to año</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Teoría de la comunicación II</li><li>Estudio de la realidad histórico-social</li><li>Comunicación organizativa e institucional</li><li>Metodología de la investigación I</li><li>Comunicación cinematográfica</li><li>Crítica artística y literaria</li><li>Comunicación científica</li><li>Metodología de la investigación II</li><li>Tesina</li><li>Práctica profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/comunicacionsocial/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/comunicacionsocial/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-cosmetologia-y-cosmiatria/">Tecnicatura en Cosmetología y Cosmiatría</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción a la cosmetología</li><li>Biología celular, histología y genética</li><li>Anatomía y fisiología</li><li>Fundamentos técnicos de aparatología cosmética</li><li>Biología de la piel</li><li>Introducción a la química cosmética</li><li>Dermatología I</li><li>Bioseguridad y medio ambiente</li><li>Cosmetología facial y anexos</li><li>Inglés</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Introducción a la cosmiatría</li><li>Química cosmética</li><li>Dermatología II</li><li>Marketing</li><li>Microbiología aplicada</li><li>Maquillaje terapéutico</li><li>Telemedicina</li><li>Estética elemental aplicada</li><li>Nutrición aplicada a la cosmiatría</li><li>Bioética y legislación</li><li>Gestión y organización del servicio de cosmetología y cosmiatría</li><li>Tratamientos cosmetológicos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Prácticas preprofesionales supervisadas</li><li>Trabajo final integrador</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/cosmetologia-y-cosmiatria" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/cosmetologia-y-cosmiatria" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Economía I – Microeconomía</li><li>Administración</li><li>Matemática</li><li>Informática para gestión empresaria (extracurricular)</li><li>Derecho público y administrativo</li><li>Contabilidad I – general</li><li>Sociología de las organizaciones</li><li>PAFU Programa de Actividad Física Universitaria opcional en 1º Año</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización empresarial y sistemas de información</li><li>Contabilidad II - Valuación y exposición</li><li>Matemática financiera</li><li>Probabilidad y estadística</li><li>Economía II – Macroeconomía</li><li>Costos</li><li>Derecho civil y comercial</li><li>Marketing I</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Contabilidad III - Análisis e interpretación de estados contables</li><li>Derecho del trabajo y la seguridad social</li><li>Administración financiera</li><li>Marketing II</li><li>Investigación operativa</li><li>Sociedades, concursos y quiebras</li><li>Administración de recursos humanos</li><li>Inglés III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Control de gestión</li><li>Desarrollo de emprendimientos</li><li>Comercio y negociación internacional</li><li>Teoría de las decisiones</li><li>Metodología de la investigación</li><li>Formulación y evaluación de proyectos</li><li>Administración de operaciones I</li><li>Gerenciamiento I</li><li>Práctica profesional</li><li>Trabajo Final (Licenciatura)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Psicología laboral</li><li>Higiene y seguridad industrial</li><li>Gestión de la calidad</li><li>Administración de operaciones II</li><li>Dirección estratégica</li><li>Gerenciamiento II</li><li>Trabajo final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/direccion-empresas" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/direccion-empresas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Economía I – Microeconomía</li><li>Administración</li><li>Matemática</li><li>Informática para gestión empresaria (extracurricular)</li><li>Derecho público y administrativo</li><li>Contabilidad I – general</li><li>Sociología de las organizaciones</li><li>PAFU Programa de Actividad Física Universitaria opcional en 1º Año</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización empresarial y sistemas de información</li><li>Contabilidad II - Valuación y exposición</li><li>Matemática financiera</li><li>Probabilidad y estadística</li><li>Economía II – Macroeconomía</li><li>Costos</li><li>Derecho civil y comercial</li><li>Marketing I</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Contabilidad III - Análisis e interpretación de estados contables</li><li>Derecho del trabajo y la seguridad social</li><li>Administración financiera</li><li>Marketing II</li><li>Investigación operativa</li><li>Sociedades, concursos y quiebras</li><li>Administración de recursos humanos</li><li>Inglés III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Control de gestión</li><li>Desarrollo de emprendimientos</li><li>Comercio y negociación internacional</li><li>Teoría de las decisiones</li><li>Metodología de la investigación</li><li>Formulación y evaluación de proyectos</li><li>Administración de operaciones I</li><li>Gerenciamiento I</li><li>Práctica profesional</li><li>Trabajo Final (Licenciatura)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Psicología laboral</li><li>Higiene y seguridad industrial</li><li>Gestión de la calidad</li><li>Administración de operaciones II</li><li>Dirección estratégica</li><li>Gerenciamiento II</li><li>Trabajo final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/direccionempresasVDU/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/direccionempresasVDU/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Economía I – Microeconomía</li><li>Administración</li><li>Matemática</li><li>Informática para gestión empresaria (extracurricular)</li><li>Derecho público y administrativo</li><li>Contabilidad I – general</li><li>Sociología de las organizaciones</li><li>PAFU Programa de Actividad Física Universitaria opcional en 1º Año</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización empresarial y sistemas de información</li><li>Contabilidad II - Valuación y exposición</li><li>Matemática financiera</li><li>Probabilidad y estadística</li><li>Economía II – Macroeconomía</li><li>Costos</li><li>Derecho civil y comercial</li><li>Marketing I</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Contabilidad III - Análisis e interpretación de estados contables</li><li>Derecho del trabajo y la seguridad social</li><li>Administración financiera</li><li>Marketing II</li><li>Investigación operativa</li><li>Sociedades, concursos y quiebras</li><li>Administración de recursos humanos</li><li>Inglés III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Control de gestión</li><li>Desarrollo de emprendimientos</li><li>Comercio y negociación internacional</li><li>Teoría de las decisiones</li><li>Metodología de la investigación</li><li>Formulación y evaluación de proyectos</li><li>Administración de operaciones I</li><li>Gerenciamiento I</li><li>Práctica profesional</li><li>Trabajo Final (Licenciatura)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Psicología laboral</li><li>Higiene y seguridad industrial</li><li>Gestión de la calidad</li><li>Administración de operaciones II</li><li>Dirección estratégica</li><li>Gerenciamiento II</li><li>Trabajo final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/direcciondeempresasSSUR" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/direcciondeempresasSSUR" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/locucion/">Locución</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción a la comunicación</li><li>Lengua y expresión</li><li>Historia americana y argentina</li><li>Periodismo informativo</li><li>Corrientes del pensamiento contemporáneo</li><li>Expresión corporal</li><li>Actuación dramática</li><li>Práctica integral de radio I</li><li>Práctica integral de radio II</li><li>Práctica integral de televisión I</li><li>Práctica integral de televisión II</li><li>Locución I</li><li>Locución II</li><li>Foniatría I</li><li>Foniatría II</li><li>PAFU Programa de Actividad Física Universitaria opcional en 1º Año.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Teoría de la comunicación I</li><li>Pronunciación del Italiano</li><li>Portugués</li><li>Psicología de la comunicación</li><li>Literatura</li><li>Periodismo de investigación</li><li>Lenguaje y estética de la música</li><li>Foniatría III</li><li>Práctica integral de televisión III</li><li>Práctica integral de radio III</li><li>Locución III y oratoria</li><li>Tecnología de la radio y de la televisión</li><li>Informática (extracurricular)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Legislación aplicada</li><li>Relaciones públicas</li><li>Sociología de la comunicación</li><li>Historia de las ideas políticas modernas y contemporáneas</li><li>Economía</li><li>Ética de la comunicación</li><li>Pronunciación del francés</li><li>Pronunciación del alemán</li><li>Locución IV</li><li>Foniatría IV</li><li>Práctica integral de televisión IV</li><li>Práctica integral de radio IV</li><li>Doblaje</li><li>Práctica profesional</li><li>Media Lab</li><li>Estudio de Radio</li><li>Estudio de TV</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/locucion/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/locucion/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/periodismo/">Periodismo</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción a la comunicación</li><li>Lengua y expresión</li><li>Historia americana y argentina</li><li>Periodismo informativo</li><li>Corrientes del pensamiento contemporáneo</li><li>Periodismo y medios (prensa gráfica)</li><li>Práctica integral de radio I</li><li>Práctica integral de radio II</li><li>Práctica integral de televisión I</li><li>Práctica integral de televisión II</li><li>Locución I</li><li>Locución II</li><li>Foniatría I</li><li>Foniatría II</li><li>PAFU Programa de Actividad Física Universitaria opcional en 1º Año.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Teoría de la comunicación I</li><li>Comunicación visual</li><li>Pronunciación del italiano</li><li>Portugués</li><li>Psicología de la comunicación</li><li>Literatura</li><li>Periodismo de investigación</li><li>Lenguaje y estética de la música</li><li>Práctica integral de televisión III</li><li>Práctica integral de radio III</li><li>Tecnología de la radio y de la televisión</li><li>Informática (extracurricular)</li><li>Técnicas de diagramación e impresión</li><li>Inglés I</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Legislación aplicada</li><li>Relaciones públicas</li><li>Periodismo de opinión</li><li>Sociología de la comunicación</li><li>Historia de las ideas políticas modernas y contemporáneas</li><li>Economía</li><li>Ética de la comunicación</li><li>Pronunciación del francés</li><li>Pronunciación del alemán</li><li>Práctica integral de televisión IV</li><li>Práctica Integral de radio IV</li><li>Fotoperiodismo</li><li>Práctica profesional</li><li>Inglés III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Teoría de la comunicación II</li><li>Estudio de la realidad histórico-social</li><li>Comunicación organizativa e institucional</li><li>Metodología de la investigación I</li><li>Comunicación cinematográfica</li><li>Crítica artística y literaria</li><li>Comunicación científica</li><li>Metodología de la investigación II</li><li>Tesina</li><li>Práctica profesional</li><li>Media Lab</li><li>Estudio de Radio</li><li>Estudio de TV</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/periodismo/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/periodismo/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/proteccion-comunitaria-y-seguridad-urbana/">Protección Comunitaria y Seguridad Urbana</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Derecho I (Penal, Procesal, Convencional, y Administrativo)</li><li>Derechos Humanos y Constitucional</li><li>Estadística descriptiva e Interpelación de datos</li><li>Normas y Procedimientos en Seguridad (Criminalística)</li><li>Atención Básica a la Salud (Primeros Auxilios)</li><li>Acondicionamiento Físico I</li><li>Protocolo General de Actuación Comunitaria</li><li>Investigación Criminal</li><li>Técnicas y Tácticas de Defensa Personal I</li><li>Balística y Armas I</li><li>Seguridad Vial</li><li>Taller de Resolución de Casos</li><li>Informática</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Derecho II (Penal, Procesal, Contravencional, y Administrativo)</li><li>Derecho de Minoridad y Familia</li><li>Gestión de Recursos Humanos</li><li>Informática Aplicada</li><li>Técnicas de Mediación, Resolución de Conflictos, y Negociación</li><li>Balística y Armas II</li><li>Acondicionamiento Físico II</li><li>Medicina Legal</li><li>Doctrina Institucional y Conducción de Personal</li><li>Estrategia, Táctica y Planificación</li><li>Técnicas y Tácticas de Defensa Personal II</li><li>Defensa Civil y Prevención de Riesgos</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Sociologia Criminal</li><li>Inteligencia Criminal</li><li>Políticas y Estrategias en Prevención del Delito y la Violencia</li><li>Prácticas Profesionalizantes</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Seguridad e Higiene en el Trabajo</li><li>Seguridad y Comunicación Social</li><li>Seguridad Física y Electrónica</li><li>Seguridad Bancaria</li><li>El sistema de Seguridad Privada</li><li>Seminario I: Muerte violenta</li><li>Legislación sobre Seguridad Ciudadana</li><li>Taller: Práctica en Seguridad I</li><li>Etica Profesional</li><li>Accidentología y Seguridad Vial</li><li>Administración de los Recursos Materiales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Metodología de la Investigación</li><li>Tecnología aplicada a la Seguridad</li><li>Seguridad Informática</li><li>Seguridad en Medios de Transporte</li><li>Seminario II: Mapeo del delito</li><li>Tráficos Ilícitos y Crimen</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/proteccion-comunitaria-y-seguridad-urbana" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/proteccion-comunitaria-y-seguridad-urbana" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/puericultura-a-distancia/">Puericultura a Distancia</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía y fisiología del embarazo, parto y puerperio</li><li>Puericultura I</li><li>Lactancia Materna I</li><li>Fundamentos psicosociales para la salud de la mujer y el recién nacido</li><li>Observación de lactantes I</li><li>Educación y Orientación en las Instituciones</li><li>Psicología Evolutiva I</li><li>Crianza y relación vincular</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Patologías durante el embarazo y del neonato</li><li>Puericultura y Nutrición</li><li>Pedagogía y educación maternal</li><li>Observación de lactantes II</li><li>Psicología Evolutiva II</li><li>Atención Integral de la mujer y el recién nacido</li><li>Lactancia Materna II</li><li>Psicología de las relaciones familiares</li><li>Organización y Administración de Centros de Puericultura</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Técnicas de Comunicación</li><li>Dinámica de grupos</li><li>Educación corporal de la mamá y del niño</li><li>Bioética</li><li>Práctica Técnica: en Hospitales o Centros materno-infantiles</li><li>Práctica Técnica: Concurrencia de una mañana o una tarde a un Hospital o Centro Materno Infantil (anual) y a un Jardín Maternal que se designen (cuatrimestral).</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/puericultura/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/puericultura/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -247,46 +891,220 @@
         <li class="oferta">
             <h3><a href="/carrera/profesorado-en-educacion-fisica/">Profesorado en Educación Física</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía Funcional I</li><li>Aprendizaje y Desarrollo Motor</li><li>Psicología General</li><li>Gimnasia Formativa</li><li>Fútbol</li><li>Balonmano</li><li>Taller I</li><li>Inglés I</li><li>Anatomía Funcional II</li><li>Historia y Teoría de la Educación Física</li><li>Sujeto del Aprendizaje</li><li>Gimnasia Funcional</li><li>Hockey</li><li>Atletismo</li><li>Taller II</li><li>Entornos Virtuales de Aprendizaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Institución y Sistemas Educativos</li><li>Actividades Lúdicas y Recreativas</li><li>Didáctica y Currículo</li><li>Fisiología General</li><li>Natación I</li><li>Vóleibol</li><li>Taller III</li><li>Didáctica de la Educación Física de Nivel Inicial y Primario</li><li>Fisiología del Ejercicio</li><li>Natación II</li><li>Gimnasia Artística</li><li>Básquetbol</li><li>Taller IV</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Gestión de Prácticas Deportivas Emergentes</li><li>Formación para la Salud</li><li>Didáctica de la Educación Física de Nivel Secundario y Superior</li><li>Evalución de la Aptitud Física</li><li>Taller V</li><li>Biomecánica</li><li>Rugby</li><li>Sociología de la Actividad Física y el Deporte</li><li>Actividad Física Adaptada</li><li>Entrenamiento de la Aptitud Física</li><li>Taller VI</li><li>Actividades Regionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Sobrecarga y Musculación</li><li>Residencia Nivel Inicial y Primario</li><li>Ética y Legislación Aplicada</li><li>Residencia Nivel Secundario y Superior</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacionfisica/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacionfisica/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-en-educacion-fisica/">Profesorado en Educación Física</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía Funcional I</li><li>Aprendizaje y Desarrollo Motor</li><li>Psicología General</li><li>Gimnasia Formativa</li><li>Fútbol</li><li>Balonmano</li><li>Taller I</li><li>Inglés I</li><li>Anatomía Funcional II</li><li>Historia y Teoría de la Educación Física</li><li>Sujeto del Aprendizaje</li><li>Gimnasia Funcional</li><li>Hockey</li><li>Atletismo</li><li>Taller II</li><li>Entornos Virtuales de Aprendizaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Institución y Sistemas Educativos</li><li>Actividades Lúdicas y Recreativas</li><li>Didáctica y Currículo</li><li>Fisiología General</li><li>Natación I</li><li>Vóleibol</li><li>Taller III</li><li>Didáctica de la Educación Física de Nivel Inicial y Primario</li><li>Fisiología del Ejercicio</li><li>Natación II</li><li>Gimnasia Artística</li><li>Básquetbol</li><li>Taller IV</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Gestión de Prácticas Deportivas Emergentes</li><li>Formación para la Salud</li><li>Didáctica de la Educación Física de Nivel Secundario y Superior</li><li>Evalución de la Aptitud Física</li><li>Taller V</li><li>Biomecánica</li><li>Rugby</li><li>Sociología de la Actividad Física y el Deporte</li><li>Actividad Física Adaptada</li><li>Entrenamiento de la Aptitud Física</li><li>Taller VI</li><li>Actividades Regionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Sobrecarga y Musculación</li><li>Residencia Nivel Inicial y Primario</li><li>Ética y Legislación Aplicada</li><li>Residencia Nivel Secundario y Superior</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacionfisicaVDU/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacionfisicaVDU/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-en-educacion-fisica/">Profesorado en Educación Física</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía Funcional I</li><li>Aprendizaje y Desarrollo Motor</li><li>Psicología General</li><li>Gimnasia Formativa</li><li>Fútbol</li><li>Balonmano</li><li>Taller I</li><li>Inglés I</li><li>Anatomía Funcional II</li><li>Historia y Teoría de la Educación Física</li><li>Sujeto del Aprendizaje</li><li>Gimnasia Funcional</li><li>Hockey</li><li>Atletismo</li><li>Taller II</li><li>Entornos Virtuales de Aprendizaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Institución y Sistemas Educativos</li><li>Actividades Lúdicas y Recreativas</li><li>Didáctica y Currículo</li><li>Fisiología General</li><li>Natación I</li><li>Vóleibol</li><li>Taller III</li><li>Didáctica de la Educación Física de Nivel Inicial y Primario</li><li>Fisiología del Ejercicio</li><li>Natación II</li><li>Gimnasia Artística</li><li>Básquetbol</li><li>Taller IV</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Gestión de Prácticas Deportivas Emergentes</li><li>Formación para la Salud</li><li>Didáctica de la Educación Física de Nivel Secundario y Superior</li><li>Evalución de la Aptitud Física</li><li>Taller V</li><li>Biomecánica</li><li>Rugby</li><li>Sociología de la Actividad Física y el Deporte</li><li>Actividad Física Adaptada</li><li>Entrenamiento de la Aptitud Física</li><li>Taller VI</li><li>Actividades Regionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Sobrecarga y Musculación</li><li>Residencia Nivel Inicial y Primario</li><li>Ética y Legislación Aplicada</li><li>Residencia Nivel Secundario y Superior</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacionfisicaSE/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacionfisicaSE/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-en-educacion-fisica/">Profesorado en Educación Física</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía Funcional I</li><li>Aprendizaje y Desarrollo Motor</li><li>Psicología General</li><li>Gimnasia Formativa</li><li>Fútbol</li><li>Balonmano</li><li>Taller I</li><li>Inglés I</li><li>Anatomía Funcional II</li><li>Historia y Teoría de la Educación Física</li><li>Sujeto del Aprendizaje</li><li>Gimnasia Funcional</li><li>Hockey</li><li>Atletismo</li><li>Taller II</li><li>Entornos Virtuales de Aprendizaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Institución y Sistemas Educativos</li><li>Actividades Lúdicas y Recreativas</li><li>Didáctica y Currículo</li><li>Fisiología General</li><li>Natación I</li><li>Vóleibol</li><li>Taller III</li><li>Didáctica de la Educación Física de Nivel Inicial y Primario</li><li>Fisiología del Ejercicio</li><li>Natación II</li><li>Gimnasia Artística</li><li>Básquetbol</li><li>Taller IV</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Gestión de Prácticas Deportivas Emergentes</li><li>Formación para la Salud</li><li>Didáctica de la Educación Física de Nivel Secundario y Superior</li><li>Evalución de la Aptitud Física</li><li>Taller V</li><li>Biomecánica</li><li>Rugby</li><li>Sociología de la Actividad Física y el Deporte</li><li>Actividad Física Adaptada</li><li>Entrenamiento de la Aptitud Física</li><li>Taller VI</li><li>Actividades Regionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Sobrecarga y Musculación</li><li>Residencia Nivel Inicial y Primario</li><li>Ética y Legislación Aplicada</li><li>Residencia Nivel Secundario y Superior</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacionfisicaSS/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacionfisicaSS/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-en-educacion-fisica/">Profesorado en Educación Física</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía Funcional I</li><li>Aprendizaje y Desarrollo Motor</li><li>Psicología General</li><li>Gimnasia Formativa</li><li>Fútbol</li><li>Balonmano</li><li>Taller I</li><li>Inglés I</li><li>Anatomía Funcional II</li><li>Historia y Teoría de la Educación Física</li><li>Sujeto del Aprendizaje</li><li>Gimnasia Funcional</li><li>Hockey</li><li>Atletismo</li><li>Taller II</li><li>Entornos Virtuales de Aprendizaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Institución y Sistemas Educativos</li><li>Actividades Lúdicas y Recreativas</li><li>Didáctica y Currículo</li><li>Fisiología General</li><li>Natación I</li><li>Vóleibol</li><li>Taller III</li><li>Didáctica de la Educación Física de Nivel Inicial y Primario</li><li>Fisiología del Ejercicio</li><li>Natación II</li><li>Gimnasia Artística</li><li>Básquetbol</li><li>Taller IV</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Gestión de Prácticas Deportivas Emergentes</li><li>Formación para la Salud</li><li>Didáctica de la Educación Física de Nivel Secundario y Superior</li><li>Evalución de la Aptitud Física</li><li>Taller V</li><li>Biomecánica</li><li>Rugby</li><li>Sociología de la Actividad Física y el Deporte</li><li>Actividad Física Adaptada</li><li>Entrenamiento de la Aptitud Física</li><li>Taller VI</li><li>Actividades Regionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Sobrecarga y Musculación</li><li>Residencia Nivel Inicial y Primario</li><li>Ética y Legislación Aplicada</li><li>Residencia Nivel Secundario y Superior</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacionfisicamalargue/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacionfisicamalargue/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-en-educacion-fisica/">Profesorado en Educación Física</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía Funcional I</li><li>Aprendizaje y Desarrollo Motor</li><li>Psicología General</li><li>Gimnasia Formativa</li><li>Fútbol</li><li>Balonmano</li><li>Taller I</li><li>Inglés I</li><li>Anatomía Funcional II</li><li>Historia y Teoría de la Educación Física</li><li>Sujeto del Aprendizaje</li><li>Gimnasia Funcional</li><li>Hockey</li><li>Atletismo</li><li>Taller II</li><li>Entornos Virtuales de Aprendizaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Institución y Sistemas Educativos</li><li>Actividades Lúdicas y Recreativas</li><li>Didáctica y Currículo</li><li>Fisiología General</li><li>Natación I</li><li>Vóleibol</li><li>Taller III</li><li>Didáctica de la Educación Física de Nivel Inicial y Primario</li><li>Fisiología del Ejercicio</li><li>Natación II</li><li>Gimnasia Artística</li><li>Básquetbol</li><li>Taller IV</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Gestión de Prácticas Deportivas Emergentes</li><li>Formación para la Salud</li><li>Didáctica de la Educación Física de Nivel Secundario y Superior</li><li>Evalución de la Aptitud Física</li><li>Taller V</li><li>Biomecánica</li><li>Rugby</li><li>Sociología de la Actividad Física y el Deporte</li><li>Actividad Física Adaptada</li><li>Entrenamiento de la Aptitud Física</li><li>Taller VI</li><li>Actividades Regionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Sobrecarga y Musculación</li><li>Residencia Nivel Inicial y Primario</li><li>Ética y Legislación Aplicada</li><li>Residencia Nivel Secundario y Superior</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacionfisicagralalvear" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacionfisicagralalvear" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-educacion-fisica-a-distancia/">Licenciatura en Educación Física a Distancia</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Actividad Física, Salud y Calidad de Vida - Semestral</li><li>M arketing del Deporte - Semestral</li><li>Salud y fitness - Semestral</li><li>Equipamiento , Instalaciones y Seguridad Deportiva - Semestral</li><li>Psicología del Deporte - Semestral</li><li>Kinefilaxia - Semestral</li><li>Formulación y Evaluación de Proyectos - Semestral</li><li>Nutrición de la Actividad Física y el Deporte - Semestral</li><li>Organización y Gestión Institucional - Semestral</li><li>Medicina del Deporte - Semestral</li><li>Esta dística Aplicada - Semestral</li><li>Metodología de la Investigación - Anual</li><li>Trabajo Final Integrador</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacionfisicaadistancia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacionfisicaadistancia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-educacion-inicial-a-distancia/">Licenciatura en Educación Inicial a distancia</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 semestres</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er semestre</h4>
+            <ul><li>Metodología de la investigación</li><li>Neuropsicosociología del desarrollo I</li><li>Acompañamiento temprano del desarrollo infantil I</li><li>Atención primaria de la salud</li><li>Taller de observación sistemática</li><li>Taller de integración: trabajo de campo. Proceso de observación.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do semestre</h4>
+            <ul><li>Metodología de la investigación</li><li>Neuropsicosociología del desarrollo II</li><li>Acompañamiento temprano del desarrollo infantil II</li><li>Contexto socio histórico. Inclusión. DUA</li><li>Taller de formación personal</li><li>Taller de integración: trabajo de campo. Proceso de observación.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er semestre</h4>
+            <ul><li>Estrategias de intervención</li><li>Institución y desarrollo emocional</li><li>Gestión institucional y estrategia de comunicación</li><li>Seminario de tesina - Trabajo Final Integrador</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/educacioninicial/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/educacioninicial/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-para-profesionales/">Profesorado para Profesionales</a></h3>
-            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 semestres</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er semestre</h4>
+            <ul><li>Didáctica y Currículo</li><li>Psicología Educativa</li><li>Pedagogía</li><li>Práctica Profesional Docente</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do semestre</h4>
+            <ul><li>Didáctica Especial y Específica</li><li>Entornos Virtuales de Aprendizaje</li><li>Evaluación del Aprendizaje</li><li>Investigación Educativa</li><li>Sociología de la Educación</li><li>Residencia Educativa</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/profesoradoprofesionales/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/profesoradoprofesionales/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -296,36 +1114,154 @@
         <li class="oferta">
             <h3><a href="/carrera/contador-publico/">Contador Público</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Administración</li><li>Contabilidad I - General</li><li>Matemática</li><li>Derecho Público y Administrativo</li><li>Economía I - Microeconomía</li><li>Sociología de las Organizaciones</li><li>PAFU Programa de Actividad Física Universitaria opcional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización Empresarial y Sistemas de Información</li><li>Contabilidad II - Valuación y Exposición</li><li>Probabilidad y Estadística</li><li>Matemática Financiera</li><li>Economía II - Macroeconomía</li><li>Costos</li><li>Derecho Civil y Comercial</li><li>Marketing</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Finanzas Públicas</li><li>Contabilidad III - Análisis e Interpretación de Estados Contables</li><li>Régimen y Práctica Tributaria I</li><li>Derecho del Trabajo y de la Seguridad Social</li><li>Administración Financiera</li><li>Negociación y Mediación</li><li>Régimen y Práctica Tributaria II</li><li>Sociedades</li><li>Administración de Recursos Humanos</li><li>Desarrollo de Emprendimientos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Control de Gestión</li><li>Auditoría Operativa y de Sistemas</li><li>Concursos y Quiebras</li><li>Metodología de la Investigación</li><li>Comercio Internacional</li><li>Derecho de Familia y Sucesiones</li><li>Auditoría Contable</li><li>Actuación Profesional</li><li>Contabilidad Pública</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/contador/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/contador/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/contador-publico/">Contador Público</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Administración</li><li>Contabilidad I - General</li><li>Matemática</li><li>Derecho Público y Administrativo</li><li>Economía I - Microeconomía</li><li>Sociología de las Organizaciones</li><li>PAFU Programa de Actividad Física Universitaria opcional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización Empresarial y Sistemas de Información</li><li>Contabilidad II - Valuación y Exposición</li><li>Probabilidad y Estadística</li><li>Matemática Financiera</li><li>Economía II - Macroeconomía</li><li>Costos</li><li>Derecho Civil y Comercial</li><li>Marketing</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Finanzas Públicas</li><li>Contabilidad III - Análisis e Interpretación de Estados Contables</li><li>Régimen y Práctica Tributaria I</li><li>Derecho del Trabajo y de la Seguridad Social</li><li>Administración Financiera</li><li>Negociación y Mediación</li><li>Régimen y Práctica Tributaria II</li><li>Sociedades</li><li>Administración de Recursos Humanos</li><li>Desarrollo de Emprendimientos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Control de Gestión</li><li>Auditoría Operativa y de Sistemas</li><li>Concursos y Quiebras</li><li>Metodología de la Investigación</li><li>Comercio Internacional</li><li>Derecho de Familia y Sucesiones</li><li>Auditoría Contable</li><li>Actuación Profesional</li><li>Contabilidad Pública</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/contadorVDU/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/contadorVDU/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/recursos-humanos/">Recursos Humanos</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Recursos humanos I</li><li>Psicología general e individual</li><li>Administración de las organizaciones</li><li>Informática de las organizaciones (extracurricular)</li><li>Comunicación social e institucional</li><li>Matemática</li><li>Sociología de las organizaciones</li><li>Técnicas de Aplicación – Nivel I</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización empresarial y sistemas de información</li><li>Derecho laboral</li><li>Probabilidad y estadística</li><li>Economía</li><li>Marketing</li><li>Recursos humanos II</li><li>Comportamiento organizacional</li><li>Técnicas de Aplicación – Nivel II</li><li>Práctica Final</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Psicología laboral</li><li>Recursos humanos III</li><li>Prevención y seguridad laboral</li><li>Metodología de la investigación social I</li><li>Dinámica de grupos</li><li>Entrevista y selección de personal</li><li>Capacitación y desarrollo de recursos humanos</li><li>Recursos humanos IV</li><li>Práctica Final</li><li>Inglés III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Gestión de calidad</li><li>Filosofía y ética profesional</li><li>Política de las remuneraciones</li><li>Metodología de la investigación social II</li><li>Creatividad e innovación</li><li>Planeamiento estratégico de recursos humanos</li><li>Negociación y resolución de conflictos</li><li>Auditoría de recursos humanos</li><li>Práctica profesional</li><li>Trabajo final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/recursoshumanos/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/recursoshumanos/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/recursos-humanos/">Recursos Humanos</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Recursos humanos I</li><li>Psicología general e individual</li><li>Administración de las organizaciones</li><li>Informática de las organizaciones (extracurricular)</li><li>Comunicación social e institucional</li><li>Matemática</li><li>Sociología de las organizaciones</li><li>Técnicas de Aplicación – Nivel I</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización empresarial y sistemas de información</li><li>Derecho laboral</li><li>Probabilidad y estadística</li><li>Economía</li><li>Marketing</li><li>Recursos humanos II</li><li>Comportamiento organizacional</li><li>Técnicas de Aplicación – Nivel II</li><li>Práctica Final</li><li>Inglés II</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/recursoshumanosSE/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/recursoshumanosSE/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/recursos-humanos/">Recursos Humanos</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Recursos humanos I</li><li>Psicología general e individual</li><li>Administración de las organizaciones</li><li>Informática de las organizaciones (extracurricular)</li><li>Comunicación social e institucional</li><li>Matemática</li><li>Sociología de las organizaciones</li><li>Técnicas de Aplicación – Nivel I</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización empresarial y sistemas de información</li><li>Derecho laboral</li><li>Probabilidad y estadística</li><li>Economía</li><li>Marketing</li><li>Recursos humanos II</li><li>Comportamiento organizacional</li><li>Técnicas de Aplicación – Nivel II</li><li>Práctica Final</li><li>Inglés II</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/recursoshumanosSS/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/recursoshumanosSS/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/recursos-humanos/">Recursos Humanos</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Recursos humanos I</li><li>Psicología general e individual</li><li>Administración de las organizaciones</li><li>Informática de las organizaciones (extracurricular)</li><li>Comunicación social e institucional</li><li>Matemática</li><li>Sociología de las organizaciones</li><li>Técnicas de Aplicación – Nivel I</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Organización empresarial y sistemas de información</li><li>Derecho laboral</li><li>Probabilidad y estadística</li><li>Economía</li><li>Marketing</li><li>Recursos humanos II</li><li>Comportamiento organizacional</li><li>Técnicas de Aplicación – Nivel II</li><li>Práctica Final</li><li>Inglés II</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/recursoshumanosuco" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/recursoshumanosuco" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/recursos-humanos/">Recursos Humanos</a></h3>
-            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <ul class="oferta-datos"><li>Duración: 1 año</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Psicología Laboral</li><li>Gestión de Relaciones Laborales</li><li>Planeamiento Estratégico de Recursos Humanos</li><li>Metodología de la Investigación</li><li>Filosofía y Ética Profesional</li><li>Creatividad e Innovación</li><li>Gestión de la Calidad</li><li>Política de Remuneraciones</li><li>Auditoría de Recursos Humanos</li><li>Práctica Profesional</li><li>Materia Optativa 1</li><li>Materia Optativa 2</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/recursoshumanos-ciclo-de-complementacion-a-distancia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/recursoshumanos-ciclo-de-complementacion-a-distancia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -335,11 +1271,38 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-matematica-a-distancia/">Licenciatura en Matemática a distancia</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://www.umaza.edu.ar/landings/matematica/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/veterinaria/">Veterinaria</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Anatomía veterinaria I</li><li>Química Aplicada</li><li>Biología Celular y Embriología</li><li>Física Biológica</li><li>Introducción a la ética y Deontología</li><li>Histología</li><li>Anatomía veterinaria II</li><li>Ecología y Conservación</li><li>Bioquímica Metabólica</li><li>Inglés</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Anatomía III</li><li>Fisiología Animal I</li><li>Microbiología</li><li>Sociología Rural y Urbana</li><li>Bioseguridad</li><li>Virología</li><li>Etología y Bienestar animal</li><li>Fisiología Animal II</li><li>Genética básica</li><li>Patología General</li><li>Parasitología</li><li>Inmunología Veterinaria</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Diagnóstico por imágenes</li><li>Farmacología y Terapéutica</li><li>Semiología y Propedéutica</li><li>Análisis clínicos</li><li>Nutrición y Alimentación animal</li><li>Genética Aplicada</li><li>Enfermedades infecciosas</li><li>Enfermedades parasitarias</li><li>Patología Especial</li><li>Técnicas Quirúrgicas</li><li>Bioestadistica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Epidemiología</li><li>Patología Médica Pequeños Animales</li><li>Producción Animal y Neonatología</li><li>Recursos Forrajeros en Producción ganadera</li><li>Toxicología Veterinaria</li><li>Patología Quirúrgica Grandes Animales</li><li>Patología de la Reproducción y Obstetricia</li><li>Producción Ovina y Caprina</li><li>Producción Avícola</li><li>Producción Porcina</li><li>Patología Quirúrgica Pequeños Animales</li><li>Producción Apícola</li><li>Optativa I Electiva</li><li>Optativa II Electiva</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Clínica de Pequeños animales</li><li>Bromatología, Inocuidad y Tecnología de Alimentos</li><li>Producción Bovina</li><li>Salud Pública</li><li>Gerenciamiento y Gestión de Proyectos</li><li>Impacto ambiental y desarrollo sustentable</li><li>Producción Equina</li><li>Medicina Legal y Forense</li><li>Clínica de grandes animales</li><li>Clínica y Zootecnia de Exóticos y no convencionales</li><li>Relación Veterinario Cliente</li><li>Metodología de la investigación</li><li>Práctica Profesional Orientada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/veterinaria/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/veterinaria/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -349,11 +1312,55 @@
         <li class="oferta">
             <h3><a href="/carrera/publicidad/">Publicidad</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción a la comunicación</li><li>Escritura transmedia</li><li>Creatividad e innovación</li><li>Introducción de la publicidad</li><li>Herramientas publicitarias: Imagen digital</li><li>Taller de edición I (Photoshop virtual)</li><li>Marketing</li><li>Herramientas publicitarias: Diseño vectorial</li><li>Teoría de la publicidad</li><li>Taller de edición II (Ilustrator - virtual)</li><li>Psicología y Neuromarketing</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Redacción publicitaria (offline y online)</li><li>Brief y brieffing</li><li>Comportamiento del target</li><li>Laboratorio digital</li><li>Fotografía publicitaria</li><li>Arte y cultura</li><li>Producción publicitaria en radio y podcast</li><li>Imagen publicitaria</li><li>Creatividad e inteligencia artificial</li><li>Redes y comunicación digital</li><li>Inglés I y II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Publicidad en medios (estrategia online-offline)</li><li>Investigación publicitaria</li><li>Sociología de la comunicación</li><li>Análisis de datos</li><li>Desarrollo de videojuegos</li><li>Producción audiovisual (TV-Redes)</li><li>Campañas institucionales y de bien público</li><li>Publicidad VI: Estrategia publicitaria</li><li>Desarrollo de emprendimientos</li><li>Imagen multimedia</li><li>Práctica profesional inicial</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Comunicación organizativa e institucional</li><li>Relaciones públicas</li><li>Neuro oratoria</li><li>Metodología de la investigación</li><li>Campañas 360</li><li>Ética y derecho publicitario</li><li>Dirección creativa</li><li>Dirección de arte</li><li>Práctica profesional avanzada</li><li>Trabajo final integrador</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/publicidad/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/publicidad/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/realizacion-audiovisual/">Realización Audiovisual</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Realización Audiovisual I</li><li>Taller de Guión Audiovisual I</li><li>Producción de Campo</li><li>Sonido</li><li>Tecnología del Video</li><li>Fotografía Fija</li><li>Edición</li><li>Visualización</li><li>Taller de Iluminación y Cámara</li><li>Historia del Cine</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Realización Audiovisual II</li><li>Televisión</li><li>Dirección de Fotografía</li><li>Taller de Guión Audiovisual II</li><li>Dirección de Arte</li><li>Post-Producción de Sonido I</li><li>Historia del Arte I</li><li>Historia del Cine II</li><li>Post-Producción de Video I</li><li>Producción y Legislación</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Dirección Cinematográfica</li><li>Montaje</li><li>Formatos Televisivos</li><li>Semiótica Visual</li><li>Post-Producción de Video II</li><li>Historia del Arte II</li><li>Post-Producción de Sonido II</li><li>Historia del cine argentino y latinoamericano</li><li>Maquillaje y vestuario</li><li>Práctica profesional</li><li>Trabajo Final Integrador</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Teoría del Cine</li><li>Crítica Cinematográfica</li><li>Metodología de la Investigación</li><li>Teoría de la Comunicación</li><li>Post-Producción de Video III</li><li>Animación</li><li>Desarrollo de videojuegos</li><li>Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/realizacionaudiovisual/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/realizacionaudiovisual/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -363,11 +1370,43 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-enologia/">Licenciatura en Enología</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Matemática</li><li>Operaciones básicas de laboratorio</li><li>Introducción a la vitivinicultura</li><li>Introducción al análisis sensorial</li><li>Física</li><li>Química</li><li>Química orgánica</li><li>Informática</li><li>Inglés Elemental</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Química analítica</li><li>Estadística</li><li>Microbiología general</li><li>Taller vitivinícola</li><li>Bioquímica</li><li>Fisicoquímica</li><li>Viticultura: ecofisiología de la vid</li><li>Análisis sensorial</li><li>Inglés Pre-intermedio (1º semestre)</li><li>Inglés Intermedio (2º semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Química Analítica Instrumental</li><li>Enología de la elaboración</li><li>Análisis organoléptico y tecnología de la cata</li><li>Química enológica</li><li>Análisis y control químico enológico</li><li>Francés vitivinícola</li><li>Enología de la estabilización</li><li>Ingeniería enológica</li><li>Microbiología enológica</li><li>Normativa y legislación vitivinícola</li><li>Prácticas integradas enológicas</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Viticultura: manejo de viñedos</li><li>Ingeniería en procesos</li><li>Formulación y evaluación de proyectos</li><li>Metodología de la investigación</li><li>Tecnología enológica</li><li>Cata profesional de vinos</li><li>Control de calidad y seguridad alimentaria</li><li>Viticultura: material vegetal y biotecnología de la vid</li><li>Taller de tesis</li><li>Costos y Finanzas</li><li>Prácticas enológicas avanzadas</li><li>Trabajo de fin de grado – Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/enologia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/enologia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-gastronomia/">Licenciatura en Gastronomía</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Alimentos y bebidas</li><li>Tecnologías alimentarias</li><li>Conservación de alimentos</li><li>Toxicología de los alimentos</li><li>Inocuidad alimentaria</li><li>Sistemas de calidad</li><li>Metodología de la investigación</li><li>Estadística aplicada</li><li>Análisis sensorial</li><li>Administración</li><li>Formulación y evaluación de proyectos</li><li>Comunicación</li><li>Marketing</li><li>Ética</li><li>Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/gastronomia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/gastronomia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -377,10 +1416,37 @@
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-en-agrimensura/">Ingeniería en Agrimensura</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Álgebra Lineal</li><li>Sistemas de Representación Gráfica</li><li>Geometría Analítica</li><li>Introducción a la Agrimensura</li><li>Cálculo I</li><li>Física I</li><li>Informática</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Cálculo II</li><li>Física II</li><li>Sistemas de Medición Topográfica</li><li>Probabilidad y Estadística</li><li>Teoría de Errores</li><li>Elementos de Geología y Geofísica</li><li>Dibujo Topográfico y Cartográfico</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Cartografía</li><li>Topografía</li><li>Derecho Público</li><li>Teledetección</li><li>Geodesia I</li><li>Derecho Privado</li><li>Geografía Urbana y Rural</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Sistemas de Información Territorial</li><li>Geodesia II</li><li>Fotogrametría</li><li>Derecho Real y Registral</li><li>Mensura I</li><li>Catastro Territorial</li><li>Valuaciones</li><li>Cartografía Aplicada</li><li>Optativa</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Mensura II</li><li>Planeamiento y Ordenamiento Territorial</li><li>Agrimensura Aplicada</li><li>Mediciones Especiales</li><li>Prácticas Profesionales Supervisadas</li><li>Optativa</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/agrimensura/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/agrimensura/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
-
+    </div>
+</div>
 </main>
 
 <footer class="pie">

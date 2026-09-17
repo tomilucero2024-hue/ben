@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ciencias sociales","item":"https://buscadoreducativo.com.ar/area/ciencias-sociales/"},{"@type":"ListItem","position":4,"name":"Gestión de Empresas Turísticas","item":"https://buscadoreducativo.com.ar/carrera/gestion-de-empresas-turisticas/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Gestión de Empresas Turísticas","description":"Dónde estudiar Gestión de Empresas Turísticas: tecnicatura del área Ciencias sociales, dictada por 1 institución (1 pública). Dura 3 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/gestion-de-empresas-turisticas/","provider":{"@type":"EducationalOrganization","name":"UTN Facultad Regional Mendoza","url":"https://buscadoreducativo.com.ar/institucion/utn-facultad-regional-mendoza/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Gestión de Empresas Turísticas en Argentina?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Gestión de Empresas Turísticas en Argentina en la siguiente institución: UTN Facultad Regional Mendoza. En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Gestión de Empresas Turísticas?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 3 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Gestión de Empresas Turísticas?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Gestión de Empresas Turísticas?","acceptedAnswer":{"@type":"Answer","text":"Gestión de Empresas Turísticas es una tecnicatura perteneciente al área de Ciencias sociales. Entre sus aptitudes más afines se destacan: pensamiento analítico, interacción social, liderazgo y gestión y base teórica y académica."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ciencias-sociales/">Ciencias sociales</a> <span aria-hidden="true">›</span> <span aria-current="page">Gestión de Empresas Turísticas</span></nav>
-    <h1>Gestión de Empresas Turísticas</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ciencias-sociales/">Ciencias sociales</a> <span aria-hidden="true">›</span> <span aria-current="page">Gestión de Empresas Turísticas</span></nav>
+        <h1>Gestión de Empresas Turísticas</h1>
     <p class="entrada">Dónde estudiar Gestión de Empresas Turísticas: tecnicatura del área Ciencias sociales, dictada por 1 institución (1 pública). Dura 3 años. Modalidades disponibles: presencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Ciencias sociales</dd>
         <dt>Tipo de formación</dt><dd>Tecnicatura</dd>
@@ -82,12 +93,31 @@
     </dl>
 
     <a class="cta" href="/?q=Gesti%C3%B3n+de+Empresas+Tur%C3%ADsticas&amp;area=Ciencias+sociales&amp;formacion=tecnicaturas">Ver Gestión de Empresas Turísticas en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Gestión de Empresas Turísticas</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta publica">Pública</span> <a href="/institucion/utn-facultad-regional-mendoza/">UTN Facultad Regional Mendoza</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción al Turismo (1° Semestre)</li><li>Administración de empresas (1° Semestre)</li><li>Tecnologías aplicadas a gestión de empresas turísticas I (1° Semestre)</li><li>Idioma I (1° Semestre)</li><li>Economía y políticas turísticas (2° Semestre)</li><li>Técnicas de comunicación (2° Semestre)</li><li>Servicios Turísticos I (2° Semestre)</li><li>Idioma II (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Tecnologías aplicadas a gestión de empresas turísticas II (1° Semestre)</li><li>Contabilidad (1° Semestre)</li><li>Servicios Turísticos II (1° Semestre)</li><li>Idioma III (1° Semestre)</li><li>Costos operativos turísticos (2° Semestre)</li><li>Comercialización I (2° Semestre)</li><li>Idioma IV (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Probabilidad y estadística (1° Semestre)</li><li>Circuitos Turísticos (1° Semestre)</li><li>Comercialización II (1° Semestre)</li><li>Legislación Turística (2° Semestre)</li><li>Práctica Profesional Supervisada (2° Semestre)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-tec-univ-gestion-de-empresas-turisticas/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-superior-gestion-de-empresas-turisticas/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -156,6 +186,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Ciencias sociales</h2>
     <ul class="enlaces">
         <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(8)</span></li>
@@ -172,7 +203,9 @@
         <li><a href="/carrera/licenciatura-en-relaciones-publicas-e-institucionales/">Licenciatura en Relaciones Públicas e Institucionales</a> <span class="cuantas">(2)</span></li>
     </ul>
     <p><a href="/area/ciencias-sociales/">Ver las 122 carreras del área Ciencias sociales →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

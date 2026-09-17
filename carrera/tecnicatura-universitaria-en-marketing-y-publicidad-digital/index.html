@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Negocios","item":"https://buscadoreducativo.com.ar/area/negocios/"},{"@type":"ListItem","position":4,"name":"Tecnicatura Universitaria en Marketing y Publicidad Digital","item":"https://buscadoreducativo.com.ar/carrera/tecnicatura-universitaria-en-marketing-y-publicidad-digital/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Tecnicatura Universitaria en Marketing y Publicidad Digital","description":"Dónde estudiar Tecnicatura Universitaria en Marketing y Publicidad Digital en Mendoza: tecnicatura del área Negocios, dictada por 1 institución (1 privada). Dura 2.5 años. Modalidades disponibles: presencial, a distancia y semipresencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-universitaria-en-marketing-y-publicidad-digital/","provider":{"@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Tecnicatura Universitaria en Marketing y Publicidad Digital en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Tecnicatura Universitaria en Marketing y Publicidad Digital en Mendoza en la siguiente institución: Universidad Siglo 21 (S21). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Tecnicatura Universitaria en Marketing y Publicidad Digital?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 2.5 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Tecnicatura Universitaria en Marketing y Publicidad Digital?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, a distancia y semipresencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Tecnicatura Universitaria en Marketing y Publicidad Digital?","acceptedAnswer":{"@type":"Answer","text":"Tecnicatura Universitaria en Marketing y Publicidad Digital es una tecnicatura perteneciente al área de Negocios. Entre sus aptitudes más afines se destacan: interacción social, liderazgo y gestión, pensamiento analítico y trabajo práctico."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/negocios/">Negocios</a> <span aria-hidden="true">›</span> <span aria-current="page">Tecnicatura Universitaria en Marketing y Publicidad Digital</span></nav>
-    <h1>Tecnicatura Universitaria en Marketing y Publicidad Digital</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/negocios/">Negocios</a> <span aria-hidden="true">›</span> <span aria-current="page">Tecnicatura Universitaria en Marketing y Publicidad Digital</span></nav>
+        <h1>Tecnicatura Universitaria en Marketing y Publicidad Digital</h1>
     <p class="entrada">Dónde estudiar Tecnicatura Universitaria en Marketing y Publicidad Digital en Mendoza: tecnicatura del área Negocios, dictada por 1 institución (1 privada). Dura 2.5 años. Modalidades disponibles: presencial, a distancia y semipresencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Negocios</dd>
         <dt>Tipo de formación</dt><dd>Tecnicatura</dd>
@@ -82,12 +93,14 @@
     </dl>
 
     <a class="cta" href="/?q=Tecnicatura+Universitaria+en+Marketing+y+Publicidad+Digital&amp;area=Negocios&amp;formacion=tecnicaturas">Ver Tecnicatura Universitaria en Marketing y Publicidad Digital en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Tecnicatura Universitaria en Marketing y Publicidad Digital</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-siglo-21-s21/">Universidad Siglo 21 (S21)</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-marketing-y-publicidad-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -156,6 +169,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Negocios</h2>
     <ul class="enlaces">
         <li><a href="/carrera/contador-publico/">Contador Público</a> <span class="cuantas">(11)</span></li>
@@ -172,7 +186,9 @@
         <li><a href="/carrera/licenciatura-en-analitica-de-negocios/">Licenciatura en Analítica de Negocios</a> <span class="cuantas">(2)</span></li>
     </ul>
     <p><a href="/area/negocios/">Ver las 75 carreras del área Negocios →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

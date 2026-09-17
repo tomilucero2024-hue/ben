@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Gastronomía","item":"https://buscadoreducativo.com.ar/area/gastronomia/"},{"@type":"ListItem","position":4,"name":"Cocinero / Panadero / Pastelero (gratuito)","item":"https://buscadoreducativo.com.ar/carrera/cocinero-panadero-pastelero-gratuito/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Cocinero / Panadero / Pastelero (gratuito)","description":"Dónde estudiar Cocinero / Panadero / Pastelero (gratuito) en Mendoza: curso o formación profesional del área Gastronomía, dictada por 1 institución (1 pública). Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/cocinero-panadero-pastelero-gratuito/","provider":{"@type":"EducationalOrganization","name":"Centro de Capacitación para el Trabajo N° 6-015 \"Cecilia Grierson\"","url":"https://buscadoreducativo.com.ar/institucion/centro-de-capacitacion-para-el-trabajo-n-6-015-cecilia-grierson/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Cocinero / Panadero / Pastelero (gratuito) en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Cocinero / Panadero / Pastelero (gratuito) en Mendoza en la siguiente institución: Centro de Capacitación para el Trabajo N° 6-015 \"Cecilia Grierson\". En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Cocinero / Panadero / Pastelero (gratuito)?","acceptedAnswer":{"@type":"Answer","text":"La duración estimada depende de la institución y modalidad elegida (típicamente entre 4 y 5 años para carreras de grado, o de 2 a 3 años para tecnicaturas)."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Cocinero / Panadero / Pastelero (gratuito)?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Cocinero / Panadero / Pastelero (gratuito)?","acceptedAnswer":{"@type":"Answer","text":"Cocinero / Panadero / Pastelero (gratuito) es una curso o formación profesional perteneciente al área de Gastronomía. Entre sus aptitudes más afines se destacan: trabajo práctico, interacción social y creatividad."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/gastronomia/">Gastronomía</a> <span aria-hidden="true">›</span> <span aria-current="page">Cocinero / Panadero / Pastelero (gratuito)</span></nav>
-    <h1>Cocinero / Panadero / Pastelero (gratuito)</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/gastronomia/">Gastronomía</a> <span aria-hidden="true">›</span> <span aria-current="page">Cocinero / Panadero / Pastelero (gratuito)</span></nav>
+        <h1>Cocinero / Panadero / Pastelero (gratuito)</h1>
     <p class="entrada">Dónde estudiar Cocinero / Panadero / Pastelero (gratuito) en Mendoza: curso o formación profesional del área Gastronomía, dictada por 1 institución (1 pública). Modalidades disponibles: presencial.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Gastronomía</dd>
         <dt>Tipo de formación</dt><dd>Curso o formación profesional</dd>
@@ -81,12 +92,14 @@
     </dl>
 
     <a class="cta" href="/?seccion=oficios-tecnicos&amp;q=Cocinero+%2F+Panadero+%2F+Pastelero+%28gratuito%29">Ver Cocinero / Panadero / Pastelero (gratuito) en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Cocinero / Panadero / Pastelero (gratuito)</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta publica">pública (DGE)</span> <a href="/institucion/centro-de-capacitacion-para-el-trabajo-n-6-015-cecilia-grierson/">Centro de Capacitación para el Trabajo N° 6-015 &quot;Cecilia Grierson&quot;</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://www.elnueve.com/mendoza/cursos-gratuitos-en-mendoza-con-rapida-salida-laboral-donde-inscribirse-y-que-podes-estudiar_20260314/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -148,23 +161,26 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Gastronomía</h2>
     <ul class="enlaces">
         <li><a href="/carrera/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/">Tecnicatura Superior en Enología e Industrias Frutihortícolas</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-gastronomia/">Tecnicatura Superior en Gastronomia</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/bromatologia/">Bromatología</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-gastronomia/">Licenciatura en Gastronomía</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/tecnicatura-en-enologia-y-viticultura/">Tecnicatura en Enología y Viticultura</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-enologia/">Tecnicatura Superior en Enología</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/administrador-a-de-finca-vitivinicola/">Administrador/a de finca vitivinícola</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/analista-sensorial-de-vinos/">Analista Sensorial de Vinos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/asistente-en-laboratorio-vitivinicola/">Asistente en Laboratorio Vitivinícola</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/bromatologia/">Bromatología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ciclo-de-licenciatura-en-enologia/">Ciclo de Licenciatura en Enología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/curso-de-cata-de-vinos/">Curso de Cata de Vinos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/cursos-de-cocina-pasteleria-cafeteria-y-mas/">Cursos de cocina, pastelería, cafetería y más</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/enologia/">Enología</a> <span class="cuantas">(1)</span></li>
     </ul>
     <p><a href="/area/gastronomia/">Ver las 23 carreras del área Gastronomía →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

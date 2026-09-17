@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abogacía: dónde estudiarla en Mendoza | BEN</title>
-<meta name="description" content="Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (1 pública y 7 privadas).">
+<meta name="description" content="Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (8 privadas).">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/carrera/abogacia/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Abogacía: dónde estudiarla en Mendoza | BEN">
-<meta property="og:description" content="Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (1 pública y 7 privadas).">
+<meta property="og:description" content="Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (8 privadas).">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/carrera/abogacia/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Abogacía: dónde estudiarla en Mendoza | BEN">
-<meta name="twitter:description" content="Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (1 pública y 7 privadas).">
+<meta name="twitter:description" content="Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (8 privadas).">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ciencias sociales","item":"https://buscadoreducativo.com.ar/area/ciencias-sociales/"},{"@type":"ListItem","position":4,"name":"Abogacía","item":"https://buscadoreducativo.com.ar/carrera/abogacia/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Abogacía","numberOfItems":8,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-1","item":{"@type":"Course","name":"Abogacía — Universidad Nacional de Cuyo (UNCuyo)","description":"Abogacía en Universidad Nacional de Cuyo (UNCuyo). Duración: 5 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-1","sameAs":"https://www.uncuyo.edu.ar/estudios/carrera/abogacia","provider":{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-2","item":{"@type":"Course","name":"Abogacía — Universidad de Mendoza (UM)","description":"Abogacía en Universidad de Mendoza (UM). Duración: 5 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-2","sameAs":"https://um.edu.ar/carreras/abogacia/","provider":{"@type":"EducationalOrganization","name":"Universidad de Mendoza (UM)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-mendoza-um/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-3","item":{"@type":"Course","name":"Abogacía — Universidad Juan Agustín Maza (UMaza)","description":"Abogacía en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-3","sameAs":"https://www.umaza.edu.ar/landings/abogacia/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-4","item":{"@type":"Course","name":"Abogacía — Universidad Juan Agustín Maza (UMaza)","description":"Abogacía en Universidad Juan Agustín Maza (UMaza). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-4","sameAs":"https://www.umaza.edu.ar/landings/abogaciaVDU/inicio","provider":{"@type":"EducationalOrganization","name":"Universidad Juan Agustín Maza (UMaza)","url":"https://buscadoreducativo.com.ar/institucion/universidad-juan-agustin-maza-umaza/"}}},{"@type":"ListItem","position":5,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-5","item":{"@type":"Course","name":"Abogacía — Universidad de Congreso (UC)","description":"Abogacía en Universidad de Congreso (UC). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-5","sameAs":"https://www.ucongreso.edu.ar/carrera/abogacia/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}},{"@type":"ListItem","position":6,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-6","item":{"@type":"Course","name":"Abogacía — Universidad del Aconcagua (UDA)","description":"Abogacía en Universidad del Aconcagua (UDA). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-6","sameAs":"https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia","provider":{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"}}},{"@type":"ListItem","position":7,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-7","item":{"@type":"Course","name":"Abogacía — Universidad del Aconcagua (UDA)","description":"Abogacía en Universidad del Aconcagua (UDA). Duración: 4 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-7","sameAs":"https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia","provider":{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"}}},{"@type":"ListItem","position":8,"url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-8","item":{"@type":"Course","name":"Abogacía — Universidad Siglo 21 (S21)","description":"Abogacía en Universidad Siglo 21 (S21). Duración: 4 años y medio. Modalidad: Presencial, híbrida o a distancia.","url":"https://buscadoreducativo.com.ar/carrera/abogacia/#oferta-8","sameAs":"https://21.edu.ar/carreras-y-programas/abogacia?hsLang=es","provider":{"@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Abogacía en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Abogacía en Mendoza en 6 instituciones: Universidad Nacional de Cuyo (UNCuyo), Universidad de Mendoza (UM), Universidad Juan Agustín Maza (UMaza), Universidad de Congreso (UC), Universidad del Aconcagua (UDA) y Universidad Siglo 21 (S21). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Abogacía?","acceptedAnswer":{"@type":"Answer","text":"La duración de la carrera varía de 4 a 5 años según el plan de estudio de la institución elegida."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Abogacía?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, a distancia y semipresencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Abogacía?","acceptedAnswer":{"@type":"Answer","text":"Abogacía es una carrera de grado perteneciente al área de Ciencias sociales. Entre sus aptitudes más afines se destacan: pensamiento analítico, interacción social, base teórica y académica y liderazgo y gestión."}}]}</script>
@@ -69,10 +77,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ciencias-sociales/">Ciencias sociales</a> <span aria-hidden="true">›</span> <span aria-current="page">Abogacía</span></nav>
-    <h1>Abogacía</h1>
-    <p class="entrada">Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (1 pública y 7 privadas). Dura de 4 a 5 años según la institución. Modalidades disponibles: presencial, a distancia y semipresencial.</p>
-
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ciencias-sociales/">Ciencias sociales</a> <span aria-hidden="true">›</span> <span aria-current="page">Abogacía</span></nav>
+        <h1>Abogacía</h1>
+    <p class="entrada">Dónde estudiar Abogacía en Mendoza: carrera de grado del área Ciencias sociales, dictada por 6 instituciones (8 privadas). Dura de 4 a 5 años según la institución. Modalidades disponibles: presencial, a distancia y semipresencial.</p>
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Ciencias sociales</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
@@ -82,47 +93,123 @@
     </dl>
 
     <a class="cta" href="/?q=Abogac%C3%ADa&amp;area=Ciencias+sociales&amp;formacion=grado">Ver Abogacía en el buscador →</a>
-
+    </aside>
+    <div class="contenido-pagina">
     <h2>Dónde estudiar Abogacía</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
-            <h3><span class="etiqueta publica">pública</span> <a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <h3><a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción a la Filosofía</li><li>Problemática del Conocimiento</li><li>Introducción al Derecho</li><li>Derecho Romano</li><li>Historia de las Instituciones Argentinas y Latinoamericanas</li><li>Derecho Político</li><li>Derecho Civil</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Derecho Penal Parte I General</li><li>Derecho Constitucional</li><li>Principios de la Economía</li><li>Derecho de las Obligaciones I</li><li>Inglés II</li><li>Práctica Profesional Supervisada I</li><li>Derecho Penal Parte General II</li><li>Finanzas Públicas y Derecho Tributario</li><li>Derecho de las Obligaciones II</li><li>Derecho del Consumidor y Defensa de la Competencia</li><li>Inglés III</li><li>Práctica Profesional Supervisada II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Derecho Penal Parte Especial I</li><li>Derecho Comercial y Societario I</li><li>Contratos Civiles y Comerciales I</li><li>Sociología del Derecho</li><li>Práctica Profesional Supervisada III</li><li>Derecho Penal Parte Especial II</li><li>Derecho Comercial y Societario II</li><li>Contratos Civiles y Comerciales II</li><li>Filosofía del Derecho</li><li>Mediación I</li><li>Práctica Profesional Supervisada IV</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Derechos Reales I</li><li>Títulos Valores</li><li>Derecho del Trabajo y la Seguridad Social</li><li>Derecho Procesal Civil y Comercial. Parte General</li><li>Mediación II</li><li>Práctica Profesional Supervisada V</li><li>Derechos Reales II</li><li>Derecho Procesal Civil y Comercial. Parte Especial</li><li>Derecho Concursal</li><li>Derecho de las Familias</li><li>Derechos Humanos</li><li>Metodología de la Investigación I</li><li>Práctica Profesional Supervisada VI</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5to año</h4>
+            <ul><li>Derecho Sucesorio</li><li>Derecho Administrativo I</li><li>Derecho Procesal Penal I</li><li>Derecho Internacional Público y de la Integración</li><li>Mediación III</li><li>Práctica Profesional Supervisada VII</li><li>Derecho Administrativo II</li><li>Derecho Procesal Penal II</li><li>Derecho de los Recursos Naturales, Aguas; y Protección del Medio Ambiente</li><li>Derecho Internacional Privado</li><li>Metodología de la Investigación II</li><li>Práctica Profesional Supervisada VIII</li><li>Espacios Curriculares Optativos correspondientes al 3º año</li><li>Derecho Público Provincial y Municipal</li><li>Derecho de la Salud y Responsabilidad Médica</li><li>Criminología</li><li>Derecho del Transporte</li><li>Espacios Curriculares Optativos correspondientes al 4º año</li><li>Derecho Electoral</li><li>Derecho del Deporte</li><li>Inteligencia Criminal y Crimen Organizado</li><li>Derecho Aeronáutico</li><li>Derecho Aduanero</li><li>Derecho Procesal</li><li>Constitucional</li><li>Derecho Informático</li><li>Análisis Económico del Derecho</li><li>Derecho Bancario Bursátil y Seguros</li><li>Propiedad Horizontal y Conjuntos Inmobiliarios</li><li>Espacios Curriculares Optativos correspondientes al 5º año</li><li>Derecho Penal Económico</li><li>Procedimientos y Procesos Administrativos Especiales</li><li>Empresa Familiar</li><li>Integración Regional</li><li>Derecho de los Negocios Internacionales</li><li>Derecho Notarial y Registral</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/abogacia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/abogacia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-mendoza-um/">Universidad de Mendoza (UM)</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://um.edu.ar/carreras/abogacia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-3">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción al Derecho</li><li>Derecho Privado I - Parte General</li><li>Introducción a la Filosofía</li><li>Economía I - Microeconomía</li><li>Administración I</li><li>Derecho Constitucional</li><li>Técnicas de Expresión Oral y Escrita</li><li>Derechos Humanos</li><li>Organización Empresarial y Sistemas de Información</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Obligaciones Civiles y Comerciales</li><li>Derecho Penal I - Parte General</li><li>Contratos I - Parte General</li><li>Derecho Internacional Público y de la Integración</li><li>Marketing</li><li>Contratos II - Parte Especial</li><li>Derecho Penal II - Parte Especial</li><li>Derecho Laboral y de la Seguridad Social</li><li>Derecho del Consumidor</li><li>Economía II - Macroeconomía</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Derecho de Familia</li><li>Derecho Comercial y Societario</li><li>Derecho Reales e Intelectuales</li><li>Administración de los Recusos Humanos</li><li>Sucesiones</li><li>Concursos y Quiebras</li><li>Derecho de los Recursos Naturales y Ambiental</li><li>Práctica Profesional I</li><li>Derecho Administrativo</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Derecho Procesal Penal</li><li>Derecho Procesal Civil, Comercial y Tributario</li><li>Finanzas Públicas</li><li>Derecho Tributario</li><li>Derecho Empresario</li><li>Ética Profesional y Habilitación Civil</li><li>Técnicas de Negociación y Mediación</li><li>Derecho Internacional Privado</li><li>Práctica Profesional II</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/abogacia/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/abogacia/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-4">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción al Derecho</li><li>Derecho Privado I - Parte General</li><li>Introducción a la Filosofía</li><li>Economía I - Microeconomía</li><li>Administración I</li><li>Derecho Constitucional</li><li>Técnicas de Expresión Oral y Escrita</li><li>Derechos Humanos</li><li>Organización Empresarial y Sistemas de Información</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Obligaciones Civiles y Comerciales</li><li>Derecho Penal I - Parte General</li><li>Contratos I - Parte General</li><li>Derecho Internacional Público y de la Integración</li><li>Marketing</li><li>Contratos II - Parte Especial</li><li>Derecho Penal II - Parte Especial</li><li>Derecho Laboral y de la Seguridad Social</li><li>Derecho del Consumidor</li><li>Economía II - Macroeconomía</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Derecho de Familia</li><li>Derecho Comercial y Societario</li><li>Derecho Reales e Intelectuales</li><li>Administración de los Recursos Humanos</li><li>Sucesiones</li><li>Concursos y Quiebras</li><li>Derecho de los Recursos Naturales y Ambiental</li><li>Práctica Profesional I</li><li>Derecho Administrativo</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to año</h4>
+            <ul><li>Derecho Procesal Penal</li><li>Derecho Procesal Civil, Comercial y Tributario</li><li>Finanzas Públicas</li><li>Derecho Tributario</li><li>Derecho Empresario</li><li>Ética Profesional y Habilitación Civil</li><li>Técnicas de Negociación y Mediación</li><li>Derecho Internacional Privado</li><li>Práctica Profesional II</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.umaza.edu.ar/landings/abogaciaVDU/inicio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.umaza.edu.ar/landings/abogaciaVDU/inicio" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-5">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-congreso-uc/">Universidad de Congreso (UC)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/abogacia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-6">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-7">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-8">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-siglo-21-s21/">Universidad Siglo 21 (S21)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial, híbrida o a distancia</li><li>Mendoza</li></ul>
+
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/abogacia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -191,6 +278,7 @@
         </details>
     </div>
 
+    <section class="relacionadas">
     <h2>Otras carreras del área Ciencias sociales</h2>
     <ul class="enlaces">
         <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(4)</span></li>
@@ -207,7 +295,9 @@
         <li><a href="/carrera/locucion/">Locución</a> <span class="cuantas">(2)</span></li>
     </ul>
     <p><a href="/area/ciencias-sociales/">Ver las 122 carreras del área Ciencias sociales →</a></p>
-
+    </section>
+    </div>
+</div>
 </main>
 
 <footer class="pie">

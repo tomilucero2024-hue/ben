@@ -36,6 +36,14 @@
             t = g || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             document.documentElement.dataset.theme = t;
             document.documentElement.style.colorScheme = t;
+
+            // Mantener la escala tipográfica de accesibilidad de la app también
+            // en las páginas estáticas, antes de que cargue la hoja de estilos.
+            const a11y = JSON.parse(localStorage.getItem('ben-a11y') || '{}');
+            const escala = Number(a11y.fontScale);
+            if (Number.isFinite(escala) && escala > 0) {
+                document.documentElement.style.setProperty('--font-scale', escala);
+            }
         } catch (e) {}
         // El logo se elige acá, antes de que el parser vea el <img>: antes venía
         // el claro en el src y se cambiaba al oscuro después, con lo cual en
@@ -48,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260915_02">
+<link rel="stylesheet" href="/paginas.css?v=20260917_01">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Universidad Católica Argentina (UCA)","item":"https://buscadoreducativo.com.ar/institucion/universidad-catolica-argentina-uca/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad Católica Argentina (UCA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-catolica-argentina-uca/","email":"ingresomendoza@uca.edu.ar","telephone":"4429400","address":{"@type":"PostalAddress","streetAddress":"Uruguay 750, Godoy Cruz","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -68,10 +76,13 @@
 </header>
 
 <main class="envoltorio">
-    <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">Universidad Católica Argentina (UCA)</span></nav>
-    <h1>Universidad Católica Argentina (UCA)</h1>
+    <div class="pagina-layout">
+    <div class="principal">
+        <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">Universidad Católica Argentina (UCA)</span></nav>
+        <h1>Universidad Católica Argentina (UCA)</h1>
     <p class="entrada">Universidad Católica Argentina (UCA): 17 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.</p>
-
+    </div>
+    <aside class="lateral">
     <dl class="ficha">
         <dt>Gestión</dt><dd>privada</dd>
         <dt>Nivel</dt><dd>universidad</dd>
@@ -83,42 +94,51 @@
     </dl>
 
     <a class="cta" href="/?institucion=Universidad%20Cat%C3%B3lica%20Argentina%20(UCA)">Ver esta institución en el buscador →</a>
+    </aside>
+    <div class="contenido-pagina">
 
     <h2>Negocios (7)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/contador-publico/">Contador Público</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion-de-empresas/">Licenciatura en Administración de Empresas</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-economia-empresarial/">Licenciatura en Economía Empresarial</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-gestion-de-negocios-digitales/">Licenciatura en Gestión de Negocios Digitales</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-gestion-del-liderazgo-y-desarrollo-organizacional/">Licenciatura en Gestión del Liderazgo y Desarrollo Organizacional</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-marketing/">Licenciatura en Marketing</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/martillero-publico-corredor-inmobiliario-y-mobiliario-administrador-de/">Martillero Público, Corredor (Inmobiliario y Mobiliario), Administrador de Consorcios y Tasador</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -128,21 +148,25 @@
         <li class="oferta">
             <h3><a href="/carrera/ciclo-de-licenciatura-en-comunicacion-digital-e-interactiva/">Ciclo de Licenciatura en Comunicación Digital e Interactiva</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-ciencias-del-comportamiento/">Licenciatura en Ciencias del Comportamiento</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-comunicacion-digital-e-interactiva/">Licenciatura en Comunicación Digital e Interactiva</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-relaciones-internacionales/">Licenciatura en Relaciones Internacionales</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -152,21 +176,25 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-psicopedagogia/">Licenciatura en Psicopedagogía</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-universitario-de-educacion-inicial/">Profesorado Universitario de Educación Inicial</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-universitario-de-educacion-primaria/">Profesorado Universitario de Educación Primaria</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-universitario-en-educacion-fisica-y-deportes/">Profesorado Universitario en Educación Física y Deportes</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/profesorado/profesorado-universitario-en-educacion-fisica-y-deportes" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -176,6 +204,7 @@
         <li class="oferta">
             <h3><a href="/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-calidad-y-medio-ambiente/">Ciclo de Licenciatura en Higiene y Seguridad, Calidad y Medio Ambiente</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: A Distancia</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -185,10 +214,12 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-psicologia/">Licenciatura en Psicología</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
             <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
-
+    </div>
+</div>
 </main>
 
 <footer class="pie">
