@@ -19,7 +19,7 @@ export const LIMITE_PAGINA = 24;
 function enlaceFichaBEN(nombre) {
     const slug = enlacesBEN.carreras[normalizarTexto(nombre)];
     return slug
-        ? `<a class="card-link card-link-ben" href="/carrera/${slug}/">Ver dónde se estudia →</a>`
+        ? `<a class="card-link card-link-ben" href="/carrera/${slug}/">Ver más información →</a>`
         : '';
 }
 
