@@ -4149,21 +4149,21 @@
     {
       "clave": "licenciatura en diseno industrial",
       "nombre": "Licenciatura en Diseño Industrial",
-      "categoria": "Grado / Carrera",
+      "categoria": "Pregrado",
       "area": "Diseño",
-      "formacion": "grado",
+      "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
-        "analitico": 3,
+        "analitico": 2,
         "tecnologico": 3,
         "practico": 5,
         "social": 2,
         "creativo": 5,
         "terreno": 1,
         "liderazgo": 2,
-        "teorico": 3,
+        "teorico": 1,
         "matematico": 1,
         "movilidad": 2
       }
@@ -4171,21 +4171,21 @@
     {
       "clave": "licenciatura en diseno y animacion digital",
       "nombre": "Licenciatura en Diseño y Animación Digital",
-      "categoria": "Grado / Carrera",
+      "categoria": "Pregrado",
       "area": "Diseño",
-      "formacion": "grado",
+      "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
-        "analitico": 3,
+        "analitico": 2,
         "tecnologico": 3,
         "practico": 5,
         "social": 2,
         "creativo": 5,
         "terreno": 1,
         "liderazgo": 2,
-        "teorico": 3,
+        "teorico": 1,
         "matematico": 1,
         "movilidad": 2
       }
@@ -5078,9 +5078,9 @@
     {
       "clave": "licenciatura en kinesiologia y fisioterapia",
       "nombre": "Licenciatura en Kinesiología y Fisioterapia",
-      "categoria": "Pregrado",
+      "categoria": "Grado / Carrera",
       "area": "Salud",
-      "formacion": "tecnicaturas",
+      "formacion": "grado",
       "instituciones": [
         "Universidad Siglo 21 (S21)"
       ],
@@ -5092,7 +5092,7 @@
         "creativo": 1,
         "terreno": 1,
         "liderazgo": 3,
-        "teorico": 4,
+        "teorico": 5,
         "matematico": 2,
         "movilidad": 2
       }
@@ -8097,8 +8097,8 @@
       }
     },
     {
-      "clave": "profesorado universitario para el nivel secundario y superior",
-      "nombre": "Profesorado Universitario para el Nivel Secundario y Superior",
+      "clave": "profesorado universitario para el nivel secundario y superior (ccc)",
+      "nombre": "Profesorado Universitario para el Nivel Secundario y Superior (CCC)",
       "categoria": "Grado / Carrera",
       "area": "Educación",
       "formacion": "profesorados",

@@ -5,7 +5,103 @@ import requests
 from bs4 import BeautifulSoup
 
 from scraper_utils import (carreras_por_link, es_duracion_real, extraer_duracion,
-                           guardar_json, mejor_duracion)
+                           guardar_json, limpiar_texto, mejor_duracion)
+
+
+# ---------------------------------------------------------------------------
+# Plan de estudio
+# ---------------------------------------------------------------------------
+# S21 publica el plan de dos maneras según la carrera:
+#  1. Pestañas por año: .study-plan__panel-wrapper con <h3> .. contenido en <ul>.
+#  2. Acordeón: .ac-accordion-modalidad__wrap (año en el <h6>, materias en <ul>).
+# El acordeón se repite en la página para modalidades y FAQ, así que sólo
+# levantamos los títulos que son año/cuatrimestre o materias adicionales.
+ORDEN = (r"primer|segundo|tercer|cuarto|quinto|sexto|s[eé]ptimo|octavo|"
+         r"noveno|d[eé]cimo|und[eé]cimo|duod[eé]cimo")
+RE_ANIO = re.compile(rf"^(?:{ORDEN})\s+a[nñ]o$", re.I)
+RE_CUATRI = re.compile(rf"^(?:{ORDEN})\s+cuatrimestre$", re.I)
+RE_NUMERO = re.compile(r"^(\d+)\s*[°º]\s*(a[nñ]o|cuatrimestre)$", re.I)
+EXTRAS = {"materias adicionales", "extras", "materias electivas",
+          "materias optativas", "optativas"}
+ORDINALES = ["primer", "segundo", "tercer", "cuarto", "quinto", "sexto",
+             "séptimo", "octavo", "noveno", "décimo", "undécimo", "duodécimo"]
+
+
+def _normalizar_tramo(titulo):
+    """'2° año' -> 'Segundo año', para que quede igual que los otros paneles."""
+    m = RE_NUMERO.match(titulo)
+    if not m:
+        return titulo
+    n = int(m.group(1))
+    if 1 <= n <= len(ORDINALES):
+        return f"{ORDINALES[n - 1].capitalize()} {m.group(2).lower()}"
+    return titulo
+
+
+def _materias(ul):
+    salida = []
+    for li in ul.find_all("li"):
+        t = limpiar_texto(li.get_text(" ", strip=True))
+        if t and t not in salida:
+            salida.append(t)
+    return salida
+
+
+def _tramos_tabs(sopa):
+    tabs = [limpiar_texto(b.get_text(" ", strip=True))
+            for b in sopa.select(".study-plan__tab")]
+    tramos = []
+    for i, w in enumerate(sopa.select(".study-plan__panel-wrapper")):
+        h = w.select_one(".study-plan__content-title")
+        anio = limpiar_texto(h.get_text(" ", strip=True)) if h else ""
+        if not anio and i < len(tabs):
+            anio = tabs[i]
+        anio = _normalizar_tramo(anio)
+        materias = []
+        for ul in w.select(".study-plan__content ul"):
+            for m in _materias(ul):
+                if m not in materias:
+                    materias.append(m)
+        if anio and materias:
+            tramos.append({"anio": anio, "materias": materias})
+    return tramos
+
+
+def _tramos_acordeon(sopa):
+    anios, cuatris, extras = [], [], []
+    for w in sopa.select(".ac-accordion-modalidad__wrap"):
+        h = w.select_one(".ac-accordion-modalidad__title h6") \
+            or w.select_one(".ac-accordion-modalidad__title")
+        if not h:
+            continue
+        titulo = _normalizar_tramo(limpiar_texto(h.get_text(" ", strip=True)))
+        bajo = titulo.lower()
+        if not (RE_ANIO.match(titulo) or RE_CUATRI.match(titulo) or bajo in EXTRAS):
+            continue
+        materias = []
+        for ul in w.select(".ac-accordion-modalidad__content ul"):
+            for m in _materias(ul):
+                if m not in materias:
+                    materias.append(m)
+        if not materias:
+            continue
+        tramo = {"anio": titulo, "materias": materias}
+        if RE_ANIO.match(titulo):
+            anios.append(tramo)
+        elif RE_CUATRI.match(titulo):
+            cuatris.append(tramo)
+        else:
+            extras.append(tramo)
+    if anios:
+        return anios + extras
+    return cuatris + extras
+
+
+def extraer_plan(sopa):
+    tramos = _tramos_tabs(sopa)
+    if not tramos:
+        tramos = _tramos_acordeon(sopa)
+    return tramos or None
 
 
 print("🛠️ Encendiendo el escáner V10.1 para la Universidad Siglo 21 (S21)...")
@@ -74,7 +170,8 @@ for pagina in range(1, 8):
             # ("Contador Público"), así que nunca coincidían y cada corrida
             # re-scrapeaba todo — y lo que fallaba se perdía.
             guardada = carreras_viejas.get(link_real)
-            if guardada and es_duracion_real(guardada.get("duracion")):
+            if (guardada and es_duracion_real(guardada.get("duracion"))
+                    and guardada.get("plan_estudio")):
                 s21_data["carreras"].append(guardada)
                 print(f"  ⏭️ Recuperada: {nombre_temporal[:35]} — {guardada['duracion']}")
             else:
@@ -85,6 +182,7 @@ for pagina in range(1, 8):
                 modalidad_texto = "Presencial, Híbrida o Distancia" # Por si el escáner falla
                 categoria = "Grado / Carrera"
                 facultad = "S21"
+                plan = None
                 
                 try:
                     time.sleep(0.5) 
@@ -116,10 +214,13 @@ for pagina in range(1, 8):
                     if re.search(r'\bpregrado\b', texto_completo, re.IGNORECASE):
                         categoria = "Pregrado"
 
+                    # 5. Plan de estudio (pestañas por año o acordeón)
+                    plan = extraer_plan(sopa_det)
+
                 except Exception as e:
-                    pass 
-                    
-                s21_data["carreras"].append({
+                    pass
+
+                nueva = {
                     "id": id_global,
                     "nombre_carrera": nombre_carrera,
                     "categoria": categoria,
@@ -129,12 +230,24 @@ for pagina in range(1, 8):
                     "modalidad": modalidad_texto,
                     "facultad": facultad,
                     "link_oficial": link_real
-                })
+                }
+                # Si la extracción falló pero ya teníamos un plan guardado, se
+                # mantiene el viejo en vez de perderlo.
+                plan = plan or (guardada or {}).get("plan_estudio")
+                if plan:
+                    nueva["plan_estudio"] = plan
+                    nueva["plan_fuente"] = link_real
+                s21_data["carreras"].append(nueva)
             id_global += 1
             contador += 1
             
     except Exception as e:
         print(f"⚠️ Error en página {pagina}: {e}")
+
+# IDs correlativos: las carreras recuperadas conservan el id viejo mientras
+# id_global avanza, y eso generaba ids repetidos (p.ej. 1011 tres veces).
+for i, carrera in enumerate(s21_data["carreras"]):
+    carrera["id"] = 1000 + i
 
 print(f"\n✅ ¡Motor afinado! Se escanearon {contador} carreras de la Siglo 21.")
 
