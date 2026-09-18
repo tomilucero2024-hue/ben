@@ -1,298 +1,1821 @@
 {
- "instituciones": [
-  {
-   "id": 3,
-   "nombre": "Universidad de Mendoza (UM)",
-   "nivel": "universidad",
-   "gestion": "privada",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "4202017",
-    "email": "informes@um.edu.ar",
-    "direccion": "Boulogne Sur Mer 683, Ciudad"
-   },
-   "carreras": [
-    {
-     "id": 300,
-     "nombre_carrera": "Abogacía",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 año",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Mendoza / Sede San Rafael",
-     "link_oficial": "https://um.edu.ar/carreras/abogacia/"
-    },
-    {
-     "id": 301,
-     "nombre_carrera": "Corredor Inmobiliario",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años y medio",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/corredor-inmobiliario/"
-    },
-    {
-     "id": 302,
-     "nombre_carrera": "Escribanía",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / Sede San Rafael",
-     "link_oficial": "https://um.edu.ar/carreras/escribania/"
-    },
-    {
-     "id": 303,
-     "nombre_carrera": "Licenciatura en Emprendimientos Inmobiliarios",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años (además del Examen de graduación, previo cumplimiento de los REQUISITOS DE ADMISIÓN correspondientes)",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-emprendimientos-inmobiliarios/"
-    },
-    {
-     "id": 304,
-     "nombre_carrera": "Martillero Público",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/martillero-publico/"
-    },
-    {
-     "id": 305,
-     "nombre_carrera": "Procuración",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / Sede San Rafael",
-     "link_oficial": "https://um.edu.ar/carreras/procuracion/"
-    },
-    {
-     "id": 306,
-     "nombre_carrera": "Arquitectura y Urbanismo",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/arquitectura-y-urbanismo/"
-    },
-    {
-     "id": 307,
-     "nombre_carrera": "Diseño Gráfico",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/diseno-grafico/"
-    },
-    {
-     "id": 308,
-     "nombre_carrera": "Diseño de Interiores",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / Sede San Rafael",
-     "link_oficial": "https://um.edu.ar/carreras/diseno-de-interiores/"
-    },
-    {
-     "id": 309,
-     "nombre_carrera": "Diseño de Indumentaria y Textil",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/diseno-de-indumentaria-y-textil/"
-    },
-    {
-     "id": 310,
-     "nombre_carrera": "Licenciatura en Diseño",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-diseno/"
-    },
-    {
-     "id": 311,
-     "nombre_carrera": "Corredor Inmobiliario. Título complementario de Arquitectura",
-     "categoria": "Grado / Carrera",
-     "duracion": "Tres semestres académicos consecutivos + examen de PRÁCTICA INTEGRADA 1",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central",
-     "link_oficial": "https://um.edu.ar/carreras/corredor-inmobiliario-titulo-complementario-de-arquitectura/"
-    },
-    {
-     "id": 312,
-     "nombre_carrera": "Ingeniería en Computación",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 año",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central",
-     "link_oficial": "https://um.edu.ar/carreras/ingenieria-en-computacion/"
-    },
-    {
-     "id": 313,
-     "nombre_carrera": "Ingeniería Electrónica",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 año",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central",
-     "link_oficial": "https://um.edu.ar/carreras/ingenieria-electronica/"
-    },
-    {
-     "id": 314,
-     "nombre_carrera": "Ingeniería Industrial",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 año",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central",
-     "link_oficial": "https://um.edu.ar/carreras/ingenieria-industrial/"
-    },
-    {
-     "id": 315,
-     "nombre_carrera": "Ingeniería en Informática",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 año",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / San Rafael",
-     "link_oficial": "https://um.edu.ar/carreras/ingenieria-en-informatica/"
-    },
-    {
-     "id": 316,
-     "nombre_carrera": "Ingeniería Eléctrica",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 año",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central",
-     "link_oficial": "https://um.edu.ar/carreras/ingenieria-electrica/"
-    },
-    {
-     "id": 317,
-     "nombre_carrera": "Bioingeniería",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 año",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central",
-     "link_oficial": "https://um.edu.ar/carreras/bioingenieria/"
-    },
-    {
-     "id": 318,
-     "nombre_carrera": "Tecnicatura en Desarrollo de Videojuegos",
-     "categoria": "Grado / Carrera",
-     "duracion": "A confirmar",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central",
-     "link_oficial": "https://um.edu.ar/carreras/tecnicatura-en-desarrollo-de-videojuegos/"
-    },
-    {
-     "id": 319,
-     "nombre_carrera": "Profesorado para Profesionales con Título de Grado",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 semestre",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/profesorado-para-profesionales-con-titulo-de-grado/"
-    },
-    {
-     "id": 320,
-     "nombre_carrera": "Tecnicatura Universitaria en Desarrollo de Software",
-     "categoria": "Grado / Carrera",
-     "duracion": "A confirmar",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-desarrollo-de-software/"
-    },
-    {
-     "id": 321,
-     "nombre_carrera": "Odontología",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central",
-     "link_oficial": "https://um.edu.ar/carreras/odontologia/"
-    },
-    {
-     "id": 322,
-     "nombre_carrera": "Licenciatura en Kinesiología",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / San Rafael / Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-kinesiologia/"
-    },
-    {
-     "id": 323,
-     "nombre_carrera": "Licenciatura en Psicología",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / San Rafael / Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-psicologia/"
-    },
-    {
-     "id": 324,
-     "nombre_carrera": "Licenciatura en Nutrición",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-nutricion/"
-    },
-    {
-     "id": 325,
-     "nombre_carrera": "Tecnicatura Universitaria en Radiología",
-     "categoria": "Grado / Carrera",
-     "duracion": "Tres años (2 años y medio, más la Practica Preprofesional)",
-     "modalidad": "Presencial",
-     "facultad": "UM - Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-radiologia/"
-    },
-    {
-     "id": 326,
-     "nombre_carrera": "Tecnicatura Universitaria en Instrumentación Quirúrgica",
-     "categoria": "Grado / Carrera",
-     "duracion": "Tres años (2 años y medio, más la Práctica)",
-     "modalidad": "Presencial",
-     "facultad": "UM - Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-instrumentacion-quirurgica/"
-    },
-    {
-     "id": 327,
-     "nombre_carrera": "Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Río Cuarto",
-     "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo/"
-    },
-    {
-     "id": 328,
-     "nombre_carrera": "Contador Público",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / Sede San Rafael",
-     "link_oficial": "https://um.edu.ar/carreras/contador-publico/"
-    },
-    {
-     "id": 329,
-     "nombre_carrera": "Licenciado en Administración de Negocios",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / Sede San Rafael",
-     "link_oficial": "https://um.edu.ar/carreras/licenciado-en-administracion-de-negocios/"
-    },
-    {
-     "id": 330,
-     "nombre_carrera": "Medicina",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 años de cursado, más un 1 año de Práctica Final Obligatoria",
-     "modalidad": "Presencial",
-     "facultad": "UM - Sede Central / Sede San Rafael",
-     "link_oficial": "https://um.edu.ar/carreras/medicina/"
-    }
-   ],
-   "departamento": "Capital"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 3,
+            "nombre": "Universidad de Mendoza (UM)",
+            "nivel": "universidad",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "4202017",
+                "email": "informes@um.edu.ar",
+                "direccion": "Boulogne Sur Mer 683, Ciudad"
+            },
+            "carreras": [
+                {
+                    "id": 300,
+                    "nombre_carrera": "Abogacía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Mendoza / Sede San Rafael",
+                    "link_oficial": "https://um.edu.ar/carreras/abogacia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Instituciones de Derecho Romano",
+                                "Introducción al Derecho",
+                                "Derecho Civil-Parte General",
+                                "Historia de las Instituciones Políticas Argentinas",
+                                "Introducción a la Argumentación Jurídica",
+                                "Introducción a la Economía",
+                                "Administración",
+                                "Contabilidad Básica",
+                                "Introducción a la Retórica Jurídica"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Historia de las Ideas Políticas",
+                                "Derecho Constitucional y Derechos Humanos",
+                                "Derecho de las Obligaciones",
+                                "Derecho de Daños",
+                                "Derecho Comercial y Societario I",
+                                "Derecho Político",
+                                "Introducción al Derecho Procesal Civil y Comercial",
+                                "Derecho Comercial y Societario II",
+                                "Derecho Penal-Parte General"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Derecho de los Contratos I",
+                                "Derecho de los Contratos II",
+                                "Derecho Penal-Parte Especial I",
+                                "Derecho Penal-Parte Especial II",
+                                "Finanzas y Régimen Tributario",
+                                "Derecho del Trabajo y Seguridad Social I",
+                                "Derecho del Trabajo y Seguridad Social II",
+                                "Instituciones del Derecho Cambiario y Bancario",
+                                "Transporte y Seguros",
+                                "Métodos Alternativos de Resolución de Conflictos"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "Derecho Procesal Penal I",
+                                "Derecho Procesal Penal II",
+                                "Derecho Reales, Registrales e Intelectuales I",
+                                "Derecho Reales, Registrales e Intelectuales II",
+                                "Derecho Administrativo",
+                                "Derecho Internacional Público y de la Integración",
+                                "Derecho Procesal Civil y Comercial I",
+                                "Derecho Procesal Civil y Comercial II",
+                                "Concursos y Quiebras",
+                                "Filosofía Jurídica"
+                            ]
+                        },
+                        {
+                            "anio": "Quinto año",
+                            "materias": [
+                                "Derecho Ambiental y Recursos Naturales I",
+                                "Derecho Ambiental y Recursos Naturales II",
+                                "Derecho de Familia",
+                                "Derecho de Sucesiones",
+                                "Derecho Internacional Privado",
+                                "Optativa I",
+                                "Optativa II",
+                                "Metodología de la Investigación",
+                                "Práctica Profesional y Práctica Profesional Supervisada"
+                            ]
+                        },
+                        {
+                            "anio": "Condición final de egreso",
+                            "materias": [
+                                "Trabajo Final de Investigación"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/abogacia/"
+                },
+                {
+                    "id": 301,
+                    "nombre_carrera": "Corredor Inmobiliario",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/corredor-inmobiliario/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Comunicación 1 (Psicología Social Básica)",
+                                "Corretaje 1 (Contexto Ocupacional)",
+                                "Derecho 1 (Propedéutica Jurídica)",
+                                "Diseño 1 (Logística Disciplinar)",
+                                "Idioma 1 (Inglés Básico)",
+                                "Inmobiliario 1 (Valoración Edilicia)",
+                                "Marketing 1 (Posicionamiento)",
+                                "Valuación 1 (Técnicas Operacionales)",
+                                "Práctica Integrada 1 (Módulo Introductorio)"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Comunicación 2 (Psicología Social Aplicada)",
+                                "Corretaje 2 (Gestión De Negocios)",
+                                "Derecho 2 (Logística Jurídica)",
+                                "Diseño 2 (Intermediación Creativa)",
+                                "Idioma 2 (Inglés Aplicado)",
+                                "Inmobiliario 2 (Desarrollo Urbano)",
+                                "Marketing 2 (Riesgos Inmobiliarios)",
+                                "Valuación 2 (Técnicas Procesales)",
+                                "Práctica Integrada 1 (Módulo Instrumental)"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Módulo Aplicativo (un semestre)",
+                                "Práctica Ocupacional",
+                                "Práctica Integrada"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/corredor-inmobiliario/"
+                },
+                {
+                    "id": 302,
+                    "nombre_carrera": "Escribanía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / Sede San Rafael",
+                    "link_oficial": "https://um.edu.ar/carreras/escribania/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Derecho Civil – Parte General",
+                                "Derecho Romano",
+                                "Historia de las Instituciones Políticas Argentina s",
+                                "Derecho Penal – Parte General",
+                                "Introducción al Derecho"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Derecho de las Obligaciones",
+                                "Títulos de Créditos y otros Papeles de Comercio",
+                                "Derecho Constitucional",
+                                "Derecho Comercial General, Empresario y Societario",
+                                "Contratos Civiles y Comerciales"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Derecho Administrativo",
+                                "Transporte y Seguro",
+                                "Derecho Procesal Civil",
+                                "Derechos Reales, Registrales e Intelectuales",
+                                "Concursos y Quiebras",
+                                "Derecho Financiero y Tributario"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "Derecho de Familia",
+                                "Derecho de Sucesiones",
+                                "Derecho Registral y Práctica Registral",
+                                "Derecho Notarial y Práctica Notarial",
+                                "Derecho Ambiental y Recursos Naturales",
+                                "Instituciones de Derecho Internacional Privado",
+                                "Seminario"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/escribania/"
+                },
+                {
+                    "id": 303,
+                    "nombre_carrera": "Licenciatura en Emprendimientos Inmobiliarios",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-emprendimientos-inmobiliarios/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer semestre",
+                            "materias": [
+                                "COMUNICACIÓN 3 Recursos",
+                                "DERECHO 3 Comercial",
+                                "MARKETING 3 Mercado Inmobi",
+                                "VALUACIÓN 3 Matemática"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo semestre",
+                            "materias": [
+                                "COMUNICACIÓN 4 Informática",
+                                "DISEÑO 3 Estadística",
+                                "INMOBILIARIO 3 Economía",
+                                "MARKETING 4 Negocios Inmob",
+                                "PRÁCTICA INTEGRADA 2"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer semestre",
+                            "materias": [
+                                "DERECHO 4 Internacional",
+                                "IDIOMA 3 Inglés Comercial",
+                                "INMOBILIARIO 4 Atractivos Inmob",
+                                "MARKETING 5 Gestión Estratégica",
+                                "PRÁCTICA INTEGRADA 2"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto semestre",
+                            "materias": [
+                                "DISEÑO 4 Creatividad Inmob",
+                                "IDIOMA 4 Inglés Especializado",
+                                "INMOBILIARIO 5 Proyectos Inmob",
+                                "VALUACIÓN 4 Finanzas",
+                                "PRÁCTICA PROFESIONAL 1",
+                                "PRÁCTICA INTEGRADA 2"
+                            ]
+                        },
+                        {
+                            "anio": "Quinto semestre",
+                            "materias": [
+                                "COMUNICACIÓN 5 Ética Social",
+                                "DISEÑO 5 Tendencias Actuales",
+                                "MARKETING 6 Simulación de Negocios",
+                                "VALUCIÓN 5 Análisis de Rentabilidad",
+                                "PRÁCTICA PROFESIONAL 2",
+                                "PRÁCTICA INTEGRADA 2"
+                            ]
+                        },
+                        {
+                            "anio": "Sexto semestre",
+                            "materias": [
+                                "COMUNICIÓN 6 Presentación de Proyectos",
+                                "DISEÑO 6 Decisiones",
+                                "INMOB. 6 Juego de Emprendedores",
+                                "VALUACIÓN 6 Impacto Ambiental",
+                                "PRÁCTICA INTEGRADA 2"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/licenciatura-en-emprendimientos-inmobiliarios/"
+                },
+                {
+                    "id": 304,
+                    "nombre_carrera": "Martillero Público",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/martillero-publico/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Comunicación 1 (Psicología Social Básica)",
+                                "Derecho 1 (Propedéutica Jurídica)",
+                                "Diseño 1 (Valoración Patrimonial)",
+                                "Gestión 1 (Contexto Ocupacional)",
+                                "Idioma 1 (Ingles Básico)",
+                                "Marketing 1 (Posicionamiento)",
+                                "Subasta 1 (Logística Disciplinar)",
+                                "Valuación 1 (Técnicas Operacionales)"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Comunicación 2 (Psicología Social aplicada)",
+                                "Derecho 2 (Logística Jurídica)",
+                                "Diseño 2 (Actuación Creativa)",
+                                "Gestión 2 (Contexto Social)",
+                                "Idioma 2 (Ingles Aplicado)",
+                                "Marketing 2 (Riesgos Comerciales)",
+                                "Subasta 2 (Mercado Regional)",
+                                "Valuación 2 (Técnicas Procesales)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/martillero-publico/"
+                },
+                {
+                    "id": 305,
+                    "nombre_carrera": "Procuración",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / Sede San Rafael",
+                    "link_oficial": "https://um.edu.ar/carreras/procuracion/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Derecho Civil – Parte General",
+                                "Derecho Comercial - Parte General",
+                                "Derecho de las Obligaciones",
+                                "Derecho Constitucional",
+                                "Títulos de Crédito y otros Papeles de Comercio"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Derecho del Trabajo y de la Seguridad Social",
+                                "Contratos Civiles y Comerciales",
+                                "Derecho Administrativo",
+                                "Derecho Procesal Civil",
+                                "Derechos Reales, Registrales e Intelectuales"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Concursos y Quiebras",
+                                "Derecho de Familia",
+                                "Derecho de Sucesiones",
+                                "Seminario",
+                                "Práctica Profesional"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/procuracion/"
+                },
+                {
+                    "id": 306,
+                    "nombre_carrera": "Arquitectura y Urbanismo",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/arquitectura-y-urbanismo/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "ARQUITECTURA 1",
+                                "CONSTRUCCIONES I",
+                                "CULTURA ARQUITECTÓNICA",
+                                "DIBUJO Y EXPRESIÓN",
+                                "ESTRUCTURAS 1",
+                                "MATEMÁTICAS",
+                                "SISTEMAS DE REPRESENTACIÓN"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "AMBIENTE 1",
+                                "ARQUITECTURA 2",
+                                "CONSTRUCCIONES 2",
+                                "ESTRUCTURAS 2",
+                                "HISTORIA DE LA ARQUITECTURA Y EL URBANISMO 1",
+                                "TEORÍA DE LA ARQUITECTURA Y EL URBANISMO 1"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "AMBIENTE 2",
+                                "ARQUITECTURA 3",
+                                "CONSTRUCCIONES 3",
+                                "ESTRUCTURAS 3",
+                                "HISTORIA DE LA ARQUITECTURA Y EL URBANISMO 2",
+                                "TEORÍA DE LA ARQUITECTURA Y EL URBANISMO 2"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "AMBIENTE 3",
+                                "ARQUITECTURA 4",
+                                "CONSTRUCCIONES 4",
+                                "ESTRUCTURAS 4",
+                                "HISTORIA DE LA ARQUITECTURA Y EL URBANISMO 3",
+                                "TEORÍA DE LA ARQUITECTURA Y EL URBANISMO 3"
+                            ]
+                        },
+                        {
+                            "anio": "Quinto año",
+                            "materias": [
+                                "ARQUITECTURA 5",
+                                "ORGANIZACIÓN, ADMINISTRACIÓN Y LEGISLACIÓN",
+                                "PRACTICANTADO (Incluye Práctica Profesional Supervisada)",
+                                "PROYECTOS INMOBILIARIOS",
+                                "URBANISMO",
+                                "OPTATIVA I",
+                                "OPTATIVA II",
+                                "PROYECTO FINAL",
+                                "FRANCÉS",
+                                "INGLÉS",
+                                "DISEÑO ASISTIDO POR COMPUTADORA – DAC",
+                                "CONSTRUCCIONES 5",
+                                "LUMINOTECNIA Y ACÚSTICA",
+                                "MARKETING PARA ARQUITECTOS",
+                                "MOVILIDAD URBANA",
+                                "DISEÑO ARQUITECTÓNICO",
+                                "DISEÑO URBANO",
+                                "PROCEDIMIENTOS Y TÉCNICAS DEL DISEÑO SUSTENTABLE",
+                                "PAISAJE Y SOSTENIBILIDAD DEL TERRITORIO",
+                                "PSICOLOGÍA",
+                                "TENDENCIAS ACTUALES",
+                                "PROCESOS DE INVESTIGACIÓN Y DISEÑO",
+                                "VIVIENDA SOCIAL"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/wp-content/uploads/PLAN-DE-ESTUDIOS-DETALLADO.pdf"
+                },
+                {
+                    "id": 307,
+                    "nombre_carrera": "Diseño Gráfico",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/diseno-grafico/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Cultura del Diseño I y II",
+                                "Dibujo y Expresión Visual I y II",
+                                "Informática I y II",
+                                "Taller de Introducción al Diseño I y II"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Diseño Regional",
+                                "Materialización I y II",
+                                "Creatividad en el Diseño",
+                                "Taller de Diseño Integral I y II",
+                                "Psicología",
+                                "Actuación Profesional"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Introducción a la Investigación",
+                                "Semiología",
+                                "Práctica Profesional",
+                                "Opcional Específica I",
+                                "Opcional Específica II",
+                                "Taller Especial de Diseño I y II",
+                                "Presentación Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/diseno-grafico/"
+                },
+                {
+                    "id": 308,
+                    "nombre_carrera": "Diseño de Interiores",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / Sede San Rafael",
+                    "link_oficial": "https://um.edu.ar/carreras/diseno-de-interiores/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Cultura del Diseño I y II",
+                                "Dibujo y Expresión Visual I y II",
+                                "Informática I y II",
+                                "Taller de Introducción al Diseño I y II"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Diseño Regional",
+                                "Materialización I y II",
+                                "Creatividad en el Diseño",
+                                "Taller de Diseño Integral I y II",
+                                "Psicología",
+                                "Actuación Profesional"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Introducción a la Investigación",
+                                "Semiología",
+                                "Práctica Profesional",
+                                "Opcional Específica I",
+                                "Opcional Específica II",
+                                "Taller Especial de Diseño I y II",
+                                "Presentación Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/diseno-de-interiores/"
+                },
+                {
+                    "id": 309,
+                    "nombre_carrera": "Diseño de Indumentaria y Textil",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/diseno-de-indumentaria-y-textil/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Cultura del Diseño I y II",
+                                "Dibujo y Expresión Visual I y II",
+                                "Informática I y II",
+                                "Taller de Introducción al Diseño I y II"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Diseño Regional",
+                                "Materialización I y II",
+                                "Creatividad en el Diseño",
+                                "Taller Integral I y II",
+                                "Psicología de la Percepción",
+                                "Actuación Profesional"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Introducción a la Investigación",
+                                "Semiología",
+                                "Práctica Profesional",
+                                "Opcional Específica I",
+                                "Opcional Específica II",
+                                "Taller Especial de Diseño I y II",
+                                "Presentación Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/diseno-de-indumentaria-y-textil/"
+                },
+                {
+                    "id": 310,
+                    "nombre_carrera": "Licenciatura en Diseño",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-diseno/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Cultura del Diseño I y II",
+                                "Dibujo y Expresión Visual I y II",
+                                "Informática I y II",
+                                "Taller de Introducción al Diseño I y II"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Diseño Regional",
+                                "Materialización I y II",
+                                "Creatividad en el Diseño",
+                                "Taller de Diseño Integral I y II",
+                                "Psicología de la Percepción",
+                                "Actuación Profesional"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Actuación Empresarial",
+                                "Práctica Profesional",
+                                "Opcional Específica I",
+                                "Opcional Específica II",
+                                "Taller Especial de Diseño I y II",
+                                "Introducción a la Investigación",
+                                "Semiología",
+                                "Presentación Final"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "Taller de Diseño Estratégico",
+                                "Opcional Integral I",
+                                "Opcional Integral II",
+                                "Opcional Específica III",
+                                "Ergonomía",
+                                "Teoría General del Diseño",
+                                "Metodología del Diseño",
+                                "Marketing Empresario",
+                                "Trabajo Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/licenciatura-en-diseno/"
+                },
+                {
+                    "id": 311,
+                    "nombre_carrera": "Corredor Inmobiliario. Título complementario de Arquitectura",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Tres semestres académicos consecutivos + examen de PRÁCTICA INTEGRADA 1",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central",
+                    "link_oficial": "https://um.edu.ar/carreras/corredor-inmobiliario-titulo-complementario-de-arquitectura/"
+                },
+                {
+                    "id": 312,
+                    "nombre_carrera": "Ingeniería en Computación",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central",
+                    "link_oficial": "https://um.edu.ar/carreras/ingenieria-en-computacion/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Curso 1",
+                            "materias": [
+                                "ÁLGEBRA Y GEOMETRÍA ANALÍTICA",
+                                "INGLÉS TÉCNICO",
+                                "INFORMÁTICA",
+                                "QUÍMICA GENERAL",
+                                "TECNOLOGÍA",
+                                "CURSO DE PRE CALCULO PARA INGENIERIA",
+                                "TECNOLOGÍA, CIENCIA Y SOCIEDAD",
+                                "CÁLCULO I",
+                                "FÍSICA I"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 2",
+                            "materias": [
+                                "COMPUTACIÓN",
+                                "CÁLCULO II",
+                                "MATEMATICA DISCRETA",
+                                "FISICA II",
+                                "HIGIENE Y SEGURIDAD INDUSTRIAL",
+                                "ORGANIZACIÓN",
+                                "INSTRUMENTOS Y MEDICIONES",
+                                "CALCULO III",
+                                "ESTADISTICA APLICADA I",
+                                "ALGEBRA LINEAL",
+                                "CIRCUITOS ELECTRICOS"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 3",
+                            "materias": [
+                                "PROGRAMACIÓN",
+                                "CIRCUITOS DIGITALES I",
+                                "ARQUITECTURA DE COMPUTADORAS",
+                                "CALCULO IV",
+                                "ANALISIS NUMERICO",
+                                "DISPOSITIVOS ELECTRONICOS",
+                                "REDES DE DATOS",
+                                "SISTEMAS OPERATIVOS",
+                                "ANALISIS DE SEÑALES",
+                                "ELECTRONICA ANALOGICA I",
+                                "ECONOMIA"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 4",
+                            "materias": [
+                                "COMPUTACIÓN II",
+                                "TRABAJO INTEGRADOR I",
+                                "CIRCUITOS DIGITALES II",
+                                "INGENIERIA DE SOFTWARE",
+                                "SEGURIDAD INFORMATICA I",
+                                "ELECTRONICA ANALOGICA II",
+                                "DISEÑO DE BASE DE DATOS I",
+                                "COMUNICACIÓN DE DATOS",
+                                "FORMULACIÓN Y EVALUACIÓN DE PROYECTOS",
+                                "INTELIGENCIA ARTIFICIAL",
+                                "MODELADO Y SISTEMAS DE CONTROL"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 5",
+                            "materias": [
+                                "PRACTICA PROFESIONAL SUPERVISADA",
+                                "TELEINFORMATICA",
+                                "INGENIERIA DE SOFTWARE APLICADA",
+                                "GESTION DE CALIDAD Y MEDIO AMBIENTE",
+                                "SISTEMAS EMBEBIDOS",
+                                "TRABAJO INTEGRADOR II",
+                                "INGENIERIA, DERECHO Y ETICA PROFESIONAL",
+                                "PLANEAMIENTO Y GESTIÓN DE EMPRESAS",
+                                "TRABAJO FINAL",
+                                "ROBOTICA"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/ingenieria-en-computacion/"
+                },
+                {
+                    "id": 313,
+                    "nombre_carrera": "Ingeniería Electrónica",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central",
+                    "link_oficial": "https://um.edu.ar/carreras/ingenieria-electronica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Curso 1",
+                            "materias": [
+                                "ÁLGEBRA Y GEOMETRÍA ANALÍTICA",
+                                "INGLÉS TÉCNICO",
+                                "INFORMÁTICA",
+                                "QUÍMICA GENERAL",
+                                "SISTEMAS DE REPRESENTACIÓN",
+                                "CURSO DE PRE CALCULO PARA INGENIERIA",
+                                "TECNOLOGÍA, CIENCIA Y SOCIEDAD",
+                                "CÁLCULO I",
+                                "FÍSICA I"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 2",
+                            "materias": [
+                                "COMPUTACIÓN",
+                                "CÁLCULO II",
+                                "FÍSICA II",
+                                "ELECTROTECNIA",
+                                "TECNOLOGÍA",
+                                "ORGANIZACIÓN",
+                                "CÁLCULO III",
+                                "ESTADÍSTICA APLICADA I",
+                                "ANÁLISIS DE CIRCUITOS I",
+                                "INSTRUMENTOS Y MEDICIONES",
+                                "ÁLGEBRA LINEAL"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 3",
+                            "materias": [
+                                "PROPAGACIÓN Y RADIACIÓN",
+                                "CIRCUITOS DIGITALES I",
+                                "CÁLCULO IV",
+                                "ANÁLISIS NUMÉRICO",
+                                "DISPOSITIVOS ELECTRÓNICOS",
+                                "HIGIENE Y SEGURIDAD INDUSTRIAL",
+                                "ARQUITECTURA DE COMPUTADORAS",
+                                "ANÁLISIS DE CIRCUITOS II",
+                                "ECONOMÍA",
+                                "ELECTRÓNICA ANALÓGICA I",
+                                "ANÁLISIS DE SEÑALES"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 4",
+                            "materias": [
+                                "TRABAJO INTEGRADOR I",
+                                "CIRCUITOS DIGITALES II",
+                                "SISTEMAS DE COMUNICACIONES I",
+                                "ELECTRÓNICA ANALÓGICA II",
+                                "GESTIÓN DE CALIDAD Y MEDIO AMBIENTE",
+                                "TELEINFORMÁTICA",
+                                "ELECTRÓNICA DE POTENCIA",
+                                "ELECTRÓNICA DE ALTA FRECUENCIA",
+                                "EVALUACIÓN Y SEGUIMIENTO DE PROYECTOS",
+                                "INSTALACIONES Y MÁQUINAS ELECTRICAS",
+                                "MODELADO Y SISTEMAS DE CONTROL"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 5",
+                            "materias": [
+                                "PRÁCTICA PROFESIONAL SUPERVISADA",
+                                "SISTEMAS DE TELEVISIÓN",
+                                "AUTOMÁTICA INDUSTRIAL",
+                                "SISTEMAS DE AUDIO",
+                                "SISTEMAS EMBEBIDOS",
+                                "TRABAJO INTEGRADOR II",
+                                "SISTEMAS DE COMUNICACIONES II",
+                                "TECNOLOGÍA DE MICROONDAS",
+                                "PLANEAMIENTO Y GESTIÓN DE EMPRESAS",
+                                "INGENIERÍA, DERECHO Y ÉTICA PROFESIONAL",
+                                "TRABAJO FINAL",
+                                "HABILIDADES DIRECTIVAS Y DE LIDERAZGO"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/ingenieria-electronica/"
+                },
+                {
+                    "id": 314,
+                    "nombre_carrera": "Ingeniería Industrial",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central",
+                    "link_oficial": "https://um.edu.ar/carreras/ingenieria-industrial/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "SISTEMAS DE REPRESENTACIÓN",
+                                "QUÍMICA GENERAL",
+                                "CÁLCULO I",
+                                "CÁLCULO II",
+                                "TECNOLOGÍA CIENCIA Y SOCIEDAD",
+                                "FÍSICA I",
+                                "ÁLGEBRA Y GEOMETRÍA ANALÍTICA",
+                                "INGLÉS TÉCNICO",
+                                "INFORMÁTICA I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "FÍSICA II",
+                                "QUÍMICA ORGÁNICA",
+                                "CÁLCULO III",
+                                "ECONOMÍA I",
+                                "ESTABILIDAD",
+                                "ESTADÍSTICA APLICADA I",
+                                "ORGANIZACIÓN Y ADMIN. DE EMPRESAS",
+                                "ÁLGEBRA LINEAL",
+                                "ECONOMÍA II",
+                                "ELECTROTECNIA INDUSTRIAL"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "MATERIALES Y ENSAYOS",
+                                "MECÁNICA DE LOS FLUIDOS",
+                                "ANÁLISIS NUMÉRICO",
+                                "SEGURIDAD HIG.IND. y SANEAMIENTO",
+                                "QUÍMICA INDUSTRIAL",
+                                "MECÁNICA APLICADA",
+                                "COSTOS INDUSTRIALES",
+                                "TERMODINÁMICA INDUSTRIAL",
+                                "GESTION DE CAL. Y MEDIO AMBIENTE"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "INVESTIGACIÓN OPERATIVA",
+                                "EQUIPAMIENTO INDUSTRIAL",
+                                "COMERCIALIZACIÓN",
+                                "ELECTRONICA GENERAL Y APLICADA",
+                                "FINANZAS DE EMPRESAS",
+                                "ADMINISTRACIÓN DE OPERACIONES",
+                                "SISTEMAS AUTOMÁTICOS Y DE CONTROL",
+                                "INFORMÁTICA INDUSTRIAL"
+                            ]
+                        },
+                        {
+                            "anio": "Quinto año",
+                            "materias": [
+                                "DIRECCIÓN ESTRATÉGICA",
+                                "OPERACIONES Y PROCESOS INDUSTRIALES",
+                                "FORMULACIÓN Y EVAL. DE PROYECTOS",
+                                "INGENIERÍA DERECHO Y ÉTICA PROFESIONAL",
+                                "GESTIÓN DE RR HH",
+                                "IDIOMA PORTUGUÉS",
+                                "PRÁCTICA PROFESIONAL SUPERVISADA",
+                                "TRABAJO FINAL"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/wp-content/uploads/Plan-de-correlatividades-y-creditos-IND.pdf"
+                },
+                {
+                    "id": 315,
+                    "nombre_carrera": "Ingeniería en Informática",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / San Rafael",
+                    "link_oficial": "https://um.edu.ar/carreras/ingenieria-en-informatica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Curso 1",
+                            "materias": [
+                                "ALGEBRA Y GEOMETRÍA ANALÍTICA",
+                                "INGLÉS TÉCNICO",
+                                "INFORMÁTICA",
+                                "TECNOLOGÍA, CIENCIA Y SOCIEDAD",
+                                "QUÍMICA GENERAL",
+                                "CURSO PRECÁLCULO PARA INGENIERÍA",
+                                "CÁLCULO I",
+                                "SISTEMAS DE REPRESENTACIÓN",
+                                "ANÁLISIS DE SISTEMAS I"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 2",
+                            "materias": [
+                                "COMPUTACIÓN",
+                                "CÁLCULO II",
+                                "MATEMATICA DISCRETA Y DISEÑO LÓGICO",
+                                "ARQUITECTURA DE COMPUTADORAS",
+                                "ANALISIS DE SISTEMAS II",
+                                "REDES DE DATOS",
+                                "DISEÑO DE BASE DE DATOS I",
+                                "FÍSICA",
+                                "ESTADÍSTICA APLICADA I",
+                                "SISTEMAS OPERATIVOS",
+                                "ÁLGEBRA LINEAL"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 3",
+                            "materias": [
+                                "PROGRAMACIÓN I",
+                                "COMPUTACIÓN II",
+                                "ANÁLISIS NUMÉRICO",
+                                "ESTADÍSTICA APLICADA II",
+                                "AUTÓMATAS Y GRAMÁTICAS",
+                                "ORGANIZACIÓN",
+                                "DISEÑO DE SISTEMAS",
+                                "COMUNICACIÓN DE DATOS",
+                                "ECONOMÍA",
+                                "DISEÑO DE BASE DE DATOS II"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 4",
+                            "materias": [
+                                "PROGRAMACIÓN II",
+                                "INGENIERÍA DE SOFTWARE",
+                                "TELEINFORMÁTICA",
+                                "SEGURIDAD INFORMÁTICA I",
+                                "TRABAJO INTEGRADOR FINAL I",
+                                "INVESTIGACIÓN OPERATIVA",
+                                "FORMULACIÓN Y EVALUACIÓN DE PROYECTOS",
+                                "INTELIGENCIA ARTIFICIAL",
+                                "INGENIERÍA DE SOFTWARE APLICADA",
+                                "TRABAJO INTEGRADOR FINAL II"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 5",
+                            "materias": [
+                                "PRÁCTICA PROFESIONAL",
+                                "ASEGURAMIENTO DE CALIDAD DE SOFTWARE",
+                                "HIGIENE Y SEGURIDAD DEL TRABAJO",
+                                "MODELOS Y SIMULACIÓN",
+                                "TRABAJO INTEGRADOR FINAL III",
+                                "SEGURIDAD INFORMÁTICA II",
+                                "INGENIERÍA DERECHO Y ETICA PROFESIONAL",
+                                "AUDITORIA DE SISTEMAS",
+                                "PLANEAMIENTO Y GESIÓN DE EMPRESAS",
+                                "TRABAJO INTEGRADOR FINAL IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/ingenieria-en-informatica/"
+                },
+                {
+                    "id": 316,
+                    "nombre_carrera": "Ingeniería Eléctrica",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central",
+                    "link_oficial": "https://um.edu.ar/carreras/ingenieria-electrica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Curso 1",
+                            "materias": [
+                                "ALGEBRA Y GEOMETRIA ANALITICA",
+                                "INGLES TECNICO",
+                                "INFORMATICA",
+                                "QUIMICA GENERAL",
+                                "SISTEMAS DE REPRESENTACION",
+                                "CURSO PRECALCULO PARA INGENIERIA",
+                                "TECNOLOGIA, CIENCIA Y SOCIEDAD",
+                                "CALCULO I",
+                                "FISICA I"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 2",
+                            "materias": [
+                                "ELECTROTECNIA",
+                                "CALCULO II",
+                                "FISICA II",
+                                "TECNOLOGIA",
+                                "ESTABILIDAD",
+                                "CALCULO III",
+                                "ESTADISTICA APLICADA I",
+                                "INSTRUMENTOS Y MEDICIONES",
+                                "ALGEBRA LINEAL",
+                                "ANALISIS DE CIRCUITOS"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 3",
+                            "materias": [
+                                "MAQUINAS ELECTRICAS",
+                                "ANALISIS NUMERICO",
+                                "HIGIENE Y SEGURIDAD INDUSTRIAL",
+                                "ORGANIZACIÓN",
+                                "MATERIALES Y ENSAYOS",
+                                "CIRCUITOS DIGITALES",
+                                "ECONOMIA",
+                                "ANALISIS DE SEÑALES",
+                                "TERMONIDAMICA INDUSTRIAL",
+                                "MECANISMOS Y ELEMENTOS DE MAQUINAS",
+                                "ELECTRONICA ANALOGICA"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 4",
+                            "materias": [
+                                "LINEAS Y REDES ELECTRICAS",
+                                "GESTION DE CALIDAD Y MEDIO AMBIENTE",
+                                "LUMINOTECNIA",
+                                "INSTALACIONES ELECTRICAS I",
+                                "MAQUINAS TERMICAS E HIDRAULICAS",
+                                "ENERGÍAS RENOVABLES I",
+                                "ELECTRONICA DE POTENCIA",
+                                "EVALUACION Y SEGUIMIENTO DE PROYECTOS",
+                                "SISTEMAS AUTOMATICOS Y DE CONTROL",
+                                "CENTRALES Y ESTACIONES DE TRANSFORMACIÓN I",
+                                "ENERGIAS RENOVABLES II"
+                            ]
+                        },
+                        {
+                            "anio": "Curso 5",
+                            "materias": [
+                                "INGENIERIA DERECHO Y ETICA PROFESIONAL",
+                                "ANALISIS Y OPERACIONES DE SISTEMAS ELECTRICOS I",
+                                "INSTALACIONES ELECTRICAS II",
+                                "PROYECTO DE MAQUINAS ELECTRICAS",
+                                "PLANEAMIENTO Y GESTION DE EMPRESAS",
+                                "CENTRALES Y ESTACIONES DE TRANSFORMACIÓN II",
+                                "ANALISIS Y OPERACIONES DE SISTEMAS ELECTRICOS II",
+                                "CALIDAD DE POTENCIA",
+                                "PROTECCION DE SISTEMAS ELÉCTRICOS",
+                                "TRABAJO FINAL",
+                                "PRACTICA PROFESIONAL SUPERVISADA"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/ingenieria-electrica/"
+                },
+                {
+                    "id": 317,
+                    "nombre_carrera": "Bioingeniería",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central",
+                    "link_oficial": "https://um.edu.ar/carreras/bioingenieria/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "SISTEMAS DE REPRESENTACIÓN",
+                                "QUÍMICA GENERAL",
+                                "CÁLCULO I",
+                                "CÁLCULO II",
+                                "TECNOLOGÍA, CIENCIA Y SOCIEDAD",
+                                "FÍSICA I",
+                                "ÁLGEBRA Y GEOMETRÍA ANALÍTICA",
+                                "INGLÉS TÉCNICO",
+                                "INFORMÁTICA I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "FÍSICA II",
+                                "CÁLCULO III",
+                                "ELECTROTECNIA",
+                                "BIOLOGÍA I",
+                                "BIOLOGÍA II",
+                                "ESTADÍSTICA APLICADA I",
+                                "ÁLGEBRA LINEAL",
+                                "CÁLCULO IV",
+                                "QUÍMICA BIOLÓGICA",
+                                "ANÁLISIS DE CIRCUITOS I",
+                                "COMPUTACIÓN"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "ANÁLISIS NUMÉRICO",
+                                "DISPOSITIVOS ELECTRÓNICOS",
+                                "ORGANIZACIÓN",
+                                "FISIOLOGÍA y BIOFÍSICA",
+                                "ANÁLISIS DE CIRCUITOS II",
+                                "FISIOPATOLOGÍA",
+                                "ELECTRÓNICA ANALÓGICA I",
+                                "ANÁLISIS DE SEÑALES",
+                                "CIRCUITOS DIGITALES I"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "BIOMATERIALES",
+                                "ELECTRÓNICA ANALÓGICA II",
+                                "RADIACIONES Y PROTECCIÓN RADIOLÓGICA",
+                                "INSTALACIONES HOSPITALARIAS",
+                                "MODELOS Y SIMULACIÓN",
+                                "BIOINSTRUMENTACIÓN I",
+                                "ELECTRÓNICA NUCLEAR",
+                                "SISTEMAS AUTOMÁTICOS Y DE CONTROL",
+                                "BIOMECÁNICA",
+                                "TRABAJO INTEGRADOR"
+                            ]
+                        },
+                        {
+                            "anio": "Quinto año",
+                            "materias": [
+                                "BIOINSTRUMENTACIÓN II",
+                                "INGENIERÍA DE REHABILITACIÓN",
+                                "EQUIPAMIENTO DE DIAGNÓSTICO Y TERAPIA",
+                                "HIGIENE, SEGURIDAD Y SANEAMIENTO",
+                                "OPTATIVA I*",
+                                "MEDICINA NUCLEAR",
+                                "EVALUACIÓN Y SEGUIMIENTO DE PROYECTOS",
+                                "PROCESAMIENTO DE IMÁGENES",
+                                "INGENIERÍA, DERECHO Y ÉTICA PROFESIONAL",
+                                "OPTATIVA II*",
+                                "PRÁCTICA PROFESIONAL SUPERVISADA",
+                                "TRABAJO FINAL",
+                                "* Consulta en secretaría"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/bioingenieria/"
+                },
+                {
+                    "id": 318,
+                    "nombre_carrera": "Tecnicatura en Desarrollo de Videojuegos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "A confirmar",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central",
+                    "link_oficial": "https://um.edu.ar/carreras/tecnicatura-en-desarrollo-de-videojuegos/"
+                },
+                {
+                    "id": 319,
+                    "nombre_carrera": "Profesorado para Profesionales con Título de Grado",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 semestre",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / Sede San Rafael / Sede Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/profesorado-para-profesionales-con-titulo-de-grado/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Sujeto del Aprendizaje I",
+                                "Currículum I",
+                                "Sistema Educativo",
+                                "Institución Educativa",
+                                "Metodología de la Investigación I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Sujeto del Aprendizaje II",
+                                "Currículum II",
+                                "Mediación Pedagógica",
+                                "Metodología de la Investigación II",
+                                "Curso Complementario de Inglés Técnico"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Informática Educativa",
+                                "Innovación y Cambio Institucional",
+                                "Residencia e Investigación",
+                                "Optativa",
+                                "Optativas",
+                                "Organización y Gestión Institucional",
+                                "Evaluación de los Aprendizajes",
+                                "Técnicas y Recursos para la Enseñanza",
+                                "Análisis de Software Educativos"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/profesorado-para-profesionales-con-titulo-de-grado/"
+                },
+                {
+                    "id": 320,
+                    "nombre_carrera": "Tecnicatura Universitaria en Desarrollo de Software",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "A confirmar",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-desarrollo-de-software/"
+                },
+                {
+                    "id": 321,
+                    "nombre_carrera": "Odontología",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central",
+                    "link_oficial": "https://um.edu.ar/carreras/odontologia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Anatomía General y Estomatológica",
+                                "Bioquímica General",
+                                "Morfología Dentaria",
+                                "Biomateriales",
+                                "Física Biológica"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Anatomía Patológica General y Bucal",
+                                "Fisiología",
+                                "Microbiología y Parasitología",
+                                "Diagnóstico por Imágenes",
+                                "Clínica Preventiva Comunitaria",
+                                "Preclínica de Operatoria Dental",
+                                "Oclusión I",
+                                "Oclusión II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Farmacología",
+                                "Semiología General",
+                                "Preclínica de Endodoncia",
+                                "Preclínica de Periodoncia",
+                                "Preclínica Prótesis Fija",
+                                "Clínica Operatoria Dental I",
+                                "Clínica de Prótesis Completa"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "Clínica de Endodoncia",
+                                "Clínica Periodoncia",
+                                "Clínica de Operatoria Dental II",
+                                "Clínica de Prótesis Parcial",
+                                "Articulación Docencia Asistencial",
+                                "Estomatología I"
+                            ]
+                        },
+                        {
+                            "anio": "Quinto año",
+                            "materias": [
+                                "Odontología Integral Adultos",
+                                "Odontología Integral Niños",
+                                "Ortodoncia",
+                                "Estomatología II",
+                                "Práctica Profesional Supervisada"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/wp-content/uploads/Plan-de-Estudios-Odontologia-2026-actualizado-1.pdf"
+                },
+                {
+                    "id": 322,
+                    "nombre_carrera": "Licenciatura en Kinesiología",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / San Rafael / Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-kinesiologia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Anatomía",
+                                "Fisiología",
+                                "Histología",
+                                "Física Biológica",
+                                "Psicología Médica",
+                                "Seminario I - (Bioquímica)"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Biomecánica",
+                                "Técnicas Kinésicas I",
+                                "Semiopatología Médico Kinésica",
+                                "Kinefilaxia",
+                                "Ortesis y Prótesis",
+                                "Psicomotricidad"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Técnicas Kinésicas II",
+                                "Semiopatología Quirúrgico Kinésica",
+                                "Kinesiología Médica",
+                                "Fisioterapia",
+                                "Kinefisiatría Estética",
+                                "Seminario III (Neurología)"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "Kinesiología Quirúrgica",
+                                "Kinesiología Legal",
+                                "Deportismo",
+                                "Farmacología Electrofisiokinésica",
+                                "Institucional y Centros de Rehabilitación",
+                                "Kinefisiatría Ocupacional y Laboral",
+                                "Metodología de la Investigación"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/wp-content/uploads/Kinesiologia-2025.pdf"
+                },
+                {
+                    "id": 323,
+                    "nombre_carrera": "Licenciatura en Psicología",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / San Rafael / Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-psicologia/"
+                },
+                {
+                    "id": 324,
+                    "nombre_carrera": "Licenciatura en Nutrición",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-nutricion/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Físico - Química",
+                                "Bioquímica",
+                                "Anatomía I",
+                                "Anatomía II",
+                                "Fundamentos de la Alimentación I",
+                                "Fundamentos de la Alimentación II",
+                                "Nutrición Normal I",
+                                "Informática I",
+                                "Inglés I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Fisiología I",
+                                "Fisiología II",
+                                "Bromatología",
+                                "Tecnología Alimentaria",
+                                "Microbiología y Parasitología",
+                                "Inglés II",
+                                "Informática II",
+                                "Estadística y Bioestadística",
+                                "Nutrición Normal II",
+                                "Nutrición Materno Infantil"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Fisiopatología y Dietoterapia del Niño I",
+                                "Fisiopatología y Dietoterapia del Adulto I",
+                                "Fisiopatología y Dietoterapia del Niño II",
+                                "Fisiopatología y Dietoterapia del Adulto II",
+                                "Técnica Dietética y Análisis Sensorial",
+                                "Técnica Dietoterápica",
+                                "Evaluación Nutricional I",
+                                "Economía Familiar",
+                                "Psicología"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "Evaluación Nutricional II",
+                                "Educación Alimentaria Nutricional",
+                                "Nutrición en Salud Pública",
+                                "Epidemiología Nutricional",
+                                "Planificación y Alimentación Institucional",
+                                "Gestión Alimentaria",
+                                "Fisiología del Deporte",
+                                "Metodología de la Investigación",
+                                "Informática III"
+                            ]
+                        },
+                        {
+                            "anio": "Quinto año",
+                            "materias": [
+                                "Comunicación Nutricional",
+                                "Toxicología de los Alimentos",
+                                "Nutrición Deportiva",
+                                "Nutrición en Geriatría",
+                                "Ética y Bioética",
+                                "Práctica Final Obligatoria",
+                                "Trabajo Final",
+                                "Optativa I",
+                                "Optativa II"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/wp-content/uploads/Plan-de-estudios-Nutricion-2025-pdf.pdf"
+                },
+                {
+                    "id": 325,
+                    "nombre_carrera": "Tecnicatura Universitaria en Radiología",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Tres años (2 años y medio, más la Practica Preprofesional)",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-radiologia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Microbiología y Epidemiología",
+                                "Técnicas Sanitarias",
+                                "Anatomía",
+                                "Histología y Embriología",
+                                "Física Biológica",
+                                "Psicología de la Personalidad y Evolutiva",
+                                "Fundamentos de Administración",
+                                "Fisiología",
+                                "Química Biológica",
+                                "Ética Profesional",
+                                "Fundamentos de Radiología"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Farmacología",
+                                "Técnica Radiológica I",
+                                "Física Radiológica",
+                                "Patología Quirúrgica",
+                                "Computación I",
+                                "Inglés",
+                                "Psicología Aplicada",
+                                "Patología Médica"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Técnica Radiológica II",
+                                "Inglés Técnico",
+                                "Computación II"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-radiologia/"
+                },
+                {
+                    "id": 326,
+                    "nombre_carrera": "Tecnicatura Universitaria en Instrumentación Quirúrgica",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Tres años (2 años y medio, más la Práctica)",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-instrumentacion-quirurgica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Microbiología y Epidemiología",
+                                "Técnicas Sanitarias",
+                                "Anatomía",
+                                "Histología y Embriología",
+                                "Física Biológica",
+                                "Psicología de la Personalidad y Evolutiva",
+                                "Fundamentos de Administración"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Psicología Aplicada",
+                                "Patología Médica"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-instrumentacion-quirurgica/"
+                },
+                {
+                    "id": 327,
+                    "nombre_carrera": "Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Río Cuarto",
+                    "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "FILOSOFÍA",
+                                "SEGURIDAD I",
+                                "MEDICINA INDUSTRIAL",
+                                "FÍSICA GENERAL",
+                                "SOCIOLOGÍA"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "HIGIENE INDUSTRIAL",
+                                "RELACIONES HUMANAS",
+                                "SEGURIDAD III",
+                                "ORGANIZACIÓN INDUSTRIAL",
+                                "ENFERMEDADES PROFESIONALES",
+                                "AMBIENTE DE TRABAJO II",
+                                "PEDAGOGÍA Y DIDÁCTICA GENERAL",
+                                "INVESTIGACIÓN DE CAMPO"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo/"
+                },
+                {
+                    "id": 328,
+                    "nombre_carrera": "Contador Público",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / Sede San Rafael",
+                    "link_oficial": "https://um.edu.ar/carreras/contador-publico/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Introducción a la Contabilidad",
+                                "Matemáticas I",
+                                "Administración I",
+                                "Economía",
+                                "Informática Aplicada",
+                                "Matemáticas II",
+                                "Derecho Público Argentino y de la Integración"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Contabilidad Básica",
+                                "Estadística para Empresas",
+                                "Derecho Empresario",
+                                "Costos Contables y Costos para Decisiones",
+                                "Sistemas y Métodos",
+                                "Microeconomía",
+                                "Contratos de la Empresa",
+                                "Administración II",
+                                "Inglés I",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Administración Financiera",
+                                "Control de Gestión",
+                                "Técnica Impositiva",
+                                "Contabilidad Superior y Análisis Contable",
+                                "Macroeconomía",
+                                "Métodos de la Investigación",
+                                "Finanzas Públicas",
+                                "Administración III",
+                                "Derecho de Familia y Sucesiones",
+                                "Derecho Concursal",
+                                "Inglés III",
+                                "Inglés IV",
+                                "Portugués I"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "Auditoría de Estados Contables",
+                                "Actuación Profesional Jurídico-Contable",
+                                "Procedimiento Tributario",
+                                "Contabilidad Pública",
+                                "Operatoria de Comercio Exterior",
+                                "Mercado de Capitales y Finanzas Empresariales",
+                                "Impuestos",
+                                "Estrategia y Negociación",
+                                "Seminario",
+                                "Empresas y Negocios Internacionales",
+                                "Auditoría Operativa y de Sistemas Computarizados",
+                                "Práctica Profesional Supervisada",
+                                "Portugués II"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/contador-publico/"
+                },
+                {
+                    "id": 329,
+                    "nombre_carrera": "Licenciado en Administración de Negocios",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / Sede San Rafael",
+                    "link_oficial": "https://um.edu.ar/carreras/licenciado-en-administracion-de-negocios/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Introducción a la Contabilidad",
+                                "Matemáticas I",
+                                "Administración I",
+                                "Economía",
+                                "Informática Aplicada",
+                                "Matemáticas II",
+                                "Derecho Público Argentino y de la Integración"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Estadística para Empresas",
+                                "Derecho Empresario",
+                                "Costos Contables y Costos para Decisiones",
+                                "Sistemas y Métodos",
+                                "Microeconomía",
+                                "Contratos de la Empresa",
+                                "Administración II",
+                                "Inglés I",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Administración Financiera",
+                                "Control de Gestión",
+                                "Análisis de Mercado",
+                                "Comercialización",
+                                "Macroeconomía",
+                                "Métodos de la Investigación",
+                                "Toma de Decisiones Económicas de la Empresa",
+                                "Administración de Recursos Humanos",
+                                "Administración III",
+                                "Inglés III",
+                                "Inglés IV",
+                                "Portugués I"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "Dirección Estratégica",
+                                "Econometría",
+                                "Operatoria de Comercio Exterior",
+                                "Mercado de Capitales y Finanzas Empresariales",
+                                "Impuestos",
+                                "Seminario",
+                                "Estrategia y Negociación",
+                                "Empresas y Negocios Internacionales",
+                                "Administración de Entidades Financieras",
+                                "Práctica Profesional Supervisada",
+                                "Portugués II"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/licenciado-en-administracion-de-negocios/"
+                },
+                {
+                    "id": 330,
+                    "nombre_carrera": "Medicina",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UM - Sede Central / Sede San Rafael",
+                    "link_oficial": "https://um.edu.ar/carreras/medicina/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "ANATOMÍA I",
+                                "CITOLOGÍA E HISTOLOGÍA GRAL",
+                                "EMBRIOLOGÍA",
+                                "BIOQUÍMICA GENERAL I",
+                                "ATENCIÓN AL ENFERMO I",
+                                "ANATOMÍA II",
+                                "BIOQUÍMICA GENERAL II",
+                                "INGLÉS I",
+                                "TEORÍA DEL HOMBRE",
+                                "ETICA"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "FISIOLOGÍA I",
+                                "GENÉTICA",
+                                "PSICOLOGÍA",
+                                "INMUNOLOGÍA",
+                                "BIOFÍSICA",
+                                "BIOESTADÍSTICA",
+                                "INGLÉS II",
+                                "HISTOLOGÍA ESPECIAL",
+                                "FISIOLOGÍA II",
+                                "MICROBIOLOGÍA",
+                                "ATENCIÓN AL ENFERMO II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "FISIOPATOLOGÍA",
+                                "ANATOMÍA PATOLÓGICA",
+                                "EPIDEMIOLOGÍA Y DEMOGRAFÍA",
+                                "INGLÉS III",
+                                "FARMACOLOGÍA",
+                                "DIAGNÓSTICO POR IMÁGENES",
+                                "ANTROPOLOGÍA MÉDICA",
+                                "GERIATRÍA",
+                                "SEMINARIO I",
+                                "METODOLOGÍA DE LA INVESTIGACIÓN MEDICINA INTERNA I"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "INVESTIGACIÓN MEDICINA INTERNA I",
+                                "TOXICOLOGÍA",
+                                "OTORRINOLARINGOLOGÍA",
+                                "INGLÉS IV",
+                                "SEMINARIO II",
+                                "OFTALMOLOGÍA",
+                                "MEDICINA INTERNA II",
+                                "CIRUGÍA",
+                                "UROLOGÍA",
+                                "URGENCIAS"
+                            ]
+                        },
+                        {
+                            "anio": "Quinto año",
+                            "materias": [
+                                "PEDIATRÍA",
+                                "GINECOLOGÍA",
+                                "SEMINARIO III Integración",
+                                "DERMATOLOGÍA",
+                                "REHABILITACIÓN",
+                                "MEDICINA LEGAL Y DEONTOLOGÍA",
+                                "BIOÉTICA",
+                                "OBSTETRICIA",
+                                "MEDICINA INTERNA III",
+                                "TRAUMATOLOGÍA",
+                                "INFECCIOSAS",
+                                "NEUROLOGÍA",
+                                "PSIQUIATRÍA",
+                                "ATENCIÓN MÉDICA PRIMARIA"
+                            ]
+                        },
+                        {
+                            "anio": "Sexto año",
+                            "materias": [
+                                "MEDICINA INTERNA",
+                                "PEDIATRÍA",
+                                "CIRUGÍA",
+                                "GINECO-OBSTETRICIA",
+                                "ATENCIÓN PRIMARIA",
+                                "ATENCIÓN PRIMARIA RURAL CURSO DE ORIENTACIÓ Y",
+                                "DESARROLLO"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/wp-content/uploads/PLAN-DE-ESTUDIO-2022.pdf"
+                }
+            ]
+        }
+    ]
 }

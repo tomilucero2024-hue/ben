@@ -828,13 +828,24 @@ function resumenPlan(plan) {
             ? 'Plan de estudio'
             : `Plan de estudio — ${etiquetas[0]}`;
     }
+    // Contamos años distintos: un plan puede traer tramos extra ("Materias
+    // adicionales", "Condición final de egreso") o un subperíodo por año
+    // ("1er año — Primer semestre"), y no queremos que inflen el total.
+    const anios = etiquetas.filter(e => /a[nñ]o/i.test(e));
+    if (anios.length) {
+        const unicos = new Set(anios.map(e => e.toLowerCase()
+            .replace(/[—–-].*$/, '').trim()));
+        return `Plan de estudio — ${unicos.size} año${unicos.size === 1 ? '' : 's'}`;
+    }
     const unidades = [
         ['semestre', 'semestre'], ['cuatrimestre', 'cuatrimestre'],
         ['trimestre', 'trimestre'], ['módulo', 'módulo'],
     ];
     for (const [clave, nombre] of unidades) {
-        if (etiquetas.every(e => e.toLowerCase().includes(clave))) {
-            return `Plan de estudio — ${plan.length} ${nombre}${plan.length === 1 ? '' : 's'}`;
+        const elegidos = etiquetas.filter(e => e.toLowerCase().includes(clave));
+        if (elegidos.length) {
+            const unicos = new Set(elegidos.map(e => e.toLowerCase().trim()));
+            return `Plan de estudio — ${unicos.size} ${nombre}${unicos.size === 1 ? '' : 's'}`;
         }
     }
     return `Plan de estudio — ${plan.length} año${plan.length === 1 ? '' : 's'}`;
