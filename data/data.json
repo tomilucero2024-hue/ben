@@ -9976,7 +9976,134 @@
                     "duracion": "5 año",
                     "modalidad": "Presencial",
                     "facultad": "UM - Sede Central / San Rafael / Río Cuarto",
-                    "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-psicologia/"
+                    "link_oficial": "https://um.edu.ar/carreras/licenciatura-en-psicologia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año — 1er semestre",
+                            "materias": [
+                                "Historia de la Psicología",
+                                "Biología General y Humana",
+                                "Psicología General",
+                                "Informática Aplicada",
+                                "Inglés I",
+                                "Perspectivas Antropológicas"
+                            ]
+                        },
+                        {
+                            "anio": "Primer año — 2do semestre",
+                            "materias": [
+                                "Corrientes Actuales en Psicología",
+                                "Neurobiología I",
+                                "Sociología Enfoque en Redes",
+                                "Fundamentos del Pensamiento Científico y Epistemología",
+                                "Inglés II",
+                                "Psicología y Problemática SocioCultural Actual"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año — 1er semestre",
+                            "materias": [
+                                "Psicología Social",
+                                "Neurobiología II",
+                                "Psicología del Desarrollo (Infancia – adolescencia)",
+                                "Optativo I",
+                                "Perspectivas de Investigación en Psicología",
+                                "Psicología del deporte y de la actividad física",
+                                "Psicología de la Personalidad",
+                                "Problemas filosóficos de la psicología"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año — 2do semestre",
+                            "materias": [
+                                "Psicoestadística",
+                                "Psicología del Desarrollo II (adultez - senectud)",
+                                "Optativo II",
+                                "Consumo Problemático del alcohol y otras drogas",
+                                "Psicología y género",
+                                "Ética, Deontología y Legislación Profesional",
+                                "Psicopatología I",
+                                "Integración Práctica I"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año — 1er semestre",
+                            "materias": [
+                                "Psicología Humanista y Existencial",
+                                "Métodos de Investigación I",
+                                "Psicopatología II",
+                                "Psicología Cognitivo Conductual",
+                                "Optativo III",
+                                "Prevención y Promoción de la Salud en la tercera edad",
+                                "Teoría y procedimientos de Intervención Grupal"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año — 2do semestre",
+                            "materias": [
+                                "Métodos de Investigación II",
+                                "Psicología Sistémico Comunicacional",
+                                "Teoría Psicoanalítica",
+                                "Integración Práctica II",
+                                "Salud Mental Comunitaria",
+                                "Optativo IV",
+                                "Gestión Colaborativa de Conflictos",
+                                "Abordaje Psicológico de las Personas con Discapacidad"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año — 1er semestre",
+                            "materias": [
+                                "Psicología de las Organizaciones",
+                                "Evaluación y Diagnóstico Psicológico I",
+                                "Intervención y Tratamiento Psicológico Psicoanálisis",
+                                "Intervención y Tratamiento Psicológico Cognitivo-Conductual",
+                                "Psicología Educacional",
+                                "Orientación y Terapia Familiar",
+                                "PPS Salud Mental Comunitaria"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año — 2do semestre",
+                            "materias": [
+                                "Evaluación y Diagnóstico Psicológico II",
+                                "Intervención y Tratamiento Psicológico Humanístico-Existencial",
+                                "Intervención y Tratamiento Psicológico Sistémico Comunicacional",
+                                "Integración Práctica III",
+                                "Psicofarmacología",
+                                "PPS Psicología Educacional",
+                                "PPS Psicología de las Organizaciones"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año — 1er y 2do semestre",
+                            "materias": [
+                                "PPS: Orientaciones Educacional, Comunitaria y Organizacional 1"
+                            ]
+                        },
+                        {
+                            "anio": "Quinto año — 1er semestre",
+                            "materias": [
+                                "Psicología Jurídico Forense"
+                            ]
+                        },
+                        {
+                            "anio": "Quinto año — 2do semestre",
+                            "materias": [
+                                "PPS Orientaciones: Forense",
+                                "Abordaje Integral del Pacientes Crónicos"
+                            ]
+                        },
+                        {
+                            "anio": "Quinto año — Anual",
+                            "materias": [
+                                "Principios de Intervención Clínica",
+                                "Seminario TIF",
+                                "PPS-Clínica: Psicoanalítico Psicodinámico- Cognitivo Conductual - Humanístico Existencial-Sistémico Comunicacional"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/wp-content/uploads/Plan-de-Estudios-Psicologia-2025.pdf"
                 },
                 {
                     "id": 324,

@@ -194,7 +194,9 @@ def extraer_plan(sopa):
 # Varias carreras sólo publican la currícula dentro de un PDF ("Plan de
 # estudios detallado"). Lo bajamos y lo leemos con `pdftotext -layout`; si la
 # herramienta no está instalada o el PDF es una imagen (sin capa de texto),
-# la carrera queda sin plan en lugar de inventarlo.
+# la carrera queda sin plan en lugar de inventarlo. Excepción: Psicología
+# (PDF imagen) se transcribió a mano en data/um.json y se conserva vía
+# `guardada.get("plan_estudio")`.
 RE_PJ_ANIO = re.compile(rf"\b({ORDEN})\s+a[nñ]o\b", re.I)
 RE_PJ_CODIGO = re.compile(r"\b([A-Za-z]{1,3}-?\d{1,4})\b")
 RE_PJ_RUIDO = re.compile(
