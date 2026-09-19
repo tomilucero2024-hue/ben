@@ -7,6 +7,33 @@ from bs4 import BeautifulSoup
 from scraper_utils import carreras_guardadas, guardar_json
 
 
+MAPA_ANIO = {"1er": "1º", "2do": "2º", "3er": "3º", "4to": "4º"}
+
+
+def extraer_plan(sopa):
+    """Saca el plan de estudio del bloque de tabs por año de la página de la carrera.
+
+    La web lista cada año en un `.tab-pane` con listas <ul><li> de materias; los
+    subtítulos como "Talleres intensivos de aplicación ágil" van en <p><strong> y
+    no entran.
+    """
+    contenedor = sopa.find("div", class_="container-tabs")
+    if not contenedor:
+        return None
+    plan = []
+    for panel in contenedor.select(".tab-content .tab-pane"):
+        etiqueta = panel.get("id", "").split("tabpane-")[-1].strip()
+        numero = etiqueta.split()[0] if etiqueta else ""
+        anio = f"{MAPA_ANIO.get(numero, numero)} año"
+        materias = []
+        for li in panel.find_all("li"):
+            texto = re.sub(r"\s+", " ", li.get_text(" ", strip=True))
+            if texto:
+                materias.append(texto)
+        plan.append({"anio": anio, "materias": materias})
+    return plan or None
+
+
 print("🛠️ Encendiendo el escáner V9 para el IUCE...")
 print("🔍 Rastreador de Modalidad (Presencial/Distancia) activado.\n")
 
@@ -62,7 +89,9 @@ try:
         nombre_temporal = a.text.strip() or href.split('/')[-1].replace('-', ' ').title()
         
         # Memoria
-        if nombre_temporal in carreras_viejas and carreras_viejas[nombre_temporal].get("duracion") not in ["Verificar en página oficial", "A confirmar", ""]:
+        if (nombre_temporal in carreras_viejas
+                and carreras_viejas[nombre_temporal].get("duracion") not in ["Verificar en página oficial", "A confirmar", ""]
+                and carreras_viejas[nombre_temporal].get("plan_estudio")):
             iuce_data["carreras"].append(carreras_viejas[nombre_temporal])
             print(f"  ⏭️ Recuperada: {nombre_temporal[:30]}...")
         else:
@@ -71,6 +100,7 @@ try:
             nombre_carrera = nombre_temporal
             duracion_texto = "Verificar en página oficial"
             modalidad_texto = "Presencial" # Valor por defecto
+            plan_estudio = None
             
             try:
                 time.sleep(0.5) 
@@ -98,10 +128,13 @@ try:
                         # Si tiene varias, las une con una barra (Ej: "Presencial / A distancia")
                         modalidad_texto = " / ".join(modalidades_encontradas)
 
+                # 4. Sacar el plan de estudio (tabs por año)
+                plan_estudio = extraer_plan(sopa_det)
+
             except Exception as e:
                 pass 
                 
-            iuce_data["carreras"].append({
+            registro = {
                 "id": id_global,
                 "nombre_carrera": nombre_carrera,
                 "categoria": "Grado / Carrera",
@@ -109,7 +142,11 @@ try:
                 "modalidad": modalidad_texto,
                 "facultad": "IUCE",
                 "link_oficial": link_real
-            })
+            }
+            if plan_estudio:
+                registro["plan_estudio"] = plan_estudio
+                registro["plan_fuente"] = link_real
+            iuce_data["carreras"].append(registro)
         id_global += 1
         contador += 1
                 

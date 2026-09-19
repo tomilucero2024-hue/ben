@@ -1,21 +1,20 @@
 // ==========================================
-// Estado de filtros/busqueda, favoritos y comparador, con su persistencia en
-// localStorage y en la URL.
+// Estado de filtros/busqueda, con su persistencia en la URL.
 // ==========================================
 
-import { buscarPorClave, ofertas } from './datos.js';
 import { normalizarTexto } from './util.js';
-
-let alCambiarFavoritos = null;
-export function registrarCambioFavoritos(fn) {
-    alCambiarFavoritos = fn;
-}
 
 export const estado = {
     seccion: 'formal',
     texto: '', formacion: 'todos', institucion: 'todos', departamento: 'todos', gestion: 'todos',
     modalidad: 'todos', costo: 'todos', duracion: 'todos', area: 'todos',
-    duracionMin: null, duracionMax: null, orden: 'default', favoritos: false,
+    duracionMin: null, duracionMax: null, orden: 'default',
+    // Vista de entrada del catálogo formal: TODAS LAS CARRERAS (grilla con
+    // filtros) por defecto; alternativas: instituciones (agrupadas por tipo)
+    // o el drilldown por áreas.
+    vista: 'carreras',
+    // Dentro de la vista de instituciones, el tipo abierto (o null = grupos).
+    tipoInstitucion: null,
     // Resultados del test vocacional, cuando hay: { carreras, rankings, total }.
     // Mientras esté seteado la grilla muestra las recomendaciones (ordenadas por
     // compatibilidad) en vez del catálogo entero, y los filtros se aplican
@@ -23,10 +22,8 @@ export const estado = {
     recomendacion: null
 };
 
-// Favoritos y comparador, persistidos en localStorage (si el navegador lo permite).
-const FAVORITOS_KEY = 'ben-favoritos';
-export const COMPARAR_KEY = 'ben-comparar';
 const SECCIONES_PERMITIDAS = new Set(['formal', 'plataformas', 'formaciones-alternativas', 'oficios-tecnicos', 'secundario']);
+const VISTAS_PERMITIDAS = new Set(['areas', 'carreras', 'instituciones']);
 const GESTIONES_PERMITIDAS = new Set(['todos', 'pública', 'privada']);
 const COSTOS_PERMITIDOS = new Set(['todos', 'gratuito', 'arancelado']);
 const MODALIDADES_PERMITIDAS = new Set(['todos', 'presencial', 'online', 'híbrida']);
@@ -43,23 +40,6 @@ const DURACIONES_PERMITIDAS = new Set(['todos', 'corta', 'hasta-1', '2-3', '4-ma
 // nada en pantalla explicara por qué.
 const AREAS_PERMITIDAS = new Set(['todos', 'Tecnología', 'Ingeniería', 'Salud', 'Negocios', 'Diseño', 'Educación', 'Ciencias sociales', 'Ambiente', 'Turismo', 'Gastronomía', 'Oficios', 'Arte', 'Idiomas']);
 
-function leerGuardado(clave) {
-    try {
-        if (typeof localStorage === 'undefined') return [];
-        const raw = JSON.parse(localStorage.getItem(clave) || '[]');
-        return Array.isArray(raw) ? raw.filter(item => typeof item === 'string' && item.length > 0) : [];
-    } catch (e) {
-        return [];
-    }
-}
-export function escribirGuardado(clave, valor) {
-    try {
-        if (typeof localStorage !== 'undefined') localStorage.setItem(clave, JSON.stringify(valor));
-    } catch (e) {}
-}
-export const favoritos = new Set(leerGuardado(FAVORITOS_KEY));
-export const comparador = new Set(leerGuardado(COMPARAR_KEY));
-
 // Paginación de resultados: mostramos de a tandas para no pintar las ~600
 // tarjetas de una. El botón "Cargar más" revela la siguiente tanda.
 export const LIMITE_PAGINA = 24;
@@ -68,6 +48,11 @@ export function sincronizarURL() {
     const p = new URLSearchParams();
     const seccion = estado.seccion;
     if (seccion !== 'formal') p.set('seccion', seccion);
+    // La vista por defecto (todas las carreras) no se escribe en la URL: la
+    // portada queda como "/" para que la bienvenida y los links limpios sigan
+    // funcionando igual que siempre. "Por área" se escribe como vista=area
+    // (singular, como pide la URL cuidada del sitio).
+    if (estado.vista && estado.vista !== 'carreras') p.set('vista', estado.vista === 'areas' ? 'area' : estado.vista);
     const searchInput = typeof document !== 'undefined' ? document.getElementById('searchInput') : null;
     const q = searchInput ? searchInput.value.trim() : '';
     if (q) p.set('q', q);
@@ -75,7 +60,6 @@ export function sincronizarURL() {
         .forEach(campo => { if (estado[campo] !== 'todos' && estado[campo] !== 'default') p.set(campo, estado[campo]); });
     if (estado.duracionMin !== null) p.set('dmin', estado.duracionMin);
     if (estado.duracionMax !== null) p.set('dmax', estado.duracionMax);
-    if (estado.favoritos) p.set('favoritos', '1');
     const qs = p.toString();
     history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
 }
@@ -86,6 +70,13 @@ export function restaurarDesdeURL() {
     if (p.has('seccion')) {
         const s = p.get('seccion');
         if (SECCIONES_PERMITIDAS.has(s)) estado.seccion = s;
+    }
+    // El valor interno de la vista es 'areas' (plural, nombre del grupo); la
+    // URL usa 'area' por legibilidad. Se aceptan las dos: links compartidos
+    // viejos pueden traer 'areas'.
+    if (p.has('vista')) {
+        const v = p.get('vista') === 'area' ? 'areas' : p.get('vista');
+        if (VISTAS_PERMITIDAS.has(v)) estado.vista = v;
     }
     if (p.has('q')) {
         const q = p.get('q');
@@ -114,7 +105,6 @@ export function restaurarDesdeURL() {
     if (estado.duracionMin !== null && estado.duracionMax !== null && estado.duracionMin > estado.duracionMax) {
         [estado.duracionMin, estado.duracionMax] = [estado.duracionMax, estado.duracionMin];
     }
-    if (p.has('favoritos')) estado.favoritos = p.get('favoritos') === '1' || p.get('favoritos') === 'true';
 
     const sort = document.getElementById('sortSelect');
     if (sort) sort.value = estado.orden;
@@ -145,66 +135,4 @@ function sincronizarTabs() {
 // ▲▲▲ ------------------------ ▲▲▲
 //
 // OJO: revisá que estas URLs sigan siendo las oficiales antes de publicar.
-function clavesDeCarrera(clave) {
-    if (buscarPorClave(clave)) return [clave];
-    const carrera = (Orientador.perfilesCarreras || []).find(c => c.clave === clave);
-    if (!carrera) return [];
-    const nombreNorm = normalizarTexto(carrera.nombre);
-    return ofertas.filter(o => normalizarTexto(o.nombre) === nombreNorm).map(o => o._clave);
-}
-
-export function estaEnFavoritos(clave) {
-    if (favoritos.has(clave)) return true;
-    const claves = clavesDeCarrera(clave);
-    return claves.length > 0 && claves.every(c => favoritos.has(c));
-}
-
-export function toggleFavorito(clave) {
-    const claves = clavesDeCarrera(clave);
-    if (!claves.length) return;
-    // Si la carrera ya está guardada completa se saca entera; si no, se guarda
-    // con todas sus instituciones (para que "Solo favoritos" la encuentre).
-    const completo = claves.every(c => favoritos.has(c));
-    claves.forEach(c => { if (completo) favoritos.delete(c); else favoritos.add(c); });
-    escribirGuardado(FAVORITOS_KEY, [...favoritos]);
-    // Se actualizan todos los botones de esa clave (grilla y tarjetas del chat),
-    // no solo el primero que encuentre.
-    if (typeof document !== 'undefined') {
-        document.querySelectorAll(`.btn-favorito[data-clave="${CSS.escape(clave)}"]`).forEach(boton => {
-            boton.classList.toggle('is-active', !completo);
-            boton.setAttribute('aria-pressed', String(!completo));
-        });
-    }
-    if (estado.favoritos && alCambiarFavoritos) alCambiarFavoritos();
-}
-
-export function enComparador(clave) {
-    if (comparador.has(clave)) return true;
-    const claves = clavesDeCarrera(clave);
-    return claves.length > 0 && claves.every(c => comparador.has(c));
-}
-function cantidadComparador() { return comparador.size; }
-
-export function toggleComparar(clave) {
-    const claves = clavesDeCarrera(clave);
-    if (!claves.length) return;
-    const completo = claves.every(c => comparador.has(c));
-    claves.forEach(c => { if (completo) comparador.delete(c); else comparador.add(c); });
-    escribirGuardado(COMPARAR_KEY, [...comparador]);
-    // Se actualizan todos los botones de esa clave (grilla y tarjetas del chat).
-    document.querySelectorAll(`.btn-comparar[data-clave="${CSS.escape(clave)}"]`).forEach(boton => {
-        boton.classList.toggle('is-active', !completo);
-        boton.setAttribute('aria-pressed', String(!completo));
-    });
-    actualizarBarraComparar();
-}
-
-export function actualizarBarraComparar() {
-    const barra = document.getElementById('compararBar');
-    if (!barra) return;
-    const cantidad = comparador.size;
-    barra.hidden = cantidad === 0;
-    const contador = document.getElementById('compararCount');
-    if (contador) contador.textContent = String(cantidad);
-}
 

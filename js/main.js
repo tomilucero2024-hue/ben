@@ -5,13 +5,12 @@
 
 import { cerrarChat, configurarBienvenida, configurarChat, salirDelTest } from './copiloto.js';
 import { cargarOfertas, catalogosAparte, inicializarOrientadorDiferido } from './datos.js';
-import { COMPARAR_KEY, actualizarBarraComparar, comparador, escribirGuardado, estado, favoritos, registrarCambioFavoritos, restaurarDesdeURL, sincronizarURL, toggleComparar, toggleFavorito } from './estado.js';
-import { abrirComparar, actualizarBotonesActivos, cambiarPanelFiltros, cambiarSeccion, cargarMas, cerrarComparar, limpiarRecomendacion, mostrarCatalogoAparte, mostrarPlataformas, mostrarResultados, sincronizarInertFiltros } from './render.js';
+import { estado, restaurarDesdeURL, sincronizarURL } from './estado.js';
+import { actualizarBotonesActivos, cambiarPanelFiltros, cambiarSeccion, cargarMas, configurarSwitcherVistas, limpiarRecomendacion, mostrarCatalogoAparte, mostrarPlataformas, mostrarResultados, sincronizarInertFiltros } from './render.js';
 import { normalizarTexto } from './util.js';
 import { inicializarAutocompletado } from './autocompletado.js';
 
 async function arrancar() {
-    registrarCambioFavoritos(mostrarResultados);
     document.body.dataset.seccion = estado.seccion;
     // Restaura filtros/sección/búsqueda desde la URL ANTES de arrancar, para que
     // el primer render ya respete un link compartido.
@@ -24,6 +23,7 @@ async function arrancar() {
     inicializarOrientadorDiferido();
     configurarChat();
     sincronizarInertFiltros();
+    configurarSwitcherVistas();
     configurarBienvenida();
 }
 
@@ -164,7 +164,11 @@ function configurarEventos() {
                 // "Salud", así que el panel mostraba filtros que ya no estaban
                 // aplicados. Ahora los dos caminos comparten resetearFiltros().
                 resetearFiltros();
-                estado.favoritos = false;
+                // El logo es "ir al inicio", y el inicio es la vista de TODAS
+                // las carreras: además de limpiar filtros y recomendación se
+                // vuelve a esa vista (no a la última en la que estaba).
+                estado.vista = 'carreras';
+                estado.tipoInstitucion = null;
                 // cambiarSeccion() ya repinta y llama a sincronizarURL(), que
                 // deja la URL en "/" con replaceState. Un pushState acá encima
                 // solo agregaba una entrada duplicada al historial: el botón
@@ -238,13 +242,6 @@ function configurarEventos() {
     document.getElementById('closeFiltersButton').addEventListener('click', () => cambiarPanelFiltros(false));
     document.getElementById('filtersOverlay').addEventListener('click', () => cambiarPanelFiltros(false));
 
-    const btnFavoritos = document.getElementById('btnFavoritos');
-    if (btnFavoritos) btnFavoritos.addEventListener('click', () => {
-        estado.favoritos = !estado.favoritos;
-        mostrarResultados();
-        sincronizarURL();
-    });
-
     const btnCargarMas = document.getElementById('cargarMas');
     if (btnCargarMas) {
         const observer = new IntersectionObserver((entries) => {
@@ -257,43 +254,14 @@ function configurarEventos() {
         btnCargarMas.addEventListener('click', cargarMas);
     }
 
-    // Delegación para los botones de las tarjetas (favorito / comparar), que se
-    // re-renderizan con frecuencia: un solo listener en document alcanza para todas.
-    document.addEventListener('click', event => {
-        const botonFav = event.target.closest('.btn-favorito');
-        if (botonFav) { toggleFavorito(botonFav.dataset.clave); return; }
-        const botonCmp = event.target.closest('.btn-comparar');
-        if (botonCmp) { toggleComparar(botonCmp.dataset.clave); return; }
-    });
-
-    const compararLimpiar = document.getElementById('compararLimpiar');
-    if (compararLimpiar) compararLimpiar.addEventListener('click', () => {
-        comparador.clear();
-        escribirGuardado(COMPARAR_KEY, []);
-        document.querySelectorAll('.btn-comparar').forEach(b => b.classList.remove('is-active'));
-        actualizarBarraComparar();
-    });
-
-    const compararAbrir = document.getElementById('compararAbrir');
-    if (compararAbrir) compararAbrir.addEventListener('click', abrirComparar);
-
-    // Antes era onclick="cerrarComparar()" en el HTML. Como modulo, las
+    // Antes era onclick="limpiarRecomendacion()" en el HTML. Como modulo, las
     // funciones ya no son globales: el boton se cablea aca como los demas.
     const chapaCerrar = document.getElementById('chapaRecomendacionCerrar');
     if (chapaCerrar) chapaCerrar.addEventListener('click', limpiarRecomendacion);
 
-    const compararCerrar = document.getElementById('compararCerrar');
-    if (compararCerrar) compararCerrar.addEventListener('click', cerrarComparar);
-
-    const modalComparar = document.getElementById('compararModal');
-    if (modalComparar) {
-        modalComparar.addEventListener('click', event => { if (event.target === modalComparar) cerrarComparar(); });
-    }
     document.addEventListener('keydown', event => {
         if (event.key !== 'Escape') return;
         // De más superficial a más profundo: se cierra una capa por vez.
-        const m = document.getElementById('compararModal');
-        if (m && !m.hidden) { cerrarComparar(); return; }
         if (document.body.classList.contains('filters-open')) { cambiarPanelFiltros(false); return; }
         const panel = document.getElementById('copilotoPanel');
         if (panel && panel.classList.contains('is-test-pantalla-completa')) { salirDelTest(); return; }
@@ -301,10 +269,6 @@ function configurarEventos() {
         if (ventana && !ventana.hidden) { cerrarChat(); return; }
         // La bienvenida es la puerta de entrada del sitio y no se cierra con Escape.
     });
-
-    actualizarBarraComparar();
-    document.querySelectorAll('.btn-comparar').forEach(b => b.classList.toggle('is-active', comparador.has(b.dataset.clave)));
-    document.querySelectorAll('.btn-favorito').forEach(b => b.classList.toggle('is-active', favoritos.has(b.dataset.clave)));
 }
 
 function aplicarRangoDuracion() {

@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Educación","item":"https://buscadoreducativo.com.ar/area/educacion/"},{"@type":"ListItem","position":4,"name":"Licenciatura en Psicopedagogía","item":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicopedagogia/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Licenciatura en Psicopedagogía","description":"Dónde estudiar Licenciatura en Psicopedagogía en Mendoza: carrera de grado del área Educación, dictada por 2 instituciones (2 privadas). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-psicopedagogia/","provider":[{"@type":"EducationalOrganization","name":"Universidad Católica Argentina (UCA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-catolica-argentina-uca/"},{"@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Licenciatura en Psicopedagogía en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Licenciatura en Psicopedagogía en Mendoza en 2 instituciones: Universidad Católica Argentina (UCA) y Universidad Siglo 21 (S21). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Licenciatura en Psicopedagogía?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Licenciatura en Psicopedagogía?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Licenciatura en Psicopedagogía?","acceptedAnswer":{"@type":"Answer","text":"Licenciatura en Psicopedagogía es una carrera de grado perteneciente al área de Educación. Entre sus aptitudes más afines se destacan: interacción social, base teórica y académica, trabajo práctico y liderazgo y gestión."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,17 +120,36 @@
         <dt>Modalidad</dt><dd>Presencial</dd>
         <dt>Duración</dt><dd>4 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Licenciatura+en+Psicopedagog%C3%ADa&amp;area=Educaci%C3%B3n&amp;formacion=grado">Ver Licenciatura en Psicopedagogía en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Licenciatura en Psicopedagogía</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-catolica-argentina-uca/">Universidad Católica Argentina (UCA)</a></h3>
-            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-
-            <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Introducción a la Psicopedagogía</li><li>Pedagogía</li><li>Introducción a la Psicología General y de la Personalidad</li><li>Psicología de la Educación</li><li>Neurociencias I</li><li>Introducción a la Filosofía</li><li>Fundamentos y Principios de la Evaluación Psicopedagógica</li><li>Didáctica General</li><li>Contextos Socioculturales y Aprendizaje</li><li>Psicología del Desarrollo de la Niñez</li><li>Procesos Básicos y Superiores</li><li>Seminario de Profundización Filosófica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Técnicas de Evaluación Diagnóstica en Niñez</li><li>Psicología Profunda</li><li>Didáctica y Currículo I</li><li>Psicología del Aprendizaje</li><li>Psicopedagogía y Diversidad</li><li>Introducción a la Teología</li><li>Técnicas de Evaluación Diagnóstica en Adolescencia y Juventud</li><li>Epistemología y Metodologías de la Investigación</li><li>Psicología del Desarrollo de la Adolescencia y Juventud</li><li>Psicología del Lenguaje</li><li>Intervenciones Psicopedagógicas en Instituciones Educativas y Organizaciones</li><li>Seminario de Profundización Teológica</li><li>Prácticas Profesionales I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Psicopatología I</li><li>Didáctica y Currículo II</li><li>Intervenciones Psicopedagógicas Preventivas en Educación, Trabajo y Salud</li><li>Clínica Psicopedagógica, Orientación y Tratamiento en Niñez</li><li>Psicopedagogía Laboral</li><li>Nociones de Ética Filosófica y Deontología Profesional</li><li>Psicopatología II</li><li>Neuropsicología y Discapacidad</li><li>Técnicas de Evaluación Diagnóstica en Adultez y Vejez</li><li>Psicopedagogía Socio-Comunitaria</li><li>Métodos y Diseños de Investigación en Psicopedagogía</li><li>Materia Optativa I</li><li>Nociones de Ética Teológica y Pensamiento Social Cristiano</li><li>Prácticas Profesionales II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Clínica Psicopedagógica, Orientación y Tratamiento en Adolescencia y Juventud</li><li>Ejercicio Profesional de la Psicopedagogía</li><li>Psicopedagogía y Nuevas Tecnologías</li><li>Taller de Trabajo Final I</li><li>Aprendizaje y Evaluación Neurocognitiva</li><li>Materia Optativa II</li><li>Seminario de Integración del Saber</li><li>Prácticas Profesionales III</li><li>Clínica Psicopedagógica, Orientación y Tratamiento en Adultez y Vejez</li><li>Orientación Vocacional, Profesional y Ocupacional</li><li>Intervenciones Psicopedagógicas y Rehabilitación Cognitiva</li><li>Taller de Trabajo Final II</li><li>Psicopedagogía Forense</li><li>Seminario de Compromiso Social</li><li>Residencia Psicopedagógica</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/psicopedagogia/plan-de-estudio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/psicopedagogia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-siglo-21-s21/">Universidad Siglo 21 (S21)</a></h3>
@@ -216,7 +264,7 @@
         <li><a href="/carrera/profesorado-de-educacion-secundaria-en-biologia/">Profesorado de Educación Secundaria en BIOLOGÍA</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/profesorado-de-teatro/">Profesorado de Teatro</a> <span class="cuantas">(4)</span></li>
     </ul>
-    <p><a href="/area/educacion/">Ver las 66 carreras del área Educación →</a></p>
+    <p><a href="/area/educacion/">Ver las 69 carreras del área Educación →</a></p>
     </section>
     </div>
 </div>

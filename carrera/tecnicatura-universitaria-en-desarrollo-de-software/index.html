@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Tecnología","item":"https://buscadoreducativo.com.ar/area/tecnologia/"},{"@type":"ListItem","position":4,"name":"Tecnicatura Universitaria en Desarrollo de Software","item":"https://buscadoreducativo.com.ar/carrera/tecnicatura-universitaria-en-desarrollo-de-software/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Tecnicatura Universitaria en Desarrollo de Software","description":"Dónde estudiar Tecnicatura Universitaria en Desarrollo de Software en Mendoza: tecnicatura del área Tecnología, dictada por 2 instituciones (2 privadas). Dura 3 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-universitaria-en-desarrollo-de-software/","provider":[{"@type":"EducationalOrganization","name":"Universidad de Mendoza (UM)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-mendoza-um/"},{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Tecnicatura Universitaria en Desarrollo de Software en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Tecnicatura Universitaria en Desarrollo de Software en Mendoza en 2 instituciones: Universidad de Mendoza (UM) y Universidad del Aconcagua (UDA). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Tecnicatura Universitaria en Desarrollo de Software?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 3 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Tecnicatura Universitaria en Desarrollo de Software?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Tecnicatura Universitaria en Desarrollo de Software?","acceptedAnswer":{"@type":"Answer","text":"Tecnicatura Universitaria en Desarrollo de Software es una tecnicatura perteneciente al área de Tecnología. Entre sus aptitudes más afines se destacan: pensamiento analítico, afinidad tecnológica, trabajo práctico y creatividad."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,8 +120,6 @@
         <dt>Modalidad</dt><dd>Presencial</dd>
         <dt>Duración</dt><dd>3 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Tecnicatura+Universitaria+en+Desarrollo+de+Software&amp;area=Tecnolog%C3%ADa&amp;formacion=tecnicaturas">Ver Tecnicatura Universitaria en Desarrollo de Software en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Tecnicatura Universitaria en Desarrollo de Software</h2>
@@ -100,13 +127,51 @@
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-mendoza-um/">Universidad de Mendoza (UM)</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — Régimen de estudios</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Régimen de estudios</h4>
+            <ul><li>Fundamentos de la programación</li><li>Ingeniería de prompts</li><li>Desarrollo de web y API&#39;s</li><li>Fundamentos de bases de datos</li><li>Consideraciones éticas y prácticas</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://um.edu.ar/carreras/tecnicatura-universitaria-en-desarrollo-de-software/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://um.edu.ar/carreras/tecnicatura-universitaria-en-desarrollo-de-software/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año — Primer cuatrimestre</h4>
+            <ul><li>Matemática</li><li>Programación I</li><li>Arquitectura de Computadoras I</li><li>Laboratorio I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo cuatrimestre</h4>
+            <ul><li>Análisis Matemático I</li><li>Programación II</li><li>Arquitectura de Computadoras II</li><li>Laboratorio II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Primer cuatrimestre</h4>
+            <ul><li>Análisis Matemático II</li><li>Sistemas de Comunicaciones</li><li>Diseño I</li><li>Laboratorio III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Segundo cuatrimestre</h4>
+            <ul><li>Estadística</li><li>Laboratorio IV</li><li>Base de datos</li><li>Diseño II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Primer cuatrimestre</h4>
+            <ul><li>Programación Avanzada</li><li>Investigación Operativa</li><li>Autómatas y Lenguajes</li><li>Sistemas Inteligentes</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Segundo cuatrimestre</h4>
+            <ul><li>Compiladores</li><li>Seguridad</li><li>Ingeniería del conocimiento</li><li>Comercialización de Servicios</li><li>Practica integradora</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-desarrollo-de-software" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-desarrollo-de-software" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -184,14 +249,14 @@
         <li><a href="/carrera/ciencia-de-datos/">Ciencia de Datos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/formacion-profesional-en-software/">Formación Profesional en Software</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ia-desde-cero/">Ia Desde Cero</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/instalador-de-aire-acondicionado-y-refrigeracion-frio-calor-sistema-inverter/">Instalador de Aire Acondicionado y Refrigeración Frío-Calor Sistema Inverter</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/lic-en-informatica-y-desarrollo-de-software/">Lic. en Informática y Desarrollo de Software</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciado-en-sistemas-de-informacion/">Licenciado en Sistemas de Información</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-bioinformatica/">Licenciatura en Bioinformática</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-ciberdefensa/">Licenciatura en Ciberdefensa</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-ciencia-de-datos/">Licenciatura en Ciencia de Datos</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/licenciatura-en-computacion/">Licenciatura en Computación</a> <span class="cuantas">(1)</span></li>
     </ul>
-    <p><a href="/area/tecnologia/">Ver las 35 carreras del área Tecnología →</a></p>
+    <p><a href="/area/tecnologia/">Ver las 31 carreras del área Tecnología →</a></p>
     </section>
     </div>
 </div>

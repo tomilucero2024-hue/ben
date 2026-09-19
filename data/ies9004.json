@@ -1,89 +1,209 @@
 {
- "instituciones": [
-  {
-   "id": 14,
-   "nombre": "IES 9-004 Gral. Toribio de Luzuriaga",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "02622-422847",
-    "email": "ies9004@infd.edu.ar",
-    "direccion": "Ruta 40 (N) Km 81, Tunuyán"
-   },
-   "carreras": [
-    {
-     "id": 1400,
-     "nombre_carrera": "PROFESORADOS Y POSTÍTULOS",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-004 Toribio de Luzuriaga",
-     "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-educacion-primaria/"
-    },
-    {
-     "id": 1401,
-     "nombre_carrera": "Profesorado de Biología",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-004 Toribio de Luzuriaga",
-     "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-biologia/"
-    },
-    {
-     "id": 1402,
-     "nombre_carrera": "Profesorado de Educación Inicial",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-004 Toribio de Luzuriaga",
-     "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/"
-    },
-    {
-     "id": 1403,
-     "nombre_carrera": "Profesorado de Educación Secundaria para Técnicos",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial sincrónica y asincrónica",
-     "turno": "A confirmar",
-     "facultad": "IES 9-004 Toribio de Luzuriaga",
-     "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-para-tecnicos/"
-    },
-    {
-     "id": 1404,
-     "nombre_carrera": "Profesorado de Geografía",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-004 Toribio de Luzuriaga",
-     "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-geografia/"
-    },
-    {
-     "id": 1405,
-     "nombre_carrera": "Profesorado de Historia",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-004 Toribio de Luzuriaga",
-     "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-historia/"
-    },
-    {
-     "id": 1406,
-     "nombre_carrera": "Tecnicatura Superior en Acompañamiento Terapéutico",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-004 Toribio de Luzuriaga",
-     "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/"
-    }
-   ],
-   "departamento": "Tunuyán"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 14,
+            "nombre": "IES 9-004 Gral. Toribio de Luzuriaga",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "02622-422847",
+                "email": "ies9004@infd.edu.ar",
+                "direccion": "Ruta 40 (N) Km 81, Tunuyán"
+            },
+            "carreras": [
+                {
+                    "id": 1400,
+                    "nombre_carrera": "Profesorado de Biología",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-004 Toribio de Luzuriaga",
+                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-biologia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Biología General",
+                                "Química General",
+                                "Matemática",
+                                "Bioestadística",
+                                "Sujeto de la Educación",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Formación Práctica Profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Química Orgánica",
+                                "Química Inorgánica",
+                                "Física General",
+                                "Ciencias de la Tierra",
+                                "Ecología",
+                                "Didáctica de las Ciencias Naturales",
+                                "Didáctica General",
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Formación Práctica Profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Didáctica de la Biología",
+                                "Biología Vegetal",
+                                "Biología Animal",
+                                "Microbiología y Biodiversidad",
+                                "Biología Humana",
+                                "Salud Humana",
+                                "Educación en la Diversidad",
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Psicología Educacional",
+                                "Formación Práctica Profesional III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Química Biológica",
+                                "Genética",
+                                "Educación Ambiental",
+                                "Formación Complementaria Específica",
+                                "Unidad de Definición Jurisdiccional: Historia y Patrimonio Cultural de Mendoza",
+                                "Educación y Tecnologías Digitales",
+                                "Educación Sexual Integral",
+                                "Formación Práctica Profesional IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-biologia/"
+                },
+                {
+                    "id": 1401,
+                    "nombre_carrera": "Profesorado de Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-004 Toribio de Luzuriaga",
+                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/"
+                },
+                {
+                    "id": 1402,
+                    "nombre_carrera": "Profesorado Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-004 Toribio de Luzuriaga",
+                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-educacion-primaria/"
+                },
+                {
+                    "id": 1403,
+                    "nombre_carrera": "Profesorado de Educación Secundaria para Técnicos",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial sincrónica y asincrónica",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-004 Toribio de Luzuriaga",
+                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-para-tecnicos/"
+                },
+                {
+                    "id": 1404,
+                    "nombre_carrera": "Profesorado de Geografía",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-004 Toribio de Luzuriaga",
+                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-geografia/"
+                },
+                {
+                    "id": 1405,
+                    "nombre_carrera": "Profesorado de Historia",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-004 Toribio de Luzuriaga",
+                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-historia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción a la Historia y a la Geografía",
+                                "Ciencias Políticas y Economía",
+                                "Historia Universal I",
+                                "Procesos Demográficos en el Tiempo y en el Espacio",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Formación Práctica Profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Sujeto de la Educación",
+                                "Epistemología de las Ciencias Sociales",
+                                "Historia Argentina I",
+                                "Historia Argentina II",
+                                "Historia Americana I",
+                                "Historia Universal II",
+                                "Didáctica General",
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Formación Práctica Profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Didáctica de la Historia",
+                                "Formación Ética y Ciudadana y su Didáctica",
+                                "Historia y Geografía de Mendoza I",
+                                "Historia y Geografía de Mendoza II",
+                                "Historia Argentina III",
+                                "Historia Americana II",
+                                "Historia Universal III",
+                                "Educación en la Diversidad",
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Psicología Educacional",
+                                "Formación Práctica Profesional III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Historia del Arte Argentino",
+                                "Investigación Histórica",
+                                "Arqueología",
+                                "Formación Complementaria Específica",
+                                "Historia Americana III",
+                                "Historia Universal IV",
+                                "Proyecto Socio Educativo",
+                                "Formación Complementaria General",
+                                "Educación y Tecnologías Digitales",
+                                "Educación Sexual Integral",
+                                "Formación Práctica Profesional IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-historia/"
+                },
+                {
+                    "id": 1406,
+                    "nombre_carrera": "Tecnicatura Superior en Acompañamiento Terapéutico",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-004 Toribio de Luzuriaga",
+                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/"
+                }
+            ]
+        }
+    ]
 }

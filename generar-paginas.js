@@ -235,6 +235,7 @@ function modalidadCanonica(texto) {
 // la app y estas páginas podían decir cosas distintas de la misma carrera.
 // Se completan en main(), que es donde se puede await-ear el módulo ES.
 let duracionCorta;
+let formatearDuracionAnios;
 let obtenerDuracionEnAnios;
 
 function listaEnEspanol(items) {
@@ -407,12 +408,41 @@ ${bloques}
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -611,12 +641,12 @@ function construirModelo() {
     const data = JSON.parse(fs.readFileSync(RUTA_DATA, 'utf8'));
     const perfiles = JSON.parse(fs.readFileSync(RUTA_PERFILES, 'utf8')).carreras || [];
 
-    // Todas las listas de data.json que son "instituciones con carreras".
+    // Solo la educación formal genera páginas. Las formaciones alternativas,
+    // los oficios técnicos y la terminalidad (secundario) se muestran en la app
+    // con su tab correspondiente y la tarjeta va directo al sitio oficial: no
+    // tienen ficha estática, no aparecen en /carreras/ ni en el sitemap.
     const GRUPOS = [
-        { clave: 'instituciones', fuente: 'Educación formal' },
-        { clave: 'formaciones_alternativas', fuente: 'Formación alternativa' },
-        { clave: 'oficios_tecnicos', fuente: 'Oficio técnico' },
-        { clave: 'secundario', fuente: 'Terminalidad educativa' }
+        { clave: 'instituciones', fuente: 'Educación formal' }
     ];
 
     const instituciones = [];
@@ -758,11 +788,12 @@ function resumenCarrera(carrera) {
     if (anios.length) {
         const min = Math.min(...anios);
         const max = Math.max(...anios);
-        const fmt = a => a >= 1
-            ? `${Number.isInteger(a) ? a : a.toFixed(1)} ${a === 1 ? 'año' : 'años'}`
-            : `${Math.round(a * 12)} meses`;
+        const fmt = a => formatearDuracionAnios(a);
         const mismaUnidad = (min >= 1) === (max >= 1);
-        const desde = mismaUnidad ? fmt(min).replace(/ (años?|meses)$/, '') : fmt(min);
+        // En "Dura de 2 a 4 años" el extremo inferior pierde la unidad; si el
+        // texto trae una duración compuesta ("1 año y 3 meses") se deja entera.
+        const sinUnidad = t => (t.includes(' y ') ? t : t.replace(/ (años?|meses)$/, ''));
+        const desde = mismaUnidad ? sinUnidad(fmt(min)) : fmt(min);
         partes.push(min === max
             ? `Dura ${fmt(min)}.`
             : `Dura de ${desde} a ${fmt(max)} según la institución.`);
@@ -796,24 +827,6 @@ const SECCION_POR_FUENTE = {
     'Formación alternativa': 'formaciones-alternativas',
     'Terminalidad educativa': 'secundario'
 };
-
-function enlaceBuscador(carrera) {
-    const p = new URLSearchParams();
-    const fuentes = new Set(carrera.ofertas.map(o => o.institucion.fuente));
-
-    // Si al menos una oferta es formal, la seccion formal es la que la muestra.
-    if (!fuentes.has('Educación formal')) {
-        const seccion = SECCION_POR_FUENTE[[...fuentes][0]];
-        if (seccion) p.set('seccion', seccion);
-    }
-    p.set('q', carrera.nombre);
-    // area y formacion solo aplican a la grilla formal.
-    if (!p.has('seccion')) {
-        if (carrera.area) p.set('area', carrera.area);
-        if (carrera.formacion) p.set('formacion', carrera.formacion);
-    }
-    return `/?${p.toString()}`;
-}
 
 // ---------------------------------------------------------------------------
 // Páginas
@@ -1040,9 +1053,7 @@ ${relacionadas.map(c => `        <li><a href="/carrera/${c.slug}/">${esc(c.nombr
 
     const lateral = `    <dl class="ficha">
 ${ficha.map(([k, v]) => `        <dt>${k}</dt><dd>${v}</dd>`).join('\n')}
-    </dl>
-
-    <a class="cta" href="${esc(enlaceBuscador(carrera))}">Ver ${esc(carrera.nombre)} en el buscador →</a>`;
+    </dl>`;
 
     const ld = carrera.ofertas.length >= 3
         ? {
@@ -1211,9 +1222,7 @@ ${lista.map(o => tarjetaOferta(o, { mostrarInstitucion: false })).join('\n')}
 
     const lateral = `    <dl class="ficha">
 ${ficha.map(([k, v]) => `        <dt>${k}</dt><dd>${v}</dd>`).join('\n')}
-    </dl>
-
-    <a class="cta" href="/?institucion=${encodeURIComponent(institucion.nombre)}">Ver esta institución en el buscador →</a>`;
+    </dl>`;
 
     const ld = {
         '@context': 'https://schema.org',
@@ -1629,7 +1638,7 @@ function mapaAutocompletado(modelo) {
 async function main() {
     // js/util.js es un modulo ES y este script es CommonJS, asi que el import
     // va aca adentro. Se resuelve antes de generar la primera pagina.
-    ({ duracionCorta, obtenerDuracionEnAnios } = await import('./js/util.js'));
+    ({ duracionCorta, formatearDuracionAnios, obtenerDuracionEnAnios } = await import('./js/util.js'));
     console.log('Generando paginas estaticas...');
 
     SALIDAS.forEach(dir => fs.rmSync(path.join(RAIZ, dir), { recursive: true, force: true }));

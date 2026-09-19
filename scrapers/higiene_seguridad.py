@@ -28,7 +28,60 @@ higiene_seguridad = [
                 "duracion": "3 años",
                 "modalidad": "Presencial (lunes a viernes 18 a 23hs)",
                 "facultad": "ITU-UNCuyo",
-                "link_oficial": "https://itu.uncuyo.edu.ar/estudios/titulo/tecnico-universitario-en-higiene-y-seguridad-laboral"
+                "link_oficial": "https://itu.uncuyo.edu.ar/estudios/titulo/tecnico-universitario-en-higiene-y-seguridad-laboral",
+                "plan_fuente": "https://itu.uncuyo.edu.ar/estudios/titulo/tecnico-universitario-en-higiene-y-seguridad-laboral",
+                # La web del ITU lista los 32 espacios curriculares sin agrupar; el
+                # reparto por año sale de la malla de la Ordenanza 22/2022 (PDF de
+                # 99 páginas escaneadas, resuelto con OCR).
+                "plan_estudio": [
+                    {
+                        "anio": "1º año",
+                        "materias": [
+                            "Higiene Industrial",
+                            "Análisis matemático",
+                            "Física",
+                            "Química",
+                            "Desarrollo del Pensamiento y Desempeño de Roles",
+                            "Técnicas de Representación Gráfica",
+                            "Comprensión y Producción de Textos",
+                            "Estadística Aplicada",
+                            "Inglés",
+                            "Informática",
+                            "Taller Integrador"
+                        ]
+                    },
+                    {
+                        "anio": "2º año",
+                        "materias": [
+                            "Higiene Industrial Aplicada",
+                            "Industria y Ambiente",
+                            "Sociología del Trabajo",
+                            "Psicología Laboral",
+                            "Ergonomía",
+                            "Relaciones Humanas",
+                            "Inducción a la Seguridad",
+                            "Patología Laboral",
+                            "Laboratorio de Práctica"
+                        ]
+                    },
+                    {
+                        "anio": "3º año",
+                        "materias": [
+                            "Servicios Industriales",
+                            "Seguridad en el Trabajo",
+                            "Estrategias de Capacitación en el Trabajo",
+                            "Legislación Laboral",
+                            "Medicina del Trabajo y Primeros Auxilios",
+                            "Organización de Empresas",
+                            "Seguridad vial",
+                            "Taller de Producción de Informes",
+                            "Optativo I",
+                            "Optativo II",
+                            "Electivo",
+                            "Práctica Profesionalizante"
+                        ]
+                    }
+                ]
             }
         ]
     },

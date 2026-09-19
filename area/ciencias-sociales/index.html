@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Qué estudiar en Ciencias sociales | BEN</title>
-<meta name="description" content="122 carreras del área Ciencias sociales en BEN, dictadas por 41 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta name="description" content="71 carreras del área Ciencias sociales en BEN, dictadas por 19 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/area/ciencias-sociales/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Qué estudiar en Ciencias sociales | BEN">
-<meta property="og:description" content="122 carreras del área Ciencias sociales en BEN, dictadas por 41 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta property="og:description" content="71 carreras del área Ciencias sociales en BEN, dictadas por 19 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/area/ciencias-sociales/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Qué estudiar en Ciencias sociales | BEN">
-<meta name="twitter:description" content="122 carreras del área Ciencias sociales en BEN, dictadas por 41 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta name="twitter:description" content="71 carreras del área Ciencias sociales en BEN, dictadas por 19 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -56,9 +56,9 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ciencias sociales","item":"https://buscadoreducativo.com.ar/area/ciencias-sociales/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Carreras del área Ciencias sociales","description":"122 carreras del área Ciencias sociales en BEN, dictadas por 41 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.","url":"https://buscadoreducativo.com.ar/area/ciencias-sociales/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Carreras del área Ciencias sociales","description":"71 carreras del área Ciencias sociales en BEN, dictadas por 19 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.","url":"https://buscadoreducativo.com.ar/area/ciencias-sociales/"}</script>
 </head>
 <body>
 <header class="cabecera">
@@ -67,35 +67,63 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
     <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <span aria-current="page">Ciencias sociales</span></nav>
     <h1>Qué estudiar en Ciencias sociales</h1>
-    <p class="entrada">122 carreras del área Ciencias sociales en BEN, dictadas por 41 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.</p>
+    <p class="entrada">71 carreras del área Ciencias sociales en BEN, dictadas por 19 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.</p>
 
     <a class="cta" href="/?area=Ciencias%20sociales">Filtrar Ciencias sociales en el buscador →</a>
 
-    <h2>Carreras de grado (47)</h2>
+    <h2>Carreras de grado (44)</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(8)</span></li>
+        <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(7)</span></li>
         <li><a href="/carrera/abogacia-y-procuracion/">Abogacía y Procuración</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/actuario/">Actuario</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ciclo-de-licenciatura-en-comunicacion-digital-e-interactiva/">Ciclo de Licenciatura en Comunicación Digital e Interactiva</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ciencias-del-comportamiento/">Ciencias del Comportamiento</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/comunicacion/">Comunicación</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/inversiones-y-mercados-de-capitales/">Inversiones y Mercados de Capitales</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/lic-en-relaciones-institucionales-ceremonial-y-comunicacion-corporativa/">Lic. en Relaciones Institucionales, Ceremonial y Comunicación Corporativa</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciado-en-relaciones-humanas/">Licenciado en Relaciones Humanas</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciado-en-relaciones-publicas/">Licenciado en Relaciones Públicas</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/licenciatura-en-anestesiologia-a-distancia/">Licenciatura en Anestesiología a distancia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-antropologia-organizacional/">Licenciatura en Antropología Organizacional</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-arqueologia/">Licenciatura en Arqueología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-ciencia-politica-y-gobierno/">Licenciatura En Ciencia Política Y Gobierno</a> <span class="cuantas">(1)</span></li>
@@ -103,24 +131,21 @@
         <li><a href="/carrera/licenciatura-en-comunicacion-digital/">Licenciatura en Comunicación Digital</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-comunicacion-digital-e-interactiva/">Licenciatura en Comunicación Digital e Interactiva</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-comunicacion-social/">Licenciatura en Comunicación Social</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-criminalistica/">Licenciatura en Criminalística</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/licenciatura-en-criminalistica/">Licenciatura en Criminalística</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-criminologia-y-seguridad/">Licenciatura en Criminología y Seguridad</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-filosofia/">Licenciatura en Filosofía</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-gestion-deportiva/">Licenciatura en Gestión Deportiva</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-gestion-publica/">Licenciatura en Gestión Pública</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-gestion-tecnologica-de-las-organizaciones/">Licenciatura en Gestión Tecnológica de las Organizaciones</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/licenciatura-en-higiene-y-seguridad-en-el-trabajo/">Licenciatura en Higiene y Seguridad en el Trabajo</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-historia/">Licenciatura en Historia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-letras/">Licenciatura en Letras</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia/">Licenciatura en Niñez, Adolescencia y Familia</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia/">Licenciatura en Niñez, Adolescencia y Familia</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-periodismo/">Licenciatura en Periodismo</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-relaciones-internacionales/">Licenciatura en Relaciones Internacionales</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/licenciatura-en-relaciones-publicas-e-institucionales/">Licenciatura en Relaciones Públicas e Institucionales</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-seguridad-ciudadana/">Licenciatura en Seguridad Ciudadana</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/licenciatura-en-seguridad-ciudadana-integral/">Licenciatura en Seguridad Ciudadana Integral</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-seguridad-ciudadana-integral-modalidad-a-distancia/">Licenciatura en Seguridad Ciudadana Integral - Modalidad a distancia</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/licenciatura-en-seguridad-ciudadana-integral-a-distancia/">Licenciatura en Seguridad Ciudadana Integral | A distancia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-seguridad-penitenciaria/">Licenciatura en Seguridad Penitenciaria</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-seguridad-publica/">Licenciatura en Seguridad Pública</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-sociologia/">Licenciatura en Sociología</a> <span class="cuantas">(1)</span></li>
@@ -130,90 +155,43 @@
         <li><a href="/carrera/procuracion/">Procuración</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/proteccion-comunitaria-y-seguridad-urbana/">Protección Comunitaria y Seguridad Urbana</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/puericultura-a-distancia/">Puericultura a Distancia</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/relaciones-internacionales-y-gobernanza-global/">Relaciones Internacionales y Gobernanza Global</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/relaciones-internacionales/">Relaciones Internacionales</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/trabajo-social/">Trabajo Social</a> <span class="cuantas">(1)</span></li>
     </ul>
 
-    <h2>Tecnicaturas (59)</h2>
+    <h2>Tecnicaturas (25)</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/gestion-de-empresas-turisticas/">Gestión de Empresas Turísticas</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/higiene-y-seguridad/">Higiene y Seguridad</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/procurador/">Procurador</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-cosmetologia-y-cosmiatria/">Tecnicatura en Cosmetología y Cosmiatría</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-direccion-de-protocolo-organizacion-de-eventos-y-relaciones/">Tecnicatura en Dirección de Protocolo, Organización de Eventos y Relaciones Públicas</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-geotecnologias/">Tecnicatura en Geotecnologías</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-gestion-contable-e-impositiva/">Tecnicatura en Gestión Contable e Impositiva</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-gestion-de-empresas/">Tecnicatura en Gestión de Empresas</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-gestion-de-empresas-familiares/">Tecnicatura en Gestión de Empresas Familiares</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-gestion-de-politicas-publicas/">Tecnicatura en Gestión de Políticas Públicas</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-higiene-y-seguridad-en-el-trabajo/">Tecnicatura en Higiene y Seguridad en el Trabajo</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/tecnicatura-en-investigacion-de-la-escena-del-crimen/">Tecnicatura en Investigación de la Escena del Crimen</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-laboratorio/">Tecnicatura en Laboratorio</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-laboratorio-de-analisis-clinicos/">Tecnicatura en Laboratorio de Análisis Clínicos</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-mecatronica/">Tecnicatura en Mecatrónica</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-operaciones-mineras/">Tecnicatura en Operaciones Mineras</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-preceptoria-escolar/">Tecnicatura en Preceptoría Escolar</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-produccion-industrial-y-automatizacion/">Tecnicatura en Producción Industrial y Automatización</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-relaciones-laborales/">Tecnicatura en Relaciones Laborales</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-responsabilidad-y-gestion-social/">Tecnicatura en Responsabilidad y Gestión Social</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-seguridad-penitenciaria/">Tecnicatura en Seguridad Penitenciaria</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-seguridad-publica/">Tecnicatura en Seguridad Pública</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-actividades-de-montana/">Tecnicatura Superior en Actividades de Montaña</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-anestesiologia/">Tecnicatura Superior en Anestesiología</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-biotecnologia/">Tecnicatura Superior en Biotecnología</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-bibliotecologia/">Tecnicatura Superior en Bibliotecología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-comunicacion-digital-convergente/">Tecnicatura Superior en Comunicación Digital Convergente</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-comunicacion-social/">Tecnicatura Superior en COMUNICACIÓN SOCIAL</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-conservacion-de-la-naturaleza/">Tecnicatura Superior en Conservación de la Naturaleza</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-contabilidad/">Tecnicatura Superior en Contabilidad</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-cosmetologia-y-cosmiatria/">Tecnicatura Superior en Cosmetología y Cosmiatría</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-desarrollo-humano-presencial/">Tecnicatura Superior En Desarrollo Humano Presencial</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-dialisis/">Tecnicatura Superior en Diálisis</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-energias-renovables/">Tecnicatura Superior en Energías Renovables</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-esterilizacion/">Tecnicatura Superior en Esterilización</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-gestion-de-industrias-culturales-y-creativas/">Tecnicatura Superior en Gestión de Industrias Culturales y Creativas</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-grafologia/">Tecnicatura Superior En Grafologia</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-laboratorio-de-analisis-clinicos/">Tecnicatura Superior en Laboratorio de Análisis Clínicos</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-mecatronica/">Tecnicatura Superior en Mecatrónica</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-mecatronica-aplicada-a-la-industria/">Tecnicatura Superior en Mecatrónica Aplicada a la Industria</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-mineria/">Tecnicatura Superior en Minería</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-optica-y-contactologia/">Tecnicatura Superior en Óptica y Contactología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-periodismo-deportivo/">Tecnicatura Superior en Periodismo Deportivo</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-petroleo-y-gas/">Tecnicatura Superior en Petróleo y Gas</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-preceptoria-escolar/">Tecnicatura Superior en Preceptoría Escolar</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-transporte-ferroviario/">Tecnicatura Superior en Transporte Ferroviario</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-universitaria-en-accidentologia-vial/">Tecnicatura universitaria en Accidentología Vial</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-universitaria-en-atencion-prehospitalaria-de-emergencias/">Tecnicatura Universitaria en Atención Prehospitalaria de Emergencias</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-universitaria-en-emergentologia/">Tecnicatura Universitaria en Emergentología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-universitaria-en-estadistica-aplicada-y-analisis/">Tecnicatura Universitaria en Estadística Aplicada y Análisis</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-universitaria-en-gestion-de-clima-laboral-en-la-organizacion/">Tecnicatura Universitaria en Gestión de Clima Laboral en la Organización</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-universitaria-en-gestion-de-moda/">Tecnicatura Universitaria en Gestión de Moda</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-universitaria-en-hidrocarburos-y-geociencia/">Tecnicatura Universitaria en Hidrocarburos y Geociencia</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo/">Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-universitaria-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/tecnicatura-universitaria-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-universitaria-en-promocion-comunitaria-en-ninez-y-adolescencia/">Tecnicatura Universitaria en Promoción Comunitaria en Niñez y Adolescencia</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-universitaria-en-seguridad-ciudadana-modalidad-a-distancia/">Tecnicatura universitaria en Seguridad Ciudadana - Modalidad a Distancia</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/tecnicatura-universitaria-en-seguridad-ciudadana-modalidad-a-distancia/">Tecnicatura universitaria en Seguridad Ciudadana - Modalidad a Distancia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicaturas/">Tecnicaturas</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnico-superior-en-locucion-de-radio-y-television/">Técnico Superior en Locución de Radio y Televisión</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos/">Técnico/a Universitario/a en Ceremonial y Organización de Eventos</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos/">Técnico/a Universitario/a en Ceremonial y Organización de Eventos</a> <span class="cuantas">(1)</span></li>
     </ul>
 
-    <h2>Cursos y formación profesional (16)</h2>
+    <h2>Cursos y formación profesional (2)</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/check-in/">Check In</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/cursos-online/">Cursos Online</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/despachante-de-aeronaves/">Despachante de Aeronaves</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/electronica/">Electrónica</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/embalsamador-y-taxidermizado-ia/">Embalsamador y Taxidermizado + IA</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/gestor-de-industrias-culturales-y-creativas/">Gestor de Industrias Culturales y Creativas</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/operador-de-servicios-de-rampa/">Operador de Servicios de Rampa</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/operador-radiotelefonista-restringido/">Operador Radiotelefonista Restringido</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/senalero-de-aerodromo/">Señalero de Aeródromo</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/supervisor-de-servicio-de-rampa/">Supervisor de Servicio de Rampa</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tanatopraxia-y-su-aplicacion-forense/">Tanatopraxia y su Aplicación Forense</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tanatopraxia-y-tanatoestetica-certificacion-nacional/">Tanatopraxia y Tanatoestética - Certificación Nacional</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tripulante-de-cabina-de-pasajeros/">Tripulante de Cabina de Pasajeros</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tripulante-de-cabina-de-pasajeros-tcp/">Tripulante de Cabina de Pasajeros (TCP)</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tripulante-de-cabina-de-pasajeros-tcp-curso-intensivo-virtual/">Tripulante de Cabina de Pasajeros (TCP) - Curso Intensivo Virtual</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tripulante-de-cabina-de-pasajeros-tcp-curso-regular/">Tripulante de Cabina de Pasajeros (TCP) - Curso Regular</a> <span class="cuantas">(1)</span></li>
     </ul>
 
 </main>

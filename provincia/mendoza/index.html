@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dónde estudiar en Mendoza | BEN</title>
-<meta name="description" content="Dónde estudiar en Mendoza: 79 instituciones y 465 carreras distintas entre universidades, terciarios, oficios y formación profesional.">
+<meta name="description" content="Dónde estudiar en Mendoza: 50 instituciones y 408 carreras distintas entre universidades, terciarios, oficios y formación profesional.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/provincia/mendoza/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Dónde estudiar en Mendoza | BEN">
-<meta property="og:description" content="Dónde estudiar en Mendoza: 79 instituciones y 465 carreras distintas entre universidades, terciarios, oficios y formación profesional.">
+<meta property="og:description" content="Dónde estudiar en Mendoza: 50 instituciones y 408 carreras distintas entre universidades, terciarios, oficios y formación profesional.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/provincia/mendoza/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Dónde estudiar en Mendoza | BEN">
-<meta name="twitter:description" content="Dónde estudiar en Mendoza: 79 instituciones y 465 carreras distintas entre universidades, terciarios, oficios y formación profesional.">
+<meta name="twitter:description" content="Dónde estudiar en Mendoza: 50 instituciones y 408 carreras distintas entre universidades, terciarios, oficios y formación profesional.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -56,9 +56,9 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Dónde estudiar en Mendoza","description":"Dónde estudiar en Mendoza: 79 instituciones y 465 carreras distintas entre universidades, terciarios, oficios y formación profesional.","url":"https://buscadoreducativo.com.ar/provincia/mendoza/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Dónde estudiar en Mendoza","description":"Dónde estudiar en Mendoza: 50 instituciones y 408 carreras distintas entre universidades, terciarios, oficios y formación profesional.","url":"https://buscadoreducativo.com.ar/provincia/mendoza/"}</script>
 </head>
 <body>
 <header class="cabecera">
@@ -67,18 +67,47 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
     <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <span aria-current="page">Mendoza</span></nav>
     <h1>Dónde estudiar en Mendoza</h1>
-    <p class="entrada">Dónde estudiar en Mendoza: 79 instituciones y 465 carreras distintas entre universidades, terciarios, oficios y formación profesional.</p>
+    <p class="entrada">Dónde estudiar en Mendoza: 50 instituciones y 408 carreras distintas entre universidades, terciarios, oficios y formación profesional.</p>
 
     <div style="display: flex; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-7);">
         <a class="cta" href="/provincia/mendoza/universidades/">Ver sólo Universidades en Mendoza →</a>
@@ -91,14 +120,14 @@
         <li><a href="/institucion/itu-instituto-tecnologico-universitario-uncuyo/">ITU - Instituto Tecnológico Universitario (UNCuyo)</a> <span class="cuantas">(1 carrera)</span></li>
         <li><a href="/institucion/universidad-catolica-argentina-uca/">Universidad Católica Argentina (UCA)</a> <span class="cuantas">(17 carreras)</span></li>
         <li><a href="/institucion/universidad-champagnat-uch/">Universidad Champagnat (UCh)</a> <span class="cuantas">(14 carreras)</span></li>
-        <li><a href="/institucion/universidad-de-congreso-uc/">Universidad de Congreso (UC)</a> <span class="cuantas">(26 carreras)</span></li>
+        <li><a href="/institucion/universidad-de-congreso-uc/">Universidad de Congreso (UC)</a> <span class="cuantas">(36 carreras)</span></li>
         <li><a href="/institucion/universidad-de-mendoza-um/">Universidad de Mendoza (UM)</a> <span class="cuantas">(31 carreras)</span></li>
-        <li><a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a> <span class="cuantas">(72 carreras)</span></li>
+        <li><a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a> <span class="cuantas">(52 carreras)</span></li>
         <li><a href="/institucion/universidad-juan-agustin-maza-umaza/">Universidad Juan Agustín Maza (UMaza)</a> <span class="cuantas">(53 carreras)</span></li>
         <li><a href="/institucion/universidad-siglo-21-s21/">Universidad Siglo 21 (S21)</a> <span class="cuantas">(76 carreras)</span></li>
     </ul>
 
-    <h2>Institutos Superiores y Terciarios (IES) (41)</h2>
+    <h2>Institutos Superiores y Terciarios (IES) (39)</h2>
     <ul class="enlaces">
         <li><a href="/institucion/escuela-de-periodismo-deportivo-de-mendoza-epd/">Escuela de Periodismo Deportivo de Mendoza (EPD)</a> <span class="cuantas">(1 carrera)</span></li>
         <li><a href="/institucion/escuela-de-psicologia-social/">Escuela de Psicología Social</a> <span class="cuantas">(7 carreras)</span></li>
@@ -110,9 +139,8 @@
         <li><a href="/institucion/ies-9-001-gral-jose-de-san-martin/">IES 9-001 Gral. José de San Martín</a> <span class="cuantas">(14 carreras)</span></li>
         <li><a href="/institucion/ies-9-002-tomas-godoy-cruz/">IES 9-002 Tomás Godoy Cruz</a> <span class="cuantas">(11 carreras)</span></li>
         <li><a href="/institucion/ies-9-003-normal-san-rafael/">IES 9-003 Normal (San Rafael)</a> <span class="cuantas">(5 carreras)</span></li>
-        <li><a href="/institucion/ies-9-004-gral-toribio-de-luzuriaga/">IES 9-004 Gral. Toribio de Luzuriaga</a> <span class="cuantas">(7 carreras)</span></li>
+        <li><a href="/institucion/ies-9-004-gral-toribio-de-luzuriaga/">IES 9-004 Gral. Toribio de Luzuriaga</a> <span class="cuantas">(6 carreras)</span></li>
         <li><a href="/institucion/ies-9-005/">IES 9-005</a> <span class="cuantas">(6 carreras)</span></li>
-        <li><a href="/institucion/ies-9-005-fidela-amparan/">IES 9-005 &quot;Fidela Amparán&quot;</a> <span class="cuantas">(1 carrera)</span></li>
         <li><a href="/institucion/ies-9-006-francisco-h-tolosa/">IES 9-006 Francisco H. Tolosa</a> <span class="cuantas">(12 carreras)</span></li>
         <li><a href="/institucion/ies-9-007-dr-salvador-calafat-gral-alvear/">IES 9-007 Dr. Salvador Calafat (Gral. Alvear)</a> <span class="cuantas">(9 carreras)</span></li>
         <li><a href="/institucion/ies-9-008-manuel-belgrano/">IES 9-008 Manuel Belgrano</a> <span class="cuantas">(6 carreras)</span></li>
@@ -130,8 +158,7 @@
         <li><a href="/institucion/ies-9-028-santa-rosa/">IES 9-028 (Santa Rosa)</a> <span class="cuantas">(4 carreras)</span></li>
         <li><a href="/institucion/ies-9-029-lujan-de-cuyo/">IES 9-029 (Luján de Cuyo)</a> <span class="cuantas">(8 carreras)</span></li>
         <li><a href="/institucion/ies-9-030-instituto-del-bicentenario/">IES 9-030 (Instituto del Bicentenario)</a> <span class="cuantas">(10 carreras)</span></li>
-        <li><a href="/institucion/ies-9016-dr-jorge-col/">IES 9016 &quot;Dr. Jorge Col&quot;</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/iesvu-ies-9-015-valle-de-uco/">IESVU (IES 9-015 Valle de Uco)</a> <span class="cuantas">(20 carreras)</span></li>
+        <li><a href="/institucion/iesvu-ies-9-015-valle-de-uco/">IESVU (IES 9-015 Valle de Uco)</a> <span class="cuantas">(21 carreras)</span></li>
         <li><a href="/institucion/instituto-de-arte-chopin/">Instituto de Arte Chopin</a> <span class="cuantas">(9 carreras)</span></li>
         <li><a href="/institucion/instituto-fabian-calle/">Instituto Fabián Calle</a> <span class="cuantas">(1 carrera)</span></li>
         <li><a href="/institucion/instituto-juan-gutenberg/">Instituto Juan Gutenberg</a> <span class="cuantas">(9 carreras)</span></li>
@@ -143,41 +170,10 @@
         <li><a href="/institucion/isteec-ies-9-013/">ISTEEC (IES 9-013)</a> <span class="cuantas">(9 carreras)</span></li>
     </ul>
 
-    <h2>Centros de Formación Profesional y Oficios (25)</h2>
+    <h2>Centros de Formación Profesional y Oficios (2)</h2>
     <ul class="enlaces">
-        <li><a href="/institucion/aalps-asociacion-argentina-de-liquidadores-y-peritos-de-seguros/">AALPS - Asociación Argentina de Liquidadores y Peritos de Seguros</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/aquanautas-mdz/">Aquanautas MDZ</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/centro-de-capacitacion-para-el-trabajo-n-6-015-cecilia-grierson/">Centro de Capacitación para el Trabajo N° 6-015 &quot;Cecilia Grierson&quot;</a> <span class="cuantas">(2 carreras)</span></li>
-        <li><a href="/institucion/cesvi-argentina/">CESVI Argentina</a> <span class="cuantas">(1 carrera)</span></li>
         <li><a href="/institucion/cultural-mendoza/">Cultural Mendoza</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/cursos-tecnicos-y-oficios-con-certificacion-camara-argentina-de-refrigeracion/">Cursos Técnicos y Oficios (con certificación Cámara Argentina de Refrigeración - Sede Mendoza)</a> <span class="cuantas">(2 carreras)</span></li>
-        <li><a href="/institucion/epgamt-escuela-de-guias-de-alta-montana-y-trekking/">EPGAMT - Escuela de Guías de Alta Montaña y Trekking</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/escuela-de-buceo-potrerillos/">Escuela de Buceo Potrerillos</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/escuela-gourmet-online/">Escuela Gourmet Online</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/escuelas-newton-sede-mendoza/">Escuelas Newton (Sede Mendoza)</a> <span class="cuantas">(10 carreras)</span></li>
-        <li><a href="/institucion/euroinnova-zowa-vet-herreria-de-caballos-online/">Euroinnova / Zowa Vet (Herrería de Caballos - Online)</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/facultad-de-ciencias-agrarias-extension-uncuyo/">Facultad de Ciencias Agrarias - Extensión (UNCuyo)</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/iap-instituto-estilismo-estetica-y-belleza-sedes-mendoza/">IAP - Instituto Estilismo, Estética y Belleza (Sedes Mendoza)</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/ica-instituto-de-capacitacion-aeronautica-sede-mendoza/">ICA - Instituto de Capacitación Aeronáutica (Sede Mendoza)</a> <span class="cuantas">(15 carreras)</span></li>
-        <li><a href="/institucion/instituto-ateneo/">Instituto Ateneo</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/instituto-cef-centro-de-especializacion-forense/">Instituto CEF - Centro de Especialización Forense</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/inta-mendoza/">INTA Mendoza</a> <span class="cuantas">(1 carrera)</span></li>
         <li><a href="/institucion/intercultural-cursos-de-idiomas/">Intercultural Cursos de Idiomas</a> <span class="cuantas">(9 carreras)</span></li>
-        <li><a href="/institucion/ise-cursos-educacion-a-distancia/">ISE Cursos - Educación a Distancia</a> <span class="cuantas">(2 carreras)</span></li>
-        <li><a href="/institucion/ise-cursos-educacion-a-distancia-oficios/">ISE Cursos - Educación a Distancia (Oficios)</a> <span class="cuantas">(4 carreras)</span></li>
-        <li><a href="/institucion/itu-instituto-tecnologico-universitario-uncuyo-cibart/">ITU - Instituto Tecnológico Universitario (UNCuyo) / CIBART</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/oceanica-buceo-escuela-de-buceo-en-mendoza/">Oceánica Buceo - Escuela de Buceo en Mendoza</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/pda-argentina-professional-diving-association-mendoza/">PDA Argentina (Professional Diving Association) - Mendoza</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/sak-wine-travel/">SAK Wine &amp; Travel</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/universidad-de-congreso-programa-de-capacitacion-laboral/">Universidad de Congreso - Programa de Capacitación Laboral</a> <span class="cuantas">(1 carrera)</span></li>
-    </ul>
-
-    <h2>Terminalidad educativa (4)</h2>
-    <ul class="enlaces">
-        <li><a href="/institucion/cebja/">CEBJA</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/cens/">CENS</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/cepas/">CEPAS</a> <span class="cuantas">(1 carrera)</span></li>
-        <li><a href="/institucion/terminalidad-educativa/">Terminalidad Educativa</a> <span class="cuantas">(1 carrera)</span></li>
     </ul>
 
 </main>

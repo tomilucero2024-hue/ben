@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Universidad del Aconcagua (UDA): carreras y oferta | BEN</title>
-<meta name="description" content="Universidad del Aconcagua (UDA): 72 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.">
+<meta name="description" content="Universidad del Aconcagua (UDA): 52 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Universidad del Aconcagua (UDA): carreras y oferta | BEN">
-<meta property="og:description" content="Universidad del Aconcagua (UDA): 72 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.">
+<meta property="og:description" content="Universidad del Aconcagua (UDA): 52 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Universidad del Aconcagua (UDA): carreras y oferta | BEN">
-<meta name="twitter:description" content="Universidad del Aconcagua (UDA): 72 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.">
+<meta name="twitter:description" content="Universidad del Aconcagua (UDA): 52 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Universidad del Aconcagua (UDA)","item":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/","email":"informes@uda.edu.ar","telephone":"5201620","address":{"@type":"PostalAddress","streetAddress":"Catamarca 147, Ciudad","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -67,12 +67,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -80,400 +109,1097 @@
     <div class="principal">
         <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">Universidad del Aconcagua (UDA)</span></nav>
         <h1>Universidad del Aconcagua (UDA)</h1>
-    <p class="entrada">Universidad del Aconcagua (UDA): 72 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.</p>
+    <p class="entrada">Universidad del Aconcagua (UDA): 52 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.</p>
     </div>
     <aside class="lateral">
     <dl class="ficha">
         <dt>Gestión</dt><dd>privada</dd>
         <dt>Nivel</dt><dd>universidad</dd>
         <dt>Provincia</dt><dd><a href="/provincia/mendoza/">Mendoza</a></dd>
-        <dt>Oferta en BEN</dt><dd>72 carreras</dd>
+        <dt>Oferta en BEN</dt><dd>52 carreras</dd>
         <dt>Dirección</dt><dd>Catamarca 147, Ciudad</dd>
         <dt>Teléfono</dt><dd>5201620</dd>
         <dt>Email</dt><dd>informes@uda.edu.ar</dd>
     </dl>
-
-    <a class="cta" href="/?institucion=Universidad%20del%20Aconcagua%20(UDA)">Ver esta institución en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
-
-    <h2>Ciencias sociales (24)</h2>
-    <ul class="ofertas">
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia/">Licenciatura en Niñez, Adolescencia y Familia</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: A Distancia</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-criminalistica/">Licenciatura en Criminalística</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia</a></h3>
-            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: A Distancia</li><li>Pregrado</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-accidentologia-vial/">Tecnicatura universitaria en Accidentología Vial</a></h3>
-            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-accidentologia-vial" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-seguridad-ciudadana-modalidad-a-distancia/">Tecnicatura universitaria en Seguridad Ciudadana - Modalidad a Distancia</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: A Distancia</li><li>Pregrado</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-seguridad-ciudadana-integral/">Licenciatura en Seguridad Ciudadana Integral</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-seguridad-ciudadana-integral-a-distancia/">Licenciatura en Seguridad Ciudadana Integral | A distancia</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-emergentologia/">Tecnicatura Universitaria en Emergentología</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrados/tecnicatura-universitaria-en-emergentologia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/lic-en-relaciones-institucionales-ceremonial-y-comunicacion-corporativa/">Lic. en Relaciones Institucionales, Ceremonial y Comunicación Corporativa</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-relaciones-institucionales-ceremonial-y-comunicacion-corporativa" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos/">Técnico/a Universitario/a en Ceremonial y Organización de Eventos</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos/">Técnico/a Universitario/a en Ceremonial y Organización de Eventos</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/abogacia/">Abogacía</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/escribania/">Escribanía</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-seguridad-ciudadana/">Licenciatura en Seguridad Ciudadana</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia</a></h3>
-            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: A Distancia</li><li>Pregrado</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia/">Licenciatura en Niñez, Adolescencia y Familia</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: A Distancia</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-criminalistica/">Licenciatura en Criminalística</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia</a></h3>
-            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: A Distancia</li><li>Pregrado</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-seguridad-ciudadana-modalidad-a-distancia/">Tecnicatura universitaria en Seguridad Ciudadana - Modalidad a Distancia</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: A Distancia</li><li>Pregrado</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-seguridad-ciudadana-integral-modalidad-a-distancia/">Licenciatura en Seguridad Ciudadana Integral - Modalidad a distancia</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/abogacia/">Abogacía</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/escribania/">Escribanía</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-    </ul>
-
-    <h2>Negocios (13)</h2>
-    <ul class="ofertas">
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-comercio-internacional/">Licenciatura en Comercio Internacional</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-comercio-internacional" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-marketing/">Licenciatura en Marketing</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-marketing" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnico-universitario-en-marketing-y-ventas/">Técnico Universitario en Marketing y Ventas</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-marketing-y-ventas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-administracion-gastronomica/">Licenciatura en Administración Gastronómica</a></h3>
-            <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-gastronomica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-administracion-hotelera/">Licenciatura en Administración Hotelera</a></h3>
-            <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-hotelera" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/contador-publico/">Contador Público</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-economia/">Licenciatura en Economía</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-analitica-de-negocios/">Licenciatura en Analítica de Negocios</a></h3>
-            <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/contador-publico/">Contador Público</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-economia/">Licenciatura en Economía</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-analitica-de-negocios/">LICENCIATURA EN ANALÍTICA DE NEGOCIOS</a></h3>
-            <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-    </ul>
 
     <h2>Salud (13)</h2>
     <ul class="ofertas">
         <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-psicologia/">Licenciatura en Psicología</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-psicologia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/profesorado-de-grado-universitario-en-psicologia-para-nivel-secundario-y/">Profesorado de Grado Universitario en Psicología para Nivel Secundario y Superior</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/profesorado-de-grado-universitario-en-psicologia-para-nivel-secundario-y-superior" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <h3><a href="/carrera/licenciatura-en-administracion-de-salud/">Licenciatura en Administración de Salud</a></h3>
+            <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Sistemas de Salud Comparados.*</li><li>Organización Contable y Operativa de Emprendimientos de Salud.</li><li>Administracion Financiera .</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo semestre</h4>
+            <ul><li>Sistemas de Información para la Toma de Decisiones.</li><li>Comercialización de Servicios de Salud.*</li><li>Evaluación de proyectos de Salud.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Tercer semestre</h4>
+            <ul><li>Metodología de la investigación.*</li><li>Tesina.</li><li>Practica Profesional.</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-fonoaudiologia/">Licenciatura en Fonoaudiología</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Epistemología y Producción Científico Tecnológica</li><li>Estructura y Funciones del Cuerpo Humano</li><li>Fundamentos Sociolingüísticos y Multiculturalidad</li><li>Genética y Embriología</li><li>Psicología General</li><li>Salud Pública y Comunitaria</li><li>Comunicación y Conciencia Corporal</li><li>Fundamentos de Lingüística</li><li>Neuroanatomía, Fisiología y Sistema Nervioso</li><li>Práctica Inicial y Trabajo de Campo</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Adquisición y Desarrollo de la Comunicación y del Lenguaje</li><li>Audiología I</li><li>Bioética y Fonoaudiología</li><li>Fonética y Fonología Aplicadas</li><li>Fundamentos de las Neurociencias Cognitivas del Lenguaje</li><li>Psicología del Desarrollo</li><li>Vocología I: Sistema Fonatorio</li><li>Metodología de la Investigación y Bases Estadísticas</li><li>Motricidad Orofacial y Fonoestomatología I</li><li>Prácticas de Aplicación Fonoaudiológica</li><li>Electiva: Nutrición</li><li>Inglés</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Audiología II</li><li>Diagnóstico del Procesamiento Cognitivo y del Lenguaje</li><li>Endocrinofoniatría</li><li>Neurolingüística en Jóvenes, Adultos y Adultos Mayores</li><li>Neurolingüística en Niñez y Adolescencia</li><li>Vocología II: Clínica de las Disfonías Funcionales</li><li>Fonoaudiología y Gestión en Salud</li><li>Fonoaudiología, Medioambiente y Bioseguridad</li><li>Motricidad Orofacial y Fonoestomatología II</li><li>Prácticas Clínicas Fonoaudiológicas</li><li>Producción de Textos Científicos</li><li>Psicología de la Relación Terapéutica</li><li>Tecnología Asistiva y Comunicación Aumentativa</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Trabajo Final de Investigación</li><li>Audiología Terapéutica</li><li>Electiva: Discapacidad y Geriatría</li><li>Electiva: Neonatología</li><li>Ética, Deontología y Legislación</li><li>Neuropsicología Cognitiva: Rehabilitación y Habilitación</li><li>Otoneurología, Audición y Equilibrio</li><li>Vocología III: Clínica de las Disfonías Orgánicas</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-fonoaudiologia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-fonoaudiologia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-obstetricia/">Licenciatura en Obstetricia</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Antropología</li><li>Psicología</li><li>Biología e Histología</li><li>Bioquímica</li><li>Anatomía General</li><li>Embriología Humana</li><li>Genética Humana</li><li>Anatomía Obstétrica</li><li>Fisiología Humana</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Obstetricia Normal</li><li>Comunicación y Liderazgo en Obstetricia</li><li>Endocrinología de la Reproducción</li><li>Microbiología, Parasitología e Inmunología</li><li>Mujer, Obstetricia y Comunidad I</li><li>Sociología</li><li>Salud Social y Comunitaria</li><li>Nutrición</li><li>Farmacología General</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Metodología de la Investigación.</li><li>Obstetricia Patológica.</li><li>Práctica Simulada.</li><li>Salud Sexual Integral.</li><li>Farmacología Aplicada a la Salud Reproductiva.</li><li>Neonatología I.</li><li>Tecnología Apropiad en Diagnóstico Perinatal.</li><li>Bioética Aplicada.</li><li>Mujer, Obstetricia y Comunidad II.</li><li>Neonatología II.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Ginecología.</li><li>Práctica Ostétrica.</li><li>Preparación Integral para la Maternidad.</li><li>Responsabilidad Profesional.</li><li>Ejercicio Profesional.</li><li>Electiva:</li><li>Herramientas para el Acompañamiento Integral de la Sexualidad Femenina.</li><li>Discapacidad y Obstetricia: Una Propuesta de Abordaje.</li><li>Razonamiento Clínico.</li><li>Reanimación Cardiopulmonar en el Recién Nacido.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Extracurriculares</h4>
+            <ul><li>Inglés I</li><li>Inglés II</li><li>Inglés III</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-obstetricia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-obstetricia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/medicina/">Medicina</a></h3>
             <ul class="oferta-datos"><li>Duración: 6 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 6 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Moléculas a Células</li><li>Genes y Desarrollo</li><li>Estructura y Función Humana</li><li>Defensas Existentes</li><li>Medicina, Hombre y Sociedad I</li><li>Servicio a la Comunidad I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Cerebro y Mente</li><li>Medicina, Hombre y Sociedad II</li><li>Introducción a las Pasantías</li><li>Servicio a la Comunidad II</li><li>Bases de la Enfermedad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Pasantías Clínicas Esenciales (1)</li><li>Cursos Horas Flexibles (2)</li><li>Cirugía/Anestesiología</li><li>Ginecología/Obstetricia</li><li>Ciencias Básicas Avanzadas I</li><li>Medicina, Hombre y Sociedad III</li><li>Atención Primaria y de Familia I</li><li>Servicio a la Comunidad III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Pasantías Clínicas Esenciales (1)</li><li>Cursos Horas Flexibles (2)</li><li>Ciencias Básicas Avanzadas II</li><li>Atención Primaria y de Familia II</li><li>Servicio a la Comunidad IV</li><li>Neurología</li><li>Emergentología</li><li>Pediatría</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Quinto año</h4>
+            <ul><li>Pasantías Clínicas Esenciales (1)</li><li>Cursos Horas Flexibles (2)</li><li>Psiquiatría</li><li>Medicina Interna</li><li>Atención Primaria y de Familia III</li><li>Practicantado</li><li>Servicio a la Comunidad V</li><li>Ciencias Básicas Avanzadas III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Sexto año</h4>
+            <ul><li>Internado (4)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Aclaraciones</h4>
+            <ul><li>(2)Los Cursos Horas Flexibles son obligatorios y deben sumar doscientas veinte (220) horas relojen total. Éstos son cursos de perfeccionamiento relacionados con las pasantías clínicas esenciales,especialidades médicas y/o técnicos, de contenido humanístico. (3) El Practicantado es a elección del alumno entre cualquiera de las asignaturas que forman partede las pasantías clínicas esenciales o de las especialidades médicas. (4) Para comenzar el Internado es obligatorio haber aprobado la totalidad de los cursos obligatoriosdel plan de estudios. El mismo será rotatorio por Medicina Interna, Cirugía, Pediatría, Gineco-Obstetricia, Emergentología, medicina de familia y una rotación especial rural</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/medicina" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/medicina" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/maestria-en-salud-publica-y-seguridad-social/">Maestría en Salud Pública y Seguridad Social</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Escenarios políticos, económicos y sociales de la salud pública</li><li>TIC – Tecnologías de Información y Comunicación</li><li>Enfoque antropológico social de la salud y la seguridad social</li><li>Epidemiología, Demografía y Estadística</li><li>Metodología de la Investigación</li><li>Planificación, Administración y Gestión en salud</li><li>Medio Ambiente y ámbitos laborales</li><li>Capital Humano</li><li>Gestión de Servicios Asistenciales</li><li>Seguridad Social</li><li>Obras Sociales, Mutuales y organizaciones de medicina prepaga</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Salud Ocupacional</li><li>Riesgos del Trabajo. Accidentes de trabajo y enfermedades profesionales</li><li>Gestión de servicio de salud laboral. Higiene y seguridad en el trabajo</li><li>Gestión de la Calidad</li><li>Deontología y Ética Profesional</li><li>Taller Tutoría Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-salud-publica-y-seguridad-social" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-salud-publica-y-seguridad-social" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/maestria-en-ejercicio-fisico-y-salud/">Maestría en Ejercicio Físico y Salud</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Fisiología del Ejercicio Físico</li><li>Nutrición para el Ejercicio Físico, el Fitness y la Salud</li><li>Neurobioinmunología, Ejercicio Físico y Salud</li><li>Ergonomía y Salud</li><li>Tecnologías aplicadas al Ejercicio Físico y la Salud</li><li>Valoración y Control de la Aptitud Física</li><li>Inglés Técnico</li><li>Bioestadística aplicada (Mgter. Walter Rosales).</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Programación del Ejercicio Físico para Enfermedades Metabólicas No Transmisibles</li><li>Readaptación y Recuperación Osteo-Articular y Muscular</li><li>Programación del Ejercicio Físico para el Fitness y la Salud</li><li>Metodología de la Investigación</li><li>Entrenamiento Físico Deportivo</li><li>Discapacidad y Salud</li><li>Trabajo Final Individual (Mgter. Walter Rosales).</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-ejercicio-fisico-y-salud" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-ejercicio-fisico-y-salud" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-enfermeria/">Licenciatura en Enfermería</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Bases Conceptuales y Tecnológicas Asistenciales de la Enfermería</li><li>Contexto Político, Socio-Cultural y Económico</li><li>Marcos Conceptuales, Éticos y Legales del Ejercicio Profesional</li><li>Ciencias Biomédicas</li><li>Docencia para la Salud</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Ciencias Sociales, Psicológicas y Humanísticas</li><li>Organización y Administración</li><li>Investigación y Trabajo Final de Grado</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-enfermeria" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-enfermeria" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-produccion-de-bioimagenes/">Licenciatura en Producción de Bioimágenes</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Administración y Gestión de Salud Pública</li><li>Comunicación</li><li>Estudios Radiológicos</li><li>Taller de Informática</li><li>Taller de Interpretación de textos en inglés</li><li>Bioética y Deontología</li><li>Biotecnología</li><li>Estudios Imagenológicos y Emergentología</li><li>Radioprotección y Radiobiología</li><li>Tomografía Axial Computada</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Hemodinamia</li><li>Medicina Nuclear</li><li>Radioterapia</li><li>Resonancia Magnética Nuclear</li><li>Taller de Metodologías de investigación y producción de textos científicos para la PFI</li><li>Trabajo Final Integrador</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-produccion-de-bioimagenes" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-produccion-de-bioimagenes" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciado-en-educacion-fisica-salud/">Licenciado en Educación Física (Salud)</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>PRIMER CUATRIMESTRE Anatomía y Fisiología Aplicada Fisiología del Ejercicio Actividad Física, Salud y Calidad de Vida Nutrición Aplicada a la Actividad Física</li><li>Anatomía y Fisiología Aplicada</li><li>Fisiología del Ejercicio</li><li>Actividad Física, Salud y Calidad de Vida</li><li>Nutrición Aplicada a la Actividad Física</li><li>SEGUNDO CUATRIMESTRE Ejercicio en los Diferentes Estadios Evolutivos de la Vida Humana Ejercicio y su Relación con el Sistema Inmune Ejercicio y su Relación con el Sistema Cardiovascular Ejercicio y su Relación con el Sistema Respiratorio</li><li>Ejercicio en los Diferentes Estadios Evolutivos de la Vida Humana</li><li>Ejercicio y su Relación con el Sistema Inmune</li><li>Ejercicio y su Relación con el Sistema Cardiovascular</li><li>Ejercicio y su Relación con el Sistema Respiratorio</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>TERCER CUATRIMESTRE Ejercicio y su Relación con el Sistema Muscular y Osteoarticular Ejercicio y su Relación con el Sistema Nervioso Actividad Física para Personas con Discapacidad Inglés Técnico</li><li>Ejercicio y su Relación con el Sistema Muscular y Osteoarticular</li><li>Ejercicio y su Relación con el Sistema Nervioso</li><li>Actividad Física para Personas con Discapacidad</li><li>Inglés Técnico</li><li>CUARTO CUATRIMESTRE Metodología de la Investigación y Estadística Aplicada Bioética Bases de Gestión, Administración y Planeamiento Estratégico Tecnologías de la Información y Comunicación en Salud Trabajo Final de Tesis</li><li>Metodología de la Investigación y Estadística Aplicada</li><li>Bioética</li><li>Bases de Gestión, Administración y Planeamiento Estratégico</li><li>Tecnologías de la Información y Comunicación en Salud</li><li>Trabajo Final de Tesis</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciado-en-educacion-fisica-salud" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciado-en-educacion-fisica-salud" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-tecnologias-de-la-salud/">Licenciatura en Tecnologías de la Salud</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Telesalud y Telemedicina</li><li>Administración y Gestión en Organizaciones de Salud</li><li>Comunicación Institucional en los Servicios Técnicos Asistenciales</li><li>Legislación Aplicada a los Servicios Técnicos Asistenciales</li><li>Metodología de la Investigación I</li><li>Bioseguridad y Salud Ocupacional-Bioética y Deontología</li><li>Emergentología General</li><li>Tecnología Biomédica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Metodología de la Investigación II y Producción de Textos Científicos para laPFI</li><li>Gestión de la Calidad en los Procesos Tecnológicos</li><li>Bioseguridad Aplicada a cada Área Profesional</li><li>Emergentología Aplicada a cada Área Profesional</li><li>Seguridad del Paciente en el Ámbito de los Servicios Técnicos Asistenciales</li><li>Trabajo Final Integrador</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-tecnologias-de-la-salud" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-tecnologias-de-la-salud" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-administracion-de-salud/">Licenciatura en Administración de Salud</a></h3>
-            <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <h3><a href="/carrera/tecnicatura-universitaria-en-emergentologia/">Tecnicatura Universitaria en Emergentología</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>ANATOMÍA Y FISIOLOGÍA HUMANA</li><li>PRINCIPIOS DE ATENCIÓN PREHOSPITALARIA</li><li>PRIMEROS AUXILIOS Y RCP BÁSICO (BLS)</li><li>PSICOLOGÍA DEL PACIENTE EN EMERGENCIAS</li><li>COMUNICACIÓN Y TRABAJO EN EQUIPO EN SITUACIONES CRÍTICAS</li><li>PATOLOGÍA MÉDICA Y QUIRÚRGICA I (RESPIRATORIA, CARDIOVASCULAR, METABÓLICA)</li><li>FARMACOLOGÍA APLICADA A LA EMERGENCIA I (FÁRMACOS BÁSICOS)</li><li>TÉCNICAS DE INMOVILIZACIÓN Y TRANSPORTE</li><li>EMERGENCIAS TRAUMÁTICAS I (FRACTURAS, HEMORRAGIAS, HERIDAS, QUEMADURAS)</li><li>PRÁCTICA PROFESIONAL I (GUARDIA HOSPITALARIA + SIMULACIÓN)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>PATOLOGÍA MÉDICA Y QUIRÚRGICA II (NEUROLÓGICAS, OBSTÉTRICAS, PEDIÁTRICAS, PSIQUIÁTRICAS)</li><li>FARMACOLOGÍA APLICADA A LA EMERGENCIA II (FÁRMACOS IVM, IM, VÍA AÉREA)</li><li>EMERGENCIAS CARDIOVASCULARES Y RESPIRATORIAS (ACLS-SOPORTE VITAL AVANZADO)</li><li>EMERGENCIAS TRAUMÁTICAS II (POLITRAUMA, TCE, TRAUMA TORÁCICO Y ABDOMINAL)</li><li>PRÁCTICA PROFESIONAL II (AMBULANCIAS Y UNIDADES DE EMERGENCIAS PREHOSPITALARIAS)</li><li>MANEJO AVANZADO DE LA VÍA AÉREA E INTUBACIÓN</li><li>ATENCIÓN EN DESASTRES Y TRIAGE MASIVO</li><li>EMERGENCIAS PEDIÁTRICAS NEONATALES (PALS, SOPORTE VITAL PEDIÁTRICO)</li><li>ÉTICA, LEGISLACIÓN Y DEONTOLOGÍA EN LA EMERGENCIA</li><li>PRÁCTICA PROFESIONAL III (INTERNADO ROTATORIO EN HOSPITAL + EMERGENCIAS EXTRAHOSPITALARIAS)</li><li>PRÁCTICA FINAL Y ECOE</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrados/tecnicatura-universitaria-en-emergentologia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrados/tecnicatura-universitaria-en-emergentologia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-administracion-de-salud/">LICENCIATURA EN ADMINISTRACIÓN DE SALUD</a></h3>
-            <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <h3><a href="/carrera/licenciatura-en-psicologia/">Licenciatura en Psicología</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año — Primer semestre</h4>
+            <ul><li>Introducción a la Psicología</li><li>Filosofía</li><li>Neurociencia I</li><li>Psicoestadística I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo semestre</h4>
+            <ul><li>Historia de la Psicología</li><li>Psicología del Desarrollo I</li><li>Sociología</li><li>Psicoestadística II</li><li>Teoría Psicológica Psicoanalítica I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Anual</h4>
+            <ul><li>Técnicas de Evaluación y Diagnóstico Psicológico I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Primer semestre</h4>
+            <ul><li>Epistemología</li><li>Teoría Psicológica Psicoanalítica II</li><li>Antropología Filosófica y Sociocultural</li><li>Neurociencia II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Segundo semestre</h4>
+            <ul><li>Psicología del Desarrollo II</li><li>Psicología Social</li><li>Psicopatología I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Anual</h4>
+            <ul><li>Técnicas de Evaluación y Diagnóstico Psicológico II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Primer semestre</h4>
+            <ul><li>Psicología de la Personalidad</li><li>Teoría Psicológica Existencial</li><li>Teoría Psicológica Cognitivo-Conductual</li><li>Metodología de la Investigación I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Segundo semestre</h4>
+            <ul><li>Teoría Psicológica Sistémica</li><li>Psicología de Pareja, Familia y Grupo</li><li>Teoría Psicológica Psicoanalítica III</li><li>Psicopatología II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Anual</h4>
+            <ul><li>Técnicas de Evaluación y Diagnóstico Psicológico III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Primer semestre</h4>
+            <ul><li>Clínica Psicológica Cognitivo Conductual</li><li>Clínica Psicológica Sistémica</li><li>Clínica Psicológica Existencial</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Segundo semestre</h4>
+            <ul><li>Psicología Educacional</li><li>Metodología de la Investigación II</li><li>Clínica Psicológica Psicoanalítica</li><li>Elementos de Neuropsicofarmacología</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Quinto año — Primer semestre</h4>
+            <ul><li>Psicología Organizacional y Laboral</li><li>Psicología Jurídico-Forense</li><li>Orientación Vocacional y Ocupacional</li><li>Psicología Comunitaria</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Quinto año — Segundo semestre</h4>
+            <ul><li>Taller de Tesis</li><li>Problemática Socioculturales Contemporáneas</li><li>Práctica en Área Profesional Supervisada I</li><li>Práctica en Área Profesional Supervisada II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Formación general y complementaria</h4>
+            <ul><li>Inglés I</li><li>Inglés II</li><li>Electiva I</li><li>Electiva II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Otros requisitos</h4>
+            <ul><li>Tesis</li><li>T.I.F. (Trabajo Final Integrador)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-psicologia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-psicologia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/profesorado-de-grado-universitario-en-psicologia-para-nivel-secundario-y/">Profesorado de Grado Universitario en Psicología para Nivel Secundario y Superior</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Introducción a la Psicología</li><li>Filosofía</li><li>Neurociencias I</li><li>Psicoestadística I</li><li>Historia de la Psicología</li><li>Psicología del Desarrollo I</li><li>Psicoestadística II</li><li>Teoría Psicológica Psicoanalítica I</li><li>Sociología</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Técnicas de Evaluación y Diagnóstico Psicológico I</li><li>Epistemología</li><li>Teoría Psicológica Psicoanalítica II</li><li>Antropología Filosófica y Sociocultural</li><li>Neurociencias II</li><li>Psicología del Desarrollo II</li><li>Psicología Social</li><li>Psicopatología I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Técnicas de Evaluación y Diagnóstico Psicológico II</li><li>Psicología de la Personalidad</li><li>Teoría Psicológica Existencial</li><li>Teoría Psicológica Cognitivo Conductual</li><li>Metodología de la Investigación I</li><li>Teoría Psicológica Sistémica</li><li>Psicología de Pareja, Familia y Grupo</li><li>Teoría Psicológica Psicoanalítica III</li><li>Problemática Contemporánea y Educación</li><li>Sujeto, Aprendizaje y Contexto</li><li>Teoría y Desarrollo Curricular</li><li>Didáctica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Inglés</li><li>Sistema Educativo</li><li>Institución Educativa</li><li>Pedagogía de la Educación Superior</li><li>Práctica Docente e Investigación Educativa</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/profesorado-de-grado-universitario-en-psicologia-para-nivel-secundario-y-superior" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/profesorado-de-grado-universitario-en-psicologia-para-nivel-secundario-y-superior" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 
-    <h2>Idiomas (6)</h2>
+    <h2>Ciencias sociales (12)</h2>
+    <ul class="ofertas">
+        <li class="oferta">
+            <h3><a href="/carrera/abogacia/">Abogacía</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año — Primer semestre</h4>
+            <ul><li>Introducción al Derecho</li><li>Derecho Privado I (Parte General)</li><li>Derecho Político</li><li>Estrategias de Aprendizaje Universitario</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo semestre</h4>
+            <ul><li>Derecho Penal I (Parte General)</li><li>Derecho Público I (Constitucional)</li><li>Derecho Privado II (Obligaciones)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Primer semestre</h4>
+            <ul><li>Derecho Privado III (Contratos)</li><li>Derecho Penal II (Parte Especial)</li><li>Introducción a la Práctica del Derecho Procesal</li><li>Introducción a Métodos Alternativos de Resolución de Conflictos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Segundo semestre</h4>
+            <ul><li>Derecho Social, Laboral y Provisional</li><li>Derecho Público II (Administrativo)</li><li>Derecho Privado IV (Comercial y Sociedades)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Primer semestre</h4>
+            <ul><li>Derecho Privado V (Reales)</li><li>Derecho Público III (Financiero y Tributario)</li><li>Principios de Derecho Internacional Público</li><li>Principios de Derecho Internacional Privado</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Segundo semestre</h4>
+            <ul><li>Derecho Privado VI (Familia)</li><li>Derecho Privado VII (Sucesiones)</li><li>Mediación</li><li>Práctica Jurídica Empresarial</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Primer semestre</h4>
+            <ul><li>Derecho Concursal</li><li>Derecho Procesal (Parte General)</li><li>Derecho Ambiental</li><li>Práctica Profesional y Pasantías Tutoriales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Segundo semestre</h4>
+            <ul><li>Derecho Procesal Penal (Provincial y Federal)</li><li>Legislación Vitivinícola y Minera</li><li>Derecho Procesal Civil, Comercial Y Laboral (Provincial y Federal)</li><li>Práctica Profesional y Pasantías Tutoriales</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/escribania/">Escribanía</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año — Primer semestre</h4>
+            <ul><li>Introducción al derecho</li><li>Derecho Privado I (Parte General)</li><li>Derecho Político</li><li>Estrategias de Aprendizaje Universitario</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo semestre</h4>
+            <ul><li>Derecho Penal I (Parte General)</li><li>Derecho Público I (Constitucional)</li><li>Derecho Privado II (Obligaciones)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Primer semestre</h4>
+            <ul><li>Derecho Privado III (Contratos)</li><li>Derecho Penal II (Parte Especial)</li><li>Introducción a la Práctica del Derecho Procesal</li><li>Introducción a Métodos Alternativos de Resolución de Conflictos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Segundo semestre</h4>
+            <ul><li>Derecho Social, Laboral y Provisional</li><li>Derecho Público II (Administrativo)</li><li>Derecho Privado IV (Comercial y Sociedades)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Primer semestre</h4>
+            <ul><li>Derecho Privado V (Reales)</li><li>Derecho Público III (Financiero y Tributario)</li><li>Principios de Derecho Internacional Público</li><li>Principios de Derecho Internacional Privado</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Segundo semestre</h4>
+            <ul><li>Derecho Privado VI (Familia)</li><li>Derecho Privado VII (Sucesiones)</li><li>Mediación</li><li>Práctica Jurídica Empresarial</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Primer semestre</h4>
+            <ul><li>Derecho Notarial y Registral I</li><li>Práctica Notarial I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Segundo semestre</h4>
+            <ul><li>Derecho Notarial y Registral II</li><li>Práctica Notarial II y Pasantías Tutoriales</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/lic-en-relaciones-institucionales-ceremonial-y-comunicacion-corporativa/">Lic. en Relaciones Institucionales, Ceremonial y Comunicación Corporativa</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año — Primer cuatrimestre</h4>
+            <ul><li>Ceremonial y protocolo</li><li>Oratoria e imagen personal</li><li>Relaciones públicas e institucionales</li><li>Portugués</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo cuatrimestre</h4>
+            <ul><li>Diseño, planificación y ejecución de eventos</li><li>Comunicación organizacional</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Primer cuatrimestre</h4>
+            <ul><li>Ceremonial institucional</li><li>Comunicación digital</li><li>Turismo y hotelería</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Segundo cuatrimestre</h4>
+            <ul><li>Organización de eventos empresariales 1</li><li>Marketing y publicidad</li><li>Italiano</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Primer cuatrimestre</h4>
+            <ul><li>Ceremonial internacional y Diplomático</li><li>Organización de eventos sociales, culturales y deportivos</li><li>Francés</li><li>Seminario de Práctica Profesional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Primer cuatrimestre</h4>
+            <ul><li>Economía y finanzas</li><li>Relaciones económicas, políticas e internacionales</li><li>Ética profesional y responsabilidad social</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Segundo cuatrimestre</h4>
+            <ul><li>Derecho aplicado a las organizaciones</li><li>Gestión de proyectos profesionales</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-relaciones-institucionales-ceremonial-y-comunicacion-corporativa" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-relaciones-institucionales-ceremonial-y-comunicacion-corporativa" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia/">Licenciatura en Niñez, Adolescencia y Familia</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Práctica de Integración I</li><li>Protección de Derechos y Políticas Sociales</li><li>Antropología Social y Cultural</li><li>Derecho de Niñez, Adolescencia y Familia</li><li>Introducción a la Niñez, Adolescencia y Familia</li><li>Psicología General</li><li>Sociología</li><li>Problemática de las Adicciones</li><li>Problemáticas Psico-Sociales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Modificación de la Conducta y Estrategias de Intervención</li><li>Práctica de Integración II</li><li>Derecho Penal: Jóvenes en Conflicto con la Ley</li><li>Introducción al Sistema Familiar</li><li>Procesos Educativos</li><li>Psicología de la Personalidad</li><li>Psicología del Desarrollo</li><li>Metodología de la Investigación Científica</li><li>Procesos de Mediación</li><li>Recreación y Dinámica de Grupos</li><li>Técnicas de Intervención Social</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Residencia y Práctica en Servicio</li><li>Animación Sociocultural</li><li>Comunidad</li><li>Criminología Juvenil</li><li>Derecho Constitucional en Niñez, Adolescencia y Familia</li><li>Educación No Formal</li><li>Informática</li><li>Planificación y Evaluación de Proyectos</li><li>Sistemas Familiares Complejos</li><li>Mediación Familiar</li><li>Psicopatología</li><li>Victimología y Estrategias de Prevención</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Metodología de la Investigación Social</li><li>Práctica Profesional</li><li>Problemática de la Adolescencia Contemporánea</li><li>Tesina</li><li>Comunicación Social</li><li>Desarrollo Organizacional</li><li>Informática</li><li>Deprivación Sociocultural</li><li>Inglés</li><li>Procesos de Mediación Comunitaria</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Antropología de la Sociedad Contemporanea</li><li>Derecho en Niñez, Adolescencia y Familia</li><li>Introducción a la Niñez, Adolescencia y Familia</li><li>Psicología General</li><li>Sociología General</li><li>Coordinación de Grupos</li><li>Educación y Desarrollo Humano</li><li>Estudios de las Infancias</li><li>Políticas Sociales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Intervención Comunitaria en Niñez Adolescencia y Familia</li><li>Psicología del Desarrollo</li><li>Estudios de las adolescencias y las juventudes</li><li>Pedagogía Social</li><li>Problemática del género y la diversidad</li><li>Sistema de responsabilidad Penal Juvenil</li><li>Consumos Problemáticos</li><li>Restitución y Protección de Derechos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Prácticas Preprofesionales</li><li>Procesos de Mediación</li><li>Sistemas Familiares</li><li>Metodología de la Investigación I</li><li>Planificación y Evaluación de Proyectos Sociales</li><li>Salud mental infanto juvenil</li><li>Aprendizaje socio -cognitivo</li><li>Electiva I: Aproximaciones en Discapacidad, Intervención e Inclusión</li><li>Electiva I: Mediación Familiar</li><li>Electiva I: Violencia de género, nuevas masculinidades</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Práctica Profesional Supervisada</li><li>Trabajo Integrador Final</li><li>Análisis Institucional</li><li>Criminología General</li><li>Electiva II: Victimología</li><li>Metodolgía de la Investigación II</li><li>Promoción y prevención de salud</li><li>Bioética de la Intervención</li><li>Electiva II: Inglés</li><li>Electiva II: Tecnologías de la Información y de la Comunicación</li><li>Gerenciamiento de Proyectos Sociales</li><li>Taller de Trabajo Integrador Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-criminalistica/">Licenciatura en Criminalística</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Introducción a la Criminalística</li><li>Registro de Imágenes Periciales</li><li>Técnicas de Identidad Humana</li><li>Dibujo Pericial</li><li>Derecho Constitucional</li><li>Investigación de le Escena del Crimen</li><li>Química Forense I</li><li>Falsificaciones y Adulteraciones Documentales</li><li>Comunicacion Oral y Escrita</li><li>Taller Investigación de la Escena del Crimen</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Balística Forense</li><li>Investigación de Accidentes y Siniestros Viales</li><li>Tecnología Criminalística</li><li>Química Forense II</li><li>Derecho Civil y Penal</li><li>Derechos Humanos</li><li>Matemática Aplicada</li><li>Física Forense</li><li>Taller de Investigación de Laboratorios y Gabinetes</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Análisis de Manuscritos</li><li>Estudio Físico y Matemático del Siniestro Vial</li><li>Toxicología Forense</li><li>Derecho Procesal</li><li>Lógica y Comunicación Pericial</li><li>Tecnología Aplicada</li><li>Aspectos Legales del Peritaje</li><li>Legislación Vial</li><li>Taller: Investigación de Siniestros Viales</li><li>Trabajo Final Integrador en Siniestrología Vial: El alumno culmina su formación en documentología y en accidentología y siniestrología vial. Adquiere los conocimientos y competencias para realizar una meta-pericia o un meta-análisis de las actuaciones jurídico-policiales que se llevan a cabo en la investigación y reconstrucción del siniestro vial.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Investigación Criminal</li><li>Metodología de la Investigación Científica y Estadística Aplicada</li><li>Medicina Legal</li><li>Psicología Forense</li><li>Deontología Profesional</li><li>Criminología</li><li>Psicopatología Forense</li><li>Práctica Profesional</li><li>Trabajo Integrador Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos/">Técnico/a Universitario/a en Ceremonial y Organización de Eventos</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año — Primer cuatrimestre</h4>
+            <ul><li>Ceremonial y protocolo</li><li>Oratoria e imagen personal</li><li>Relaciones públicas e institucionales</li><li>Portugués</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo cuatrimestre</h4>
+            <ul><li>Diseño, planificación y ejecución de eventos</li><li>Comunicación organizacional</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Primer cuatrimestre</h4>
+            <ul><li>Ceremonial institucional</li><li>Comunicación digital</li><li>Turismo y hotelería</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Segundo cuatrimestre</h4>
+            <ul><li>Organización de eventos empresariales</li><li>Marketing y publicidad</li><li>Italiano</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Primer cuatrimestre</h4>
+            <ul><li>Ceremonial internacional y diplomático</li><li>Organización de eventos sociales, culturales y deportivos</li><li>Francés</li><li>Seminario de práctica profesional Título Intermedio: Técnico/a Universitario/a en Ceremonial y Organización de Eventos</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-universitaria-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia</a></h3>
+            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Introducción a la Niñez, Adolescencia y Familia</li><li>Psicología General</li><li>Sociología General</li><li>Antropología de la Sociedad</li><li>Derecho en Niñez, Adolescencia y Familia</li><li>Políticas Sociales</li><li>Estudios de las Infancias</li><li>Educación y Desarrollo Humano</li><li>Coordinación de Grupos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Sistema de responsabilidad Penal Juveni</li><li>Psicología del Desarrollo</li><li>Pedagogía Social</li><li>Estudios de las adolescencias y las juventudes</li><li>Problemática del género y la diversidad</li><li>Restitución y Protección de Derecho</li><li>Consumos Problemáticos</li><li>Intervención Comunitaria en Niñez Adolescencia y Familia</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Salud mental infanto juvenil</li><li>Sistemas Familiares</li><li>Planificación y Evaluación de Propyectos Sociales</li><li>Metodología de la Investigación I</li><li>Aprendizaje socio -cognitivo</li><li>Procesos de Mediación</li><li>Electiva I</li><li>Prácticas Preprofesionales</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-universitaria-en-accidentologia-vial/">Tecnicatura universitaria en Accidentología Vial</a></h3>
+            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Introducción a la Criminalística</li><li>Registro de Imágenes Periciales</li><li>Dibujo Pericial</li><li>Derecho Constitucional</li><li>Investigación de le Escena del Crimen</li><li>Química Forense I</li><li>Comunicacion Oral y Escrita</li><li>Taller Investigación de la Escena del Crimen</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Investigación de Accidentes y Siniestros Viales</li><li>Química Forense II</li><li>Derecho Civil y Penal</li><li>Derechos Humanos</li><li>Matemática Aplicada</li><li>Física Forense</li><li>Taller de Investigación de Laboratorios y Gabinetes</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Estudio Físico y Matemático del Siniestro Vial</li><li>Derecho Procesal</li><li>Lógica y Comunicación Pericial</li><li>Tecnología Aplicada</li><li>Aspectos Legales del Peritaje</li><li>Legislación Vial</li><li>Taller Investigación de Siniestros Viales</li><li>Trabajo Final Integrador en Siniestrología Vial</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-accidentologia-vial" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-accidentologia-vial" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-universitaria-en-seguridad-ciudadana-modalidad-a-distancia/">Tecnicatura universitaria en Seguridad Ciudadana - Modalidad a Distancia</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Manejo de plataforma Moodle y recursos tecnológicos</li><li>Comprensión de textos, escritura y diálogos en Seguridad</li><li>Técnicas de Comunicación y Mediación</li><li>Problemática Contemporánea y Seguridad</li><li>Antropología Sociocultural</li><li>Informática Aplicada</li><li>Introducción a la Seguridad</li><li>Organizaciones de la Seguridad</li><li>Introducción a la Criminalística</li><li>Estadísticas Criminológicas Básicas</li><li>Atención Básica en la Salud</li><li>Taller de Casos y Proyectos I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Derecho Constitucional</li><li>Derecho Penal y Procesal</li><li>Derecho de Niñez, Adolescencia y Familia</li><li>Derecho Contravencional</li><li>Derecho Administrativo</li><li>Técnicas de Abordaje en Seguridad Ciudadana</li><li>Legislación especial en el uso de armas</li><li>Investigaciones de Conductas Delictivas</li><li>Deontología Profesional</li><li>Conducción de Organizaciones de Seguridad</li><li>Taller de Casos y Proyectos II</li><li>Trabajo Integrador Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-seguridad-ciudadana/">Licenciatura en Seguridad Ciudadana</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Manejo de la plataforma Moodle</li><li>Introducción a la Seguridad Integral</li><li>Historia de la seguridad</li><li>Producción y análisis de textos específicos</li><li>Derechos Humanos y seguridad</li><li>Organizaciones policiales</li><li>Análisis prospectivo</li><li>Gestión de la organización y del capital humano</li><li>Planificación estratégica</li><li>Estadística aplicada y presupuestos en seguridad</li><li>Deontología profesional</li><li>Técnicas alternativas en resolución de conflictos</li><li>Psicología aplicada a la Seguridad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Seguridad ciudadana</li><li>Seguridad privada</li><li>Seguridad ambiental y rural</li><li>Seguridad Vial</li><li>Seguridad turística</li><li>Seguridad y ciberespacio</li><li>Criminología</li><li>Política criminal</li><li>Investigación Criminal</li><li>Crimen organizado</li><li>Prevención de conductas antisociales y delictivas</li><li>Taller del Proyecto Integrador Final - PIF</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-seguridad-ciudadana-integral-modalidad-a-distancia/">Licenciatura en Seguridad Ciudadana Integral - Modalidad a distancia</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Manejo de la plataforma Moodle</li><li>Introducción a la Seguridad Integral</li><li>Historia de la seguridad</li><li>Producción y análisis de textos específicos</li><li>Derechos Humanos y seguridad</li><li>Organizaciones policiales</li><li>Análisis prospectivo</li><li>Gestión de la organización y del capital humano</li><li>Planificación estratégica</li><li>Estadística aplicada y presupuestos en seguridad</li><li>Deontología profesional</li><li>Técnicas alternativas en resolución de conflictos</li><li>Psicología aplicada a la Seguridad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Seguridad ciudadana</li><li>Seguridad privada</li><li>Seguridad ambiental y rural</li><li>Seguridad Vial</li><li>Seguridad turística</li><li>Seguridad y ciberespacio</li><li>Criminología</li><li>Política criminal</li><li>Investigación Criminal</li><li>Crimen organizado</li><li>Prevención de conductas antisociales y delictivas</li><li>Taller del Proyecto Integrador Final - PIF</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+    </ul>
+
+    <h2>Negocios (8)</h2>
+    <ul class="ofertas">
+        <li class="oferta">
+            <h3><a href="/carrera/contador-publico/">Contador Público</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Álgebra</li><li>Comportamiento Organizacional</li><li>Instituciones del Derecho Público</li><li>Inglés I – (Prueba de Nivel)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo semestre</h4>
+            <ul><li>Administración</li><li>Contabilidad Básica</li><li>Instituciones del Derecho Privado</li><li>Economía I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Primer semestre</h4>
+            <ul><li>Matemática y Cálculo Financiero</li><li>Derecho Comercial I</li><li>Organización Contable de la Empresa</li><li>Economía II (Macroeconomía y Política Económica)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Segundo semestre</h4>
+            <ul><li>Contabilidad Superior</li><li>Estadística</li><li>Economía III (Microeconomía)</li><li>Inglés II (Prueba de Nivel)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Primer semestre</h4>
+            <ul><li>Costos y Contabilidad de Gestión</li><li>Finanzas Públicas</li><li>Procesos y sistemas de Información</li><li>Inglés Técnico</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Segundo semestre</h4>
+            <ul><li>Derecho Civil</li><li>Análisis de Estados Contables</li><li>Contabilidad del Sector Público</li><li>Electiva</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Primer semestre</h4>
+            <ul><li>Teoría y Técnica Impositiva I</li><li>Metodología de la Investigación y Seminario de Aplicación</li><li>Instituciones del Trabajo y Administración de Recursos Humanos</li><li>Auditoría</li><li>Práctica Profesional Supervisada (anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Segundo semestre</h4>
+            <ul><li>Teoría y Técnica Impositiva II</li><li>Actuación Profesional</li><li>Práctica Profesional Supervisada (anual)</li><li>Electiva</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año — Primer semestre</h4>
+            <ul><li>Administración I (Fundamentos y Teoría de Gestión)</li><li>Matemática I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo semestre</h4>
+            <ul><li>Contabilidad para Administración</li><li>Economía I (Microeconomía)</li><li>Derecho I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Anual</h4>
+            <ul><li>Introducción al Desarrollo Empresarial</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Primer semestre</h4>
+            <ul><li>Estadística (Metodológica y Aplicada)</li><li>Matemática II</li><li>Derecho II</li><li>Economía II (Macroeconomía)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Segundo semestre</h4>
+            <ul><li>Administración II (Metodológica y Sistemática)</li><li>Costos para Decisiones</li><li>Comportamiento Organizacional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-economia/">Licenciatura en Economía</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año — Primer semestre</h4>
+            <ul><li>Álgebra</li><li>Comportamiento Organizacional</li><li>Instituciones del Derecho Público</li><li>Inglés I - Prueba de Nivel</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo semestre</h4>
+            <ul><li>Administración</li><li>Contabilidad Básica</li><li>Instituciones del Derecho Privado</li><li>Economía I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Primer semestre</h4>
+            <ul><li>Matemática y Cálculo Financiero</li><li>Derecho Comercial I</li><li>Organización Contable de la Empresa</li><li>Economía II (Macroeconomía y Política Económica)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Segundo semestre</h4>
+            <ul><li>Contabilidad Superior</li><li>Estadística</li><li>Economía III (Microeconomía)</li><li>Inglés II - Prueba de Nivel</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Primer semestre</h4>
+            <ul><li>Finanzas Públicas</li><li>Econometría y Matemática para Economistas</li><li>Economía IV (Macroeconomía II)</li><li>Inglés Técnico</li><li>Administración Financiera del Sector Público</li><li>Procesos y Sistemas de Información</li><li>Economía del Sector Público</li><li>Electiva</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Primer semestre</h4>
+            <ul><li>Cuentas Nacionales</li><li>Metodología de la investigación y Seminario de Aplicación</li><li>Crecimiento y Desarrollo Económico</li><li>Mercado de Capitales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Segundo semestre</h4>
+            <ul><li>Sociología de las Organizaciones</li><li>Organización Industrial</li><li>Historia del Pensamiento Económico</li><li>Electiva</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-analitica-de-negocios/">Licenciatura en Analítica de Negocios</a></h3>
+            <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año — Primer semestre</h4>
+            <ul><li>Ciencia de Datos Empresariales</li><li>Modelado y Consultas de Datos Empresariales</li><li>Matemáticas aplicadas a Negocios</li><li>Protección de Datos Empresariales en la Nube.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo semestre</h4>
+            <ul><li>Analítica de Negocios y Series de Tiempo.</li><li>Estadísticas para el Análisis de Negocios</li><li>Aprendizaje Automático I</li><li>Comunicación de Datos y Visualización</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Tercer semestre</h4>
+            <ul><li>Laboratorio (Herramientas)</li><li>Aprendizaje Automático II y Aprendizaje Profundo</li><li>Gestión de Proyectos</li><li>Inglés para la Analítica de Negocios</li><li>Metodología de la Investigación y Proyecto Integrador</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-comercio-internacional/">Licenciatura en Comercio Internacional</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año — Primer cuatrimestre</h4>
+            <ul><li>Comercio exterior I</li><li>Aduana y régimen aduanero I</li><li>Instituciones del derecho público y privado</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo cuatrimestre</h4>
+            <ul><li>Técnicas y estrategias de comercialización internacional</li><li>Economía empresarial</li><li>Análisis financiero del comercio exterior</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Anual</h4>
+            <ul><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Primer cuatrimestre</h4>
+            <ul><li>Comercio exterior II</li><li>Logística internacional I (Cargas y transporte)</li><li>Aduana y régimen aduanero II</li><li>Estrategías de promoción de mercados</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Segundo cuatrimestre</h4>
+            <ul><li>Economía internacional</li><li>Organismos internacionales de financiamiento</li><li>Envases y embalajes para el comercio internacional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Anual</h4>
+            <ul><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Primer cuatrimestre</h4>
+            <ul><li>Gestión empresaria y fiscal</li><li>Matemática financiera</li><li>Logística Internacional II (Gestión de la cadena de suministro)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Segundo cuatrimestre</h4>
+            <ul><li>Desarrollo económico regional</li><li>Estadística aplicada al comercio exterior</li><li>Costos y precios de exportación e importación</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Anual</h4>
+            <ul><li>Inglés instrumental III</li><li>Práctica profesional (ejercicio del comercio exterior)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Primer cuatrimestre</h4>
+            <ul><li>Negociaciones internacionales y alianzas estratégicas</li><li>Relaciones económicas internacionales</li><li>Administración estratégica del comercio internacional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Segundo cuatrimestre</h4>
+            <ul><li>Finanzas internacionales de la empresa</li><li>Derecho internacional económico</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año — Anual</h4>
+            <ul><li>Metodología y técnicas de la investigación</li><li>Desarrollo y evaluación de proyectos de negocios</li><li>Práctica y orientación profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-comercio-internacional" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-comercio-internacional" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-marketing/">Licenciatura en Marketing</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Marketing</li><li>Análisis empresarial</li><li>Herramientas informáticas</li><li>Economía</li><li>Análisis comunicacional</li><li>Matemática financiera</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Sociología aplicada</li><li>Estadística aplicada</li><li>Comportamiento del consumidor</li><li>Costos y presupuestos</li><li>Productos y servicios</li><li>Gestión y práctica de ventas</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Canales de distribución y merchandising</li><li>Comunicación</li><li>Laboratorio y práctica de marketing</li><li>Inglés III</li><li>Investigación de mercados</li><li>Finanzas aplicadas</li><li>Gestión de precios</li><li>Marketing y tecnología</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Derecho comercial</li><li>Estrategias de marketing</li><li>Emprendimientos</li><li>Comercio internacional</li><li>Marketing directo y relacional</li><li>Marketing sectorial</li><li>Marketing vitivinícola</li><li>Práctica profesional supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-marketing" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-marketing" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnico-universitario-en-marketing-y-ventas/">Técnico Universitario en Marketing y Ventas</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año — Primer cuatrimestre</h4>
+            <ul><li>Marketing</li><li>Análisis empresarial</li><li>Herramientas informáticas</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo cuatrimestre</h4>
+            <ul><li>Economía</li><li>Análisis comunicacional</li><li>Matemática financiera</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Primer cuatrimestre</h4>
+            <ul><li>Sociología aplicada</li><li>Estadística aplicada</li><li>Comportamiento del consumidor</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Segundo cuatrimestre</h4>
+            <ul><li>Costos y presupuestos</li><li>Productos y servicios</li><li>Gestión y práctica de ventas</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Anual</h4>
+            <ul><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Primer cuatrimestre</h4>
+            <ul><li>Canales de distribución y merchandising</li><li>Comunicación</li><li>Laboratorio y práctica de marketing</li><li>Inglés III</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-marketing-y-ventas" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-marketing-y-ventas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-administracion-gastronomica/">Licenciatura en Administración Gastronómica</a></h3>
+            <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Economía</li><li>Administración de Operaciones en Hoteles y Restaurantes</li><li>Estadística Aplicada</li><li>Elementos de Derecho Civil y Comercial</li><li>Administración Financiera</li><li>Arquitectura y Diseño en Hotelería y Gastronomía</li><li>Investigación de Mercados</li><li>Costos y Presupuestos</li><li>Administración de Recursos Humanos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Formulación y Evaluación de Proyectos</li><li>Procesos y Gestión de Calidad</li><li>Comercialización de Servicios</li><li>Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-gastronomica" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-gastronomica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+    </ul>
+
+    <h2>Idiomas (4)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/traductorado-publico-de-ingles/">Traductorado Público de Inglés</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Lengua Inglesa I</li><li>Gramática Inglesa I</li><li>Fonética y Fonología Inglesa I</li><li>Comunicación Lingüística I</li><li>Teoría y Práctica de la Traducción I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Lengua Inglesa II</li><li>Gramática Inglesa II</li><li>Fonética y Fonología Inglesa II</li><li>Cultura y Literatura Inglesa I</li><li>Comunicación Lingüística II</li><li>Teoría y Práctica de la Traducción II</li><li>Elementos del Derecho aplicados a la Traducción Jurídica I</li><li>Lengua Extranjera I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Lengua Inglesa III</li><li>Comunicación Lingüística III</li><li>Traducción Audiovisual Especializada</li><li>Elementos Del Derecho aplicados a la Traducción Jurídica II</li><li>Gramática Contrastiva</li><li>Traducción Técnico-Científica</li><li>Lengua Extranjera II</li><li>Cultura y Literatura Inglesa II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Lengua Inglesa IV</li><li>Práctica Profesional y Estrategias de Inserción Laboral</li><li>Traducción Económico-Financiera</li><li>Metodología de la Investigación</li><li>Lengua Extranjera III</li><li>Informática y Traducción de Páginas Web</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/traductorado-publico-de-italiano/">Traductorado Público de Italiano</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Lengua Italiana I</li><li>Gramática Italiana I</li><li>Fonética y Fonología Italiana I</li><li>Comunicación Lingüística I</li><li>Taller de Introducción a la Vida Universitaria *</li><li>Traductología I *</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Lengua Italiana II</li><li>Gramática Italiana II</li><li>Fonética y Fonología Italiana II</li><li>Cultura y Civilización Italiana I</li><li>Comunicación Lingüística II *</li><li>Traductología II *</li><li>Elementos del Derecho aplicados a la Traducción I *</li><li>Traducción Jurídica I *</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Lengua Italiana III</li><li>Gramática Italiana III</li><li>Comunicación Lingüística III</li><li>Elementos del Derecho aplicados a la Traducción II *</li><li>Cultura y Civilización Italiana II</li><li>Informática y Herramientas de Búsqueda I *</li><li>Traducción Jurídica II *</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Lengua Italiana IV</li><li>Práctica Profesional e Informática Aplicada</li><li>Metodología de la Investigación</li><li>Elementos del Derecho Aplicados a la Traducción III *</li><li>Traducción Jurídica III *</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/traductor-publico-de-portugues/">Traductor Público de Portugués</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Lengua Portuguesa I</li><li>Gramática Portuguesa I</li><li>Fonética y Fonología Portuguesa I</li><li>Comunicación Lingüística I</li><li>Taller de Introducción a la Vida Universitaria *</li><li>Traductología I *</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Lengua Portuguesa II</li><li>Gramática Portuguesa II</li><li>Fonética y Fonología Portuguesa II</li><li>Cultura y Civilización Portuguesa I</li><li>Comunicación Lingüística II *</li><li>Traductología II *</li><li>Elementos del Derecho aplicados a la Traducción I *</li><li>Traducción Jurídica I *</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Lengua Portuguesa III</li><li>Gramática Portuguesa III</li><li>Comunicación Lingüística III</li><li>Elementos del Derecho aplicados a la Traducción II *</li><li>Cultura y Civilización Portuguesa II</li><li>Informática y Herramientas de Búsqueda I *</li><li>Traducción Jurídica II *</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Lengua Portuguesa IV</li><li>Práctica Profesional e Informática Aplicada</li><li>Metodología de la Investigación</li><li>Elementos del Derecho Aplicados a la Traducción III *</li><li>Traducción Jurídica III *</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductor-publico-de-portugues" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductor-publico-de-portugues" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-ingles/">Licenciatura en Inglés</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — Año y medio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Año y medio</h4>
+            <ul><li>Comprensión y Producción de Textos en Lengua Inglesa I</li><li>Taller TICs</li><li>Sociolingüística y Pragmática</li><li>Investigación Educativa</li><li>Problemática Educativa de Nivel Superior</li><li>Comprensión y Producción de Textos en Lengua Inglesa II</li><li>Lingüística Sistémica Funcional (con oración didáctica)</li><li>Taller de Reflexión sobre la Práctica Docente</li><li>Currículum y Diseño de materiales (ESP)</li><li>Seminario de Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/ciclos-de-complementacion-curricular/licenciatura-en-ingles" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/ciclos-de-complementacion-curricular/licenciatura-en-ingles" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/traductorado-publico-de-ingles/">Traductorado Público de Inglés</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/traductorado-publico-de-italiano/">Traductorado Público de Italiano</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-    </ul>
-
-    <h2>Educación (4)</h2>
-    <ul class="ofertas">
-        <li class="oferta">
-            <h3><a href="/carrera/profesorado-de-grado-universitario/">Profesorado de Grado Universitario</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/profesorado-universitario-en-lengua-y-cultura-inglesa/">Profesorado Universitario en Lengua y Cultura Inglesa</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/profesorado-universitario-en-lengua-y-cultura-inglesa" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-educacion-fisica-con-orientacion-en-fisiologia-del-trabajo/">Licenciatura en Educación Física con Orientación en Fisiología del Trabajo Físico y Rendimiento Humano</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-educacion-fisica-con-orientacion-en-fisiologia-del-trabajo-fisico-y-rendimiento-humano" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/profesorado-de-grado-universitario/">PROFESORADO DE GRADO UNIVERSITARIO</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 
@@ -482,25 +1208,113 @@
         <li class="oferta">
             <h3><a href="/carrera/lic-en-informatica-y-desarrollo-de-software/">Lic. en Informática y Desarrollo de Software</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Matemática</li><li>Programación I</li><li>Arquitectura de Computadoras I</li><li>Laboratorio I</li><li>Análisis Matemático I</li><li>Programación II</li><li>Arquitectura de Computadoras II</li><li>Laboratorio II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Análisis Matemático II</li><li>Sistemas de Comunicaciones</li><li>Diseño I</li><li>Laboratorio III</li><li>Estadística</li><li>Laboratorio IV</li><li>Base de datos</li><li>Diseño II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Programación Avanzada</li><li>Investigación Operativa</li><li>Autómatas y Lenguajes</li><li>Sistemas Inteligentes</li><li>Compiladores</li><li>Seguridad</li><li>Ingeniería del conocimiento</li><li>Practica integradora</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Ingeniería del Software</li><li>Simulación</li><li>Base de Datos avanzada</li><li>Sistemas distribuidos</li><li>Comercialización de Servicios</li><li>Derecho Informático y Ética Profesional</li><li>Evaluación de Proyectos</li><li>PrácticaProfesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-informatica-y-desarrollo-de-software" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-informatica-y-desarrollo-de-software" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-telecomunicaciones/">Licenciatura en Telecomunicaciones</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Matemática</li><li>Programación I</li><li>Arquitectura de Computadoras I</li><li>Laboratorio I</li><li>Análisis Matemático I</li><li>Programación II</li><li>Arquitectura de Computadoras II</li><li>Laboratorio II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Análisis Matemático II</li><li>Sistemas de Comunicaciones</li><li>Física</li><li>Laboratorio III</li><li>Estadística</li><li>Laboratorio IV</li><li>Base de Datos</li><li>Electrónica Básica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Protocolos de Red y Transporte</li><li>Investigación Operativa</li><li>Redes Ópticas</li><li>Redes Inalámbricas</li><li>Telecontrol</li><li>Taller de computadoras</li><li>Telefonía</li><li>Servidores</li><li>Práctica Integradora</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Sistemas Distribuidos</li><li>Simulación</li><li>Seguridad en Redes</li><li>Derecho Informático y Ética Profesional</li><li>Evaluación de Proyectos</li><li>Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-telecomunicaciones" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-telecomunicaciones" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnico-en-telecomunicaciones/">Técnico en Telecomunicaciones</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Matemática</li><li>Programación I</li><li>Arquitectura de Computadoras I</li><li>Laboratorio I</li><li>Análisis Matemático I</li><li>Programación II</li><li>Arquitectura de Computadoras II</li><li>Laboratorio II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Análisis Matemático II</li><li>Sistemas de Comunicaciones</li><li>Física</li><li>Laboratorio III</li><li>Estadística</li><li>Laboratorio IV</li><li>Base de Datos</li><li>Electrónica Básica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Protocolos de Red y Transporte</li><li>Investigación Operativa</li><li>Redes Ópticas</li><li>Redes Inalámbricas</li><li>Telecontrol</li><li>Taller de computadoras</li><li>Telefonía</li><li>Servidores</li><li>Práctica Integradora</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-en-telecomunicaciones" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-en-telecomunicaciones" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-desarrollo-de-software/">Técnico Universitario en Desarrollo de Software</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año — Primer cuatrimestre</h4>
+            <ul><li>Matemática</li><li>Programación I</li><li>Arquitectura de Computadoras I</li><li>Laboratorio I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo cuatrimestre</h4>
+            <ul><li>Análisis Matemático I</li><li>Programación II</li><li>Arquitectura de Computadoras II</li><li>Laboratorio II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Primer cuatrimestre</h4>
+            <ul><li>Análisis Matemático II</li><li>Sistemas de Comunicaciones</li><li>Diseño I</li><li>Laboratorio III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Segundo cuatrimestre</h4>
+            <ul><li>Estadística</li><li>Laboratorio IV</li><li>Base de datos</li><li>Diseño II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Primer cuatrimestre</h4>
+            <ul><li>Programación Avanzada</li><li>Investigación Operativa</li><li>Autómatas y Lenguajes</li><li>Sistemas Inteligentes</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año — Segundo cuatrimestre</h4>
+            <ul><li>Compiladores</li><li>Seguridad</li><li>Ingeniería del conocimiento</li><li>Comercialización de Servicios</li><li>Practica integradora</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-desarrollo-de-software" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-desarrollo-de-software" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -510,26 +1324,163 @@
         <li class="oferta">
             <h3><a href="/carrera/lic-en-turismo-y-hoteleria/">Lic. en Turismo y Hotelería</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Turismo y Hospitalidad</li><li>Historia de la Cultura Universal</li><li>Administración General</li><li>Geografía Turística Argentina y Regional</li><li>Historia Argentina y Regional</li><li>Operaciones Hoteleras</li><li>Inglés Nivel I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Información y Circuitos Turísticos</li><li>Sociología Aplicada</li><li>Operación de Restaurantes</li><li>Antropología Aplicada</li><li>Servicios Turísticos</li><li>Organizaciones Protocolares Temporarias</li><li>Inglés Nivel II</li><li>Práctica Profesional I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Recursos, Macroproductos y Espacios Turísticos</li><li>Psicología Aplicada</li><li>Marketing Turístico</li><li>Inglés Nivel III</li><li>Práctica Profesional II</li><li>Economía</li><li>Gestión de recursos turísticos</li><li>Estadística aplicada</li><li>Derecho civil y comercial</li><li>Administración financiera</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Política y planificación turística</li><li>Investigación de mercados</li><li>Costos y presupuestos</li><li>Administración de recursos humanos</li><li>Gerencia estratégica de hoteles y restaurantes</li><li>Formulación y evaluación de proyectos</li><li>Procesos y gestión de calidad</li><li>Comercialización de servicios</li><li>Trabajo final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-turismo-y-hoteleria" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-turismo-y-hoteleria" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-turismo-y-hoteleria/">Tecnicatura Universitaria en Turismo y Hotelería</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Turismo y Hospitalidad</li><li>Historia de la Cultura Universal</li><li>Administración General</li><li>Geografía Turística Argentina y Regional</li><li>Historia Argentina y Regional</li><li>Operaciones Hoteleras ANUAL</li><li>Inglés Nivel I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Información y Circuitos Turísticos</li><li>Sociología Aplicada</li><li>Operación de Restaurantes</li><li>Antropología Aplicada</li><li>Servicios Turísticos</li><li>Organizaciones Protocolares Temporarias</li><li>Inglés Nivel II</li><li>Práctica Profesional I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Recursos, Macroproductos y Espacios Turísticos</li><li>Psicología Aplicada</li><li>Marketing Turístico</li><li>Inglés Nivel III</li><li>Práctica Profesional II</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnicatura-universitaria-en-turismo-y-hoteleria" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnicatura-universitaria-en-turismo-y-hoteleria" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-administracion-hotelera/">Licenciatura en Administración Hotelera</a></h3>
+            <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Economía</li><li>Administración de Operaciones en Hoteles y Restaurantes</li><li>Estadística Aplicada</li><li>Elementos de Derecho Civil y Comercial</li><li>Administración Financiera</li><li>Arquitectura y Diseño en Hotelería y Gastronomía</li><li>Investigación de Mercados</li><li>Costos y Presupuestos</li><li>Administración de Recursos Humanos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Formulación y Evaluación de Proyectos</li><li>Procesos y Gestión de Calidad</li><li>Comercialización de Servicios</li><li>Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-hotelera" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-hotelera" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-turismo/">Licenciatura en Turismo</a></h3>
             <ul class="oferta-datos"><li>Duración: 1 año y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año — Primer cuatrimestre</h4>
+            <ul><li>Economía</li><li>Gestión de Recursos Turísticos</li><li>Estadística Aplicada</li><li>Elementos de Derecho Civil y Comercial</li><li>Administración Financiera</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Primer año — Segundo cuatrimestre</h4>
+            <ul><li>Política y Planeamiento Turístico</li><li>Investigación de Mercados</li><li>Costos y Presupuestos</li><li>Administración de Recursos Humanos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Primer cuatrimestre</h4>
+            <ul><li>Formulación y Evaluación de Proyectos</li><li>Procesos y Gestión de Calidad</li><li>Comercialización de Servicios</li><li>Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-turismo" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-turismo" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
-        <li class="oferta">
-            <h3><a href="/carrera/lic-en-turismo-y-hoteleria/">Lic. en Turismo y Hotelería</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+    </ul>
 
-            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-turismo-y-hoteleria" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+    <h2>Educación (3)</h2>
+    <ul class="ofertas">
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-educacion-fisica-con-orientacion-en-fisiologia-del-trabajo/">Licenciatura en Educación Física con Orientación en Fisiología del Trabajo Físico y Rendimiento Humano</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>PRIMER CUATRIMESTRE Fisiología del Trabajo Físico I Psicología de la Actividad Física y Deportiva Bioquímica Estadística I Biomecánica I</li><li>Fisiología del Trabajo Físico I</li><li>Psicología de la Actividad Física y Deportiva</li><li>Bioquímica</li><li>Estadística I</li><li>Biomecánica I</li><li>SEGUNDO CUATRIMESTRE Fisiología del Trabajo Físico II Nutrición y Energética de la Actividad Física y Deportiva Evaluación Funcional de la Actividad Física y Deportiva Estadística II Biomecánica II</li><li>Fisiología del Trabajo Físico II</li><li>Nutrición y Energética de la Actividad Física y Deportiva</li><li>Evaluación Funcional de la Actividad Física y Deportiva</li><li>Estadística II</li><li>Biomecánica II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>TERCER CUATRIMESTRE Principios del Entrenamiento y Estructuración de la Planificación Metodología de la Investigación Seminario de Control Funcional en Campo y Laboratorio Bioética</li><li>Principios del Entrenamiento y Estructuración de la Planificación</li><li>Metodología de la Investigación</li><li>Seminario de Control Funcional en Campo y Laboratorio</li><li>Bioética</li><li>CUARTO CUATRIMESTRE Seminario de Planeamiento Seminario de Diseño del Trabajo Final Trabajo Final Inglés</li><li>Seminario de Planeamiento</li><li>Seminario de Diseño del Trabajo Final</li><li>Trabajo Final</li><li>Inglés</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-educacion-fisica-con-orientacion-en-fisiologia-del-trabajo-fisico-y-rendimiento-humano" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-educacion-fisica-con-orientacion-en-fisiologia-del-trabajo-fisico-y-rendimiento-humano" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/profesorado-universitario-en-lengua-y-cultura-inglesa/">Profesorado Universitario en Lengua y Cultura Inglesa</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Lengua Inglesa I</li><li>Gramática Inglesa I</li><li>Fonética y Fonología Inglesa I</li><li>Antropología Filosófica y Deontología *</li><li>Psicología del Desarrollo y del Aprendizaje</li><li>Comunicación Lingüística I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Lengua Inglesa II</li><li>Gramática Inglesa II</li><li>Fonética y Fonología Inglesa II</li><li>Cultura y Literatura Inglesa I</li><li>Sistema Educativo y Currículum</li><li>Problemática Educativa</li><li>Comunicación Lingüística II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Lengua Inglesa III</li><li>Didáctica de la Lengua Extranjera I</li><li>Comunicación Lingüística III</li><li>Literatura Infantil y del Adolescente *</li><li>Gramática Contrastiva *</li><li>Cultura y Literatura Inglesa II *</li><li>Práctica y Residencia Docente I</li><li>Neuropsicolingüística</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Lengua Inglesa IV</li><li>Tecnología Aplicada a la Docencia</li><li>Didáctica de la Lengua Extranjera II</li><li>Investigación Educativa</li><li>Práctica y Residencia Docente II</li><li>Didáctica del Español como Lengua Extranjera *</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/profesorado-universitario-en-lengua-y-cultura-inglesa" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/profesorado-universitario-en-lengua-y-cultura-inglesa" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/profesorado-de-grado-universitario/">Profesorado de Grado Universitario</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Problemática Contemporánea y Educación</li><li>Sujeto, Aprendizaje y Contexto</li><li>Teoría y Desarrollo Curricular</li><li>Didáctica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Sistema Educativo</li><li>Institución Educativa</li><li>Pedagogía de la Educación Superior</li><li>Práctica Docente e Investigación Educativa</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 
@@ -538,13 +1489,43 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnico-universitario-en-diseno-grafico-y-publicidad/">Técnico Universitario en Diseño Gráfico y Publicidad</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Brief &amp; Insight</li><li>Diseño Gráfico</li><li>Fotografía</li><li>Herramientas Digitales</li><li>Electiva 1 (a elección de la institución)</li><li>Concepto y Redacción Publicitaria</li><li>Taller Creativo</li><li>Estrategias de Medios</li><li>Electiva 2 (a elección de la institución)</li><li>Optativa 1 (a elección del estudiante)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Planning Estratégico</li><li>Diagramación y Tipografía</li><li>Sistemas de Impresión y Tecnología</li><li>Redacción Publicitaria</li><li>Trabajo Inicial de Campo</li><li>Creatividad e Innovación</li><li>Medios Digitales</li><li>Electiva 3 (a elección de la institución)</li><li>Optativa 2 (a elección del estudiante)</li><li>Trabajo Avanzado de Campo</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-diseno-grafico-y-publicidad" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-diseno-grafico-y-publicidad" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-direccion-creativa-de-diseno-y-publicidad/">Licenciatura en Dirección Creativa de Diseño y Publicidad</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Curso introductorio (módulo propedéutico)</li><li>Pensamiento creativo</li><li>Experiencia de usuario</li><li>Relaciones públicas</li><li>Diseño y proceso proyectual</li><li>Producción y dirección audiovisual</li><li>Packaging</li><li>Diseño de interfaz y web</li><li>Planificación de campañas digitales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Gestión de la empresa creativa</li><li>Dirección creativa</li><li>Storytelling</li><li>Animación 2D y 3D</li><li>Creatividad tecnológica</li><li>Herramientas de pensamiento estratégico</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año — Anual</h4>
+            <ul><li>Trabajo final: Portfolio</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-direccion-creativa-de-diseno-y-publicidad" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-direccion-creativa-de-diseno-y-publicidad" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -554,7 +1535,28 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-calidad-medio-ambiente-e-higiene-y-seguridad-en-el-trabajo/">Licenciatura en Calidad, Medio Ambiente e Higiene y Seguridad en el Trabajo</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Física I</li><li>Álgebra</li><li>Dibujo Técnico</li><li>Administración de Empresas y Recursos Humanos</li><li>Química I</li><li>Física II</li><li>Análisis Matemático</li><li>Seguridad en el Trabajo I</li><li>Química II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Mecánica de los Fluidos</li><li>Tecnología de los Materiales</li><li>Ergonomía</li><li>Termodinámica</li><li>Medicina del Trabajo y Medioambiental</li><li>Incendio I</li><li>Psicología del Trabajo</li><li>Máquinas e Instalaciones Térmicas</li><li>Higiene I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Pasantías Clínicas Esenciales (1)</li><li>Principios de Gestión y Liderazgo para la Calidad</li><li>Administración General del Ambiente</li><li>Seguridad en el Trabajo II</li><li>Toxicología y Ecotoxicología</li><li>Estadística</li><li>Incendio II</li><li>Higiene Industrial II</li><li>Gestión de la Calidad y Normas ISO 9000</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Legislación Laboral y Medioambiental</li><li>Planificación y Control de la Calidad de los Productos y los Procedimientos</li><li>Los Sistemas de Gestión Ambiental</li><li>Estudio del Trabajo</li><li>Didáctica de la Educación</li><li>Evaluación del Impacto Ambiental</li><li>Sociología</li><li>Metodología de la Investigación Científica</li><li>Práctica Profesional</li><li>Inglés</li><li>Informática</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-calidad-medio-ambiente-e-higiene-y-seguridad-en-el-trabajo" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-calidad-medio-ambiente-e-higiene-y-seguridad-en-el-trabajo" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -564,7 +1566,20 @@
         <li class="oferta">
             <h3><a href="/carrera/sommelier-universitario/">Sommelier Universitario</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Evaluación Sensorial I</li><li>Elementos de Viticultura y Enología I</li><li>Historia Económica y Geografía Vitivinícola I</li><li>Servicio y Gestión I</li><li>Evaluación Sensorial II</li><li>Elementos de Viticultura y Enología II</li><li>Historia Económica y Geografía Vitivinícola II</li><li>Servicio y Gestión II</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Evaluación Sensorial III</li><li>Historia Económica y Geografía Vitivinícola III</li><li>Bebidas Especiales y Productos I</li><li>Gestión de Negocios I</li><li>Evaluación Sensorial IV</li><li>Historia Económica y Geografía Vitivinícola IV</li><li>Bebidas Especiales y Productos II</li><li>Gestión de Negocios II</li><li>Inglés II</li><li>Prácticas de Procesos</li><li>Prácticas de Servicio</li><li>Trabajo Final Integral</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-pregrado/sommelier-universitario" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-pregrado/sommelier-universitario" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>

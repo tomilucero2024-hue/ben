@@ -56,10 +56,10 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ciencias sociales","item":"https://buscadoreducativo.com.ar/area/ciencias-sociales/"},{"@type":"ListItem","position":4,"name":"Ciencias del Comportamiento","item":"https://buscadoreducativo.com.ar/carrera/ciencias-del-comportamiento/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Ciencias del Comportamiento","description":"Dónde estudiar Ciencias del Comportamiento en Mendoza: carrera de grado del área Ciencias sociales, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: a distancia.","url":"https://buscadoreducativo.com.ar/carrera/ciencias-del-comportamiento/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Ciencias del Comportamiento en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Ciencias del Comportamiento en Mendoza en la siguiente institución: Universidad de Congreso (UC). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Ciencias del Comportamiento?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Ciencias del Comportamiento?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad a distancia, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Ciencias del Comportamiento?","acceptedAnswer":{"@type":"Answer","text":"Ciencias del Comportamiento es una carrera de grado perteneciente al área de Ciencias sociales. Entre sus aptitudes más afines se destacan: pensamiento analítico, interacción social, base teórica y académica y liderazgo y gestión."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Ciencias del Comportamiento","description":"Dónde estudiar Ciencias del Comportamiento en Mendoza: carrera de grado del área Ciencias sociales, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/ciencias-del-comportamiento/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Ciencias del Comportamiento en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Ciencias del Comportamiento en Mendoza en la siguiente institución: Universidad de Congreso (UC). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Ciencias del Comportamiento?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Ciencias del Comportamiento?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Ciencias del Comportamiento?","acceptedAnswer":{"@type":"Answer","text":"Ciencias del Comportamiento es una carrera de grado perteneciente al área de Ciencias sociales. Entre sus aptitudes más afines se destacan: pensamiento analítico, interacción social, base teórica y académica y liderazgo y gestión."}}]}</script>
 </head>
 <body>
 <header class="cabecera">
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -81,26 +110,45 @@
     <div class="principal">
         <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ciencias-sociales/">Ciencias sociales</a> <span aria-hidden="true">›</span> <span aria-current="page">Ciencias del Comportamiento</span></nav>
         <h1>Ciencias del Comportamiento</h1>
-    <p class="entrada">Dónde estudiar Ciencias del Comportamiento en Mendoza: carrera de grado del área Ciencias sociales, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: a distancia.</p>
+    <p class="entrada">Dónde estudiar Ciencias del Comportamiento en Mendoza: carrera de grado del área Ciencias sociales, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: presencial.</p>
     </div>
     <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Ciencias sociales</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
         <dt>Dónde se dicta</dt><dd>1 institución</dd>
-        <dt>Modalidad</dt><dd>A distancia</dd>
+        <dt>Modalidad</dt><dd>Presencial</dd>
         <dt>Duración</dt><dd>4 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Ciencias+del+Comportamiento&amp;area=Ciencias+sociales&amp;formacion=grado">Ver Ciencias del Comportamiento en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Ciencias del Comportamiento</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-congreso-uc/">Universidad de Congreso (UC)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: A Distancia</li><li>Mendoza</li></ul>
-
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1° AÑO</h4>
+            <ul><li>Psicología del Comportamiento Humano</li><li>Introducción a las Ciencias del Comportamiento</li><li>Sociología y Cambio Social</li><li>Estadística Aplicada</li><li>Comunicación y Escritura Académica</li><li>Procesos Cognitivos y Toma de Decisiones</li><li>Antropologóa Cultural y Diversidad</li><li>Principios de Economía del Comportamiento</li><li>Introducción a los Datos como Activo Estratégico</li><li>Pensamiento Crítico y Resolución de Problemas</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2° AÑO</h4>
+            <ul><li>Aprendizaje Humano y Motivación</li><li>Neurociencia Aplicada al Comportamiento</li><li>Métodos de Recolección de Datos</li><li>Psicología Social y Dinámica de Grupos</li><li>Electiva I</li><li>Electiva II</li><li>Psicología Organizacional y del Trabajo</li><li>Introducción a la Analítica Conductual</li><li>Bases Biológicas del Comportamiento</li><li>Proyecto Final Integrador de Tecnicatura</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3° AÑO</h4>
+            <ul><li>Diseño Experimental y Metología Avanzada</li><li>Psicometría y Validación de Instrumentos</li><li>Técnicas Avanzadas de Análisis Cualitativo</li><li>Electiva III</li><li>Electiva IV</li><li>Psicología de la Persuación</li><li>Cultura, Valores y Comportamiento Global</li><li>Análisis de Datos con Herramientas Digitales</li><li>Psicología de la Personalidad</li><li>Electiva V</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4° AÑO</h4>
+            <ul><li>Diseño de Intervenciones Conductuales</li><li>Ética y Regulación en Investigación y Práctica Conductual</li><li>Análisis de Ecosistemas y Comportamiento Digital</li><li>Medición de Impacto y Evaluación de Resultados</li><li>Electiva VI</li><li>Electiva VII</li><li>Laboratorio de Innovación en Comportamiento</li><li>Electiva VIII</li><li>Seminario de Integración y Práctica Profesional</li><li>Proyecto Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/ciencias-del-comportamiento/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/ciencias-del-comportamiento/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -158,7 +206,7 @@
         <details class="faq-item">
             <summary class="faq-pregunta"><strong>¿Qué modalidades de cursado hay para Ciencias del Comportamiento?</strong></summary>
             <div class="faq-respuesta">
-                <p>Actualmente se puede cursar en modalidad a distancia, según la institución que elijas.</p>
+                <p>Actualmente se puede cursar en modalidad presencial, según la institución que elijas.</p>
             </div>
         </details>
         <details class="faq-item">
@@ -172,20 +220,20 @@
     <section class="relacionadas">
     <h2>Otras carreras del área Ciencias sociales</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(8)</span></li>
-        <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(7)</span></li>
         <li><a href="/carrera/licenciatura-en-relaciones-internacionales/">Licenciatura en Relaciones Internacionales</a> <span class="cuantas">(4)</span></li>
-        <li><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-petroleo-y-gas/">Tecnicatura Superior en Petróleo y Gas</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/tecnicatura-universitaria-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/despachante-de-aeronaves/">Despachante de Aeronaves</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-comunicacion-social/">Licenciatura en Comunicación Social</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-criminalistica/">Licenciatura en Criminalística</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia/">Licenciatura en Niñez, Adolescencia y Familia</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-relaciones-publicas-e-institucionales/">Licenciatura en Relaciones Públicas e Institucionales</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/locucion/">Locución</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/periodismo/">Periodismo</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/abogacia-y-procuracion/">Abogacía y Procuración</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/actuario/">Actuario</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/ciclo-de-licenciatura-en-comunicacion-digital-e-interactiva/">Ciclo de Licenciatura en Comunicación Digital e Interactiva</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/comunicacion/">Comunicación</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/cursos-online/">Cursos Online</a> <span class="cuantas">(1)</span></li>
     </ul>
-    <p><a href="/area/ciencias-sociales/">Ver las 122 carreras del área Ciencias sociales →</a></p>
+    <p><a href="/area/ciencias-sociales/">Ver las 71 carreras del área Ciencias sociales →</a></p>
     </section>
     </div>
 </div>

@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Universidad de Congreso (UC): carreras y oferta | BEN</title>
-<meta name="description" content="Universidad de Congreso (UC): 26 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.">
+<meta name="description" content="Universidad de Congreso (UC): 36 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Universidad de Congreso (UC): carreras y oferta | BEN">
-<meta property="og:description" content="Universidad de Congreso (UC): 26 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.">
+<meta property="og:description" content="Universidad de Congreso (UC): 36 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Universidad de Congreso (UC): carreras y oferta | BEN">
-<meta name="twitter:description" content="Universidad de Congreso (UC): 26 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.">
+<meta name="twitter:description" content="Universidad de Congreso (UC): 36 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Universidad de Congreso (UC)","item":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/","email":"informes@ucongreso.edu.ar","telephone":"4230630","address":{"@type":"PostalAddress","streetAddress":"Colón 90, Ciudad","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -67,12 +67,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -80,146 +109,860 @@
     <div class="principal">
         <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/instituciones/">Instituciones</a> <span aria-hidden="true">›</span> <a href="/provincia/mendoza/">Mendoza</a> <span aria-hidden="true">›</span> <span aria-current="page">Universidad de Congreso (UC)</span></nav>
         <h1>Universidad de Congreso (UC)</h1>
-    <p class="entrada">Universidad de Congreso (UC): 26 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.</p>
+    <p class="entrada">Universidad de Congreso (UC): 36 carreras en Mendoza, gestión privada. Duración, modalidad y links oficiales de cada una.</p>
     </div>
     <aside class="lateral">
     <dl class="ficha">
         <dt>Gestión</dt><dd>privada</dd>
         <dt>Nivel</dt><dd>universidad</dd>
         <dt>Provincia</dt><dd><a href="/provincia/mendoza/">Mendoza</a></dd>
-        <dt>Oferta en BEN</dt><dd>26 carreras</dd>
+        <dt>Oferta en BEN</dt><dd>36 carreras</dd>
         <dt>Dirección</dt><dd>Colón 90, Ciudad</dd>
         <dt>Teléfono</dt><dd>4230630</dd>
         <dt>Email</dt><dd>informes@ucongreso.edu.ar</dd>
     </dl>
-
-    <a class="cta" href="/?institucion=Universidad%20de%20Congreso%20(UC)">Ver esta institución en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
 
-    <h2>Negocios (9)</h2>
+    <h2>Negocios (10)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/comercio-exterior/">Comercio Exterior</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Administración</li><li>Comercio Internacional I</li><li>Matemática I</li><li>Economía I</li><li>Inglés I</li><li>Contabilidad</li><li>Matemática II</li><li>Comercio Internacional II</li><li>Comercialización</li><li>Economía II</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º Año</h4>
+            <ul><li>Estadística I</li><li>Derecho I</li><li>Historia Mundial Contemporánea</li><li>Inglés III</li><li>Costos</li><li>Derecho II</li><li>Comercialización Internacional</li><li>Inglés IV</li><li>Legislación Aduanera</li><li>Economía Internacional</li><li>Medios de Pago de Comercio Internacional</li><li>Estadística II</li><li>Economía III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º Año</h4>
+            <ul><li>Geografía Económica</li><li>Transportes y Seguros Internacionales</li><li>Envases y Embalajes</li><li>Portugués</li><li>Inglés V</li><li>Derecho Internacional Público</li><li>Clasificación Arancelaria y Valoración</li><li>Inglés VI</li><li>Portugués II</li><li>Investigación de Mercados</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º Año</h4>
+            <ul><li>Dirección y Alianzas Estratégicas</li><li>Formulación y Evaluación de Proyectos</li><li>Integración y Cooperación Económica</li><li>Régimen Bancario y Financiero Internacional</li><li>Negociaciones</li><li>Derecho Internacional Económico</li><li>Operatoria del Comercio Exterior</li><li>Régimen Penal y Prácticas Desleales del Comercio Internacional</li><li>Trabajo Final</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Extracurriculares</h4>
+            <ul><li>Chino I</li><li>Chino II</li><li>Chino III</li><li>Chino IV</li><li>Chino V</li><li>Chino VI</li><li>Chino VII</li><li>Chino VIII</li><li>Portugués III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Electivas</h4>
+            <ul><li>Sociología</li><li>Economía III</li><li>Procesos y Sistemas de Información</li><li>Teoría de las Decisiones</li><li>Matemática Financiera</li><li>Portugués II</li><li>Formulación de Proyectos</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/comercio-exterior/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/comercio-exterior/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/marketing-internacional/">Marketing Internacional</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º Año</h4>
+            <ul><li>Administración</li><li>Comercio Internacional</li><li>Marketing I</li><li>Economía I</li><li>Inglés I</li><li>Sociología</li><li>Economía II</li><li>Métodos Cuantitativos</li><li>Marketing II</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º Año</h4>
+            <ul><li>Matemática Financiera</li><li>Métrica y Analítica de Resultados</li><li>Economía III</li><li>Inglés III</li><li>Marketing Internacional</li><li>Derecho Comercial</li><li>Comportamiento del consumidor</li><li>Tecnología y nuevos paradigmas</li><li>Economía Internacional</li><li>Introducción a los lenguajes de programación</li><li>Inglés IV</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º Año</h4>
+            <ul><li>Investigación Académica</li><li>Comunicación Publicitaria</li><li>Política de Productos</li><li>Marketing On-line</li><li>Portugués I</li><li>Investigación de Mercados</li><li>Inglés V</li><li>Política de Precios</li><li>Canales de Distribución</li><li>Dirección de Ventas</li><li>Portugués II</li><li>Inglés VI</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º Año</h4>
+            <ul><li>Dirección y Alianzas Estratégicas</li><li>Formulación y Evaluación de Proyectos</li><li>Integración y Cooperación Económica</li><li>Medios de Pago</li><li>Negociaciones</li><li>E-Business</li><li>Derecho Internacional Privado</li><li>Costos de Importación y Exportación</li><li>Oratoria</li><li>Negocios Internacionales y Estructuras Regionales</li><li>Trabajo Final</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Extracurriculares</h4>
+            <ul><li>Chino I</li><li>Chino II</li><li>Chino III</li><li>Chino IV</li><li>Chino V</li><li>Chino VI</li><li>Chino VII</li><li>Chino VIII</li><li>Comercialización II</li><li>Portugués I</li><li>Portugués II</li><li>Portugués III</li><li>Matemática Financiera</li><li>Comercialización Internacional</li><li>Formulación de Proyectos II</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/comercializacion-con-orientacion-internacionales/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/comercializacion-con-orientacion-internacionales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/relaciones-economicas-internacionales/">Relaciones Económicas Internacionales</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/administracion/">Administración</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º Año</h4>
+            <ul><li>Administración I (*)</li><li>Comercialización</li><li>Economía I</li><li>Matemática I (*)</li><li>Electiva I (Comercio Internacional) (*)</li><li>Inglés I</li><li>Sociología (*)</li><li>Contabilidad I</li><li>Análisis Matemático (*)</li><li>Derecho I</li><li>Economía II</li><li>Inglés II</li><li>(*) Régimen promocional: 12 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º Año</h4>
+            <ul><li>Estadística I (*)</li><li>Inglés III</li><li>Costos</li><li>Derecho II</li><li>Economía III</li><li>Electiva II (Comportamiento Organizacional) (*)</li><li>Electiva III (Derecho Público)</li><li>Inglés IV</li><li>Matemática Financiera</li><li>Sistemas de Informática (*)</li><li>Dirección Estratégica</li><li>Lógica (*)</li><li>(*) Régimen promocional: 12 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º Año</h4>
+            <ul><li>Estadística II (*)</li><li>Administración II</li><li>Electiva IV (Comportamiento del Consumidor)</li><li>Inglés V</li><li>Análisis Organizacional</li><li>Finanzas (*)</li><li>Electiva V (Política de Negocios)</li><li>Inglés VI</li><li>Electiva VI (Historia Económica)</li><li>Electiva VII (Canales de Distribución)</li><li>Electiva VIII (Dirección de Ventas)</li><li>Administración Financiera</li><li>(*) Régimen promocional: 12 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º Año</h4>
+            <ul><li>Metodología de la Investigación</li><li>Formulación y Evaluación de Proyectos</li><li>Análisis de Estados Contables</li><li>Electiva IX (Ética Profesional)</li><li>Negociaciones (*)</li><li>Electiva X (Teoría de las Decisiones)</li><li>Electiva XI (Comercialización Vitivinícola)</li><li>Electiva XII (Entrepreneurship)</li><li>Electiva XIII (Técnicas de Gestión)</li><li>Electiva XIV (Comercialización II)</li><li>Trabajo Final</li><li>(*) Régimen promocional: 12 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Electivas</h4>
+            <ul><li>Introducción al Comercio Internacional (*)</li><li>Comportamiento Organizacional (*)</li><li>Derecho Público</li><li>Comportamiento del Consumidor</li><li>Política de Negocios</li><li>Historia Económica</li><li>Canales de Distribución</li><li>Dirección de Ventas</li><li>Ética Profesional</li><li>Administración de la Producción</li><li>Teoría de las Decisiones</li><li>Comercialización Vitivinícola</li><li>Entrepreneurship</li><li>Técnicas de Gestión</li><li>Comercialización II</li><li>Derecho del Trabajo y la Seguridad Social</li><li>Gestión de Calidad</li><li>(*) Régimen promocional: 12 espacios curriculares.</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/administracion/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/administracion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/administracion-de-negocios-digitales/">Administración de Negocios Digitales</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1° AÑO</h4>
+            <ul><li>Introducción a los Negocios Digitales</li><li>Adminsitración Estratégica de Negocios Digitales</li><li>Economía Digital y Comportamiento del Consumidor Online</li><li>Comunicación Escrita en Plataformas Digitales</li><li>Estadística Aplicada a los Negocios</li><li>Pensamiento Crítico y Resolución de Problemas</li><li>Diseño de Modelos Digitales Sostenibles</li><li>Principios del Marketing Digital</li><li>Introducción a los Datos como Activo Estratégico</li><li>Herramientas Operativas del Ecosistema Digital</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2° AÑO</h4>
+            <ul><li>Métodos Digitales de Investigación de Mercado</li><li>Ecosistemas Colaborativos y Trabajo Remoto</li><li>Creatividad e Innovación Estratégica</li><li>Legislación Digital y Gobernanza de Plataformas</li><li>Introducción a la Inteligencia Artificial</li><li>Conceptos de Contabilidad y Matemática Financiera</li><li>E-commerce y Plataformas de Venta</li><li>Automatización de Flujos Digitales</li><li>Laboratorio de Simulación Empresarial Digital</li><li>Prácticas de Tecnicatura: Diseño de Negocio Digital</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3° AÑO</h4>
+            <ul><li>Estrategias de Crecimiento Acelerado (Growth Hacking)</li><li>Decisiones Estratégicas basadas de Inteligencia de Datos</li><li>Diseño de Experiencias Omnicanal Integradas</li><li>Gestión Ágil de Proyectos Digitales</li><li>Negociación en Contextos Digitales</li><li>Transformación Digital: Diagnóstico y Estategia</li><li>Desarrollo Integral de Productos Digitales</li><li>Tecnologías Emergentes y Tendencias de Mercado</li><li>Gamificación y Motivación Digital</li><li>Electiva I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4° AÑO</h4>
+            <ul><li>Finanzas para Proyectos de Innovación</li><li>Aplicaciones de IA a Sectores Productivos</li><li>Métricas de Impacto Digital y Analítica Avanzada</li><li>Taller de Incubación de Emprendimientos Tecnológicos</li><li>Blockchain y Nuevas Infraestructuras Digitales</li><li>Electiva II</li><li>Electiva III</li><li>Electiva IV</li><li>Laboratorio de Startups Digitales</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/administracion-de-negocios-digitales/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/administracion-de-negocios-digitales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/agronegocios/">Agronegocios</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º Año</h4>
+            <ul><li>Administración General</li><li>Macro Economía</li><li>Derecho I</li><li>Comercialización Agroindustrial</li><li>Inglés I</li><li>Analísis Matemático</li><li>Contabilidad Gerencial</li><li>Micro Economía</li><li>Geografía Economía</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º Año</h4>
+            <ul><li>Probabilidad y Estadística</li><li>Costos</li><li>Administración de Personal</li><li>Sistemas de Producción Vegetal</li><li>Inglés III</li><li>Matemática Financiera</li><li>Administración de Pymes y Empresas Familiares (Agropecuarias)</li><li>Logística</li><li>Sistemas de Producción Animal</li><li>Inglés IV</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º Año</h4>
+            <ul><li>Responsabilidad Social</li><li>Administración Financiera</li><li>Derecho Rural</li><li>Control de Gestión</li><li>Inglés V</li><li>Metodología de la Investigación</li><li>Legislación Impositiva</li><li>Mercados Agroalimentarios</li><li>Impacto Ambiental y Desarrollo Sustentable</li><li>Inglés VI</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º Año</h4>
+            <ul><li>Comportamiento Organizacional</li><li>Dirección Estratégica</li><li>Producciones no tradicionales</li><li>Emprendedurismo</li><li>Práctica Profesional Supervisada</li><li>Negociaciones</li><li>Plan de Negocios Agropecuarios</li><li>Ética Profesional</li><li>Digitalazación y uso de datos</li><li>Seminario de Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/agronegocios/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/agronegocios/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/comercializacion/">Comercialización</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º Año</h4>
+            <ul><li>Administración I (*)</li><li>Comercio Internacional (*)</li><li>Introducción a la Matemática (*)</li><li>Comercialización</li><li>Economía I</li><li>Inglés I</li><li>Introducción a las Ciencias Sociales (*)</li><li>Contabilidad I</li><li>Análisis Matemático (*)</li><li>Inglés II</li><li>(*) Régimen promocional: 8 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º Año</h4>
+            <ul><li>Estadística I (*)</li><li>Derecho I</li><li>Sociología</li><li>Economía II</li><li>Inglés III</li><li>Costos</li><li>Derecho II</li><li>Comportamiento del Consumidor</li><li>Economía III</li><li>Inglés IV</li><li>(*) Régimen promocional: 8 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º Año</h4>
+            <ul><li>Estadística II (*)</li><li>Comunicación Publicitaria</li><li>Política de Productos</li><li>Electiva</li><li>Inglés V</li><li>Investigación de Mercados</li><li>Política de Precios</li><li>Canales de Distribución</li><li>Dirección de Ventas</li><li>Inglés VI</li><li>(*) Régimen promocional: 8 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º Año</h4>
+            <ul><li>Dirección y Alianzas Estratégicas</li><li>Formulación y Evaluación de Proyectos</li><li>Electiva</li><li>Negociaciones (*)</li><li>Trabajo Final</li><li>(*) Régimen promocional: 8 espacios curriculares.</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/comercializacion/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/comercializacion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/contador-publico/">Contador Público</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º AÑO</h4>
+            <ul><li>Administración I (*)</li><li>Economía I</li><li>Introducción a la Comercialización</li><li>Matemática I (*)</li><li>Inglés I</li><li>Derecho I</li><li>Economía II</li><li>Matemática II (*)</li><li>Contabilidad I</li><li>Introducción a las Ciencias Sociales (*)</li><li>Inglés II</li><li>(*) Materias Promocionales</li><li>(*) Régimen promocional: 17 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º AÑO</h4>
+            <ul><li>Economía III</li><li>Estadística I (*)</li><li>Filosofía (*)</li><li>Contabilidad II</li><li>Derecho II</li><li>Inglés III</li><li>Análisis Organizacional</li><li>Procesos y Sistemas de Información (*)</li><li>Derecho Público (*)</li><li>Derecho III</li><li>Costos</li><li>Inglés IV</li><li>(*) Materias Promocionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º AÑO</h4>
+            <ul><li>Comportamiento Organizacional (*)</li><li>Matemática Financiera</li><li>Contabilidad III</li><li>Estadística II (*)</li><li>Inglés V</li><li>Derecho del Trabajo y la Seguridad Social (*)</li><li>Administración Financiera (*)</li><li>Finanzas Públicas (*)</li><li>Teoría y Técnica Impositiva I</li><li>Inglés VI</li><li>(*) Materias Promocionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º AÑO</h4>
+            <ul><li>Administración II</li><li>Teoría y Técnica Impositiva II</li><li>Ética Profesional (*)</li><li>Formulación y Evaluación de Proyectos</li><li>Concursos y Quiebras</li><li>Teoría de las Decisiones</li><li>Dirección Estratégica</li><li>Actuación Profesional (*)</li><li>Auditoría de Estados Contables</li><li>Teoría y Técnica Impositiva III</li><li>Control de Gestión</li><li>(*) Materias Promocionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Último Semestre</h4>
+            <ul><li>Negociaciones (*)</li><li>Introducción al Comercio Internacional (*)</li><li>Auditoria Operativa y de Sistemas Computarizados</li><li>Administración y Contabilidad Pública</li><li>Derecho de Familia y Sucesiones</li><li>Seminario de Trabajo Final</li><li>Práctica Profesional Supervisada</li><li>(*) Materias Promocionales</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/contador-publico/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/contador-publico/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/economia/">Economía</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º Año</h4>
+            <ul><li>Administración I (*)</li><li>Lógica (*)</li><li>Matemática I (*)</li><li>Geografía Económica y Social</li><li>Inglés I</li><li>Introducción a la Economía</li><li>Derecho</li><li>Matemática II (*)</li><li>Inglés II</li><li>(*) Régimen promocional: 12 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º Año</h4>
+            <ul><li>Contabilidad</li><li>Estadística I (*)</li><li>Teoría de Precios I</li><li>Informática (*)</li><li>Inglés III</li><li>Sociología (*)</li><li>Teoría Monetaria I</li><li>Estadística II (*)</li><li>Inglés IV</li><li>(*) Régimen promocional: 12 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º Año</h4>
+            <ul><li>Teoría de Precios II</li><li>Matemática III</li><li>Historia Mundial Contemporánea</li><li>Inglés V</li><li>Teoría Monetaria II</li><li>Evaluación de Proyectos</li><li>Comercio Internacional I (*)</li><li>Inglés VI</li><li>(*) Régimen promocional: 12 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º Año</h4>
+            <ul><li>Finanzas Públicas (*)</li><li>Historia del Pensamiento Económico</li><li>Electiva</li><li>Econometría I</li><li>Historia Económica Argentina</li><li>Seminario</li><li>Trabajo Final</li><li>(*) Régimen promocional: 12 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Electivas</h4>
+            <ul><li>Economía Internacional y Crecimiento Económico</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/economia/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/economia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/marketing-digital/">Marketing Digital</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1° AÑO</h4>
+            <ul><li>Fundamentos del Marketing y Comunicación</li><li>Administración Estratégica de Negocios Digitales</li><li>Economía Digital y Comportamiento del Consumidor Online</li><li>Comunicación Escrita y Redacción Digital</li><li>Estadística Aplicada a los Negocios</li><li>Principios del Marketing Digital</li><li>Publicidad Digital y Medios Online</li><li>Branding y Posicionamiento Online</li><li>Introducción a los Datos como Activo Estratégico</li><li>Herramientas Operativas del Ecosistema Digital</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2° AÑO</h4>
+            <ul><li>Introducción a la Inteligencia Artificial</li><li>Métodos Digitales de Investigación de Mercado</li><li>Creatividad e Innovación Estratégica</li><li>Legislación Digital y Gobernanza de Plataformas</li><li>Estrategias de Contenidos Digitales</li><li>Contabilidad y Matemática Financiera</li><li>E-commerce y Marketplaces</li><li>Automatización de Flujos Digitales</li><li>SEO y SEM Avanzado</li><li>Prácticas de Tecnicatura: Campaña de Marketing Online</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3° AÑO</h4>
+            <ul><li>Diseño de Experiencias Omnicanal Integradas</li><li>Laboratorio de Estrategias y Campañas Digitales</li><li>IA Aplicada al Marketing</li><li>Clínica de Casos y Tendencias Digitales</li><li>Electiva I</li><li>Diseño UX/UI para Marketing Digital</li><li>Gamificación y Engagement Online</li><li>Simulación de Gestión de Marketing Digital</li><li>Electiva II</li><li>Electiva III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4° AÑO</h4>
+            <ul><li>Métricas de Impacto Digital y Analítica Avanzada</li><li>Gestión de Influencers y Comunidades Digitales</li><li>Optimización de Conversión (CRO)</li><li>Estrategias de Crecimiento Acelerado (Growth Hacking)</li><li>Blockchain y Nuevas Tecnologías en Consumo</li><li>Herramientas Digitales de Diseño y Edición</li><li>Neuromarketing y Técnicas Persuasivas</li><li>Desarrollo de Campañas Integradas</li><li>Electiva IV</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/marketing-digital/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/marketing-digital/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/recursos-humanos/">Recursos Humanos</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Administración I (*)</li><li>Economía I</li><li>Matemática I (*)</li><li>Gestión del Personal (Introducción a los Recursos Humanos)</li><li>Psicología Aplicada a los Recursos Humanos</li><li>Inglés I</li><li>Filosofía (*)</li><li>Sociología (Int. las Ciencias Sociales) (*)</li><li>Matemática II (*)</li><li>Contabilidad</li><li>Derecho I</li><li>Inglés II</li><li>(*) Régimen promocional: 10 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Estadística I (*)</li><li>Dirección de Personal</li><li>Comunicación Estratégica</li><li>Comportamiento Organizacional (*)</li><li>Inglés III</li><li>Derecho Laboral y de Seguridad Social I</li><li>Costos Laborales</li><li>Análisis y Evaluación de Cargos</li><li>Análisis Organizacional</li><li>Inglés IV</li><li>(*) Régimen promocional: 10 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Estadística II (*)</li><li>Selección de Personal</li><li>Gestión de la Calidad</li><li>Administración de Remuneración</li><li>Inglés V</li><li>Oratoria</li><li>Ergonomía y Salud Ocuapacional</li><li>Administración de la Capacitación</li><li>Administración Gubernamental y de ONG</li><li>Inglés VI</li><li>(*) Régimen promocional: 10 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Gestión de Crisis y Conflicto</li><li>Relaciones Laborales y Sindicales</li><li>Responsabilidad Social Empresaria</li><li>Administración Pymes y Empresas Familiares</li><li>Gestión Estratégica de Recursos Humanos</li><li>Negociaciones (*)</li><li>Sistemas de Información Aplicada (*)</li><li>Auditoría en Gestión de Recursos Humanos</li><li>Práctica Profesional y Trabajo Final</li><li>(*) Régimen promocional: 10 espacios curriculares.</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/recursos-humanos/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/recursos-humanos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
-        <li class="oferta">
-            <h3><a href="/carrera/administracion-de-negocios-digitales/">Administración de Negocios Digitales</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: A Distancia</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/administracion-de-negocios-digitales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
     </ul>
 
-    <h2>Ciencias sociales (6)</h2>
+    <h2>Salud (9)</h2>
     <ul class="ofertas">
         <li class="oferta">
-            <h3><a href="/carrera/relaciones-internacionales-y-gobernanza-global/">Relaciones Internacionales y Gobernanza Global</a></h3>
+            <h3><a href="/carrera/fonoaudiologia-y-clinica-del-lenguaje/">Fonoaudiología y Clínica del Lenguaje</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º AÑO</h4>
+            <ul><li>Anatomía y fisiología</li><li>Física acústica</li><li>Lingüística I</li><li>Psicología general</li><li>Filosofía del lenguaje I</li><li>Psicoacústica</li><li>Endocrinofoniatría</li><li>Fonología y fonética I</li><li>Taller de Iniciación musical</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º AÑO</h4>
+            <ul><li>Audiología I</li><li>Ortofonía I</li><li>Filosofía del lenguaje II</li><li>Taller de práctica musical y corporal</li><li>Otología II</li><li>Psicología evolutiva I</li><li>Fonología y fonética II</li><li>Semiología</li><li>Taller de cuerpo y lenguaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º AÑO</h4>
+            <ul><li>Audiología II</li><li>Ortofonía II</li><li>Fonoestomatología I</li><li>Desarrollo del ser hablante</li><li>Neuropatología y genética</li><li>Taller de musicalidad</li><li>Fonoestomatología II</li><li>Socioetnolingüística</li><li>Clínica del lenguaje I</li><li>Laboratorio de la voz I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º AÑO</h4>
+            <ul><li>Audiología III</li><li>Terapéutica vocal</li><li>Psicología evolutiva II</li><li>Análisis del discurso</li><li>Afasiología</li><li>Clínica del lenguaje II</li><li>Neuropsicología y lenguaje</li><li>Psicopatología</li><li>Taller de juego y lenguaje</li><li>Laboratorio de la voz II</li><li>Idioma I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5º AÑO</h4>
+            <ul><li>Idioma II</li><li>Terapéutica audiológica</li><li>Laberintología funcional</li><li>Clínica del lenguaje III</li><li>Seminario de capacitación área voz</li><li>Seminario de capacitación área audición</li><li>Seminario de capacitación área lenguaje</li><li>Laboratorio de audición</li><li>PPS audición</li><li>PPS voz</li><li>PPS lenguaje</li><li>Metodología de la investigación</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/fonoaudiologia-y-clinica-del-lenguaje/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/fonoaudiologia-y-clinica-del-lenguaje/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/kinesiologia/">Kinesiología</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Salud Pública</li><li>Química</li><li>Anatomía</li><li>Biología</li><li>Biofísica</li><li>Morfofisiología Dinámica</li><li>Introducción a la Kinesiología</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Atención al Paciente</li><li>Anatomía Funcional y Biomecánica</li><li>Semiopatología Kinésica Médica</li><li>Kinesioterapia</li><li>Fisioterapia</li><li>Psicomotricidad</li><li>Evaluación y Terapéutica Kinefisiátrica I</li><li>Kinefilaxia</li><li>Ética y Deontología Profesional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Diagnóstico por Imágenes</li><li>Patología Quirúrgica</li><li>Clínica Kinefisiátrica</li><li>Farmacología</li><li>Evaluación y Terapéutica Kinefisiátrica II</li><li>Inglés Técnico</li><li>Práctica Profesional I</li><li>Órtesis y Prótesis</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Kinefisiatría del Deporte</li><li>Kinefisiatría Ocupacional y Laboral</li><li>Metodología de la Investigación</li><li>Gestión de la Salud</li><li>Informática Aplicada</li><li>Kinefisiatría Dermo-Estética</li><li>Kinefisiatría Geriátrica</li><li>Taller Trabajo Final de Grado</li><li>Práctica Profesional II</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/kinesiologia/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/kinesiologia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
-            <h3><a href="/carrera/comunicacion/">Comunicación</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/comunicacion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <h3><a href="/carrera/laboratorio-de-analisis-clinicos/">Laboratorio de Análisis Clínicos</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1° AÑO</h4>
+            <ul><li>Biología Celular y Molecular</li><li>Química General y Orgánica</li><li>Anatomía y Fisiología Humana</li><li>Introducción al Laboratorio Clínico</li><li>Bioseguridad y Gestión de Residuos Patológicos</li><li>Química Clínica I</li><li>Hematología I</li><li>Microbiología General</li><li>Técnicas de Extracción y Procesamiento de Muestras</li><li>Parasitología</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2° AÑO</h4>
+            <ul><li>Inmunología Clínica</li><li>Química Clínica II</li><li>Hematología II y Banco de Sangre</li><li>Bacterología Clínica</li><li>Técnicas de Diagnóstico Molecular</li><li>Legislación Sanitaria y Ética Profesional</li><li>Control de Calidad en el Laboratorio</li><li>Prácticas Profesionalizantes I</li><li>Prácticas Profesionalizantes II</li><li>Seminario Integrador Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/laboratorio-de-analisis-clinicos/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/laboratorio-de-analisis-clinicos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
-        <li class="oferta">
-            <h3><a href="/carrera/locucion/">Locución</a></h3>
-            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/locucion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/periodismo/">Periodismo</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/periodismo/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/abogacia/">Abogacía</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/abogacia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/ciencias-del-comportamiento/">Ciencias del Comportamiento</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: A Distancia</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/ciencias-del-comportamiento/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-    </ul>
-
-    <h2>Salud (4)</h2>
-    <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-instrumentacion-quirurgica/">Licenciatura en Instrumentación Quirúrgica</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er Año</h4>
+            <ul><li>Salud Pública</li><li>Fundamentos de Instrumentación Quirúrgica</li><li>Comunicación</li><li>Aspectos Psico-Socio-Culturales de Desarrollo</li><li>Morfofisiología Dinámica</li><li>Bases Físico-Químicas</li><li>Ingles Técnico I</li><li>Microbiología. Parasitología e Inmunología</li><li>Atención del Paciente Quirúrgico</li><li>Problemática Socio-cultural y Laboral</li><li>Inglés Técnico II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do Año</h4>
+            <ul><li>Psicología Social e Institucional</li><li>Procesos Tecnológicos</li><li>Ética y Deontología Profesional</li><li>Informática Aplicada</li><li>Farmacología</li><li>Procedimientos Quirúrgicos I</li><li>Práctica Profesionalizante I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er Año</h4>
+            <ul><li>Práctica Profesionalizante II</li><li>Gestión de la Salud</li><li>Procedimientos Quirúrgicos II</li><li>Sistemas de Salud</li><li>Epidemiología y Bioestadística</li><li>Informática y Nuevas Tecnologías</li><li>Inglés Técnico III</li><li>Ética y Aspectos Legales de la Instrumentación Quirúrgica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4to Año</h4>
+            <ul><li>Paciente Crítico y Crítico Quirúrgico</li><li>Administración y Gestión en Áreas Quirúrgicas</li><li>Dinámicas y Coordinación de Áreas Quirúrgicas</li><li>Relaciones en el Ámbito Profesional</li><li>Metodología de la Investigación</li><li>Comunicación y Relaciones Interpersonales</li><li>Capacitación Profesional Continua</li><li>Trabajo Final Teoría</li><li>Taller Trabajo Final Práctico</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/instrumentacion-quirurgica/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/instrumentacion-quirurgica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-produccion-de-bioimagenes-radiologia/">Licenciatura en Producción de Bioimágenes (Radiología)</a></h3>
+            <h3><a href="/carrera/licenciatura-en-radiologia/">Licenciatura en Radiología</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1° AÑO</h4>
+            <ul><li>Salud Pública</li><li>Fundamentos de Radiología</li><li>Matemática</li><li>Aspectos Psico-Socio-Culturales de Desarrollo</li><li>Morfofisiología Dinámica</li><li>Bases Físico-Químicas</li><li>Informática I</li><li>Microbiología. Parasitología e Inmunología</li><li>Comunicación</li><li>Problemática socio-cultural y laboral</li><li>Práctica Pre-Profesional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2° AÑO</h4>
+            <ul><li>Atención al Paciente</li><li>Técnicas Radiológicas I</li><li>Ingles Técnico I</li><li>Informática II</li><li>Técnicas Radiológicas II</li><li>Ética y Deontología Profesional</li><li>Práctica Profesionalizante I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3° AÑO</h4>
+            <ul><li>Técnicas Radiológicas III</li><li>Gestión de la Salud</li><li>Práctica Profesionalizante II</li><li>Mamografía</li><li>Inglés Específico</li><li>Relaciones Anatomo-Radiológicas</li><li>Educación para la Salud</li><li>Hemodinamia y Angiografía</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º AÑO</h4>
+            <ul><li>Tomografía Axial Computada</li><li>Resonancia Nuclear Magnética</li><li>Medicina Nuclear</li><li>Radioterapia y Radio Protección</li><li>Trabajo Final - Teoría</li><li>Trabajo Final - Práctica</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/radiologia/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/radiologia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/preparacion-fisica-y-entrenamiento-deportivo/">Preparación Física y Entrenamiento Deportivo</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1° AÑO</h4>
+            <ul><li>Fundamentos de la Preparación Física</li><li>Anatomía y Fisiología Aplicada al Deporte</li><li>Psicología del Deporte y Motivación</li><li>Nutrición Deportiva</li><li>Metodología del Entrenamiento Deportivo</li><li>Entrenamiento de la Fuerza y la Resistencia</li><li>Entrenamiento de la Velocidad y la Coordinación</li><li>Evaluación y Control del Entrenamiento</li><li>Entrenamiento en Deportes de Conjunto</li><li>Primeros Auxilios y Prevención de Lesiones</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2° AÑO</h4>
+            <ul><li>Entrenamiento en Deportes Individuales</li><li>Entrenamiento Funcional y Readapción Física</li><li>Biomecánica del Movimiento</li><li>Técnicas de Recuperación y Descanso</li><li>Gestión y Marketing Deportivo</li><li>Planificación y Periodización del Entrenamiento</li><li>Entrenamiento en Poblaciones Especiales</li><li>Deporte y Sociedad</li><li>Taller de Investigación y Estadística Aplicada</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/preparacion-fisica-y-entrenamiento-deportivo/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/preparacion-fisica-y-entrenamiento-deportivo/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/psicologia/">Psicología</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º AÑO</h4>
+            <ul><li>Introducción a la Psicología I</li><li>Perspectivas Antropológicas</li><li>Procesos Biológicos Neuropsicológicos</li><li>Epistemología. Fundamento del Pensamiento Científico</li><li>Introducción a la Filosofía</li><li>Sociología</li><li>Psicología Evolutiva I</li><li>Métodos Cuantitativos y Estadística</li><li>Introducción a la Psicología II</li><li>Historia de la Psicología</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º AÑO</h4>
+            <ul><li>Psicología de la Personalidad</li><li>Bases Teóricas del Psicoanálisis</li><li>Psicología Evolutiva II</li><li>Filosofía Contemporánea</li><li>Metodología de la Investigación I</li><li>Inglés I</li><li>Bases Teóricas Cognitivo Conductual</li><li>Psicología Social</li><li>Bases Teóricas Existenciales y Humanísticas</li><li>Bases Teóricas de la Perspectiva Sistémica</li><li>Evaluación y Diagnóstico Psicológico I</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º AÑO</h4>
+            <ul><li>Bases Teóricas del Análisis Grupal e Institucional</li><li>Psicopatología I</li><li>Psiconeuropatología</li><li>Evaluación y Diagnóstico Psicológico II</li><li>Psicología Comunitaria</li><li>Evaluación y Diagnóstico Psicológico III</li><li>Psicología Organizacional y Laboral</li><li>Psicología Clínica</li><li>Psicopatología II</li><li>Psicologia y Medio Ambiente</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º AÑO</h4>
+            <ul><li>Psicoterapia Existencial y Humanista</li><li>Psicoterapia Psicoanalítica</li><li>Evaluación y Diagnóstico Psicológico IV</li><li>Psicología Jurídico Forense</li><li>Ética y Deontología Profesional</li><li>Metodología de la Investigación II</li><li>Psicoterapia Cognitiva – Conductual</li><li>Psicoterapia Sistémica</li><li>Psicología en Educación</li><li>Psicodiagnóstico</li><li>Profundización en Psicologia del Adulto Mayor</li><li>Historia de la Cultura</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5º AÑO</h4>
+            <ul><li>Psicofarmacología</li><li>PPS en Psicología Comunitaria</li><li>PPS en Organización Laboral</li><li>PPS en Clínica (ANUAL)</li><li>Seminario de Proyecto de Trabajo Final</li><li>PPS en Jurídico Forense</li><li>PPS en Educacional</li><li>Orientación Vocacional y Ocupacional</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/psicologia/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/psicologia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-acompanante-terapeutico/">Tecnicatura en Acompañante Terapéutico</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º AÑO</h4>
+            <ul><li>Bases Biológicas del Comportamiento</li><li>Estudios de los Procesos Psicológicos Básicos</li><li>Dinámicas de Intervención en Sistemas Familiares y Grupales</li><li>Fundamentos del Acompañamiento Terapéutico</li><li>La Práctica del Acompañante Terapéutico I</li><li>Fundamentos de Terapia Ocupacional</li><li>Psicopatología</li><li>Intervención en Crisis</li><li>La Práctica del Acompañante Terapéutico II</li><li>Ética del Servicio</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º AÑO</h4>
+            <ul><li>Elementos de Psico-Farmacología</li><li>Principios de Psicogeriatría</li><li>Intervención en Crisis II</li><li>Habilidades Sociales y de Comunicación</li><li>La Práctica del Acompañante Terapéutico III</li><li>Dinámica de Intervención I</li><li>Dinámica de Intervención II</li><li>Dinámica de Intervención III</li><li>Dinámica de Intervención IV</li><li>La Práctica del Acompañante Terapéutico IV</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º AÑO</h4>
+            <ul><li>Prácticas Hospitalarias</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/acompanante-terapeutico/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/acompanante-terapeutico/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-en-enfermeria/">Tecnicatura en Enfermería</a></h3>
+            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º AÑO</h4>
+            <ul><li>Salud Pública</li><li>Fundamentos de Enfermería</li><li>Comunicación</li><li>Aspectos Psico-Socio-Culturales de Desarrollo</li><li>Morfofisiología Dinámica</li><li>Bases Físico-Químicas</li><li>Ingles Técnico I</li><li>Microbiología, Parasitología e Inmunología</li><li>Enfermería Comunitaria</li><li>Práctica Pre-Profesional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º AÑO</h4>
+            <ul><li>Problemática socio-cultural y laboral</li><li>Enfermería del Adulto y Adulto Mayor</li><li>Ética y Deontología Profesional</li><li>Ingles Técnico II</li><li>Enfermería Materno-Infantil Juvenil</li><li>Educación para la Salud</li><li>Psicología Social e Institucional</li><li>Informática Aplicada</li><li>Farmacología</li><li>Nutrición y Dietoterapia</li><li>Práctica Profesionalizante I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º AÑO</h4>
+            <ul><li>Enfermería de la Salud Mental y Psiquiátrica</li><li>Cuidados Críticos y Emergentología</li><li>Gestión de Enfermería</li><li>Práctica Profesionalizante II</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/enfermeria/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/enfermeria/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+    </ul>
+
+    <h2>Ciencias sociales (8)</h2>
+    <ul class="ofertas">
+        <li class="oferta">
+            <h3><a href="/carrera/relaciones-internacionales/">Relaciones Internacionales</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º AÑO</h4>
+            <ul><li>Historia de las Relaciones Internacionales</li><li>Economía I</li><li>Historia de las Ideas Políticas (Anual)</li><li>Geografía Económica y Política</li><li>Introducción a las Ciencias Sociales</li><li>Inglés I</li><li>Economía II</li><li>Ceremonial y Protocolo</li><li>Geopolítica</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º AÑO</h4>
+            <ul><li>Economía III</li><li>Teoría de las Relaciones Internacionales</li><li>Historia Política Argentina y Latinoamericana (Anual)</li><li>Derecho I (Constitucional)</li><li>Electiva</li><li>Inglés III</li><li>Teoría Política</li><li>Historia de las Culturas Orientales</li><li>Inglés IV</li><li>Organizaciones Internacionales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º AÑO</h4>
+            <ul><li>Política Internacional Contemporánea (Anual)</li><li>Formulación y Evaluación de Proyectos (Anual)</li><li>Introducción al Comercio Internacional</li><li>Derecho Internacional Público</li><li>Trato Diplomático y Orientación Consular</li><li>Inglés V</li><li>Sistemas Políticos Comparados</li><li>Derecho Internacional Privado</li><li>Negociaciones</li><li>Inglés VI</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º AÑO - REI</h4>
+            <ul><li>Portugués I</li><li>Integración Económica</li><li>Comercialización Internacional (Marketing Internacional)</li><li>Economía Internacional</li><li>Electiva</li><li>Portugués II</li><li>Trabajo Final</li><li>Internacionalización de Empresas</li><li>Régimen Financiero Comercial Internacional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º AÑO - Gob. Global</h4>
+            <ul><li>Política Exterior Argentina (Anual)</li><li>Portugués I</li><li>Investigación Académica</li><li>Cooperación Internacional Para El Desarrollo</li><li>Relaciones Institucionales</li><li>Políticas Gubernamentales para América Latina</li><li>Portugués II</li><li>El Sistema Interamericano</li><li>Psicología Política y Liderazgo</li><li>Trabajo Final</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Electivas</h4>
+            <ul><li>PRIMER SEMESTRE</li><li>Matemática Financiera (1S)</li><li>Filosofía (1S)</li><li>Marketing 1 (1S)</li><li>Investigación Académica (1S)</li><li>E-Business (1S)</li><li>Relaciones Institucionales (1S)</li><li>Gerenciamiento Ambiental (1S)</li><li>SEGUNDO SEMESTRE</li><li>Oratoria (2S)</li><li>Administración Gubernamental y ONG (2S)</li><li>Economía Ambiental (2S)</li><li>Dirección Estratégica (2S)</li><li>Psicología Política y Liderazgo (2S)</li><li>Periodismo Especializado (2S)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Extracurriculares</h4>
+            <ul><li>Chino I</li><li>Chino II</li><li>Chino III</li><li>Chino IV</li><li>Chino V</li><li>Chino VI</li><li>Chino VII</li><li>Chino VIII</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/comunicacion/">Comunicación</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º Año</h4>
+            <ul><li>1º SEMESTRE</li><li>Teoría de la Comunicación</li><li>Taller de Escritura I</li><li>Introducción a la Administración</li><li>Filosofía</li><li>Inglés I</li><li>Introducción a la Comercialización</li><li>2º SEMESTRE</li><li>Semiología</li><li>Taller de Escritura II</li><li>Historia Mundial Contemporánea</li><li>Tecnología y Nuevos Paradigmas</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º Año</h4>
+            <ul><li>1° SEMESTRE</li><li>Economía</li><li>Marketing On Line</li><li>Inglés III</li><li>Diseño y Comunicación Visual</li><li>Comunicación Publicitaria</li><li>Psicología de la Comunicación</li><li>2° SEMESTRE</li><li>Identidad Visual</li><li>Sociología de la Comunicación</li><li>Taller de Escritura III</li><li>Inglés IV</li><li>Historia Política y Social Argentina</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º Año</h4>
+            <ul><li>1°SEMESTRE</li><li>Comunicación Gráfica y Radial</li><li>Gestión de Redes Sociales</li><li>Derecho a la Información</li><li>Comunicación Organizacional I</li><li>Estética</li><li>2° SEMESTRE</li><li>Investigación de Mercados</li><li>Comunicación Audiovisual</li><li>Relaciones Públicas e Institucionales</li><li>Comunicación Organizacional II</li><li>Periodismo Especializado</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º Año</h4>
+            <ul><li>1° SEMESTRE</li><li>Planificación Estratégica de Campañas</li><li>Periodismo Digital</li><li>Introducción a Lenguajes de Programación</li><li>Metodología de la Investigación</li><li>Taller de Radio y TV</li><li>Periodismo de Investigación</li><li>2° SEMESTRE</li><li>Métrica y Analítica de Resultados</li><li>Seminario Negociaciones</li><li>Seminario Estructura Internacional Contemporánea</li><li>Gestión de Proyectos Comunicacionales</li><li>Trabajo Final</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Electivas</h4>
+            <ul><li>1ER SEMESTRE</li><li>Periodismo Deportivo</li><li>Teoría de las Decisiones</li><li>2DO SEMESTRE</li><li>Oratoria</li><li>Marketing Político</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Plan Anterior</h4>
+            <ul><li>Plan 1998</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/comunicacion/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/comunicacion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/locucion/">Locución</a></h3>
+            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º Año</h4>
+            <ul><li>1º SEMESTRE</li><li>Teoría de la Comunicación</li><li>Expresión Oral y Escrita</li><li>Locución I</li><li>Foniatría I</li><li>Práctica Integral de Radio I</li><li>Práctica Integral de TV I</li><li>Introducción a la Administración</li><li>Derecho a la Información</li><li>2º SEMESTRE</li><li>Práctica Integral de Radio II</li><li>Práctica Integral de TV II</li><li>Tecnologías y Nuevos Paradigmas</li><li>Historia Mundial Contemporánea</li><li>Redacción Periodística</li><li>Pronunciación del Francés</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º Año</h4>
+            <ul><li>1° SEMESTRE</li><li>Tecnología de la Radio y la Televisión</li><li>Pronunciación del Italiano</li><li>Lenguaje y Estética de la Música</li><li>Locución II</li><li>Foniatría II</li><li>Práctica Integral de Radio III</li><li>Práctica Integral de TV III</li><li>Gestión de Redes Sociales</li><li>2° SEMESTRE</li><li>Pronunciación del Alemán</li><li>Historia Política y Social Argentina</li><li>Interpretación</li><li>Oratoria y Expresión Corporal</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º Año</h4>
+            <ul><li>1°SEMESTRE</li><li>Locución III</li><li>Foniatría III</li><li>Práctica Integral de Radio IV</li><li>Práctica Integral de TV IV</li><li>Inglés I</li><li>Portugués</li><li>Estética e Historia del Arte</li><li>2° SEMESTRE</li><li>Estructura Internacional Contemporánea</li><li>Doblaje</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/locucion/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/locucion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/periodismo/">Periodismo</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º Año</h4>
+            <ul><li>1º SEMESTRE</li><li>Compresión y Producción de Textos (Taller de Escritura I)</li><li>Teoría de la Comunicación</li><li>Filosofía</li><li>Inglés I</li><li>Comunicación Gráfica y Radial</li><li>2º SEMESTRE</li><li>Redacción Periodística (Taller de Escritura II)</li><li>Tecnología y Nuevos Paradigmas</li><li>Sociología de la Comunicación</li><li>Historia Mundial Contemporánea</li><li>Inglés II</li><li>Comunicación Audiovisual</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º Año</h4>
+            <ul><li>1° SEMESTRE</li><li>Taller de Radio y TV I (Taller de Radio TV)</li><li>Estética</li><li>Producción Periodística</li><li>Psicología de la Comunicación</li><li>Derecho Informativo y Audiovisual</li><li>Locución I</li><li>2° SEMESTRE</li><li>Taller de Radio y TV II</li><li>Semiología</li><li>Dirección y Administración de Medios</li><li>Locución II</li><li>Opinión Pública</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º Año</h4>
+            <ul><li>1° SEMESTRE</li><li>Comunicación Organizacional I</li><li>Gestión de Redes Sociales</li><li>Periodismo de Investigación</li><li>Periodismo Digital</li><li>Diseño y Comunicación Visual</li><li>2° SEMESTRE</li><li>Comunicación Organizacional II</li><li>Periodismo Especializado</li><li>Fotoperiodismo</li><li>Estructura Internacional Contemporánea</li><li>Historia Política y Social Argentina</li><li>Gestión de Proyectos de Comunicación</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º Año</h4>
+            <ul><li>1° SEMESTRE</li><li>Seminario Metodología de la Investigación</li><li>Introducción a Lenguajes de Programación</li><li>Electiva 1</li><li>Electiva 2</li><li>2° SEMESTRE</li><li>Métrica y Analítica de Resultados</li><li>Oratoria y Expresión Corporal</li><li>Identidad Visual</li><li>Práctica Profesional</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/periodismo/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/periodismo/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/trabajo-social/">Trabajo Social</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1° año</h4>
+            <ul><li>Trabajo Social I (Teoría y Práctica)</li><li>Filosofía</li><li>Psicología</li><li>Promoción de la Salud</li><li>Informática Aplicada I</li><li>Idioma Inglés I</li><li>Antropología</li><li>Sociología I</li><li>Mediación</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2° año</h4>
+            <ul><li>Trabajo Social II (Teoría y Práctica)</li><li>Técnicas de Investigación Social I</li><li>Psicología Evolutiva</li><li>Derecho Civil</li><li>Informática Aplicada II</li><li>Idioma Inglés II</li><li>Sociología II</li><li>Seminario de Integración en Trabajo Social y Salud</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3° año</h4>
+            <ul><li>Trabajo Social III (Teoría y Práctica)</li><li>Técnicas de Investigación Social II</li><li>Planificación Social I</li><li>Derecho Penal</li><li>Psicología Social</li><li>Análisis Organizacional</li><li>Seminario de Integración en Problemáticas Sociales</li><li>Informática Aplicada III</li><li>Idioma Inglés III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4° año</h4>
+            <ul><li>Trabajo Social IV (Teoría y Práctica)</li><li>Política Social del Estado</li><li>Planificación Social II</li><li>Legislación Familiar</li><li>Epistemología de las Ciencias Sociales</li><li>Pedagogía</li><li>Psicopatología</li><li>Ética Profesional</li><li>Seminario de Integración en Problemáticas Educativas</li><li>Supervisión</li><li>Tesina Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/trabajo-social/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/trabajo-social/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/ciencias-del-comportamiento/">Ciencias del Comportamiento</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1° AÑO</h4>
+            <ul><li>Psicología del Comportamiento Humano</li><li>Introducción a las Ciencias del Comportamiento</li><li>Sociología y Cambio Social</li><li>Estadística Aplicada</li><li>Comunicación y Escritura Académica</li><li>Procesos Cognitivos y Toma de Decisiones</li><li>Antropologóa Cultural y Diversidad</li><li>Principios de Economía del Comportamiento</li><li>Introducción a los Datos como Activo Estratégico</li><li>Pensamiento Crítico y Resolución de Problemas</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2° AÑO</h4>
+            <ul><li>Aprendizaje Humano y Motivación</li><li>Neurociencia Aplicada al Comportamiento</li><li>Métodos de Recolección de Datos</li><li>Psicología Social y Dinámica de Grupos</li><li>Electiva I</li><li>Electiva II</li><li>Psicología Organizacional y del Trabajo</li><li>Introducción a la Analítica Conductual</li><li>Bases Biológicas del Comportamiento</li><li>Proyecto Final Integrador de Tecnicatura</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3° AÑO</h4>
+            <ul><li>Diseño Experimental y Metología Avanzada</li><li>Psicometría y Validación de Instrumentos</li><li>Técnicas Avanzadas de Análisis Cualitativo</li><li>Electiva III</li><li>Electiva IV</li><li>Psicología de la Persuación</li><li>Cultura, Valores y Comportamiento Global</li><li>Análisis de Datos con Herramientas Digitales</li><li>Psicología de la Personalidad</li><li>Electiva V</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4° AÑO</h4>
+            <ul><li>Diseño de Intervenciones Conductuales</li><li>Ética y Regulación en Investigación y Práctica Conductual</li><li>Análisis de Ecosistemas y Comportamiento Digital</li><li>Medición de Impacto y Evaluación de Resultados</li><li>Electiva VI</li><li>Electiva VII</li><li>Laboratorio de Innovación en Comportamiento</li><li>Electiva VIII</li><li>Seminario de Integración y Práctica Profesional</li><li>Proyecto Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/ciencias-del-comportamiento/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/ciencias-del-comportamiento/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/inversiones-y-mercados-de-capitales/">Inversiones y Mercados de Capitales</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1° AÑO</h4>
+            <ul><li>Introducción al Mercado de Capitales</li><li>Matemática Financiera</li><li>Economía General</li><li>Contabilidad Financiera</li><li>Regulación del Mercado de Valores</li><li>Herramientas Digitales para la Inversión</li><li>Estadística Aplicada</li><li>Productos Financieros de Renta Fija</li><li>Psicología del Inversor</li><li>Inglés Técnico Financiero I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2° AÑO</h4>
+            <ul><li>Productos Financieros de Renta Variable</li><li>Análisis Técnico</li><li>Análisis Fundamental</li><li>Estrategias de Inversión</li><li>Gestión de Carteras</li><li>Evaluación de Riesgo Financiero</li><li>Ética Profesional y Compliance</li><li>Inglés Técnico Financiero II</li><li>Seminario de Casos y Simulaciones de Inversión</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/inversiones-y-mercados-de-capitales/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/inversiones-y-mercados-de-capitales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/abogacia/">Abogacía</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan</h4>
+            <ul><li>Primer Año</li><li>Principios Generales del Derecho</li><li>Derecho Político</li><li>Introducción al Lenguaje Jurídico</li><li>Instituciones del Derecho Romano</li><li>Historia Institucional Argentina</li><li>Derecho Privado</li><li>Epistemología y Metodología de la Investigación</li><li>Derecho Público Provincial y Municipal</li><li>Derecho Constitucional y de los DDHH</li><li>Segundo Año</li><li>Introducción al Derecho Penal y Teoría del Delito</li><li>Obligaciones</li><li>Derecho Ambiental</li><li>Economía para Abogados</li><li>Derecho Procesal Parte General</li><li>Derecho Penal Parte Específica</li><li>Derechos de los Contratos y del Consumidor</li><li>Deontología Jurídica</li><li>Derecho Procesal Civil y Comercial</li><li>Tercer Año</li><li>Mediación y Resolución Participativa de Conflictos</li><li>Sociedades Civiles Comerciales y de la Empresa</li><li>Derecho de Familia y Sucesiones</li><li>Derecho Laboral y Seguridad Social</li><li>Análisis Económico del Derecho</li><li>Concursos y Quiebras</li><li>Derecho Bancario y Títulos de Crédito</li><li>Derecho Procesal Penal</li><li>Derechos Reales</li><li>Cuarto Año</li><li>Derecho del Transporte y los Seguros</li><li>Derecho Administrativo</li><li>Derecho Internacional Público</li><li>Filosofía Jurídica</li><li>Derecho Procesal Constitucional</li><li>Derecho Tributario y Aduanero</li><li>Derecho Internacional Privado</li><li>Técnicas de Litigación Oral y Oratoria</li><li>Prácticas Profesionales Supervisadas</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Plan 2018</h4>
+            <ul><li>Principios Generales del Derecho (Programas)</li><li>Introducción al Derecho Privado</li><li>Introducción al Lenguaje Jurídico (Programas)</li><li>Inglés Jurídico I (Anual)</li><li>Instituciones del Derecho Romano (Programas)</li><li>Introducción al Derecho Penal</li><li>Teoría del Estado</li><li>Derecho Privado – Parte General</li><li>Derecho Penal – Parte General</li><li>Derecho Constitucional</li><li>Epistemología y Metodología de la Investigación Jurídicas</li><li>Historia Institucional Argentina (Programas)</li><li>Obligaciones Civiles y Comerciales (Anual)</li><li>Derechos del Contrato y del Consumidor (Anual)</li><li>Inglés Jurídico II (Anual)</li><li>Derecho Procesal – Parte General</li><li>Derecho Penal P.E.</li><li>Economía para Abogados (Programas)</li><li>DDHH y Garantías</li><li>Derecho Público, Provincial y Municipal</li><li>Derecho Procesal, Civil y Comercial</li><li>Economía para Abogados II</li><li>Derecho Procesal Penal (Programas)</li><li>Derechos Reales e Intelectuales (Anual)</li><li>Derecho Societario (Anual)</li><li>Inglés Jurídico III (Anual)</li><li>Títulos de Crédito y Derecho Bancario</li><li>Derecho de Familia</li><li>Deontología Jurídica (Programas)</li><li>Derecho Sucesorio</li><li>Concursos y Quiebras (Programas)</li><li>Derecho Laboral</li><li>Inglés Jurídico IV (Anual)</li><li>Derecho Administrativo (Anual)</li><li>Derecho Internacional Público (Programas)</li><li>Análisis Económico del Derecho (Programas)</li><li>Derecho Procesal Constitucional (Programas)</li><li>Derecho Seguridad Social</li><li>Sociología Jurídica</li><li>Derecho Ambiental (Programas)</li><li>Transporte y Seguros</li><li>Derecho Empresarial</li><li>Inglés Jurídico V (Anual)</li><li>Derecho Internacional Privado (Programas)</li><li>Métodos Alternativos de Resolución de Conflictos</li><li>Derecho Tributario y Finanzas Públicas</li><li>Filosofía Jurídica (Programas)</li><li>Derecho Aduanero</li><li>Derecho de Agua y Minas</li><li>Derecho Penal Tributario</li><li>Técnicas de Litigación Oral</li><li>Prácticas Profesionales Supervisadas</li><li>CORRELATIVAS</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/abogacia/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/abogacia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+    </ul>
+
+    <h2>Educación (3)</h2>
+    <ul class="ofertas">
+        <li class="oferta">
+            <h3><a href="/carrera/ciencias-de-la-educacion/">Ciencias de la Educación</a></h3>
+            <ul class="oferta-datos"><li>Duración: Consultar en Plan de Estudios. Nuevos Postulantes de la Sede</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º AÑO</h4>
+            <ul><li>Historia de la Educación</li><li>Pedagogía</li><li>Epistemología de las Ciencias Sociales</li><li>Problemática Educativa Contemporánea</li><li>Administración</li><li>Didáctica I</li><li>Sociología de la Educación</li><li>Estudios Culturales y Educación</li><li>Computación Aplicada</li><li>Psicología General</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º AÑO</h4>
+            <ul><li>Pedagogía II</li><li>Psicología Evolutiva</li><li>Procesos Comunicacionales</li><li>Análisis de Instituciones</li><li>Coloquio I</li><li>Psicología del Aprendizaje</li><li>Educación y Trabajo</li><li>Psico - Sociología de los Grupos</li><li>Política Educativa y Educación Comparada</li><li>Coloquio II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º AÑO</h4>
+            <ul><li>Didáctica II</li><li>Investigación Educacional I</li><li>Planeamiento Estratégico</li><li>Electiva</li><li>Coloquio III</li><li>Economía</li><li>Investigación Educacional II</li><li>Electiva 2</li><li>Pasantía I</li><li>Coloquio IV</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º AÑO - Instituciones</h4>
+            <ul><li>Historia del Pensamiento Organizacional</li><li>Modelizaciones Actuales de las Organizaciones</li><li>Legislación Educativa Comparada</li><li>Tecnología de Gestión</li><li>Administración y Gestión de Sistemas e Instituciones Educativas</li><li>Ética de las Organizaciones</li><li>Negociaciones y Resolución de Conflictos</li><li>Análisis de Casos</li><li>Pasantía II</li><li>Inglés I</li><li>Trabajo Final</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º AÑO - Tecnología</h4>
+            <ul><li>Introducción a la Tecnología Educativa</li><li>Tecnología y Capacitación</li><li>Educación a Distancia</li><li>Diseño y Producción I</li><li>Diseño y Evolución de Proyectos</li><li>Diseño y Producción II</li><li>Diseño y Producción III</li><li>Diseño y Producción IV</li><li>Pasantía II -</li><li>Inglés 1</li><li>Trabajo Final -</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º AÑO - RRHH</h4>
+            <ul><li>Modelizaciones Actuales de las Organizaciones -</li><li>Tecnología y Capacitación</li><li>Los Recursos Humanos en las Organizaciones</li><li>Problemas de Trabajo y Empleo</li><li>Arquitectura de la Capacitación</li><li>Enfoques de Evaluación por Desempeño</li><li>Ética de las Organizaciones -</li><li>Negociaciones y Resolución de Conflictos -</li><li>Diseño y Producción</li><li>Pasantía II -</li><li>Inglés I -</li><li>Trabajo Final -</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5º AÑO - PROFESORADO</h4>
+            <ul><li>Didáctica del Nivel Superior</li><li>Formación Docente Continua</li><li>Educación en el Mundo Contemporáneo</li><li>Sistema Educativo</li><li>Observación y Práctica de la Enseñanza</li><li>Residencia Docente</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/ciencias-de-la-educacion/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/ciencias-de-la-educacion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/profesorado-universitario-para-profesionales/">Profesorado Universitario para Profesionales</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er Año</h4>
+            <ul><li>Sistema Educativo</li><li>Institución Educativa</li><li>Sociología de la Educación</li><li>Educación y TIC</li><li>Psicología del Aprendizaje</li><li>Sujeto Psíquico del Aprendizaje y su Cultura</li><li>Mediación Pedagógica</li><li>Didáctica del Sujeto del Aprendizaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do Año</h4>
+            <ul><li>Metodología de la Investigación</li><li>Currículum, Práctica Docente y Evaluación</li><li>Política y Legislación Educativa</li><li>Proyectos Áulicos e Institucionales</li><li>Organización y Gestión Institucional</li><li>Formación Docente Continua</li><li>Práctica y Observación de la Enseñanza</li><li>Residencia Docente</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/profesorado-universitario-para-profesionales/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/profesorado-universitario-para-profesionales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/psicopedagogia/">Psicopedagogía</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º Año</h4>
+            <ul><li>Bases Biológicas y Neurológicas del Comportamiento</li><li>Antropología Filosófica</li><li>Pedagogía</li><li>Introducción a la Psicología</li><li>Sociología</li><li>Psicología genética</li><li>Psicología cognitiva</li><li>Introducción a las prácticas psicopedagógicas</li><li>Neuropsicología</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º Año</h4>
+            <ul><li>Seminario optativo I</li><li>Didáctica</li><li>Teoría e interpretación del proceso diagnóstico I</li><li>Epistemología</li><li>Trabajos de campo I</li><li>Psicología evolutiva I</li><li>Teoría e interpretación del proceso diagnóstico II</li><li>Didáctica de la matemática</li><li>Didáctica de la lengua</li><li>Seminario optativo II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º Año</h4>
+            <ul><li>Psicología educacional</li><li>Psicología evolutiva II</li><li>Psicopatología</li><li>Análisis de casos I (Lenguaje)</li><li>Neurociencias aplicadas al aprendizaje</li><li>Análisis de casos II (Lectoescritura)</li><li>Orientación vocacional y ocupacional</li><li>Trabajos de campo II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º Año</h4>
+            <ul><li>Psicología social</li><li>Metodología y técnicas de la investigación I</li><li>Análisis de casos III (Número)</li><li>Prácticas profesionales I (Clínica)</li><li>Psicopedagogía de la diversidad e integración escolar</li><li>Psicopedagogía institucional</li><li>Psicopedagogía familiar</li><li>Prácticas profesionales II (Educación)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5º Año</h4>
+            <ul><li>Metodología y técnicas de la investigación II</li><li>Seminario de la orientación I</li><li>Seminario de la orientación II</li><li>Trabajos de campo III</li><li>Seminario de trabajo final</li><li>Seminario de la orientación III</li><li>Seminario de la orientación IV</li><li>Prácticas profesionales III</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/psicopedagogia/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/psicopedagogia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 
@@ -228,13 +971,55 @@
         <li class="oferta">
             <h3><a href="/carrera/gestion-ambiental/">Gestión Ambiental</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º AÑO</h4>
+            <ul><li>Introducción a la Ecología</li><li>Epistemología de las Ciencias Ambientales</li><li>Matemática Aplicada</li><li>Sociología</li><li>Ecología de las Poblaciones</li><li>Economía</li><li>Hidrología</li><li>Ecología Antropológica</li><li>Derecho y Legislación Ambiental I</li><li>Gestión y Proyecto Ambiental I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º AÑO</h4>
+            <ul><li>Evaluación y Manejo de los Recursos Naturales</li><li>Geografía Regional Argentina</li><li>Gestión del Recurso Agua</li><li>Derecho y Legislación Ambiental II</li><li>Ecología de las Zonas Áridas</li><li>Ecología Humana</li><li>Gestión del Recurso Aire</li><li>Sistemas de Información Ambiental</li><li>Economía Ambiental</li><li>Estadística General</li><li>Gestión y Proyecto Ambiental II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º AÑO</h4>
+            <ul><li>Salud y Medio Ambiente I</li><li>Formulación y Evaluación de Proyectos Ambientales</li><li>Administración y Gestión de los Sistemas Ambientales Rurales</li><li>Gestión del Recurso Suelo</li><li>Administración y Gestión de los Sistemas Ambientales Urbanos</li><li>Geología Ambiental I</li><li>Residuos Sólidos y Peligrosos</li><li>Evaluación del Impacto Ambiental</li><li>Gestión y Proyecto Ambiental III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º AÑO</h4>
+            <ul><li>Salud y Medio Ambiente II</li><li>Gestión de Espacios Verdes y Arbolado Urbano</li><li>Gerenciamiento Ambiental</li><li>Geología Ambiental II</li><li>Evaluación del Impacto Ambiental II</li><li>Políticas Ambientales</li><li>Ordenamiento Ambiental</li><li>Desarrollo Sustentable</li><li>Proyecto Final</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/gestion-ambiental/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/gestion-ambiental/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/gestion-de-recursos-hidricos/">Gestión de Recursos Hídricos</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º AÑO</h4>
+            <ul><li>Introducción a la Ecología</li><li>Epistemología de las Ciencias Ambientales</li><li>Matemática Aplicada</li><li>Sociología Ambiental</li><li>Biología General</li><li>Fisicoquímica Ambiental</li><li>Hidrología</li><li>Ecología Antropológica</li><li>Informática Aplicada</li><li>Gestión y Proyecto Ambiental I</li><li>Economía Ambiental</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º AÑO</h4>
+            <ul><li>Evaluación y Manejo de los Recursos Naturales</li><li>Geografía Regional Argentina</li><li>Hidroquímica (Calidad del agua)</li><li>Ecología de las Zonas Áridas</li><li>Salud y Medio Ambiente I</li><li>Inglés I</li><li>Derecho y Legislación Hídrica</li><li>Ecología Humana</li><li>Estadística General</li><li>Sistemas de Información Ambiental</li><li>Geología Ambiental I</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º AÑO</h4>
+            <ul><li>Formulación y Evaluación de Proyectos Ambientales</li><li>Geología Ambiental II</li><li>Administración y Gestión de Sistemas Ambientales</li><li>Salud y Medio Ambiente II</li><li>Gestión del Recurso Suelo</li><li>Evaluación del Impacto Ambiental</li><li>Residuos Sólidos y Peligrosos</li><li>Práctica Profesionalizante I</li><li>Explotación de Agua Subterránea</li><li>Tratamiento de Datos Hidrogeoatmosféricos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º AÑO</h4>
+            <ul><li>Agua Potable y Saneamiento</li><li>Metodología de Investigación</li><li>Gestión Integrada de los Recursos Hídricos</li><li>Obras Hidráulicas</li><li>Problemas Ambientales de las Tierras Secas (Taller)</li><li>Planeamiento de los Recursos Hídricos</li><li>Administración del Agua</li><li>Práctica Profesionalizante II</li><li>Proyecto Final</li><li>Tesis Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/gestion-de-recursos-hidricos/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/gestion-de-recursos-hidricos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -244,13 +1029,59 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-direccion-y-produccion-audiovisual/">Tecnicatura Universitaria en Dirección y Producción Audiovisual</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er Año</h4>
+            <ul><li>Proyecto Audiovisual I</li><li>Estética y Lenguaje Audiovisual</li><li>Generación Electrónica de Imágenes</li><li>Semiótica</li><li>Inglés</li><li>Composición e Iluminación</li><li>Producción Integral de Radio</li><li>Producción Integral de Televisión</li><li>Fotografía y Cámara</li><li>Práctica Profesional I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do Año</h4>
+            <ul><li>Proyecto Audiovisual II</li><li>Post Producción</li><li>Derecho Audiovisual</li><li>Taller Guion</li><li>Taller Sonido</li><li>Proyecto Producción Televisiva</li><li>Realización Publicitaria Radial y Televisiva</li><li>Práctica Profesional II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er Año</h4>
+            <ul><li>Proyecto Audiovisual III</li><li>Laboratorio Edición Digital</li><li>Dirección de Arte y Diseño Escenográfico</li><li>Transmedia (Storytelling)</li><li>Dirección de Doblaje I</li><li>Dirección de Doblaje II</li><li>Taller de Producción Radial</li><li>Gestión de Contenido Audiovisual</li><li>Práctica Profesional III</li><li>Electiva I</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/direccion-y-produccion-audiovisual/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/direccion-y-produccion-audiovisual/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/arquitectura/">Arquitectura</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º AÑO</h4>
+            <ul><li>Arquitectura I</li><li>Estructuras I</li><li>Construcciones I</li><li>Comunicación y Forma I</li><li>Introducción a la Historia y a la Teoría de la Arquitectura y el Urbanismo</li><li>Matemática</li><li>Física Aplicada</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º AÑO</h4>
+            <ul><li>Arquitectura II</li><li>Estructuras II</li><li>Construcciones II</li><li>Comunicación y Forma II</li><li>Historia de la Arquitectura y el Urbanismo I</li><li>Informática I</li><li>Teoría de la Arquitectura I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º AÑO</h4>
+            <ul><li>Arquitectura III</li><li>Estructuras III</li><li>Construcciones III</li><li>Producción y Gestión I</li><li>Historia de la Arquitectura y el Urbanismo II</li><li>Informática II</li><li>Teoría de la Arquitectura II</li><li>Diseño de Interior y Paisaje</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º AÑO</h4>
+            <ul><li>Arquitectura IV</li><li>Estructuras IV</li><li>Construcciones IV</li><li>Producción y Gestión II</li><li>Historia y Crítica de la Arquitectura y el Urbanismo</li><li>Urbanismo</li><li>Electiva</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5º AÑO</h4>
+            <ul><li>Arquitectura y Diseño Urbano</li><li>Prácticas Profesionales Supervisadas (PSP)</li><li>Trabajo Final</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Electivas</h4>
+            <ul><li>Hábitat Digno (1er semestre)</li><li>Desarrollo de Emprendimientos (1er semestre)</li><li>Gestión de Espacios Verdes y Arbolado Publico (1er semestre)</li><li>Ordenamiento Ambiental (2do semestre)</li><li>Arquitectura Sustentable (2do semestre)</li><li>Patrimonio (2do semestre)</li><li>Paisaje Cultural (2do semestre)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/arquitectura/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/arquitectura/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -260,24 +1091,56 @@
         <li class="oferta">
             <h3><a href="/carrera/hoteleria/">Hotelería</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º Año</h4>
+            <ul><li>Introducción a la Industria de la Hospitalidad</li><li>Housekeeping I</li><li>Equipamiento Hotelero</li><li>Administración General</li><li>Métodos Cuantitativos</li><li>Housekeeping II</li><li>Introducción a las Ciencias Sociales</li><li>Atención al Cliente</li><li>Contabilidad General</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º Año</h4>
+            <ul><li>Front Desk</li><li>Relaciones Públicas</li><li>Higiene y Seguridad</li><li>Estadística Aplicada</li><li>Inglés II</li><li>Alimentos y Bebidas</li><li>Gestión Hotelera</li><li>Servicio del Vino</li><li>Comercialización</li><li>Inglés III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º Año</h4>
+            <ul><li>Administración Hotelera</li><li>Alimentos y Bebidas</li><li>Electiva</li><li>Economía Turística</li><li>Inglés 4</li><li>Auditoría y Control de Hoteles</li><li>Congresos y Convenciones</li><li>Legislación Turística</li><li>Francés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º Año</h4>
+            <ul><li>Servicio de Catering y Room Service</li><li>Marketing Hotelero</li><li>Comportamiento del Consumidor</li><li>Formulación de Proyectos</li><li>Francés II</li><li>Política y Planeamiento Hotelero</li><li>Gestión de la Calidad</li><li>Bar, Coctelería y Destilados</li><li>Administración de Recursos Humanos</li><li>Francés III</li><li>Práctica Profesional</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/hoteleria/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/hoteleria/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/turismo/">Turismo</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º Año</h4>
+            <ul><li>01- Introducción al Turismo</li><li>02- Destinos Turísticos de Argentina</li><li>03- Patrimonio</li><li>04- Servicios Turísticos</li><li>05- Métodos Cuantitativos</li><li>06- Recursos Territoriales Americanos</li><li>07- Historia Mundial</li><li>08- Introducción a las Ciencias Sociales (*)</li><li>09- Contabilidad General</li><li>10- Inglés I</li><li>(*) Régimen promocional: 2 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º Año</h4>
+            <ul><li>11- Espacios Turísticos Mundiales</li><li>12- Historia de la Cultura</li><li>13- Enoturismo</li><li>14- Administración General (*)</li><li>15- Inglés II</li><li>16- Gestión de Agencias</li><li>17- Información Técnica</li><li>18- Técnicas de Guiado y Recreación</li><li>19- Estadística Aplicada</li><li>20- Inglés III</li><li>(*) Régimen promocional: 2 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º Año</h4>
+            <ul><li>21- Diseño de Productos Turísticos</li><li>22- Reservas y Emisión</li><li>23- Ventas y Comercialización</li><li>24- Economía Turística</li><li>25- Inglés IV</li><li>26- Desarrollo de Turismo Sostenible</li><li>27- Administración de Empresas Turísticas</li><li>28- Planificación y Organización de Eventos</li><li>29- Legislación Turística</li><li>30- Portugués I</li><li>(*) Régimen promocional: 2 espacios curriculares.</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º Año</h4>
+            <ul><li>31- Políticas Turísticas y Planificación Territorial</li><li>32- Marketing Turístico</li><li>33- Mercados Turísticos</li><li>34- Formulación de Proyectos</li><li>35- Portugués II</li><li>36- Gestión de Destinos</li><li>37- Comercio Electrónico</li><li>38- Gestión de la Calidad</li><li>39- Relaciones Públicas</li><li>40- Portugués III</li><li>41- Trabajo Final</li><li>(*) Régimen promocional: 2 espacios curriculares.</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/turismo/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/turismo/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-    </ul>
-
-    <h2>Educación (1)</h2>
-    <ul class="ofertas">
-        <li class="oferta">
-            <h3><a href="/carrera/profesorado-universitario-para-profesionales/">Profesorado Universitario para Profesionales</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/profesorado-universitario-para-profesionales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
     </div>

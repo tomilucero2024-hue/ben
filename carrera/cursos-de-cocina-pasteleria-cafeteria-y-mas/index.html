@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Gastronomía","item":"https://buscadoreducativo.com.ar/area/gastronomia/"},{"@type":"ListItem","position":4,"name":"Cursos de cocina, pastelería, cafetería y más","item":"https://buscadoreducativo.com.ar/carrera/cursos-de-cocina-pasteleria-cafeteria-y-mas/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Cursos de cocina, pastelería, cafetería y más","description":"Dónde estudiar Cursos de cocina, pastelería, cafetería y más en Mendoza: curso o formación profesional del área Gastronomía, dictada por 1 institución (1 privada). Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/cursos-de-cocina-pasteleria-cafeteria-y-mas/","provider":{"@type":"EducationalOrganization","name":"Escuela Internacional Islas Malvinas","url":"https://buscadoreducativo.com.ar/institucion/escuela-internacional-islas-malvinas/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Cursos de cocina, pastelería, cafetería y más en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Cursos de cocina, pastelería, cafetería y más en Mendoza en la siguiente institución: Escuela Internacional Islas Malvinas. En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Cursos de cocina, pastelería, cafetería y más?","acceptedAnswer":{"@type":"Answer","text":"La duración estimada depende de la institución y modalidad elegida (típicamente entre 4 y 5 años para carreras de grado, o de 2 a 3 años para tecnicaturas)."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Cursos de cocina, pastelería, cafetería y más?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Cursos de cocina, pastelería, cafetería y más?","acceptedAnswer":{"@type":"Answer","text":"Cursos de cocina, pastelería, cafetería y más es una curso o formación profesional perteneciente al área de Gastronomía. Entre sus aptitudes más afines se destacan: trabajo práctico, creatividad y interacción social."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -90,8 +119,6 @@
         <dt>Dónde se dicta</dt><dd>1 institución</dd>
         <dt>Modalidad</dt><dd>Presencial</dd>
     </dl>
-
-    <a class="cta" href="/?q=Cursos+de+cocina%2C+pasteler%C3%ADa%2C+cafeter%C3%ADa+y+m%C3%A1s&amp;area=Gastronom%C3%ADa&amp;formacion=cursos">Ver Cursos de cocina, pastelería, cafetería y más en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Cursos de cocina, pastelería, cafetería y más</h2>
@@ -164,8 +191,8 @@
     <section class="relacionadas">
     <h2>Otras carreras del área Gastronomía</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/">Tecnicatura Superior en Enología e Industrias Frutihortícolas</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-gastronomia/">Tecnicatura Superior en Gastronomia</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/">Tecnicatura Superior en Enología e Industrias Frutihortícolas</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-gastronomia/">Tecnicatura Superior en Gastronomia</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/bromatologia/">Bromatología</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-gastronomia/">Licenciatura en Gastronomía</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/tecnicatura-en-enologia-y-viticultura/">Tecnicatura en Enología y Viticultura</a> <span class="cuantas">(2)</span></li>
@@ -174,10 +201,10 @@
         <li><a href="/carrera/analista-sensorial-de-vinos/">Analista Sensorial de Vinos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/asistente-en-laboratorio-vitivinicola/">Asistente en Laboratorio Vitivinícola</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ciclo-de-licenciatura-en-enologia/">Ciclo de Licenciatura en Enología</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/cocinero-panadero-pastelero-gratuito/">Cocinero / Panadero / Pastelero (gratuito)</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/curso-de-cata-de-vinos/">Curso de Cata de Vinos</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/enologia/">Enología</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/licenciatura-en-bromatologia/">Licenciatura en Bromatología</a> <span class="cuantas">(1)</span></li>
     </ul>
-    <p><a href="/area/gastronomia/">Ver las 23 carreras del área Gastronomía →</a></p>
+    <p><a href="/area/gastronomia/">Ver las 18 carreras del área Gastronomía →</a></p>
     </section>
     </div>
 </div>

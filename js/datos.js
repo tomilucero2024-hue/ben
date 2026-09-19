@@ -61,8 +61,7 @@ export const catalogosAparte = {
         cursos: [],
         // Tarjeta simple: son cuatro puertas de entrada institucionales, no cursos
         // concretos. No tienen duración ni modalidad únicas (cada sede varía), así
-        // que se muestran solo con nombre, descripción y link, y sin favorito ni
-        // comparar: no hay nada que comparar entre "CENS" y "CEPAS" en una tabla.
+        // que se muestran solo con nombre, descripción y link.
         simple: true
     }
 };

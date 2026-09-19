@@ -82,6 +82,31 @@ body {
 .marca { display: inline-flex; align-items: center; }
 .marca img { height: 34px; width: auto; display: block; }
 
+/* Botón de modo claro/oscuro de las páginas estáticas: vive en la cabecera
+   como en la app, con los mismos ítems de color según el tema. */
+.tema-statico {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+}
+.tema-statico svg { width: 20px; height: 20px; display: block; }
+.tema-statico:hover { background: var(--surface-soft); }
+html[data-theme="dark"] .tema-sol { display: block; color: #facc15; }
+html[data-theme="dark"] .tema-luna { display: none; }
+html[data-theme="light"] .tema-sol { display: none; }
+html[data-theme="light"] .tema-luna { display: block; color: #6366f1; }
+
 .buscador-mini {
     position: relative;
     display: flex;

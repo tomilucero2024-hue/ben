@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Universidad de la Defensa Nacional (UNDEF)","item":"https://buscadoreducativo.com.ar/institucion/universidad-de-la-defensa-nacional-undef/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad de la Defensa Nacional (UNDEF)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-la-defensa-nacional-undef/","email":"informes@iua.edu.ar","address":{"@type":"PostalAddress","streetAddress":"Modalidad a distancia - Sede central Córdoba","addressCountry":"AR"}}</script>
 </head>
@@ -67,12 +67,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,8 +120,6 @@
         <dt>Dirección</dt><dd>Modalidad a distancia - Sede central Córdoba</dd>
         <dt>Email</dt><dd>informes@iua.edu.ar</dd>
     </dl>
-
-    <a class="cta" href="/?institucion=Universidad%20de%20la%20Defensa%20Nacional%20(UNDEF)">Ver esta institución en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
 
@@ -101,48 +128,180 @@
         <li class="oferta">
             <h3><a href="/carrera/contador-publico/">Contador Público</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: A Distancia</li><li>Grado / Licenciatura</li></ul>
-
-            <a class="oficial" href="https://undef.edu.ar/a-distancia-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Informática Aplicada</li><li>Administración I</li><li>Derecho Administrativo y Público</li><li>Contabilidad I</li><li>Derecho Privado I</li><li>Contabilidad II</li><li>Administración II</li><li>Matemática I (Álgebra)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Sistemas Administrativos</li><li>Contabilidad III</li><li>Economía I</li><li>Matemática II (Análisis)</li><li>Administración Pública</li><li>Economía II</li><li>Estadística</li><li>Finanzas Públicas</li><li>Derecho Privado II</li><li>Inglés Técnico</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Ética y Responsabilidad Social</li><li>Administración de Personal</li><li>Matemática Financiera</li><li>Contabilidad de Gestión I</li><li>Portugués Técnico</li><li>Contabilidad IV</li><li>Métodos y Técnicas de Invetigación Social</li><li>Técnica Impositiva I</li><li>Contabilidad de Gestión II</li><li>Administración Financiera Gubernamental</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Relaciones Laborales y de la Seguridad Social</li><li>Sociedades</li><li>Técnica Impositiva II</li><li>Análisis de Estados Contables</li><li>Tecnología de la Información y Comunicación I</li><li>Administración Financiera</li><li>Derecho Concursal y Cambiario</li><li>Auditoría I</li><li>Tecnología de la Información y Comunicación II</li><li>Gestión del Sector Público</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5º año</h4>
+            <ul><li>Historia Económica y Social</li><li>Auditoria II</li><li>Técnica Impositiva III</li><li>Control de Gestión</li><li>Prácticas Profesionales Supervisadas</li><li>Contador Público</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://fca.iua.edu.ar/?page_id=3279" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://fca.iua.edu.ar/?page_id=3279" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: A Distancia</li><li>Grado / Licenciatura</li></ul>
-
-            <a class="oficial" href="https://undef.edu.ar/a-distancia-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Informática Aplicada</li><li>Administración I</li><li>Derecho Administrativo y Público c/Leg. Imp. Arg. (Pública)</li><li>Sistemas Contables I</li><li>Matemática I</li><li>Relaciones Laborales y Seguridad Social</li><li>Derecho Privado I</li><li>Ciencias del Comportamiento I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Matemática II</li><li>Ciencias del Comportamiento II</li><li>Administración de Operaciones I</li><li>Sistemas Contables II</li><li>Comercialización I</li><li>Administración II</li><li>Economía I</li><li>Probabilidad y Estadística</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Economía II</li><li>Sistemas Contables III</li><li>Administración de Recursos Humanos I</li><li>Finanzas</li><li>Proyecto de Pregrado</li><li>Comercialización II</li><li>Instrumentos Estadísticos para la gestión</li><li>Administración III</li><li>Administración de Operaciones II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Administración IV</li><li>Administración Financiera</li><li>Administración de Recursos Humanos II</li><li>Modelos Cuantitativos para la Administración</li><li>Sociedades Comerciales</li><li>Administración Financiera II</li><li>Administración V</li><li>Política Económica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5º año</h4>
+            <ul><li>Administración VI</li><li>Ética y Deontología Profesional</li><li>Proyecto de Grado</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.iua.edu.ar/?page_id=384" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.iua.edu.ar/?page_id=384" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-logistica/">Licenciatura en Logística</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: A Distancia</li><li>Grado / Licenciatura</li></ul>
-
-            <a class="oficial" href="https://undef.edu.ar/a-distancia-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Administración</li><li>Matemática I</li><li>Tecnologías de la Información y Comunicación – Entornos Colaborativos</li><li>Logística y Cadena de Suministro</li><li>Sistemas de Transporte</li><li>Matemática II</li><li>Sistemas y Procesos</li><li>Economía</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Aprovisionamiento y Almacenes</li><li>Probabilidad y Estadística I</li><li>Gestión de Costos</li><li>Legislación I</li><li>Higiene y Seguridad en el Trabajo</li><li>Operación del Transporte</li><li>Comportamiento Organizacional</li><li>Administración de Operaciones I</li><li>Comercialización y Marketing</li><li>Inglés</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Administración de Inventario</li><li>Gestión de la Calidad</li><li>Logística Internacional</li><li>Legislación II</li><li>Probabilidad y Estadística II</li><li>Planificación del Transporte</li><li>Modelos Cuantitativos I</li><li>Negociación</li><li>Contabilidad y Finanzas</li><li>Tecnologías de la Información y Comunicación – Sistemas de Información</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Administración Estratégica y Control de Gestión</li><li>Modelos Cuantitativos II</li><li>Gestión Ambiental y Logística Verde</li><li>Administración de Operaciones II</li><li>Logística Pública</li><li>Portugués</li><li>Etica y Ejercicio Profesional</li><li>Diseño y Gestión de la Cadena de Suministro</li><li>Formulación, Evaluación y Gestión de Proyectos</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.iua.edu.ar/?page_id=388" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.iua.edu.ar/?page_id=388" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-recursos-humanos/">Licenciatura en Recursos Humanos</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: A Distancia</li><li>Grado / Licenciatura</li></ul>
-
-            <a class="oficial" href="https://undef.edu.ar/a-distancia-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Administración I</li><li>Introducción a la Calidad</li><li>Derecho Laboral I</li><li>Informática Aplicada</li><li>Administración II</li><li>Ciencias delComportamiento I</li><li>Administración de Recursos Humanos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Capacitación y Desarrollo</li><li>Ciencias del Comportamiento II</li><li>Comunicación I</li><li>Preservación de Sistemas Ambientales</li><li>Técnicas Cuantitativas para la Gestión de Recursos Humanos</li><li>Derecho Laboral II</li><li>Negociación</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Administración de Remuneraciones y Beneficios</li><li>Comunicación II</li><li>Motivación e Incentivos no Remunerativos</li><li>Administración de Operaciones</li><li>Economía Laboral</li><li>Calidad de Vida Laboral I</li><li>Sistemas Informáticos de Recursos Humanos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Calidad de Servicios</li><li>Calidad de Vida laboral II</li><li>Ciencias del Comportamiento III</li><li>Reclutamiento y Selección</li><li>Economía</li><li>Cambio Organizacional</li><li>Sociología del Trabajo</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5º año</h4>
+            <ul><li>Etica y Deontología Profesional</li><li>Métodos y Técnicas de Investigación Social</li><li>Estrategia</li><li>Auditoría de Recursos Humanos</li><li>Proyecto de Grado</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.iua.edu.ar/?page_id=386" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.iua.edu.ar/?page_id=386" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 
-    <h2>Ciencias sociales (3)</h2>
+    <h2>Ciencias sociales (2)</h2>
     <ul class="ofertas">
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-en-higiene-y-seguridad-en-el-trabajo/">Tecnicatura en Higiene y Seguridad en el Trabajo</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: A Distancia</li><li>Pregrado / Tecnicatura</li></ul>
-
-            <a class="oficial" href="https://undef.edu.ar/a-distancia-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-relaciones-internacionales/">Licenciatura en Relaciones Internacionales</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: A Distancia</li><li>Grado / Licenciatura</li></ul>
-
-            <a class="oficial" href="https://undef.edu.ar/a-distancia-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Historia del Pensamiento politico y Social</li><li>Introducción a las Relaciones Internacionales</li><li>Introducción al derecho</li><li>Introducción a la Economía</li><li>Historia Política General 1</li><li>Introducción a la Ciencia Política</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Metodología de la Ciencia Política</li><li>Historia Política General II</li><li>Historia Argencina y Americana</li><li>Teoría de las RR II</li><li>Macroeconomía</li><li>Gobierno de la R. Argentina y Política Exterior</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Sistemas Políticos Comparados</li><li>Procesos de Integración</li><li>Estrategia</li><li>Derecho Internacional Público, Diplomático y Consular</li><li>Política Econímica Argentina</li><li>Geopolítica (1er C)</li><li>Negociación y Resolución de Conflictos (1er C)</li><li>Organismos Internacionales (2do C)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Política Internacional Contemporánea</li><li>Política Internacional Latinoamericana</li><li>Derecho Internacional de los Conflictos Armados</li><li>Escenario de Conflictos Internacionales</li><li>Seguridad Internacional</li><li>Misiones de paz y desarme</li><li>Defensa Nacional y Regional (1er C)</li><li>Metodología de la Investigación en RRII (2do C)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://fe.undef.edu.ar/esg/of_rrii.php" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://fe.undef.edu.ar/esg/of_rrii.php" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-gestion-publica/">Licenciatura en Gestión Pública</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: A Distancia</li><li>Grado / Licenciatura</li></ul>
-
-            <a class="oficial" href="https://undef.edu.ar/a-distancia-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Introducción a la Administración Pública</li><li>Introducción a la Economía</li><li>Teoría del Estado</li><li>Derecho Constitucional e Instituciones de Derecho Público</li><li>Políticas Públicas I</li><li>Filosofía</li><li>Sociología General</li><li>Historia Social Argentina</li><li>Sistemas de Información Aplicados a la Gestión Pública</li><li>Economía Política</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Derecho Administrativo</li><li>Administración Financiera y Técnicas Presupuestarias</li><li>Teoría de las Organizaciones I</li><li>Políticas Públicas II</li><li>Ética de la Función Pública</li><li>Estadística e Indicadores para la gestión</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Planeamiento a Mediano y Largo Plazo</li><li>Taller de Diseño y Formulación de Proyectos 28 100 128 segundo año aprobado</li><li>Teoría de las Organizaciones II 48 48 96 13 , primer año aprobado</li><li>Dirección General y Liderazgo 48 48 96 segundo año aprobado</li><li>Compras, Contrataciones y Licitaciones 40 40 80 12, primer año aprobado</li><li>Derecho Laboral y Régimen del Empelo Público 40 40 80 11, primer año aprobado</li><li>Comunicación Institucional 32 32 64 19 - Primer ciclo aprobado</li><li>Electiva 1* 32 32 64 Primer ciclo aprobado</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Electiva 2* 32 32 64 Primer ciclo aprobado</li><li>Finanzas Públicas y Federalismo Fiscal 40 40 80 21- Primer ciclo aprobado</li><li>Gestión y Desarrollo de Recursos Humanos 40 40 80 Tercer año aprobado</li><li>Sistemas de Gestión y Administración 40 40 80 Primer ciclo aprobado</li><li>Sostenibilidad Social y Ambiente 40 40 80 Primer ciclo aprobado</li><li>Auditoría, Control y Gestión de Calidad 40 40 80 Primer ciclo aprobado</li><li>Taller de Evaluación de Proyectos 28 100 128 Tercer año aprobado</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://undef.edu.ar/fadena/wp-content/uploads/2026/02/Licenciatura-en-Gestion-Publica.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://undef.edu.ar/fadena/carreras-de-grado/licgestionpublica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 
@@ -151,14 +310,79 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-desarrollo-de-aplicaciones-informaticas/">Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: A Distancia</li><li>Pregrado / Tecnicatura</li></ul>
-
-            <a class="oficial" href="https://undef.edu.ar/a-distancia-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Matemática I</li><li>Técnicas de Programación</li><li>Arquitectura de Computadoras</li><li>Sistemas y Organizaciones</li><li>Base de Datos</li><li>Programación I</li><li>Ingles Técnico</li><li>Introducción a las Redes de Datos</li><li>Matemática II</li><li>Derecho Informático y Ética Profesional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Estadística Aplicada</li><li>Electiva I (Web / Móviles/IA)</li><li>Diseño de Interfaces de Usuario</li><li>Desarrollo de Software I</li><li>Sistemas Operativos</li><li>Electiva II (Web / Móviles/IA)</li><li>Desarrollo de Software II</li><li>Gestión de Proyectos Informáticos</li><li>Sistemas Gestores de Contenidos</li><li>Calidad y Testing de Software</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Electiva III (Web / Móviles/IA)</li><li>Seguridad y Protección de la Información</li><li>Comercio Electrónico y Marketing Digital</li><li>Taller de Desarrollo de Aplicaciones</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.iua.edu.ar/?page_id=6268" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.iua.edu.ar/?page_id=6268" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-ciberdefensa/">Licenciatura en Ciberdefensa</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: A Distancia</li><li>Grado / Licenciatura</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Análisis Matemático I</li><li>Álgebra I</li><li>Gestión de Servicios de Información</li><li>Inglés I</li><li>Sistemas Operativos I</li><li>Sistemas de Tratamiento de Datos</li><li>Infraestructura de Telecomunicaciones</li><li>Sociedad y Estado</li><li>Sistemas Operativos II</li><li>Lenguajes de Programación</li><li>Análisis Matemático II</li><li>Álgebra II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Probabilidad y Estadística</li><li>Inglés II</li><li>Tecnología Operativa</li><li>Programación Segura 48 48 96 6,7 y</li><li>Ciberseguridad aplicada</li><li>Dispositivos Remotos e Internet de las Cosas</li><li>Ética Profesional</li><li>Sistema de Gestión de Seguridad de la Información 48 48 96 3,6,7 y</li><li>Protección de Infraestructuras Críticas 32 32 64 3,8 y</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Metodologías de Análisis de Riesgos de TIC</li><li>Análisis de Escenarios y Capacidades</li><li>Gobierno y Políticas Públicas</li><li>Informática Forense 40 40 80 5,16 y</li><li>Relaciones Internacionales</li><li>Inteligencia Artificial y Aprendizaje de Máquina</li><li>Geopolítica</li><li>Derecho Aplicado a la Defensa Nacional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Sistema de Inteligencia Nacional</li><li>Investigación Operativa</li><li>Criptografía Aplicada</li><li>Gestión de Proyectos</li><li>Instrumento Militar y su Sistema de Armas</li><li>Modelos y Simulación</li><li>Prospectiva Estratégica y Táctica</li><li>Actores en el Quinto Dominio</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://undef.edu.ar/fadena/wp-content/uploads/2026/02/Licenciatura-en-Ciberdefensa.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://undef.edu.ar/fadena/carreras-de-grado/licciberdefensa/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+    </ul>
 
-            <a class="oficial" href="https://undef.edu.ar/a-distancia-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+    <h2>Ambiente (1)</h2>
+    <ul class="ofertas">
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-en-higiene-y-seguridad-en-el-trabajo/">Tecnicatura en Higiene y Seguridad en el Trabajo</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: A Distancia</li><li>Pregrado / Tecnicatura</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Organización Industrial</li><li>Seguridad Industrial I (Organización interna)</li><li>Física General</li><li>Psicología Laboral</li><li>Química</li><li>Pedagogía y Didáctica</li><li>Seguridad Industrial II (Instalaciones eléctricas)</li><li>Derecho del Trabajo</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Medicina del Trabajo</li><li>Selección y capacitación de Personal</li><li>Seguridad Industrial III (Máquinas y Herramientas)</li><li>Análisis Estadístico</li><li>Ambientes de Trabajo I (Ruidos y Vibraciones)</li><li>Ambientes de Trabajo II (Iluminación y Color)</li><li>Enfermedades Profesionales</li><li>Seguridad Industrial IV (Incendios, Sistemas de Alarma, Evacuación)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Ambientes de Trabajo III (Ventilación)</li><li>Seguridad contra Accidentes en ámbitos no laborales y accidentología vial</li><li>Estudio del Trabajo (Ergonomía)</li><li>Seguridad Industrial V (Equipos y Elementos de Protección Personal)</li><li>Trabajo Final Integrador</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.fie.undef.edu.ar/wp-content/uploads/2026/06/PlanEstudioTecSeg.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.fie.undef.edu.ar/tecnicatura-higiene-y-seguridad-en-el-trabajo/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
     </div>

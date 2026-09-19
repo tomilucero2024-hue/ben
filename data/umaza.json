@@ -412,7 +412,31 @@
                     "duracion": "2 años",
                     "modalidad": "Presencial",
                     "facultad": "UMaza - Campus virtual",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/bioimagenes"
+                    "link_oficial": "https://www.umaza.edu.ar/landings/bioimagenes",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan de estudios",
+                            "materias": [
+                                "Ultrasonido (ecografía)",
+                                "Bioestadística",
+                                "Medicina Legal Aplicada",
+                                "Seguridad del Paciente",
+                                "Imágenes de la Mujer (mamografía y DMO)",
+                                "Formulación y evaluación de proyectos",
+                                "Gestión y organización de servicios de Bioimagenologia",
+                                "Gestión de Calidad en servicios de bioimagenologia",
+                                "Inteligencia Artificial en Salud",
+                                "Bioseguridad y Radioprotección",
+                                "Tomografía Multicorte (TCMC)",
+                                "Resonancia Magnética Nuclear (RMN)",
+                                "Metodología de la Investigación",
+                                "Intervencionismo",
+                                "Medicina Nuclear",
+                                "Tesina"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/bioimagenes"
                 },
                 {
                     "id": 407,
@@ -1346,6 +1370,7 @@
                         {
                             "anio": "Plan de estudios",
                             "materias": [
+                                "Asignaturas",
                                 "Actividad Física, Salud y Calidad de Vida - Semestral",
                                 "M arketing del Deporte - Semestral",
                                 "Salud y fitness - Semestral",
@@ -1358,7 +1383,8 @@
                                 "Medicina del Deporte - Semestral",
                                 "Esta dística Aplicada - Semestral",
                                 "Metodología de la Investigación - Anual",
-                                "Trabajo Final Integrador"
+                                "Trabajo Final Integrador",
+                                "Cursado: un año y trabajo final integrador"
                             ]
                         }
                     ],
@@ -1575,6 +1601,7 @@
                         {
                             "anio": "Plan de estudios",
                             "materias": [
+                                "Aprobado por Res. Minis. Nº 1042-2024",
                                 "Alimentos y bebidas",
                                 "Tecnologías alimentarias",
                                 "Conservación de alimentos",
@@ -1990,7 +2017,23 @@
                     "duracion": "1 año",
                     "modalidad": "Presencial",
                     "facultad": "UMaza - Campus Virtual",
-                    "link_oficial": "https://www.umaza.edu.ar/landings/matematica/inicio"
+                    "link_oficial": "https://www.umaza.edu.ar/landings/matematica/inicio",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan de estudios",
+                            "materias": [
+                                "Curso Nivelatorio",
+                                "Estructuras Algebraicas",
+                                "Geometría Superior",
+                                "Metodología de la Investigación",
+                                "Cálculo Avanzado",
+                                "Variable Compleja y Análisis de Fourier",
+                                "Análisis Real",
+                                "Tesina"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.umaza.edu.ar/landings/matematica/inicio"
                 },
                 {
                     "id": 432,
@@ -3065,6 +3108,7 @@
                         {
                             "anio": "Plan de estudios",
                             "materias": [
+                                "Materias",
                                 "Psicología Laboral",
                                 "Gestión de Relaciones Laborales",
                                 "Planeamiento Estratégico de Recursos Humanos",

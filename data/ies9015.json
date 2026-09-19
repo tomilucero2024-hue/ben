@@ -1,219 +1,841 @@
 {
- "instituciones": [
-  {
-   "id": 24,
-   "nombre": "IESVU (IES 9-015 Valle de Uco)",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "A confirmar",
-    "email": "contacto@iesvu.edu.ar",
-    "direccion": "Valle de Uco, Mendoza"
-   },
-   "carreras": [
-    {
-     "id": 2400,
-     "nombre_carrera": "Tecnicatura en Agronomía",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "2 años y medio (5 cuatrimestres)",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-agronomica/"
-    },
-    {
-     "id": 2401,
-     "nombre_carrera": "Tecnicatura en Comercio Internacional y Aduana",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años de duración",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-comercio-internacional-y-aduanas/"
-    },
-    {
-     "id": 2402,
-     "nombre_carrera": "Tecnicatura en Enología e Industrias Frutihortícolas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años (6 cuatrimestres )",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/"
-    },
-    {
-     "id": 2403,
-     "nombre_carrera": "Tecnicatura en Estadística y Análisis de Datos",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "Tres años",
-     "modalidad": "A Distancia",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-en-estadistica-y-analisis-de-datos/"
-    },
-    {
-     "id": 2404,
-     "nombre_carrera": "Tecnicatura en Higiene, Seguridad y Ambiente",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "2 años y medio",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-higiene-seguridad-y-ambiente/"
-    },
-    {
-     "id": 2405,
-     "nombre_carrera": "Tecnicatura en Administración de Empresas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "2 años y medio",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-administracion-de-empresas/"
-    },
-    {
-     "id": 2406,
-     "nombre_carrera": "Tecnicatura en Gastronomía",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "5 cuatrimestres – 2 años y medio",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-gastronomia/"
-    },
-    {
-     "id": 2407,
-     "nombre_carrera": "Tecnicatura en Laboratorio de Análisis Clínicos",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 Años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-laboratorio-de-analisis-clinicos/"
-    },
-    {
-     "id": 2408,
-     "nombre_carrera": "Tecnicatura en Mecatrónica",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años (6 cuatrimestres)",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-mecatronica/"
-    },
-    {
-     "id": 2409,
-     "nombre_carrera": "Enfermería Profesional",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 (tres) años.",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/enfermeria-profesional/"
-    },
-    {
-     "id": 2409,
-     "nombre_carrera": "Tecnicatura en Gestión Integral de Recursos Hídricos",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 (tres) años.",
-     "modalidad": "A Distancia",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-gestion-integral-de-recursos-hidricos/"
-    },
-    {
-     "id": 2410,
-     "nombre_carrera": "Tecnicatura en Administración Pública",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 (tres) años.",
-     "modalidad": "A Distancia",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-administracion-publica-4/"
-    },
-    {
-     "id": 2411,
-     "nombre_carrera": "Tecnicatura en Viticultura y Enología",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 (tres) años.",
-     "modalidad": "A Distancia",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-viticultura-y-enologia-ead/"
-    },
-    {
-     "id": 2413,
-     "nombre_carrera": "Administrador/a de finca vitivinícola",
-     "categoria": "Curso / Formación Profesional",
-     "duracion": "2 cuatrimestres",
-     "modalidad": "A Distancia",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/administrador-de-finca-vitivinicola/"
-    },
-    {
-     "id": 2414,
-     "nombre_carrera": "Analista Sensorial de Vinos",
-     "categoria": "Curso / Formación Profesional",
-     "duracion": "10 meses",
-     "modalidad": "A Distancia",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/analista-sensorial-de-vinos/"
-    },
-    {
-     "id": 2415,
-     "nombre_carrera": "Asistente en Laboratorio Vitivinícola",
-     "categoria": "Curso / Formación Profesional",
-     "duracion": "10 meses",
-     "modalidad": "A Distancia",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/asistente-en-laboratorio-vitivinicola/"
-    },
-    {
-     "id": 2416,
-     "nombre_carrera": "Laboratorista Hídrico",
-     "categoria": "Curso / Formación Profesional",
-     "duracion": "10 meses",
-     "modalidad": "A Distancia",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/laboratorista-hidrico/"
-    },
-    {
-     "id": 2417,
-     "nombre_carrera": "Curso Inglés – Nivel A1",
-     "categoria": "Curso / Formación Profesional",
-     "duracion": "A confirmar",
-     "modalidad": "A Distancia",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/curso-ingles-nivel-a1/"
-    },
-    {
-     "id": 2418,
-     "nombre_carrera": "Curso de Portugués 2026",
-     "categoria": "Curso / Formación Profesional",
-     "duracion": "A confirmar",
-     "modalidad": "A confirmar",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/curso-de-portugues-2026/"
-    },
-    {
-     "id": 2419,
-     "nombre_carrera": "Curso de Italiano 2026",
-     "categoria": "Curso / Formación Profesional",
-     "duracion": "A confirmar",
-     "modalidad": "A confirmar",
-     "turno": "A confirmar",
-     "facultad": "IESVU (IES 9-015)",
-     "link_oficial": "https://iesvu.edu.ar/estudio/curso-de-italiano-2026/"
-    }
-   ],
-   "departamento": "San Carlos"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 24,
+            "nombre": "IESVU (IES 9-015 Valle de Uco)",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "contacto@iesvu.edu.ar",
+                "direccion": "Valle de Uco, Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 2400,
+                    "nombre_carrera": "Tecnicatura Superior en Agronomía",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio (5 cuatrimestres)",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-agronomica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Matemática aplicada a la agricultura",
+                                "Estadística",
+                                "Informática aplicada",
+                                "Alfabetización académica",
+                                "Físico-química agrícola",
+                                "Sistema suelo, planta y atmósfera",
+                                "Producción animal I",
+                                "Electiva I: Producción animal II",
+                                "Producción hortícola",
+                                "Emprendedorismo y agronegocios",
+                                "Inglés técnico",
+                                "Producción Frutícola",
+                                "Práctica profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Agroecología",
+                                "Tecnología agrícola I",
+                                "Tecnología agrícola II",
+                                "Manejo reproductivo, sanitario y nutricional animal",
+                                "Gestión y mantenimiento de maquinarias agropecuarias",
+                                "Manejo integrado de plagas y enfermedades",
+                                "Gestión de la calidad",
+                                "Sistema suelo, cultivo y atmósfera",
+                                "Administración rural",
+                                "Manejo integrado de plagas y enfermedades",
+                                "Riego y drenaje",
+                                "Formulación y evaluación de proyectos I",
+                                "Práctica profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Formulación y evaluación de proyectos II",
+                                "Intercambio y comercialización",
+                                "Extensión rural",
+                                "Electiva II: Procesamiento e industrialización agropecuaria",
+                                "Desarrollo Sostenible",
+                                "Desarrollo territorial",
+                                "Gestión de sistema de producción Integral",
+                                "Práctica profesional III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/tecnicatura-superior-agronomica/"
+                },
+                {
+                    "id": 2400,
+                    "nombre_carrera": "Tecnicatura Superior en Comercio Internacional y Aduana",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-comercio-internacional-y-aduanas/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Inglés",
+                                "Informática",
+                                "Análisis Cuantitativo",
+                                "Comunicación, Comprensión y Producción de Textos",
+                                "Microeconomía",
+                                "Introducción al Comercio Internacional",
+                                "Macroeconomía",
+                                "Estructura Económica Mundial",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Régimen Aduanero",
+                                "Inglés II",
+                                "Derecho Civil y Comercial",
+                                "Régimen Económico Financiero",
+                                "Importación",
+                                "Valoración Aduanera",
+                                "Procesos de Integración y Cooperación Económica",
+                                "Exportación",
+                                "Clasificación Arancelaria",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Portugués",
+                                "Inglés III",
+                                "Comercialización Internacional",
+                                "Logística del Transporte",
+                                "Análisis de Costos y Presupuesto",
+                                "Negociación",
+                                "Envase y Embalaje",
+                                "Administración y Contabilidad de las Organizaciones",
+                                "Emprendedorismo",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-comercio-internacional-y-aduanas/"
+                },
+                {
+                    "id": 2402,
+                    "nombre_carrera": "Tecnicatura Superior en Enología e Industrias Frutihortícolas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años (6 cuatrimestres )",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Química General e inorgánica",
+                                "Matemática",
+                                "Higiene y Seguridad",
+                                "Alfabetización académica",
+                                "Producciones primarias",
+                                "Introducción a la Vinificación e Industrializaciones",
+                                "Física",
+                                "Microbiología General",
+                                "Química Orgánica",
+                                "Análisis sensorial I",
+                                "Práctica Profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Química Analítica e Instrumental",
+                                "Estadística",
+                                "Operaciones unitarias",
+                                "Química Biológica",
+                                "Tecnología y análisis de productos oleícolas",
+                                "Microbiología aplicada",
+                                "Análisis sensorial II",
+                                "Vinificaciones I",
+                                "Práctica Profesional II",
+                                "Gestión de Calidad",
+                                "Bromatología y toxicología",
+                                "Operaciones unitarias",
+                                "Emprendedorismo y Agronegocios"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Tecnología y análisis de productos frutihortícolas",
+                                "Legislación vitivinícola y alimentaria",
+                                "Inglés técnico",
+                                "Análisis de bebidas vínicas y no vínicas",
+                                "Vinificaciones II",
+                                "Gestión de emprendimientos",
+                                "Análisis sensorial III",
+                                "Ética profesional",
+                                "Vinificaciones Especiales",
+                                "Desarrollo sostenible",
+                                "Práctica Profesional III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/"
+                },
+                {
+                    "id": 2403,
+                    "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-administracion-de-empresas/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción a la administración de empresas",
+                                "Inglés técnico",
+                                "Comunicación efectiva",
+                                "Herramientas digitales para la gestión",
+                                "Introducción a la economía I",
+                                "Matemática aplicada",
+                                "Introducción a la legislación",
+                                "Desarrollo regional y contexto laboral",
+                                "Práctica profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Comercialización",
+                                "Estructura de costos",
+                                "Formulación y evaluación de proyectos",
+                                "Economía de la empresa",
+                                "Cálculo financiero",
+                                "Introducción a la contabilidad",
+                                "Análisis de la información contable",
+                                "Producto y servicio",
+                                "Práctica profesionalizante ii"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Logística integral",
+                                "Práctica impositiva y liquidación de sueldos",
+                                "Administración de personal",
+                                "Ética profesional",
+                                "Control de gestión",
+                                "Práctica profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-administracion-de-empresas/"
+                },
+                {
+                    "id": 2404,
+                    "nombre_carrera": "Tecnicatura Superior en Gastronomía",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "5 cuatrimestres (2 años y medio)",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-gastronomia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Cocina I",
+                                "Métodos cuantitativos",
+                                "Introducción a la panadería y repostería",
+                                "Bromatología",
+                                "Materias primas e insumos gastronómicos",
+                                "Inglés técnico I",
+                                "Alfabetización académica",
+                                "Nutrición",
+                                "Servicio de alimentos y bebidas",
+                                "Informática gastronómica",
+                                "Sistema de gestión gastronómica",
+                                "Práctica profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Cocina II",
+                                "Coctelería",
+                                "Organización de eventos y catering",
+                                "Dietología",
+                                "Cocina regional",
+                                "Administración y comportamiento organizacional",
+                                "Toxicología de los alimentos",
+                                "Inglés técnico II",
+                                "Gestión de costos y presupuestos",
+                                "Vinos y maridaje",
+                                "Gestión de alimentos y bebidas",
+                                "Marketing gastronómico",
+                                "Práctica profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Cocina III",
+                                "Cocina Internacional",
+                                "Ética profesional",
+                                "Francés técnico",
+                                "Repostería internacional",
+                                "Gestión de emprendimientos gastronómicos",
+                                "Práctica Profesional III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-gastronomia/"
+                },
+                {
+                    "id": 2405,
+                    "nombre_carrera": "Tecnicatura Superior en Laboratorio de Análisis Clínicos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-laboratorio-de-analisis-clinicos/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Fundamentos de Laboratorio",
+                                "Morfofisiología Dinámica Humana",
+                                "Morfofisiología",
+                                "Dinámica Humana",
+                                "Física Biológica",
+                                "Química Inorgánica",
+                                "Herramientas Digitales en Salud",
+                                "Comunicación en Salud",
+                                "Antropología Socio Cultural y Salud",
+                                "Procesos Psicológicos y Sociales",
+                                "Primeros Auxilios y Técnicas Sanitarias",
+                                "Salud Pública y Promoción para la Salud",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Hematología",
+                                "Bioquímica Clínica I",
+                                "Química Orgánica y Biológica",
+                                "Patología Médica Aplicada",
+                                "Microbiología General y Aplicada",
+                                "Análisis Clínico Microbiológico",
+                                "Toxicología",
+                                "Epidemiología y Bioestadística",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Bioquímica Clínica II",
+                                "Inmunología Aplicada",
+                                "Endocrinología Aplicada",
+                                "Gestión, Higiene y Seguridad en el Laboratorio",
+                                "Farmacología General Aplicada",
+                                "Histoquímica y Genética",
+                                "Investigación en Salud",
+                                "Ética y Legislación Profesional",
+                                "Inglés Técnico",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-laboratorio-de-analisis-clinicos/"
+                },
+                {
+                    "id": 2406,
+                    "nombre_carrera": "Tecnicatura Superior en Mecatrónica",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años (6 cuatrimestres)",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-mecatronica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Sistemas mecánicos",
+                                "Sistemas eléctricos 1",
+                                "Sistemas electrónicos 1",
+                                "Sistemas informáticos",
+                                "Ciencias aplicadas",
+                                "Sistemas eléctricos 2",
+                                "Sistemas electrónicos 2",
+                                "Sistemas de control",
+                                "Representación de sistemas mecatrónicos",
+                                "Alfabetización académica",
+                                "Prácticas profesionalizantes 1"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Dispositivos electromecánicos",
+                                "Automatización e instrumentación industrial",
+                                "Autómatas programables",
+                                "Sistemas informáticos de control",
+                                "Procesos de fabricación",
+                                "Cad/Cae y Cam",
+                                "Sistemas interfaces humano máquina",
+                                "Prácticas profesionalizantes 2"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Simulación de sistemas mecatrónicos",
+                                "Procesos y gestión de mantenimiento y calidad",
+                                "Gestión de emprendimiento",
+                                "Electiva A: automatización y robótica industrial",
+                                "Electiva B: sistemas mecatrónicos en redes de distribución eléctrica",
+                                "Formación y orientación laboral",
+                                "Inglés",
+                                "Prácticas profesionalizantes 3",
+                                "Proyecto final de mecatrónica"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-mecatronica/"
+                },
+                {
+                    "id": 2401,
+                    "nombre_carrera": "Tecnicatura Superior en Estadística y Análisis de Datos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "Tres años",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-en-estadistica-y-analisis-de-datos/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Estadística I",
+                                "Herramientas Informáticas Estadísticas I",
+                                "Metodología de la Investigación",
+                                "Bases matemáticas",
+                                "Análisis matemático",
+                                "Inglés técnico I",
+                                "Fundamentos Teóricos de los Indicadores sociales y económicos",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Estadística II",
+                                "Herramientas Informáticas Estadísticas II",
+                                "Lógica",
+                                "Demografía",
+                                "Álgebra",
+                                "Bases de Datos",
+                                "Minería de datos",
+                                "Inglés técnico II",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Herramientas Informáticas Estadísticas III",
+                                "Estadística III",
+                                "Estadística No Paramétrica",
+                                "Informes Estadísticos",
+                                "Análisis de datos espaciales",
+                                "Big Data",
+                                "Simulación y modelado estadísticos",
+                                "Aprendizaje automatizado",
+                                "Ética Profesional",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/tecnicatura-en-estadistica-y-analisis-de-datos/"
+                },
+                {
+                    "id": 2408,
+                    "nombre_carrera": "Tecnicatura Superior en Higiene, Seguridad y Ambiente",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-higiene-seguridad-y-ambiente/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Alfabetización Académica",
+                                "Tecnologías Digitales Aplicadas",
+                                "Física",
+                                "Química",
+                                "Inglés Técnico Taller",
+                                "Representación Técnica de Planos",
+                                "Higiene Laboral I",
+                                "Seguridad Laboral I",
+                                "Liderazgo y habilidades interpersonales",
+                                "Introducción a Prevención",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Estadística Aplicada",
+                                "Gestión de Emprendimientos",
+                                "Ambiente y Sostenibilidad",
+                                "Derecho y Legislación Aplicada a la Higiene y Seguridad Laboral",
+                                "Sistemas de Gestión",
+                                "Derecho Ambiental",
+                                "Medicina del trabajo y Toxicología",
+                                "Higiene Laboral II",
+                                "Seguridad Laboral II",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Evaluación de Impacto Ambiental",
+                                "Seguridad contra incendios (Especialización)",
+                                "Ergonomía",
+                                "Higiene y Seguridad en Minería y Petróleo (Especialización)",
+                                "Higiene y Seguridad Agropecuaria",
+                                "Higiene y Seguridad en la Industria de la Construcción",
+                                "Higiene y Seguridad en Servicios TIC, Economía del Conocimiento e Industria",
+                                "Práctica Profesionalizante III",
+                                "Seguridad industrial y riesgos tecnológicos (especialización)",
+                                "Calidad, ambiente y sostenibilidad (especialización)",
+                                "Seguridad en la construcción y obras civiles (especialización)",
+                                "Seguridad minera y energética (especialización)",
+                                "Higiene y seguridad hospitalaria y de laboratorios (especialización)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-higiene-seguridad-y-ambiente/"
+                },
+                {
+                    "id": 2402,
+                    "nombre_carrera": "Enfermería Profesional",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/enfermeria-profesional/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Antropología Sociocultural y Salud",
+                                "Procesos psicológicos y sociales",
+                                "Entornos Virtuales de la Salud y Herramientas Digitales",
+                                "Comunicación en Salud",
+                                "Bases del Cuidado en Enfermería",
+                                "Morfofisiología Dinámica Humana.",
+                                "Físico-Química Biológica",
+                                "Enfermería Comunitaria y Salud Pública",
+                                "Práctica Profesionalizante I."
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Educación para la Salud",
+                                "Nutrición y Dietoterapia",
+                                "Microbiología, Parasitología e Inmunología.",
+                                "Epidemiología y Bioestadística.",
+                                "Farmacología Aplicada a la Enfermería",
+                                "Fisiopatología Humana",
+                                "Cuidados de Enfermería en el Adulto",
+                                "Aspectos Psicosociales y Culturales del Desarrollo",
+                                "Cuidados de Enfermería en el Adulto Mayor.",
+                                "Práctica Profesionalizante II."
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Inglés Técnico.",
+                                "Investigación en Salud",
+                                "Cuidados de Enfermería en Salud Mental",
+                                "Cuidados de Enfermería en Emergencias y Catástrofes",
+                                "Ética y Legislación Aplicada a la enfermería",
+                                "Gestión del Cuidado en Enfermerìa",
+                                "Cuidados de Enfermería Materna y del recién nacido",
+                                "Cuidados de Enfermería en las Infancias y Adolescencias",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/enfermeria-profesional/"
+                },
+                {
+                    "id": 2403,
+                    "nombre_carrera": "Tecnicatura Superior en Gestión Integral de Recursos Hídricos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-gestion-integral-de-recursos-hidricos/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "ANÁLISIS DE LA OFERTA HÍDRICA",
+                                "CARACTERIZACIÓN DE EFLUENTES",
+                                "PROMOCIÓN Y CUIDADO DEL RECURSO HÍDRICO",
+                                "ANÁLISIS DEL RECURSO HÍDRICO PARA ABASTECIMIENTO POBLACIONAL",
+                                "PROCESO DE TRABAJO INTEGRADO EN LA GESTIÓN DEL RECURSO HÍDRICO",
+                                "VALORACIÓN DEL RECURSO HÍDRICO PARA EL USO AGRÍCOLA"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "GESTIÓN ADMINISTRATIVA DE OBRAS DE ABASTECIMIENTO DE AGUA POTABLE",
+                                "VALORACIÓN Y GESTIÓN DEL RECURSO HÍDRICO SUBTERRÁNEO",
+                                "PROYECTO Y CONSTRUCCIÓN DE PERFORACIÓN E INSTALACIONES CONEXAS",
+                                "PLANIFICACIÓN DE SISTEMAS DE TRATAMIENTOS DE EFLUENTES",
+                                "ANÁLISIS DE VARIABLES A TRAVÉS DE SISTEMAS DE INFORMACIÓN GEOGRÁFICA",
+                                "PLANIFICACIÓN DE SISTEMAS DE RIEGO INTRA FINCA",
+                                "SISTEMAS DE TRATAMIENTO Y OBRAS DE ABASTECIMEINTO DE AGUA POTABLE",
+                                "DISEÑO, INSTALACIÓN Y MANTENIMIENTO DE SISTEMAS DE RIEGO",
+                                "GESTIÓN INTEGRADA DE EFLUENTES"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "GESTIÓN DEL SISTEMA DE DISTRIBUCIÓN DE AGUA EXTRA PREDIO",
+                                "VIABILIDAD DE EMPRENDIMIENTOS RELACIONADOS CON LA UTILIZACIÓN DEL RECURSO HÍDRICO",
+                                "PROCESOS CONSTRUCTIVOS DE PLANTAS DE DEPURACIÓN",
+                                "REGULACIÓN DE RÍOS EN EL DESARROLLO REGIONAL",
+                                "PROYECCIÓN DE EMPRENDIMIENTOS RELACIONADOS CON EL RECURSO HÍDRICO",
+                                "EVALUACIÓN DEL RECURSO HÍDRICO EN LOS PROCESOS INDUSTRIALES",
+                                "GESTIÓN INTEGRAL DE PROCESOS DE POTABILIZACIÓN",
+                                "IMPACTO AMBIENTAL DE CAUCES NATURALES Y RESERVORIOS"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-gestion-integral-de-recursos-hidricos/"
+                },
+                {
+                    "id": 2404,
+                    "nombre_carrera": "Tecnicatura Superior en Administración Pública",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-administracion-publica-4/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración General",
+                                "Matemática y Estadística",
+                                "Informática y Tecnología.",
+                                "Inglés Técnico I",
+                                "Comunicación, Comprensión y Producción de Textos",
+                                "Metodología de la Investigación",
+                                "Microeconomía",
+                                "Macroeconomía",
+                                "Problemática Sociocultural y el Contexto.",
+                                "Práctica Pofesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Desarrollo Local Sustentable",
+                                "Inglés Técnico II",
+                                "Estado y Sociedad",
+                                "Administración Pública",
+                                "Formulación y Evaluación de Proyectos",
+                                "Introducción al Derecho",
+                                "Introducción a la Contabilidad",
+                                "Derecho Constitucional",
+                                "Contabilidad Pública",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión de Políticas Públicas",
+                                "Presupuesto y Finanzas Públicas",
+                                "Derecho Administrativo",
+                                "Análisis y Desarrollo Organizacional",
+                                "Ética Profesional",
+                                "Control en la Gestión Pública",
+                                "Procedimientos de Compras y Contrataciones",
+                                "Técnica Legislativa",
+                                "Gestión de Personal",
+                                "Comunicación Organizacional",
+                                "Informática y Tecnología Aplicada",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-administracion-publica-4/"
+                },
+                {
+                    "id": 2412,
+                    "nombre_carrera": "Tecnicatura Superior en Viticultura y Enología",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-viticultura-y-enologia-ead/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Módulo 1 Producción Vitícola I",
+                                "Módulo 2 Producción Vitícola II",
+                                "Módulo 3 Planificación de Sistema de Riego Intra-Finca",
+                                "Módulo 4 Vinificación I",
+                                "Módulo 5 Vinificación II",
+                                "Módulo 6 Procesos de Trabajo Integrado en la Gestión Vitivinícola y Enológica",
+                                "Módulo 7 Análisis de Productos Enológicos I",
+                                "Módulo 8 Emprendedurismo y Agronegocios"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Módulo 9 Gestión de de los Procesos Fermentativos",
+                                "Módulo 10 Gestión de Maquinarias Agroindustriales",
+                                "Módulo 11 Análisis de Productos Enológicos II",
+                                "Módulo 12 Manejo de Cosecha y Postcosecha",
+                                "Módulo 13 Territorio Desarrollo y Ambiente",
+                                "Módulo 14 Innovación y Gestión Empresarial"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Módulo 15 Análisis de Bebidas",
+                                "Módulo 16 Gestión del Desarrollo Sostenible",
+                                "Módulo 17 Gestión de Emprendimientos",
+                                "Módulo 18 Gestión de la Estabilización de Vinos",
+                                "Módulo 19 Gestión de la Crianza de Vinos",
+                                "Módulo 20 Análisis Sensorial de Vinos",
+                                "Módulo 21 Elaboración de Proyectos Productivos"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/tecnicatura-superior-en-viticultura-y-enologia-ead/"
+                },
+                {
+                    "id": 2400,
+                    "nombre_carrera": "Administrador/a de finca vitivinícola",
+                    "categoria": "Curso / Formación Profesional",
+                    "duracion": "2 cuatrimestres",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/administrador-de-finca-vitivinicola/"
+                },
+                {
+                    "id": 2401,
+                    "nombre_carrera": "Analista Sensorial de Vinos",
+                    "categoria": "Curso / Formación Profesional",
+                    "duracion": "10 meses",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/analista-sensorial-de-vinos/"
+                },
+                {
+                    "id": 2402,
+                    "nombre_carrera": "Asistente en Laboratorio Vitivinícola",
+                    "categoria": "Curso / Formación Profesional",
+                    "duracion": "10 meses",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/asistente-en-laboratorio-vitivinicola/"
+                },
+                {
+                    "id": 2403,
+                    "nombre_carrera": "Laboratorista Hídrico",
+                    "categoria": "Curso / Formación Profesional",
+                    "duracion": "10 meses",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/laboratorista-hidrico/"
+                },
+                {
+                    "id": 2404,
+                    "nombre_carrera": "Curso Inglés – Nivel A1",
+                    "categoria": "Curso / Formación Profesional",
+                    "duracion": "A confirmar",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/curso-ingles-nivel-a1/"
+                },
+                {
+                    "id": 2405,
+                    "nombre_carrera": "Curso de Italiano – Nivel A 1",
+                    "categoria": "Curso / Formación Profesional",
+                    "duracion": "A confirmar",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/curso-de-italiano-2026/"
+                },
+                {
+                    "id": 2406,
+                    "nombre_carrera": "Curso de Portugués A 1.2",
+                    "categoria": "Curso / Formación Profesional",
+                    "duracion": "A confirmar",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/curso-de-portugues-2026/"
+                },
+                {
+                    "id": 2407,
+                    "nombre_carrera": "Curso de Portugués A 1.1",
+                    "categoria": "Curso / Formación Profesional",
+                    "duracion": "A confirmar",
+                    "modalidad": "A confirmar",
+                    "turno": "A confirmar",
+                    "facultad": "IESVU (IES 9-015)",
+                    "link_oficial": "https://iesvu.edu.ar/estudio/curso-de-portugues-a-1-1/"
+                }
+            ]
+        }
+    ]
 }

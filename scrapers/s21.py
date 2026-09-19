@@ -97,10 +97,45 @@ def _tramos_acordeon(sopa):
     return cuatris + extras
 
 
+def _tramos_details(sopa):
+    """Plan publicado como <h5> por cuatrimestre/año con su <ul> debajo
+    (las fichas HubSpot de Medicina usan div.plan-estudios-details)."""
+    caja = sopa.select_one(".plan-estudios-details")
+    if caja is None:
+        return None
+    tramos = []
+    actual = None
+    pendiente = []
+    for el in caja.find_all(["h5", "h6", "ul"]):
+        titular = limpiar_texto(el.get_text(" ", strip=True))
+        if el.name in ("h5", "h6"):
+            titulo = _normalizar_tramo(titular)
+            bajo = titulo.lower()
+            if RE_ANIO.match(titulo) or RE_CUATRI.match(titulo) or bajo in EXTRAS:
+                if pendiente:
+                    tramos.append({"anio": pendiente[0], "materias": pendiente[1]})
+                pendiente = [titulo, []]
+                actual = titulo
+            continue
+        materias = _materias(el)
+        if not materias:
+            continue
+        if actual is not None:
+            for m in materias:
+                if m not in pendiente[1]:
+                    pendiente[1].append(m)
+    if pendiente:
+        tramos.append({"anio": pendiente[0], "materias": pendiente[1]})
+    tramos = [t for t in tramos if t["materias"]]
+    return tramos or None
+
+
 def extraer_plan(sopa):
     tramos = _tramos_tabs(sopa)
     if not tramos:
         tramos = _tramos_acordeon(sopa)
+    if not tramos:
+        tramos = _tramos_details(sopa) or []
     return tramos or None
 
 

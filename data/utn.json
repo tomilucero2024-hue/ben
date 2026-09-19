@@ -1,767 +1,867 @@
 {
-  "instituciones": [
-    {
-      "id": 1,
-      "nombre": "UTN Facultad Regional Mendoza",
-      "carreras": [
+    "instituciones": [
         {
-          "id": 1,
-          "nombre_carrera": "INGENIERÍA CIVIL",
-          "categoria": "Ingeniería",
-          "duracion": "5 años",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-civil/",
-          "plan_estudio": [
-            {
-              "anio": "1er año",
-              "materias": [
-                "Análisis Matemático I (1° Semestre)",
-                "Álgebra y Geometría Analítica (1° Semestre)",
-                "Ingeniería y Sociedad (1° Semestre)",
-                "Ingeniería Civil I (Anual)",
-                "Sistema de Representación (Anual)",
-                "Química General (2° Semestre)",
-                "Física I (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "2do año",
-              "materias": [
-                "Análisis Matemático II (1° Semestre)",
-                "Estabilidad (Anual)",
-                "Ingeniería Civil II (Anual)",
-                "Tecnología de los Materiales (Anual)",
-                "Física II (2° Semestre)",
-                "Probabilidad y Estadística (2° Semestre)",
-                "Inglés I (1° Semestre)"
-              ]
-            },
-            {
-              "anio": "3er año",
-              "materias": [
-                "Resistencia de Materiales (Anual)",
-                "Tecnología del Hormigón (1° Semestre)",
-                "Tecnología de la Construcción (Anual)",
-                "Geotopografía (2° Semestre)",
-                "Hidráulica General y Aplicada (Anual)",
-                "Cálculo Avanzado (2° Semestre)",
-                "Instalaciones Eléctricas y Acústica (1° Semestre)",
-                "Instalaciones Termomecánicas (1° Semestre)",
-                "Economía (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "4to año",
-              "materias": [
-                "Geotecnia (2° Semestre)",
-                "Instalaciones Sanitarias y de gas (1° Semestre)",
-                "Diseño arquitectonico, Planeamiento y Urbanismo (E.I.) (Anual)",
-                "Análisis Estructural I (1° Semestre)",
-                "Estructuras de hormigón (2° Semestre)",
-                "Hidrología y Obras hidráulicas (Anual)",
-                "Ingeniería legal (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "5to año",
-              "materias": [
-                "Construcciones Metálicas y de Madera (2° Semestre)",
-                "Cimentaciones (1° Semestre)",
-                "Ingeniería Sanitaria (1° Semestre)",
-                "Organización y Cond.de Obras (Anual)",
-                "Vías de Comunicación I (2° Semestre)",
-                "Análisis Estructural II (2° Semestre)",
-                "Vías de Comunicación II (2° Semestre)",
-                "Gestión Ambiental y Desarrollo Sustentable (Anual)"
-              ]
-            },
-            {
-              "anio": "6to año",
-              "materias": [
-                "Proyecto Final (E.I) (Anual)"
-              ]
-            }
-          ],
-          "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-ing-civil/"
-        },
-        {
-          "id": 2,
-          "nombre_carrera": "INGENIERÍA ELECTROMECÁNICA",
-          "categoria": "Ingeniería",
-          "duracion": "5 años",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-electromecanica/",
-          "plan_estudio": [
-            {
-              "anio": "1er año",
-              "materias": [
-                "Análisis Matemático (1° Semestre)",
-                "Química General (2° Semestre)",
-                "Física I (2° Semestre)",
-                "Ingeniería Electromecánica I (Anual)",
-                "Algebra y Geometría Analítica (1° Semestre)",
-                "Ingeniería y Sociedad (2° Semestre)",
-                "Sistemas de Representación (1° Semestre)",
-                "Representación Gráfica (200 hs)"
-              ]
-            },
-            {
-              "anio": "2do año",
-              "materias": [
-                "Fisica II (1° Semestre)",
-                "Estabilidad (Anual)",
-                "Ingeniería Electromecánica II (Anual)",
-                "Conocimiento de Materiales (Anual)",
-                "Análisis Matemático II (1° Semestre)",
-                "Programación en Computación (2° Semestre)",
-                "Probabilidad y Estadística (2° Semestre)",
-                "Inglés I (Anual)"
-              ]
-            },
-            {
-              "anio": "3er año",
-              "materias": [
-                "Tecnología Mecánica (Anual)",
-                "Ingeniería Electromecánica III (Anual)",
-                "Mecánica y Mecanismos (Anual)",
-                "Electrotecnia (Anual)",
-                "Termodinámica Técnica (1° Semestre)",
-                "Matemática para Ing. Electromecánica (1° Semestre)",
-                "Higiene y Seguridad Industrial (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "4to año",
-              "materias": [
-                "Elementos de Máquinas (Anual)",
-                "Electrónica Industrial (2° Semestre)",
-                "Mecánica de los Fluidos y Máquinas Fluidodinámicas (Anual)",
-                "Maquinarias Eléctricas (Anual)",
-                "Mediciones Eléctricas (1° Semestre)",
-                "Máquinas Térmicas (Anual)",
-                "Economía (2° Semestre)",
-                "Legislación (1° Semestre)"
-              ]
-            },
-            {
-              "anio": "5to año",
-              "materias": [
-                "Redes de Distribución e Instalaciones Eléctricas (Anual)",
-                "Instalaciones Térmicas, Mecánicas y Frigoríficas (1° Semestre)",
-                "Máquinas y Equipos de Transporte (Anual)",
-                "Gestión y Mantenimiento Electromecánico (1° Semestre)",
-                "Organización Industrial (2° Semestre)",
-                "Automatización y Control Industrial (1° Semestre)",
-                "Proyecto Final (2° Semestre)"
-              ]
-            }
-          ],
-          "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-ing-electromecanica/"
-        },
-        {
-          "id": 3,
-          "nombre_carrera": "INGENIERÍA ELECTRÓNICA",
-          "categoria": "Ingeniería",
-          "duracion": "5 1/2 años",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-electronica",
-          "plan_estudio": [
-            {
-              "anio": "1er año",
-              "materias": [
-                "Informática I (Anual)",
-                "Álgebra y Geometría Analítica (Anual)",
-                "Análisis Matemático I (Anual)",
-                "Ingeniería y Sociedad (1° Semestre)",
-                "Fisica I (Anual)",
-                "Diseño Asistido por Computadoras (2° Semestre)",
-                "Química (1° Semestre)"
-              ]
-            },
-            {
-              "anio": "2do año",
-              "materias": [
-                "Análisis Matemático II (Anual)",
-                "Informática II (Anual)",
-                "Análisis de Señales y Sistemas 2026 (es solo para alumnos que tengan cursada Analisis matemático II) (Anual)",
-                "Física II (Anual)",
-                "Probabilidad y Estadística (2° Semestre)",
-                "Técnicas Digitales I (Anual)",
-                "Ingles I"
-              ]
-            },
-            {
-              "anio": "3er año",
-              "materias": [
-                "Física Electrónica (1° Semestre)",
-                "Teoría de los Circuitos I (Anual)",
-                "Dispositivos Electrónicos (2026) (1° Semestre)",
-                "Legislación (1° Semestre)",
-                "Electrónica Aplicada I (2° Semestre)",
-                "Medios de Enlace (2° Semestre)",
-                "Seguridad, Higiene y Medio Ambiente (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "4to año",
-              "materias": [
-                "Ingés II",
-                "Técnicas Digitales II (Anual)",
-                "Medidas Electrónicas I (Anual)",
-                "Teoría de los Circuitos II (Anual)",
-                "Máquinas e Instalaciones Eléctricas (Anual)",
-                "Sistemas de Comunicaciones (Anual)",
-                "Electrónica Aplicada II (Anual)"
-              ]
-            },
-            {
-              "anio": "5to año",
-              "materias": [
-                "Técnicas Digitales III (Anual)",
-                "Medidas Electrónicas II (Anual)",
-                "Sistemas de Control (Anual)",
-                "Electrónica Aplicada III (Anual)",
-                "Tecnología Electrónica (Anual)",
-                "Electrónica de Potencia (Anual)",
-                "Organización Industrial (Anual)"
-              ]
-            },
-            {
-              "anio": "6to año",
-              "materias": [
-                "Economía (1° Semestre)",
-                "Proyecto Final (1° Semestre)"
-              ]
-            }
-          ],
-          "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-ing-electronica/"
-        },
-        {
-          "id": 4,
-          "nombre_carrera": "INGENIERÍA QUÍMICA",
-          "categoria": "Ingeniería",
-          "duracion": "5 años",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-quimica",
-          "plan_estudio": [
-            {
-              "anio": "1er año",
-              "materias": [
-                "Introducción a la Ingeniería Química (Anual)",
-                "Sistemas de representación (Anual)",
-                "Ingeniería y Sociedad (1° Semestre)",
-                "Algebra y Geometría Analítica (1° Semestre)",
-                "Análisis Matemático I (1° Semestre)",
-                "Física I (2° Semestre)",
-                "Química (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "2do año",
-              "materias": [
-                "Introducción a Equipos y Procesos (Anual)",
-                "Química Organica (Anual)",
-                "Probabilidad y Estadística (1° Semestre)",
-                "Química Inorgánica (1° Semestre)",
-                "Análisis Matemático II (1° Semestre)",
-                "Fìsica II (2° Semestre)",
-                "Legislación (2° Semestre)",
-                "Inglés I (2° Semestre)",
-                "Fundamentos de Informática (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "3er año",
-              "materias": [
-                "Balance de Masa y Energía (Anual)",
-                "Termodinámica (1° Semestre)",
-                "Matemática Superior Aplicada (1° Semestre)",
-                "Microbiología y Química Biológica (1° Semestre)",
-                "Química Analítica (1° Semestre)",
-                "Físicoquímica (2° Semestre)",
-                "Fenómenos de Transporte (2° Semestre)",
-                "Ciencia de loa Materiales (2° Semestre)",
-                "Química Aplicada (2° Semestre)",
-                "Inglés II (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "4to año",
-              "materias": [
-                "Diseño, simulación, optimización y seguridad de procesos (Anual)",
-                "Operaciones Unitarias I (Anual)",
-                "Ingeniería de las Reacciones Químicas (Anual)",
-                "Tecnología de la Energía Térmica (1° Semestre)",
-                "Economia (1° Semestre)",
-                "Calidad y Control Estadístico de Procesos (1° Semestre)",
-                "Operaciones Unitarias II (2° Semestre)",
-                "Organizacion Industrial (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "5to año",
-              "materias": [
-                "Control Automático de Procesos (Anual)",
-                "Ingeniería Ambiental (Anual)",
-                "Proyecto Final (Anual)",
-                "Mecánica Industrial (1° Semestre)",
-                "Procesos Biotecnológicos (2° Semestre)",
-                "Higiene y Seguridad en el Trabajo (2° Semestre)",
-                "Máquinas e Instalaciones Eléctricas (2° Semestre)"
-              ]
-            }
-          ],
-          "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-ing-quimica/"
-        },
-        {
-          "id": 5,
-          "nombre_carrera": "INGENIERÍA EN SISTEMAS DE INFORMACIÓN",
-          "categoria": "Ingeniería",
-          "duracion": "5 años",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-en-sistemas-informacion/",
-          "plan_estudio": [
-            {
-              "anio": "1er año",
-              "materias": [
-                "Análisis Matemático I (1° Semestre)",
-                "Algebra y Geometría Analítica (1° Semestre)",
-                "Fisica I (2° Semestre)",
-                "Inglés I (1° Semestre / 2° Semestre)",
-                "Lógica y Estructuras Discretas (1° Semestre)",
-                "Algoritmos y Estructuras de Datos (2° Semestre)",
-                "Arquitectura de Computadores (2° Semestre)",
-                "Sistemas y Procesos de Negocio (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "2do año",
-              "materias": [
-                "Análisis Matemático II (1° Semestre)",
-                "Física II (2° Semestre)",
-                "Ingeniería y Sociedad (1° Semestre)",
-                "Inglés II (1° Semestre / 2° Semestre)",
-                "Sintaxis y Semántica de los Lenguajes (1° Semestre)",
-                "Paradigmas de Programación (2° Semestre)",
-                "Sistemas Operativos (2° Semestre)",
-                "Análisis de Sistemas de Información (Integradora) (Anual)"
-              ]
-            },
-            {
-              "anio": "3er año",
-              "materias": [
-                "Probabilidades y Estadísticas (1° Semestre)",
-                "Economía (1° Semestre)",
-                "Bases de Datos (1° Semestre)",
-                "Desarrollo de Software (2° Semestre)",
-                "Comunicación de Datos (1° Semestre)",
-                "Análisis Numérico (2° Semestre)",
-                "Diseño de Sistemas de Información (integradora) (Anual)"
-              ]
-            },
-            {
-              "anio": "4to año",
-              "materias": [
-                "Legislación (1° Semestre)",
-                "Ingeniería y Calidad de Software (Anual)",
-                "Redes de Datos (2° Semestre)",
-                "Investigación Operativa (1° Semestre)",
-                "Simulación (1° Semestre)",
-                "Tecnologías para la automatización (2° Semestre)",
-                "Administración de Sistemas de Información (integradora) (Anual)"
-              ]
-            },
-            {
-              "anio": "5to año",
-              "materias": [
-                "Inteligencia Artificial (2° Semestre)",
-                "Ciencia de Datos (2° Semestre)",
-                "Sistemas de Gestión (1° Semestre)",
-                "Gestión Gerencial (1° Semestre)",
-                "Seguridad en los Sistemas de Información (1° Semestre)",
-                "Proyecto Final (integradora) (Anual)"
-              ]
-            }
-          ],
-          "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-ing-sistemas-de-informacion/"
-        },
-        {
-          "id": 6,
-          "nombre_carrera": "INGENIERÍA EN TELECOMUNICACIONES",
-          "categoria": "Ingeniería",
-          "duracion": "5 años",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-en-telecomunicaciones/",
-          "plan_estudio": [
-            {
-              "anio": "1er año",
-              "materias": [
-                "Informática I (Anual)",
-                "Álgebra y Geometría Analítica. (Anual)",
-                "Análisis Matemático I (Anual)",
-                "Ingeniería y Sociedad (1° Semestre)",
-                "Diseño Asistido por Computadoras (2° Semestre)",
-                "Física I (Anual)",
-                "Técnicas Digitales (Anual)"
-              ]
-            },
-            {
-              "anio": "2do año",
-              "materias": [
-                "Química General (1° Semestre)",
-                "Física II (Anual)",
-                "Análisis de Señales y Sistemas (Anual)",
-                "Taller de Redes y Comunicaciones (2° Semestre)",
-                "Informática II (Anual)",
-                "Ingles I"
-              ]
-            },
-            {
-              "anio": "3er año",
-              "materias": [
-                "Probabilidad y Estadística (2° Semestre)",
-                "Teoría de los Circuitos (Anual)",
-                "Dispositivos Electrónicos y Electrónica General (Anual)",
-                "Física Electrónica (1° Semestre)",
-                "Medios de Enlace (2° Semestre)",
-                "Seguridad Higiene y Medio Ambiente (2° Semestre)",
-                "Sistemas de Comunicaciones (Anual)"
-              ]
-            },
-            {
-              "anio": "4to año",
-              "materias": [
-                "Redes de Comunicaciones y Datos (Anual)",
-                "Medidas Electrónicas (Anual)",
-                "Administración de Redes de Datos (1° Semestre)",
-                "Tecnología Electrónica e introducción al Control (Anual)",
-                "Inglés II",
-                "Electrónica Aplicada a las Comunicaciones (Anual)",
-                "Telecomunicaciones Móviles (1° Semestre)",
-                "Sistemas Operativos de Red (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "5to año",
-              "materias": [
-                "Comunicaciones Opticas (2° Semestre)",
-                "Sistemas Multimedia, Audio y Video Digital (1° Semestre)",
-                "Antenas y Propagación Electromagnética (1° Semestre)",
-                "Comunicaciones y Protocolos Industriales (2° Semestre)",
-                "Economia (2° Semestre)",
-                "Proyecto Final (1° Semestre)",
-                "Organización Industrial (Anual)",
-                "Legislación para Comunicaciones (1° Semestre)"
-              ]
-            }
-          ],
-          "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-de-ing-en-telecomunicaciones/"
-        },
-        {
-          "id": 7,
-          "nombre_carrera": "INGENIERÍA EN MINAS",
-          "categoria": "Ingeniería",
-          "duracion": "5 años",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://frm.utn.edu.ar/ingenieria-minas/",
-          "plan_estudio": [
-            {
-              "anio": "1er año",
-              "materias": [
-                "Álgebra y Geometría Analítica (Anual)",
-                "Análisis Matemático I (Anual)",
-                "Química General (1° Semestre)",
-                "Sistema de Representación (1° Semestre)",
-                "Introducción a la Ingeniería en Minas (Anual)",
-                "Física I (Anual)",
-                "Ingeniería y Sociedad (2° Semestre)",
-                "Fundamentos de Informática (2° Semestre)",
-                "Inglés I (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "2do año",
-              "materias": [
-                "Física II (1° Semestre)",
-                "Geología Aplicada y Ambiental (1° Semestre)",
-                "Química Inorgánica (1° Semestre)",
-                "Inglés II (1° Semestre)",
-                "Yacimientos Minerales (2° Semestre)",
-                "Geotopografía (2° Semestre)",
-                "Probabilidad y Estadística (2° Semestre)",
-                "Análisis Matemático II (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "3er año",
-              "materias": [
-                "Minerología I (1° Semestre)",
-                "Estática y Resistencia de Materiales (1° Semestre)",
-                "Electrotécnia (1° Semestre)",
-                "Fisicoquímica (1° Semestre)",
-                "Minerología II (2° Semestre)",
-                "Derecho Minero y Legislación (2° Semestre)",
-                "Exploración (2° Semestre)",
-                "Procesamiento de Minerales. (2° Semestre)",
-                "Seguridad, Higiene y medio Ambiente (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "4to año",
-              "materias": [
-                "Economía (1° Semestre)",
-                "Voladuras de Rocas y Explosivos (1° Semestre)",
-                "Química Analítica (1° Semestre)",
-                "Gestión Ambiental y Desarrollo Sustentable (1° Semestre)",
-                "Mecánica de Rocas y suelos (1° Semestre)",
-                "Calculo Avanzado (2° Semestre)",
-                "Explotación de Minas (2° Semestre)",
-                "Software de aplicación minera (2° Semestre)",
-                "Electiva I (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "5to año",
-              "materias": [
-                "Evaluación de Proyectos Mineros. (1° Semestre)",
-                "Planificación Minera y Gestión de Relaves (1° Semestre)",
-                "Prevención y Remediación Impactos (2° Semestre)",
-                "Construcciones Mineras (2° Semestre)",
-                "Proyecto Final (Anual)",
-                "Electiva II (1° Semestre)",
-                "Electiva III (2° Semestre)",
-                "Práctica Profesional Supervisada (150 hs)"
-              ]
-            }
-          ],
-          "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-ing-minas/"
-        },
-        {
-          "id": 8,
-          "nombre_carrera": "ADMINISTRACIÓN",
-          "categoria": "Tecnicatura",
-          "duracion": "2 años",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://frm.utn.edu.ar/tecnicatura-universitaria-en-administracion/"
-        },
-        {
-          "id": 9,
-          "nombre_carrera": "Enología",
-          "categoria": "Tecnicatura",
-          "duracion": "3 años",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://www4.frm.utn.edu.ar/tecnicatura-superior-enologia/",
-          "plan_estudio": [
-            {
-              "anio": "1er año",
-              "materias": [
-                "Matemática (1° Semestre)",
-                "Química General (1° Semestre)",
-                "Física I (1° Semestre)",
-                "Analisis Sensorial I (1° Semestre)",
-                "Introducción a la Vitivinicultura (1° Semestre)",
-                "Fisica II (2° Semestre)",
-                "Química Inorgánica (2° Semestre)",
-                "Vitivinicultura (2° Semestre)",
-                "Análisis Sensorial II (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "2do año",
-              "materias": [
-                "Química Orgánica Orientada (Anual)",
-                "Microbiología Enológica (Anual)",
-                "Química Analítica (1° Semestre)",
-                "Enología I (1° Semestre)",
-                "Química Analítica Instrumental (2° Semestre)",
-                "Legislación y Normativa Vitivinícola (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "3er año",
-              "materias": [
-                "Enología II (Anual)",
-                "Gestión de Empresas Vitivinícolas (Anual)",
-                "Higiene y Seguridad Ambiental (Anual)",
-                "Practica Supervisada (2° Semestre)"
-              ]
-            }
-          ],
-          "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-enologia/"
-        },
-        {
-          "id": 10,
-          "nombre_carrera": "Gestión de Empresas Hoteleras",
-          "categoria": "Tecnicatura",
-          "duracion": "3 años",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://www4.frm.utn.edu.ar/tecnicatura-superior-gestion-de-empresas-hoteleras/",
-          "plan_estudio": [
-            {
-              "anio": "1er año",
-              "materias": [
-                "Introducción a la Industria de la hospitalidad (1° Semestre)",
-                "Administración de empresas (1° Semestre)",
-                "Tecnologías aplicadas a la gestión de empresas I (1° Semestre)",
-                "Idioma I (1° Semestre)",
-                "Economía y políticas turísticas (2° Semestre)",
-                "Técnicas de Venta (2° Semestre)",
-                "Recepción y Reservas (2° Semestre)",
-                "Idioma II (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "2do año",
-              "materias": [
-                "Housekeeping (1° Semestre)",
-                "Contabilidad (1° Semestre)",
-                "Alimentos y bebidas (1° Semestre)",
-                "Idioma III (1° Semestre)",
-                "Costos (2° Semestre)",
-                "Comercialización I (2° Semestre)",
-                "Idioma IV (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "3er año",
-              "materias": [
-                "Organización de eventos (1° Semestre)",
-                "Probabilidades y Estadísticas (1° Semestre)",
-                "Comercialización II (1° Semestre)",
-                "Relaciones Públicas (2° Semestre)",
-                "Práctica Profesional Supervisada (2° Semestre)"
-              ]
-            }
-          ],
-          "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-gestion-de-empresas-hoteleras/"
-        },
-        {
-          "id": 11,
-          "nombre_carrera": "Gestión de Empresas Turísticas",
-          "categoria": "Tecnicatura",
-          "duracion": "3 años",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://www4.frm.utn.edu.ar/tecnicatura-superior-gestion-de-empresas-turisticas/",
-          "plan_estudio": [
-            {
-              "anio": "1er año",
-              "materias": [
-                "Introducción al Turismo (1° Semestre)",
-                "Administración de empresas (1° Semestre)",
-                "Tecnologías aplicadas a gestión de empresas turísticas I (1° Semestre)",
-                "Idioma I (1° Semestre)",
-                "Economía y políticas turísticas (2° Semestre)",
-                "Técnicas de comunicación (2° Semestre)",
-                "Servicios Turísticos I (2° Semestre)",
-                "Idioma II (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "2do año",
-              "materias": [
-                "Tecnologías aplicadas a gestión de empresas turísticas II (1° Semestre)",
-                "Contabilidad (1° Semestre)",
-                "Servicios Turísticos II (1° Semestre)",
-                "Idioma III (1° Semestre)",
-                "Costos operativos turísticos (2° Semestre)",
-                "Comercialización I (2° Semestre)",
-                "Idioma IV (2° Semestre)"
-              ]
-            },
-            {
-              "anio": "3er año",
-              "materias": [
-                "Probabilidad y estadística (1° Semestre)",
-                "Circuitos Turísticos (1° Semestre)",
-                "Comercialización II (1° Semestre)",
-                "Legislación Turística (2° Semestre)",
-                "Práctica Profesional Supervisada (2° Semestre)"
-              ]
-            }
-          ],
-          "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-gestion-de-empresas-turisticas/"
-        },
-        {
-          "id": 12,
-          "nombre_carrera": "Higiene y Seguridad",
-          "categoria": "Tecnicatura",
-          "duracion": "3 años",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://www4.frm.utn.edu.ar/tecnicatura-superior-higiene-y-seguridad/",
-          "plan_estudio": [
-            {
-              "anio": "1er año",
-              "materias": [
-                "Análisis Matemático (1° Semestre)",
-                "Química (1° Semestre)",
-                "Fisica (1° Semestre)",
-                "Conocimiento de Materiales (1° Semestre)",
-                "Trabajo y Metodologia de la Investigación (2° Semestre)",
-                "Medicina Laboral Avanzada (2° Semestre)",
-                "Sociología y Psicología Laboral (2° Semestre)",
-                "Higiene Laboral Avanzanda (2° Semestre)",
-                "Taller de Integración I (Anual)"
-              ]
-            },
-            {
-              "anio": "2do año",
-              "materias": [
-                "Toxicología Laboral (1° Semestre)",
-                "Ergonomía (1° Semestre)",
-                "Legislación Laboral (1° Semestre)",
-                "Seguridad Industrial Avanzada (1° Semestre)",
-                "Diseño y Práctica de Capacitación (2° Semestre)",
-                "Incendio y Explosiones (2° Semestre)",
-                "Riesgología (2° Semestre)",
-                "Proyecto Final (2° Semestre)",
-                "Taller de Integración II (1° Semestre)"
-              ]
-            },
-            {
-              "anio": "3er año",
-              "materias": [
-                "Seguridad IV (2° Semestre)",
-                "Selección y Capacitación del Personal (1° Semestre)",
-                "Didáctica y Metodología de la Investigación (1° Semestre)",
-                "Derecho del Trabajo (1° Semestre)",
-                "Ética y Deontología Profesional (2° Semestre)",
-                "Trabajo Final (2° Semestre)"
-              ]
-            }
-          ],
-          "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-higiene-y-seguridad/"
-        },
-        {
-          "id": 13,
-          "nombre_carrera": "Programación",
-          "categoria": "Tecnicatura",
-          "duracion": "2 años",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://www4.frm.utn.edu.ar/tecnicatura-superior-programacion/"
-        },
-        {
-          "id": 14,
-          "nombre_carrera": "Videojuegos",
-          "categoria": "Tecnicatura",
-          "duracion": "2 años y medio",
-          "modalidad": "Presencial",
-          "facultad": "UTN FRM",
-          "link_oficial": "https://www4.frm.utn.edu.ar/tecnicatura-universitaria-en-desarrollo-y-produccion-de-videojuegos/"
+            "id": 1,
+            "nombre": "UTN Facultad Regional Mendoza",
+            "carreras": [
+                {
+                    "id": 1,
+                    "nombre_carrera": "Ingeniería Civil",
+                    "categoria": "Ingeniería",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-civil/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Análisis Matemático I (1° Semestre)",
+                                "Álgebra y Geometría Analítica (1° Semestre)",
+                                "Ingeniería y Sociedad (1° Semestre)",
+                                "Ingeniería Civil I (Anual)",
+                                "Sistema de Representación (Anual)",
+                                "Química General (2° Semestre)",
+                                "Física I (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Análisis Matemático II (1° Semestre)",
+                                "Estabilidad (Anual)",
+                                "Ingeniería Civil II (Anual)",
+                                "Tecnología de los Materiales (Anual)",
+                                "Física II (2° Semestre)",
+                                "Probabilidad y Estadística (2° Semestre)",
+                                "Inglés I (1° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Resistencia de Materiales (Anual)",
+                                "Tecnología del Hormigón (1° Semestre)",
+                                "Tecnología de la Construcción (Anual)",
+                                "Geotopografía (2° Semestre)",
+                                "Hidráulica General y Aplicada (Anual)",
+                                "Cálculo Avanzado (2° Semestre)",
+                                "Instalaciones Eléctricas y Acústica (1° Semestre)",
+                                "Instalaciones Termomecánicas (1° Semestre)",
+                                "Economía (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Geotecnia (2° Semestre)",
+                                "Instalaciones Sanitarias y de gas (1° Semestre)",
+                                "Diseño arquitectonico, Planeamiento y Urbanismo (E.I.) (Anual)",
+                                "Análisis Estructural I (1° Semestre)",
+                                "Estructuras de hormigón (2° Semestre)",
+                                "Hidrología y Obras hidráulicas (Anual)",
+                                "Ingeniería legal (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Construcciones Metálicas y de Madera (2° Semestre)",
+                                "Cimentaciones (1° Semestre)",
+                                "Ingeniería Sanitaria (1° Semestre)",
+                                "Organización y Cond.de Obras (Anual)",
+                                "Vías de Comunicación I (2° Semestre)",
+                                "Análisis Estructural II (2° Semestre)",
+                                "Vías de Comunicación II (2° Semestre)",
+                                "Gestión Ambiental y Desarrollo Sustentable (Anual)"
+                            ]
+                        },
+                        {
+                            "anio": "6to año",
+                            "materias": [
+                                "Proyecto Final (E.I) (Anual)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-ing-civil/"
+                },
+                {
+                    "id": 2,
+                    "nombre_carrera": "Ingeniería Electromecánica",
+                    "categoria": "Ingeniería",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-electromecanica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Análisis Matemático (1° Semestre)",
+                                "Química General (2° Semestre)",
+                                "Física I (2° Semestre)",
+                                "Ingeniería Electromecánica I (Anual)",
+                                "Algebra y Geometría Analítica (1° Semestre)",
+                                "Ingeniería y Sociedad (2° Semestre)",
+                                "Sistemas de Representación (1° Semestre)",
+                                "Representación Gráfica (200 hs)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Fisica II (1° Semestre)",
+                                "Estabilidad (Anual)",
+                                "Ingeniería Electromecánica II (Anual)",
+                                "Conocimiento de Materiales (Anual)",
+                                "Análisis Matemático II (1° Semestre)",
+                                "Programación en Computación (2° Semestre)",
+                                "Probabilidad y Estadística (2° Semestre)",
+                                "Inglés I (Anual)"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Tecnología Mecánica (Anual)",
+                                "Ingeniería Electromecánica III (Anual)",
+                                "Mecánica y Mecanismos (Anual)",
+                                "Electrotecnia (Anual)",
+                                "Termodinámica Técnica (1° Semestre)",
+                                "Matemática para Ing. Electromecánica (1° Semestre)",
+                                "Higiene y Seguridad Industrial (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Elementos de Máquinas (Anual)",
+                                "Electrónica Industrial (2° Semestre)",
+                                "Mecánica de los Fluidos y Máquinas Fluidodinámicas (Anual)",
+                                "Maquinarias Eléctricas (Anual)",
+                                "Mediciones Eléctricas (1° Semestre)",
+                                "Máquinas Térmicas (Anual)",
+                                "Economía (2° Semestre)",
+                                "Legislación (1° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Redes de Distribución e Instalaciones Eléctricas (Anual)",
+                                "Instalaciones Térmicas, Mecánicas y Frigoríficas (1° Semestre)",
+                                "Máquinas y Equipos de Transporte (Anual)",
+                                "Gestión y Mantenimiento Electromecánico (1° Semestre)",
+                                "Organización Industrial (2° Semestre)",
+                                "Automatización y Control Industrial (1° Semestre)",
+                                "Proyecto Final (2° Semestre)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-ing-electromecanica/"
+                },
+                {
+                    "id": 3,
+                    "nombre_carrera": "Ingeniería Electrónica",
+                    "categoria": "Ingeniería",
+                    "duracion": "5 1/2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-electronica",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Informática I (Anual)",
+                                "Álgebra y Geometría Analítica (Anual)",
+                                "Análisis Matemático I (Anual)",
+                                "Ingeniería y Sociedad (1° Semestre)",
+                                "Fisica I (Anual)",
+                                "Diseño Asistido por Computadoras (2° Semestre)",
+                                "Química (1° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Análisis Matemático II (Anual)",
+                                "Informática II (Anual)",
+                                "Análisis de Señales y Sistemas 2026 (es solo para alumnos que tengan cursada Analisis matemático II) (Anual)",
+                                "Física II (Anual)",
+                                "Probabilidad y Estadística (2° Semestre)",
+                                "Técnicas Digitales I (Anual)",
+                                "Ingles I"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Física Electrónica (1° Semestre)",
+                                "Teoría de los Circuitos I (Anual)",
+                                "Dispositivos Electrónicos (2026) (1° Semestre)",
+                                "Legislación (1° Semestre)",
+                                "Electrónica Aplicada I (2° Semestre)",
+                                "Medios de Enlace (2° Semestre)",
+                                "Seguridad, Higiene y Medio Ambiente (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Ingés II",
+                                "Técnicas Digitales II (Anual)",
+                                "Medidas Electrónicas I (Anual)",
+                                "Teoría de los Circuitos II (Anual)",
+                                "Máquinas e Instalaciones Eléctricas (Anual)",
+                                "Sistemas de Comunicaciones (Anual)",
+                                "Electrónica Aplicada II (Anual)"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Técnicas Digitales III (Anual)",
+                                "Medidas Electrónicas II (Anual)",
+                                "Sistemas de Control (Anual)",
+                                "Electrónica Aplicada III (Anual)",
+                                "Tecnología Electrónica (Anual)",
+                                "Electrónica de Potencia (Anual)",
+                                "Organización Industrial (Anual)"
+                            ]
+                        },
+                        {
+                            "anio": "6to año",
+                            "materias": [
+                                "Economía (1° Semestre)",
+                                "Proyecto Final (1° Semestre)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-ing-electronica/"
+                },
+                {
+                    "id": 4,
+                    "nombre_carrera": "Ingeniería Química",
+                    "categoria": "Ingeniería",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-quimica",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Introducción a la Ingeniería Química (Anual)",
+                                "Sistemas de representación (Anual)",
+                                "Ingeniería y Sociedad (1° Semestre)",
+                                "Algebra y Geometría Analítica (1° Semestre)",
+                                "Análisis Matemático I (1° Semestre)",
+                                "Física I (2° Semestre)",
+                                "Química (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Introducción a Equipos y Procesos (Anual)",
+                                "Química Organica (Anual)",
+                                "Probabilidad y Estadística (1° Semestre)",
+                                "Química Inorgánica (1° Semestre)",
+                                "Análisis Matemático II (1° Semestre)",
+                                "Fìsica II (2° Semestre)",
+                                "Legislación (2° Semestre)",
+                                "Inglés I (2° Semestre)",
+                                "Fundamentos de Informática (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Balance de Masa y Energía (Anual)",
+                                "Termodinámica (1° Semestre)",
+                                "Matemática Superior Aplicada (1° Semestre)",
+                                "Microbiología y Química Biológica (1° Semestre)",
+                                "Química Analítica (1° Semestre)",
+                                "Físicoquímica (2° Semestre)",
+                                "Fenómenos de Transporte (2° Semestre)",
+                                "Ciencia de loa Materiales (2° Semestre)",
+                                "Química Aplicada (2° Semestre)",
+                                "Inglés II (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Diseño, simulación, optimización y seguridad de procesos (Anual)",
+                                "Operaciones Unitarias I (Anual)",
+                                "Ingeniería de las Reacciones Químicas (Anual)",
+                                "Tecnología de la Energía Térmica (1° Semestre)",
+                                "Economia (1° Semestre)",
+                                "Calidad y Control Estadístico de Procesos (1° Semestre)",
+                                "Operaciones Unitarias II (2° Semestre)",
+                                "Organizacion Industrial (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Control Automático de Procesos (Anual)",
+                                "Ingeniería Ambiental (Anual)",
+                                "Proyecto Final (Anual)",
+                                "Mecánica Industrial (1° Semestre)",
+                                "Procesos Biotecnológicos (2° Semestre)",
+                                "Higiene y Seguridad en el Trabajo (2° Semestre)",
+                                "Máquinas e Instalaciones Eléctricas (2° Semestre)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-ing-quimica/"
+                },
+                {
+                    "id": 5,
+                    "nombre_carrera": "Ingeniería en Sistemas de Información",
+                    "categoria": "Ingeniería",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-en-sistemas-informacion/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Análisis Matemático I (1° Semestre)",
+                                "Algebra y Geometría Analítica (1° Semestre)",
+                                "Fisica I (2° Semestre)",
+                                "Inglés I (1° Semestre / 2° Semestre)",
+                                "Lógica y Estructuras Discretas (1° Semestre)",
+                                "Algoritmos y Estructuras de Datos (2° Semestre)",
+                                "Arquitectura de Computadores (2° Semestre)",
+                                "Sistemas y Procesos de Negocio (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Análisis Matemático II (1° Semestre)",
+                                "Física II (2° Semestre)",
+                                "Ingeniería y Sociedad (1° Semestre)",
+                                "Inglés II (1° Semestre / 2° Semestre)",
+                                "Sintaxis y Semántica de los Lenguajes (1° Semestre)",
+                                "Paradigmas de Programación (2° Semestre)",
+                                "Sistemas Operativos (2° Semestre)",
+                                "Análisis de Sistemas de Información (Integradora) (Anual)"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Probabilidades y Estadísticas (1° Semestre)",
+                                "Economía (1° Semestre)",
+                                "Bases de Datos (1° Semestre)",
+                                "Desarrollo de Software (2° Semestre)",
+                                "Comunicación de Datos (1° Semestre)",
+                                "Análisis Numérico (2° Semestre)",
+                                "Diseño de Sistemas de Información (integradora) (Anual)"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Legislación (1° Semestre)",
+                                "Ingeniería y Calidad de Software (Anual)",
+                                "Redes de Datos (2° Semestre)",
+                                "Investigación Operativa (1° Semestre)",
+                                "Simulación (1° Semestre)",
+                                "Tecnologías para la automatización (2° Semestre)",
+                                "Administración de Sistemas de Información (integradora) (Anual)"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Inteligencia Artificial (2° Semestre)",
+                                "Ciencia de Datos (2° Semestre)",
+                                "Sistemas de Gestión (1° Semestre)",
+                                "Gestión Gerencial (1° Semestre)",
+                                "Seguridad en los Sistemas de Información (1° Semestre)",
+                                "Proyecto Final (integradora) (Anual)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-ing-sistemas-de-informacion/"
+                },
+                {
+                    "id": 6,
+                    "nombre_carrera": "Ingeniería en Telecomunicaciones",
+                    "categoria": "Ingeniería",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://www4.frm.utn.edu.ar/ingenieria-en-telecomunicaciones/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Informática I (Anual)",
+                                "Álgebra y Geometría Analítica. (Anual)",
+                                "Análisis Matemático I (Anual)",
+                                "Ingeniería y Sociedad (1° Semestre)",
+                                "Diseño Asistido por Computadoras (2° Semestre)",
+                                "Física I (Anual)",
+                                "Técnicas Digitales (Anual)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Química General (1° Semestre)",
+                                "Física II (Anual)",
+                                "Análisis de Señales y Sistemas (Anual)",
+                                "Taller de Redes y Comunicaciones (2° Semestre)",
+                                "Informática II (Anual)",
+                                "Ingles I"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Probabilidad y Estadística (2° Semestre)",
+                                "Teoría de los Circuitos (Anual)",
+                                "Dispositivos Electrónicos y Electrónica General (Anual)",
+                                "Física Electrónica (1° Semestre)",
+                                "Medios de Enlace (2° Semestre)",
+                                "Seguridad Higiene y Medio Ambiente (2° Semestre)",
+                                "Sistemas de Comunicaciones (Anual)"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Redes de Comunicaciones y Datos (Anual)",
+                                "Medidas Electrónicas (Anual)",
+                                "Administración de Redes de Datos (1° Semestre)",
+                                "Tecnología Electrónica e introducción al Control (Anual)",
+                                "Inglés II",
+                                "Electrónica Aplicada a las Comunicaciones (Anual)",
+                                "Telecomunicaciones Móviles (1° Semestre)",
+                                "Sistemas Operativos de Red (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Comunicaciones Opticas (2° Semestre)",
+                                "Sistemas Multimedia, Audio y Video Digital (1° Semestre)",
+                                "Antenas y Propagación Electromagnética (1° Semestre)",
+                                "Comunicaciones y Protocolos Industriales (2° Semestre)",
+                                "Economia (2° Semestre)",
+                                "Proyecto Final (1° Semestre)",
+                                "Organización Industrial (Anual)",
+                                "Legislación para Comunicaciones (1° Semestre)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-de-ing-en-telecomunicaciones/"
+                },
+                {
+                    "id": 7,
+                    "nombre_carrera": "Ingeniería en Minas",
+                    "categoria": "Ingeniería",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://frm.utn.edu.ar/ingenieria-minas/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Álgebra y Geometría Analítica (Anual)",
+                                "Análisis Matemático I (Anual)",
+                                "Química General (1° Semestre)",
+                                "Sistema de Representación (1° Semestre)",
+                                "Introducción a la Ingeniería en Minas (Anual)",
+                                "Física I (Anual)",
+                                "Ingeniería y Sociedad (2° Semestre)",
+                                "Fundamentos de Informática (2° Semestre)",
+                                "Inglés I (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Física II (1° Semestre)",
+                                "Geología Aplicada y Ambiental (1° Semestre)",
+                                "Química Inorgánica (1° Semestre)",
+                                "Inglés II (1° Semestre)",
+                                "Yacimientos Minerales (2° Semestre)",
+                                "Geotopografía (2° Semestre)",
+                                "Probabilidad y Estadística (2° Semestre)",
+                                "Análisis Matemático II (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Minerología I (1° Semestre)",
+                                "Estática y Resistencia de Materiales (1° Semestre)",
+                                "Electrotécnia (1° Semestre)",
+                                "Fisicoquímica (1° Semestre)",
+                                "Minerología II (2° Semestre)",
+                                "Derecho Minero y Legislación (2° Semestre)",
+                                "Exploración (2° Semestre)",
+                                "Procesamiento de Minerales. (2° Semestre)",
+                                "Seguridad, Higiene y medio Ambiente (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "4to año",
+                            "materias": [
+                                "Economía (1° Semestre)",
+                                "Voladuras de Rocas y Explosivos (1° Semestre)",
+                                "Química Analítica (1° Semestre)",
+                                "Gestión Ambiental y Desarrollo Sustentable (1° Semestre)",
+                                "Mecánica de Rocas y suelos (1° Semestre)",
+                                "Calculo Avanzado (2° Semestre)",
+                                "Explotación de Minas (2° Semestre)",
+                                "Software de aplicación minera (2° Semestre)",
+                                "Electiva I (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "5to año",
+                            "materias": [
+                                "Evaluación de Proyectos Mineros. (1° Semestre)",
+                                "Planificación Minera y Gestión de Relaves (1° Semestre)",
+                                "Prevención y Remediación Impactos (2° Semestre)",
+                                "Construcciones Mineras (2° Semestre)",
+                                "Proyecto Final (Anual)",
+                                "Electiva II (1° Semestre)",
+                                "Electiva III (2° Semestre)",
+                                "Práctica Profesional Supervisada (150 hs)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-ing-minas/"
+                },
+                {
+                    "id": 8,
+                    "nombre_carrera": "Administración",
+                    "categoria": "Tecnicatura",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://frm.utn.edu.ar/tecnicatura-universitaria-en-administracion/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Administración General I (Anual)",
+                                "Matemática General (Anual)",
+                                "Informática I (Anual)",
+                                "Problemática Social contemporánea (Anual)",
+                                "Psicología de las Organizaciones (Anual)",
+                                "Ambiente, Economía y Sociedad (Anual)",
+                                "Legislación I (Anual)",
+                                "Estado y Sociedad (Anual)",
+                                "Seminario (Anual)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Administración General II (Anual)",
+                                "Informática II (Anual)",
+                                "Comportamiento organizacional (Anual)",
+                                "Estadística (Anual)",
+                                "Economía II (Anual)",
+                                "Legislación II (Anual)",
+                                "Administración Estatal (Anual)",
+                                "Gestión de Recursos Humanos (Anual)",
+                                "Finanzas y Técnicas contables (Anual)",
+                                "Proyecto Final (Anual)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-adminsitracion/"
+                },
+                {
+                    "id": 9,
+                    "nombre_carrera": "Enología",
+                    "categoria": "Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://www4.frm.utn.edu.ar/tecnicatura-superior-enologia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Matemática (1° Semestre)",
+                                "Química General (1° Semestre)",
+                                "Física I (1° Semestre)",
+                                "Analisis Sensorial I (1° Semestre)",
+                                "Introducción a la Vitivinicultura (1° Semestre)",
+                                "Fisica II (2° Semestre)",
+                                "Química Inorgánica (2° Semestre)",
+                                "Vitivinicultura (2° Semestre)",
+                                "Análisis Sensorial II (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Química Orgánica Orientada (Anual)",
+                                "Microbiología Enológica (Anual)",
+                                "Química Analítica (1° Semestre)",
+                                "Enología I (1° Semestre)",
+                                "Química Analítica Instrumental (2° Semestre)",
+                                "Legislación y Normativa Vitivinícola (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Enología II (Anual)",
+                                "Gestión de Empresas Vitivinícolas (Anual)",
+                                "Higiene y Seguridad Ambiental (Anual)",
+                                "Practica Supervisada (2° Semestre)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-enologia/"
+                },
+                {
+                    "id": 10,
+                    "nombre_carrera": "Gestión de Empresas Hoteleras",
+                    "categoria": "Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://www4.frm.utn.edu.ar/tecnicatura-superior-gestion-de-empresas-hoteleras/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Introducción a la Industria de la hospitalidad (1° Semestre)",
+                                "Administración de empresas (1° Semestre)",
+                                "Tecnologías aplicadas a la gestión de empresas I (1° Semestre)",
+                                "Idioma I (1° Semestre)",
+                                "Economía y políticas turísticas (2° Semestre)",
+                                "Técnicas de Venta (2° Semestre)",
+                                "Recepción y Reservas (2° Semestre)",
+                                "Idioma II (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Housekeeping (1° Semestre)",
+                                "Contabilidad (1° Semestre)",
+                                "Alimentos y bebidas (1° Semestre)",
+                                "Idioma III (1° Semestre)",
+                                "Costos (2° Semestre)",
+                                "Comercialización I (2° Semestre)",
+                                "Idioma IV (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Organización de eventos (1° Semestre)",
+                                "Probabilidades y Estadísticas (1° Semestre)",
+                                "Comercialización II (1° Semestre)",
+                                "Relaciones Públicas (2° Semestre)",
+                                "Práctica Profesional Supervisada (2° Semestre)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-gestion-de-empresas-hoteleras/"
+                },
+                {
+                    "id": 11,
+                    "nombre_carrera": "Gestión de Empresas Turísticas",
+                    "categoria": "Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://www4.frm.utn.edu.ar/tecnicatura-superior-gestion-de-empresas-turisticas/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Introducción al Turismo (1° Semestre)",
+                                "Administración de empresas (1° Semestre)",
+                                "Tecnologías aplicadas a gestión de empresas turísticas I (1° Semestre)",
+                                "Idioma I (1° Semestre)",
+                                "Economía y políticas turísticas (2° Semestre)",
+                                "Técnicas de comunicación (2° Semestre)",
+                                "Servicios Turísticos I (2° Semestre)",
+                                "Idioma II (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Tecnologías aplicadas a gestión de empresas turísticas II (1° Semestre)",
+                                "Contabilidad (1° Semestre)",
+                                "Servicios Turísticos II (1° Semestre)",
+                                "Idioma III (1° Semestre)",
+                                "Costos operativos turísticos (2° Semestre)",
+                                "Comercialización I (2° Semestre)",
+                                "Idioma IV (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Probabilidad y estadística (1° Semestre)",
+                                "Circuitos Turísticos (1° Semestre)",
+                                "Comercialización II (1° Semestre)",
+                                "Legislación Turística (2° Semestre)",
+                                "Práctica Profesional Supervisada (2° Semestre)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-gestion-de-empresas-turisticas/"
+                },
+                {
+                    "id": 12,
+                    "nombre_carrera": "Higiene y Seguridad",
+                    "categoria": "Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://www4.frm.utn.edu.ar/tecnicatura-superior-higiene-y-seguridad/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Análisis Matemático (1° Semestre)",
+                                "Química (1° Semestre)",
+                                "Fisica (1° Semestre)",
+                                "Conocimiento de Materiales (1° Semestre)",
+                                "Trabajo y Metodologia de la Investigación (2° Semestre)",
+                                "Medicina Laboral Avanzada (2° Semestre)",
+                                "Sociología y Psicología Laboral (2° Semestre)",
+                                "Higiene Laboral Avanzanda (2° Semestre)",
+                                "Taller de Integración I (Anual)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Toxicología Laboral (1° Semestre)",
+                                "Ergonomía (1° Semestre)",
+                                "Legislación Laboral (1° Semestre)",
+                                "Seguridad Industrial Avanzada (1° Semestre)",
+                                "Diseño y Práctica de Capacitación (2° Semestre)",
+                                "Incendio y Explosiones (2° Semestre)",
+                                "Riesgología (2° Semestre)",
+                                "Proyecto Final (2° Semestre)",
+                                "Taller de Integración II (1° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Seguridad IV (2° Semestre)",
+                                "Selección y Capacitación del Personal (1° Semestre)",
+                                "Didáctica y Metodología de la Investigación (1° Semestre)",
+                                "Derecho del Trabajo (1° Semestre)",
+                                "Ética y Deontología Profesional (2° Semestre)",
+                                "Trabajo Final (2° Semestre)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-higiene-y-seguridad/"
+                },
+                {
+                    "id": 13,
+                    "nombre_carrera": "Programación",
+                    "categoria": "Tecnicatura",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://www4.frm.utn.edu.ar/tecnicatura-superior-programacion/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Programación I (1° Semestre)",
+                                "Arquitectura y Sistemas operativos (1° Semestre)",
+                                "Matemática (1° Semestre)",
+                                "Organización empresarial (1° Semestre)",
+                                "Programación II (2° Semestre)",
+                                "Probabilidad y Estadística (2° Semestre)",
+                                "Base de Datos I (2° Semestre)",
+                                "Inglés I (2° Semestre)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Programación III (1° Semestre)",
+                                "Base de Datos II (1° Semestre)",
+                                "Metodología de Sistemas I (1° Semestre)",
+                                "Inglés II (1° Semestre)",
+                                "Programación IV (2° Semestre)",
+                                "Metodología de Sistemas II (2° Semestre)",
+                                "Introducción al análisis de datos (2° Semestre)",
+                                "Legislación (2° Semestre)",
+                                "Gestión de desarrollo de software (2° Semestre)",
+                                "Trabajo Final Integrador (Anual)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-programacion/"
+                },
+                {
+                    "id": 14,
+                    "nombre_carrera": "Videojuegos",
+                    "categoria": "Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "UTN FRM",
+                    "link_oficial": "https://www4.frm.utn.edu.ar/tecnicatura-universitaria-en-desarrollo-y-produccion-de-videojuegos/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Programación de Videojuegos 1 (Anual)",
+                                "Probabilidad (Anual)",
+                                "Diseño de Juegos (Anual)",
+                                "Arte 2D (Anual)",
+                                "Ingles 1 (Anual)",
+                                "Programación de videojuegos 2 (Anual)",
+                                "Game Design (Anual)",
+                                "Arte 3 D (Anual)",
+                                "Audio Interactivo 1 (Anual)"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Programación de videojuegos 3 (Anual)",
+                                "Motores de desarrollo 1 (Anual)",
+                                "Technical Art (Anual)",
+                                "Audio Interactivo 2 (Anual)",
+                                "Inglés 2 (Anual)",
+                                "Narrativa (Anual)"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Electiva 1 (Anual)",
+                                "Electiva 2 (Anual)",
+                                "Electiva 3 (Anual)",
+                                "Práctica Supervisada (Anual)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-en-desarrollo-y-produccion-de-videojuegos/"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

@@ -1,73 +1,479 @@
 {
- "instituciones": [
-  {
-   "id": 9,
-   "nombre": "Instituto Univ. de Ciencias Empresariales (IUCE)",
-   "nivel": "universidad",
-   "gestion": "privada",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "4292152",
-    "email": "informes@i-uce.edu.ar",
-    "direccion": "Patricias Mendocinas 1374, Ciudad"
-   },
-   "carreras": [
-    {
-     "id": 900,
-     "nombre_carrera": "Licenciatura en Comercialización",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial / A distancia",
-     "facultad": "IUCE",
-     "link_oficial": "https://i-uce.edu.ar/careers/uce-marketing"
-    },
-    {
-     "id": 901,
-     "nombre_carrera": "Licenciatura en Recursos Humanos",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial / A distancia",
-     "facultad": "IUCE",
-     "link_oficial": "https://i-uce.edu.ar/careers/uce-recursos-humanos"
-    },
-    {
-     "id": 902,
-     "nombre_carrera": "Licenciatura en Comercio Exterior y Aduanas",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial / A distancia",
-     "facultad": "IUCE",
-     "link_oficial": "https://i-uce.edu.ar/careers/uce-comercio-exterior-y-aduanas"
-    },
-    {
-     "id": 903,
-     "nombre_carrera": "Licenciatura en Administración de Empresas",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial / A distancia",
-     "facultad": "IUCE",
-     "link_oficial": "https://i-uce.edu.ar/careers/administracion-de-empresas"
-    },
-    {
-     "id": 904,
-     "nombre_carrera": "Licenciatura en Relaciones Públicas e Institucionales",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial / A distancia",
-     "facultad": "IUCE",
-     "link_oficial": "https://i-uce.edu.ar/careers/uce-relaciones-publicas"
-    },
-    {
-     "id": 905,
-     "nombre_carrera": "Licenciatura en Logística y Transporte",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial / A distancia",
-     "facultad": "IUCE",
-     "link_oficial": "https://i-uce.edu.ar/careers/uce-logistica-y-transporte"
-    }
-   ],
-   "departamento": "Capital"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 9,
+            "nombre": "Instituto Univ. de Ciencias Empresariales (IUCE)",
+            "nivel": "universidad",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "4292152",
+                "email": "informes@i-uce.edu.ar",
+                "direccion": "Patricias Mendocinas 1374, Ciudad"
+            },
+            "carreras": [
+                {
+                    "id": 900,
+                    "nombre_carrera": "Licenciatura en Comercialización",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial / A distancia",
+                    "facultad": "IUCE",
+                    "link_oficial": "https://i-uce.edu.ar/careers/uce-marketing",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Comercialización",
+                                "Administración",
+                                "Gestión de Personas",
+                                "Teoría de la Comunicación",
+                                "Branding y Marketing Personal",
+                                "Negocios Digitales",
+                                "Psicología",
+                                "Métodos Cuantitativos",
+                                "Fundamentos de Economía y Finanzas",
+                                "Contextos Socioculturales",
+                                "Bienestar Personal y Organizacional",
+                                "Oratoria",
+                                "Escritura"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Comercio Electrónico",
+                                "Contabilidad",
+                                "Diseño de Marcas",
+                                "Publicidad",
+                                "Marco Legal de las Organizaciones",
+                                "Comportamiento del Consumidor",
+                                "Estadística",
+                                "Comunicación y Cultura Organizacional",
+                                "Humanidades y Apreciación del Arte",
+                                "Innovación y Creatividad"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Análisis de los Medios",
+                                "Campañas de Comunicación Integrada",
+                                "Logística",
+                                "Análisis de Costos y Presupuesto",
+                                "Política de Producto",
+                                "Política de Precio",
+                                "Formulación y Evaluación de Proyectos",
+                                "Gestión de la Calidad",
+                                "Emprendimiento",
+                                "Gestión y Liderazgo de Equipos",
+                                "Ética, Responsabilidad Social y Sustentabilidad",
+                                "Negociaciones"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Metodología de la Investigación",
+                                "Sistemas de Información Gerencial",
+                                "Planificación y Organización Integral de Eventos",
+                                "Investigación de Mercados",
+                                "Dirección Estratégica y Competitividad Sustentable",
+                                "Comercialización Internacional",
+                                "Trabajo Final de Investigación",
+                                "Normas de Seguridad e Higiene",
+                                "Neurociencias e Inteligencia Emocional",
+                                "Dirección de Ventas",
+                                "Marketing Digital"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://i-uce.edu.ar/careers/uce-marketing"
+                },
+                {
+                    "id": 901,
+                    "nombre_carrera": "Licenciatura en Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial / A distancia",
+                    "facultad": "IUCE",
+                    "link_oficial": "https://i-uce.edu.ar/careers/uce-recursos-humanos",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración",
+                                "Comercialización",
+                                "Gestión de Personas",
+                                "Teoría de la Comunicación",
+                                "Psicología",
+                                "Negocios Digitales",
+                                "Fundamentos de Economía y Finanzas",
+                                "Métodos Cuantitativos",
+                                "Derecho Civil y Comercial",
+                                "Contexto Sociocultural",
+                                "Bienestar Personal y Organizacional",
+                                "Oratoria",
+                                "Escritura"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Contabilidad",
+                                "Derecho Laboral",
+                                "Selección de Personal",
+                                "Diseño y Evaluación de Puestos",
+                                "Sistemas de Retribución y Compensaciones",
+                                "Analítica de Recursos Humanos",
+                                "Comunicación y Cultura Organizacional",
+                                "Estadística",
+                                "Humanidades y Apreciación del Arte",
+                                "Innovación y Creatividad"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión por Competencias",
+                                "Relaciones Laborales",
+                                "Análisis de Costos y Presupuesto",
+                                "Diseño y Organización de Procesos",
+                                "Coaching Organizacional",
+                                "Capacitación y Desarrollo de Talentos",
+                                "Gestión de la Calidad",
+                                "Formulación y Evaluación de Proyectos",
+                                "Emprendimiento",
+                                "Gestiónde Liderazgo y Equipos",
+                                "Ética, Responsabilidad Social y Sustentabilidad",
+                                "Negociaciones"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Sistemas de Información Gerencial",
+                                "Metodología de la Investigación",
+                                "Gestión de Empresas Familiares y PyMEs",
+                                "Innovación y Desarrollo Organizacional",
+                                "Dirección Estratégica y Competitividad Sustentable",
+                                "Mediación y Arbitraje",
+                                "Consultoría profesional",
+                                "Trabajo Final de Investigación",
+                                "Normas de Seguridad e Higiene",
+                                "Neurociencias e Inteligencia Emocional"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://i-uce.edu.ar/careers/uce-recursos-humanos"
+                },
+                {
+                    "id": 902,
+                    "nombre_carrera": "Licenciatura en Comercio Exterior y Aduanas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial / A distancia",
+                    "facultad": "IUCE",
+                    "link_oficial": "https://i-uce.edu.ar/careers/uce-comercio-exterior-y-aduanas",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración",
+                                "Comercio Internacional",
+                                "Métodos Cuantitativos",
+                                "Gestión de Personas",
+                                "Negocios Digitales",
+                                "Derecho Civil y Comercial",
+                                "Fundamentos de Economía y Finanzas",
+                                "Comercialización",
+                                "Contextos Socioculturales",
+                                "Bienestar Personal y Organizacional",
+                                "Oratoria",
+                                "Escritura"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Cálculo Financiero",
+                                "Aduana y Régimen Aduanero I",
+                                "Comercialización Internacional",
+                                "Aduana y Régimen Aduanero II",
+                                "Geografía Económica",
+                                "Clasificación y Valoración Aduanera",
+                                "Contabilidad",
+                                "Comunicación y Cultura Organizacional",
+                                "Estadística",
+                                "Humanidades y Apreciación del Arte",
+                                "Innovación y Creatividad"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Derecho Tributario",
+                                "Logística Internacional",
+                                "Costos y Precios de Importación-Exportación",
+                                "Derecho Penal Aduanero",
+                                "Formulación y Evaluación de Proyectos",
+                                "Régimen Bancario y Medios de Pago",
+                                "Gestión de la Calidad",
+                                "Práctica Aduanera",
+                                "Emprendimiento",
+                                "Gestión y Liderazgo de Equipos",
+                                "Ética, Responsabilidad Social y Sustentabilidad",
+                                "Negociaciones"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Sistemas de Información Gerencial",
+                                "Derecho Internacional",
+                                "Metodología de la Investigación",
+                                "Investigación de Mercados",
+                                "E-logistics",
+                                "Dirección Estratégica y Competitividad Sustentable",
+                                "Economía Internacional",
+                                "Trabajo Final de Investigación",
+                                "Normas de Seguridad e Higiene",
+                                "Neurociencias e Inteligencia Emocional"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://i-uce.edu.ar/careers/uce-comercio-exterior-y-aduanas"
+                },
+                {
+                    "id": 903,
+                    "nombre_carrera": "Licenciatura en Administración de Empresas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial / A distancia",
+                    "facultad": "IUCE",
+                    "link_oficial": "https://i-uce.edu.ar/careers/administracion-de-empresas",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Comercialización",
+                                "Administración",
+                                "Gestión de Personas",
+                                "Psicología",
+                                "Negocios Digitales",
+                                "Métodos Cuantitativos",
+                                "Economía I",
+                                "Derecho Civil y Comercial",
+                                "Contextos Socioculturales",
+                                "Bienestar Personal y Organizacional",
+                                "Oratoria",
+                                "Escritura"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Contabilidad",
+                                "Derecho Laboral",
+                                "Contabilidad de Costos",
+                                "Economía II",
+                                "Sistemas de Retribución y Compensaciones",
+                                "Cálculo Financiero",
+                                "Estadística",
+                                "Comunicación y Cultura Organizacional",
+                                "Humanidades y Apreciación del Arte",
+                                "Innovación y Creatividad"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión por Competencias",
+                                "Análisis de Estados Contables",
+                                "Impuestos",
+                                "Diseño y Organización de Procesos",
+                                "Administración Financiera y Fintech",
+                                "Formulación y Evaluación de Proyectos",
+                                "Administración de la Producción",
+                                "Gestión de la Calidad",
+                                "Emprendimiento",
+                                "Gestión de Liderazgo y Equipos",
+                                "Ética, Responsabilidad Social y Sustentabilidad",
+                                "Negociaciones"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Metodología de la Investigación",
+                                "Sistemas de Información Gerencial",
+                                "Control de Gestión",
+                                "Gestión de Empresas Familiares y PyMEs",
+                                "Innovación y Desarrollo Organizacional",
+                                "Dirección Estratégica y Competitividad Sustentable",
+                                "Administración Gerencial",
+                                "Trabajo Final de Investigación",
+                                "Normas de Seguridad e Higiene",
+                                "Neurociencias e Inteligencia Emocional"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://i-uce.edu.ar/careers/administracion-de-empresas"
+                },
+                {
+                    "id": 904,
+                    "nombre_carrera": "Licenciatura en Relaciones Públicas e Institucionales",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial / A distancia",
+                    "facultad": "IUCE",
+                    "link_oficial": "https://i-uce.edu.ar/careers/uce-relaciones-publicas",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración",
+                                "Introducción a las RRPP e Institucionales",
+                                "Gestión de Personas",
+                                "Teoría de la Comunicación",
+                                "Psicología",
+                                "Negocios Digitales",
+                                "Branding y Marketing Personal",
+                                "Métodos Cuantitativos",
+                                "Comercialización",
+                                "Contextos Socioculturales",
+                                "Bienestar Personal y Organizacional",
+                                "Oratoria",
+                                "Escritura"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Ceremonial Público y Privado",
+                                "Marketing Digital",
+                                "Publicidad",
+                                "Comunicación visual",
+                                "Relaciones Públicas Empresariales",
+                                "Análisis de los Medios I",
+                                "Comunicación y Cultura Organizacional",
+                                "Fundamentos de Economía y Finanzas",
+                                "Humanidades y Apreciación del Arte",
+                                "Innovación y Creatividad"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Análisis de los medios II",
+                                "Relaciones Institucionales",
+                                "Análisis de Costos y Presupuesto",
+                                "Campañas de Comunicación Integrada",
+                                "Formulación y Evaluación de Proyectos",
+                                "Media, Coaching y Vocería",
+                                "Gestión de la Calidad",
+                                "Planificación de RRPP e Institucionales",
+                                "Emprendimiento",
+                                "Gestión de Liderazgo y equipos",
+                                "Ética, Responsabilidad Social y Sustentabilidad",
+                                "Negociaciones"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Sistemas de Información Gerencial",
+                                "Turismo, Ferias y Congresos",
+                                "Metodología de la Investigación",
+                                "Planificación y Organización Integral de Eventos",
+                                "Dirección Estratégica y Competitividad Sustentable",
+                                "Cultura y Eventos Vitivinícolas",
+                                "Ceremonial Internacional",
+                                "Trabajo final de investigación",
+                                "Normas de Seguridad e Higiene",
+                                "Neurociencias e inteligencia emocional"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://i-uce.edu.ar/careers/uce-relaciones-publicas"
+                },
+                {
+                    "id": 905,
+                    "nombre_carrera": "Licenciatura en Logística y Transporte",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial / A distancia",
+                    "facultad": "IUCE",
+                    "link_oficial": "https://i-uce.edu.ar/careers/uce-logistica-y-transporte",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción a la Logística",
+                                "Administración",
+                                "Comercio Internacional",
+                                "Métodos Cuantitativos",
+                                "Negocios Digitales",
+                                "Gestión de Personas",
+                                "Derecho Civil y Comercial",
+                                "Fundamentos de Economía y Finanzas",
+                                "Comercialización",
+                                "Contextos Socioculturales",
+                                "Bienestar Personal y Organizacional",
+                                "Oratoria",
+                                "Escritura"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Transporte Terrestre y en FFRR",
+                                "Psicología",
+                                "E-Logistics",
+                                "Planeamiento de Compras y Aprovisionamiento",
+                                "Geografía Económica",
+                                "Gestión de Inventarios y de Stock",
+                                "Legislación y Práctica Aduanera",
+                                "Transporte Marítimo y Fluvial",
+                                "Comunicación y Cultura Organizacional",
+                                "Estadística",
+                                "Humanidades y Apreciación del Arte",
+                                "Innovación y Creatividad"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Envases, Embalajes, Paletización y Logística Inversa",
+                                "Sistema de Gestión Almacenes",
+                                "Logística y Canales de Distribución",
+                                "Formulación y Evaluación de Proyectos",
+                                "Control Financiero del Proceso Logístico",
+                                "Gestión de la Calidad",
+                                "Transporte Aéreo y Multimodal",
+                                "Emprendimiento",
+                                "Gestión de Liderazgo y Equipos",
+                                "Ética, Responsabilidad Social y Sustentabilidad",
+                                "Negociaciones"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Sistemas de Información Gerencial",
+                                "Metodología de la Investigación",
+                                "Derecho Internacional",
+                                "Dirección Estratégica y Competitividad Sustentable",
+                                "Economía Internacional",
+                                "Trabajo Final de Investigación",
+                                "Normas de Seguridad e Higiene",
+                                "Neurociencias e Inteligencia Emocional"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://i-uce.edu.ar/careers/uce-logistica-y-transporte"
+                }
+            ]
+        }
+    ]
 }

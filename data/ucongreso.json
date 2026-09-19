@@ -1,253 +1,2750 @@
 {
- "instituciones": [
-  {
-   "id": 500,
-   "nombre": "Universidad de Congreso (UC)",
-   "nivel": "universidad",
-   "gestion": "privada",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "4230630",
-    "email": "informes@ucongreso.edu.ar",
-    "direccion": "Colón 90, Ciudad"
-   },
-   "carreras": [
-    {
-     "id": 500,
-     "nombre_carrera": "Comercio Exterior",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Estudios Internacionales",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/comercio-exterior/"
-    },
-    {
-     "id": 501,
-     "nombre_carrera": "Marketing Internacional",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Estudios Internacionales",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/comercializacion-con-orientacion-internacionales/"
-    },
-    {
-     "id": 502,
-     "nombre_carrera": "Relaciones Económicas Internacionales",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Estudios Internacionales",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/"
-    },
-    {
-     "id": 536,
-     "nombre_carrera": "Relaciones Internacionales y Gobernanza Global",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Estudios Internacionales",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/"
-    },
-    {
-     "id": 504,
-     "nombre_carrera": "Comunicación",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Humanidades",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/comunicacion/"
-    },
-    {
-     "id": 505,
-     "nombre_carrera": "Locución",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Humanidades",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/locucion/"
-    },
-    {
-     "id": 506,
-     "nombre_carrera": "Periodismo",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Humanidades",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/periodismo/"
-    },
-    {
-     "id": 507,
-     "nombre_carrera": "Profesorado Universitario para Profesionales",
-     "categoria": "Grado / Carrera",
-     "duracion": "Cuatro semestres",
-     "modalidad": "Presencial",
-     "facultad": "UC - Humanidades",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/profesorado-universitario-para-profesionales/"
-    },
-    {
-     "id": 509,
-     "nombre_carrera": "Tecnicatura Universitaria en Dirección y Producción Audiovisual",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Humanidades",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/direccion-y-produccion-audiovisual/"
-    },
-    {
-     "id": 510,
-     "nombre_carrera": "Arquitectura",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ambiente, Arquitectura y Urbanismo",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/arquitectura/"
-    },
-    {
-     "id": 511,
-     "nombre_carrera": "Gestión Ambiental",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ambiente, Arquitectura y Urbanismo",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/gestion-ambiental/"
-    },
-    {
-     "id": 512,
-     "nombre_carrera": "Gestión de Recursos Hídricos",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ambiente, Arquitectura y Urbanismo",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/gestion-de-recursos-hidricos/"
-    },
-    {
-     "id": 516,
-     "nombre_carrera": "Licenciatura en Instrumentación Quirúrgica",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ciencias de la Salud",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/instrumentacion-quirurgica/"
-    },
-    {
-     "id": 517,
-     "nombre_carrera": "Licenciatura en Producción de Bioimágenes (Radiología)",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ciencias de la Salud",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/radiologia/"
-    },
-    {
-     "id": 519,
-     "nombre_carrera": "Psicología",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ciencias de la Salud",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/psicologia/"
-    },
-    {
-     "id": 520,
-     "nombre_carrera": "Tecnicatura en Acompañante Terapéutico",
-     "categoria": "Grado / Carrera",
-     "duracion": "3 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ciencias de la Salud",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/acompanante-terapeutico/"
-    },
-    {
-     "id": 523,
-     "nombre_carrera": "Administración",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ciencias Económicas y de la Administración",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/administracion/"
-    },
-    {
-     "id": 527,
-     "nombre_carrera": "Comercialización",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ciencias Económicas y de la Administración",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/comercializacion/"
-    },
-    {
-     "id": 528,
-     "nombre_carrera": "Contador Público",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 años y 6 meses",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ciencias Económicas y de la Administración",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/contador-publico/"
-    },
-    {
-     "id": 529,
-     "nombre_carrera": "Economía",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ciencias Económicas y de la Administración",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/economia/"
-    },
-    {
-     "id": 530,
-     "nombre_carrera": "Hotelería",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ciencias Económicas y de la Administración",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/hoteleria/"
-    },
-    {
-     "id": 533,
-     "nombre_carrera": "Recursos Humanos",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ciencias Económicas y de la Administración",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/recursos-humanos/"
-    },
-    {
-     "id": 534,
-     "nombre_carrera": "Turismo",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ciencias Económicas y de la Administración",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/turismo/"
-    },
-    {
-     "id": 535,
-     "nombre_carrera": "Abogacía",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "Presencial",
-     "facultad": "UC - Ciencias Jurídicas",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/abogacia/"
-    },
-    {
-     "id": 537,
-     "nombre_carrera": "Administración de Negocios Digitales",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "A Distancia",
-     "facultad": "UC - Ciencias Económicas y de la Administración",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/administracion-de-negocios-digitales/"
-    },
-    {
-     "id": 538,
-     "nombre_carrera": "Ciencias del Comportamiento",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 Años",
-     "modalidad": "A Distancia",
-     "facultad": "UC - Ciencias Económicas y de la Administración",
-     "link_oficial": "https://www.ucongreso.edu.ar/carrera/ciencias-del-comportamiento/"
-    }
-   ],
-   "departamento": "Capital"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 5,
+            "nombre": "Universidad de Congreso (UC)",
+            "nivel": "universidad",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "4230630",
+                "email": "informes@ucongreso.edu.ar",
+                "direccion": "Colón 90, Ciudad"
+            },
+            "carreras": [
+                {
+                    "id": 500,
+                    "nombre_carrera": "Comercio Exterior",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 Años",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Estudios Internacionales",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/comercio-exterior/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración",
+                                "Comercio Internacional I",
+                                "Matemática I",
+                                "Economía I",
+                                "Inglés I",
+                                "Contabilidad",
+                                "Matemática II",
+                                "Comercio Internacional II",
+                                "Comercialización",
+                                "Economía II",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "2º Año",
+                            "materias": [
+                                "Estadística I",
+                                "Derecho I",
+                                "Historia Mundial Contemporánea",
+                                "Inglés III",
+                                "Costos",
+                                "Derecho II",
+                                "Comercialización Internacional",
+                                "Inglés IV",
+                                "Legislación Aduanera",
+                                "Economía Internacional",
+                                "Medios de Pago de Comercio Internacional",
+                                "Estadística II",
+                                "Economía III"
+                            ]
+                        },
+                        {
+                            "anio": "3º Año",
+                            "materias": [
+                                "Geografía Económica",
+                                "Transportes y Seguros Internacionales",
+                                "Envases y Embalajes",
+                                "Portugués",
+                                "Inglés V",
+                                "Derecho Internacional Público",
+                                "Clasificación Arancelaria y Valoración",
+                                "Inglés VI",
+                                "Portugués II",
+                                "Investigación de Mercados"
+                            ]
+                        },
+                        {
+                            "anio": "4º Año",
+                            "materias": [
+                                "Dirección y Alianzas Estratégicas",
+                                "Formulación y Evaluación de Proyectos",
+                                "Integración y Cooperación Económica",
+                                "Régimen Bancario y Financiero Internacional",
+                                "Negociaciones",
+                                "Derecho Internacional Económico",
+                                "Operatoria del Comercio Exterior",
+                                "Régimen Penal y Prácticas Desleales del Comercio Internacional",
+                                "Trabajo Final"
+                            ]
+                        },
+                        {
+                            "anio": "Extracurriculares",
+                            "materias": [
+                                "Chino I",
+                                "Chino II",
+                                "Chino III",
+                                "Chino IV",
+                                "Chino V",
+                                "Chino VI",
+                                "Chino VII",
+                                "Chino VIII",
+                                "Portugués III"
+                            ]
+                        },
+                        {
+                            "anio": "Electivas",
+                            "materias": [
+                                "Sociología",
+                                "Economía III",
+                                "Procesos y Sistemas de Información",
+                                "Teoría de las Decisiones",
+                                "Matemática Financiera",
+                                "Portugués II",
+                                "Formulación de Proyectos"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/comercio-exterior/"
+                },
+                {
+                    "id": 501,
+                    "nombre_carrera": "Marketing Internacional",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 Años",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Estudios Internacionales",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/comercializacion-con-orientacion-internacionales/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º Año",
+                            "materias": [
+                                "Administración",
+                                "Comercio Internacional",
+                                "Marketing I",
+                                "Economía I",
+                                "Inglés I",
+                                "Sociología",
+                                "Economía II",
+                                "Métodos Cuantitativos",
+                                "Marketing II",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "2º Año",
+                            "materias": [
+                                "Matemática Financiera",
+                                "Métrica y Analítica de Resultados",
+                                "Economía III",
+                                "Inglés III",
+                                "Marketing Internacional",
+                                "Derecho Comercial",
+                                "Comportamiento del consumidor",
+                                "Tecnología y nuevos paradigmas",
+                                "Economía Internacional",
+                                "Introducción a los lenguajes de programación",
+                                "Inglés IV"
+                            ]
+                        },
+                        {
+                            "anio": "3º Año",
+                            "materias": [
+                                "Investigación Académica",
+                                "Comunicación Publicitaria",
+                                "Política de Productos",
+                                "Marketing On-line",
+                                "Portugués I",
+                                "Investigación de Mercados",
+                                "Inglés V",
+                                "Política de Precios",
+                                "Canales de Distribución",
+                                "Dirección de Ventas",
+                                "Portugués II",
+                                "Inglés VI"
+                            ]
+                        },
+                        {
+                            "anio": "4º Año",
+                            "materias": [
+                                "Dirección y Alianzas Estratégicas",
+                                "Formulación y Evaluación de Proyectos",
+                                "Integración y Cooperación Económica",
+                                "Medios de Pago",
+                                "Negociaciones",
+                                "E-Business",
+                                "Derecho Internacional Privado",
+                                "Costos de Importación y Exportación",
+                                "Oratoria",
+                                "Negocios Internacionales y Estructuras Regionales",
+                                "Trabajo Final"
+                            ]
+                        },
+                        {
+                            "anio": "Extracurriculares",
+                            "materias": [
+                                "Chino I",
+                                "Chino II",
+                                "Chino III",
+                                "Chino IV",
+                                "Chino V",
+                                "Chino VI",
+                                "Chino VII",
+                                "Chino VIII",
+                                "Comercialización II",
+                                "Portugués I",
+                                "Portugués II",
+                                "Portugués III",
+                                "Matemática Financiera",
+                                "Comercialización Internacional",
+                                "Formulación de Proyectos II"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/comercializacion-con-orientacion-internacionales/"
+                },
+                {
+                    "id": 502,
+                    "nombre_carrera": "Relaciones Internacionales",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 Años",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Estudios Internacionales",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º AÑO",
+                            "materias": [
+                                "Historia de las Relaciones Internacionales",
+                                "Economía I",
+                                "Historia de las Ideas Políticas (Anual)",
+                                "Geografía Económica y Política",
+                                "Introducción a las Ciencias Sociales",
+                                "Inglés I",
+                                "Economía II",
+                                "Ceremonial y Protocolo",
+                                "Geopolítica",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "2º AÑO",
+                            "materias": [
+                                "Economía III",
+                                "Teoría de las Relaciones Internacionales",
+                                "Historia Política Argentina y Latinoamericana (Anual)",
+                                "Derecho I (Constitucional)",
+                                "Electiva",
+                                "Inglés III",
+                                "Teoría Política",
+                                "Historia de las Culturas Orientales",
+                                "Inglés IV",
+                                "Organizaciones Internacionales"
+                            ]
+                        },
+                        {
+                            "anio": "3º AÑO",
+                            "materias": [
+                                "Política Internacional Contemporánea (Anual)",
+                                "Formulación y Evaluación de Proyectos (Anual)",
+                                "Introducción al Comercio Internacional",
+                                "Derecho Internacional Público",
+                                "Trato Diplomático y Orientación Consular",
+                                "Inglés V",
+                                "Sistemas Políticos Comparados",
+                                "Derecho Internacional Privado",
+                                "Negociaciones",
+                                "Inglés VI"
+                            ]
+                        },
+                        {
+                            "anio": "4º AÑO - REI",
+                            "materias": [
+                                "Portugués I",
+                                "Integración Económica",
+                                "Comercialización Internacional (Marketing Internacional)",
+                                "Economía Internacional",
+                                "Electiva",
+                                "Portugués II",
+                                "Trabajo Final",
+                                "Internacionalización de Empresas",
+                                "Régimen Financiero Comercial Internacional"
+                            ]
+                        },
+                        {
+                            "anio": "4º AÑO - Gob. Global",
+                            "materias": [
+                                "Política Exterior Argentina (Anual)",
+                                "Portugués I",
+                                "Investigación Académica",
+                                "Cooperación Internacional Para El Desarrollo",
+                                "Relaciones Institucionales",
+                                "Políticas Gubernamentales para América Latina",
+                                "Portugués II",
+                                "El Sistema Interamericano",
+                                "Psicología Política y Liderazgo",
+                                "Trabajo Final"
+                            ]
+                        },
+                        {
+                            "anio": "Electivas",
+                            "materias": [
+                                "PRIMER SEMESTRE",
+                                "Matemática Financiera (1S)",
+                                "Filosofía (1S)",
+                                "Marketing 1 (1S)",
+                                "Investigación Académica (1S)",
+                                "E-Business (1S)",
+                                "Relaciones Institucionales (1S)",
+                                "Gerenciamiento Ambiental (1S)",
+                                "SEGUNDO SEMESTRE",
+                                "Oratoria (2S)",
+                                "Administración Gubernamental y ONG (2S)",
+                                "Economía Ambiental (2S)",
+                                "Dirección Estratégica (2S)",
+                                "Psicología Política y Liderazgo (2S)",
+                                "Periodismo Especializado (2S)"
+                            ]
+                        },
+                        {
+                            "anio": "Extracurriculares",
+                            "materias": [
+                                "Chino I",
+                                "Chino II",
+                                "Chino III",
+                                "Chino IV",
+                                "Chino V",
+                                "Chino VI",
+                                "Chino VII",
+                                "Chino VIII"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/relaciones-internacionales/"
+                },
+                {
+                    "id": 503,
+                    "nombre_carrera": "Ciencias de la Educación",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Consultar en Plan de Estudios. Nuevos Postulantes de la Sede",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Humanidades",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/ciencias-de-la-educacion/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º AÑO",
+                            "materias": [
+                                "Historia de la Educación",
+                                "Pedagogía",
+                                "Epistemología de las Ciencias Sociales",
+                                "Problemática Educativa Contemporánea",
+                                "Administración",
+                                "Didáctica I",
+                                "Sociología de la Educación",
+                                "Estudios Culturales y Educación",
+                                "Computación Aplicada",
+                                "Psicología General"
+                            ]
+                        },
+                        {
+                            "anio": "2º AÑO",
+                            "materias": [
+                                "Pedagogía II",
+                                "Psicología Evolutiva",
+                                "Procesos Comunicacionales",
+                                "Análisis de Instituciones",
+                                "Coloquio I",
+                                "Psicología del Aprendizaje",
+                                "Educación y Trabajo",
+                                "Psico - Sociología de los Grupos",
+                                "Política Educativa y Educación Comparada",
+                                "Coloquio II"
+                            ]
+                        },
+                        {
+                            "anio": "3º AÑO",
+                            "materias": [
+                                "Didáctica II",
+                                "Investigación Educacional I",
+                                "Planeamiento Estratégico",
+                                "Electiva",
+                                "Coloquio III",
+                                "Economía",
+                                "Investigación Educacional II",
+                                "Electiva 2",
+                                "Pasantía I",
+                                "Coloquio IV"
+                            ]
+                        },
+                        {
+                            "anio": "4º AÑO - Instituciones",
+                            "materias": [
+                                "Historia del Pensamiento Organizacional",
+                                "Modelizaciones Actuales de las Organizaciones",
+                                "Legislación Educativa Comparada",
+                                "Tecnología de Gestión",
+                                "Administración y Gestión de Sistemas e Instituciones Educativas",
+                                "Ética de las Organizaciones",
+                                "Negociaciones y Resolución de Conflictos",
+                                "Análisis de Casos",
+                                "Pasantía II",
+                                "Inglés I",
+                                "Trabajo Final"
+                            ]
+                        },
+                        {
+                            "anio": "4º AÑO - Tecnología",
+                            "materias": [
+                                "Introducción a la Tecnología Educativa",
+                                "Tecnología y Capacitación",
+                                "Educación a Distancia",
+                                "Diseño y Producción I",
+                                "Diseño y Evolución de Proyectos",
+                                "Diseño y Producción II",
+                                "Diseño y Producción III",
+                                "Diseño y Producción IV",
+                                "Pasantía II -",
+                                "Inglés 1",
+                                "Trabajo Final -"
+                            ]
+                        },
+                        {
+                            "anio": "4º AÑO - RRHH",
+                            "materias": [
+                                "Modelizaciones Actuales de las Organizaciones -",
+                                "Tecnología y Capacitación",
+                                "Los Recursos Humanos en las Organizaciones",
+                                "Problemas de Trabajo y Empleo",
+                                "Arquitectura de la Capacitación",
+                                "Enfoques de Evaluación por Desempeño",
+                                "Ética de las Organizaciones -",
+                                "Negociaciones y Resolución de Conflictos -",
+                                "Diseño y Producción",
+                                "Pasantía II -",
+                                "Inglés I -",
+                                "Trabajo Final -"
+                            ]
+                        },
+                        {
+                            "anio": "5º AÑO - PROFESORADO",
+                            "materias": [
+                                "Didáctica del Nivel Superior",
+                                "Formación Docente Continua",
+                                "Educación en el Mundo Contemporáneo",
+                                "Sistema Educativo",
+                                "Observación y Práctica de la Enseñanza",
+                                "Residencia Docente"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/ciencias-de-la-educacion/"
+                },
+                {
+                    "id": 504,
+                    "nombre_carrera": "Comunicación",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Humanidades",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/comunicacion/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º Año",
+                            "materias": [
+                                "1º SEMESTRE",
+                                "Teoría de la Comunicación",
+                                "Taller de Escritura I",
+                                "Introducción a la Administración",
+                                "Filosofía",
+                                "Inglés I",
+                                "Introducción a la Comercialización",
+                                "2º SEMESTRE",
+                                "Semiología",
+                                "Taller de Escritura II",
+                                "Historia Mundial Contemporánea",
+                                "Tecnología y Nuevos Paradigmas",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "2º Año",
+                            "materias": [
+                                "1° SEMESTRE",
+                                "Economía",
+                                "Marketing On Line",
+                                "Inglés III",
+                                "Diseño y Comunicación Visual",
+                                "Comunicación Publicitaria",
+                                "Psicología de la Comunicación",
+                                "2° SEMESTRE",
+                                "Identidad Visual",
+                                "Sociología de la Comunicación",
+                                "Taller de Escritura III",
+                                "Inglés IV",
+                                "Historia Política y Social Argentina"
+                            ]
+                        },
+                        {
+                            "anio": "3º Año",
+                            "materias": [
+                                "1°SEMESTRE",
+                                "Comunicación Gráfica y Radial",
+                                "Gestión de Redes Sociales",
+                                "Derecho a la Información",
+                                "Comunicación Organizacional I",
+                                "Estética",
+                                "2° SEMESTRE",
+                                "Investigación de Mercados",
+                                "Comunicación Audiovisual",
+                                "Relaciones Públicas e Institucionales",
+                                "Comunicación Organizacional II",
+                                "Periodismo Especializado"
+                            ]
+                        },
+                        {
+                            "anio": "4º Año",
+                            "materias": [
+                                "1° SEMESTRE",
+                                "Planificación Estratégica de Campañas",
+                                "Periodismo Digital",
+                                "Introducción a Lenguajes de Programación",
+                                "Metodología de la Investigación",
+                                "Taller de Radio y TV",
+                                "Periodismo de Investigación",
+                                "2° SEMESTRE",
+                                "Métrica y Analítica de Resultados",
+                                "Seminario Negociaciones",
+                                "Seminario Estructura Internacional Contemporánea",
+                                "Gestión de Proyectos Comunicacionales",
+                                "Trabajo Final"
+                            ]
+                        },
+                        {
+                            "anio": "Electivas",
+                            "materias": [
+                                "1ER SEMESTRE",
+                                "Periodismo Deportivo",
+                                "Teoría de las Decisiones",
+                                "2DO SEMESTRE",
+                                "Oratoria",
+                                "Marketing Político"
+                            ]
+                        },
+                        {
+                            "anio": "Plan Anterior",
+                            "materias": [
+                                "Plan 1998"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/comunicacion/"
+                },
+                {
+                    "id": 505,
+                    "nombre_carrera": "Locución",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Humanidades",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/locucion/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º Año",
+                            "materias": [
+                                "1º SEMESTRE",
+                                "Teoría de la Comunicación",
+                                "Expresión Oral y Escrita",
+                                "Locución I",
+                                "Foniatría I",
+                                "Práctica Integral de Radio I",
+                                "Práctica Integral de TV I",
+                                "Introducción a la Administración",
+                                "Derecho a la Información",
+                                "2º SEMESTRE",
+                                "Práctica Integral de Radio II",
+                                "Práctica Integral de TV II",
+                                "Tecnologías y Nuevos Paradigmas",
+                                "Historia Mundial Contemporánea",
+                                "Redacción Periodística",
+                                "Pronunciación del Francés"
+                            ]
+                        },
+                        {
+                            "anio": "2º Año",
+                            "materias": [
+                                "1° SEMESTRE",
+                                "Tecnología de la Radio y la Televisión",
+                                "Pronunciación del Italiano",
+                                "Lenguaje y Estética de la Música",
+                                "Locución II",
+                                "Foniatría II",
+                                "Práctica Integral de Radio III",
+                                "Práctica Integral de TV III",
+                                "Gestión de Redes Sociales",
+                                "2° SEMESTRE",
+                                "Pronunciación del Alemán",
+                                "Historia Política y Social Argentina",
+                                "Interpretación",
+                                "Oratoria y Expresión Corporal"
+                            ]
+                        },
+                        {
+                            "anio": "3º Año",
+                            "materias": [
+                                "1°SEMESTRE",
+                                "Locución III",
+                                "Foniatría III",
+                                "Práctica Integral de Radio IV",
+                                "Práctica Integral de TV IV",
+                                "Inglés I",
+                                "Portugués",
+                                "Estética e Historia del Arte",
+                                "2° SEMESTRE",
+                                "Estructura Internacional Contemporánea",
+                                "Doblaje"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/locucion/"
+                },
+                {
+                    "id": 506,
+                    "nombre_carrera": "Periodismo",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Humanidades",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/periodismo/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º Año",
+                            "materias": [
+                                "1º SEMESTRE",
+                                "Compresión y Producción de Textos (Taller de Escritura I)",
+                                "Teoría de la Comunicación",
+                                "Filosofía",
+                                "Inglés I",
+                                "Comunicación Gráfica y Radial",
+                                "2º SEMESTRE",
+                                "Redacción Periodística (Taller de Escritura II)",
+                                "Tecnología y Nuevos Paradigmas",
+                                "Sociología de la Comunicación",
+                                "Historia Mundial Contemporánea",
+                                "Inglés II",
+                                "Comunicación Audiovisual"
+                            ]
+                        },
+                        {
+                            "anio": "2º Año",
+                            "materias": [
+                                "1° SEMESTRE",
+                                "Taller de Radio y TV I (Taller de Radio TV)",
+                                "Estética",
+                                "Producción Periodística",
+                                "Psicología de la Comunicación",
+                                "Derecho Informativo y Audiovisual",
+                                "Locución I",
+                                "2° SEMESTRE",
+                                "Taller de Radio y TV II",
+                                "Semiología",
+                                "Dirección y Administración de Medios",
+                                "Locución II",
+                                "Opinión Pública"
+                            ]
+                        },
+                        {
+                            "anio": "3º Año",
+                            "materias": [
+                                "1° SEMESTRE",
+                                "Comunicación Organizacional I",
+                                "Gestión de Redes Sociales",
+                                "Periodismo de Investigación",
+                                "Periodismo Digital",
+                                "Diseño y Comunicación Visual",
+                                "2° SEMESTRE",
+                                "Comunicación Organizacional II",
+                                "Periodismo Especializado",
+                                "Fotoperiodismo",
+                                "Estructura Internacional Contemporánea",
+                                "Historia Política y Social Argentina",
+                                "Gestión de Proyectos de Comunicación"
+                            ]
+                        },
+                        {
+                            "anio": "4º Año",
+                            "materias": [
+                                "1° SEMESTRE",
+                                "Seminario Metodología de la Investigación",
+                                "Introducción a Lenguajes de Programación",
+                                "Electiva 1",
+                                "Electiva 2",
+                                "2° SEMESTRE",
+                                "Métrica y Analítica de Resultados",
+                                "Oratoria y Expresión Corporal",
+                                "Identidad Visual",
+                                "Práctica Profesional",
+                                "Trabajo Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/periodismo/"
+                },
+                {
+                    "id": 507,
+                    "nombre_carrera": "Profesorado Universitario para Profesionales",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Cuatro semestres",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Humanidades",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/profesorado-universitario-para-profesionales/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er Año",
+                            "materias": [
+                                "Sistema Educativo",
+                                "Institución Educativa",
+                                "Sociología de la Educación",
+                                "Educación y TIC",
+                                "Psicología del Aprendizaje",
+                                "Sujeto Psíquico del Aprendizaje y su Cultura",
+                                "Mediación Pedagógica",
+                                "Didáctica del Sujeto del Aprendizaje"
+                            ]
+                        },
+                        {
+                            "anio": "2do Año",
+                            "materias": [
+                                "Metodología de la Investigación",
+                                "Currículum, Práctica Docente y Evaluación",
+                                "Política y Legislación Educativa",
+                                "Proyectos Áulicos e Institucionales",
+                                "Organización y Gestión Institucional",
+                                "Formación Docente Continua",
+                                "Práctica y Observación de la Enseñanza",
+                                "Residencia Docente"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/profesorado-universitario-para-profesionales/"
+                },
+                {
+                    "id": 508,
+                    "nombre_carrera": "Psicopedagogía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Humanidades",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/psicopedagogia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º Año",
+                            "materias": [
+                                "Bases Biológicas y Neurológicas del Comportamiento",
+                                "Antropología Filosófica",
+                                "Pedagogía",
+                                "Introducción a la Psicología",
+                                "Sociología",
+                                "Psicología genética",
+                                "Psicología cognitiva",
+                                "Introducción a las prácticas psicopedagógicas",
+                                "Neuropsicología"
+                            ]
+                        },
+                        {
+                            "anio": "2º Año",
+                            "materias": [
+                                "Seminario optativo I",
+                                "Didáctica",
+                                "Teoría e interpretación del proceso diagnóstico I",
+                                "Epistemología",
+                                "Trabajos de campo I",
+                                "Psicología evolutiva I",
+                                "Teoría e interpretación del proceso diagnóstico II",
+                                "Didáctica de la matemática",
+                                "Didáctica de la lengua",
+                                "Seminario optativo II"
+                            ]
+                        },
+                        {
+                            "anio": "3º Año",
+                            "materias": [
+                                "Psicología educacional",
+                                "Psicología evolutiva II",
+                                "Psicopatología",
+                                "Análisis de casos I (Lenguaje)",
+                                "Neurociencias aplicadas al aprendizaje",
+                                "Análisis de casos II (Lectoescritura)",
+                                "Orientación vocacional y ocupacional",
+                                "Trabajos de campo II"
+                            ]
+                        },
+                        {
+                            "anio": "4º Año",
+                            "materias": [
+                                "Psicología social",
+                                "Metodología y técnicas de la investigación I",
+                                "Análisis de casos III (Número)",
+                                "Prácticas profesionales I (Clínica)",
+                                "Psicopedagogía de la diversidad e integración escolar",
+                                "Psicopedagogía institucional",
+                                "Psicopedagogía familiar",
+                                "Prácticas profesionales II (Educación)"
+                            ]
+                        },
+                        {
+                            "anio": "5º Año",
+                            "materias": [
+                                "Metodología y técnicas de la investigación II",
+                                "Seminario de la orientación I",
+                                "Seminario de la orientación II",
+                                "Trabajos de campo III",
+                                "Seminario de trabajo final",
+                                "Seminario de la orientación III",
+                                "Seminario de la orientación IV",
+                                "Prácticas profesionales III",
+                                "Trabajo Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/psicopedagogia/"
+                },
+                {
+                    "id": 509,
+                    "nombre_carrera": "Tecnicatura Universitaria en Dirección y Producción Audiovisual",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Humanidades",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/direccion-y-produccion-audiovisual/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er Año",
+                            "materias": [
+                                "Proyecto Audiovisual I",
+                                "Estética y Lenguaje Audiovisual",
+                                "Generación Electrónica de Imágenes",
+                                "Semiótica",
+                                "Inglés",
+                                "Composición e Iluminación",
+                                "Producción Integral de Radio",
+                                "Producción Integral de Televisión",
+                                "Fotografía y Cámara",
+                                "Práctica Profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2do Año",
+                            "materias": [
+                                "Proyecto Audiovisual II",
+                                "Post Producción",
+                                "Derecho Audiovisual",
+                                "Taller Guion",
+                                "Taller Sonido",
+                                "Proyecto Producción Televisiva",
+                                "Realización Publicitaria Radial y Televisiva",
+                                "Práctica Profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3er Año",
+                            "materias": [
+                                "Proyecto Audiovisual III",
+                                "Laboratorio Edición Digital",
+                                "Dirección de Arte y Diseño Escenográfico",
+                                "Transmedia (Storytelling)",
+                                "Dirección de Doblaje I",
+                                "Dirección de Doblaje II",
+                                "Taller de Producción Radial",
+                                "Gestión de Contenido Audiovisual",
+                                "Práctica Profesional III",
+                                "Electiva I"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/direccion-y-produccion-audiovisual/"
+                },
+                {
+                    "id": 510,
+                    "nombre_carrera": "Arquitectura",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ambiente, Arquitectura y Urbanismo",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/arquitectura/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º AÑO",
+                            "materias": [
+                                "Arquitectura I",
+                                "Estructuras I",
+                                "Construcciones I",
+                                "Comunicación y Forma I",
+                                "Introducción a la Historia y a la Teoría de la Arquitectura y el Urbanismo",
+                                "Matemática",
+                                "Física Aplicada"
+                            ]
+                        },
+                        {
+                            "anio": "2º AÑO",
+                            "materias": [
+                                "Arquitectura II",
+                                "Estructuras II",
+                                "Construcciones II",
+                                "Comunicación y Forma II",
+                                "Historia de la Arquitectura y el Urbanismo I",
+                                "Informática I",
+                                "Teoría de la Arquitectura I"
+                            ]
+                        },
+                        {
+                            "anio": "3º AÑO",
+                            "materias": [
+                                "Arquitectura III",
+                                "Estructuras III",
+                                "Construcciones III",
+                                "Producción y Gestión I",
+                                "Historia de la Arquitectura y el Urbanismo II",
+                                "Informática II",
+                                "Teoría de la Arquitectura II",
+                                "Diseño de Interior y Paisaje"
+                            ]
+                        },
+                        {
+                            "anio": "4º AÑO",
+                            "materias": [
+                                "Arquitectura IV",
+                                "Estructuras IV",
+                                "Construcciones IV",
+                                "Producción y Gestión II",
+                                "Historia y Crítica de la Arquitectura y el Urbanismo",
+                                "Urbanismo",
+                                "Electiva"
+                            ]
+                        },
+                        {
+                            "anio": "5º AÑO",
+                            "materias": [
+                                "Arquitectura y Diseño Urbano",
+                                "Prácticas Profesionales Supervisadas (PSP)",
+                                "Trabajo Final"
+                            ]
+                        },
+                        {
+                            "anio": "Electivas",
+                            "materias": [
+                                "Hábitat Digno (1er semestre)",
+                                "Desarrollo de Emprendimientos (1er semestre)",
+                                "Gestión de Espacios Verdes y Arbolado Publico (1er semestre)",
+                                "Ordenamiento Ambiental (2do semestre)",
+                                "Arquitectura Sustentable (2do semestre)",
+                                "Patrimonio (2do semestre)",
+                                "Paisaje Cultural (2do semestre)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/arquitectura/"
+                },
+                {
+                    "id": 511,
+                    "nombre_carrera": "Gestión Ambiental",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ambiente, Arquitectura y Urbanismo",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/gestion-ambiental/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º AÑO",
+                            "materias": [
+                                "Introducción a la Ecología",
+                                "Epistemología de las Ciencias Ambientales",
+                                "Matemática Aplicada",
+                                "Sociología",
+                                "Ecología de las Poblaciones",
+                                "Economía",
+                                "Hidrología",
+                                "Ecología Antropológica",
+                                "Derecho y Legislación Ambiental I",
+                                "Gestión y Proyecto Ambiental I"
+                            ]
+                        },
+                        {
+                            "anio": "2º AÑO",
+                            "materias": [
+                                "Evaluación y Manejo de los Recursos Naturales",
+                                "Geografía Regional Argentina",
+                                "Gestión del Recurso Agua",
+                                "Derecho y Legislación Ambiental II",
+                                "Ecología de las Zonas Áridas",
+                                "Ecología Humana",
+                                "Gestión del Recurso Aire",
+                                "Sistemas de Información Ambiental",
+                                "Economía Ambiental",
+                                "Estadística General",
+                                "Gestión y Proyecto Ambiental II"
+                            ]
+                        },
+                        {
+                            "anio": "3º AÑO",
+                            "materias": [
+                                "Salud y Medio Ambiente I",
+                                "Formulación y Evaluación de Proyectos Ambientales",
+                                "Administración y Gestión de los Sistemas Ambientales Rurales",
+                                "Gestión del Recurso Suelo",
+                                "Administración y Gestión de los Sistemas Ambientales Urbanos",
+                                "Geología Ambiental I",
+                                "Residuos Sólidos y Peligrosos",
+                                "Evaluación del Impacto Ambiental",
+                                "Gestión y Proyecto Ambiental III"
+                            ]
+                        },
+                        {
+                            "anio": "4º AÑO",
+                            "materias": [
+                                "Salud y Medio Ambiente II",
+                                "Gestión de Espacios Verdes y Arbolado Urbano",
+                                "Gerenciamiento Ambiental",
+                                "Geología Ambiental II",
+                                "Evaluación del Impacto Ambiental II",
+                                "Políticas Ambientales",
+                                "Ordenamiento Ambiental",
+                                "Desarrollo Sustentable",
+                                "Proyecto Final",
+                                "Trabajo Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/gestion-ambiental/"
+                },
+                {
+                    "id": 512,
+                    "nombre_carrera": "Gestión de Recursos Hídricos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ambiente, Arquitectura y Urbanismo",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/gestion-de-recursos-hidricos/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º AÑO",
+                            "materias": [
+                                "Introducción a la Ecología",
+                                "Epistemología de las Ciencias Ambientales",
+                                "Matemática Aplicada",
+                                "Sociología Ambiental",
+                                "Biología General",
+                                "Fisicoquímica Ambiental",
+                                "Hidrología",
+                                "Ecología Antropológica",
+                                "Informática Aplicada",
+                                "Gestión y Proyecto Ambiental I",
+                                "Economía Ambiental"
+                            ]
+                        },
+                        {
+                            "anio": "2º AÑO",
+                            "materias": [
+                                "Evaluación y Manejo de los Recursos Naturales",
+                                "Geografía Regional Argentina",
+                                "Hidroquímica (Calidad del agua)",
+                                "Ecología de las Zonas Áridas",
+                                "Salud y Medio Ambiente I",
+                                "Inglés I",
+                                "Derecho y Legislación Hídrica",
+                                "Ecología Humana",
+                                "Estadística General",
+                                "Sistemas de Información Ambiental",
+                                "Geología Ambiental I",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3º AÑO",
+                            "materias": [
+                                "Formulación y Evaluación de Proyectos Ambientales",
+                                "Geología Ambiental II",
+                                "Administración y Gestión de Sistemas Ambientales",
+                                "Salud y Medio Ambiente II",
+                                "Gestión del Recurso Suelo",
+                                "Evaluación del Impacto Ambiental",
+                                "Residuos Sólidos y Peligrosos",
+                                "Práctica Profesionalizante I",
+                                "Explotación de Agua Subterránea",
+                                "Tratamiento de Datos Hidrogeoatmosféricos"
+                            ]
+                        },
+                        {
+                            "anio": "4º AÑO",
+                            "materias": [
+                                "Agua Potable y Saneamiento",
+                                "Metodología de Investigación",
+                                "Gestión Integrada de los Recursos Hídricos",
+                                "Obras Hidráulicas",
+                                "Problemas Ambientales de las Tierras Secas (Taller)",
+                                "Planeamiento de los Recursos Hídricos",
+                                "Administración del Agua",
+                                "Práctica Profesionalizante II",
+                                "Proyecto Final",
+                                "Tesis Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/gestion-de-recursos-hidricos/"
+                },
+                {
+                    "id": 513,
+                    "nombre_carrera": "Fonoaudiología y Clínica del Lenguaje",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias de la Salud",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/fonoaudiologia-y-clinica-del-lenguaje/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º AÑO",
+                            "materias": [
+                                "Anatomía y fisiología",
+                                "Física acústica",
+                                "Lingüística I",
+                                "Psicología general",
+                                "Filosofía del lenguaje I",
+                                "Psicoacústica",
+                                "Endocrinofoniatría",
+                                "Fonología y fonética I",
+                                "Taller de Iniciación musical"
+                            ]
+                        },
+                        {
+                            "anio": "2º AÑO",
+                            "materias": [
+                                "Audiología I",
+                                "Ortofonía I",
+                                "Filosofía del lenguaje II",
+                                "Taller de práctica musical y corporal",
+                                "Otología II",
+                                "Psicología evolutiva I",
+                                "Fonología y fonética II",
+                                "Semiología",
+                                "Taller de cuerpo y lenguaje"
+                            ]
+                        },
+                        {
+                            "anio": "3º AÑO",
+                            "materias": [
+                                "Audiología II",
+                                "Ortofonía II",
+                                "Fonoestomatología I",
+                                "Desarrollo del ser hablante",
+                                "Neuropatología y genética",
+                                "Taller de musicalidad",
+                                "Fonoestomatología II",
+                                "Socioetnolingüística",
+                                "Clínica del lenguaje I",
+                                "Laboratorio de la voz I"
+                            ]
+                        },
+                        {
+                            "anio": "4º AÑO",
+                            "materias": [
+                                "Audiología III",
+                                "Terapéutica vocal",
+                                "Psicología evolutiva II",
+                                "Análisis del discurso",
+                                "Afasiología",
+                                "Clínica del lenguaje II",
+                                "Neuropsicología y lenguaje",
+                                "Psicopatología",
+                                "Taller de juego y lenguaje",
+                                "Laboratorio de la voz II",
+                                "Idioma I"
+                            ]
+                        },
+                        {
+                            "anio": "5º AÑO",
+                            "materias": [
+                                "Idioma II",
+                                "Terapéutica audiológica",
+                                "Laberintología funcional",
+                                "Clínica del lenguaje III",
+                                "Seminario de capacitación área voz",
+                                "Seminario de capacitación área audición",
+                                "Seminario de capacitación área lenguaje",
+                                "Laboratorio de audición",
+                                "PPS audición",
+                                "PPS voz",
+                                "PPS lenguaje",
+                                "Metodología de la investigación",
+                                "Trabajo Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/fonoaudiologia-y-clinica-del-lenguaje/"
+                },
+                {
+                    "id": 514,
+                    "nombre_carrera": "Kinesiología",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias de la Salud",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/kinesiologia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Salud Pública",
+                                "Química",
+                                "Anatomía",
+                                "Biología",
+                                "Biofísica",
+                                "Morfofisiología Dinámica",
+                                "Introducción a la Kinesiología"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Atención al Paciente",
+                                "Anatomía Funcional y Biomecánica",
+                                "Semiopatología Kinésica Médica",
+                                "Kinesioterapia",
+                                "Fisioterapia",
+                                "Psicomotricidad",
+                                "Evaluación y Terapéutica Kinefisiátrica I",
+                                "Kinefilaxia",
+                                "Ética y Deontología Profesional"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Diagnóstico por Imágenes",
+                                "Patología Quirúrgica",
+                                "Clínica Kinefisiátrica",
+                                "Farmacología",
+                                "Evaluación y Terapéutica Kinefisiátrica II",
+                                "Inglés Técnico",
+                                "Práctica Profesional I",
+                                "Órtesis y Prótesis"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Kinefisiatría del Deporte",
+                                "Kinefisiatría Ocupacional y Laboral",
+                                "Metodología de la Investigación",
+                                "Gestión de la Salud",
+                                "Informática Aplicada",
+                                "Kinefisiatría Dermo-Estética",
+                                "Kinefisiatría Geriátrica",
+                                "Taller Trabajo Final de Grado",
+                                "Práctica Profesional II",
+                                "Trabajo Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/kinesiologia/"
+                },
+                {
+                    "id": 515,
+                    "nombre_carrera": "Laboratorio de Análisis Clínicos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias de la Salud",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/laboratorio-de-analisis-clinicos/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1° AÑO",
+                            "materias": [
+                                "Biología Celular y Molecular",
+                                "Química General y Orgánica",
+                                "Anatomía y Fisiología Humana",
+                                "Introducción al Laboratorio Clínico",
+                                "Bioseguridad y Gestión de Residuos Patológicos",
+                                "Química Clínica I",
+                                "Hematología I",
+                                "Microbiología General",
+                                "Técnicas de Extracción y Procesamiento de Muestras",
+                                "Parasitología"
+                            ]
+                        },
+                        {
+                            "anio": "2° AÑO",
+                            "materias": [
+                                "Inmunología Clínica",
+                                "Química Clínica II",
+                                "Hematología II y Banco de Sangre",
+                                "Bacterología Clínica",
+                                "Técnicas de Diagnóstico Molecular",
+                                "Legislación Sanitaria y Ética Profesional",
+                                "Control de Calidad en el Laboratorio",
+                                "Prácticas Profesionalizantes I",
+                                "Prácticas Profesionalizantes II",
+                                "Seminario Integrador Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/laboratorio-de-analisis-clinicos/"
+                },
+                {
+                    "id": 516,
+                    "nombre_carrera": "Licenciatura en Instrumentación Quirúrgica",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias de la Salud",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/instrumentacion-quirurgica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er Año",
+                            "materias": [
+                                "Salud Pública",
+                                "Fundamentos de Instrumentación Quirúrgica",
+                                "Comunicación",
+                                "Aspectos Psico-Socio-Culturales de Desarrollo",
+                                "Morfofisiología Dinámica",
+                                "Bases Físico-Químicas",
+                                "Ingles Técnico I",
+                                "Microbiología. Parasitología e Inmunología",
+                                "Atención del Paciente Quirúrgico",
+                                "Problemática Socio-cultural y Laboral",
+                                "Inglés Técnico II"
+                            ]
+                        },
+                        {
+                            "anio": "2do Año",
+                            "materias": [
+                                "Psicología Social e Institucional",
+                                "Procesos Tecnológicos",
+                                "Ética y Deontología Profesional",
+                                "Informática Aplicada",
+                                "Farmacología",
+                                "Procedimientos Quirúrgicos I",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "3er Año",
+                            "materias": [
+                                "Práctica Profesionalizante II",
+                                "Gestión de la Salud",
+                                "Procedimientos Quirúrgicos II",
+                                "Sistemas de Salud",
+                                "Epidemiología y Bioestadística",
+                                "Informática y Nuevas Tecnologías",
+                                "Inglés Técnico III",
+                                "Ética y Aspectos Legales de la Instrumentación Quirúrgica"
+                            ]
+                        },
+                        {
+                            "anio": "4to Año",
+                            "materias": [
+                                "Paciente Crítico y Crítico Quirúrgico",
+                                "Administración y Gestión en Áreas Quirúrgicas",
+                                "Dinámicas y Coordinación de Áreas Quirúrgicas",
+                                "Relaciones en el Ámbito Profesional",
+                                "Metodología de la Investigación",
+                                "Comunicación y Relaciones Interpersonales",
+                                "Capacitación Profesional Continua",
+                                "Trabajo Final Teoría",
+                                "Taller Trabajo Final Práctico"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/instrumentacion-quirurgica/"
+                },
+                {
+                    "id": 517,
+                    "nombre_carrera": "Licenciatura en Radiología",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias de la Salud",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/radiologia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1° AÑO",
+                            "materias": [
+                                "Salud Pública",
+                                "Fundamentos de Radiología",
+                                "Matemática",
+                                "Aspectos Psico-Socio-Culturales de Desarrollo",
+                                "Morfofisiología Dinámica",
+                                "Bases Físico-Químicas",
+                                "Informática I",
+                                "Microbiología. Parasitología e Inmunología",
+                                "Comunicación",
+                                "Problemática socio-cultural y laboral",
+                                "Práctica Pre-Profesional"
+                            ]
+                        },
+                        {
+                            "anio": "2° AÑO",
+                            "materias": [
+                                "Atención al Paciente",
+                                "Técnicas Radiológicas I",
+                                "Ingles Técnico I",
+                                "Informática II",
+                                "Técnicas Radiológicas II",
+                                "Ética y Deontología Profesional",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "3° AÑO",
+                            "materias": [
+                                "Técnicas Radiológicas III",
+                                "Gestión de la Salud",
+                                "Práctica Profesionalizante II",
+                                "Mamografía",
+                                "Inglés Específico",
+                                "Relaciones Anatomo-Radiológicas",
+                                "Educación para la Salud",
+                                "Hemodinamia y Angiografía"
+                            ]
+                        },
+                        {
+                            "anio": "4º AÑO",
+                            "materias": [
+                                "Tomografía Axial Computada",
+                                "Resonancia Nuclear Magnética",
+                                "Medicina Nuclear",
+                                "Radioterapia y Radio Protección",
+                                "Trabajo Final - Teoría",
+                                "Trabajo Final - Práctica"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/radiologia/"
+                },
+                {
+                    "id": 518,
+                    "nombre_carrera": "Preparación Física y Entrenamiento Deportivo",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias de la Salud",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/preparacion-fisica-y-entrenamiento-deportivo/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1° AÑO",
+                            "materias": [
+                                "Fundamentos de la Preparación Física",
+                                "Anatomía y Fisiología Aplicada al Deporte",
+                                "Psicología del Deporte y Motivación",
+                                "Nutrición Deportiva",
+                                "Metodología del Entrenamiento Deportivo",
+                                "Entrenamiento de la Fuerza y la Resistencia",
+                                "Entrenamiento de la Velocidad y la Coordinación",
+                                "Evaluación y Control del Entrenamiento",
+                                "Entrenamiento en Deportes de Conjunto",
+                                "Primeros Auxilios y Prevención de Lesiones"
+                            ]
+                        },
+                        {
+                            "anio": "2° AÑO",
+                            "materias": [
+                                "Entrenamiento en Deportes Individuales",
+                                "Entrenamiento Funcional y Readapción Física",
+                                "Biomecánica del Movimiento",
+                                "Técnicas de Recuperación y Descanso",
+                                "Gestión y Marketing Deportivo",
+                                "Planificación y Periodización del Entrenamiento",
+                                "Entrenamiento en Poblaciones Especiales",
+                                "Deporte y Sociedad",
+                                "Taller de Investigación y Estadística Aplicada",
+                                "Práctica Profesional Supervisada"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/preparacion-fisica-y-entrenamiento-deportivo/"
+                },
+                {
+                    "id": 519,
+                    "nombre_carrera": "Psicología",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias de la Salud",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/psicologia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º AÑO",
+                            "materias": [
+                                "Introducción a la Psicología I",
+                                "Perspectivas Antropológicas",
+                                "Procesos Biológicos Neuropsicológicos",
+                                "Epistemología. Fundamento del Pensamiento Científico",
+                                "Introducción a la Filosofía",
+                                "Sociología",
+                                "Psicología Evolutiva I",
+                                "Métodos Cuantitativos y Estadística",
+                                "Introducción a la Psicología II",
+                                "Historia de la Psicología"
+                            ]
+                        },
+                        {
+                            "anio": "2º AÑO",
+                            "materias": [
+                                "Psicología de la Personalidad",
+                                "Bases Teóricas del Psicoanálisis",
+                                "Psicología Evolutiva II",
+                                "Filosofía Contemporánea",
+                                "Metodología de la Investigación I",
+                                "Inglés I",
+                                "Bases Teóricas Cognitivo Conductual",
+                                "Psicología Social",
+                                "Bases Teóricas Existenciales y Humanísticas",
+                                "Bases Teóricas de la Perspectiva Sistémica",
+                                "Evaluación y Diagnóstico Psicológico I",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "3º AÑO",
+                            "materias": [
+                                "Bases Teóricas del Análisis Grupal e Institucional",
+                                "Psicopatología I",
+                                "Psiconeuropatología",
+                                "Evaluación y Diagnóstico Psicológico II",
+                                "Psicología Comunitaria",
+                                "Evaluación y Diagnóstico Psicológico III",
+                                "Psicología Organizacional y Laboral",
+                                "Psicología Clínica",
+                                "Psicopatología II",
+                                "Psicologia y Medio Ambiente"
+                            ]
+                        },
+                        {
+                            "anio": "4º AÑO",
+                            "materias": [
+                                "Psicoterapia Existencial y Humanista",
+                                "Psicoterapia Psicoanalítica",
+                                "Evaluación y Diagnóstico Psicológico IV",
+                                "Psicología Jurídico Forense",
+                                "Ética y Deontología Profesional",
+                                "Metodología de la Investigación II",
+                                "Psicoterapia Cognitiva – Conductual",
+                                "Psicoterapia Sistémica",
+                                "Psicología en Educación",
+                                "Psicodiagnóstico",
+                                "Profundización en Psicologia del Adulto Mayor",
+                                "Historia de la Cultura"
+                            ]
+                        },
+                        {
+                            "anio": "5º AÑO",
+                            "materias": [
+                                "Psicofarmacología",
+                                "PPS en Psicología Comunitaria",
+                                "PPS en Organización Laboral",
+                                "PPS en Clínica (ANUAL)",
+                                "Seminario de Proyecto de Trabajo Final",
+                                "PPS en Jurídico Forense",
+                                "PPS en Educacional",
+                                "Orientación Vocacional y Ocupacional",
+                                "Trabajo Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/psicologia/"
+                },
+                {
+                    "id": 520,
+                    "nombre_carrera": "Tecnicatura en Acompañante Terapéutico",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias de la Salud",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/acompanante-terapeutico/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º AÑO",
+                            "materias": [
+                                "Bases Biológicas del Comportamiento",
+                                "Estudios de los Procesos Psicológicos Básicos",
+                                "Dinámicas de Intervención en Sistemas Familiares y Grupales",
+                                "Fundamentos del Acompañamiento Terapéutico",
+                                "La Práctica del Acompañante Terapéutico I",
+                                "Fundamentos de Terapia Ocupacional",
+                                "Psicopatología",
+                                "Intervención en Crisis",
+                                "La Práctica del Acompañante Terapéutico II",
+                                "Ética del Servicio"
+                            ]
+                        },
+                        {
+                            "anio": "2º AÑO",
+                            "materias": [
+                                "Elementos de Psico-Farmacología",
+                                "Principios de Psicogeriatría",
+                                "Intervención en Crisis II",
+                                "Habilidades Sociales y de Comunicación",
+                                "La Práctica del Acompañante Terapéutico III",
+                                "Dinámica de Intervención I",
+                                "Dinámica de Intervención II",
+                                "Dinámica de Intervención III",
+                                "Dinámica de Intervención IV",
+                                "La Práctica del Acompañante Terapéutico IV"
+                            ]
+                        },
+                        {
+                            "anio": "3º AÑO",
+                            "materias": [
+                                "Prácticas Hospitalarias"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/acompanante-terapeutico/"
+                },
+                {
+                    "id": 521,
+                    "nombre_carrera": "Tecnicatura en Enfermería",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias de la Salud",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/enfermeria/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º AÑO",
+                            "materias": [
+                                "Salud Pública",
+                                "Fundamentos de Enfermería",
+                                "Comunicación",
+                                "Aspectos Psico-Socio-Culturales de Desarrollo",
+                                "Morfofisiología Dinámica",
+                                "Bases Físico-Químicas",
+                                "Ingles Técnico I",
+                                "Microbiología, Parasitología e Inmunología",
+                                "Enfermería Comunitaria",
+                                "Práctica Pre-Profesional"
+                            ]
+                        },
+                        {
+                            "anio": "2º AÑO",
+                            "materias": [
+                                "Problemática socio-cultural y laboral",
+                                "Enfermería del Adulto y Adulto Mayor",
+                                "Ética y Deontología Profesional",
+                                "Ingles Técnico II",
+                                "Enfermería Materno-Infantil Juvenil",
+                                "Educación para la Salud",
+                                "Psicología Social e Institucional",
+                                "Informática Aplicada",
+                                "Farmacología",
+                                "Nutrición y Dietoterapia",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "3º AÑO",
+                            "materias": [
+                                "Enfermería de la Salud Mental y Psiquiátrica",
+                                "Cuidados Críticos y Emergentología",
+                                "Gestión de Enfermería",
+                                "Práctica Profesionalizante II"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/enfermeria/"
+                },
+                {
+                    "id": 522,
+                    "nombre_carrera": "Trabajo Social",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias de la Salud",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/trabajo-social/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1° año",
+                            "materias": [
+                                "Trabajo Social I (Teoría y Práctica)",
+                                "Filosofía",
+                                "Psicología",
+                                "Promoción de la Salud",
+                                "Informática Aplicada I",
+                                "Idioma Inglés I",
+                                "Antropología",
+                                "Sociología I",
+                                "Mediación"
+                            ]
+                        },
+                        {
+                            "anio": "2° año",
+                            "materias": [
+                                "Trabajo Social II (Teoría y Práctica)",
+                                "Técnicas de Investigación Social I",
+                                "Psicología Evolutiva",
+                                "Derecho Civil",
+                                "Informática Aplicada II",
+                                "Idioma Inglés II",
+                                "Sociología II",
+                                "Seminario de Integración en Trabajo Social y Salud"
+                            ]
+                        },
+                        {
+                            "anio": "3° año",
+                            "materias": [
+                                "Trabajo Social III (Teoría y Práctica)",
+                                "Técnicas de Investigación Social II",
+                                "Planificación Social I",
+                                "Derecho Penal",
+                                "Psicología Social",
+                                "Análisis Organizacional",
+                                "Seminario de Integración en Problemáticas Sociales",
+                                "Informática Aplicada III",
+                                "Idioma Inglés III"
+                            ]
+                        },
+                        {
+                            "anio": "4° año",
+                            "materias": [
+                                "Trabajo Social IV (Teoría y Práctica)",
+                                "Política Social del Estado",
+                                "Planificación Social II",
+                                "Legislación Familiar",
+                                "Epistemología de las Ciencias Sociales",
+                                "Pedagogía",
+                                "Psicopatología",
+                                "Ética Profesional",
+                                "Seminario de Integración en Problemáticas Educativas",
+                                "Supervisión",
+                                "Tesina Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/trabajo-social/"
+                },
+                {
+                    "id": 523,
+                    "nombre_carrera": "Administración",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias Económicas y de la Administración",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/administracion/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º Año",
+                            "materias": [
+                                "Administración I (*)",
+                                "Comercialización",
+                                "Economía I",
+                                "Matemática I (*)",
+                                "Electiva I (Comercio Internacional) (*)",
+                                "Inglés I",
+                                "Sociología (*)",
+                                "Contabilidad I",
+                                "Análisis Matemático (*)",
+                                "Derecho I",
+                                "Economía II",
+                                "Inglés II",
+                                "(*) Régimen promocional: 12 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "2º Año",
+                            "materias": [
+                                "Estadística I (*)",
+                                "Inglés III",
+                                "Costos",
+                                "Derecho II",
+                                "Economía III",
+                                "Electiva II (Comportamiento Organizacional) (*)",
+                                "Electiva III (Derecho Público)",
+                                "Inglés IV",
+                                "Matemática Financiera",
+                                "Sistemas de Informática (*)",
+                                "Dirección Estratégica",
+                                "Lógica (*)",
+                                "(*) Régimen promocional: 12 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "3º Año",
+                            "materias": [
+                                "Estadística II (*)",
+                                "Administración II",
+                                "Electiva IV (Comportamiento del Consumidor)",
+                                "Inglés V",
+                                "Análisis Organizacional",
+                                "Finanzas (*)",
+                                "Electiva V (Política de Negocios)",
+                                "Inglés VI",
+                                "Electiva VI (Historia Económica)",
+                                "Electiva VII (Canales de Distribución)",
+                                "Electiva VIII (Dirección de Ventas)",
+                                "Administración Financiera",
+                                "(*) Régimen promocional: 12 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "4º Año",
+                            "materias": [
+                                "Metodología de la Investigación",
+                                "Formulación y Evaluación de Proyectos",
+                                "Análisis de Estados Contables",
+                                "Electiva IX (Ética Profesional)",
+                                "Negociaciones (*)",
+                                "Electiva X (Teoría de las Decisiones)",
+                                "Electiva XI (Comercialización Vitivinícola)",
+                                "Electiva XII (Entrepreneurship)",
+                                "Electiva XIII (Técnicas de Gestión)",
+                                "Electiva XIV (Comercialización II)",
+                                "Trabajo Final",
+                                "(*) Régimen promocional: 12 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "Electivas",
+                            "materias": [
+                                "Introducción al Comercio Internacional (*)",
+                                "Comportamiento Organizacional (*)",
+                                "Derecho Público",
+                                "Comportamiento del Consumidor",
+                                "Política de Negocios",
+                                "Historia Económica",
+                                "Canales de Distribución",
+                                "Dirección de Ventas",
+                                "Ética Profesional",
+                                "Administración de la Producción",
+                                "Teoría de las Decisiones",
+                                "Comercialización Vitivinícola",
+                                "Entrepreneurship",
+                                "Técnicas de Gestión",
+                                "Comercialización II",
+                                "Derecho del Trabajo y la Seguridad Social",
+                                "Gestión de Calidad",
+                                "(*) Régimen promocional: 12 espacios curriculares."
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/administracion/"
+                },
+                {
+                    "id": 524,
+                    "nombre_carrera": "Administración de Negocios Digitales",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias Económicas y de la Administración",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/administracion-de-negocios-digitales/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1° AÑO",
+                            "materias": [
+                                "Introducción a los Negocios Digitales",
+                                "Adminsitración Estratégica de Negocios Digitales",
+                                "Economía Digital y Comportamiento del Consumidor Online",
+                                "Comunicación Escrita en Plataformas Digitales",
+                                "Estadística Aplicada a los Negocios",
+                                "Pensamiento Crítico y Resolución de Problemas",
+                                "Diseño de Modelos Digitales Sostenibles",
+                                "Principios del Marketing Digital",
+                                "Introducción a los Datos como Activo Estratégico",
+                                "Herramientas Operativas del Ecosistema Digital"
+                            ]
+                        },
+                        {
+                            "anio": "2° AÑO",
+                            "materias": [
+                                "Métodos Digitales de Investigación de Mercado",
+                                "Ecosistemas Colaborativos y Trabajo Remoto",
+                                "Creatividad e Innovación Estratégica",
+                                "Legislación Digital y Gobernanza de Plataformas",
+                                "Introducción a la Inteligencia Artificial",
+                                "Conceptos de Contabilidad y Matemática Financiera",
+                                "E-commerce y Plataformas de Venta",
+                                "Automatización de Flujos Digitales",
+                                "Laboratorio de Simulación Empresarial Digital",
+                                "Prácticas de Tecnicatura: Diseño de Negocio Digital"
+                            ]
+                        },
+                        {
+                            "anio": "3° AÑO",
+                            "materias": [
+                                "Estrategias de Crecimiento Acelerado (Growth Hacking)",
+                                "Decisiones Estratégicas basadas de Inteligencia de Datos",
+                                "Diseño de Experiencias Omnicanal Integradas",
+                                "Gestión Ágil de Proyectos Digitales",
+                                "Negociación en Contextos Digitales",
+                                "Transformación Digital: Diagnóstico y Estategia",
+                                "Desarrollo Integral de Productos Digitales",
+                                "Tecnologías Emergentes y Tendencias de Mercado",
+                                "Gamificación y Motivación Digital",
+                                "Electiva I"
+                            ]
+                        },
+                        {
+                            "anio": "4° AÑO",
+                            "materias": [
+                                "Finanzas para Proyectos de Innovación",
+                                "Aplicaciones de IA a Sectores Productivos",
+                                "Métricas de Impacto Digital y Analítica Avanzada",
+                                "Taller de Incubación de Emprendimientos Tecnológicos",
+                                "Blockchain y Nuevas Infraestructuras Digitales",
+                                "Electiva II",
+                                "Electiva III",
+                                "Electiva IV",
+                                "Laboratorio de Startups Digitales",
+                                "Práctica Profesional Supervisada"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/administracion-de-negocios-digitales/"
+                },
+                {
+                    "id": 525,
+                    "nombre_carrera": "Agronegocios",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias Económicas y de la Administración",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/agronegocios/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º Año",
+                            "materias": [
+                                "Administración General",
+                                "Macro Economía",
+                                "Derecho I",
+                                "Comercialización Agroindustrial",
+                                "Inglés I",
+                                "Analísis Matemático",
+                                "Contabilidad Gerencial",
+                                "Micro Economía",
+                                "Geografía Economía",
+                                "Inglés II"
+                            ]
+                        },
+                        {
+                            "anio": "2º Año",
+                            "materias": [
+                                "Probabilidad y Estadística",
+                                "Costos",
+                                "Administración de Personal",
+                                "Sistemas de Producción Vegetal",
+                                "Inglés III",
+                                "Matemática Financiera",
+                                "Administración de Pymes y Empresas Familiares (Agropecuarias)",
+                                "Logística",
+                                "Sistemas de Producción Animal",
+                                "Inglés IV"
+                            ]
+                        },
+                        {
+                            "anio": "3º Año",
+                            "materias": [
+                                "Responsabilidad Social",
+                                "Administración Financiera",
+                                "Derecho Rural",
+                                "Control de Gestión",
+                                "Inglés V",
+                                "Metodología de la Investigación",
+                                "Legislación Impositiva",
+                                "Mercados Agroalimentarios",
+                                "Impacto Ambiental y Desarrollo Sustentable",
+                                "Inglés VI"
+                            ]
+                        },
+                        {
+                            "anio": "4º Año",
+                            "materias": [
+                                "Comportamiento Organizacional",
+                                "Dirección Estratégica",
+                                "Producciones no tradicionales",
+                                "Emprendedurismo",
+                                "Práctica Profesional Supervisada",
+                                "Negociaciones",
+                                "Plan de Negocios Agropecuarios",
+                                "Ética Profesional",
+                                "Digitalazación y uso de datos",
+                                "Seminario de Trabajo Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/agronegocios/"
+                },
+                {
+                    "id": 526,
+                    "nombre_carrera": "Ciencias del Comportamiento",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias Económicas y de la Administración",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/ciencias-del-comportamiento/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1° AÑO",
+                            "materias": [
+                                "Psicología del Comportamiento Humano",
+                                "Introducción a las Ciencias del Comportamiento",
+                                "Sociología y Cambio Social",
+                                "Estadística Aplicada",
+                                "Comunicación y Escritura Académica",
+                                "Procesos Cognitivos y Toma de Decisiones",
+                                "Antropologóa Cultural y Diversidad",
+                                "Principios de Economía del Comportamiento",
+                                "Introducción a los Datos como Activo Estratégico",
+                                "Pensamiento Crítico y Resolución de Problemas"
+                            ]
+                        },
+                        {
+                            "anio": "2° AÑO",
+                            "materias": [
+                                "Aprendizaje Humano y Motivación",
+                                "Neurociencia Aplicada al Comportamiento",
+                                "Métodos de Recolección de Datos",
+                                "Psicología Social y Dinámica de Grupos",
+                                "Electiva I",
+                                "Electiva II",
+                                "Psicología Organizacional y del Trabajo",
+                                "Introducción a la Analítica Conductual",
+                                "Bases Biológicas del Comportamiento",
+                                "Proyecto Final Integrador de Tecnicatura"
+                            ]
+                        },
+                        {
+                            "anio": "3° AÑO",
+                            "materias": [
+                                "Diseño Experimental y Metología Avanzada",
+                                "Psicometría y Validación de Instrumentos",
+                                "Técnicas Avanzadas de Análisis Cualitativo",
+                                "Electiva III",
+                                "Electiva IV",
+                                "Psicología de la Persuación",
+                                "Cultura, Valores y Comportamiento Global",
+                                "Análisis de Datos con Herramientas Digitales",
+                                "Psicología de la Personalidad",
+                                "Electiva V"
+                            ]
+                        },
+                        {
+                            "anio": "4° AÑO",
+                            "materias": [
+                                "Diseño de Intervenciones Conductuales",
+                                "Ética y Regulación en Investigación y Práctica Conductual",
+                                "Análisis de Ecosistemas y Comportamiento Digital",
+                                "Medición de Impacto y Evaluación de Resultados",
+                                "Electiva VI",
+                                "Electiva VII",
+                                "Laboratorio de Innovación en Comportamiento",
+                                "Electiva VIII",
+                                "Seminario de Integración y Práctica Profesional",
+                                "Proyecto Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/ciencias-del-comportamiento/"
+                },
+                {
+                    "id": 527,
+                    "nombre_carrera": "Comercialización",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias Económicas y de la Administración",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/comercializacion/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º Año",
+                            "materias": [
+                                "Administración I (*)",
+                                "Comercio Internacional (*)",
+                                "Introducción a la Matemática (*)",
+                                "Comercialización",
+                                "Economía I",
+                                "Inglés I",
+                                "Introducción a las Ciencias Sociales (*)",
+                                "Contabilidad I",
+                                "Análisis Matemático (*)",
+                                "Inglés II",
+                                "(*) Régimen promocional: 8 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "2º Año",
+                            "materias": [
+                                "Estadística I (*)",
+                                "Derecho I",
+                                "Sociología",
+                                "Economía II",
+                                "Inglés III",
+                                "Costos",
+                                "Derecho II",
+                                "Comportamiento del Consumidor",
+                                "Economía III",
+                                "Inglés IV",
+                                "(*) Régimen promocional: 8 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "3º Año",
+                            "materias": [
+                                "Estadística II (*)",
+                                "Comunicación Publicitaria",
+                                "Política de Productos",
+                                "Electiva",
+                                "Inglés V",
+                                "Investigación de Mercados",
+                                "Política de Precios",
+                                "Canales de Distribución",
+                                "Dirección de Ventas",
+                                "Inglés VI",
+                                "(*) Régimen promocional: 8 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "4º Año",
+                            "materias": [
+                                "Dirección y Alianzas Estratégicas",
+                                "Formulación y Evaluación de Proyectos",
+                                "Electiva",
+                                "Negociaciones (*)",
+                                "Trabajo Final",
+                                "(*) Régimen promocional: 8 espacios curriculares."
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/comercializacion/"
+                },
+                {
+                    "id": 528,
+                    "nombre_carrera": "Contador Público",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años y 6 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias Económicas y de la Administración",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/contador-publico/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º AÑO",
+                            "materias": [
+                                "Administración I (*)",
+                                "Economía I",
+                                "Introducción a la Comercialización",
+                                "Matemática I (*)",
+                                "Inglés I",
+                                "Derecho I",
+                                "Economía II",
+                                "Matemática II (*)",
+                                "Contabilidad I",
+                                "Introducción a las Ciencias Sociales (*)",
+                                "Inglés II",
+                                "(*) Materias Promocionales",
+                                "(*) Régimen promocional: 17 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "2º AÑO",
+                            "materias": [
+                                "Economía III",
+                                "Estadística I (*)",
+                                "Filosofía (*)",
+                                "Contabilidad II",
+                                "Derecho II",
+                                "Inglés III",
+                                "Análisis Organizacional",
+                                "Procesos y Sistemas de Información (*)",
+                                "Derecho Público (*)",
+                                "Derecho III",
+                                "Costos",
+                                "Inglés IV",
+                                "(*) Materias Promocionales"
+                            ]
+                        },
+                        {
+                            "anio": "3º AÑO",
+                            "materias": [
+                                "Comportamiento Organizacional (*)",
+                                "Matemática Financiera",
+                                "Contabilidad III",
+                                "Estadística II (*)",
+                                "Inglés V",
+                                "Derecho del Trabajo y la Seguridad Social (*)",
+                                "Administración Financiera (*)",
+                                "Finanzas Públicas (*)",
+                                "Teoría y Técnica Impositiva I",
+                                "Inglés VI",
+                                "(*) Materias Promocionales"
+                            ]
+                        },
+                        {
+                            "anio": "4º AÑO",
+                            "materias": [
+                                "Administración II",
+                                "Teoría y Técnica Impositiva II",
+                                "Ética Profesional (*)",
+                                "Formulación y Evaluación de Proyectos",
+                                "Concursos y Quiebras",
+                                "Teoría de las Decisiones",
+                                "Dirección Estratégica",
+                                "Actuación Profesional (*)",
+                                "Auditoría de Estados Contables",
+                                "Teoría y Técnica Impositiva III",
+                                "Control de Gestión",
+                                "(*) Materias Promocionales"
+                            ]
+                        },
+                        {
+                            "anio": "Último Semestre",
+                            "materias": [
+                                "Negociaciones (*)",
+                                "Introducción al Comercio Internacional (*)",
+                                "Auditoria Operativa y de Sistemas Computarizados",
+                                "Administración y Contabilidad Pública",
+                                "Derecho de Familia y Sucesiones",
+                                "Seminario de Trabajo Final",
+                                "Práctica Profesional Supervisada",
+                                "(*) Materias Promocionales"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/contador-publico/"
+                },
+                {
+                    "id": 529,
+                    "nombre_carrera": "Economía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias Económicas y de la Administración",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/economia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º Año",
+                            "materias": [
+                                "Administración I (*)",
+                                "Lógica (*)",
+                                "Matemática I (*)",
+                                "Geografía Económica y Social",
+                                "Inglés I",
+                                "Introducción a la Economía",
+                                "Derecho",
+                                "Matemática II (*)",
+                                "Inglés II",
+                                "(*) Régimen promocional: 12 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "2º Año",
+                            "materias": [
+                                "Contabilidad",
+                                "Estadística I (*)",
+                                "Teoría de Precios I",
+                                "Informática (*)",
+                                "Inglés III",
+                                "Sociología (*)",
+                                "Teoría Monetaria I",
+                                "Estadística II (*)",
+                                "Inglés IV",
+                                "(*) Régimen promocional: 12 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "3º Año",
+                            "materias": [
+                                "Teoría de Precios II",
+                                "Matemática III",
+                                "Historia Mundial Contemporánea",
+                                "Inglés V",
+                                "Teoría Monetaria II",
+                                "Evaluación de Proyectos",
+                                "Comercio Internacional I (*)",
+                                "Inglés VI",
+                                "(*) Régimen promocional: 12 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "4º Año",
+                            "materias": [
+                                "Finanzas Públicas (*)",
+                                "Historia del Pensamiento Económico",
+                                "Electiva",
+                                "Econometría I",
+                                "Historia Económica Argentina",
+                                "Seminario",
+                                "Trabajo Final",
+                                "(*) Régimen promocional: 12 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "Electivas",
+                            "materias": [
+                                "Economía Internacional y Crecimiento Económico"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/economia/"
+                },
+                {
+                    "id": 530,
+                    "nombre_carrera": "Hotelería",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias Económicas y de la Administración",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/hoteleria/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º Año",
+                            "materias": [
+                                "Introducción a la Industria de la Hospitalidad",
+                                "Housekeeping I",
+                                "Equipamiento Hotelero",
+                                "Administración General",
+                                "Métodos Cuantitativos",
+                                "Housekeeping II",
+                                "Introducción a las Ciencias Sociales",
+                                "Atención al Cliente",
+                                "Contabilidad General",
+                                "Inglés I"
+                            ]
+                        },
+                        {
+                            "anio": "2º Año",
+                            "materias": [
+                                "Front Desk",
+                                "Relaciones Públicas",
+                                "Higiene y Seguridad",
+                                "Estadística Aplicada",
+                                "Inglés II",
+                                "Alimentos y Bebidas",
+                                "Gestión Hotelera",
+                                "Servicio del Vino",
+                                "Comercialización",
+                                "Inglés III"
+                            ]
+                        },
+                        {
+                            "anio": "3º Año",
+                            "materias": [
+                                "Administración Hotelera",
+                                "Alimentos y Bebidas",
+                                "Electiva",
+                                "Economía Turística",
+                                "Inglés 4",
+                                "Auditoría y Control de Hoteles",
+                                "Congresos y Convenciones",
+                                "Legislación Turística",
+                                "Francés I"
+                            ]
+                        },
+                        {
+                            "anio": "4º Año",
+                            "materias": [
+                                "Servicio de Catering y Room Service",
+                                "Marketing Hotelero",
+                                "Comportamiento del Consumidor",
+                                "Formulación de Proyectos",
+                                "Francés II",
+                                "Política y Planeamiento Hotelero",
+                                "Gestión de la Calidad",
+                                "Bar, Coctelería y Destilados",
+                                "Administración de Recursos Humanos",
+                                "Francés III",
+                                "Práctica Profesional",
+                                "Trabajo Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/hoteleria/"
+                },
+                {
+                    "id": 531,
+                    "nombre_carrera": "Inversiones y Mercados de Capitales",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias Económicas y de la Administración",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/inversiones-y-mercados-de-capitales/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1° AÑO",
+                            "materias": [
+                                "Introducción al Mercado de Capitales",
+                                "Matemática Financiera",
+                                "Economía General",
+                                "Contabilidad Financiera",
+                                "Regulación del Mercado de Valores",
+                                "Herramientas Digitales para la Inversión",
+                                "Estadística Aplicada",
+                                "Productos Financieros de Renta Fija",
+                                "Psicología del Inversor",
+                                "Inglés Técnico Financiero I"
+                            ]
+                        },
+                        {
+                            "anio": "2° AÑO",
+                            "materias": [
+                                "Productos Financieros de Renta Variable",
+                                "Análisis Técnico",
+                                "Análisis Fundamental",
+                                "Estrategias de Inversión",
+                                "Gestión de Carteras",
+                                "Evaluación de Riesgo Financiero",
+                                "Ética Profesional y Compliance",
+                                "Inglés Técnico Financiero II",
+                                "Seminario de Casos y Simulaciones de Inversión",
+                                "Práctica Profesional Supervisada"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/inversiones-y-mercados-de-capitales/"
+                },
+                {
+                    "id": 532,
+                    "nombre_carrera": "Marketing Digital",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias Económicas y de la Administración",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/marketing-digital/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1° AÑO",
+                            "materias": [
+                                "Fundamentos del Marketing y Comunicación",
+                                "Administración Estratégica de Negocios Digitales",
+                                "Economía Digital y Comportamiento del Consumidor Online",
+                                "Comunicación Escrita y Redacción Digital",
+                                "Estadística Aplicada a los Negocios",
+                                "Principios del Marketing Digital",
+                                "Publicidad Digital y Medios Online",
+                                "Branding y Posicionamiento Online",
+                                "Introducción a los Datos como Activo Estratégico",
+                                "Herramientas Operativas del Ecosistema Digital"
+                            ]
+                        },
+                        {
+                            "anio": "2° AÑO",
+                            "materias": [
+                                "Introducción a la Inteligencia Artificial",
+                                "Métodos Digitales de Investigación de Mercado",
+                                "Creatividad e Innovación Estratégica",
+                                "Legislación Digital y Gobernanza de Plataformas",
+                                "Estrategias de Contenidos Digitales",
+                                "Contabilidad y Matemática Financiera",
+                                "E-commerce y Marketplaces",
+                                "Automatización de Flujos Digitales",
+                                "SEO y SEM Avanzado",
+                                "Prácticas de Tecnicatura: Campaña de Marketing Online"
+                            ]
+                        },
+                        {
+                            "anio": "3° AÑO",
+                            "materias": [
+                                "Diseño de Experiencias Omnicanal Integradas",
+                                "Laboratorio de Estrategias y Campañas Digitales",
+                                "IA Aplicada al Marketing",
+                                "Clínica de Casos y Tendencias Digitales",
+                                "Electiva I",
+                                "Diseño UX/UI para Marketing Digital",
+                                "Gamificación y Engagement Online",
+                                "Simulación de Gestión de Marketing Digital",
+                                "Electiva II",
+                                "Electiva III"
+                            ]
+                        },
+                        {
+                            "anio": "4° AÑO",
+                            "materias": [
+                                "Métricas de Impacto Digital y Analítica Avanzada",
+                                "Gestión de Influencers y Comunidades Digitales",
+                                "Optimización de Conversión (CRO)",
+                                "Estrategias de Crecimiento Acelerado (Growth Hacking)",
+                                "Blockchain y Nuevas Tecnologías en Consumo",
+                                "Herramientas Digitales de Diseño y Edición",
+                                "Neuromarketing y Técnicas Persuasivas",
+                                "Desarrollo de Campañas Integradas",
+                                "Electiva IV",
+                                "Práctica Profesional Supervisada"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/marketing-digital/"
+                },
+                {
+                    "id": 533,
+                    "nombre_carrera": "Recursos Humanos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias Económicas y de la Administración",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/recursos-humanos/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración I (*)",
+                                "Economía I",
+                                "Matemática I (*)",
+                                "Gestión del Personal (Introducción a los Recursos Humanos)",
+                                "Psicología Aplicada a los Recursos Humanos",
+                                "Inglés I",
+                                "Filosofía (*)",
+                                "Sociología (Int. las Ciencias Sociales) (*)",
+                                "Matemática II (*)",
+                                "Contabilidad",
+                                "Derecho I",
+                                "Inglés II",
+                                "(*) Régimen promocional: 10 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Estadística I (*)",
+                                "Dirección de Personal",
+                                "Comunicación Estratégica",
+                                "Comportamiento Organizacional (*)",
+                                "Inglés III",
+                                "Derecho Laboral y de Seguridad Social I",
+                                "Costos Laborales",
+                                "Análisis y Evaluación de Cargos",
+                                "Análisis Organizacional",
+                                "Inglés IV",
+                                "(*) Régimen promocional: 10 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Estadística II (*)",
+                                "Selección de Personal",
+                                "Gestión de la Calidad",
+                                "Administración de Remuneración",
+                                "Inglés V",
+                                "Oratoria",
+                                "Ergonomía y Salud Ocuapacional",
+                                "Administración de la Capacitación",
+                                "Administración Gubernamental y de ONG",
+                                "Inglés VI",
+                                "(*) Régimen promocional: 10 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Gestión de Crisis y Conflicto",
+                                "Relaciones Laborales y Sindicales",
+                                "Responsabilidad Social Empresaria",
+                                "Administración Pymes y Empresas Familiares",
+                                "Gestión Estratégica de Recursos Humanos",
+                                "Negociaciones (*)",
+                                "Sistemas de Información Aplicada (*)",
+                                "Auditoría en Gestión de Recursos Humanos",
+                                "Práctica Profesional y Trabajo Final",
+                                "(*) Régimen promocional: 10 espacios curriculares."
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/recursos-humanos/"
+                },
+                {
+                    "id": 534,
+                    "nombre_carrera": "Turismo",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias Económicas y de la Administración",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/turismo/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º Año",
+                            "materias": [
+                                "01- Introducción al Turismo",
+                                "02- Destinos Turísticos de Argentina",
+                                "03- Patrimonio",
+                                "04- Servicios Turísticos",
+                                "05- Métodos Cuantitativos",
+                                "06- Recursos Territoriales Americanos",
+                                "07- Historia Mundial",
+                                "08- Introducción a las Ciencias Sociales (*)",
+                                "09- Contabilidad General",
+                                "10- Inglés I",
+                                "(*) Régimen promocional: 2 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "2º Año",
+                            "materias": [
+                                "11- Espacios Turísticos Mundiales",
+                                "12- Historia de la Cultura",
+                                "13- Enoturismo",
+                                "14- Administración General (*)",
+                                "15- Inglés II",
+                                "16- Gestión de Agencias",
+                                "17- Información Técnica",
+                                "18- Técnicas de Guiado y Recreación",
+                                "19- Estadística Aplicada",
+                                "20- Inglés III",
+                                "(*) Régimen promocional: 2 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "3º Año",
+                            "materias": [
+                                "21- Diseño de Productos Turísticos",
+                                "22- Reservas y Emisión",
+                                "23- Ventas y Comercialización",
+                                "24- Economía Turística",
+                                "25- Inglés IV",
+                                "26- Desarrollo de Turismo Sostenible",
+                                "27- Administración de Empresas Turísticas",
+                                "28- Planificación y Organización de Eventos",
+                                "29- Legislación Turística",
+                                "30- Portugués I",
+                                "(*) Régimen promocional: 2 espacios curriculares."
+                            ]
+                        },
+                        {
+                            "anio": "4º Año",
+                            "materias": [
+                                "31- Políticas Turísticas y Planificación Territorial",
+                                "32- Marketing Turístico",
+                                "33- Mercados Turísticos",
+                                "34- Formulación de Proyectos",
+                                "35- Portugués II",
+                                "36- Gestión de Destinos",
+                                "37- Comercio Electrónico",
+                                "38- Gestión de la Calidad",
+                                "39- Relaciones Públicas",
+                                "40- Portugués III",
+                                "41- Trabajo Final",
+                                "(*) Régimen promocional: 2 espacios curriculares."
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/turismo/"
+                },
+                {
+                    "id": 535,
+                    "nombre_carrera": "Abogacía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 AÑOS",
+                    "modalidad": "Presencial",
+                    "facultad": "UC - Ciencias Jurídicas",
+                    "link_oficial": "https://www.ucongreso.edu.ar/carrera/abogacia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan",
+                            "materias": [
+                                "Primer Año",
+                                "Principios Generales del Derecho",
+                                "Derecho Político",
+                                "Introducción al Lenguaje Jurídico",
+                                "Instituciones del Derecho Romano",
+                                "Historia Institucional Argentina",
+                                "Derecho Privado",
+                                "Epistemología y Metodología de la Investigación",
+                                "Derecho Público Provincial y Municipal",
+                                "Derecho Constitucional y de los DDHH",
+                                "Segundo Año",
+                                "Introducción al Derecho Penal y Teoría del Delito",
+                                "Obligaciones",
+                                "Derecho Ambiental",
+                                "Economía para Abogados",
+                                "Derecho Procesal Parte General",
+                                "Derecho Penal Parte Específica",
+                                "Derechos de los Contratos y del Consumidor",
+                                "Deontología Jurídica",
+                                "Derecho Procesal Civil y Comercial",
+                                "Tercer Año",
+                                "Mediación y Resolución Participativa de Conflictos",
+                                "Sociedades Civiles Comerciales y de la Empresa",
+                                "Derecho de Familia y Sucesiones",
+                                "Derecho Laboral y Seguridad Social",
+                                "Análisis Económico del Derecho",
+                                "Concursos y Quiebras",
+                                "Derecho Bancario y Títulos de Crédito",
+                                "Derecho Procesal Penal",
+                                "Derechos Reales",
+                                "Cuarto Año",
+                                "Derecho del Transporte y los Seguros",
+                                "Derecho Administrativo",
+                                "Derecho Internacional Público",
+                                "Filosofía Jurídica",
+                                "Derecho Procesal Constitucional",
+                                "Derecho Tributario y Aduanero",
+                                "Derecho Internacional Privado",
+                                "Técnicas de Litigación Oral y Oratoria",
+                                "Prácticas Profesionales Supervisadas"
+                            ]
+                        },
+                        {
+                            "anio": "Plan 2018",
+                            "materias": [
+                                "Principios Generales del Derecho (Programas)",
+                                "Introducción al Derecho Privado",
+                                "Introducción al Lenguaje Jurídico (Programas)",
+                                "Inglés Jurídico I (Anual)",
+                                "Instituciones del Derecho Romano (Programas)",
+                                "Introducción al Derecho Penal",
+                                "Teoría del Estado",
+                                "Derecho Privado – Parte General",
+                                "Derecho Penal – Parte General",
+                                "Derecho Constitucional",
+                                "Epistemología y Metodología de la Investigación Jurídicas",
+                                "Historia Institucional Argentina (Programas)",
+                                "Obligaciones Civiles y Comerciales (Anual)",
+                                "Derechos del Contrato y del Consumidor (Anual)",
+                                "Inglés Jurídico II (Anual)",
+                                "Derecho Procesal – Parte General",
+                                "Derecho Penal P.E.",
+                                "Economía para Abogados (Programas)",
+                                "DDHH y Garantías",
+                                "Derecho Público, Provincial y Municipal",
+                                "Derecho Procesal, Civil y Comercial",
+                                "Economía para Abogados II",
+                                "Derecho Procesal Penal (Programas)",
+                                "Derechos Reales e Intelectuales (Anual)",
+                                "Derecho Societario (Anual)",
+                                "Inglés Jurídico III (Anual)",
+                                "Títulos de Crédito y Derecho Bancario",
+                                "Derecho de Familia",
+                                "Deontología Jurídica (Programas)",
+                                "Derecho Sucesorio",
+                                "Concursos y Quiebras (Programas)",
+                                "Derecho Laboral",
+                                "Inglés Jurídico IV (Anual)",
+                                "Derecho Administrativo (Anual)",
+                                "Derecho Internacional Público (Programas)",
+                                "Análisis Económico del Derecho (Programas)",
+                                "Derecho Procesal Constitucional (Programas)",
+                                "Derecho Seguridad Social",
+                                "Sociología Jurídica",
+                                "Derecho Ambiental (Programas)",
+                                "Transporte y Seguros",
+                                "Derecho Empresarial",
+                                "Inglés Jurídico V (Anual)",
+                                "Derecho Internacional Privado (Programas)",
+                                "Métodos Alternativos de Resolución de Conflictos",
+                                "Derecho Tributario y Finanzas Públicas",
+                                "Filosofía Jurídica (Programas)",
+                                "Derecho Aduanero",
+                                "Derecho de Agua y Minas",
+                                "Derecho Penal Tributario",
+                                "Técnicas de Litigación Oral",
+                                "Prácticas Profesionales Supervisadas",
+                                "CORRELATIVAS"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.ucongreso.edu.ar/carrera/abogacia/"
+                }
+            ]
+        }
+    ]
 }

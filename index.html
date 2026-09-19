@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="manifest" href="/manifest.json?v=20260917_01">
+    <link rel="manifest" href="/manifest.json?v=20260919_11">
     <meta name="theme-color" content="#1d4ed8">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="BEN">
@@ -80,7 +80,7 @@
             document.head.appendChild(pre);
         })();
     </script>
-    <link rel="stylesheet" href="/style.css?v=20260917_01">
+    <link rel="stylesheet" href="/style.css?v=20260919_11">
 
 </head>
 <body>
@@ -180,16 +180,6 @@
             </section>
 
             <section class="filter-group">
-                <h3>Tipo de institución</h3>
-                <div class="filter-options">
-                    <button class="filter-option active" data-filter="institucion" data-value="todos" type="button">Todos</button>
-                    <button class="filter-option" data-filter="institucion" data-value="universidades" type="button">Universidades</button>
-                    <button class="filter-option" data-filter="institucion" data-value="ies" type="button">IES / Institutos superiores</button>
-                    <button class="filter-option" data-filter="institucion" data-value="centros" type="button">Centros de formación</button>
-                </div>
-            </section>
-
-            <section class="filter-group">
                 <h3>Departamento</h3>
                 <div class="filter-options filter-options-compact">
                     <button class="filter-option active" data-filter="departamento" data-value="todos" type="button">Todos</button>
@@ -263,25 +253,6 @@
                 </div>
             </section>
 
-            <section class="filter-group">
-                <h3>Área de la carrera</h3>
-                <div class="filter-options filter-options-compact">
-                    <button class="filter-option active" data-filter="area" data-value="todos" type="button">Todas las áreas</button>
-                    <button class="filter-option" data-filter="area" data-value="Tecnología" type="button">Tecnología</button>
-                    <button class="filter-option" data-filter="area" data-value="Ingeniería" type="button">Ingeniería</button>
-                    <button class="filter-option" data-filter="area" data-value="Salud" type="button">Salud</button>
-                    <button class="filter-option" data-filter="area" data-value="Negocios" type="button">Negocios</button>
-                    <button class="filter-option" data-filter="area" data-value="Diseño" type="button">Diseño</button>
-                    <button class="filter-option" data-filter="area" data-value="Educación" type="button">Educación</button>
-                    <button class="filter-option" data-filter="area" data-value="Ciencias sociales" type="button">Ciencias sociales</button>
-                    <button class="filter-option" data-filter="area" data-value="Ambiente" type="button">Ambiente</button>
-                    <button class="filter-option" data-filter="area" data-value="Turismo" type="button">Turismo</button>
-                    <button class="filter-option" data-filter="area" data-value="Gastronomía" type="button">Gastronomía</button>
-                    <button class="filter-option" data-filter="area" data-value="Oficios" type="button">Oficios</button>
-                    <button class="filter-option" data-filter="area" data-value="Arte" type="button">Arte</button>
-                    <button class="filter-option" data-filter="area" data-value="Idiomas" type="button">Idiomas</button>
-                </div>
-            </section>
             <button id="clearFiltersButton" class="clear-filters-button" type="button">Limpiar filtros</button>
         </aside>
         </div>
@@ -295,28 +266,39 @@
                  Vive acá, arriba de la grilla, y no arriba de toda la página. -->
 
             <div id="resultsToolbar" class="results-toolbar">
-                <p id="resultsCount" class="results-count" role="status" aria-live="polite"></p>
-                <!-- Aparece solo cuando la grilla muestra el ranking del test
-                     vocacional; la ✕ devuelve al catálogo completo. -->
-                <p id="chapaRecomendacion" class="chapa-recomendacion" hidden>
-                    <span class="chapa-texto"><svg class="meta-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.6 8.4-2.2 5-5 2.2 2.2-5z"/></svg> Recomendaciones del Copiloto</span>
-                    <button id="chapaRecomendacionCerrar" type="button" aria-label="Volver al catálogo completo">✕</button>
-                </p>
-                <div class="toolbar-actions">
-                    <button id="btnFavoritos" class="favoritos-toggle" type="button" aria-pressed="false"><svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <span>Solo favoritos</span></button>
-                    <!-- El rótulo va en un <span> propio para que en celular se pueda
-                         esconder visualmente sin sacarlo del árbol de accesibilidad:
-                         sigue siendo el nombre del <select> para un lector de pantalla. -->
-                    <label class="sort-control" for="sortSelect"><span class="sort-control-label">Ordenar por</span>
-                    <select id="sortSelect">
-                        <option value="default">Predeterminado</option>
-                        <option value="relevancia">Más relevantes</option>
-                        <option value="nombre-az">Carrera (A → Z)</option>
-                        <option value="nombre-za">Carrera (Z → A)</option>
-                        <option value="publica-primero">Pública primero</option>
-                        <option value="privada-primero">Privada primero</option>
-                    </select>
-                    </label>
+                <div class="results-toolbar-top">
+                    <p id="resultsCount" class="results-count" role="status" aria-live="polite"></p>
+                    <!-- Aparece solo cuando la grilla muestra el ranking del test
+                         vocacional; la ✕ devuelve al catálogo completo. -->
+                    <p id="chapaRecomendacion" class="chapa-recomendacion" hidden>
+                        <span class="chapa-texto"><svg class="meta-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.6 8.4-2.2 5-5 2.2 2.2-5z"/></svg> Recomendaciones del Copiloto</span>
+                        <button id="chapaRecomendacionCerrar" type="button" aria-label="Volver al catálogo completo">✕</button>
+                    </p>
+                </div>
+                <div class="results-toolbar-bottom">
+                    <!-- Forma de explorar el catálogo formal: grilla completa,
+                         instituciones por tipo o tarjetas por área. Se muestra
+                         siempre en esta sección, no solo en la bienvenida. -->
+                    <nav id="vistasSwitcher" class="vistas-switcher" aria-label="Forma de explorar las carreras">
+                        <button type="button" class="vistas-switcher-btn" data-vista="carreras" aria-pressed="false">Carreras</button>
+                        <button type="button" class="vistas-switcher-btn" data-vista="instituciones" aria-pressed="false">Instituciones</button>
+                        <button type="button" class="vistas-switcher-btn" data-vista="areas" aria-pressed="false">Por área</button>
+                    </nav>
+                    <div class="toolbar-actions">
+                        <!-- El rótulo va en un <span> propio para que en celular se pueda
+                             esconder visualmente sin sacarlo del árbol de accesibilidad:
+                             sigue siendo el nombre del <select> para un lector de pantalla. -->
+                        <label class="sort-control" for="sortSelect"><span class="sort-control-label">Ordenar por</span>
+                        <select id="sortSelect">
+                            <option value="default">Predeterminado</option>
+                            <option value="relevancia">Más relevantes</option>
+                            <option value="nombre-az">Carrera (A → Z)</option>
+                            <option value="nombre-za">Carrera (Z → A)</option>
+                            <option value="publica-primero">Pública primero</option>
+                            <option value="privada-primero">Privada primero</option>
+                        </select>
+                        </label>
+                    </div>
                 </div>
             </div>
             <h2 class="sr-only">Resultados de la búsqueda</h2>
@@ -368,16 +350,6 @@
             <p class="footer-copy">
                 <strong>BEN</strong> — Buscador Educativo Nacional
             </p>
-            <!-- Estos dos enlaces son la puerta de entrada a las páginas
-                 estáticas que genera generar-paginas.js. Cumplen doble función:
-                 le dan al robot de Google un camino para llegar a las ~650
-                 páginas (que si no serían invisibles, porque la grilla la pinta
-                 JavaScript), y le dan a cualquier persona una forma de recorrer
-                 el catálogo sin depender de acertar el filtro. -->
-            <nav class="footer-mapa" aria-label="Explorar el catálogo">
-                <a href="/carreras/">Todas las carreras</a>
-                <a href="/instituciones/">Todas las instituciones</a>
-            </nav>
             <div class="footer-actions">
                 <button id="btnAbrirFeedback" class="btn-footer-feedback" type="button" aria-haspopup="dialog" aria-controls="modalFeedback">
                     <span aria-hidden="true">💬</span> Sugerir mejora o reportar fallo
@@ -407,24 +379,6 @@
         </div>
         <button id="btn-toggle-chat" class="btn-chat-toggle" type="button" aria-expanded="false" aria-controls="ventana-chat" aria-label="Abrir el copiloto vocacional"><img src="/img/copiloto-icono.png" alt="" class="btn-chat-icono-img" aria-hidden="true"></button>
     </aside>
-
-    <!-- Barra flotante del comparador: aparece apenas hay algo para comparar. -->
-    <div id="compararBar" class="comparar-bar" hidden>
-        <span class="comparar-bar-texto">Tenés <strong id="compararCount">0</strong> para comparar</span>
-        <button id="compararAbrir" class="comparar-bar-btn" type="button">Comparar ↗</button>
-        <button id="compararLimpiar" class="comparar-bar-limpiar" type="button">Vaciar</button>
-    </div>
-
-    <!-- Modal de comparación lado a lado. -->
-    <div id="compararModal" class="comparar-modal" hidden>
-        <div class="comparar-modal-contenido" role="dialog" aria-modal="true" aria-label="Comparar ofertas">
-            <div class="comparar-modal-cabecera">
-                <h2>Comparar ofertas</h2>
-                <button id="compararCerrar" class="comparar-modal-cerrar" type="button" aria-label="Cerrar comparación">✕</button>
-            </div>
-            <div id="compararCuerpo" class="comparar-modal-cuerpo"></div>
-        </div>
-    </div>
 
     <!-- Modal de Feedback (Sugerencias y Reporte de Fallos) -->
     <div id="modalFeedback" class="modal-feedback" hidden>
@@ -517,7 +471,11 @@
                         <span class="bienvenida-cta">Empezar el test →</span>
                     </span>
                 </button>
-                <button id="btnBienvenidaCatalogo" class="bienvenida-catalogo" type="button">Ver carreras</button>
+                <div class="bienvenida-opciones-secundarias">
+                    <button id="btnBienvenidaCarreras" class="bienvenida-catalogo" type="button">Mostrar todas las carreras</button>
+                    <button id="btnBienvenidaInstituciones" class="bienvenida-catalogo" type="button">Mostrar instituciones</button>
+                    <button id="btnBienvenidaAreas" class="bienvenida-catalogo" type="button">Ver carreras por área</button>
+                </div>
             </div>
         </div>
     </section>
@@ -615,11 +573,11 @@
 
     <!-- Scripts clasicos: son autonomos (IIFE) y tienen que correr antes que el
          modulo, que espera encontrar window.Orientador ya definido. -->
-    <script src="/js/orientador.js?v=20260917_01"></script>
-    <script src="/js/accesibilidad.js?v=20260917_01"></script>
-    <script src="/js/feedback.js?v=20260917_01"></script>
+    <script src="/js/orientador.js?v=20260919_11"></script>
+    <script src="/js/accesibilidad.js?v=20260919_11"></script>
+    <script src="/js/feedback.js?v=20260919_11"></script>
     <!-- El resto de la app vive en modulos ES; main.js es el punto de entrada. -->
-    <script type="module" src="/js/main.js?v=20260917_01"></script>
+    <script type="module" src="/js/main.js?v=20260919_11"></script>
 
     <!-- Service worker para que el sitio abra sin conexión. Vive en la raíz,
          igual que esta página, así su scope cubre todo el sitio: la app, los JSON

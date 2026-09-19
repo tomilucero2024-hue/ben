@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Universidad Siglo 21 (S21)","item":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/","email":"informes@21.edu.ar","telephone":"0810-555-0202","address":{"@type":"PostalAddress","streetAddress":"San Lorenzo 258, Ciudad (Sede Mendoza)","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -67,12 +67,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -92,12 +121,535 @@
         <dt>Teléfono</dt><dd>0810-555-0202</dd>
         <dt>Email</dt><dd>informes@21.edu.ar</dd>
     </dl>
-
-    <a class="cta" href="/?institucion=Universidad%20Siglo%2021%20(S21)">Ver esta institución en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
 
-    <h2>Ciencias sociales (23)</h2>
+    <h2>Negocios (19)</h2>
+    <ul class="ofertas">
+        <li class="oferta">
+            <h3><a href="/carrera/contador-publico/">Contador Público</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Herramientas Matemáticas I - Álgebra</li><li>Administración</li><li>Empresas Familiares</li><li>Principios de Contabilidad</li><li>Desarrollo Emprendedor</li><li>Recursos Informáticos</li><li>Contabilidad Básica</li><li>Herramientas Matemáticas II - Análisis</li><li>Grupo y Liderazgo</li><li>Sistemas de Información Organizacionales</li><li>Dirección General</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Contabilidad Intermedia</li><li>Análisis Cuantitativo Financiero</li><li>Economía I</li><li>Herramientas Matemáticas III - Estadística I</li><li>Marco Legal de las Organizaciones</li><li>Contabilidad Superior</li><li>Economía II</li><li>Herramientas Matemáticas IV - Investigación Operativa</li><li>Contabilidad de Costos Derecho Empresario</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Auditoría I</li><li>Control y Evaluación Financiero I</li><li>Derecho del Trabajo y la Seguridad Social</li><li>Finanzas Públicas</li><li>Herramientas Matemáticas V - Estadística II</li><li>Auditoría II</li><li>Control y Evaluación Financiero II</li><li>Impuestos I</li><li>Personas Jurídicas</li><li>Formulación y Evaluación de Proyectos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Práctica Impositiva y de Liquidación de Sueldos</li><li>Herramientas Matemáticas VI - Modelos de Simulación</li><li>Impuestos II</li><li>Seminario Final de Contador Público</li><li>Economía Internacional</li><li>Concursos y Quiebras</li><li>Impuestos III</li><li>Práctica Profesional de Contador Público (Instancia Académica)</li><li>Instituciones y Políticas Gubernamentales</li><li>Economía Argentina</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Materias adicionales</h4>
+            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/contador-publico?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/contador-publico?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Administración</li><li>Herramientas Matemáticas I – Álgebra</li><li>Sistemas de Información Organizacionales</li><li>Psicología Social</li><li>Sociología General</li><li>Idioma Extranjero I</li><li>Producción I</li><li>Herramientas Matemáticas II – Análisis</li><li>Contabilidad Básica y de Gestión</li><li>Idioma Extranjero II</li><li>Recursos Informáticos</li><li>Desarrollo Emprendedor</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Economía I</li><li>Herramientas Matemáticas III – Estadística I</li><li>Marketing I</li><li>Introducción al Comercio Exterior</li><li>Producción II</li><li>Idioma Extranjero III</li><li>Economía II</li><li>Análisis Cuantitativo Financiero</li><li>Herramientas Matemáticas IV – Investigación Operativa</li><li>Estrategia</li><li>Cultura Organizacional</li><li>Idioma Extranjero IV</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Herramientas Matemáticas V – Estadística II</li><li>Contabilidad de Costos</li><li>Grupo y Liderazgo</li><li>Logística</li><li>Marco Legal de las Organizaciones</li><li>Idioma Extranjero V</li><li>Dirección General</li><li>Seminario de Planificación y Control de Gestión</li><li>Administración de Recursos Humanos</li><li>Formulación y Evaluación de Proyectos</li><li>Principios de Derecho Laboral</li><li>Idioma Extranjero VI</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Emprendimientos Universitarios</li><li>Administración Financiera</li><li>Régimen Tributario</li><li>Gestión Ambiental</li><li>Práctica Profesional de Administración</li><li>Actualización Profesional</li><li>Instituciones Políticas y Gubernamentales</li><li>Economía Argentina</li><li>Herramientas Matemáticas VI – Modelos de Simulación</li><li>Seminario Final de Administración</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Materias adicionales</h4>
+            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-comercio-internacional/">Licenciatura en Comercio Internacional</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Administración</li><li>Introducción al Comercio Exterior</li><li>Herramientas Matemáticas I (Álgebra)</li><li>Desarrollo Emprendedor</li><li>Idioma Extranjero I</li><li>Comportamiento del Consumidor</li><li>Contabilidad Básica y de Gestión</li><li>Marketing</li><li>Exportaciones</li><li>Herramientas Matemáticas II (Análisis)</li><li>Geografía Económica</li><li>Idioma Extranjero II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Investigación de Mercados</li><li>Importaciones</li><li>Herramientas Matemáticas III (Estadística)</li><li>Métodos y Técnicas de Investigación Social</li><li>Economía I</li><li>Idioma Extranjero III</li><li>Estrategia</li><li>Herramientas Matemáticas IV</li><li>Derecho Aduanero</li><li>Economía II</li><li>Idioma Extranjero IV</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Técnicas y Estrategias de Comercialización</li><li>Marketing Internacional</li><li>Marco Legal de las Organizaciones</li><li>Economía Internacional</li><li>Idioma Extranjero V</li><li>Política Internacional</li><li>Dirección General</li><li>Seminario de Práctica de Comercio Internacional</li><li>Ética y Deontología Profesional</li><li>Marco Legal Internacional</li><li>Finanzas Internacionales</li><li>Idioma Extranjero VI</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Transporte, Cargas y Seguros</li><li>Procesos de Integración Regional</li><li>Emprendimientos Universitarios</li><li>Idioma Extranjero VII</li><li>Práctica Profesional de Comercio Internacional</li><li>Instituciones Políticas y Gubernamentales</li><li>Idioma Extranjero VIII</li><li>Seminario Final de Comercio Internacional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercio-internacional?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercio-internacional?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-administracion-agraria/">Licenciatura en Administración Agraria</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Administración</li><li>Biología y Medio Ambiente</li><li>Clima y Suelo</li><li>Herramientas Matemáticas I - Álgebra</li><li>Idioma Extranjero I</li><li>Introducción a La Producción Agropecuaria</li><li>Contabilidad Básica y de Gestión</li><li>Desarrollo Emprendedor</li><li>Geografía Económica</li><li>Herramientas Matemáticas II - Análisis</li><li>Idioma Extranjero II</li><li>Uso y Manejo de Suelos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Economía I</li><li>Herramientas Matemáticas III - Estadística I -</li><li>Marketing I</li><li>Producción Vegetal</li><li>Ética y Deontología Profesional</li><li>Idioma Extranjero IV</li><li>Análisis Cuantitativo Financiero</li><li>Economía II</li><li>Estrategia</li><li>Negocios con Producciones Alternativas</li><li>Producción Animal</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Contabilidad de Costos</li><li>Economía de Empresas</li><li>Formulación y Evaluación de Proyectos</li><li>Herramientas Matemáticas IV - Investigación</li><li>Idioma Extranjero V</li><li>Marco Legal De Las Organizaciones</li><li>Dirección General</li><li>Formación de Precios Agropecuarios</li><li>Idioma Extranjero VI</li><li>Logística</li><li>Seminario de Práctica de Administración Agraria</li><li>Sistemas De Información Geográfica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Emprendimientos Universitarios</li><li>Gestión Ambiental</li><li>Gestión de Operaciones Agroambientales</li><li>Práctica Profesional de Administración Agraria</li><li>Régimen Tributario</li><li>Administración Financiera</li><li>Economía Argentina</li><li>Politicas Agropecuarias</li><li>Práctica Solidaria</li><li>Regimen Juridico de la Empresa Agraria</li><li>Seminario Final de Administración Agraria</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Materias adicionales</h4>
+            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-agraria?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-agraria?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-comercializacion-marketing/">Licenciatura en Comercialización - Marketing</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Administración</li><li>Herramientas Matemáticas I – Álgebra</li><li>Comportamiento del Consumidor</li><li>Idioma Extranjero I</li><li>Desarrollo Emprendedor</li><li>Sociología General</li><li>Marketing I</li><li>Herramientas Matemáticas II – Análisis</li><li>Métodos y Técnicas de Investigación Social</li><li>Recursos Informáticos</li><li>Teoría de la Comunicación</li><li>Idioma Extranjero II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Investigación de Mercados</li><li>Economía I</li><li>Marketing II</li><li>Comunicación Organizacional</li><li>Herramientas Matemáticas III – Estadística I</li><li>Idioma Extranjero III</li><li>Economía II</li><li>Herramientas Matemáticas IV – Investigación Operativa</li><li>Publicidad</li><li>Ética y Deontología Profesional</li><li>Estrategia</li><li>Idioma Extranjero IV</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Técnicas y Estrategias de Comercialización</li><li>Análisis Cuantitativo Financiero</li><li>Herramientas Matemáticas V – Estadística II</li><li>Marco Legal de las Organizaciones</li><li>Contabilidad Básica y de Gestión</li><li>Idioma Extranjero V</li><li>Marketing Internacional</li><li>Grupo y Liderazgo</li><li>Logística</li><li>Formulación y Evaluación de Proyectos</li><li>Idioma Extranjero VI</li><li>Seminario de Práctica de Comercialización</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Emprendimientos Universitarios</li><li>Estrategias de Comunicaciones Integradas</li><li>Marketing de Servicios</li><li>Práctica Profesional de Comercialización</li><li>Formación de Precios</li><li>Herramientas Matemáticas VI – Modelos de Simulación</li><li>Opinión Pública y Comportamiento Político Electoral</li><li>Seminario Final de Comercialización</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Materias adicionales</h4>
+            <ul><li>Práctica Solidaria</li><li>Materia Electiva</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercializacion-marketing?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercializacion-marketing?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-finanzas/">Licenciatura en Finanzas</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Herramientas Matemáticas I - Álgebra</li><li>Contabilidad Básica y de Gestión</li><li>Introducción a Finanzas</li><li>Economía I</li><li>Desarrollo Emprendedor</li><li>Idioma Extranjero I</li><li>Herramientas Matemáticas II (Análisis)</li><li>Planificación Financiera</li><li>Contabilidad Intermedia</li><li>Matemática Financiera</li><li>Emprendimientos Universitarios</li><li>Idioma Extranjero II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Instrumentos de Renta Fija</li><li>Herramientas Matemáticas III (Estadística I)</li><li>Administración de Portfolio de Inversión</li><li>Análisis de Estados Financieros</li><li>Tecnología Financiera</li><li>Idioma Extranjero III</li><li>Economía II</li><li>Fusiones, Adquisiciones y Fusión de Deuda</li><li>Herramientas Matemáticas V (Estadística II)</li><li>Inversión en Renta Variable</li><li>Programación Financiera</li><li>Idioma Extranjero IV</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Economía Argentina</li><li>Inversión en Bienes Raíces</li><li>Derivados Financieros</li><li>Economía Internacional</li><li>Ética y Deontología Profesional</li><li>Idioma Extranjero V</li><li>Régimen Tributario</li><li>Fideicomisos y Securitizaciones</li><li>Finanzas Internacionales</li><li>Grupo y Liderazgo</li><li>Idioma Extranjero VI</li><li>Seminario de Práctica de Finanzas</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Administración Financiera</li><li>Métodos Estadísticos Aplicados a la Economía</li><li>Valuación de Empresas</li><li>Fondos de Capital Privado</li><li>Regulaciones de la Industria Bancaria y Financiera</li><li>Práctica Profesional de Finanzas</li><li>Futuros, Opciones y Swaps</li><li>Evaluación de Proyectos de Inversión</li><li>Gestión de Riesgo Financiero</li><li>Introducción a Criptomonedas y Contratos Inteligentes</li><li>Inversiones Alternativas</li><li>Seminario Final de Finanzas</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Materias adicionales</h4>
+            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-finanzas?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-finanzas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-gestion-de-recursos-humanos/">Licenciatura en Gestión de Recursos Humanos</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial o Virtual</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Administración</li><li>Administración de Recursos Humanos</li><li>Desarrollo Emprendedor</li><li>Idioma Extranjero I</li><li>Introducción a la Filosofía</li><li>Sociología General</li><li>Idioma Extranjero II</li><li>Principios de Economía</li><li>Producción I</li><li>Psicología Social</li><li>Recursos Informáticos</li><li>Teoría de la Comunicación</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Diseño y Evaluación de Puestos</li><li>Gramática Aplicada</li><li>Idioma Extranjero III</li><li>Marco Legal de las Organizaciones</li><li>Métodos y Técnicas de Investigación Social</li><li>Producción II</li><li>Comunicación Organizacional</li><li>Cultura Organizacional</li><li>Idioma Extranjero IV</li><li>Métodos Cuantitativos de Gestión</li><li>Selección de Personal</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Estrategias y Métodos de Capacitación</li><li>Grupo y Liderazgo</li><li>Idioma Extranjero V</li><li>Metodología de Análisis de Datos Cuantitativos</li><li>Principios de Derecho Laboral</li><li>Historia del Trabajo</li><li>Idioma Extranjero VI</li><li>Programa de Asistencia Integral</li><li>Seguridad e Higiene Laboral</li><li>Seminario de Práctica de Recursos Humanos</li><li>Ética y Deontología Profesional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Emprendimientos Universitarios</li><li>Gestión Ambiental</li><li>Mediación Arbitraje y Negociación</li><li>Práctica Profesional de Recursos Humanos</li><li>Teoría y Práctica de la Motivación y Promoción</li><li>Empresas Familiares</li><li>Instituciones Políticas y Gubernamentales</li><li>Práctica Solidaria</li><li>Relaciones Sindicales</li><li>Seminario Final de Recursos Humanos</li><li>Sociología del Poder</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Materias adicionales</h4>
+            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-de-recursos-humanos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-de-recursos-humanos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-inteligencia-de-negocios-digitales/">Licenciatura en Inteligencia de Negocios Digitales</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Economía I</li><li>Marketing I</li><li>Estrategia</li><li>Herramientas Matemáticas I - Álgebra</li><li>Desarrollo Emprendedor</li><li>Arquitectura Tecnológica</li><li>Herramientas Matemáticas II - Análisis</li><li>Introducción a Finanzas</li><li>Economía II</li><li>Idioma Extranjero II</li><li>Experiencia de Usuario</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Formulación y Evaluación de Proyectos</li><li>Estrategia Global</li><li>Arquitectura de Datos</li><li>Mediación, Arbitraje y Negociación</li><li>Herramientas Matemáticas III - Estadística I</li><li>Idioma Extranjero III</li><li>Herramientas Matemáticas V - Estadística II</li><li>Arquitectura Tecnológica Aplicada a los Negocios</li><li>Administración Financiera</li><li>Idioma Extranjero IV</li><li>Marketing II</li><li>Experiencia de Usuario Aplicada a los Negocios</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Contabilidad de Costos</li><li>Arquitectura de Datos Avanzada</li><li>Oratoria y Expresión Escrita</li><li>Ética y Deontología Profesional</li><li>Idioma Extranjero V</li><li>Gestión Estratégica de Proyectos</li><li>Innovación Tecnológica</li><li>Idioma Extranjero VI</li><li>Seminario de Práctica de Inteligencia</li><li>de Negocios Digitales</li><li>Marketing de Servicios</li><li>Grupo y Liderazgo</li><li>Gestión de Producto</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Gestión de Producto Aplicada a los Negocios Digitales</li><li>Gestión de Equipos de Alto Rendimiento</li><li>Métodos Estadísticos Aplicados a la Economía</li><li>Introduccion a la Estructura Tecnológica</li><li>Derecho Aplicado a la Tecnología</li><li>Práctica Profesional de Inteligencia de</li><li>Negocios Digitales</li><li>Oratoria y Expresión Escrita Aplicada a los Negocios</li><li>Dirección General</li><li>Legislación de Proyectos Tecnológicos</li><li>Emprendimientos Universitarios</li><li>Seminario Final de Inteligencia de</li><li>Infraestructura Tecnológica Aplicada a los Negocios</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Materias adicionales</h4>
+            <ul><li>Práctica Solidaria</li><li>Materias electivas</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-de-negocios-digitales?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-de-negocios-digitales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-logistica-global/">Licenciatura en Logística Global</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Administración</li><li>Idioma Extranjero I</li><li>Introducción al Comercio Exterior</li><li>Herramientas Matemática I - Álgebra</li><li>Desarrollo Emprendedor</li><li>Administración de Recursos Humanos</li><li>Contabilidad Básica y Gestión</li><li>Cultura Organizacional</li><li>Administración de Operaciones</li><li>Herramientas Matemáticas II - Análisis</li><li>Idioma Extranjero II</li><li>Recursos Informáticos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Economía I</li><li>Marketing Global</li><li>Idioma Extranjero III</li><li>Exportaciones</li><li>Herramientas Matemáticas III - Estadística I</li><li>Cadenas de Suministros: Planificación y Control</li><li>Herramientas Matemáticas IV - Investigación Operativa</li><li>Dirección General</li><li>importaciones</li><li>Marco Legal de las Organizaciones</li><li>Economía II</li><li>Idioma extranjero IV</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Contabilidad de Costos</li><li>Idioma Extranjero V</li><li>Ética y Deontología Profesional</li><li>Análisis Cuantitativo Financiero</li><li>Herramientas Matemáticas V - Estadística II</li><li>Grupo y Liderazgo</li><li>Régimen Tributario</li><li>Transporte, Cargas y Seguros</li><li>Idioma Extranjero VI</li><li>Marco Legal internacional</li><li>Seminario de Práctica de logística Global</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Administración Financiera</li><li>Cadena de Suministros: Logística Global</li><li>Régimen Tributario Internacionla</li><li>Estrategia Global</li><li>Herramientas Matemáticas VI - Modelos Simulación</li><li>Práctica Profesional de Logística Global</li><li>Formulación y Evaluación de Proyectos</li><li>Emprendimientos Universitarios</li><li>Cadena de Suministros: Análisis Comparativos</li><li>Instituciones Políticas y Gubernamental</li><li>Gestión Ambiental</li><li>Seminario Final de Logística Global</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Materias adicionales</h4>
+            <ul><li>Práctica Solidaria.</li><li>Materia Electiva I.</li><li>Materia Electiva II.</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-logistica-global?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-logistica-global?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-administracion-de-infraestructura-tecnologica/">Licenciatura en Administración de Infraestructura Tecnológica</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Álgebra y Geometría</li><li>Lógica Simbólica</li><li>Introducción a Tecnologías de Información y Comunicaciones</li><li>Sistemas de Información</li><li>Introducción a los algoritmos</li><li>Idioma Extranjero I</li><li>Análisis Matemático</li><li>Programación orientada a Objetos</li><li>Arquitectura del Computador</li><li>Estadística y Probabilidad</li><li>Física</li><li>Idioma Extranjero II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Introducción a la Infraestructura Tecnológica</li><li>Algoritmos y Estructura de Datos I</li><li>Sistemas Operativos</li><li>Base de Datos I</li><li>Innovación Tecnológica</li><li>Idioma Extranjero III</li><li>Sistemas Operativos Avanzados</li><li>Algoritmos y Estructura de Datos II</li><li>Comunicaciones</li><li>Legislación de Proyectos Tecnológicos</li><li>Base de Datos II</li><li>Idioma Extranjero IV</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Inteligencia Artificial</li><li>Computación en la Nube</li><li>Ingeniería de Software</li><li>Seguridad Informática</li><li>Oratoria</li><li>Idioma Extranjero V</li><li>Herramientas Matemáticas VI - Modelos de Simulación</li><li>Redes</li><li>Privacidad y Seguridad de los Datos</li><li>Grupo y Liderazgo</li><li>Idioma Extranjero VI</li><li>Seminario de Práctica de Infraestructura Tecnológica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Gestión de la Calidad, Riesgos y Evaluación de Proyectos</li><li>Internet de las Cosas</li><li>Auditoría de Sistemas</li><li>Ética y Deontología Profesional</li><li>Nanotecnología</li><li>Práctica Profesional de Infraestructura Tecnológica</li><li>Desarrollo Emprendedor</li><li>Gestión de Proyectos de Infraestructura</li><li>Riesgo Eléctrico en Edificios e Instalaciones</li><li>Inteligencia de Negocios</li><li>Emprendimientos Universitarios</li><li>Seminario Final de Infraestructura Tecnológica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Materias adicionales</h4>
+            <ul><li>Práctica Solidaria</li><li>Materias electivas</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-infraestructura-tecnologica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-infraestructura-tecnologica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-administracion-publica/">Licenciatura en Administración Pública</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Teoría Política I</li><li>Organización y Sistemas</li><li>Teoría de la Administración Pública</li><li>Principios de Economía</li><li>Introducción a la Filosofía</li><li>Desarrollo Emprendedor</li><li>Derecho Constitucional</li><li>Historia de América Latina</li><li>Geografía Económica</li><li>Sistemas Políticos Comparados</li><li>Métodos y Técnicas de Investigación Social</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Comunicación Política</li><li>Régimen Tributario y Previsional</li><li>Derecho Administrativo</li><li>Introducción a las Políticas Públicas</li><li>Sociología General</li><li>Idioma Extranjero II</li><li>Redacción y Técnica Legislativa</li><li>Federalismo Político y Fiscal en Argentina</li><li>Políticas Públicas I</li><li>Ética en la Administración Pública</li><li>Historia Argentina</li><li>Idioma Extranjero III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Políticas Públicas Comparadas</li><li>Análisis y Diagnóstico del Cambio Organizacional</li><li>Administración de Proyectos Públicos</li><li>Grupo y Liderazgo</li><li>Economía Argentina</li><li>Idioma Extranjero IV</li><li>Administración de Recursos Humanos</li><li>Gestión Presupuestaria</li><li>Herramientas Matemáticas III Estadística I</li><li>Planeamiento y Gestión del Territorio</li><li>Seminario de Práctica de Gestión Pública</li><li>Idioma Extranjero V</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Gestión De Calidad</li><li>Políticas, Normas y Organismos de Control de la Administración Pública</li><li>Metodología de Administración de Proyectos</li><li>Práctica Profesional de Administración Pública</li><li>Responsabilidad Social</li><li>Estado y Administración en Argentina</li><li>Opinión Pública y Comportamiento Político Electoral</li><li>Sistemas de Información y Nuevas Tecnologías aplicadas en la Gestión Pública</li><li>Emprendimientos Universitarios</li><li>Seminario Final de Administración Pública</li><li>Gerenciamiento del Sector Público</li><li>Idioma Extranjero VI</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Materias adicionales</h4>
+            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-publica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-publica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/martillero-corredor-publico-y-corredor-inmobiliario/">Martillero, Corredor Público Y Corredor Inmobiliario</a></h3>
+            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Derecho Privado Civil</li><li>Derecho Privado Comercial</li><li>Recursos Informáticos</li><li>Marketing I</li><li>Contabilidad Básica y de Gestión</li><li>Administración</li><li>Elementos Fundamentales de Derechos Reales</li><li>Sistemas Jurídicos Administrativos Registrales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Derecho Procesal</li><li>Procedimiento de Ejecución y Conservación del Patrimonio</li><li>Tasación y Estimación de Bienes</li><li>Subasta Judicial y Particular</li><li>Instituciones Políticas y Gubernamentales</li><li>Administración y Gestión Inmobiliaria Informática Jurídica</li><li>Corretaje Público Inmobiliario e Intermediación de Bienes</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Integración Profesional: el Estudio del Caso</li><li>Intermediación Inmobiliaria</li><li>Seminario de Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/martillero-corredor-publico-y-corredor-inmobiliario?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/martillero-corredor-publico-y-corredor-inmobiliario?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-en-administracion-y-gestion-tributaria/">Tecnicatura en Administración y Gestión Tributaria</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Recursos Informáticos</li><li>Impuestos I</li><li>Principios de la Contabilidad</li><li>Principios de Derecho Laboral</li><li>Contabilidad Básica</li><li>Tratamiento Fiscal de Pequeños Contribuyentes</li><li>Impuestos II</li><li>Contabilidad de Costos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Práctica Impositiva y de Liquidación de Sueldos</li><li>Administración</li><li>Contabilidad Intermedia</li><li>Análisis Cuantitativo Financiero</li><li>Contabilidad Superior</li><li>Impuestos III</li><li>Informática Aplicada</li><li>Sociedades</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Integración Profesional: El estudio del Caso</li><li>Seminario de Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-administracion-y-gestion-tributaria?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-administracion-y-gestion-tributaria?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-en-direccion-de-equipos-de-ventas/">Tecnicatura en Dirección de Equipos de Ventas</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Estrategia Competitiva</li><li>Introducción al Marketing</li><li>Negociación</li><li>Principios de Administración</li><li>Análisis del Comportamiento del Consumidor</li><li>Gestión de Servicios al Cliente</li><li>Gestión de Ventas I: Principios de Ventas</li><li>Introducción a Costos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Contabilidad</li><li>Elementos de Marketing</li><li>Gestión de Recursos Humanos</li><li>Herramientas de Investigación de Mercados</li><li>Control de Gestión</li><li>Gestión de Ventas II: Gestión de la Fuerza de Ventas</li><li>Liderazgo y Conducción de Equipos</li><li>Presupuesto</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Seminario de Practica Profesional</li><li>Integración Profesional: El estudio de Caso</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-equipos-de-ventas?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-equipos-de-ventas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-en-gestion-contable-e-impositiva/">Tecnicatura en Gestión Contable e Impositiva</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Matemática</li><li>Administración</li><li>Principios de Economía</li><li>Teoría y Técnica Contable</li><li>Legislación Impositiva y Técnica</li><li>Recursos Informáticos</li><li>Análisis Cuantitativo Financiero</li><li>Ética y Deontología Profesional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Principios de Derecho Laboral</li><li>Seminario de Práctica Contable</li><li>Marco Legal de las Organizaciones</li><li>Seminario de Práctica Impositiva</li><li>Inglés Técnico</li><li>Costos y Presupuestos</li><li>Informática Aplicada</li><li>Seminario de Práctica Impositiva II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Seminario de Práctica Profesional</li><li>Integración Profesional - El Estudio del Caso</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-contable-e-impositiva?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-contable-e-impositiva?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-en-gestion-de-empresas-familiares/">Tecnicatura en Gestión de Empresas Familiares</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Comunicación Interna y Organización de la Empresa Familiar</li><li>Desarrollo Emprendedor</li><li>Elementos de Contabilidad Básica y de Gestión</li><li>Empresas Familiares</li><li>Administración Herramientas para la profesionalización: Protocolo y Órganos de Gobierno</li><li>Marco Legal: Prevención de Conflictos Legales en la Gestión y Sucesión de la Empresa Familiar</li><li>Marketing I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Análisis Cuantitativo Financiero</li><li>Dirección General</li><li>Introducción al Comercio Exterior</li><li>Negociación y Resolución de Conflictos</li><li>Administración de Recursos Humanos</li><li>Contabilidad de Costos</li><li>Estrategia</li><li>Nuevos Negocios, Innovación y Organizaciones Inteligentes</li><li>Internacionalización de la Empresa Familiar</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Integración Profesional: El Estudio del Caso (Empresas Familiares)</li><li>Seminario de Práctica Profesional de Empresas Familiares</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-empresas-familiares?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-empresas-familiares?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-universitaria-en-administracion-y-gestion-de-politicas-publicas/">Tecnicatura Universitaria En Administración Y Gestión De Políticas Públicas</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Introductoria: Administración Pública</li><li>Introductoria: Políticas Públicas</li><li>Principios Básicos de Economía Aplicada</li><li>Teoría del Estado</li><li>Análisis, Diseño y Gestión de Políticas Públicas</li><li>Federalismo Argentino</li><li>Principios de Derecho Constitucional</li><li>Régimen de Procedimientos Administrativos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Gestión de Presupuestos Públicos</li><li>Control y Regulación del Sector Público</li><li>Derecho Tributario y Previsional</li><li>Ética Pública</li><li>Administración y Evaluación de Proyectos</li><li>Eficiencia en la Gestión Pública</li><li>Nuevas Tecnologías para el Sector Público</li><li>Planificación y Gestión Local y Regional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Integración Profesional: El Estudio Del Caso</li><li>Seminario de Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-administracion-publica-y-gestion-de-politicas-publicas?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-administracion-publica-y-gestion-de-politicas-publicas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-universitaria-en-marketing-y-publicidad-digital/">Tecnicatura Universitaria en Marketing y Publicidad Digital</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Sociología General</li><li>Comportamiento del Consumidor</li><li>Marketing I</li><li>Plan de Marketing Digita</li><li>Marketing Móvil</li><li>Tecnologías en Marketing Digital</li><li>Estrategia Digital</li><li>Publicidad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Sitios Web y Publicidad Digital</li><li>Posicionamiento en Buscadores (SEO Y SEM)</li><li>Administración de Comunidades en Línea</li><li>Redacción Publicitaria</li><li>Desarrollo Emprendedor</li><li>Campañas Publicitarias</li><li>Análisis de Herramientas de Medición en Línea - Análisis Web</li><li>Comercio Electrónico</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Integración Profesional: el Estudio de Caso</li><li>Seminario de Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-marketing-y-publicidad-digital?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-marketing-y-publicidad-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-en-negocios-agroecologicos/">Tecnicatura en Negocios Agroecológicos</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Clima y Suelo</li><li>Ecología</li><li>Introducción a la Producción Agropecuaria</li><li>Matemática Aplicada a la Gestión Administrativa</li><li>Agroecología</li><li>Economía I</li><li>Administración</li><li>Uso y Manejo de Suelos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Zootecnia</li><li>Tratamiento de Efluentes y Residuos Agrarios</li><li>Geografía Económica</li><li>Cultivos Sostenibles</li><li>Gestión de Operaciones Agroambientales</li><li>Agricultura Orgánica Certificada</li><li>Administración Técnica Agraria</li><li>Proyectos de Reducción y Reutilización de Recursos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Integración Profesional: El Estudio del Caso</li><li>Seminario de Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-negocios-agroecologicos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-negocios-agroecologicos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+    </ul>
+
+    <h2>Ciencias sociales (18)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/abogacia/">Abogacía</a></h3>
@@ -432,52 +984,6 @@
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-protocolo-organizacion-de-eventos-y-rrpp?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-en-gestion-contable-e-impositiva/">Tecnicatura en Gestión Contable e Impositiva</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Matemática</li><li>Administración</li><li>Principios de Economía</li><li>Teoría y Técnica Contable</li><li>Legislación Impositiva y Técnica</li><li>Recursos Informáticos</li><li>Análisis Cuantitativo Financiero</li><li>Ética y Deontología Profesional</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Principios de Derecho Laboral</li><li>Seminario de Práctica Contable</li><li>Marco Legal de las Organizaciones</li><li>Seminario de Práctica Impositiva</li><li>Inglés Técnico</li><li>Costos y Presupuestos</li><li>Informática Aplicada</li><li>Seminario de Práctica Impositiva II</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Seminario de Práctica Profesional</li><li>Integración Profesional - El Estudio del Caso</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-contable-e-impositiva?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-contable-e-impositiva?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-en-gestion-de-empresas-familiares/">Tecnicatura en Gestión de Empresas Familiares</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Comunicación Interna y Organización de la Empresa Familiar</li><li>Desarrollo Emprendedor</li><li>Elementos de Contabilidad Básica y de Gestión</li><li>Empresas Familiares</li><li>Administración Herramientas para la profesionalización: Protocolo y Órganos de Gobierno</li><li>Marco Legal: Prevención de Conflictos Legales en la Gestión y Sucesión de la Empresa Familiar</li><li>Marketing I</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Análisis Cuantitativo Financiero</li><li>Dirección General</li><li>Introducción al Comercio Exterior</li><li>Negociación y Resolución de Conflictos</li><li>Administración de Recursos Humanos</li><li>Contabilidad de Costos</li><li>Estrategia</li><li>Nuevos Negocios, Innovación y Organizaciones Inteligentes</li><li>Internacionalización de la Empresa Familiar</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Integración Profesional: El Estudio del Caso (Empresas Familiares)</li><li>Seminario de Práctica Profesional de Empresas Familiares</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-empresas-familiares?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-empresas-familiares?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-investigacion-de-la-escena-del-crimen/">Tecnicatura en Investigación de la Escena del Crimen</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
             <details class="plan-de-estudio">
@@ -522,75 +1028,6 @@
     </div>
 </details>
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-relaciones-laborales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-atencion-prehospitalaria-de-emergencias/">Tecnicatura Universitaria en Atención Prehospitalaria de Emergencias</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial en Campus Córdoba</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Salud Pública</li><li>Fundamentos de Anatomía Humana</li><li>Soporte Vital Básico</li><li>Comunicación Efectiva</li><li>Apoyo Psicológico en Situaciones de Emergencia</li><li>Morfofisiología Sistémica</li><li>Soporte Básico de Vida en Trauma</li><li>Operaciones de Rescate en APH</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Electrocardiografía</li><li>Desastres y Atención de Víctimas Múltiples</li><li>Técnicas, Procedimientos y Tecnologías Aplicadas a la Atención Prehospitalaria</li><li>Patología de Emergencias</li><li>Atención Prehospitalaria en Poblaciones Especiales</li><li>Apoyo al Soporte Vital Avanzado</li><li>Farmacología en APH</li><li>Transporte del Paciente Crítico</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Atención Prehospitalaria en Actividad Física y Deporte</li><li>Operaciones en Centrales de Emergencias Médicas</li><li>Atención Prehospitalaria Aplicada</li><li>Seminario de Práctica Profesional</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-atencion-prehospitalaria-de-emergencias?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-atencion-prehospitalaria-de-emergencias?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-gestion-de-moda/">Tecnicatura Universitaria en Gestión de Moda</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Historia y Sociología de La Moda</li><li>Introducción al Marketing</li><li>Introducción al Diseño de Moda</li><li>Comportamiento del Consumidor</li><li>Marketing de Moda</li><li>Introducción a Costos</li><li>Formación y Comunicación de Marca</li><li>Visual Merchandising</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Negociación</li><li>Control de Gestión</li><li>Administración para Empresas de Moda</li><li>Arte y Estética</li><li>Liderazgo y Conducción de Equipos</li><li>Comunicación Aplicada a las Organizaciones</li><li>Herramientas de Investigación de Mercado</li><li>Precios y Venta para Marcas de Moda</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Integración Profesional: El Estudio Del Caso</li><li>Seminario de Práctica Profesional</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-moda?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-moda?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-hidrocarburos-y-geociencia/">Tecnicatura Universitaria en Hidrocarburos y Geociencia</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Perforación</li><li>Herramientas Matemáticas III – Estadística I</li><li>Geología I</li><li>Física</li><li>Higiene y Medio Ambiente</li><li>Logística</li><li>Química General y Orgánica</li><li>Electrotecnia y Termotecnia</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Máquinas y Sistemas</li><li>Implementación de Normas de Calidad</li><li>Geología II</li><li>Mecánica de los Fluidos</li><li>Estudio del Trabajo</li><li>Terminación y Reparación de Pozo</li><li>Reservorios</li><li>Almacenamiento, Transporte y Refinamiento</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Integración profesional el estudio del caso</li><li>Seminario de práctica profesional</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-hidrocarburos-y-geociencia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-hidrocarburos-y-geociencia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-promocion-comunitaria-en-ninez-y-adolescencia/">Tecnicatura Universitaria en Promoción Comunitaria en Niñez y Adolescencia</a></h3>
@@ -686,513 +1123,7 @@
         </li>
     </ul>
 
-    <h2>Negocios (18)</h2>
-    <ul class="ofertas">
-        <li class="oferta">
-            <h3><a href="/carrera/contador-publico/">Contador Público</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Herramientas Matemáticas I - Álgebra</li><li>Administración</li><li>Empresas Familiares</li><li>Principios de Contabilidad</li><li>Desarrollo Emprendedor</li><li>Recursos Informáticos</li><li>Contabilidad Básica</li><li>Herramientas Matemáticas II - Análisis</li><li>Grupo y Liderazgo</li><li>Sistemas de Información Organizacionales</li><li>Dirección General</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Contabilidad Intermedia</li><li>Análisis Cuantitativo Financiero</li><li>Economía I</li><li>Herramientas Matemáticas III - Estadística I</li><li>Marco Legal de las Organizaciones</li><li>Contabilidad Superior</li><li>Economía II</li><li>Herramientas Matemáticas IV - Investigación Operativa</li><li>Contabilidad de Costos Derecho Empresario</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Auditoría I</li><li>Control y Evaluación Financiero I</li><li>Derecho del Trabajo y la Seguridad Social</li><li>Finanzas Públicas</li><li>Herramientas Matemáticas V - Estadística II</li><li>Auditoría II</li><li>Control y Evaluación Financiero II</li><li>Impuestos I</li><li>Personas Jurídicas</li><li>Formulación y Evaluación de Proyectos</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Práctica Impositiva y de Liquidación de Sueldos</li><li>Herramientas Matemáticas VI - Modelos de Simulación</li><li>Impuestos II</li><li>Seminario Final de Contador Público</li><li>Economía Internacional</li><li>Concursos y Quiebras</li><li>Impuestos III</li><li>Práctica Profesional de Contador Público (Instancia Académica)</li><li>Instituciones y Políticas Gubernamentales</li><li>Economía Argentina</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Materias adicionales</h4>
-            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/contador-publico?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/contador-publico?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Administración</li><li>Herramientas Matemáticas I – Álgebra</li><li>Sistemas de Información Organizacionales</li><li>Psicología Social</li><li>Sociología General</li><li>Idioma Extranjero I</li><li>Producción I</li><li>Herramientas Matemáticas II – Análisis</li><li>Contabilidad Básica y de Gestión</li><li>Idioma Extranjero II</li><li>Recursos Informáticos</li><li>Desarrollo Emprendedor</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Economía I</li><li>Herramientas Matemáticas III – Estadística I</li><li>Marketing I</li><li>Introducción al Comercio Exterior</li><li>Producción II</li><li>Idioma Extranjero III</li><li>Economía II</li><li>Análisis Cuantitativo Financiero</li><li>Herramientas Matemáticas IV – Investigación Operativa</li><li>Estrategia</li><li>Cultura Organizacional</li><li>Idioma Extranjero IV</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Herramientas Matemáticas V – Estadística II</li><li>Contabilidad de Costos</li><li>Grupo y Liderazgo</li><li>Logística</li><li>Marco Legal de las Organizaciones</li><li>Idioma Extranjero V</li><li>Dirección General</li><li>Seminario de Planificación y Control de Gestión</li><li>Administración de Recursos Humanos</li><li>Formulación y Evaluación de Proyectos</li><li>Principios de Derecho Laboral</li><li>Idioma Extranjero VI</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Emprendimientos Universitarios</li><li>Administración Financiera</li><li>Régimen Tributario</li><li>Gestión Ambiental</li><li>Práctica Profesional de Administración</li><li>Actualización Profesional</li><li>Instituciones Políticas y Gubernamentales</li><li>Economía Argentina</li><li>Herramientas Matemáticas VI – Modelos de Simulación</li><li>Seminario Final de Administración</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Materias adicionales</h4>
-            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-comercio-internacional/">Licenciatura en Comercio Internacional</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Administración</li><li>Introducción al Comercio Exterior</li><li>Herramientas Matemáticas I (Álgebra)</li><li>Desarrollo Emprendedor</li><li>Idioma Extranjero I</li><li>Comportamiento del Consumidor</li><li>Contabilidad Básica y de Gestión</li><li>Marketing</li><li>Exportaciones</li><li>Herramientas Matemáticas II (Análisis)</li><li>Geografía Económica</li><li>Idioma Extranjero II</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Investigación de Mercados</li><li>Importaciones</li><li>Herramientas Matemáticas III (Estadística)</li><li>Métodos y Técnicas de Investigación Social</li><li>Economía I</li><li>Idioma Extranjero III</li><li>Estrategia</li><li>Herramientas Matemáticas IV</li><li>Derecho Aduanero</li><li>Economía II</li><li>Idioma Extranjero IV</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Técnicas y Estrategias de Comercialización</li><li>Marketing Internacional</li><li>Marco Legal de las Organizaciones</li><li>Economía Internacional</li><li>Idioma Extranjero V</li><li>Política Internacional</li><li>Dirección General</li><li>Seminario de Práctica de Comercio Internacional</li><li>Ética y Deontología Profesional</li><li>Marco Legal Internacional</li><li>Finanzas Internacionales</li><li>Idioma Extranjero VI</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Transporte, Cargas y Seguros</li><li>Procesos de Integración Regional</li><li>Emprendimientos Universitarios</li><li>Idioma Extranjero VII</li><li>Práctica Profesional de Comercio Internacional</li><li>Instituciones Políticas y Gubernamentales</li><li>Idioma Extranjero VIII</li><li>Seminario Final de Comercio Internacional</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercio-internacional?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercio-internacional?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-administracion-agraria/">Licenciatura en Administración Agraria</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Administración</li><li>Biología y Medio Ambiente</li><li>Clima y Suelo</li><li>Herramientas Matemáticas I - Álgebra</li><li>Idioma Extranjero I</li><li>Introducción a La Producción Agropecuaria</li><li>Contabilidad Básica y de Gestión</li><li>Desarrollo Emprendedor</li><li>Geografía Económica</li><li>Herramientas Matemáticas II - Análisis</li><li>Idioma Extranjero II</li><li>Uso y Manejo de Suelos</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Economía I</li><li>Herramientas Matemáticas III - Estadística I -</li><li>Marketing I</li><li>Producción Vegetal</li><li>Ética y Deontología Profesional</li><li>Idioma Extranjero IV</li><li>Análisis Cuantitativo Financiero</li><li>Economía II</li><li>Estrategia</li><li>Negocios con Producciones Alternativas</li><li>Producción Animal</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Contabilidad de Costos</li><li>Economía de Empresas</li><li>Formulación y Evaluación de Proyectos</li><li>Herramientas Matemáticas IV - Investigación</li><li>Idioma Extranjero V</li><li>Marco Legal De Las Organizaciones</li><li>Dirección General</li><li>Formación de Precios Agropecuarios</li><li>Idioma Extranjero VI</li><li>Logística</li><li>Seminario de Práctica de Administración Agraria</li><li>Sistemas De Información Geográfica</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Emprendimientos Universitarios</li><li>Gestión Ambiental</li><li>Gestión de Operaciones Agroambientales</li><li>Práctica Profesional de Administración Agraria</li><li>Régimen Tributario</li><li>Administración Financiera</li><li>Economía Argentina</li><li>Politicas Agropecuarias</li><li>Práctica Solidaria</li><li>Regimen Juridico de la Empresa Agraria</li><li>Seminario Final de Administración Agraria</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Materias adicionales</h4>
-            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-agraria?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-agraria?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-comercializacion-marketing/">Licenciatura en Comercialización - Marketing</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Administración</li><li>Herramientas Matemáticas I – Álgebra</li><li>Comportamiento del Consumidor</li><li>Idioma Extranjero I</li><li>Desarrollo Emprendedor</li><li>Sociología General</li><li>Marketing I</li><li>Herramientas Matemáticas II – Análisis</li><li>Métodos y Técnicas de Investigación Social</li><li>Recursos Informáticos</li><li>Teoría de la Comunicación</li><li>Idioma Extranjero II</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Investigación de Mercados</li><li>Economía I</li><li>Marketing II</li><li>Comunicación Organizacional</li><li>Herramientas Matemáticas III – Estadística I</li><li>Idioma Extranjero III</li><li>Economía II</li><li>Herramientas Matemáticas IV – Investigación Operativa</li><li>Publicidad</li><li>Ética y Deontología Profesional</li><li>Estrategia</li><li>Idioma Extranjero IV</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Técnicas y Estrategias de Comercialización</li><li>Análisis Cuantitativo Financiero</li><li>Herramientas Matemáticas V – Estadística II</li><li>Marco Legal de las Organizaciones</li><li>Contabilidad Básica y de Gestión</li><li>Idioma Extranjero V</li><li>Marketing Internacional</li><li>Grupo y Liderazgo</li><li>Logística</li><li>Formulación y Evaluación de Proyectos</li><li>Idioma Extranjero VI</li><li>Seminario de Práctica de Comercialización</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Emprendimientos Universitarios</li><li>Estrategias de Comunicaciones Integradas</li><li>Marketing de Servicios</li><li>Práctica Profesional de Comercialización</li><li>Formación de Precios</li><li>Herramientas Matemáticas VI – Modelos de Simulación</li><li>Opinión Pública y Comportamiento Político Electoral</li><li>Seminario Final de Comercialización</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Materias adicionales</h4>
-            <ul><li>Práctica Solidaria</li><li>Materia Electiva</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercializacion-marketing?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercializacion-marketing?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-finanzas/">Licenciatura en Finanzas</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Herramientas Matemáticas I - Álgebra</li><li>Contabilidad Básica y de Gestión</li><li>Introducción a Finanzas</li><li>Economía I</li><li>Desarrollo Emprendedor</li><li>Idioma Extranjero I</li><li>Herramientas Matemáticas II (Análisis)</li><li>Planificación Financiera</li><li>Contabilidad Intermedia</li><li>Matemática Financiera</li><li>Emprendimientos Universitarios</li><li>Idioma Extranjero II</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Instrumentos de Renta Fija</li><li>Herramientas Matemáticas III (Estadística I)</li><li>Administración de Portfolio de Inversión</li><li>Análisis de Estados Financieros</li><li>Tecnología Financiera</li><li>Idioma Extranjero III</li><li>Economía II</li><li>Fusiones, Adquisiciones y Fusión de Deuda</li><li>Herramientas Matemáticas V (Estadística II)</li><li>Inversión en Renta Variable</li><li>Programación Financiera</li><li>Idioma Extranjero IV</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Economía Argentina</li><li>Inversión en Bienes Raíces</li><li>Derivados Financieros</li><li>Economía Internacional</li><li>Ética y Deontología Profesional</li><li>Idioma Extranjero V</li><li>Régimen Tributario</li><li>Fideicomisos y Securitizaciones</li><li>Finanzas Internacionales</li><li>Grupo y Liderazgo</li><li>Idioma Extranjero VI</li><li>Seminario de Práctica de Finanzas</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Administración Financiera</li><li>Métodos Estadísticos Aplicados a la Economía</li><li>Valuación de Empresas</li><li>Fondos de Capital Privado</li><li>Regulaciones de la Industria Bancaria y Financiera</li><li>Práctica Profesional de Finanzas</li><li>Futuros, Opciones y Swaps</li><li>Evaluación de Proyectos de Inversión</li><li>Gestión de Riesgo Financiero</li><li>Introducción a Criptomonedas y Contratos Inteligentes</li><li>Inversiones Alternativas</li><li>Seminario Final de Finanzas</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Materias adicionales</h4>
-            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-finanzas?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-finanzas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-gestion-de-recursos-humanos/">Licenciatura en Gestión de Recursos Humanos</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial o Virtual</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Administración</li><li>Administración de Recursos Humanos</li><li>Desarrollo Emprendedor</li><li>Idioma Extranjero I</li><li>Introducción a la Filosofía</li><li>Sociología General</li><li>Idioma Extranjero II</li><li>Principios de Economía</li><li>Producción I</li><li>Psicología Social</li><li>Recursos Informáticos</li><li>Teoría de la Comunicación</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Diseño y Evaluación de Puestos</li><li>Gramática Aplicada</li><li>Idioma Extranjero III</li><li>Marco Legal de las Organizaciones</li><li>Métodos y Técnicas de Investigación Social</li><li>Producción II</li><li>Comunicación Organizacional</li><li>Cultura Organizacional</li><li>Idioma Extranjero IV</li><li>Métodos Cuantitativos de Gestión</li><li>Selección de Personal</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Estrategias y Métodos de Capacitación</li><li>Grupo y Liderazgo</li><li>Idioma Extranjero V</li><li>Metodología de Análisis de Datos Cuantitativos</li><li>Principios de Derecho Laboral</li><li>Historia del Trabajo</li><li>Idioma Extranjero VI</li><li>Programa de Asistencia Integral</li><li>Seguridad e Higiene Laboral</li><li>Seminario de Práctica de Recursos Humanos</li><li>Ética y Deontología Profesional</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Emprendimientos Universitarios</li><li>Gestión Ambiental</li><li>Mediación Arbitraje y Negociación</li><li>Práctica Profesional de Recursos Humanos</li><li>Teoría y Práctica de la Motivación y Promoción</li><li>Empresas Familiares</li><li>Instituciones Políticas y Gubernamentales</li><li>Práctica Solidaria</li><li>Relaciones Sindicales</li><li>Seminario Final de Recursos Humanos</li><li>Sociología del Poder</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Materias adicionales</h4>
-            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-de-recursos-humanos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-de-recursos-humanos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-inteligencia-de-negocios-digitales/">Licenciatura en Inteligencia de Negocios Digitales</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Economía I</li><li>Marketing I</li><li>Estrategia</li><li>Herramientas Matemáticas I - Álgebra</li><li>Desarrollo Emprendedor</li><li>Arquitectura Tecnológica</li><li>Herramientas Matemáticas II - Análisis</li><li>Introducción a Finanzas</li><li>Economía II</li><li>Idioma Extranjero II</li><li>Experiencia de Usuario</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Formulación y Evaluación de Proyectos</li><li>Estrategia Global</li><li>Arquitectura de Datos</li><li>Mediación, Arbitraje y Negociación</li><li>Herramientas Matemáticas III - Estadística I</li><li>Idioma Extranjero III</li><li>Herramientas Matemáticas V - Estadística II</li><li>Arquitectura Tecnológica Aplicada a los Negocios</li><li>Administración Financiera</li><li>Idioma Extranjero IV</li><li>Marketing II</li><li>Experiencia de Usuario Aplicada a los Negocios</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Contabilidad de Costos</li><li>Arquitectura de Datos Avanzada</li><li>Oratoria y Expresión Escrita</li><li>Ética y Deontología Profesional</li><li>Idioma Extranjero V</li><li>Gestión Estratégica de Proyectos</li><li>Innovación Tecnológica</li><li>Idioma Extranjero VI</li><li>Seminario de Práctica de Inteligencia</li><li>de Negocios Digitales</li><li>Marketing de Servicios</li><li>Grupo y Liderazgo</li><li>Gestión de Producto</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Gestión de Producto Aplicada a los Negocios Digitales</li><li>Gestión de Equipos de Alto Rendimiento</li><li>Métodos Estadísticos Aplicados a la Economía</li><li>Introduccion a la Estructura Tecnológica</li><li>Derecho Aplicado a la Tecnología</li><li>Práctica Profesional de Inteligencia de</li><li>Negocios Digitales</li><li>Oratoria y Expresión Escrita Aplicada a los Negocios</li><li>Dirección General</li><li>Legislación de Proyectos Tecnológicos</li><li>Emprendimientos Universitarios</li><li>Seminario Final de Inteligencia de</li><li>Infraestructura Tecnológica Aplicada a los Negocios</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Materias adicionales</h4>
-            <ul><li>Práctica Solidaria</li><li>Materias electivas</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-de-negocios-digitales?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-de-negocios-digitales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-logistica-global/">Licenciatura en Logística Global</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Administración</li><li>Idioma Extranjero I</li><li>Introducción al Comercio Exterior</li><li>Herramientas Matemática I - Álgebra</li><li>Desarrollo Emprendedor</li><li>Administración de Recursos Humanos</li><li>Contabilidad Básica y Gestión</li><li>Cultura Organizacional</li><li>Administración de Operaciones</li><li>Herramientas Matemáticas II - Análisis</li><li>Idioma Extranjero II</li><li>Recursos Informáticos</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Economía I</li><li>Marketing Global</li><li>Idioma Extranjero III</li><li>Exportaciones</li><li>Herramientas Matemáticas III - Estadística I</li><li>Cadenas de Suministros: Planificación y Control</li><li>Herramientas Matemáticas IV - Investigación Operativa</li><li>Dirección General</li><li>importaciones</li><li>Marco Legal de las Organizaciones</li><li>Economía II</li><li>Idioma extranjero IV</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Contabilidad de Costos</li><li>Idioma Extranjero V</li><li>Ética y Deontología Profesional</li><li>Análisis Cuantitativo Financiero</li><li>Herramientas Matemáticas V - Estadística II</li><li>Grupo y Liderazgo</li><li>Régimen Tributario</li><li>Transporte, Cargas y Seguros</li><li>Idioma Extranjero VI</li><li>Marco Legal internacional</li><li>Seminario de Práctica de logística Global</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Administración Financiera</li><li>Cadena de Suministros: Logística Global</li><li>Régimen Tributario Internacionla</li><li>Estrategia Global</li><li>Herramientas Matemáticas VI - Modelos Simulación</li><li>Práctica Profesional de Logística Global</li><li>Formulación y Evaluación de Proyectos</li><li>Emprendimientos Universitarios</li><li>Cadena de Suministros: Análisis Comparativos</li><li>Instituciones Políticas y Gubernamental</li><li>Gestión Ambiental</li><li>Seminario Final de Logística Global</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Materias adicionales</h4>
-            <ul><li>Práctica Solidaria.</li><li>Materia Electiva I.</li><li>Materia Electiva II.</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-logistica-global?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-logistica-global?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-administracion-hotelera/">Licenciatura en Administración Hotelera</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Administración</li><li>Desarrollo Emprendedor</li><li>Geografía Turística</li><li>Herramientas Matemáticas II - Análisis -</li><li>Idioma Extranjero I</li><li>Mercados Turísticos</li><li>Alimentos y Bebidas</li><li>Comportamiento del Consumidor</li><li>Eventos, Ceremonial y Protocolo</li><li>Idioma Extranjero II</li><li>Servicios Turísticos</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Contabilidad Básica y de Gestión</li><li>Gestión de Empresas Gastronómicas</li><li>Herramientas Matemáticas III - Estadística I</li><li>Idioma Extranjero III</li><li>Marketing I</li><li>Práctica Solidaria</li><li>Cultura Organizacional</li><li>Economía I</li><li>Gestión de Alojamiento</li><li>Idioma Extranjero IV</li><li>Investigación de Mercado</li><li>Marco Legal de las Organizaciones</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Administración De Recursos Humanos</li><li>Análisis Cuantitativo Financiero</li><li>Contabilidad De Costos</li><li>Economía II</li><li>Idioma Extranjero V</li><li>Recepción, Conserjería y Reservas</li><li>Dirección General</li><li>Formulación Y Evaluación De Proyectos</li><li>Historia Universal</li><li>Idioma Extranjero VI</li><li>Seminario de Práctica de Administración Hotelera</li><li>Ética y Deontología Profesional</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Emprendimientos Universitarios</li><li>Gestión Ambiental</li><li>Gestión de Turismo de Negocios y de Tiempo Libre</li><li>Idioma Extranjero VII</li><li>Práctica Profesional de Administración Hotelera</li><li>Turismo y Mercado</li><li>Idioma Extranjero VIII</li><li>Instituciones Políticas y Gubernamentales</li><li>Pisos y Habitaciones - Mantenimiento y Seguridad</li><li>Hotelera</li><li>Planificación Turística</li><li>Seminario Final de Administración Hotelera</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-hotelera?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-hotelera?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-administracion-de-infraestructura-tecnologica/">Licenciatura en Administración de Infraestructura Tecnológica</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Álgebra y Geometría</li><li>Lógica Simbólica</li><li>Introducción a Tecnologías de Información y Comunicaciones</li><li>Sistemas de Información</li><li>Introducción a los algoritmos</li><li>Idioma Extranjero I</li><li>Análisis Matemático</li><li>Programación orientada a Objetos</li><li>Arquitectura del Computador</li><li>Estadística y Probabilidad</li><li>Física</li><li>Idioma Extranjero II</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Introducción a la Infraestructura Tecnológica</li><li>Algoritmos y Estructura de Datos I</li><li>Sistemas Operativos</li><li>Base de Datos I</li><li>Innovación Tecnológica</li><li>Idioma Extranjero III</li><li>Sistemas Operativos Avanzados</li><li>Algoritmos y Estructura de Datos II</li><li>Comunicaciones</li><li>Legislación de Proyectos Tecnológicos</li><li>Base de Datos II</li><li>Idioma Extranjero IV</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Inteligencia Artificial</li><li>Computación en la Nube</li><li>Ingeniería de Software</li><li>Seguridad Informática</li><li>Oratoria</li><li>Idioma Extranjero V</li><li>Herramientas Matemáticas VI - Modelos de Simulación</li><li>Redes</li><li>Privacidad y Seguridad de los Datos</li><li>Grupo y Liderazgo</li><li>Idioma Extranjero VI</li><li>Seminario de Práctica de Infraestructura Tecnológica</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Gestión de la Calidad, Riesgos y Evaluación de Proyectos</li><li>Internet de las Cosas</li><li>Auditoría de Sistemas</li><li>Ética y Deontología Profesional</li><li>Nanotecnología</li><li>Práctica Profesional de Infraestructura Tecnológica</li><li>Desarrollo Emprendedor</li><li>Gestión de Proyectos de Infraestructura</li><li>Riesgo Eléctrico en Edificios e Instalaciones</li><li>Inteligencia de Negocios</li><li>Emprendimientos Universitarios</li><li>Seminario Final de Infraestructura Tecnológica</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Materias adicionales</h4>
-            <ul><li>Práctica Solidaria</li><li>Materias electivas</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-infraestructura-tecnologica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-infraestructura-tecnologica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-administracion-publica/">Licenciatura en Administración Pública</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Teoría Política I</li><li>Organización y Sistemas</li><li>Teoría de la Administración Pública</li><li>Principios de Economía</li><li>Introducción a la Filosofía</li><li>Desarrollo Emprendedor</li><li>Derecho Constitucional</li><li>Historia de América Latina</li><li>Geografía Económica</li><li>Sistemas Políticos Comparados</li><li>Métodos y Técnicas de Investigación Social</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Comunicación Política</li><li>Régimen Tributario y Previsional</li><li>Derecho Administrativo</li><li>Introducción a las Políticas Públicas</li><li>Sociología General</li><li>Idioma Extranjero II</li><li>Redacción y Técnica Legislativa</li><li>Federalismo Político y Fiscal en Argentina</li><li>Políticas Públicas I</li><li>Ética en la Administración Pública</li><li>Historia Argentina</li><li>Idioma Extranjero III</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Políticas Públicas Comparadas</li><li>Análisis y Diagnóstico del Cambio Organizacional</li><li>Administración de Proyectos Públicos</li><li>Grupo y Liderazgo</li><li>Economía Argentina</li><li>Idioma Extranjero IV</li><li>Administración de Recursos Humanos</li><li>Gestión Presupuestaria</li><li>Herramientas Matemáticas III Estadística I</li><li>Planeamiento y Gestión del Territorio</li><li>Seminario de Práctica de Gestión Pública</li><li>Idioma Extranjero V</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Gestión De Calidad</li><li>Políticas, Normas y Organismos de Control de la Administración Pública</li><li>Metodología de Administración de Proyectos</li><li>Práctica Profesional de Administración Pública</li><li>Responsabilidad Social</li><li>Estado y Administración en Argentina</li><li>Opinión Pública y Comportamiento Político Electoral</li><li>Sistemas de Información y Nuevas Tecnologías aplicadas en la Gestión Pública</li><li>Emprendimientos Universitarios</li><li>Seminario Final de Administración Pública</li><li>Gerenciamiento del Sector Público</li><li>Idioma Extranjero VI</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Materias adicionales</h4>
-            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-publica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-publica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/martillero-corredor-publico-y-corredor-inmobiliario/">Martillero, Corredor Público Y Corredor Inmobiliario</a></h3>
-            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Derecho Privado Civil</li><li>Derecho Privado Comercial</li><li>Recursos Informáticos</li><li>Marketing I</li><li>Contabilidad Básica y de Gestión</li><li>Administración</li><li>Elementos Fundamentales de Derechos Reales</li><li>Sistemas Jurídicos Administrativos Registrales</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Derecho Procesal</li><li>Procedimiento de Ejecución y Conservación del Patrimonio</li><li>Tasación y Estimación de Bienes</li><li>Subasta Judicial y Particular</li><li>Instituciones Políticas y Gubernamentales</li><li>Administración y Gestión Inmobiliaria Informática Jurídica</li><li>Corretaje Público Inmobiliario e Intermediación de Bienes</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Integración Profesional: el Estudio del Caso</li><li>Intermediación Inmobiliaria</li><li>Seminario de Práctica Profesional</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/martillero-corredor-publico-y-corredor-inmobiliario?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/martillero-corredor-publico-y-corredor-inmobiliario?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-en-administracion-y-gestion-tributaria/">Tecnicatura en Administración y Gestión Tributaria</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Recursos Informáticos</li><li>Impuestos I</li><li>Principios de la Contabilidad</li><li>Principios de Derecho Laboral</li><li>Contabilidad Básica</li><li>Tratamiento Fiscal de Pequeños Contribuyentes</li><li>Impuestos II</li><li>Contabilidad de Costos</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Práctica Impositiva y de Liquidación de Sueldos</li><li>Administración</li><li>Contabilidad Intermedia</li><li>Análisis Cuantitativo Financiero</li><li>Contabilidad Superior</li><li>Impuestos III</li><li>Informática Aplicada</li><li>Sociedades</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Integración Profesional: El estudio del Caso</li><li>Seminario de Práctica Profesional</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-administracion-y-gestion-tributaria?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-administracion-y-gestion-tributaria?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-en-direccion-de-equipos-de-ventas/">Tecnicatura en Dirección de Equipos de Ventas</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Estrategia Competitiva</li><li>Introducción al Marketing</li><li>Negociación</li><li>Principios de Administración</li><li>Análisis del Comportamiento del Consumidor</li><li>Gestión de Servicios al Cliente</li><li>Gestión de Ventas I: Principios de Ventas</li><li>Introducción a Costos</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Contabilidad</li><li>Elementos de Marketing</li><li>Gestión de Recursos Humanos</li><li>Herramientas de Investigación de Mercados</li><li>Control de Gestión</li><li>Gestión de Ventas II: Gestión de la Fuerza de Ventas</li><li>Liderazgo y Conducción de Equipos</li><li>Presupuesto</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Seminario de Practica Profesional</li><li>Integración Profesional: El estudio de Caso</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-equipos-de-ventas?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-equipos-de-ventas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-administracion-y-gestion-de-politicas-publicas/">Tecnicatura Universitaria En Administración Y Gestión De Políticas Públicas</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Introductoria: Administración Pública</li><li>Introductoria: Políticas Públicas</li><li>Principios Básicos de Economía Aplicada</li><li>Teoría del Estado</li><li>Análisis, Diseño y Gestión de Políticas Públicas</li><li>Federalismo Argentino</li><li>Principios de Derecho Constitucional</li><li>Régimen de Procedimientos Administrativos</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Gestión de Presupuestos Públicos</li><li>Control y Regulación del Sector Público</li><li>Derecho Tributario y Previsional</li><li>Ética Pública</li><li>Administración y Evaluación de Proyectos</li><li>Eficiencia en la Gestión Pública</li><li>Nuevas Tecnologías para el Sector Público</li><li>Planificación y Gestión Local y Regional</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Integración Profesional: El Estudio Del Caso</li><li>Seminario de Práctica Profesional</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-administracion-publica-y-gestion-de-politicas-publicas?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-administracion-publica-y-gestion-de-politicas-publicas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-marketing-y-publicidad-digital/">Tecnicatura Universitaria en Marketing y Publicidad Digital</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Sociología General</li><li>Comportamiento del Consumidor</li><li>Marketing I</li><li>Plan de Marketing Digita</li><li>Marketing Móvil</li><li>Tecnologías en Marketing Digital</li><li>Estrategia Digital</li><li>Publicidad</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Sitios Web y Publicidad Digital</li><li>Posicionamiento en Buscadores (SEO Y SEM)</li><li>Administración de Comunidades en Línea</li><li>Redacción Publicitaria</li><li>Desarrollo Emprendedor</li><li>Campañas Publicitarias</li><li>Análisis de Herramientas de Medición en Línea - Análisis Web</li><li>Comercio Electrónico</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Integración Profesional: el Estudio de Caso</li><li>Seminario de Práctica Profesional</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-marketing-y-publicidad-digital?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-marketing-y-publicidad-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-en-negocios-agroecologicos/">Tecnicatura en Negocios Agroecológicos</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Clima y Suelo</li><li>Ecología</li><li>Introducción a la Producción Agropecuaria</li><li>Matemática Aplicada a la Gestión Administrativa</li><li>Agroecología</li><li>Economía I</li><li>Administración</li><li>Uso y Manejo de Suelos</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Zootecnia</li><li>Tratamiento de Efluentes y Residuos Agrarios</li><li>Geografía Económica</li><li>Cultivos Sostenibles</li><li>Gestión de Operaciones Agroambientales</li><li>Agricultura Orgánica Certificada</li><li>Administración Técnica Agraria</li><li>Proyectos de Reducción y Reutilización de Recursos</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Integración Profesional: El Estudio del Caso</li><li>Seminario de Práctica Profesional</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-negocios-agroecologicos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-negocios-agroecologicos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-    </ul>
-
-    <h2>Salud (10)</h2>
+    <h2>Salud (11)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-psicologia/">Licenciatura en Psicología</a></h3>
@@ -1379,7 +1310,52 @@
         <li class="oferta">
             <h3><a href="/carrera/medicina/">Carrera de Medicina</a></h3>
             <ul class="oferta-datos"><li>Duración: 6 años</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 10 cuatrimestres</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer Cuatrimestre</h4>
+            <ul><li>Anatomía I</li><li>Biología Celular y Genética</li><li>Bioquímica Médica I</li><li>Medicina, Paciente y Sociedad</li><li>Métodos y Técnicas de Investigación Social</li><li>Inglés Médico I</li><li>Seminario de práctica Integradora I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo Cuatrimestre</h4>
+            <ul><li>Anatomía II</li><li>Embriología</li><li>Atención Primaria de la Salud I</li><li>Introducción a la Investigación en Medicina</li><li>Bioquímica Médica II</li><li>Seminario de práctica Integradora II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer Cuatrimestre</h4>
+            <ul><li>Fisiología y Biofísica I</li><li>Histología I</li><li>Salud Pública</li><li>Recursos Informáticos</li><li>Grupo y Liderazgo</li><li>Inglés Médico II</li><li>Seminario de práctica Integradora III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto Cuatrimestre</h4>
+            <ul><li>Fisiología y Biofísica II</li><li>Histología II</li><li>Neuroanatomía y Neurofisiología</li><li>Salud Psicosocial</li><li>Bioestadística</li><li>Seminario de práctica Integradora IV</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Quinto Cuatrimestre</h4>
+            <ul><li>Patología I</li><li>Medicina I</li><li>Bacteriología y Virología</li><li>Relación Médico Paciente</li><li>Epidemiología</li><li>Inglés Médico III</li><li>Seminario de práctica Integradora V</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Sexto Cuatrimestre</h4>
+            <ul><li>Patología II</li><li>Medicina II</li><li>Parasitología y Micrología</li><li>Bioética y Profesionalismo</li><li>Emprendimientos Universitarios</li><li>Seminario de práctica Integradora VI</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Séptimo Cuatrimestre</h4>
+            <ul><li>Medicina Interna I</li><li>Farmacología General</li><li>Medicina Quirúrgica I</li><li>Ginecología</li><li>Diagnóstico por Imágenes</li><li>Medicina basada en la evidencia</li><li>Seminario de práctica Integradora VII</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Octavo Cuatrimestre</h4>
+            <ul><li>Medicina Interna II</li><li>Farmacología Aplicada</li><li>Medicina Quirúrgica II</li><li>Obstetricia</li><li>Salud Mental y Psiquiatría</li><li>Antropología Médica</li><li>Seminario de práctica Integradora VIII</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Noveno Cuatrimestre</h4>
+            <ul><li>Medicina Interna III</li><li>Telemedicina</li><li>Oftalmología</li><li>Pediatría I</li><li>Estrategias y métodos de capacitación en salud</li><li>Traumatología y Ortopedia</li><li>Seminario de práctica Integradora IX</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Décimo Cuatrimestre</h4>
+            <ul><li>Medicina Interna IV</li><li>Pediatría II</li><li>Medicina Legal y Toxicología</li><li>Salud y cuidados gerontológicos</li><li>Nutrición en Medicina</li><li>Seminario de práctica Integradora X</li><li>Práctica Final Obligatoria 40 semanas (1840 h) Práctica Solidaria (22 h)</li><li>40 semanas (1840 h)</li><li>Práctica Solidaria (22 h)</li><li>Materias Electivas Medicina del Ejercicio Trasplante de Órganos y Tejidos Anestesia Gestión en Salud</li><li>Medicina del Ejercicio</li><li>Trasplante de Órganos y Tejidos</li><li>Anestesia</li><li>Gestión en Salud</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/medicina?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/medicina?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
@@ -1408,6 +1384,29 @@
     </div>
 </details>
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-fonoaudiologia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-universitaria-en-atencion-prehospitalaria-de-emergencias/">Tecnicatura Universitaria en Atención Prehospitalaria de Emergencias</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial en Campus Córdoba</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Salud Pública</li><li>Fundamentos de Anatomía Humana</li><li>Soporte Vital Básico</li><li>Comunicación Efectiva</li><li>Apoyo Psicológico en Situaciones de Emergencia</li><li>Morfofisiología Sistémica</li><li>Soporte Básico de Vida en Trauma</li><li>Operaciones de Rescate en APH</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Electrocardiografía</li><li>Desastres y Atención de Víctimas Múltiples</li><li>Técnicas, Procedimientos y Tecnologías Aplicadas a la Atención Prehospitalaria</li><li>Patología de Emergencias</li><li>Atención Prehospitalaria en Poblaciones Especiales</li><li>Apoyo al Soporte Vital Avanzado</li><li>Farmacología en APH</li><li>Transporte del Paciente Crítico</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Atención Prehospitalaria en Actividad Física y Deporte</li><li>Operaciones en Centrales de Emergencias Médicas</li><li>Atención Prehospitalaria Aplicada</li><li>Seminario de Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-atencion-prehospitalaria-de-emergencias?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-atencion-prehospitalaria-de-emergencias?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-enfermeria/">Tecnicatura Universitaria en Enfermería</a></h3>
@@ -1454,6 +1453,199 @@
     </div>
 </details>
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-administrativa-de-servicios-de-salud?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+    </ul>
+
+    <h2>Diseño (7)</h2>
+    <ul class="ofertas">
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-diseno-y-animacion-digital/">Licenciatura en Diseño y Animación Digital</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial o Virtual</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Morfología I</li><li>Herramientas Digitales I</li><li>Introducción a la Animación Digital</li><li>Dibujo</li><li>Sociología General</li><li>Desarrollo Emprendedor</li><li>Creación Publicitaria</li><li>Postproducción Digital</li><li>Generalidad 3D I</li><li>Publicidad</li><li>Idioma Extranjero I</li><li>Métodos y Técnicas de Investigación Social</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Morfología II</li><li>Herramientas Digitales II</li><li>Animación 2D</li><li>Tipografía</li><li>Grupo y Liderazgo</li><li>Idioma Extranjero II</li><li>Creación Publicitaria II</li><li>Postproducción Digital II</li><li>Generalidad 3D II</li><li>Diseño de Comunicación Visual I</li><li>Fotografía</li><li>Idioma Extranjero III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Diseño de Comunicación Visual II</li><li>Composición de Efectos Visuales I</li><li>Modelado 3D</li><li>Principios de Iluminación en 3D</li><li>Seminario de Práctica</li><li>Idioma Extranjero IV</li><li>Diseño de Proyectos</li><li>Efectos Visuales 3D</li><li>Diseño de Escenas Digitales</li><li>Iluminación y Rendering</li><li>Responsabilidad Social</li><li>Idioma Extranjero V</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Planeamiento de la Comunicación</li><li>Composición de Efectos Visuales II</li><li>Animación 3D</li><li>Iluminación para Animación 3D</li><li>Emprendimientos Universitarios</li><li>Práctica Profesional</li><li>Creatividad y Emprendedorismo</li><li>Simulaciones y Fluidos</li><li>Texturas y Desarrollo de Estilos en 3D</li><li>Iluminación Foto-Real</li><li>Idioma Extranjero VI</li><li>Seminario Final</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Materias adicionales</h4>
+            <ul><li>Práctica Solidaria</li><li>2 materias electiva</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-diseno-de-indumentaria-y-textil/">Licenciatura en Diseño de Indumentaria y Textil</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Análisis de Producto (Diyt) - Ind.</li><li>Dibujo</li><li>Idioma Extranjero I</li><li>Psicología Social</li><li>Sociología General (Sociología De La Moda) - Ind.</li><li>Taller de Creatividad y Diseño I</li><li>Comportamiento del Consumidor</li><li>Desarrollo Emprendedor</li><li>Diseño de Indumentaria I - (Elementos del Diseño)</li><li>Idioma Extranjero II</li><li>Sistemas de Representación (Diyt) - Ind.</li><li>Taller de Creatividad y Diseño II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Diseño de Indumentaria II (Armado de Colección I e Identidad Corporativa)</li><li>Historia de la Moda</li><li>Idioma Extranjero III</li><li>Marketing I</li><li>Molderia I</li><li>Tecnología Aplicada a La Indumentaria</li><li>Diseño de Indumentaria III (Armado de Colección II- Moda y Tendencia)</li><li>Ergonomía (Diyt) - Ind.</li><li>Fotografía</li><li>Idioma Extranjero IV</li><li>Moldería II</li><li>Semiótica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Comunicación Organizacional</li><li>Contabilidad de Costos (Diyt) - Ind.</li><li>Idioma Extranjero V</li><li>Moldería III</li><li>Publicidad</li><li>Ética y Deontología Profesional</li><li>Diseño de Indumentaria Asistido por Computadora I</li><li>Estética (Diyt)</li><li>Idioma Extranjero VI</li><li>Modelística</li><li>Seminario de Práctica de Diseño de Indumentaria y Textil</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Diseño de Indumentaria Asistido por Computadora II</li><li>Diseño de Indumentaria IV (Armado de Colección III, Diseño Teatral y Cinematográfico)</li><li>Emprendimientos Universitarios</li><li>Práctica Profesional de Diseño de Indumentaria y Textil</li><li>Diseño de Calzado</li><li>Diseño de Packaging</li><li>Gestión Empresarial</li><li>Gestión Ambiental</li><li>Práctica Solidaria</li><li>Seminario Final de Diseño de Indumentaria y Textil</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-de-indumentaria-y-textil?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-de-indumentaria-y-textil?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/lic-en-diseno-grafico/">Lic. en Diseño Gráfico</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Comunicación Visual</li><li>Morfología I</li><li>Dibujo</li><li>Taller de Creatividad y Diseño</li><li>Comportamiento del Consumidor</li><li>Diseño de Comunicación Visual I</li><li>Morfología II</li><li>Tipografía I</li><li>Herramientas Digitales I</li><li>Taller de Creatividad y Diseño II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Marketing</li><li>Cultura Organizacional</li><li>Estética</li><li>Diseño de Comunicación Visual II</li><li>Herramientas Digitales II</li><li>Redacción Publicitaria</li><li>Creación Publicitaria</li><li>Diseño de Comunicación Visual III</li><li>Herramientas Digitales III</li><li>Desarrollo Emprendedor</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Comunicación Organizacional</li><li>Planeamiento de la Comunicación</li><li>Ética y Deontología Profesional</li><li>Tecnología Gráfica I</li><li>Diseño de Comunicación Visual IV</li><li>Herramientas Digitales IV</li><li>Semiótica</li><li>Historia del Diseño</li><li>Fotografía</li><li>Tecnología Gráfica II</li><li>Seminario de Práctica de Diseño Gráfico</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Comunicación Visual V</li><li>Tipografía II</li><li>Emprendimientos Universitarios</li><li>Seminario de Práctica Profesional de Diseño Gráfico</li><li>Gestión Ambiental</li><li>Teoría de los Medios de Comunicación Social</li><li>Diseño Interactivo</li><li>Seminario Final en Diseño Gráfico</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Materias adicionales</h4>
+            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-grafico?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-grafico?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-diseno-industrial/">Licenciatura en Diseño Industrial</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Análisis de Productos</li><li>Desarrollo Emprendedor</li><li>Dibujo</li><li>Idioma Extranjero I</li><li>Sociología General</li><li>Taller de Creatividad y Diseño I</li><li>Diseño Asistido por Computadora I</li><li>Diseño Industrial I</li><li>Idioma Extranjero II</li><li>Morfología del Producto I</li><li>Sistemas de Representación</li><li>Taller de Creatividad y Diseño II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Diseño Asistido por Computadora II</li><li>Diseño Industrial II</li><li>Historia del Diseño Industrial</li><li>Idioma Extranjero III</li><li>Morfología del Producto II</li><li>Tecnología y sus Aplicaciones I</li><li>Diseño Asistido por Computadora III</li><li>Diseño Industrial III</li><li>Ergonomía</li><li>Física</li><li>Idioma Extranjero IV</li><li>Tecnología y sus Aplicaciones II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Diseño Asistido por Computadora IV</li><li>Diseño Industrial IV</li><li>Herramientas Matemáticas II (Análisis)</li><li>Idioma Extranjero V</li><li>Semiótica</li><li>Tecnología y sus Aplicaciones III</li><li>Contabilidad de Costos</li><li>Idioma Extranjero VI</li><li>Modelística</li><li>Seminario de Práctica de Diseño Industrial</li><li>Ética y Deontología Profesional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Diseño Asistido por Computadora V</li><li>Diseño Industrial V</li><li>Emprendimientos Universitarios</li><li>Práctica Profesional de Diseño Industrial</li><li>Tecnología y sus Aplicaciones IV</li><li>Gestión Empresarial</li><li>Gestión Ambiental</li><li>Legislación</li><li>Práctica Solidaria</li><li>Seminario Final de Diseño Industrial</li><li>Tecnología y sus Aplicaciones V</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-industrial?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-industrial?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-publicidad/">Licenciatura en Publicidad</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial o Virtual</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Comunicación Visual</li><li>Psicología Social</li><li>Publicidad</li><li>Recursos Informáticos</li><li>Taller de Creatividad y Diseño I</li><li>Teoría de la Comunicación</li><li>Análisis de los Medios de Comunicación</li><li>Comportamiento del Consumidor</li><li>Desarrollo Emprendedor</li><li>Herramientas Digitales I</li><li>Morfología I</li><li>Taller de Creatividad y Diseño II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Creación Publicitaria I</li><li>Gramática Aplicada</li><li>Herramientas Digitales II</li><li>Historia de la Publicidad</li><li>Marketing I</li><li>Creación Publicitaria II</li><li>Cultura Organizacional</li><li>Herramientas Digitales III</li><li>Producción Radial</li><li>Redacción Publicitaria</li><li>Semiótica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Herramientas Digitales IV</li><li>Historia Universal</li><li>Lingüística</li><li>Planeamiento de la Comunicación</li><li>Producción Televisiva</li><li>Tecnología Gráfica</li><li>Estrategia y Planificación de Medios</li><li>Estética</li><li>Fotografía</li><li>Seminario de Práctica de Publicidad</li><li>Ética y Deontología Profesional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Diseño Interactivo</li><li>Emprendimientos Universitarios</li><li>Estrategias de Comunicaciones Integradas</li><li>Práctica Profesional de Publicidad</li><li>Campañas Publicitarias</li><li>Gestión Ambiental</li><li>Práctica Solidaria</li><li>Seminario Final de Publicidad</li><li>Sociología de los Medios de Comunicación Social</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-publicidad?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-publicidad?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-universitaria-en-diseno-y-animacion-digital/">Tecnicatura Universitaria en Diseño y Animación Digital</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Morfología I</li><li>Herramientas Digitales I</li><li>Introducción a la Animación Digital</li><li>Generalidad 3d</li><li>Fotografía</li><li>Publicidad</li><li>Post-Producción Digital I</li><li>Modelado 3d</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Morfología II</li><li>Herramientas Digitales II</li><li>Animación 2D</li><li>Generalidad 3D II</li><li>Planeamiento de Comunicación</li><li>Creatividad y Emprendedorismo</li><li>Post-Producción Digital II</li><li>Animación 3D</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Integración Profesional: El Estudio de Caso</li><li>Seminario de Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-universitaria-en-gestion-de-moda/">Tecnicatura Universitaria en Gestión de Moda</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Historia y Sociología de La Moda</li><li>Introducción al Marketing</li><li>Introducción al Diseño de Moda</li><li>Comportamiento del Consumidor</li><li>Marketing de Moda</li><li>Introducción a Costos</li><li>Formación y Comunicación de Marca</li><li>Visual Merchandising</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Negociación</li><li>Control de Gestión</li><li>Administración para Empresas de Moda</li><li>Arte y Estética</li><li>Liderazgo y Conducción de Equipos</li><li>Comunicación Aplicada a las Organizaciones</li><li>Herramientas de Investigación de Mercado</li><li>Precios y Venta para Marcas de Moda</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Integración Profesional: El Estudio Del Caso</li><li>Seminario de Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-moda?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-moda?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 
@@ -1663,176 +1855,6 @@
     </div>
 </details>
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-redes-informaticas-y-telecomunicaciones?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-    </ul>
-
-    <h2>Diseño (6)</h2>
-    <ul class="ofertas">
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-diseno-y-animacion-digital/">Licenciatura en Diseño y Animación Digital</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial o Virtual</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Morfología I</li><li>Herramientas Digitales I</li><li>Introducción a la Animación Digital</li><li>Dibujo</li><li>Sociología General</li><li>Desarrollo Emprendedor</li><li>Creación Publicitaria</li><li>Postproducción Digital</li><li>Generalidad 3D I</li><li>Publicidad</li><li>Idioma Extranjero I</li><li>Métodos y Técnicas de Investigación Social</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Morfología II</li><li>Herramientas Digitales II</li><li>Animación 2D</li><li>Tipografía</li><li>Grupo y Liderazgo</li><li>Idioma Extranjero II</li><li>Creación Publicitaria II</li><li>Postproducción Digital II</li><li>Generalidad 3D II</li><li>Diseño de Comunicación Visual I</li><li>Fotografía</li><li>Idioma Extranjero III</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Diseño de Comunicación Visual II</li><li>Composición de Efectos Visuales I</li><li>Modelado 3D</li><li>Principios de Iluminación en 3D</li><li>Seminario de Práctica</li><li>Idioma Extranjero IV</li><li>Diseño de Proyectos</li><li>Efectos Visuales 3D</li><li>Diseño de Escenas Digitales</li><li>Iluminación y Rendering</li><li>Responsabilidad Social</li><li>Idioma Extranjero V</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Planeamiento de la Comunicación</li><li>Composición de Efectos Visuales II</li><li>Animación 3D</li><li>Iluminación para Animación 3D</li><li>Emprendimientos Universitarios</li><li>Práctica Profesional</li><li>Creatividad y Emprendedorismo</li><li>Simulaciones y Fluidos</li><li>Texturas y Desarrollo de Estilos en 3D</li><li>Iluminación Foto-Real</li><li>Idioma Extranjero VI</li><li>Seminario Final</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Materias adicionales</h4>
-            <ul><li>Práctica Solidaria</li><li>2 materias electiva</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-diseno-de-indumentaria-y-textil/">Licenciatura en Diseño de Indumentaria y Textil</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Análisis de Producto (Diyt) - Ind.</li><li>Dibujo</li><li>Idioma Extranjero I</li><li>Psicología Social</li><li>Sociología General (Sociología De La Moda) - Ind.</li><li>Taller de Creatividad y Diseño I</li><li>Comportamiento del Consumidor</li><li>Desarrollo Emprendedor</li><li>Diseño de Indumentaria I - (Elementos del Diseño)</li><li>Idioma Extranjero II</li><li>Sistemas de Representación (Diyt) - Ind.</li><li>Taller de Creatividad y Diseño II</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Diseño de Indumentaria II (Armado de Colección I e Identidad Corporativa)</li><li>Historia de la Moda</li><li>Idioma Extranjero III</li><li>Marketing I</li><li>Molderia I</li><li>Tecnología Aplicada a La Indumentaria</li><li>Diseño de Indumentaria III (Armado de Colección II- Moda y Tendencia)</li><li>Ergonomía (Diyt) - Ind.</li><li>Fotografía</li><li>Idioma Extranjero IV</li><li>Moldería II</li><li>Semiótica</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Comunicación Organizacional</li><li>Contabilidad de Costos (Diyt) - Ind.</li><li>Idioma Extranjero V</li><li>Moldería III</li><li>Publicidad</li><li>Ética y Deontología Profesional</li><li>Diseño de Indumentaria Asistido por Computadora I</li><li>Estética (Diyt)</li><li>Idioma Extranjero VI</li><li>Modelística</li><li>Seminario de Práctica de Diseño de Indumentaria y Textil</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Diseño de Indumentaria Asistido por Computadora II</li><li>Diseño de Indumentaria IV (Armado de Colección III, Diseño Teatral y Cinematográfico)</li><li>Emprendimientos Universitarios</li><li>Práctica Profesional de Diseño de Indumentaria y Textil</li><li>Diseño de Calzado</li><li>Diseño de Packaging</li><li>Gestión Empresarial</li><li>Gestión Ambiental</li><li>Práctica Solidaria</li><li>Seminario Final de Diseño de Indumentaria y Textil</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-de-indumentaria-y-textil?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-de-indumentaria-y-textil?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/lic-en-diseno-grafico/">Lic. en Diseño Gráfico</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Comunicación Visual</li><li>Morfología I</li><li>Dibujo</li><li>Taller de Creatividad y Diseño</li><li>Comportamiento del Consumidor</li><li>Diseño de Comunicación Visual I</li><li>Morfología II</li><li>Tipografía I</li><li>Herramientas Digitales I</li><li>Taller de Creatividad y Diseño II</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Marketing</li><li>Cultura Organizacional</li><li>Estética</li><li>Diseño de Comunicación Visual II</li><li>Herramientas Digitales II</li><li>Redacción Publicitaria</li><li>Creación Publicitaria</li><li>Diseño de Comunicación Visual III</li><li>Herramientas Digitales III</li><li>Desarrollo Emprendedor</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Comunicación Organizacional</li><li>Planeamiento de la Comunicación</li><li>Ética y Deontología Profesional</li><li>Tecnología Gráfica I</li><li>Diseño de Comunicación Visual IV</li><li>Herramientas Digitales IV</li><li>Semiótica</li><li>Historia del Diseño</li><li>Fotografía</li><li>Tecnología Gráfica II</li><li>Seminario de Práctica de Diseño Gráfico</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Comunicación Visual V</li><li>Tipografía II</li><li>Emprendimientos Universitarios</li><li>Seminario de Práctica Profesional de Diseño Gráfico</li><li>Gestión Ambiental</li><li>Teoría de los Medios de Comunicación Social</li><li>Diseño Interactivo</li><li>Seminario Final en Diseño Gráfico</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Materias adicionales</h4>
-            <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-grafico?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-grafico?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-diseno-industrial/">Licenciatura en Diseño Industrial</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Análisis de Productos</li><li>Desarrollo Emprendedor</li><li>Dibujo</li><li>Idioma Extranjero I</li><li>Sociología General</li><li>Taller de Creatividad y Diseño I</li><li>Diseño Asistido por Computadora I</li><li>Diseño Industrial I</li><li>Idioma Extranjero II</li><li>Morfología del Producto I</li><li>Sistemas de Representación</li><li>Taller de Creatividad y Diseño II</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Diseño Asistido por Computadora II</li><li>Diseño Industrial II</li><li>Historia del Diseño Industrial</li><li>Idioma Extranjero III</li><li>Morfología del Producto II</li><li>Tecnología y sus Aplicaciones I</li><li>Diseño Asistido por Computadora III</li><li>Diseño Industrial III</li><li>Ergonomía</li><li>Física</li><li>Idioma Extranjero IV</li><li>Tecnología y sus Aplicaciones II</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Diseño Asistido por Computadora IV</li><li>Diseño Industrial IV</li><li>Herramientas Matemáticas II (Análisis)</li><li>Idioma Extranjero V</li><li>Semiótica</li><li>Tecnología y sus Aplicaciones III</li><li>Contabilidad de Costos</li><li>Idioma Extranjero VI</li><li>Modelística</li><li>Seminario de Práctica de Diseño Industrial</li><li>Ética y Deontología Profesional</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Diseño Asistido por Computadora V</li><li>Diseño Industrial V</li><li>Emprendimientos Universitarios</li><li>Práctica Profesional de Diseño Industrial</li><li>Tecnología y sus Aplicaciones IV</li><li>Gestión Empresarial</li><li>Gestión Ambiental</li><li>Legislación</li><li>Práctica Solidaria</li><li>Seminario Final de Diseño Industrial</li><li>Tecnología y sus Aplicaciones V</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-industrial?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-industrial?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-publicidad/">Licenciatura en Publicidad</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial o Virtual</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 4 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Comunicación Visual</li><li>Psicología Social</li><li>Publicidad</li><li>Recursos Informáticos</li><li>Taller de Creatividad y Diseño I</li><li>Teoría de la Comunicación</li><li>Análisis de los Medios de Comunicación</li><li>Comportamiento del Consumidor</li><li>Desarrollo Emprendedor</li><li>Herramientas Digitales I</li><li>Morfología I</li><li>Taller de Creatividad y Diseño II</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Creación Publicitaria I</li><li>Gramática Aplicada</li><li>Herramientas Digitales II</li><li>Historia de la Publicidad</li><li>Marketing I</li><li>Creación Publicitaria II</li><li>Cultura Organizacional</li><li>Herramientas Digitales III</li><li>Producción Radial</li><li>Redacción Publicitaria</li><li>Semiótica</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Herramientas Digitales IV</li><li>Historia Universal</li><li>Lingüística</li><li>Planeamiento de la Comunicación</li><li>Producción Televisiva</li><li>Tecnología Gráfica</li><li>Estrategia y Planificación de Medios</li><li>Estética</li><li>Fotografía</li><li>Seminario de Práctica de Publicidad</li><li>Ética y Deontología Profesional</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Cuarto año</h4>
-            <ul><li>Diseño Interactivo</li><li>Emprendimientos Universitarios</li><li>Estrategias de Comunicaciones Integradas</li><li>Práctica Profesional de Publicidad</li><li>Campañas Publicitarias</li><li>Gestión Ambiental</li><li>Práctica Solidaria</li><li>Seminario Final de Publicidad</li><li>Sociología de los Medios de Comunicación Social</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-publicidad?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-publicidad?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-diseno-y-animacion-digital/">Tecnicatura Universitaria en Diseño y Animación Digital</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Virtual</li><li>Pregrado</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Primer año</h4>
-            <ul><li>Morfología I</li><li>Herramientas Digitales I</li><li>Introducción a la Animación Digital</li><li>Generalidad 3d</li><li>Fotografía</li><li>Publicidad</li><li>Post-Producción Digital I</li><li>Modelado 3d</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Segundo año</h4>
-            <ul><li>Morfología II</li><li>Herramientas Digitales II</li><li>Animación 2D</li><li>Generalidad 3D II</li><li>Planeamiento de Comunicación</li><li>Creatividad y Emprendedorismo</li><li>Post-Producción Digital II</li><li>Animación 3D</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>Tercer año</h4>
-            <ul><li>Integración Profesional: El Estudio de Caso</li><li>Seminario de Práctica Profesional</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 
@@ -2056,7 +2078,7 @@
         </li>
     </ul>
 
-    <h2>Ingeniería (2)</h2>
+    <h2>Ingeniería (3)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-en-software/">Ingeniería en Software</a></h3>
@@ -2124,9 +2146,32 @@
 </details>
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/ingenieria-en-innovacion-y-desarrollo?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-universitaria-en-hidrocarburos-y-geociencia/">Tecnicatura Universitaria en Hidrocarburos y Geociencia</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial, Híbrida o Distancia</li><li>Pregrado</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Perforación</li><li>Herramientas Matemáticas III – Estadística I</li><li>Geología I</li><li>Física</li><li>Higiene y Medio Ambiente</li><li>Logística</li><li>Química General y Orgánica</li><li>Electrotecnia y Termotecnia</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Máquinas y Sistemas</li><li>Implementación de Normas de Calidad</li><li>Geología II</li><li>Mecánica de los Fluidos</li><li>Estudio del Trabajo</li><li>Terminación y Reparación de Pozo</li><li>Reservorios</li><li>Almacenamiento, Transporte y Refinamiento</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Integración profesional el estudio del caso</li><li>Seminario de práctica profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-hidrocarburos-y-geociencia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-hidrocarburos-y-geociencia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
     </ul>
 
-    <h2>Turismo (2)</h2>
+    <h2>Turismo (3)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-gestion-turistica/">Licenciatura en Gestión Turística</a></h3>
@@ -2158,6 +2203,33 @@
     </div>
 </details>
             <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-turistica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-administracion-hotelera/">Licenciatura en Administración Hotelera</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Virtual</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Administración</li><li>Desarrollo Emprendedor</li><li>Geografía Turística</li><li>Herramientas Matemáticas II - Análisis -</li><li>Idioma Extranjero I</li><li>Mercados Turísticos</li><li>Alimentos y Bebidas</li><li>Comportamiento del Consumidor</li><li>Eventos, Ceremonial y Protocolo</li><li>Idioma Extranjero II</li><li>Servicios Turísticos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Contabilidad Básica y de Gestión</li><li>Gestión de Empresas Gastronómicas</li><li>Herramientas Matemáticas III - Estadística I</li><li>Idioma Extranjero III</li><li>Marketing I</li><li>Práctica Solidaria</li><li>Cultura Organizacional</li><li>Economía I</li><li>Gestión de Alojamiento</li><li>Idioma Extranjero IV</li><li>Investigación de Mercado</li><li>Marco Legal de las Organizaciones</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Administración De Recursos Humanos</li><li>Análisis Cuantitativo Financiero</li><li>Contabilidad De Costos</li><li>Economía II</li><li>Idioma Extranjero V</li><li>Recepción, Conserjería y Reservas</li><li>Dirección General</li><li>Formulación Y Evaluación De Proyectos</li><li>Historia Universal</li><li>Idioma Extranjero VI</li><li>Seminario de Práctica de Administración Hotelera</li><li>Ética y Deontología Profesional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Emprendimientos Universitarios</li><li>Gestión Ambiental</li><li>Gestión de Turismo de Negocios y de Tiempo Libre</li><li>Idioma Extranjero VII</li><li>Práctica Profesional de Administración Hotelera</li><li>Turismo y Mercado</li><li>Idioma Extranjero VIII</li><li>Instituciones Políticas y Gubernamentales</li><li>Pisos y Habitaciones - Mantenimiento y Seguridad</li><li>Hotelera</li><li>Planificación Turística</li><li>Seminario Final de Administración Hotelera</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-hotelera?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-hotelera?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-gestion-de-recursos-turisticos/">Tecnicatura Universitaria en Gestión de Recursos Turísticos</a></h3>

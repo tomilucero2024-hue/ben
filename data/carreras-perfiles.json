@@ -95,7 +95,7 @@
     },
     {
       "clave": "administracion",
-      "nombre": "ADMINISTRACIÓN",
+      "nombre": "Administración",
       "categoria": "Tecnicatura",
       "area": "Negocios",
       "formacion": "tecnicaturas",
@@ -164,7 +164,7 @@
       "clave": "administrativo veterinaria",
       "nombre": "Administrativo Veterinaria",
       "categoria": "Curso / Formación Profesional",
-      "area": "Ambiente",
+      "area": "Negocios",
       "formacion": "cursos",
       "instituciones": [
         "Instituto Juan Gutenberg"
@@ -173,13 +173,35 @@
         "analitico": 4,
         "tecnologico": 2,
         "practico": 5,
-        "social": 2,
+        "social": 4,
         "creativo": 2,
-        "terreno": 5,
-        "liderazgo": 2,
-        "teorico": 2,
-        "matematico": 2,
+        "terreno": 3,
+        "liderazgo": 4,
+        "teorico": 1,
+        "matematico": 3,
         "movilidad": 4
+      }
+    },
+    {
+      "clave": "agronegocios",
+      "nombre": "Agronegocios",
+      "categoria": "Grado / Carrera",
+      "area": "Negocios",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de Congreso (UC)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 5,
+        "teorico": 4,
+        "matematico": 3,
+        "movilidad": 3
       }
     },
     {
@@ -646,6 +668,28 @@
       }
     },
     {
+      "clave": "ciencias de la educacion",
+      "nombre": "Ciencias de la Educación",
+      "categoria": "Grado / Carrera",
+      "area": "Educación",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de Congreso (UC)"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 3,
+        "terreno": 1,
+        "liderazgo": 4,
+        "teorico": 5,
+        "matematico": 2,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "ciencias del comportamiento",
       "nombre": "Ciencias del Comportamiento",
       "categoria": "Grado / Carrera",
@@ -778,6 +822,28 @@
       }
     },
     {
+      "clave": "conductor nautico (patron de yate)",
+      "nombre": "Conductor Náutico (Patrón de Yate)",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "Prefectura Naval Argentina (Certificaciones Náuticas)"
+      ],
+      "perfil": {
+        "analitico": 2,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 1,
+        "creativo": 2,
+        "terreno": 4,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
       "clave": "contador publico",
       "nombre": "Contador Público",
       "categoria": "Grado / Carrera",
@@ -896,6 +962,28 @@
       }
     },
     {
+      "clave": "curso barista integral",
+      "nombre": "Curso Barista Integral",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Academia Manifiesto (Baristas)"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 3,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "curso de apicultura online (gratuito)",
       "nombre": "Curso de Apicultura Online (gratuito)",
       "categoria": "Curso / Formación Profesional",
@@ -935,6 +1023,28 @@
         "terreno": 2,
         "liderazgo": 2,
         "teorico": 0,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "curso de cata y maridaje de aceite de oliva",
+      "nombre": "Curso de Cata y Maridaje de Aceite de Oliva",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "ASOLMEN - Asociación Olivícola de Mendoza"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 3,
         "matematico": 1,
         "movilidad": 2
       }
@@ -1006,6 +1116,28 @@
       }
     },
     {
+      "clave": "curso de formacion de guardavidas",
+      "nombre": "Curso de Formación de Guardavidas",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Cruz Roja Argentina (Filial Mendoza)"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 3,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "curso de frances",
       "nombre": "Curso de Francés",
       "categoria": "Curso / Formación Profesional",
@@ -1046,6 +1178,28 @@
         "liderazgo": 5,
         "teorico": 1,
         "matematico": 3,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "curso de huerta organica y agroecologia",
+      "nombre": "Curso de Huerta Orgánica y Agroecología",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ambiente",
+      "formacion": "cursos",
+      "instituciones": [
+        "INTA - Instituto Nacional de Tecnología Agropecuaria (Mendoza)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 2,
+        "creativo": 2,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 2,
+        "matematico": 2,
         "movilidad": 3
       }
     },
@@ -1160,8 +1314,8 @@
       }
     },
     {
-      "clave": "curso de italiano 2026",
-      "nombre": "Curso de Italiano 2026",
+      "clave": "curso de italiano – nivel a 1",
+      "nombre": "Curso de Italiano – Nivel A 1",
       "categoria": "Curso / Formación Profesional",
       "area": "Idiomas",
       "formacion": "cursos",
@@ -1226,8 +1380,8 @@
       }
     },
     {
-      "clave": "curso de portugues 2026",
-      "nombre": "Curso de Portugués 2026",
+      "clave": "curso de portugues a 1.1",
+      "nombre": "Curso de Portugués A 1.1",
       "categoria": "Curso / Formación Profesional",
       "area": "Idiomas",
       "formacion": "cursos",
@@ -1245,6 +1399,50 @@
         "teorico": 4,
         "matematico": 1,
         "movilidad": 5
+      }
+    },
+    {
+      "clave": "curso de portugues a 1.2",
+      "nombre": "Curso de Portugués A 1.2",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Idiomas",
+      "formacion": "cursos",
+      "instituciones": [
+        "IESVU (IES 9-015 Valle de Uco)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 1,
+        "liderazgo": 1,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 5
+      }
+    },
+    {
+      "clave": "curso de primeros auxilios, rcp y dea",
+      "nombre": "Curso de Primeros Auxilios, RCP y DEA",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Salud",
+      "formacion": "cursos",
+      "instituciones": [
+        "Cruz Roja Argentina (Filial Mendoza)"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 3,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 2,
+        "matematico": 2,
+        "movilidad": 2
       }
     },
     {
@@ -1494,22 +1692,22 @@
       "clave": "direccion de empresas",
       "nombre": "Dirección de Empresas",
       "categoria": "Grado / Carrera",
-      "area": "Ciencias sociales",
+      "area": "Negocios",
       "formacion": "grado",
       "instituciones": [
         "Universidad Juan Agustín Maza (UMaza)"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 2,
+        "tecnologico": 2,
+        "practico": 3,
         "social": 5,
         "creativo": 2,
         "terreno": 1,
         "liderazgo": 5,
-        "teorico": 5,
-        "matematico": 1,
-        "movilidad": 2
+        "teorico": 4,
+        "matematico": 3,
+        "movilidad": 3
       }
     },
     {
@@ -1846,6 +2044,50 @@
       }
     },
     {
+      "clave": "fonoaudiologia y clinica del lenguaje",
+      "nombre": "Fonoaudiología y Clínica del Lenguaje",
+      "categoria": "Grado / Carrera",
+      "area": "Salud",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de Congreso (UC)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 0,
+        "liderazgo": 2,
+        "teorico": 5,
+        "matematico": 2,
+        "movilidad": 4
+      }
+    },
+    {
+      "clave": "formacion de guardaparques nacionales",
+      "nombre": "Formación de Guardaparques Nacionales",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Administración de Parques Nacionales (APN)"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 3,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "formacion profesional en apicultura",
       "nombre": "Formación Profesional en Apicultura",
       "categoria": "Formación Profesional",
@@ -2004,22 +2246,22 @@
       "clave": "gestion de empresas turisticas",
       "nombre": "Gestión de Empresas Turísticas",
       "categoria": "Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Turismo",
       "formacion": "tecnicaturas",
       "instituciones": [
         "UTN Facultad Regional Mendoza"
       ],
       "perfil": {
-        "analitico": 5,
+        "analitico": 3,
         "tecnologico": 1,
-        "practico": 3,
+        "practico": 4,
         "social": 5,
         "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 5,
-        "teorico": 4,
+        "terreno": 3,
+        "liderazgo": 4,
+        "teorico": 1,
         "matematico": 1,
-        "movilidad": 2
+        "movilidad": 4
       }
     },
     {
@@ -2136,22 +2378,22 @@
       "clave": "higiene y seguridad",
       "nombre": "Higiene y Seguridad",
       "categoria": "Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Ambiente",
       "formacion": "tecnicaturas",
       "instituciones": [
         "UTN Facultad Regional Mendoza"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 3,
         "creativo": 2,
-        "terreno": 2,
-        "liderazgo": 4,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
+        "terreno": 5,
+        "liderazgo": 3,
+        "teorico": 3,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -2222,7 +2464,7 @@
     },
     {
       "clave": "ingenieria civil",
-      "nombre": "INGENIERÍA CIVIL",
+      "nombre": "Ingeniería Civil",
       "categoria": "Ingeniería",
       "area": "Ingeniería",
       "formacion": "grado",
@@ -2267,7 +2509,7 @@
     },
     {
       "clave": "ingenieria electromecanica",
-      "nombre": "INGENIERÍA ELECTROMECÁNICA",
+      "nombre": "Ingeniería Electromecánica",
       "categoria": "Ingeniería",
       "area": "Ingeniería",
       "formacion": "grado",
@@ -2289,7 +2531,7 @@
     },
     {
       "clave": "ingenieria electronica",
-      "nombre": "INGENIERÍA ELECTRÓNICA",
+      "nombre": "Ingeniería Electrónica",
       "categoria": "Ingeniería",
       "area": "Ingeniería",
       "formacion": "grado",
@@ -2444,7 +2686,7 @@
     },
     {
       "clave": "ingenieria en minas",
-      "nombre": "INGENIERÍA EN MINAS",
+      "nombre": "Ingeniería en Minas",
       "categoria": "Ingeniería",
       "area": "Ingeniería",
       "formacion": "grado",
@@ -2488,7 +2730,7 @@
     },
     {
       "clave": "ingenieria en sistemas de informacion",
-      "nombre": "INGENIERÍA EN SISTEMAS DE INFORMACIÓN",
+      "nombre": "Ingeniería en Sistemas de Información",
       "categoria": "Ingeniería",
       "area": "Ingeniería",
       "formacion": "grado",
@@ -2532,7 +2774,7 @@
     },
     {
       "clave": "ingenieria en telecomunicaciones",
-      "nombre": "INGENIERÍA EN TELECOMUNICACIONES",
+      "nombre": "Ingeniería en Telecomunicaciones",
       "categoria": "Ingeniería",
       "area": "Ingeniería",
       "formacion": "grado",
@@ -2622,7 +2864,7 @@
     },
     {
       "clave": "ingenieria quimica",
-      "nombre": "INGENIERÍA QUÍMICA",
+      "nombre": "Ingeniería Química",
       "categoria": "Ingeniería",
       "area": "Ingeniería",
       "formacion": "grado",
@@ -2732,6 +2974,50 @@
       }
     },
     {
+      "clave": "instalador de sistemas de energia solar (fotovoltaicos y termicos)",
+      "nombre": "Instalador de Sistemas de Energía Solar (Fotovoltaicos y Térmicos)",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Tecnología",
+      "formacion": "cursos",
+      "instituciones": [
+        "Capacitación en Energía Solar (Mendoza)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 5,
+        "practico": 5,
+        "social": 1,
+        "creativo": 3,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 1,
+        "matematico": 3,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "instructorado nacional de esqui y snowboard (niveles 1 a 3)",
+      "nombre": "Instructorado Nacional de Esquí y Snowboard (Niveles 1 a 3)",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "AADIDESS - Asociación Argentina de Instructores de Esquí y Snowboard"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 3,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "interprete en guitarra y lectura musical",
       "nombre": "Intérprete en Guitarra y Lectura Musical",
       "categoria": "Curso / Formación Profesional",
@@ -2798,6 +3084,50 @@
       }
     },
     {
+      "clave": "inversiones y mercados de capitales",
+      "nombre": "Inversiones y Mercados de Capitales",
+      "categoria": "Grado / Carrera",
+      "area": "Ciencias sociales",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de Congreso (UC)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 1,
+        "practico": 2,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 5,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "kinesiologia",
+      "nombre": "Kinesiología",
+      "categoria": "Grado / Carrera",
+      "area": "Salud",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de Congreso (UC)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 1,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 5,
+        "matematico": 2,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "kinesiologia y fisioterapia",
       "nombre": "Kinesiología y Fisioterapia",
       "categoria": "Grado / Carrera",
@@ -2816,6 +3146,28 @@
         "liderazgo": 3,
         "teorico": 5,
         "matematico": 2,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "laboratorio de analisis clinicos",
+      "nombre": "Laboratorio de Análisis Clínicos",
+      "categoria": "Grado / Carrera",
+      "area": "Salud",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de Congreso (UC)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 1,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 5,
+        "matematico": 3,
         "movilidad": 2
       }
     },
@@ -3289,22 +3641,22 @@
       "clave": "licenciatura en administracion hotelera",
       "nombre": "Licenciatura en Administración Hotelera",
       "categoria": "Grado / Carrera",
-      "area": "Negocios",
+      "area": "Turismo",
       "formacion": "grado",
       "instituciones": [
         "Universidad del Aconcagua (UDA)",
         "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
-        "analitico": 5,
-        "tecnologico": 2,
+        "analitico": 4,
+        "tecnologico": 1,
         "practico": 4,
         "social": 5,
         "creativo": 2,
-        "terreno": 3,
-        "liderazgo": 5,
-        "teorico": 4,
-        "matematico": 3,
+        "terreno": 5,
+        "liderazgo": 4,
+        "teorico": 3,
+        "matematico": 1,
         "movilidad": 5
       }
     },
@@ -3400,21 +3752,21 @@
       "clave": "licenciatura en anestesiologia a distancia",
       "nombre": "Licenciatura en Anestesiología a distancia",
       "categoria": "Grado / Carrera",
-      "area": "Ciencias sociales",
+      "area": "Salud",
       "formacion": "grado",
       "instituciones": [
         "Universidad Juan Agustín Maza (UMaza)"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 2,
+        "tecnologico": 2,
+        "practico": 5,
         "social": 5,
-        "creativo": 2,
+        "creativo": 1,
         "terreno": 0,
-        "liderazgo": 3,
+        "liderazgo": 2,
         "teorico": 5,
-        "matematico": 1,
+        "matematico": 2,
         "movilidad": 3
       }
     },
@@ -4814,22 +5166,22 @@
       "clave": "licenciatura en higiene y seguridad en el trabajo",
       "nombre": "Licenciatura en Higiene y Seguridad en el Trabajo",
       "categoria": "Grado / Carrera",
-      "area": "Ciencias sociales",
+      "area": "Ambiente",
       "formacion": "grado",
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 3,
         "creativo": 2,
-        "terreno": 2,
-        "liderazgo": 4,
+        "terreno": 5,
+        "liderazgo": 3,
         "teorico": 5,
-        "matematico": 1,
-        "movilidad": 2
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -5457,28 +5809,6 @@
       }
     },
     {
-      "clave": "licenciatura en produccion de bioimagenes (radiologia)",
-      "nombre": "Licenciatura en Producción de Bioimágenes (Radiología)",
-      "categoria": "Grado / Carrera",
-      "area": "Salud",
-      "formacion": "grado",
-      "instituciones": [
-        "Universidad de Congreso (UC)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 3,
-        "practico": 5,
-        "social": 5,
-        "creativo": 3,
-        "terreno": 0,
-        "liderazgo": 2,
-        "teorico": 5,
-        "matematico": 2,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "licenciatura en psicologia",
       "nombre": "Licenciatura en Psicología",
       "categoria": "Grado / Carrera",
@@ -5568,6 +5898,28 @@
         "teorico": 5,
         "matematico": 5,
         "movilidad": 3
+      }
+    },
+    {
+      "clave": "licenciatura en radiologia",
+      "nombre": "Licenciatura en Radiología",
+      "categoria": "Grado / Carrera",
+      "area": "Salud",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de Congreso (UC)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 5,
+        "creativo": 3,
+        "terreno": 0,
+        "liderazgo": 2,
+        "teorico": 5,
+        "matematico": 2,
+        "movilidad": 2
       }
     },
     {
@@ -5663,52 +6015,8 @@
       }
     },
     {
-      "clave": "licenciatura en seguridad ciudadana integral",
-      "nombre": "Licenciatura en Seguridad Ciudadana Integral",
-      "categoria": "Grado / Carrera",
-      "area": "Ciencias sociales",
-      "formacion": "grado",
-      "instituciones": [
-        "Universidad del Aconcagua (UDA)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 2,
-        "liderazgo": 4,
-        "teorico": 5,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "licenciatura en seguridad ciudadana integral - modalidad a distancia",
       "nombre": "Licenciatura en Seguridad Ciudadana Integral - Modalidad a distancia",
-      "categoria": "Grado / Carrera",
-      "area": "Ciencias sociales",
-      "formacion": "grado",
-      "instituciones": [
-        "Universidad del Aconcagua (UDA)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 4,
-        "teorico": 5,
-        "matematico": 1,
-        "movilidad": 3
-      }
-    },
-    {
-      "clave": "licenciatura en seguridad ciudadana integral | a distancia",
-      "nombre": "Licenciatura en Seguridad Ciudadana Integral | A distancia",
       "categoria": "Grado / Carrera",
       "area": "Ciencias sociales",
       "formacion": "grado",
@@ -6036,6 +6344,28 @@
         "teorico": 4,
         "matematico": 2,
         "movilidad": 2
+      }
+    },
+    {
+      "clave": "marketing digital",
+      "nombre": "Marketing Digital",
+      "categoria": "Grado / Carrera",
+      "area": "Negocios",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de Congreso (UC)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 3,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 1,
+        "liderazgo": 5,
+        "teorico": 4,
+        "matematico": 3,
+        "movilidad": 3
       }
     },
     {
@@ -6457,6 +6787,28 @@
         "liderazgo": 2,
         "teorico": 5,
         "matematico": 2,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "preparacion fisica y entrenamiento deportivo",
+      "nombre": "Preparación Física y Entrenamiento Deportivo",
+      "categoria": "Grado / Carrera",
+      "area": "Salud",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de Congreso (UC)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 1,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 5,
+        "matematico": 5,
         "movilidad": 2
       }
     },
@@ -8185,46 +8537,24 @@
       }
     },
     {
-      "clave": "profesorados y postitulos",
-      "nombre": "PROFESORADOS Y POSTÍTULOS",
-      "categoria": "Grado / Profesorado",
-      "area": "Educación",
-      "formacion": "profesorados",
-      "instituciones": [
-        "IES 9-004 Gral. Toribio de Luzuriaga"
-      ],
-      "perfil": {
-        "analitico": 3,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
-        "creativo": 3,
-        "terreno": 1,
-        "liderazgo": 4,
-        "teorico": 5,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "programa de la tec. superior en laboratorio de analisis clinicos",
       "nombre": "Programa de la Tec. Superior en Laboratorio de Análisis Clínicos",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Tecnología",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-026 Instituto de la Patria Grande"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 5,
+        "tecnologico": 4,
         "practico": 5,
-        "social": 1,
-        "creativo": 3,
+        "social": 5,
+        "creativo": 1,
         "terreno": 1,
         "liderazgo": 2,
         "teorico": 4,
-        "matematico": 4,
+        "matematico": 3,
         "movilidad": 2
       }
     },
@@ -8232,21 +8562,21 @@
       "clave": "programa de tec. superior en dialisis",
       "nombre": "Programa de Tec. Superior en Diálisis",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Tecnología",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-026 Instituto de la Patria Grande"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 5,
+        "tecnologico": 4,
         "practico": 5,
-        "social": 1,
-        "creativo": 3,
+        "social": 5,
+        "creativo": 1,
         "terreno": 1,
         "liderazgo": 2,
-        "teorico": 2,
-        "matematico": 3,
+        "teorico": 3,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -8254,21 +8584,21 @@
       "clave": "programa de tec. superior en gestion de las organizaciones de la salud",
       "nombre": "Programa de Tec. Superior en Gestión de las Organizaciones de la Salud",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Tecnología",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-026 Instituto de la Patria Grande"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 5,
+        "tecnologico": 4,
         "practico": 5,
-        "social": 4,
-        "creativo": 3,
+        "social": 5,
+        "creativo": 1,
         "terreno": 0,
         "liderazgo": 4,
-        "teorico": 2,
-        "matematico": 3,
+        "teorico": 3,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -8335,6 +8665,28 @@
         "liderazgo": 2,
         "teorico": 5,
         "matematico": 2,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "psicopedagogia",
+      "nombre": "Psicopedagogía",
+      "categoria": "Grado / Carrera",
+      "area": "Educación",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de Congreso (UC)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 3,
+        "terreno": 1,
+        "liderazgo": 4,
+        "teorico": 5,
+        "matematico": 1,
         "movilidad": 2
       }
     },
@@ -8450,30 +8802,8 @@
       }
     },
     {
-      "clave": "relaciones economicas internacionales",
-      "nombre": "Relaciones Económicas Internacionales",
-      "categoria": "Grado / Carrera",
-      "area": "Negocios",
-      "formacion": "grado",
-      "instituciones": [
-        "Universidad de Congreso (UC)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 2,
-        "practico": 3,
-        "social": 4,
-        "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 4,
-        "teorico": 4,
-        "matematico": 3,
-        "movilidad": 3
-      }
-    },
-    {
-      "clave": "relaciones internacionales y gobernanza global",
-      "nombre": "Relaciones Internacionales y Gobernanza Global",
+      "clave": "relaciones internacionales",
+      "nombre": "Relaciones Internacionales",
       "categoria": "Grado / Carrera",
       "area": "Ciencias sociales",
       "formacion": "grado",
@@ -8780,50 +9110,6 @@
       }
     },
     {
-      "clave": "tecnicatura en administracion de empresas",
-      "nombre": "Tecnicatura en Administración de Empresas",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Negocios",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IESVU (IES 9-015 Valle de Uco)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 2,
-        "practico": 4,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 5,
-        "teorico": 2,
-        "matematico": 3,
-        "movilidad": 3
-      }
-    },
-    {
-      "clave": "tecnicatura en administracion publica",
-      "nombre": "Tecnicatura en Administración Pública",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Negocios",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IESVU (IES 9-015 Valle de Uco)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 2,
-        "practico": 5,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 2,
-        "liderazgo": 5,
-        "teorico": 2,
-        "matematico": 3,
-        "movilidad": 3
-      }
-    },
-    {
       "clave": "tecnicatura en administracion y gestion tributaria",
       "nombre": "Tecnicatura en Administración y Gestión Tributaria",
       "categoria": "Pregrado",
@@ -8843,28 +9129,6 @@
         "teorico": 3,
         "matematico": 5,
         "movilidad": 3
-      }
-    },
-    {
-      "clave": "tecnicatura en agronomia",
-      "nombre": "Tecnicatura en Agronomía",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Ambiente",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IESVU (IES 9-015 Valle de Uco)"
-      ],
-      "perfil": {
-        "analitico": 4,
-        "tecnologico": 2,
-        "practico": 5,
-        "social": 2,
-        "creativo": 2,
-        "terreno": 5,
-        "liderazgo": 2,
-        "teorico": 3,
-        "matematico": 2,
-        "movilidad": 4
       }
     },
     {
@@ -8890,46 +9154,24 @@
       }
     },
     {
-      "clave": "tecnicatura en comercio internacional y aduana",
-      "nombre": "Tecnicatura en Comercio Internacional y Aduana",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Negocios",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IESVU (IES 9-015 Valle de Uco)"
-      ],
-      "perfil": {
-        "analitico": 4,
-        "tecnologico": 2,
-        "practico": 4,
-        "social": 4,
-        "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 4,
-        "teorico": 2,
-        "matematico": 3,
-        "movilidad": 3
-      }
-    },
-    {
       "clave": "tecnicatura en cosmetologia y cosmiatria",
       "nombre": "Tecnicatura en Cosmetología y Cosmiatría",
       "categoria": "Grado / Carrera",
-      "area": "Ciencias sociales",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Juan Agustín Maza (UMaza)"
       ],
       "perfil": {
         "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
+        "tecnologico": 2,
+        "practico": 5,
         "social": 5,
-        "creativo": 2,
+        "creativo": 1,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -9088,24 +9330,24 @@
       }
     },
     {
-      "clave": "tecnicatura en enologia e industrias frutihorticolas",
-      "nombre": "Tecnicatura en Enología e Industrias Frutihortícolas",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Gastronomía",
+      "clave": "tecnicatura en enfermeria",
+      "nombre": "Tecnicatura en Enfermería",
+      "categoria": "Grado / Carrera",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "IESVU (IES 9-015 Valle de Uco)"
+        "Universidad de Congreso (UC)"
       ],
       "perfil": {
-        "analitico": 1,
+        "analitico": 5,
         "tecnologico": 2,
         "practico": 5,
-        "social": 4,
-        "creativo": 4,
-        "terreno": 2,
+        "social": 5,
+        "creativo": 1,
+        "terreno": 0,
         "liderazgo": 2,
-        "teorico": 0,
-        "matematico": 1,
+        "teorico": 3,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -9132,28 +9374,6 @@
       }
     },
     {
-      "clave": "tecnicatura en estadistica y analisis de datos",
-      "nombre": "Tecnicatura en Estadística y Análisis de Datos",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Tecnología",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IESVU (IES 9-015 Valle de Uco)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 5,
-        "practico": 4,
-        "social": 1,
-        "creativo": 3,
-        "terreno": 1,
-        "liderazgo": 2,
-        "teorico": 4,
-        "matematico": 5,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "tecnicatura en frances",
       "nombre": "Tecnicatura en Francés",
       "categoria": "Grado / Carrera",
@@ -9176,69 +9396,47 @@
       }
     },
     {
-      "clave": "tecnicatura en gastronomia",
-      "nombre": "Tecnicatura en Gastronomía",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Gastronomía",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IESVU (IES 9-015 Valle de Uco)"
-      ],
-      "perfil": {
-        "analitico": 1,
-        "tecnologico": 1,
-        "practico": 5,
-        "social": 4,
-        "creativo": 5,
-        "terreno": 1,
-        "liderazgo": 2,
-        "teorico": 0,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "tecnicatura en geotecnologias",
       "nombre": "Tecnicatura en Geotecnologías",
       "categoria": "Grado / Carrera",
-      "area": "Ciencias sociales",
+      "area": "Ambiente",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)"
       ],
       "perfil": {
         "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 2,
         "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
       "clave": "tecnicatura en gestion contable e impositiva",
       "nombre": "Tecnicatura en Gestión Contable e Impositiva",
       "categoria": "Pregrado",
-      "area": "Ciencias sociales",
+      "area": "Negocios",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 3,
+        "tecnologico": 2,
+        "practico": 4,
         "social": 5,
         "creativo": 2,
         "terreno": 1,
         "liderazgo": 5,
-        "teorico": 4,
-        "matematico": 3,
-        "movilidad": 2
+        "teorico": 3,
+        "matematico": 5,
+        "movilidad": 3
       }
     },
     {
@@ -9267,44 +9465,44 @@
       "clave": "tecnicatura en gestion de empresas",
       "nombre": "Tecnicatura en Gestión de Empresas",
       "categoria": "Grado / Carrera",
-      "area": "Ciencias sociales",
+      "area": "Negocios",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 3,
+        "tecnologico": 2,
+        "practico": 4,
         "social": 5,
         "creativo": 2,
         "terreno": 1,
         "liderazgo": 5,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
+        "teorico": 2,
+        "matematico": 3,
+        "movilidad": 3
       }
     },
     {
       "clave": "tecnicatura en gestion de empresas familiares",
       "nombre": "Tecnicatura en Gestión de Empresas Familiares",
       "categoria": "Pregrado",
-      "area": "Ciencias sociales",
+      "area": "Negocios",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 3,
+        "tecnologico": 2,
+        "practico": 4,
         "social": 5,
         "creativo": 2,
         "terreno": 1,
         "liderazgo": 5,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
+        "teorico": 2,
+        "matematico": 3,
+        "movilidad": 3
       }
     },
     {
@@ -9330,32 +9528,10 @@
       }
     },
     {
-      "clave": "tecnicatura en gestion integral de recursos hidricos",
-      "nombre": "Tecnicatura en Gestión Integral de Recursos Hídricos",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Ambiente",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IESVU (IES 9-015 Valle de Uco)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 2,
-        "practico": 5,
-        "social": 3,
-        "creativo": 2,
-        "terreno": 5,
-        "liderazgo": 4,
-        "teorico": 2,
-        "matematico": 2,
-        "movilidad": 4
-      }
-    },
-    {
       "clave": "tecnicatura en higiene y seguridad en el trabajo",
       "nombre": "Tecnicatura en Higiene y Seguridad en el Trabajo",
       "categoria": "Grado / Carrera",
-      "area": "Ciencias sociales",
+      "area": "Ambiente",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)",
@@ -9363,29 +9539,7 @@
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 2,
-        "liderazgo": 4,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
-      "clave": "tecnicatura en higiene, seguridad y ambiente",
-      "nombre": "Tecnicatura en Higiene, Seguridad y Ambiente",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Ambiente",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IESVU (IES 9-015 Valle de Uco)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 3,
+        "tecnologico": 2,
         "practico": 5,
         "social": 3,
         "creativo": 2,
@@ -9448,28 +9602,6 @@
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 2,
-        "movilidad": 2
-      }
-    },
-    {
-      "clave": "tecnicatura en laboratorio de analisis clinicos",
-      "nombre": "Tecnicatura en Laboratorio de Análisis Clínicos",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IESVU (IES 9-015 Valle de Uco)"
       ],
       "perfil": {
         "analitico": 5,
@@ -9551,28 +9683,6 @@
       }
     },
     {
-      "clave": "tecnicatura en mecatronica",
-      "nombre": "Tecnicatura en Mecatrónica",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IESVU (IES 9-015 Valle de Uco)"
-      ],
-      "perfil": {
-        "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "tecnicatura en negocios agroecologicos",
       "nombre": "Tecnicatura en Negocios Agroecológicos",
       "categoria": "Pregrado",
@@ -9598,21 +9708,21 @@
       "clave": "tecnicatura en operaciones mineras",
       "nombre": "Tecnicatura en Operaciones Mineras",
       "categoria": "Grado / Carrera",
-      "area": "Ciencias sociales",
+      "area": "Ingeniería",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
+        "tecnologico": 4,
+        "practico": 5,
+        "social": 1,
         "creativo": 2,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 5,
         "movilidad": 2
       }
     },
@@ -9620,20 +9730,20 @@
       "clave": "tecnicatura en preceptoria escolar",
       "nombre": "Tecnicatura en Preceptoría Escolar",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Educación",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Fundación Rayuela"
       ],
       "perfil": {
-        "analitico": 4,
+        "analitico": 2,
         "tecnologico": 1,
-        "practico": 3,
+        "practico": 4,
         "social": 5,
-        "creativo": 2,
+        "creativo": 3,
         "terreno": 1,
         "liderazgo": 3,
-        "teorico": 4,
+        "teorico": 3,
         "matematico": 1,
         "movilidad": 2
       }
@@ -9686,22 +9796,22 @@
       "clave": "tecnicatura en produccion industrial y automatizacion",
       "nombre": "Tecnicatura en Producción Industrial y Automatización",
       "categoria": "Grado / Carrera",
-      "area": "Ciencias sociales",
+      "area": "Oficios",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)"
       ],
       "perfil": {
-        "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
+        "analitico": 2,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 1,
         "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
+        "terreno": 4,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -9832,28 +9942,6 @@
         "terreno": 2,
         "liderazgo": 4,
         "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
-      "clave": "tecnicatura en viticultura y enologia",
-      "nombre": "Tecnicatura en Viticultura y Enología",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Gastronomía",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IESVU (IES 9-015 Valle de Uco)"
-      ],
-      "perfil": {
-        "analitico": 1,
-        "tecnologico": 2,
-        "practico": 5,
-        "social": 4,
-        "creativo": 4,
-        "terreno": 2,
-        "liderazgo": 2,
-        "teorico": 0,
         "matematico": 1,
         "movilidad": 2
       }
@@ -9998,23 +10086,23 @@
       "clave": "tecnicatura superior en actividades de montana",
       "nombre": "Tecnicatura Superior en Actividades de Montaña",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Turismo",
       "formacion": "tecnicaturas",
       "instituciones": [
         "IEF - Instituto de Educación Física (IES 9-016)",
         "IES 9016 \"Dr. Jorge Col\""
       ],
       "perfil": {
-        "analitico": 4,
+        "analitico": 2,
         "tecnologico": 1,
-        "practico": 4,
+        "practico": 5,
         "social": 5,
         "creativo": 2,
-        "terreno": 3,
-        "liderazgo": 3,
-        "teorico": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 1,
         "matematico": 1,
-        "movilidad": 3
+        "movilidad": 5
       }
     },
     {
@@ -10027,6 +10115,7 @@
         "IES 9-006 Francisco H. Tolosa",
         "IES 9-009 (Tupungato)",
         "ISTEEC (IES 9-013)",
+        "IESVU (IES 9-015 Valle de Uco)",
         "IES 9-024 (Lavalle)"
       ],
       "perfil": {
@@ -10072,6 +10161,7 @@
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-001 Gral. José de San Martín",
+        "IESVU (IES 9-015 Valle de Uco)",
         "IES 9-023"
       ],
       "perfil": {
@@ -10160,6 +10250,7 @@
       "area": "Ambiente",
       "formacion": "tecnicaturas",
       "instituciones": [
+        "IESVU (IES 9-015 Valle de Uco)",
         "IES 9-021 Tecnológico"
       ],
       "perfil": {
@@ -10201,21 +10292,21 @@
       "clave": "tecnicatura superior en anestesiologia",
       "nombre": "Tecnicatura Superior en Anestesiología",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Instituto San Agustín"
       ],
       "perfil": {
         "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
+        "tecnologico": 2,
+        "practico": 5,
         "social": 5,
-        "creativo": 2,
+        "creativo": 1,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -10245,14 +10336,36 @@
       "clave": "tecnicatura superior en bibliotecologia",
       "nombre": "Tecnicatura Superior en Bibliotecología",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ambiente",
+      "area": "Ciencias sociales",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Fundación Rayuela"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 3,
+        "tecnologico": 2,
+        "practico": 4,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 3,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "tecnicatura superior en biotecnologia",
+      "nombre": "Tecnicatura Superior en Biotecnología",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ambiente",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IDESA - Instituto de Educación Superior Alvear (UGACOOP)"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 2,
         "practico": 5,
         "social": 2,
         "creativo": 2,
@@ -10264,28 +10377,6 @@
       }
     },
     {
-      "clave": "tecnicatura superior en biotecnologia",
-      "nombre": "Tecnicatura Superior en Biotecnología",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IDESA - Instituto de Educación Superior Alvear (UGACOOP)"
-      ],
-      "perfil": {
-        "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "tecnicatura superior en comercio internacional y aduana",
       "nombre": "Tecnicatura Superior en Comercio Internacional y Aduana",
       "categoria": "Pregrado / Tecnicatura",
@@ -10293,6 +10384,7 @@
       "formacion": "tecnicaturas",
       "instituciones": [
         "ISTEEC (IES 9-013)",
+        "IESVU (IES 9-015 Valle de Uco)",
         "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
       ],
       "perfil": {
@@ -10378,7 +10470,7 @@
       "clave": "tecnicatura superior en conservacion de la naturaleza",
       "nombre": "Tecnicatura Superior en Conservación de la Naturaleza",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Ambiente",
       "formacion": "tecnicaturas",
       "instituciones": [
         "IEF - Instituto de Educación Física (IES 9-016)",
@@ -10386,15 +10478,15 @@
       ],
       "perfil": {
         "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 2,
         "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -10423,43 +10515,43 @@
       "clave": "tecnicatura superior en contabilidad",
       "nombre": "Tecnicatura Superior en Contabilidad",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Negocios",
       "formacion": "tecnicaturas",
       "instituciones": [
         "ISTEEC (IES 9-013)"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
+        "tecnologico": 2,
+        "practico": 4,
+        "social": 4,
         "creativo": 2,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 3,
-        "movilidad": 2
+        "liderazgo": 4,
+        "teorico": 3,
+        "matematico": 5,
+        "movilidad": 3
       }
     },
     {
       "clave": "tecnicatura superior en cosmetologia y cosmiatria",
       "nombre": "Tecnicatura Superior en Cosmetología y Cosmiatría",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Instituto San Agustín"
       ],
       "perfil": {
         "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
+        "tecnologico": 2,
+        "practico": 5,
         "social": 5,
-        "creativo": 2,
+        "creativo": 1,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -10539,21 +10631,21 @@
       "clave": "tecnicatura superior en dialisis",
       "nombre": "Tecnicatura Superior en Diálisis",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Instituto San Agustín"
       ],
       "perfil": {
         "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
+        "tecnologico": 2,
+        "practico": 5,
         "social": 5,
-        "creativo": 2,
+        "creativo": 1,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -10629,7 +10721,7 @@
       "clave": "tecnicatura superior en energias renovables",
       "nombre": "Tecnicatura Superior en Energías Renovables",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Ambiente",
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-009 (Tupungato)",
@@ -10637,15 +10729,15 @@
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 2,
-        "practico": 4,
-        "social": 5,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 2,
         "creativo": 2,
-        "terreno": 3,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -10748,6 +10840,7 @@
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-009 (Tupungato)",
+        "IESVU (IES 9-015 Valle de Uco)",
         "IES 9-023",
         "IES 9-024 (Lavalle)"
       ],
@@ -10765,24 +10858,46 @@
       }
     },
     {
+      "clave": "tecnicatura superior en estadistica y analisis de datos",
+      "nombre": "Tecnicatura Superior en Estadística y Análisis de Datos",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Tecnología",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IESVU (IES 9-015 Valle de Uco)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 5,
+        "practico": 4,
+        "social": 1,
+        "creativo": 3,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 4,
+        "matematico": 5,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "tecnicatura superior en esterilizacion",
       "nombre": "Tecnicatura Superior en Esterilización",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Instituto San Agustín"
       ],
       "perfil": {
         "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
+        "tecnologico": 2,
+        "practico": 5,
         "social": 5,
-        "creativo": 2,
+        "creativo": 1,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -10838,6 +10953,7 @@
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-011 Del Atuel",
+        "IESVU (IES 9-015 Valle de Uco)",
         "IES 9-021 Tecnológico"
       ],
       "perfil": {
@@ -10897,6 +11013,28 @@
         "teorico": 1,
         "matematico": 3,
         "movilidad": 3
+      }
+    },
+    {
+      "clave": "tecnicatura superior en gestion integral de recursos hidricos",
+      "nombre": "Tecnicatura Superior en Gestión Integral de Recursos Hídricos",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ambiente",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IESVU (IES 9-015 Valle de Uco)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 3,
+        "creativo": 2,
+        "terreno": 5,
+        "liderazgo": 4,
+        "teorico": 2,
+        "matematico": 2,
+        "movilidad": 4
       }
     },
     {
@@ -11019,6 +11157,7 @@
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-012 Informática",
+        "IESVU (IES 9-015 Valle de Uco)",
         "INSUTEC (Instituto Superior de Educación Tecnológica)"
       ],
       "perfil": {
@@ -11060,21 +11199,22 @@
       "clave": "tecnicatura superior en laboratorio de analisis clinicos",
       "nombre": "Tecnicatura Superior en Laboratorio de Análisis Clínicos",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
+        "IESVU (IES 9-015 Valle de Uco)",
         "Instituto San Agustín"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 3,
+        "tecnologico": 2,
+        "practico": 5,
         "social": 5,
-        "creativo": 2,
+        "creativo": 1,
         "terreno": 1,
-        "liderazgo": 3,
+        "liderazgo": 2,
         "teorico": 4,
-        "matematico": 2,
+        "matematico": 3,
         "movilidad": 2
       }
     },
@@ -11151,22 +11291,23 @@
       "clave": "tecnicatura superior en mecatronica",
       "nombre": "Tecnicatura Superior en Mecatrónica",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Ingeniería",
       "formacion": "tecnicaturas",
       "instituciones": [
+        "IESVU (IES 9-015 Valle de Uco)",
         "IES 9-021 Tecnológico",
         "IES 9-023"
       ],
       "perfil": {
-        "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
+        "analitico": 5,
+        "tecnologico": 4,
+        "practico": 4,
+        "social": 1,
         "creativo": 2,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 5,
         "movilidad": 2
       }
     },
@@ -11174,21 +11315,21 @@
       "clave": "tecnicatura superior en mecatronica aplicada a la industria",
       "nombre": "Tecnicatura Superior en Mecatrónica Aplicada a la Industria",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Ingeniería",
       "formacion": "tecnicaturas",
       "instituciones": [
         "IDESA - Instituto de Educación Superior Alvear (UGACOOP)"
       ],
       "perfil": {
-        "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
+        "analitico": 5,
+        "tecnologico": 4,
+        "practico": 4,
+        "social": 1,
         "creativo": 2,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 5,
         "movilidad": 2
       }
     },
@@ -11218,22 +11359,22 @@
       "clave": "tecnicatura superior en mineria",
       "nombre": "Tecnicatura Superior en Minería",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Ingeniería",
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-018 (Malargüe)",
         "INSUTEC (Instituto Superior de Educación Tecnológica)"
       ],
       "perfil": {
-        "analitico": 4,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
+        "analitico": 5,
+        "tecnologico": 4,
+        "practico": 5,
+        "social": 1,
         "creativo": 2,
         "terreno": 3,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 5,
         "movilidad": 3
       }
     },
@@ -11241,21 +11382,21 @@
       "clave": "tecnicatura superior en optica y contactologia",
       "nombre": "Tecnicatura Superior en Óptica y Contactología",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-021 Tecnológico"
       ],
       "perfil": {
         "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
+        "tecnologico": 2,
+        "practico": 5,
         "social": 5,
-        "creativo": 2,
+        "creativo": 1,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -11285,7 +11426,7 @@
       "clave": "tecnicatura superior en petroleo y gas",
       "nombre": "Tecnicatura Superior en Petróleo y Gas",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Ingeniería",
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-009 (Tupungato)",
@@ -11293,15 +11434,15 @@
         "INSUTEC (Instituto Superior de Educación Tecnológica)"
       ],
       "perfil": {
-        "analitico": 4,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
+        "analitico": 5,
+        "tecnologico": 4,
+        "practico": 5,
+        "social": 1,
         "creativo": 2,
         "terreno": 3,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 5,
         "movilidad": 3
       }
     },
@@ -11331,20 +11472,20 @@
       "clave": "tecnicatura superior en preceptoria escolar",
       "nombre": "Tecnicatura Superior en Preceptoría Escolar",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Educación",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Instituto Santísima Trinidad"
       ],
       "perfil": {
-        "analitico": 4,
+        "analitico": 2,
         "tecnologico": 1,
-        "practico": 3,
+        "practico": 4,
         "social": 5,
-        "creativo": 2,
+        "creativo": 3,
         "terreno": 1,
         "liderazgo": 3,
-        "teorico": 4,
+        "teorico": 3,
         "matematico": 1,
         "movilidad": 2
       }
@@ -11353,7 +11494,7 @@
       "clave": "tecnicatura superior en preparacion fisica",
       "nombre": "Tecnicatura Superior en Preparación Física",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ambiente",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
         "IEF - Instituto de Educación Física (IES 9-016)"
@@ -11362,13 +11503,13 @@
         "analitico": 5,
         "tecnologico": 2,
         "practico": 5,
-        "social": 3,
-        "creativo": 2,
-        "terreno": 5,
+        "social": 5,
+        "creativo": 1,
+        "terreno": 2,
         "liderazgo": 3,
         "teorico": 4,
         "matematico": 5,
-        "movilidad": 3
+        "movilidad": 2
       }
     },
     {
@@ -11508,22 +11649,22 @@
       "clave": "tecnicatura superior en transporte ferroviario",
       "nombre": "Tecnicatura Superior en Transporte Ferroviario",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Oficios",
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-027 (Guaymallén)"
       ],
       "perfil": {
-        "analitico": 5,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
+        "analitico": 3,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 1,
         "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
+        "terreno": 4,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -11576,6 +11717,28 @@
       }
     },
     {
+      "clave": "tecnicatura superior en viticultura y enologia",
+      "nombre": "Tecnicatura Superior en Viticultura y Enología",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Gastronomía",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IESVU (IES 9-015 Valle de Uco)"
+      ],
+      "perfil": {
+        "analitico": 1,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 4,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "tecnicatura universitaria en accidentologia vial",
       "nombre": "Tecnicatura universitaria en Accidentología Vial",
       "categoria": "Pregrado",
@@ -11623,21 +11786,21 @@
       "clave": "tecnicatura universitaria en atencion prehospitalaria de emergencias",
       "nombre": "Tecnicatura Universitaria en Atención Prehospitalaria de Emergencias",
       "categoria": "Pregrado",
-      "area": "Ciencias sociales",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
+        "tecnologico": 2,
         "practico": 5,
         "social": 5,
-        "creativo": 2,
+        "creativo": 1,
         "terreno": 1,
-        "liderazgo": 4,
-        "teorico": 4,
-        "matematico": 1,
+        "liderazgo": 3,
+        "teorico": 3,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -11755,21 +11918,21 @@
       "clave": "tecnicatura universitaria en emergentologia",
       "nombre": "Tecnicatura Universitaria en Emergentología",
       "categoria": "Pregrado",
-      "area": "Ciencias sociales",
+      "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad del Aconcagua (UDA)"
       ],
       "perfil": {
         "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
+        "tecnologico": 2,
+        "practico": 5,
         "social": 5,
-        "creativo": 2,
+        "creativo": 1,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -11865,20 +12028,20 @@
       "clave": "tecnicatura universitaria en gestion de moda",
       "nombre": "Tecnicatura Universitaria en Gestión de Moda",
       "categoria": "Pregrado",
-      "area": "Ciencias sociales",
+      "area": "Diseño",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
-        "analitico": 5,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
-        "creativo": 2,
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 3,
+        "creativo": 5,
         "terreno": 1,
-        "liderazgo": 5,
-        "teorico": 4,
+        "liderazgo": 4,
+        "teorico": 1,
         "matematico": 1,
         "movilidad": 2
       }
@@ -11931,21 +12094,21 @@
       "clave": "tecnicatura universitaria en hidrocarburos y geociencia",
       "nombre": "Tecnicatura Universitaria en Hidrocarburos y Geociencia",
       "categoria": "Pregrado",
-      "area": "Ciencias sociales",
+      "area": "Ingeniería",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
+        "tecnologico": 4,
+        "practico": 4,
+        "social": 1,
         "creativo": 2,
         "terreno": 1,
-        "liderazgo": 3,
+        "liderazgo": 2,
         "teorico": 4,
-        "matematico": 2,
+        "matematico": 5,
         "movilidad": 2
       }
     },
@@ -11953,22 +12116,22 @@
       "clave": "tecnicatura universitaria en higiene y seguridad en el trabajo",
       "nombre": "Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo",
       "categoria": "Grado / Carrera",
-      "area": "Ciencias sociales",
+      "area": "Ambiente",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad de Mendoza (UM)"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 3,
         "creativo": 2,
-        "terreno": 2,
-        "liderazgo": 4,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
+        "terreno": 5,
+        "liderazgo": 3,
+        "teorico": 3,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -12481,22 +12644,22 @@
       "clave": "tecnico universitario en higiene y seguridad en el trabajo",
       "nombre": "Técnico Universitario en Higiene y Seguridad en el Trabajo",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
+      "area": "Ambiente",
       "formacion": "tecnicaturas",
       "instituciones": [
         "ITU - Instituto Tecnológico Universitario (UNCuyo)"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 3,
         "creativo": 2,
-        "terreno": 2,
-        "liderazgo": 4,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
+        "terreno": 5,
+        "liderazgo": 3,
+        "teorico": 3,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -12539,6 +12702,50 @@
         "terreno": 1,
         "liderazgo": 3,
         "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "timonel de yate",
+      "nombre": "Timonel de Yate",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Prefectura Naval Argentina (Certificaciones Náuticas)"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 3,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "trabajo social",
+      "nombre": "Trabajo Social",
+      "categoria": "Grado / Carrera",
+      "area": "Ciencias sociales",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de Congreso (UC)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 1,
+        "practico": 2,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 5,
         "matematico": 1,
         "movilidad": 2
       }

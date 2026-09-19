@@ -4,7 +4,8 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from scraper_utils import carreras_guardadas, guardar_json
+from pdf_utils import plan_desde_url_pdf, primer_pdf_de_plan
+from scraper_utils import carreras_guardadas, extraer_plan_anual, guardar_json, pedir_sopa
 
 
 print("🛠️ Encendiendo el escáner V16 para IES 9-006 Francisco H. Tolosa (Rivadavia)...")
@@ -51,11 +52,15 @@ try:
         if "/sitio/" not in link_oficial or "mendoza.edu.ar" not in link_oficial:
             continue
             
+        # "Profesorados" y "Tecnicaturas" son los títulos del menú, no carreras.
+        if re.fullmatch(r"(profesorados|tecnicaturas)", nombre_carrera.strip(), re.I):
+            continue
+
         # Identificamos si es profesorado o tecnicatura
         if "profesorado" in nombre_lower or "tecnicatura" in nombre_lower:
             carreras_procesadas.add(link_oficial)
             
-            if nombre_carrera in carreras_viejas and carreras_viejas[nombre_carrera].get("duracion") not in ["A confirmar"]:
+            if nombre_carrera in carreras_viejas and carreras_viejas[nombre_carrera].get("plan_estudio"):
                 ies_data["carreras"].append(carreras_viejas[nombre_carrera])
                 print(f"  ⏭️ Recuperada: {nombre_carrera[:35]}...")
             else:
@@ -70,22 +75,33 @@ try:
                     
                 modalidad_texto = "Presencial"
                 turno_texto = "A confirmar"
+                plan = None
                 
                 try:
                     time.sleep(0.3)
-                    req_det = requests.get(link_oficial, headers={'User-Agent': 'Mozilla/5.0'}, timeout=15)
-                    sopa_det = BeautifulSoup(req_det.text, 'html.parser')
-                    
-                    texto_completo = sopa_det.get_text(separator=' ')
-                    match_turno = re.search(r'Turno[s]?:\s*([^\n\.]+)', texto_completo, re.IGNORECASE)
-                    if match_turno:
-                        turno_texto = match_turno.group(1).strip()
+                    sopa_det = pedir_sopa(link_oficial)
+                    if sopa_det:
+                        texto_completo = sopa_det.get_text(separator=' ')
+                        match_turno = re.search(r'Turno[s]?:\s*([^\n\.]+)', texto_completo, re.IGNORECASE)
+                        if match_turno:
+                            turno_texto = match_turno.group(1).strip()
+                        
+                        # El plan publicado en la página manda; si no está, se
+                        # baja el PDF del flyer a dos columnas.
+                        plan = extraer_plan_anual(sopa_det)
+                        if not plan:
+                            plan = plan_desde_url_pdf(primer_pdf_de_plan(sopa_det))
                 except Exception as e:
                     pass
-                    
-                print(f"   ✨ Ficha -> {categoria_actual} | Duración: [{duracion_texto}]")
                 
-                ies_data["carreras"].append({
+                if not plan:
+                    guardada = carreras_viejas.get(nombre_carrera)
+                    if guardada:
+                        plan = guardada.get("plan_estudio")
+                
+                print(f"   ✨ Ficha -> {categoria_actual} | Duración: [{duracion_texto}] | Plan: {'sí' if plan else 'no'}")
+                
+                registro = {
                     "id": id_global,
                     "nombre_carrera": nombre_carrera,
                     "categoria": categoria_actual,
@@ -94,7 +110,11 @@ try:
                     "turno": turno_texto,
                     "facultad": "IES 9-006 Francisco H. Tolosa",
                     "link_oficial": link_oficial
-                })
+                }
+                if plan:
+                    registro["plan_estudio"] = plan
+                    registro["plan_fuente"] = link_oficial
+                ies_data["carreras"].append(registro)
                 id_global += 1
                 contador += 1
                 
@@ -102,6 +122,19 @@ try:
 
 except Exception as e:
     print(f"⚠️ Falla mecánica en IES 9-006: {e}")
+
+# El menú del sitio cambia: una carrera puede desaparecer del nav sin dejar de
+# existir (pasó con Producción Artística Artesanal). Conservamos las ya
+# guardadas que hoy no aparecieron.
+vistas = {c["nombre_carrera"] for c in ies_data["carreras"]}
+for nombre, guardada in carreras_viejas.items():
+    if nombre in vistas:
+        continue
+    if re.fullmatch(r"(profesorados|tecnicaturas)", nombre.strip(), re.I):
+        continue
+    if guardada.get("link_oficial"):
+        ies_data["carreras"].append(guardada)
+        print(f"  💾 Conservada del archivo anterior: {nombre[:40]}...")
 
 base_ies = {"instituciones": [ies_data]}
 guardar_json(base_ies, "ies9006.json")

@@ -24,6 +24,12 @@ from scraper_utils import (carreras_guardadas, es_duracion_real, guardar_json,
 # Las carreras que sólo ofrecen un PDF ("Plan de Estudios detallado") se leen con
 # pdftotext (ver más abajo); si el PDF es una imagen sin texto, quedan sin plan:
 # no inventamos una currícula que la web no publica.
+#
+# Sin plan público (verificado, la web no lo publica de ninguna forma):
+#   * Tecnicatura en Desarrollo de Videojuegos (sólo pestañas Presentación /
+#     Perfil / Régimen, sin materias).
+#   * Corredor Inmobiliario. Título complementario de Arquitectura (sin pestaña
+#     de plan ni PDF).
 ORDEN = (r"primer|segundo|tercer|cuarto|quinto|sexto|s[eé]ptimo|octavo|"
          r"noveno|d[eé]cimo|und[eé]cimo|duod[eé]cimo")
 ORDINALES = ["primer", "segundo", "tercer", "cuarto", "quinto", "sexto",
@@ -103,6 +109,32 @@ def _panel_plan(sopa):
             texto += " " + limpiar_texto(h2.get_text(" ", strip=True))
         if RE_PLAN_TAB.search(texto):
             return panel
+    return None
+
+
+def _plan_régimen_estudios(sopa):
+    """Algunas tecnicaturas (Desarrollo de Software) listan las materias como
+    h4 sueltos dentro del tab "Régimen de estudios", sin años ni PDF. Usamos el
+    tab como un único tramo plano; si el tab es solo prosa, devolvemos None."""
+    for panel in sopa.select(".fl-tabs-panel-content"):
+        rotulo = panel.find_previous(class_="fl-tabs-label")
+        texto = limpiar_texto(rotulo.get_text(" ", strip=True)) if rotulo else ""
+        if not re.search(r"r[eé]gimen\s+de\s+estudios", texto, re.I):
+            continue
+        materias = []
+        for el in panel.find_all(["h3", "h4", "strong", "b"]):
+            m = limpiar_texto(el.get_text(" ", strip=True))
+            if m and m not in materias and RE_PLAN_TAB.search(m):
+                continue
+            if m and m not in materias and len(m) >= 3:
+                materias.append(m)
+        # Quitamos el encabezado del propio tab ("Régimen de estudios").
+        materias = [
+            m for m in materias
+            if not re.search(r"r[eé]gimen\s+de\s+estudios", m, re.I)
+        ]
+        if len(materias) >= 5:
+            return [{"anio": "Régimen de estudios", "materias": materias}]
     return None
 
 
@@ -467,6 +499,12 @@ try:
                             plan = extraer_plan_pdf(pdf_url)
                             if plan:
                                 fuente_plan = pdf_url
+                    if not plan:
+                        # Último recurso: tecnicaturas que listan las materias en
+                        # h4 dentro del tab "Régimen de estudios" (Des. Software).
+                        plan = _plan_régimen_estudios(sopa_det)
+                        if plan:
+                            fuente_plan = href
 
                 except Exception:
                     pass

@@ -56,9 +56,9 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Negocios","item":"https://buscadoreducativo.com.ar/area/negocios/"},{"@type":"ListItem","position":4,"name":"Licenciatura en Recursos Humanos","item":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-recursos-humanos/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Licenciatura en Recursos Humanos","description":"Dónde estudiar Licenciatura en Recursos Humanos en Mendoza: curso o formación profesional del área Negocios, dictada por 2 instituciones (1 pública y 1 privada). Dura de 3 a 4.5 años según la institución. Modalidades disponibles: presencial y a distancia.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-recursos-humanos/","provider":[{"@type":"EducationalOrganization","name":"Instituto Univ. de Ciencias Empresariales (IUCE)","url":"https://buscadoreducativo.com.ar/institucion/instituto-univ-de-ciencias-empresariales-iuce/"},{"@type":"EducationalOrganization","name":"Universidad de la Defensa Nacional (UNDEF)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-la-defensa-nacional-undef/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Licenciatura en Recursos Humanos","description":"Dónde estudiar Licenciatura en Recursos Humanos en Mendoza: curso o formación profesional del área Negocios, dictada por 2 instituciones (1 pública y 1 privada). Dura de 3 a 4 años y medio según la institución. Modalidades disponibles: presencial y a distancia.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-recursos-humanos/","provider":[{"@type":"EducationalOrganization","name":"Instituto Univ. de Ciencias Empresariales (IUCE)","url":"https://buscadoreducativo.com.ar/institucion/instituto-univ-de-ciencias-empresariales-iuce/"},{"@type":"EducationalOrganization","name":"Universidad de la Defensa Nacional (UNDEF)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-la-defensa-nacional-undef/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Licenciatura en Recursos Humanos en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Licenciatura en Recursos Humanos en Mendoza en 2 instituciones: Instituto Univ. de Ciencias Empresariales (IUCE) y Universidad de la Defensa Nacional (UNDEF). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Licenciatura en Recursos Humanos?","acceptedAnswer":{"@type":"Answer","text":"La duración de la carrera varía de 3 a 4.5 años según el plan de estudio de la institución elegida."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Licenciatura en Recursos Humanos?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial y a distancia, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Licenciatura en Recursos Humanos?","acceptedAnswer":{"@type":"Answer","text":"Licenciatura en Recursos Humanos es una curso o formación profesional perteneciente al área de Negocios. Entre sus aptitudes más afines se destacan: trabajo práctico, pensamiento analítico, interacción social y liderazgo y gestión."}}]}</script>
 </head>
 <body>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -81,7 +110,7 @@
     <div class="principal">
         <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/negocios/">Negocios</a> <span aria-hidden="true">›</span> <span aria-current="page">Licenciatura en Recursos Humanos</span></nav>
         <h1>Licenciatura en Recursos Humanos</h1>
-    <p class="entrada">Dónde estudiar Licenciatura en Recursos Humanos en Mendoza: curso o formación profesional del área Negocios, dictada por 2 instituciones (1 pública y 1 privada). Dura de 3 a 4.5 años según la institución. Modalidades disponibles: presencial y a distancia.</p>
+    <p class="entrada">Dónde estudiar Licenciatura en Recursos Humanos en Mendoza: curso o formación profesional del área Negocios, dictada por 2 instituciones (1 pública y 1 privada). Dura de 3 a 4 años y medio según la institución. Modalidades disponibles: presencial y a distancia.</p>
     </div>
     <aside class="lateral">
     <dl class="ficha">
@@ -91,8 +120,6 @@
         <dt>Modalidad</dt><dd>Presencial y A distancia</dd>
         <dt>Duración</dt><dd>3 años · 4 años y medio</dd>
     </dl>
-
-    <a class="cta" href="/?q=Licenciatura+en+Recursos+Humanos&amp;area=Negocios&amp;formacion=cursos">Ver Licenciatura en Recursos Humanos en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Licenciatura en Recursos Humanos</h2>
@@ -100,14 +127,60 @@
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/instituto-univ-de-ciencias-empresariales-iuce/">Instituto Univ. de Ciencias Empresariales (IUCE)</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial / A distancia</li><li>Mendoza</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Administración</li><li>Comercialización</li><li>Gestión de Personas</li><li>Teoría de la Comunicación</li><li>Psicología</li><li>Negocios Digitales</li><li>Fundamentos de Economía y Finanzas</li><li>Métodos Cuantitativos</li><li>Derecho Civil y Comercial</li><li>Contexto Sociocultural</li><li>Bienestar Personal y Organizacional</li><li>Oratoria</li><li>Escritura</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Contabilidad</li><li>Derecho Laboral</li><li>Selección de Personal</li><li>Diseño y Evaluación de Puestos</li><li>Sistemas de Retribución y Compensaciones</li><li>Analítica de Recursos Humanos</li><li>Comunicación y Cultura Organizacional</li><li>Estadística</li><li>Humanidades y Apreciación del Arte</li><li>Innovación y Creatividad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Gestión por Competencias</li><li>Relaciones Laborales</li><li>Análisis de Costos y Presupuesto</li><li>Diseño y Organización de Procesos</li><li>Coaching Organizacional</li><li>Capacitación y Desarrollo de Talentos</li><li>Gestión de la Calidad</li><li>Formulación y Evaluación de Proyectos</li><li>Emprendimiento</li><li>Gestiónde Liderazgo y Equipos</li><li>Ética, Responsabilidad Social y Sustentabilidad</li><li>Negociaciones</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Sistemas de Información Gerencial</li><li>Metodología de la Investigación</li><li>Gestión de Empresas Familiares y PyMEs</li><li>Innovación y Desarrollo Organizacional</li><li>Dirección Estratégica y Competitividad Sustentable</li><li>Mediación y Arbitraje</li><li>Consultoría profesional</li><li>Trabajo Final de Investigación</li><li>Normas de Seguridad e Higiene</li><li>Neurociencias e Inteligencia Emocional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://i-uce.edu.ar/careers/uce-recursos-humanos" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://i-uce.edu.ar/careers/uce-recursos-humanos" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/universidad-de-la-defensa-nacional-undef/">Universidad de la Defensa Nacional (UNDEF)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: A Distancia</li></ul>
-
-            <a class="oficial" href="https://undef.edu.ar/a-distancia-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 5 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Administración I</li><li>Introducción a la Calidad</li><li>Derecho Laboral I</li><li>Informática Aplicada</li><li>Administración II</li><li>Ciencias delComportamiento I</li><li>Administración de Recursos Humanos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Capacitación y Desarrollo</li><li>Ciencias del Comportamiento II</li><li>Comunicación I</li><li>Preservación de Sistemas Ambientales</li><li>Técnicas Cuantitativas para la Gestión de Recursos Humanos</li><li>Derecho Laboral II</li><li>Negociación</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Administración de Remuneraciones y Beneficios</li><li>Comunicación II</li><li>Motivación e Incentivos no Remunerativos</li><li>Administración de Operaciones</li><li>Economía Laboral</li><li>Calidad de Vida Laboral I</li><li>Sistemas Informáticos de Recursos Humanos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Calidad de Servicios</li><li>Calidad de Vida laboral II</li><li>Ciencias del Comportamiento III</li><li>Reclutamiento y Selección</li><li>Economía</li><li>Cambio Organizacional</li><li>Sociología del Trabajo</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>5º año</h4>
+            <ul><li>Etica y Deontología Profesional</li><li>Métodos y Técnicas de Investigación Social</li><li>Estrategia</li><li>Auditoría de Recursos Humanos</li><li>Proyecto de Grado</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.iua.edu.ar/?page_id=386" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.iua.edu.ar/?page_id=386" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 
@@ -178,20 +251,20 @@
     <section class="relacionadas">
     <h2>Otras carreras del área Negocios</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/contador-publico/">Contador Público</a> <span class="cuantas">(11)</span></li>
+        <li><a href="/carrera/contador-publico/">Contador Público</a> <span class="cuantas">(10)</span></li>
         <li><a href="/carrera/recursos-humanos/">Recursos Humanos</a> <span class="cuantas">(6)</span></li>
-        <li><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a> <span class="cuantas">(5)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-administracion-de-empresas/">Tecnicatura Superior en Administración de Empresas</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-administracion-de-empresas/">Tecnicatura Superior en Administración de Empresas</a> <span class="cuantas">(5)</span></li>
+        <li><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-logistica/">Tecnicatura Superior en Logística</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-administracion-de-empresas/">Licenciatura en Administración de Empresas</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-comercio-internacional/">Licenciatura en Comercio Internacional</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/licenciatura-en-economia/">Licenciatura en Economía</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-administracion-publica/">Tecnicatura Superior en ADMINISTRACIÓN PÚBLICA</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-comercio-internacional-y-aduana/">Tecnicatura Superior en Comercio Internacional y Aduana</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-gestion-de-recursos-humanos/">Tecnicatura Superior en Gestion de Recursos Humanos</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/administracion/">ADMINISTRACIÓN</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-administracion-hotelera/">Licenciatura en Administración Hotelera</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-analitica-de-negocios/">Licenciatura en Analítica de Negocios</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/administracion/">Administración</a> <span class="cuantas">(2)</span></li>
     </ul>
-    <p><a href="/area/negocios/">Ver las 75 carreras del área Negocios →</a></p>
+    <p><a href="/area/negocios/">Ver las 73 carreras del área Negocios →</a></p>
     </section>
     </div>
 </div>

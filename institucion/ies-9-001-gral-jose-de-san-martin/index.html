@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"IES 9-001 Gral. José de San Martín","item":"https://buscadoreducativo.com.ar/institucion/ies-9-001-gral-jose-de-san-martin/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"IES 9-001 Gral. José de San Martín","url":"https://buscadoreducativo.com.ar/institucion/ies-9-001-gral-jose-de-san-martin/","email":"consultas@ens9001.edu.ar","telephone":"02623-420750","address":{"@type":"PostalAddress","streetAddress":"Chubut y Balcarce, Gral. San Martín","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -67,12 +67,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -92,8 +121,6 @@
         <dt>Teléfono</dt><dd>02623-420750</dd>
         <dt>Email</dt><dd>consultas@ens9001.edu.ar</dd>
     </dl>
-
-    <a class="cta" href="/?institucion=IES%209-001%20Gral.%20Jos%C3%A9%20de%20San%20Mart%C3%ADn">Ver esta institución en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
 
@@ -102,19 +129,82 @@
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-primaria/">Profesorado de Educación PRIMARIA</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Profesorado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Pensamiento Filosófico</li><li>Sistema Educativo</li><li>Pedagogía</li><li>Comprensión y Producción de Textos Académicos</li><li>Numeración</li><li>Lengua y Literatura Infantil y Juvenil</li><li>Educación Artística</li><li>Práctica Profesional Docente I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Instituciones Educativas</li><li>Didáctica</li><li>Sujetos de la Educación</li><li>Psicología Educacional</li><li>Ciencias Sociales y su Didáctica I</li><li>Números Racionales y su Didáctica</li><li>Espacio, Geometría y su Didáctica</li><li>Ciencias Naturales y su Didáctica I</li><li>Lengua y su Didáctica</li><li>Literatura Infantil y Juvenil y su Didáctica</li><li>Práctica Profesional Docente II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Gestión y Evaluación de los Aprendizajes</li><li>Educación en la Diversidad</li><li>Proyectos de Intervención Estratégica</li><li>Formación Ética y Ciudadana y su Didáctica</li><li>Educación Tecnológica</li><li>Medida y su Didáctica</li><li>Álgebra, Funciones y su Didáctica</li><li>Ciencias Sociales y su Didáctica II</li><li>Ciencias Naturales y su Didáctica II</li><li>Alfabetización</li><li>Práctica Profesional Docente III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Educación y Tecnologías Digitales</li><li>Educación Sexual Integral</li><li>Historia y Patrimonio Cultural de Mendoza</li><li>UDJE de Formación Complementaria General</li><li>UCJE de Formación Complementaria Específica</li><li>Didáctica de la Lengua y de la Literatura Infantil y Juvenil</li><li>Didáctica de la Matemática</li><li>Didáctica de las Ciencias Sociales</li><li>Didáctica de las Ciencias Naturales</li><li>Práctica Profesional Docente IV</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://ens9001-infd.mendoza.edu.ar/sitio/educacion-primaria/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/educacion-primaria/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-inicial/">Profesorado de Educación INICIAL</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Profesorado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Pensamiento Filosófico</li><li>Sistema Educativo</li><li>Pedagogía</li><li>Comprensión y Producción de Textos Académicos</li><li>Centralidad del Juego</li><li>Juegos y Producción de Objetos Lúdicos</li><li>Lenguajes Artísticos Expresivos: Teatro</li><li>Lenguajes Artísticos Expresivos: Música</li><li>Práctica Profesional Docente I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Instituciones Educativas</li><li>Didáctica</li><li>Psicología Educacional</li><li>Educación y Atención Temprana al Desarrollo Infantil</li><li>Didáctica de Jardín Maternal</li><li>Prácticas Lingüísticas en Educación Inicial</li><li>Lenguajes Artísticos Expresivos: Artes Visuales</li><li>Educación Matemática Temprana e Inicial I</li><li>Sujetos de la Educación</li><li>Práctica Profesional Docente II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Gestión y Evaluación de los Aprendizajes</li><li>Educación en la Diversidad</li><li>Proyectos de Intervención Socioeducativa</li><li>Literatura Infantil</li><li>Didáctica de Jardín de Infantes</li><li>Educación Matemática Inicial II</li><li>Alfabetización Temprana e Inicial</li><li>Didáctica del Ambiente Natural</li><li>Didáctica del Ambiente Social</li><li>Motricidad en Jardín Maternal y Jardín de Infantes</li><li>Práctica Profesional Docente III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Educación y Tecnologías Digitales</li><li>Educación Sexual Integral</li><li>Historia y Patrimonio Cultural de Mendoza</li><li>UDJE de Formación Complementaria General</li><li>Problemáticas de la Educación Inicial</li><li>Salud y Cultura del Cuidado</li><li>Formación Ética y Ciudadana y su Didáctica</li><li>UCJE de Formación Complementaria Específica</li><li>Práctica Profesional Docente IV</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://ens9001-infd.mendoza.edu.ar/sitio/educacion-inicial/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/educacion-inicial/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual/">Profesorado de Educación ESPECIAL con ORIENTACIÓN en DISCAPACIDAD INTELECT UAL</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Profesorado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Pensamiento Filosófico</li><li>Sistema Educativo</li><li>Pedagogía</li><li>Comprensión y Producción de Textos Académicos</li><li>Educación Artística: Artes Visuales</li><li>Educación Artística: Música</li><li>Educación Especial Contemporánea</li><li>Neuropsicosociología del Desarrollo</li><li>Discapacidad Intelectual: Características del Desarrollo</li><li>Atención Temprana</li><li>Práctica Profesional Docente I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Instituciones Educativas</li><li>Didáctica</li><li>Psicología Educacional</li><li>Sujetos de la Educación I</li><li>Abordaje Pedagógico Didáctico I</li><li>Sujetos de la Educación II</li><li>Psicomotricidad</li><li>Discapacidad Motora y Abordaje Pedagógico Didáctico</li><li>Didáctica de la Matemática</li><li>Didáctica de la Lengua</li><li>Didáctica de la Literatura</li><li>Didáctica de las Ciencias Naturales</li><li>Práctica Profesional Docente II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Gestión y Evaluación de los Aprendizajes</li><li>Proyectos de Intervención Socioeducativa</li><li>Didáctica de la Formación Ética y Ciudadana</li><li>Abordaje Pedagógico Didáctico II</li><li>Comunicación y Desarrollo del Lenguaje en la Persona con Discapacidad</li><li>Didáctica de las Ciencias Sociales</li><li>Discapacidad Múltiple y Abordaje Pedagógico Didáctico</li><li>Perspectiva Social, Transición a la Vida Adulta y Ocupación Laboral</li><li>Alfabetización</li><li>Práctica Profesional Docente III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Educación y Tecnologías Digitales</li><li>Educación Sexual Integral</li><li>Historia y Patrimonio Cultural de Mendoza</li><li>UCE Formación Complementaria General</li><li>UCE Formación Complementaria Específica</li><li>Educación Artística: Teatro</li><li>Práctica Profesional Docente IV</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://ens9001-infd.mendoza.edu.ar/sitio/educacion-especial/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/educacion-especial/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
@@ -150,7 +240,24 @@
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-secundaria-de-la-modalidad-tecnico-profesional-en-conc/">Profesorado de Educación Secundaria de la MODALIDAD TÉCNICO PROFESIONAL EN CONC. CON EL TÍTULO DE BASE</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Profesorado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>La Enseñanza en la Escuela Secundaria Técnica I</li><li>El Aprendizaje en la Escuela Secundaria Técnica</li><li>Competencias Comunicacionales, Comprensión de Textos I</li><li>Competencias Comunicacionales, Comprensión de Textos II</li><li>Práctica I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Contexto de y para el Aprendizaje en la Escuela Secundaria Técnica I</li><li>Adolescencias y Educación Secundaria Técnica</li><li>La Enseñanza en la Escuela Secundaria Técnica II</li><li>Condiciones del Ejercicio Profesional</li><li>Vinculación con el Sector Socio Productivo</li><li>Práctica II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Contextos de y para el Aprendizaje en la Escuela Secundaria Técnica II</li><li>Producción de Textos de ETP Secundaria</li><li>Uso Didáctico de las Tics</li><li>Práctica Profesional Docente III</li><li>Reflexión sobre la Problematización de la Práctica</li><li>Residencia</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://ens9001-infd.mendoza.edu.ar/sitio/protec/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/protec/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -160,7 +267,24 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio/">Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Pregrado / Tecnicatura</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Comunicación, Comprensión y Producción de Textos</li><li>Inglés Técnico</li><li>TIC</li><li>Higiene I</li><li>Seguridad I</li><li>Equipo y Elementos de Protección Personal</li><li>Sistema de Gestión del Medio Ambiente</li><li>Taller de Ciencias Básicas Aplicadas</li><li>Problemática Socio Cultural y del Trabajo</li><li>Interpretación de Planos</li><li>Sistema de Gestión de la Calidad</li><li>Práctica Profesionalizante I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Ecología</li><li>Planificación y Técnicas para el Control de la Calidad</li><li>Problemática Ambiental</li><li>Higiene II</li><li>Seguridad II</li><li>Psicología Laboral</li><li>Legislación Laboral</li><li>Prevención de la Salud Laboral</li><li>Ergonomía</li><li>Higiene y Seguridad Aplicada</li><li>Capacitación y Desarrollo Profesional</li><li>Derecho Ambiental</li><li>Incendio I</li><li>Práctica Profesionalizante II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Técnicas en Remediación Ambiental</li><li>Gestión de Procesos Productivos</li><li>Incendio II</li><li>Evaluación de Impactos Ambientales</li><li>Manejo y Gestión de Residuos</li><li>Recursos Humanos</li><li>Producción de Informes de Investigación</li><li>Toxicología</li><li>Evaluación de Proyectos</li><li>Estadística Aplicada</li><li>Ética Profesional</li><li>Seminario Optativo</li><li>Práctica Profesionalizante III</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-laboral/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-laboral/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -170,7 +294,24 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-superior-en-comunicacion-social/">Tecnicatura Superior en COMUNICACIÓN SOCIAL</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Pregrado / Tecnicatura</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Comprensión y Producción de textos</li><li>Introducción a la Comunicación</li><li>Tecnología de la Información y la Comunicación</li><li>Problemática Socio-Cultural y el Contexto</li><li>Periodismo</li><li>Taller de Radio</li><li>Oralidad y Expresión Artística</li><li>Taller de Gráfica</li><li>Taller de Televisión</li><li>Fotografía</li><li>Práctica Profesionalizante I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Teoría de la Comunicación</li><li>Taller de Comunicación Digital</li><li>Electiva 1</li><li>Psicología de la Comunicación</li><li>Problemática Geopolítica, Regional y Local</li><li>Ingles Técnico I</li><li>Formulación y Evaluación de Proyectos de Comunicación</li><li>Sociología de la Comunicación</li><li>Problemática Económico-Política Argentina</li><li>Inglés Técnico II</li><li>Administración y Gestión de Proyectos de Comunicación</li><li>Práctica Profesionalizante II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Comunicación Institucional</li><li>Electiva 2</li><li>Comunicación Lingüística</li><li>Teoría de la Imagen</li><li>Desarrollo Emprendedor</li><li>Ética y Legislación Profesional</li><li>Semiología</li><li>Marketing, Publicidad y Propaganda</li><li>Dirección y Administración de Medios</li><li>Gestión de Redes Sociales</li><li>Práctica Profesionalizante III</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://ens9001-infd.mendoza.edu.ar/sitio/comunicacion-social/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/comunicacion-social/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -190,7 +331,24 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-superior-en-administracion-publica/">Tecnicatura Superior en ADMINISTRACIÓN PÚBLICA</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Pregrado / Tecnicatura</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Administración General</li><li>Matemática y Estadística</li><li>Informática y Tecnología</li><li>Inglés Técnico I</li><li>Comunicación, Comprensión y Producción de Textos</li><li>Metodología de la Investigación</li><li>Microeconomía</li><li>Macroeconomía</li><li>Problemática Sociocultural y el Contexto</li><li>Práctica Profesionalizante I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Desarrollo Local y Sustentable</li><li>Ingles Técnico II</li><li>Estado y Sociedad</li><li>Administración Pública</li><li>Formulación y Evaluación de Proyecto</li><li>Introducción al Derecho</li><li>Introducción a la Contabilidad</li><li>Derecho Constitucional</li><li>Contabilidad Pública</li><li>Práctica Profesionalizante II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Gestión de Políticas Públicas</li><li>Presupuesto y Finanzas Públicas</li><li>Derecho Administrativo</li><li>Análisis y Desarrollo Organizacional</li><li>Ética Profesional</li><li>Control en la Gestión Pública</li><li>Procedimientos de Compras y Contrataciones</li><li>Técnica Legislativa</li><li>Gestión de Personal</li><li>Comunicación Organizacional</li><li>Informática y Tecnología Aplicada</li><li>Práctica Profesionalizante III</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://ens9001-infd.mendoza.edu.ar/sitio/publica/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://ens9001-infd.mendoza.edu.ar/sitio/publica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>

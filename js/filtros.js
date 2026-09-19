@@ -3,7 +3,7 @@
 // ==========================================
 
 import { ofertas } from './datos.js';
-import { estado, favoritos } from './estado.js';
+import { estado } from './estado.js';
 import { distanciaLevenshtein, getGrupoDuracion, normalizarTexto } from './util.js';
 
 // Qué tanto se parece una oferta a lo que el usuario tipeó, de 0 a 100. A
@@ -151,7 +151,6 @@ export function cumpleFiltros(oferta) {
         && (estado.costo === 'todos' || (oferta.costo || (oferta.gestion === 'pública' ? 'gratuito' : 'arancelado')) === estado.costo)
         && (estado.duracion === 'todos' || getGrupoDuracion(oferta.duracionAnios) === estado.duracion)
         && (estado.area === 'todos' || oferta.area === estado.area)
-        && (estado.favoritos === false || favoritos.has(oferta._clave))
         && enRango;
 }
 
@@ -180,8 +179,3 @@ export function filtrarYOrdenar() {
     };
     return comparadores[estado.orden] ? resultados.sort(comparadores[estado.orden]) : resultados;
 }
-
-// Resuelve una clave a las claves reales de oferta. Si la clave ya pertenece a
-// una oferta/plataforma/catálogo aparte, es única. Si es una carrera del
-// orientador (p.ej. "abogacia"), devuelve todas las ofertas que la dictan: así
-// favorito y comparar guardan lo mismo que filtra y muestra el catálogo.

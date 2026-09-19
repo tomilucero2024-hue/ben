@@ -1,7 +1,9 @@
+import time
+
 import requests
 from bs4 import BeautifulSoup
 
-from scraper_utils import carreras_guardadas, guardar_json
+from scraper_utils import carreras_guardadas, extraer_plan_anual, guardar_json, pedir_sopa
 
 
 print("🛠️ Encendiendo el escáner V11 para IES 9-001 Gral. José de San Martín...")
@@ -22,17 +24,16 @@ ies_data = {
     "carreras": []
 }
 
-url_ies = "https://ens9001-infd.mendoza.edu.ar/sitio/ingreso-pre-inscripcion/"
+# El listado bueno es /carreras/: en /ingreso-pre-inscripcion las tecnicaturas
+# sin enlace propio (Diseño de Indumentaria, Acompañamiento Terapéutico) quedan
+# apuntando a la página de ingreso y no hay forma de llegar a su plan.
+url_ies = "https://ens9001-infd.mendoza.edu.ar/sitio/carreras/"
 id_global = 1100 
 contador = 0
 
 try:
     print(f"📍 Entrando a la matriz del IES: {url_ies}")
     req = requests.get(url_ies, headers={'User-Agent': 'Mozilla/5.0'}, timeout=15)
-    
-    if req.status_code != 200 or "Profesorados" not in req.text:
-        url_ies = "https://ens9001-infd.mendoza.edu.ar/sitio/carreras/"
-        req = requests.get(url_ies, headers={'User-Agent': 'Mozilla/5.0'}, timeout=15)
 
     sopa = BeautifulSoup(req.text, 'html.parser')
     contenido = sopa.find('div', class_='entry-content') or sopa
@@ -73,13 +74,25 @@ try:
                     link_oficial = href
             
             if len(nombre_carrera) > 5:
-                if nombre_carrera in carreras_viejas:
-                    ies_data["carreras"].append(carreras_viejas[nombre_carrera])
+                guardada = carreras_viejas.get(nombre_carrera)
+                if guardada and guardada.get("plan_estudio"):
+                    ies_data["carreras"].append(guardada)
                     print(f"  ⏭️ Recuperada: {nombre_carrera[:45]}...")
                 else:
                     print(f"  🔍 Cortando a medida: {nombre_carrera[:45]}...")
-                    
-                    ies_data["carreras"].append({
+                    plan = None
+                    fuente = link_oficial
+                    try:
+                        time.sleep(0.4)
+                        detalle = pedir_sopa(link_oficial)
+                        if detalle:
+                            plan = extraer_plan_anual(detalle)
+                    except Exception:
+                        pass
+                    if not plan and guardada:
+                        plan = guardada.get("plan_estudio")
+                        fuente = guardada.get("plan_fuente") or fuente
+                    registro = {
                         "id": id_global,
                         "nombre_carrera": nombre_carrera,
                         "categoria": categoria_actual,
@@ -87,7 +100,11 @@ try:
                         "modalidad": "Presencial",
                         "facultad": "IES 9-001 San Martín",
                         "link_oficial": link_oficial
-                    })
+                    }
+                    if plan:
+                        registro["plan_estudio"] = plan
+                        registro["plan_fuente"] = fuente
+                    ies_data["carreras"].append(registro)
                 id_global += 1
                 contador += 1
                 

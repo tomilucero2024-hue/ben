@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Oficios","item":"https://buscadoreducativo.com.ar/area/oficios/"},{"@type":"ListItem","position":4,"name":"Tecnicatura Superior en Construcciones Sustentables","item":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-construcciones-sustentables/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Tecnicatura Superior en Construcciones Sustentables","description":"Dónde estudiar Tecnicatura Superior en Construcciones Sustentables en Mendoza: tecnicatura del área Oficios, dictada por 1 institución (1 pública). Dura 3 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-construcciones-sustentables/","provider":{"@type":"EducationalOrganization","name":"INSUTEC (Instituto Superior de Educación Tecnológica)","url":"https://buscadoreducativo.com.ar/institucion/insutec-instituto-superior-de-educacion-tecnologica/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Tecnicatura Superior en Construcciones Sustentables en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Tecnicatura Superior en Construcciones Sustentables en Mendoza en la siguiente institución: INSUTEC (Instituto Superior de Educación Tecnológica). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Tecnicatura Superior en Construcciones Sustentables?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 3 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Tecnicatura Superior en Construcciones Sustentables?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Tecnicatura Superior en Construcciones Sustentables?","acceptedAnswer":{"@type":"Answer","text":"Tecnicatura Superior en Construcciones Sustentables es una tecnicatura perteneciente al área de Oficios. Entre sus aptitudes más afines se destacan: trabajo práctico, trabajo de campo y al aire libre, pensamiento analítico y afinidad tecnológica."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,8 +120,6 @@
         <dt>Modalidad</dt><dd>Presencial</dd>
         <dt>Duración</dt><dd>3 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Tecnicatura+Superior+en+Construcciones+Sustentables&amp;area=Oficios&amp;formacion=tecnicaturas">Ver Tecnicatura Superior en Construcciones Sustentables en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Tecnicatura Superior en Construcciones Sustentables</h2>
@@ -172,20 +199,14 @@
     <section class="relacionadas">
     <h2>Otras carreras del área Oficios</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/barberia-barber-shop/">Barbería / Barber Shop</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/carpinteria-en-madera/">Carpintería en Madera</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/cursos-de-buceo-incluye-nitrox/">Cursos de Buceo (incluye Nitrox)</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/cursos-de-buceo-niveles-inicial-a-dive-master-e-instructor/">Cursos de Buceo (niveles inicial a Dive Master e Instructor)</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/cursos-de-buceo-padi-incluye-rescue-diver/">Cursos de Buceo PADI (incluye Rescue Diver)</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/electricista-domiciliario-hasta-3-7kw/">Electricista Domiciliario (hasta 3,7kW)</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/gasista-e-instalaciones-sanitarias-ia/">Gasista e Instalaciones Sanitarias + IA</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/gasista-matriculado-categoria-3/">Gasista Matriculado Categoría 3</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/herreria-artistica-ia/">Herrería Artística + IA</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/instalacion-de-gas-instalador-de-gas-matricula-ecogas-2-categoria/">Instalación de Gas (Instalador de Gas - Matrícula ECOGAS 2ª Categoría)</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-ceramica-industrial/">Licenciatura en Cerámica Industrial</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/mecanica-automotriz/">Mecánica Automotriz</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-construcciones/">Tecnicatura Construcciones</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-en-mantenimiento-e-instalaciones-industriales/">Tecnicatura en Mantenimiento e Instalaciones Industriales</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-en-produccion-industrial-y-automatizacion/">Tecnicatura en Producción Industrial y Automatización</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-metalmecanica/">Tecnicatura Superior en Metalmecánica</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-transporte-ferroviario/">Tecnicatura Superior en Transporte Ferroviario</a> <span class="cuantas">(1)</span></li>
     </ul>
-    <p><a href="/area/oficios/">Ver las 29 carreras del área Oficios →</a></p>
+    <p><a href="/area/oficios/">Ver las 7 carreras del área Oficios →</a></p>
     </section>
     </div>
 </div>

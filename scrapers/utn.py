@@ -155,6 +155,9 @@ PLANES_CONOCIDOS = {
     "Gestión de Empresas Hoteleras": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-gestion-de-empresas-hoteleras/",
     "Gestión de Empresas Turísticas": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-gestion-de-empresas-turisticas/",
     "Higiene y Seguridad": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-higiene-y-seguridad/",
+    "Administración": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-adminsitracion/",
+    "Programación": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-programacion/",
+    "Videojuegos": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-en-desarrollo-y-produccion-de-videojuegos/",
 }
 
 # "primer año", "segundo año", "tercer año", ... -> "1er año", "2do año", ...
@@ -212,10 +215,25 @@ def extraer_plan(url_plan):
                 continue
             # Las filas válidas arrancan con el código numérico de la materia;
             # si no, es una fila de separación o una tabla ajena al plan.
-            if not re.fullmatch(r"\d+", celdas[0]):
+            # Excepción: "Administración" publica la tabla sin código (columna
+            # "CÓDIGO DE MATERIA" vacía); ahí el nombre es la primera celda.
+            if re.fullmatch(r"\d+", celdas[0]):
+                nombre = celdas[1] if len(celdas) >= 2 else celdas[0]
+                regimen = celdas[2] if len(celdas) >= 3 else ""
+            elif len(celdas) >= 2:
+                # Posible fila sin código (Administración publica la columna
+                # CÓDIGO vacía): ['', 'Administración General I', 'Anual']
+                # → tras quitar vacías queda [Nombre, Régimen]. Si la 2ª celda
+                # parece un régimen, el nombre es la primera.
+                nombre, regimen = celdas[0], ""
+                if len(celdas) >= 2 and re.fullmatch(
+                        r"anual|semestral|(?:anual\s*/\s*semestral)|[0-9°º]+ ?[sS]emestre",
+                        celdas[1], re.I):
+                    regimen = celdas[1]
+                else:
+                    continue
+            else:
                 continue
-            nombre = celdas[1] if len(celdas) >= 2 else celdas[0]
-            regimen = celdas[2] if len(celdas) >= 3 else ""
             materia = nombre
             if regimen and regimen not in BASURA_REGIMEN:
                 materia = f"{nombre} ({regimen})"
@@ -229,11 +247,12 @@ def extraer_plan(url_plan):
     return {"plan_estudio": anios, "plan_fuente": url_plan}
 
 
-print("\n📚 Buscando planes de estudio por carrera (solo grados de 3 años o más)...")
+print("\n📚 Buscando planes de estudio por carrera (grados de 2 años o más)...")
 for carrera in utn_data["carreras"]:
     nombre = carrera["nombre_carrera"]
-    # El alcance es grado/pregrado de 3 años o más.
-    if (duracion_a_anios(carrera.get("duracion")) or 0) < 3:
+    # El alcance es grado/pregrado de 2 años o más (las tecnicaturas de 2 años
+    # también publican plan: Administración, Programación, Videojuegos).
+    if (duracion_a_anios(carrera.get("duracion")) or 0) < 2:
         print(f"  ⏭️ {nombre}: dura menos de 3 años, sin plan en catálogo.")
         continue
     # Ya lo descubrimos: no lo volvemos a bajar.

@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Turismo","item":"https://buscadoreducativo.com.ar/area/turismo/"},{"@type":"ListItem","position":4,"name":"Hotelería","item":"https://buscadoreducativo.com.ar/carrera/hoteleria/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Hotelería","description":"Dónde estudiar Hotelería en Mendoza: carrera de grado del área Turismo, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/hoteleria/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Hotelería en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Hotelería en Mendoza en la siguiente institución: Universidad de Congreso (UC). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Hotelería?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Hotelería?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Hotelería?","acceptedAnswer":{"@type":"Answer","text":"Hotelería es una carrera de grado perteneciente al área de Turismo. Entre sus aptitudes más afines se destacan: interacción social, trabajo de campo y al aire libre, movilidad geográfica y trabajo práctico."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,8 +120,6 @@
         <dt>Modalidad</dt><dd>Presencial</dd>
         <dt>Duración</dt><dd>4 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Hoteler%C3%ADa&amp;area=Turismo&amp;formacion=grado">Ver Hotelería en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Hotelería</h2>
@@ -100,7 +127,28 @@
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-congreso-uc/">Universidad de Congreso (UC)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º Año</h4>
+            <ul><li>Introducción a la Industria de la Hospitalidad</li><li>Housekeeping I</li><li>Equipamiento Hotelero</li><li>Administración General</li><li>Métodos Cuantitativos</li><li>Housekeeping II</li><li>Introducción a las Ciencias Sociales</li><li>Atención al Cliente</li><li>Contabilidad General</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º Año</h4>
+            <ul><li>Front Desk</li><li>Relaciones Públicas</li><li>Higiene y Seguridad</li><li>Estadística Aplicada</li><li>Inglés II</li><li>Alimentos y Bebidas</li><li>Gestión Hotelera</li><li>Servicio del Vino</li><li>Comercialización</li><li>Inglés III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º Año</h4>
+            <ul><li>Administración Hotelera</li><li>Alimentos y Bebidas</li><li>Electiva</li><li>Economía Turística</li><li>Inglés 4</li><li>Auditoría y Control de Hoteles</li><li>Congresos y Convenciones</li><li>Legislación Turística</li><li>Francés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º Año</h4>
+            <ul><li>Servicio de Catering y Room Service</li><li>Marketing Hotelero</li><li>Comportamiento del Consumidor</li><li>Formulación de Proyectos</li><li>Francés II</li><li>Política y Planeamiento Hotelero</li><li>Gestión de la Calidad</li><li>Bar, Coctelería y Destilados</li><li>Administración de Recursos Humanos</li><li>Francés III</li><li>Práctica Profesional</li><li>Trabajo Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/hoteleria/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/hoteleria/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -175,16 +223,17 @@
         <li><a href="/carrera/tecnicatura-superior-en-turismo/">Tecnicatura Superior en Turismo</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-turismo-y-hoteleria/">Tecnicatura Superior en Turismo y Hotelería</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/licenciatura-en-turismo/">Licenciatura en Turismo</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/lic-en-turismo-y-hoteleria/">Lic. en Turismo y Hotelería</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/licenciatura-en-administracion-hotelera/">Licenciatura en Administración Hotelera</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/gestion-de-empresas-hoteleras/">Gestión de Empresas Hoteleras</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/guia-de-alta-montana-y-trekking/">Guía de Alta Montaña y Trekking</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/gestion-de-empresas-turisticas/">Gestión de Empresas Turísticas</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/lic-en-turismo-y-hoteleria/">Lic. en Turismo y Hotelería</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-gestion-turistica/">Licenciatura en Gestión Turística</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-actividades-de-montana/">Tecnicatura Superior en Actividades de Montaña</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-universitaria-en-gestion-de-recursos-turisticos/">Tecnicatura Universitaria en Gestión de Recursos Turísticos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-universitaria-en-turismo-y-hoteleria/">Tecnicatura Universitaria en Turismo y Hotelería</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnico-superior-en-hoteleria/">Técnico Superior en Hotelería</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/turismo/">Turismo</a> <span class="cuantas">(1)</span></li>
     </ul>
-    <p><a href="/area/turismo/">Ver las 12 carreras del área Turismo →</a></p>
+    <p><a href="/area/turismo/">Ver las 14 carreras del área Turismo →</a></p>
     </section>
     </div>
 </div>

@@ -3458,7 +3458,134 @@
                     "duracion": "6 años",
                     "modalidad": "Presencial, Híbrida o Distancia",
                     "facultad": "S21",
-                    "link_oficial": "https://21.edu.ar/carreras-y-programas/medicina?hsLang=es"
+                    "link_oficial": "https://21.edu.ar/carreras-y-programas/medicina?hsLang=es",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer Cuatrimestre",
+                            "materias": [
+                                "Anatomía I",
+                                "Biología Celular y Genética",
+                                "Bioquímica Médica I",
+                                "Medicina, Paciente y Sociedad",
+                                "Métodos y Técnicas de Investigación Social",
+                                "Inglés Médico I",
+                                "Seminario de práctica Integradora I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo Cuatrimestre",
+                            "materias": [
+                                "Anatomía II",
+                                "Embriología",
+                                "Atención Primaria de la Salud I",
+                                "Introducción a la Investigación en Medicina",
+                                "Bioquímica Médica II",
+                                "Seminario de práctica Integradora II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer Cuatrimestre",
+                            "materias": [
+                                "Fisiología y Biofísica I",
+                                "Histología I",
+                                "Salud Pública",
+                                "Recursos Informáticos",
+                                "Grupo y Liderazgo",
+                                "Inglés Médico II",
+                                "Seminario de práctica Integradora III"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto Cuatrimestre",
+                            "materias": [
+                                "Fisiología y Biofísica II",
+                                "Histología II",
+                                "Neuroanatomía y Neurofisiología",
+                                "Salud Psicosocial",
+                                "Bioestadística",
+                                "Seminario de práctica Integradora IV"
+                            ]
+                        },
+                        {
+                            "anio": "Quinto Cuatrimestre",
+                            "materias": [
+                                "Patología I",
+                                "Medicina I",
+                                "Bacteriología y Virología",
+                                "Relación Médico Paciente",
+                                "Epidemiología",
+                                "Inglés Médico III",
+                                "Seminario de práctica Integradora V"
+                            ]
+                        },
+                        {
+                            "anio": "Sexto Cuatrimestre",
+                            "materias": [
+                                "Patología II",
+                                "Medicina II",
+                                "Parasitología y Micrología",
+                                "Bioética y Profesionalismo",
+                                "Emprendimientos Universitarios",
+                                "Seminario de práctica Integradora VI"
+                            ]
+                        },
+                        {
+                            "anio": "Séptimo Cuatrimestre",
+                            "materias": [
+                                "Medicina Interna I",
+                                "Farmacología General",
+                                "Medicina Quirúrgica I",
+                                "Ginecología",
+                                "Diagnóstico por Imágenes",
+                                "Medicina basada en la evidencia",
+                                "Seminario de práctica Integradora VII"
+                            ]
+                        },
+                        {
+                            "anio": "Octavo Cuatrimestre",
+                            "materias": [
+                                "Medicina Interna II",
+                                "Farmacología Aplicada",
+                                "Medicina Quirúrgica II",
+                                "Obstetricia",
+                                "Salud Mental y Psiquiatría",
+                                "Antropología Médica",
+                                "Seminario de práctica Integradora VIII"
+                            ]
+                        },
+                        {
+                            "anio": "Noveno Cuatrimestre",
+                            "materias": [
+                                "Medicina Interna III",
+                                "Telemedicina",
+                                "Oftalmología",
+                                "Pediatría I",
+                                "Estrategias y métodos de capacitación en salud",
+                                "Traumatología y Ortopedia",
+                                "Seminario de práctica Integradora IX"
+                            ]
+                        },
+                        {
+                            "anio": "Décimo Cuatrimestre",
+                            "materias": [
+                                "Medicina Interna IV",
+                                "Pediatría II",
+                                "Medicina Legal y Toxicología",
+                                "Salud y cuidados gerontológicos",
+                                "Nutrición en Medicina",
+                                "Seminario de práctica Integradora X",
+                                "Práctica Final Obligatoria 40 semanas (1840 h) Práctica Solidaria (22 h)",
+                                "40 semanas (1840 h)",
+                                "Práctica Solidaria (22 h)",
+                                "Materias Electivas Medicina del Ejercicio Trasplante de Órganos y Tejidos Anestesia Gestión en Salud",
+                                "Medicina del Ejercicio",
+                                "Trasplante de Órganos y Tejidos",
+                                "Anestesia",
+                                "Gestión en Salud"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://21.edu.ar/carreras-y-programas/medicina?hsLang=es"
                 },
                 {
                     "id": 1043,

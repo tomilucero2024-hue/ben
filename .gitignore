@@ -11,3 +11,9 @@ env/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Dependencias JS para los tests (jsdom) y scripts descartables de una corrida
+node_modules/
+patch_*.js
+check_braces.js
+update_settings.js

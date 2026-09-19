@@ -59,7 +59,7 @@
 
        Familia cromática: EdTech de tres colores. Índigo para lo formal e
        institucional, naranja para plataformas y categorías, verde jade para
-       la acción (CTAs, chat, favoritos, foco de inputs).
+       la acción (CTAs, chat, foco de inputs).
 
        Los NOMBRES de las variables funcionales (--orange, --blue, --purple…)
        se mantienen a propósito aunque el matiz
@@ -78,7 +78,7 @@
     --blue: #4F46E5;     /* índigo: formal / institucional */
     --purple: #9333EA;   /* violeta */
     --teal: #0D9488;     /* verde azulado */
-    --accent: #059669;   /* verde jade: acción (CTAs, chat, favoritos) */
+    --accent: #059669;   /* verde jade: acción (CTAs, chat) */
     --shadow: rgba(40, 34, 90, .14);
 
     /* Tinta de los badges. El color puro sobre su propio tinte al 16% daba ~2.5:1
@@ -218,7 +218,7 @@ button { cursor: pointer; }
 
    La única sombra que queda en el sitio es la escalera --elev-*, y va
    solo en lo que de verdad flota por encima de la página: la ventana
-   del chat, su burbuja, la barra del comparador y el modal. Ahí la
+   del chat y su burbuja. Ahí la
    sombra no es decoración — es lo que separa la capa flotante del
    contenido que quedó abajo.
 
@@ -615,12 +615,49 @@ h1, h2, .section-tab-texto strong {
 .clear-filters-button { width: calc(100% - 2rem); min-height: 38px; margin: 1rem; padding: .55rem; border: 1px solid var(--line); border-radius: var(--radius-xs); color: var(--muted); background: transparent; font-size: var(--fs-xs); }
 .clear-filters-button:hover { border-color: var(--accent); color: var(--accent-ink); }
 
-/* 7. BARRA SOBRE LOS RESULTADOS: cantidad encontrada y selector de orden. */
-.results-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
+/* 7. BARRA SOBRE LOS RESULTADOS: cantidad encontrada, selector de orden y las
+      tres formas de explorar el catálogo (Carreras / Instituciones / Por área). */
+.results-toolbar { display: flex; flex-direction: column; gap: .75rem; margin-bottom: 1.25rem; }
+.results-toolbar-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.results-toolbar-bottom { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
 .results-count { margin: 0; color: var(--muted); font-size: var(--fs-base); font-weight: 600; }
 /* El ícono recuerda en qué sección está parado el usuario (la barra solo se ve
    en Educación Formal; las plataformas tienen su propio encabezado). */
 .results-count::before { content: '🎓 '; }
+/* Selector persistente de vista: se queda en el medio y el "Ordenar por" se
+   pega a la derecha. Al activar "Por área" o "Instituciones" el sort se oculta
+   (no hay carreras que ordenar), pero el selector sigue siempre visible. */
+.vistas-switcher {
+    margin-inline: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: .2rem;
+    padding: .25rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    background: var(--surface-soft);
+}
+.vistas-switcher-btn {
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-size: var(--fs-2xs);
+    font-weight: 700;
+    line-height: 1;
+    padding: .5rem .85rem;
+    border-radius: 999px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background var(--dur-base) ease, color var(--dur-base) ease;
+}
+.vistas-switcher-btn:hover, .vistas-switcher-btn:focus-visible { color: var(--accent-ink); }
+.vistas-switcher-btn.is-active, .vistas-switcher-btn[aria-pressed="true"] {
+    background: var(--accent);
+    /* Texto blanco: la tinta del acento (verde oscuro en claro, índigo claro
+       en oscuro) se confundía con el relleno y el rótulo no se leía. */
+    color: #fff;
+}
 .sort-control { display: flex; align-items: center; gap: .5rem; color: var(--muted); font-size: var(--fs-xs); white-space: nowrap; }
 /* El borde fuerte y la flecha nativa del navegador se quedan intactos: son lo
    que dice "esto se abre", y eso no se negocia por estética. */
@@ -830,15 +867,6 @@ h1, h2, .section-tab-texto strong {
     vertical-align: -1px;
     transition: transform var(--dur-fast) ease, fill var(--dur-fast) ease, stroke var(--dur-fast) ease;
 }
-.btn-favorito.is-active .btn-svg {
-    fill: currentColor;
-}
-.btn-comparar:not(.is-active) .btn-svg-check {
-    display: none;
-}
-.btn-comparar.is-active .btn-svg-add {
-    display: none;
-}
 .card-cta-group {
     display: flex;
     align-items: center;
@@ -905,13 +933,6 @@ h1, h2, .section-tab-texto strong {
     -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;
     opacity: .85;
 }
-/* Empty de favoritos: ícono de estrella vacía a juego con el mensaje. */
-.empty-favoritos::before {
-    width: 64px; height: 64px;
-    mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M32%208l7.9%2016.4L56%2024.4l-12%2011.6%202.8%2016.3L32%2044.6l-14.8%207.7%202.8-16.3L8%2024.4z%22%2F%3E%3C%2Fsvg%3E");
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M32%208l7.9%2016.4L56%2024.4l-12%2011.6%202.8%2016.3L32%2044.6l-14.8%207.7%202.8-16.3L8%2024.4z%22%2F%3E%3C%2Fsvg%3E");
-}
-.empty-favoritos strong { color: var(--orange-ink); }
 .results-suggest {
     grid-column: 1 / -1; margin: 0 0 .25rem; padding: 1rem 1.1rem;
     border: 1px solid var(--line); border-left: 4px solid var(--orange);
@@ -1141,8 +1162,8 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .btn-chat-sugerencia { min-height: 36px; padding: .4rem .65rem; border: 1px dashed var(--line); border-radius: var(--radius-pill); color: var(--muted); background: transparent; font-size: var(--fs-2xs); transition: border-color var(--dur-base) ease, color var(--dur-base) ease; }
 .btn-chat-sugerencia:hover, .btn-chat-sugerencia:focus-visible { border-color: var(--accent); color: var(--accent-ink); }
 
-/* Tarjetas compactas de resultado que el copiloto muestra en el chat, con los
-   botones de favorito/comparar operativos (funcionan por delegación). */
+/* Tarjetas compactas de resultado que el copiloto muestra en el chat, con sus
+   acciones operativas (funcionan por delegación). */
 .chat-resultados { display: flex; flex-direction: column; gap: .5rem; margin-top: .55rem; }
 .chat-resultado-card {
     display: flex; flex-direction: column; gap: .4rem;
@@ -1153,7 +1174,6 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .chat-resultado-nombre { font-weight: 700; color: var(--text); font-size: var(--fs-sm); }
 .chat-resultado-card .compatibilidad-badge { font-size: var(--fs-2xs); padding: .1rem .5rem; }
 .chat-resultado-acciones { display: flex; flex-wrap: wrap; gap: .4rem; }
-.chat-resultado-acciones .btn-favorito, .chat-resultado-acciones .btn-comparar { min-height: 32px; padding: .3rem .55rem; font-size: var(--fs-2xs); }
 .chat-resultado-acciones .tipo-badges { margin: 0; }
 
 /* Barra de progreso del test vocacional */
@@ -1423,8 +1443,7 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
         padding: .5rem .85rem;
     }
     .duration-range button, .duration-range input,
-    .comparar-bar-btn, .comparar-bar-limpiar, .comparar-modal-cerrar,
-    .btn-favorito, .btn-comparar, .btn-escuchar-card, .favoritos-toggle, .clear-filters-button,
+    .btn-escuchar-card, .clear-filters-button,
     .btn-chat-sugerencia, .sort-control select,
     .card-link, .platform-link {
         min-height: 44px;
@@ -1527,6 +1546,8 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
         font-size: var(--fs-sm);
         line-height: 1.35;
     }
+    .results-toolbar-top, .results-toolbar-bottom { width: 100%; }
+    .vistas-switcher { width: 100%; justify-content: center; }
     .toolbar-actions {
         display: flex;
         align-items: center;
@@ -1535,20 +1556,11 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
         width: 100%;
     }
     /* El reparto de esta fila lo manda el <select>: entre el rótulo "Ordenar
-       por" y el toggle de favoritos quedaba en ~88px, y "Predeterminado"
-       necesita 119, así que el orden activo se leía cortado ("Predeterm…") y en
-       celular no había forma de saber cómo estaba ordenada la grilla. Ahora el
-       select reserva lo suyo y el que cede es el toggle, que se sigue
-       entendiendo con la estrella. */
-    .favoritos-toggle {
-        flex: 0 1 auto;
-        min-width: 0;
-        text-align: center;
-        padding: .45rem .6rem;
-    }
-    /* En 375px no entran los tres: "Solo favoritos" + "Ordenar por" + el
-       selector suman más que el ancho de pantalla. Se esconde el rótulo, que es
-       el más prescindible de los tres —las propias opciones dicen que eso
+       por" y el selector, en ~88px la opción activa se leía cortada
+       ("Predeterm…") y en celular no había forma de saber cómo estaba ordenada
+       la grilla. Ahora el select reserva lo suyo. */
+    /* En 375px no entran "Ordenar por" + el selector: se esconde el rótulo, que
+       es el más prescindible de los dos —las propias opciones dicen que eso
        ordena—, pero se esconde VISUALMENTE: sigue en el árbol de accesibilidad
        como nombre del <select>. */
     .sort-control-label {
@@ -1592,28 +1604,12 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 }
 
 /* ================================================================
-   14. FAVORITOS Y COMPARADOR
-   Botones de tarjeta, toggle de favoritos en la toolbar y el modal
-   de comparación lado a lado.
+   14. BOTONES DE TARJETA
+   El botón "Escuchar" nace oculto y solo se muestra cuando el usuario
+   activa la lectura en voz alta desde accesibilidad.js.
    ================================================================ */
 .toolbar-actions { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
-
-.favoritos-toggle {
-    min-height: 38px; padding: .5rem .8rem; border: 1px solid var(--line);
-    border-radius: var(--radius-sm); color: var(--text); background: var(--surface);
-    font-family: var(--font-text); font-size: var(--fs-xs); font-weight: 700; cursor: pointer;
-    transition: border-color var(--dur-base) ease, color var(--dur-base) ease,
-                background-color var(--dur-base) ease;
-}
-.favoritos-toggle:hover:not(.active) { border-color: var(--orange); color: var(--orange-ink); }
-/* Activado = teñido de naranja, con el borde y la tinta al tono. Sin el hundido
-   que lo acompañaba, el tinte y el borde son toda la señal, así que se quedan
-   fuertes (18% y 60%) para que el estado se lea de un vistazo. */
-.favoritos-toggle.active {
-    color: var(--orange-ink);
-    background: color-mix(in srgb, var(--orange) 18%, var(--surface));
-    border-color: color-mix(in srgb, var(--orange) 60%, var(--line));
-}
+.results-toolbar .toolbar-actions[hidden] { display: none; }
 
 .card-actions {
     display: flex;
@@ -1623,7 +1619,7 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     padding-top: var(--space-4);
     width: 100%;
 }
-.btn-favorito, .btn-comparar, .btn-escuchar-card {
+.btn-escuchar-card {
     flex: 1 1 calc(50% - .25rem);
     min-width: 0;
     display: inline-flex; align-items: center; justify-content: center; gap: .35rem;
@@ -1633,87 +1629,12 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
     transition: border-color var(--dur-base) ease, color var(--dur-base) ease, background var(--dur-base) ease;
 }
-.btn-favorito:hover, .btn-comparar:hover, .btn-escuchar-card:hover { border-color: var(--accent); color: var(--accent-ink); }
-.btn-favorito.is-active { color: var(--on-accent); background: var(--orange); border-color: var(--orange); }
-.btn-comparar.is-active { color: var(--on-accent); background: var(--blue); border-color: var(--blue); }
+.btn-escuchar-card:hover { border-color: var(--accent); color: var(--accent-ink); }
 
 .btn-escuchar-card { display: none; }
 html[data-tts="true"] .btn-escuchar-card {
     display: inline-flex;
     flex: 1 1 100%;
-}
-
-/* Barra flotante del comparador, fija abajo centrada. Va por encima del modal
-   del copiloto (z-index 90) para poder comparar desde los resultados del chat. */
-.comparar-bar {
-    position: fixed; left: 50%; bottom: calc(4rem + env(safe-area-inset-bottom));
-    transform: translateX(-50%); z-index: 95;
-    display: flex; align-items: center; gap: .75rem;
-    padding: .6rem .8rem; border: 1px solid var(--line); border-radius: var(--radius-pill);
-    background: var(--surface); box-shadow: var(--elev-3);
-    font-family: var(--font-text); font-size: var(--fs-sm);
-}
-.comparar-bar-texto { color: var(--text); }
-.comparar-bar-btn {
-    min-height: 34px; padding: .35rem .9rem; border: none; border-radius: var(--radius-pill);
-    color: var(--on-accent); background: var(--blue); font-weight: 700; cursor: pointer;
-}
-.comparar-bar-btn:hover { background: color-mix(in srgb, var(--blue) 82%, #000); }
-.comparar-bar-limpiar {
-    min-height: 34px; padding: .35rem .7rem; border: 1px solid var(--line);
-    border-radius: var(--radius-pill); color: var(--muted); background: transparent; cursor: pointer;
-}
-
-/* Modal de comparación. Por encima de la barra (95) y del copiloto (90). */
-.comparar-modal {
-    position: fixed; inset: 0; z-index: 96; display: flex; align-items: center; justify-content: center;
-    padding: 1rem; background: color-mix(in srgb, var(--bg) 60%, transparent);
-    backdrop-filter: blur(3px);
-}
-.comparar-modal-contenido {
-    width: min(100%, 860px); max-height: 86vh; overflow: auto;
-    border: 1px solid var(--line); border-radius: var(--radius-lg);
-    background: var(--surface); box-shadow: var(--elev-4);
-}
-.comparar-modal-cabecera {
-    position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between;
-    padding: 1rem 1.25rem; border-bottom: 1px solid var(--line); background: var(--surface);
-}
-.comparar-modal-cabecera h2 { margin: 0; font-family: var(--font-detail); font-weight: 400; font-size: var(--fs-xl); letter-spacing: .04em; }
-.comparar-modal-cerrar {
-    width: 38px; height: 38px; border: 1px solid var(--line); border-radius: var(--radius-sm);
-    color: var(--text); background: var(--surface-soft); font-size: var(--fs-md); cursor: pointer;
-}
-.comparar-modal-cuerpo { padding: 1rem 1.25rem 1.5rem; }
-/* Contenedor de scroll de la tabla: sin esto, comparar muchas carreras desbordaba
-   el modal a lo ancho y se llevaba puesto el botón de cerrar. */
-.comparar-responsive { max-width: 100%; overflow-x: auto; }
-.tabla-comparar { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
-.tabla-comparar th, .tabla-comparar td { padding: .65rem .75rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
-.tabla-comparar thead th { font-family: var(--font-detail); font-weight: 400; font-size: var(--fs-md); letter-spacing: .03em; color: var(--text); }
-.tabla-comparar tbody th[scope="row"] { color: var(--muted); font-weight: 600; white-space: nowrap; }
-
-/* Vista apilada (móvil): una tarjeta por ítem, cada atributo como fila
-   etiqueta/valor. La tabla de al lado queda oculta en pantallas angostas. */
-.comparar-movil { display: none; }
-.comparar-item {
-    border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface-soft);
-    padding: .9rem 1rem; margin-bottom: .9rem;
-}
-.comparar-item-titulo { margin: 0 0 .6rem; font-size: var(--fs-lg); line-height: 1.3; }
-.comparar-item-lista { margin: 0; }
-.comparar-fila { display: flex; gap: .6rem; padding: .35rem 0; border-top: 1px solid var(--line); }
-.comparar-fila:first-child { border-top: none; }
-.comparar-fila dt { flex: 0 0 42%; color: var(--muted); font-weight: 600; font-size: var(--fs-xs); }
-.comparar-fila dd { margin: 0; flex: 1; font-size: var(--fs-xs); }
-
-/* 820px, no 600: es el mismo punto en que el layout pasa a una columna. Con 600
-   quedaba una franja de 601-820px con la tabla ancha (y sus <th> nowrap) metida
-   en un modal angosto. */
-@media (max-width: 820px) {
-    .comparar-bar { left: .75rem; right: .75rem; transform: none; flex-wrap: wrap; justify-content: center; }
-    .tabla-comparar { display: none; }
-    .comparar-movil { display: block; }
 }
 
 
@@ -1747,8 +1668,7 @@ html[data-tts="true"] .btn-escuchar-card {
 @media (pointer: coarse) {
     .filter-option { min-height: 44px; }
     .duration-range button, .duration-range input,
-    .comparar-bar-btn, .comparar-bar-limpiar, .comparar-modal-cerrar,
-    .btn-favorito, .btn-comparar, .favoritos-toggle, .clear-filters-button,
+    .btn-escuchar-card, .clear-filters-button,
     .btn-chat-sugerencia, .sort-control select,
     .card-link, .platform-link { min-height: 44px; }
     .duration-range { grid-template-columns: 1fr auto 1fr 44px; }
@@ -1890,11 +1810,6 @@ html[data-tts="true"] .btn-escuchar-card {
 .card-actions button:hover {
     background: var(--surface-soft);
     border-color: var(--accent);
-}
-.card-actions .btn-favorito.activo {
-    color: var(--orange);
-    border-color: var(--orange);
-    background: rgba(255, 84, 0, 0.1);
 }
 
 /* Progreso del test */
@@ -2108,6 +2023,15 @@ html[data-tts="true"] .btn-escuchar-card {
     transition: border-color var(--dur-base) ease, color var(--dur-base) ease, transform var(--dur-base) ease;
 }
 .bienvenida-catalogo:hover { border-color: var(--accent); color: var(--accent-ink); }
+/* Las tres vías secundarias además del Copiloto: se apilan en una columna. */
+.bienvenida-opciones-secundarias {
+    flex: 1 1 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+}
+.bienvenida-opciones-secundarias .bienvenida-catalogo { text-align: left; }
 
 /* En pantallas angostas las dos opciones se apilan. */
 @media (max-width: 480px) {
@@ -2956,36 +2880,130 @@ html[data-contrast="high"] .btn-tipo-feedback.is-active {
     align-items: center;
     gap: .35rem;
 }
-.favoritos-toggle {
+
+
+/* (El pie ancla al catálogo estático vía sitemap.xml: /carreras/, /instituciones/.
+   El enlace "Todas las instituciones" del footer se retiró de index.html.) */
+
+/* Nuevas vistas de Áreas y Carreras Agrupadas */
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.25rem;
+}
+
+.area-card {
+    padding: 1.75rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+}
+
+.area-icon {
+    width: 104px;
+    height: 104px;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 15%, transparent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-icon svg {
+    width: 58px;
+    height: 58px;
+}
+
+/* Fix grid to use standard gap like .results-grid */
+
+
+
+.area-title {
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    margin: 0;
+}
+
+.area-count {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+}
+
+.area-header {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.btn-volver-areas {
     display: inline-flex;
     align-items: center;
     gap: .35rem;
-}
-.favoritos-toggle .btn-svg {
-    color: var(--orange-ink);
-}
-.favoritos-toggle.is-active .btn-svg {
-    fill: currentColor;
-}
-
-
-/* Enlaces del pie hacia el catálogo estático (/carreras/, /instituciones/).
-   Ver el comentario en index.html: existen para que el catálogo sea recorrible
-   sin JavaScript, tanto por una persona como por un buscador. */
-.footer-mapa {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-3) var(--space-6);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    background: var(--surface-soft);
+    color: var(--accent-ink);
+    font-weight: 600;
+    cursor: pointer;
+    padding: .35rem .75rem;
     font-size: var(--fs-sm);
+    transition: border-color var(--dur-base) ease, color var(--dur-base) ease, background var(--dur-base) ease;
 }
 
-.footer-mapa a {
-    color: var(--muted);
-    text-decoration: none;
+.btn-volver-areas:hover, .btn-volver-areas:focus-visible {
+    border-color: var(--accent);
+    background: var(--surface);
+    color: var(--accent);
 }
 
-.footer-mapa a:hover,
-.footer-mapa a:focus-visible {
+.area-header-title {
+    font-size: 1.75rem;
+    margin: 0;
     color: var(--text);
-    text-decoration: underline;
+}
+
+.career-group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+
+.area-ejemplos-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem auto 0;
+    font-size: var(--fs-xs);
+    color: var(--text-muted);
+    text-align: left;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.area-ejemplo-item {
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Agrupación de instituciones por tipo en la vista "Instituciones": una
+   sección por tipo, con su h2 y la grilla de tarjetas. El primer grupo no
+   necesita separación (arranca la vista); los siguientes se espacian. */
+.grupo-instituciones-separado {
+    margin-top: 2.75rem;
+}
+
+.grupo-instituciones-count {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
 }

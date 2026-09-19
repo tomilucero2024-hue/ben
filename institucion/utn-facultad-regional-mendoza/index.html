@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"UTN Facultad Regional Mendoza","item":"https://buscadoreducativo.com.ar/institucion/utn-facultad-regional-mendoza/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"UTN Facultad Regional Mendoza","url":"https://buscadoreducativo.com.ar/institucion/utn-facultad-regional-mendoza/"}</script>
 </head>
@@ -67,12 +67,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -87,15 +116,13 @@
         <dt>Gestión</dt><dd>Pública</dd>
         <dt>Oferta en BEN</dt><dd>14 carreras</dd>
     </dl>
-
-    <a class="cta" href="/?institucion=UTN%20Facultad%20Regional%20Mendoza">Ver esta institución en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
 
     <h2>Ingeniería (7)</h2>
     <ul class="ofertas">
         <li class="oferta">
-            <h3><a href="/carrera/ingenieria-civil/">INGENIERÍA CIVIL</a></h3>
+            <h3><a href="/carrera/ingenieria-civil/">Ingeniería Civil</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio — 6 años</summary>
@@ -130,7 +157,7 @@
             <a class="oficial" href="https://www4.frm.utn.edu.ar/ingenieria-civil/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
-            <h3><a href="/carrera/ingenieria-electromecanica/">INGENIERÍA ELECTROMECÁNICA</a></h3>
+            <h3><a href="/carrera/ingenieria-electromecanica/">Ingeniería Electromecánica</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio — 5 años</summary>
@@ -161,7 +188,7 @@
             <a class="oficial" href="https://www4.frm.utn.edu.ar/ingenieria-electromecanica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
-            <h3><a href="/carrera/ingenieria-electronica/">INGENIERÍA ELECTRÓNICA</a></h3>
+            <h3><a href="/carrera/ingenieria-electronica/">Ingeniería Electrónica</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años y medio</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio — 6 años</summary>
@@ -196,7 +223,7 @@
             <a class="oficial" href="https://www4.frm.utn.edu.ar/ingenieria-electronica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
-            <h3><a href="/carrera/ingenieria-quimica/">INGENIERÍA QUÍMICA</a></h3>
+            <h3><a href="/carrera/ingenieria-quimica/">Ingeniería Química</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio — 5 años</summary>
@@ -227,7 +254,7 @@
             <a class="oficial" href="https://www4.frm.utn.edu.ar/ingenieria-quimica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
-            <h3><a href="/carrera/ingenieria-en-sistemas-de-informacion/">INGENIERÍA EN SISTEMAS DE INFORMACIÓN</a></h3>
+            <h3><a href="/carrera/ingenieria-en-sistemas-de-informacion/">Ingeniería en Sistemas de Información</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio — 5 años</summary>
@@ -258,7 +285,7 @@
             <a class="oficial" href="https://www4.frm.utn.edu.ar/ingenieria-en-sistemas-informacion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
-            <h3><a href="/carrera/ingenieria-en-telecomunicaciones/">INGENIERÍA EN TELECOMUNICACIONES</a></h3>
+            <h3><a href="/carrera/ingenieria-en-telecomunicaciones/">Ingeniería en Telecomunicaciones</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio — 5 años</summary>
@@ -289,7 +316,7 @@
             <a class="oficial" href="https://www4.frm.utn.edu.ar/ingenieria-en-telecomunicaciones/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
-            <h3><a href="/carrera/ingenieria-en-minas/">INGENIERÍA EN MINAS</a></h3>
+            <h3><a href="/carrera/ingenieria-en-minas/">Ingeniería en Minas</a></h3>
             <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Ingeniería</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio — 5 años</summary>
@@ -321,8 +348,77 @@
         </li>
     </ul>
 
-    <h2>Ciencias sociales (2)</h2>
+    <h2>Tecnología (2)</h2>
     <ul class="ofertas">
+        <li class="oferta">
+            <h3><a href="/carrera/programacion/">Programación</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 2 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Programación I (1° Semestre)</li><li>Arquitectura y Sistemas operativos (1° Semestre)</li><li>Matemática (1° Semestre)</li><li>Organización empresarial (1° Semestre)</li><li>Programación II (2° Semestre)</li><li>Probabilidad y Estadística (2° Semestre)</li><li>Base de Datos I (2° Semestre)</li><li>Inglés I (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Programación III (1° Semestre)</li><li>Base de Datos II (1° Semestre)</li><li>Metodología de Sistemas I (1° Semestre)</li><li>Inglés II (1° Semestre)</li><li>Programación IV (2° Semestre)</li><li>Metodología de Sistemas II (2° Semestre)</li><li>Introducción al análisis de datos (2° Semestre)</li><li>Legislación (2° Semestre)</li><li>Gestión de desarrollo de software (2° Semestre)</li><li>Trabajo Final Integrador (Anual)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-tec-univ-programacion/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-superior-programacion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/videojuegos/">Videojuegos</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Programación de Videojuegos 1 (Anual)</li><li>Probabilidad (Anual)</li><li>Diseño de Juegos (Anual)</li><li>Arte 2D (Anual)</li><li>Ingles 1 (Anual)</li><li>Programación de videojuegos 2 (Anual)</li><li>Game Design (Anual)</li><li>Arte 3 D (Anual)</li><li>Audio Interactivo 1 (Anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Programación de videojuegos 3 (Anual)</li><li>Motores de desarrollo 1 (Anual)</li><li>Technical Art (Anual)</li><li>Audio Interactivo 2 (Anual)</li><li>Inglés 2 (Anual)</li><li>Narrativa (Anual)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Electiva 1 (Anual)</li><li>Electiva 2 (Anual)</li><li>Electiva 3 (Anual)</li><li>Práctica Supervisada (Anual)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-tec-univ-en-desarrollo-y-produccion-de-videojuegos/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-universitaria-en-desarrollo-y-produccion-de-videojuegos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+    </ul>
+
+    <h2>Turismo (2)</h2>
+    <ul class="ofertas">
+        <li class="oferta">
+            <h3><a href="/carrera/gestion-de-empresas-hoteleras/">Gestión de Empresas Hoteleras</a></h3>
+            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Introducción a la Industria de la hospitalidad (1° Semestre)</li><li>Administración de empresas (1° Semestre)</li><li>Tecnologías aplicadas a la gestión de empresas I (1° Semestre)</li><li>Idioma I (1° Semestre)</li><li>Economía y políticas turísticas (2° Semestre)</li><li>Técnicas de Venta (2° Semestre)</li><li>Recepción y Reservas (2° Semestre)</li><li>Idioma II (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Housekeeping (1° Semestre)</li><li>Contabilidad (1° Semestre)</li><li>Alimentos y bebidas (1° Semestre)</li><li>Idioma III (1° Semestre)</li><li>Costos (2° Semestre)</li><li>Comercialización I (2° Semestre)</li><li>Idioma IV (2° Semestre)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Organización de eventos (1° Semestre)</li><li>Probabilidades y Estadísticas (1° Semestre)</li><li>Comercialización II (1° Semestre)</li><li>Relaciones Públicas (2° Semestre)</li><li>Práctica Profesional Supervisada (2° Semestre)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-tec-univ-gestion-de-empresas-hoteleras/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-superior-gestion-de-empresas-hoteleras/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
         <li class="oferta">
             <h3><a href="/carrera/gestion-de-empresas-turisticas/">Gestión de Empresas Turísticas</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
@@ -346,6 +442,10 @@
 </details>
             <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-superior-gestion-de-empresas-turisticas/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
+    </ul>
+
+    <h2>Ambiente (1)</h2>
+    <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/higiene-y-seguridad/">Higiene y Seguridad</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
@@ -368,22 +468,6 @@
     </div>
 </details>
             <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-superior-higiene-y-seguridad/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-    </ul>
-
-    <h2>Tecnología (2)</h2>
-    <ul class="ofertas">
-        <li class="oferta">
-            <h3><a href="/carrera/programacion/">Programación</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
-
-            <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-superior-programacion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/videojuegos/">Videojuegos</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
-
-            <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-universitaria-en-desarrollo-y-produccion-de-videojuegos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 
@@ -417,37 +501,23 @@
     <h2>Negocios (1)</h2>
     <ul class="ofertas">
         <li class="oferta">
-            <h3><a href="/carrera/administracion/">ADMINISTRACIÓN</a></h3>
+            <h3><a href="/carrera/administracion/">Administración</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
-
-            <a class="oficial" href="https://frm.utn.edu.ar/tecnicatura-universitaria-en-administracion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-    </ul>
-
-    <h2>Turismo (1)</h2>
-    <ul class="ofertas">
-        <li class="oferta">
-            <h3><a href="/carrera/gestion-de-empresas-hoteleras/">Gestión de Empresas Hoteleras</a></h3>
-            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Tecnicatura</li></ul>
             <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
+    <summary>Plan de estudio — 2 años</summary>
     <div class="plan-contenido">
         <div class="plan-anio">
             <h4>1er año</h4>
-            <ul><li>Introducción a la Industria de la hospitalidad (1° Semestre)</li><li>Administración de empresas (1° Semestre)</li><li>Tecnologías aplicadas a la gestión de empresas I (1° Semestre)</li><li>Idioma I (1° Semestre)</li><li>Economía y políticas turísticas (2° Semestre)</li><li>Técnicas de Venta (2° Semestre)</li><li>Recepción y Reservas (2° Semestre)</li><li>Idioma II (2° Semestre)</li></ul>
+            <ul><li>Administración General I (Anual)</li><li>Matemática General (Anual)</li><li>Informática I (Anual)</li><li>Problemática Social contemporánea (Anual)</li><li>Psicología de las Organizaciones (Anual)</li><li>Ambiente, Economía y Sociedad (Anual)</li><li>Legislación I (Anual)</li><li>Estado y Sociedad (Anual)</li><li>Seminario (Anual)</li></ul>
         </div>
         <div class="plan-anio">
             <h4>2do año</h4>
-            <ul><li>Housekeeping (1° Semestre)</li><li>Contabilidad (1° Semestre)</li><li>Alimentos y bebidas (1° Semestre)</li><li>Idioma III (1° Semestre)</li><li>Costos (2° Semestre)</li><li>Comercialización I (2° Semestre)</li><li>Idioma IV (2° Semestre)</li></ul>
+            <ul><li>Administración General II (Anual)</li><li>Informática II (Anual)</li><li>Comportamiento organizacional (Anual)</li><li>Estadística (Anual)</li><li>Economía II (Anual)</li><li>Legislación II (Anual)</li><li>Administración Estatal (Anual)</li><li>Gestión de Recursos Humanos (Anual)</li><li>Finanzas y Técnicas contables (Anual)</li><li>Proyecto Final (Anual)</li></ul>
         </div>
-        <div class="plan-anio">
-            <h4>3er año</h4>
-            <ul><li>Organización de eventos (1° Semestre)</li><li>Probabilidades y Estadísticas (1° Semestre)</li><li>Comercialización II (1° Semestre)</li><li>Relaciones Públicas (2° Semestre)</li><li>Práctica Profesional Supervisada (2° Semestre)</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-tec-univ-gestion-de-empresas-hoteleras/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://frm.utn.edu.ar/plan-de-estudio-tec-univ-adminsitracion/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www4.frm.utn.edu.ar/tecnicatura-superior-gestion-de-empresas-hoteleras/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://frm.utn.edu.ar/tecnicatura-universitaria-en-administracion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
     </div>

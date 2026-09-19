@@ -635,6 +635,208 @@
      "link_oficial": "https://aalps.org.ar/quienes-curso/"
     }
    ]
+  },
+  {
+   "id": 222,
+   "nombre": "Cruz Roja Argentina (Filial Mendoza)",
+   "nivel": "capacitación profesional",
+   "gestion": "privada (asociación)",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Calle San Juan 938, Ciudad de Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 22201,
+     "nombre_carrera": "Curso de Primeros Auxilios, RCP y DEA",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial / Virtual",
+     "facultad": "Cruz Roja Argentina",
+     "link_oficial": "https://www.cruzroja.org.ar/filialescra/mendoza"
+    },
+    {
+     "id": 22202,
+     "nombre_carrera": "Curso de Formación de Guardavidas",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "1 año",
+     "modalidad": "Presencial",
+     "facultad": "Escuela de Guardavidas de Cruz Roja Argentina",
+     "link_oficial": "https://www.cruzroja.org.ar/escuelas-guardavidas"
+    }
+   ]
+  },
+  {
+   "id": 223,
+   "nombre": "ASOLMEN - Asociación Olivícola de Mendoza",
+   "nivel": "capacitación profesional",
+   "gestion": "privada (asociación)",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "asolmen@asolmen.com.ar",
+    "direccion": "Sarmiento 199, 6° Piso, Of. 603, Ciudad de Mendoza"
+   },
+   "carreras": [
+    {
+     "id": 22301,
+     "nombre_carrera": "Curso de Cata y Maridaje de Aceite de Oliva",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "ASOLMEN",
+     "link_oficial": "A confirmar"
+    }
+   ]
+  },
+  {
+   "id": 224,
+   "nombre": "AADIDESS - Asociación Argentina de Instructores de Esquí y Snowboard",
+   "nivel": "capacitación profesional",
+   "gestion": "privada (asociación)",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "+54 294 442-8789 / +54 294 443-6072",
+    "email": "central@aadidess.com",
+    "direccion": "Morales 483 PB, San Carlos de Bariloche, Río Negro (cursos en Las Leñas, Mendoza)"
+   },
+   "carreras": [
+    {
+     "id": 22401,
+     "nombre_carrera": "Instructorado Nacional de Esquí y Snowboard (Niveles 1 a 3)",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "Las Leñas",
+     "link_oficial": "https://aadidess.com/cursos"
+    }
+   ]
+  },
+  {
+   "id": 225,
+   "nombre": "Academia Manifiesto (Baristas)",
+   "nivel": "capacitación profesional",
+   "gestion": "privada",
+   "provincia": "Buenos Aires (online, accesible desde Mendoza)",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Buenos Aires (presencial) / Online"
+   },
+   "carreras": [
+    {
+     "id": 22501,
+     "nombre_carrera": "Curso Barista Integral",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "2 semanas",
+     "modalidad": "Presencial / Online",
+     "facultad": "Academia Manifiesto",
+     "link_oficial": "https://academia.manifiestocafe.com.ar"
+    }
+   ]
+  },
+  {
+   "id": 226,
+   "nombre": "Capacitación en Energía Solar (Mendoza)",
+   "nivel": "capacitación profesional",
+   "gestion": "A confirmar",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "A confirmar"
+   },
+   "carreras": [
+    {
+     "id": 22601,
+     "nombre_carrera": "Instalador de Sistemas de Energía Solar (Fotovoltaicos y Térmicos)",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "A confirmar",
+     "facultad": "A confirmar",
+     "link_oficial": "A confirmar"
+    }
+   ]
+  },
+  {
+   "id": 227,
+   "nombre": "Prefectura Naval Argentina (Certificaciones Náuticas)",
+   "nivel": "capacitación profesional",
+   "gestion": "pública",
+   "provincia": "A confirmar (accesible desde Mendoza)",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "A confirmar"
+   },
+   "carreras": [
+    {
+     "id": 22701,
+     "nombre_carrera": "Timonel de Yate",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "Prefectura Naval Argentina",
+     "link_oficial": "https://www.argentina.gob.ar/servicio/obtener-el-certificado-de-timonel-de-yate"
+    },
+    {
+     "id": 22702,
+     "nombre_carrera": "Conductor Náutico (Patrón de Yate)",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Presencial",
+     "facultad": "Prefectura Naval Argentina",
+     "link_oficial": "https://www.argentina.gob.ar/servicio/obtener-el-certificado-de-conductor-nautico"
+    }
+   ]
+  },
+  {
+   "id": 228,
+   "nombre": "Administración de Parques Nacionales (APN)",
+   "nivel": "capacitación profesional",
+   "gestion": "pública",
+   "provincia": "Córdoba",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "Centro de Formación y Capacitación en Áreas Protegidas (CFyCAP), Embalse, Córdoba"
+   },
+   "carreras": [
+    {
+     "id": 22801,
+     "nombre_carrera": "Formación de Guardaparques Nacionales",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar (por concurso público)",
+     "modalidad": "Presencial",
+     "facultad": "CFyCAP - Embalse",
+     "link_oficial": "https://www.argentina.gob.ar/parquesnacionales"
+    }
+   ]
+  },
+  {
+   "id": 229,
+   "nombre": "INTA - Instituto Nacional de Tecnología Agropecuaria (Mendoza)",
+   "nivel": "capacitación (extensión)",
+   "gestion": "pública",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "A confirmar",
+    "email": "A confirmar",
+    "direccion": "A confirmar (EEA Mendoza, Luján de Cuyo)"
+   },
+   "carreras": [
+    {
+     "id": 22901,
+     "nombre_carrera": "Curso de Huerta Orgánica y Agroecología",
+     "categoria": "Curso / Formación Profesional",
+     "duracion": "A confirmar",
+     "modalidad": "Online (gratuito)",
+     "facultad": "INTA",
+     "link_oficial": "https://inta.gob.ar"
+    }
+   ]
   }
  ]
 }

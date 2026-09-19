@@ -1,100 +1,604 @@
 {
- "instituciones": [
-  {
-   "id": 47,
-   "nombre": "Universidad de la Defensa Nacional (UNDEF)",
-   "nivel": "universidad",
-   "gestion": "pública",
-   "provincia": "Nacional (a distancia)",
-   "contacto": {
-    "telefono": "",
-    "email": "informes@iua.edu.ar",
-    "direccion": "Modalidad a distancia - Sede central Córdoba"
-   },
-   "carreras": [
-    {
-     "id": 1,
-     "nombre_carrera": "Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "2 años y medio",
-     "modalidad": "A Distancia",
-     "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
-     "link_oficial": "https://undef.edu.ar/a-distancia-2/"
-    },
-    {
-     "id": 2,
-     "nombre_carrera": "Tecnicatura en Higiene y Seguridad en el Trabajo",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "2 años y medio",
-     "modalidad": "A Distancia",
-     "facultad": "Facultad de Ingeniería del Ejército",
-     "link_oficial": "https://undef.edu.ar/a-distancia-2/"
-    },
-    {
-     "id": 3,
-     "nombre_carrera": "Licenciatura en Relaciones Internacionales",
-     "categoria": "Grado / Licenciatura",
-     "duracion": "4 años",
-     "modalidad": "A Distancia",
-     "facultad": "Facultad del Ejército",
-     "link_oficial": "https://undef.edu.ar/a-distancia-2/"
-    },
-    {
-     "id": 4,
-     "nombre_carrera": "Contador Público",
-     "categoria": "Grado / Licenciatura",
-     "duracion": "4 años y medio",
-     "modalidad": "A Distancia",
-     "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
-     "link_oficial": "https://undef.edu.ar/a-distancia-2/"
-    },
-    {
-     "id": 5,
-     "nombre_carrera": "Licenciatura en Administración",
-     "categoria": "Grado / Licenciatura",
-     "duracion": "4 años y medio",
-     "modalidad": "A Distancia",
-     "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
-     "link_oficial": "https://undef.edu.ar/a-distancia-2/"
-    },
-    {
-     "id": 6,
-     "nombre_carrera": "Licenciatura en Logística",
-     "categoria": "Grado / Licenciatura",
-     "duracion": "4 años",
-     "modalidad": "A Distancia",
-     "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
-     "link_oficial": "https://undef.edu.ar/a-distancia-2/"
-    },
-    {
-     "id": 7,
-     "nombre_carrera": "Licenciatura en Recursos Humanos",
-     "categoria": "Grado / Licenciatura",
-     "duracion": "4 años y medio",
-     "modalidad": "A Distancia",
-     "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
-     "link_oficial": "https://undef.edu.ar/a-distancia-2/"
-    },
-    {
-     "id": 8,
-     "nombre_carrera": "Licenciatura en Ciberdefensa",
-     "categoria": "Grado / Licenciatura",
-     "duracion": "4 años",
-     "modalidad": "A Distancia",
-     "facultad": "Facultad de la Defensa Nacional",
-     "link_oficial": "https://undef.edu.ar/a-distancia-2/"
-    },
-    {
-     "id": 9,
-     "nombre_carrera": "Licenciatura en Gestión Pública",
-     "categoria": "Grado / Licenciatura",
-     "duracion": "4 años",
-     "modalidad": "A Distancia",
-     "facultad": "Facultad de la Defensa Nacional",
-     "link_oficial": "https://undef.edu.ar/a-distancia-2/"
-    }
-   ],
-   "departamento": "A distancia"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 47,
+            "nombre": "Universidad de la Defensa Nacional (UNDEF)",
+            "nivel": "universidad",
+            "gestion": "pública",
+            "provincia": "Nacional (a distancia)",
+            "contacto": {
+                "telefono": "",
+                "email": "informes@iua.edu.ar",
+                "direccion": "Modalidad a distancia - Sede central Córdoba"
+            },
+            "carreras": [
+                {
+                    "id": 1,
+                    "nombre_carrera": "Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
+                    "link_oficial": "https://www.iua.edu.ar/?page_id=6268",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Matemática I",
+                                "Técnicas de Programación",
+                                "Arquitectura de Computadoras",
+                                "Sistemas y Organizaciones",
+                                "Base de Datos",
+                                "Programación I",
+                                "Ingles Técnico",
+                                "Introducción a las Redes de Datos",
+                                "Matemática II",
+                                "Derecho Informático y Ética Profesional"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Estadística Aplicada",
+                                "Electiva I (Web / Móviles/IA)",
+                                "Diseño de Interfaces de Usuario",
+                                "Desarrollo de Software I",
+                                "Sistemas Operativos",
+                                "Electiva II (Web / Móviles/IA)",
+                                "Desarrollo de Software II",
+                                "Gestión de Proyectos Informáticos",
+                                "Sistemas Gestores de Contenidos",
+                                "Calidad y Testing de Software"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Electiva III (Web / Móviles/IA)",
+                                "Seguridad y Protección de la Información",
+                                "Comercio Electrónico y Marketing Digital",
+                                "Taller de Desarrollo de Aplicaciones"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.iua.edu.ar/?page_id=6268"
+                },
+                {
+                    "id": 2,
+                    "nombre_carrera": "Tecnicatura en Higiene y Seguridad en el Trabajo",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de Ingeniería del Ejército",
+                    "link_oficial": "https://www.fie.undef.edu.ar/tecnicatura-higiene-y-seguridad-en-el-trabajo/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Organización Industrial",
+                                "Seguridad Industrial I (Organización interna)",
+                                "Física General",
+                                "Psicología Laboral",
+                                "Química",
+                                "Pedagogía y Didáctica",
+                                "Seguridad Industrial II (Instalaciones eléctricas)",
+                                "Derecho del Trabajo"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Medicina del Trabajo",
+                                "Selección y capacitación de Personal",
+                                "Seguridad Industrial III (Máquinas y Herramientas)",
+                                "Análisis Estadístico",
+                                "Ambientes de Trabajo I (Ruidos y Vibraciones)",
+                                "Ambientes de Trabajo II (Iluminación y Color)",
+                                "Enfermedades Profesionales",
+                                "Seguridad Industrial IV (Incendios, Sistemas de Alarma, Evacuación)"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Ambientes de Trabajo III (Ventilación)",
+                                "Seguridad contra Accidentes en ámbitos no laborales y accidentología vial",
+                                "Estudio del Trabajo (Ergonomía)",
+                                "Seguridad Industrial V (Equipos y Elementos de Protección Personal)",
+                                "Trabajo Final Integrador"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.fie.undef.edu.ar/wp-content/uploads/2026/06/PlanEstudioTecSeg.pdf"
+                },
+                {
+                    "id": 3,
+                    "nombre_carrera": "Licenciatura en Relaciones Internacionales",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad del Ejército",
+                    "link_oficial": "https://fe.undef.edu.ar/esg/of_rrii.php",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Historia del Pensamiento politico y Social",
+                                "Introducción a las Relaciones Internacionales",
+                                "Introducción al derecho",
+                                "Introducción a la Economía",
+                                "Historia Política General 1",
+                                "Introducción a la Ciencia Política"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Metodología de la Ciencia Política",
+                                "Historia Política General II",
+                                "Historia Argencina y Americana",
+                                "Teoría de las RR II",
+                                "Macroeconomía",
+                                "Gobierno de la R. Argentina y Política Exterior"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Sistemas Políticos Comparados",
+                                "Procesos de Integración",
+                                "Estrategia",
+                                "Derecho Internacional Público, Diplomático y Consular",
+                                "Política Econímica Argentina",
+                                "Geopolítica (1er C)",
+                                "Negociación y Resolución de Conflictos (1er C)",
+                                "Organismos Internacionales (2do C)"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Política Internacional Contemporánea",
+                                "Política Internacional Latinoamericana",
+                                "Derecho Internacional de los Conflictos Armados",
+                                "Escenario de Conflictos Internacionales",
+                                "Seguridad Internacional",
+                                "Misiones de paz y desarme",
+                                "Defensa Nacional y Regional (1er C)",
+                                "Metodología de la Investigación en RRII (2do C)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://fe.undef.edu.ar/esg/of_rrii.php"
+                },
+                {
+                    "id": 4,
+                    "nombre_carrera": "Contador Público",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años y medio",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
+                    "link_oficial": "https://fca.iua.edu.ar/?page_id=3279",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Informática Aplicada",
+                                "Administración I",
+                                "Derecho Administrativo y Público",
+                                "Contabilidad I",
+                                "Derecho Privado I",
+                                "Contabilidad II",
+                                "Administración II",
+                                "Matemática I (Álgebra)"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Sistemas Administrativos",
+                                "Contabilidad III",
+                                "Economía I",
+                                "Matemática II (Análisis)",
+                                "Administración Pública",
+                                "Economía II",
+                                "Estadística",
+                                "Finanzas Públicas",
+                                "Derecho Privado II",
+                                "Inglés Técnico"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Ética y Responsabilidad Social",
+                                "Administración de Personal",
+                                "Matemática Financiera",
+                                "Contabilidad de Gestión I",
+                                "Portugués Técnico",
+                                "Contabilidad IV",
+                                "Métodos y Técnicas de Invetigación Social",
+                                "Técnica Impositiva I",
+                                "Contabilidad de Gestión II",
+                                "Administración Financiera Gubernamental"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Relaciones Laborales y de la Seguridad Social",
+                                "Sociedades",
+                                "Técnica Impositiva II",
+                                "Análisis de Estados Contables",
+                                "Tecnología de la Información y Comunicación I",
+                                "Administración Financiera",
+                                "Derecho Concursal y Cambiario",
+                                "Auditoría I",
+                                "Tecnología de la Información y Comunicación II",
+                                "Gestión del Sector Público"
+                            ]
+                        },
+                        {
+                            "anio": "5º año",
+                            "materias": [
+                                "Historia Económica y Social",
+                                "Auditoria II",
+                                "Técnica Impositiva III",
+                                "Control de Gestión",
+                                "Prácticas Profesionales Supervisadas",
+                                "Contador Público"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://fca.iua.edu.ar/?page_id=3279"
+                },
+                {
+                    "id": 5,
+                    "nombre_carrera": "Licenciatura en Administración",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años y medio",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
+                    "link_oficial": "https://www.iua.edu.ar/?page_id=384",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Informática Aplicada",
+                                "Administración I",
+                                "Derecho Administrativo y Público c/Leg. Imp. Arg. (Pública)",
+                                "Sistemas Contables I",
+                                "Matemática I",
+                                "Relaciones Laborales y Seguridad Social",
+                                "Derecho Privado I",
+                                "Ciencias del Comportamiento I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Matemática II",
+                                "Ciencias del Comportamiento II",
+                                "Administración de Operaciones I",
+                                "Sistemas Contables II",
+                                "Comercialización I",
+                                "Administración II",
+                                "Economía I",
+                                "Probabilidad y Estadística"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Economía II",
+                                "Sistemas Contables III",
+                                "Administración de Recursos Humanos I",
+                                "Finanzas",
+                                "Proyecto de Pregrado",
+                                "Comercialización II",
+                                "Instrumentos Estadísticos para la gestión",
+                                "Administración III",
+                                "Administración de Operaciones II"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Administración IV",
+                                "Administración Financiera",
+                                "Administración de Recursos Humanos II",
+                                "Modelos Cuantitativos para la Administración",
+                                "Sociedades Comerciales",
+                                "Administración Financiera II",
+                                "Administración V",
+                                "Política Económica"
+                            ]
+                        },
+                        {
+                            "anio": "5º año",
+                            "materias": [
+                                "Administración VI",
+                                "Ética y Deontología Profesional",
+                                "Proyecto de Grado"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.iua.edu.ar/?page_id=384"
+                },
+                {
+                    "id": 6,
+                    "nombre_carrera": "Licenciatura en Logística",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
+                    "link_oficial": "https://www.iua.edu.ar/?page_id=388",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración",
+                                "Matemática I",
+                                "Tecnologías de la Información y Comunicación – Entornos Colaborativos",
+                                "Logística y Cadena de Suministro",
+                                "Sistemas de Transporte",
+                                "Matemática II",
+                                "Sistemas y Procesos",
+                                "Economía"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Aprovisionamiento y Almacenes",
+                                "Probabilidad y Estadística I",
+                                "Gestión de Costos",
+                                "Legislación I",
+                                "Higiene y Seguridad en el Trabajo",
+                                "Operación del Transporte",
+                                "Comportamiento Organizacional",
+                                "Administración de Operaciones I",
+                                "Comercialización y Marketing",
+                                "Inglés"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Administración de Inventario",
+                                "Gestión de la Calidad",
+                                "Logística Internacional",
+                                "Legislación II",
+                                "Probabilidad y Estadística II",
+                                "Planificación del Transporte",
+                                "Modelos Cuantitativos I",
+                                "Negociación",
+                                "Contabilidad y Finanzas",
+                                "Tecnologías de la Información y Comunicación – Sistemas de Información"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Administración Estratégica y Control de Gestión",
+                                "Modelos Cuantitativos II",
+                                "Gestión Ambiental y Logística Verde",
+                                "Administración de Operaciones II",
+                                "Logística Pública",
+                                "Portugués",
+                                "Etica y Ejercicio Profesional",
+                                "Diseño y Gestión de la Cadena de Suministro",
+                                "Formulación, Evaluación y Gestión de Proyectos",
+                                "Práctica Profesional Supervisada"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.iua.edu.ar/?page_id=388"
+                },
+                {
+                    "id": 7,
+                    "nombre_carrera": "Licenciatura en Recursos Humanos",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años y medio",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de Ciencias de la Administración - CRUC IUA",
+                    "link_oficial": "https://www.iua.edu.ar/?page_id=386",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración I",
+                                "Introducción a la Calidad",
+                                "Derecho Laboral I",
+                                "Informática Aplicada",
+                                "Administración II",
+                                "Ciencias delComportamiento I",
+                                "Administración de Recursos Humanos"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Capacitación y Desarrollo",
+                                "Ciencias del Comportamiento II",
+                                "Comunicación I",
+                                "Preservación de Sistemas Ambientales",
+                                "Técnicas Cuantitativas para la Gestión de Recursos Humanos",
+                                "Derecho Laboral II",
+                                "Negociación"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Administración de Remuneraciones y Beneficios",
+                                "Comunicación II",
+                                "Motivación e Incentivos no Remunerativos",
+                                "Administración de Operaciones",
+                                "Economía Laboral",
+                                "Calidad de Vida Laboral I",
+                                "Sistemas Informáticos de Recursos Humanos"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Calidad de Servicios",
+                                "Calidad de Vida laboral II",
+                                "Ciencias del Comportamiento III",
+                                "Reclutamiento y Selección",
+                                "Economía",
+                                "Cambio Organizacional",
+                                "Sociología del Trabajo"
+                            ]
+                        },
+                        {
+                            "anio": "5º año",
+                            "materias": [
+                                "Etica y Deontología Profesional",
+                                "Métodos y Técnicas de Investigación Social",
+                                "Estrategia",
+                                "Auditoría de Recursos Humanos",
+                                "Proyecto de Grado"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.iua.edu.ar/?page_id=386"
+                },
+                {
+                    "id": 8,
+                    "nombre_carrera": "Licenciatura en Ciberdefensa",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de la Defensa Nacional",
+                    "link_oficial": "https://undef.edu.ar/fadena/carreras-de-grado/licciberdefensa/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Análisis Matemático I",
+                                "Álgebra I",
+                                "Gestión de Servicios de Información",
+                                "Inglés I",
+                                "Sistemas Operativos I",
+                                "Sistemas de Tratamiento de Datos",
+                                "Infraestructura de Telecomunicaciones",
+                                "Sociedad y Estado",
+                                "Sistemas Operativos II",
+                                "Lenguajes de Programación",
+                                "Análisis Matemático II",
+                                "Álgebra II"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Probabilidad y Estadística",
+                                "Inglés II",
+                                "Tecnología Operativa",
+                                "Programación Segura 48 48 96 6,7 y",
+                                "Ciberseguridad aplicada",
+                                "Dispositivos Remotos e Internet de las Cosas",
+                                "Ética Profesional",
+                                "Sistema de Gestión de Seguridad de la Información 48 48 96 3,6,7 y",
+                                "Protección de Infraestructuras Críticas 32 32 64 3,8 y"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Metodologías de Análisis de Riesgos de TIC",
+                                "Análisis de Escenarios y Capacidades",
+                                "Gobierno y Políticas Públicas",
+                                "Informática Forense 40 40 80 5,16 y",
+                                "Relaciones Internacionales",
+                                "Inteligencia Artificial y Aprendizaje de Máquina",
+                                "Geopolítica",
+                                "Derecho Aplicado a la Defensa Nacional"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Sistema de Inteligencia Nacional",
+                                "Investigación Operativa",
+                                "Criptografía Aplicada",
+                                "Gestión de Proyectos",
+                                "Instrumento Militar y su Sistema de Armas",
+                                "Modelos y Simulación",
+                                "Prospectiva Estratégica y Táctica",
+                                "Actores en el Quinto Dominio"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://undef.edu.ar/fadena/wp-content/uploads/2026/02/Licenciatura-en-Ciberdefensa.pdf"
+                },
+                {
+                    "id": 9,
+                    "nombre_carrera": "Licenciatura en Gestión Pública",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años",
+                    "modalidad": "A Distancia",
+                    "facultad": "Facultad de la Defensa Nacional",
+                    "link_oficial": "https://undef.edu.ar/fadena/carreras-de-grado/licgestionpublica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción a la Administración Pública",
+                                "Introducción a la Economía",
+                                "Teoría del Estado",
+                                "Derecho Constitucional e Instituciones de Derecho Público",
+                                "Políticas Públicas I",
+                                "Filosofía",
+                                "Sociología General",
+                                "Historia Social Argentina",
+                                "Sistemas de Información Aplicados a la Gestión Pública",
+                                "Economía Política"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Derecho Administrativo",
+                                "Administración Financiera y Técnicas Presupuestarias",
+                                "Teoría de las Organizaciones I",
+                                "Políticas Públicas II",
+                                "Ética de la Función Pública",
+                                "Estadística e Indicadores para la gestión"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Planeamiento a Mediano y Largo Plazo",
+                                "Taller de Diseño y Formulación de Proyectos 28 100 128 segundo año aprobado",
+                                "Teoría de las Organizaciones II 48 48 96 13 , primer año aprobado",
+                                "Dirección General y Liderazgo 48 48 96 segundo año aprobado",
+                                "Compras, Contrataciones y Licitaciones 40 40 80 12, primer año aprobado",
+                                "Derecho Laboral y Régimen del Empelo Público 40 40 80 11, primer año aprobado",
+                                "Comunicación Institucional 32 32 64 19 - Primer ciclo aprobado",
+                                "Electiva 1* 32 32 64 Primer ciclo aprobado"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Electiva 2* 32 32 64 Primer ciclo aprobado",
+                                "Finanzas Públicas y Federalismo Fiscal 40 40 80 21- Primer ciclo aprobado",
+                                "Gestión y Desarrollo de Recursos Humanos 40 40 80 Tercer año aprobado",
+                                "Sistemas de Gestión y Administración 40 40 80 Primer ciclo aprobado",
+                                "Sostenibilidad Social y Ambiente 40 40 80 Primer ciclo aprobado",
+                                "Auditoría, Control y Gestión de Calidad 40 40 80 Primer ciclo aprobado",
+                                "Taller de Evaluación de Proyectos 28 100 128 Tercer año aprobado"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://undef.edu.ar/fadena/wp-content/uploads/2026/02/Licenciatura-en-Gestion-Publica.pdf"
+                }
+            ],
+            "departamento": "A distancia"
+        }
+    ]
 }

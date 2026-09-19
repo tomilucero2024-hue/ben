@@ -38,7 +38,7 @@ paginas.css  estilos de las páginas estáticas (mucho más liviano, ver más ab
   js/                la aplicación, en módulos ES (main.js es el punto de entrada)
     util.js            texto, clasificadores y escapado de HTML
     datos.js           carga de data.json y armado de ofertas/plataformas/catálogos
-    estado.js          filtros, favoritos y comparador (localStorage + URL)
+    estado.js          filtros, búsqueda y estado (persistido en la URL)
     filtros.js         búsqueda difusa, filtrado y orden
     render.js          todo lo que pinta HTML
     copiloto.js        chat, test vocacional y búsqueda por texto libre
@@ -115,7 +115,7 @@ desde cualquier carpeta.
 
 Hay un service worker en `sw.js` (en la **raíz**) que precachea el esqueleto del sitio y los
 dos JSON que consume, así que una vez visitado el sitio abre y funciona completo sin internet:
-catálogo, filtros, favoritos y el test vocacional.
+catálogo, filtros y el test vocacional.
 
 Vive en la raíz porque un service worker solo intercepta pedidos dentro de su scope, y el
 scope no puede ser más ancho que la carpeta donde está el archivo. Desde la raíz cubre todo:

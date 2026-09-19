@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Qué estudiar en Salud | BEN</title>
-<meta name="description" content="55 carreras del área Salud en BEN, dictadas por 22 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta name="description" content="72 carreras del área Salud en BEN, dictadas por 21 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/area/salud/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Qué estudiar en Salud | BEN">
-<meta property="og:description" content="55 carreras del área Salud en BEN, dictadas por 22 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta property="og:description" content="72 carreras del área Salud en BEN, dictadas por 21 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/area/salud/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Qué estudiar en Salud | BEN">
-<meta name="twitter:description" content="55 carreras del área Salud en BEN, dictadas por 22 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta name="twitter:description" content="72 carreras del área Salud en BEN, dictadas por 21 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -56,9 +56,9 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Salud","item":"https://buscadoreducativo.com.ar/area/salud/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Carreras del área Salud","description":"55 carreras del área Salud en BEN, dictadas por 22 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.","url":"https://buscadoreducativo.com.ar/area/salud/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Carreras del área Salud","description":"72 carreras del área Salud en BEN, dictadas por 21 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.","url":"https://buscadoreducativo.com.ar/area/salud/"}</script>
 </head>
 <body>
 <header class="cabecera">
@@ -67,29 +67,62 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
     <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <span aria-current="page">Salud</span></nav>
     <h1>Qué estudiar en Salud</h1>
-    <p class="entrada">55 carreras del área Salud en BEN, dictadas por 22 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.</p>
+    <p class="entrada">72 carreras del área Salud en BEN, dictadas por 21 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.</p>
 
     <a class="cta" href="/?area=Salud">Filtrar Salud en el buscador →</a>
 
-    <h2>Carreras de grado (27)</h2>
+    <h2>Carreras de grado (32)</h2>
     <ul class="enlaces">
         <li><a href="/carrera/bioquimica/">Bioquímica</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/farmacia/">Farmacia</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/fonoaudiologia-y-clinica-del-lenguaje/">Fonoaudiología y Clínica del Lenguaje</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/kinesiologia/">Kinesiología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/kinesiologia-y-fisioterapia/">Kinesiología y Fisioterapia</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/laboratorio-de-analisis-clinicos/">Laboratorio de Análisis Clínicos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciado-en-educacion-fisica-salud/">Licenciado en Educación Física (Salud)</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/licenciatura-en-administracion-de-salud/">Licenciatura en Administración de Salud</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/licenciatura-en-administracion-de-salud/">Licenciatura en Administración de Salud</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-anatomia-patologica-a-distancia/">Licenciatura en Anatomía Patológica a distancia</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/licenciatura-en-anestesiologia-a-distancia/">Licenciatura en Anestesiología a distancia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-enfermeria/">Licenciatura en Enfermería</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-fonoaudiologia/">Licenciatura en Fonoaudiología</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-hemoterapia-a-distancia/">Licenciatura en Hemoterapia a distancia</a> <span class="cuantas">(1)</span></li>
@@ -100,8 +133,8 @@
         <li><a href="/carrera/licenciatura-en-nutricion/">Licenciatura en Nutrición</a> <span class="cuantas">(6)</span></li>
         <li><a href="/carrera/licenciatura-en-obstetricia/">Licenciatura en Obstetricia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-produccion-de-bioimagenes/">Licenciatura en Producción de Bioimágenes</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/licenciatura-en-produccion-de-bioimagenes-radiologia/">Licenciatura en Producción de Bioimágenes (Radiología)</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-psicologia/">Licenciatura en Psicología</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/licenciatura-en-radiologia/">Licenciatura en Radiología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-tecnologias-de-la-salud/">Licenciatura en Tecnologías de la Salud</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-terapia-del-lenguaje/">Licenciatura en Terapia del Lenguaje</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-terapia-ocupacional/">Licenciatura en Terapia Ocupacional</a> <span class="cuantas">(2)</span></li>
@@ -110,30 +143,45 @@
         <li><a href="/carrera/musicoterapia/">Musicoterapia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/odontologia/">Odontología</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/podologia-universitaria/">Podología Universitaria</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/preparacion-fisica-y-entrenamiento-deportivo/">Preparación Física y Entrenamiento Deportivo</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/psicologia/">Psicología</a> <span class="cuantas">(1)</span></li>
     </ul>
 
-    <h2>Tecnicaturas (23)</h2>
+    <h2>Tecnicaturas (37)</h2>
     <ul class="enlaces">
         <li><a href="/carrera/enfermeria-profesional/">Enfermería Profesional</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/maestria-en-ejercicio-fisico-y-salud/">Maestría en Ejercicio Físico y Salud</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/maestria-en-salud-publica-y-seguridad-social/">Maestría en Salud Pública y Seguridad Social</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/programa-de-la-tec-superior-en-laboratorio-de-analisis-clinicos/">Programa de la Tec. Superior en Laboratorio de Análisis Clínicos</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/programa-de-tec-superior-en-dialisis/">Programa de Tec. Superior en Diálisis</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/programa-de-tec-superior-en-gestion-de-las-organizaciones-de-la-salud/">Programa de Tec. Superior en Gestión de las Organizaciones de la Salud</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-acompanante-terapeutico/">Tecnicatura en Acompañante Terapéutico</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-anestesia/">Tecnicatura en Anestesia</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-en-cosmetologia-y-cosmiatria/">Tecnicatura en Cosmetología y Cosmiatría</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-diagnostico-por-imagenes/">Tecnicatura en Diagnóstico por Imágenes</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-en-enfermeria/">Tecnicatura en Enfermería</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-quirofano/">Tecnicatura en Quirófano</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-acompanamiento-terapeutico-a-distancia/">Tecnicatura Superior En Acompanamiento Terapeutico A Distancia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-acompanamiento-terapeutico-presencial/">Tecnicatura Superior En Acompanamiento Terapeutico Presencial</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-acompanamiento-terapeutico/">Tecnicatura Superior en Acompañamiento Terapéutico</a> <span class="cuantas">(5)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-anestesiologia/">Tecnicatura Superior en Anestesiología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-asistencia-gerontologica/">Tecnicatura Superior en Asistencia Gerontológica</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-cosmetologia-y-cosmiatria/">Tecnicatura Superior en Cosmetología y Cosmiatría</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-dialisis/">Tecnicatura Superior en Diálisis</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-enfermeria-profesional/">Tecnicatura Superior en Enfermería Profesional</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-esterilizacion/">Tecnicatura Superior en Esterilización</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-farmacia/">Tecnicatura Superior en Farmacia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-hemoterapia/">Tecnicatura Superior en Hemoterapia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-instrumentacion-quirurgica/">Tecnicatura Superior en Instrumentación Quirúrgica</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-laboratorio-de-analisis-clinicos/">Tecnicatura Superior en Laboratorio de Análisis Clínicos</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-optica-y-contactologia/">Tecnicatura Superior en Óptica y Contactología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-podologia/">Tecnicatura Superior en Podología</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-preparacion-fisica/">Tecnicatura Superior en Preparación Física</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-psicologia-social-a-distancia/">Tecnicatura Superior En Psicologia Social A Distancia</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-psicologia-social-presencial/">Tecnicatura Superior En Psicologia Social Presencial</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-radiologia-e-imagenes-para-el-diagnostico/">Tecnicatura Superior en Radiología e Imágenes para el Diagnóstico</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-universitaria-en-atencion-prehospitalaria-de-emergencias/">Tecnicatura Universitaria en Atención Prehospitalaria de Emergencias</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-universitaria-en-emergentologia/">Tecnicatura Universitaria en Emergentología</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-universitaria-en-enfermeria/">Tecnicatura Universitaria en Enfermería</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-universitaria-en-gestion-administrativa-de-servicios-de-salud/">Tecnicatura Universitaria en Gestión Administrativa de Servicios De Salud</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-universitaria-en-instrumentacion-quirurgica/">Tecnicatura Universitaria en Instrumentación Quirúrgica</a> <span class="cuantas">(1)</span></li>
@@ -145,12 +193,10 @@
         <li><a href="/carrera/profesorado-de-grado-universitario-en-psicologia-para-nivel-secundario-y/">Profesorado de Grado Universitario en Psicología para Nivel Secundario y Superior</a> <span class="cuantas">(1)</span></li>
     </ul>
 
-    <h2>Cursos y formación profesional (4)</h2>
+    <h2>Cursos y formación profesional (2)</h2>
     <ul class="enlaces">
         <li><a href="/carrera/acompanante-terapeutico/">Acompañante Terapéutico</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/auxiliar-de-farmacia/">Auxiliar de Farmacia</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/diplomatura-en-primeros-auxilios-y-maniobras-de-rescate-en-zonas-inhospitas/">Diplomatura en Primeros Auxilios y Maniobras de Rescate en Zonas Inhóspitas</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/herrador-de-caballos-y-podologo-equino/">Herrador de Caballos y Podólogo Equino</a> <span class="cuantas">(1)</span></li>
     </ul>
 
 </main>

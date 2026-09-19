@@ -56,10 +56,10 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Negocios","item":"https://buscadoreducativo.com.ar/area/negocios/"},{"@type":"ListItem","position":4,"name":"Administración de Negocios Digitales","item":"https://buscadoreducativo.com.ar/carrera/administracion-de-negocios-digitales/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Administración de Negocios Digitales","description":"Dónde estudiar Administración de Negocios Digitales en Mendoza: carrera de grado del área Negocios, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: a distancia.","url":"https://buscadoreducativo.com.ar/carrera/administracion-de-negocios-digitales/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Administración de Negocios Digitales en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Administración de Negocios Digitales en Mendoza en la siguiente institución: Universidad de Congreso (UC). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Administración de Negocios Digitales?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Administración de Negocios Digitales?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad a distancia, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Administración de Negocios Digitales?","acceptedAnswer":{"@type":"Answer","text":"Administración de Negocios Digitales es una carrera de grado perteneciente al área de Negocios. Entre sus aptitudes más afines se destacan: pensamiento analítico, interacción social, liderazgo y gestión y base teórica y académica."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Administración de Negocios Digitales","description":"Dónde estudiar Administración de Negocios Digitales en Mendoza: carrera de grado del área Negocios, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/administracion-de-negocios-digitales/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Administración de Negocios Digitales en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Administración de Negocios Digitales en Mendoza en la siguiente institución: Universidad de Congreso (UC). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Administración de Negocios Digitales?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Administración de Negocios Digitales?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Administración de Negocios Digitales?","acceptedAnswer":{"@type":"Answer","text":"Administración de Negocios Digitales es una carrera de grado perteneciente al área de Negocios. Entre sus aptitudes más afines se destacan: pensamiento analítico, interacción social, liderazgo y gestión y base teórica y académica."}}]}</script>
 </head>
 <body>
 <header class="cabecera">
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -81,26 +110,45 @@
     <div class="principal">
         <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/negocios/">Negocios</a> <span aria-hidden="true">›</span> <span aria-current="page">Administración de Negocios Digitales</span></nav>
         <h1>Administración de Negocios Digitales</h1>
-    <p class="entrada">Dónde estudiar Administración de Negocios Digitales en Mendoza: carrera de grado del área Negocios, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: a distancia.</p>
+    <p class="entrada">Dónde estudiar Administración de Negocios Digitales en Mendoza: carrera de grado del área Negocios, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: presencial.</p>
     </div>
     <aside class="lateral">
     <dl class="ficha">
         <dt>Área</dt><dd>Negocios</dd>
         <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
         <dt>Dónde se dicta</dt><dd>1 institución</dd>
-        <dt>Modalidad</dt><dd>A distancia</dd>
+        <dt>Modalidad</dt><dd>Presencial</dd>
         <dt>Duración</dt><dd>4 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Administraci%C3%B3n+de+Negocios+Digitales&amp;area=Negocios&amp;formacion=grado">Ver Administración de Negocios Digitales en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Administración de Negocios Digitales</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-congreso-uc/">Universidad de Congreso (UC)</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: A Distancia</li><li>Mendoza</li></ul>
-
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1° AÑO</h4>
+            <ul><li>Introducción a los Negocios Digitales</li><li>Adminsitración Estratégica de Negocios Digitales</li><li>Economía Digital y Comportamiento del Consumidor Online</li><li>Comunicación Escrita en Plataformas Digitales</li><li>Estadística Aplicada a los Negocios</li><li>Pensamiento Crítico y Resolución de Problemas</li><li>Diseño de Modelos Digitales Sostenibles</li><li>Principios del Marketing Digital</li><li>Introducción a los Datos como Activo Estratégico</li><li>Herramientas Operativas del Ecosistema Digital</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2° AÑO</h4>
+            <ul><li>Métodos Digitales de Investigación de Mercado</li><li>Ecosistemas Colaborativos y Trabajo Remoto</li><li>Creatividad e Innovación Estratégica</li><li>Legislación Digital y Gobernanza de Plataformas</li><li>Introducción a la Inteligencia Artificial</li><li>Conceptos de Contabilidad y Matemática Financiera</li><li>E-commerce y Plataformas de Venta</li><li>Automatización de Flujos Digitales</li><li>Laboratorio de Simulación Empresarial Digital</li><li>Prácticas de Tecnicatura: Diseño de Negocio Digital</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3° AÑO</h4>
+            <ul><li>Estrategias de Crecimiento Acelerado (Growth Hacking)</li><li>Decisiones Estratégicas basadas de Inteligencia de Datos</li><li>Diseño de Experiencias Omnicanal Integradas</li><li>Gestión Ágil de Proyectos Digitales</li><li>Negociación en Contextos Digitales</li><li>Transformación Digital: Diagnóstico y Estategia</li><li>Desarrollo Integral de Productos Digitales</li><li>Tecnologías Emergentes y Tendencias de Mercado</li><li>Gamificación y Motivación Digital</li><li>Electiva I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4° AÑO</h4>
+            <ul><li>Finanzas para Proyectos de Innovación</li><li>Aplicaciones de IA a Sectores Productivos</li><li>Métricas de Impacto Digital y Analítica Avanzada</li><li>Taller de Incubación de Emprendimientos Tecnológicos</li><li>Blockchain y Nuevas Infraestructuras Digitales</li><li>Electiva II</li><li>Electiva III</li><li>Electiva IV</li><li>Laboratorio de Startups Digitales</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/administracion-de-negocios-digitales/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/administracion-de-negocios-digitales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -158,7 +206,7 @@
         <details class="faq-item">
             <summary class="faq-pregunta"><strong>¿Qué modalidades de cursado hay para Administración de Negocios Digitales?</strong></summary>
             <div class="faq-respuesta">
-                <p>Actualmente se puede cursar en modalidad a distancia, según la institución que elijas.</p>
+                <p>Actualmente se puede cursar en modalidad presencial, según la institución que elijas.</p>
             </div>
         </details>
         <details class="faq-item">
@@ -172,20 +220,20 @@
     <section class="relacionadas">
     <h2>Otras carreras del área Negocios</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/contador-publico/">Contador Público</a> <span class="cuantas">(11)</span></li>
+        <li><a href="/carrera/contador-publico/">Contador Público</a> <span class="cuantas">(10)</span></li>
         <li><a href="/carrera/recursos-humanos/">Recursos Humanos</a> <span class="cuantas">(6)</span></li>
-        <li><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a> <span class="cuantas">(5)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-administracion-de-empresas/">Tecnicatura Superior en Administración de Empresas</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-administracion-de-empresas/">Tecnicatura Superior en Administración de Empresas</a> <span class="cuantas">(5)</span></li>
+        <li><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-logistica/">Tecnicatura Superior en Logística</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-administracion-de-empresas/">Licenciatura en Administración de Empresas</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-comercio-internacional/">Licenciatura en Comercio Internacional</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/licenciatura-en-economia/">Licenciatura en Economía</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-administracion-publica/">Tecnicatura Superior en ADMINISTRACIÓN PÚBLICA</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-comercio-internacional-y-aduana/">Tecnicatura Superior en Comercio Internacional y Aduana</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-gestion-de-recursos-humanos/">Tecnicatura Superior en Gestion de Recursos Humanos</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/administracion/">ADMINISTRACIÓN</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-administracion-hotelera/">Licenciatura en Administración Hotelera</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-analitica-de-negocios/">Licenciatura en Analítica de Negocios</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/administracion/">Administración</a> <span class="cuantas">(2)</span></li>
     </ul>
-    <p><a href="/area/negocios/">Ver las 75 carreras del área Negocios →</a></p>
+    <p><a href="/area/negocios/">Ver las 73 carreras del área Negocios →</a></p>
     </section>
     </div>
 </div>

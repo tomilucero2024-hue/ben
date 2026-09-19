@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Qué estudiar en Tecnología | BEN</title>
-<meta name="description" content="35 carreras del área Tecnología en BEN, dictadas por 20 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta name="description" content="31 carreras del área Tecnología en BEN, dictadas por 18 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <link rel="canonical" href="https://buscadoreducativo.com.ar/area/tecnologia/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BEN — Buscador Educativo Nacional">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Qué estudiar en Tecnología | BEN">
-<meta property="og:description" content="35 carreras del área Tecnología en BEN, dictadas por 20 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta property="og:description" content="31 carreras del área Tecnología en BEN, dictadas por 18 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <meta property="og:url" content="https://buscadoreducativo.com.ar/area/tecnologia/">
 <meta property="og:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="BEN — Buscador Educativo Nacional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Qué estudiar en Tecnología | BEN">
-<meta name="twitter:description" content="35 carreras del área Tecnología en BEN, dictadas por 20 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
+<meta name="twitter:description" content="31 carreras del área Tecnología en BEN, dictadas por 18 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.">
 <meta name="twitter:image" content="https://buscadoreducativo.com.ar/og-ben.png">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -56,9 +56,9 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Tecnología","item":"https://buscadoreducativo.com.ar/area/tecnologia/"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Carreras del área Tecnología","description":"35 carreras del área Tecnología en BEN, dictadas por 20 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.","url":"https://buscadoreducativo.com.ar/area/tecnologia/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Carreras del área Tecnología","description":"31 carreras del área Tecnología en BEN, dictadas por 18 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.","url":"https://buscadoreducativo.com.ar/area/tecnologia/"}</script>
 </head>
 <body>
 <header class="cabecera">
@@ -67,18 +67,47 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
     <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <span aria-current="page">Tecnología</span></nav>
     <h1>Qué estudiar en Tecnología</h1>
-    <p class="entrada">35 carreras del área Tecnología en BEN, dictadas por 20 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.</p>
+    <p class="entrada">31 carreras del área Tecnología en BEN, dictadas por 18 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.</p>
 
     <a class="cta" href="/?area=Tecnolog%C3%ADa">Filtrar Tecnología en el buscador →</a>
 
@@ -98,19 +127,16 @@
         <li><a href="/carrera/licenciatura-en-telecomunicaciones/">Licenciatura en Telecomunicaciones</a> <span class="cuantas">(1)</span></li>
     </ul>
 
-    <h2>Tecnicaturas (19)</h2>
+    <h2>Tecnicaturas (16)</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/programa-de-la-tec-superior-en-laboratorio-de-analisis-clinicos/">Programa de la Tec. Superior en Laboratorio de Análisis Clínicos</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/programa-de-tec-superior-en-dialisis/">Programa de Tec. Superior en Diálisis</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/programa-de-tec-superior-en-gestion-de-las-organizaciones-de-la-salud/">Programa de Tec. Superior en Gestión de las Organizaciones de la Salud</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/programacion/">Programación</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-desarrollo-de-software/">Tecnicatura en Desarrollo de Software</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-desarrollo-de-videojuegos/">Tecnicatura en Desarrollo de Videojuegos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-electricidad-y-sistemas-de-control-industriales/">Tecnicatura en Electricidad y Sistemas de Control Industriales</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/tecnicatura-en-estadistica-y-analisis-de-datos/">Tecnicatura en Estadística y Análisis de Datos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-redes-y-telecomunicaciones/">Tecnicatura en Redes y Telecomunicaciones</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-computacion-y-redes/">Tecnicatura Superior en Computacion y Redes</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-desarrollo-de-software/">Tecnicatura Superior en Desarrollo de Software</a> <span class="cuantas">(7)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-estadistica-y-analisis-de-datos/">Tecnicatura Superior en Estadística y Análisis de Datos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-redes-y-ciberseguridad/">Tecnicatura Superior en Redes y Ciberseguridad</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/tecnicatura-universitaria-en-desarrollo-de-aplicaciones-informaticas/">Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-universitaria-en-desarrollo-de-software/">Tecnicatura Universitaria en Desarrollo de Software</a> <span class="cuantas">(2)</span></li>
@@ -126,11 +152,10 @@
         <li><a href="/carrera/profesorado-en-informatica/">Profesorado en Informatica</a> <span class="cuantas">(1)</span></li>
     </ul>
 
-    <h2>Cursos y formación profesional (3)</h2>
+    <h2>Cursos y formación profesional (2)</h2>
     <ul class="enlaces">
         <li><a href="/carrera/formacion-profesional-en-software/">Formación Profesional en Software</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ia-desde-cero/">Ia Desde Cero</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/instalador-de-aire-acondicionado-y-refrigeracion-frio-calor-sistema-inverter/">Instalador de Aire Acondicionado y Refrigeración Frío-Calor Sistema Inverter</a> <span class="cuantas">(1)</span></li>
     </ul>
 
 </main>

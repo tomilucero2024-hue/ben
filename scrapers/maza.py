@@ -14,6 +14,31 @@ from scraper_utils import (duracion_por_plan, extraer_duracion, guardar_json,
 # UMaza salían todas con "Verificar en web oficial".
 SIN_DATO = "Verificar en web oficial"
 
+# La landing de Bioimágenes publica los 16 módulos en un único párrafo separado
+# por ";" y antes hay mucha prosa (Presentación, Objetivos, Perfil…), así que el
+# extractor genérico corta en el primer párrafo largo. Se transcriben desde la
+# propia landing (Resolución Ministerial N° 255, 4 semestres).
+PLANES_MANUALES = {
+    "https://www.umaza.edu.ar/landings/bioimagenes": [
+        "Ultrasonido (ecografía)",
+        "Bioestadística",
+        "Medicina Legal Aplicada",
+        "Seguridad del Paciente",
+        "Imágenes de la Mujer (mamografía y DMO)",
+        "Formulación y evaluación de proyectos",
+        "Gestión y organización de servicios de Bioimagenologia",
+        "Gestión de Calidad en servicios de bioimagenologia",
+        "Inteligencia Artificial en Salud",
+        "Bioseguridad y Radioprotección",
+        "Tomografía Multicorte (TCMC)",
+        "Resonancia Magnética Nuclear (RMN)",
+        "Metodología de la Investigación",
+        "Intervencionismo",
+        "Medicina Nuclear",
+        "Tesina",
+    ],
+}
+
 
 ORDINALES = {
     "1er": 1, "1ro": 1, "1°": 1, "primer": 1, "primero": 1,
@@ -98,6 +123,15 @@ def _materias_del_bloque(etiqueta):
     return materias
 
 
+# En el plan plano, las materias son títulos cortos y la prosa llega después
+# ("Las cátedras tienen solo profesor Titular", "Diseñar y ejecutar…").
+RE_PROSA_MATERIA = re.compile(
+    r"(?i)\b(tienen?|ejecutar|realizar|asesoramientos|busca|busquen|trayecto|"
+    r"dato importante|profesores de|egresado.? de una|interesados\b|"
+    r"estudios y asesoramientos|podr[aá]n|cursa[rn]?)\b|"
+    r"es\s+(una|un|la)\s+(carrera|propuesta|profesi[oó]n)")
+
+
 def _plan_plano(sopa):
     """Sin tramos etiquetados: junta la lista única que cuelga de "Materias/Plan"."""
     for encabezado in sopa.find_all(["h2", "h3", "h4"]):
@@ -105,17 +139,38 @@ def _plan_plano(sopa):
         if not RX_SECCION_PLAN.search(titulo):
             continue
         materias = []
+        prosa = False
         for hermano in encabezado.next_siblings:
             if not getattr(hermano, "name", None):
                 continue
             if hermano.name in ("h1", "h2"):
                 break
-            listas = [hermano] if hermano.name == "ul" else hermano.find_all("ul")
+            if hermano.name == "ul":
+                listas = [hermano]
+            elif hermano.name == "p":
+                listas = [hermano]
+            else:
+                listas = hermano.find_all(["ul", "p"])
             for lista in listas:
+                if prosa:
+                    break
+                if lista.name == "p":
+                    # Materias sueltas en <p> (Matemática a distancia). Si el
+                    # párrafo parece prosa, cortamos: las materias ya quedaron.
+                    candidata = limpiar_texto(lista.get_text(" ", strip=True))
+                    if not candidata:
+                        continue
+                    if RE_PROSA_MATERIA.search(candidata) or len(candidata) > 60:
+                        prosa = True
+                        break
+                    materias.append(candidata)
+                    continue
                 for item in lista.find_all("li", recursive=False):
                     materia = limpiar_texto(item.get_text(" ", strip=True))
                     if materia and materia not in materias:
                         materias.append(materia)
+            if prosa:
+                break
         if len(materias) >= 8:
             return [{"anio": "Plan de estudios", "materias": materias}]
     return None
@@ -274,6 +329,9 @@ try:
                             duracion = guardada["duracion"]
                         if not plan:
                             plan = plan_guardado
+                        if not plan and link_real in PLANES_MANUALES:
+                            plan = [{"anio": "Plan de estudios",
+                                     "materias": PLANES_MANUALES[link_real]}]
                         if duracion in (SIN_DATO, "A confirmar", "") and plan:
                             duracion = f"{len(plan)} años"
                         marca = "✅" if duracion != SIN_DATO else "❔"

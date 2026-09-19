@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Universidad de Mendoza (UM)","item":"https://buscadoreducativo.com.ar/institucion/universidad-de-mendoza-um/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad de Mendoza (UM)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-mendoza-um/","email":"informes@um.edu.ar","telephone":"4202017","address":{"@type":"PostalAddress","streetAddress":"Boulogne Sur Mer 683, Ciudad","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -67,12 +67,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -92,8 +121,6 @@
         <dt>Teléfono</dt><dd>4202017</dd>
         <dt>Email</dt><dd>informes@um.edu.ar</dd>
     </dl>
-
-    <a class="cta" href="/?institucion=Universidad%20de%20Mendoza%20(UM)">Ver esta institución en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
 
@@ -788,7 +815,7 @@
         </li>
     </ul>
 
-    <h2>Ciencias sociales (4)</h2>
+    <h2>Ciencias sociales (3)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/abogacia/">Abogacía</a></h3>
@@ -875,6 +902,35 @@
 </details>
             <a class="oficial" href="https://um.edu.ar/carreras/procuracion/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
+    </ul>
+
+    <h2>Tecnología (2)</h2>
+    <ul class="ofertas">
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-en-desarrollo-de-videojuegos/">Tecnicatura en Desarrollo de Videojuegos</a></h3>
+            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+
+            <a class="oficial" href="https://um.edu.ar/carreras/tecnicatura-en-desarrollo-de-videojuegos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-universitaria-en-desarrollo-de-software/">Tecnicatura Universitaria en Desarrollo de Software</a></h3>
+            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — Régimen de estudios</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Régimen de estudios</h4>
+            <ul><li>Fundamentos de la programación</li><li>Ingeniería de prompts</li><li>Desarrollo de web y API&#39;s</li><li>Fundamentos de bases de datos</li><li>Consideraciones éticas y prácticas</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://um.edu.ar/carreras/tecnicatura-universitaria-en-desarrollo-de-software/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://um.edu.ar/carreras/tecnicatura-universitaria-en-desarrollo-de-software/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+    </ul>
+
+    <h2>Ambiente (1)</h2>
+    <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo/">Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
@@ -893,22 +949,6 @@
     </div>
 </details>
             <a class="oficial" href="https://um.edu.ar/carreras/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-    </ul>
-
-    <h2>Tecnología (2)</h2>
-    <ul class="ofertas">
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-en-desarrollo-de-videojuegos/">Tecnicatura en Desarrollo de Videojuegos</a></h3>
-            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://um.edu.ar/carreras/tecnicatura-en-desarrollo-de-videojuegos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-universitaria-en-desarrollo-de-software/">Tecnicatura Universitaria en Desarrollo de Software</a></h3>
-            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
-            <a class="oficial" href="https://um.edu.ar/carreras/tecnicatura-universitaria-en-desarrollo-de-software/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 

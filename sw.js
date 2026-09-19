@@ -16,7 +16,7 @@
 // hace que un usuario con la versión vieja cacheada reciba la nueva: al cambiar
 // el nombre del caché, el activate de abajo borra todo lo anterior. Si se
 // actualiza el HTML y no esto, el service worker sigue sirviendo lo viejo.
-const VERSION = '20260917_01';
+const VERSION = '20260919_11';
 const CACHE = `ben-${VERSION}`;
 
 // El esqueleto mínimo para que la app abra sin red.
@@ -52,6 +52,15 @@ const SHELL = [
 ];
 
 const url = ruta => new URL(ruta, self.registration.scope).toString();
+
+// Las rutas de las páginas estáticas del catálogo. Si el fetch falla, para
+// estas NUNCA conviene devolver el shell de la app (index.html): le parece al
+// usuario que el enlace "a las carreras de la facultad" lo devuelve a la página
+// principal. Mejor un error de conexión claro que un falso redireccionamiento.
+const RUTAS_ESTATICAS = ['/carrera/', '/carreras/', '/institucion/', '/instituciones/', '/area/', '/provincia/'];
+function esRutaEstatica(destino) {
+    return RUTAS_ESTATICAS.some(pre => destino.pathname.startsWith(pre));
+}
 
 self.addEventListener('install', evento => {
     evento.waitUntil((async () => {
@@ -126,6 +135,26 @@ async function redPrimero(request) {
     }
 }
 
+// Navegación con el comportamiento distinto según la ruta:
+//  - app (/) o cualquier otra: red primero, con el shell cacheado como última
+//    red de contención, para que la app siga abriendo sin conexión.
+//  - páginas estáticas del catálogo: red primero CACHEANDO la ficha al visitarla,
+//    y si la red falla se usa esa copia; sin copia, error del navegador en vez
+//    del shell que parece "la página principal".
+async function redPrimeroConFallback(request, destino) {
+    const cache = await caches.open(CACHE);
+    try {
+        const respuesta = await fetch(request);
+        if (respuesta && respuesta.ok) cache.put(request, respuesta.clone());
+        return respuesta;
+    } catch (e) {
+        const guardada = await buscarEnCache(cache, request);
+        if (guardada) return guardada;
+        if (esRutaEstatica(destino)) return Response.error();
+        return (await cache.match(url('index.html'))) || Response.error();
+    }
+}
+
 self.addEventListener('fetch', evento => {
     const request = evento.request;
     if (request.method !== 'GET') return;
@@ -136,18 +165,12 @@ self.addEventListener('fetch', evento => {
     if (destino.origin !== self.location.origin) return;
 
     // Navegación: red primero para no dejar a nadie clavado en una versión
-    // vieja, con el index cacheado como red de contención si no hay conexión.
+    // vieja, con index cacheado como red de contención si no hay conexión.
+    // Para las rutas de las páginas estáticas el fallback NO es el shell:
+    // ver esRutaEstatica. Al visitarlas en línea se cachean igual, así el
+    // revisitar sin red sigue mostrando la ficha real.
     if (request.mode === 'navigate') {
-        evento.respondWith((async () => {
-            try {
-                return await fetch(request);
-            } catch (e) {
-                const cache = await caches.open(CACHE);
-                return (await buscarEnCache(cache, request))
-                    || (await cache.match(url('index.html')))
-                    || Response.error();
-            }
-        })());
+        evento.respondWith(redPrimeroConFallback(request, destino));
         return;
     }
 

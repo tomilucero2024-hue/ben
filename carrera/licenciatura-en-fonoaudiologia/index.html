@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Salud","item":"https://buscadoreducativo.com.ar/area/salud/"},{"@type":"ListItem","position":4,"name":"Licenciatura en Fonoaudiología","item":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-fonoaudiologia/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Licenciatura en Fonoaudiología","description":"Dónde estudiar Licenciatura en Fonoaudiología en Mendoza: carrera de grado del área Salud, dictada por 2 instituciones (2 privadas). Dura 4 años. Modalidades disponibles: presencial, a distancia y semipresencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-fonoaudiologia/","provider":[{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"},{"@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Licenciatura en Fonoaudiología en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Licenciatura en Fonoaudiología en Mendoza en 2 instituciones: Universidad del Aconcagua (UDA) y Universidad Siglo 21 (S21). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Licenciatura en Fonoaudiología?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Licenciatura en Fonoaudiología?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, a distancia y semipresencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Licenciatura en Fonoaudiología?","acceptedAnswer":{"@type":"Answer","text":"Licenciatura en Fonoaudiología es una carrera de grado perteneciente al área de Salud. Entre sus aptitudes más afines se destacan: pensamiento analítico, trabajo práctico, interacción social y base teórica y académica."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,8 +120,6 @@
         <dt>Modalidad</dt><dd>Presencial, A distancia y Semipresencial</dd>
         <dt>Duración</dt><dd>4 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Licenciatura+en+Fonoaudiolog%C3%ADa&amp;area=Salud&amp;formacion=grado">Ver Licenciatura en Fonoaudiología en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Licenciatura en Fonoaudiología</h2>
@@ -100,7 +127,28 @@
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Epistemología y Producción Científico Tecnológica</li><li>Estructura y Funciones del Cuerpo Humano</li><li>Fundamentos Sociolingüísticos y Multiculturalidad</li><li>Genética y Embriología</li><li>Psicología General</li><li>Salud Pública y Comunitaria</li><li>Comunicación y Conciencia Corporal</li><li>Fundamentos de Lingüística</li><li>Neuroanatomía, Fisiología y Sistema Nervioso</li><li>Práctica Inicial y Trabajo de Campo</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Adquisición y Desarrollo de la Comunicación y del Lenguaje</li><li>Audiología I</li><li>Bioética y Fonoaudiología</li><li>Fonética y Fonología Aplicadas</li><li>Fundamentos de las Neurociencias Cognitivas del Lenguaje</li><li>Psicología del Desarrollo</li><li>Vocología I: Sistema Fonatorio</li><li>Metodología de la Investigación y Bases Estadísticas</li><li>Motricidad Orofacial y Fonoestomatología I</li><li>Prácticas de Aplicación Fonoaudiológica</li><li>Electiva: Nutrición</li><li>Inglés</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Audiología II</li><li>Diagnóstico del Procesamiento Cognitivo y del Lenguaje</li><li>Endocrinofoniatría</li><li>Neurolingüística en Jóvenes, Adultos y Adultos Mayores</li><li>Neurolingüística en Niñez y Adolescencia</li><li>Vocología II: Clínica de las Disfonías Funcionales</li><li>Fonoaudiología y Gestión en Salud</li><li>Fonoaudiología, Medioambiente y Bioseguridad</li><li>Motricidad Orofacial y Fonoestomatología II</li><li>Prácticas Clínicas Fonoaudiológicas</li><li>Producción de Textos Científicos</li><li>Psicología de la Relación Terapéutica</li><li>Tecnología Asistiva y Comunicación Aumentativa</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Trabajo Final de Investigación</li><li>Audiología Terapéutica</li><li>Electiva: Discapacidad y Geriatría</li><li>Electiva: Neonatología</li><li>Ética, Deontología y Legislación</li><li>Neuropsicología Cognitiva: Rehabilitación y Habilitación</li><li>Otoneurología, Audición y Equilibrio</li><li>Vocología III: Clínica de las Disfonías Orgánicas</li><li>Práctica Profesional Supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-fonoaudiologia" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-fonoaudiologia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
@@ -206,13 +254,13 @@
         <li><a href="/carrera/tecnicatura-superior-en-enfermeria-profesional/">Tecnicatura Superior en Enfermería Profesional</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/kinesiologia-y-fisioterapia/">Kinesiología y Fisioterapia</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-produccion-de-bioimagenes/">Licenciatura en Producción de Bioimágenes</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/licenciatura-en-administracion-de-salud/">Licenciatura en Administración de Salud</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-enfermeria/">Licenciatura en Enfermería</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-instrumentacion-quirurgica/">Licenciatura en Instrumentación Quirúrgica</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-terapia-ocupacional/">Licenciatura en Terapia Ocupacional</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/odontologia/">Odontología</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/podologia-universitaria/">Podología Universitaria</a> <span class="cuantas">(2)</span></li>
     </ul>
-    <p><a href="/area/salud/">Ver las 55 carreras del área Salud →</a></p>
+    <p><a href="/area/salud/">Ver las 72 carreras del área Salud →</a></p>
     </section>
     </div>
 </div>

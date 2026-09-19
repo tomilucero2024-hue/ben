@@ -1,667 +1,2982 @@
 {
- "instituciones": [
-  {
-   "id": 6,
-   "nombre": "Universidad del Aconcagua (UDA)",
-   "nivel": "universidad",
-   "gestion": "privada",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "5201620",
-    "email": "informes@uda.edu.ar",
-    "direccion": "Catamarca 147, Ciudad"
-   },
-   "carreras": [
-    {
-     "id": 615,
-     "nombre_carrera": "Licenciatura en Psicología",
-     "categoria": "Grado / Carrera",
-     "duracion": "5 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-psicologia"
-    },
-    {
-     "id": 616,
-     "nombre_carrera": "Profesorado de Grado Universitario en Psicología para Nivel Secundario y Superior",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/profesorado-de-grado-universitario-en-psicologia-para-nivel-secundario-y-superior"
-    },
-    {
-     "id": 617,
-     "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia"
-    },
-    {
-     "id": 618,
-     "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "A Distancia",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia"
-    },
-    {
-     "id": 619,
-     "nombre_carrera": "Licenciatura en Criminalística",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica"
-    },
-    {
-     "id": 631,
-     "nombre_carrera": "Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia",
-     "categoria": "Pregrado",
-     "duracion": "3 año",
-     "modalidad": "A Distancia",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
-    },
-    {
-     "id": 632,
-     "nombre_carrera": "Tecnicatura universitaria en Accidentología Vial",
-     "categoria": "Pregrado",
-     "duracion": "3 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-accidentologia-vial"
-    },
-    {
-     "id": 634,
-     "nombre_carrera": "Tecnicatura universitaria en Seguridad Ciudadana - Modalidad a Distancia",
-     "categoria": "Pregrado",
-     "duracion": "2 año",
-     "modalidad": "A Distancia",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana"
-    },
-    {
-     "id": 608,
-     "nombre_carrera": "Profesorado de Grado Universitario",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario"
-    },
-    {
-     "id": 609,
-     "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana"
-    },
-    {
-     "id": 610,
-     "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral | A distancia",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia"
-    },
-    {
-     "id": 620,
-     "nombre_carrera": "Profesorado Universitario en Lengua y Cultura Inglesa",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/profesorado-universitario-en-lengua-y-cultura-inglesa"
-    },
-    {
-     "id": 621,
-     "nombre_carrera": "Traductorado Público de Inglés",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles"
-    },
-    {
-     "id": 622,
-     "nombre_carrera": "Traductorado Público de Italiano",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano"
-    },
-    {
-     "id": 623,
-     "nombre_carrera": "Traductor Público de Portugués",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductor-publico-de-portugues"
-    },
-    {
-     "id": 635,
-     "nombre_carrera": "Sommelier Universitario",
-     "categoria": "Pregrado",
-     "duracion": "2 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-pregrado/sommelier-universitario"
-    },
-    {
-     "id": 616,
-     "nombre_carrera": "Licenciatura en Inglés",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/ciclos-de-complementacion-curricular/licenciatura-en-ingles"
-    },
-    {
-     "id": 611,
-     "nombre_carrera": "Licenciatura en Fonoaudiología",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-fonoaudiologia"
-    },
-    {
-     "id": 612,
-     "nombre_carrera": "Licenciatura en Obstetricia",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-obstetricia"
-    },
-    {
-     "id": 613,
-     "nombre_carrera": "Medicina",
-     "categoria": "Grado / Carrera",
-     "duracion": "6 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/medicina"
-    },
-    {
-     "id": 614,
-     "nombre_carrera": "Licenciatura en Calidad, Medio Ambiente e Higiene y Seguridad en el Trabajo",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-calidad-medio-ambiente-e-higiene-y-seguridad-en-el-trabajo"
-    },
-    {
-     "id": 621,
-     "nombre_carrera": "Maestría en Salud Pública y Seguridad Social",
-     "categoria": "Pregrado",
-     "duracion": "1 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-salud-publica-y-seguridad-social"
-    },
-    {
-     "id": 622,
-     "nombre_carrera": "Maestría en Ejercicio Físico y Salud",
-     "categoria": "Pregrado",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-ejercicio-fisico-y-salud"
-    },
-    {
-     "id": 623,
-     "nombre_carrera": "Licenciatura en Enfermería",
-     "categoria": "Grado / Carrera",
-     "duracion": "18 meses",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-enfermeria"
-    },
-    {
-     "id": 624,
-     "nombre_carrera": "Licenciatura en Producción de Bioimágenes",
-     "categoria": "Grado / Carrera",
-     "duracion": "18 meses",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-produccion-de-bioimagenes"
-    },
-    {
-     "id": 625,
-     "nombre_carrera": "Licenciatura en Educación Física con Orientación en Fisiología del Trabajo Físico y Rendimiento Humano",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-educacion-fisica-con-orientacion-en-fisiologia-del-trabajo-fisico-y-rendimiento-humano"
-    },
-    {
-     "id": 626,
-     "nombre_carrera": "Licenciado en Educación Física (Salud)",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciado-en-educacion-fisica-salud"
-    },
-    {
-     "id": 627,
-     "nombre_carrera": "Licenciatura en Tecnologías de la Salud",
-     "categoria": "Grado / Carrera",
-     "duracion": "18 meses",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-tecnologias-de-la-salud"
-    },
-    {
-     "id": 636,
-     "nombre_carrera": "Tecnicatura Universitaria en Emergentología",
-     "categoria": "Pregrado",
-     "duracion": "2 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrados/tecnicatura-universitaria-en-emergentologia"
-    },
-    {
-     "id": 605,
-     "nombre_carrera": "Licenciatura en Comercio Internacional",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-comercio-internacional"
-    },
-    {
-     "id": 606,
-     "nombre_carrera": "Lic. en Informática y Desarrollo de Software",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-informatica-y-desarrollo-de-software"
-    },
-    {
-     "id": 607,
-     "nombre_carrera": "Licenciatura en Marketing",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-marketing"
-    },
-    {
-     "id": 608,
-     "nombre_carrera": "Lic. en Relaciones Institucionales, Ceremonial y Comunicación Corporativa",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-relaciones-institucionales-ceremonial-y-comunicacion-corporativa"
-    },
-    {
-     "id": 609,
-     "nombre_carrera": "Licenciatura en Telecomunicaciones",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-telecomunicaciones"
-    },
-    {
-     "id": 610,
-     "nombre_carrera": "Lic. en Turismo y Hotelería",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-turismo-y-hoteleria"
-    },
-    {
-     "id": 624,
-     "nombre_carrera": "Técnico en Telecomunicaciones",
-     "categoria": "Pregrado",
-     "duracion": "3 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-en-telecomunicaciones"
-    },
-    {
-     "id": 625,
-     "nombre_carrera": "Técnico Universitario en Diseño Gráfico y Publicidad",
-     "categoria": "Pregrado",
-     "duracion": "2 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-diseno-grafico-y-publicidad"
-    },
-    {
-     "id": 626,
-     "nombre_carrera": "Técnico/a Universitario/a en Ceremonial y Organización de Eventos",
-     "categoria": "Pregrado",
-     "duracion": "2 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos"
-    },
-    {
-     "id": 627,
-     "nombre_carrera": "Técnico Universitario en Desarrollo de Software",
-     "categoria": "Pregrado",
-     "duracion": "3 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-desarrollo-de-software"
-    },
-    {
-     "id": 628,
-     "nombre_carrera": "Técnico Universitario en Marketing y Ventas",
-     "categoria": "Pregrado",
-     "duracion": "2 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-marketing-y-ventas"
-    },
-    {
-     "id": 629,
-     "nombre_carrera": "Tecnicatura Universitaria en Turismo y Hotelería",
-     "categoria": "Pregrado",
-     "duracion": "2 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnicatura-universitaria-en-turismo-y-hoteleria"
-    },
-    {
-     "id": 641,
-     "nombre_carrera": "Licenciatura en Administración Gastronómica",
-     "categoria": "Grado / Carrera",
-     "duracion": "18 meses",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-gastronomica"
-    },
-    {
-     "id": 642,
-     "nombre_carrera": "Licenciatura en Administración Hotelera",
-     "categoria": "Grado / Carrera",
-     "duracion": "18 meses",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-hotelera"
-    },
-    {
-     "id": 643,
-     "nombre_carrera": "Licenciatura en Dirección Creativa de Diseño y Publicidad",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-direccion-creativa-de-diseno-y-publicidad"
-    },
-    {
-     "id": 644,
-     "nombre_carrera": "Licenciatura en Turismo",
-     "categoria": "Grado / Carrera",
-     "duracion": "18 meses",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-turismo"
-    },
-    {
-     "id": 610,
-     "nombre_carrera": "Lic. en Turismo y Hotelería",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-turismo-y-hoteleria"
-    },
-    {
-     "id": 626,
-     "nombre_carrera": "Técnico/a Universitario/a en Ceremonial y Organización de Eventos",
-     "categoria": "Pregrado",
-     "duracion": "2 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos"
-    },
-    {
-     "id": 600,
-     "nombre_carrera": "Abogacía",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia"
-    },
-    {
-     "id": 601,
-     "nombre_carrera": "Contador Público",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico"
-    },
-    {
-     "id": 602,
-     "nombre_carrera": "Escribanía",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania"
-    },
-    {
-     "id": 603,
-     "nombre_carrera": "Licenciatura en Administración",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion"
-    },
-    {
-     "id": 604,
-     "nombre_carrera": "Licenciatura en Economía",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia"
-    },
-    {
-     "id": 652,
-     "nombre_carrera": "Licenciatura en Administración de Salud",
-     "categoria": "Grado / Carrera",
-     "duracion": "1 año y medio",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud"
-    },
-    {
-     "id": 653,
-     "nombre_carrera": "Licenciatura en Analítica de Negocios",
-     "categoria": "Grado / Carrera",
-     "duracion": "1 año y medio",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios"
-    },
-    {
-     "id": 654,
-     "nombre_carrera": "Licenciatura en Seguridad Ciudadana",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana"
-    },
-    {
-     "id": 631,
-     "nombre_carrera": "Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia",
-     "categoria": "Pregrado",
-     "duracion": "3 año",
-     "modalidad": "A Distancia",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
-    },
-    {
-     "id": 621,
-     "nombre_carrera": "Traductorado Público de Inglés",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles"
-    },
-    {
-     "id": 622,
-     "nombre_carrera": "Traductorado Público de Italiano",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano"
-    },
-    {
-     "id": 617,
-     "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia"
-    },
-    {
-     "id": 618,
-     "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "A Distancia",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia"
-    },
-    {
-     "id": 619,
-     "nombre_carrera": "Licenciatura en Criminalística",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica"
-    },
-    {
-     "id": 631,
-     "nombre_carrera": "Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia",
-     "categoria": "Pregrado",
-     "duracion": "3 año",
-     "modalidad": "A Distancia",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
-    },
-    {
-     "id": 634,
-     "nombre_carrera": "Tecnicatura universitaria en Seguridad Ciudadana - Modalidad a Distancia",
-     "categoria": "Pregrado",
-     "duracion": "2 año",
-     "modalidad": "A Distancia",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana"
-    },
-    {
-     "id": 663,
-     "nombre_carrera": "PROFESORADO DE GRADO UNIVERSITARIO",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario"
-    },
-    {
-     "id": 664,
-     "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral - Modalidad a distancia",
-     "categoria": "Grado / Carrera",
-     "duracion": "2 años",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia"
-    },
-    {
-     "id": 600,
-     "nombre_carrera": "Abogacía",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia"
-    },
-    {
-     "id": 603,
-     "nombre_carrera": "Licenciatura en Administración",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion"
-    },
-    {
-     "id": 601,
-     "nombre_carrera": "Contador Público",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico"
-    },
-    {
-     "id": 604,
-     "nombre_carrera": "Licenciatura en Economía",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia"
-    },
-    {
-     "id": 602,
-     "nombre_carrera": "Escribanía",
-     "categoria": "Grado / Carrera",
-     "duracion": "4 año",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania"
-    },
-    {
-     "id": 670,
-     "nombre_carrera": "LICENCIATURA EN ADMINISTRACIÓN DE SALUD",
-     "categoria": "Grado / Carrera",
-     "duracion": "1 año y medio",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud"
-    },
-    {
-     "id": 671,
-     "nombre_carrera": "LICENCIATURA EN ANALÍTICA DE NEGOCIOS",
-     "categoria": "Grado / Carrera",
-     "duracion": "1 año y medio",
-     "modalidad": "Presencial",
-     "facultad": "UDA",
-     "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios"
+  "instituciones": [
+    {
+      "id": 6,
+      "nombre": "Universidad del Aconcagua (UDA)",
+      "nivel": "universidad",
+      "gestion": "privada",
+      "carreras": [
+        {
+          "id": 600,
+          "nombre_carrera": "Abogacía",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia",
+          "plan_estudio": [
+            {
+              "anio": "Primer año — Primer semestre",
+              "materias": [
+                "Introducción al Derecho",
+                "Derecho Privado I (Parte General)",
+                "Derecho Político",
+                "Estrategias de Aprendizaje Universitario"
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo semestre",
+              "materias": [
+                "Derecho Penal I (Parte General)",
+                "Derecho Público I (Constitucional)",
+                "Derecho Privado II (Obligaciones)"
+              ]
+            },
+            {
+              "anio": "Segundo año — Primer semestre",
+              "materias": [
+                "Derecho Privado III (Contratos)",
+                "Derecho Penal II (Parte Especial)",
+                "Introducción a la Práctica del Derecho Procesal",
+                "Introducción a Métodos Alternativos de Resolución de Conflictos"
+              ]
+            },
+            {
+              "anio": "Segundo año — Segundo semestre",
+              "materias": [
+                "Derecho Social, Laboral y Provisional",
+                "Derecho Público II (Administrativo)",
+                "Derecho Privado IV (Comercial y Sociedades)"
+              ]
+            },
+            {
+              "anio": "Tercer año — Primer semestre",
+              "materias": [
+                "Derecho Privado V (Reales)",
+                "Derecho Público III (Financiero y Tributario)",
+                "Principios de Derecho Internacional Público",
+                "Principios de Derecho Internacional Privado"
+              ]
+            },
+            {
+              "anio": "Tercer año — Segundo semestre",
+              "materias": [
+                "Derecho Privado VI (Familia)",
+                "Derecho Privado VII (Sucesiones)",
+                "Mediación",
+                "Práctica Jurídica Empresarial"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Primer semestre",
+              "materias": [
+                "Derecho Concursal",
+                "Derecho Procesal (Parte General)",
+                "Derecho Ambiental",
+                "Práctica Profesional y Pasantías Tutoriales"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Segundo semestre",
+              "materias": [
+                "Derecho Procesal Penal (Provincial y Federal)",
+                "Legislación Vitivinícola y Minera",
+                "Derecho Procesal Civil, Comercial Y Laboral (Provincial y Federal)",
+                "Práctica Profesional y Pasantías Tutoriales"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/abogacia"
+        },
+        {
+          "id": 601,
+          "nombre_carrera": "Contador Público",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Álgebra",
+                "Comportamiento Organizacional",
+                "Instituciones del Derecho Público",
+                "Inglés I – (Prueba de Nivel)"
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo semestre",
+              "materias": [
+                "Administración",
+                "Contabilidad Básica",
+                "Instituciones del Derecho Privado",
+                "Economía I"
+              ]
+            },
+            {
+              "anio": "Segundo año — Primer semestre",
+              "materias": [
+                "Matemática y Cálculo Financiero",
+                "Derecho Comercial I",
+                "Organización Contable de la Empresa",
+                "Economía II (Macroeconomía y Política Económica)"
+              ]
+            },
+            {
+              "anio": "Segundo año — Segundo semestre",
+              "materias": [
+                "Contabilidad Superior",
+                "Estadística",
+                "Economía III (Microeconomía)",
+                "Inglés II (Prueba de Nivel)"
+              ]
+            },
+            {
+              "anio": "Tercer año — Primer semestre",
+              "materias": [
+                "Costos y Contabilidad de Gestión",
+                "Finanzas Públicas",
+                "Procesos y sistemas de Información",
+                "Inglés Técnico"
+              ]
+            },
+            {
+              "anio": "Tercer año — Segundo semestre",
+              "materias": [
+                "Derecho Civil",
+                "Análisis de Estados Contables",
+                "Contabilidad del Sector Público",
+                "Electiva"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Primer semestre",
+              "materias": [
+                "Teoría y Técnica Impositiva I",
+                "Metodología de la Investigación y Seminario de Aplicación",
+                "Instituciones del Trabajo y Administración de Recursos Humanos",
+                "Auditoría",
+                "Práctica Profesional Supervisada (anual)"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Segundo semestre",
+              "materias": [
+                "Teoría y Técnica Impositiva II",
+                "Actuación Profesional",
+                "Práctica Profesional Supervisada (anual)",
+                "Electiva"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/contador-publico"
+        },
+        {
+          "id": 602,
+          "nombre_carrera": "Escribanía",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania",
+          "plan_estudio": [
+            {
+              "anio": "Primer año — Primer semestre",
+              "materias": [
+                "Introducción al derecho",
+                "Derecho Privado I (Parte General)",
+                "Derecho Político",
+                "Estrategias de Aprendizaje Universitario"
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo semestre",
+              "materias": [
+                "Derecho Penal I (Parte General)",
+                "Derecho Público I (Constitucional)",
+                "Derecho Privado II (Obligaciones)"
+              ]
+            },
+            {
+              "anio": "Segundo año — Primer semestre",
+              "materias": [
+                "Derecho Privado III (Contratos)",
+                "Derecho Penal II (Parte Especial)",
+                "Introducción a la Práctica del Derecho Procesal",
+                "Introducción a Métodos Alternativos de Resolución de Conflictos"
+              ]
+            },
+            {
+              "anio": "Segundo año — Segundo semestre",
+              "materias": [
+                "Derecho Social, Laboral y Provisional",
+                "Derecho Público II (Administrativo)",
+                "Derecho Privado IV (Comercial y Sociedades)"
+              ]
+            },
+            {
+              "anio": "Tercer año — Primer semestre",
+              "materias": [
+                "Derecho Privado V (Reales)",
+                "Derecho Público III (Financiero y Tributario)",
+                "Principios de Derecho Internacional Público",
+                "Principios de Derecho Internacional Privado"
+              ]
+            },
+            {
+              "anio": "Tercer año — Segundo semestre",
+              "materias": [
+                "Derecho Privado VI (Familia)",
+                "Derecho Privado VII (Sucesiones)",
+                "Mediación",
+                "Práctica Jurídica Empresarial"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Primer semestre",
+              "materias": [
+                "Derecho Notarial y Registral I",
+                "Práctica Notarial I"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Segundo semestre",
+              "materias": [
+                "Derecho Notarial y Registral II",
+                "Práctica Notarial II y Pasantías Tutoriales"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/escribania"
+        },
+        {
+          "id": 603,
+          "nombre_carrera": "Licenciatura en Administración",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion",
+          "plan_estudio": [
+            {
+              "anio": "Primer año — Primer semestre",
+              "materias": [
+                "Administración I (Fundamentos y Teoría de Gestión)",
+                "Matemática I"
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo semestre",
+              "materias": [
+                "Contabilidad para Administración",
+                "Economía I (Microeconomía)",
+                "Derecho I"
+              ]
+            },
+            {
+              "anio": "Primer año — Anual",
+              "materias": [
+                "Introducción al Desarrollo Empresarial"
+              ]
+            },
+            {
+              "anio": "Segundo año — Primer semestre",
+              "materias": [
+                "Estadística (Metodológica y Aplicada)",
+                "Matemática II",
+                "Derecho II",
+                "Economía II (Macroeconomía)"
+              ]
+            },
+            {
+              "anio": "Segundo año — Segundo semestre",
+              "materias": [
+                "Administración II (Metodológica y Sistemática)",
+                "Costos para Decisiones",
+                "Comportamiento Organizacional"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/licenciatura-en-administracion"
+        },
+        {
+          "id": 604,
+          "nombre_carrera": "Licenciatura en Economía",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia",
+          "plan_estudio": [
+            {
+              "anio": "Primer año — Primer semestre",
+              "materias": [
+                "Álgebra",
+                "Comportamiento Organizacional",
+                "Instituciones del Derecho Público",
+                "Inglés I - Prueba de Nivel"
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo semestre",
+              "materias": [
+                "Administración",
+                "Contabilidad Básica",
+                "Instituciones del Derecho Privado",
+                "Economía I"
+              ]
+            },
+            {
+              "anio": "Segundo año — Primer semestre",
+              "materias": [
+                "Matemática y Cálculo Financiero",
+                "Derecho Comercial I",
+                "Organización Contable de la Empresa",
+                "Economía II (Macroeconomía y Política Económica)"
+              ]
+            },
+            {
+              "anio": "Segundo año — Segundo semestre",
+              "materias": [
+                "Contabilidad Superior",
+                "Estadística",
+                "Economía III (Microeconomía)",
+                "Inglés II - Prueba de Nivel"
+              ]
+            },
+            {
+              "anio": "Tercer año — Primer semestre",
+              "materias": [
+                "Finanzas Públicas",
+                "Econometría y Matemática para Economistas",
+                "Economía IV (Macroeconomía II)",
+                "Inglés Técnico",
+                "Administración Financiera del Sector Público",
+                "Procesos y Sistemas de Información",
+                "Economía del Sector Público",
+                "Electiva"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Primer semestre",
+              "materias": [
+                "Cuentas Nacionales",
+                "Metodología de la investigación y Seminario de Aplicación",
+                "Crecimiento y Desarrollo Económico",
+                "Mercado de Capitales"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Segundo semestre",
+              "materias": [
+                "Sociología de las Organizaciones",
+                "Organización Industrial",
+                "Historia del Pensamiento Económico",
+                "Electiva"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/carreras-de-grado/lic-en-economia"
+        },
+        {
+          "id": 605,
+          "nombre_carrera": "Licenciatura en Administración de Salud",
+          "categoria": "Grado / Carrera",
+          "duracion": "1 año y medio",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Sistemas de Salud Comparados.*",
+                "Organización Contable y Operativa de Emprendimientos de Salud.",
+                "Administracion Financiera ."
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo semestre",
+              "materias": [
+                "Sistemas de Información para la Toma de Decisiones.",
+                "Comercialización de Servicios de Salud.*",
+                "Evaluación de proyectos de Salud."
+              ]
+            },
+            {
+              "anio": "Segundo año — Tercer semestre",
+              "materias": [
+                "Metodología de la investigación.*",
+                "Tesina.",
+                "Practica Profesional."
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-de-salud"
+        },
+        {
+          "id": 606,
+          "nombre_carrera": "Licenciatura en Analítica de Negocios",
+          "categoria": "Grado / Carrera",
+          "duracion": "1 año y medio",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios",
+          "plan_estudio": [
+            {
+              "anio": "Primer año — Primer semestre",
+              "materias": [
+                "Ciencia de Datos Empresariales",
+                "Modelado y Consultas de Datos Empresariales",
+                "Matemáticas aplicadas a Negocios",
+                "Protección de Datos Empresariales en la Nube."
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo semestre",
+              "materias": [
+                "Analítica de Negocios y Series de Tiempo.",
+                "Estadísticas para el Análisis de Negocios",
+                "Aprendizaje Automático I",
+                "Comunicación de Datos y Visualización"
+              ]
+            },
+            {
+              "anio": "Segundo año — Tercer semestre",
+              "materias": [
+                "Laboratorio (Herramientas)",
+                "Aprendizaje Automático II y Aprendizaje Profundo",
+                "Gestión de Proyectos",
+                "Inglés para la Analítica de Negocios",
+                "Metodología de la Investigación y Proyecto Integrador"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcej-2025/ciclos-de-complementacion-curricular/licenciatura-en-analitica-de-negocios"
+        },
+        {
+          "id": 607,
+          "nombre_carrera": "Licenciatura en Fonoaudiología",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-fonoaudiologia",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Epistemología y Producción Científico Tecnológica",
+                "Estructura y Funciones del Cuerpo Humano",
+                "Fundamentos Sociolingüísticos y Multiculturalidad",
+                "Genética y Embriología",
+                "Psicología General",
+                "Salud Pública y Comunitaria",
+                "Comunicación y Conciencia Corporal",
+                "Fundamentos de Lingüística",
+                "Neuroanatomía, Fisiología y Sistema Nervioso",
+                "Práctica Inicial y Trabajo de Campo"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Adquisición y Desarrollo de la Comunicación y del Lenguaje",
+                "Audiología I",
+                "Bioética y Fonoaudiología",
+                "Fonética y Fonología Aplicadas",
+                "Fundamentos de las Neurociencias Cognitivas del Lenguaje",
+                "Psicología del Desarrollo",
+                "Vocología I: Sistema Fonatorio",
+                "Metodología de la Investigación y Bases Estadísticas",
+                "Motricidad Orofacial y Fonoestomatología I",
+                "Prácticas de Aplicación Fonoaudiológica",
+                "Electiva: Nutrición",
+                "Inglés"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Audiología II",
+                "Diagnóstico del Procesamiento Cognitivo y del Lenguaje",
+                "Endocrinofoniatría",
+                "Neurolingüística en Jóvenes, Adultos y Adultos Mayores",
+                "Neurolingüística en Niñez y Adolescencia",
+                "Vocología II: Clínica de las Disfonías Funcionales",
+                "Fonoaudiología y Gestión en Salud",
+                "Fonoaudiología, Medioambiente y Bioseguridad",
+                "Motricidad Orofacial y Fonoestomatología II",
+                "Prácticas Clínicas Fonoaudiológicas",
+                "Producción de Textos Científicos",
+                "Psicología de la Relación Terapéutica",
+                "Tecnología Asistiva y Comunicación Aumentativa"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Trabajo Final de Investigación",
+                "Audiología Terapéutica",
+                "Electiva: Discapacidad y Geriatría",
+                "Electiva: Neonatología",
+                "Ética, Deontología y Legislación",
+                "Neuropsicología Cognitiva: Rehabilitación y Habilitación",
+                "Otoneurología, Audición y Equilibrio",
+                "Vocología III: Clínica de las Disfonías Orgánicas",
+                "Práctica Profesional Supervisada"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-fonoaudiologia"
+        },
+        {
+          "id": 608,
+          "nombre_carrera": "Licenciatura en Obstetricia",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-obstetricia",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Antropología",
+                "Psicología",
+                "Biología e Histología",
+                "Bioquímica",
+                "Anatomía General",
+                "Embriología Humana",
+                "Genética Humana",
+                "Anatomía Obstétrica",
+                "Fisiología Humana"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Obstetricia Normal",
+                "Comunicación y Liderazgo en Obstetricia",
+                "Endocrinología de la Reproducción",
+                "Microbiología, Parasitología e Inmunología",
+                "Mujer, Obstetricia y Comunidad I",
+                "Sociología",
+                "Salud Social y Comunitaria",
+                "Nutrición",
+                "Farmacología General"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Metodología de la Investigación.",
+                "Obstetricia Patológica.",
+                "Práctica Simulada.",
+                "Salud Sexual Integral.",
+                "Farmacología Aplicada a la Salud Reproductiva.",
+                "Neonatología I.",
+                "Tecnología Apropiad en Diagnóstico Perinatal.",
+                "Bioética Aplicada.",
+                "Mujer, Obstetricia y Comunidad II.",
+                "Neonatología II."
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Ginecología.",
+                "Práctica Ostétrica.",
+                "Preparación Integral para la Maternidad.",
+                "Responsabilidad Profesional.",
+                "Ejercicio Profesional.",
+                "Electiva:",
+                "Herramientas para el Acompañamiento Integral de la Sexualidad Femenina.",
+                "Discapacidad y Obstetricia: Una Propuesta de Abordaje.",
+                "Razonamiento Clínico.",
+                "Reanimación Cardiopulmonar en el Recién Nacido."
+              ]
+            },
+            {
+              "anio": "Extracurriculares",
+              "materias": [
+                "Inglés I",
+                "Inglés II",
+                "Inglés III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-obstetricia"
+        },
+        {
+          "id": 609,
+          "nombre_carrera": "Medicina",
+          "categoria": "Grado / Carrera",
+          "duracion": "6 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/medicina",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Moléculas a Células",
+                "Genes y Desarrollo",
+                "Estructura y Función Humana",
+                "Defensas Existentes",
+                "Medicina, Hombre y Sociedad I",
+                "Servicio a la Comunidad I"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Cerebro y Mente",
+                "Medicina, Hombre y Sociedad II",
+                "Introducción a las Pasantías",
+                "Servicio a la Comunidad II",
+                "Bases de la Enfermedad"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Pasantías Clínicas Esenciales (1)",
+                "Cursos Horas Flexibles (2)",
+                "Cirugía/Anestesiología",
+                "Ginecología/Obstetricia",
+                "Ciencias Básicas Avanzadas I",
+                "Medicina, Hombre y Sociedad III",
+                "Atención Primaria y de Familia I",
+                "Servicio a la Comunidad III"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Pasantías Clínicas Esenciales (1)",
+                "Cursos Horas Flexibles (2)",
+                "Ciencias Básicas Avanzadas II",
+                "Atención Primaria y de Familia II",
+                "Servicio a la Comunidad IV",
+                "Neurología",
+                "Emergentología",
+                "Pediatría"
+              ]
+            },
+            {
+              "anio": "Quinto año",
+              "materias": [
+                "Pasantías Clínicas Esenciales (1)",
+                "Cursos Horas Flexibles (2)",
+                "Psiquiatría",
+                "Medicina Interna",
+                "Atención Primaria y de Familia III",
+                "Practicantado",
+                "Servicio a la Comunidad V",
+                "Ciencias Básicas Avanzadas III"
+              ]
+            },
+            {
+              "anio": "Sexto año",
+              "materias": [
+                "Internado (4)"
+              ]
+            },
+            {
+              "anio": "Aclaraciones",
+              "materias": [
+                "(2)Los Cursos Horas Flexibles son obligatorios y deben sumar doscientas veinte (220) horas relojen total. Éstos son cursos de perfeccionamiento relacionados con las pasantías clínicas esenciales,especialidades médicas y/o técnicos, de contenido humanístico. (3) El Practicantado es a elección del alumno entre cualquiera de las asignaturas que forman partede las pasantías clínicas esenciales o de las especialidades médicas. (4) Para comenzar el Internado es obligatorio haber aprobado la totalidad de los cursos obligatoriosdel plan de estudios. El mismo será rotatorio por Medicina Interna, Cirugía, Pediatría, Gineco-Obstetricia, Emergentología, medicina de familia y una rotación especial rural"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/medicina"
+        },
+        {
+          "id": 610,
+          "nombre_carrera": "Licenciatura en Calidad, Medio Ambiente e Higiene y Seguridad en el Trabajo",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-calidad-medio-ambiente-e-higiene-y-seguridad-en-el-trabajo",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Física I",
+                "Álgebra",
+                "Dibujo Técnico",
+                "Administración de Empresas y Recursos Humanos",
+                "Química I",
+                "Física II",
+                "Análisis Matemático",
+                "Seguridad en el Trabajo I",
+                "Química II"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Mecánica de los Fluidos",
+                "Tecnología de los Materiales",
+                "Ergonomía",
+                "Termodinámica",
+                "Medicina del Trabajo y Medioambiental",
+                "Incendio I",
+                "Psicología del Trabajo",
+                "Máquinas e Instalaciones Térmicas",
+                "Higiene I"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Pasantías Clínicas Esenciales (1)",
+                "Principios de Gestión y Liderazgo para la Calidad",
+                "Administración General del Ambiente",
+                "Seguridad en el Trabajo II",
+                "Toxicología y Ecotoxicología",
+                "Estadística",
+                "Incendio II",
+                "Higiene Industrial II",
+                "Gestión de la Calidad y Normas ISO 9000"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Legislación Laboral y Medioambiental",
+                "Planificación y Control de la Calidad de los Productos y los Procedimientos",
+                "Los Sistemas de Gestión Ambiental",
+                "Estudio del Trabajo",
+                "Didáctica de la Educación",
+                "Evaluación del Impacto Ambiental",
+                "Sociología",
+                "Metodología de la Investigación Científica",
+                "Práctica Profesional",
+                "Inglés",
+                "Informática"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-grado/licenciatura-en-calidad-medio-ambiente-e-higiene-y-seguridad-en-el-trabajo"
+        },
+        {
+          "id": 611,
+          "nombre_carrera": "Maestría en Salud Pública y Seguridad Social",
+          "categoria": "Pregrado",
+          "duracion": "1 año",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-salud-publica-y-seguridad-social",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Escenarios políticos, económicos y sociales de la salud pública",
+                "TIC – Tecnologías de Información y Comunicación",
+                "Enfoque antropológico social de la salud y la seguridad social",
+                "Epidemiología, Demografía y Estadística",
+                "Metodología de la Investigación",
+                "Planificación, Administración y Gestión en salud",
+                "Medio Ambiente y ámbitos laborales",
+                "Capital Humano",
+                "Gestión de Servicios Asistenciales",
+                "Seguridad Social",
+                "Obras Sociales, Mutuales y organizaciones de medicina prepaga"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Salud Ocupacional",
+                "Riesgos del Trabajo. Accidentes de trabajo y enfermedades profesionales",
+                "Gestión de servicio de salud laboral. Higiene y seguridad en el trabajo",
+                "Gestión de la Calidad",
+                "Deontología y Ética Profesional",
+                "Taller Tutoría Trabajo Final"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-salud-publica-y-seguridad-social"
+        },
+        {
+          "id": 612,
+          "nombre_carrera": "Maestría en Ejercicio Físico y Salud",
+          "categoria": "Pregrado",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-ejercicio-fisico-y-salud",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Fisiología del Ejercicio Físico",
+                "Nutrición para el Ejercicio Físico, el Fitness y la Salud",
+                "Neurobioinmunología, Ejercicio Físico y Salud",
+                "Ergonomía y Salud",
+                "Tecnologías aplicadas al Ejercicio Físico y la Salud",
+                "Valoración y Control de la Aptitud Física",
+                "Inglés Técnico",
+                "Bioestadística aplicada (Mgter. Walter Rosales)."
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Programación del Ejercicio Físico para Enfermedades Metabólicas No Transmisibles",
+                "Readaptación y Recuperación Osteo-Articular y Muscular",
+                "Programación del Ejercicio Físico para el Fitness y la Salud",
+                "Metodología de la Investigación",
+                "Entrenamiento Físico Deportivo",
+                "Discapacidad y Salud",
+                "Trabajo Final Individual (Mgter. Walter Rosales)."
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrado/maestria-en-ejercicio-fisico-y-salud"
+        },
+        {
+          "id": 613,
+          "nombre_carrera": "Licenciatura en Enfermería",
+          "categoria": "Grado / Carrera",
+          "duracion": "18 meses",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-enfermeria",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Bases Conceptuales y Tecnológicas Asistenciales de la Enfermería",
+                "Contexto Político, Socio-Cultural y Económico",
+                "Marcos Conceptuales, Éticos y Legales del Ejercicio Profesional",
+                "Ciencias Biomédicas",
+                "Docencia para la Salud"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Ciencias Sociales, Psicológicas y Humanísticas",
+                "Organización y Administración",
+                "Investigación y Trabajo Final de Grado"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-enfermeria"
+        },
+        {
+          "id": 614,
+          "nombre_carrera": "Licenciatura en Producción de Bioimágenes",
+          "categoria": "Grado / Carrera",
+          "duracion": "18 meses",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-produccion-de-bioimagenes",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Administración y Gestión de Salud Pública",
+                "Comunicación",
+                "Estudios Radiológicos",
+                "Taller de Informática",
+                "Taller de Interpretación de textos en inglés",
+                "Bioética y Deontología",
+                "Biotecnología",
+                "Estudios Imagenológicos y Emergentología",
+                "Radioprotección y Radiobiología",
+                "Tomografía Axial Computada"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Hemodinamia",
+                "Medicina Nuclear",
+                "Radioterapia",
+                "Resonancia Magnética Nuclear",
+                "Taller de Metodologías de investigación y producción de textos científicos para la PFI",
+                "Trabajo Final Integrador"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-produccion-de-bioimagenes"
+        },
+        {
+          "id": 615,
+          "nombre_carrera": "Licenciatura en Educación Física con Orientación en Fisiología del Trabajo Físico y Rendimiento Humano",
+          "categoria": "Grado / Carrera",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-educacion-fisica-con-orientacion-en-fisiologia-del-trabajo-fisico-y-rendimiento-humano",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "PRIMER CUATRIMESTRE Fisiología del Trabajo Físico I Psicología de la Actividad Física y Deportiva Bioquímica Estadística I Biomecánica I",
+                "Fisiología del Trabajo Físico I",
+                "Psicología de la Actividad Física y Deportiva",
+                "Bioquímica",
+                "Estadística I",
+                "Biomecánica I",
+                "SEGUNDO CUATRIMESTRE Fisiología del Trabajo Físico II Nutrición y Energética de la Actividad Física y Deportiva Evaluación Funcional de la Actividad Física y Deportiva Estadística II Biomecánica II",
+                "Fisiología del Trabajo Físico II",
+                "Nutrición y Energética de la Actividad Física y Deportiva",
+                "Evaluación Funcional de la Actividad Física y Deportiva",
+                "Estadística II",
+                "Biomecánica II"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "TERCER CUATRIMESTRE Principios del Entrenamiento y Estructuración de la Planificación Metodología de la Investigación Seminario de Control Funcional en Campo y Laboratorio Bioética",
+                "Principios del Entrenamiento y Estructuración de la Planificación",
+                "Metodología de la Investigación",
+                "Seminario de Control Funcional en Campo y Laboratorio",
+                "Bioética",
+                "CUARTO CUATRIMESTRE Seminario de Planeamiento Seminario de Diseño del Trabajo Final Trabajo Final Inglés",
+                "Seminario de Planeamiento",
+                "Seminario de Diseño del Trabajo Final",
+                "Trabajo Final",
+                "Inglés"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-educacion-fisica-con-orientacion-en-fisiologia-del-trabajo-fisico-y-rendimiento-humano"
+        },
+        {
+          "id": 616,
+          "nombre_carrera": "Licenciado en Educación Física (Salud)",
+          "categoria": "Grado / Carrera",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciado-en-educacion-fisica-salud",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "PRIMER CUATRIMESTRE Anatomía y Fisiología Aplicada Fisiología del Ejercicio Actividad Física, Salud y Calidad de Vida Nutrición Aplicada a la Actividad Física",
+                "Anatomía y Fisiología Aplicada",
+                "Fisiología del Ejercicio",
+                "Actividad Física, Salud y Calidad de Vida",
+                "Nutrición Aplicada a la Actividad Física",
+                "SEGUNDO CUATRIMESTRE Ejercicio en los Diferentes Estadios Evolutivos de la Vida Humana Ejercicio y su Relación con el Sistema Inmune Ejercicio y su Relación con el Sistema Cardiovascular Ejercicio y su Relación con el Sistema Respiratorio",
+                "Ejercicio en los Diferentes Estadios Evolutivos de la Vida Humana",
+                "Ejercicio y su Relación con el Sistema Inmune",
+                "Ejercicio y su Relación con el Sistema Cardiovascular",
+                "Ejercicio y su Relación con el Sistema Respiratorio"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "TERCER CUATRIMESTRE Ejercicio y su Relación con el Sistema Muscular y Osteoarticular Ejercicio y su Relación con el Sistema Nervioso Actividad Física para Personas con Discapacidad Inglés Técnico",
+                "Ejercicio y su Relación con el Sistema Muscular y Osteoarticular",
+                "Ejercicio y su Relación con el Sistema Nervioso",
+                "Actividad Física para Personas con Discapacidad",
+                "Inglés Técnico",
+                "CUARTO CUATRIMESTRE Metodología de la Investigación y Estadística Aplicada Bioética Bases de Gestión, Administración y Planeamiento Estratégico Tecnologías de la Información y Comunicación en Salud Trabajo Final de Tesis",
+                "Metodología de la Investigación y Estadística Aplicada",
+                "Bioética",
+                "Bases de Gestión, Administración y Planeamiento Estratégico",
+                "Tecnologías de la Información y Comunicación en Salud",
+                "Trabajo Final de Tesis"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciado-en-educacion-fisica-salud"
+        },
+        {
+          "id": 617,
+          "nombre_carrera": "Licenciatura en Tecnologías de la Salud",
+          "categoria": "Grado / Carrera",
+          "duracion": "18 meses",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-tecnologias-de-la-salud",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Telesalud y Telemedicina",
+                "Administración y Gestión en Organizaciones de Salud",
+                "Comunicación Institucional en los Servicios Técnicos Asistenciales",
+                "Legislación Aplicada a los Servicios Técnicos Asistenciales",
+                "Metodología de la Investigación I",
+                "Bioseguridad y Salud Ocupacional-Bioética y Deontología",
+                "Emergentología General",
+                "Tecnología Biomédica"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Metodología de la Investigación II y Producción de Textos Científicos para laPFI",
+                "Gestión de la Calidad en los Procesos Tecnológicos",
+                "Bioseguridad Aplicada a cada Área Profesional",
+                "Emergentología Aplicada a cada Área Profesional",
+                "Seguridad del Paciente en el Ámbito de los Servicios Técnicos Asistenciales",
+                "Trabajo Final Integrador"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/ciclos-de-complementacion-curricular/licenciatura-en-tecnologias-de-la-salud"
+        },
+        {
+          "id": 618,
+          "nombre_carrera": "Tecnicatura Universitaria en Emergentología",
+          "categoria": "Pregrado",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrados/tecnicatura-universitaria-en-emergentologia",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "ANATOMÍA Y FISIOLOGÍA HUMANA",
+                "PRINCIPIOS DE ATENCIÓN PREHOSPITALARIA",
+                "PRIMEROS AUXILIOS Y RCP BÁSICO (BLS)",
+                "PSICOLOGÍA DEL PACIENTE EN EMERGENCIAS",
+                "COMUNICACIÓN Y TRABAJO EN EQUIPO EN SITUACIONES CRÍTICAS",
+                "PATOLOGÍA MÉDICA Y QUIRÚRGICA I (RESPIRATORIA, CARDIOVASCULAR, METABÓLICA)",
+                "FARMACOLOGÍA APLICADA A LA EMERGENCIA I (FÁRMACOS BÁSICOS)",
+                "TÉCNICAS DE INMOVILIZACIÓN Y TRANSPORTE",
+                "EMERGENCIAS TRAUMÁTICAS I (FRACTURAS, HEMORRAGIAS, HERIDAS, QUEMADURAS)",
+                "PRÁCTICA PROFESIONAL I (GUARDIA HOSPITALARIA + SIMULACIÓN)"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "PATOLOGÍA MÉDICA Y QUIRÚRGICA II (NEUROLÓGICAS, OBSTÉTRICAS, PEDIÁTRICAS, PSIQUIÁTRICAS)",
+                "FARMACOLOGÍA APLICADA A LA EMERGENCIA II (FÁRMACOS IVM, IM, VÍA AÉREA)",
+                "EMERGENCIAS CARDIOVASCULARES Y RESPIRATORIAS (ACLS-SOPORTE VITAL AVANZADO)",
+                "EMERGENCIAS TRAUMÁTICAS II (POLITRAUMA, TCE, TRAUMA TORÁCICO Y ABDOMINAL)",
+                "PRÁCTICA PROFESIONAL II (AMBULANCIAS Y UNIDADES DE EMERGENCIAS PREHOSPITALARIAS)",
+                "MANEJO AVANZADO DE LA VÍA AÉREA E INTUBACIÓN",
+                "ATENCIÓN EN DESASTRES Y TRIAGE MASIVO",
+                "EMERGENCIAS PEDIÁTRICAS NEONATALES (PALS, SOPORTE VITAL PEDIÁTRICO)",
+                "ÉTICA, LEGISLACIÓN Y DEONTOLOGÍA EN LA EMERGENCIA",
+                "PRÁCTICA PROFESIONAL III (INTERNADO ROTATORIO EN HOSPITAL + EMERGENCIAS EXTRAHOSPITALARIAS)",
+                "PRÁCTICA FINAL Y ECOE"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcm-2025/carreras-de-pregrados/tecnicatura-universitaria-en-emergentologia"
+        },
+        {
+          "id": 619,
+          "nombre_carrera": "Licenciatura en Comercio Internacional",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-comercio-internacional",
+          "plan_estudio": [
+            {
+              "anio": "Primer año — Primer cuatrimestre",
+              "materias": [
+                "Comercio exterior I",
+                "Aduana y régimen aduanero I",
+                "Instituciones del derecho público y privado"
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo cuatrimestre",
+              "materias": [
+                "Técnicas y estrategias de comercialización internacional",
+                "Economía empresarial",
+                "Análisis financiero del comercio exterior"
+              ]
+            },
+            {
+              "anio": "Primer año — Anual",
+              "materias": [
+                "Inglés I"
+              ]
+            },
+            {
+              "anio": "Segundo año — Primer cuatrimestre",
+              "materias": [
+                "Comercio exterior II",
+                "Logística internacional I (Cargas y transporte)",
+                "Aduana y régimen aduanero II",
+                "Estrategías de promoción de mercados"
+              ]
+            },
+            {
+              "anio": "Segundo año — Segundo cuatrimestre",
+              "materias": [
+                "Economía internacional",
+                "Organismos internacionales de financiamiento",
+                "Envases y embalajes para el comercio internacional"
+              ]
+            },
+            {
+              "anio": "Segundo año — Anual",
+              "materias": [
+                "Inglés II"
+              ]
+            },
+            {
+              "anio": "Tercer año — Primer cuatrimestre",
+              "materias": [
+                "Gestión empresaria y fiscal",
+                "Matemática financiera",
+                "Logística Internacional II (Gestión de la cadena de suministro)"
+              ]
+            },
+            {
+              "anio": "Tercer año — Segundo cuatrimestre",
+              "materias": [
+                "Desarrollo económico regional",
+                "Estadística aplicada al comercio exterior",
+                "Costos y precios de exportación e importación"
+              ]
+            },
+            {
+              "anio": "Tercer año — Anual",
+              "materias": [
+                "Inglés instrumental III",
+                "Práctica profesional (ejercicio del comercio exterior)"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Primer cuatrimestre",
+              "materias": [
+                "Negociaciones internacionales y alianzas estratégicas",
+                "Relaciones económicas internacionales",
+                "Administración estratégica del comercio internacional"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Segundo cuatrimestre",
+              "materias": [
+                "Finanzas internacionales de la empresa",
+                "Derecho internacional económico"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Anual",
+              "materias": [
+                "Metodología y técnicas de la investigación",
+                "Desarrollo y evaluación de proyectos de negocios",
+                "Práctica y orientación profesional"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-comercio-internacional"
+        },
+        {
+          "id": 620,
+          "nombre_carrera": "Lic. en Informática y Desarrollo de Software",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-informatica-y-desarrollo-de-software",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Matemática",
+                "Programación I",
+                "Arquitectura de Computadoras I",
+                "Laboratorio I",
+                "Análisis Matemático I",
+                "Programación II",
+                "Arquitectura de Computadoras II",
+                "Laboratorio II"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Análisis Matemático II",
+                "Sistemas de Comunicaciones",
+                "Diseño I",
+                "Laboratorio III",
+                "Estadística",
+                "Laboratorio IV",
+                "Base de datos",
+                "Diseño II"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Programación Avanzada",
+                "Investigación Operativa",
+                "Autómatas y Lenguajes",
+                "Sistemas Inteligentes",
+                "Compiladores",
+                "Seguridad",
+                "Ingeniería del conocimiento",
+                "Practica integradora"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Ingeniería del Software",
+                "Simulación",
+                "Base de Datos avanzada",
+                "Sistemas distribuidos",
+                "Comercialización de Servicios",
+                "Derecho Informático y Ética Profesional",
+                "Evaluación de Proyectos",
+                "PrácticaProfesional"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-informatica-y-desarrollo-de-software"
+        },
+        {
+          "id": 621,
+          "nombre_carrera": "Licenciatura en Marketing",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-marketing",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Marketing",
+                "Análisis empresarial",
+                "Herramientas informáticas",
+                "Economía",
+                "Análisis comunicacional",
+                "Matemática financiera",
+                "Inglés I"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Sociología aplicada",
+                "Estadística aplicada",
+                "Comportamiento del consumidor",
+                "Costos y presupuestos",
+                "Productos y servicios",
+                "Gestión y práctica de ventas",
+                "Inglés II"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Canales de distribución y merchandising",
+                "Comunicación",
+                "Laboratorio y práctica de marketing",
+                "Inglés III",
+                "Investigación de mercados",
+                "Finanzas aplicadas",
+                "Gestión de precios",
+                "Marketing y tecnología"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Derecho comercial",
+                "Estrategias de marketing",
+                "Emprendimientos",
+                "Comercio internacional",
+                "Marketing directo y relacional",
+                "Marketing sectorial",
+                "Marketing vitivinícola",
+                "Práctica profesional supervisada"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-marketing"
+        },
+        {
+          "id": 622,
+          "nombre_carrera": "Lic. en Relaciones Institucionales, Ceremonial y Comunicación Corporativa",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-relaciones-institucionales-ceremonial-y-comunicacion-corporativa",
+          "plan_estudio": [
+            {
+              "anio": "Primer año — Primer cuatrimestre",
+              "materias": [
+                "Ceremonial y protocolo",
+                "Oratoria e imagen personal",
+                "Relaciones públicas e institucionales",
+                "Portugués"
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo cuatrimestre",
+              "materias": [
+                "Diseño, planificación y ejecución de eventos",
+                "Comunicación organizacional",
+                "Inglés I"
+              ]
+            },
+            {
+              "anio": "Segundo año — Primer cuatrimestre",
+              "materias": [
+                "Ceremonial institucional",
+                "Comunicación digital",
+                "Turismo y hotelería",
+                "Inglés II"
+              ]
+            },
+            {
+              "anio": "Segundo año — Segundo cuatrimestre",
+              "materias": [
+                "Organización de eventos empresariales 1",
+                "Marketing y publicidad",
+                "Italiano"
+              ]
+            },
+            {
+              "anio": "Tercer año — Primer cuatrimestre",
+              "materias": [
+                "Ceremonial internacional y Diplomático",
+                "Organización de eventos sociales, culturales y deportivos",
+                "Francés",
+                "Seminario de Práctica Profesional"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Primer cuatrimestre",
+              "materias": [
+                "Economía y finanzas",
+                "Relaciones económicas, políticas e internacionales",
+                "Ética profesional y responsabilidad social"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Segundo cuatrimestre",
+              "materias": [
+                "Derecho aplicado a las organizaciones",
+                "Gestión de proyectos profesionales",
+                "Práctica Profesional Supervisada"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-relaciones-institucionales-ceremonial-y-comunicacion-corporativa"
+        },
+        {
+          "id": 623,
+          "nombre_carrera": "Licenciatura en Telecomunicaciones",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-telecomunicaciones",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Matemática",
+                "Programación I",
+                "Arquitectura de Computadoras I",
+                "Laboratorio I",
+                "Análisis Matemático I",
+                "Programación II",
+                "Arquitectura de Computadoras II",
+                "Laboratorio II"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Análisis Matemático II",
+                "Sistemas de Comunicaciones",
+                "Física",
+                "Laboratorio III",
+                "Estadística",
+                "Laboratorio IV",
+                "Base de Datos",
+                "Electrónica Básica"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Protocolos de Red y Transporte",
+                "Investigación Operativa",
+                "Redes Ópticas",
+                "Redes Inalámbricas",
+                "Telecontrol",
+                "Taller de computadoras",
+                "Telefonía",
+                "Servidores",
+                "Práctica Integradora"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Sistemas Distribuidos",
+                "Simulación",
+                "Seguridad en Redes",
+                "Derecho Informático y Ética Profesional",
+                "Evaluación de Proyectos",
+                "Práctica Profesional"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-telecomunicaciones"
+        },
+        {
+          "id": 624,
+          "nombre_carrera": "Lic. en Turismo y Hotelería",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-turismo-y-hoteleria",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Turismo y Hospitalidad",
+                "Historia de la Cultura Universal",
+                "Administración General",
+                "Geografía Turística Argentina y Regional",
+                "Historia Argentina y Regional",
+                "Operaciones Hoteleras",
+                "Inglés Nivel I"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Información y Circuitos Turísticos",
+                "Sociología Aplicada",
+                "Operación de Restaurantes",
+                "Antropología Aplicada",
+                "Servicios Turísticos",
+                "Organizaciones Protocolares Temporarias",
+                "Inglés Nivel II",
+                "Práctica Profesional I"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Recursos, Macroproductos y Espacios Turísticos",
+                "Psicología Aplicada",
+                "Marketing Turístico",
+                "Inglés Nivel III",
+                "Práctica Profesional II",
+                "Economía",
+                "Gestión de recursos turísticos",
+                "Estadística aplicada",
+                "Derecho civil y comercial",
+                "Administración financiera"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Política y planificación turística",
+                "Investigación de mercados",
+                "Costos y presupuestos",
+                "Administración de recursos humanos",
+                "Gerencia estratégica de hoteles y restaurantes",
+                "Formulación y evaluación de proyectos",
+                "Procesos y gestión de calidad",
+                "Comercialización de servicios",
+                "Trabajo final"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/lic-en-turismo-y-hoteleria"
+        },
+        {
+          "id": 625,
+          "nombre_carrera": "Profesorado Universitario en Lengua y Cultura Inglesa",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/profesorado-universitario-en-lengua-y-cultura-inglesa",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Lengua Inglesa I",
+                "Gramática Inglesa I",
+                "Fonética y Fonología Inglesa I",
+                "Antropología Filosófica y Deontología *",
+                "Psicología del Desarrollo y del Aprendizaje",
+                "Comunicación Lingüística I"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Lengua Inglesa II",
+                "Gramática Inglesa II",
+                "Fonética y Fonología Inglesa II",
+                "Cultura y Literatura Inglesa I",
+                "Sistema Educativo y Currículum",
+                "Problemática Educativa",
+                "Comunicación Lingüística II"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Lengua Inglesa III",
+                "Didáctica de la Lengua Extranjera I",
+                "Comunicación Lingüística III",
+                "Literatura Infantil y del Adolescente *",
+                "Gramática Contrastiva *",
+                "Cultura y Literatura Inglesa II *",
+                "Práctica y Residencia Docente I",
+                "Neuropsicolingüística"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Lengua Inglesa IV",
+                "Tecnología Aplicada a la Docencia",
+                "Didáctica de la Lengua Extranjera II",
+                "Investigación Educativa",
+                "Práctica y Residencia Docente II",
+                "Didáctica del Español como Lengua Extranjera *"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/profesorado-universitario-en-lengua-y-cultura-inglesa"
+        },
+        {
+          "id": 626,
+          "nombre_carrera": "Traductorado Público de Inglés",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Lengua Inglesa I",
+                "Gramática Inglesa I",
+                "Fonética y Fonología Inglesa I",
+                "Comunicación Lingüística I",
+                "Teoría y Práctica de la Traducción I"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Lengua Inglesa II",
+                "Gramática Inglesa II",
+                "Fonética y Fonología Inglesa II",
+                "Cultura y Literatura Inglesa I",
+                "Comunicación Lingüística II",
+                "Teoría y Práctica de la Traducción II",
+                "Elementos del Derecho aplicados a la Traducción Jurídica I",
+                "Lengua Extranjera I"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Lengua Inglesa III",
+                "Comunicación Lingüística III",
+                "Traducción Audiovisual Especializada",
+                "Elementos Del Derecho aplicados a la Traducción Jurídica II",
+                "Gramática Contrastiva",
+                "Traducción Técnico-Científica",
+                "Lengua Extranjera II",
+                "Cultura y Literatura Inglesa II"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Lengua Inglesa IV",
+                "Práctica Profesional y Estrategias de Inserción Laboral",
+                "Traducción Económico-Financiera",
+                "Metodología de la Investigación",
+                "Lengua Extranjera III",
+                "Informática y Traducción de Páginas Web"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-ingles"
+        },
+        {
+          "id": 627,
+          "nombre_carrera": "Traductorado Público de Italiano",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Lengua Italiana I",
+                "Gramática Italiana I",
+                "Fonética y Fonología Italiana I",
+                "Comunicación Lingüística I",
+                "Taller de Introducción a la Vida Universitaria *",
+                "Traductología I *"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Lengua Italiana II",
+                "Gramática Italiana II",
+                "Fonética y Fonología Italiana II",
+                "Cultura y Civilización Italiana I",
+                "Comunicación Lingüística II *",
+                "Traductología II *",
+                "Elementos del Derecho aplicados a la Traducción I *",
+                "Traducción Jurídica I *"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Lengua Italiana III",
+                "Gramática Italiana III",
+                "Comunicación Lingüística III",
+                "Elementos del Derecho aplicados a la Traducción II *",
+                "Cultura y Civilización Italiana II",
+                "Informática y Herramientas de Búsqueda I *",
+                "Traducción Jurídica II *"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Lengua Italiana IV",
+                "Práctica Profesional e Informática Aplicada",
+                "Metodología de la Investigación",
+                "Elementos del Derecho Aplicados a la Traducción III *",
+                "Traducción Jurídica III *"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductorado-publico-de-italiano"
+        },
+        {
+          "id": 628,
+          "nombre_carrera": "Traductor Público de Portugués",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductor-publico-de-portugues",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Lengua Portuguesa I",
+                "Gramática Portuguesa I",
+                "Fonética y Fonología Portuguesa I",
+                "Comunicación Lingüística I",
+                "Taller de Introducción a la Vida Universitaria *",
+                "Traductología I *"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Lengua Portuguesa II",
+                "Gramática Portuguesa II",
+                "Fonética y Fonología Portuguesa II",
+                "Cultura y Civilización Portuguesa I",
+                "Comunicación Lingüística II *",
+                "Traductología II *",
+                "Elementos del Derecho aplicados a la Traducción I *",
+                "Traducción Jurídica I *"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Lengua Portuguesa III",
+                "Gramática Portuguesa III",
+                "Comunicación Lingüística III",
+                "Elementos del Derecho aplicados a la Traducción II *",
+                "Cultura y Civilización Portuguesa II",
+                "Informática y Herramientas de Búsqueda I *",
+                "Traducción Jurídica II *"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Lengua Portuguesa IV",
+                "Práctica Profesional e Informática Aplicada",
+                "Metodología de la Investigación",
+                "Elementos del Derecho Aplicados a la Traducción III *",
+                "Traducción Jurídica III *"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-grado/traductor-publico-de-portugues"
+        },
+        {
+          "id": 629,
+          "nombre_carrera": "Licenciatura en Psicología",
+          "categoria": "Grado / Carrera",
+          "duracion": "5 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-psicologia",
+          "plan_estudio": [
+            {
+              "anio": "Primer año — Primer semestre",
+              "materias": [
+                "Introducción a la Psicología",
+                "Filosofía",
+                "Neurociencia I",
+                "Psicoestadística I"
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo semestre",
+              "materias": [
+                "Historia de la Psicología",
+                "Psicología del Desarrollo I",
+                "Sociología",
+                "Psicoestadística II",
+                "Teoría Psicológica Psicoanalítica I"
+              ]
+            },
+            {
+              "anio": "Segundo año — Anual",
+              "materias": [
+                "Técnicas de Evaluación y Diagnóstico Psicológico I"
+              ]
+            },
+            {
+              "anio": "Segundo año — Primer semestre",
+              "materias": [
+                "Epistemología",
+                "Teoría Psicológica Psicoanalítica II",
+                "Antropología Filosófica y Sociocultural",
+                "Neurociencia II"
+              ]
+            },
+            {
+              "anio": "Segundo año — Segundo semestre",
+              "materias": [
+                "Psicología del Desarrollo II",
+                "Psicología Social",
+                "Psicopatología I"
+              ]
+            },
+            {
+              "anio": "Tercer año — Anual",
+              "materias": [
+                "Técnicas de Evaluación y Diagnóstico Psicológico II"
+              ]
+            },
+            {
+              "anio": "Tercer año — Primer semestre",
+              "materias": [
+                "Psicología de la Personalidad",
+                "Teoría Psicológica Existencial",
+                "Teoría Psicológica Cognitivo-Conductual",
+                "Metodología de la Investigación I"
+              ]
+            },
+            {
+              "anio": "Tercer año — Segundo semestre",
+              "materias": [
+                "Teoría Psicológica Sistémica",
+                "Psicología de Pareja, Familia y Grupo",
+                "Teoría Psicológica Psicoanalítica III",
+                "Psicopatología II"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Anual",
+              "materias": [
+                "Técnicas de Evaluación y Diagnóstico Psicológico III"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Primer semestre",
+              "materias": [
+                "Clínica Psicológica Cognitivo Conductual",
+                "Clínica Psicológica Sistémica",
+                "Clínica Psicológica Existencial"
+              ]
+            },
+            {
+              "anio": "Cuarto año — Segundo semestre",
+              "materias": [
+                "Psicología Educacional",
+                "Metodología de la Investigación II",
+                "Clínica Psicológica Psicoanalítica",
+                "Elementos de Neuropsicofarmacología"
+              ]
+            },
+            {
+              "anio": "Quinto año — Primer semestre",
+              "materias": [
+                "Psicología Organizacional y Laboral",
+                "Psicología Jurídico-Forense",
+                "Orientación Vocacional y Ocupacional",
+                "Psicología Comunitaria"
+              ]
+            },
+            {
+              "anio": "Quinto año — Segundo semestre",
+              "materias": [
+                "Taller de Tesis",
+                "Problemática Socioculturales Contemporáneas",
+                "Práctica en Área Profesional Supervisada I",
+                "Práctica en Área Profesional Supervisada II"
+              ]
+            },
+            {
+              "anio": "Formación general y complementaria",
+              "materias": [
+                "Inglés I",
+                "Inglés II",
+                "Electiva I",
+                "Electiva II"
+              ]
+            },
+            {
+              "anio": "Otros requisitos",
+              "materias": [
+                "Tesis",
+                "T.I.F. (Trabajo Final Integrador)"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-psicologia"
+        },
+        {
+          "id": 630,
+          "nombre_carrera": "Profesorado de Grado Universitario en Psicología para Nivel Secundario y Superior",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/profesorado-de-grado-universitario-en-psicologia-para-nivel-secundario-y-superior",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Introducción a la Psicología",
+                "Filosofía",
+                "Neurociencias I",
+                "Psicoestadística I",
+                "Historia de la Psicología",
+                "Psicología del Desarrollo I",
+                "Psicoestadística II",
+                "Teoría Psicológica Psicoanalítica I",
+                "Sociología"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Técnicas de Evaluación y Diagnóstico Psicológico I",
+                "Epistemología",
+                "Teoría Psicológica Psicoanalítica II",
+                "Antropología Filosófica y Sociocultural",
+                "Neurociencias II",
+                "Psicología del Desarrollo II",
+                "Psicología Social",
+                "Psicopatología I"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Técnicas de Evaluación y Diagnóstico Psicológico II",
+                "Psicología de la Personalidad",
+                "Teoría Psicológica Existencial",
+                "Teoría Psicológica Cognitivo Conductual",
+                "Metodología de la Investigación I",
+                "Teoría Psicológica Sistémica",
+                "Psicología de Pareja, Familia y Grupo",
+                "Teoría Psicológica Psicoanalítica III",
+                "Problemática Contemporánea y Educación",
+                "Sujeto, Aprendizaje y Contexto",
+                "Teoría y Desarrollo Curricular",
+                "Didáctica"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Inglés",
+                "Sistema Educativo",
+                "Institución Educativa",
+                "Pedagogía de la Educación Superior",
+                "Práctica Docente e Investigación Educativa"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/profesorado-de-grado-universitario-en-psicologia-para-nivel-secundario-y-superior"
+        },
+        {
+          "id": 631,
+          "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Práctica de Integración I",
+                "Protección de Derechos y Políticas Sociales",
+                "Antropología Social y Cultural",
+                "Derecho de Niñez, Adolescencia y Familia",
+                "Introducción a la Niñez, Adolescencia y Familia",
+                "Psicología General",
+                "Sociología",
+                "Problemática de las Adicciones",
+                "Problemáticas Psico-Sociales"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Modificación de la Conducta y Estrategias de Intervención",
+                "Práctica de Integración II",
+                "Derecho Penal: Jóvenes en Conflicto con la Ley",
+                "Introducción al Sistema Familiar",
+                "Procesos Educativos",
+                "Psicología de la Personalidad",
+                "Psicología del Desarrollo",
+                "Metodología de la Investigación Científica",
+                "Procesos de Mediación",
+                "Recreación y Dinámica de Grupos",
+                "Técnicas de Intervención Social"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Residencia y Práctica en Servicio",
+                "Animación Sociocultural",
+                "Comunidad",
+                "Criminología Juvenil",
+                "Derecho Constitucional en Niñez, Adolescencia y Familia",
+                "Educación No Formal",
+                "Informática",
+                "Planificación y Evaluación de Proyectos",
+                "Sistemas Familiares Complejos",
+                "Mediación Familiar",
+                "Psicopatología",
+                "Victimología y Estrategias de Prevención"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Metodología de la Investigación Social",
+                "Práctica Profesional",
+                "Problemática de la Adolescencia Contemporánea",
+                "Tesina",
+                "Comunicación Social",
+                "Desarrollo Organizacional",
+                "Informática",
+                "Deprivación Sociocultural",
+                "Inglés",
+                "Procesos de Mediación Comunitaria"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia"
+        },
+        {
+          "id": 632,
+          "nombre_carrera": "Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Antropología de la Sociedad Contemporanea",
+                "Derecho en Niñez, Adolescencia y Familia",
+                "Introducción a la Niñez, Adolescencia y Familia",
+                "Psicología General",
+                "Sociología General",
+                "Coordinación de Grupos",
+                "Educación y Desarrollo Humano",
+                "Estudios de las Infancias",
+                "Políticas Sociales"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Intervención Comunitaria en Niñez Adolescencia y Familia",
+                "Psicología del Desarrollo",
+                "Estudios de las adolescencias y las juventudes",
+                "Pedagogía Social",
+                "Problemática del género y la diversidad",
+                "Sistema de responsabilidad Penal Juvenil",
+                "Consumos Problemáticos",
+                "Restitución y Protección de Derechos"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Prácticas Preprofesionales",
+                "Procesos de Mediación",
+                "Sistemas Familiares",
+                "Metodología de la Investigación I",
+                "Planificación y Evaluación de Proyectos Sociales",
+                "Salud mental infanto juvenil",
+                "Aprendizaje socio -cognitivo",
+                "Electiva I: Aproximaciones en Discapacidad, Intervención e Inclusión",
+                "Electiva I: Mediación Familiar",
+                "Electiva I: Violencia de género, nuevas masculinidades"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Práctica Profesional Supervisada",
+                "Trabajo Integrador Final",
+                "Análisis Institucional",
+                "Criminología General",
+                "Electiva II: Victimología",
+                "Metodolgía de la Investigación II",
+                "Promoción y prevención de salud",
+                "Bioética de la Intervención",
+                "Electiva II: Inglés",
+                "Electiva II: Tecnologías de la Información y de la Comunicación",
+                "Gerenciamiento de Proyectos Sociales",
+                "Taller de Trabajo Integrador Final"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-ninez-adolescencia-y-familia-a-distancia"
+        },
+        {
+          "id": 633,
+          "nombre_carrera": "Licenciatura en Criminalística",
+          "categoria": "Grado / Carrera",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Introducción a la Criminalística",
+                "Registro de Imágenes Periciales",
+                "Técnicas de Identidad Humana",
+                "Dibujo Pericial",
+                "Derecho Constitucional",
+                "Investigación de le Escena del Crimen",
+                "Química Forense I",
+                "Falsificaciones y Adulteraciones Documentales",
+                "Comunicacion Oral y Escrita",
+                "Taller Investigación de la Escena del Crimen"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Balística Forense",
+                "Investigación de Accidentes y Siniestros Viales",
+                "Tecnología Criminalística",
+                "Química Forense II",
+                "Derecho Civil y Penal",
+                "Derechos Humanos",
+                "Matemática Aplicada",
+                "Física Forense",
+                "Taller de Investigación de Laboratorios y Gabinetes"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Análisis de Manuscritos",
+                "Estudio Físico y Matemático del Siniestro Vial",
+                "Toxicología Forense",
+                "Derecho Procesal",
+                "Lógica y Comunicación Pericial",
+                "Tecnología Aplicada",
+                "Aspectos Legales del Peritaje",
+                "Legislación Vial",
+                "Taller: Investigación de Siniestros Viales",
+                "Trabajo Final Integrador en Siniestrología Vial: El alumno culmina su formación en documentología y en accidentología y siniestrología vial. Adquiere los conocimientos y competencias para realizar una meta-pericia o un meta-análisis de las actuaciones jurídico-policiales que se llevan a cabo en la investigación y reconstrucción del siniestro vial."
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Investigación Criminal",
+                "Metodología de la Investigación Científica y Estadística Aplicada",
+                "Medicina Legal",
+                "Psicología Forense",
+                "Deontología Profesional",
+                "Criminología",
+                "Psicopatología Forense",
+                "Práctica Profesional",
+                "Trabajo Integrador Final"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-grado/licenciatura-en-criminalistica"
+        },
+        {
+          "id": 634,
+          "nombre_carrera": "Técnico en Telecomunicaciones",
+          "categoria": "Pregrado",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-en-telecomunicaciones",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Matemática",
+                "Programación I",
+                "Arquitectura de Computadoras I",
+                "Laboratorio I",
+                "Análisis Matemático I",
+                "Programación II",
+                "Arquitectura de Computadoras II",
+                "Laboratorio II"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Análisis Matemático II",
+                "Sistemas de Comunicaciones",
+                "Física",
+                "Laboratorio III",
+                "Estadística",
+                "Laboratorio IV",
+                "Base de Datos",
+                "Electrónica Básica"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Protocolos de Red y Transporte",
+                "Investigación Operativa",
+                "Redes Ópticas",
+                "Redes Inalámbricas",
+                "Telecontrol",
+                "Taller de computadoras",
+                "Telefonía",
+                "Servidores",
+                "Práctica Integradora"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-en-telecomunicaciones"
+        },
+        {
+          "id": 635,
+          "nombre_carrera": "Técnico Universitario en Diseño Gráfico y Publicidad",
+          "categoria": "Pregrado",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-diseno-grafico-y-publicidad",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Brief & Insight",
+                "Diseño Gráfico",
+                "Fotografía",
+                "Herramientas Digitales",
+                "Electiva 1 (a elección de la institución)",
+                "Concepto y Redacción Publicitaria",
+                "Taller Creativo",
+                "Estrategias de Medios",
+                "Electiva 2 (a elección de la institución)",
+                "Optativa 1 (a elección del estudiante)"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Planning Estratégico",
+                "Diagramación y Tipografía",
+                "Sistemas de Impresión y Tecnología",
+                "Redacción Publicitaria",
+                "Trabajo Inicial de Campo",
+                "Creatividad e Innovación",
+                "Medios Digitales",
+                "Electiva 3 (a elección de la institución)",
+                "Optativa 2 (a elección del estudiante)",
+                "Trabajo Avanzado de Campo"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-diseno-grafico-y-publicidad"
+        },
+        {
+          "id": 636,
+          "nombre_carrera": "Técnico/a Universitario/a en Ceremonial y Organización de Eventos",
+          "categoria": "Pregrado",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos",
+          "plan_estudio": [
+            {
+              "anio": "Primer año — Primer cuatrimestre",
+              "materias": [
+                "Ceremonial y protocolo",
+                "Oratoria e imagen personal",
+                "Relaciones públicas e institucionales",
+                "Portugués"
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo cuatrimestre",
+              "materias": [
+                "Diseño, planificación y ejecución de eventos",
+                "Comunicación organizacional",
+                "Inglés I"
+              ]
+            },
+            {
+              "anio": "Segundo año — Primer cuatrimestre",
+              "materias": [
+                "Ceremonial institucional",
+                "Comunicación digital",
+                "Turismo y hotelería",
+                "Inglés II"
+              ]
+            },
+            {
+              "anio": "Segundo año — Segundo cuatrimestre",
+              "materias": [
+                "Organización de eventos empresariales",
+                "Marketing y publicidad",
+                "Italiano"
+              ]
+            },
+            {
+              "anio": "Tercer año — Primer cuatrimestre",
+              "materias": [
+                "Ceremonial internacional y diplomático",
+                "Organización de eventos sociales, culturales y deportivos",
+                "Francés",
+                "Seminario de práctica profesional Título Intermedio: Técnico/a Universitario/a en Ceremonial y Organización de Eventos"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-a-universitario-a-en-ceremonial-y-organizacion-de-eventos"
+        },
+        {
+          "id": 637,
+          "nombre_carrera": "Técnico Universitario en Desarrollo de Software",
+          "categoria": "Pregrado",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-desarrollo-de-software",
+          "plan_estudio": [
+            {
+              "anio": "Primer año — Primer cuatrimestre",
+              "materias": [
+                "Matemática",
+                "Programación I",
+                "Arquitectura de Computadoras I",
+                "Laboratorio I"
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo cuatrimestre",
+              "materias": [
+                "Análisis Matemático I",
+                "Programación II",
+                "Arquitectura de Computadoras II",
+                "Laboratorio II"
+              ]
+            },
+            {
+              "anio": "Segundo año — Primer cuatrimestre",
+              "materias": [
+                "Análisis Matemático II",
+                "Sistemas de Comunicaciones",
+                "Diseño I",
+                "Laboratorio III"
+              ]
+            },
+            {
+              "anio": "Segundo año — Segundo cuatrimestre",
+              "materias": [
+                "Estadística",
+                "Laboratorio IV",
+                "Base de datos",
+                "Diseño II"
+              ]
+            },
+            {
+              "anio": "Tercer año — Primer cuatrimestre",
+              "materias": [
+                "Programación Avanzada",
+                "Investigación Operativa",
+                "Autómatas y Lenguajes",
+                "Sistemas Inteligentes"
+              ]
+            },
+            {
+              "anio": "Tercer año — Segundo cuatrimestre",
+              "materias": [
+                "Compiladores",
+                "Seguridad",
+                "Ingeniería del conocimiento",
+                "Comercialización de Servicios",
+                "Practica integradora"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-desarrollo-de-software"
+        },
+        {
+          "id": 638,
+          "nombre_carrera": "Técnico Universitario en Marketing y Ventas",
+          "categoria": "Pregrado",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-marketing-y-ventas",
+          "plan_estudio": [
+            {
+              "anio": "Primer año — Primer cuatrimestre",
+              "materias": [
+                "Marketing",
+                "Análisis empresarial",
+                "Herramientas informáticas"
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo cuatrimestre",
+              "materias": [
+                "Economía",
+                "Análisis comunicacional",
+                "Matemática financiera"
+              ]
+            },
+            {
+              "anio": "Segundo año — Primer cuatrimestre",
+              "materias": [
+                "Sociología aplicada",
+                "Estadística aplicada",
+                "Comportamiento del consumidor"
+              ]
+            },
+            {
+              "anio": "Segundo año — Segundo cuatrimestre",
+              "materias": [
+                "Costos y presupuestos",
+                "Productos y servicios",
+                "Gestión y práctica de ventas"
+              ]
+            },
+            {
+              "anio": "Segundo año — Anual",
+              "materias": [
+                "Inglés II"
+              ]
+            },
+            {
+              "anio": "Tercer año — Primer cuatrimestre",
+              "materias": [
+                "Canales de distribución y merchandising",
+                "Comunicación",
+                "Laboratorio y práctica de marketing",
+                "Inglés III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnico-universitario-en-marketing-y-ventas"
+        },
+        {
+          "id": 639,
+          "nombre_carrera": "Tecnicatura Universitaria en Turismo y Hotelería",
+          "categoria": "Pregrado",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnicatura-universitaria-en-turismo-y-hoteleria",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Turismo y Hospitalidad",
+                "Historia de la Cultura Universal",
+                "Administración General",
+                "Geografía Turística Argentina y Regional",
+                "Historia Argentina y Regional",
+                "Operaciones Hoteleras ANUAL",
+                "Inglés Nivel I"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Información y Circuitos Turísticos",
+                "Sociología Aplicada",
+                "Operación de Restaurantes",
+                "Antropología Aplicada",
+                "Servicios Turísticos",
+                "Organizaciones Protocolares Temporarias",
+                "Inglés Nivel II",
+                "Práctica Profesional I"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Recursos, Macroproductos y Espacios Turísticos",
+                "Psicología Aplicada",
+                "Marketing Turístico",
+                "Inglés Nivel III",
+                "Práctica Profesional II"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-pregrado/tecnicatura-universitaria-en-turismo-y-hoteleria"
+        },
+        {
+          "id": 640,
+          "nombre_carrera": "Sommelier Universitario",
+          "categoria": "Pregrado",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-pregrado/sommelier-universitario",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Evaluación Sensorial I",
+                "Elementos de Viticultura y Enología I",
+                "Historia Económica y Geografía Vitivinícola I",
+                "Servicio y Gestión I",
+                "Evaluación Sensorial II",
+                "Elementos de Viticultura y Enología II",
+                "Historia Económica y Geografía Vitivinícola II",
+                "Servicio y Gestión II",
+                "Inglés I"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Evaluación Sensorial III",
+                "Historia Económica y Geografía Vitivinícola III",
+                "Bebidas Especiales y Productos I",
+                "Gestión de Negocios I",
+                "Evaluación Sensorial IV",
+                "Historia Económica y Geografía Vitivinícola IV",
+                "Bebidas Especiales y Productos II",
+                "Gestión de Negocios II",
+                "Inglés II",
+                "Prácticas de Procesos",
+                "Prácticas de Servicio",
+                "Trabajo Final Integral"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/carreras-de-pregrado/sommelier-universitario"
+        },
+        {
+          "id": 641,
+          "nombre_carrera": "Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia",
+          "categoria": "Pregrado",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Introducción a la Niñez, Adolescencia y Familia",
+                "Psicología General",
+                "Sociología General",
+                "Antropología de la Sociedad",
+                "Derecho en Niñez, Adolescencia y Familia",
+                "Políticas Sociales",
+                "Estudios de las Infancias",
+                "Educación y Desarrollo Humano",
+                "Coordinación de Grupos"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Sistema de responsabilidad Penal Juveni",
+                "Psicología del Desarrollo",
+                "Pedagogía Social",
+                "Estudios de las adolescencias y las juventudes",
+                "Problemática del género y la diversidad",
+                "Restitución y Protección de Derecho",
+                "Consumos Problemáticos",
+                "Intervención Comunitaria en Niñez Adolescencia y Familia"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Salud mental infanto juvenil",
+                "Sistemas Familiares",
+                "Planificación y Evaluación de Propyectos Sociales",
+                "Metodología de la Investigación I",
+                "Aprendizaje socio -cognitivo",
+                "Procesos de Mediación",
+                "Electiva I",
+                "Prácticas Preprofesionales"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tec-en-ninez-adolescencia-y-familia-a-distancia"
+        },
+        {
+          "id": 642,
+          "nombre_carrera": "Tecnicatura universitaria en Accidentología Vial",
+          "categoria": "Pregrado",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-accidentologia-vial",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Introducción a la Criminalística",
+                "Registro de Imágenes Periciales",
+                "Dibujo Pericial",
+                "Derecho Constitucional",
+                "Investigación de le Escena del Crimen",
+                "Química Forense I",
+                "Comunicacion Oral y Escrita",
+                "Taller Investigación de la Escena del Crimen"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Investigación de Accidentes y Siniestros Viales",
+                "Química Forense II",
+                "Derecho Civil y Penal",
+                "Derechos Humanos",
+                "Matemática Aplicada",
+                "Física Forense",
+                "Taller de Investigación de Laboratorios y Gabinetes"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Estudio Físico y Matemático del Siniestro Vial",
+                "Derecho Procesal",
+                "Lógica y Comunicación Pericial",
+                "Tecnología Aplicada",
+                "Aspectos Legales del Peritaje",
+                "Legislación Vial",
+                "Taller Investigación de Siniestros Viales",
+                "Trabajo Final Integrador en Siniestrología Vial"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-accidentologia-vial"
+        },
+        {
+          "id": 643,
+          "nombre_carrera": "Tecnicatura universitaria en Seguridad Ciudadana - Modalidad a Distancia",
+          "categoria": "Pregrado",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Manejo de plataforma Moodle y recursos tecnológicos",
+                "Comprensión de textos, escritura y diálogos en Seguridad",
+                "Técnicas de Comunicación y Mediación",
+                "Problemática Contemporánea y Seguridad",
+                "Antropología Sociocultural",
+                "Informática Aplicada",
+                "Introducción a la Seguridad",
+                "Organizaciones de la Seguridad",
+                "Introducción a la Criminalística",
+                "Estadísticas Criminológicas Básicas",
+                "Atención Básica en la Salud",
+                "Taller de Casos y Proyectos I"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Derecho Constitucional",
+                "Derecho Penal y Procesal",
+                "Derecho de Niñez, Adolescencia y Familia",
+                "Derecho Contravencional",
+                "Derecho Administrativo",
+                "Técnicas de Abordaje en Seguridad Ciudadana",
+                "Legislación especial en el uso de armas",
+                "Investigaciones de Conductas Delictivas",
+                "Deontología Profesional",
+                "Conducción de Organizaciones de Seguridad",
+                "Taller de Casos y Proyectos II",
+                "Trabajo Integrador Final"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-seguridad-ciudadana"
+        },
+        {
+          "id": 644,
+          "nombre_carrera": "Licenciatura en Inglés",
+          "categoria": "Grado / Carrera",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/ciclos-de-complementacion-curricular/licenciatura-en-ingles",
+          "plan_estudio": [
+            {
+              "anio": "Año y medio",
+              "materias": [
+                "Comprensión y Producción de Textos en Lengua Inglesa I",
+                "Taller TICs",
+                "Sociolingüística y Pragmática",
+                "Investigación Educativa",
+                "Problemática Educativa de Nivel Superior",
+                "Comprensión y Producción de Textos en Lengua Inglesa II",
+                "Lingüística Sistémica Funcional (con oración didáctica)",
+                "Taller de Reflexión sobre la Práctica Docente",
+                "Currículum y Diseño de materiales (ESP)",
+                "Seminario de Tesina"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-esle-2025/ciclos-de-complementacion-curricular/licenciatura-en-ingles"
+        },
+        {
+          "id": 645,
+          "nombre_carrera": "Profesorado de Grado Universitario",
+          "categoria": "Grado / Carrera",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Problemática Contemporánea y Educación",
+                "Sujeto, Aprendizaje y Contexto",
+                "Teoría y Desarrollo Curricular",
+                "Didáctica"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Sistema Educativo",
+                "Institución Educativa",
+                "Pedagogía de la Educación Superior",
+                "Práctica Docente e Investigación Educativa"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/profesorado-de-grado-universitario"
+        },
+        {
+          "id": 646,
+          "nombre_carrera": "Licenciatura en Seguridad Ciudadana",
+          "categoria": "Grado / Carrera",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Manejo de la plataforma Moodle",
+                "Introducción a la Seguridad Integral",
+                "Historia de la seguridad",
+                "Producción y análisis de textos específicos",
+                "Derechos Humanos y seguridad",
+                "Organizaciones policiales",
+                "Análisis prospectivo",
+                "Gestión de la organización y del capital humano",
+                "Planificación estratégica",
+                "Estadística aplicada y presupuestos en seguridad",
+                "Deontología profesional",
+                "Técnicas alternativas en resolución de conflictos",
+                "Psicología aplicada a la Seguridad"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Seguridad ciudadana",
+                "Seguridad privada",
+                "Seguridad ambiental y rural",
+                "Seguridad Vial",
+                "Seguridad turística",
+                "Seguridad y ciberespacio",
+                "Criminología",
+                "Política criminal",
+                "Investigación Criminal",
+                "Crimen organizado",
+                "Prevención de conductas antisociales y delictivas",
+                "Taller del Proyecto Integrador Final - PIF"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana"
+        },
+        {
+          "id": 647,
+          "nombre_carrera": "Licenciatura en Seguridad Ciudadana Integral - Modalidad a distancia",
+          "categoria": "Grado / Carrera",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Manejo de la plataforma Moodle",
+                "Introducción a la Seguridad Integral",
+                "Historia de la seguridad",
+                "Producción y análisis de textos específicos",
+                "Derechos Humanos y seguridad",
+                "Organizaciones policiales",
+                "Análisis prospectivo",
+                "Gestión de la organización y del capital humano",
+                "Planificación estratégica",
+                "Estadística aplicada y presupuestos en seguridad",
+                "Deontología profesional",
+                "Técnicas alternativas en resolución de conflictos",
+                "Psicología aplicada a la Seguridad"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Seguridad ciudadana",
+                "Seguridad privada",
+                "Seguridad ambiental y rural",
+                "Seguridad Vial",
+                "Seguridad turística",
+                "Seguridad y ciberespacio",
+                "Criminología",
+                "Política criminal",
+                "Investigación Criminal",
+                "Crimen organizado",
+                "Prevención de conductas antisociales y delictivas",
+                "Taller del Proyecto Integrador Final - PIF"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/ciclos-de-complementacion-curricular/licenciatura-en-seguridad-ciudadana-distancia"
+        },
+        {
+          "id": 648,
+          "nombre_carrera": "Licenciatura en Administración Gastronómica",
+          "categoria": "Grado / Carrera",
+          "duracion": "18 meses",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-gastronomica",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Economía",
+                "Administración de Operaciones en Hoteles y Restaurantes",
+                "Estadística Aplicada",
+                "Elementos de Derecho Civil y Comercial",
+                "Administración Financiera",
+                "Arquitectura y Diseño en Hotelería y Gastronomía",
+                "Investigación de Mercados",
+                "Costos y Presupuestos",
+                "Administración de Recursos Humanos"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Formulación y Evaluación de Proyectos",
+                "Procesos y Gestión de Calidad",
+                "Comercialización de Servicios",
+                "Tesina"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-gastronomica"
+        },
+        {
+          "id": 649,
+          "nombre_carrera": "Licenciatura en Administración Hotelera",
+          "categoria": "Grado / Carrera",
+          "duracion": "18 meses",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-hotelera",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Economía",
+                "Administración de Operaciones en Hoteles y Restaurantes",
+                "Estadística Aplicada",
+                "Elementos de Derecho Civil y Comercial",
+                "Administración Financiera",
+                "Arquitectura y Diseño en Hotelería y Gastronomía",
+                "Investigación de Mercados",
+                "Costos y Presupuestos",
+                "Administración de Recursos Humanos"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Formulación y Evaluación de Proyectos",
+                "Procesos y Gestión de Calidad",
+                "Comercialización de Servicios",
+                "Tesina"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-administracion-hotelera"
+        },
+        {
+          "id": 650,
+          "nombre_carrera": "Licenciatura en Dirección Creativa de Diseño y Publicidad",
+          "categoria": "Grado / Carrera",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-direccion-creativa-de-diseno-y-publicidad",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Curso introductorio (módulo propedéutico)",
+                "Pensamiento creativo",
+                "Experiencia de usuario",
+                "Relaciones públicas",
+                "Diseño y proceso proyectual",
+                "Producción y dirección audiovisual",
+                "Packaging",
+                "Diseño de interfaz y web",
+                "Planificación de campañas digitales"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Gestión de la empresa creativa",
+                "Dirección creativa",
+                "Storytelling",
+                "Animación 2D y 3D",
+                "Creatividad tecnológica",
+                "Herramientas de pensamiento estratégico"
+              ]
+            },
+            {
+              "anio": "Segundo año — Anual",
+              "materias": [
+                "Trabajo final: Portfolio"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-direccion-creativa-de-diseno-y-publicidad"
+        },
+        {
+          "id": 651,
+          "nombre_carrera": "Licenciatura en Turismo",
+          "categoria": "Grado / Carrera",
+          "duracion": "18 meses",
+          "modalidad": "Presencial",
+          "facultad": "UDA",
+          "link_oficial": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-turismo",
+          "plan_estudio": [
+            {
+              "anio": "Primer año — Primer cuatrimestre",
+              "materias": [
+                "Economía",
+                "Gestión de Recursos Turísticos",
+                "Estadística Aplicada",
+                "Elementos de Derecho Civil y Comercial",
+                "Administración Financiera"
+              ]
+            },
+            {
+              "anio": "Primer año — Segundo cuatrimestre",
+              "materias": [
+                "Política y Planeamiento Turístico",
+                "Investigación de Mercados",
+                "Costos y Presupuestos",
+                "Administración de Recursos Humanos"
+              ]
+            },
+            {
+              "anio": "Segundo año — Primer cuatrimestre",
+              "materias": [
+                "Formulación y Evaluación de Proyectos",
+                "Procesos y Gestión de Calidad",
+                "Comercialización de Servicios",
+                "Tesina"
+              ]
+            }
+          ],
+          "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-turismo"
+        }
+      ],
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "5201620",
+        "email": "informes@uda.edu.ar",
+        "direccion": "Catamarca 147, Ciudad"
+      }
     }
-   ],
-   "departamento": "Capital"
-  }
- ]
+  ]
 }

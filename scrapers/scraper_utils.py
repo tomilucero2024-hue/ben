@@ -307,6 +307,161 @@ def extraer_duracion(texto, ventana=140):
     return None
 
 
+# ---------------------------------------------------------------------------
+# Plan de estudios (webs "Escuela Suite" de los IES del INFd)
+# ---------------------------------------------------------------------------
+#
+# Los IES de la plataforma *-infd.mendoza.edu.ar publican la currícula con el
+# mismo esqueleto —un título "Plan de estudios", un subtítulo por año y las
+# materias debajo— pero cada carrera lo maqueta distinto: los años vienen en
+# <h3>, en <p> o con la carga horaria pegada ("Primer Año – 870 hs cátedra");
+# las materias, en <ul>, en <ol> o dentro de un único <p> con <br>. Por eso el
+# extractor no se ata a una etiqueta: camina lo que sigue al título, reconoce
+# los años por el texto y levanta las materias de los tres formatos.
+
+RE_ANIO_PLAN = re.compile(
+    r"^(primer|segundo|tercer|cuarto|quinto|sexto|\d{1,2})\s*(?:er|do|to|mo|ro|[.°º])*\s*a[ñn]o\b",
+    re.I,
+)
+_MAPA_ANIO_PLAN = {"primer": "1", "segundo": "2", "tercer": "3",
+                   "cuarto": "4", "quinto": "5", "sexto": "6"}
+_RE_NUMERO_MATERIA = re.compile(r"^\s*\d{1,3}\s*[\.\-)]\s*")
+_RE_FIN_DE_PLAN = re.compile(
+    r"(?i)plan\s+d?e?\s*\d{4}.*resoluci|resoluci[oó]n\s+aprobatoria|^\s*enlace\s+de\s+descarga"
+)
+
+
+def lineas_por_br(raiz):
+    """Parte un nodo en líneas: cada <br> (aunque esté anidado) corta una materia."""
+    lineas = [""]
+
+    def recorrer(nodo):
+        for hijo in nodo.children:
+            nombre = getattr(hijo, "name", None)
+            if nombre == "br":
+                lineas.append("")
+            elif nombre:
+                recorrer(hijo)
+            else:
+                lineas[-1] += str(hijo)
+
+    recorrer(raiz)
+    return [re.sub(r"\s+", " ", linea).strip() for linea in lineas if linea.strip()]
+
+
+def _limpiar_materia(texto):
+    """Saca el número de orden ("01.", "31-") con el que la web lista cada materia."""
+    texto = re.sub(r"\s+", " ", texto.replace("\xa0", " ")).strip(" .-–|")
+    return _RE_NUMERO_MATERIA.sub("", texto).strip()
+
+
+def _materias_de(elemento):
+    if elemento.name in ("ul", "ol"):
+        lineas = []
+        for item in elemento.find_all("li", recursive=False):
+            lineas.extend(lineas_por_br(item))
+    elif elemento.name == "p":
+        lineas = lineas_por_br(elemento)
+    else:
+        return []
+    return [m for m in (_limpiar_materia(linea) for linea in lineas) if m]
+
+
+def _numero_de_anio_plan(texto):
+    """1, 2… o "Primer" -> número de año, o None."""
+    coincidencia = RE_ANIO_PLAN.match(texto)
+    if not coincidencia:
+        return None
+    bruto = coincidencia.group(1).lower()
+    return bruto if bruto.isdigit() else _MAPA_ANIO_PLAN.get(bruto)
+
+
+def extraer_plan_anual(sopa):
+    """Plan de estudios de las webs del INFd: años sueltos y materias debajo.
+
+    Devuelve [{"anio": "1º año", "materias": [...]}, ...] o None si no encuentra
+    el título del plan. No inventa: sin título no hay plan.
+    """
+    inicio = None
+    for elemento in sopa.find_all(["h1", "h2", "h3", "h4", "h5", "p", "strong", "b"]):
+        if elemento.find_parent("nav"):
+            continue
+        clases = " ".join(elemento.get("class") or []).lower()
+        if "menu" in clases or "nav" in clases:
+            continue
+        if re.fullmatch(r"plan de estudios?\.?", elemento.get_text(" ", strip=True), re.I):
+            inicio = elemento
+            break
+    if inicio is None:
+        return None
+
+    plan = []
+    actual = None
+    for elemento in inicio.find_all_next(["h1", "h2", "h3", "h4", "h5", "h6", "p", "ul", "ol"]):
+        texto = re.sub(r"\s+", " ", elemento.get_text(" ", strip=True))
+        if not texto:
+            continue
+        numero = _numero_de_anio_plan(texto)
+        if numero:
+            actual = {"anio": numero + "º año", "materias": []}
+            plan.append(actual)
+            continue
+        if _RE_FIN_DE_PLAN.search(texto):
+            if actual is not None:
+                break
+            continue
+        if elemento.name in ("h1", "h2", "h3", "h4", "h5", "h6"):
+            if actual is not None:
+                break
+            continue
+        if elemento.name in ("ul", "ol", "p") and actual is not None:
+            for materia in _materias_de(elemento):
+                if not RE_ANIO_PLAN.match(materia):
+                    actual["materias"].append(materia)
+
+    return [tramo for tramo in plan if tramo["materias"]] or None
+
+
+def extraer_plan_en_bloque(sopa):
+    """Plan escrito dentro de un único bloque, separado por <br>.
+
+    Otra maqueta del INFd: la currícula entera va en una misma celda/div, con
+    los años en negrita y las materias cortadas por <br> ("PLAN DE ESTUDIO / PRIMER
+    AÑO: / materia / materia / SEGUNDO AÑO: …"). Acá se busca el bloque que más
+    años reconozca y se parsea renglón por renglón.
+    """
+    mejor = None
+    mejor_anios = 0
+    for contenedor in sopa.find_all(["td", "section", "article", "div", "p"]):
+        if contenedor.find(["td", "section", "article", "div"]):
+            continue
+        if not re.search(r"plan de estudios?", contenedor.get_text(" ", strip=True), re.I):
+            continue
+        lineas = lineas_por_br(contenedor)
+        anios = sum(1 for linea in lineas if _numero_de_anio_plan(linea))
+        if anios > mejor_anios:
+            mejor_anios = anios
+            mejor = lineas
+    if mejor is None or mejor_anios < 1:
+        return None
+
+    plan = []
+    actual = None
+    for linea in mejor:
+        numero = _numero_de_anio_plan(linea)
+        if numero:
+            actual = {"anio": numero + "º año", "materias": []}
+            plan.append(actual)
+            continue
+        if re.fullmatch(r"plan de estudios?:?", linea, re.I):
+            continue
+        if actual is not None:
+            materia = _limpiar_materia(linea)
+            if materia:
+                actual["materias"].append(materia)
+    return [tramo for tramo in plan if tramo["materias"]] or None
+
+
 def duracion_por_plan(texto):
     """Deduce la duración contando los años del plan de estudios.
 

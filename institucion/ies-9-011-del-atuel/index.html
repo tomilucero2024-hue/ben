@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"IES 9-011 Del Atuel","item":"https://buscadoreducativo.com.ar/institucion/ies-9-011-del-atuel/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"IES 9-011 Del Atuel","url":"https://buscadoreducativo.com.ar/institucion/ies-9-011-del-atuel/","email":"ies9011@infd.edu.ar","telephone":"0260-4422794","address":{"@type":"PostalAddress","streetAddress":"Maza 750, San Rafael, Mendoza","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -67,12 +67,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -92,8 +121,6 @@
         <dt>Teléfono</dt><dd>0260-4422794</dd>
         <dt>Email</dt><dd>ies9011@infd.edu.ar</dd>
     </dl>
-
-    <a class="cta" href="/?institucion=IES%209-011%20Del%20Atuel">Ver esta institución en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
 
@@ -102,7 +129,28 @@
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-secundaria-en-biologia/">Profesorado de Educacion Secundaria en Biologia</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Grado / Profesorado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Biología General</li><li>Química General</li><li>Matemática</li><li>Bioestadística</li><li>Sujeto de la Educación</li><li>Pedagogía</li><li>Comprensión y Producción de Textos Académicos</li><li>Formación Práctica Profesional I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Química Orgánica</li><li>Química Inorgánica</li><li>Física General</li><li>Ciencias de la tierra</li><li>Ecología – Taller/Seminario</li><li>Didáctica de las Ciencias Naturales</li><li>Didáctica General</li><li>Pensamiento Filosófico</li><li>Sistema Educativo</li><li>Formación Práctica Profesional II – Práctica/Taller</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Didáctica de la Biología</li><li>Biología Vegetal</li><li>Biología Animal</li><li>Microbiología y Biodiversidad</li><li>Biología Humana</li><li>Salud Humana</li><li>Educación en la Diversidad</li><li>Gestión y Evaluación de los Aprendizajes – Taller/Ateneo</li><li>Psicología Educacional</li><li>Formación Práctica Profesional III – Práctica/Trabajo de Campo</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Química Biológica</li><li>Genética</li><li>Educación Ambiental</li><li>Formación Complementaria Específica</li><li>UDJ_Historia y Patrimonio Cultural de Mendoza</li><li>Educación y Tecnologías Digitales</li><li>Educación Sexual Integral – Práctica/Trabajo de Campo</li><li>Formación Práctica Profesional IV</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-biologia/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-biologia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
@@ -114,25 +162,109 @@
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-secundaria-en-historia/">Profesorado de Educacion Secundaria en Historia</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Grado / Profesorado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Introducción a la Historia y a la Geografía</li><li>Ciencias Políticas y Economía</li><li>Historia Universal I</li><li>Procesos Demográficos en el Tiempo y en Espacio Asignatura</li><li>Pedagogía</li><li>Comprensión y Producción de Textos Académicos Taller</li><li>Formación Práctica Profesional I Práctica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Sujeto de la Educación</li><li>Epistemología de las Ciencias Sociales</li><li>Historia Argentina I</li><li>Historia Argentina II</li><li>Historia Americana I</li><li>Historia Universal II</li><li>Didáctica General</li><li>Pensamiento Filosófico</li><li>Sistema Educativo</li><li>Formación Práctica profesional II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Didáctica de la Historia</li><li>Formación Ética y Ciudadana y su Didáctica</li><li>Historia y Geografía de Mendoza I</li><li>Historia y Geografía de Mendoza II</li><li>Historia Argentina III</li><li>Historia Americana II</li><li>Historia Universal III (siglo XV – siglo XVIII)</li><li>Educación en la diversidad</li><li>Gestión y Evaluación de los Aprendizajes</li><li>Psicología educacional</li><li>Formación Práctica Profesional II – Trabajo de campo</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Historia del arte argentino</li><li>Investigación histórica</li><li>Arqueología</li><li>Formación Complementaria Específica</li><li>Historia Americana III (1960 a la actualidad)</li><li>Historia Universal IV</li><li>Proyecto de Intervención Socioeducativa</li><li>Formación Complementaria General</li><li>Educación y Tecnologías Digitales</li><li>Educación Sexual Integra</li><li>Formación Práctica Profesional IV – Trabajo de campo</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-en-ingles/">Profesorado en Ingles</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Grado / Profesorado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Lengua Inglesa</li><li>Gramática Inglesa</li><li>Fonética y Fonología Inglesa</li><li>Prácticas de Lengua Inglesa</li><li>Comprensión y Producción de Textos Académicos</li><li>Práctica Profesional Docente I</li><li>Pensamiento Filosófico</li><li>Sistema Educativo</li><li>Pedagogía</li><li>Prácticas de Gramática Inglesa</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Lengua Inglesa</li><li>Gramática Inglesa</li><li>Fonética y Fonología Inglesa</li><li>Didáctica del Inglés I</li><li>Práctica Profesional Docente II</li><li>Sujetos de la Educación I</li><li>Didáctica</li><li>Instituciones Educativas</li><li>Psicología Educacional</li><li>Sujetos de la Educación II</li><li>Prácticas de Fonética y Fonología Inglesa</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Lengua Inglesa III</li><li>Gramática Inglesa III</li><li>Fonética y Fonología Inglesa III</li><li>Didáctica del Inglés II</li><li>Práctica Profesional Docente III</li><li>Cultura y Literatura Británica I</li><li>Gestión y Evaluación de los Aprendizajes</li><li>Cultura y Literatura Británica II</li><li>Proyectos de Intervención Socioeducativa</li><li>Educación en la Diversidad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Lengua Inglesa</li><li>Práctica Profesional Docente IV</li><li>Fonética y Fonología Inglesa IV</li><li>Cultura y Literatura norteamericana</li><li>Educación Sexual Integral</li><li>Educación y Tecnologías Digitales</li><li>Historia y Patrimonio Cultural de Mendoza</li><li>Formación Complementaria General</li><li>Formación Complementaria Específica</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-ingles-2/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-ingles-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/">Profesorado de Educacion Secundaria en Lengua y Literatura</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Grado / Profesorado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Pensamiento Filosófico Módulo</li><li>Sistema educativo Módulo</li><li>Pedagogía Módulo</li><li>Comprensión y Producción de textos académicos Taller</li><li>Literatura Universal I Módulo-Ateneo</li><li>Morfología y Semántica Léxica Asignatura</li><li>Literatura y Cultura Grecolatina Módulo-Ateneo</li><li>Fundamentos de la Lengua Módulo-Ateneo</li><li>Fundamentos de la Literatura Módulo-Ateneo</li><li>Práctica profesional docente I Práctica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Instituciones Educativas Módulo</li><li>Didáctica Módulo</li><li>Psicología educacional Módulo</li><li>Sujetos de la educación Módulo</li><li>Literatura Española Módulo-Ateneo</li><li>Sintaxis y Semántica Proposicional Asignatura</li><li>Lingüística del texto y Análisis del Discurso I Módulo</li><li>Literatura Universal II Módulo-Taller-Ateneo</li><li>Literatura para jóvenes Módulo-Taller-Ateneo</li><li>Fonética, Fonología y Grafemática Asignatura</li><li>Lingüistica del texto y Análisis del Discurso II Módulo</li><li>Literatura Latinoamericana I Módulo-Ateneo</li><li>Práctica profesional docente II Práctica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Gestión y evaluación de los aprendizajes Taller</li><li>Proyectos de intervención socioeducativa Taller</li><li>Educación en la diversidad Módulo</li><li>Literatura Argentina I Módulo-Ateneo</li><li>Literatura Latinoamericana II Módulo-Ateneo</li><li>Psicolingüística y Sociolingüística Módulo</li><li>Didáctica de la Lengua Módulo</li><li>Literatura Argentina II Módulo-Ateneo</li><li>Alfabetización Asignatura</li><li>Didáctica de la Literatura Módulo</li><li>Práctica profesional docente III Práctica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Educación Sexual Integral Módulo</li><li>Educación y Tecnologías Digitales Taller</li><li>Historia y Patrimonio Cultural de Mendoza Seminario</li><li>Formación Complementaria General Taller</li><li>Filología Asignatura</li><li>Literatura Argentina III Módulo-Ateneo</li><li>Teoría y Crítica Literarias Asignatura</li><li>Formación Complementaria específica</li><li>Práctica profesional docente IV Práctica</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-secundaria-en-matematica/">Profesorado de Educacion Secundaria en Matematica</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Grado / Profesorado</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Pensamiento filosófico Módulo</li><li>Sistema Educativo Módulo</li><li>Comprensión y producción de textos académicos Taller</li><li>El quehacer matemático Taller</li><li>Cálculo I Asignatura</li><li>Álgebra I Asignatura</li><li>Geometría I Asignatura</li><li>Pedagogía Módulo</li><li>Práctica Profesional Docente I Práctica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Didáctica Módulo</li><li>Sujetos de la Educación Módulo</li><li>Cálculo II Asignatura</li><li>Álgebra II Asignatura</li><li>Geometría II Asignatura</li><li>Didáctica de la Matemática I Módulo</li><li>Instituciones Educativas Módulo</li><li>Psicología Educacional Módulo</li><li>Didáctica de la Matemática II Módulo</li><li>Práctica Profesional Docente II Práctica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Gestión y evaluación de los aprendizajes Taller</li><li>Proyectos de intervención socioeducativa Taller</li><li>Probabilidad y Estadística I Asignatura</li><li>Didáctica de la Matemática III Módulo</li><li>Historia de la Matemática Módulo</li><li>Geometría III Módulo</li><li>Física I Asignatura</li><li>Educación y tecnologías digitales Taller</li><li>Complemento de la Formación Específica A definir</li><li>Didáctica de la Matemática IV Módulo</li><li>Práctica Profesional Docente III Práctica</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Historia y patrimonio cultural de Mendoza Seminario</li><li>Educación en la Diversidad Módulo</li><li>Cálculo III Asignatura</li><li>Probabilidad y Estadística II Asignatura</li><li>Física II Asignatura</li><li>Educación Sexual Integral Taller</li><li>Complemento de la Formación General A definir</li><li>Práctica Profesional Docente IV Práctica</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -142,7 +274,24 @@
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-superior-en-gastronomia/">Tecnicatura Superior en Gastronomia</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Cocina I ( Asignatura )</li><li>Métodos cuantitativos ( Asignatura )</li><li>Introducción a la panadería y repostería ( Asignatura )</li><li>Bromatología ( Asignatura )</li><li>Materias primas e insumos gastronómicos ( Asignatura )</li><li>Inglés técnico I (Taller)</li><li>Alfabetización académica ( Asignatura )</li><li>Nutrición ( Asignatura )</li><li>Servicio de alimentos y bebidas (Taller)</li><li>Informática gastronómica (Taller)</li><li>Sistema de gestión gastronómica (Taller)</li><li>Práctica profesional I (Práctica Profesional)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Cocina II ( Asignatura )</li><li>Vinos, Bar y Coctelería ( Asignatura )</li><li>Dietología ( Asignatura )</li><li>Panadería ( Asignatura )</li><li>Comportamiento Organizacional ( Asignatura )</li><li>Inglés Técnico II (Taller)</li><li>Costos Operativos ( Asignatura )</li><li>Cocina Regional (Taller)</li><li>Práctica Profesionalizante II (Taller)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Control de Alimentos y Bebidas (Módulo)</li><li>Cocina Internacional ( Asignatura )</li><li>Organización de Eventos y Catering ( Asignatura )</li><li>Ética Profesional (Taller)</li><li>Francés Técnico (Taller)</li><li>Marketing Gastronómico ( Asignatura )</li><li>Técnicas de Cocina Modernizantes (Módulo)</li><li>Repostería ( Asignatura )</li><li>Pymes y Microemprendimientos (Taller)</li><li>Gestión Gastronómica ( Asignatura )</li><li>Práctica Profesionalizante III (Taller)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gastronomia/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gastronomia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>

@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Negocios","item":"https://buscadoreducativo.com.ar/area/negocios/"},{"@type":"ListItem","position":4,"name":"Corredor Público Inmobiliario y Martillero","item":"https://buscadoreducativo.com.ar/carrera/corredor-publico-inmobiliario-y-martillero/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Corredor Público Inmobiliario y Martillero","description":"Dónde estudiar Corredor Público Inmobiliario y Martillero en Mendoza: carrera de grado del área Negocios, dictada por 1 institución (1 privada). Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/corredor-publico-inmobiliario-y-martillero/","provider":{"@type":"EducationalOrganization","name":"Universidad Champagnat (UCh)","url":"https://buscadoreducativo.com.ar/institucion/universidad-champagnat-uch/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Corredor Público Inmobiliario y Martillero en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Corredor Público Inmobiliario y Martillero en Mendoza en la siguiente institución: Universidad Champagnat (UCh). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Corredor Público Inmobiliario y Martillero?","acceptedAnswer":{"@type":"Answer","text":"La duración estimada depende de la institución y modalidad elegida (típicamente entre 4 y 5 años para carreras de grado, o de 2 a 3 años para tecnicaturas)."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Corredor Público Inmobiliario y Martillero?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Corredor Público Inmobiliario y Martillero?","acceptedAnswer":{"@type":"Answer","text":"Corredor Público Inmobiliario y Martillero es una carrera de grado perteneciente al área de Negocios. Entre sus aptitudes más afines se destacan: pensamiento analítico, interacción social, liderazgo y gestión y base teórica y académica."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -90,8 +119,6 @@
         <dt>Dónde se dicta</dt><dd>1 institución</dd>
         <dt>Modalidad</dt><dd>Presencial</dd>
     </dl>
-
-    <a class="cta" href="/?q=Corredor+P%C3%BAblico+Inmobiliario+y+Martillero&amp;area=Negocios&amp;formacion=grado">Ver Corredor Público Inmobiliario y Martillero en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Corredor Público Inmobiliario y Martillero</h2>
@@ -99,7 +126,28 @@
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-champagnat-uch/">Universidad Champagnat (UCh)</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Inglés I</li><li>Introducción al Derecho</li><li>Matemática</li><li>Elementos de Arquitectura</li><li>Contabilidad</li><li>Derecho Civil</li><li>Economía</li><li>Elementos de Arte</li><li>Derecho Comercial</li><li>Procesamiento de Datos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Inglés II</li><li>Obligaciones Civiles y Comerciales</li><li>Tasaciones I</li><li>Derecho Registral</li><li>Derecho Procesal Civil y Comercial</li><li>Matemática Financiera</li><li>Corretaje y Ventas</li><li>Tasaciones II</li><li>Técnica Judicial</li><li>Estadística Corredor Público Inmobiliario</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Inglés III</li><li>Contratos</li><li>Planeamiento Urbano</li><li>Organización y Gestión Inmobiliaria</li><li>Relaciones Públicas</li><li>Marketing</li><li>Diseño y Evaluación de Proy. Inmobil.</li><li>Técnicas de Negociación</li><li>Adm. de Consorcios y Propiedades</li><li>Ética Profesional</li><li>Práctica Profesional Martillero Público</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Inglés III</li><li>Técnicas de Valuación</li><li>Derecho Público I</li><li>Remates y Subastas</li><li>Relaciones Públicas</li><li>Marketing</li><li>Diseño y Evaluación de Proyectos</li><li>Derecho Público II</li><li>Técnicas de Negociación</li><li>Ética Profesional</li><li>Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/Corredor_Publico_Martillero.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/corredor-publico-inmobiliario-y-martillero" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -171,20 +219,20 @@
     <section class="relacionadas">
     <h2>Otras carreras del área Negocios</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/contador-publico/">Contador Público</a> <span class="cuantas">(11)</span></li>
+        <li><a href="/carrera/contador-publico/">Contador Público</a> <span class="cuantas">(10)</span></li>
         <li><a href="/carrera/recursos-humanos/">Recursos Humanos</a> <span class="cuantas">(6)</span></li>
-        <li><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a> <span class="cuantas">(5)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-administracion-de-empresas/">Tecnicatura Superior en Administración de Empresas</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-administracion-de-empresas/">Tecnicatura Superior en Administración de Empresas</a> <span class="cuantas">(5)</span></li>
+        <li><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-logistica/">Tecnicatura Superior en Logística</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-administracion-de-empresas/">Licenciatura en Administración de Empresas</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-comercio-internacional/">Licenciatura en Comercio Internacional</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/licenciatura-en-economia/">Licenciatura en Economía</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-administracion-publica/">Tecnicatura Superior en ADMINISTRACIÓN PÚBLICA</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-comercio-internacional-y-aduana/">Tecnicatura Superior en Comercio Internacional y Aduana</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-gestion-de-recursos-humanos/">Tecnicatura Superior en Gestion de Recursos Humanos</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/administracion/">ADMINISTRACIÓN</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-administracion-hotelera/">Licenciatura en Administración Hotelera</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-analitica-de-negocios/">Licenciatura en Analítica de Negocios</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/administracion/">Administración</a> <span class="cuantas">(2)</span></li>
     </ul>
-    <p><a href="/area/negocios/">Ver las 75 carreras del área Negocios →</a></p>
+    <p><a href="/area/negocios/">Ver las 73 carreras del área Negocios →</a></p>
     </section>
     </div>
 </div>

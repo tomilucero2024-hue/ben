@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ciencias sociales","item":"https://buscadoreducativo.com.ar/area/ciencias-sociales/"},{"@type":"ListItem","position":4,"name":"Tecnicatura universitaria en Accidentología Vial","item":"https://buscadoreducativo.com.ar/carrera/tecnicatura-universitaria-en-accidentologia-vial/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Tecnicatura universitaria en Accidentología Vial","description":"Dónde estudiar Tecnicatura universitaria en Accidentología Vial en Mendoza: tecnicatura del área Ciencias sociales, dictada por 1 institución (1 privada). Dura 3 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-universitaria-en-accidentologia-vial/","provider":{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Tecnicatura universitaria en Accidentología Vial en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Tecnicatura universitaria en Accidentología Vial en Mendoza en la siguiente institución: Universidad del Aconcagua (UDA). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Tecnicatura universitaria en Accidentología Vial?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 3 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Tecnicatura universitaria en Accidentología Vial?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Tecnicatura universitaria en Accidentología Vial?","acceptedAnswer":{"@type":"Answer","text":"Tecnicatura universitaria en Accidentología Vial es una tecnicatura perteneciente al área de Ciencias sociales. Entre sus aptitudes más afines se destacan: interacción social, pensamiento analítico, base teórica y académica y trabajo práctico."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,8 +120,6 @@
         <dt>Modalidad</dt><dd>Presencial</dd>
         <dt>Duración</dt><dd>3 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Tecnicatura+universitaria+en+Accidentolog%C3%ADa+Vial&amp;area=Ciencias+sociales&amp;formacion=tecnicaturas">Ver Tecnicatura universitaria en Accidentología Vial en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Tecnicatura universitaria en Accidentología Vial</h2>
@@ -100,7 +127,24 @@
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Introducción a la Criminalística</li><li>Registro de Imágenes Periciales</li><li>Dibujo Pericial</li><li>Derecho Constitucional</li><li>Investigación de le Escena del Crimen</li><li>Química Forense I</li><li>Comunicacion Oral y Escrita</li><li>Taller Investigación de la Escena del Crimen</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Investigación de Accidentes y Siniestros Viales</li><li>Química Forense II</li><li>Derecho Civil y Penal</li><li>Derechos Humanos</li><li>Matemática Aplicada</li><li>Física Forense</li><li>Taller de Investigación de Laboratorios y Gabinetes</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Estudio Físico y Matemático del Siniestro Vial</li><li>Derecho Procesal</li><li>Lógica y Comunicación Pericial</li><li>Tecnología Aplicada</li><li>Aspectos Legales del Peritaje</li><li>Legislación Vial</li><li>Taller Investigación de Siniestros Viales</li><li>Trabajo Final Integrador en Siniestrología Vial</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-accidentologia-vial" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fpsi/carreras-de-pregrado/tecnicatura-universitaria-en-accidentologia-vial" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -172,20 +216,20 @@
     <section class="relacionadas">
     <h2>Otras carreras del área Ciencias sociales</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(8)</span></li>
-        <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(7)</span></li>
         <li><a href="/carrera/licenciatura-en-relaciones-internacionales/">Licenciatura en Relaciones Internacionales</a> <span class="cuantas">(4)</span></li>
-        <li><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-petroleo-y-gas/">Tecnicatura Superior en Petróleo y Gas</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/tecnicatura-universitaria-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/despachante-de-aeronaves/">Despachante de Aeronaves</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-comunicacion-social/">Licenciatura en Comunicación Social</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-criminalistica/">Licenciatura en Criminalística</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia/">Licenciatura en Niñez, Adolescencia y Familia</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-relaciones-publicas-e-institucionales/">Licenciatura en Relaciones Públicas e Institucionales</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/locucion/">Locución</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/periodismo/">Periodismo</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/abogacia-y-procuracion/">Abogacía y Procuración</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/actuario/">Actuario</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/ciclo-de-licenciatura-en-comunicacion-digital-e-interactiva/">Ciclo de Licenciatura en Comunicación Digital e Interactiva</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/ciencias-del-comportamiento/">Ciencias del Comportamiento</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/comunicacion/">Comunicación</a> <span class="cuantas">(1)</span></li>
     </ul>
-    <p><a href="/area/ciencias-sociales/">Ver las 122 carreras del área Ciencias sociales →</a></p>
+    <p><a href="/area/ciencias-sociales/">Ver las 71 carreras del área Ciencias sociales →</a></p>
     </section>
     </div>
 </div>

@@ -1,145 +1,933 @@
 {
- "instituciones": [
-  {
-   "id": 11,
-   "nombre": "IES 9-001 Gral. José de San Martín",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "02623-420750",
-    "email": "consultas@ens9001.edu.ar",
-    "direccion": "Chubut y Balcarce, Gral. San Martín"
-   },
-   "carreras": [
-    {
-     "id": 1100,
-     "nombre_carrera": "Profesorado de Educación PRIMARIA",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-primaria/"
-    },
-    {
-     "id": 1101,
-     "nombre_carrera": "Profesorado de Educación INICIAL",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-inicial/"
-    },
-    {
-     "id": 1102,
-     "nombre_carrera": "Profesorado de Educación ESPECIAL con ORIENTACIÓN en DISCAPACIDAD INTELECT UAL",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-especial/"
-    },
-    {
-     "id": 1103,
-     "nombre_carrera": "Profesorado de INGLÉS",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/ingles-2/"
-    },
-    {
-     "id": 1104,
-     "nombre_carrera": "Profesorado de Educación Secundaria en LENGUA y LITERATURA",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/lengua-y-literatura/"
-    },
-    {
-     "id": 1105,
-     "nombre_carrera": "Profesorado de Educación Secundaria en GEOGRAFÍA",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/geografia-3/"
-    },
-    {
-     "id": 1106,
-     "nombre_carrera": "Profesorado de Educación Secundaria en HISTORIA",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/historia-3/"
-    },
-    {
-     "id": 1107,
-     "nombre_carrera": "Profesorado de Educación Secundaria en BIOLOGÍA",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/biologia/"
-    },
-    {
-     "id": 1108,
-     "nombre_carrera": "Profesorado de Educación Secundaria de la MODALIDAD TÉCNICO PROFESIONAL EN CONC. CON EL TÍTULO DE BASE",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/protec/"
-    },
-    {
-     "id": 1109,
-     "nombre_carrera": "Tecnicatura Superior en ADMINISTRACIÓN PÚBLICA",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/publica/"
-    },
-    {
-     "id": 1110,
-     "nombre_carrera": "Tecnicatura Superior en COMUNICACIÓN SOCIAL",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/comunicacion-social/"
-    },
-    {
-     "id": 1111,
-     "nombre_carrera": "Tecnicatura Superior en DISEÑO DE INDUMENTARIA, TEXTIL y ACCESORIOS",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/ingreso-pre-inscripcion/"
-    },
-    {
-     "id": 1112,
-     "nombre_carrera": "Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-laboral/"
-    },
-    {
-     "id": 1113,
-     "nombre_carrera": "Tecnicatura Superior en Acompañamiento Terapéutico",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "facultad": "IES 9-001 San Martín",
-     "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/ingreso-pre-inscripcion/"
-    }
-   ],
-   "departamento": "San Martín"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 11,
+            "nombre": "IES 9-001 Gral. José de San Martín",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "02623-420750",
+                "email": "consultas@ens9001.edu.ar",
+                "direccion": "Chubut y Balcarce, Gral. San Martín"
+            },
+            "carreras": [
+                {
+                    "id": 1100,
+                    "nombre_carrera": "Profesorado de Educación PRIMARIA",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-primaria/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Numeración",
+                                "Lengua y Literatura Infantil y Juvenil",
+                                "Educación Artística",
+                                "Práctica Profesional Docente I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Instituciones Educativas",
+                                "Didáctica",
+                                "Sujetos de la Educación",
+                                "Psicología Educacional",
+                                "Ciencias Sociales y su Didáctica I",
+                                "Números Racionales y su Didáctica",
+                                "Espacio, Geometría y su Didáctica",
+                                "Ciencias Naturales y su Didáctica I",
+                                "Lengua y su Didáctica",
+                                "Literatura Infantil y Juvenil y su Didáctica",
+                                "Práctica Profesional Docente II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Educación en la Diversidad",
+                                "Proyectos de Intervención Estratégica",
+                                "Formación Ética y Ciudadana y su Didáctica",
+                                "Educación Tecnológica",
+                                "Medida y su Didáctica",
+                                "Álgebra, Funciones y su Didáctica",
+                                "Ciencias Sociales y su Didáctica II",
+                                "Ciencias Naturales y su Didáctica II",
+                                "Alfabetización",
+                                "Práctica Profesional Docente III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Educación y Tecnologías Digitales",
+                                "Educación Sexual Integral",
+                                "Historia y Patrimonio Cultural de Mendoza",
+                                "UDJE de Formación Complementaria General",
+                                "UCJE de Formación Complementaria Específica",
+                                "Didáctica de la Lengua y de la Literatura Infantil y Juvenil",
+                                "Didáctica de la Matemática",
+                                "Didáctica de las Ciencias Sociales",
+                                "Didáctica de las Ciencias Naturales",
+                                "Práctica Profesional Docente IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-primaria/"
+                },
+                {
+                    "id": 1101,
+                    "nombre_carrera": "Profesorado de Educación INICIAL",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-inicial/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Centralidad del Juego",
+                                "Juegos y Producción de Objetos Lúdicos",
+                                "Lenguajes Artísticos Expresivos: Teatro",
+                                "Lenguajes Artísticos Expresivos: Música",
+                                "Práctica Profesional Docente I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Instituciones Educativas",
+                                "Didáctica",
+                                "Psicología Educacional",
+                                "Educación y Atención Temprana al Desarrollo Infantil",
+                                "Didáctica de Jardín Maternal",
+                                "Prácticas Lingüísticas en Educación Inicial",
+                                "Lenguajes Artísticos Expresivos: Artes Visuales",
+                                "Educación Matemática Temprana e Inicial I",
+                                "Sujetos de la Educación",
+                                "Práctica Profesional Docente II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Educación en la Diversidad",
+                                "Proyectos de Intervención Socioeducativa",
+                                "Literatura Infantil",
+                                "Didáctica de Jardín de Infantes",
+                                "Educación Matemática Inicial II",
+                                "Alfabetización Temprana e Inicial",
+                                "Didáctica del Ambiente Natural",
+                                "Didáctica del Ambiente Social",
+                                "Motricidad en Jardín Maternal y Jardín de Infantes",
+                                "Práctica Profesional Docente III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Educación y Tecnologías Digitales",
+                                "Educación Sexual Integral",
+                                "Historia y Patrimonio Cultural de Mendoza",
+                                "UDJE de Formación Complementaria General",
+                                "Problemáticas de la Educación Inicial",
+                                "Salud y Cultura del Cuidado",
+                                "Formación Ética y Ciudadana y su Didáctica",
+                                "UCJE de Formación Complementaria Específica",
+                                "Práctica Profesional Docente IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-inicial/"
+                },
+                {
+                    "id": 1102,
+                    "nombre_carrera": "Profesorado de Educación ESPECIAL con ORIENTACIÓN en DISCAPACIDAD INTELECT UAL",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-especial/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Educación Artística: Artes Visuales",
+                                "Educación Artística: Música",
+                                "Educación Especial Contemporánea",
+                                "Neuropsicosociología del Desarrollo",
+                                "Discapacidad Intelectual: Características del Desarrollo",
+                                "Atención Temprana",
+                                "Práctica Profesional Docente I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Instituciones Educativas",
+                                "Didáctica",
+                                "Psicología Educacional",
+                                "Sujetos de la Educación I",
+                                "Abordaje Pedagógico Didáctico I",
+                                "Sujetos de la Educación II",
+                                "Psicomotricidad",
+                                "Discapacidad Motora y Abordaje Pedagógico Didáctico",
+                                "Didáctica de la Matemática",
+                                "Didáctica de la Lengua",
+                                "Didáctica de la Literatura",
+                                "Didáctica de las Ciencias Naturales",
+                                "Práctica Profesional Docente II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Proyectos de Intervención Socioeducativa",
+                                "Didáctica de la Formación Ética y Ciudadana",
+                                "Abordaje Pedagógico Didáctico II",
+                                "Comunicación y Desarrollo del Lenguaje en la Persona con Discapacidad",
+                                "Didáctica de las Ciencias Sociales",
+                                "Discapacidad Múltiple y Abordaje Pedagógico Didáctico",
+                                "Perspectiva Social, Transición a la Vida Adulta y Ocupación Laboral",
+                                "Alfabetización",
+                                "Práctica Profesional Docente III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Educación y Tecnologías Digitales",
+                                "Educación Sexual Integral",
+                                "Historia y Patrimonio Cultural de Mendoza",
+                                "UCE Formación Complementaria General",
+                                "UCE Formación Complementaria Específica",
+                                "Educación Artística: Teatro",
+                                "Práctica Profesional Docente IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-especial/"
+                },
+                {
+                    "id": 1103,
+                    "nombre_carrera": "Profesorado de INGLÉS",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/ingles-2/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Lengua Inglesa I",
+                                "Gramática Inglesa I",
+                                "Fonética y Fonología Inglesa I",
+                                "Prácticas de Lengua Inglesa",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Práctica Profesional Docente I",
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Pedagogía",
+                                "Prácticas de Gramática Inglesa"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Lengua Inglesa II",
+                                "Gramática Inglesa II",
+                                "Fonética y Fonología Inglesa II",
+                                "Didáctica del Inglés I",
+                                "Práctica Profesional Docente II",
+                                "Sujetos de la Educación I",
+                                "Didáctica",
+                                "Instituciones Educativas",
+                                "Psicología Educacional",
+                                "Sujetos de la Educación II",
+                                "Prácticas de Fonética y Fonología Inglesa"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Lengua Inglesa III",
+                                "Gramática Inglesa III",
+                                "Fonética y Fonología Inglesa III",
+                                "Didáctica del Inglés II",
+                                "Práctica Profesional Docente III",
+                                "Cultura y Literatura Británica I",
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Cultura y Literatura Británica II",
+                                "Proyectos de Intervención Socioeducativo",
+                                "Educación en la Diversidad"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Lengua Inglesa IV",
+                                "Práctica Profesional Docente IV",
+                                "Fonética y Fonología Inglesa IV",
+                                "Cultura y Literatura Norteamericana",
+                                "Educación Sexual Integral",
+                                "Educación y Tecnologías Digitales",
+                                "Historia y Patrimonio Cultural de Mendoza",
+                                "Formación Complementaria General",
+                                "Formación Complementaria Específica"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/ingles-2/"
+                },
+                {
+                    "id": 1104,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en LENGUA y LITERATURA",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/lengua-y-literatura/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Literatura Universal I",
+                                "Morfología y Semántica Léxica",
+                                "Literatura y cultura Grecolatina",
+                                "Fundamentos de la Lengua",
+                                "Fundamentos de la literatura",
+                                "Práctica Profesional Docente I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Instituciones Educativas",
+                                "Didáctica",
+                                "Psicología Educacional",
+                                "Sujetos de la Educación",
+                                "Literatura española",
+                                "Sintaxis y Semántica Proposicional",
+                                "Lingüística del texto t Análisis del discurso I",
+                                "Literatura Universal II",
+                                "Literatura para Jóvenes",
+                                "Fonética, Fonología y Grafemática",
+                                "Lingüística del Texto y Análisis del Discurso II",
+                                "Literatura Latinoamericana I",
+                                "Práctica Profesional Docente II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Proyectos de Intervención Socioeducativas",
+                                "Educación en la Diversidad",
+                                "Literatura Argentina I",
+                                "Literatura Latinoamericana II",
+                                "Psicolingüística y Sociolingüística",
+                                "Didáctica de la Lengua",
+                                "Literatura Argentina II",
+                                "Alfabetización",
+                                "Didáctica de la Literatura",
+                                "Práctica Profesional Docente III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Educación Sexual Integral",
+                                "Educación y Tecnologías Digitales",
+                                "Historia y Patrimonio Cultural de Mendoza",
+                                "Formación Complementaria General",
+                                "Filología",
+                                "Literatura Argentina III",
+                                "Teoría y Crítica literaria",
+                                "Práctica Profesional Docente IV",
+                                "Formación Complementaria Específica"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/lengua-y-literatura/"
+                },
+                {
+                    "id": 1105,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en GEOGRAFÍA",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/geografia-3/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción a la Historia y a la Geografía",
+                                "Ciencia Política y Economía",
+                                "Geografía Física I",
+                                "Proceso Demográfico en el tiempo y en el espacio",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Formación Práctica Profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Sujeto de la Educación",
+                                "Epistemología de las Ciencias Sociales",
+                                "Geografía de América I",
+                                "Didáctica de la Geografía I",
+                                "Geografía Física II",
+                                "Geografía Argentina I",
+                                "Didáctica General",
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Formación Práctica Profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Geografía de la Mundialización",
+                                "Historia y Geografía de Mendoza I",
+                                "Historia y Geografía de Mendoza II",
+                                "Geografía Argentina II",
+                                "Didáctica de la Geografía II",
+                                "Problemática Ambiental",
+                                "Geografía de América II",
+                                "Técnicas y herramientas de trabajo en Geografía",
+                                "Educación en la Diversidad",
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Psicología Educacional",
+                                "Formación Práctica Profesional III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Geopolítica de los Espacios Mundiales",
+                                "Investigación Geográfica",
+                                "Educación Ambiental",
+                                "Geografía de los Espacios Rurales y Urbanos",
+                                "Técnicas y herramientas de trabajo en Geografía II",
+                                "Formación Complementaria Específica",
+                                "Proyecto de Intervención Socioeducativa",
+                                "37 Formación Complementaria General",
+                                "Educación y Tecnologías Digitales",
+                                "Educación Sexual Integral",
+                                "Formación Práctica Profesional IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/geografia-3/"
+                },
+                {
+                    "id": 1106,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en HISTORIA",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/historia-3/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción a la Historia y a la Geografía",
+                                "Ciencias Políticas y Economía",
+                                "Historia Universal I",
+                                "Procesos Demográficos en el tiempo y en el espacio",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Formación Práctica Profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Sujeto de la Educación",
+                                "Epistemología de las Ciencias Sociales",
+                                "Historia Argentina I",
+                                "Historia Argentina II",
+                                "Historia Americana I",
+                                "Historia Universal II",
+                                "Didáctica General",
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Formación Práctica Profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Didáctica de la Historia",
+                                "Formación Ética y Ciudadana y su Didáctica",
+                                "Historia y Geografía de Mendoza I",
+                                "Historia y Geografía de Mendoza II",
+                                "Historia Argentina III",
+                                "Historia Americana II",
+                                "Historia Universal III",
+                                "Educación en la Diversidad",
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Psicología Educacional",
+                                "Formación Práctica Profesional III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Historia del Arte Argentino",
+                                "Investigación Histórica",
+                                "Arqueología",
+                                "Formación Complementaria Específica",
+                                "Historia Americana III",
+                                "Historia Universal IV",
+                                "Proyecto Socio Educativo",
+                                "Formación Complementaria General",
+                                "Educación y Tecnologías Digitales",
+                                "Educación Sexual Integral",
+                                "Formación Práctica Profesional IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/historia-3/"
+                },
+                {
+                    "id": 1107,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en BIOLOGÍA",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/biologia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Biología General",
+                                "Química General",
+                                "Matemática",
+                                "Bioestadística",
+                                "Sujeto de la Educación",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Formación Práctica Profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Química Orgánica",
+                                "Química Inorgánica",
+                                "Física General",
+                                "Ciencias de la Tierra",
+                                "Ecología",
+                                "Didáctica de las Ciencias Naturales",
+                                "Didáctica General",
+                                "Pensamiento filosófico",
+                                "Sistema Educativo",
+                                "Formación Práctica Profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Didáctica de la Biología",
+                                "Biología vegetal",
+                                "Biología animal",
+                                "Microbiología y biodiversidad",
+                                "Biología Humana",
+                                "Salud Humana",
+                                "Educación en la diversidad",
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Psicología Educacional",
+                                "Formación Práctica Profesional III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Química Biológica",
+                                "Genética",
+                                "Educación Ambiental",
+                                "Formación Complementaria Específica",
+                                "Unidad de Definición Jurisdiccional: Historia y Patrimonio Cultural de Mendoza",
+                                "Educación y Tecnologías Digitales",
+                                "Educación Sexual Integral",
+                                "Formación Práctica Profesional IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/biologia/"
+                },
+                {
+                    "id": 1108,
+                    "nombre_carrera": "Profesorado de Educación Secundaria de la MODALIDAD TÉCNICO PROFESIONAL EN CONC. CON EL TÍTULO DE BASE",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/protec/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "La Enseñanza en la Escuela Secundaria Técnica I",
+                                "El Aprendizaje en la Escuela Secundaria Técnica",
+                                "Competencias Comunicacionales, Comprensión de Textos I",
+                                "Competencias Comunicacionales, Comprensión de Textos II",
+                                "Práctica I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Contexto de y para el Aprendizaje en la Escuela Secundaria Técnica I",
+                                "Adolescencias y Educación Secundaria Técnica",
+                                "La Enseñanza en la Escuela Secundaria Técnica II",
+                                "Condiciones del Ejercicio Profesional",
+                                "Vinculación con el Sector Socio Productivo",
+                                "Práctica II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Contextos de y para el Aprendizaje en la Escuela Secundaria Técnica II",
+                                "Producción de Textos de ETP Secundaria",
+                                "Uso Didáctico de las Tics",
+                                "Práctica Profesional Docente III",
+                                "Reflexión sobre la Problematización de la Práctica",
+                                "Residencia"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/protec/"
+                },
+                {
+                    "id": 1109,
+                    "nombre_carrera": "Tecnicatura Superior en ADMINISTRACIÓN PÚBLICA",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/publica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración General",
+                                "Matemática y Estadística",
+                                "Informática y Tecnología",
+                                "Inglés Técnico I",
+                                "Comunicación, Comprensión y Producción de Textos",
+                                "Metodología de la Investigación",
+                                "Microeconomía",
+                                "Macroeconomía",
+                                "Problemática Sociocultural y el Contexto",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Desarrollo Local y Sustentable",
+                                "Ingles Técnico II",
+                                "Estado y Sociedad",
+                                "Administración Pública",
+                                "Formulación y Evaluación de Proyecto",
+                                "Introducción al Derecho",
+                                "Introducción a la Contabilidad",
+                                "Derecho Constitucional",
+                                "Contabilidad Pública",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión de Políticas Públicas",
+                                "Presupuesto y Finanzas Públicas",
+                                "Derecho Administrativo",
+                                "Análisis y Desarrollo Organizacional",
+                                "Ética Profesional",
+                                "Control en la Gestión Pública",
+                                "Procedimientos de Compras y Contrataciones",
+                                "Técnica Legislativa",
+                                "Gestión de Personal",
+                                "Comunicación Organizacional",
+                                "Informática y Tecnología Aplicada",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/publica/"
+                },
+                {
+                    "id": 1110,
+                    "nombre_carrera": "Tecnicatura Superior en COMUNICACIÓN SOCIAL",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/comunicacion-social/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Comprensión y Producción de textos",
+                                "Introducción a la Comunicación",
+                                "Tecnología de la Información y la Comunicación",
+                                "Problemática Socio-Cultural y el Contexto",
+                                "Periodismo",
+                                "Taller de Radio",
+                                "Oralidad y Expresión Artística",
+                                "Taller de Gráfica",
+                                "Taller de Televisión",
+                                "Fotografía",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Teoría de la Comunicación",
+                                "Taller de Comunicación Digital",
+                                "Electiva 1",
+                                "Psicología de la Comunicación",
+                                "Problemática Geopolítica, Regional y Local",
+                                "Ingles Técnico I",
+                                "Formulación y Evaluación de Proyectos de Comunicación",
+                                "Sociología de la Comunicación",
+                                "Problemática Económico-Política Argentina",
+                                "Inglés Técnico II",
+                                "Administración y Gestión de Proyectos de Comunicación",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Comunicación Institucional",
+                                "Electiva 2",
+                                "Comunicación Lingüística",
+                                "Teoría de la Imagen",
+                                "Desarrollo Emprendedor",
+                                "Ética y Legislación Profesional",
+                                "Semiología",
+                                "Marketing, Publicidad y Propaganda",
+                                "Dirección y Administración de Medios",
+                                "Gestión de Redes Sociales",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/comunicacion-social/"
+                },
+                {
+                    "id": 1111,
+                    "nombre_carrera": "Tecnicatura Superior en DISEÑO DE INDUMENTARIA, TEXTIL y ACCESORIOS",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/diseno-de-indumentaria/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Diseño de Indumentaria I",
+                                "Moldería I",
+                                "Dibujo Aplicado a la Indumentaria I",
+                                "Dibujo Técnico Asistido I",
+                                "Ergonomía",
+                                "Psicología de la Percepción",
+                                "Práctica de Lectura Escritura y Oralidad",
+                                "Administración de Recursos",
+                                "Historia de la Indumentaria I",
+                                "Sociología y Cultura de la Indumentaria",
+                                "Inglés",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Diseño de Indumentaria II",
+                                "Moldería II",
+                                "Dibujo Aplicado a la Indumentaria II",
+                                "Dibujo Técnico Asistido II",
+                                "Historia de la Indumentaria II",
+                                "Tecnología I",
+                                "Costos y Comercialización",
+                                "Semiótica",
+                                "Diseño Textil",
+                                "Practica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Diseño de la Indumentaria III",
+                                "Moldería III",
+                                "Dibujo Técnico Asistido y Comunicación del Proyecto",
+                                "Diseño de Marroquinería y Accesorios",
+                                "Ética Profesional",
+                                "Tecnología II",
+                                "Emprendedorismo",
+                                "Practica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/diseno-de-indumentaria/"
+                },
+                {
+                    "id": 1112,
+                    "nombre_carrera": "Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-laboral/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Comunicación, Comprensión y Producción de Textos",
+                                "Inglés Técnico",
+                                "TIC",
+                                "Higiene I",
+                                "Seguridad I",
+                                "Equipo y Elementos de Protección Personal",
+                                "Sistema de Gestión del Medio Ambiente",
+                                "Taller de Ciencias Básicas Aplicadas",
+                                "Problemática Socio Cultural y del Trabajo",
+                                "Interpretación de Planos",
+                                "Sistema de Gestión de la Calidad",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Ecología",
+                                "Planificación y Técnicas para el Control de la Calidad",
+                                "Problemática Ambiental",
+                                "Higiene II",
+                                "Seguridad II",
+                                "Psicología Laboral",
+                                "Legislación Laboral",
+                                "Prevención de la Salud Laboral",
+                                "Ergonomía",
+                                "Higiene y Seguridad Aplicada",
+                                "Capacitación y Desarrollo Profesional",
+                                "Derecho Ambiental",
+                                "Incendio I",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Técnicas en Remediación Ambiental",
+                                "Gestión de Procesos Productivos",
+                                "Incendio II",
+                                "Evaluación de Impactos Ambientales",
+                                "Manejo y Gestión de Residuos",
+                                "Recursos Humanos",
+                                "Producción de Informes de Investigación",
+                                "Toxicología",
+                                "Evaluación de Proyectos",
+                                "Estadística Aplicada",
+                                "Ética Profesional",
+                                "Seminario Optativo",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-laboral/"
+                },
+                {
+                    "id": 1113,
+                    "nombre_carrera": "Tecnicatura Superior en Acompañamiento Terapéutico",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES 9-001 San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Antropología Sociocultural y Salud",
+                                "Psicología General y de la Personalidad",
+                                "Entornos Virtuales de la Salud y Herramientas Digitales",
+                                "Comunicación en Salud",
+                                "Salud Pública y Comunidad",
+                                "Primeros Auxilios",
+                                "Fundamentos del Acompañamiento Terapéutico",
+                                "Anatomía del Cuerpo Humano",
+                                "Bases Neuropsicológicas del Desarrollo",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Psicología del Desarrollo",
+                                "Psicología Social y de Grupos",
+                                "Estrategias de Recreación y Habilidades para la Vida",
+                                "Aspectos Generales de Farmacología Aplicada",
+                                "Investigación en Salud",
+                                "Educación para la Salud",
+                                "Acompañamiento Terapéutico en Niñez y Adolescencia",
+                                "Acompañamiento Terapéutico en Adultos y Adultos Mayores",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Inglés Técnico",
+                                "Ética y Legislación en Acompañamiento Terapéutico",
+                                "Gestión del Trabajo y Autocuidado",
+                                "Salud Mental y Adicciones",
+                                "Acompañamiento Terapéutico en Salud Mental",
+                                "Acompañamiento Terapéutico en Diversos Contextos",
+                                "Acompañamiento Terapéutico en la Discapacidad",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/"
+                }
+            ]
+        }
+    ]
 }

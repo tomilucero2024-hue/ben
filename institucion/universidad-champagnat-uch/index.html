@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Universidad Champagnat (UCh)","item":"https://buscadoreducativo.com.ar/institucion/universidad-champagnat-uch/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad Champagnat (UCh)","url":"https://buscadoreducativo.com.ar/institucion/universidad-champagnat-uch/","email":"informes@uch.edu.ar","telephone":"4243698","address":{"@type":"PostalAddress","streetAddress":"Belgrano 721, Godoy Cruz","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -67,12 +67,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -92,8 +121,6 @@
         <dt>Teléfono</dt><dd>4243698</dd>
         <dt>Email</dt><dd>informes@uch.edu.ar</dd>
     </dl>
-
-    <a class="cta" href="/?institucion=Universidad%20Champagnat%20(UCh)">Ver esta institución en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
 
@@ -102,31 +129,136 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciado-en-relaciones-publicas/">Licenciado en Relaciones Públicas</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Recursos Humanos I</li><li>Metodología y Técnicas de la Investigación Social I</li><li>Sociología</li><li>Psicología General y de la Personalidad</li><li>Inglés I</li><li>Recursos Humanos II</li><li>Metodología y Técnicas de la Investigación Social II</li><li>Comunicación Social I</li><li>Historia de las Instituciones Sociales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Recursos Humanos III</li><li>Comunicación Social II</li><li>Metodología y Técnicas de la Investigación Social III</li><li>Matemática</li><li>Inglés II</li><li>Recursos Humanos IV</li><li>Estadística</li><li>Sociología de la Comunicación</li><li>Economía</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Antropología Filosófica</li><li>Dinámica de Grupos</li><li>Informática Aplicada I</li><li>Administración</li><li>Inglés III</li><li>Informática Aplicada II</li><li>Comunicación Institucional</li><li>Marketing</li><li>Ética Profesional en Recursos Humanos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Relaciones Públicas I</li><li>Opinión Pública</li><li>Ceremonial y Protocolo</li><li>Publicidad y Propaganda</li><li>Reingeniería Aplicada</li><li>Inglés IV</li><li>Relaciones Públicas II</li><li>Cultura de Masas</li><li>Sistema Nacional e Internacional de Comunicaciones</li><li>Seminario de Información Pública</li><li>Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/Relaciones_publicas.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/licenciatura-en-relaciones-publicas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciado-en-relaciones-humanas/">Licenciado en Relaciones Humanas</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Recursos Humanos I</li><li>Metodología y Técnicas de la Investigación Social I</li><li>Sociología</li><li>Psicología General y de la Personalidad</li><li>Inglés I</li><li>Recursos Humanos II</li><li>Metodología y Técnicas de la Investigación Social II</li><li>Comunicación Social I</li><li>Historia de las Instituciones Sociales</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Recursos Humanos III</li><li>Comunicación Social II</li><li>Metodología y Técnicas de la Investigación Social III</li><li>Matemática</li><li>Inglés II</li><li>Recursos Humanos IV</li><li>Estadística</li><li>Sociología de la Comunicación</li><li>Economía</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Antropología Filosófica</li><li>Dinámica de Grupos</li><li>Informática Aplicada I</li><li>Administración</li><li>Inglés III</li><li>Informática Aplicada II</li><li>Comunicación Institucional</li><li>Marketing</li><li>Ética Profesional en Recursos Humanos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Derecho Laboral</li><li>Psicología de la Motivación y Autoestima</li><li>Selección Personal</li><li>Publicidad y Propaganda</li><li>Reingeniería Aplicada</li><li>Inglés IV</li><li>Teoría y Práctica de la Entrevista</li><li>Administración de Personal</li><li>Gestión de la Calidad Total</li><li>Comportamiento Organizacional</li><li>Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/Relaciones_humanas.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/licenciatura-en-relaciones-humanas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/abogacia-y-procuracion/">Abogacía y Procuración</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Derecho Privado Parte General</li><li>Principios Generales del Derecho</li><li>Filosofía y Ética</li><li>Historia de las Instituciones Argentinas</li><li>Derecho Constitucional</li><li>Teoría del Estado</li><li>Derecho Penal Parte General</li><li>Obligaciones Civiles y Comerciales I</li><li>Práctica Profesional I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Derecho Penal Parte Especial</li><li>Contratos Parte General</li><li>Derecho Procesal Parte General</li><li>Obligaciones Civiles y Comerciales II</li><li>Lógica y Argumentación 1/3</li><li>Derechos Humanos</li><li>Derecho Procesal Penal</li><li>Contratos Parte Especial</li><li>Derecho Procesal Civil y Comercial</li><li>Práctica Profesional II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Resolución Alternativa de Conflictos</li><li>Derechos Reales I</li><li>Derecho de las Familias</li><li>Sociedades Civiles y Comerciales</li><li>Metodología de la Investigación</li><li>Derechos Reales II</li><li>Derecho Sucesorio</li><li>Papeles de Comercio</li><li>Concursos y Quiebras</li><li>Derecho Laboral</li><li>Práctica Profesional III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Economía</li><li>Derecho Administrativo</li><li>Derecho Internacional Público y de la Integración</li><li>Derecho Privado Profundizado</li><li>Optativa I: Derecho Notarial Derecho Minero y Agrario</li><li>Derecho Financiero y Tributario</li><li>Derecho Procesal Constitucional</li><li>Derecho Ambiental y Aguas</li><li>Derecho Internacional Privado</li><li>Práctica Profesional IV</li><li>Optativa II: Derecho Registral Título de Grado: Abogado/a 3/3</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/Abogacia.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/abogacia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-relaciones-internacionales/">Licenciado en Relaciones Internacionales</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Introducción a las Ciencias Sociales</li><li>Motodología y Técnicas de la Investigación Social I</li><li>Relaciones Internacionales</li><li>Historia de las Integraciones</li><li>Inglés I</li><li>Historia Argentina y Latinoamericana</li><li>Metodología y Técnicas de la</li><li>Teoría de la Admin. Y Derecho Admin.</li><li>Historias de las Ideas Políticas</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Derecho Internacional Público</li><li>Sistemática de la Ciencia Política</li><li>Historia Argentina Contemporánea</li><li>Metodología y Técnicas de Investigación Social III</li><li>Inglés II</li><li>Economía Internacional</li><li>Sociología</li><li>Historia de las Relaciones Internacionales</li><li>Derecho Constitucional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Historia de la Política Exterior Argentina</li><li>Economía Argentina y Latinoamericana</li><li>Teoría Política</li><li>Estructura Económica Internacional</li><li>Inglés III</li><li>Sistemas Políticos Comparados</li><li>Teorías de las Relaciones Internacionales</li><li>Política Exterior Argentina I</li><li>Política Internacional Contemporánea</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Toma de Decisiones y Téc. de Negociación</li><li>Derecho Diplomático y Consular</li><li>Ética Profesional</li><li>Seminario I</li><li>Inglés IV</li><li>Organismos Internacionales</li><li>Política Exterior Argentina II</li><li>Contratos Internacionales</li><li>Seminario II</li><li>Seminario III</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/Relaciones_Internacionales.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/licenciatura-en-relaciones-internacionales" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-comunicacion-digital/">Licenciatura en Comunicación Digital</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Plataformas y ecosistemas digitales</li><li>Publicidad y marketing digital</li><li>Guión</li><li>Sociedad, tecnología y comunicación</li><li>Diseño de experiencia e interfaz de usuario</li><li>Fotografía y edición digital</li><li>Redacción digital</li><li>Análisis de públicos y audiencias</li><li>Animación digital</li><li>Fundamentos de la comunicación</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Medios de comunicación y</li><li>Periodismo de datos</li><li>Modelos de negocios y economía</li><li>Edición de audio y video</li><li>Metodología de la investigación</li><li>Planificación de comunicación digital</li><li>Realización audiovisual</li><li>Periodismo digital</li><li>Teorías críticas de la comunicación</li><li>Diseño y desarrollo web</li><li>Práctica Profesionalizante Régimen de Modalidad Cursado de cursado Título intermedio:</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Comunicación estratégica y gestión</li><li>Storytelling</li><li>Gamificación</li><li>Regulación y legislación de</li><li>Narrativa Transmedia</li><li>Estética audiovisual</li><li>Economía y políticas públicas</li><li>Televisión digital</li><li>Procesos creativos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Economía del conocimiento</li><li>Administración de proyectos</li><li>Gestión de Recursos Humanos</li><li>Comunicación política</li><li>Producción Transmedia</li><li>Análisis y estadística</li><li>Práctica Profesional Situada curriculares Título:</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/lic_comunicacion_digital2022.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/licenciatura-en-comunicacion-digital" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -136,25 +268,109 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion-de-empresas/">Licenciado en Administración de Empresas</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Introducción a la Contabilidad</li><li>Matemática General</li><li>Procesamiento de Datos</li><li>Inglés I</li><li>Derecho Civil</li><li>Microeconomía</li><li>Administración General</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Normas Contables de Valuación</li><li>Estadística Metodológica e inferencial</li><li>Tecnologías de Gestión</li><li>Inglés II</li><li>Macroeconomía</li><li>Sistemas de Información y Control</li><li>Derecho Público</li><li>Matemática Financiera</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Creatividad e Iniciativa</li><li>Planificación Estratégica</li><li>Planificación Estratégica</li><li>Derecho Comercial I</li><li>Comportamiento Organizacional</li><li>Calidad</li><li>Exposición y Análisis de los Est. Contables</li><li>Derecho Laboral</li><li>Práctica Profesional I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Comercialización General</li><li>Administración de Operaciones</li><li>Administración Financiera</li><li>Administración de los Recursos Humanos</li><li>Formulación y evaluación de Proyectos General</li><li>Módulo Electivo I</li><li>Módulo Electivo II</li><li>Práctica Profesional II Mercado de Capitales de Empresas</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/Administracion_empresas.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/licenciatura-en-administracion-de-empresas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-comercio-internacional/">Licenciado en Comercio Internacional</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Inglés I</li><li>Comercio Internacional I</li><li>Contabilidad</li><li>Matemática</li><li>Principios de Administración</li><li>Comercio Internacional II</li><li>Marketing</li><li>Principios de Economía</li><li>Geografía Económica Argentina y Mundial</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Inglés II</li><li>Legislación Práctica y Aduanera</li><li>Marketing Internacional</li><li>Derecho Civil</li><li>Microeconomía</li><li>Tecnol. Informáticas y Comunicación I</li><li>Clasificación y Valoración Aduanera</li><li>Técnicas de Negociación</li><li>Derecho Comercial</li><li>Matemática Financiera</li><li>Tecnol. Informática y Comunicación II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Inglés III</li><li>Sistema Informático María</li><li>Transporte Internacional</li><li>Derecho Internacional Público</li><li>Macroeconomía</li><li>Estadística</li><li>Régimen Económico y Financiero del Comercio Internacional</li><li>Costos y Precios de Exportación e Importación</li><li>Investigación de Mercados</li><li>Derecho Internacional Privado</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Inglés IV</li><li>Operativa del Comercio Internacional</li><li>Portugués I</li><li>Envases y Embalajes</li><li>Formulación y Evaluación de Proyectos</li><li>Economía Internacional</li><li>Portugués II</li><li>Comercio Electrónico</li><li>Bloques Económicos Mundiales</li><li>Ética Profesional</li><li>Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/Comercio_internacional.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/licenciatura-en-comercio-internacional" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/corredor-publico-inmobiliario-y-martillero/">Corredor Público Inmobiliario y Martillero</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Inglés I</li><li>Introducción al Derecho</li><li>Matemática</li><li>Elementos de Arquitectura</li><li>Contabilidad</li><li>Derecho Civil</li><li>Economía</li><li>Elementos de Arte</li><li>Derecho Comercial</li><li>Procesamiento de Datos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Inglés II</li><li>Obligaciones Civiles y Comerciales</li><li>Tasaciones I</li><li>Derecho Registral</li><li>Derecho Procesal Civil y Comercial</li><li>Matemática Financiera</li><li>Corretaje y Ventas</li><li>Tasaciones II</li><li>Técnica Judicial</li><li>Estadística Corredor Público Inmobiliario</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Inglés III</li><li>Contratos</li><li>Planeamiento Urbano</li><li>Organización y Gestión Inmobiliaria</li><li>Relaciones Públicas</li><li>Marketing</li><li>Diseño y Evaluación de Proy. Inmobil.</li><li>Técnicas de Negociación</li><li>Adm. de Consorcios y Propiedades</li><li>Ética Profesional</li><li>Práctica Profesional Martillero Público</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Inglés III</li><li>Técnicas de Valuación</li><li>Derecho Público I</li><li>Remates y Subastas</li><li>Relaciones Públicas</li><li>Marketing</li><li>Diseño y Evaluación de Proyectos</li><li>Derecho Público II</li><li>Técnicas de Negociación</li><li>Ética Profesional</li><li>Práctica Profesional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/Corredor_Publico_Martillero.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/corredor-publico-inmobiliario-y-martillero" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/contador-publico/">Contador Público</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Introducción a la Contabilidad</li><li>Taller de Comprensión Lectora y Producción de Textos</li><li>Introducción a la Economía</li><li>Matemática I</li><li>Procesamiento de Datos</li><li>Microeconomía</li><li>Administración General</li><li>Matemática II</li><li>Contabilidad Básica</li><li>Práctica Contable I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Normas Contables I</li><li>Estadística I</li><li>Tecnologías de Gestión</li><li>Derecho Civil I</li><li>Macroeconomía 1/3</li><li>Normas Contables II</li><li>Estadística II</li><li>Matemática Financiera</li><li>Sistemas de Información y Control</li><li>Derecho Público</li><li>Práctica Contable II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Contabilidad Superior</li><li>Técnica Impositiva I</li><li>Finanzas Públicas</li><li>Derecho Comercial I</li><li>Historia Económica y Social</li><li>Contabilidad Pública</li><li>Técnica Impositiva II</li><li>Administración Financiera</li><li>Derecho Comercial II</li><li>Práctica Contable III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Auditoría</li><li>Costos</li><li>Derecho Civil II</li><li>Derecho Laboral</li><li>Práctica Jurídica</li><li>Ética Profesional</li><li>Auditoría y Procesamiento Electrónico de Datos</li><li>Metodología de la Investigación</li><li>Derecho Comercial III</li><li>Prácticas Profesionales Supervisadas 29,31,33,34,35,36 3/3</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/Contador_Publico.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/contador-publico" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -164,13 +380,51 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciado-en-sistemas-de-informacion/">Licenciado en Sistemas de Información</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Algoritmos, Programas y Estructuras de Datos I</li><li>Lógica y Estructuras Discretas</li><li>Algebra y Geometría Analítica</li><li>Introducción a los Sistemas</li><li>Arquitectura de las Computadoras I</li><li>Programación Web</li><li>Teoría de la Computación I</li><li>Bases de Datos I</li><li>Ingeniería de Requisitos</li><li>Sistemas Operativos I</li><li>Algoritmos, Programas y Estructuras de Datos II</li><li>Cálculo I</li><li>Teoría de la Computación II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Bases de Datos II</li><li>Ingeniería de Software I</li><li>Programación Orientada a Objetos</li><li>Cálculo II</li><li>Ingeniería de Software II</li><li>Sistemas Operativos II</li><li>Redes I</li><li>Laboratorio de Desarrollo de Software</li><li>Programación Concurrente</li><li>Probabilidades y Estadísticas</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Ingeniería de Software III</li><li>Redes II</li><li>Programación Distribuida</li><li>Fundamentos de Inteligencia Artificial</li><li>Bases de Datos III</li><li>Arquitectura de Sistemas</li><li>Arquitectura de las Computadoras II</li><li>Optativa I (AyL)</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Gestión de Proyectos</li><li>Calidad de Software</li><li>Aspectos Sociales, Empresariales y Profesionales</li><li>Metodología de la Investigación</li><li>Proyecto de Software (Anual)</li><li>Inteligencia Artificial</li><li>Seguridad Aplicada a Sistemas de Información</li><li>Optativa II (ISBDSI)</li><li>Aspectos Laborales y Legales del Ejercicio de la Profesión</li><li>Práctica Profesional Supervisada en Sistemas de Información</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/lic_sistemas_2023.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/licenciatura-en-sistemas-de-informacion" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/analista-programador-universitario/">Analista Programador Universitario</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Algoritmos y estructuras de datos I</li><li>Programación I</li><li>Introducción a los sistemas</li><li>Matemática básica</li><li>Arquitectura de computadoras I</li><li>Bases de datos I</li><li>Programación II</li><li>Álgebra I</li><li>Ingeniería de requisitos</li><li>Sistemas operativos I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Programación III</li><li>Álgebra II</li><li>Bases de datos II</li><li>Ingeniería de soitware I</li><li>Programación IV</li><li>Cálculo I</li><li>Redes I</li><li>Ingeniería de soitware II</li><li>Sistemas operativos II semanal mensual Correlativas</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Programación V</li><li>Cálculo II</li><li>Redes II</li><li>Algoritmos y estructuras de datos II</li><li>Ingeniería de soitware III</li><li>Programación VI</li><li>Teoría de la computación I</li><li>Arquitectura de computadoras II</li><li>Bases de datos III</li><li>Aspectos profesionales I</li><li>Inglés Título:</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/analista__programador_universitario.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/analista-programador-universitario-en-sistemas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -180,7 +434,28 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-diseno-grafico-y-digital/">Licenciatura en Diseño Gráfico y Digital</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Lenguaje Visual</li><li>Introducción a la Tipografía</li><li>Psicología y Comportamiento</li><li>Comunicación, Arte y Tecnología</li><li>Programas Vectoriales</li><li>Dibujo I</li><li>Fundamentos Proyectuales</li><li>Tipografía</li><li>Sistemas de Representación</li><li>Programas Pixelares</li><li>Dibujo II</li><li>Arte y Diseño Moderno</li><li>Proyecto de Identidad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Sistemas de Signos</li><li>Semiología</li><li>Programas de Maquetación</li><li>Fotografía</li><li>Introducción a la Animación</li><li>Proyecto Editorial</li><li>Diseño Audiovisual</li><li>Tecnología Gráfica</li><li>Animación</li><li>Ética y Legislación Profesional</li><li>Proyecto Multimedia</li><li>Práctica Profesionalizante Régimen de Modalidad Cursado de cursado Título intermedio:</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Diseño Regional y Sustentable</li><li>Marketing y Publicidad</li><li>Creatividad e Innovación</li><li>Guión y Realización Audiovisual</li><li>Diseño Contemporáneo</li><li>Diseño Web</li><li>Modelos de Negocios</li><li>Comunicación Profesional</li><li>Narrativas Digitales</li><li>Experiencia de Usuario</li><li>Diseño de Información</li><li>Proyecto Integrador</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Diseño y Gestión</li><li>Diseño Web y Aplicaciones móviles</li><li>Producción Editorial Digital</li><li>Desarrollo web y aplicaciones móviles</li><li>Diseño de Libros</li><li>Marketing Digital</li><li>Cultura de la imagen</li><li>Diseño en movimiento</li><li>a Electiva a. Diseño de Packaging</li><li>b Electiva b. Desarrollo Multiplataforma</li><li>c Electiva c. Diseño de Diarios y Revistas</li><li>Proyecto de Diseño curriculares Título:</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/lic_diseno2022.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/licenciatura-en-diseño" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -190,7 +465,28 @@
         <li class="oferta">
             <h3><a href="/carrera/profesorados-universitarios-en-educacion-primaria-y-en-educacion-inicial/">Profesorados Universitarios en Educación Primaria y en Educación Inicial</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Pedagogía</li><li>Sujetos de la Educación Inicial</li><li>Sociología de la Educación</li><li>Prácticas de lectura, escritura y oralidad</li><li>Tecnologías Digitales en los Procesos de Enseñanza y Aprendizaje I</li><li>Taller de Pensamiento lógico-matemático</li><li>Didáctica General</li><li>Historia y Prospectiva de la Educación</li><li>Instituciones educativas</li><li>Lengua</li><li>Práctica Profesional Docente I</li><li>Política y Legislación de la Educación argentina</li><li>Didáctica de la Lengua I</li><li>Didáctica de las Ciencias Sociales I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Didáctica de las Ciencias Naturales I</li><li>Didáctica de la Matemática I</li><li>Psicología de la educación</li><li>Alfabetización Inicial</li><li>Tecnologías Digitales en los Procesos de Enseñanza y Aprendizaje II</li><li>Práctica profesional docente II Rectorado Cursado de cursado</li><li>Lenguajes Artísticos y su Didáctica</li><li>Didáctica de las Ciencias Sociales II</li><li>Didáctica de las Ciencias Naturales II</li><li>Literatura aplicada al Nivel Primario</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Tecnologías digitales en los procesos de enseñanza y aprendizaje III</li><li>Didáctica de la Matemática II</li><li>Cultura del cuidado</li><li>Pedagogía inclusiva</li><li>Educación Científica y Tecnológica</li><li>Práctica profesional docente III</li><li>Prácticas de construcción ciudadana</li><li>Didáctica de la literatura</li><li>Filosofía y Educación</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Actividad física y su Didáctica</li><li>Tecnologías digitales en los procesos de enseñanza y aprendizaje IV</li><li>Dimensión ético-política de la praxis docente</li><li>Práctica Profesional Docente IV Todos los espacios y Residencia curriculares</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/educacion_primaria.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/profesorados-universitarios-en-educacion-primaria-e-inicial" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -200,7 +496,28 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-turismo/">Licenciado en Turismo</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Inglés I</li><li>Portugués I</li><li>Historia de la Cultura Universal</li><li>Técnicas de Expresión</li><li>Introducción al Turismo</li><li>Geografía General</li><li>Hist. de la Cultura Americana y Argentina</li><li>Información Turística</li><li>Sociología Aplicada al Turismo</li><li>Turismo y Medio Ambiente</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Inglés II</li><li>Portugués II</li><li>Psicología Aplicada al Turismo</li><li>Historial Argentina y de Cuyo</li><li>Geografía Turística de Argentina</li><li>Taller de Higiene y Primeros Auxilios</li><li>Geografía Regional Turística de Cuyo</li><li>Conducción de Grupos y Recreación</li><li>Turismo del Vino</li><li>Folklore</li><li>Práctica Profesional del Guía</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Inglés III</li><li>Portugués III</li><li>Geografía Turística Continental</li><li>Matemática</li><li>Economía</li><li>Administración</li><li>Contabilidad</li><li>Legislación Aplicada</li><li>Metodología de la Investigación</li><li>Relaciones Públicas</li><li>Servicios Turísticos I</li><li>Planificación I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Inglés IV</li><li>Portugués IV</li><li>Servicios Turísticos II</li><li>Estadística</li><li>Legislación Comparada</li><li>Formulación y Evaluación de Proyectos</li><li>Marketing Turístico</li><li>Vías de Comunicación y Transporte</li><li>Administración Hotelera</li><li>Planificación II</li><li>Admin. De RRHH en la Emp. Turística</li><li>Ética Profesional</li><li>Taller de Amadeus</li><li>Seminario de Tesina Título: Licenciado en Turismo</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/Lic_Turismo.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/licenciatura-en-turismo" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>

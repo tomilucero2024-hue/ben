@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Negocios","item":"https://buscadoreducativo.com.ar/area/negocios/"},{"@type":"ListItem","position":4,"name":"Licenciatura en Marketing","item":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-marketing/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Licenciatura en Marketing","description":"Dónde estudiar Licenciatura en Marketing en Mendoza: carrera de grado del área Negocios, dictada por 2 instituciones (2 privadas). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-marketing/","provider":[{"@type":"EducationalOrganization","name":"Universidad del Aconcagua (UDA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-del-aconcagua-uda/"},{"@type":"EducationalOrganization","name":"Universidad Católica Argentina (UCA)","url":"https://buscadoreducativo.com.ar/institucion/universidad-catolica-argentina-uca/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Licenciatura en Marketing en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Licenciatura en Marketing en Mendoza en 2 instituciones: Universidad del Aconcagua (UDA) y Universidad Católica Argentina (UCA). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Licenciatura en Marketing?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Licenciatura en Marketing?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Licenciatura en Marketing?","acceptedAnswer":{"@type":"Answer","text":"Licenciatura en Marketing es una carrera de grado perteneciente al área de Negocios. Entre sus aptitudes más afines se destacan: pensamiento analítico, interacción social, liderazgo y gestión y creatividad."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,8 +120,6 @@
         <dt>Modalidad</dt><dd>Presencial</dd>
         <dt>Duración</dt><dd>4 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Licenciatura+en+Marketing&amp;area=Negocios&amp;formacion=grado">Ver Licenciatura en Marketing en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Licenciatura en Marketing</h2>
@@ -100,14 +127,56 @@
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-del-aconcagua-uda/">Universidad del Aconcagua (UDA)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Primer año</h4>
+            <ul><li>Marketing</li><li>Análisis empresarial</li><li>Herramientas informáticas</li><li>Economía</li><li>Análisis comunicacional</li><li>Matemática financiera</li><li>Inglés I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Segundo año</h4>
+            <ul><li>Sociología aplicada</li><li>Estadística aplicada</li><li>Comportamiento del consumidor</li><li>Costos y presupuestos</li><li>Productos y servicios</li><li>Gestión y práctica de ventas</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Tercer año</h4>
+            <ul><li>Canales de distribución y merchandising</li><li>Comunicación</li><li>Laboratorio y práctica de marketing</li><li>Inglés III</li><li>Investigación de mercados</li><li>Finanzas aplicadas</li><li>Gestión de precios</li><li>Marketing y tecnología</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>Cuarto año</h4>
+            <ul><li>Derecho comercial</li><li>Estrategias de marketing</li><li>Emprendimientos</li><li>Comercio internacional</li><li>Marketing directo y relacional</li><li>Marketing sectorial</li><li>Marketing vitivinícola</li><li>Práctica profesional supervisada</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-marketing" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/carreras-de-grado/licenciatura-en-marketing" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta" id="oferta-2">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-catolica-argentina-uca/">Universidad Católica Argentina (UCA)</a></h3>
-            <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-
-            <a class="oficial" href="https://uca.edu.ar/es/ingreso" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Administración</li><li>Contabilidad</li><li>Matemática Aplicada I</li><li>Microeconomía</li><li>Seminario: Argentina en el Mundo</li><li>Filosofía y Antropología</li><li>Taller: Lógica y Oratoria</li><li>Taller: Comunicación y Redacción</li><li>Administración Avanzada</li><li>Contabilidad y Sistemas de Información</li><li>Matemática Aplicada II</li><li>Macroeconomía</li><li>Introducción al Derecho</li><li>Seminario I</li><li>Taller: Software de Negocios I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Gerencia y Liderazgo</li><li>Fundamentos del Marketing</li><li>Estadística</li><li>Derecho Comercial</li><li>Ética y sus Fundamentos</li><li>Introducción a la Teología</li><li>Taller de Habilidades Profesionales</li><li>Comportamiento e Investigación de Mercado</li><li>Marketing Estratégico</li><li>Estrategia de Producto</li><li>Distribución y Trade Marketing</li><li>Gestión de IT</li><li>Seminario II</li><li>Taller: Software de Negocios II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Competitividad y Costos en el Marketing</li><li>Nuevas Tendencias de la Administración</li><li>Seminario: Estrategia de Marca</li><li>Comunicación Integrada de Marketing</li><li>Estrategia de Precio</li><li>Síntesis Teológica</li><li>Marketing de Servicios</li><li>Innovación en Marketing</li><li>Presupuesto y Control</li><li>Optativa Grupo 1</li><li>Optativa Grupo 2</li><li>Seminario III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Planificación Integral de Marketing</li><li>Estrategia Empresarial</li><li>Optativa Grupo 1</li><li>Optativa Grupo 2</li><li>Optativa Grupo 3</li><li>Moral y Compromiso Social</li><li>Dirección General</li><li>Ética Económica y Empresarial</li><li>Optativa Grupo 3</li><li>Optativa Grupo 3</li><li>Optativa Grupo 3</li><li>Seminario IV</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/marketing/plan-de-estudio" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/marketing" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 
@@ -178,20 +247,20 @@
     <section class="relacionadas">
     <h2>Otras carreras del área Negocios</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/contador-publico/">Contador Público</a> <span class="cuantas">(11)</span></li>
+        <li><a href="/carrera/contador-publico/">Contador Público</a> <span class="cuantas">(10)</span></li>
         <li><a href="/carrera/recursos-humanos/">Recursos Humanos</a> <span class="cuantas">(6)</span></li>
-        <li><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a> <span class="cuantas">(5)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-administracion-de-empresas/">Tecnicatura Superior en Administración de Empresas</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-administracion-de-empresas/">Tecnicatura Superior en Administración de Empresas</a> <span class="cuantas">(5)</span></li>
+        <li><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-logistica/">Tecnicatura Superior en Logística</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-administracion-de-empresas/">Licenciatura en Administración de Empresas</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-comercio-internacional/">Licenciatura en Comercio Internacional</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/licenciatura-en-economia/">Licenciatura en Economía</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-administracion-publica/">Tecnicatura Superior en ADMINISTRACIÓN PÚBLICA</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-comercio-internacional-y-aduana/">Tecnicatura Superior en Comercio Internacional y Aduana</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-gestion-de-recursos-humanos/">Tecnicatura Superior en Gestion de Recursos Humanos</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/administracion/">ADMINISTRACIÓN</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-administracion-hotelera/">Licenciatura en Administración Hotelera</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-analitica-de-negocios/">Licenciatura en Analítica de Negocios</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/administracion/">Administración</a> <span class="cuantas">(2)</span></li>
     </ul>
-    <p><a href="/area/negocios/">Ver las 75 carreras del área Negocios →</a></p>
+    <p><a href="/area/negocios/">Ver las 73 carreras del área Negocios →</a></p>
     </section>
     </div>
 </div>

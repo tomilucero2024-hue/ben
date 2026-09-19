@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ingeniería","item":"https://buscadoreducativo.com.ar/area/ingenieria/"},{"@type":"ListItem","position":4,"name":"Ingeniería Recursos Naturales Renovables","item":"https://buscadoreducativo.com.ar/carrera/ingenieria-recursos-naturales-renovables/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Ingeniería Recursos Naturales Renovables","description":"Dónde estudiar Ingeniería Recursos Naturales Renovables: curso o formación profesional del área Ingeniería, dictada por 1 institución (1 privada). Dura 5 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/ingenieria-recursos-naturales-renovables/","provider":{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Ingeniería Recursos Naturales Renovables en Argentina?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Ingeniería Recursos Naturales Renovables en Argentina en la siguiente institución: Universidad Nacional de Cuyo (UNCuyo). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Ingeniería Recursos Naturales Renovables?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 5 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Ingeniería Recursos Naturales Renovables?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Ingeniería Recursos Naturales Renovables?","acceptedAnswer":{"@type":"Answer","text":"Ingeniería Recursos Naturales Renovables es una curso o formación profesional perteneciente al área de Ingeniería. Entre sus aptitudes más afines se destacan: pensamiento analítico, trabajo práctico, carga matemática y cuantitativa y afinidad tecnológica."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,8 +120,6 @@
         <dt>Modalidad</dt><dd>Presencial</dd>
         <dt>Duración</dt><dd>5 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Ingenier%C3%ADa+Recursos+Naturales+Renovables&amp;area=Ingenier%C3%ADa&amp;formacion=cursos">Ver Ingeniería Recursos Naturales Renovables en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Ingeniería Recursos Naturales Renovables</h2>
@@ -181,20 +208,20 @@
     <section class="relacionadas">
     <h2>Otras carreras del área Ingeniería</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/ingenieria-civil/">INGENIERÍA CIVIL</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/ingenieria-electronica/">INGENIERÍA ELECTRÓNICA</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/ingenieria-en-telecomunicaciones/">INGENIERÍA EN TELECOMUNICACIONES</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-mecatronica/">Tecnicatura Superior en Mecatrónica</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-petroleo-y-gas/">Tecnicatura Superior en Petróleo y Gas</a> <span class="cuantas">(3)</span></li>
+        <li><a href="/carrera/ingenieria-civil/">Ingeniería Civil</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/ingenieria-electronica/">Ingeniería Electrónica</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/ingenieria-en-telecomunicaciones/">Ingeniería en Telecomunicaciones</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/ingenieria-industrial/">Ingeniería Industrial</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/ingenieria-mecanica/">Ingeniería Mecánica</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/ingenieria-quimica/">INGENIERÍA QUÍMICA</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/ingenieria-quimica/">Ingeniería Química</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-mineria/">Tecnicatura Superior en Minería</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/bioingenieria/">Bioingeniería</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ingenieria-agronomica/">Ingeniería Agronómica</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ingenieria-electrica/">Ingeniería Eléctrica</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/ingenieria-electromecanica/">INGENIERÍA ELECTROMECÁNICA</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/ingenieria-en-agrimensura/">Ingeniería en Agrimensura</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/ingenieria-en-alimentos/">Ingeniería en Alimentos</a> <span class="cuantas">(1)</span></li>
     </ul>
-    <p><a href="/area/ingenieria/">Ver las 22 carreras del área Ingeniería →</a></p>
+    <p><a href="/area/ingenieria/">Ver las 28 carreras del área Ingeniería →</a></p>
     </section>
     </div>
 </div>

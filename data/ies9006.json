@@ -1,139 +1,672 @@
 {
- "instituciones": [
-  {
-   "id": 16,
-   "nombre": "IES 9-006 Francisco H. Tolosa",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "0263-4422582",
-    "email": "ens9006@infd.edu.ar",
-    "direccion": "Aristóbulo del Valle y Lavalle, Rivadavia"
-   },
-   "carreras": [
-    {
-     "id": 1600,
-     "nombre_carrera": "Profesorados",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-006 Francisco H. Tolosa",
-     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/profesorados/"
-    },
-    {
-     "id": 1601,
-     "nombre_carrera": "Profesorado de Educación Inicial",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-006 Francisco H. Tolosa",
-     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-inicial/"
-    },
-    {
-     "id": 1602,
-     "nombre_carrera": "Profesorado de Educación Primaria",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-006 Francisco H. Tolosa",
-     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-primaria/"
-    },
-    {
-     "id": 1603,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-006 Francisco H. Tolosa",
-     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/matematica/"
-    },
-    {
-     "id": 1604,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Física",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-006 Francisco H. Tolosa",
-     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/fisica/"
-    },
-    {
-     "id": 1605,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Química",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-006 Francisco H. Tolosa",
-     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/quimica/"
-    },
-    {
-     "id": 1606,
-     "nombre_carrera": "Profesorado de Artes Visuales",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-006 Francisco H. Tolosa",
-     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/artes/"
-    },
-    {
-     "id": 1607,
-     "nombre_carrera": "Tecnicaturas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-006 Francisco H. Tolosa",
-     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/?page_id=916"
-    },
-    {
-     "id": 1608,
-     "nombre_carrera": "Tecnicatura Superior en Turismo y Hotelería",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-006 Francisco H. Tolosa",
-     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/turismo/"
-    },
-    {
-     "id": 1609,
-     "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-006 Francisco H. Tolosa",
-     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-de-empresas/"
-    },
-    {
-     "id": 1610,
-     "nombre_carrera": "Tecnicatura Superior en Higiene y Seguridad con Orientación en Calidad y Medio Ambiente",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-006 Francisco H. Tolosa",
-     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente/"
-    },
-    {
-     "id": 1611,
-     "nombre_carrera": "Tecnicatura Superior en Producción Artística Artesanal",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-006 Francisco H. Tolosa",
-     "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/produccion-artistica-artesanal/"
-    }
-   ],
-   "departamento": "Rivadavia"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 16,
+            "nombre": "IES 9-006 Francisco H. Tolosa",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "0263-4422582",
+                "email": "ens9006@infd.edu.ar",
+                "direccion": "Aristóbulo del Valle y Lavalle, Rivadavia"
+            },
+            "carreras": [
+                {
+                    "id": 1600,
+                    "nombre_carrera": "Profesorado de Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-006 Francisco H. Tolosa",
+                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-inicial/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pensamiento Filosóﬁco",
+                                "Sistema Educativo",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Pedagogía",
+                                "Centralidad del Juego",
+                                "Juego y Producción de Objetos Lúdicos",
+                                "Lenguajes Artísticos Expresivos: Música",
+                                "Lenguajes Artísticos Expresivos: Teatro",
+                                "Práctica Profesional Docente I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Didáctica",
+                                "Instituciones Educativas",
+                                "Psicología Educacional",
+                                "Educación y Atención Temprana al Desarrollo Infantil",
+                                "Didáctica del Jardín Maternal",
+                                "Prácticas Lingüísticas en Educación Inicial",
+                                "Lenguajes Artísticos Expresivos: Artes Visuales",
+                                "Educación Matemática Temprana e Inicial I",
+                                "Sujetos de la Educación",
+                                "Práctica Profesional Docente II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Proyectos de Intervención Socioeducativa",
+                                "Educación en la Diversidad",
+                                "Literatura Infantil",
+                                "Didáctica de Jardín de Infantes",
+                                "Educación Matemática Inicial II",
+                                "Alfabetización Temprana e Inicial",
+                                "Didáctica del Ambiente Natural",
+                                "Didáctica del Ambiente Social",
+                                "Motricidad en Jardín Maternal y en Jardín de Infantes",
+                                "Práctica Profesional Docente III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "ESI",
+                                "Educación y Tecnologías Digitales",
+                                "Historia y Patrimonio Cultural de",
+                                "Formación Complementaria General",
+                                "Problemáticas de la Educación Inicial",
+                                "Salud y Cultura del Cuidado",
+                                "Formación Ética y Ciudadana y su Didáctica",
+                                "Formación Complementaria Especíﬁca",
+                                "Práctica Profesional Docente IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-inicial/"
+                },
+                {
+                    "id": 1601,
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-006 Francisco H. Tolosa",
+                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-primaria/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pensamiento Filosóﬁco",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Sistema Educativo",
+                                "Pedagogía",
+                                "Numeración",
+                                "Lengua y Literatura Infantil y Juvenil",
+                                "Educación Artística",
+                                "Práctica Profesional Docente I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Didáctica",
+                                "Psicología Educacional",
+                                "Instituciones Educativas",
+                                "Sujetos de la Educación",
+                                "Números Racionales y su Didáctica",
+                                "Ciencias Sociales y su Didáctica I",
+                                "Ciencias Naturales y su Didáctica I",
+                                "Lengua y su Didáctica",
+                                "Literatura Infantil y Juvenil y su Didáctica",
+                                "Espacio, Geometría y su Didáctica",
+                                "Práctica Profesional Docente II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Proyectos de Intervención Socioeducativa",
+                                "Educación en la Diversidad",
+                                "Educación Tecnológica",
+                                "Medida y su Didáctica",
+                                "Ciencias Sociales y su Didáctica II",
+                                "Ciencias Naturales y su Didáctica II",
+                                "Alfabetización",
+                                "Formación Ética y Ciudadana y su Didáctica",
+                                "Álgebra, Funciones y su Didáctica",
+                                "Práctica Profesional Docente III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Educación Sexual Integral",
+                                "Educación y Tecnologías Digitales",
+                                "Historia y Patrimonio Cultural de",
+                                "Formación Complementaria General",
+                                "Didáctica de la Lengua y la Literatura Infantil y Juvenil",
+                                "Didáctica de la Matemática",
+                                "Didáctica de las Ciencias Sociales",
+                                "Didáctica de las Ciencias Naturales",
+                                "Formación Complementaria Especíﬁca",
+                                "Práctica Profesional Docente IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-primaria/"
+                },
+                {
+                    "id": 1602,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-006 Francisco H. Tolosa",
+                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/matematica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pensamiento Filosóﬁco",
+                                "Sistema Educativo",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "El Quehacer Matemático",
+                                "Cálculo I",
+                                "Álgebra I",
+                                "Geometría I",
+                                "Práctica Profesional Docente I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Psicología Educacional",
+                                "Didáctica",
+                                "Instituciones Educativas",
+                                "Sujetos del Aprendizaje",
+                                "Didáctica de la Matemática I",
+                                "Didáctica de la Matemática II",
+                                "Álgebra II",
+                                "Cálculo II",
+                                "Geometría II",
+                                "Práctica Profesional Docente II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Proyectos de Intervención Educativa",
+                                "Educación y Tecnologías Digitales",
+                                "Complemento de la Formación Especíﬁca",
+                                "Física I",
+                                "Didáctica de la Matemática III",
+                                "Didáctica de la Matemática IV",
+                                "Geometría III",
+                                "Probabilidad y Estadística I",
+                                "Historia de la Matemática",
+                                "Práctica Profesional Docente III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Historia y Patrimonio Cultural de",
+                                "Educación en la Diversidad",
+                                "Educación Sexual Integral",
+                                "Física II",
+                                "Complemento de la Formación General",
+                                "Probabilidad y Estadística II",
+                                "Cálculo III",
+                                "Práctica Profesional Docente IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/matematica/"
+                },
+                {
+                    "id": 1603,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Física",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-006 Francisco H. Tolosa",
+                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/fisica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Física I",
+                                "Álgebra y Geometría Analítica",
+                                "Laboratorio de Física",
+                                "Química I",
+                                "Cálculo I",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Formación Práctica Profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Física II",
+                                "Cálculo II",
+                                "Didáctica de la Física I",
+                                "Historia de la Física",
+                                "Sujeto de la Educación",
+                                "Formación Complementaria Especíﬁca",
+                                "Oscilaciones y Ondas Mecánicas",
+                                "Didáctica General",
+                                "Pensamiento Filosóﬁco",
+                                "Sistema Educativo",
+                                "Formación Práctica Profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Física III",
+                                "Probabilidad y Estadística",
+                                "Didáctica de la Física II",
+                                "Cálculo III",
+                                "Química II",
+                                "Óptica",
+                                "Física experimental",
+                                "Educación para la Diversidad",
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Psicología Educacional",
+                                "Formación Práctica Profesional III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Física IV",
+                                "Físicoquímica II",
+                                "Fundamentos de Astronomía",
+                                "Mecánica Analítica",
+                                "Epistemología de la física",
+                                "UDJ: Historia y Patrimonio de",
+                                "Educación y tecnologías digitales",
+                                "Educación Sexual Integral",
+                                "Formación Práctica Profesional IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/fisica/"
+                },
+                {
+                    "id": 1604,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Química",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-006 Francisco H. Tolosa",
+                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/quimica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Biología General",
+                                "Química General",
+                                "Matemática",
+                                "Bioestadística",
+                                "Sujeto de la Educación",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Formación Práctica Profesional"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Química Orgánica",
+                                "Química Inorgánica",
+                                "Física General",
+                                "Ciencias de la Tierra",
+                                "Ecología",
+                                "Didáctica de las Ciencias Naturales",
+                                "Didáctica General",
+                                "Pensamiento Filosóﬁco",
+                                "Sistema Educativo",
+                                "Formación Práctica Profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Química Biológica I",
+                                "Química Biológica II",
+                                "Fisicoquímica",
+                                "Química Analítica general",
+                                "Didáctica de la Química",
+                                "Educación en la Diversidad",
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Psicología Educacional",
+                                "Formación Práctica Profesional III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Química Analítica Instrumental",
+                                "Formación Complementaria Especíﬁca",
+                                "Química Ambiental y de Salud",
+                                "Química de los Alimentos",
+                                "UDJ: Historia y Patrimonio Cultural",
+                                "Educación y Tecnologías Digitales",
+                                "Educación Sexual Integral",
+                                "Formación Práctica Profesional IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/quimica/"
+                },
+                {
+                    "id": 1605,
+                    "nombre_carrera": "Profesorado de Artes Visuales",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-006 Francisco H. Tolosa",
+                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/artes/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Dibujo I",
+                                "Bidimensión I",
+                                "Tridimensión I",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Lenguaje de las Artes Visuales I",
+                                "Historia de las Artes Visuales I",
+                                "Formación Práctica Profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Dibujo II",
+                                "Bidimensión II",
+                                "Tridimensión II",
+                                "Pensamiento Filosóﬁco",
+                                "Sistema Educativo",
+                                "Didáctica General",
+                                "Sujeto de la Educación I",
+                                "Lenguaje de las Artes Visuales II",
+                                "Didáctica de las Artes Visuales I",
+                                "Historia de las Artes Visuales II",
+                                "Formación Práctica Profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Dibujo III",
+                                "Producción Artística I: Bidimensión (Grabado – Pintura)",
+                                "Producción Artística I: Tridimensión (Escultura – Cerámica)",
+                                "Lenguaje de las Artes Visuales III",
+                                "Didáctica de las Artes Visuales II",
+                                "Historia de las Artes Visuales III",
+                                "Psicología de la Educación",
+                                "Sujeto de la Educación II",
+                                "Educación para la Diversidad",
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Formación Práctica Profesional III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Producción Artística II: Cerámica – Escultura – Grabado o Dibujo",
+                                "Historia de las Artes Visuales IV",
+                                "Artes Visuales y Producción Audiovisual",
+                                "Teoría del Arte",
+                                "Producción Artística Contemporánea",
+                                "Educación y Tecnologías Digitales",
+                                "Educación Sexual Integral",
+                                "Formación Complementaria Especíﬁca",
+                                "Formación Práctica Profesional IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/artes/"
+                },
+                {
+                    "id": 1606,
+                    "nombre_carrera": "Tecnicatura Superior en Turismo y Hotelería",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-006 Francisco H. Tolosa",
+                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/turismo/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Taller de Oratoria y Comunicación",
+                                "Taller de Competencias Digitales",
+                                "Gestión de Riesgos y Primeros Auxilios",
+                                "Introducción al Turismo",
+                                "Inglés I",
+                                "Procesos Históricos y Patrimonio",
+                                "Portugués I",
+                                "Taller de Enoturismo",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Inglés II",
+                                "Portugués II",
+                                "Derecho y Ética para la Gestión de Turismo",
+                                "Economía, Costos y Gestión Financiera de la actividad turística",
+                                "Espacios Turísticos de Argentina",
+                                "Prestación de Servicios Turísticos",
+                                "Espacios Turísticos Mundiales",
+                                "Estadística Aplicada al Turismo",
+                                "Planiﬁcación y Gestión Turística",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Inglés III",
+                                "Portugués III",
+                                "Desarrollo y Gestión de Destinos Turísticos Inteligentes",
+                                "Marketing Aplicado a Turismo",
+                                "Formulación y Evaluación de Proyectos Turísticos",
+                                "Electiva 1: Accesibilidad Turística y Trato Inclusivo/Nuevas Tendencias y Perspectivas en el Turismo",
+                                "Estrategias para el Desarrollo del Turismo Local Sostenible",
+                                "Electiva 2: Turismo Rural y Agroturismo/Turismo comunitario",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/turismo/"
+                },
+                {
+                    "id": 1607,
+                    "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-006 Francisco H. Tolosa",
+                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-de-empresas/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción a la Administración de Empresas",
+                                "Inglés Técnico",
+                                "Comunicación Efectiva",
+                                "Herramientas Digitales para la Gestión",
+                                "Introducción a la Economía I",
+                                "Introducción a la Economía II",
+                                "Matemática Aplicada",
+                                "Estadística y Análisis de Datos",
+                                "Introducción a la Legislación",
+                                "Desarrollo Regional y Contexto Laboral",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Comercialización",
+                                "Estructura de Costos",
+                                "Gestión Financiera",
+                                "Formulación y Evaluación de Proyectos",
+                                "Cálculo Financiero",
+                                "Introducción a la Contabilidad",
+                                "Análisis de la Información Contable",
+                                "Economía de la Empresa",
+                                "Producto y Servicio",
+                                "Derecho Comercial y Laboral",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Logística Integral",
+                                "Práctica Impositiva y Liquidación de Sueldos",
+                                "Administración de Personal",
+                                "Ética Profesional",
+                                "Control de Gestión",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-de-empresas/"
+                },
+                {
+                    "id": 1608,
+                    "nombre_carrera": "Tecnicatura Superior en Higiene, Seguridad y Ambiente",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-006 Francisco H. Tolosa",
+                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-seguridad-ambiente/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Alfabetización Académica",
+                                "Tecnologías Digitales Aplicadas",
+                                "Física",
+                                "Inglés Técnico",
+                                "Representación Técnica de Planos",
+                                "Higiene Laboral I",
+                                "Seguridad Laboral I",
+                                "Liderazgo y habilidades interpersonales",
+                                "Introducción a Prevención 4.0",
+                                "Química",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Estadística Aplicada",
+                                "Ambiente y Sostenibilidad",
+                                "Derecho y Legislación Aplicada a la Higiene y Seguridad Laboral",
+                                "Sistemas de Gestión",
+                                "Medicina del trabajo y Toxicología",
+                                "Higiene Laboral II",
+                                "Seguridad Laboral II",
+                                "Gestión de Emprendimientos",
+                                "Derecho Ambiental",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Evaluación de impacto ambiental",
+                                "Seguridad contra incendios",
+                                "Ergonomía",
+                                "Higiene y Seguridad en Minería y Petróleo",
+                                "Higiene y Seguridad Agropecuaria",
+                                "Higiene y Seguridad en la Industria de la Construcción",
+                                "Higiene y Seguridad en Servicios TIC, Economía del Conocimiento e Industria 4.0",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-seguridad-ambiente/"
+                },
+                {
+                    "id": 1611,
+                    "nombre_carrera": "Tecnicatura Superior en Producción Artística Artesanal",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-006 Francisco H. Tolosa",
+                    "link_oficial": "https://ens9006-infd.mendoza.edu.ar/sitio/produccion-artistica-artesanal/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Comunicación y Comprensión de Textos",
+                                "Tecnología de los Materiales",
+                                "Historia del Arte I",
+                                "Técnicas Tridimensionales I",
+                                "Técnicas Bidimensionales I",
+                                "Tecnología de la Información y Comunicación",
+                                "Lenguaje Visual",
+                                "Dibujo y Diseño Proyectual",
+                                "Materia Electiva I",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Inglés",
+                                "Historia del Arte II",
+                                "Técnicas Bidimensionales II",
+                                "Técnicas Tridimensionales II",
+                                "Dibujo y Diseño Proyectual II",
+                                "Tecnología Aplicada",
+                                "Materia Electiva II",
+                                "Materia Electiva III",
+                                "Práctica Profesionalizante II Tel. Fijo: Más de cien años, abrazando la educación E-mail:"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Patrimonio, Conservación y Restauración",
+                                "Problemática Sociocultural y Contexto",
+                                "Diseño de Productos",
+                                "Estructura de Costos",
+                                "Elaboración y Evaluación de Proyectos Productivos",
+                                "Marketing",
+                                "Materia Electiva IV",
+                                "Materia Electiva V",
+                                "Materia Electiva VI",
+                                "Práctica Profesionalizante III Modalidad: Presencial Validez Nacional Docentes Especializados Amplia Salida Laboral 263 444-2078 tolosaterciario@gmail.com"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/Tecnicatura-Superior-en-Produccion-Artistica-Artesanal_compressed.pdf"
+                }
+            ]
+        }
+    ]
 }

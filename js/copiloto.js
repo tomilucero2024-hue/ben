@@ -4,8 +4,8 @@
 // ==========================================
 
 import { ETIQUETAS_FUENTE, asegurarOrientadorListo, catalogosAparte, ofertas, plataformas } from './datos.js';
-import { LIMITE_PAGINA, enComparador, estaEnFavoritos, estado } from './estado.js';
-import { cambiarSeccion, mostrarResultados, renderizarCursosAparte, renderizarPlataformas, renderizarTarjetas, renderizarTarjetasConCompatibilidad } from './render.js';
+import { LIMITE_PAGINA, estado } from './estado.js';
+import { cambiarSeccion, cambiarVista, mostrarResultados, renderizarCursosAparte, renderizarPlataformas, renderizarTarjetas, renderizarTarjetasConCompatibilidad } from './render.js';
 import { capSeguro, escaparHTML, normalizarTexto, obtenerModalidades } from './util.js';
 
 let pasoActual = 0;
@@ -129,12 +129,20 @@ export function configurarBienvenida() {
     }
 
     const btnCopiloto = document.getElementById('btnBienvenidaCopiloto');
-    const btnCatalogo = document.getElementById('btnBienvenidaCatalogo');
+    const btnCarreras = document.getElementById('btnBienvenidaCarreras');
+    const btnInstituciones = document.getElementById('btnBienvenidaInstituciones');
+    const btnAreas = document.getElementById('btnBienvenidaAreas');
     if (btnCopiloto) btnCopiloto.addEventListener('click', () => {
         salirDeBienvenida(() => abrirTestPantallaCompleta());
     });
-    if (btnCatalogo) btnCatalogo.addEventListener('click', () => {
-        salirDeBienvenida();
+    if (btnCarreras) btnCarreras.addEventListener('click', () => {
+        salirDeBienvenida(() => cambiarVista('carreras'));
+    });
+    if (btnInstituciones) btnInstituciones.addEventListener('click', () => {
+        salirDeBienvenida(() => cambiarVista('instituciones'));
+    });
+    if (btnAreas) btnAreas.addEventListener('click', () => {
+        salirDeBienvenida(() => cambiarVista('areas'));
     });
 }
 
@@ -999,7 +1007,6 @@ function mostrarRecomendacion() {
         const compatibles = rankings.total || todas.length;
         html = `
             <p><img class="chat-bot-icon" src="/img/copiloto-icono.png" alt="" width="16" height="16"> <strong>Orientador:</strong> ¡Mapeo completo! Encontré <strong>${compatibles} carreras compatibles</strong> con tu perfil.${matchPct ? ' Tu mejor match: <strong>' + escaparHTML(mejor.nombre) + '</strong> con ' + mejor.compatibilidad + '%.' : ''}</p>
-            <p class="mensaje-bot-nota">Podés marcarlas como favoritas o sumarlas para comparar desde acá mismo.</p>
             <div class="chat-resultados">${tarjetas}</div>
             <p class="mensaje-bot-nota">Acá te muestro las ${visibles.length} de mejor match. Cerrá esta ventana y vas a encontrar ${todas.length} en la grilla, donde además podés filtrarlas sin perder el orden por compatibilidad.</p>
             <p class="mensaje-bot-nota"><small>⚖️ <em>Resultado de compatibilidad preliminar basado en intereses. Consultá siempre con un profesional de la orientación vocacional.</em></small></p>
@@ -1010,9 +1017,7 @@ function mostrarRecomendacion() {
     renderizarChat();
 }
 
-// Tarjeta compacta de resultado para el chat. Los botones de favorito/comparar
-// no llevan onclick: funcionan por delegación (configurarEventos) con data-clave,
-// igual que las tarjetas de la grilla.
+// Tarjeta compacta de resultado para el chat.
 function tarjetaResultadoChat(carrera, rankings) {
     const compat = carrera.compatibilidad || 0;
     const matchClass = compat >= 75 ? 'match-alto' : (compat >= 50 ? 'match-medio' : 'match-bajo');
@@ -1030,8 +1035,6 @@ function tarjetaResultadoChat(carrera, rankings) {
             </div>
             ${tipoBadge || carrera.area ? '<div class="tipo-badges">' + tipoBadge + (carrera.area ? '<span class="tipo-badge area">' + capSeguro(carrera.area) + '</span>' : '') + '</div>' : ''}
             <div class="chat-resultado-acciones">
-                <button type="button" class="btn-favorito${estaEnFavoritos(clave) ? ' is-active' : ''}" data-clave="${escaparHTML(clave)}" aria-pressed="${estaEnFavoritos(clave)}" title="Guardar en favoritos"><svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <span>Favorito</span></button>
-                <button type="button" class="btn-comparar${enComparador(clave) ? ' is-active' : ''}" data-clave="${escaparHTML(clave)}" aria-pressed="${enComparador(clave)}" title="Agregar a comparar"><svg class="btn-svg btn-svg-add" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><svg class="btn-svg btn-svg-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> <span>Comparar</span></button>
                 <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(clave)}" aria-label="Escuchar carrera"><svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg> <span>Escuchar</span></button>
             </div>
         </div>`;

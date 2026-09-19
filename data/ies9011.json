@@ -1,109 +1,646 @@
 {
- "instituciones": [
-  {
-   "id": 20,
-   "nombre": "IES 9-011 Del Atuel",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "0260-4422794",
-    "email": "ies9011@infd.edu.ar",
-    "direccion": "Maza 750, San Rafael, Mendoza"
-   },
-   "carreras": [
-    {
-     "id": 2000,
-     "nombre_carrera": "Profesorado de Educacion Secundaria en Biologia",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-011 Del Atuel",
-     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-biologia/"
-    },
-    {
-     "id": 2001,
-     "nombre_carrera": "Profesorado de Educacion Secundaria en Geografia",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-011 Del Atuel",
-     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-geografia/"
-    },
-    {
-     "id": 2002,
-     "nombre_carrera": "Profesorado de Educacion Secundaria en Historia",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-011 Del Atuel",
-     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/"
-    },
-    {
-     "id": 2003,
-     "nombre_carrera": "Profesorado en Informatica",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-011 Del Atuel",
-     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-informatica/"
-    },
-    {
-     "id": 2004,
-     "nombre_carrera": "Profesorado en Ingles",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-011 Del Atuel",
-     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-ingles-2/"
-    },
-    {
-     "id": 2005,
-     "nombre_carrera": "Profesorado de Educacion Secundaria en Lengua y Literatura",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-011 Del Atuel",
-     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/"
-    },
-    {
-     "id": 2006,
-     "nombre_carrera": "Profesorado de Educacion Secundaria en Matematica",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-011 Del Atuel",
-     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica/"
-    },
-    {
-     "id": 2007,
-     "nombre_carrera": "Tecnicatura Superior en Turismo",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-011 Del Atuel",
-     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-turismo/"
-    },
-    {
-     "id": 2008,
-     "nombre_carrera": "Tecnicatura Superior en Gastronomia",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-011 Del Atuel",
-     "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gastronomia/"
-    }
-   ],
-   "departamento": "San Rafael"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 20,
+            "nombre": "IES 9-011 Del Atuel",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "0260-4422794",
+                "email": "ies9011@infd.edu.ar",
+                "direccion": "Maza 750, San Rafael, Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 2000,
+                    "nombre_carrera": "Profesorado de Educacion Secundaria en Biologia",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-011 Del Atuel",
+                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-biologia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Biología General",
+                                "Química General",
+                                "Matemática",
+                                "Bioestadística",
+                                "Sujeto de la Educación",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Formación Práctica Profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Química Orgánica",
+                                "Química Inorgánica",
+                                "Física General",
+                                "Ciencias de la tierra",
+                                "Ecología – Taller/Seminario",
+                                "Didáctica de las Ciencias Naturales",
+                                "Didáctica General",
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Formación Práctica Profesional II – Práctica/Taller"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Didáctica de la Biología",
+                                "Biología Vegetal",
+                                "Biología Animal",
+                                "Microbiología y Biodiversidad",
+                                "Biología Humana",
+                                "Salud Humana",
+                                "Educación en la Diversidad",
+                                "Gestión y Evaluación de los Aprendizajes – Taller/Ateneo",
+                                "Psicología Educacional",
+                                "Formación Práctica Profesional III – Práctica/Trabajo de Campo"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Química Biológica",
+                                "Genética",
+                                "Educación Ambiental",
+                                "Formación Complementaria Específica",
+                                "UDJ_Historia y Patrimonio Cultural de Mendoza",
+                                "Educación y Tecnologías Digitales",
+                                "Educación Sexual Integral – Práctica/Trabajo de Campo",
+                                "Formación Práctica Profesional IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-biologia/"
+                },
+                {
+                    "id": 2000,
+                    "nombre_carrera": "Profesorado de Educacion Secundaria en Geografia",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-011 Del Atuel",
+                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-geografia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción a la Historia y a la Geografía",
+                                "Ciencia Política y Economía",
+                                "Geografía Física I",
+                                "Procesos Demográficos en el Tiempo y en Espacio",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Formación Práctica Profesional I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Sujeto de la Educación",
+                                "Epistemología de las Ciencias Sociales",
+                                "Geografía de América I",
+                                "Didáctica de la Geografía I",
+                                "Geografía Física II",
+                                "Geografía Argentina I",
+                                "Didáctica General",
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Formación Práctica Profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Geografía de la Mundialización",
+                                "Historia y Geografía de Mendoza I",
+                                "Historia y Geografía de Mendoza II",
+                                "Geografía Argentina II",
+                                "Didáctica de la Geografía II",
+                                "Problemática ambiental",
+                                "Geografía de América II",
+                                "Técnicas y Herramientas de Trabajo en Geografía I",
+                                "Educación en la Diversidad",
+                                "Gestión y Evaluación de los Aprendizajes – Taller / Ateneo",
+                                "Psicología Educacional",
+                                "Formación Práctica Profesional III – Práctica/Trabajo de Campo"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Geopolítica de los Espacios Mundiales",
+                                "Investigación Geográfica",
+                                "Educación Ambiental",
+                                "Geografía de los Espacios Rurales y Urbanos",
+                                "Técnicas y Herramientas de Trabajo en Geografía",
+                                "Formación Complementaria Específica",
+                                "Proyectos de Intervención Socioeducativa",
+                                "Formación Complementaria General",
+                                "Educación y Tecnologías Digitales",
+                                "Educación Sexual Integral",
+                                "Formación Práctica Profesional IV – Práctica/Trabajo de Campo"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-geografia/"
+                },
+                {
+                    "id": 2002,
+                    "nombre_carrera": "Profesorado de Educacion Secundaria en Historia",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-011 Del Atuel",
+                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción a la Historia y a la Geografía",
+                                "Ciencias Políticas y Economía",
+                                "Historia Universal I",
+                                "Procesos Demográficos en el Tiempo y en Espacio Asignatura",
+                                "Pedagogía",
+                                "Comprensión y Producción de Textos Académicos Taller",
+                                "Formación Práctica Profesional I Práctica"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Sujeto de la Educación",
+                                "Epistemología de las Ciencias Sociales",
+                                "Historia Argentina I",
+                                "Historia Argentina II",
+                                "Historia Americana I",
+                                "Historia Universal II",
+                                "Didáctica General",
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Formación Práctica profesional II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Didáctica de la Historia",
+                                "Formación Ética y Ciudadana y su Didáctica",
+                                "Historia y Geografía de Mendoza I",
+                                "Historia y Geografía de Mendoza II",
+                                "Historia Argentina III",
+                                "Historia Americana II",
+                                "Historia Universal III (siglo XV – siglo XVIII)",
+                                "Educación en la diversidad",
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Psicología educacional",
+                                "Formación Práctica Profesional II – Trabajo de campo"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Historia del arte argentino",
+                                "Investigación histórica",
+                                "Arqueología",
+                                "Formación Complementaria Específica",
+                                "Historia Americana III (1960 a la actualidad)",
+                                "Historia Universal IV",
+                                "Proyecto de Intervención Socioeducativa",
+                                "Formación Complementaria General",
+                                "Educación y Tecnologías Digitales",
+                                "Educación Sexual Integra",
+                                "Formación Práctica Profesional IV – Trabajo de campo"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/"
+                },
+                {
+                    "id": 2001,
+                    "nombre_carrera": "Profesorado en Informatica",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-011 Del Atuel",
+                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-informatica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Matemática Aplicada I (Específico)",
+                                "Programación I (Específico)",
+                                "Pedagogía (General)",
+                                "Sujeto de la Educación (General)",
+                                "Objetos Interactivos Digitales I (Específico)",
+                                "Programación II (Específico)",
+                                "Organización y Arquitectura de Computadoras (Específico)",
+                                "Historia y Política de la Educación Argentina (General)",
+                                "Alfabetización Académica y Digital I (General)",
+                                "Práctica Profesional I (Práctica Profesional)"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Programación III (Específico)",
+                                "Sistemas Operativos (Específico)",
+                                "Didáctica General (General)",
+                                "Alfabetización Académica y Digital II (General)",
+                                "Psicología Educativa (General)",
+                                "Programación IV (Específico)",
+                                "Base de Datos (Específico)",
+                                "Didáctica de la Informática I (Específico)",
+                                "Sociología de la Educación (General)",
+                                "Instituciones Educativas (General)",
+                                "Práctica Profesional II (Práctica Profesional)"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Objetos Interactivos Digitales II (Específico)",
+                                "Inglés Técnico (Específico)",
+                                "Redes Informáticas y Telecomunicaciones (Específico)",
+                                "Filosofía de la Educación (General)",
+                                "Matemática Aplicada II (Específico)",
+                                "UDI (General)",
+                                "Pedagogía de la Diferencia (General)",
+                                "TIC para la enseñanza (Específico)",
+                                "Didáctica de la Informática II (Específico)",
+                                "Práctica Profesional III (Práctica Profesional)"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Ciencia de Datos e Inteligencia Artificial (Específico)",
+                                "Ciudadanía Digital (Específico)",
+                                "Promoción de la Salud (General)",
+                                "Didáctica de la Informática (Específico)",
+                                "UDIE (Específico)",
+                                "Gestión de grupo y clima de aprendizaje (General)",
+                                "Práctica Profesional IV (Práctica Profesional)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-informatica/"
+                },
+                {
+                    "id": 2004,
+                    "nombre_carrera": "Profesorado en Ingles",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-011 Del Atuel",
+                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-ingles-2/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Lengua Inglesa",
+                                "Gramática Inglesa",
+                                "Fonética y Fonología Inglesa",
+                                "Prácticas de Lengua Inglesa",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Práctica Profesional Docente I",
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Pedagogía",
+                                "Prácticas de Gramática Inglesa"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Lengua Inglesa",
+                                "Gramática Inglesa",
+                                "Fonética y Fonología Inglesa",
+                                "Didáctica del Inglés I",
+                                "Práctica Profesional Docente II",
+                                "Sujetos de la Educación I",
+                                "Didáctica",
+                                "Instituciones Educativas",
+                                "Psicología Educacional",
+                                "Sujetos de la Educación II",
+                                "Prácticas de Fonética y Fonología Inglesa"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Lengua Inglesa III",
+                                "Gramática Inglesa III",
+                                "Fonética y Fonología Inglesa III",
+                                "Didáctica del Inglés II",
+                                "Práctica Profesional Docente III",
+                                "Cultura y Literatura Británica I",
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Cultura y Literatura Británica II",
+                                "Proyectos de Intervención Socioeducativa",
+                                "Educación en la Diversidad"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Lengua Inglesa",
+                                "Práctica Profesional Docente IV",
+                                "Fonética y Fonología Inglesa IV",
+                                "Cultura y Literatura norteamericana",
+                                "Educación Sexual Integral",
+                                "Educación y Tecnologías Digitales",
+                                "Historia y Patrimonio Cultural de Mendoza",
+                                "Formación Complementaria General",
+                                "Formación Complementaria Específica"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-ingles-2/"
+                },
+                {
+                    "id": 2005,
+                    "nombre_carrera": "Profesorado de Educacion Secundaria en Lengua y Literatura",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-011 Del Atuel",
+                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pensamiento Filosófico Módulo",
+                                "Sistema educativo Módulo",
+                                "Pedagogía Módulo",
+                                "Comprensión y Producción de textos académicos Taller",
+                                "Literatura Universal I Módulo-Ateneo",
+                                "Morfología y Semántica Léxica Asignatura",
+                                "Literatura y Cultura Grecolatina Módulo-Ateneo",
+                                "Fundamentos de la Lengua Módulo-Ateneo",
+                                "Fundamentos de la Literatura Módulo-Ateneo",
+                                "Práctica profesional docente I Práctica"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Instituciones Educativas Módulo",
+                                "Didáctica Módulo",
+                                "Psicología educacional Módulo",
+                                "Sujetos de la educación Módulo",
+                                "Literatura Española Módulo-Ateneo",
+                                "Sintaxis y Semántica Proposicional Asignatura",
+                                "Lingüística del texto y Análisis del Discurso I Módulo",
+                                "Literatura Universal II Módulo-Taller-Ateneo",
+                                "Literatura para jóvenes Módulo-Taller-Ateneo",
+                                "Fonética, Fonología y Grafemática Asignatura",
+                                "Lingüistica del texto y Análisis del Discurso II Módulo",
+                                "Literatura Latinoamericana I Módulo-Ateneo",
+                                "Práctica profesional docente II Práctica"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión y evaluación de los aprendizajes Taller",
+                                "Proyectos de intervención socioeducativa Taller",
+                                "Educación en la diversidad Módulo",
+                                "Literatura Argentina I Módulo-Ateneo",
+                                "Literatura Latinoamericana II Módulo-Ateneo",
+                                "Psicolingüística y Sociolingüística Módulo",
+                                "Didáctica de la Lengua Módulo",
+                                "Literatura Argentina II Módulo-Ateneo",
+                                "Alfabetización Asignatura",
+                                "Didáctica de la Literatura Módulo",
+                                "Práctica profesional docente III Práctica"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Educación Sexual Integral Módulo",
+                                "Educación y Tecnologías Digitales Taller",
+                                "Historia y Patrimonio Cultural de Mendoza Seminario",
+                                "Formación Complementaria General Taller",
+                                "Filología Asignatura",
+                                "Literatura Argentina III Módulo-Ateneo",
+                                "Teoría y Crítica Literarias Asignatura",
+                                "Formación Complementaria específica",
+                                "Práctica profesional docente IV Práctica"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/"
+                },
+                {
+                    "id": 2006,
+                    "nombre_carrera": "Profesorado de Educacion Secundaria en Matematica",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-011 Del Atuel",
+                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pensamiento filosófico Módulo",
+                                "Sistema Educativo Módulo",
+                                "Comprensión y producción de textos académicos Taller",
+                                "El quehacer matemático Taller",
+                                "Cálculo I Asignatura",
+                                "Álgebra I Asignatura",
+                                "Geometría I Asignatura",
+                                "Pedagogía Módulo",
+                                "Práctica Profesional Docente I Práctica"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Didáctica Módulo",
+                                "Sujetos de la Educación Módulo",
+                                "Cálculo II Asignatura",
+                                "Álgebra II Asignatura",
+                                "Geometría II Asignatura",
+                                "Didáctica de la Matemática I Módulo",
+                                "Instituciones Educativas Módulo",
+                                "Psicología Educacional Módulo",
+                                "Didáctica de la Matemática II Módulo",
+                                "Práctica Profesional Docente II Práctica"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión y evaluación de los aprendizajes Taller",
+                                "Proyectos de intervención socioeducativa Taller",
+                                "Probabilidad y Estadística I Asignatura",
+                                "Didáctica de la Matemática III Módulo",
+                                "Historia de la Matemática Módulo",
+                                "Geometría III Módulo",
+                                "Física I Asignatura",
+                                "Educación y tecnologías digitales Taller",
+                                "Complemento de la Formación Específica A definir",
+                                "Didáctica de la Matemática IV Módulo",
+                                "Práctica Profesional Docente III Práctica"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Historia y patrimonio cultural de Mendoza Seminario",
+                                "Educación en la Diversidad Módulo",
+                                "Cálculo III Asignatura",
+                                "Probabilidad y Estadística II Asignatura",
+                                "Física II Asignatura",
+                                "Educación Sexual Integral Taller",
+                                "Complemento de la Formación General A definir",
+                                "Práctica Profesional Docente IV Práctica"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica/"
+                },
+                {
+                    "id": 2002,
+                    "nombre_carrera": "Tecnicatura Superior en Turismo",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-011 Del Atuel",
+                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-turismo/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "GEOGRAFÍA Y AMBIENTE DE MENDOZA",
+                                "RECURSOS TURÍSTICOS DE ARGENTINA",
+                                "INTRODUCCIÓN AL TURISMO Y LA HOTELERÍA",
+                                "PRODUCCIÓN DE INFORMACIÓN TURÍSTICA",
+                                "COMUNICACIÓN ORAL",
+                                "INGLÉS I",
+                                "PORTUGUÉS I",
+                                "PRÁCTICA PROFESIONALIZANTE I",
+                                "HISTORIA Y CULTURA DE MENDOZA",
+                                "INFORMACIÓN TURÍSTICA DE MENDOZA",
+                                "GUIADO Y COORDINACIÓN",
+                                "GESTIÓN DE RIESGOS Y PRIMEROS AUXILIOS",
+                                "ÉTICA Y LEGISLACIÓN TURÍSTICA I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "ADMINISTRACIÓN GENERAL",
+                                "GASTRONOMÍA, ALIMENTOS Y BEBIDAS",
+                                "ÉTICA Y LEGISLACIÓN TURÍSTICA II",
+                                "INGLÉS II",
+                                "PORTUGUÉS II",
+                                "SERVICIOS DE HOSPEDAJE",
+                                "ECONOMÍA, COSTOS Y FINANZAS",
+                                "INFORMÁTICA",
+                                "PRÁCTICA PROFESIONALIZANTE II",
+                                "GESTIÓN PÚBLICA DEL TURISMO",
+                                "DESTINOS, CIRCUITOS Y PRODUCTOS TURÍSTICOS",
+                                "ESTADÍSTICA APLICADA"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "ELECTIVA I: TURISMO NATURAL",
+                                "RECURSOS HUMANOS",
+                                "MARKETING TURÍSTICO",
+                                "INGLÉS III",
+                                "PORTUGUÉS III",
+                                "FORMULACIÓN Y EVALUACIÓN DE PROYECTOS",
+                                "GESTIÓN DE EMPRESAS DE VIAJES",
+                                "PRÁCTICA PROFESIONALIZANTE III",
+                                "ELECTIVA II: HOSPITALIDAD",
+                                "ORGANIZACION DE EVENTOS"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-turismo/"
+                },
+                {
+                    "id": 2008,
+                    "nombre_carrera": "Tecnicatura Superior en Gastronomia",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-011 Del Atuel",
+                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gastronomia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Cocina I ( Asignatura )",
+                                "Métodos cuantitativos ( Asignatura )",
+                                "Introducción a la panadería y repostería ( Asignatura )",
+                                "Bromatología ( Asignatura )",
+                                "Materias primas e insumos gastronómicos ( Asignatura )",
+                                "Inglés técnico I (Taller)",
+                                "Alfabetización académica ( Asignatura )",
+                                "Nutrición ( Asignatura )",
+                                "Servicio de alimentos y bebidas (Taller)",
+                                "Informática gastronómica (Taller)",
+                                "Sistema de gestión gastronómica (Taller)",
+                                "Práctica profesional I (Práctica Profesional)"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Cocina II ( Asignatura )",
+                                "Vinos, Bar y Coctelería ( Asignatura )",
+                                "Dietología ( Asignatura )",
+                                "Panadería ( Asignatura )",
+                                "Comportamiento Organizacional ( Asignatura )",
+                                "Inglés Técnico II (Taller)",
+                                "Costos Operativos ( Asignatura )",
+                                "Cocina Regional (Taller)",
+                                "Práctica Profesionalizante II (Taller)"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Control de Alimentos y Bebidas (Módulo)",
+                                "Cocina Internacional ( Asignatura )",
+                                "Organización de Eventos y Catering ( Asignatura )",
+                                "Ética Profesional (Taller)",
+                                "Francés Técnico (Taller)",
+                                "Marketing Gastronómico ( Asignatura )",
+                                "Técnicas de Cocina Modernizantes (Módulo)",
+                                "Repostería ( Asignatura )",
+                                "Pymes y Microemprendimientos (Taller)",
+                                "Gestión Gastronómica ( Asignatura )",
+                                "Práctica Profesionalizante III (Taller)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gastronomia/"
+                }
+            ]
+        }
+    ]
 }

@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Educación","item":"https://buscadoreducativo.com.ar/area/educacion/"},{"@type":"ListItem","position":4,"name":"Profesorados Universitarios en Educación Primaria y en Educación Inicial","item":"https://buscadoreducativo.com.ar/carrera/profesorados-universitarios-en-educacion-primaria-y-en-educacion-inicial/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Profesorados Universitarios en Educación Primaria y en Educación Inicial","description":"Dónde estudiar Profesorados Universitarios en Educación Primaria y en Educación Inicial en Mendoza: profesorado del área Educación, dictada por 1 institución (1 privada). Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorados-universitarios-en-educacion-primaria-y-en-educacion-inicial/","provider":{"@type":"EducationalOrganization","name":"Universidad Champagnat (UCh)","url":"https://buscadoreducativo.com.ar/institucion/universidad-champagnat-uch/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Profesorados Universitarios en Educación Primaria y en Educación Inicial en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Profesorados Universitarios en Educación Primaria y en Educación Inicial en Mendoza en la siguiente institución: Universidad Champagnat (UCh). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Profesorados Universitarios en Educación Primaria y en Educación Inicial?","acceptedAnswer":{"@type":"Answer","text":"La duración estimada depende de la institución y modalidad elegida (típicamente entre 4 y 5 años para carreras de grado, o de 2 a 3 años para tecnicaturas)."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Profesorados Universitarios en Educación Primaria y en Educación Inicial?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Profesorados Universitarios en Educación Primaria y en Educación Inicial?","acceptedAnswer":{"@type":"Answer","text":"Profesorados Universitarios en Educación Primaria y en Educación Inicial es una profesorado perteneciente al área de Educación. Entre sus aptitudes más afines se destacan: interacción social, base teórica y académica, trabajo práctico y liderazgo y gestión."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -90,8 +119,6 @@
         <dt>Dónde se dicta</dt><dd>1 institución</dd>
         <dt>Modalidad</dt><dd>Presencial</dd>
     </dl>
-
-    <a class="cta" href="/?q=Profesorados+Universitarios+en+Educaci%C3%B3n+Primaria+y+en+Educaci%C3%B3n+Inicial&amp;area=Educaci%C3%B3n&amp;formacion=profesorados">Ver Profesorados Universitarios en Educación Primaria y en Educación Inicial en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Profesorados Universitarios en Educación Primaria y en Educación Inicial</h2>
@@ -99,7 +126,28 @@
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-champagnat-uch/">Universidad Champagnat (UCh)</a></h3>
             <ul class="oferta-datos"><li>Duración: A confirmar</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Pedagogía</li><li>Sujetos de la Educación Inicial</li><li>Sociología de la Educación</li><li>Prácticas de lectura, escritura y oralidad</li><li>Tecnologías Digitales en los Procesos de Enseñanza y Aprendizaje I</li><li>Taller de Pensamiento lógico-matemático</li><li>Didáctica General</li><li>Historia y Prospectiva de la Educación</li><li>Instituciones educativas</li><li>Lengua</li><li>Práctica Profesional Docente I</li><li>Política y Legislación de la Educación argentina</li><li>Didáctica de la Lengua I</li><li>Didáctica de las Ciencias Sociales I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Didáctica de las Ciencias Naturales I</li><li>Didáctica de la Matemática I</li><li>Psicología de la educación</li><li>Alfabetización Inicial</li><li>Tecnologías Digitales en los Procesos de Enseñanza y Aprendizaje II</li><li>Práctica profesional docente II Rectorado Cursado de cursado</li><li>Lenguajes Artísticos y su Didáctica</li><li>Didáctica de las Ciencias Sociales II</li><li>Didáctica de las Ciencias Naturales II</li><li>Literatura aplicada al Nivel Primario</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Tecnologías digitales en los procesos de enseñanza y aprendizaje III</li><li>Didáctica de la Matemática II</li><li>Cultura del cuidado</li><li>Pedagogía inclusiva</li><li>Educación Científica y Tecnológica</li><li>Práctica profesional docente III</li><li>Prácticas de construcción ciudadana</li><li>Didáctica de la literatura</li><li>Filosofía y Educación</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Actividad física y su Didáctica</li><li>Tecnologías digitales en los procesos de enseñanza y aprendizaje IV</li><li>Dimensión ético-política de la praxis docente</li><li>Práctica Profesional Docente IV Todos los espacios y Residencia curriculares</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/educacion_primaria.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/profesorados-universitarios-en-educacion-primaria-e-inicial" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -184,7 +232,7 @@
         <li><a href="/carrera/profesorado-de-educacion-secundaria-en-biologia/">Profesorado de Educación Secundaria en BIOLOGÍA</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/profesorado-de-teatro/">Profesorado de Teatro</a> <span class="cuantas">(4)</span></li>
     </ul>
-    <p><a href="/area/educacion/">Ver las 66 carreras del área Educación →</a></p>
+    <p><a href="/area/educacion/">Ver las 69 carreras del área Educación →</a></p>
     </section>
     </div>
 </div>

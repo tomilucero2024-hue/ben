@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Tecnología","item":"https://buscadoreducativo.com.ar/area/tecnologia/"},{"@type":"ListItem","position":4,"name":"Licenciatura en Ciberdefensa","item":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-ciberdefensa/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Licenciatura en Ciberdefensa","description":"Dónde estudiar Licenciatura en Ciberdefensa: carrera de grado del área Tecnología, dictada por 1 institución (1 pública). Dura 4 años. Modalidades disponibles: a distancia.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-ciberdefensa/","provider":{"@type":"EducationalOrganization","name":"Universidad de la Defensa Nacional (UNDEF)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-la-defensa-nacional-undef/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Licenciatura en Ciberdefensa en Argentina?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Licenciatura en Ciberdefensa en Argentina en la siguiente institución: Universidad de la Defensa Nacional (UNDEF). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Licenciatura en Ciberdefensa?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Licenciatura en Ciberdefensa?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad a distancia, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Licenciatura en Ciberdefensa?","acceptedAnswer":{"@type":"Answer","text":"Licenciatura en Ciberdefensa es una carrera de grado perteneciente al área de Tecnología. Entre sus aptitudes más afines se destacan: pensamiento analítico, afinidad tecnológica, trabajo práctico y base teórica y académica."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,8 +120,6 @@
         <dt>Modalidad</dt><dd>A distancia</dd>
         <dt>Duración</dt><dd>4 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Licenciatura+en+Ciberdefensa&amp;area=Tecnolog%C3%ADa&amp;formacion=grado">Ver Licenciatura en Ciberdefensa en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Licenciatura en Ciberdefensa</h2>
@@ -100,8 +127,29 @@
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta publica">pública</span> <a href="/institucion/universidad-de-la-defensa-nacional-undef/">Universidad de la Defensa Nacional (UNDEF)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: A Distancia</li></ul>
-
-            <a class="oficial" href="https://undef.edu.ar/a-distancia-2/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Análisis Matemático I</li><li>Álgebra I</li><li>Gestión de Servicios de Información</li><li>Inglés I</li><li>Sistemas Operativos I</li><li>Sistemas de Tratamiento de Datos</li><li>Infraestructura de Telecomunicaciones</li><li>Sociedad y Estado</li><li>Sistemas Operativos II</li><li>Lenguajes de Programación</li><li>Análisis Matemático II</li><li>Álgebra II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Probabilidad y Estadística</li><li>Inglés II</li><li>Tecnología Operativa</li><li>Programación Segura 48 48 96 6,7 y</li><li>Ciberseguridad aplicada</li><li>Dispositivos Remotos e Internet de las Cosas</li><li>Ética Profesional</li><li>Sistema de Gestión de Seguridad de la Información 48 48 96 3,6,7 y</li><li>Protección de Infraestructuras Críticas 32 32 64 3,8 y</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Metodologías de Análisis de Riesgos de TIC</li><li>Análisis de Escenarios y Capacidades</li><li>Gobierno y Políticas Públicas</li><li>Informática Forense 40 40 80 5,16 y</li><li>Relaciones Internacionales</li><li>Inteligencia Artificial y Aprendizaje de Máquina</li><li>Geopolítica</li><li>Derecho Aplicado a la Defensa Nacional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Sistema de Inteligencia Nacional</li><li>Investigación Operativa</li><li>Criptografía Aplicada</li><li>Gestión de Proyectos</li><li>Instrumento Militar y su Sistema de Armas</li><li>Modelos y Simulación</li><li>Prospectiva Estratégica y Táctica</li><li>Actores en el Quinto Dominio</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://undef.edu.ar/fadena/wp-content/uploads/2026/02/Licenciatura-en-Ciberdefensa.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://undef.edu.ar/fadena/carreras-de-grado/licciberdefensa/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 
@@ -179,13 +227,13 @@
         <li><a href="/carrera/ciencia-de-datos/">Ciencia de Datos</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/formacion-profesional-en-software/">Formación Profesional en Software</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/ia-desde-cero/">Ia Desde Cero</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/instalador-de-aire-acondicionado-y-refrigeracion-frio-calor-sistema-inverter/">Instalador de Aire Acondicionado y Refrigeración Frío-Calor Sistema Inverter</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/lic-en-informatica-y-desarrollo-de-software/">Lic. en Informática y Desarrollo de Software</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciado-en-sistemas-de-informacion/">Licenciado en Sistemas de Información</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-bioinformatica/">Licenciatura en Bioinformática</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-ciencia-de-datos/">Licenciatura en Ciencia de Datos</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/licenciatura-en-computacion/">Licenciatura en Computación</a> <span class="cuantas">(1)</span></li>
     </ul>
-    <p><a href="/area/tecnologia/">Ver las 35 carreras del área Tecnología →</a></p>
+    <p><a href="/area/tecnologia/">Ver las 31 carreras del área Tecnología →</a></p>
     </section>
     </div>
 </div>

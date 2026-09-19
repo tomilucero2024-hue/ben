@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Educación","item":"https://buscadoreducativo.com.ar/area/educacion/"},{"@type":"ListItem","position":4,"name":"Profesorado para Técnicos","item":"https://buscadoreducativo.com.ar/carrera/profesorado-para-tecnicos/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Profesorado para Técnicos","description":"Dónde estudiar Profesorado para Técnicos en Mendoza: profesorado del área Educación, dictada por 2 instituciones (2 públicas). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-para-tecnicos/","provider":[{"@type":"EducationalOrganization","name":"IES 9-014 Profesorado de Arte (IPA)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-014-profesorado-de-arte-ipa/"},{"@type":"EducationalOrganization","name":"IES 9-029 (Luján de Cuyo)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-029-lujan-de-cuyo/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Profesorado para Técnicos en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Profesorado para Técnicos en Mendoza en 2 instituciones: IES 9-014 Profesorado de Arte (IPA) y IES 9-029 (Luján de Cuyo). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Profesorado para Técnicos?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Profesorado para Técnicos?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Profesorado para Técnicos?","acceptedAnswer":{"@type":"Answer","text":"Profesorado para Técnicos es una profesorado perteneciente al área de Educación. Entre sus aptitudes más afines se destacan: interacción social, base teórica y académica, trabajo práctico y liderazgo y gestión."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,8 +120,6 @@
         <dt>Modalidad</dt><dd>Presencial</dd>
         <dt>Duración</dt><dd>4 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Profesorado+para+T%C3%A9cnicos&amp;area=Educaci%C3%B3n&amp;formacion=profesorados">Ver Profesorado para Técnicos en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Profesorado para Técnicos</h2>
@@ -191,7 +218,7 @@
         <li><a href="/carrera/profesorado-de-educacion-secundaria-en-biologia/">Profesorado de Educación Secundaria en BIOLOGÍA</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/profesorado-de-teatro/">Profesorado de Teatro</a> <span class="cuantas">(4)</span></li>
     </ul>
-    <p><a href="/area/educacion/">Ver las 66 carreras del área Educación →</a></p>
+    <p><a href="/area/educacion/">Ver las 69 carreras del área Educación →</a></p>
     </section>
     </div>
 </div>

@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Universidad Nacional de Cuyo (UNCuyo)","item":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"}</script>
 </head>
@@ -67,12 +67,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -86,8 +115,6 @@
     <dl class="ficha">
         <dt>Oferta en BEN</dt><dd>121 carreras</dd>
     </dl>
-
-    <a class="cta" href="/?institucion=Universidad%20Nacional%20de%20Cuyo%20(UNCuyo)">Ver esta institución en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
 
@@ -806,23 +833,8 @@
         </li>
     </ul>
 
-    <h2>Ciencias sociales (21)</h2>
+    <h2>Ciencias sociales (15)</h2>
     <ul class="ofertas">
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-higiene-y-seguridad-en-el-trabajo/">Licenciatura en Higiene y Seguridad en el Trabajo</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Matemática Aplicada y Estadística</li><li>Representación Gráfica e Interpretación de Planos</li><li>Integridad y Ética Profesional</li><li>Metodología de la Investigación</li><li>Incendio: Cálculo y Proyecto</li><li>Toxicología Laboral</li><li>Saneamiento Ambiental</li><li>Prevención de Riesgos</li><li>Salud Ocupacional</li><li>Seguridad Minera, Agraria y en la Construcción</li><li>Ambiente y Sustentabilidad</li><li>Estudio del Trabajo</li><li>Gestión de Costos y Presupuestos</li><li>Gestión Integrada: Calidad, Seguridad y Ambiente</li><li>Formulación y Evaluación de Proyectos</li><li>Gestión de Recursos Humanos</li><li>Estado y Economía</li><li>Taller de Producción de Tesis</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-en-el-trabajo_6922" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-en-el-trabajo_6922" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-laboratorio/">Tecnicatura en Laboratorio</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
@@ -987,74 +999,6 @@
     </div>
 </details>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-seguridad-publica_4710" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-en-operaciones-mineras/">Tecnicatura en Operaciones Mineras</a></h3>
-            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>1er año</h4>
-            <ul><li>Minería, Sociedad y Territorio</li><li>Física</li><li>Introducción a la Minería</li><li>Matemática</li><li>Química</li><li>Sistemas de Representación</li><li>Electrotecnia</li><li>Geología y Mineralogía</li><li>Práctica Profesionalizante I</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>2do año</h4>
-            <ul><li>Tecnologías Digitales Aplicadas a la Minería</li><li>Ambiente y Minería Sostenible</li><li>Yacimientos Minerales</li><li>Inglés Técnico</li><li>Mecánica de Rocas</li><li>Topografía Minera</li><li>Práctica Profesionalizante II</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>3er año</h4>
-            <ul><li>Técnicas de Explotación Minera</li><li>Procesos de Recuperación y Tratamiento de Minerales</li><li>Economía Minera</li><li>Servicios e Instalaciones de Minas</li><li>Seguridad Operativa y Sostenibilidad Social</li><li>Dimensiones Sociales y Ambientales de la Minería</li><li>Práctica Profesionalizante III</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-operaciones-mineras" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-operaciones-mineras" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-en-gestion-de-empresas/">Tecnicatura en Gestión de Empresas</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Administración General</li><li>Comprensión y Producción de Textos</li><li>Desarrollo de la Actitud Emprendedora</li><li>Desarrollo del Pensamiento y Desempeño de Roles</li><li>Economía</li><li>Formulación y Evaluación de Proyectos</li><li>Gestión Comercial</li><li>Gestión Contable e Impositiva</li><li>Gestión de Costos</li><li>Gestión de la Calidad</li><li>Gestión de la Producción</li><li>Gestión del Capital Humano</li><li>Gestión Financiera</li><li>Gestión Jurídica</li><li>Información Contable Básica</li><li>Informática</li><li>Inglés</li><li>Introducción a la Administración</li><li>Introducción a la Logística</li><li>Introducción al Marketing</li><li>Matemática y Estadística</li><li>Orientación optativa</li><li>Práctica Profesionalizante</li><li>Sistemas de Información</li><li>Taller de Integración</li><li>Taller de Producción de Informes</li><li>Taller Inicial</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-gestion-de-empresas" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-gestion-de-empresas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-en-higiene-y-seguridad-en-el-trabajo/">Tecnicatura en Higiene y Seguridad en el Trabajo</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Comprensión y Producción de Textos</li><li>Desarrollo del Pensamiento y Desempeño de Roles</li><li>Psicología Laboral</li><li>Sociología del Trabajo</li><li>Análisis matemático</li><li>Inglés</li><li>Relaciones Humanas</li><li>Informática</li><li>Taller de Producción de Informes</li><li>Estrategias de Capacitación en el Trabajo</li><li>Física</li><li>Química</li><li>Estadística Aplicada</li><li>Técnicas de Representación Gráfica</li><li>Industria y Ambiente</li><li>Organización de Empresas</li><li>Higiene Industrial</li><li>Higiene Industrial Aplicada</li><li>Inducción a la Seguridad</li><li>Patología Laboral</li><li>Seguridad en el Trabajo</li><li>Medicina del Trabajo y Primeros Auxilios</li><li>Ergonomía</li><li>Servicios Industriales</li><li>Legislación Laboral</li><li>Seguridad vial</li><li>Optativo I</li><li>Optativo II</li><li>Electivo</li><li>Taller Integrador</li><li>Laboratorio de Práctica</li><li>Práctica Profesionalizante</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo_8442" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo_8442" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-en-produccion-industrial-y-automatizacion/">Tecnicatura en Producción Industrial y Automatización</a></h3>
-            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Aseguramiento de la Calidad Industrial</li><li>Automatismo y Robótica</li><li>Calor y Termodinámica</li><li>Ciencia de los Materiales</li><li>Comprensión y Producción de Textos</li><li>Desarrollo del Pensamiento y Desempeño de Roles</li><li>Electricidad y Electrónica</li><li>Energía y Ambiente</li><li>Gestión Empresario/Industrial</li><li>Higiene y Seguridad Industrial</li><li>Informática</li><li>Inglés Técnico</li><li>Matemática y Estadística</li><li>Mecánica</li><li>Planificación y Control de la Producción</li><li>Práctica Profesionalizante</li><li>Proyecto Tutorado</li><li>Resistencia de Materiales</li><li>Técnicas de Representación</li><li>Tecnología de Construcción y Diseño Mecánico</li><li>Tecnología y Métodos de Fabricación Mecánica</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-industrial-y-automatizacion_9658" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-industrial-y-automatizacion_9658" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-comunicacion-social/">Licenciatura en Comunicación Social</a></h3>
@@ -1292,32 +1236,9 @@
 </details>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-letras" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
-        <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-en-geotecnologias/">Tecnicatura en Geotecnologías</a></h3>
-            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio — 3 años</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>1er año</h4>
-            <ul><li>Matemática</li><li>Geografía Física General</li><li>Competencias y Producción de Textos Académicos</li><li>Técnicas en Geografía</li><li>Práctica de Actividad Física Saludable I</li><li>Geografía Humana General</li><li>Geotecnologías</li><li>Cartografía Matemática</li><li>Lengua Extranjera I: Inglés</li><li>Práctica de Actividad Física Saludable II</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>2do año</h4>
-            <ul><li>Estadística</li><li>Sistemas de Información Geográfica I</li><li>Análisis Matemático</li><li>Lengua Extranjera II: Inglés</li><li>Teledetección</li><li>Metodologías y Técnicas para el Abordaje del Dato Geográfico</li><li>Lengua Extranjera III:Inglés</li><li>Base de datos espaciales</li><li>Práctica Profesional</li></ul>
-        </div>
-        <div class="plan-anio">
-            <h4>3er año</h4>
-            <ul><li>Geoposicionamiento</li><li>Cartografía Temática</li><li>Teledetección II</li><li>Sistemas de Información Geográfica II</li><li>Práctica Profesional</li><li>Optativa 2</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-geotecnologias" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-geotecnologias" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
     </ul>
 
-    <h2>Ingeniería (12)</h2>
+    <h2>Ingeniería (13)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-agronomica/">Ingeniería Agronómica</a></h3>
@@ -1441,6 +1362,29 @@
     </div>
 </details>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/ingenieria-quimica-" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-en-operaciones-mineras/">Tecnicatura en Operaciones Mineras</a></h3>
+            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Minería, Sociedad y Territorio</li><li>Física</li><li>Introducción a la Minería</li><li>Matemática</li><li>Química</li><li>Sistemas de Representación</li><li>Electrotecnia</li><li>Geología y Mineralogía</li><li>Práctica Profesionalizante I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Tecnologías Digitales Aplicadas a la Minería</li><li>Ambiente y Minería Sostenible</li><li>Yacimientos Minerales</li><li>Inglés Técnico</li><li>Mecánica de Rocas</li><li>Topografía Minera</li><li>Práctica Profesionalizante II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Técnicas de Explotación Minera</li><li>Procesos de Recuperación y Tratamiento de Minerales</li><li>Economía Minera</li><li>Servicios e Instalaciones de Minas</li><li>Seguridad Operativa y Sostenibilidad Social</li><li>Dimensiones Sociales y Ambientales de la Minería</li><li>Práctica Profesionalizante III</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-operaciones-mineras" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-operaciones-mineras" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-civil/">Ingeniería Civil</a></h3>
@@ -1697,177 +1641,23 @@
         </li>
     </ul>
 
-    <h2>Arte (11)</h2>
+    <h2>Ambiente (11)</h2>
     <ul class="ofertas">
         <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-arte-dramatico/">Licenciatura en Arte Dramático</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <h3><a href="/carrera/licenciatura-en-higiene-y-seguridad-en-el-trabajo/">Licenciatura en Higiene y Seguridad en el Trabajo</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio</summary>
     <div class="plan-contenido">
         <div class="plan-anio">
             <h4>Plan de estudios</h4>
-            <ul><li>Actuación I</li><li>Improvisación I</li><li>Técnicas Corporales I</li><li>Técnicas Vocales I</li><li>Análisis del Hecho Teatral</li><li>Diseño del Espacio Escénico</li><li>Práctica Escénica I</li><li>Actuación II</li><li>Improvisación II</li><li>Técnicas Vocales II</li><li>Historia de la Cultura y el Teatro Universales I</li><li>Maquillaje</li><li>Práctica Escénica II</li><li>Psicología y Dinámica de Grupos</li><li>Técnicas Corporales II</li><li>Actuación III</li><li>Historia de la Cultura y el Teatro Argentino I</li><li>Psicología del Arte</li><li>Técnicas Corporales III</li><li>Técnicas Vocales III</li><li>Historia de la Cultura y el Teatro Universales II</li><li>Gestión y Producción de Espectáculos</li><li>Práctica Escénica III</li><li>Dramaturgia</li><li>Materia Optativa</li><li>Actuación IV</li><li>Historia de la Cultura y el Teatro Argentino II</li><li>Técnicas Corporales IV</li><li>Seminario de Investigación</li><li>Historia de la Cultura y el Teatro Universales III</li><li>Práctica Profesional (No Presencial)</li></ul>
+            <ul><li>Matemática Aplicada y Estadística</li><li>Representación Gráfica e Interpretación de Planos</li><li>Integridad y Ética Profesional</li><li>Metodología de la Investigación</li><li>Incendio: Cálculo y Proyecto</li><li>Toxicología Laboral</li><li>Saneamiento Ambiental</li><li>Prevención de Riesgos</li><li>Salud Ocupacional</li><li>Seguridad Minera, Agraria y en la Construcción</li><li>Ambiente y Sustentabilidad</li><li>Estudio del Trabajo</li><li>Gestión de Costos y Presupuestos</li><li>Gestión Integrada: Calidad, Seguridad y Ambiente</li><li>Formulación y Evaluación de Proyectos</li><li>Gestión de Recursos Humanos</li><li>Estado y Economía</li><li>Taller de Producción de Tesis</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-arte-dramatico_8488" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-en-el-trabajo_6922" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-arte-dramatico_8488" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-en-el-trabajo_6922" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-artes-plasticas/">Licenciatura en Artes Plásticas</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Introducción a las Artes Plásticas</li><li>Dibujo I</li><li>Tecnología y Expresión de los Materiales y Procesos Estructurales</li><li>Sistemas de Representación</li><li>Análisis de las Formas</li><li>Historia del Arte I</li><li>Taller de Rotación I: Pintura</li><li>Taller de Rotación I: Escultura</li><li>Taller de Rotación I: Grabado</li><li>Dibujo II</li><li>Dibujo Técnico</li><li>Visión I</li><li>Historia del Arte II</li><li>Taller de Rotación II: Pintura</li><li>Taller de Rotación II: Escultura</li><li>Taller de Rotación II: Grabado</li><li>Dibujo III</li><li>Visión II</li><li>Historia del Arte III</li><li>Taller I (con opción a Pintura, Escultura o Grabado)</li><li>Historia del Arte IV</li><li>Medios de Comunicación</li><li>Historia de las Corrientes Literarias</li><li>Taller II (continúa la opción de Taller I)</li><li>Historia del Arte Americano y Argentino</li><li>Filosofía del Arte</li><li>Pedagogía (2º año)</li><li>Psicología (3º año)</li><li>Didáctica (4º año)</li><li>Práctica de la Enseñanza (5º año)</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-artes-plasticas" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-artes-plasticas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-canto/">Licenciatura en Canto</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Canto I</li><li>Canto Coral Profesional I</li><li>Armonía I</li><li>Historia de la Música I</li><li>Técnicas Corporales para Cantantes I</li><li>Piano Complementario I</li><li>Práctica Escénica para Cantantes I</li><li>Alemán I</li><li>Canto II</li><li>Canto Coral Profesional II</li><li>Armonía II</li><li>Historia de la Música II</li><li>Técnicas Corporales para Cantantes II</li><li>Piano Complementario II</li><li>Alemán II</li><li>Francés I</li><li>Canto III</li><li>Análisis y Morfología Musical I</li><li>Historia de la Música III</li><li>Francés II</li><li>Práctica Escénica para Cantantes II</li><li>Canto IV</li><li>Taller de Tesina</li><li>Historia de la Música IV</li><li>Canto V</li><li>Práctica Escénica para Cantantes III</li><li>Tesina</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-canto" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-canto" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-ceramica-artistica/">Licenciatura en Cerámica Artística</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Taller Cerámico I</li><li>Dibujo I</li><li>Técnica y Practica Cerámica I</li><li>Historia del Arte y la Cerámica I</li><li>Historia del Arte y la Cerámica II</li><li>Química General</li><li>Análisis de las formas</li><li>Taller Cerámico II</li><li>Dibujo II</li><li>Técnica y Practica Cerámica II</li><li>Historia del Arte y la Cerámica III</li><li>Visión I</li><li>Diseño Cerámico I</li><li>Taller Cerámico III</li><li>Dibujo III</li><li>Tecnología de Pastas y Esmaltes</li><li>Técnica y Practica Cerámica III</li><li>Filosofía del Arte</li><li>Historia del Arte y la Cerámica IV</li><li>Visión II</li><li>Taller Cerámico IV</li><li>Serigrafía</li><li>Taller de Trabajo Final</li><li>Gestión y producción de las Artes Visuales</li><li>Proyecto Artístico</li><li>Trabajo Final</li><li>Materias Optativas</li><li>Diseño Cerámico II</li><li>Sistemas de representación</li><li>Mineralogía y Petrología</li><li>Química Analítica</li><li>Química Aplicada</li><li>Física aplicada a la cerámica</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ceramica-artistica" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ceramica-artistica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-composicion-musical/">Licenciatura en Composición Musical</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Canto Coral Profesional I</li><li>Armonía I</li><li>Historia de Música I</li><li>Piano Complementario I</li><li>Lenguaje Musical Avanzado</li><li>Tecnología de Producción Musical I</li><li>Acústica</li><li>Canto Coral Profesional II</li><li>Armonía II</li><li>Historia de la Música II</li><li>Contrapunto I</li><li>Piano Complementario II</li><li>Tecnología de Producción Musical II</li><li>Composición I</li><li>Armonía Profesional</li><li>Análisis y Morfología Musical I</li><li>Historia de la Música III</li><li>Contrapunto Profesional</li><li>Piano Complementario III</li><li>Instrumentación y Lectura de Partituras</li><li>Tecnología de Producción Musical III</li><li>Composición II</li><li>Análisis y Morfología Musical II</li><li>Taller de Tesina</li><li>Historia de la Música IV</li><li>Análisis de la Música del Siglo XX I</li><li>Taller de Composición Electroacústica I</li><li>Orquestación</li><li>Fuga</li><li>Composición III</li><li>Tesina</li><li>Historia del Arte</li><li>Análisis de la Música del Siglo XX II</li><li>Taller de Composición Electroacústica II</li><li>Filosofía del Arte</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-composicion-musical_4284" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-composicion-musical_4284" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-direccion-coral/">Licenciatura en Dirección Coral</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Dirección Coral I</li><li>Canto Coral Profesional I</li><li>Armonía I</li><li>Historia de la Música I</li><li>Piano Complementario I</li><li>Alemán</li><li>Canto Complementario</li><li>Dirección Coral II</li><li>Canto Coral Profesional II</li><li>Armonía II</li><li>Historia de la Música II</li><li>Contrapunto I</li><li>Piano Complementario II</li><li>Francés</li><li>Canto Complementario II</li><li>Dirección Coral III</li><li>Armonía Profesional</li><li>Análisis y Morfología Musical I</li><li>Historia de la Música III</li><li>Contrapunto II</li><li>Piano Complementario III</li><li>Dirección Coral IV</li><li>Análisis y Morfología Musical II</li><li>Historia de la Música IV</li><li>Taller de Tesina</li><li>Análisis de la Música del Siglo XX I</li><li>Taller de Versiones Corales</li><li>Dirección Coral V</li><li>Tesina</li><li>Historia del Arte</li><li>Análisis de la Música del Siglo XX II</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-direccion-coral" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-direccion-coral" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-historia-de-las-artes-plasticas/">Licenciatura en Historia de las Artes Plásticas</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Área de Formación Específica</li><li>Historia del Arte Antiguo</li><li>Historia del Arte Medieval</li><li>Historia del Arte Moderno</li><li>Historia del arte Contemporáneo</li><li>Historia del Arte Americano y Argentino I</li><li>Historia del Arte Americano y Argentino II</li><li>Historiografía de la Historia del Arte</li><li>Museología</li><li>Seminario</li><li>Área de Formación Artístico-Instrumental</li><li>Tecnología de los materiales y procesos estructurales</li><li>Análisis de las Formas</li><li>Sistemas de Representación</li><li>Dibujo I</li><li>Visión I</li><li>Visión II</li><li>Taller de Producción de Textos</li><li>Fotografía Documentalista</li><li>Técnicas de Investigación en Historia del Arte</li><li>Optativa I: cualquiera de las siguientes asignaturas</li><li>Dibujo II ó Taller I (Pintura o Grabado o Escultura)</li><li>Optativa II: cualquiera de las siguientes asignaturas</li><li>Historia de la Cerámica I</li><li>Historia de la Cerámica II</li><li>Historia de la Cerámica III</li><li>Historia del Diseño</li><li>Historia de la Cultura y el Teatro Universales I</li><li>Historia de la Cultura y el Teatro Universales II</li><li>Historia de la Cultura y el Teatro Universales III</li><li>Historia de la Cultura y el Teatro Argentino I</li><li>Historia de la Cultura y el Teatro Argentino II</li><li>Idioma Moderno Latino (Francés ó Italiano)</li><li>Idioma Moderno Sajón (Inglés o Alemán)</li><li>Área de Formación General</li><li>Filosofía del Arte</li><li>Historia de la Cultura Universal</li><li>Optativa III: cualquiera de las siguientes asignaturas</li><li>Arqueología</li><li>Medios de Comunicación</li><li>Historia de la Crítica del Arte</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-historia-de-las-artes-plasticas" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-historia-de-las-artes-plasticas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-instrumento/">Licenciatura en Instrumento</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Instrumento I</li><li>Música de Cámara I</li><li>Armonía I</li><li>Canto Coral</li><li>Instrumento II</li><li>Música de Cámara II</li><li>Historia de la Música I</li><li>Armonía II</li><li>Contrapunto I</li><li>Instrumento III</li><li>Música de Cámara III</li><li>Historia de la Música II</li><li>Contrapunto II</li><li>Armonía III</li><li>Análisis y Morfología Musical I</li><li>Instrumento IV</li><li>Música de Cámara IV</li><li>Historia de la Música III</li><li>Análisis y Morfología Musical II</li><li>Instrumento V</li><li>Historia de la Música IV</li><li>Música de Cámara V</li><li>Materias Optativas</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-instrumento-violin-viola-violoncello-contrabajo-arpa-flauta-oboe-clarinete-fagot-saxofon-trompa-trompeta-trombon-o-percusion_9943" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-instrumento-violin-viola-violoncello-contrabajo-arpa-flauta-oboe-clarinete-fagot-saxofon-trompa-trompeta-trombon-o-percusion_9943" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-musica-popular/">Licenciatura en Música Popular</a></h3>
-            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Rítimica I</li><li>Instrumento I o Canto I</li><li>Interpretación I</li><li>Música Popular Argentina I</li><li>Instrumento Complementario</li><li>Pensamiento y Arte Latinoamericano</li><li>Rítimica II</li><li>Instrumento II o Canto II</li><li>Interpretación II</li><li>Música Popular Argentina II</li><li>Ensamble I</li><li>Armonía</li><li>Canto Coral</li><li>Producción I</li><li>Instrumento III o Canto III</li><li>Interpretación III</li><li>Música Popular Latinoamericana I</li><li>Ensamble II</li><li>Armonía Práctica</li><li>Producción II</li><li>Análisis y Morfología Musical</li><li>Instrumento IV o Canto IV</li><li>Interpretación IV</li><li>Música Popular Latinoamericana II</li><li>Ensamble III</li><li>Producción III</li><li>Producción y Gestión de Espectáculos</li><li>Seminario de Tesis</li><li>Cátedra Abierta de Música Popular</li><li>Seminario Abierto</li><li>Taller de Instrumentos Andinos</li><li>Taller de Versiones Corales</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-musica-popular_7383" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-musica-popular_7383" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-organo/">Licenciatura en Órgano</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Instrumento I</li><li>Música de Cámara I</li><li>Armonía I</li><li>Bajo Continuo I</li><li>Canto Coral</li><li>Instrumento II</li><li>Bajo Continuo II</li><li>Música de Cámara II</li><li>Historia de la Música I</li><li>Armonía II</li><li>Contrapunto I</li><li>Instrumento III</li><li>Música de Cámara III</li><li>Historia de la Música II</li><li>Contrapunto II</li><li>Armonía III</li><li>Análisis y Morfología Musical I</li><li>Instrumento IV</li><li>Historia de la Música III</li><li>Análisis y Morfología Musical II</li><li>Instrumento V</li><li>Taller de tesina</li><li>Historia de la Música IV</li><li>Tesina</li><li>Piano o Clave complementario para Órgano I</li><li>Piano o Clave complementario para Órgano II</li><li>Materias Optativas</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-organo" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-organo" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-        <li class="oferta">
-            <h3><a href="/carrera/licenciatura-en-piano-o-guitarra/">Licenciatura en Piano o Guitarra</a></h3>
-            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
-            <details class="plan-de-estudio">
-    <summary>Plan de estudio</summary>
-    <div class="plan-contenido">
-        <div class="plan-anio">
-            <h4>Plan de estudios</h4>
-            <ul><li>Instrumento I</li><li>Música de Cámara I</li><li>Armonía I</li><li>Canto Coral</li><li>Instrumento II</li><li>Música de Cámara II</li><li>Historia de la Música I</li><li>Armonía II</li><li>Contrapunto I</li><li>Instrumento III</li><li>Música de Cámara III</li><li>Historia de la Música II</li><li>Contrapunto II</li><li>Armonía III</li><li>Análisis y Morfología Musical I</li><li>Instrumento IV</li><li>Música de Cámara IV</li><li>Historia de la Música III</li><li>Análisis y Morfología Musical II</li><li>Instrumento V</li><li>Historia de la Música IV</li><li>Música de Cámara V</li><li>Materias Optativas</li></ul>
-        </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-piano-o-guitarra" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
-    </div>
-</details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-piano-o-guitarra" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
-        </li>
-    </ul>
-
-    <h2>Ambiente (8)</h2>
-    <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-fisica/">Licenciatura en Física</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
@@ -1902,6 +1692,21 @@
     </div>
 </details>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-fisica_3653" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-en-higiene-y-seguridad-en-el-trabajo/">Tecnicatura en Higiene y Seguridad en el Trabajo</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Comprensión y Producción de Textos</li><li>Desarrollo del Pensamiento y Desempeño de Roles</li><li>Psicología Laboral</li><li>Sociología del Trabajo</li><li>Análisis matemático</li><li>Inglés</li><li>Relaciones Humanas</li><li>Informática</li><li>Taller de Producción de Informes</li><li>Estrategias de Capacitación en el Trabajo</li><li>Física</li><li>Química</li><li>Estadística Aplicada</li><li>Técnicas de Representación Gráfica</li><li>Industria y Ambiente</li><li>Organización de Empresas</li><li>Higiene Industrial</li><li>Higiene Industrial Aplicada</li><li>Inducción a la Seguridad</li><li>Patología Laboral</li><li>Seguridad en el Trabajo</li><li>Medicina del Trabajo y Primeros Auxilios</li><li>Ergonomía</li><li>Servicios Industriales</li><li>Legislación Laboral</li><li>Seguridad vial</li><li>Optativo I</li><li>Optativo II</li><li>Electivo</li><li>Taller Integrador</li><li>Laboratorio de Práctica</li><li>Práctica Profesionalizante</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo_8442" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo_8442" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-biologia/">Licenciatura en Biología</a></h3>
@@ -2120,9 +1925,201 @@
 </details>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-geografia_4879" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-en-geotecnologias/">Tecnicatura en Geotecnologías</a></h3>
+            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1er año</h4>
+            <ul><li>Matemática</li><li>Geografía Física General</li><li>Competencias y Producción de Textos Académicos</li><li>Técnicas en Geografía</li><li>Práctica de Actividad Física Saludable I</li><li>Geografía Humana General</li><li>Geotecnologías</li><li>Cartografía Matemática</li><li>Lengua Extranjera I: Inglés</li><li>Práctica de Actividad Física Saludable II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2do año</h4>
+            <ul><li>Estadística</li><li>Sistemas de Información Geográfica I</li><li>Análisis Matemático</li><li>Lengua Extranjera II: Inglés</li><li>Teledetección</li><li>Metodologías y Técnicas para el Abordaje del Dato Geográfico</li><li>Lengua Extranjera III:Inglés</li><li>Base de datos espaciales</li><li>Práctica Profesional</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3er año</h4>
+            <ul><li>Geoposicionamiento</li><li>Cartografía Temática</li><li>Teledetección II</li><li>Sistemas de Información Geográfica II</li><li>Práctica Profesional</li><li>Optativa 2</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-geotecnologias" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-geotecnologias" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
     </ul>
 
-    <h2>Negocios (8)</h2>
+    <h2>Arte (11)</h2>
+    <ul class="ofertas">
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-arte-dramatico/">Licenciatura en Arte Dramático</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Actuación I</li><li>Improvisación I</li><li>Técnicas Corporales I</li><li>Técnicas Vocales I</li><li>Análisis del Hecho Teatral</li><li>Diseño del Espacio Escénico</li><li>Práctica Escénica I</li><li>Actuación II</li><li>Improvisación II</li><li>Técnicas Vocales II</li><li>Historia de la Cultura y el Teatro Universales I</li><li>Maquillaje</li><li>Práctica Escénica II</li><li>Psicología y Dinámica de Grupos</li><li>Técnicas Corporales II</li><li>Actuación III</li><li>Historia de la Cultura y el Teatro Argentino I</li><li>Psicología del Arte</li><li>Técnicas Corporales III</li><li>Técnicas Vocales III</li><li>Historia de la Cultura y el Teatro Universales II</li><li>Gestión y Producción de Espectáculos</li><li>Práctica Escénica III</li><li>Dramaturgia</li><li>Materia Optativa</li><li>Actuación IV</li><li>Historia de la Cultura y el Teatro Argentino II</li><li>Técnicas Corporales IV</li><li>Seminario de Investigación</li><li>Historia de la Cultura y el Teatro Universales III</li><li>Práctica Profesional (No Presencial)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-arte-dramatico_8488" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-arte-dramatico_8488" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-artes-plasticas/">Licenciatura en Artes Plásticas</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Introducción a las Artes Plásticas</li><li>Dibujo I</li><li>Tecnología y Expresión de los Materiales y Procesos Estructurales</li><li>Sistemas de Representación</li><li>Análisis de las Formas</li><li>Historia del Arte I</li><li>Taller de Rotación I: Pintura</li><li>Taller de Rotación I: Escultura</li><li>Taller de Rotación I: Grabado</li><li>Dibujo II</li><li>Dibujo Técnico</li><li>Visión I</li><li>Historia del Arte II</li><li>Taller de Rotación II: Pintura</li><li>Taller de Rotación II: Escultura</li><li>Taller de Rotación II: Grabado</li><li>Dibujo III</li><li>Visión II</li><li>Historia del Arte III</li><li>Taller I (con opción a Pintura, Escultura o Grabado)</li><li>Historia del Arte IV</li><li>Medios de Comunicación</li><li>Historia de las Corrientes Literarias</li><li>Taller II (continúa la opción de Taller I)</li><li>Historia del Arte Americano y Argentino</li><li>Filosofía del Arte</li><li>Pedagogía (2º año)</li><li>Psicología (3º año)</li><li>Didáctica (4º año)</li><li>Práctica de la Enseñanza (5º año)</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-artes-plasticas" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-artes-plasticas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-canto/">Licenciatura en Canto</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Canto I</li><li>Canto Coral Profesional I</li><li>Armonía I</li><li>Historia de la Música I</li><li>Técnicas Corporales para Cantantes I</li><li>Piano Complementario I</li><li>Práctica Escénica para Cantantes I</li><li>Alemán I</li><li>Canto II</li><li>Canto Coral Profesional II</li><li>Armonía II</li><li>Historia de la Música II</li><li>Técnicas Corporales para Cantantes II</li><li>Piano Complementario II</li><li>Alemán II</li><li>Francés I</li><li>Canto III</li><li>Análisis y Morfología Musical I</li><li>Historia de la Música III</li><li>Francés II</li><li>Práctica Escénica para Cantantes II</li><li>Canto IV</li><li>Taller de Tesina</li><li>Historia de la Música IV</li><li>Canto V</li><li>Práctica Escénica para Cantantes III</li><li>Tesina</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-canto" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-canto" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-ceramica-artistica/">Licenciatura en Cerámica Artística</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Taller Cerámico I</li><li>Dibujo I</li><li>Técnica y Practica Cerámica I</li><li>Historia del Arte y la Cerámica I</li><li>Historia del Arte y la Cerámica II</li><li>Química General</li><li>Análisis de las formas</li><li>Taller Cerámico II</li><li>Dibujo II</li><li>Técnica y Practica Cerámica II</li><li>Historia del Arte y la Cerámica III</li><li>Visión I</li><li>Diseño Cerámico I</li><li>Taller Cerámico III</li><li>Dibujo III</li><li>Tecnología de Pastas y Esmaltes</li><li>Técnica y Practica Cerámica III</li><li>Filosofía del Arte</li><li>Historia del Arte y la Cerámica IV</li><li>Visión II</li><li>Taller Cerámico IV</li><li>Serigrafía</li><li>Taller de Trabajo Final</li><li>Gestión y producción de las Artes Visuales</li><li>Proyecto Artístico</li><li>Trabajo Final</li><li>Materias Optativas</li><li>Diseño Cerámico II</li><li>Sistemas de representación</li><li>Mineralogía y Petrología</li><li>Química Analítica</li><li>Química Aplicada</li><li>Física aplicada a la cerámica</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ceramica-artistica" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-ceramica-artistica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-composicion-musical/">Licenciatura en Composición Musical</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Canto Coral Profesional I</li><li>Armonía I</li><li>Historia de Música I</li><li>Piano Complementario I</li><li>Lenguaje Musical Avanzado</li><li>Tecnología de Producción Musical I</li><li>Acústica</li><li>Canto Coral Profesional II</li><li>Armonía II</li><li>Historia de la Música II</li><li>Contrapunto I</li><li>Piano Complementario II</li><li>Tecnología de Producción Musical II</li><li>Composición I</li><li>Armonía Profesional</li><li>Análisis y Morfología Musical I</li><li>Historia de la Música III</li><li>Contrapunto Profesional</li><li>Piano Complementario III</li><li>Instrumentación y Lectura de Partituras</li><li>Tecnología de Producción Musical III</li><li>Composición II</li><li>Análisis y Morfología Musical II</li><li>Taller de Tesina</li><li>Historia de la Música IV</li><li>Análisis de la Música del Siglo XX I</li><li>Taller de Composición Electroacústica I</li><li>Orquestación</li><li>Fuga</li><li>Composición III</li><li>Tesina</li><li>Historia del Arte</li><li>Análisis de la Música del Siglo XX II</li><li>Taller de Composición Electroacústica II</li><li>Filosofía del Arte</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-composicion-musical_4284" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-composicion-musical_4284" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-direccion-coral/">Licenciatura en Dirección Coral</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Dirección Coral I</li><li>Canto Coral Profesional I</li><li>Armonía I</li><li>Historia de la Música I</li><li>Piano Complementario I</li><li>Alemán</li><li>Canto Complementario</li><li>Dirección Coral II</li><li>Canto Coral Profesional II</li><li>Armonía II</li><li>Historia de la Música II</li><li>Contrapunto I</li><li>Piano Complementario II</li><li>Francés</li><li>Canto Complementario II</li><li>Dirección Coral III</li><li>Armonía Profesional</li><li>Análisis y Morfología Musical I</li><li>Historia de la Música III</li><li>Contrapunto II</li><li>Piano Complementario III</li><li>Dirección Coral IV</li><li>Análisis y Morfología Musical II</li><li>Historia de la Música IV</li><li>Taller de Tesina</li><li>Análisis de la Música del Siglo XX I</li><li>Taller de Versiones Corales</li><li>Dirección Coral V</li><li>Tesina</li><li>Historia del Arte</li><li>Análisis de la Música del Siglo XX II</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-direccion-coral" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-direccion-coral" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-historia-de-las-artes-plasticas/">Licenciatura en Historia de las Artes Plásticas</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Área de Formación Específica</li><li>Historia del Arte Antiguo</li><li>Historia del Arte Medieval</li><li>Historia del Arte Moderno</li><li>Historia del arte Contemporáneo</li><li>Historia del Arte Americano y Argentino I</li><li>Historia del Arte Americano y Argentino II</li><li>Historiografía de la Historia del Arte</li><li>Museología</li><li>Seminario</li><li>Área de Formación Artístico-Instrumental</li><li>Tecnología de los materiales y procesos estructurales</li><li>Análisis de las Formas</li><li>Sistemas de Representación</li><li>Dibujo I</li><li>Visión I</li><li>Visión II</li><li>Taller de Producción de Textos</li><li>Fotografía Documentalista</li><li>Técnicas de Investigación en Historia del Arte</li><li>Optativa I: cualquiera de las siguientes asignaturas</li><li>Dibujo II ó Taller I (Pintura o Grabado o Escultura)</li><li>Optativa II: cualquiera de las siguientes asignaturas</li><li>Historia de la Cerámica I</li><li>Historia de la Cerámica II</li><li>Historia de la Cerámica III</li><li>Historia del Diseño</li><li>Historia de la Cultura y el Teatro Universales I</li><li>Historia de la Cultura y el Teatro Universales II</li><li>Historia de la Cultura y el Teatro Universales III</li><li>Historia de la Cultura y el Teatro Argentino I</li><li>Historia de la Cultura y el Teatro Argentino II</li><li>Idioma Moderno Latino (Francés ó Italiano)</li><li>Idioma Moderno Sajón (Inglés o Alemán)</li><li>Área de Formación General</li><li>Filosofía del Arte</li><li>Historia de la Cultura Universal</li><li>Optativa III: cualquiera de las siguientes asignaturas</li><li>Arqueología</li><li>Medios de Comunicación</li><li>Historia de la Crítica del Arte</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-historia-de-las-artes-plasticas" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-historia-de-las-artes-plasticas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-instrumento/">Licenciatura en Instrumento</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Instrumento I</li><li>Música de Cámara I</li><li>Armonía I</li><li>Canto Coral</li><li>Instrumento II</li><li>Música de Cámara II</li><li>Historia de la Música I</li><li>Armonía II</li><li>Contrapunto I</li><li>Instrumento III</li><li>Música de Cámara III</li><li>Historia de la Música II</li><li>Contrapunto II</li><li>Armonía III</li><li>Análisis y Morfología Musical I</li><li>Instrumento IV</li><li>Música de Cámara IV</li><li>Historia de la Música III</li><li>Análisis y Morfología Musical II</li><li>Instrumento V</li><li>Historia de la Música IV</li><li>Música de Cámara V</li><li>Materias Optativas</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-instrumento-violin-viola-violoncello-contrabajo-arpa-flauta-oboe-clarinete-fagot-saxofon-trompa-trompeta-trombon-o-percusion_9943" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-instrumento-violin-viola-violoncello-contrabajo-arpa-flauta-oboe-clarinete-fagot-saxofon-trompa-trompeta-trombon-o-percusion_9943" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-musica-popular/">Licenciatura en Música Popular</a></h3>
+            <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Rítimica I</li><li>Instrumento I o Canto I</li><li>Interpretación I</li><li>Música Popular Argentina I</li><li>Instrumento Complementario</li><li>Pensamiento y Arte Latinoamericano</li><li>Rítimica II</li><li>Instrumento II o Canto II</li><li>Interpretación II</li><li>Música Popular Argentina II</li><li>Ensamble I</li><li>Armonía</li><li>Canto Coral</li><li>Producción I</li><li>Instrumento III o Canto III</li><li>Interpretación III</li><li>Música Popular Latinoamericana I</li><li>Ensamble II</li><li>Armonía Práctica</li><li>Producción II</li><li>Análisis y Morfología Musical</li><li>Instrumento IV o Canto IV</li><li>Interpretación IV</li><li>Música Popular Latinoamericana II</li><li>Ensamble III</li><li>Producción III</li><li>Producción y Gestión de Espectáculos</li><li>Seminario de Tesis</li><li>Cátedra Abierta de Música Popular</li><li>Seminario Abierto</li><li>Taller de Instrumentos Andinos</li><li>Taller de Versiones Corales</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-musica-popular_7383" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-musica-popular_7383" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-organo/">Licenciatura en Órgano</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Instrumento I</li><li>Música de Cámara I</li><li>Armonía I</li><li>Bajo Continuo I</li><li>Canto Coral</li><li>Instrumento II</li><li>Bajo Continuo II</li><li>Música de Cámara II</li><li>Historia de la Música I</li><li>Armonía II</li><li>Contrapunto I</li><li>Instrumento III</li><li>Música de Cámara III</li><li>Historia de la Música II</li><li>Contrapunto II</li><li>Armonía III</li><li>Análisis y Morfología Musical I</li><li>Instrumento IV</li><li>Historia de la Música III</li><li>Análisis y Morfología Musical II</li><li>Instrumento V</li><li>Taller de tesina</li><li>Historia de la Música IV</li><li>Tesina</li><li>Piano o Clave complementario para Órgano I</li><li>Piano o Clave complementario para Órgano II</li><li>Materias Optativas</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-organo" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-organo" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/licenciatura-en-piano-o-guitarra/">Licenciatura en Piano o Guitarra</a></h3>
+            <ul class="oferta-datos"><li>Duración: 5 años</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Instrumento I</li><li>Música de Cámara I</li><li>Armonía I</li><li>Canto Coral</li><li>Instrumento II</li><li>Música de Cámara II</li><li>Historia de la Música I</li><li>Armonía II</li><li>Contrapunto I</li><li>Instrumento III</li><li>Música de Cámara III</li><li>Historia de la Música II</li><li>Contrapunto II</li><li>Armonía III</li><li>Análisis y Morfología Musical I</li><li>Instrumento IV</li><li>Música de Cámara IV</li><li>Historia de la Música III</li><li>Análisis y Morfología Musical II</li><li>Instrumento V</li><li>Historia de la Música IV</li><li>Música de Cámara V</li><li>Materias Optativas</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-piano-o-guitarra" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-piano-o-guitarra" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+    </ul>
+
+    <h2>Negocios (9)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-gestion-de-negocios-regionales/">Licenciatura en Gestión de Negocios Regionales</a></h3>
@@ -2254,6 +2251,21 @@
     </div>
 </details>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/licenciatura-en-logistica" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-en-gestion-de-empresas/">Tecnicatura en Gestión de Empresas</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Administración General</li><li>Comprensión y Producción de Textos</li><li>Desarrollo de la Actitud Emprendedora</li><li>Desarrollo del Pensamiento y Desempeño de Roles</li><li>Economía</li><li>Formulación y Evaluación de Proyectos</li><li>Gestión Comercial</li><li>Gestión Contable e Impositiva</li><li>Gestión de Costos</li><li>Gestión de la Calidad</li><li>Gestión de la Producción</li><li>Gestión del Capital Humano</li><li>Gestión Financiera</li><li>Gestión Jurídica</li><li>Información Contable Básica</li><li>Informática</li><li>Inglés</li><li>Introducción a la Administración</li><li>Introducción a la Logística</li><li>Introducción al Marketing</li><li>Matemática y Estadística</li><li>Orientación optativa</li><li>Práctica Profesionalizante</li><li>Sistemas de Información</li><li>Taller de Integración</li><li>Taller de Producción de Informes</li><li>Taller Inicial</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-gestion-de-empresas" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-gestion-de-empresas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-logistica-y-transporte/">Tecnicatura en Logística y Transporte</a></h3>
@@ -3005,7 +3017,7 @@
         </li>
     </ul>
 
-    <h2>Oficios (2)</h2>
+    <h2>Oficios (3)</h2>
     <ul class="ofertas">
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-ceramica-industrial/">Licenciatura en Cerámica Industrial</a></h3>
@@ -3036,6 +3048,21 @@
     </div>
 </details>
             <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-mantenimiento-e-instalaciones-industriales_3181" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+        </li>
+        <li class="oferta">
+            <h3><a href="/carrera/tecnicatura-en-produccion-industrial-y-automatizacion/">Tecnicatura en Producción Industrial y Automatización</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Grado / Carrera</li></ul>
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>Plan de estudios</h4>
+            <ul><li>Aseguramiento de la Calidad Industrial</li><li>Automatismo y Robótica</li><li>Calor y Termodinámica</li><li>Ciencia de los Materiales</li><li>Comprensión y Producción de Textos</li><li>Desarrollo del Pensamiento y Desempeño de Roles</li><li>Electricidad y Electrónica</li><li>Energía y Ambiente</li><li>Gestión Empresario/Industrial</li><li>Higiene y Seguridad Industrial</li><li>Informática</li><li>Inglés Técnico</li><li>Matemática y Estadística</li><li>Mecánica</li><li>Planificación y Control de la Producción</li><li>Práctica Profesionalizante</li><li>Proyecto Tutorado</li><li>Resistencia de Materiales</li><li>Técnicas de Representación</li><li>Tecnología de Construcción y Diseño Mecánico</li><li>Tecnología y Métodos de Fabricación Mecánica</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-industrial-y-automatizacion_9658" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-industrial-y-automatizacion_9658" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
 

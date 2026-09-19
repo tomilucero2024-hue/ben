@@ -1,135 +1,250 @@
-import os
-import re
-from pathlib import Path
+"""Universidad Católica Argentina (UCA) - Sede Mendoza.
 
+uca.edu.ar es una app Angular (CSR): el HTML que devuelve `requests` es solo el
+shell de 117 KB sin datos. El contenido real lo sirve su backend en
+https://wadmin.uca.edu.ar:
+
+  * /api/career/search/?locale=es  -> todas las carreras (nombre, duración, sede, linkCareer)
+  * /api/studyplan/?q=<slug>&locale=es -> plan de estudios en HTML
+
+Aprovechamos esas dos rutas: la búsqueda para duración/enlace oficial y el
+studyplan para las materias. Las páginas de plan visibles son
+https://uca.edu.ar/es{facultad}/carrera-de-grado/{slug}/plan-de-estudio.
+"""
+
+import re
+
+import requests
 from bs4 import BeautifulSoup
 
-from scraper_utils import (carreras_guardadas, es_duracion_real, extraer_duracion,
-                           guardar_json, pedir_sopa)
+from scraper_utils import guardar_json, limpiar_texto
 
-# Rutas resueltas desde la ubicación de este archivo, para que los scripts
-# funcionen sin importar desde qué carpeta se los ejecute.
-DIR_FUENTES = Path(__file__).resolve().parent / "fuentes"
+API = "https://wadmin.uca.edu.ar"
+CABECERAS = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
+
+# Las 17 carreras de la Facultad de Humanidades y Ciencias Económicas (Mendoza).
+# El slug es el último tramo de linkCareer y es la clave para pedir el plan.
+CARRERAS = [
+    {"id": 800, "nombre_carrera": "Ciclo de Licenciatura en Comunicación Digital e Interactiva",
+     "slug": "ciclo-de-licenciatura-en-comunicacion-digital-e-interactiva",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 801, "nombre_carrera": "Contador Público",
+     "slug": "contador-publico-1",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 802, "nombre_carrera": "Licenciatura en Administración de Empresas",
+     "slug": "administracion-de-empresas",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 803, "nombre_carrera": "Licenciatura en Ciencias del Comportamiento",
+     "slug": "licenciatura-en-ciencias-del-comportamiento",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 804, "nombre_carrera": "Licenciatura en Comunicación Digital e Interactiva",
+     "slug": "comunicacion-digital-e-interactiva-1",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 805, "nombre_carrera": "Licenciatura en Economía Empresarial",
+     "slug": "licenciatura-en-economia-empresarial",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 806, "nombre_carrera": "Licenciatura en Gestión de Negocios Digitales",
+     "slug": "licenciatura-en-gestion-de-negocios-digitales",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 807, "nombre_carrera": "Licenciatura en Gestión del Liderazgo y Desarrollo Organizacional",
+     "slug": "licenciatura-en-gestion-del-liderazgo-y-desarrollo-organizacional",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 808, "nombre_carrera": "Licenciatura en Marketing",
+     "slug": "marketing",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 809, "nombre_carrera": "Licenciatura en Psicología",
+     "slug": "psicologia",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 810, "nombre_carrera": "Licenciatura en Psicopedagogía",
+     "slug": "psicopedagogia",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 811, "nombre_carrera": "Licenciatura en Relaciones Internacionales",
+     "slug": "relaciones-internacionales",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 812, "nombre_carrera": "Martillero Público, Corredor (Inmobiliario y Mobiliario), Administrador de Consorcios y Tasador",
+     "slug": "martillero-publico-corredor-inmobiliario-y-mobiliario-administrador-de-consorcios-y-tasador",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 813, "nombre_carrera": "Profesorado Universitario de Educación Inicial",
+     "slug": "educacion-inicial",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 814, "nombre_carrera": "Profesorado Universitario de Educación Primaria",
+     "slug": "educacion-primaria",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Humanidades y Ciencias Económicas"},
+    {"id": 815, "nombre_carrera": "Profesorado Universitario en Educación Física y Deportes",
+     "slug": "profesorado-universitario-en-educacion-fisica-y-deportes",
+     "categoria": "Grado / Carrera", "modalidad": "Presencial",
+     "facultad": "UCA - Facultad de Humanidades y Ciencias Económicas"},
+    {"id": 816, "nombre_carrera": "Ciclo de Licenciatura en Higiene y Seguridad, Calidad y Medio Ambiente",
+     "slug": "licenciatura-en-higiene-y-seguridad-en-el-trabajo-calidad-y-medio-ambiente-ciclo-de-complementacion-curricular-ccc",
+     "categoria": "Grado / Carrera", "modalidad": "A Distancia",
+     "facultad": "UCA - Facultad de Humanidades y Ciencias Económicas"},
+]
+
+YEAR_RE = re.compile(r"^(PRIMER|SEGUNDO|TERCER|CUARTO|QUINTO|SEXTO)\s+A[ÑN]\s*O\b", re.I)
+SEM_RE = re.compile(r"^\d+\s*[°º]?\s*(semestre|cuatrimestre)\b", re.I)
+SKIP_RE = re.compile(
+    r"^(los primeros|un seminario|las tem|materias en contra|cuatro talleres|requisito)",
+    re.I,
+)
+TITULO_RE = re.compile(r"^t[íi]tulo\s+(de grado|intermedio)", re.I)
+PARTE_AÑO_RE = re.compile(r"^(PRIMER|SEGUNDO|TERCER|CUARTO|QUINTO|SEXTO)\s+A[ÑN]$", re.I)
+MAPA_ANIO = {"PRIMER": "1º", "SEGUNDO": "2º", "TERCER": "3º", "CUARTO": "4º", "QUINTO": "5º", "SEXTO": "6º"}
+
+
+def unir_lineas_partidas(lineas):
+    """El PDF/HTML a veces corta 'CUARTO AÑO' en 'CUARTO AÑ' + 'O'; las une."""
+    salida = []
+    i = 0
+    while i < len(lineas):
+        linea = lineas[i]
+        if i + 1 < len(lineas) and PARTE_AÑO_RE.match(linea.strip()) and lineas[i + 1].strip() == "O":
+            salida.append(linea.strip() + "O")
+            i += 2
+            continue
+        salida.append(linea.strip())
+        i += 1
+    return salida
+
+
+def extraer_plan(body):
+    """Convierte el HTML del plan en [{"anio": "1º año", "materias": [...]}]."""
+    sopa = BeautifulSoup(body, "html.parser")
+    anios = []
+
+    def anio(nombre):
+        for a in anios:
+            if a["anio"] == nombre:
+                return a
+        a = {"anio": nombre, "materias": []}
+        anios.append(a)
+        return a
+
+    actual = None
+    for bloque in sopa.find_all(["p", "ul", "ol", "h1", "h2", "h3", "h4", "h5"]):
+        # Evita procesar un bloque anidado dentro de otro ya procesado.
+        if bloque.find_parent(["p", "ul", "ol"]) is not None:
+            continue
+        if bloque.name in ("ul", "ol"):
+            lineas = [
+                x
+                for li in bloque.find_all("li")
+                for x in li.get_text("\n", strip=True).split("\n")
+                if x.strip()
+            ]
+        else:
+            lineas = [x for x in bloque.get_text("\n", strip=True).split("\n") if x.strip()]
+        for linea in unir_lineas_partidas(lineas):
+            norm = re.sub(r"\s+", " ", linea).strip()
+            m = YEAR_RE.match(norm)
+            if m:
+                actual = anio(MAPA_ANIO[m.group(1).upper()] + " año")
+                continue
+            if SEM_RE.match(norm) or SKIP_RE.match(norm) or TITULO_RE.match(norm):
+                continue
+            if norm.startswith("*") or norm.endswith("*"):
+                continue
+            if actual is None:
+                actual = anio("1º año")
+            actual["materias"].append(limpiar_texto(norm))
+    return anios
+
+
+def buscar_carreras():
+    """Devuelve un mapa slug -> carrera desde la búsqueda oficial de la UCA."""
+    try:
+        respuesta = requests.get(f"{API}/api/career/search/?locale=es", headers=CABECERAS, timeout=40)
+        respuesta.raise_for_status()
+        datos = respuesta.json().get("data") or []
+    except Exception as error:
+        print(f"  ⚠️ No se pudo consultar la búsqueda de carreras: {error}")
+        return {}
+    mapa = {}
+    for grupo in datos:
+        for carrera in grupo.get("career", []):
+            link = carrera.get("linkCareer") or ""
+            if not link.startswith("/facultades/facultad-de-humanidades-y-ciencias-economicas"):
+                continue
+            slug = link.rstrip("/").split("/")[-1]
+            mapa.setdefault(slug, carrera)
+    return mapa
+
+
+def traer_plan(slug):
+    try:
+        respuesta = requests.get(f"{API}/api/studyplan/?q={slug}&locale=es", headers=CABECERAS, timeout=40)
+        respuesta.raise_for_status()
+        datos = respuesta.json().get("data")
+    except Exception as error:
+        print(f"    ⚠️ Error pidiendo el plan de '{slug}': {error}")
+        return None
+    if not datos:
+        return None
+    items = datos[0][0].get("studyPlanItems") or []
+    if not items:
+        return None
+    return extraer_plan(items[0]["body"])
 
 
 print("🛠️ Encendiendo el escáner V8 para la UCA...")
-print("⚠️ Ojo: Detectamos Angular. Sistema de inyección dual activado.\n")
+print("⚠️ Ojo: Detectamos Angular. Usando la API del backend (wadmin.uca.edu.ar).\n")
 
-carreras_viejas = carreras_guardadas("uca.json")
+api = buscar_carreras()
+print(f"📡 Carreras de Mendoza en la API: {len(api)}\n")
+
+carreras = []
+for base in CARRERAS:
+    info = api.get(base["slug"]) or {}
+    link = info.get("linkCareer")
+    link_oficial = ("https://uca.edu.ar/es" + link) if link else "https://uca.edu.ar/es/ingreso"
+    duracion = info.get("duracion") or "Verificar en web oficial"
+    plan = traer_plan(base["slug"])
+    registro = {
+        "id": base["id"],
+        "nombre_carrera": base["nombre_carrera"],
+        "categoria": base["categoria"],
+        "duracion": duracion,
+        "modalidad": base["modalidad"],
+        "facultad": base["facultad"],
+        "link_oficial": link_oficial,
+    }
+    if plan:
+        registro["plan_estudio"] = plan
+        registro["plan_fuente"] = link_oficial.rstrip("/") + "/plan-de-estudio"
+        total = sum(len(a["materias"]) for a in plan)
+        print(f"  ✅ {base['nombre_carrera'][:52]:54s} {len(plan)} años / {total} materias")
+    else:
+        print(f"  ⚠️ {base['nombre_carrera'][:52]:54s} sin plan")
+    carreras.append(registro)
+
 uca_data = {
     "id": 8,
     "nombre": "Universidad Católica Argentina (UCA)",
     "nivel": "universidad",
-    "gestion": "privada", # 👈 La etiqueta naranja
+    "gestion": "privada",
     "provincia": "Mendoza",
     "contacto": {
         "telefono": "4429400",
         "email": "ingresomendoza@uca.edu.ar",
-        "direccion": "Uruguay 750, Godoy Cruz"
+        "direccion": "Uruguay 750, Godoy Cruz",
     },
-    "carreras": []
+    "carreras": carreras,
+    "departamento": "Godoy Cruz",
 }
 
-id_global = 800
-contador = 0
-
-# Función para destripar la sopa (sea de la web o de un archivo local)
-def procesar_sopa(sopa):
-    global id_global, contador
-    
-    # Buscamos la fila principal (Captura 3)
-    filas = sopa.find_all('tr', id='resultado-buscador')
-    
-    for fila in filas:
-        tds = fila.find_all('td')
-        if len(tds) >= 5:
-            sede = tds[3].text.strip()
-            
-            # 🛑 EL FILTRO DE MENDOZA: Si no es de Mendoza, la pasamos por alto
-            if "mendoza" not in sede.lower():
-                continue
-                
-            nombre_carrera = tds[1].text.strip()
-            facultad_texto = "UCA - " + tds[4].text.strip()
-            
-            # Buscamos la fila detalle (que está justo abajo de la fila principal)
-            fila_detalle = fila.find_next_sibling('tr')
-            duracion_texto = "Verificar en web oficial"
-            link_real = "https://uca.edu.ar/es/ingreso"
-            
-            if fila_detalle:
-                # Sacar duración: primero el par <p>Duración</p><p>valor</p> del
-                # diseño viejo, y si no está, buscándola en el texto de la fila.
-                #
-                # OJO — hoy esto no encuentra nada, y no es culpa del selector:
-                # uca.edu.ar es una app Angular y el volcado guardado en
-                # fuentes/uca_codigo.html tiene las filas de detalle VACÍAS,
-                # porque el sitio las rellena recién cuando el usuario expande
-                # cada carrera. Con requests+BeautifulSoup no hay forma de
-                # llegar a ese contenido (todas las rutas del sitio devuelven el
-                # mismo shell de 117 KB sin datos). Para que estas 17 carreras
-                # tengan duración hay que volver a guardar el HTML CON las filas
-                # ya expandidas, o sumar un navegador headless al proyecto.
-                p_duracion = fila_detalle.find('p', string=re.compile('Duración', re.IGNORECASE))
-                if p_duracion:
-                    p_valor = p_duracion.find_next_sibling('p')
-                    if p_valor:
-                        duracion_texto = p_valor.text.strip()
-                if not es_duracion_real(duracion_texto):
-                    hallada = extraer_duracion(fila_detalle.get_text(" "))
-                    if hallada:
-                        duracion_texto = hallada
-                
-                # Sacar Link (Captura 1)
-                link_btn = fila_detalle.find('a', string=re.compile('MÁS INFO', re.IGNORECASE))
-                if link_btn and 'href' in link_btn.attrs:
-                    href = link_btn['href']
-                    link_real = href if href.startswith('http') else f"https://uca.edu.ar/{href.lstrip('/')}"
-            
-            print(f"  ✅ Pescada (Mendoza): {nombre_carrera}")
-            
-            uca_data["carreras"].append({
-                "id": id_global,
-                "nombre_carrera": nombre_carrera,
-                "categoria": "Grado / Carrera",
-                "duracion": duracion_texto,
-                "modalidad": "Presencial",
-                "facultad": facultad_texto,
-                "link_oficial": link_real
-            })
-            id_global += 1
-            contador += 1
-
-# INTENTO 1: Raspado Local (Si el usuario puenteó Angular)
-archivo_html_local = DIR_FUENTES / "uca_codigo.html"
-if os.path.exists(archivo_html_local):
-    print(f"📁 Se encontró '{archivo_html_local}'. Extrayendo datos puenteados...")
-    with open(archivo_html_local, "r", encoding="utf-8") as f:
-        sopa_local = BeautifulSoup(f.read(), 'html.parser')
-        procesar_sopa(sopa_local)
-else:
-    # INTENTO 2: Raspado Web Directo
-    print("🌐 Intentando raspar directo desde la web...")
-    try:
-        url_uca = "https://uca.edu.ar/es/ingreso"
-        sopa = pedir_sopa(url_uca)
-        procesar_sopa(sopa_web)
-    except Exception as e:
-        print(f"⚠️ Fallo web: {e}")
-
-# CHEQUEO DE RESULTADOS Y DIAGNÓSTICO
-if contador == 0:
-    print("\n❌ CERO CARRERAS ENCONTRADAS.")
-    print("Mecánica: Angular bloqueó el escáner. Necesitamos puentear el sistema.")
-    print("PASOS PARA SOLUCIONARLO:")
-    print("  1. Entrá a https://uca.edu.ar/es/ingreso en Chrome.")
-    print("  2. Hacé clic derecho en la tabla de carreras -> 'Inspeccionar'.")
-    print("  3. Buscá la etiqueta <tbody>, clic derecho -> Copy -> Copy element (o Copy OuterHTML).")
-    print("  4. Creá un archivo llamado 'uca_codigo.html' en esta misma carpeta, pegá eso y guardá.")
-    print("  5. Volvé a correr este script.")
-else:
-    print(f"\n✅ ¡Manso! Se guardaron {contador} carreras de la UCA Sede Mendoza.")
-    
-    base_uca = {"instituciones": [uca_data]}
-    guardar_json(base_uca, "uca.json")
-    print("🎉 Archivo 'uca.json' listo para la calle.")
+guardar_json({"instituciones": [uca_data]}, "uca.json")
+print(f"\n🎉 UCA lista: {len(carreras)} carreras de Mendoza.")

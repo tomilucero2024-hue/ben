@@ -1,172 +1,1264 @@
 {
- "instituciones": [
-  {
-   "id": 8,
-   "nombre": "Universidad Católica Argentina (UCA)",
-   "nivel": "universidad",
-   "gestion": "privada",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "4429400",
-    "email": "ingresomendoza@uca.edu.ar",
-    "direccion": "Uruguay 750, Godoy Cruz"
-   },
-   "carreras": [
-    {
-     "id": 800,
-     "nombre_carrera": "Ciclo de Licenciatura en Comunicación Digital e Interactiva",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 801,
-     "nombre_carrera": "Contador Público",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 802,
-     "nombre_carrera": "Licenciatura en Administración de Empresas",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 803,
-     "nombre_carrera": "Licenciatura en Ciencias del Comportamiento",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 804,
-     "nombre_carrera": "Licenciatura en Comunicación Digital e Interactiva",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 805,
-     "nombre_carrera": "Licenciatura en Economía Empresarial",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 806,
-     "nombre_carrera": "Licenciatura en Gestión de Negocios Digitales",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 807,
-     "nombre_carrera": "Licenciatura en Gestión del Liderazgo y Desarrollo Organizacional",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 808,
-     "nombre_carrera": "Licenciatura en Marketing",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 809,
-     "nombre_carrera": "Licenciatura en Psicología",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 810,
-     "nombre_carrera": "Licenciatura en Psicopedagogía",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 811,
-     "nombre_carrera": "Licenciatura en Relaciones Internacionales",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 812,
-     "nombre_carrera": "Martillero Público, Corredor (Inmobiliario y Mobiliario), Administrador de Consorcios y Tasador",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 813,
-     "nombre_carrera": "Profesorado Universitario de Educación Inicial",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 814,
-     "nombre_carrera": "Profesorado Universitario de Educación Primaria",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/ingreso"
-    },
-    {
-     "id": 815,
-     "nombre_carrera": "Profesorado Universitario en Educación Física y Deportes",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "Presencial",
-     "facultad": "UCA - Facultad de Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/profesorado/profesorado-universitario-en-educacion-fisica-y-deportes"
-    },
-    {
-     "id": 816,
-     "nombre_carrera": "Ciclo de Licenciatura en Higiene y Seguridad, Calidad y Medio Ambiente",
-     "categoria": "Grado / Carrera",
-     "duracion": "Verificar en web oficial",
-     "modalidad": "A Distancia",
-     "facultad": "UCA - Facultad de Humanidades y Ciencias Económicas",
-     "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas"
-    }
-   ],
-   "departamento": "Godoy Cruz"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 8,
+            "nombre": "Universidad Católica Argentina (UCA)",
+            "nivel": "universidad",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "4429400",
+                "email": "ingresomendoza@uca.edu.ar",
+                "direccion": "Uruguay 750, Godoy Cruz"
+            },
+            "carreras": [
+                {
+                    "id": 800,
+                    "nombre_carrera": "Ciclo de Licenciatura en Comunicación Digital e Interactiva",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "1 año",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/ciclo-de-licenciatura/ciclo-de-licenciatura-en-comunicacion-digital-e-interactiva",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Comunicación Digital e Interactiva",
+                                "Aspectos Económicos y Jurídicos de la Web",
+                                "Usabilidad y Experiencia de Usuario",
+                                "Programación Ligera",
+                                "Producción de Contenidos Multimediales",
+                                "Moral y Compromiso Social",
+                                "Análisis y Gestión de Redes Sociales",
+                                "Ética y Deontología Profesional",
+                                "Diseño Interactivo",
+                                "Desarrollo de Aplicaciones Web",
+                                "Optativa",
+                                "Redacción para la Web",
+                                "Creación y Gestión de Emprendimientos",
+                                "Gestión de Contenidos",
+                                "Técnicas de Posicionamiento y Métricas Web",
+                                "Filosofía y Antropología",
+                                "Introducción a la Teología"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/ciclo-de-licenciatura/ciclo-de-licenciatura-en-comunicacion-digital-e-interactiva/plan-de-estudio"
+                },
+                {
+                    "id": 801,
+                    "nombre_carrera": "Contador Público",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/contador-publico-1",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración",
+                                "Contabilidad",
+                                "Matemática Aplicada I",
+                                "Microeconomía",
+                                "Seminario: Argentina en el Mundo",
+                                "Filosofía y Antropología",
+                                "Taller: Lógica y Oratoria",
+                                "Taller: Comunicación y redacción",
+                                "Administración Avanzada",
+                                "Contabilidad y Sistemas de Información",
+                                "Matemática Aplicada II",
+                                "Macroeconomía",
+                                "Introducción al Derecho",
+                                "Seminario de Introducción al Estudios de las Ciencias Sociales",
+                                "Taller: Software de Negocios I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Estadística",
+                                "Contabilidad para la Toma de Decisiones",
+                                "Derecho Público",
+                                "Derecho Laboral y Seguridad Social",
+                                "Ética Personal y Social",
+                                "Gestión de IT",
+                                "Taller de Habilidades Profesionales",
+                                "Competitividad y Costos",
+                                "Matemática Financiera",
+                                "Contabilidad de Combinaciones de Negocios",
+                                "Derecho Comercial",
+                                "Contabilidad Socio Ambiental y de ONG",
+                                "Introducción a la Teología",
+                                "Taller: Software de Negocios II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Estados Contables",
+                                "Finanzas Públicas y Control",
+                                "Derecho Concursal y Quiebras",
+                                "Presupuesto y Control",
+                                "Síntesis Teológica",
+                                "Métodos Cuantitativos",
+                                "Economía Argentina",
+                                "Finanzas Corporativas",
+                                "Normas Internacionales de Información Financiera",
+                                "Impuestos I",
+                                "Optativa Grupo A",
+                                "Administración General",
+                                "Taller de análisis y presentación de Estados Contables",
+                                "Historia del Pensamiento Económico y Político"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Ética Económica y Empresarial",
+                                "Auditoría",
+                                "Optativa Grupo B",
+                                "Optativa Grupo A",
+                                "Moral y Compromiso Social",
+                                "Prácticas de Integración I",
+                                "Impuestos II",
+                                "Diseño y Auditoría de Sistemas de Información",
+                                "Actuación Profesional",
+                                "Auditoria Interna y Operativa",
+                                "Optativa Grupo B",
+                                "Práctica Impuestos Nacionales",
+                                "Finanzas Corporativas Avanzadas",
+                                "Prácticas de Integración II"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/contador-publico-1/plan-de-estudio"
+                },
+                {
+                    "id": 802,
+                    "nombre_carrera": "Licenciatura en Administración de Empresas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/administracion-de-empresas",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración",
+                                "Contabilidad",
+                                "Matemática Aplicada I",
+                                "Microeconomía",
+                                "Introducción a la Filosofía",
+                                "Pensamiento Sistémico y Crítico",
+                                "Gestión Organizacional",
+                                "Contabilidad y Sistemas de Información",
+                                "Matemática Aplicada II",
+                                "Macroeconomía",
+                                "Seminario de Profundización Filosófica",
+                                "Software de Negocios"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Gerencia, Liderazgo y Desarrollo",
+                                "Contabilidad Gerencial",
+                                "Métodos Cuantitativos",
+                                "Introducción al Derecho",
+                                "Introducción a la Teología",
+                                "Seminario Desarrollo de Habilidades Profesionales",
+                                "Competitividad y Costos",
+                                "Marketing",
+                                "Derecho Laboral y Seguridad Social",
+                                "Métodos Cuantitativos para la Administración y Finanzas",
+                                "Gestión de IT",
+                                "Seminario de Profundización Teológica"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Dirección de Operaciones",
+                                "Estrategia y Modelos de Negocios",
+                                "Presupuesto y Control",
+                                "Introducción al Data Mining",
+                                "Derecho Comercial",
+                                "Nociones de Ética Filosófica y Deontología Profesional",
+                                "Finanzas Corporativas",
+                                "Nuevas Tendencias de la Administración",
+                                "Gestión Tributaria",
+                                "Logística",
+                                "Optativa",
+                                "Nociones de Ética Teológica y Pensamiento Social Cristiano"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Emprendimientos de Negocios",
+                                "Optativa",
+                                "Neuropsicosociología de la Decisión Aplicada",
+                                "Dirección y Control Económico",
+                                "Dirección Comercial",
+                                "Seminario de Integración del Saber",
+                                "Desarrollo de Empresas y Nuevos Negocios",
+                                "Finanzas Avanzadas",
+                                "Dirección General y Política de la Empresa",
+                                "Optativa",
+                                "Optativa",
+                                "Seminario de Compromiso Social"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/administracion-de-empresas/plan-de-estudio"
+                },
+                {
+                    "id": 803,
+                    "nombre_carrera": "Licenciatura en Ciencias del Comportamiento",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/licenciatura-en-ciencias-del-comportamiento",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción al Comportamiento y a la Comunicación",
+                                "Introducción a la Filosofía",
+                                "Introducción a la Neurociencia y al Desarrollo de la Vida Mental",
+                                "Desarrollo de la Vida Social y Familiar",
+                                "Taller: Lectura y Redacción",
+                                "Teorías Psicológicas de la Motivación",
+                                "Ciencias Cognitivas y Procesamiento de la Información",
+                                "Ecología del Comportamiento Humano",
+                                "Seminario de Profundización Filosófica",
+                                "Taller: Teoría y Técnica de la Entrevista"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Neurociencia Computacional",
+                                "Comportamiento Económico: Aspectos Históricos y Perspectivas Actuales",
+                                "Métodos y Diseño de la Investigación Comportamental",
+                                "Introducción a la Teología",
+                                "Biología de la Motivación",
+                                "Taller: Comunicación Asertiva",
+                                "Psicología Organizacional",
+                                "Economía del Conocimiento y del Comportamiento",
+                                "Estadística Aplicada al Comportamiento",
+                                "Procesos Evolutivos de Desarrollo Humano",
+                                "Seminario de Profundización Teológica",
+                                "Taller: Medición de Tendencias Sociales"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Neurociencia, Conocimiento y Políticas Públicas",
+                                "Conducta del Consumidor",
+                                "Investigación Cualitativa Aplicada al Comportamiento",
+                                "Ciencias de Datos e Inteligencia Artificial",
+                                "Nociones de Ética Filosófica y Deontología Profesional",
+                                "Taller Electivo",
+                                "Desarrollo de Políticas Públicas y Herramientas de Análisis Político",
+                                "Neuromarketing y Neuroeconomía",
+                                "Ciencias del Comportamiento Aplicadas",
+                                "Calidad de Vida, Sociedad y Ambiente",
+                                "Nociones de Ética Teológica y Pensamiento Social Cristiano",
+                                "Taller Electivo"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Práctica Profesional I",
+                                "Neurociencia del Aprendizaje y la Memoria",
+                                "Análisis Predictivo con Machine Learning",
+                                "Seminario de Integración del Saber",
+                                "Taller de Elaboración de TIF",
+                                "Taller Electivo",
+                                "Práctica Profesional II",
+                                "Diversidad e Inclusión Social",
+                                "Análisis de la Opinión Pública",
+                                "Deontología y Ejercicio Profesional en las Ciencias del Comportamiento",
+                                "Seminario de Compromiso Social",
+                                "Taller Electivo",
+                                "Idioma Inglés y Trabajo Integrador Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/licenciatura-en-ciencias-del-comportamiento/plan-de-estudio"
+                },
+                {
+                    "id": 804,
+                    "nombre_carrera": "Licenciatura en Comunicación Digital e Interactiva",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/comunicacion-digital-e-interactiva-1",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción a la Comunicación Digital e Interactiva",
+                                "Historia de la Cultura",
+                                "Gramática",
+                                "Arte y Diseño",
+                                "Filosofía y Antropología",
+                                "Literatura",
+                                "Herramientas Multimediales",
+                                "Introducción al Periodismo",
+                                "Diseño",
+                                "Seminario I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Historia del Siglo XX",
+                                "Comunicación Audiovisual",
+                                "Metodología de la Investigación",
+                                "Teoría Social",
+                                "Ética y sus Fundamentos",
+                                "Introducción a la Teología",
+                                "Teoría de la Comunicación Social",
+                                "Producción Audiovisual",
+                                "Principios de Economía",
+                                "Comunicación Institucional",
+                                "Seminario II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Planificación para las RRPP",
+                                "Creatividad",
+                                "Psicología e Investigación de mercado",
+                                "Atención de cuentas",
+                                "Medios",
+                                "Síntesis Teológica",
+                                "Marketing",
+                                "Opinión Pública",
+                                "Comunicación Multimedial",
+                                "Estudios Culturales",
+                                "Materia Optativa",
+                                "Seminario III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Comunicación Digital e Interactiva",
+                                "Aspectos Económicos y Jurídicos de la Web",
+                                "Usabilidad y Experiencia de Usuario",
+                                "Programación Ligera",
+                                "Producción de Contenidos Multimediales",
+                                "Moral y Compromiso Social",
+                                "Análisis y Gestión de Redes Sociales",
+                                "Ética y Deontología Profesional",
+                                "Diseño Interactivo",
+                                "Desarrollo de Aplicaciones Web",
+                                "Materia Optativa",
+                                "Seminario IV",
+                                "Redacción para la Web",
+                                "Creación y Gestión de Emprendimientos",
+                                "Gestión de Contenidos",
+                                "Técnicas de Posicionamiento y Métricas Web"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/comunicacion-digital-e-interactiva-1/plan-de-estudio"
+                },
+                {
+                    "id": 805,
+                    "nombre_carrera": "Licenciatura en Economía Empresarial",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/licenciatura-en-economia-empresarial",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración",
+                                "Contabilidad",
+                                "Matemática Aplicada I",
+                                "Microeconomía",
+                                "Seminario: Argentina en el Mundo",
+                                "Introducción a la Filosofía",
+                                "Contabilidad Gerencial",
+                                "Matemática Aplicada II",
+                                "Macroeconomía",
+                                "Introducción al Derecho",
+                                "Seminario de Profundización Filosófica",
+                                "Taller De Lógica y Comunicación (Redacción + Oratoria)"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Gerencia y Liderazgo",
+                                "Teoría Microeconómica",
+                                "Estadística",
+                                "Matemática Aplicada III",
+                                "Introducción a la Teología",
+                                "Programación inicial",
+                                "Competitividad y Costos",
+                                "Fundamentos del Marketing",
+                                "Tecnología Aplicada a los negocios",
+                                "Teoría Macroeconómica",
+                                "Inferencia Estadística",
+                                "Seminario de Profundización Teológica"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Operaciones y Logística",
+                                "Métodos Cuantitativos Financieros",
+                                "Temas Especiales de Microeconomía",
+                                "Economía Argentina",
+                                "Ciencia de Datos I",
+                                "Nociones de Ética Filosófica y Deontología profesional",
+                                "Finanzas Corporativas",
+                                "Análisis de Mercado",
+                                "Derecho Comercial",
+                                "Ciencias de Datos II",
+                                "Comercio Internacional",
+                                "Nociones de Ética Teológica y Pensamiento Social Cristiano"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Finanzas Corporativas Avanzadas",
+                                "Economía y Finanzas Internacionales",
+                                "Seminario de Integración del Saber",
+                                "Optativa Grupo 2",
+                                "Optativa Grupo 2",
+                                "Optativa Grupo 1",
+                                "Emprendimientos y Nuevos Negocios",
+                                "Ética Económica y empresarial",
+                                "Seminario de Compromiso social",
+                                "Optativa Grupo 3",
+                                "Optativa Grupo 3",
+                                "Optativa Grupo 3"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/licenciatura-en-economia-empresarial/plan-de-estudio"
+                },
+                {
+                    "id": 806,
+                    "nombre_carrera": "Licenciatura en Gestión de Negocios Digitales",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/licenciatura-en-gestion-de-negocios-digitales",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Arquitectura de la Tecnología Informática",
+                                "Matemática Aplicada I",
+                                "Microeconomía",
+                                "Contabilidad",
+                                "Sistemas de Bases de Datos",
+                                "Filosofía y Antropología",
+                                "Administración",
+                                "Matemática Aplicada II",
+                                "Derecho Privado I",
+                                "Negocios y Tecnología en Internet",
+                                "Contabilidad y Sistemas de Información",
+                                "Seminario I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Estadística",
+                                "Macroeconomía",
+                                "Seminario Análisis de Estados Financieros",
+                                "Derecho Laboral y Seguridad",
+                                "Administración Avanzada",
+                                "Ética y sus Fundamentos",
+                                "Introducción a la Teología",
+                                "Competitividad y Costos",
+                                "Matemática Financiera",
+                                "Gestión de Personas",
+                                "Seguridad de la Información y de Sistemas",
+                                "Fundamentos del Marketing",
+                                "Derecho Privado II",
+                                "Seminario II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Dirección de Operaciones",
+                                "Presupuesto y Control",
+                                "Gestión Tributaria",
+                                "Fundamentos de Ingeniería de Software",
+                                "Gerencia y Liderazgo",
+                                "Síntesis Teológica",
+                                "Gestión de Proyectos Digitales",
+                                "Finanzas Corporativas",
+                                "Marketing Estratégico",
+                                "Dirección y Control Económico",
+                                "Aplicación de las Telecomunicaciones",
+                                "Sistemas Integrados de Gestión",
+                                "Seminario III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Innovación en el Marketing",
+                                "Seminario: Contabilidad Socio Ambiental y de ONG",
+                                "Fundamentos de Interacción",
+                                "Tecnologías Aplicadas",
+                                "Comercio Electrónico (E-Business)",
+                                "Ética Económica y Empresarial",
+                                "Optativa I",
+                                "Entrepreneurship",
+                                "Inteligencia Artificial",
+                                "Servicios Informáticos y Plataformas Web",
+                                "Auditoría de Sistemas",
+                                "Optativa II",
+                                "Seminario IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/licenciatura-en-gestion-de-negocios-digitales/plan-de-estudio"
+                },
+                {
+                    "id": 807,
+                    "nombre_carrera": "Licenciatura en Gestión del Liderazgo y Desarrollo Organizacional",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/licenciatura-en-gestion-del-liderazgo-y-desarrollo-organizacional",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración",
+                                "Contabilidad",
+                                "Matemática Aplicada",
+                                "Microeconomía",
+                                "Pensamiento Sistémico y Crítico",
+                                "Introducción a la Filosofía",
+                                "Macroeconomía",
+                                "Introducción a la Gestión de Personas",
+                                "Psicología",
+                                "Derecho Empresarial",
+                                "Competencias Digitales",
+                                "Seminario de Profundización Filosófica"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Marketing",
+                                "Gestión de Talento I",
+                                "Neurociencias",
+                                "Métodos Cuantitativos",
+                                "Sociología",
+                                "Introducción a la Teología",
+                                "Gestión de Talento II",
+                                "Pensamiento Crítico y Gestión de las Emociones",
+                                "Derecho Laboral y Seguridad Social",
+                                "Estrategias Competitivas y Nuevos Modelos de Negocios",
+                                "Economía del Comportamiento",
+                                "Seminario de Profundización Teológica"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Teorías del Liderazgo",
+                                "Optativa Grupo TEC A",
+                                "Comunicación Organizacional",
+                                "Incentivos Organizacionales",
+                                "Análisis de la Cultura y Gestión del Cambio Organizacional",
+                                "Nociones de Ética Filosófica y Deontología Profesional",
+                                "Liderazgo de Equipos de Trabajo",
+                                "Negociación y Resolución de Conflictos",
+                                "Coaching",
+                                "Gestión de Clima y Compromiso Organizacional",
+                                "Optativa Grupo TEC B",
+                                "Nociones de Ética Teológica y Pensamiento Social Cristiano"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Gestión de Procesos y Proyectos",
+                                "Tecnología Aplicada al Trabajo",
+                                "Nuevos Modelos Organizacionales",
+                                "Optativa Grupo HAB",
+                                "Innovación en Gestión de Talento",
+                                "Seminario de Integración del Saber",
+                                "Analítica de Datos en Gestión de Personas",
+                                "Toma de Decisiones en Gestión de Personas",
+                                "Optativa Grupo PROF",
+                                "Optativa Grupo PROF",
+                                "Optativa Grupo PROF",
+                                "Seminario de Compromiso Social"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/licenciatura-en-gestion-del-liderazgo-y-desarrollo-organizacional/plan-de-estudio"
+                },
+                {
+                    "id": 808,
+                    "nombre_carrera": "Licenciatura en Marketing",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/marketing",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Administración",
+                                "Contabilidad",
+                                "Matemática Aplicada I",
+                                "Microeconomía",
+                                "Seminario: Argentina en el Mundo",
+                                "Filosofía y Antropología",
+                                "Taller: Lógica y Oratoria",
+                                "Taller: Comunicación y Redacción",
+                                "Administración Avanzada",
+                                "Contabilidad y Sistemas de Información",
+                                "Matemática Aplicada II",
+                                "Macroeconomía",
+                                "Introducción al Derecho",
+                                "Seminario I",
+                                "Taller: Software de Negocios I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Gerencia y Liderazgo",
+                                "Fundamentos del Marketing",
+                                "Estadística",
+                                "Derecho Comercial",
+                                "Ética y sus Fundamentos",
+                                "Introducción a la Teología",
+                                "Taller de Habilidades Profesionales",
+                                "Comportamiento e Investigación de Mercado",
+                                "Marketing Estratégico",
+                                "Estrategia de Producto",
+                                "Distribución y Trade Marketing",
+                                "Gestión de IT",
+                                "Seminario II",
+                                "Taller: Software de Negocios II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Competitividad y Costos en el Marketing",
+                                "Nuevas Tendencias de la Administración",
+                                "Seminario: Estrategia de Marca",
+                                "Comunicación Integrada de Marketing",
+                                "Estrategia de Precio",
+                                "Síntesis Teológica",
+                                "Marketing de Servicios",
+                                "Innovación en Marketing",
+                                "Presupuesto y Control",
+                                "Optativa Grupo 1",
+                                "Optativa Grupo 2",
+                                "Seminario III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Planificación Integral de Marketing",
+                                "Estrategia Empresarial",
+                                "Optativa Grupo 1",
+                                "Optativa Grupo 2",
+                                "Optativa Grupo 3",
+                                "Moral y Compromiso Social",
+                                "Dirección General",
+                                "Ética Económica y Empresarial",
+                                "Optativa Grupo 3",
+                                "Optativa Grupo 3",
+                                "Optativa Grupo 3",
+                                "Seminario IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/marketing/plan-de-estudio"
+                },
+                {
+                    "id": 809,
+                    "nombre_carrera": "Licenciatura en Psicología",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/psicologia",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción a la Psicología General",
+                                "Psicología de la Niñez",
+                                "Neurociencias I",
+                                "Historia de la Cultura",
+                                "Filosofía y Antropología",
+                                "Psicología General",
+                                "Psicología de la Adolescencia",
+                                "Neurociencias II",
+                                "Introducción a la Sociología"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Psicoanálisis I",
+                                "Psicología de la Familia y las Instituciones",
+                                "Psicología de la Vida Adulta y de la Vejez",
+                                "Psicología de la Personalidad",
+                                "Ética y sus Fundamentos",
+                                "Psicoanálisis II",
+                                "Metodología de la Investigación I",
+                                "Psicología de la Salud y Salud Pública",
+                                "Psicología Social y Comunitaria",
+                                "Neuropsicología Cognitiva"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Orientaciones Actuales de la Psicología I",
+                                "Psicopatología I",
+                                "Estadística Aplicada a la Psicología",
+                                "Ejercicio Profesional",
+                                "Introducción a la Teología",
+                                "Orientaciones Actuales de la Psicología II",
+                                "Psicopatología II",
+                                "Técnicas de Evaluación Psicológica I",
+                                "Psicología Educacional",
+                                "Psicología Laboral-Organizacional"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Psicología Clínica de la Niñez y Adolescencia I",
+                                "Técnicas de Evaluación Psicológica II",
+                                "Psicología Jurídico-Forense",
+                                "Metodología de la Investigación II",
+                                "Síntesis Teológica",
+                                "Psicología Clínica de la Niñez y Adolescencia II",
+                                "Técnicas de Evaluación Psicológica III",
+                                "Psicoterapias",
+                                "Seminario de Integración Filosófico-Psicológico"
+                            ]
+                        },
+                        {
+                            "anio": "5º año",
+                            "materias": [
+                                "Psicología Clínica del Adulto, Geronte y Familia I",
+                                "Rorschach I",
+                                "Trabajo de Integración Final",
+                                "Moral y Compromiso Social",
+                                "Optativa I",
+                                "Psicología Clínica del Adulto, Geronte y Familia II",
+                                "Orientación Vocacional - Ocupacional",
+                                "Integración Psicodiagnóstica",
+                                "Optativa II",
+                                "Prácticas Profesionales Supervisadas",
+                                "Defensa del Trabajo de Integración Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/psicologia/plan-de-estudio"
+                },
+                {
+                    "id": 810,
+                    "nombre_carrera": "Licenciatura en Psicopedagogía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/psicopedagogia",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción a la Psicopedagogía",
+                                "Pedagogía",
+                                "Introducción a la Psicología General y de la Personalidad",
+                                "Psicología de la Educación",
+                                "Neurociencias I",
+                                "Introducción a la Filosofía",
+                                "Fundamentos y Principios de la Evaluación Psicopedagógica",
+                                "Didáctica General",
+                                "Contextos Socioculturales y Aprendizaje",
+                                "Psicología del Desarrollo de la Niñez",
+                                "Procesos Básicos y Superiores",
+                                "Seminario de Profundización Filosófica"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Técnicas de Evaluación Diagnóstica en Niñez",
+                                "Psicología Profunda",
+                                "Didáctica y Currículo I",
+                                "Psicología del Aprendizaje",
+                                "Psicopedagogía y Diversidad",
+                                "Introducción a la Teología",
+                                "Técnicas de Evaluación Diagnóstica en Adolescencia y Juventud",
+                                "Epistemología y Metodologías de la Investigación",
+                                "Psicología del Desarrollo de la Adolescencia y Juventud",
+                                "Psicología del Lenguaje",
+                                "Intervenciones Psicopedagógicas en Instituciones Educativas y Organizaciones",
+                                "Seminario de Profundización Teológica",
+                                "Prácticas Profesionales I"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Psicopatología I",
+                                "Didáctica y Currículo II",
+                                "Intervenciones Psicopedagógicas Preventivas en Educación, Trabajo y Salud",
+                                "Clínica Psicopedagógica, Orientación y Tratamiento en Niñez",
+                                "Psicopedagogía Laboral",
+                                "Nociones de Ética Filosófica y Deontología Profesional",
+                                "Psicopatología II",
+                                "Neuropsicología y Discapacidad",
+                                "Técnicas de Evaluación Diagnóstica en Adultez y Vejez",
+                                "Psicopedagogía Socio-Comunitaria",
+                                "Métodos y Diseños de Investigación en Psicopedagogía",
+                                "Materia Optativa I",
+                                "Nociones de Ética Teológica y Pensamiento Social Cristiano",
+                                "Prácticas Profesionales II"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Clínica Psicopedagógica, Orientación y Tratamiento en Adolescencia y Juventud",
+                                "Ejercicio Profesional de la Psicopedagogía",
+                                "Psicopedagogía y Nuevas Tecnologías",
+                                "Taller de Trabajo Final I",
+                                "Aprendizaje y Evaluación Neurocognitiva",
+                                "Materia Optativa II",
+                                "Seminario de Integración del Saber",
+                                "Prácticas Profesionales III",
+                                "Clínica Psicopedagógica, Orientación y Tratamiento en Adultez y Vejez",
+                                "Orientación Vocacional, Profesional y Ocupacional",
+                                "Intervenciones Psicopedagógicas y Rehabilitación Cognitiva",
+                                "Taller de Trabajo Final II",
+                                "Psicopedagogía Forense",
+                                "Seminario de Compromiso Social",
+                                "Residencia Psicopedagógica"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/psicopedagogia/plan-de-estudio"
+                },
+                {
+                    "id": 811,
+                    "nombre_carrera": "Licenciatura en Relaciones Internacionales",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/relaciones-internacionales",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Introducción a las Ciencias Políticas",
+                                "Principios de Sociología",
+                                "Pensamiento Político Clásico",
+                                "Historia Política Contemporánea",
+                                "Introducción a la Filosofía",
+                                "Introducción a las Relaciones Internacionales",
+                                "Nociones Jurídicas y Derechos Humanos",
+                                "Metodología de la Investigación Social",
+                                "Pensamiento Político Moderno",
+                                "Seminario de Profundización Filosófica",
+                                "Inglés - Nivel I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Historia Argentina Colonial y del Siglo XIX",
+                                "Teoría y Derecho Constitucional",
+                                "Teoría de las Relaciones Internacionales",
+                                "Pensamiento Político Contemporáneo",
+                                "Introducción a la Teología",
+                                "Historia Argentina Contemporánea",
+                                "Principios de Economía",
+                                "Teoría Política Sistemática",
+                                "Sociología Política",
+                                "Seminario de Profundización Teológica",
+                                "Inglés - Nivel II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Geografía Política y Económica Argentina y Latinoamericana",
+                                "Economía del Sector Público",
+                                "Métodos Cuantitativos",
+                                "Gobierno y Administración de la República Argentina",
+                                "Nociones de Ética Filosófica y Deontología Profesional",
+                                "Política Comparada",
+                                "Historia Política de América",
+                                "Política Exterior Argentina",
+                                "Nociones de Ética Teológica y Pensamiento Social Cristiano",
+                                "Política Económica Internacional",
+                                "Historia de las Relaciones Internacionales"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Política Económica Argentina",
+                                "Seminario de Investigación",
+                                "Seminario de Integración del Saber",
+                                "Política Internacional Contemporánea",
+                                "Derecho Internacional Público",
+                                "América Latina en la Política Internacional",
+                                "Seminario de Compromiso Social",
+                                "Estrategia y Seguridad Internacional",
+                                "Organismos Internacionales",
+                                "Materias Optativas (1) y Trabajo de Integración Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/carrera-de-grado/relaciones-internacionales/plan-de-estudio"
+                },
+                {
+                    "id": 812,
+                    "nombre_carrera": "Martillero Público, Corredor (Inmobiliario y Mobiliario), Administrador de Consorcios y Tasador",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/pregrado/martillero-publico-corredor-inmobiliario-y-mobiliario-administrador-de-consorcios-y-tasador",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Doctrina Social de la Iglesia",
+                                "Matemática y Estadística",
+                                "Introducción al Derecho",
+                                "Historia del Arte I",
+                                "Tasación y Venta I",
+                                "Principios de Derecho Civil",
+                                "Principios de Remate y Corretaje",
+                                "Contabilidad y Administración I",
+                                "Topografía y Geodesia",
+                                "Tasación y Venta II"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Tasación y Venta III",
+                                "Principios de Derecho Comercial",
+                                "Contabilidad y Administración II",
+                                "Principios de Arquitectura, Construcción y Urbanismo",
+                                "Ética y Deontología Profesional",
+                                "Historia del Arte II",
+                                "Negociación, Mediación y Arbitraje 1",
+                                "Informática",
+                                "Finanzas Públicas e Impuestos",
+                                "Tasación y Venta IV",
+                                "Marketing",
+                                "Principios de Derecho Registral",
+                                "Principios de Derecho Procesal",
+                                "Valuación de Obras de Arte 1"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/pregrado/martillero-publico-corredor-inmobiliario-y-mobiliario-administrador-de-consorcios-y-tasador/plan-de-estudio"
+                },
+                {
+                    "id": 813,
+                    "nombre_carrera": "Profesorado Universitario de Educación Inicial",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/profesorado/educacion-inicial",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Antropología y Filosofía de la Educación",
+                                "Pedagogía",
+                                "Sujetos de Aprendizaje I",
+                                "Contextos Socioculturales de Aprendizaje",
+                                "Taller de Comunicación I: Lectura, Escritura y Oralidad",
+                                "Teología I",
+                                "Didáctica",
+                                "Juego y Desarrollo Infantil",
+                                "Seminario de Investigación Educativa I: Corporeidad y Motricidad",
+                                "Práctica Educativa I: Experiencia Social en Organizaciones de la Comunidad: Escuelas y Aulas"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Historia de la Educación Argentina",
+                                "Didáctica y Currículum del Nivel Inicial",
+                                "Sujetos de Aprendizaje II",
+                                "Taller de Comunicación II: Integración de las TICs a la Enseñanza y el Aprendizaje",
+                                "Lengua, Literatura y su Enseñanza",
+                                "Sociología de la Educación",
+                                "Matemática y su Enseñanza",
+                                "Psicología Educacional",
+                                "Seminario de Investigación Educativa II: Alfabetización Inicial",
+                                "Práctica Educativa II: Experiencia Pedagógica en Instituciones Educativas de Ámbitos Urbanos, Suburbanos y Rural"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Evaluación I",
+                                "Educación Artística y su Enseñanza",
+                                "Ciencias Sociales y su Enseñanza",
+                                "Taller de Comunicación III: La Comunicación Educativa y la Gestión del Aula",
+                                "Ciencias Naturales y su Enseñanza",
+                                "Educación Física y su Enseñanza",
+                                "Seminario de Investigación Educativa III: Problemáticas del Nivel Inicial",
+                                "Práctica Educativa III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Gobierno de la Educación",
+                                "Teología II",
+                                "Evaluación II",
+                                "Práctica Educativa IV (Residencia Pedagógica)",
+                                "Seminario de Investigación Educativa IV: Investigación en y para la Acción Docente",
+                                "Ateneo de Residencia Pedagógica I",
+                                "Ateneo de Residencia Pedagógica II",
+                                "Taller de Comunicación IV: Presentaciones en Ámbitos Diversos",
+                                "Profesorado Universitario de Educación Inicial"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/profesorado/educacion-inicial/plan-de-estudio"
+                },
+                {
+                    "id": 814,
+                    "nombre_carrera": "Profesorado Universitario de Educación Primaria",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Verificar en web oficial",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/profesorado/educacion-primaria",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Antropología y Filosofía de la Educación",
+                                "Pedagogía",
+                                "Sujetos de Aprendizaje I",
+                                "Contextos Socioculturales de Aprendizaje",
+                                "Taller de Comunicación I: Lectura, Escritura y Oralidad",
+                                "Teología I",
+                                "Didáctica",
+                                "Juego y Desarrollo Infantil",
+                                "Seminario de Investigación Educativa I: Corporeidad y Motricidad",
+                                "Práctica Educativa I: Experiencia Social en Organizaciones de la Comunidad: Escuelas y Aulas"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Historia de la Educación Argentina",
+                                "Didáctica y Currículum del Nivel Primario",
+                                "Sujetos de Aprendizaje II",
+                                "Taller de Comunicación II: Integración de las TICs a la Enseñanza y el Aprendizaje",
+                                "Lengua, Literatura y su Enseñanza",
+                                "Sociología de la Educación",
+                                "Matemática y su Enseñanza",
+                                "Psicología Educacional",
+                                "Seminario de Investigación Educativa II: Alfabetización Inicial",
+                                "Práctica Educativa II: Experiencia Pedagógica en Instituciones Educativas de Ámbitos Urbanos, Suburbanos y Rural"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Evaluación I",
+                                "Educación Artística y su Enseñanza",
+                                "Ciencias Sociales y su Enseñanza",
+                                "Taller de Comunicación III: La Comunicación Educativa y la Gestión del Aula",
+                                "Ciencias Naturales y su Enseñanza",
+                                "Educación Física y su Enseñanza",
+                                "Seminario de Investigación Educativa III: Problemáticas del Nivel Primario",
+                                "Práctica Educativa III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Gobierno de la Educación",
+                                "Teología II",
+                                "Evaluación II",
+                                "Práctica Educativa IV (Residencia Pedagógica)",
+                                "Seminario de Investigación Educativa IV: Investigación en y para la Acción Docente",
+                                "Ateneo de Residencia Pedagógica I",
+                                "Ateneo de Residencia Pedagógica II",
+                                "Taller de Comunicación IV: Presentaciones en Ámbitos Diversos",
+                                "Profesor/a Universitario/a de Educación Primaria"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/profesorado/educacion-primaria/plan-de-estudio"
+                },
+                {
+                    "id": 815,
+                    "nombre_carrera": "Profesorado Universitario en Educación Física y Deportes",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "UCA - Facultad de Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/profesorado/profesorado-universitario-en-educacion-fisica-y-deportes",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Filosofía de la Educación",
+                                "Trayecto formativo personalizado (primer ciclo durante primer y segundo año)",
+                                "Introducción a la Educación Física",
+                                "Pedagogía",
+                                "Deportes I (Hándbol, Básquet, Hockey)",
+                                "Sujetos de Aprendizaje: Corporeidad y Motricidad",
+                                "Práctica Educativa I",
+                                "Biología y Anatomía Aplicadas",
+                                "Didáctica",
+                                "Deportes I y su didáctica (Handbol, Basquet, Hockey)"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Teología y educación",
+                                "Trayecto formativo personalizado (primer ciclo durante primer y segundo año)",
+                                "Psicología Educacional",
+                                "Deportes II (Atletismo, Gimnasia y Natación)",
+                                "La Educación Física y su didáctica en los niveles inicial y primario",
+                                "Prácticas Ludomotrices",
+                                "Deportes II y su didáctica (Atletismo, Gimnasia, Natación)",
+                                "Evaluación",
+                                "La Educación Física y su didáctica en los niveles secundario y superior",
+                                "Prácticas corporales en ambientes naturales",
+                                "Práctica Educativa II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Ética y deontología profesional",
+                                "Trayecto formativo personalizado (segundo ciclo durante tercer y cuarto año)",
+                                "Historia de la Educación Argentina y de la Educación Física",
+                                "Prácticas corporales expresivas",
+                                "Fisiología del ejercicio y biomecánica",
+                                "Deportes III (Sóftbol, Voley, Fútbol, Rugby)",
+                                "Educación Física para personas con discapacidad",
+                                "Deportes III y su didáctica (Sóftbol, Vóley, Fútbol, Rugby)",
+                                "Sociología de la Educación",
+                                "Práctica Educativa III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Integración del saber",
+                                "Trayecto formativo personalizado (segundo ciclo durante tercer y cuarto año)",
+                                "Deportes Alternativos",
+                                "Prácticas del fitness",
+                                "Teoría de la Educación Física",
+                                "Investigación en Educación Física",
+                                "Educación Física, Salud y Adultos Mayores",
+                                "Teoría y práctica del entrenamiento",
+                                "Política y Gestión de la Educación Física y el Deporte",
+                                "Práctica educativa IV",
+                                "Profesor/a Universitario/a en Educación Física y Deportes"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/profesorado/profesorado-universitario-en-educacion-fisica-y-deportes/plan-de-estudio"
+                },
+                {
+                    "id": 816,
+                    "nombre_carrera": "Ciclo de Licenciatura en Higiene y Seguridad, Calidad y Medio Ambiente",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "A Distancia",
+                    "facultad": "UCA - Facultad de Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/ciclo-de-complementacion-curricular/licenciatura-en-higiene-y-seguridad-en-el-trabajo-calidad-y-medio-ambiente-ciclo-de-complementacion-curricular-ccc",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Física",
+                                "Matemática",
+                                "Gestión Administrativa",
+                                "Sistema Integrado de Gestión de la Calidad",
+                                "Desarrollo Ambiental",
+                                "Introducción a la Filosofía",
+                                "Química Básica y Ambiental",
+                                "Estadística",
+                                "Organización Industrial",
+                                "Psicología Laboral y Capacitación del Personal",
+                                "Instalaciones Industriales y Riesgos Especiales",
+                                "Introducción a la teología"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Nociones de ética teológica y pensamiento social cristiano",
+                                "Sustentabilidad y Energías Renovables",
+                                "Auditorías, Confiabilidad y Calidad",
+                                "Medicina Laboral y Toxicología",
+                                "Investigación Pericial y Legislación Laboral",
+                                "Legislación Ambiental",
+                                "Diseño y Cálculo de Instalaciones Contra Incendio",
+                                "Evaluación de Impacto Ambiental",
+                                "Protección y Seguridad Radiológica",
+                                "Seminario de Integración del Saber",
+                                "Seminario de Compromiso Social",
+                                "Metodología de la investigación",
+                                "Idioma Inglés",
+                                "Trabajo Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/ciclo-de-complementacion-curricular/licenciatura-en-higiene-y-seguridad-en-el-trabajo-calidad-y-medio-ambiente-ciclo-de-complementacion-curricular-ccc/plan-de-estudio"
+                }
+            ],
+            "departamento": "Godoy Cruz"
+        }
+    ]
 }

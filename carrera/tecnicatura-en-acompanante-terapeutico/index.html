@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Salud","item":"https://buscadoreducativo.com.ar/area/salud/"},{"@type":"ListItem","position":4,"name":"Tecnicatura en Acompañante Terapéutico","item":"https://buscadoreducativo.com.ar/carrera/tecnicatura-en-acompanante-terapeutico/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Tecnicatura en Acompañante Terapéutico","description":"Dónde estudiar Tecnicatura en Acompañante Terapéutico en Mendoza: tecnicatura del área Salud, dictada por 1 institución (1 privada). Dura 3 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-en-acompanante-terapeutico/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Tecnicatura en Acompañante Terapéutico en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Tecnicatura en Acompañante Terapéutico en Mendoza en la siguiente institución: Universidad de Congreso (UC). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Tecnicatura en Acompañante Terapéutico?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 3 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Tecnicatura en Acompañante Terapéutico?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Tecnicatura en Acompañante Terapéutico?","acceptedAnswer":{"@type":"Answer","text":"Tecnicatura en Acompañante Terapéutico es una tecnicatura perteneciente al área de Salud. Entre sus aptitudes más afines se destacan: trabajo práctico, interacción social, pensamiento analítico y base teórica y académica."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,8 +120,6 @@
         <dt>Modalidad</dt><dd>Presencial</dd>
         <dt>Duración</dt><dd>3 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Tecnicatura+en+Acompa%C3%B1ante+Terap%C3%A9utico&amp;area=Salud&amp;formacion=tecnicaturas">Ver Tecnicatura en Acompañante Terapéutico en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Tecnicatura en Acompañante Terapéutico</h2>
@@ -100,7 +127,24 @@
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-congreso-uc/">Universidad de Congreso (UC)</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 3 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º AÑO</h4>
+            <ul><li>Bases Biológicas del Comportamiento</li><li>Estudios de los Procesos Psicológicos Básicos</li><li>Dinámicas de Intervención en Sistemas Familiares y Grupales</li><li>Fundamentos del Acompañamiento Terapéutico</li><li>La Práctica del Acompañante Terapéutico I</li><li>Fundamentos de Terapia Ocupacional</li><li>Psicopatología</li><li>Intervención en Crisis</li><li>La Práctica del Acompañante Terapéutico II</li><li>Ética del Servicio</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º AÑO</h4>
+            <ul><li>Elementos de Psico-Farmacología</li><li>Principios de Psicogeriatría</li><li>Intervención en Crisis II</li><li>Habilidades Sociales y de Comunicación</li><li>La Práctica del Acompañante Terapéutico III</li><li>Dinámica de Intervención I</li><li>Dinámica de Intervención II</li><li>Dinámica de Intervención III</li><li>Dinámica de Intervención IV</li><li>La Práctica del Acompañante Terapéutico IV</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º AÑO</h4>
+            <ul><li>Prácticas Hospitalarias</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/acompanante-terapeutico/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/acompanante-terapeutico/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -179,13 +223,13 @@
         <li><a href="/carrera/tecnicatura-superior-en-enfermeria-profesional/">Tecnicatura Superior en Enfermería Profesional</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/kinesiologia-y-fisioterapia/">Kinesiología y Fisioterapia</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-produccion-de-bioimagenes/">Licenciatura en Producción de Bioimágenes</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/licenciatura-en-administracion-de-salud/">Licenciatura en Administración de Salud</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-enfermeria/">Licenciatura en Enfermería</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-fonoaudiologia/">Licenciatura en Fonoaudiología</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-instrumentacion-quirurgica/">Licenciatura en Instrumentación Quirúrgica</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-terapia-ocupacional/">Licenciatura en Terapia Ocupacional</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/odontologia/">Odontología</a> <span class="cuantas">(2)</span></li>
     </ul>
-    <p><a href="/area/salud/">Ver las 55 carreras del área Salud →</a></p>
+    <p><a href="/area/salud/">Ver las 72 carreras del área Salud →</a></p>
     </section>
     </div>
 </div>

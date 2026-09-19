@@ -29,11 +29,16 @@ const O = require('./js/orientador.js');
   assert(util.getFormacion({ categoria: 'Curso', nombre_carrera: 'Taller de Drones' }) === 'cursos', 'Taller de Drones debe ser curso');
   assert(util.getFormacion({ categoria: 'Profesorado', nombre_carrera: 'Profesorado de Historia' }) === 'profesorados', 'Profesorado de Historia debe ser profesorado');
 
+  assert(Math.abs(util.obtenerDuracionEnAnios('10 meses') - 10 / 12) < 1e-9, '10 meses debe interpretarse como 10/12 años');
+  assert(util.formatearDuracionAnios(10 / 12) === '10 meses', '0.8333 años no debe mostrarse como decimal');
+  assert(util.formatearDuracionAnios(4.5) === '4 años y medio', '4.5 años debe ser "4 años y medio"');
+  assert(util.duracionCorta('10 meses') === '10 meses', 'duracionCorta de 10 meses debe volver a meses');
+
   // 2. Test estado.js
   console.log('2. Probando js/estado.js...');
   const estadoModule = await import('./js/estado.js');
-  assert(estadoModule.favoritos instanceof Set, 'favoritos debe ser Set');
-  assert(estadoModule.comparador instanceof Set, 'comparador debe ser Set');
+  assert(estadoModule.estado && typeof estadoModule.estado.orden === 'string', 'estado debe exportar objeto estado');
+  assert(estadoModule.LIMITE_PAGINA === 24, 'LIMITE_PAGINA debe ser 24');
 
   // 3. Test orientador.js
   console.log('3. Probando js/orientador.js (compatibilidad vocacional)...');

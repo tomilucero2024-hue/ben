@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ciencias sociales","item":"https://buscadoreducativo.com.ar/area/ciencias-sociales/"},{"@type":"ListItem","position":4,"name":"Abogacía y Procuración","item":"https://buscadoreducativo.com.ar/carrera/abogacia-y-procuracion/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Abogacía y Procuración","description":"Dónde estudiar Abogacía y Procuración en Mendoza: carrera de grado del área Ciencias sociales, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/abogacia-y-procuracion/","provider":{"@type":"EducationalOrganization","name":"Universidad Champagnat (UCh)","url":"https://buscadoreducativo.com.ar/institucion/universidad-champagnat-uch/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Abogacía y Procuración en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Abogacía y Procuración en Mendoza en la siguiente institución: Universidad Champagnat (UCh). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Abogacía y Procuración?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Abogacía y Procuración?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Abogacía y Procuración?","acceptedAnswer":{"@type":"Answer","text":"Abogacía y Procuración es una carrera de grado perteneciente al área de Ciencias sociales. Entre sus aptitudes más afines se destacan: pensamiento analítico, interacción social, base teórica y académica y liderazgo y gestión."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,8 +120,6 @@
         <dt>Modalidad</dt><dd>Presencial</dd>
         <dt>Duración</dt><dd>4 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Abogac%C3%ADa+y+Procuraci%C3%B3n&amp;area=Ciencias+sociales&amp;formacion=grado">Ver Abogacía y Procuración en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Abogacía y Procuración</h2>
@@ -100,7 +127,28 @@
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-champagnat-uch/">Universidad Champagnat (UCh)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Derecho Privado Parte General</li><li>Principios Generales del Derecho</li><li>Filosofía y Ética</li><li>Historia de las Instituciones Argentinas</li><li>Derecho Constitucional</li><li>Teoría del Estado</li><li>Derecho Penal Parte General</li><li>Obligaciones Civiles y Comerciales I</li><li>Práctica Profesional I</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Derecho Penal Parte Especial</li><li>Contratos Parte General</li><li>Derecho Procesal Parte General</li><li>Obligaciones Civiles y Comerciales II</li><li>Lógica y Argumentación 1/3</li><li>Derechos Humanos</li><li>Derecho Procesal Penal</li><li>Contratos Parte Especial</li><li>Derecho Procesal Civil y Comercial</li><li>Práctica Profesional II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Resolución Alternativa de Conflictos</li><li>Derechos Reales I</li><li>Derecho de las Familias</li><li>Sociedades Civiles y Comerciales</li><li>Metodología de la Investigación</li><li>Derechos Reales II</li><li>Derecho Sucesorio</li><li>Papeles de Comercio</li><li>Concursos y Quiebras</li><li>Derecho Laboral</li><li>Práctica Profesional III</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Economía</li><li>Derecho Administrativo</li><li>Derecho Internacional Público y de la Integración</li><li>Derecho Privado Profundizado</li><li>Optativa I: Derecho Notarial Derecho Minero y Agrario</li><li>Derecho Financiero y Tributario</li><li>Derecho Procesal Constitucional</li><li>Derecho Ambiental y Aguas</li><li>Derecho Internacional Privado</li><li>Práctica Profesional IV</li><li>Optativa II: Derecho Registral Título de Grado: Abogado/a 3/3</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.uch.edu.ar/docs/Abogacia.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.uch.edu.ar/carrera/abogacia" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -172,20 +220,20 @@
     <section class="relacionadas">
     <h2>Otras carreras del área Ciencias sociales</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(8)</span></li>
-        <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(7)</span></li>
         <li><a href="/carrera/licenciatura-en-relaciones-internacionales/">Licenciatura en Relaciones Internacionales</a> <span class="cuantas">(4)</span></li>
-        <li><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-petroleo-y-gas/">Tecnicatura Superior en Petróleo y Gas</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/tecnicatura-universitaria-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/despachante-de-aeronaves/">Despachante de Aeronaves</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-comunicacion-social/">Licenciatura en Comunicación Social</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-criminalistica/">Licenciatura en Criminalística</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia/">Licenciatura en Niñez, Adolescencia y Familia</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/licenciatura-en-ninez-adolescencia-y-familia-modalidad-a-distancia/">Licenciatura en Niñez, Adolescencia y Familia - Modalidad a Distancia</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-relaciones-publicas-e-institucionales/">Licenciatura en Relaciones Públicas e Institucionales</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/locucion/">Locución</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/periodismo/">Periodismo</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/actuario/">Actuario</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/ciclo-de-licenciatura-en-comunicacion-digital-e-interactiva/">Ciclo de Licenciatura en Comunicación Digital e Interactiva</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/ciencias-del-comportamiento/">Ciencias del Comportamiento</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/comunicacion/">Comunicación</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/cursos-online/">Cursos Online</a> <span class="cuantas">(1)</span></li>
     </ul>
-    <p><a href="/area/ciencias-sociales/">Ver las 122 carreras del área Ciencias sociales →</a></p>
+    <p><a href="/area/ciencias-sociales/">Ver las 71 carreras del área Ciencias sociales →</a></p>
     </section>
     </div>
 </div>

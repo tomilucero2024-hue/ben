@@ -75,19 +75,22 @@ export function getArea(carrera) {
         ? (carrera.nombre_carrera || carrera.nombre || '')
         : (carrera || '');
     const nombre = normalizarTexto(raw);
+    // El stemming matchea de más acá ("bibliotecoLOGía" contra el término
+    // "ecolog"), así que estas excepciones van primero y no se discuten.
+    if (nombre.includes('bibliotecologia')) return 'Ciencias sociales';
     const tiene = (...terminos) => terminos.some(termino => nombre.includes(normalizarTexto(termino)));
-    if (tiene('ingenier')) return 'Ingeniería';
-    if (tiene('program', 'sistema', 'informat', 'comput', 'software', 'datos', 'data', 'inteligencia artificial', 'ciberseguridad', 'ciberdefensa', 'ciber', 'robotica', 'videojuego', 'web', 'cloud', 'telecomunicacion', 'ia desde cero', 'desarrollo de software', 'seguridad informatica')) return 'Tecnología';
-    if (tiene('medicin', 'enfermer', 'kinesi', 'nutric', 'odont', 'farmac', 'fonoaudi', 'obstetric', 'terapia', 'radiolog', 'bioquim', 'salud', 'anestesia', 'instrumentacion quirurg', 'diagnostico por imagenes', 'quirofano', 'podolog', 'terapeutico', 'anatomia patologica', 'bioimagenes', 'gerontolog', 'primeros auxilios', 'salud mental', 'psicologia')) return 'Salud';
-    if (tiene('administracion', 'contador', 'contad', 'marketing', 'comercio', 'negocio', 'finanza', 'econom', 'recursos humanos', 'logistica', 'secretariado', 'gestion empresarial', 'ventas', 'seguros', 'banc', 'comercializacion', 'community manager', 'martillero', 'corredor inmobiliario', 'inmobiliari', 'aduan', 'despachante de aduana', 'gestion aeroportuaria', 'siniestro', 'emprendimiento', 'gestion del liderazgo')) return 'Negocios';
-    if (tiene('diseno', 'arquitect', 'multimedia', 'interiorismo', 'indumentaria', 'animacion', 'fotograf', 'grafic', 'audiovisual', 'publicidad')) return 'Diseño';
-    if (tiene('profesorado', 'educacion', 'pedagog', 'didact', 'docencia', 'ensenanza')) return 'Educación';
-    if (tiene('turismo', 'hoteler', 'guia de turismo', 'hospitalidad', 'viajes', 'recreacion', 'guia de alta montana', 'trekking', 'gestion de recursos turisticos', 'gestion turistica')) return 'Turismo';
+    if (tiene('ingenier', 'mecatronic', 'miner', 'petroleo', 'hidrocarburo')) return 'Ingeniería';
+    if (tiene('programacion', 'programador', 'sistema', 'informat', 'comput', 'software', 'datos', 'data', 'inteligencia artificial', 'ciberseguridad', 'ciberdefensa', 'ciber', 'robotica', 'videojuego', 'web', 'cloud', 'telecomunicacion', 'ia desde cero', 'desarrollo de software', 'seguridad informatica')) return 'Tecnología';
+    if (tiene('medicin', 'enfermer', 'kinesi', 'nutric', 'odont', 'farmac', 'fonoaudi', 'obstetric', 'terapia', 'radiolog', 'bioquim', 'salud', 'anestesia', 'anestesiolog', 'preparacion fisica', 'dialisis', 'esteriliz', 'optica', 'cosmetolog', 'emergenci', 'emergentolog', 'analisis clinicos', 'instrumentacion quirurg', 'diagnostico por imagenes', 'quirofano', 'podolog', 'terapeutico', 'anatomia patologica', 'bioimagenes', 'gerontolog', 'primeros auxilios', 'salud mental', 'psicologia')) return 'Salud';
+    if (tiene('turismo', 'hoteler', 'turist', 'guia de turismo', 'hospitalidad', 'viajes', 'recreacion', 'guia de alta montana', 'actividades de montana', 'trekking', 'gestion de recursos turisticos', 'gestion turistica')) return 'Turismo';
+    if (tiene('administracion', 'administrat', 'contador', 'contad', 'contabilidad', 'contable', 'marketing', 'comercio', 'negocio', 'finanza', 'econom', 'recursos humanos', 'logistica', 'secretariado', 'gestion empresarial', 'gestion de empresas', 'direccion de empresas', 'ventas', 'seguros', 'banc', 'comercializacion', 'community manager', 'martillero', 'corredor inmobiliario', 'inmobiliari', 'aduan', 'despachante de aduana', 'gestion aeroportuaria', 'siniestro', 'emprendimiento', 'gestion del liderazgo')) return 'Negocios';
+    if (tiene('diseno', 'arquitect', 'multimedia', 'interiorismo', 'indumentaria', 'animacion', 'fotograf', 'grafic', 'audiovisual', 'publicidad', 'gestion de moda')) return 'Diseño';
+    if (tiene('profesorado', 'educacion', 'pedagog', 'didact', 'docencia', 'ensenanza', 'preceptoria')) return 'Educación';
     if (tiene('gastronom', 'cocina', 'pasteler', 'panader', 'chef', 'sommelier', 'enolog', 'vino', 'cocteler', 'bartender', 'sensorial de vinos', 'cata de vinos', 'finca vitivinicola', 'vitivinicola', 'laboratorio vitivinicola', 'bromatolog')) return 'Gastronomía';
     if (tiene('ingles', 'idioma', 'portugues', 'frances', 'traduccion', 'interpretacion', 'italiano', 'chino', 'coreano', 'aleman', 'japones', 'lengua de senas', 'lengua extranjera')) return 'Idiomas';
     if (tiene('arte', 'musica', 'teatro', 'escenograf', 'danza', 'cine', 'ilustracion', 'canto', 'coral', 'organo', 'instrumento', 'ceramica artistica', 'actor', 'actriz', 'artes visuales', 'artes plasticas', 'piano', 'guitarra', 'composicion musical', 'bellas artes')) return 'Arte';
-    if (tiene('ambient', 'agronom', 'biolog', 'geolog', 'forestal', 'veterin', 'quimic', 'hidric', 'ecolog', 'apicultur', 'paisajis', 'agro', 'recursos naturales', 'botanica', 'zoolog', 'ciencias de la tierra', 'geografia', 'geografo', 'fisica', 'matematica')) return 'Ambiente';
-    if (tiene('mecanic', 'electric', 'carpinter', 'refrigeracion', 'soldadur', 'construccion', 'automotor', 'gasista', 'plomer', 'cerrajeri', 'torner', 'herreri', 'pintur', 'albanil', 'mantenimiento', 'instalacion', 'oficio', 'pilot', 'buceo', 'drone', 'drones', 'aeronaut', 'chofer', 'conductor', 'barberia', 'peluqueri', 'electricista', 'ceramica industrial')) return 'Oficios';
+    if (tiene('ambient', 'agronom', 'biolog', 'biotecnolog', 'geolog', 'forestal', 'veterin', 'quimic', 'hidric', 'ecolog', 'apicultur', 'paisajis', 'agro', 'recursos naturales', 'botanica', 'zoolog', 'ciencias de la tierra', 'geografia', 'geografo', 'fisica', 'matematica', 'higiene y seguridad', 'geotecnolog', 'conservacion de la naturaleza', 'energias renovables')) return 'Ambiente';
+    if (tiene('mecanic', 'electric', 'carpinter', 'refrigeracion', 'soldadur', 'construccion', 'automotor', 'gasista', 'plomer', 'cerrajeri', 'torner', 'herreri', 'pintur', 'albanil', 'mantenimiento', 'instalacion', 'oficio', 'pilot', 'buceo', 'drone', 'drones', 'aeronaut', 'chofer', 'conductor', 'barberia', 'peluqueri', 'electricista', 'ceramica industrial', 'ferroviari', 'automatizacion')) return 'Oficios';
     return 'Ciencias sociales';
 }
 export function obtenerModalidades(modalidad) { const texto = normalizarTexto(modalidad); const valores = []; if (texto.includes('presencial')) valores.push('presencial'); if (texto.includes('online') || texto.includes('virtual') || texto.includes('distancia')) valores.push('online'); if (texto.includes('hibrid')) valores.push('híbrida'); return valores.length ? valores : ['presencial']; }
@@ -155,13 +158,11 @@ const DURACION_SIN_DATO = /^(a confirmar|no especificad[ao]|sin especificar|sin 
 // chip de tarjeta no se puede leer. Se muestra la duración ya interpretada y el
 // texto completo queda en el title; el detalle fino vive en la ficha de la
 // carrera y en el sitio oficial, que la tarjeta ya enlaza.
-export function duracionCorta(duracion) {
-    const texto = limpiarTexto(duracion);
-    if (!texto) return 'A confirmar';
-    if (DURACION_SIN_DATO.test(normalizarTexto(texto))) return 'A confirmar';
-    const anios = obtenerDuracionEnAnios(texto);
-    // Sin poder interpretarlo no se inventa nada: se devuelve lo que vino.
-    if (anios === null) return texto;
+// Convierte un número de años a texto legible. Existe porque un dato como
+// "10 meses" se interpreta como 0.8333… años y no se puede mostrar el decimal
+// crudo ("0.8333333333333334 años"): se vuelve a la unidad chica.
+export function formatearDuracionAnios(anios) {
+    if (anios === null || anios === undefined || !Number.isFinite(anios) || anios <= 0) return '';
     if (anios < 1) {
         const meses = Math.max(1, Math.round(anios * 12));
         return `${meses} ${meses === 1 ? 'mes' : 'meses'}`;
@@ -173,6 +174,16 @@ export function duracionCorta(duracion) {
     if (Math.abs(resto - 0.5) < 0.01) return `${base} y medio`;
     const meses = Math.round(resto * 12);
     return meses ? `${base} y ${meses} ${meses === 1 ? 'mes' : 'meses'}` : base;
+}
+
+export function duracionCorta(duracion) {
+    const texto = limpiarTexto(duracion);
+    if (!texto) return 'A confirmar';
+    if (DURACION_SIN_DATO.test(normalizarTexto(texto))) return 'A confirmar';
+    const anios = obtenerDuracionEnAnios(texto);
+    // Sin poder interpretarlo no se inventa nada: se devuelve lo que vino.
+    if (anios === null) return texto;
+    return formatearDuracionAnios(anios);
 }
 
 // ==========================================
@@ -204,12 +215,7 @@ export function nombreSeguro(texto) {
 // "sin link", que ya estaba contemplado en todos los renders.
 export function urlSegura(url) {
     const limpia = limpiarTexto(url);
-    if (!limpia) return '';
-    try {
-        const protocolo = new URL(limpia, document.baseURI).protocol;
-        return (protocolo === 'http:' || protocolo === 'https:') ? limpia : '';
-    } catch (e) {
-        return '';
-    }
+    if (!/^https?:\/\//i.test(limpia)) return '';
+    return limpia;
 }
 

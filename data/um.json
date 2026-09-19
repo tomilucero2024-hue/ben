@@ -1230,8 +1230,21 @@
                     "categoria": "Grado / Carrera",
                     "duracion": "A confirmar",
                     "modalidad": "Presencial",
-                    "facultad": "UM - Sede Río Cuarto",
-                    "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-desarrollo-de-software/"
+                    "facultad": "UM",
+                    "link_oficial": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-desarrollo-de-software/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Régimen de estudios",
+                            "materias": [
+                                "Fundamentos de la programación",
+                                "Ingeniería de prompts",
+                                "Desarrollo de web y API's",
+                                "Fundamentos de bases de datos",
+                                "Consideraciones éticas y prácticas"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://um.edu.ar/carreras/tecnicatura-universitaria-en-desarrollo-de-software/"
                 },
                 {
                     "id": 321,

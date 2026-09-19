@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Instituto Univ. de Ciencias Empresariales (IUCE)","item":"https://buscadoreducativo.com.ar/institucion/instituto-univ-de-ciencias-empresariales-iuce/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Instituto Univ. de Ciencias Empresariales (IUCE)","url":"https://buscadoreducativo.com.ar/institucion/instituto-univ-de-ciencias-empresariales-iuce/","email":"informes@i-uce.edu.ar","telephone":"4292152","address":{"@type":"PostalAddress","streetAddress":"Patricias Mendocinas 1374, Ciudad","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -67,12 +67,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -92,8 +121,6 @@
         <dt>Teléfono</dt><dd>4292152</dd>
         <dt>Email</dt><dd>informes@i-uce.edu.ar</dd>
     </dl>
-
-    <a class="cta" href="/?institucion=Instituto%20Univ.%20de%20Ciencias%20Empresariales%20(IUCE)">Ver esta institución en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
 
@@ -102,31 +129,136 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-comercializacion/">Licenciatura en Comercialización</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial / A distancia</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Comercialización</li><li>Administración</li><li>Gestión de Personas</li><li>Teoría de la Comunicación</li><li>Branding y Marketing Personal</li><li>Negocios Digitales</li><li>Psicología</li><li>Métodos Cuantitativos</li><li>Fundamentos de Economía y Finanzas</li><li>Contextos Socioculturales</li><li>Bienestar Personal y Organizacional</li><li>Oratoria</li><li>Escritura</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Comercio Electrónico</li><li>Contabilidad</li><li>Diseño de Marcas</li><li>Publicidad</li><li>Marco Legal de las Organizaciones</li><li>Comportamiento del Consumidor</li><li>Estadística</li><li>Comunicación y Cultura Organizacional</li><li>Humanidades y Apreciación del Arte</li><li>Innovación y Creatividad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Análisis de los Medios</li><li>Campañas de Comunicación Integrada</li><li>Logística</li><li>Análisis de Costos y Presupuesto</li><li>Política de Producto</li><li>Política de Precio</li><li>Formulación y Evaluación de Proyectos</li><li>Gestión de la Calidad</li><li>Emprendimiento</li><li>Gestión y Liderazgo de Equipos</li><li>Ética, Responsabilidad Social y Sustentabilidad</li><li>Negociaciones</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Metodología de la Investigación</li><li>Sistemas de Información Gerencial</li><li>Planificación y Organización Integral de Eventos</li><li>Investigación de Mercados</li><li>Dirección Estratégica y Competitividad Sustentable</li><li>Comercialización Internacional</li><li>Trabajo Final de Investigación</li><li>Normas de Seguridad e Higiene</li><li>Neurociencias e Inteligencia Emocional</li><li>Dirección de Ventas</li><li>Marketing Digital</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://i-uce.edu.ar/careers/uce-marketing" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://i-uce.edu.ar/careers/uce-marketing" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-recursos-humanos/">Licenciatura en Recursos Humanos</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial / A distancia</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Administración</li><li>Comercialización</li><li>Gestión de Personas</li><li>Teoría de la Comunicación</li><li>Psicología</li><li>Negocios Digitales</li><li>Fundamentos de Economía y Finanzas</li><li>Métodos Cuantitativos</li><li>Derecho Civil y Comercial</li><li>Contexto Sociocultural</li><li>Bienestar Personal y Organizacional</li><li>Oratoria</li><li>Escritura</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Contabilidad</li><li>Derecho Laboral</li><li>Selección de Personal</li><li>Diseño y Evaluación de Puestos</li><li>Sistemas de Retribución y Compensaciones</li><li>Analítica de Recursos Humanos</li><li>Comunicación y Cultura Organizacional</li><li>Estadística</li><li>Humanidades y Apreciación del Arte</li><li>Innovación y Creatividad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Gestión por Competencias</li><li>Relaciones Laborales</li><li>Análisis de Costos y Presupuesto</li><li>Diseño y Organización de Procesos</li><li>Coaching Organizacional</li><li>Capacitación y Desarrollo de Talentos</li><li>Gestión de la Calidad</li><li>Formulación y Evaluación de Proyectos</li><li>Emprendimiento</li><li>Gestiónde Liderazgo y Equipos</li><li>Ética, Responsabilidad Social y Sustentabilidad</li><li>Negociaciones</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Sistemas de Información Gerencial</li><li>Metodología de la Investigación</li><li>Gestión de Empresas Familiares y PyMEs</li><li>Innovación y Desarrollo Organizacional</li><li>Dirección Estratégica y Competitividad Sustentable</li><li>Mediación y Arbitraje</li><li>Consultoría profesional</li><li>Trabajo Final de Investigación</li><li>Normas de Seguridad e Higiene</li><li>Neurociencias e Inteligencia Emocional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://i-uce.edu.ar/careers/uce-recursos-humanos" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://i-uce.edu.ar/careers/uce-recursos-humanos" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-comercio-exterior-y-aduanas/">Licenciatura en Comercio Exterior y Aduanas</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial / A distancia</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Administración</li><li>Comercio Internacional</li><li>Métodos Cuantitativos</li><li>Gestión de Personas</li><li>Negocios Digitales</li><li>Derecho Civil y Comercial</li><li>Fundamentos de Economía y Finanzas</li><li>Comercialización</li><li>Contextos Socioculturales</li><li>Bienestar Personal y Organizacional</li><li>Oratoria</li><li>Escritura</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Cálculo Financiero</li><li>Aduana y Régimen Aduanero I</li><li>Comercialización Internacional</li><li>Aduana y Régimen Aduanero II</li><li>Geografía Económica</li><li>Clasificación y Valoración Aduanera</li><li>Contabilidad</li><li>Comunicación y Cultura Organizacional</li><li>Estadística</li><li>Humanidades y Apreciación del Arte</li><li>Innovación y Creatividad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Derecho Tributario</li><li>Logística Internacional</li><li>Costos y Precios de Importación-Exportación</li><li>Derecho Penal Aduanero</li><li>Formulación y Evaluación de Proyectos</li><li>Régimen Bancario y Medios de Pago</li><li>Gestión de la Calidad</li><li>Práctica Aduanera</li><li>Emprendimiento</li><li>Gestión y Liderazgo de Equipos</li><li>Ética, Responsabilidad Social y Sustentabilidad</li><li>Negociaciones</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Sistemas de Información Gerencial</li><li>Derecho Internacional</li><li>Metodología de la Investigación</li><li>Investigación de Mercados</li><li>E-logistics</li><li>Dirección Estratégica y Competitividad Sustentable</li><li>Economía Internacional</li><li>Trabajo Final de Investigación</li><li>Normas de Seguridad e Higiene</li><li>Neurociencias e Inteligencia Emocional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://i-uce.edu.ar/careers/uce-comercio-exterior-y-aduanas" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://i-uce.edu.ar/careers/uce-comercio-exterior-y-aduanas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion-de-empresas/">Licenciatura en Administración de Empresas</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial / A distancia</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Comercialización</li><li>Administración</li><li>Gestión de Personas</li><li>Psicología</li><li>Negocios Digitales</li><li>Métodos Cuantitativos</li><li>Economía I</li><li>Derecho Civil y Comercial</li><li>Contextos Socioculturales</li><li>Bienestar Personal y Organizacional</li><li>Oratoria</li><li>Escritura</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Contabilidad</li><li>Derecho Laboral</li><li>Contabilidad de Costos</li><li>Economía II</li><li>Sistemas de Retribución y Compensaciones</li><li>Cálculo Financiero</li><li>Estadística</li><li>Comunicación y Cultura Organizacional</li><li>Humanidades y Apreciación del Arte</li><li>Innovación y Creatividad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Gestión por Competencias</li><li>Análisis de Estados Contables</li><li>Impuestos</li><li>Diseño y Organización de Procesos</li><li>Administración Financiera y Fintech</li><li>Formulación y Evaluación de Proyectos</li><li>Administración de la Producción</li><li>Gestión de la Calidad</li><li>Emprendimiento</li><li>Gestión de Liderazgo y Equipos</li><li>Ética, Responsabilidad Social y Sustentabilidad</li><li>Negociaciones</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Metodología de la Investigación</li><li>Sistemas de Información Gerencial</li><li>Control de Gestión</li><li>Gestión de Empresas Familiares y PyMEs</li><li>Innovación y Desarrollo Organizacional</li><li>Dirección Estratégica y Competitividad Sustentable</li><li>Administración Gerencial</li><li>Trabajo Final de Investigación</li><li>Normas de Seguridad e Higiene</li><li>Neurociencias e Inteligencia Emocional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://i-uce.edu.ar/careers/administracion-de-empresas" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://i-uce.edu.ar/careers/administracion-de-empresas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-logistica-y-transporte/">Licenciatura en Logística y Transporte</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial / A distancia</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Introducción a la Logística</li><li>Administración</li><li>Comercio Internacional</li><li>Métodos Cuantitativos</li><li>Negocios Digitales</li><li>Gestión de Personas</li><li>Derecho Civil y Comercial</li><li>Fundamentos de Economía y Finanzas</li><li>Comercialización</li><li>Contextos Socioculturales</li><li>Bienestar Personal y Organizacional</li><li>Oratoria</li><li>Escritura</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Transporte Terrestre y en FFRR</li><li>Psicología</li><li>E-Logistics</li><li>Planeamiento de Compras y Aprovisionamiento</li><li>Geografía Económica</li><li>Gestión de Inventarios y de Stock</li><li>Legislación y Práctica Aduanera</li><li>Transporte Marítimo y Fluvial</li><li>Comunicación y Cultura Organizacional</li><li>Estadística</li><li>Humanidades y Apreciación del Arte</li><li>Innovación y Creatividad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Envases, Embalajes, Paletización y Logística Inversa</li><li>Sistema de Gestión Almacenes</li><li>Logística y Canales de Distribución</li><li>Formulación y Evaluación de Proyectos</li><li>Control Financiero del Proceso Logístico</li><li>Gestión de la Calidad</li><li>Transporte Aéreo y Multimodal</li><li>Emprendimiento</li><li>Gestión de Liderazgo y Equipos</li><li>Ética, Responsabilidad Social y Sustentabilidad</li><li>Negociaciones</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Sistemas de Información Gerencial</li><li>Metodología de la Investigación</li><li>Derecho Internacional</li><li>Dirección Estratégica y Competitividad Sustentable</li><li>Economía Internacional</li><li>Trabajo Final de Investigación</li><li>Normas de Seguridad e Higiene</li><li>Neurociencias e Inteligencia Emocional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://i-uce.edu.ar/careers/uce-logistica-y-transporte" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://i-uce.edu.ar/careers/uce-logistica-y-transporte" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -136,7 +268,28 @@
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-relaciones-publicas-e-institucionales/">Licenciatura en Relaciones Públicas e Institucionales</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial / A distancia</li><li>Grado / Carrera</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º año</h4>
+            <ul><li>Administración</li><li>Introducción a las RRPP e Institucionales</li><li>Gestión de Personas</li><li>Teoría de la Comunicación</li><li>Psicología</li><li>Negocios Digitales</li><li>Branding y Marketing Personal</li><li>Métodos Cuantitativos</li><li>Comercialización</li><li>Contextos Socioculturales</li><li>Bienestar Personal y Organizacional</li><li>Oratoria</li><li>Escritura</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º año</h4>
+            <ul><li>Ceremonial Público y Privado</li><li>Marketing Digital</li><li>Publicidad</li><li>Comunicación visual</li><li>Relaciones Públicas Empresariales</li><li>Análisis de los Medios I</li><li>Comunicación y Cultura Organizacional</li><li>Fundamentos de Economía y Finanzas</li><li>Humanidades y Apreciación del Arte</li><li>Innovación y Creatividad</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º año</h4>
+            <ul><li>Análisis de los medios II</li><li>Relaciones Institucionales</li><li>Análisis de Costos y Presupuesto</li><li>Campañas de Comunicación Integrada</li><li>Formulación y Evaluación de Proyectos</li><li>Media, Coaching y Vocería</li><li>Gestión de la Calidad</li><li>Planificación de RRPP e Institucionales</li><li>Emprendimiento</li><li>Gestión de Liderazgo y equipos</li><li>Ética, Responsabilidad Social y Sustentabilidad</li><li>Negociaciones</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º año</h4>
+            <ul><li>Sistemas de Información Gerencial</li><li>Turismo, Ferias y Congresos</li><li>Metodología de la Investigación</li><li>Planificación y Organización Integral de Eventos</li><li>Dirección Estratégica y Competitividad Sustentable</li><li>Cultura y Eventos Vitivinícolas</li><li>Ceremonial Internacional</li><li>Trabajo final de investigación</li><li>Normas de Seguridad e Higiene</li><li>Neurociencias e inteligencia emocional</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://i-uce.edu.ar/careers/uce-relaciones-publicas" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://i-uce.edu.ar/careers/uce-relaciones-publicas" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>

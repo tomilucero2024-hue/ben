@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260917_01">
+<link rel="stylesheet" href="/paginas.css?v=20260919_11">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ambiente","item":"https://buscadoreducativo.com.ar/area/ambiente/"},{"@type":"ListItem","position":4,"name":"Gestión de Recursos Hídricos","item":"https://buscadoreducativo.com.ar/carrera/gestion-de-recursos-hidricos/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Gestión de Recursos Hídricos","description":"Dónde estudiar Gestión de Recursos Hídricos en Mendoza: curso o formación profesional del área Ambiente, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/gestion-de-recursos-hidricos/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dónde estudiar Gestión de Recursos Hídricos en Mendoza?","acceptedAnswer":{"@type":"Answer","text":"Podés estudiar Gestión de Recursos Hídricos en Mendoza en la siguiente institución: Universidad de Congreso (UC). En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una."}},{"@type":"Question","name":"¿Cuánto dura la carrera de Gestión de Recursos Hídricos?","acceptedAnswer":{"@type":"Answer","text":"La carrera tiene una duración estimada de 4 años."}},{"@type":"Question","name":"¿Qué modalidades de cursado hay para Gestión de Recursos Hídricos?","acceptedAnswer":{"@type":"Answer","text":"Actualmente se puede cursar en modalidad presencial, según la institución que elijas."}},{"@type":"Question","name":"¿Qué perfil y habilidades se recomiendan para Gestión de Recursos Hídricos?","acceptedAnswer":{"@type":"Answer","text":"Gestión de Recursos Hídricos es una curso o formación profesional perteneciente al área de Ambiente. Entre sus aptitudes más afines se destacan: pensamiento analítico, trabajo práctico, trabajo de campo y al aire libre y liderazgo y gestión."}}]}</script>
@@ -68,12 +68,41 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
+        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
         <form class="buscador-mini" action="/" method="get" role="search">
             <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
             <button type="submit">Buscar</button>
             <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
         </form>
     </div>
+    <script>
+        // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
+        // persiste en localStorage (ben-theme, que la app y estas páginas ya
+        // leen) y cambia el logo por la variante del tema.
+        (() => {
+            const boton = document.getElementById('temaStatico');
+            if (!boton) return;
+            const logo = document.getElementById('marcaLogo');
+            const pintar = () => {
+                const oscuro = document.documentElement.dataset.theme === 'dark';
+                boton.setAttribute('aria-pressed', String(oscuro));
+                boton.setAttribute('aria-label', oscuro ? 'Activar modo claro' : 'Activar modo oscuro');
+                boton.title = oscuro ? 'Activar modo claro' : 'Activar modo oscuro';
+                if (logo) logo.src = oscuro ? '/logo-ben-dark.png' : '/logo-ben-light.png';
+            };
+            boton.addEventListener('click', () => {
+                const siguiente = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = siguiente;
+                document.documentElement.style.colorScheme = siguiente;
+                try { localStorage.setItem('ben-theme', siguiente); } catch (e) {}
+                pintar();
+            });
+            pintar();
+        })();
+    </script>
 </header>
 
 <main class="envoltorio">
@@ -91,8 +120,6 @@
         <dt>Modalidad</dt><dd>Presencial</dd>
         <dt>Duración</dt><dd>4 años</dd>
     </dl>
-
-    <a class="cta" href="/?q=Gesti%C3%B3n+de+Recursos+H%C3%ADdricos&amp;area=Ambiente&amp;formacion=cursos">Ver Gestión de Recursos Hídricos en el buscador →</a>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Gestión de Recursos Hídricos</h2>
@@ -100,7 +127,28 @@
         <li class="oferta" id="oferta-1">
             <h3><span class="etiqueta privada">privada</span> <a href="/institucion/universidad-de-congreso-uc/">Universidad de Congreso (UC)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
-
+            <details class="plan-de-estudio">
+    <summary>Plan de estudio — 4 años</summary>
+    <div class="plan-contenido">
+        <div class="plan-anio">
+            <h4>1º AÑO</h4>
+            <ul><li>Introducción a la Ecología</li><li>Epistemología de las Ciencias Ambientales</li><li>Matemática Aplicada</li><li>Sociología Ambiental</li><li>Biología General</li><li>Fisicoquímica Ambiental</li><li>Hidrología</li><li>Ecología Antropológica</li><li>Informática Aplicada</li><li>Gestión y Proyecto Ambiental I</li><li>Economía Ambiental</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>2º AÑO</h4>
+            <ul><li>Evaluación y Manejo de los Recursos Naturales</li><li>Geografía Regional Argentina</li><li>Hidroquímica (Calidad del agua)</li><li>Ecología de las Zonas Áridas</li><li>Salud y Medio Ambiente I</li><li>Inglés I</li><li>Derecho y Legislación Hídrica</li><li>Ecología Humana</li><li>Estadística General</li><li>Sistemas de Información Ambiental</li><li>Geología Ambiental I</li><li>Inglés II</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>3º AÑO</h4>
+            <ul><li>Formulación y Evaluación de Proyectos Ambientales</li><li>Geología Ambiental II</li><li>Administración y Gestión de Sistemas Ambientales</li><li>Salud y Medio Ambiente II</li><li>Gestión del Recurso Suelo</li><li>Evaluación del Impacto Ambiental</li><li>Residuos Sólidos y Peligrosos</li><li>Práctica Profesionalizante I</li><li>Explotación de Agua Subterránea</li><li>Tratamiento de Datos Hidrogeoatmosféricos</li></ul>
+        </div>
+        <div class="plan-anio">
+            <h4>4º AÑO</h4>
+            <ul><li>Agua Potable y Saneamiento</li><li>Metodología de Investigación</li><li>Gestión Integrada de los Recursos Hídricos</li><li>Obras Hidráulicas</li><li>Problemas Ambientales de las Tierras Secas (Taller)</li><li>Planeamiento de los Recursos Hídricos</li><li>Administración del Agua</li><li>Práctica Profesionalizante II</li><li>Proyecto Final</li><li>Tesis Final</li></ul>
+        </div>
+        <p class="plan-fuente">Fuente: <a href="https://www.ucongreso.edu.ar/carrera/gestion-de-recursos-hidricos/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+    </div>
+</details>
             <a class="oficial" href="https://www.ucongreso.edu.ar/carrera/gestion-de-recursos-hidricos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
         </li>
     </ul>
@@ -173,19 +221,19 @@
     <h2>Otras carreras del área Ambiente</h2>
     <ul class="enlaces">
         <li><a href="/carrera/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio/">Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE</a> <span class="cuantas">(3)</span></li>
-        <li><a href="/carrera/formacion-profesional-en-apicultura/">Formación Profesional en Apicultura</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-higiene-seguridad-y-ambiente/">Tecnicatura Superior en Higiene, Seguridad y Ambiente</a> <span class="cuantas">(3)</span></li>
         <li><a href="/carrera/licenciatura-en-fisica/">Licenciatura en Física</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-matematica/">Licenciatura en Matemática</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-higiene-seguridad-y-ambiente/">Tecnicatura Superior en Higiene, Seguridad y Ambiente</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/administrativo-veterinaria/">Administrativo Veterinaria</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/capacitacion-en-apicultura/">Capacitación en Apicultura</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-en-higiene-y-seguridad-en-el-trabajo/">Tecnicatura en Higiene y Seguridad en el Trabajo</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-agronomia/">Tecnicatura Superior en Agronomía</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-conservacion-de-la-naturaleza/">Tecnicatura Superior en Conservación de la Naturaleza</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-energias-renovables/">Tecnicatura Superior en Energías Renovables</a> <span class="cuantas">(2)</span></li>
+        <li><a href="/carrera/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo/">Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-calidad-y-medio-ambiente/">Ciclo de Licenciatura en Higiene y Seguridad, Calidad y Medio Ambiente</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/curso-de-apicultura-online-gratuito/">Curso de Apicultura Online (gratuito)</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/formacion-profesional-en-apicultura/">Formación Profesional en Apicultura</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/geografo-a/">Geógrafo/a</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/gestion-ambiental/">Gestión Ambiental</a> <span class="cuantas">(1)</span></li>
-        <li><a href="/carrera/laboratorista-hidrico/">Laboratorista Hídrico</a> <span class="cuantas">(1)</span></li>
     </ul>
-    <p><a href="/area/ambiente/">Ver las 36 carreras del área Ambiente →</a></p>
+    <p><a href="/area/ambiente/">Ver las 37 carreras del área Ambiente →</a></p>
     </section>
     </div>
 </div>
