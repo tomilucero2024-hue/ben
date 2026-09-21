@@ -773,7 +773,20 @@
                     "modalidad": "A confirmar",
                     "turno": "A confirmar",
                     "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/analista-sensorial-de-vinos/"
+                    "link_oficial": "https://iesvu.edu.ar/estudio/analista-sensorial-de-vinos/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Módulos",
+                            "materias": [
+                                "Análisis de productos enológicos I",
+                                "Gestión de estabilización de vinos",
+                                "Gestión de la crianza de vinos",
+                                "Análisis Sensorial de vinos",
+                                "Gestión de RRHH en el sector vitivinícola"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/analista-sensorial-de-vinos/"
                 },
                 {
                     "id": 2402,
@@ -783,7 +796,21 @@
                     "modalidad": "A confirmar",
                     "turno": "A confirmar",
                     "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/asistente-en-laboratorio-vitivinicola/"
+                    "link_oficial": "https://iesvu.edu.ar/estudio/asistente-en-laboratorio-vitivinicola/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Módulos",
+                            "materias": [
+                                "Vinificación I",
+                                "Vinificación II",
+                                "Análisis de productos enológicos I",
+                                "Gestión de procesos fermentativos",
+                                "Análisis de productos enológicos II",
+                                "Gestión del RRHH en el sector vitivinícola"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/asistente-en-laboratorio-vitivinicola/"
                 },
                 {
                     "id": 2403,
@@ -793,7 +820,20 @@
                     "modalidad": "A confirmar",
                     "turno": "A confirmar",
                     "facultad": "IESVU (IES 9-015)",
-                    "link_oficial": "https://iesvu.edu.ar/estudio/laboratorista-hidrico/"
+                    "link_oficial": "https://iesvu.edu.ar/estudio/laboratorista-hidrico/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Módulos",
+                            "materias": [
+                                "Análisis de la oferta hídrica",
+                                "Caracterización de efluentes",
+                                "Planificación de sistemas de tratamiento de efluentes",
+                                "Proceso de trabajo integrado en la gestión del recurso hídrico",
+                                "Técnicas y procedimientos de laboratorio"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://iesvu.edu.ar/estudio/laboratorista-hidrico/"
                 },
                 {
                     "id": 2404,

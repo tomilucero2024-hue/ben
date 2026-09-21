@@ -1,1013 +1,1013 @@
 {
-    "instituciones": [
-        {
-            "id": 7,
-            "nombre": "Universidad Champagnat (UCh)",
-            "nivel": "universidad",
-            "gestion": "privada",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "4243698",
-                "email": "informes@uch.edu.ar",
-                "direccion": "Belgrano 721, Godoy Cruz"
-            },
-            "carreras": [
-                {
-                    "id": 700,
-                    "nombre_carrera": "Licenciado en Administración de Empresas",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-administracion-de-empresas",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Introducción a la Contabilidad",
-                                "Matemática General",
-                                "Procesamiento de Datos",
-                                "Inglés I",
-                                "Derecho Civil",
-                                "Microeconomía",
-                                "Administración General"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Normas Contables de Valuación",
-                                "Estadística Metodológica e inferencial",
-                                "Tecnologías de Gestión",
-                                "Inglés II",
-                                "Macroeconomía",
-                                "Sistemas de Información y Control",
-                                "Derecho Público",
-                                "Matemática Financiera"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Creatividad e Iniciativa",
-                                "Planificación Estratégica",
-                                "Planificación Estratégica",
-                                "Derecho Comercial I",
-                                "Comportamiento Organizacional",
-                                "Calidad",
-                                "Exposición y Análisis de los Est. Contables",
-                                "Derecho Laboral",
-                                "Práctica Profesional I"
-                            ]
-                        },
-                        {
-                            "anio": "4º año",
-                            "materias": [
-                                "Comercialización General",
-                                "Administración de Operaciones",
-                                "Administración Financiera",
-                                "Administración de los Recursos Humanos",
-                                "Formulación y evaluación de Proyectos General",
-                                "Módulo Electivo I",
-                                "Módulo Electivo II",
-                                "Práctica Profesional II Mercado de Capitales de Empresas"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/Administracion_empresas.pdf"
-                },
-                {
-                    "id": 701,
-                    "nombre_carrera": "Licenciado en Comercio Internacional",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-comercio-internacional",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Inglés I",
-                                "Comercio Internacional I",
-                                "Contabilidad",
-                                "Matemática",
-                                "Principios de Administración",
-                                "Comercio Internacional II",
-                                "Marketing",
-                                "Principios de Economía",
-                                "Geografía Económica Argentina y Mundial"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Inglés II",
-                                "Legislación Práctica y Aduanera",
-                                "Marketing Internacional",
-                                "Derecho Civil",
-                                "Microeconomía",
-                                "Tecnol. Informáticas y Comunicación I",
-                                "Clasificación y Valoración Aduanera",
-                                "Técnicas de Negociación",
-                                "Derecho Comercial",
-                                "Matemática Financiera",
-                                "Tecnol. Informática y Comunicación II"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Inglés III",
-                                "Sistema Informático María",
-                                "Transporte Internacional",
-                                "Derecho Internacional Público",
-                                "Macroeconomía",
-                                "Estadística",
-                                "Régimen Económico y Financiero del Comercio Internacional",
-                                "Costos y Precios de Exportación e Importación",
-                                "Investigación de Mercados",
-                                "Derecho Internacional Privado"
-                            ]
-                        },
-                        {
-                            "anio": "4º año",
-                            "materias": [
-                                "Inglés IV",
-                                "Operativa del Comercio Internacional",
-                                "Portugués I",
-                                "Envases y Embalajes",
-                                "Formulación y Evaluación de Proyectos",
-                                "Economía Internacional",
-                                "Portugués II",
-                                "Comercio Electrónico",
-                                "Bloques Económicos Mundiales",
-                                "Ética Profesional",
-                                "Práctica Profesional"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/Comercio_internacional.pdf"
-                },
-                {
-                    "id": 702,
-                    "nombre_carrera": "Corredor Público Inmobiliario y Martillero",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/corredor-publico-inmobiliario-y-martillero",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Inglés I",
-                                "Introducción al Derecho",
-                                "Matemática",
-                                "Elementos de Arquitectura",
-                                "Contabilidad",
-                                "Derecho Civil",
-                                "Economía",
-                                "Elementos de Arte",
-                                "Derecho Comercial",
-                                "Procesamiento de Datos"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Inglés II",
-                                "Obligaciones Civiles y Comerciales",
-                                "Tasaciones I",
-                                "Derecho Registral",
-                                "Derecho Procesal Civil y Comercial",
-                                "Matemática Financiera",
-                                "Corretaje y Ventas",
-                                "Tasaciones II",
-                                "Técnica Judicial",
-                                "Estadística Corredor Público Inmobiliario"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Inglés III",
-                                "Contratos",
-                                "Planeamiento Urbano",
-                                "Organización y Gestión Inmobiliaria",
-                                "Relaciones Públicas",
-                                "Marketing",
-                                "Diseño y Evaluación de Proy. Inmobil.",
-                                "Técnicas de Negociación",
-                                "Adm. de Consorcios y Propiedades",
-                                "Ética Profesional",
-                                "Práctica Profesional Martillero Público"
-                            ]
-                        },
-                        {
-                            "anio": "4º año",
-                            "materias": [
-                                "Inglés III",
-                                "Técnicas de Valuación",
-                                "Derecho Público I",
-                                "Remates y Subastas",
-                                "Relaciones Públicas",
-                                "Marketing",
-                                "Diseño y Evaluación de Proyectos",
-                                "Derecho Público II",
-                                "Técnicas de Negociación",
-                                "Ética Profesional",
-                                "Práctica Profesional"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/Corredor_Publico_Martillero.pdf"
-                },
-                {
-                    "id": 703,
-                    "nombre_carrera": "Contador Público",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/contador-publico",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Introducción a la Contabilidad",
-                                "Taller de Comprensión Lectora y Producción de Textos",
-                                "Introducción a la Economía",
-                                "Matemática I",
-                                "Procesamiento de Datos",
-                                "Microeconomía",
-                                "Administración General",
-                                "Matemática II",
-                                "Contabilidad Básica",
-                                "Práctica Contable I"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Normas Contables I",
-                                "Estadística I",
-                                "Tecnologías de Gestión",
-                                "Derecho Civil I",
-                                "Macroeconomía 1/3",
-                                "Normas Contables II",
-                                "Estadística II",
-                                "Matemática Financiera",
-                                "Sistemas de Información y Control",
-                                "Derecho Público",
-                                "Práctica Contable II"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Contabilidad Superior",
-                                "Técnica Impositiva I",
-                                "Finanzas Públicas",
-                                "Derecho Comercial I",
-                                "Historia Económica y Social",
-                                "Contabilidad Pública",
-                                "Técnica Impositiva II",
-                                "Administración Financiera",
-                                "Derecho Comercial II",
-                                "Práctica Contable III"
-                            ]
-                        },
-                        {
-                            "anio": "4º año",
-                            "materias": [
-                                "Auditoría",
-                                "Costos",
-                                "Derecho Civil II",
-                                "Derecho Laboral",
-                                "Práctica Jurídica",
-                                "Ética Profesional",
-                                "Auditoría y Procesamiento Electrónico de Datos",
-                                "Metodología de la Investigación",
-                                "Derecho Comercial III",
-                                "Prácticas Profesionales Supervisadas 29,31,33,34,35,36 3/3"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/Contador_Publico.pdf"
-                },
-                {
-                    "id": 704,
-                    "nombre_carrera": "Licenciado en Relaciones Públicas",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-relaciones-publicas",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Recursos Humanos I",
-                                "Metodología y Técnicas de la Investigación Social I",
-                                "Sociología",
-                                "Psicología General y de la Personalidad",
-                                "Inglés I",
-                                "Recursos Humanos II",
-                                "Metodología y Técnicas de la Investigación Social II",
-                                "Comunicación Social I",
-                                "Historia de las Instituciones Sociales"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Recursos Humanos III",
-                                "Comunicación Social II",
-                                "Metodología y Técnicas de la Investigación Social III",
-                                "Matemática",
-                                "Inglés II",
-                                "Recursos Humanos IV",
-                                "Estadística",
-                                "Sociología de la Comunicación",
-                                "Economía"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Antropología Filosófica",
-                                "Dinámica de Grupos",
-                                "Informática Aplicada I",
-                                "Administración",
-                                "Inglés III",
-                                "Informática Aplicada II",
-                                "Comunicación Institucional",
-                                "Marketing",
-                                "Ética Profesional en Recursos Humanos"
-                            ]
-                        },
-                        {
-                            "anio": "4º año",
-                            "materias": [
-                                "Relaciones Públicas I",
-                                "Opinión Pública",
-                                "Ceremonial y Protocolo",
-                                "Publicidad y Propaganda",
-                                "Reingeniería Aplicada",
-                                "Inglés IV",
-                                "Relaciones Públicas II",
-                                "Cultura de Masas",
-                                "Sistema Nacional e Internacional de Comunicaciones",
-                                "Seminario de Información Pública",
-                                "Práctica Profesional"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/Relaciones_publicas.pdf"
-                },
-                {
-                    "id": 705,
-                    "nombre_carrera": "Licenciado en Relaciones Humanas",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-relaciones-humanas",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Recursos Humanos I",
-                                "Metodología y Técnicas de la Investigación Social I",
-                                "Sociología",
-                                "Psicología General y de la Personalidad",
-                                "Inglés I",
-                                "Recursos Humanos II",
-                                "Metodología y Técnicas de la Investigación Social II",
-                                "Comunicación Social I",
-                                "Historia de las Instituciones Sociales"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Recursos Humanos III",
-                                "Comunicación Social II",
-                                "Metodología y Técnicas de la Investigación Social III",
-                                "Matemática",
-                                "Inglés II",
-                                "Recursos Humanos IV",
-                                "Estadística",
-                                "Sociología de la Comunicación",
-                                "Economía"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Antropología Filosófica",
-                                "Dinámica de Grupos",
-                                "Informática Aplicada I",
-                                "Administración",
-                                "Inglés III",
-                                "Informática Aplicada II",
-                                "Comunicación Institucional",
-                                "Marketing",
-                                "Ética Profesional en Recursos Humanos"
-                            ]
-                        },
-                        {
-                            "anio": "4º año",
-                            "materias": [
-                                "Derecho Laboral",
-                                "Psicología de la Motivación y Autoestima",
-                                "Selección Personal",
-                                "Publicidad y Propaganda",
-                                "Reingeniería Aplicada",
-                                "Inglés IV",
-                                "Teoría y Práctica de la Entrevista",
-                                "Administración de Personal",
-                                "Gestión de la Calidad Total",
-                                "Comportamiento Organizacional",
-                                "Práctica Profesional"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/Relaciones_humanas.pdf"
-                },
-                {
-                    "id": 706,
-                    "nombre_carrera": "Licenciado en Turismo",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-turismo",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Inglés I",
-                                "Portugués I",
-                                "Historia de la Cultura Universal",
-                                "Técnicas de Expresión",
-                                "Introducción al Turismo",
-                                "Geografía General",
-                                "Hist. de la Cultura Americana y Argentina",
-                                "Información Turística",
-                                "Sociología Aplicada al Turismo",
-                                "Turismo y Medio Ambiente"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Inglés II",
-                                "Portugués II",
-                                "Psicología Aplicada al Turismo",
-                                "Historial Argentina y de Cuyo",
-                                "Geografía Turística de Argentina",
-                                "Taller de Higiene y Primeros Auxilios",
-                                "Geografía Regional Turística de Cuyo",
-                                "Conducción de Grupos y Recreación",
-                                "Turismo del Vino",
-                                "Folklore",
-                                "Práctica Profesional del Guía"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Inglés III",
-                                "Portugués III",
-                                "Geografía Turística Continental",
-                                "Matemática",
-                                "Economía",
-                                "Administración",
-                                "Contabilidad",
-                                "Legislación Aplicada",
-                                "Metodología de la Investigación",
-                                "Relaciones Públicas",
-                                "Servicios Turísticos I",
-                                "Planificación I"
-                            ]
-                        },
-                        {
-                            "anio": "4º año",
-                            "materias": [
-                                "Inglés IV",
-                                "Portugués IV",
-                                "Servicios Turísticos II",
-                                "Estadística",
-                                "Legislación Comparada",
-                                "Formulación y Evaluación de Proyectos",
-                                "Marketing Turístico",
-                                "Vías de Comunicación y Transporte",
-                                "Administración Hotelera",
-                                "Planificación II",
-                                "Admin. De RRHH en la Emp. Turística",
-                                "Ética Profesional",
-                                "Taller de Amadeus",
-                                "Seminario de Tesina Título: Licenciado en Turismo"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/Lic_Turismo.pdf"
-                },
-                {
-                    "id": 707,
-                    "nombre_carrera": "Abogacía y Procuración",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Derecho",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/abogacia",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Derecho Privado Parte General",
-                                "Principios Generales del Derecho",
-                                "Filosofía y Ética",
-                                "Historia de las Instituciones Argentinas",
-                                "Derecho Constitucional",
-                                "Teoría del Estado",
-                                "Derecho Penal Parte General",
-                                "Obligaciones Civiles y Comerciales I",
-                                "Práctica Profesional I"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Derecho Penal Parte Especial",
-                                "Contratos Parte General",
-                                "Derecho Procesal Parte General",
-                                "Obligaciones Civiles y Comerciales II",
-                                "Lógica y Argumentación 1/3",
-                                "Derechos Humanos",
-                                "Derecho Procesal Penal",
-                                "Contratos Parte Especial",
-                                "Derecho Procesal Civil y Comercial",
-                                "Práctica Profesional II"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Resolución Alternativa de Conflictos",
-                                "Derechos Reales I",
-                                "Derecho de las Familias",
-                                "Sociedades Civiles y Comerciales",
-                                "Metodología de la Investigación",
-                                "Derechos Reales II",
-                                "Derecho Sucesorio",
-                                "Papeles de Comercio",
-                                "Concursos y Quiebras",
-                                "Derecho Laboral",
-                                "Práctica Profesional III"
-                            ]
-                        },
-                        {
-                            "anio": "4º año",
-                            "materias": [
-                                "Economía",
-                                "Derecho Administrativo",
-                                "Derecho Internacional Público y de la Integración",
-                                "Derecho Privado Profundizado",
-                                "Optativa I: Derecho Notarial Derecho Minero y Agrario",
-                                "Derecho Financiero y Tributario",
-                                "Derecho Procesal Constitucional",
-                                "Derecho Ambiental y Aguas",
-                                "Derecho Internacional Privado",
-                                "Práctica Profesional IV",
-                                "Optativa II: Derecho Registral Título de Grado: Abogado/a 3/3"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/Abogacia.pdf"
-                },
-                {
-                    "id": 708,
-                    "nombre_carrera": "Licenciado en Relaciones Internacionales",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Derecho",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-relaciones-internacionales",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Introducción a las Ciencias Sociales",
-                                "Motodología y Técnicas de la Investigación Social I",
-                                "Relaciones Internacionales",
-                                "Historia de las Integraciones",
-                                "Inglés I",
-                                "Historia Argentina y Latinoamericana",
-                                "Metodología y Técnicas de la",
-                                "Teoría de la Admin. Y Derecho Admin.",
-                                "Historias de las Ideas Políticas"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Derecho Internacional Público",
-                                "Sistemática de la Ciencia Política",
-                                "Historia Argentina Contemporánea",
-                                "Metodología y Técnicas de Investigación Social III",
-                                "Inglés II",
-                                "Economía Internacional",
-                                "Sociología",
-                                "Historia de las Relaciones Internacionales",
-                                "Derecho Constitucional"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Historia de la Política Exterior Argentina",
-                                "Economía Argentina y Latinoamericana",
-                                "Teoría Política",
-                                "Estructura Económica Internacional",
-                                "Inglés III",
-                                "Sistemas Políticos Comparados",
-                                "Teorías de las Relaciones Internacionales",
-                                "Política Exterior Argentina I",
-                                "Política Internacional Contemporánea"
-                            ]
-                        },
-                        {
-                            "anio": "4º año",
-                            "materias": [
-                                "Toma de Decisiones y Téc. de Negociación",
-                                "Derecho Diplomático y Consular",
-                                "Ética Profesional",
-                                "Seminario I",
-                                "Inglés IV",
-                                "Organismos Internacionales",
-                                "Política Exterior Argentina II",
-                                "Contratos Internacionales",
-                                "Seminario II",
-                                "Seminario III"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/Relaciones_Internacionales.pdf"
-                },
-                {
-                    "id": 709,
-                    "nombre_carrera": "Licenciatura en Diseño Gráfico y Digital",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Informática y Diseño",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-diseño",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Lenguaje Visual",
-                                "Introducción a la Tipografía",
-                                "Psicología y Comportamiento",
-                                "Comunicación, Arte y Tecnología",
-                                "Programas Vectoriales",
-                                "Dibujo I",
-                                "Fundamentos Proyectuales",
-                                "Tipografía",
-                                "Sistemas de Representación",
-                                "Programas Pixelares",
-                                "Dibujo II",
-                                "Arte y Diseño Moderno",
-                                "Proyecto de Identidad"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Sistemas de Signos",
-                                "Semiología",
-                                "Programas de Maquetación",
-                                "Fotografía",
-                                "Introducción a la Animación",
-                                "Proyecto Editorial",
-                                "Diseño Audiovisual",
-                                "Tecnología Gráfica",
-                                "Animación",
-                                "Ética y Legislación Profesional",
-                                "Proyecto Multimedia",
-                                "Práctica Profesionalizante Régimen de Modalidad Cursado de cursado Título intermedio:"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Diseño Regional y Sustentable",
-                                "Marketing y Publicidad",
-                                "Creatividad e Innovación",
-                                "Guión y Realización Audiovisual",
-                                "Diseño Contemporáneo",
-                                "Diseño Web",
-                                "Modelos de Negocios",
-                                "Comunicación Profesional",
-                                "Narrativas Digitales",
-                                "Experiencia de Usuario",
-                                "Diseño de Información",
-                                "Proyecto Integrador"
-                            ]
-                        },
-                        {
-                            "anio": "4º año",
-                            "materias": [
-                                "Diseño y Gestión",
-                                "Diseño Web y Aplicaciones móviles",
-                                "Producción Editorial Digital",
-                                "Desarrollo web y aplicaciones móviles",
-                                "Diseño de Libros",
-                                "Marketing Digital",
-                                "Cultura de la imagen",
-                                "Diseño en movimiento",
-                                "a Electiva a. Diseño de Packaging",
-                                "b Electiva b. Desarrollo Multiplataforma",
-                                "c Electiva c. Diseño de Diarios y Revistas",
-                                "Proyecto de Diseño curriculares Título:"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/lic_diseno2022.pdf"
-                },
-                {
-                    "id": 710,
-                    "nombre_carrera": "Licenciado en Sistemas de Información",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "4 años",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Informática y Diseño",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-sistemas-de-informacion",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Algoritmos, Programas y Estructuras de Datos I",
-                                "Lógica y Estructuras Discretas",
-                                "Algebra y Geometría Analítica",
-                                "Introducción a los Sistemas",
-                                "Arquitectura de las Computadoras I",
-                                "Programación Web",
-                                "Teoría de la Computación I",
-                                "Bases de Datos I",
-                                "Ingeniería de Requisitos",
-                                "Sistemas Operativos I",
-                                "Algoritmos, Programas y Estructuras de Datos II",
-                                "Cálculo I",
-                                "Teoría de la Computación II"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Bases de Datos II",
-                                "Ingeniería de Software I",
-                                "Programación Orientada a Objetos",
-                                "Cálculo II",
-                                "Ingeniería de Software II",
-                                "Sistemas Operativos II",
-                                "Redes I",
-                                "Laboratorio de Desarrollo de Software",
-                                "Programación Concurrente",
-                                "Probabilidades y Estadísticas"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Ingeniería de Software III",
-                                "Redes II",
-                                "Programación Distribuida",
-                                "Fundamentos de Inteligencia Artificial",
-                                "Bases de Datos III",
-                                "Arquitectura de Sistemas",
-                                "Arquitectura de las Computadoras II",
-                                "Optativa I (AyL)"
-                            ]
-                        },
-                        {
-                            "anio": "4º año",
-                            "materias": [
-                                "Gestión de Proyectos",
-                                "Calidad de Software",
-                                "Aspectos Sociales, Empresariales y Profesionales",
-                                "Metodología de la Investigación",
-                                "Proyecto de Software (Anual)",
-                                "Inteligencia Artificial",
-                                "Seguridad Aplicada a Sistemas de Información",
-                                "Optativa II (ISBDSI)",
-                                "Aspectos Laborales y Legales del Ejercicio de la Profesión",
-                                "Práctica Profesional Supervisada en Sistemas de Información"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/lic_sistemas_2023.pdf"
-                },
-                {
-                    "id": 711,
-                    "nombre_carrera": "Analista Programador Universitario",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Informática y Diseño",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/analista-programador-universitario-en-sistemas",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Algoritmos y estructuras de datos I",
-                                "Programación I",
-                                "Introducción a los sistemas",
-                                "Matemática básica",
-                                "Arquitectura de computadoras I",
-                                "Bases de datos I",
-                                "Programación II",
-                                "Álgebra I",
-                                "Ingeniería de requisitos",
-                                "Sistemas operativos I"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Programación III",
-                                "Álgebra II",
-                                "Bases de datos II",
-                                "Ingeniería de soitware I",
-                                "Programación IV",
-                                "Cálculo I",
-                                "Redes I",
-                                "Ingeniería de soitware II",
-                                "Sistemas operativos II semanal mensual Correlativas"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Programación V",
-                                "Cálculo II",
-                                "Redes II",
-                                "Algoritmos y estructuras de datos II",
-                                "Ingeniería de soitware III",
-                                "Programación VI",
-                                "Teoría de la computación I",
-                                "Arquitectura de computadoras II",
-                                "Bases de datos III",
-                                "Aspectos profesionales I",
-                                "Inglés Título:"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/analista__programador_universitario.pdf"
-                },
-                {
-                    "id": 712,
-                    "nombre_carrera": "Licenciatura en Comunicación Digital",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Educación",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-comunicacion-digital",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Plataformas y ecosistemas digitales",
-                                "Publicidad y marketing digital",
-                                "Guión",
-                                "Sociedad, tecnología y comunicación",
-                                "Diseño de experiencia e interfaz de usuario",
-                                "Fotografía y edición digital",
-                                "Redacción digital",
-                                "Análisis de públicos y audiencias",
-                                "Animación digital",
-                                "Fundamentos de la comunicación"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Medios de comunicación y",
-                                "Periodismo de datos",
-                                "Modelos de negocios y economía",
-                                "Edición de audio y video",
-                                "Metodología de la investigación",
-                                "Planificación de comunicación digital",
-                                "Realización audiovisual",
-                                "Periodismo digital",
-                                "Teorías críticas de la comunicación",
-                                "Diseño y desarrollo web",
-                                "Práctica Profesionalizante Régimen de Modalidad Cursado de cursado Título intermedio:"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Comunicación estratégica y gestión",
-                                "Storytelling",
-                                "Gamificación",
-                                "Regulación y legislación de",
-                                "Narrativa Transmedia",
-                                "Estética audiovisual",
-                                "Economía y políticas públicas",
-                                "Televisión digital",
-                                "Procesos creativos"
-                            ]
-                        },
-                        {
-                            "anio": "4º año",
-                            "materias": [
-                                "Economía del conocimiento",
-                                "Administración de proyectos",
-                                "Gestión de Recursos Humanos",
-                                "Comunicación política",
-                                "Producción Transmedia",
-                                "Análisis y estadística",
-                                "Práctica Profesional Situada curriculares Título:"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/lic_comunicacion_digital2022.pdf"
-                },
-                {
-                    "id": 713,
-                    "nombre_carrera": "Profesorados Universitarios en Educación Primaria y en Educación Inicial",
-                    "categoria": "Grado / Carrera",
-                    "duracion": "Verificar en página oficial",
-                    "modalidad": "Presencial",
-                    "facultad": "Facultad de Educación",
-                    "link_oficial": "https://www.uch.edu.ar/carrera/profesorados-universitarios-en-educacion-primaria-e-inicial",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Pedagogía",
-                                "Sujetos de la Educación Inicial",
-                                "Sociología de la Educación",
-                                "Prácticas de lectura, escritura y oralidad",
-                                "Tecnologías Digitales en los Procesos de Enseñanza y Aprendizaje I",
-                                "Taller de Pensamiento lógico-matemático",
-                                "Didáctica General",
-                                "Historia y Prospectiva de la Educación",
-                                "Instituciones educativas",
-                                "Lengua",
-                                "Práctica Profesional Docente I",
-                                "Política y Legislación de la Educación argentina",
-                                "Didáctica de la Lengua I",
-                                "Didáctica de las Ciencias Sociales I"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Didáctica de las Ciencias Naturales I",
-                                "Didáctica de la Matemática I",
-                                "Psicología de la educación",
-                                "Alfabetización Inicial",
-                                "Tecnologías Digitales en los Procesos de Enseñanza y Aprendizaje II",
-                                "Práctica profesional docente II Rectorado Cursado de cursado",
-                                "Lenguajes Artísticos y su Didáctica",
-                                "Didáctica de las Ciencias Sociales II",
-                                "Didáctica de las Ciencias Naturales II",
-                                "Literatura aplicada al Nivel Primario"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Tecnologías digitales en los procesos de enseñanza y aprendizaje III",
-                                "Didáctica de la Matemática II",
-                                "Cultura del cuidado",
-                                "Pedagogía inclusiva",
-                                "Educación Científica y Tecnológica",
-                                "Práctica profesional docente III",
-                                "Prácticas de construcción ciudadana",
-                                "Didáctica de la literatura",
-                                "Filosofía y Educación"
-                            ]
-                        },
-                        {
-                            "anio": "4º año",
-                            "materias": [
-                                "Actividad física y su Didáctica",
-                                "Tecnologías digitales en los procesos de enseñanza y aprendizaje IV",
-                                "Dimensión ético-política de la praxis docente",
-                                "Práctica Profesional Docente IV Todos los espacios y Residencia curriculares"
-                            ]
-                        }
-                    ],
-                    "plan_fuente": "https://www.uch.edu.ar/docs/educacion_primaria.pdf"
-                }
-            ],
-            "departamento": "Godoy Cruz"
-        }
-    ]
+ "instituciones": [
+  {
+   "id": 7,
+   "nombre": "Universidad Champagnat (UCh)",
+   "nivel": "universidad",
+   "gestion": "privada",
+   "provincia": "Mendoza",
+   "contacto": {
+    "telefono": "4243698",
+    "email": "informes@uch.edu.ar",
+    "direccion": "Belgrano 721, Godoy Cruz"
+   },
+   "carreras": [
+    {
+     "id": 700,
+     "nombre_carrera": "Licenciado en Administración de Empresas",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+     "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-administracion-de-empresas",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Introducción a la Contabilidad",
+        "Matemática General",
+        "Procesamiento de Datos",
+        "Inglés I",
+        "Derecho Civil",
+        "Microeconomía",
+        "Administración General"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Normas Contables de Valuación",
+        "Estadística Metodológica e inferencial",
+        "Tecnologías de Gestión",
+        "Inglés II",
+        "Macroeconomía",
+        "Sistemas de Información y Control",
+        "Derecho Público",
+        "Matemática Financiera"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Creatividad e Iniciativa",
+        "Planificación Estratégica",
+        "Planificación Estratégica",
+        "Derecho Comercial I",
+        "Comportamiento Organizacional",
+        "Calidad",
+        "Exposición y Análisis de los Est. Contables",
+        "Derecho Laboral",
+        "Práctica Profesional I"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Comercialización General",
+        "Administración de Operaciones",
+        "Administración Financiera",
+        "Administración de los Recursos Humanos",
+        "Formulación y evaluación de Proyectos General",
+        "Módulo Electivo I",
+        "Módulo Electivo II",
+        "Práctica Profesional II Mercado de Capitales de Empresas"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/Administracion_empresas.pdf"
+    },
+    {
+     "id": 701,
+     "nombre_carrera": "Licenciado en Comercio Internacional",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+     "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-comercio-internacional",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Inglés I",
+        "Comercio Internacional I",
+        "Contabilidad",
+        "Matemática",
+        "Principios de Administración",
+        "Comercio Internacional II",
+        "Marketing",
+        "Principios de Economía",
+        "Geografía Económica Argentina y Mundial"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Inglés II",
+        "Legislación Práctica y Aduanera",
+        "Marketing Internacional",
+        "Derecho Civil",
+        "Microeconomía",
+        "Tecnol. Informáticas y Comunicación I",
+        "Clasificación y Valoración Aduanera",
+        "Técnicas de Negociación",
+        "Derecho Comercial",
+        "Matemática Financiera",
+        "Tecnol. Informática y Comunicación II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Inglés III",
+        "Sistema Informático María",
+        "Transporte Internacional",
+        "Derecho Internacional Público",
+        "Macroeconomía",
+        "Estadística",
+        "Régimen Económico y Financiero del Comercio Internacional",
+        "Costos y Precios de Exportación e Importación",
+        "Investigación de Mercados",
+        "Derecho Internacional Privado"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Inglés IV",
+        "Operativa del Comercio Internacional",
+        "Portugués I",
+        "Envases y Embalajes",
+        "Formulación y Evaluación de Proyectos",
+        "Economía Internacional",
+        "Portugués II",
+        "Comercio Electrónico",
+        "Bloques Económicos Mundiales",
+        "Ética Profesional",
+        "Práctica Profesional"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/Comercio_internacional.pdf"
+    },
+    {
+     "id": 702,
+     "nombre_carrera": "Corredor Público Inmobiliario y Martillero",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en página oficial",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+     "link_oficial": "https://www.uch.edu.ar/carrera/corredor-publico-inmobiliario-y-martillero",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Inglés I",
+        "Introducción al Derecho",
+        "Matemática",
+        "Elementos de Arquitectura",
+        "Contabilidad",
+        "Derecho Civil",
+        "Economía",
+        "Elementos de Arte",
+        "Derecho Comercial",
+        "Procesamiento de Datos"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Inglés II",
+        "Obligaciones Civiles y Comerciales",
+        "Tasaciones I",
+        "Derecho Registral",
+        "Derecho Procesal Civil y Comercial",
+        "Matemática Financiera",
+        "Corretaje y Ventas",
+        "Tasaciones II",
+        "Técnica Judicial",
+        "Estadística Corredor Público Inmobiliario"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Inglés III",
+        "Contratos",
+        "Planeamiento Urbano",
+        "Organización y Gestión Inmobiliaria",
+        "Relaciones Públicas",
+        "Marketing",
+        "Diseño y Evaluación de Proy. Inmobil.",
+        "Técnicas de Negociación",
+        "Adm. de Consorcios y Propiedades",
+        "Ética Profesional",
+        "Práctica Profesional Martillero Público"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Inglés III",
+        "Técnicas de Valuación",
+        "Derecho Público I",
+        "Remates y Subastas",
+        "Relaciones Públicas",
+        "Marketing",
+        "Diseño y Evaluación de Proyectos",
+        "Derecho Público II",
+        "Técnicas de Negociación",
+        "Ética Profesional",
+        "Práctica Profesional"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/Corredor_Publico_Martillero.pdf"
+    },
+    {
+     "id": 703,
+     "nombre_carrera": "Contador Público",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+     "link_oficial": "https://www.uch.edu.ar/carrera/contador-publico",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Introducción a la Contabilidad",
+        "Taller de Comprensión Lectora y Producción de Textos",
+        "Introducción a la Economía",
+        "Matemática I",
+        "Procesamiento de Datos",
+        "Microeconomía",
+        "Administración General",
+        "Matemática II",
+        "Contabilidad Básica",
+        "Práctica Contable I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Normas Contables I",
+        "Estadística I",
+        "Tecnologías de Gestión",
+        "Derecho Civil I",
+        "Macroeconomía 1/3",
+        "Normas Contables II",
+        "Estadística II",
+        "Matemática Financiera",
+        "Sistemas de Información y Control",
+        "Derecho Público",
+        "Práctica Contable II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Contabilidad Superior",
+        "Técnica Impositiva I",
+        "Finanzas Públicas",
+        "Derecho Comercial I",
+        "Historia Económica y Social",
+        "Contabilidad Pública",
+        "Técnica Impositiva II",
+        "Administración Financiera",
+        "Derecho Comercial II",
+        "Práctica Contable III"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Auditoría",
+        "Costos",
+        "Derecho Civil II",
+        "Derecho Laboral",
+        "Práctica Jurídica",
+        "Ética Profesional",
+        "Auditoría y Procesamiento Electrónico de Datos",
+        "Metodología de la Investigación",
+        "Derecho Comercial III",
+        "Prácticas Profesionales Supervisadas 29,31,33,34,35,36 3/3"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/Contador_Publico.pdf"
+    },
+    {
+     "id": 704,
+     "nombre_carrera": "Licenciado en Relaciones Públicas",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en página oficial",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+     "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-relaciones-publicas",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Recursos Humanos I",
+        "Metodología y Técnicas de la Investigación Social I",
+        "Sociología",
+        "Psicología General y de la Personalidad",
+        "Inglés I",
+        "Recursos Humanos II",
+        "Metodología y Técnicas de la Investigación Social II",
+        "Comunicación Social I",
+        "Historia de las Instituciones Sociales"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Recursos Humanos III",
+        "Comunicación Social II",
+        "Metodología y Técnicas de la Investigación Social III",
+        "Matemática",
+        "Inglés II",
+        "Recursos Humanos IV",
+        "Estadística",
+        "Sociología de la Comunicación",
+        "Economía"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Antropología Filosófica",
+        "Dinámica de Grupos",
+        "Informática Aplicada I",
+        "Administración",
+        "Inglés III",
+        "Informática Aplicada II",
+        "Comunicación Institucional",
+        "Marketing",
+        "Ética Profesional en Recursos Humanos"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Relaciones Públicas I",
+        "Opinión Pública",
+        "Ceremonial y Protocolo",
+        "Publicidad y Propaganda",
+        "Reingeniería Aplicada",
+        "Inglés IV",
+        "Relaciones Públicas II",
+        "Cultura de Masas",
+        "Sistema Nacional e Internacional de Comunicaciones",
+        "Seminario de Información Pública",
+        "Práctica Profesional"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/Relaciones_publicas.pdf"
+    },
+    {
+     "id": 705,
+     "nombre_carrera": "Licenciado en Relaciones Humanas",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+     "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-relaciones-humanas",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Recursos Humanos I",
+        "Metodología y Técnicas de la Investigación Social I",
+        "Sociología",
+        "Psicología General y de la Personalidad",
+        "Inglés I",
+        "Recursos Humanos II",
+        "Metodología y Técnicas de la Investigación Social II",
+        "Comunicación Social I",
+        "Historia de las Instituciones Sociales"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Recursos Humanos III",
+        "Comunicación Social II",
+        "Metodología y Técnicas de la Investigación Social III",
+        "Matemática",
+        "Inglés II",
+        "Recursos Humanos IV",
+        "Estadística",
+        "Sociología de la Comunicación",
+        "Economía"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Antropología Filosófica",
+        "Dinámica de Grupos",
+        "Informática Aplicada I",
+        "Administración",
+        "Inglés III",
+        "Informática Aplicada II",
+        "Comunicación Institucional",
+        "Marketing",
+        "Ética Profesional en Recursos Humanos"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Derecho Laboral",
+        "Psicología de la Motivación y Autoestima",
+        "Selección Personal",
+        "Publicidad y Propaganda",
+        "Reingeniería Aplicada",
+        "Inglés IV",
+        "Teoría y Práctica de la Entrevista",
+        "Administración de Personal",
+        "Gestión de la Calidad Total",
+        "Comportamiento Organizacional",
+        "Práctica Profesional"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/Relaciones_humanas.pdf"
+    },
+    {
+     "id": 706,
+     "nombre_carrera": "Licenciado en Turismo",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+     "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-turismo",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Inglés I",
+        "Portugués I",
+        "Historia de la Cultura Universal",
+        "Técnicas de Expresión",
+        "Introducción al Turismo",
+        "Geografía General",
+        "Hist. de la Cultura Americana y Argentina",
+        "Información Turística",
+        "Sociología Aplicada al Turismo",
+        "Turismo y Medio Ambiente"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Inglés II",
+        "Portugués II",
+        "Psicología Aplicada al Turismo",
+        "Historial Argentina y de Cuyo",
+        "Geografía Turística de Argentina",
+        "Taller de Higiene y Primeros Auxilios",
+        "Geografía Regional Turística de Cuyo",
+        "Conducción de Grupos y Recreación",
+        "Turismo del Vino",
+        "Folklore",
+        "Práctica Profesional del Guía"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Inglés III",
+        "Portugués III",
+        "Geografía Turística Continental",
+        "Matemática",
+        "Economía",
+        "Administración",
+        "Contabilidad",
+        "Legislación Aplicada",
+        "Metodología de la Investigación",
+        "Relaciones Públicas",
+        "Servicios Turísticos I",
+        "Planificación I"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Inglés IV",
+        "Portugués IV",
+        "Servicios Turísticos II",
+        "Estadística",
+        "Legislación Comparada",
+        "Formulación y Evaluación de Proyectos",
+        "Marketing Turístico",
+        "Vías de Comunicación y Transporte",
+        "Administración Hotelera",
+        "Planificación II",
+        "Admin. De RRHH en la Emp. Turística",
+        "Ética Profesional",
+        "Taller de Amadeus",
+        "Seminario de Tesina Título: Licenciado en Turismo"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/Lic_Turismo.pdf"
+    },
+    {
+     "id": 707,
+     "nombre_carrera": "Abogacía y Procuración",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Derecho",
+     "link_oficial": "https://www.uch.edu.ar/carrera/abogacia",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Derecho Privado Parte General",
+        "Principios Generales del Derecho",
+        "Filosofía y Ética",
+        "Historia de las Instituciones Argentinas",
+        "Derecho Constitucional",
+        "Teoría del Estado",
+        "Derecho Penal Parte General",
+        "Obligaciones Civiles y Comerciales I",
+        "Práctica Profesional I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Derecho Penal Parte Especial",
+        "Contratos Parte General",
+        "Derecho Procesal Parte General",
+        "Obligaciones Civiles y Comerciales II",
+        "Lógica y Argumentación 1/3",
+        "Derechos Humanos",
+        "Derecho Procesal Penal",
+        "Contratos Parte Especial",
+        "Derecho Procesal Civil y Comercial",
+        "Práctica Profesional II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Resolución Alternativa de Conflictos",
+        "Derechos Reales I",
+        "Derecho de las Familias",
+        "Sociedades Civiles y Comerciales",
+        "Metodología de la Investigación",
+        "Derechos Reales II",
+        "Derecho Sucesorio",
+        "Papeles de Comercio",
+        "Concursos y Quiebras",
+        "Derecho Laboral",
+        "Práctica Profesional III"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Economía",
+        "Derecho Administrativo",
+        "Derecho Internacional Público y de la Integración",
+        "Derecho Privado Profundizado",
+        "Optativa I: Derecho Notarial Derecho Minero y Agrario",
+        "Derecho Financiero y Tributario",
+        "Derecho Procesal Constitucional",
+        "Derecho Ambiental y Aguas",
+        "Derecho Internacional Privado",
+        "Práctica Profesional IV",
+        "Optativa II: Derecho Registral Título de Grado: Abogado/a 3/3"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/Abogacia.pdf"
+    },
+    {
+     "id": 708,
+     "nombre_carrera": "Licenciado en Relaciones Internacionales",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Derecho",
+     "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-relaciones-internacionales",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Introducción a las Ciencias Sociales",
+        "Motodología y Técnicas de la Investigación Social I",
+        "Relaciones Internacionales",
+        "Historia de las Integraciones",
+        "Inglés I",
+        "Historia Argentina y Latinoamericana",
+        "Metodología y Técnicas de la",
+        "Teoría de la Admin. Y Derecho Admin.",
+        "Historias de las Ideas Políticas"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Derecho Internacional Público",
+        "Sistemática de la Ciencia Política",
+        "Historia Argentina Contemporánea",
+        "Metodología y Técnicas de Investigación Social III",
+        "Inglés II",
+        "Economía Internacional",
+        "Sociología",
+        "Historia de las Relaciones Internacionales",
+        "Derecho Constitucional"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Historia de la Política Exterior Argentina",
+        "Economía Argentina y Latinoamericana",
+        "Teoría Política",
+        "Estructura Económica Internacional",
+        "Inglés III",
+        "Sistemas Políticos Comparados",
+        "Teorías de las Relaciones Internacionales",
+        "Política Exterior Argentina I",
+        "Política Internacional Contemporánea"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Toma de Decisiones y Téc. de Negociación",
+        "Derecho Diplomático y Consular",
+        "Ética Profesional",
+        "Seminario I",
+        "Inglés IV",
+        "Organismos Internacionales",
+        "Política Exterior Argentina II",
+        "Contratos Internacionales",
+        "Seminario II",
+        "Seminario III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/Relaciones_Internacionales.pdf"
+    },
+    {
+     "id": 709,
+     "nombre_carrera": "Licenciatura en Diseño Gráfico y Digital",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en página oficial",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Informática y Diseño",
+     "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-dise%C3%B1o",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Lenguaje Visual",
+        "Introducción a la Tipografía",
+        "Psicología y Comportamiento",
+        "Comunicación, Arte y Tecnología",
+        "Programas Vectoriales",
+        "Dibujo I",
+        "Fundamentos Proyectuales",
+        "Tipografía",
+        "Sistemas de Representación",
+        "Programas Pixelares",
+        "Dibujo II",
+        "Arte y Diseño Moderno",
+        "Proyecto de Identidad"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Sistemas de Signos",
+        "Semiología",
+        "Programas de Maquetación",
+        "Fotografía",
+        "Introducción a la Animación",
+        "Proyecto Editorial",
+        "Diseño Audiovisual",
+        "Tecnología Gráfica",
+        "Animación",
+        "Ética y Legislación Profesional",
+        "Proyecto Multimedia",
+        "Práctica Profesionalizante Régimen de Modalidad Cursado de cursado Título intermedio:"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Diseño Regional y Sustentable",
+        "Marketing y Publicidad",
+        "Creatividad e Innovación",
+        "Guión y Realización Audiovisual",
+        "Diseño Contemporáneo",
+        "Diseño Web",
+        "Modelos de Negocios",
+        "Comunicación Profesional",
+        "Narrativas Digitales",
+        "Experiencia de Usuario",
+        "Diseño de Información",
+        "Proyecto Integrador"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Diseño y Gestión",
+        "Diseño Web y Aplicaciones móviles",
+        "Producción Editorial Digital",
+        "Desarrollo web y aplicaciones móviles",
+        "Diseño de Libros",
+        "Marketing Digital",
+        "Cultura de la imagen",
+        "Diseño en movimiento",
+        "a Electiva a. Diseño de Packaging",
+        "b Electiva b. Desarrollo Multiplataforma",
+        "c Electiva c. Diseño de Diarios y Revistas",
+        "Proyecto de Diseño curriculares Título:"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/lic_diseno2022.pdf"
+    },
+    {
+     "id": 710,
+     "nombre_carrera": "Licenciado en Sistemas de Información",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Informática y Diseño",
+     "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-sistemas-de-informacion",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Algoritmos, Programas y Estructuras de Datos I",
+        "Lógica y Estructuras Discretas",
+        "Algebra y Geometría Analítica",
+        "Introducción a los Sistemas",
+        "Arquitectura de las Computadoras I",
+        "Programación Web",
+        "Teoría de la Computación I",
+        "Bases de Datos I",
+        "Ingeniería de Requisitos",
+        "Sistemas Operativos I",
+        "Algoritmos, Programas y Estructuras de Datos II",
+        "Cálculo I",
+        "Teoría de la Computación II"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Bases de Datos II",
+        "Ingeniería de Software I",
+        "Programación Orientada a Objetos",
+        "Cálculo II",
+        "Ingeniería de Software II",
+        "Sistemas Operativos II",
+        "Redes I",
+        "Laboratorio de Desarrollo de Software",
+        "Programación Concurrente",
+        "Probabilidades y Estadísticas"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Ingeniería de Software III",
+        "Redes II",
+        "Programación Distribuida",
+        "Fundamentos de Inteligencia Artificial",
+        "Bases de Datos III",
+        "Arquitectura de Sistemas",
+        "Arquitectura de las Computadoras II",
+        "Optativa I (AyL)"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Gestión de Proyectos",
+        "Calidad de Software",
+        "Aspectos Sociales, Empresariales y Profesionales",
+        "Metodología de la Investigación",
+        "Proyecto de Software (Anual)",
+        "Inteligencia Artificial",
+        "Seguridad Aplicada a Sistemas de Información",
+        "Optativa II (ISBDSI)",
+        "Aspectos Laborales y Legales del Ejercicio de la Profesión",
+        "Práctica Profesional Supervisada en Sistemas de Información"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/lic_sistemas_2023.pdf"
+    },
+    {
+     "id": 711,
+     "nombre_carrera": "Analista Programador Universitario",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Informática y Diseño",
+     "link_oficial": "https://www.uch.edu.ar/carrera/analista-programador-universitario-en-sistemas",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Algoritmos y estructuras de datos I",
+        "Programación I",
+        "Introducción a los sistemas",
+        "Matemática básica",
+        "Arquitectura de computadoras I",
+        "Bases de datos I",
+        "Programación II",
+        "Álgebra I",
+        "Ingeniería de requisitos",
+        "Sistemas operativos I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Programación III",
+        "Álgebra II",
+        "Bases de datos II",
+        "Ingeniería de soitware I",
+        "Programación IV",
+        "Cálculo I",
+        "Redes I",
+        "Ingeniería de soitware II",
+        "Sistemas operativos II semanal mensual Correlativas"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Programación V",
+        "Cálculo II",
+        "Redes II",
+        "Algoritmos y estructuras de datos II",
+        "Ingeniería de soitware III",
+        "Programación VI",
+        "Teoría de la computación I",
+        "Arquitectura de computadoras II",
+        "Bases de datos III",
+        "Aspectos profesionales I",
+        "Inglés Título:"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/analista__programador_universitario.pdf"
+    },
+    {
+     "id": 712,
+     "nombre_carrera": "Licenciatura en Comunicación Digital",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en página oficial",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Educación",
+     "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-comunicacion-digital",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Plataformas y ecosistemas digitales",
+        "Publicidad y marketing digital",
+        "Guión",
+        "Sociedad, tecnología y comunicación",
+        "Diseño de experiencia e interfaz de usuario",
+        "Fotografía y edición digital",
+        "Redacción digital",
+        "Análisis de públicos y audiencias",
+        "Animación digital",
+        "Fundamentos de la comunicación"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Medios de comunicación y",
+        "Periodismo de datos",
+        "Modelos de negocios y economía",
+        "Edición de audio y video",
+        "Metodología de la investigación",
+        "Planificación de comunicación digital",
+        "Realización audiovisual",
+        "Periodismo digital",
+        "Teorías críticas de la comunicación",
+        "Diseño y desarrollo web",
+        "Práctica Profesionalizante Régimen de Modalidad Cursado de cursado Título intermedio:"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Comunicación estratégica y gestión",
+        "Storytelling",
+        "Gamificación",
+        "Regulación y legislación de",
+        "Narrativa Transmedia",
+        "Estética audiovisual",
+        "Economía y políticas públicas",
+        "Televisión digital",
+        "Procesos creativos"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Economía del conocimiento",
+        "Administración de proyectos",
+        "Gestión de Recursos Humanos",
+        "Comunicación política",
+        "Producción Transmedia",
+        "Análisis y estadística",
+        "Práctica Profesional Situada curriculares Título:"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/lic_comunicacion_digital2022.pdf"
+    },
+    {
+     "id": 713,
+     "nombre_carrera": "Profesorados Universitarios en Educación Primaria y en Educación Inicial",
+     "categoria": "Grado / Carrera",
+     "duracion": "Verificar en página oficial",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Educación",
+     "link_oficial": "https://www.uch.edu.ar/carrera/profesorados-universitarios-en-educacion-primaria-e-inicial",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Pedagogía",
+        "Sujetos de la Educación Inicial",
+        "Sociología de la Educación",
+        "Prácticas de lectura, escritura y oralidad",
+        "Tecnologías Digitales en los Procesos de Enseñanza y Aprendizaje I",
+        "Taller de Pensamiento lógico-matemático",
+        "Didáctica General",
+        "Historia y Prospectiva de la Educación",
+        "Instituciones educativas",
+        "Lengua",
+        "Práctica Profesional Docente I",
+        "Política y Legislación de la Educación argentina",
+        "Didáctica de la Lengua I",
+        "Didáctica de las Ciencias Sociales I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Didáctica de las Ciencias Naturales I",
+        "Didáctica de la Matemática I",
+        "Psicología de la educación",
+        "Alfabetización Inicial",
+        "Tecnologías Digitales en los Procesos de Enseñanza y Aprendizaje II",
+        "Práctica profesional docente II Rectorado Cursado de cursado",
+        "Lenguajes Artísticos y su Didáctica",
+        "Didáctica de las Ciencias Sociales II",
+        "Didáctica de las Ciencias Naturales II",
+        "Literatura aplicada al Nivel Primario"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Tecnologías digitales en los procesos de enseñanza y aprendizaje III",
+        "Didáctica de la Matemática II",
+        "Cultura del cuidado",
+        "Pedagogía inclusiva",
+        "Educación Científica y Tecnológica",
+        "Práctica profesional docente III",
+        "Prácticas de construcción ciudadana",
+        "Didáctica de la literatura",
+        "Filosofía y Educación"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Actividad física y su Didáctica",
+        "Tecnologías digitales en los procesos de enseñanza y aprendizaje IV",
+        "Dimensión ético-política de la praxis docente",
+        "Práctica Profesional Docente IV Todos los espacios y Residencia curriculares"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.uch.edu.ar/docs/educacion_primaria.pdf"
+    }
+   ],
+   "departamento": "Godoy Cruz"
+  }
+ ]
 }

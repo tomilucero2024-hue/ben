@@ -1,129 +1,776 @@
 {
- "instituciones": [
-  {
-   "id": 12,
-   "nombre": "IES 9-002 Tomás Godoy Cruz",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "0261-4235077",
-    "email": "contacto@institutotomasgodoycruz.com",
-    "direccion": "Mitre y Montevideo, Ciudad de Mendoza"
-   },
-   "carreras": [
+  "instituciones": [
     {
-     "id": 1200,
-     "nombre_carrera": "Profesorado de Educación Inicial",
-     "categoria": "Grado / Profesorado",
-     "duracion": "📅 4 años",
-     "turno": "🕐 turno mañana o tarde",
-     "modalidad": "Presencial",
-     "facultad": "IES Tomás Godoy Cruz",
-     "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-inicial/"
-    },
-    {
-     "id": 1201,
-     "nombre_carrera": "Profesorado de Educación Primaria",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "turno": "Turno mañana o vespertino",
-     "modalidad": "Presencial",
-     "facultad": "IES Tomás Godoy Cruz",
-     "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-primaria/"
-    },
-    {
-     "id": 1202,
-     "nombre_carrera": "Profesorado de Educación Especial",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "turno": "Turno vespertino",
-     "modalidad": "Presencial",
-     "facultad": "IES Tomás Godoy Cruz",
-     "link_oficial": "https://institutotomasgodoycruz.com/profesorado-en-educacion-especial/"
-    },
-    {
-     "id": 1203,
-     "nombre_carrera": "Profesorado en Artes Visuales",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "turno": "Turno vespertino",
-     "modalidad": "Presencial",
-     "facultad": "IES Tomás Godoy Cruz",
-     "link_oficial": "https://institutotomasgodoycruz.com/profesorado-en-artes-visuales/"
-    },
-    {
-     "id": 1204,
-     "nombre_carrera": "Profesorado de Inglés",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "turno": "Turno vespertino",
-     "modalidad": "Presencial",
-     "facultad": "IES Tomás Godoy Cruz",
-     "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-ingles/"
-    },
-    {
-     "id": 1205,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Biología",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "turno": "Turno vespertino",
-     "modalidad": "Presencial",
-     "facultad": "IES Tomás Godoy Cruz",
-     "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-biologia/"
-    },
-    {
-     "id": 1206,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "turno": "Turno tarde o vespertino",
-     "modalidad": "Presencial",
-     "facultad": "IES Tomás Godoy Cruz",
-     "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-matematica/"
-    },
-    {
-     "id": 1207,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Física",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "turno": "Turno vespertino",
-     "modalidad": "Presencial",
-     "facultad": "IES Tomás Godoy Cruz",
-     "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-fisica/"
-    },
-    {
-     "id": 1208,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Química",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "turno": "Turno vespertino",
-     "modalidad": "Presencial",
-     "facultad": "IES Tomás Godoy Cruz",
-     "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-quimica/"
-    },
-    {
-     "id": 1209,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Lengua y Literatura",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "turno": "A confirmar",
-     "modalidad": "Presencial",
-     "facultad": "IES Tomás Godoy Cruz",
-     "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-lengua-y-literatura/"
-    },
-    {
-     "id": 1210,
-     "nombre_carrera": "Tecnicatura en Producción Artística y Artesanal",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "turno": "Turno vespertino",
-     "modalidad": "Presencial",
-     "facultad": "IES Tomás Godoy Cruz",
-     "link_oficial": "https://institutotomasgodoycruz.com/tecnicatura-en-produccion-artistica-y-artesanal/"
+      "id": 12,
+      "nombre": "IES 9-002 Tomás Godoy Cruz",
+      "nivel": "terciario",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "0261-4235077",
+        "email": "contacto@institutotomasgodoycruz.com",
+        "direccion": "Mitre y Montevideo, Ciudad de Mendoza"
+      },
+      "carreras": [
+        {
+          "id": 1200,
+          "nombre_carrera": "Profesorado de Educación Inicial",
+          "categoria": "Grado / Profesorado",
+          "duracion": "📅 4 años",
+          "turno": "🕐 turno mañana o tarde",
+          "modalidad": "Presencial",
+          "facultad": "IES Tomás Godoy Cruz",
+          "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-inicial/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Pedagogía",
+                "Sistema Educativo",
+                "Comprensión y Producción de Textos Académicos",
+                "Centralidad del Juego",
+                "Juego y Producción de Objetos Lúdicos",
+                "Lenguajes Artísticos Expresivos - Teatro",
+                "Lenguajes Artísticos Expresivos - Música",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Psicología Educacional",
+                "Instituciones Educativas",
+                "Educación y Atención Temprana al Desarrollo Infantil",
+                "Didáctica de Jardín Maternal",
+                "Didáctica de Jardín de Infantes",
+                "Prácticas Lingüísticas en Educación Inicial",
+                "Lenguajes Artísticos Expresivos - Artes Visuales",
+                "Educación Matemática Temprana e Inicial I",
+                "Sujetos de la Educación",
+                "Motricidad en Jardín Maternal y en Jardín de Infantes",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyectos de Intervención Socioeducativa",
+                "Literatura Infantil",
+                "Educación en la Diversidad",
+                "Educación Matemática Inicial II",
+                "Alfabetización Temprana e Inicial",
+                "Didáctica del Ambiente Natural",
+                "Didáctica del Ambiente Social",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación Sexual Integral",
+                "Educación y Tecnologías Digitales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Problemáticas de la Educación Inicial",
+                "Formación Complementaria General",
+                "Formación Complementaria Específica",
+                "Salud y Cultura del Cuidado",
+                "Formación Ética y Ciudadana y su Didáctica",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1201,
+          "nombre_carrera": "Profesorado de Educación Primaria",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "turno": "Turno mañana o vespertino",
+          "modalidad": "Presencial",
+          "facultad": "IES Tomás Godoy Cruz",
+          "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-primaria/",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Pedagogía",
+                "Promoción de la Salud",
+                "Sujetos de la Educación Primaria",
+                "Literatura para Niños y Jóvenes",
+                "Didáctica General",
+                "Perspectiva Histórica, Política, Social, Económica y Cultural de América Latina",
+                "Psicología Educacional",
+                "Lengua",
+                "Prácticas de Lectura, escritura y Oralidad",
+                "Tecnologías de la Comunicación y la Información",
+                "Matemática",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Historia y Política de la Educación Argentina",
+                "Expresión Artística",
+                "Didáctica de la Lengua I",
+                "Sociología de la Educación",
+                "Instituciones Educativas",
+                "Didáctica de la Literatura",
+                "Didáctica de las Ciencias Sociales I",
+                "Didáctica de las Ciencias Naturales I",
+                "Didáctica de la Matemática I",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "Tercer Año",
+              "materias": [
+                "Filosofía",
+                "Didáctica de la Matemática II",
+                "Unidad de Definición Institucional CFE",
+                "Formación Ética y Ciudadana",
+                "Unidad de Definición Institucional CFG",
+                "Problemática del Nivel Primario",
+                "Alfabetización Inicial",
+                "Didáctica de las Ciencias Sociales II",
+                "Didáctica de las Cs Naturales II",
+                "Didáctica de la Tecnología",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "Cuarto Año",
+              "materias": [
+                "Didáctica de las Cs Naturales III",
+                "Didáctica de la Matemática III",
+                "Didáctica de la Lengua II",
+                "Didáctica de las Cs Sociales III (Mendoza)",
+                "Unidad de Definición Institucional CFG",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://institutotomasgodoycruz.com/profesorado-de-educacion-primaria/"
+        },
+        {
+          "id": 1202,
+          "nombre_carrera": "Profesorado de Educación Especial",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "turno": "Turno vespertino",
+          "modalidad": "Presencial",
+          "facultad": "IES Tomás Godoy Cruz",
+          "link_oficial": "https://institutotomasgodoycruz.com/profesorado-en-educacion-especial/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Comprensión y Producción de Textos Académicos",
+                "Pensamiento Filosófico",
+                "Pedagogía",
+                "Sistema Educativo",
+                "Educación Artística: Artes Visuales",
+                "Educación Artística: Música",
+                "Educación Especial Contemporánea",
+                "Neuropsicosociología del Desarrollo",
+                "Discapacidad Intelectual: características del desarrollo",
+                "Atención Temprana",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Psicología Educacional",
+                "Instituciones Educativas",
+                "Abordaje Pedagógico Didáctico I",
+                "Sujetos de la Educación I",
+                "Sujetos de la Educación II",
+                "Psicomotricidad",
+                "Discapacidad Motora y Abordaje Pedagógico Didáctico",
+                "Didáctica de la Matemática",
+                "Didáctica de la Lengua",
+                "Didáctica de la Literatura",
+                "Didáctica de las Ciencias Naturales",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyectos de Intervención Socioeducativa",
+                "Didáctica de la Formación Ética y Ciudadana",
+                "Abordaje Pedagógico Didáctico II",
+                "Comunicación y Desarrollo del Lenguaje en la Persona con Discapacidad",
+                "Didáctica de las Ciencias Sociales",
+                "Discapacidad Múltiple y Abordaje Pedagógico Didáctico",
+                "Perspectiva Social, Transición a la Vida Adulta y Ocupación Laboral",
+                "Alfabetización",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "UCE Formación Complementaria General",
+                "Educación y Tecnologías Digitales",
+                "UCE Formación Complementaria Específica",
+                "Educación Sexual Integral",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Educación Artística: Teatro",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1203,
+          "nombre_carrera": "Profesorado en Artes Visuales",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "turno": "Turno vespertino",
+          "modalidad": "Presencial",
+          "facultad": "IES Tomás Godoy Cruz",
+          "link_oficial": "https://institutotomasgodoycruz.com/profesorado-en-artes-visuales/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Dibujo I",
+                "Bidimensión I",
+                "Tridimensión I",
+                "Lenguaje de las Artes Visuales I",
+                "Historia de las Artes Visuales I",
+                "Pedagogía",
+                "Comprensión y Producción de Textos Académicos",
+                "Formación Práctica Profesional I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Dibujo II",
+                "Bidimensión II",
+                "Tridimensión II",
+                "Lenguaje de las Artes Visuales II",
+                "Historia de las Artes Visuales II",
+                "Sujeto de la Educación I",
+                "Didáctica de las Artes Visuales I",
+                "Didáctica General",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Formación Práctica Profesional II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Producción Artística I: Bidimensión: Grabado - Pintura",
+                "Producción Artística I: Tridimensión: Escultura - Cerámica",
+                "Historia de las Artes Visuales III",
+                "Dibujo III",
+                "Lenguaje de las Artes Visuales III",
+                "Didáctica de las Artes Visuales II",
+                "Educación en la Diversidad",
+                "Gestión y Evaluación de los Aprendizajes",
+                "Psicología Educacional",
+                "Formación Práctica Profesional III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Información no disponible (no publicada por la institución)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1204,
+          "nombre_carrera": "Profesorado de Inglés",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "turno": "Turno vespertino",
+          "modalidad": "Presencial",
+          "facultad": "IES Tomás Godoy Cruz",
+          "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-ingles/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Práctica Profesional Docente I",
+                "Lengua Inglesa I",
+                "Fonética y Fonología Inglesa I",
+                "Gramática Inglesa I",
+                "Prácticas de Lengua Inglesa",
+                "Comprensión y Producción de Textos Académicos",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Pedagogía"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Práctica Profesional Docente II",
+                "Lengua Inglesa II",
+                "Fonética y Fonología Inglesa II",
+                "Gramática Inglesa II",
+                "Didáctica del Inglés I",
+                "Sujetos de la Educación I",
+                "Sujetos de la Educación II",
+                "Prácticas de Fonética y Fonología Inglesa",
+                "Didáctica",
+                "Instituciones Educativas",
+                "Psicología Educacional"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Práctica Profesional Docente III",
+                "Lengua Inglesa III",
+                "Fonética y Fonología Inglesa III",
+                "Gramática Inglesa III",
+                "Didáctica del Inglés II",
+                "Cultura y Literatura Británica I",
+                "Cultura y Literatura Británica II",
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyectos de Intervención Socioeducativa",
+                "Educación en la Diversidad"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Práctica Profesional Docente IV",
+                "Lengua Inglesa IV",
+                "U.D.J.E. (Unidad de Diseño Jurisdiccional Electiva)",
+                "Fonética y Fonología Inglesa IV",
+                "Formación Complementaria Específica",
+                "Cultura y Literatura Norteamericana",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Formación Complementaria General",
+                "Educación Sexual Integral",
+                "Educación y Tecnologías Digitales"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1205,
+          "nombre_carrera": "Profesorado de Educación Secundaria en Biología",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "turno": "Turno vespertino",
+          "modalidad": "Presencial",
+          "facultad": "IES Tomás Godoy Cruz",
+          "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-biologia/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Biología General",
+                "Química General",
+                "Matemática",
+                "Bioestadística",
+                "Sujeto de la Educación",
+                "Pedagogía",
+                "Comprensión y Producción de Textos Académicos",
+                "Formación Práctica Profesional I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Química Orgánica",
+                "Química Inorgánica",
+                "Física General",
+                "Ciencias de la Tierra",
+                "Ecología",
+                "Didáctica General",
+                "Didáctica de las Ciencias Naturales",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Formación Práctica Profesional II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Didáctica de la Biología",
+                "Biología Vegetal",
+                "Biología Animal",
+                "Microbiología y Biodiversidad",
+                "Biología Humana",
+                "Salud Humana",
+                "Psicología Educacional",
+                "Educación para la Diversidad",
+                "Gestión y Evaluación de los Aprendizajes",
+                "Formación Práctica Profesional III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Química Biológica",
+                "Genética",
+                "Educación Ambiental",
+                "UDJE Formación Complementaria Específica",
+                "UDJE Historia y Patrimonio de Mendoza",
+                "Educación y Tecnologías Digitales",
+                "Educación Sexual Integral",
+                "Formación Práctica Profesional IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1206,
+          "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "turno": "Turno tarde o vespertino",
+          "modalidad": "Presencial",
+          "facultad": "IES Tomás Godoy Cruz",
+          "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-matematica/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Álgebra I",
+                "Cálculo I",
+                "Geometría I",
+                "Geometría Analítica",
+                "Promoción de la Salud",
+                "Historia Política, Social, Económica y Cultural de América Latina",
+                "Prácticas de Lectura, Escritura y Oralidad",
+                "Tecnologías de la Comunicación y la Información",
+                "Pedagogía",
+                "Didáctica General",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Álgebra II",
+                "Cálculo II",
+                "Geometría II",
+                "Probabilidad y Estadística I",
+                "Didáctica de la Matemática I",
+                "Psicología Educacional",
+                "Sujetos de la Educación",
+                "Historia y Política de la Educación Argentina",
+                "Instituciones Educativas",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Historia de la Matemática",
+                "Las TIC en la Enseñanza de la Matemática",
+                "Geometría III",
+                "Probabilidad y Estadística II",
+                "Didáctica de la Matemática II",
+                "Álgebra III",
+                "Física I",
+                "UDI - CFE",
+                "Epistemología de la Matemática",
+                "Filosofía",
+                "UDI - CFG",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Cálculo III",
+                "Cálculo Numérico",
+                "UDI - CFE",
+                "Modelos Matemática",
+                "Matemática Aplicada",
+                "Física II",
+                "Sociología de la Educación",
+                "UDI - CFG",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1207,
+          "nombre_carrera": "Profesorado de Educación Secundaria en Física",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "turno": "Turno vespertino",
+          "modalidad": "Presencial",
+          "facultad": "IES Tomás Godoy Cruz",
+          "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-fisica/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Física I",
+                "Álgebra y Geometría Analítica",
+                "Laboratorio de Física",
+                "Química I",
+                "Cálculo I",
+                "Pedagogía",
+                "Comprensión y Producción de Textos Académicos",
+                "Formación Práctica Profesional I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Física II",
+                "Cálculo II",
+                "Didáctica de la Física I",
+                "Historia de la Física",
+                "Sujeto de la Educación",
+                "Formación Complementaria Específica",
+                "Oscilaciones y Ondas Mecánicas",
+                "Didáctica General",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Formación Práctica Profesional II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Física III",
+                "Probabilidad y Estadística",
+                "Didáctica de la Física II",
+                "Cálculo III",
+                "Química II",
+                "Óptica",
+                "Física Experimental",
+                "Educación para la Diversidad",
+                "Gestión y Evaluación de los Aprendizajes",
+                "Formación Práctica Profesional III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Física IV",
+                "Fisicoquímica",
+                "Fundamentos de Astronomía",
+                "Mecánica Analítica",
+                "Epistemología de la Física",
+                "UDJE Historia y Patrimonio de Mendoza",
+                "Educación y Tecnologías Digitales",
+                "Educación Sexual Integral",
+                "Formación Práctica Profesional IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1208,
+          "nombre_carrera": "Profesorado de Educación Secundaria en Química",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "turno": "Turno vespertino",
+          "modalidad": "Presencial",
+          "facultad": "IES Tomás Godoy Cruz",
+          "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-quimica/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Biología General",
+                "Química General",
+                "Matemática",
+                "Bioestadística",
+                "Sujeto de la Educación",
+                "Pedagogía",
+                "Comprensión y Producción de Textos Académicos",
+                "Formación Práctica Profesional I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Química Orgánica",
+                "Química Inorgánica",
+                "Física General",
+                "Ciencias de la Tierra",
+                "Ecología",
+                "Didáctica General",
+                "Didáctica de las Ciencias Naturales",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Formación Práctica Profesional II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Química Biológica I",
+                "Química Biológica II",
+                "Fisicoquímica",
+                "Química Analítica General",
+                "Didáctica de la Química",
+                "Psicología Educacional",
+                "Educación para la Diversidad",
+                "Gestión y Evaluación de los Aprendizajes",
+                "Formación Práctica Profesional III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Química Analítica Instrumental",
+                "UDJE Formación Complementaria Específica",
+                "Química Ambiental y de Salud",
+                "Química de los Alimentos",
+                "UDJE Historia y Patrimonio de Mendoza",
+                "Educación y Tecnologías Digitales",
+                "Educación Sexual Integral",
+                "Formación Práctica Profesional IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1209,
+          "nombre_carrera": "Profesorado de Educación Secundaria en Lengua y Literatura",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "turno": "A confirmar",
+          "modalidad": "Presencial",
+          "facultad": "IES Tomás Godoy Cruz",
+          "link_oficial": "https://institutotomasgodoycruz.com/profesorado-de-educacion-secundaria-en-lengua-y-literatura/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Pedagogía",
+                "Sistema Educativo",
+                "Comprensión y Producción de Textos Académicos",
+                "Literatura Universal I",
+                "Literatura y Cultura Grecolatina",
+                "Morfología y Semántica Léxica",
+                "Fundamentos de la Lengua",
+                "Fundamentos de la Literatura",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Instituciones Educativas",
+                "Didáctica",
+                "Sujeto de la Educación",
+                "Psicología Educacional",
+                "Literatura Universal II",
+                "Literatura Latinoamericana I",
+                "Sintaxis y Semántica Proposicional",
+                "Fonética, Fonología y Grafemática",
+                "Lingüística del Texto y Análisis del Discurso I",
+                "Literatura Española",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyectos de Intervención Estratégica",
+                "Educación en la Diversidad",
+                "Literatura Argentina I",
+                "Literatura Latinoamericana II",
+                "Alfabetización",
+                "Lingüística del Texto y Análisis del Discurso II",
+                "Didáctica de la Lengua",
+                "Didáctica de la Literatura",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación y Tecnologías Digitales",
+                "Educación Sexual Integral",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "UDJE Formación Complementaria General",
+                "UDJE Formación Complementaria Específica",
+                "Literatura Argentina II",
+                "Teoría y Crítica Literaria",
+                "Filología",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1210,
+          "nombre_carrera": "Tecnicatura en Producción Artística y Artesanal",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "turno": "Turno vespertino",
+          "modalidad": "Presencial",
+          "facultad": "IES Tomás Godoy Cruz",
+          "link_oficial": "https://institutotomasgodoycruz.com/tecnicatura-en-produccion-artistica-y-artesanal/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Historia del Arte I",
+                "Técnicas Bidimensionales I",
+                "Técnicas Tridimensionales I",
+                "Dibujo y Diseño Proyectual I",
+                "Tecnología de la Información y Comunicación",
+                "Lenguaje Visual",
+                "Técnicas y Prácticas Cerámicas I",
+                "Comunicación, Comprensión y Producción de Textos",
+                "Tecnología de los Materiales",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Historia del Arte II",
+                "Técnicas Bidimensionales II",
+                "Técnicas Tridimensionales II",
+                "Dibujo y Diseño Proyectual II",
+                "Tecnología Aplicada",
+                "Inglés",
+                "Técnicas y Prácticas Cerámicas II",
+                "Diseño Cerámico",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Diseño de Productos",
+                "Estructura de Costos",
+                "Elaboración y Evaluación de Proyectos Productivos",
+                "Marketing",
+                "Cerámica",
+                "Vitrofusión",
+                "Esmaltado en Metales",
+                "Patrimonio, Conservación y Restauración",
+                "Problemática Sociocultural y el Contexto",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ]
+        }
+      ],
+      "departamento": "Capital"
     }
-   ],
-   "departamento": "Capital"
-  }
- ]
+  ]
 }

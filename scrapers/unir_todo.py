@@ -22,6 +22,8 @@ DIR_DATOS = Path(__file__).resolve().parents[1] / "data"
 ARCHIVOS_SIMPLES = [
     ("utn.json", "✅ Datos de la UTN cargados al chasis.", "⚠️ Faltan los datos de la UTN. Corré scraper_utn.py primero."),
     ("uncuyo.json", "✅ Datos de la UNCuyo cargados al chasis.", "⚠️ Faltan los datos de la UNCuyo. Corré scraper_uncuyo.py primero."),
+    ("itu.json", "✅ Datos del ITU (UNCuyo) cargados al chasis.", "⚠️ Faltan los datos del ITU. Corré el script correspondiente primero."),
+    ("fca.json", "✅ Datos de la Facultad de Ciencias Agrarias (UNCuyo) cargados al chasis.", "⚠️ Faltan los datos de Cs. Agrarias. Corré el script correspondiente primero."),
     ("um.json", "✅ Datos de la UM cargados al chasis.", "⚠️ Faltan los datos de la UM. Corré scraper_um.py primero."),
     ("umaza.json", "✅ Datos de la UMaza cargados al chasis.", "⚠️ Faltan los datos de la UMaza. Corré scraper_umaza.py primero."),
     ("ucongreso.json", "✅ Datos de la U. de Congreso cargados al chasis.", "⚠️ Faltan los datos de la U. de Congreso. Corré scraper_ucongreso.py primero."),
@@ -59,7 +61,6 @@ ARCHIVOS_SIMPLES = [
     ("rayuela.json", "✅ Datos de Fundación Rayuela cargados al chasis.", "⚠️ Faltan los datos de Rayuela. Corré scraper_rayuela.py primero."),
     ("intercultural.json", "✅ Datos de Intercultural cargados al chasis.", "⚠️ Faltan los datos de Intercultural. Corré scraper_intercultural.py primero."),
     ("chopin.json", "✅ Datos del Instituto de Arte Chopin cargados al chasis.", "⚠️ Faltan los datos de Chopin. Corré scraper_chopin.py primero."),
-    ("imei.json", "✅ Datos del Instituto IMEI cargados al chasis.", "⚠️ Faltan los datos del IMEI. Corré scraper_imei.py primero."),
     ("trinidad.json", "✅ Datos del Instituto Santísima Trinidad cargados al chasis.", "⚠️ Faltan los datos del Santísima Trinidad. Corré scraper_trinidad.py primero."),
     ("epd.json", "✅ Datos de la EPD cargados al chasis.", "⚠️ Faltan los datos de la EPD. Corré scraper_epd.py primero."),
     ("psicosocial.json", "✅ Datos de la Escuela de Psicología Social cargados al chasis.", "⚠️ Faltan los datos de Psicología Social. Corré scraper_psicosocial.py primero."),

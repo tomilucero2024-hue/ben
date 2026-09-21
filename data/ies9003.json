@@ -1,69 +1,303 @@
 {
- "instituciones": [
-  {
-   "id": 13,
-   "nombre": "IES 9-003 Normal (San Rafael)",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "0260-4422262",
-    "email": "ens9003@gmail.com",
-    "direccion": "Julio Silva y Barcala, San Rafael"
-   },
-   "carreras": [
-    {
-     "id": 1300,
-     "nombre_carrera": "Profesorado de Educación Primaria",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años modalidad combinada (50% virtual-50% presencial)",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-003 Normal (San Rafael)",
-     "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
-    },
-    {
-     "id": 1301,
-     "nombre_carrera": "Profesorado de Educación Inicial",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años modalidad combinada (50% virtual-50%presencial)",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-003 Normal (San Rafael)",
-     "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/profesorado-de-nivel-inicial/"
-    },
-    {
-     "id": 1302,
-     "nombre_carrera": "Profesorado de Educación Especial",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años modalidad combinada (50% virtual-50%presencial)",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-003 Normal (San Rafael)",
-     "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/"
-    },
-    {
-     "id": 1303,
-     "nombre_carrera": "Tecnicatura Superior en Acompañamiento Terapéutico",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años modalidad combinada (50% virtual-50%presencial)",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-003 Normal (San Rafael)",
-     "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/"
-    },
-    {
-     "id": 1304,
-     "nombre_carrera": "Tecnicatura Superior en Comunicación Digital Convergente",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años modalidad Distancia (100% presencial)",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-003 Normal (San Rafael)",
-     "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico-2/"
-    }
-   ],
-   "departamento": "San Rafael"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 13,
+            "nombre": "IES 9-003 Normal (San Rafael)",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "0260-4422262",
+                "email": "ens9003@gmail.com",
+                "direccion": "Julio Silva y Barcala, San Rafael"
+            },
+            "carreras": [
+                {
+                    "id": 1300,
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años modalidad combinada (50% virtual-50% presencial)",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-003 Normal (San Rafael)",
+                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "El aprendizaje en la Contextos de y para el La enseñanza en la Contextos de y para el",
+                                "Campo de la Formación Docente",
+                                "escuela secundaria aprendizaje en la escuela secundaria aprendizaje en la",
+                                "técnica (103) escuela secundaria técnica II (64) escuela secundaria",
+                                "La enseñanza en la técnica I (103) técnica II",
+                                "Específica Escuela Secundaria",
+                                "N07",
+                                "TRAYECTO FORMATIVO COMPLETO",
+                                "Técnica I",
+                                "N03",
+                                "Adolescencias y N10 N13",
+                                "N01 educación secundaria",
+                                "técnica",
+                                "N08",
+                                "Campo de Formación técnica",
+                                "comprensión de textos I comprensión de textos II (84)",
+                                "(90)",
+                                "específica",
+                                "N02 N04 N09 N11 N14 N16",
+                                "N06 Actualización Científico Tecnológica*4",
+                                "Práctica I Práctica II Práctica III Residencia",
+                                "Práctica Docente",
+                                "(52) (72) (96)",
+                                "N17",
+                                "Campo de",
+                                "N05 N12 N15 Reflexión sobre la",
+                                "problematización de la",
+                                "práctica (58) N18",
+                                "disponibilidad de Espacios Formativos acordes al Título de Base"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9003-infd.mendoza.edu.ar/sitio/wp-content/uploads/2024/03/plan-de-estudios.pdf"
+                },
+                {
+                    "id": 1301,
+                    "nombre_carrera": "Profesorado de Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años modalidad combinada (50% virtual-50%presencial)",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-003 Normal (San Rafael)",
+                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/profesorado-de-nivel-inicial/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo (Anual)",
+                                "Comprensión y Producción de Textos Académicos (Anual)",
+                                "Centralidad del Juego",
+                                "Lenguajes Artísticos Expresivos - Teatro (Anual)",
+                                "Lenguajes Artísticos Expresivos - Música (Anual)",
+                                "PPD I (Anual)",
+                                "Pedagogía",
+                                "Juego y Producción de Objetos Lúdicos"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Didáctica",
+                                "Instituciones Educativas",
+                                "Prácticas Lingüísticas en Educación Inicial (Anual)",
+                                "Lenguajes Artísticos Expresivos - Artes Visuales (Anual)",
+                                "Educación Matemática Temprana e Inicial I (Anual)",
+                                "Sujetos de la Educación (Anual)",
+                                "PPD II (Anual)",
+                                "Psicología Educacional",
+                                "Educación y Atención Temprana al Desarrollo Infantil",
+                                "Didáctica de Jardín Maternal"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Literatura Infantil",
+                                "Didáctica de Jardín de Infantes",
+                                "Alfabetización Temprana e Inicial (Anual)",
+                                "Didáctica del Ambiente Natural (Anual)",
+                                "Didáctica del Ambiente Social (Anual)",
+                                "Motricidad en Jardín Maternal y en Jardín de Infantes (Anual)",
+                                "PPD III (Anual)",
+                                "Proyectos de Intervención Socioeducativa",
+                                "Educación en la Diversidad",
+                                "Educación Matemática Inicial II"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "ESI",
+                                "Educación y Tecnologías Digitales",
+                                "Problemáticas de la Educación Inicial",
+                                "Salud y Cultura del Cuidado",
+                                "PPD IV (Anual)",
+                                "Historia y Patrimonio Cultural de Mendoza",
+                                "Formación Complementaria General",
+                                "Formación Complementaria Específica",
+                                "Formación Ética y Ciudadana y su Didáctica"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 1302,
+                    "nombre_carrera": "Profesorado de Educación Especial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años modalidad combinada (50% virtual-50%presencial)",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-003 Normal (San Rafael)",
+                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pedagogía (F01) Historia política social cultural y económica de América Latina (F04)",
+                                "Didáctica general (F02) Psicología Educativa (F05)",
+                                "Promoción de la salud (F03) Expresión artística (F06)",
+                                "F07 - Tecnologías de la información y la comunicación",
+                                "F08 - Prácticas de lectura escritura y oralidad",
+                                "F09 - Sujetos de la educación especial",
+                                "F10 - Bases neurofisiológicas del desarrollo",
+                                "F11 - Práctica profesional docente I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "F12 - Historia y política de la educación argentina F14 - Sociología de la educación",
+                                "F13 - Problemáticas de la subjetividad y la discapacidad F15 - Instituciones educativas",
+                                "F16 - Didáctica de la educación especial",
+                                "F17 - Trastornos del desarrollo en sujetos con discapacidad intelectual",
+                                "F18 - Matemática y su didáctica",
+                                "F19 - Lengua y su didáctica",
+                                "F20 - Tecnología y su didáctica",
+                                "F21 - Música y su didáctica",
+                                "F22 - Práctica profesional docente II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "F23 - Filosofía F26 - Educación temprana",
+                                "F25 - Alfabetización F28 - Formación ética y ciudadana",
+                                "F29 - Ciencias sociales y su didáctica",
+                                "F30 - Ciencias naturales y su didáctica",
+                                "F31 - Literatura y su didáctica",
+                                "F32 - Artes visuales y su didáctica",
+                                "F33 - Práctica profesioinal docente III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "F34 - Trastornos motores F38 - Perspectiva Social: Transición y la Vida Adulta",
+                                "Problemáticas de la Evaluación en la Educación Especial (F35) F39 - Multidiscapacidad",
+                                "F36 - UDI CFE Barreras Comunicacionales F40 - UDI CFE Adaptaciones Curriculares",
+                                "F37 - UDI CFG Intervenciones Lúdicas F41 - UDI CFG Protocolo y Legislación Educativa",
+                                "F42 - Problemáticas Contemporáneas de la Educación Especial",
+                                "F43 - Práctica Profesional Docente IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9003-infd.mendoza.edu.ar/sitio/wp-content/uploads/sitio/PEE_plan_de_estudios.pdf"
+                },
+                {
+                    "id": 1303,
+                    "nombre_carrera": "Tecnicatura Superior en Acompañamiento Terapéutico",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años modalidad combinada (50% virtual-50%presencial)",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-003 Normal (San Rafael)",
+                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "ANTROPOLOGÍA SOCIOCULTURAL Y SALUD",
+                                "PSICOLOGÍA GENERAL Y DE LA PERSONALIDAD",
+                                "ENTORNOS VIRTUALES DE LA SALUD Y HERRAMIENTAS DIGITALES",
+                                "COMUNICACIÓN EN SALUD",
+                                "SALUD PÚBLICA Y COMUNIDAD",
+                                "PRIMEROS AUXILIOS",
+                                "FUNDAMENTOS DEL ACOMPAÑAMIENTO TERAPÉUTICO",
+                                "ANATOMÍA DEL CUERPO HUMANO",
+                                "BASES NEUROPSICOLÓGICAS DEL DESARROLLO",
+                                "PRÁCTICA PROFESIONALIZANTE I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "PSICOLOGÍA DEL DESARROLLO",
+                                "PSICOLOGÍA SOCIAL Y DE GRUPOS",
+                                "ESTRATEGIAS DE RECREACIÓN Y HABILIDADES PARA LA VIDA",
+                                "ASPECTOS GENERALES DE FARMACOLOGÍA APLICADA",
+                                "INVESTIGACIÓN EN SALUD",
+                                "EDUCACIÓN PARA LA SALUD",
+                                "ACOMPAÑAMIENTO TERAPÉUTICO EN NIÑEZ Y ADOLESCENCIA",
+                                "ACOMPAÑAMIENTO TERAPÉUTICO EN ADULTOS Y ADULTOS MAYORES",
+                                "PRÁCTICA PROFESIONALIZANTE II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "INGLÉS TÉCNICO",
+                                "ÉTICA Y LEGISLACIÓN EN ACOMPAÑAMIENTO TERAPÉUTICO",
+                                "GESTIÓN DEL TRABAJO Y AUTOCUIDADO",
+                                "SALUD MENTAL Y ADICCIONES",
+                                "ACOMPAÑAMIENTO TERAPÉUTICO EN SALUD MENTAL",
+                                "ACOMPAÑAMIENTO TERAPÉUTICO EN DIVERSOS CONTEXTOS",
+                                "ACOMPAÑAMIENTO TERAPÉUTICO EN LA DISCAPACIDAD",
+                                "PRÁCTICA PROFESIONALIZANTE III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9003-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/"
+                },
+                {
+                    "id": 1304,
+                    "nombre_carrera": "Tecnicatura Superior en Comunicación Digital Convergente",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años modalidad Distancia (100% presencial)",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-003 Normal (San Rafael)",
+                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico-2/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Alfabetización Académica",
+                                "Introducción a la gestión de contenidos digitales",
+                                "Tecnologías Digitales Multimediales",
+                                "Teorías y enfoques de la Comunicación",
+                                "Procesos Culturales Digitales",
+                                "Cultura y expresiones artísticas en la era de la convergencia digital",
+                                "Inglés Técnico",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Comprensión y Producción de Textos Periodísticos",
+                                "Narrativas y Audiencias Transmediales",
+                                "Planificación y Gestión de Medios Digitales",
+                                "Lenguaje digital y redes sociales",
+                                "Periodismo Digital",
+                                "Periodismo de Datos",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Marketing Digital Integral: Social Media, Publicidad y Propaganda",
+                                "Ciudadanía Digital Responsable: Ética, Derecho y Seguridad en la Red",
+                                "Taller de producción y edición de contenidos y narrativas gráficas",
+                                "Taller de producción y edición de contenidos y narrativas audiovisuales",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ens9003-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico-2/"
+                }
+            ],
+            "departamento": "San Rafael"
+        }
+    ]
 }

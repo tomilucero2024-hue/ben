@@ -107,6 +107,153 @@ plataformas_online = [
         "modalidad": "100% Online, autogestionado",
         "oferta": "Alfabetización digital, marketing, trabajos rurales, atención al público, drones",
         "duracion": "Variable según curso"
+    },
+    # --- Plataformas nacionales / LatAm ---
+    {
+        "institucion": "Platzi",
+        "modalidad": "100% Online, a tu ritmo (suscripción)",
+        "oferta": "Programación, IA, Data, Diseño, Marketing e Inglés",
+        "duracion": "Variable (rutas de aprendizaje)"
+    },
+    {
+        "institucion": "Domestika",
+        "modalidad": "100% Online, a tu ritmo",
+        "oferta": "Creatividad: ilustración, diseño, fotografía, IA y artesanía",
+        "duracion": "Cursos de pocas semanas"
+    },
+    {
+        "institucion": "Crehana",
+        "modalidad": "100% Online, a tu ritmo",
+        "oferta": "Diseño, marketing, negocios, audiovisual y fotografía",
+        "duracion": "Cursos y academias (rutas)"
+    },
+    {
+        "institucion": "Open English",
+        "modalidad": "100% Online en vivo (clases 24/7)",
+        "oferta": "Inglés con profesores nativos y preparación TOEFL/IELTS/TOEIC",
+        "duracion": "Según nivel"
+    },
+    {
+        "institucion": "Capacitarte",
+        "modalidad": "100% Online",
+        "oferta": "Cursos cortos y carreras en administración, salud, tecnología y oficios",
+        "duracion": "De semanas a 2 años"
+    },
+    {
+        "institucion": "Centro de e-Learning UTN BA",
+        "modalidad": "100% Online (en vivo o autogestionado)",
+        "oferta": "Cursos, diplomaturas y carreras con certificado oficial UTN",
+        "duracion": "De semanas a 3 años"
+    },
+    {
+        "institucion": "Google Actívate (Crece con Google)",
+        "modalidad": "100% Online, a tu ritmo",
+        "oferta": "Marketing digital, datos, IA, programación y empleabilidad",
+        "duracion": "Cursos cortos y certificados (3 a 6 meses)"
+    },
+    {
+        "institucion": "Fundación Telefónica - Conecta Empleo",
+        "modalidad": "100% Online, autogestionado",
+        "oferta": "Programación, marketing digital, analítica web y habilidades digitales",
+        "duracion": "Cursos cortos"
+    },
+    # --- Plataformas internacionales gratuitas (con certificado) ---
+    {
+        "institucion": "Coursera",
+        "modalidad": "100% Online, a tu ritmo",
+        "oferta": "Cursos y certificados de universidades y empresas (Google, IBM, Meta)",
+        "duracion": "De semanas a meses"
+    },
+    {
+        "institucion": "edX",
+        "modalidad": "100% Online, a tu ritmo (auditoría gratuita)",
+        "oferta": "Cursos de Harvard, MIT y otras universidades; MicroMasters",
+        "duracion": "De semanas a meses"
+    },
+    {
+        "institucion": "freeCodeCamp",
+        "modalidad": "100% Online, autoguiado y gratuito",
+        "oferta": "Programación web, Python, data y ciberseguridad; certificaciones gratuitas",
+        "duracion": "A tu ritmo (100% gratis)"
+    },
+    {
+        "institucion": "Khan Academy (español)",
+        "modalidad": "100% Online, autoguiado y gratuito",
+        "oferta": "Matemática, ciencias, programación y preparación académica",
+        "duracion": "A tu ritmo (100% gratis)"
+    },
+    {
+        "institucion": "IBM SkillsBuild",
+        "modalidad": "100% Online, autoguiado y gratuito",
+        "oferta": "IA, ciberseguridad, datos y habilidades profesionales; certificados IBM",
+        "duracion": "Cursos cortos (100% gratis)"
+    },
+    {
+        "institucion": "Cisco Networking Academy",
+        "modalidad": "100% Online, autoguiado y gratuito",
+        "oferta": "Redes, ciberseguridad, Python e IoT; certificaciones Cisco",
+        "duracion": "Cursos cortos (100% gratis)"
+    },
+    {
+        "institucion": "AWS Skill Builder",
+        "modalidad": "100% Online, autoasistido",
+        "oferta": "Cloud, IA y data con rutas de preparación para certificaciones AWS",
+        "duracion": "Variable según ruta"
+    },
+    {
+        "institucion": "Google Cloud Skills Boost",
+        "modalidad": "100% Online, a tu ritmo",
+        "oferta": "Google Cloud, IA y data; skill badges y certificaciones",
+        "duracion": "Variable según ruta"
+    },
+    {
+        "institucion": "MIT OpenCourseWare",
+        "modalidad": "100% Online, autoguiado y gratuito",
+        "oferta": "Cursos universitarios del MIT (ciencias, ingeniería y computación)",
+        "duracion": "A tu ritmo (100% gratis)"
+    },
+    {
+        "institucion": "OpenLearn (Open University)",
+        "modalidad": "100% Online, autoguiado y gratuito",
+        "oferta": "Cursos universitarios del Reino Unido en múltiples áreas",
+        "duracion": "De horas a semanas (100% gratis)"
+    },
+    # --- Plataformas internacionales de pago ---
+    {
+        "institucion": "Udemy",
+        "modalidad": "100% Online, a tu ritmo (compra por curso)",
+        "oferta": "Más de 200.000 cursos de todas las áreas",
+        "duracion": "A tu ritmo (acceso de por vida)"
+    },
+    {
+        "institucion": "Udacity",
+        "modalidad": "100% Online, a tu ritmo (suscripción)",
+        "oferta": "Nanodegrees de IA, data y cloud con proyectos revisados",
+        "duracion": "De 3 a 6 meses"
+    },
+    {
+        "institucion": "FutureLearn",
+        "modalidad": "100% Online, a tu ritmo",
+        "oferta": "Cursos y microcredenciales de universidades del Reino Unido",
+        "duracion": "De semanas a meses"
+    },
+    {
+        "institucion": "Codecademy",
+        "modalidad": "100% Online, interactivo",
+        "oferta": "Programación, data y ciberseguridad con práctica en el navegador",
+        "duracion": "A tu ritmo (suscripción)"
+    },
+    {
+        "institucion": "DataCamp",
+        "modalidad": "100% Online, interactivo",
+        "oferta": "Data science, Python, R, SQL y analítica",
+        "duracion": "A tu ritmo (suscripción)"
+    },
+    {
+        "institucion": "LinkedIn Learning",
+        "modalidad": "100% Online, a tu ritmo",
+        "oferta": "Tecnología, negocios y habilidades blandas con certificados",
+        "duracion": "Cursos cortos (suscripción)"
     }
 ]
 

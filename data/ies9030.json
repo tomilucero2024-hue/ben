@@ -1,119 +1,662 @@
 {
- "instituciones": [
-  {
-   "id": 34,
-   "nombre": "IES 9-030 (Instituto del Bicentenario)",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "A confirmar",
-    "email": "contacto@institutodelbicentenario.edu.ar",
-    "direccion": "Godoy Cruz, Mendoza"
-   },
-   "carreras": [
+  "instituciones": [
     {
-     "id": 3400,
-     "nombre_carrera": "Profesorado de Educacion Secundaria en Lengua y Literatura",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-030",
-     "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/"
-    },
-    {
-     "id": 3401,
-     "nombre_carrera": "Profesorado de Teatro",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-030",
-     "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-teatro/"
-    },
-    {
-     "id": 3402,
-     "nombre_carrera": "Profesorado de Educacion Secundaria en Historia",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-030",
-     "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/"
-    },
-    {
-     "id": 3403,
-     "nombre_carrera": "Profesorado de Educacion Especial",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-030",
-     "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/"
-    },
-    {
-     "id": 3404,
-     "nombre_carrera": "Profesorado de Artes Visuales",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-030",
-     "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/"
-    },
-    {
-     "id": 3405,
-     "nombre_carrera": "Profesorado de Educacion Primaria",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-030",
-     "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
-    },
-    {
-     "id": 3406,
-     "nombre_carrera": "Profesorado de Educacion Inicial",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-030",
-     "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/"
-    },
-    {
-     "id": 3407,
-     "nombre_carrera": "Profesorado de Ingles",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-030",
-     "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-ingles/"
-    },
-    {
-     "id": 3408,
-     "nombre_carrera": "Tecnicatura Construcciones",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-030",
-     "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/tecnicatura-construcciones/"
-    },
-    {
-     "id": 3409,
-     "nombre_carrera": "Tecnicatura Superior en Logistica",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-030",
-     "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-logistica/"
+      "id": 34,
+      "nombre": "IES 9-030 (Instituto del Bicentenario)",
+      "nivel": "terciario",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "A confirmar",
+        "email": "contacto@institutodelbicentenario.edu.ar",
+        "direccion": "Godoy Cruz, Mendoza"
+      },
+      "carreras": [
+        {
+          "id": 3400,
+          "nombre_carrera": "Profesorado de Educacion Secundaria en Lengua y Literatura",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-030",
+          "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "PENSAMIENTO FILOSÓFICO",
+                "SISTEMA EDUCATIVO",
+                "PEDAGOGÍA",
+                "COMPRENSIÓN Y PRODUCCIÓN DE TEXTOS ACADÉMICOS",
+                "LITERATURA UNIVERSAL I",
+                "MORFOLOGÍA Y SEMÁNTICA LÉXICA",
+                "LITERATURA Y CULTURA GRECOLATINA",
+                "FUNDAMENTOS DE LA LENGUA",
+                "FUNDAMENTOS DE LA LITERATURA"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "INSTITUCIONES EDUCATIVAS",
+                "DIDÁCTICA",
+                "PSICOLOGÍA EDUCACIONAL",
+                "SUJETOS DE LA EDUCACIÓN",
+                "LITERATURA ESPAÑOLA",
+                "SINTAXIS Y SEMÁNTICA PROPOSICIONAL",
+                "LINGÜÍSTICA DEL TEXTO Y ANÁLISIS DEL DISCURSO I",
+                "LITERATURA UNIVERSAL II",
+                "LITERATURA PARA JÓVENES",
+                "FONÉTICA, FONOLOGÍA Y GRAFEMÁTICA",
+                "LINGÜÍSTICA DEL TEXTO Y ANÁLISIS DEL DISCURSO II",
+                "LITERATURA LATINOAMERICANA I",
+                "PPD II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "GESTIÓN Y EVALUACIÓN DE LOS APRENDIZAJES",
+                "PROYECTOS DE INTERVENCIÓN SOCIOEDUCATIVA",
+                "EDUCACIÓN EN LA DIVERSIDAD",
+                "LITERATURA ARGENTINA I",
+                "LITERATURA LATINOAMERICANA II",
+                "PSICOLINGÜÍSTICA Y SOCIOLINGÜÍSTICA",
+                "DIDÁCTICA DE LA LENGUA",
+                "LITERATURA ARGENTINA II",
+                "ALFABETIZACIÓN",
+                "DIDÁCTICA DE LA LITERATURA"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "EDUCACIÓN SEXUAL INTEGRAL",
+                "EDUCACIÓN Y TECNOLOGÍAS DIGITALES",
+                "HISTORIA Y PATRIMONIO CULTURAL DE MENDOZA",
+                "FILOLOGÍA",
+                "LITERATURA ARGENTINA III",
+                "TEORÍA Y CRÍTICA LITERARIAS",
+                "PPD IV",
+                "Unidades curriculares electivas de Formación Complementaria Específica"
+              ]
+            }
+          ],
+          "plan_fuente": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/"
+        },
+        {
+          "id": 3401,
+          "nombre_carrera": "Profesorado de Teatro",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-030",
+          "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-teatro/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "ACTUACIÓN I",
+                "TÉCNICAS VOCALES Y CORPORALES I",
+                "ESCENOGRAFÍA, VESTUARIO Y MAQUILLAJE",
+                "LENGUAJE Y ANÁLISIS DEL HECHO TEATRAL",
+                "PEDAGOGÍA",
+                "COMPRENSIÓN Y PRODUCCIÓN DE TEXTOS ACADÉMICOS",
+                "FORMACIÓN PRÁCTICA PROFESIONAL I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "ACTUACIÓN II",
+                "TÉCNICAS VOCALES Y CORPORALES II",
+                "PROYECTO ESCÉNICO MULTIMEDIAL I",
+                "HISTORIA DEL TEATRO I",
+                "SUJETO DEL APRENDIZAJE I",
+                "DIDÁCTICA ESPECÍFICA I",
+                "DIDÁCTICA GENERAL",
+                "PENSAMIENTO FILOSÓFICO",
+                "SISTEMA EDUCATIVO",
+                "FORMACIÓN PRÁCTICA PROFESIONAL II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "DRAMATURGIA Y GUIÓN",
+                "ACTUACIÓN III",
+                "TÉCNICAS VOCALES Y CORPORALES III",
+                "DIDÁCTICA ESPECÍFICA II",
+                "HISTORIA DEL TEATRO II",
+                "PSICOLOGÍA DE LA EDUCACIÓN"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "DIRECCIÓN Y PUESTA EN ESCENA",
+                "PRODUCCIÓN ARTÍSTICA CONTEMPORÁNEA",
+                "FORMACIÓN COMPLEMENTARIA ESPECÍFICA",
+                "DISEÑO Y GESTIÓN DE PROYECTOS TEATRALES",
+                "FORMACIÓN COMPLEMENTARIA GENERAL: Historia de los lenguajes",
+                "EDUCACIÓN Y TECNOLOGÍAS DIGITALES",
+                "EDUCACIÓN SEXUAL INTEGRAL"
+              ]
+            }
+          ],
+          "plan_fuente": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-teatro/"
+        },
+        {
+          "id": 3402,
+          "nombre_carrera": "Profesorado de Educacion Secundaria en Historia",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-030",
+          "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Introducción a la Historia y a la Geografía",
+                "Ciencias Políticas y Economía",
+                "Historia Universal I",
+                "PROCESOS DEMOGRÁFICOS EN EL TIEMPO Y EN ESPACIO",
+                "Pedagogía",
+                "Comprensión y Producción de Textos Académicos",
+                "Formación Práctica Profesional I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Sujeto de la Educación",
+                "Historia Argentina II",
+                "Historia Americana I",
+                "Historia Universal II",
+                "Didáctica General",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Formación Práctica profesional II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Didáctica de la Historia",
+                "Formación Ética y Ciudadana y su Didáctica",
+                "Historia y Geografía de Mendoza I",
+                "Historia y Geografía de Mendoza II",
+                "Historia Argentina III",
+                "Historia Americana II",
+                "Historia Universal III (siglo XV – siglo XVIII)",
+                "Educación en la diversidad",
+                "Gestión y Evaluación de los Aprendizajes",
+                "Psicología educacional",
+                "Formación Práctica Profesional III modalidades del sistema"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Historia del arte argentino",
+                "Investigación histórica",
+                "Arqueología",
+                "Formación Complementaria Específica",
+                "Historia Americana III (1960 a la actualidad)",
+                "Historia Universal IV",
+                "Proyecto de Intervención Socioeducativa",
+                "Formación Complementaria General",
+                "Educación y Tecnologías Digitales",
+                "Educación Sexual Integral",
+                "Formación Práctica Profesional IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/"
+        },
+        {
+          "id": 3403,
+          "nombre_carrera": "Profesorado de Educacion Especial",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-030",
+          "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Comprensión y Producción de Textos Académicos",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Pedagogía",
+                "Expresión Artística: Música",
+                "Neuropsicosociología del Desarrollo",
+                "Discapacidad Intelectual: características del desarrollo",
+                "Atención Temprana",
+                "Expresión Artística: Artes Visuales",
+                "Educación Especial Contemporánea",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Instituciones Educativas",
+                "Sujeto de la Educación I",
+                "Psicología Educacional",
+                "Abordaje Pedagógico Didáctico I",
+                "Psicomotricidad",
+                "Didáctica de la Matemática",
+                "Didáctica de la Lengua",
+                "Didáctica de la Literatura",
+                "Sujeto de la Educación II",
+                "Discapacidad Motora y Abordaje Pedagógico Didáctico",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyecto de Intervención Estratégica",
+                "Abordaje Pedagógico Didáctico II",
+                "Didáctica de las Ciencias Sociales",
+                "Discapacidad Múltiple y Abordaje Pedagógico Didáctico",
+                "Perspectiva Social, Transición a la Vida Adulta y Ocupación Laboral",
+                "Alfabetización",
+                "Didáctica de la Formación Ética y Ciudadana",
+                "Comunicación y Desarrollo del Lenguaje en Personas con",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación y Tecnologías Digitales",
+                "Educación Sexual Integral",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "UCE Formación complementaria General",
+                "Expresión Artística: Teatro",
+                "Práctica Profesional IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/"
+        },
+        {
+          "id": 3404,
+          "nombre_carrera": "Profesorado de Artes Visuales",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-030",
+          "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "DIBUJO I",
+                "BIDIMENSIÓN I",
+                "TRIDIMENSIÓN I",
+                "LENGUAJE DE LAS ARTES VISUALES I",
+                "HISTORIA DE LAS ARTES VISUALES I",
+                "PEDAGOGÍA",
+                "COMPRENSIÓN Y PRODUCCIÓN DE TEXTOS ACADÉMICOS",
+                "FORMACIÓN PRÁCTICA PROFESIONAL I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "DIBUJO II",
+                "TRIDIMENSIÓN II",
+                "LENGUAJE DE LAS ARTES VISUALES II",
+                "HISTORIA DE LAS ARTES VISUALES II",
+                "SUJETO DE LA EDUCACIÓN I",
+                "DIDÁCTICAS DE LAS ARTES VISUALES I",
+                "DIDÁCTICA GENERAL",
+                "PENSAMIENTO FILOSÓFICO",
+                "SISTEMA EDUCATIVO",
+                "FORMACIÓN PRÁCTICA PROFESIONAL II",
+                "SUJETO DE LA EDUCACIÓN II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "PRODUCCIÓN ARTÍSTICA I: BI DIMENSIÓN: GRABADO - PINTURA",
+                "PRODUCCIÓN ARTÍSTICA I. TRIDIMENSIÓN: ESCULTURA - CERÁMICA",
+                "HISTORIA DE LAS ARTES VISUALES III",
+                "DIBUJO III",
+                "LENGUAJE DE LAS ARTES VISUALES III",
+                "DIDÁCTICAS DE LAS ARTES VISUALES II",
+                "EDUCACIÓN EN LA DIVERSIDAD",
+                "GESTIÓN Y EVALUACIÓN DE LOS APRENDIZAJES",
+                "PSICOLOGÍA EDUCACIONAL",
+                "FORMACIÓN PRÁCTICA PROFESIONAL III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "PRODUCCIÓN ARTÍSTICA II: PINTURA – CERÁMICA – ESCULTURA – GRABADO – DIBUJO",
+                "ARTES VISUALES Y PRODUCCIÓN AUDIOVISUAL",
+                "HISTORIA DE LAS ARTES VISUALES IV",
+                "TEORÍA DEL ARTE",
+                "PRODUCCIÓN ARTÍSTICA CONTEMPORÁNEA",
+                "FORMACIÓN COMPLEMENTARIA ESPECÍFICA",
+                "EDUCACIÓN Y TECNOLOGÍAS DIGITALES",
+                "EDUCACIÓN SEXUAL INTEGRAL",
+                "FORMACIÓN PRÁCTICA PROFESIONAL IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/"
+        },
+        {
+          "id": 3405,
+          "nombre_carrera": "Profesorado de Educacion Primaria",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-030",
+          "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Comprensión y Producción de textos académicos",
+                "Sistema Educativo",
+                "Pedagogía",
+                "Numeración",
+                "Lengua y Literatura infantil y juvenil",
+                "Educación Artística",
+                "Práctica Profesional Docente I. Práctica docente vinculada con escenarios y contextos"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Psicología educacional",
+                "Instituciones Educativas",
+                "Sujetos de la educación",
+                "Números Racionales y su didáctica",
+                "Ciencias Naturales y su didáctica I",
+                "Lengua y su didáctica",
+                "Literatura infantil y juvenil y su didáctica",
+                "Espacio, Geometría y su didáctica",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los aprendizajes",
+                "Proyectos de Intervención Estratégica",
+                "Educación en la diversidad",
+                "Educación Tecnológica",
+                "Medida y su didáctica",
+                "Ciencias Naturales y su didáctica II",
+                "Alfabetización",
+                "Formación Ética y Ciudadana y su didáctica",
+                "Álgebra, Funciones y su didáctica",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación Sexual Integral",
+                "Educación con tecnologías digitales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Formación complementaria General",
+                "Didáctica de la Lengua y la Literatura infantil y juvenil",
+                "Didáctica de la Matemática",
+                "Didáctica de las Ciencias Sociales III",
+                "Didáctica de las Ciencias Naturales III",
+                "Formación complementaria Específica",
+                "Práctica Profesional Docente IV. Residencia docente"
+              ]
+            }
+          ],
+          "plan_fuente": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
+        },
+        {
+          "id": 3406,
+          "nombre_carrera": "Profesorado de Educacion Inicial",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-030",
+          "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Comprensión y Producción de Textos Académicos",
+                "Pedagogía",
+                "Centralidad del Juego",
+                "Juego y Producción de Objetos Lúdicos",
+                "Lenguajes Artísticos Expresivos - Teatro",
+                "Lenguajes Artísticos Expresivos - Música",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Instituciones Educativas",
+                "Psicología Educacional",
+                "Educación y Atención Temprana al Desarrollo Infantil",
+                "Didáctica de Jardín Maternal",
+                "Prácticas Lingüísticas en Educación Inicial",
+                "Lenguajes Artísticos Expresivos - Artes Visuales",
+                "Educación Matemática Temprana e Inicial I",
+                "Sujetos de la Educación",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyectos de Intervención Socioeducativa",
+                "Educación en la Diversidad",
+                "Literatura Infantil",
+                "Didáctica de Jardín de Infantes",
+                "Educación Matemática Inicial II",
+                "Alfabetización Temprana e Inicial",
+                "Didáctica del Ambiente Natural",
+                "Didáctica del Ambiente Social",
+                "Motricidad en JM y en JI",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "ESI",
+                "Educación y Tecnologías Digitales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Problemáticas de la Ed. Inicial",
+                "Formación Complementaria Específica",
+                "Salud y Cultura del Cuidado",
+                "Formación Ética y Ciudadana y su Didáctica",
+                "Práctica Profesional Docente IV",
+                "Formación Complementaria General"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3407,
+          "nombre_carrera": "Profesorado de Ingles",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-030",
+          "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-ingles/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "LENGUA INGLESA I",
+                "GRAMÁTICA INGLESA I",
+                "FONÉTICA Y FONOLOGÍA INGLESA I",
+                "PRÁCTICAS DE LENGUA INGLESA",
+                "COMPRENSIÓN Y PRODUCCIÓN DE TEXTOS ACADÉMICOS",
+                "PRÁCTICA PROFESIONAL DOCENTE I",
+                "PENSAMIENTO FILOSÓFICO",
+                "SISTEMA EDUCATIVO",
+                "PEDAGOGÍA",
+                "PRÁCTICAS DE GRAMÁTICA INGLESA"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "LENGUA INGLESA II",
+                "GRAMÁTICA INGLESA II",
+                "FONÉTICA Y FONOLOGÍA INGLESA II",
+                "DIDÁCTICA DEL INGLÉS I",
+                "PRÁCTICA PROFESIONAL DOCENTE II",
+                "SUJETOS DE LA EDUCACIÓN I",
+                "DIDÁCTICA",
+                "INSTITUCIONES EDUCATIVAS",
+                "PSICOLOGÍA EDUCACIONAL",
+                "SUJETOS DE LA EDUCACIÓN II",
+                "PRÁCTICAS DE FONÉTICA Y FONOLOGÍA INGLESA"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "LENGUA INGLESA III",
+                "GRAMÁTICA INGLESA III",
+                "FONÉTICA Y FONOLOGÍA INGLESA III",
+                "DIDÁCTICA DEL INGLÉS II",
+                "PRÁCTICA PROFESIONAL DOCENTE III",
+                "CULTURA Y LITERATURA BRITÁNICA I",
+                "GESTIÓN Y EVALUACIÓN DE LOS APRENDIZAJES",
+                "CULTURA Y LITERATURA BRITÁNICA II",
+                "PROYECTOS DE INTERVENCIÓN SOCIOEDUCATIVA",
+                "EDUCACIÓN EN LA DIVERSIDAD"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "LENGUA INGLESA IV",
+                "PRÁCTICA PROFESIONAL DOCENTE IV: Residencia Docente",
+                "FONÉTICA Y FONOLOGÍA INGLESA IV",
+                "CULTURA Y LITERATURA NORTEAMERICANA",
+                "EDUCACIÓN SEXUAL INTEGRAL",
+                "EDUCACIÓN Y TECNOLOGÍAS DIGITALES",
+                "HISTORIA Y PATRIMONIO CULTURAL DE MENDOZA",
+                "FORMACIÓN COMPLEMENTARIA GENERAL",
+                "UNIDAD DE DISEÑO JURISDICCIONAL ELECTIVA"
+              ]
+            }
+          ],
+          "plan_fuente": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-ingles/"
+        },
+        {
+          "id": 3408,
+          "nombre_carrera": "Tecnicatura Construcciones",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-030",
+          "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/tecnicatura-construcciones/",
+          "plan_estudio": [
+            {
+              "anio": "Plan de estudios",
+              "materias": [
+                "Plan no publicado en texto; verificar en la página oficial"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3409,
+          "nombre_carrera": "Tecnicatura Superior en Logistica",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-030",
+          "link_oficial": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-logistica/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Inglés I",
+                "Informática I",
+                "Administración de las Organizaciones",
+                "Matemática",
+                "Comprensión y Producción de Textos",
+                "Introducción a la Logística",
+                "Organización y Conducción Empresaria",
+                "Estadística",
+                "Geografía Económica",
+                "Transporte terrestre",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Inglés II",
+                "Informática II",
+                "Estructura de Costos",
+                "Embalajes y Logística Inversa",
+                "Transporte Aéreo",
+                "Almacenamiento",
+                "Compras",
+                "Distribución",
+                "Transporte Marítimo y Fluvial",
+                "Administración de inventarios",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Formulación y Evaluación de Proyectos",
+                "Marketing",
+                "Seguridad e Higiene Laboral",
+                "Logística Internacional",
+                "Ética Profesional",
+                "Electiva",
+                "Metodología de la Investigación",
+                "Gestión de la Calidad",
+                "Derecho Privado",
+                "Problemática Sociocultural y el Contexto",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-logistica/"
+        }
+      ],
+      "departamento": "Godoy Cruz"
     }
-   ],
-   "departamento": "Godoy Cruz"
-  }
- ]
+  ]
 }

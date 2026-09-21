@@ -1,109 +1,584 @@
 {
- "instituciones": [
-  {
-   "id": 31,
-   "nombre": "IES 9-024 (Lavalle)",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "A confirmar",
-    "email": "contacto@ies9024.edu.ar",
-    "direccion": "Lavalle, Mendoza"
-   },
-   "carreras": [
+  "instituciones": [
     {
-     "id": 3100,
-     "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-024 Lavalle",
-     "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual"
-    },
-    {
-     "id": 3101,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Lengua y Literatura",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-024 Lavalle",
-     "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura"
-    },
-    {
-     "id": 3102,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-024 Lavalle",
-     "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica"
-    },
-    {
-     "id": 3103,
-     "nombre_carrera": "Profesorado para la educación Secundaria de la modalidad Técnico Profesional, en concurrencia con el Título de Base",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-024 Lavalle",
-     "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-de-la-modalidad-tecnico-profesional-en-concurrencia-con-el-titulo-de-base/profesorado-de-educacion-secundaria-tecnica-en-incumbencia-con-el-titulo-de-base"
-    },
-    {
-     "id": 3104,
-     "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-024 Lavalle",
-     "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-analisis-y-programacion-de-sistemas"
-    },
-    {
-     "id": 3105,
-     "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-024 Lavalle",
-     "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-de-empresas"
-    },
-    {
-     "id": 3106,
-     "nombre_carrera": "Tecnicatura Superior en Turismo y Hotelería",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-024 Lavalle",
-     "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-turismo-y-hoteleria"
-    },
-    {
-     "id": 3107,
-     "nombre_carrera": "Tecnicatura Superior en Enología e Industrias Frutihortícolas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-024 Lavalle",
-     "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas"
-    },
-    {
-     "id": 3108,
-     "nombre_carrera": "Tecnicatura Superior en Higiene y Seguridad con Orientación en Calidad y Medio Ambiente",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-024 Lavalle",
-     "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente"
+      "id": 31,
+      "nombre": "IES 9-024 (Lavalle)",
+      "nivel": "terciario",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "A confirmar",
+        "email": "contacto@ies9024.edu.ar",
+        "direccion": "Lavalle, Mendoza"
+      },
+      "carreras": [
+        {
+          "id": 3100,
+          "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-024 Lavalle",
+          "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Comprensión y Producción de Textos Académicos",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Pedagogía",
+                "Expresión Artística: Música",
+                "Neuropsicosociología del Desarrollo",
+                "Discapacidad Intelectual: características del desarrollo",
+                "Atención Temprana",
+                "Expresión Artística: Artes Visuales",
+                "Educación Especial Contemporánea",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Instituciones Educativas",
+                "Sujeto de la Educación I",
+                "Psicología Educacional",
+                "Abordaje Pedagógico Didáctico I",
+                "Psicomotricidad",
+                "Didáctica de la Matemática",
+                "Didáctica de la Lengua",
+                "Didáctica de la Literatura",
+                "Didáctica de las Ciencias Naturales",
+                "Sujeto de la Educación II",
+                "Discapacidad Motora y Abordaje Pedagógico Didáctico",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyecto de Intervención Estratégica",
+                "Abordaje Pedagógico Didáctico II",
+                "Didáctica de las Ciencias Sociales",
+                "Discapacidad Múltiple y Abordaje Pedagógico Didáctico",
+                "Perspectiva Social, Transición a la Vida Adulta y Ocupación",
+                "Alfabetización",
+                "Didáctica de la Formación Ética y Ciudadana",
+                "Comunicación y Desarrollo del Lenguaje en Personas con Discapacidad",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación y Tecnologías Digitales",
+                "Educación Sexual Integral",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "UCE Formación complementaria General",
+                "Expresión Artística: Teatro",
+                "UCE Formación complementaria Específica",
+                "Práctica Profesional IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2024/10/2023_-ANEXO-Profesorado-de-Educacion-Especial-con-Orientacion-en-Discapacidad-Intelectual.pdf"
+        },
+        {
+          "id": 3101,
+          "nombre_carrera": "Profesorado de Educación Secundaria en Lengua y Literatura",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-024 Lavalle",
+          "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Sistema educativo",
+                "Pedagogía",
+                "Comprensión y Producción de Textos Académicos",
+                "Literatura Universal I",
+                "Morfología y Semántica Léxica",
+                "Literatura y Cultura Grecolatina",
+                "Fundamentos de la Lengua",
+                "Fundamentos de la Literatura",
+                "Práctica profesional docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Instituciones educativas",
+                "Didáctica",
+                "Psicología educacional",
+                "Sujetos de la educación",
+                "Literatura Española",
+                "Sintaxis y Semántica Proposicional",
+                "Lingüística del texto y Análisis del Discurso I",
+                "Literatura Universal II",
+                "Literatura para jóvenes",
+                "Fonética, Fonología y Grafemática",
+                "Lingüística del texto y Análisis del Discurso II",
+                "Literatura Latinoamericana I",
+                "Práctica profesional docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y evaluación de los aprendizajes",
+                "Proyectos de intervención socioeducativa",
+                "Educación en la diversidad",
+                "Literatura Argentina I",
+                "Literatura Latinoamericana II",
+                "Psicolingüística y Sociolingüística",
+                "Didáctica de la Lengua",
+                "Literatura Argentina II",
+                "Alfabetización",
+                "Didáctica de la Literatura",
+                "Práctica profesional docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación Sexual Integral",
+                "Educación y Tecnologías Digitales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Formación Complementaria General",
+                "Filología",
+                "Literatura Argentina III",
+                "Teoría y Crítica Literarias",
+                "Formación Complementaria específica",
+                "Práctica profesional docente IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2024/10/2023_-ANEXO-Profesorado-de-Educacion-Secundaria-en-Lengua-y-Literatura.pdf"
+        },
+        {
+          "id": 3102,
+          "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-024 Lavalle",
+          "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-matematica",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Comprensión y Producción de Textos Académicos",
+                "El Quehacer Matemático",
+                "Cálculo I",
+                "Álgebra I",
+                "Geometría I",
+                "Pedagogía",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Sujetos de la Educación",
+                "Cálculo II",
+                "Álgebra II",
+                "Geometría II",
+                "Didáctica de la Matemática I",
+                "Instituciones Educativas",
+                "Psicología Educacional",
+                "Didáctica de la Matemática II",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y evaluación de los aprendizajes",
+                "Proyectos de intervención socioeducativa",
+                "Probabilidad y Estadística I",
+                "Didáctica de la Matemática III",
+                "Historia de la Matemática",
+                "Geometría III",
+                "Física I",
+                "Educación y tecnologías digitales",
+                "Complemento de la Formación Específica (trayecto optativo: Cálculo numérico; Articulación de la enseñanza de la matemática entre primaria y secundaria; Trigonometría; Matemática financiera; Modelos matemáticos; Formas de razonamiento matemático; Juegos matemáticos; Introducción a la relatividad y Física cuántica; Enseñar y aprender matemática en la educación de adultos)",
+                "Didáctica de la Matemática IV",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Historia y patrimonio cultural de Mendoza",
+                "Educación en la diversidad",
+                "Cálculo III",
+                "Probabilidad y Estadística II",
+                "Física II",
+                "Educación Sexual Integral (ESI)",
+                "Complemento de la Formación General",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2024/10/2023_ANEXO-Profesorado-de-Educacion-Secundaria-en-Matematica.pdf"
+        },
+        {
+          "id": 3103,
+          "nombre_carrera": "Profesorado para la educación Secundaria de la modalidad Técnico Profesional, en concurrencia con el Título de Base",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-024 Lavalle",
+          "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-de-la-modalidad-tecnico-profesional-en-concurrencia-con-el-titulo-de-base/profesorado-de-educacion-secundaria-tecnica-en-incumbencia-con-el-titulo-de-base",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "La enseñanza en la Escuela Secundaria Técnica I",
+                "El aprendizaje en la escuela secundaria técnica",
+                "Competencias comunicacionales, comprensión de textos I",
+                "Competencias comunicacionales, comprensión de textos II",
+                "Actualización Científico - Tecnológica en concurrencia con el título",
+                "Práctica I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Contextos de y para la escuela secundaria técnica I",
+                "La enseñanza en la escuela secundaria técnica II",
+                "Condiciones del ejercicio profesional",
+                "Vinculación con el sector socio-productivo",
+                "Actualización Científico - Tecnológica en concurrencia con el título",
+                "Práctica II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Contextos de y para la escuela secundaria técnica II",
+                "Adolescencias y educación secundaria técnica",
+                "Producción de textos para la ETP secundaria",
+                "Uso didáctico de las TIC",
+                "Actualización Científico - Tecnológica en concurrencia con el título",
+                "Práctica III",
+                "Residencia",
+                "Reflexión sobre la problematización de la práctica"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2026/02/RESOL.-801-DGE-25-DGE-Plan-de-estudios-Profesorado-para-la-educacion-secundaria-de-la-modalidad-tecnico-profesionalANEXO.pdf"
+        },
+        {
+          "id": 3104,
+          "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-024 Lavalle",
+          "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-analisis-y-programacion-de-sistemas",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Programación I",
+                "Matemática Aplicada",
+                "Lógica Computacional",
+                "Inglés técnico I",
+                "Alfabetización académica",
+                "Seminario Nuevas Tecnologías",
+                "Arquitectura de Dispositivos",
+                "Sistemas Operativos I",
+                "Base de Datos I",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Programación II",
+                "Matemática Discreta",
+                "Análisis Matemático",
+                "Comunicación y Redes",
+                "Inglés técnico II",
+                "Modelado de Software",
+                "Sistemas Operativos II",
+                "Base de Datos II Práctica",
+                "Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Programación III Arquitectura y",
+                "Diseño de Interfaces: UI y UX",
+                "Auditoría y Calidad de Sistemas",
+                "Ciberseguridad",
+                "Inglés técnico III",
+                "Legislación Informática y Ética profesional",
+                "Estadística y Probabilidades para el Desarrollo de Software",
+                "Gestión de Proyectos de Software",
+                "Metodologías Ágiles",
+                "Base de Datos III Práctica",
+                "Profesionalizante III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2026/02/RS-2024-RESOL-2024-6079-E-GDEMZA-DGE-Plan-de-estudio-Tecnicatura-Superior-en-DSANEXO_I.pdf"
+        },
+        {
+          "id": 3105,
+          "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-024 Lavalle",
+          "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-de-empresas",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "INTRODUCCIÓN A LA ADMINISTRACIÓN DE EMPRESAS",
+                "INGLÉS TÉCNICO",
+                "COMUNICACIÓN EFECTIVA",
+                "HERRAMIENTAS DIGITALES PARA LA GESTIÓN",
+                "INTRODUCCIÓN A LA ECONOMÍA I",
+                "INTRODUCCIÓN A LA ECONOMÍA II",
+                "MATEMÁTICA APLICADA",
+                "ESTADÍSTICA Y ANÁLISIS DE DATOS",
+                "INTRODUCCIÓN A LA LEGISLACIÓN",
+                "DESARROLLO REGIONAL Y CONTEXTO LABORAL",
+                "PRÁCTICA PROFESIONALIZANTE I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "COMERCIALIZACIÓN",
+                "ESTRUCTURA DE COSTOS",
+                "FORMULACIÓN Y EVALUACIÓN DE PROYECTOS",
+                "ECONOMÍA DE LA EMPRESA",
+                "CÁLCULO FINANCIERO",
+                "GESTIÓN FINANCIERA",
+                "INTRODUCCIÓN A LA CONTABILIDAD",
+                "ANÁLISIS DE LA INFORMACIÓN CONTABLE",
+                "PRODUCTO Y SERVICIO",
+                "DERECHO COMERCIAL Y LABORAL",
+                "PRÁCTICA PROFESIONALIZANTE II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "LOGÍSTICA INTEGRAL",
+                "PRÁCTICA IMPOSITIVA Y LIQUIDACIÓN DE SUELDOS",
+                "ADMINISTRACIÓN DE PERSONAL",
+                "ÉTICA PROFESIONAL",
+                "CONTROL DE GESTIÓN",
+                "PRÁCTICA PROFESIONALIZANTE III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-de-empresas"
+        },
+        {
+          "id": 3106,
+          "nombre_carrera": "Tecnicatura Superior en Turismo y Hotelería",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-024 Lavalle",
+          "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-turismo-y-hoteleria",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Inglés I",
+                "Portugués I",
+                "Práctica Profesionalizante I",
+                "Geografía y Ambiente de Mendoza",
+                "Recursos Turísticos de Argentina",
+                "Introducción al Turismo y la Hotelería",
+                "Producción de Información Turística",
+                "Historia y Cultura de Mendoza",
+                "Comunicación Oral",
+                "Información Turística de Mendoza",
+                "Guiado y Coordinación",
+                "Gestión de Riesgos y Primeros Auxilios",
+                "Ética y Legislación Turística I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Inglés II",
+                "Portugués II",
+                "Práctica Profesionalizante II",
+                "Servicios de Hospedaje",
+                "Economía, Costos y Finanzas",
+                "Informática",
+                "Administración General",
+                "Gastronomía, Alimentos y Bebidas",
+                "Destinos, Circuitos y Productos Turísticos",
+                "Estadística Aplicada",
+                "Ética y Legislación Turística II",
+                "Gestión Pública del Turismo"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Inglés III",
+                "Portugués III",
+                "Formulación y Evaluación de Proyectos",
+                "Gestión de Empresas de Viajes",
+                "Electiva I: Turismo con Identidad",
+                "Electiva II: Turismo Sostenible",
+                "Recursos Humanos",
+                "Marketing Turístico",
+                "Organización de Eventos",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2026/03/Res.885-2026-Tecnicatura-en-Turismo-y-Hoteleria-IES-9024.pdf"
+        },
+        {
+          "id": 3107,
+          "nombre_carrera": "Tecnicatura Superior en Enología e Industrias Frutihortícolas",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-024 Lavalle",
+          "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "QUÍMICA GENERAL E INORGÁNICA",
+                "MATEMÁTICA",
+                "FÍSICA",
+                "HIGIENE Y SEGURIDAD",
+                "MICROBIOLOGÍA GENERAL",
+                "ALFABETIZACIÓN ACADÉMICA",
+                "QUÍMICA ORGÁNICA",
+                "PRODUCCIONES PRIMARIAS",
+                "INTRODUCCIÓN A LA VINIFICACIÓN E INDUSTRIALIZACIONES",
+                "ANÁLISIS SENSORIAL I",
+                "PRÁCTICA PROFESIONALIZANTE I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "QUÍMICA ANALÍTICA E INSTRUMENTAL",
+                "GESTIÓN DE CALIDAD",
+                "ESTADÍSTICA",
+                "BROMATOLOGÍA Y TOXICOLOGÍA",
+                "OPERACIONES UNITARIAS",
+                "QUÍMICA BIOLÓGICA",
+                "EMPRENDEDORISMO Y AGRONEGOCIOS",
+                "TECNOLOGÍA Y ANÁLISIS DE LOS PRODUCTOS OLEÍCOLAS",
+                "MICROBIOLOGÍA APLICADA",
+                "ANÁLISIS SENSORIAL II",
+                "VINIFICACIONES I",
+                "PRÁCTICA PROFESIONAL II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "TECNOLOGÍA Y ANÁLISIS DE LOS PRODUCTOS FRUTIHORTÍCOLAS",
+                "LEGISLACIÓN VITIVINÍCOLA Y ALIMENTARIA",
+                "ÉTICA PROFESIONAL",
+                "INGLÉS TÉCNICO",
+                "ANÁLISIS DE BEBIDAS VÍNICAS Y NO VÍNICAS",
+                "VINIFICACIONES ESPECIALES",
+                "VINIFICACIONES II",
+                "GESTIÓN DE EMPRENDIMIENTOS",
+                "DESARROLLO SOSTENIBLE",
+                "ANÁLISIS SENSORIAL III",
+                "PRÁCTICA PROFESIONAL III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2026/02/RS-2025-6286-GDEMZA-DGE-Aprobacion-Plan-de-Estudio-Tecnicatura-Superior-en-Enologia-e-Industrias-Frutihorticolasanexo.pdf"
+        },
+        {
+          "id": 3108,
+          "nombre_carrera": "Tecnicatura Superior en Higiene y Seguridad con Orientación en Calidad y Medio Ambiente",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-024 Lavalle",
+          "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Alfabetización Académica",
+                "Tecnologías Digitales Aplicadas",
+                "Física",
+                "Inglés Técnico",
+                "Representación Técnica de Planos",
+                "Higiene Laboral I",
+                "Seguridad Laboral I",
+                "Liderazgo y Habilidades Interpersonales",
+                "Introducción a la Prevención 4.0",
+                "Química",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Estadística Aplicada",
+                "Ambiente y Sostenibilidad",
+                "Derecho y Legislación Aplicada a la Higiene y Seguridad Laboral",
+                "Sistemas de Gestión",
+                "Medicina del Trabajo y Toxicología",
+                "Higiene Laboral II",
+                "Seguridad Laboral II",
+                "Gestión de Emprendimientos",
+                "Derecho Ambiental",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Evaluación de Impacto Ambiental",
+                "Seguridad contra Incendios",
+                "Ergonomía",
+                "Higiene y Seguridad en Minería y Petróleo",
+                "Higiene y Seguridad Agropecuaria",
+                "Higiene y Seguridad en la Industria de la Construcción",
+                "Higiene y Seguridad en Servicios TIC, Economía del Conocimiento e Industria 4.0",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente"
+        }
+      ],
+      "departamento": "Lavalle"
     }
-   ],
-   "departamento": "Lavalle"
-  }
- ]
+  ]
 }

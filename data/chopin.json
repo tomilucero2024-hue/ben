@@ -60,7 +60,46 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto de Arte Chopin",
-     "link_oficial": "https://arteschopin.edu.ar/tecnicatura-superior-en-danza/"
+     "link_oficial": "https://arteschopin.edu.ar/tecnicatura-superior-en-danza/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Danzas Argentinas I",
+        "Danza Contemporánea I",
+        "Danza Española I",
+        "Expresión Corporal",
+        "Tecnica Academica I",
+        "Audioperceptiva",
+        "Historia Universal del Arte y la Cultura",
+        "Práctica Profesionalizante I",
+        "Anatomia y Fisiologia Aplicada a la Danza",
+        "Prácticas de Lectura, Escritura y Oralidad",
+        "Tic",
+        "Práctica de Escritura y Oralidad",
+        "Problemática Sociocultural y del Conocimiento"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Coreografía y Creatividad",
+        "Danzas Argentinas II",
+        "Danza Contemporánea II",
+        "Danza Española II",
+        "Formulacion, Gestion y Evaluacion de Proyectos",
+        "Tecnica Academica II",
+        "Historia De La Danza",
+        "Práctica Profesionalizante II",
+        "Iluminación",
+        "Escenotecnia",
+        "Teatro",
+        "Maquillaje y Vestuario",
+        "Inglés"
+       ]
+      }
+     ],
+     "plan_fuente": "https://arteschopin.edu.ar/tecnicatura-superior-en-danza/"
     },
     {
      "id": 3910,
@@ -70,7 +109,47 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto de Arte Chopin",
-     "link_oficial": "https://arteschopin.edu.ar/tecnicatura-superior-en-direccion-coral/"
+     "link_oficial": "https://arteschopin.edu.ar/tecnicatura-superior-en-direccion-coral/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Lenguaje Musical I",
+        "Técnica Vocal I",
+        "Canto y Dirección Coral I",
+        "Expresión Corporal",
+        "Instrumento y Repertorio Coral I",
+        "Percepción y Producción Musical",
+        "Estética y Teoría Del Arte",
+        "Historia Universal del Arte",
+        "Práctica Profesionalizante I",
+        "Salud Vocal",
+        "Tic",
+        "Prácticas De Escritura y Oralidad",
+        "Problemática Socio Cultural y Del Trabajo"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Conjuntos Vocales e Instrumentales",
+        "Lenguaje Musical II",
+        "Armonía",
+        "Canto Y Dirección Coral II",
+        "Versiones Corales",
+        "Produccion y Gestion",
+        "Instrumento y Repertorio Coral II",
+        "Historia de la Música",
+        "Prácticas Profesionalizantes II",
+        "Lenguajes Artísticos",
+        "Técnica Vocal II",
+        "Psicología de los Grupos",
+        "Producción Artística Contemporánea",
+        "Inglés"
+       ]
+      }
+     ],
+     "plan_fuente": "https://arteschopin.edu.ar/tecnicatura-superior-en-direccion-coral/"
     },
     {
      "id": 3911,
@@ -80,7 +159,81 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto de Arte Chopin",
-     "link_oficial": "https://arteschopin.edu.ar/profesorado-en-musica/"
+     "link_oficial": "https://arteschopin.edu.ar/profesorado-en-musica/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Lenguaje Musical I",
+        "Canto Individual y Grupal I",
+        "Instrumento Armónico I",
+        "Fundamentos de la Percepción y la Producción Musical",
+        "UDI – CFE",
+        "Promoción de la Salud",
+        "Historia Universal del Arte y la Cultura",
+        "Prácticas de Lectura, Escritura y Oralidad",
+        "Tecnologías de la Comunicación y la Información",
+        "Pedagogía",
+        "Didáctica General",
+        "Práctica Profesional Docente I",
+        "Electivas"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Lenguaje Musical II",
+        "Canto Individual y Grupal II",
+        "Instrumento Armónico II",
+        "Historia de la Música I",
+        "Didáctica de la Música I",
+        "UDI – CFG",
+        "UDI – CFE",
+        "Psicología Educacional",
+        "Sujetos de la Educación I",
+        "Historia y Política de la Educación Argentina",
+        "Instituciones Educativas",
+        "Práctica Profesional Docente II",
+        "Electivas"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Lenguaje Musical III",
+        "Canto y Dirección Coral I",
+        "Instrumento Armónico III",
+        "Historia de la Música II",
+        "Didáctica de la Música II",
+        "Práctica de Conjuntos Vocales e Instrumentales",
+        "Sujetos de la Educación II",
+        "Arte y Nuevas Tecnologías",
+        "UDI – CFE",
+        "Sociología de la Educación",
+        "Práctica Profesional Docente III",
+        "Electivas"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Lenguaje Musical IV",
+        "Canto y Dirección Coral II",
+        "Instrumento Armónico IV",
+        "Lenguajes Artísticos",
+        "Producción Artística Contemporánea",
+        "Teoría del Arte",
+        "UDI – CFE",
+        "Arte y Nuevas Tecnologías",
+        "UDI – CFE",
+        "Didáctica de la Música III",
+        "UDI – CFG",
+        "Práctica Profesional Docente IV",
+        "Electivas"
+       ]
+      }
+     ],
+     "plan_fuente": "https://arteschopin.edu.ar/profesorado-en-musica/"
     },
     {
      "id": 3912,
@@ -90,7 +243,82 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto de Arte Chopin",
-     "link_oficial": "https://arteschopin.edu.ar/profesorado-en-danza/"
+     "link_oficial": "https://arteschopin.edu.ar/profesorado-en-danza/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Danzas Argentinas I",
+        "Expresión Corporal",
+        "Técnica Académica I",
+        "UDI – CFE",
+        "Anatomía y Fisiología aplicada a la Danza",
+        "Zapateo Folklórico Argentino",
+        "Promoción de la Salud",
+        "Historia Universal del Arte y la Cultura",
+        "Tecnologías de la Comunicación y la Información",
+        "Prácticas de Lectura, Escritura y Oralidad",
+        "Tecnologías de la Comunicación y la Información",
+        "Pedagogía",
+        "Didáctica General",
+        "Práctica Profesional Docente I",
+        "Electivas"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Danzas Argentinas II",
+        "Danzas Contemporáneas I",
+        "Historia de la Danza I",
+        "Didáctica de la Danza I",
+        "Técnica Académica II",
+        "Psicología Educacional",
+        "Sujetos de la Educación I",
+        "UDI – CFG",
+        "UDI – CFE",
+        "Historia y Política de la Educación Argentina",
+        "Instituciones Educativas",
+        "Práctica Profesional Docente II",
+        "Electivas"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Danzas Argentinas III",
+        "Danzas Contemporáneas II",
+        "Historia de la Danza II",
+        "Didáctica de la Danza II",
+        "Técnica Académica III",
+        "Sujetos de la Educación II",
+        "Arte y Nuevas Tecnologías",
+        "UDI – CFE",
+        "Sociología de la Educación",
+        "Práctica Profesional Docente III",
+        "Práctica Profesional Docente III",
+        "Electivas"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Danza y Composición Coreográfica",
+        "Producción y gestión de espectáculos",
+        "Didáctica de la Danza III",
+        "Producción Artística Contemporánea",
+        "Lenguajes Artísticos",
+        "UDI – CFE",
+        "Teoría del Arte",
+        "UDI – CFG",
+        "Práctica Profesional Docente IV",
+        "UDI – CFG",
+        "Práctica Profesional Docente IV",
+        "Electivas"
+       ]
+      }
+     ],
+     "plan_fuente": "https://arteschopin.edu.ar/profesorado-en-danza/"
     },
     {
      "id": 3901,
@@ -100,7 +328,47 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto de Arte Chopin",
-     "link_oficial": "https://arteschopin.edu.ar/tecnicatura-superior-en-gestion-de-industrias-culturales-y-creativas/"
+     "link_oficial": "https://arteschopin.edu.ar/tecnicatura-superior-en-gestion-de-industrias-culturales-y-creativas/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Alfabetización Académica",
+        "Teoría del Arte",
+        "Problemática Socio Cultural y del Trabajo",
+        "Historia Universal del Arte y la Cultura",
+        "Ceremonial y Protocolo",
+        "Tecnología Digital Aplicada",
+        "Lenguajes Artísticos",
+        "Creatividad",
+        "Arte y Patrimonio",
+        "Gestión de Industrias Culturales I",
+        ".Estudios Culturales",
+        "Enseñanza del Folklore Argentino",
+        "Recursos y Desarrollo Cultural",
+        "Practica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Procesos Psicológicos y Sociales",
+        "Administración y Legislación",
+        "Ingles",
+        "Producción Artística Contemporánea",
+        "Museología",
+        "Optativa",
+        "Procesos Creativos",
+        "Producción Digital",
+        "Producción y Gestión Artística Cultural",
+        "Proyecto Artístico Cultural",
+        "Semiótica del Arte",
+        "Gestión de las industrias culturales II",
+        "Practica Profesionalizante II"
+       ]
+      }
+     ],
+     "plan_fuente": "https://arteschopin.edu.ar/tecnicatura-superior-en-gestion-de-industrias-culturales-y-creativas/"
     }
    ],
    "departamento": "Godoy Cruz"

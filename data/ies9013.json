@@ -1,109 +1,275 @@
 {
- "instituciones": [
-  {
-   "id": 22,
-   "nombre": "ISTEEC (IES 9-013)",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "A confirmar",
-    "email": "contacto@isteec.edu.ar",
-    "direccion": "Ciudad de Mendoza"
-   },
-   "carreras": [
-    {
-     "id": 2201,
-     "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "ISTEEC (IES 9-013)",
-     "link_oficial": "https://isteec.edu.ar/administracion-de-empresas/"
-    },
-    {
-     "id": 2202,
-     "nombre_carrera": "Tecnicatura Superior en Comercio Internacional y Aduana",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "ISTEEC (IES 9-013)",
-     "link_oficial": "https://isteec.edu.ar/comercio-internacional-y-aduana/"
-    },
-    {
-     "id": 2203,
-     "nombre_carrera": "Tecnicatura Superior en Contabilidad",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "ISTEEC (IES 9-013)",
-     "link_oficial": "https://isteec.edu.ar/contabilidad/"
-    },
-    {
-     "id": 2204,
-     "nombre_carrera": "Tecnicatura Superior en Enología e Industria de los Alimentos",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "ISTEEC (IES 9-013)",
-     "link_oficial": "https://isteec.edu.ar/enologia-e-industria-de-los-alimentos/"
-    },
-    {
-     "id": 2205,
-     "nombre_carrera": "Tecnicatura Superior en Finanzas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "ISTEEC (IES 9-013)",
-     "link_oficial": "https://isteec.edu.ar/finanzas/"
-    },
-    {
-     "id": 2206,
-     "nombre_carrera": "Tecnicatura Superior en Logística",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "ISTEEC (IES 9-013)",
-     "link_oficial": "https://isteec.edu.ar/logistica/"
-    },
-    {
-     "id": 2207,
-     "nombre_carrera": "Tecnicatura Superior en Marketing",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "ISTEEC (IES 9-013)",
-     "link_oficial": "https://isteec.edu.ar/marketing/"
-    },
-    {
-     "id": 2208,
-     "nombre_carrera": "Tecnicatura Superior en Recursos Humanos",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "ISTEEC (IES 9-013)",
-     "link_oficial": "https://isteec.edu.ar/recursos-humanos/"
-    },
-    {
-     "id": 2209,
-     "nombre_carrera": "Tecnicatura Superior en Turismo",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "ISTEEC (IES 9-013)",
-     "link_oficial": "https://isteec.edu.ar/turismo/"
-    }
-   ],
-   "departamento": "Capital"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 22,
+            "nombre": "ISTEEC (IES 9-013)",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "contacto@isteec.edu.ar",
+                "direccion": "Ciudad de Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 2201,
+                    "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "ISTEEC (IES 9-013)",
+                    "link_oficial": "https://isteec.edu.ar/administracion-de-empresas/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Materias",
+                            "materias": [
+                                "Introducción a la Administración de Empresas Anual",
+                                "Inglés Técnico Anual",
+                                "Comunicación Efectiva Anual",
+                                "Herramientas Digitales para la Gestión Anual",
+                                "Introducción a la Economía I 1.er cuatrimestre",
+                                "Introducción a la Economía II 2.º cuatrimestre",
+                                "Matemática Aplicada 1.er cuatrimestre",
+                                "Estadística y Análisis de Datos 2.º cuatrimestre",
+                                "Introducción a la Legislación 1.er cuatrimestre",
+                                "Desarrollo Regional y Contexto Laboral 2.º cuatrimestre",
+                                "Práctica Profesionalizante I Anual"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://isteec.edu.ar/administracion-de-empresas/"
+                },
+                {
+                    "id": 2202,
+                    "nombre_carrera": "Tecnicatura Superior en Comercio Internacional y Aduana",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "ISTEEC (IES 9-013)",
+                    "link_oficial": "https://isteec.edu.ar/comercio-internacional-y-aduana/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Materias",
+                            "materias": [
+                                "Inglés I Anual",
+                                "Informática Anual",
+                                "Análisis Cuantitativo Anual",
+                                "Comunicación, Comprensión y Producción de Textos 1.er cuatrimestre",
+                                "Microeconomía 1.er cuatrimestre",
+                                "Introducción al Comercio Internacional 1.er cuatrimestre",
+                                "Macroeconomía 2.º cuatrimestre",
+                                "Estructura Económica Mundial 2.º cuatrimestre",
+                                "Práctica Profesionalizante I Anual"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://isteec.edu.ar/comercio-internacional-y-aduana/"
+                },
+                {
+                    "id": 2203,
+                    "nombre_carrera": "Tecnicatura Superior en Contabilidad",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "ISTEEC (IES 9-013)",
+                    "link_oficial": "https://isteec.edu.ar/contabilidad/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Materias",
+                            "materias": [
+                                "Contabilidad I Anual",
+                                "Inglés I Anual",
+                                "Administración Anual",
+                                "Informática Aplicada I Anual",
+                                "Liquidación de Sueldos y Jornales Anual",
+                                "Matemática 1.er cuatrimestre",
+                                "Introducción al Derecho 1.er cuatrimestre",
+                                "Comunicación 1.er cuatrimestre",
+                                "Estadística 2.º cuatrimestre",
+                                "Derecho del Trabajo y la Seguridad Social 2.º cuatrimestre",
+                                "Práctica Profesionalizante I 2.º cuatrimestre"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://isteec.edu.ar/contabilidad/"
+                },
+                {
+                    "id": 2204,
+                    "nombre_carrera": "Tecnicatura Superior en Enología e Industria de los Alimentos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "ISTEEC (IES 9-013)",
+                    "link_oficial": "https://isteec.edu.ar/enologia-e-industria-de-los-alimentos/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Materias",
+                            "materias": [
+                                "Química General e Inorgánica Anual",
+                                "Matemática 1.er cuatrimestre",
+                                "Higiene y Seguridad 1.er cuatrimestre",
+                                "Alfabetización Académica 1.er cuatrimestre",
+                                "Producciones Primarias Anual",
+                                "Introducción a la Vinificación e Industrializaciones Anual",
+                                "Física 2.º cuatrimestre",
+                                "Microbiología General 2.º cuatrimestre",
+                                "Química Orgánica 2.º cuatrimestre",
+                                "Análisis Sensorial I 2.º cuatrimestre",
+                                "Práctica Profesionalizante I Anual"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://isteec.edu.ar/enologia-e-industria-de-los-alimentos/"
+                },
+                {
+                    "id": 2205,
+                    "nombre_carrera": "Tecnicatura Superior en Finanzas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "ISTEEC (IES 9-013)",
+                    "link_oficial": "https://isteec.edu.ar/finanzas/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Materias",
+                            "materias": [
+                                "Inglés I Anual",
+                                "Informática Aplicada a las Finanzas Anual",
+                                "Análisis Cuantitativo Anual",
+                                "Comunicación, Comprensión y Producción de Textos 1.er cuatrimestre",
+                                "Economía 1.er cuatrimestre",
+                                "Introducción a las Finanzas 1.er cuatrimestre",
+                                "Estructura Económica Mundial 2.º cuatrimestre",
+                                "Planificación y Gestión Financiera 2.º cuatrimestre",
+                                "Contabilidad Financiera 2.º cuatrimestre",
+                                "Práctica Profesionalizante I Anual"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://isteec.edu.ar/finanzas/"
+                },
+                {
+                    "id": 2206,
+                    "nombre_carrera": "Tecnicatura Superior en Logística",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "ISTEEC (IES 9-013)",
+                    "link_oficial": "https://isteec.edu.ar/logistica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Materias",
+                            "materias": [
+                                "Inglés I Anual",
+                                "Informática I Anual",
+                                "Administración de las Organizaciones 1.er cuatrimestre",
+                                "Matemática 1.er cuatrimestre",
+                                "Comprensión y Producción de Textos 1.er cuatrimestre",
+                                "Introducción a la Logística 1.er cuatrimestre",
+                                "Organización y Conducción Empresaria 2.º cuatrimestre",
+                                "Estadística 2.º cuatrimestre",
+                                "Geografía Económica 2.º cuatrimestre",
+                                "Transporte Terrestre 2.º cuatrimestre",
+                                "Práctica Profesionalizante I Anual"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://isteec.edu.ar/logistica/"
+                },
+                {
+                    "id": 2207,
+                    "nombre_carrera": "Tecnicatura Superior en Marketing",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "ISTEEC (IES 9-013)",
+                    "link_oficial": "https://isteec.edu.ar/marketing/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Materias",
+                            "materias": [
+                                "Inglés I Anual",
+                                "Informática Aplicada al Marketing Anual",
+                                "Fundamentos de Marketing Anual",
+                                "Comunicación y Redacción Digital 1.er cuatrimestre",
+                                "Planificación Estratégica del Marketing Digital 1.er cuatrimestre",
+                                "Comportamiento de Consumidores y Usuarios 1.er cuatrimestre",
+                                "Innovación, Creatividad y Transformación Digital 1.er cuatrimestre",
+                                "Generación de Contenidos y Gestión de Plataformas 2.º cuatrimestre",
+                                "Desarrollo y Experiencia de Marca 2.º cuatrimestre",
+                                "Diseño y Gestión de Campañas Digitales 2.º cuatrimestre",
+                                "Práctica Profesionalizante I Anual"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://isteec.edu.ar/marketing/"
+                },
+                {
+                    "id": 2208,
+                    "nombre_carrera": "Tecnicatura Superior en Recursos Humanos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "ISTEEC (IES 9-013)",
+                    "link_oficial": "https://isteec.edu.ar/recursos-humanos/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Materias",
+                            "materias": [
+                                "Introducción a la Administración de los Recursos Humanos Anual",
+                                "Inglés Técnico Anual",
+                                "Comunicación Efectiva Anual",
+                                "Herramientas Digitales para la Gestión Anual",
+                                "Introducción a la Economía Anual",
+                                "Matemática Aplicada 1.er cuatrimestre",
+                                "Estadística y Análisis de Datos 2.º cuatrimestre",
+                                "Introducción a la Legislación 1.er cuatrimestre",
+                                "Desarrollo Regional y Contexto Laboral 2.º cuatrimestre",
+                                "Práctica Profesionalizante I Anual"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://isteec.edu.ar/recursos-humanos/"
+                },
+                {
+                    "id": 2209,
+                    "nombre_carrera": "Tecnicatura Superior en Turismo",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "ISTEEC (IES 9-013)",
+                    "link_oficial": "https://isteec.edu.ar/turismo/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Materias",
+                            "materias": [
+                                "Taller de Oratoria y Comunicación 1.er cuatrimestre",
+                                "Taller de Competencias Digitales Anual",
+                                "Gestión de Riesgos y Primeros Auxilios 1.er cuatrimestre",
+                                "Introducción al Turismo 1.er cuatrimestre",
+                                "Inglés I Anual",
+                                "Procesos Históricos y Patrimonio Cultural de Mendoza Anual",
+                                "Portugués I Anual",
+                                "Espacios Turísticos de Mendoza 2.º cuatrimestre",
+                                "Enoturismo 2.º cuatrimestre",
+                                "Práctica Profesionalizante I Anual"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://isteec.edu.ar/turismo/"
+                }
+            ],
+            "departamento": "Capital"
+        }
+    ]
 }

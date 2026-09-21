@@ -20,7 +20,46 @@
      "modalidad": "A confirmar",
      "turno": "A confirmar",
      "facultad": "Escuela de Psicología Social",
-     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-psicologia-social-presencial/"
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-psicologia-social-presencial/",
+     "plan_fuente": "https://espsicosocial.com.ar/tecnicatura-superior-en-psicologia-social-presencial/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Teoría de los Grupos",
+        "Psicología General",
+        "Psicología Social",
+        "Teoría Psicoanalítica",
+        "Psicología Social de la Vida Cotidiana",
+        "Mundo Contemporáneo"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Sociología",
+        "Teoría de la Conducta",
+        "Teoría de las Estructuras Vinculares",
+        "Constitución de la Subjetividad",
+        "Pensamiento Científico e Investigación",
+        "Deontología Profesional",
+        "Psicología Institucional (EDI)",
+        "Filosofía"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Estructura y Dinámica del Rol Observador",
+        "Áreas de Aplicación de la Psicología Social",
+        "Metodología de la Investigación en Psicología Social",
+        "Práctica Profesionalizante: El Rol del Observador",
+        "Estructura y Dinámica del Rol Coordinador",
+        "Práctica Profesionalizante: El Rol Coordinador",
+        "Práctica Profesionalizante IV: Abordajes en el Ámbito Comunitario"
+       ]
+      }
+     ]
     },
     {
      "id": 4301,
@@ -30,7 +69,46 @@
      "modalidad": "A confirmar",
      "turno": "A confirmar",
      "facultad": "Escuela de Psicología Social",
-     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-psicologia-social-a-distancia/"
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-psicologia-social-a-distancia/",
+     "plan_fuente": "https://espsicosocial.com.ar/tecnicatura-superior-en-psicologia-social-a-distancia/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Teoría de los Grupos",
+        "Psicología General",
+        "Psicología Social",
+        "Teoría Psicoanalítica",
+        "Psicología Social de la Vida Cotidiana",
+        "Mundo Contemporáneo"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Sociología",
+        "Teoría de la Conducta",
+        "Teoría de las Estructuras Vinculares",
+        "Constitución de la Subjetividad",
+        "Pensamiento Científico e Investigación",
+        "Deontología Profesional",
+        "Psicología Institucional (EDI)",
+        "Filosofía"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Estructura y Dinámica del Rol Observador",
+        "Áreas de Aplicación de la Psicología Social",
+        "Metodología de la Investigación en Psicología Social",
+        "Práctica Profesionalizante: El Rol del Observador",
+        "Estructura y Dinámica del Rol Coordinador",
+        "Práctica Profesionalizante: El Rol Coordinador",
+        "Práctica Profesionalizante IV: Abordajes en el Ámbito Comunitario"
+       ]
+      }
+     ]
     },
     {
      "id": 4302,
@@ -40,7 +118,59 @@
      "modalidad": "A confirmar",
      "turno": "A confirmar",
      "facultad": "Escuela de Psicología Social",
-     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-desarrollo-humano-presencial/"
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-desarrollo-humano-presencial/",
+     "plan_fuente": "https://espsicosocial.com.ar/tecnicatura-superior-en-desarrollo-humano-presencial/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Aproximación al Desarrollo Humano",
+        "Introducción al Enfoque Centrado en la Persona",
+        "Problemas Sociológicos Contemporáneos",
+        "Problemas Filosóficos Contemporáneos",
+        "Fundamentos de Psicología",
+        "Fundamentos del Desarrollo Humano",
+        "Enfoque Centrado en la Persona",
+        "Antropología Filosófica",
+        "Mundo Contemporáneo (EDI)",
+        "Práctica Profesionalizante: Observación del Quehacer del Rol Profesional"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Teoría y Práctica en Desarrollo Humano",
+        "Dinámica Grupal",
+        "Ciclos Vitales de las Niñeces y Adolescencias",
+        "Aportes Teóricos al Desarrollo Humano",
+        "Derechos Humanos, Diversidad y Comunidad",
+        "Mecanismos Adaptativos Disfuncionales (EDI)",
+        "Desarrollo Humano",
+        "Dinámica Grupal Aplicada",
+        "Ciclos Vitales de las Juventudes, Adultos y Vejeces",
+        "Aportes Actuales del Enfoque Centrado en la Persona",
+        "Psicopatología",
+        "Práctica Profesionalizante: Construcción del Rol Profesional"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Comunicación en Desarrollo Humano",
+        "Desarrollo Humano en Pareja y Familia",
+        "Desarrollo Humano en Ámbitos Educacionales",
+        "Desarrollo Humano en Adolescencias",
+        "Recursos Expresivos y Creatividad",
+        "Práctica Profesionalizante: Inserción Profesional",
+        "Desarrollo Humano en Ámbitos Organizacionales y Comunitarios",
+        "Desarrollo Humano en Contextos de Vulnerabilidad",
+        "Ética y Deontología Profesional",
+        "Abordajes en Desarrollo Humano",
+        "Herramientas para el Desarrollo Personal (EDI)",
+        "Práctica Profesionalizante: Desempeño Profesional"
+       ]
+      }
+     ]
     },
     {
      "id": 4303,
@@ -50,7 +180,53 @@
      "modalidad": "A confirmar",
      "turno": "A confirmar",
      "facultad": "Escuela de Psicología Social",
-     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico/"
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico/",
+     "plan_fuente": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Psicología General",
+        "Cuerpo Humano, Salud y Recursos",
+        "Introducción a la Filosofía",
+        "Introducción al Acompañamiento Terapéutico",
+        "Estado, Política y Salud",
+        "Rol y Funciones del Acompañante Terapéutico",
+        "Neurofisiopatología",
+        "Dinámica Grupal",
+        "Comunicación y Tecnología en el Campo de Salud",
+        "Práctica Profesionalizante: Acercamiento al Campo Profesional del Acompañante Terapéutico"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Ciclos Vitales de Niñez y Adolescencia",
+        "Diversidad del Padecimiento en Niñez y Adolescencia",
+        "Modalidades de Intervención en Niñez y Adolescencia",
+        "Acompañamiento Terapéutico en Situaciones de Crisis",
+        "Abordaje en el Ámbito Familiar",
+        "Práctica Profesionalizante: Inserción del Acompañante Terapéutico en Ámbitos Comunitarios",
+        "Ciclos Vitales de Juventud, Adultez y Vejez",
+        "Diversidad del Padecimiento en Juventud, Adultez y Vejez",
+        "Modalidades de Intervención en Juventud, Adultez y Vejez",
+        "Inglés Técnico",
+        "Acompañamiento en Dolencias Transitorias y Terminales",
+        "Práctica Profesionalizante: Inserción del Acompañante Terapéutico en Ámbitos Grupales e Institucionales"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Ética y Derechos Humanos",
+        "Planificación y Gestión en Salud",
+        "Discapacidad y Educación Inclusiva",
+        "EDI",
+        "Abordaje en Consumos Problemáticos",
+        "Práctica Profesionalizante: Diseño de Proyectos en Acompañamiento Terapéutico"
+       ]
+      }
+     ]
     },
     {
      "id": 4304,
@@ -60,7 +236,40 @@
      "modalidad": "A confirmar",
      "turno": "A confirmar",
      "facultad": "Escuela de Psicología Social",
-     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-grafologia/"
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-grafologia/",
+     "plan_fuente": "https://espsicosocial.com.ar/tecnicatura-superior-en-grafologia/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Grafología Científica I",
+        "Historia de la Grafología y la Escritura",
+        "Psicología General",
+        "Ámbitos de aplicación de la Grafología",
+        "Grafología Científica II",
+        "Psicología de la Personalidad",
+        "Psicología del Desarrollo Evolutivo",
+        "P.P.I: Introducción al quehacer Profesional"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Grafología de la Firma y Rúbrica",
+        "Grafología Aplicada al Mensaje Publicitario",
+        "Grafología Aplicada al Desarrollo Evolutivo",
+        "Grafología Forense y Elementos del Derecho",
+        "Técnicas Proyectivas Gráficas I",
+        "Metodología de la Investigación",
+        "Grafología Aplicada a la Selección de Personal",
+        "Grafología del Temperamento y el Carácter",
+        "Técnicas Proyectivas Gráficas II",
+        "Ética y Deontología Profesional",
+        "Psicopatología",
+        "P.P.II: La Grafología como herramienta eficaz de la Selección de Personal"
+       ]
+      }
+     ]
     },
     {
      "id": 4305,
@@ -70,7 +279,53 @@
      "modalidad": "A confirmar",
      "turno": "A confirmar",
      "facultad": "Escuela de Psicología Social",
-     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico-presencial/"
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico-presencial/",
+     "plan_fuente": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico-presencial/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Psicología General",
+        "Cuerpo Humano, Salud y Recursos",
+        "Introducción a la Filosofía",
+        "Introducción al Acompañamiento Terapéutico",
+        "Estado, Política y Salud",
+        "Rol y Funciones del Acompañante Terapéutico",
+        "Neurofisiopatología",
+        "Dinámica Grupal",
+        "Comunicación y Tecnología en el Campo de Salud",
+        "Práctica Profesionalizante: Acercamiento al Campo Profesional del Acompañante Terapéutico"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Ciclos Vitales de Niñez y Adolescencia",
+        "Diversidad del Padecimiento en Niñez y Adolescencia",
+        "Modalidades de Intervención en Niñez y Adolescencia",
+        "Acompañamiento Terapéutico en Situaciones de Crisis",
+        "Abordaje en el Ámbito Familiar",
+        "Práctica Profesionalizante: Inserción del Acompañante Terapéutico en Ámbitos Comunitarios",
+        "Ciclos Vitales de Juventud, Adultez y Vejez",
+        "Diversidad del Padecimiento en Juventud, Adultez y Vejez",
+        "Modalidades de Intervención en Juventud, Adultez y Vejez",
+        "Inglés Técnico",
+        "Acompañamiento en Dolencias Transitorias y Terminales",
+        "Práctica Profesionalizante: Inserción del Acompañante Terapéutico en Ámbitos Grupales e Institucionales"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Ética y Derechos Humanos",
+        "Planificación y Gestión en Salud",
+        "Discapacidad y Educación Inclusiva",
+        "EDI",
+        "Abordaje en Consumos Problemáticos",
+        "Práctica Profesionalizante: Diseño de Proyectos en Acompañamiento Terapéutico"
+       ]
+      }
+     ]
     },
     {
      "id": 4306,
@@ -80,7 +335,143 @@
      "modalidad": "A confirmar",
      "turno": "A confirmar",
      "facultad": "Escuela de Psicología Social",
-     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico-a-distancia/"
+     "link_oficial": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico-a-distancia/",
+     "plan_fuente": "https://espsicosocial.com.ar/tecnicatura-superior-en-acompanamiento-terapeutico-a-distancia/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Psicología General",
+        "Cuerpo Humano, Salud y Recursos",
+        "Introducción a la Filosofía",
+        "Introducción al Acompañamiento Terapéutico",
+        "Estado, Política y Salud",
+        "Rol y Funciones del Acompañante Terapéutico",
+        "Neurofisiopatología",
+        "Dinámica Grupal",
+        "Comunicación y Tecnología en el Campo de Salud",
+        "Práctica Profesionalizante: Acercamiento al Campo Profesional del Acompañante Terapéutico"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Ciclos Vitales de Niñez y Adolescencia",
+        "Diversidad del Padecimiento en Niñez y Adolescencia",
+        "Modalidades de Intervención en Niñez y Adolescencia",
+        "Acompañamiento Terapéutico en Situaciones de Crisis",
+        "Abordaje en el Ámbito Familiar",
+        "Práctica Profesionalizante: Inserción del Acompañante Terapéutico en Ámbitos Comunitarios",
+        "Ciclos Vitales de Juventud, Adultez y Vejez",
+        "Diversidad del Padecimiento en Juventud, Adultez y Vejez",
+        "Modalidades de Intervención en Juventud, Adultez y Vejez",
+        "Inglés Técnico",
+        "Acompañamiento en Dolencias Transitorias y Terminales",
+        "Práctica Profesionalizante: Inserción del Acompañante Terapéutico en Ámbitos Grupales e Institucionales"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Ética y Derechos Humanos",
+        "Planificación y Gestión en Salud",
+        "Discapacidad y Educación Inclusiva",
+        "EDI",
+        "Abordaje en Consumos Problemáticos",
+        "Práctica Profesionalizante: Diseño de Proyectos en Acompañamiento Terapéutico"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 4307,
+     "nombre_carrera": "Tecnicatura Superior En Ninez, Adolescencia Y Familia Presencial",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "turno": "A confirmar",
+     "facultad": "Escuela de Psicología Social",
+     "link_oficial": "https://espsicosocial.com.ar/t-s-ninez-adolescencia-y-familia-presencial/",
+     "plan_fuente": "https://espsicosocial.com.ar/t-s-ninez-adolescencia-y-familia-presencial/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Educación para la Salud y Articulación de Recursos",
+        "Estado y Políticas Públicas",
+        "Sociología",
+        "Psicología General",
+        "Problemática de la Niñez y Adolescencia",
+        "Psicología Social",
+        "Metodología de la Investigación Social",
+        "Problemática de la Familia",
+        "Psicología de los Ciclos Vitales de Niñez y Adolescencia",
+        "Prácticas Profesionalizantes I: Acercamiento al Campo de trabajo, en niñez, adolescencia y familia"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Derecho de Niñez, Adolescencia y Familia I",
+        "Estudios Socioeconómicos de la Argentina Contemporánea",
+        "Técnicas de Intervención Social y Comunitaria",
+        "Psicología de los Ciclos Vitales de Adultez y Vejez",
+        "Psicología Organizacional e Intervención Institucional",
+        "Ética y Deontología Profesional",
+        "Derecho de Niñez, Adolescencia y Familia II",
+        "Antropología Cultural",
+        "Abordaje de la Problemática de la Niñez, Adolescencia y Familia",
+        "Psicopatología",
+        "Comunicación, Sociedad y Familia",
+        "Prácticas Profesionalizantes II: Abordaje de situaciones Problemáticas en Contextos reales"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 4308,
+     "nombre_carrera": "Tecnicatura Superior En Ninez, Adolescencia Y Familia A Distancia",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 años",
+     "modalidad": "A Distancia",
+     "turno": "A confirmar",
+     "facultad": "Escuela de Psicología Social",
+     "link_oficial": "https://espsicosocial.com.ar/t-s-ninez-adolescencia-y-familia-a-distancia/",
+     "plan_fuente": "https://espsicosocial.com.ar/t-s-ninez-adolescencia-y-familia-a-distancia/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Educación para la Salud y Articulación de Recursos",
+        "Estado y Políticas Públicas",
+        "Sociología",
+        "Psicología General",
+        "Problemática de la Niñez y Adolescencia",
+        "Psicología Social",
+        "Metodología de la Investigación Social",
+        "Problemática de la Familia",
+        "Psicología de los Ciclos Vitales de Niñez y Adolescencia",
+        "Prácticas Profesionalizantes I: Acercamiento al Campo de trabajo, en niñez, adolescencia y familia"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Derecho de Niñez, Adolescencia y Familia I",
+        "Estudios Socioeconómicos de la Argentina Contemporánea",
+        "Técnicas de Intervención Social y Comunitaria",
+        "Psicología de los Ciclos Vitales de Adultez y Vejez",
+        "Psicología Organizacional e Intervención Institucional",
+        "Ética y Deontología Profesional",
+        "Derecho de Niñez, Adolescencia y Familia II",
+        "Antropología Cultural",
+        "Abordaje de la Problemática de la Niñez, Adolescencia y Familia",
+        "Psicopatología",
+        "Comunicación, Sociedad y Familia",
+        "Prácticas Profesionalizantes II: Abordaje de situaciones Problemáticas en Contextos reales"
+       ]
+      }
+     ]
     }
    ],
    "departamento": "Capital"

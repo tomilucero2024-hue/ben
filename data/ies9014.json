@@ -1,79 +1,377 @@
 {
- "instituciones": [
-  {
-   "id": 23,
-   "nombre": "IES 9-014 Profesorado de Arte (IPA)",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "A confirmar",
-    "email": "contacto@profesoradodearte.edu.ar",
-    "direccion": "San Rafael, Mendoza"
-   },
-   "carreras": [
-    {
-     "id": 2301,
-     "nombre_carrera": "Profesorado de Danzas",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-014 Profesorado de Arte (IPA)",
-     "link_oficial": "https://profesoradodearte.edu.ar/danzas/"
-    },
-    {
-     "id": 2302,
-     "nombre_carrera": "Profesorado de Música",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-014 Profesorado de Arte (IPA)",
-     "link_oficial": "https://profesoradodearte.edu.ar/musica/"
-    },
-    {
-     "id": 2303,
-     "nombre_carrera": "Profesorado de Teatro",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-014 Profesorado de Arte (IPA)",
-     "link_oficial": "https://profesoradodearte.edu.ar/teatro/"
-    },
-    {
-     "id": 2304,
-     "nombre_carrera": "Profesorado de Artes Visuales",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-014 Profesorado de Arte (IPA)",
-     "link_oficial": "https://profesoradodearte.edu.ar/artes-visuales/"
-    },
-    {
-     "id": 2305,
-     "nombre_carrera": "Tecnicatura en Gestión Cultural y Economía de la Cultura",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-014 Profesorado de Arte (IPA)",
-     "link_oficial": "https://profesoradodearte.edu.ar/tecnicatura/"
-    },
-    {
-     "id": 2306,
-     "nombre_carrera": "Profesorado para Técnicos",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-014 Profesorado de Arte (IPA)",
-     "link_oficial": "https://profesoradodearte.edu.ar/profesorado-para-tecnicos/"
-    }
-   ],
-   "departamento": "San Rafael"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 23,
+            "nombre": "IES 9-014 Profesorado de Arte (IPA)",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "contacto@profesoradodearte.edu.ar",
+                "direccion": "San Rafael, Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 2301,
+                    "nombre_carrera": "Profesorado de Danzas",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-014 Profesorado de Arte (IPA)",
+                    "link_oficial": "https://profesoradodearte.edu.ar/danzas/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Prácticas de Lectura, Escritura y Oralidad",
+                                "Promoción de la salud",
+                                "Pedagogía",
+                                "Anatomía y Fisiología aplicada a la Danza",
+                                "Expresión Corporal",
+                                "Unidad de Definición Institucional",
+                                "Zapateo Folklórico Argentino",
+                                "Historia Universal del Arte y la Cultura",
+                                "Tecnologías de la Información y la Comunicación",
+                                "Didáctica General",
+                                "Práctica Profesional Docente I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Psicología Educacional",
+                                "Historia y Política de la Educación Argentina",
+                                "Unidad de Definición Institucional",
+                                "Sujeto de la Educación I",
+                                "Instituciones Educativas",
+                                "Práctica Profesional Docente II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Sujeto de la Educación II",
+                                "Técnica Académica III",
+                                "Danzas Contemporáneas II",
+                                "Danzas Argentinas III",
+                                "Historia de la Danza II",
+                                "Didáctica de la Danza II",
+                                "Unidad de Definición Institucional",
+                                "Arte y Nuevas Tecnologías",
+                                "Sociología de la Educación",
+                                "Práctica Profesional Docente III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Teoría del Arte",
+                                "Lenguajes Artísticos",
+                                "Danza y Composición Coreográfica",
+                                "Producciones Artísticas Contemporáneas",
+                                "Práctica Profesi onal Docente IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://profesoradodearte.edu.ar/danzas/"
+                },
+                {
+                    "id": 2302,
+                    "nombre_carrera": "Profesorado de Música",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-014 Profesorado de Arte (IPA)",
+                    "link_oficial": "https://profesoradodearte.edu.ar/musica/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pedagogía",
+                                "Promoción de la salud",
+                                "Prácticas de Lectura, Escritura y Oralidad",
+                                "Historia Universal del Arte y la Cultura",
+                                "Didáctica General",
+                                "Tecnologías de la Información y la Comunicación",
+                                "Instrumento Armónico I (piano o guitarra)",
+                                "Fundamentos de la Percepción y la Producción Musical",
+                                "Unidad de Definición In stitucional",
+                                "Práctica Profesional Docente I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Historia y Política de la Educación Argentina",
+                                "Psicología Educacional",
+                                "Unidad de Definición Institucional",
+                                "Sujeto de la Educación I",
+                                "Instituciones Educativas",
+                                "Instrumento Armónico II",
+                                "Didáctica de la Música I",
+                                "Historia de la Música I",
+                                "Práctica Profesional Docente II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Sujeto de la Educación II",
+                                "Unidad de Definición Institucional",
+                                "Sociología de la Educación",
+                                "Instrumento Armónico III",
+                                "Didáctica de la Música II",
+                                "Prácticas de Conjuntos Vocales e Instrumentales",
+                                "Práctica Profesional Docente III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Teoría del Arte",
+                                "Lenguajes Artísticos",
+                                "Didáctica de la Música III",
+                                "Producciones Artísticas Contemporáneas",
+                                "Canto y Dirección Coral II",
+                                "Práctica Profesional Docente IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://profesoradodearte.edu.ar/musica/"
+                },
+                {
+                    "id": 2303,
+                    "nombre_carrera": "Profesorado de Teatro",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-014 Profesorado de Arte (IPA)",
+                    "link_oficial": "https://profesoradodearte.edu.ar/teatro/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Prácticas de Lectura, Escritura y Oralidad",
+                                "Promoción de la salud",
+                                "Pedagogía",
+                                "Lenguaje y Análisis Del Hecho Teatral",
+                                "Actuación I",
+                                "Historia Universal del Arte y la Cultura",
+                                "Tecnologías de la Información y la Comunicación",
+                                "Didáctica General",
+                                "Práctica Profesional Docente I",
+                                "Actuación III"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Psicología Educacional",
+                                "Historia y Política de la Educación Argentina",
+                                "Unidad de Definición Institucional",
+                                "Actuación II",
+                                "Técnicas Corporales II",
+                                "Sujeto de la Educación I",
+                                "Instituciones Educativas",
+                                "Práctica Profesional Docente II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Sujeto de la Educación II",
+                                "Técnicas Corporales y Vocales III",
+                                "Unidad de Definición Institucional",
+                                "Arte y Nuevas Tecnologías",
+                                "Sociología de la Educación",
+                                "Práctica Profesional Docente III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Teoría del Arte",
+                                "Lenguajes Artísticos",
+                                "Vestuario Y Maquillaje",
+                                "Producciones Artísticas Contemporáneas",
+                                "Diseño y Producción de Proyectos Teatrales",
+                                "Dirección y Puesta en Escena",
+                                "Práctica Profesional Docente IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://profesoradodearte.edu.ar/teatro/"
+                },
+                {
+                    "id": 2304,
+                    "nombre_carrera": "Profesorado de Artes Visuales",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-014 Profesorado de Arte (IPA)",
+                    "link_oficial": "https://profesoradodearte.edu.ar/artes-visuales/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "DIBUJO I",
+                                "BIDIMENSIÓN I",
+                                "TRIDIMENSIÓN I",
+                                "LENGUAJE DE LAS ARTES VISUALES I",
+                                "HISTORIA DE LAS ARTES VISUALES I",
+                                "PEDAGOGÍA",
+                                "COMPRENSIÓN Y PRODUCCIÓN DE TEXTOS ACADÉMICOS",
+                                "FORMACIÓN PRÁCTICA PROFESIONAL I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "DIBUJO II",
+                                "TRIDIMENSIÓN II",
+                                "LENGUAJE DE LAS ARTES VISUALES II",
+                                "HISTORIA DE LAS ARTES VISUALES II",
+                                "SUJETO DE LA EDUCACIÓN I",
+                                "DIDÁCTICAS DE LAS ARTES VISUALES I",
+                                "DIDÁCTICA GENERAL",
+                                "PENSAMIENTO FILOSÓFICO",
+                                "SISTEMA EDUCATIVO",
+                                "FORMACIÓN PRÁCTICA PROFESIONAL II",
+                                "SUJETO DE LA EDUCACIÓN II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "PRODUCCIÓN ARTÍSTICA I: BI DIMENSIÓN: GRABADO - PINTURA",
+                                "PRODUCCIÓN ARTÍSTICA I. TRIDIMENSIÓN: ESCULTURA - CERÁMICA",
+                                "HISTORIA DE LAS ARTES VISUALES III",
+                                "DIBUJO III",
+                                "LENGUAJE DE LAS ARTES VISUALES III",
+                                "DIDÁCTICAS DE LAS ARTES VISUALES II",
+                                "EDUCACIÓN EN LA DIVERSIDAD",
+                                "GESTIÓN Y EVALUACIÓN DE LOS APRENDIZAJES",
+                                "PSICOLOGÍA EDUCACIONAL",
+                                "FORMACIÓN PRÁCTICA PROFESIONAL III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "PRODUCCIÓN ARTÍSTICA II: PINTURA – CERÁMICA – ESCULTURA – GRABADO – DIBUJO",
+                                "ARTES VISUALES Y PRODUCCIÓN AUDIOVISUAL",
+                                "HISTORIA DE LAS ARTES VISUALES IV",
+                                "TEORÍA DEL ARTE",
+                                "PRODUCCIÓN ARTÍSTICA CONTEMPORÁNEA",
+                                "FORMACIÓN COMPLEMENTARIA ESPECÍFICA",
+                                "EDUCACIÓN Y TECNOLOGÍAS DIGITALES",
+                                "EDUCACIÓN SEXUAL INTEGRAL",
+                                "FORMACIÓN PRÁCTICA PROFESIONAL IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://profesoradodearte.edu.ar/artes-visuales/"
+                },
+                {
+                    "id": 2305,
+                    "nombre_carrera": "Tecnicatura en Gestión Cultural y Economía de la Cultura",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-014 Profesorado de Arte (IPA)",
+                    "link_oficial": "https://profesoradodearte.edu.ar/tecnicatura/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Comunicación, Comprensión y Producción de Textos",
+                                "Historia I",
+                                "Historia II",
+                                "Estado y Sociedad",
+                                "Problemática Sociocultural y del Contexto",
+                                "Sociología y Antropología de la Cultura",
+                                "TICs Aplicadas a la Gestión Cultural"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Análisis y Desarrollo Organizacional",
+                                "Formulación y Evaluación de Proyectos",
+                                "Economía General"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Psicología Organizacional",
+                                "Gestión de Emprendimientos",
+                                "Habilidades interpersonales",
+                                "Economía de la Cultura",
+                                "Marketing Cultural",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://profesoradodearte.edu.ar/tecnicatura/"
+                },
+                {
+                    "id": 2306,
+                    "nombre_carrera": "Profesorado para Técnicos",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-014 Profesorado de Arte (IPA)",
+                    "link_oficial": "https://profesoradodearte.edu.ar/profesorado-para-tecnicos/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer Año",
+                            "materias": [
+                                "La enseñanza en la escuela secundaria técnica I",
+                                "El aprendizaje en la escuela secundaria técnica",
+                                "Contextos de y para la escuela secundaria técnica I",
+                                "Competencias comunicacionales I",
+                                "Competencias comunicacionales II",
+                                "Práctica I",
+                                "Reflexión sobre la problematización de la práctica",
+                                "Actualización científico-tecnológica"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo Año",
+                            "materias": [
+                                "La enseñanza en la escuela secundaria técnica II",
+                                "Contextos de y para la escuela secundaria técnica II",
+                                "Adolescencias y educación secundaria técnica",
+                                "Condiciones del ejercicio profesional",
+                                "Vinculación con el sector socio-productivo",
+                                "Producción de textos para la ETP secundaria",
+                                "Práctica II",
+                                "Actualización científico-tecnológica"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer Año",
+                            "materias": [
+                                "Uso didáctico de las TIC",
+                                "Práctica III",
+                                "Residencia",
+                                "Reflexión sobre la problematización de la práctica",
+                                "Continuidad del trayecto de actualización científico-tecnológica (hasta completar 192 hs)"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://profesoradodearte.edu.ar/profesorado-para-tecnicos/"
+                }
+            ],
+            "departamento": "San Rafael"
+        }
+    ]
 }

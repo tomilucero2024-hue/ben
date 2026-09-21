@@ -77,6 +77,24 @@ python -m http.server 8010
 
 y abrir `http://localhost:8010/`.
 
+## Tests
+
+La suite se corre con Node y no necesita nada más allá de `npm install` (jsdom):
+
+```bash
+node test_general.js          # salud general: imports/exports, sello de caché, catálogos, render, SW y smoke HTTP
+node test-flow.js             # flujo completo de la app en jsdom (búsqueda, filtros, copiloto)
+node test_instituciones.js    # vista de instituciones (agrupadas por tipo)
+node test_switcher.js         # conmutador de vistas Carreras / Instituciones / Por área
+node test-orientador.js       # test vocacional: perfiles, ranking y compatibilidad
+node verify-assertiveness.js  # asertividad del ranking del orientador
+```
+
+`test_general.js` detecta, entre otras cosas, **imports que no se resuelven** entre módulos
+(rompen la app entera en el navegador y `node --check` no los ve porque valida archivo por
+archivo) y que el **sello de caché** esté sincronizado entre `index.html`, `sw.js` y las
+páginas generadas.
+
 > Las rutas son absolutas a propósito. El service worker, cuando no hay red, contesta
 > cualquier navegación con el `index.html` cacheado; si alguien está en `/carrera/medicina/`
 > y se le corta la conexión, la app se dibuja en *esa* dirección y con rutas relativas iría a

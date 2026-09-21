@@ -1,79 +1,355 @@
 {
- "instituciones": [
-  {
-   "id": 15,
-   "nombre": "IES 9-005",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "0263-4442371",
-    "email": "ens9005@infd.edu.ar",
-    "direccion": "San Martín y Godoy Cruz, Junín, Mendoza"
-   },
-   "carreras": [
+  "instituciones": [
     {
-     "id": 1500,
-     "nombre_carrera": "Profesorado de Educación Primaria",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-005",
-     "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria-2/"
-    },
-    {
-     "id": 1501,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Biología",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-005",
-     "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-biologia/"
-    },
-    {
-     "id": 1502,
-     "nombre_carrera": "Profesorado de Educación Especial (Sede Las Catitas)",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-005",
-     "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/prof-de-educacion-especial/"
-    },
-    {
-     "id": 1503,
-     "nombre_carrera": "Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec)",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-005",
-     "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-de-la-modalidad-tecnico-profesional-en-concurrencia-con-el-titulo-de-base/"
-    },
-    {
-     "id": 1504,
-     "nombre_carrera": "Formación Profesional en Apicultura",
-     "categoria": "Formación Profesional",
-     "duracion": "1 año y medio",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-005",
-     "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/formacion-profesional-en-agronomia/"
-    },
-    {
-     "id": 1505,
-     "nombre_carrera": "Formación Profesional en Software",
-     "categoria": "Formación Profesional",
-     "duracion": "1 año y medio",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-005",
-     "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/formacion-profesional-en-software/"
+      "id": 15,
+      "nombre": "IES 9-005",
+      "nivel": "terciario",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "0263-4442371",
+        "email": "ens9005@infd.edu.ar",
+        "direccion": "San Martín y Godoy Cruz, Junín, Mendoza"
+      },
+      "carreras": [
+        {
+          "id": 1500,
+          "nombre_carrera": "Profesorado de Educación Primaria",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-005",
+          "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria-2/",
+          "plan_fuente": "https://ens9005-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria-2/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Comprensión y Producción de Textos Académicos",
+                "Pedagogía",
+                "Educación Artística",
+                "Lengua y Literatura Infantil y Juvenil",
+                "Numeración",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Instituciones Educativas",
+                "Sujetos de la Educación",
+                "Psicología Educacional",
+                "Ciencias Sociales y su Didáctica I",
+                "Números Racionales y su Didáctica",
+                "Espacio, Geometría y su Didáctica",
+                "Ciencias Naturales y su Didáctica I",
+                "Lengua y su Didáctica",
+                "Literatura Infantil y Juvenil y su Didáctica",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Formación Ética y Ciudadana y su Didáctica",
+                "Proyectos de Intervención Estratégica",
+                "Educación Tecnológica",
+                "Educación en la Diversidad",
+                "Medida y su Didáctica",
+                "Álgebra, Funciones y su Didáctica",
+                "Ciencias Sociales y su Didáctica II",
+                "Ciencias Naturales y su Didáctica II",
+                "Alfabetización",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "ESI",
+                "Educación y Tecnologías Digitales",
+                "Didáctica de la Lengua y la Literatura Infantil y Juvenil",
+                "Didáctica de la Matemática",
+                "Didáctica de las Ciencias Sociales",
+                "Didáctica de las Ciencias Naturales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Formación Complementaria General",
+                "Formación Complementaria Específica",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1501,
+          "nombre_carrera": "Profesorado de Educación Secundaria en Biología",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-005",
+          "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-biologia/",
+          "plan_fuente": "https://ens9005-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-biologia/",
+          "plan_estudio": [
+            {
+              "anio": "📘 Primer Año",
+              "materias": [
+                "Matemática",
+                "Biología General",
+                "Química General",
+                "Bioestadística",
+                "Sujeto de la Educación",
+                "Pedagogía",
+                "Formación Práctica Profesional I",
+                "Comprensión y Producción de textos académicos"
+              ]
+            },
+            {
+              "anio": "📗 Segundo Año",
+              "materias": [
+                "Química Orgánica",
+                "Química Inorgánica",
+                "Física General",
+                "Ciencias de la Tierra",
+                "Didáctica General",
+                "Ecología",
+                "Didáctica de las Ciencias Naturales",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Formación Práctica Profesional II"
+              ]
+            },
+            {
+              "anio": "📙 Tercer Año",
+              "materias": [
+                "Microbiología y Biodiversidad",
+                "Biología Vegetal",
+                "Biología Animal",
+                "Didáctica de la Biología",
+                "Salud Humana",
+                "Biología Humana",
+                "Educación para la Diversidad",
+                "Psicología Educacional",
+                "Gestión y evaluación de los aprendizajes",
+                "Formación Práctica Profesional III"
+              ]
+            },
+            {
+              "anio": "📒 Cuarto Año",
+              "materias": [
+                "Química Biológica",
+                "Genética",
+                "Educación Ambiental",
+                "Educación y Tecnologías Digitales",
+                "ESI",
+                "UDJE Formación Complementaria Específica",
+                "UDJE Historia y Patrimonio de Mendoza",
+                "Formación Práctica Profesional IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1502,
+          "nombre_carrera": "Profesorado de Educación Especial (Sede Las Catitas)",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-005",
+          "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/prof-de-educacion-especial/",
+          "plan_fuente": "https://ens9005-infd.mendoza.edu.ar/sitio/prof-de-educacion-especial/",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Comprensión y Producción de Textos Académicos",
+                "Pensamiento Filosófico",
+                "Pedagogía",
+                "Sistema Educativo",
+                "Educación Artística: Artes Visuales",
+                "Educación Artística: Música",
+                "Educación Especial Contemporánea",
+                "Neuropsicosociología del Desarrollo",
+                "Discapacidad Intelectual: características del desarrollo",
+                "Atención Temprana",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Didáctica",
+                "Psicología Educacional",
+                "Instituciones Educativas",
+                "Abordaje Pedagógico Didáctico I",
+                "Sujetos de la Educación I",
+                "Sujetos de la Educación II",
+                "Psicomotricidad",
+                "Discapacidad Motora y Abordaje Pedagógico Didáctico",
+                "Didáctica de la Matemática",
+                "Didáctica de la Lengua",
+                "Didáctica de la Literatura",
+                "Didáctica de las Ciencias Naturales",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyectos de Intervención Socioeducativa",
+                "Didáctica de la Formación Ética y Ciudadana",
+                "Abordaje Pedagógico Didáctico II",
+                "Comunicación y Desarrollo del Lenguaje en la Persona con Discapacidad",
+                "Didáctica de las Ciencias Sociales",
+                "Discapacidad Múltiple y Abordaje Pedagógico Didáctico",
+                "Perspeciva Social, Transición a la Vida Adulta y Ocupación Laboral",
+                "Alfabetización",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "Cuarto año",
+              "materias": [
+                "Educación y Tecnología Digitales",
+                "ESI",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "UCE: Formación Complementaria General",
+                "UCE: Formación Complementaria Específica",
+                "Educación Artística: Teatro",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1503,
+          "nombre_carrera": "Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el título de base (ProTec)",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-005",
+          "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-de-la-modalidad-tecnico-profesional-en-concurrencia-con-el-titulo-de-base/",
+          "plan_fuente": "https://ens9005-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-de-la-modalidad-tecnico-profesional-en-concurrencia-con-el-titulo-de-base/",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "La enseñanza en la Escuela Secundaria Técnica I.",
+                "Competencias comunicacionales, comprensión de textos técnicos y no técnicos I",
+                "El aprendizaje en la escuela secundaria técnica",
+                "Competencias comunicacionales, comprensión de textos técnicos y no técnicos II",
+                "Práctica I"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Contextos de y para el aprendizaje en la Escuela Secundaria Técnica I.",
+                "Adolescencias y Educación Secundaria Técnica.",
+                "Condiciones del Ejercicio profesional.",
+                "La enseñanza en la Escuela Secundaria Técnica II.",
+                "Vinculación con el sector socio productivo.",
+                "Práctica II."
+              ]
+            },
+            {
+              "anio": "Tercer año",
+              "materias": [
+                "Contextos de y para el aprendizaje en la Escuela Secundaria Técnica II.",
+                "Producción de textos para la ETP Secundaria.",
+                "Práctica III.",
+                "Uso didáctico de TIC",
+                "Residencia",
+                "Reflexión sobre la problematización de la Práctica.",
+                "Actualización Científico Tecnológica."
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1504,
+          "nombre_carrera": "Formación Profesional en Apicultura",
+          "categoria": "Formación Profesional",
+          "duracion": "1 año y medio",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-005",
+          "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/formacion-profesional-en-agronomia/",
+          "plan_fuente": "https://ens9005-infd.mendoza.edu.ar/sitio/formacion-profesional-en-agronomia/",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Biología y sanidad de las abejas",
+                "Manejo técnico de colmenas",
+                "Introducción a la agroecología",
+                "Equipamiento apícola y seguridad en el trabajo",
+                "Legislación productiva y ambiental",
+                "Producción de miel y derivados",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Gestión de emprendimientos apícolas",
+                "Comercialización y calidad de productos",
+                "Polinización y biodiversidad",
+                "Innovación y tecnología aplicada a la apicultura",
+                "Educación ambiental y divulgación",
+                "Práctica Profesionalizante II"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1505,
+          "nombre_carrera": "Formación Profesional en Software",
+          "categoria": "Formación Profesional",
+          "duracion": "1 año y medio",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-005",
+          "link_oficial": "https://ens9005-infd.mendoza.edu.ar/sitio/formacion-profesional-en-software/",
+          "plan_fuente": "https://ens9005-infd.mendoza.edu.ar/sitio/formacion-profesional-en-software/",
+          "plan_estudio": [
+            {
+              "anio": "Primer año",
+              "materias": [
+                "Lógica Computacional",
+                "Fundamentos de Programación",
+                "Programación estructurada.",
+                "Introducción al Desarrollo Web",
+                "Bases de Datos",
+                "Matemática Aplicada",
+                "Comunicación Profesional",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "Segundo año",
+              "materias": [
+                "Programación orientada a objetos",
+                "Desarrollo de Aplicaciones",
+                "Gestión de Proyectos de Software",
+                "Seguridad Informática",
+                "Documentación Técnica",
+                "Trabajo Colaborativo y Cultura Dev",
+                "Proyecto Final Integrador",
+                "Práctica Profesionalizante II"
+              ]
+            }
+          ]
+        }
+      ]
     }
-   ],
-   "departamento": "Junín"
-  }
- ]
+  ]
 }

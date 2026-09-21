@@ -20,7 +20,63 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Escuela de Periodismo Deportivo de Mendoza",
-     "link_oficial": "https://epdmendoza.com.ar/"
+     "link_oficial": "https://epdmendoza.com.ar/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Comunicación Gráfica I",
+        "Comprensión y Producción de Textos I",
+        "Teoría de la Comunicación",
+        "Historia de las Ideas y las Instituciones Políticas",
+        "Inglés I",
+        "Informática I",
+        "Deportes I",
+        "Psicología y Deporte",
+        "Literatura Contemporánea",
+        "Historia del Deporte"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Comunicación Radiofónica y Locución",
+        "Metodología de la Investigación",
+        "Comunicación Gráfica II",
+        "Inglés II",
+        "Informática II",
+        "Deportes II",
+        "1° Cuatrimestre:",
+        "Historia del Periodismo",
+        "Comprensión y Producción de Textos II",
+        "Problemática Sociocultural y del Conocimiento",
+        "2° Cuatrimestre:",
+        "Semiótica y Teoría de la Imagen",
+        "Cultura y Espectáculos",
+        "Fotografía"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Materias anuales:",
+        "Comunicación Televisiva",
+        "Marketing, Publicidad y Propaganda",
+        "Inglés III",
+        "Deportes III",
+        "Práctica Profesional",
+        "1° Cuatrimestre:",
+        "Análisis de la Realidad de los Medios",
+        "Organización Económica de los Medios",
+        "Legislación y Ética Periodística",
+        "2° Cuatrimestre:",
+        "Sociología de la Comunicación",
+        "Medicina Deportiva",
+        "Entrenamiento Deportivo"
+       ]
+      }
+     ],
+     "plan_fuente": "https://epdmendoza.com.ar/plan-de-estudio/"
     }
    ],
    "departamento": "Capital"

@@ -189,6 +189,7 @@ export function renderizarCursosAparte(contenedor, lista, simple = false) {
             <div class="card-info">
                 <p class="card-institucion-row">${SVG_INSTITUCION} <strong>${enlaceInstitucionBEN(curso.institucion)}</strong></p>
                 ${curso.provincia ? `<p class="card-meta-row">${SVG_MODALIDAD} <span>${capSeguro(curso.provincia)}</span></p>` : ''}
+                ${curso.sede ? `<p class="card-meta-row">${SVG_MODALIDAD} <span>${capSeguro(curso.sede)}</span></p>` : ''}
                 <p class="card-meta-row">${SVG_DURACION} <span>${capSeguro(curso.duracion)}</span></p>
             </div>
             ${urlSegura(curso.link)

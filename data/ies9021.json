@@ -1,99 +1,472 @@
 {
- "instituciones": [
-  {
-   "id": 29,
-   "nombre": "IES 9-021 Tecnológico",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "A confirmar",
-    "email": "contacto@ies9021.edu.ar",
-    "direccion": "Junín, Mendoza"
-   },
-   "carreras": [
+  "instituciones": [
     {
-     "id": 2900,
-     "nombre_carrera": "Tecnicatura Superior en Farmacia",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-021",
-     "link_oficial": "https://ies9021.edu.ar/carreras/"
-    },
-    {
-     "id": 2901,
-     "nombre_carrera": "Tecnicatura Superior en Gastronomía",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-021",
-     "link_oficial": "https://ies9021.edu.ar/carreras/"
-    },
-    {
-     "id": 2902,
-     "nombre_carrera": "Tecnicatura Superior en Óptica y Contactología",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-021",
-     "link_oficial": "https://ies9021.edu.ar/carreras/"
-    },
-    {
-     "id": 2903,
-     "nombre_carrera": "Tecnicatura Superior en Mecatrónica",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-021",
-     "link_oficial": "https://ies9021.edu.ar/carreras/"
-    },
-    {
-     "id": 2904,
-     "nombre_carrera": "Tecnicatura Superior en Agronomía",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-021",
-     "link_oficial": "https://ies9021.edu.ar/carreras/"
-    },
-    {
-     "id": 2905,
-     "nombre_carrera": "Tecnicatura Superior en Enología",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-021",
-     "link_oficial": "https://ies9021.edu.ar/carreras/"
-    },
-    {
-     "id": 2906,
-     "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-021",
-     "link_oficial": "https://ies9021.edu.ar/carreras/"
-    },
-    {
-     "id": 2907,
-     "nombre_carrera": "Tecnicatura Superior en Podología",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-021",
-     "link_oficial": "https://ies9021.edu.ar/carreras/"
+      "id": 29,
+      "nombre": "IES 9-021 Tecnológico",
+      "nivel": "terciario",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "A confirmar",
+        "email": "contacto@ies9021.edu.ar",
+        "direccion": "Junín, Mendoza"
+      },
+      "carreras": [
+        {
+          "id": 2900,
+          "nombre_carrera": "Tecnicatura Superior en Farmacia",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-021",
+          "link_oficial": "https://ies9021.edu.ar/carreras/farmacia/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Química Aplicada a Ciencias de la Salud I",
+                "Anatomía y Fisiología Humana I",
+                "Informática",
+                "Física Aplicada a Ciencias de la Salud",
+                "Farmacia y Salud Pública",
+                "Química Aplicada a Ciencias de la Salud II",
+                "Anatomía y Fisiología Humana II",
+                "Atención al Paciente",
+                "Higiene y Seguridad",
+                "Principios Básicos de los Medicamentos",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Inglés Técnico",
+                "Farmacotecnia",
+                "Microbiología y Parasitología I",
+                "Introducción a la Farmacología I",
+                "Productos Médicos",
+                "Microbiología y Parasitología II",
+                "Introducción a la Farmacología II",
+                "Fundamentos de Fisiopatología",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión de Emprendimientos",
+                "Servicios Técnicos Farmacéuticos I",
+                "Epidemiología y Salud Pública",
+                "Problemática Sociocultural y de la Salud",
+                "Sistemas Informáticos Farmacéuticos",
+                "Servicios Técnicos Farmacéuticos II",
+                "Ética Profesional y Legislación Farmacéutica",
+                "Medicamentos de Origen Natural",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2901,
+          "nombre_carrera": "Tecnicatura Superior en Gastronomía",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-021",
+          "link_oficial": "https://ies9021.edu.ar/carreras/gastronomia/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Cocina I",
+                "Métodos Cuantitativos",
+                "Introducción a la Panadería y Repostería",
+                "Bromatología",
+                "Materias Primas e Insumos Gastronómicos",
+                "Inglés Técnico I",
+                "Alfabetización Académica",
+                "Nutrición",
+                "Servicio de Alimentos y Bebidas",
+                "Informática Gastronómica",
+                "Sistema de Gestión Gastronómica",
+                "Práctica Profesional I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Cocina II",
+                "Cocotelería",
+                "Organización de Eventos y Catering",
+                "Dietología",
+                "Cocina Regional",
+                "Administración y Comportamiento Organizacional",
+                "Toxicología de los Alimentos",
+                "Inglés Técnico II",
+                "Gestión de Costos y Presupuestos",
+                "Vinos y Maridaje",
+                "Gestión de Alimentos y Bebidas",
+                "Marketing Gastronómico",
+                "Práctica Profesional II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Cocina III",
+                "Cocina Internacional",
+                "Ética Profesional",
+                "Francés Técnico",
+                "Repostería Internacional",
+                "Gestión de Emprendimientos Gastronómicos",
+                "Práctica Profesional III"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2902,
+          "nombre_carrera": "Tecnicatura Superior en Óptica y Contactología",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-021",
+          "link_oficial": "https://ies9021.edu.ar/carreras/optica-y-contactologia/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Química Aplicada",
+                "Matemática Aplicada",
+                "Anatomía del Sistema Visual",
+                "Física",
+                "Diseño y Geometría",
+                "Introducción a la Óptica",
+                "Óptica Oftálmica General",
+                "Entornos Virtuales de la Salud y Herramientas Digitales",
+                "Comunicación en Salud",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Óptica Oftálmica Especial",
+                "Óptica Instrumental",
+                "Óptica Oftálmica Aplicada",
+                "Histología y Fisiología del Sistema Visual",
+                "Patología del Sistema Visual",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Adaptación de Lentes de Contacto",
+                "Gabinete de Contactología",
+                "Gestión y Calidad en Óptica y Contactología",
+                "Gestión de Costos y Ventas",
+                "Ergonomía, Higiene y Seguridad",
+                "Ética y Legislación Profesional",
+                "Inglés Técnico",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2903,
+          "nombre_carrera": "Tecnicatura Superior en Mecatrónica",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-021",
+          "link_oficial": "https://ies9021.edu.ar/carreras/mecatronica/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Sistemas Mecánicos",
+                "Sistemas Eléctricos I",
+                "Sistemas Electrónicos I",
+                "Sistemas Informáticos",
+                "Ciencias Aplicadas",
+                "Sistemas Eléctricos II",
+                "Sistemas Electrónicos II",
+                "Sistemas de Control",
+                "Representación de Sistemas Mecatrónicos",
+                "Alfabetización Académica",
+                "Prácticas Profesionalizantes I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Dispositivos Electromecánicos",
+                "Automatización e Instrumentación Industrial",
+                "Autómatas Programables",
+                "Sistemas Informáticos de Control",
+                "Procesos de Fabricación",
+                "CAD CAM y CAE",
+                "Sistemas Interfaces Humano Máquina",
+                "Prácticas Profesionalizantes II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Simulación de Sistemas Mecatrónicos",
+                "Procesos y Gestión de Mantenimiento y Calidad",
+                "Gestión de Emprendimiento",
+                "Electiva Institucional",
+                "Formación y Orientación Laboral",
+                "Inglés Técnico",
+                "Prácticas Profesionalizantes III",
+                "Proyecto Final de Mecatrónica"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2904,
+          "nombre_carrera": "Tecnicatura Superior en Agronomía",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-021",
+          "link_oficial": "https://ies9021.edu.ar/carreras/agronomia/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Matemática Aplicada a la Agricultura",
+                "Estadística",
+                "Informática Aplicada",
+                "Emprendedorismo y Agronegocio",
+                "Alfabetización Académica",
+                "Físico-Química Agrícola",
+                "Sistema Suelo, Plantas y Atmósfera",
+                "Producción Animal I",
+                "Electiva I: Producción Animal II",
+                "Producción Hortícola",
+                "Inglés Técnico",
+                "Producción Frutícola",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Agroecología",
+                "Manejo Reproductivo, Sanitario y Nutricional Animal",
+                "Tecnología Agrícola I",
+                "Tecnología Agrícola II",
+                "Gestión y Mantenimiento de Maquinarias Agropecuarias",
+                "Formulación y Evaluación de Proyectos I",
+                "Sistema Suelo, Cultivo y Atmósfera",
+                "Administración Rural",
+                "Gestión de la Calidad",
+                "Manejo Integrado de Plagas y Enfermedades",
+                "Riego y Drenaje",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Formulación y Evaluación de Proyectos II",
+                "Intercambio y Comercialización",
+                "Extensión Rural",
+                "Electiva II: Procesamiento e Industrialización Agropecuaria",
+                "Desarrollo Sostenible",
+                "Desarrollo Territorial",
+                "Gestión de Sistema de Producción Integral",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2905,
+          "nombre_carrera": "Tecnicatura Superior en Enología",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-021",
+          "link_oficial": "https://ies9021.edu.ar/carreras/enologia-e-industria-frutihorticolas/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Química General e Inorgánica",
+                "Matemática",
+                "Física",
+                "Higiene y Seguridad",
+                "Microbiología General",
+                "Alfabetización Académica",
+                "Química Orgánica",
+                "Producciones Primarias",
+                "Introducción a la Vinificación e Industrializaciones",
+                "Análisis Sensorial I",
+                "Práctica Profesional I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Química Analítica e Instrumental",
+                "Gestión de Calidad",
+                "Estadística",
+                "Bromatología y Toxicología",
+                "Operaciones Unitarias",
+                "Química Biológica",
+                "Emprendedorismo y Agronegocios",
+                "Tecnología y Análisis de Productos Oleícolas",
+                "Microbiología Aplicada",
+                "Análisis Sensorial II",
+                "Vinificaciones I",
+                "Práctica Profesional II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Tecnología y Análisis de Productos Frutihortícolas",
+                "Legislación Vitivinícola y Alimentaria",
+                "Ética Profesional",
+                "Inglés Técnico",
+                "Análisis de Bebidas Víncias y No Víncias",
+                "Vinificaciones Especiales",
+                "Vinificaciones II",
+                "Gestión de Emprendimientos",
+                "Desarrollo Sostenible",
+                "Análisis Sensorial III",
+                "Práctica Profesional III"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2906,
+          "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-021",
+          "link_oficial": "https://ies9021.edu.ar/carreras/desarrollo-de-software/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Programación I",
+                "Matemática Aplicada",
+                "Lógica Computacional",
+                "Inglés Técnico I",
+                "Alfabetización Académica",
+                "Seminario Nuevas Tecnologías",
+                "Arquitectura de Dispositivos",
+                "Sistemas Operativos I",
+                "Base de Datos I",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Programación II",
+                "Matemática Discreta",
+                "Análisis Matemático",
+                "Comunicación y Redes",
+                "Inglés Técnico II",
+                "Modelado de Software",
+                "Sistemas Operativos II",
+                "Base de Datos II",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Programación III",
+                "Arquitectura y Diseño de Interfaces: UI y UX",
+                "Auditoría y Calidad de Sistemas",
+                "Ciberseguridad",
+                "Inglés Técnico III",
+                "Legislación Informática y Ética Profesional",
+                "Estadística y Probabilidades para el Desarrollo de Software",
+                "Gestión de Proyectos de Software",
+                "Metodologías Ágiles",
+                "Base de Datos III",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2907,
+          "nombre_carrera": "Tecnicatura Superior en Robótica",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-021",
+          "link_oficial": "https://ies9021.edu.ar/carreras/robotica/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Programación",
+                "Matemática Aplicada",
+                "Lógica Computacional",
+                "Inglés Técnico I",
+                "Alfabetización Académica",
+                "Arquitectura de Dispositivos",
+                "Sistemas Operativos",
+                "Base de Datos",
+                "Fundamentos Mecánicos y Eléctricos para Sistemas Robóticos",
+                "Taller de Electrónica",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Tecnología de Accionamientos y Mantenimiento de Sistemas Robóticos",
+                "Taller de Mecatrónica",
+                "Diseño e Integración de Nodos IoT para Robótica",
+                "Redes, Protocolos e Interfaces",
+                "Inglés Técnico II",
+                "Laboratorio de Diseño y Fabricación Digital I",
+                "Robótica I",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Testeo Avanzado y Diagnóstico Funcional de Sistemas Robóticos",
+                "Taller de Microelectrónica",
+                "Robótica II",
+                "Visión Computacional y Aprendizaje Automático",
+                "Inglés Técnico III",
+                "Ética, Legislación y Sustentabilidad Tecnológica",
+                "Ciberseguridad en Sistemas Robóticos e IoT",
+                "Laboratorio de Diseño y Fabricación Digital II",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ]
+        }
+      ],
+      "departamento": "Junín"
     }
-   ],
-   "departamento": "Junín"
-  }
- ]
+  ]
 }

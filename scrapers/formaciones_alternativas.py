@@ -471,6 +471,15 @@ formaciones_alternativas = [
                 "modalidad": "Online",
                 "facultad": "INTA Mendoza",
                 "link_oficial": "https://www.facebook.com/INTA.Mendoza/photos/curso-de-apicultura-online-gratuito"
+            },
+            {
+                "id": 21402,
+                "nombre_carrera": "Curso de Huerta Orgánica y Agroecología",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar",
+                "modalidad": "Online (gratuito)",
+                "facultad": "INTA Mendoza",
+                "link_oficial": "https://inta.gob.ar"
             }
         ]
     },
@@ -595,6 +604,33 @@ formaciones_alternativas = [
                 "modalidad": "Presencial",
                 "facultad": "Facultad de Ciencias Agrarias - UNCuyo",
                 "link_oficial": "https://fca.uncuyo.edu.ar/cursos/item/curso-de-cerveza-artesanal"
+            },
+            {
+                "id": 21902,
+                "nombre_carrera": "Diplomado en Cultivo de Cannabis Sativa",
+                "categoria": "Diplomatura",
+                "duracion": "125 horas",
+                "modalidad": "Presencial (prácticas a campo)",
+                "facultad": "Facultad de Ciencias Agrarias - UNCuyo",
+                "link_oficial": "https://www.uncuyo.edu.ar/prensa/crece-la-formacion-en-cannabis-y-la-uncuyo-abre-una-nueva-cohorte-de-su-diplomado"
+            },
+            {
+                "id": 21903,
+                "nombre_carrera": "Taller de Cata de Aceite de Oliva Virgen",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "5 horas reloj",
+                "modalidad": "Presencial (certificado FCA-UNCuyo y COI)",
+                "facultad": "Facultad de Ciencias Agrarias - UNCuyo",
+                "link_oficial": "https://fca.uncuyo.edu.ar/taller-de-cata-de-aceite-de-oliva-virgen"
+            },
+            {
+                "id": 21904,
+                "nombre_carrera": "Introducción al Riego por Goteo: Instalación, Operación y Mantenimiento",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar",
+                "modalidad": "Presencial",
+                "facultad": "Facultad de Ciencias Agrarias - UNCuyo / Masteragua",
+                "link_oficial": "https://enolife.com.ar/es/agrarias-uncuyo-y-masteragua-convocan-en-febrero-al-2-curso-de-instaladores-de-riego-tecnificado/"
             }
         ]
     },
@@ -641,6 +677,424 @@ formaciones_alternativas = [
                 "modalidad": "Online",
                 "facultad": "AALPS",
                 "link_oficial": "https://aalps.org.ar/quienes-curso/"
+            }
+        ]
+    },
+    {
+        "id": 222,
+        "nombre": "Universidad Juan Agustín Maza (UMaza) - Escuela de Salvamento Acuático",
+        "nivel": "capacitación profesional",
+        "gestion": "privada (universidad)",
+        "provincia": "Mendoza",
+        "contacto": {
+            "telefono": "(0261) 4056240 int. 325",
+            "email": "deportes@umaza.edu.ar",
+            "direccion": "Campo de Deportes UMaza, Adolfo Calle 4136, Guaymallén (sedes Gran Mendoza, Valle de Uco, General Alvear y Malargüe)"
+        },
+        "carreras": [
+            {
+                "id": 22201,
+                "nombre_carrera": "Guardavidas Profesional (Salvamento Acuático)",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "12 meses / 850 horas",
+                "modalidad": "Semipresencial (teoría virtual + práctica presencial)",
+                "facultad": "UMaza - ESAM",
+                "link_oficial": "https://www.umaza.edu.ar/landings/salvamento"
+            }
+        ]
+    },
+    {
+        "id": 223,
+        "nombre": "InSuTec - Instituto Superior Tecnológico N° 9-019",
+        "nivel": "formación profesional",
+        "gestion": "pública (DGE)",
+        "provincia": "Mendoza",
+        "contacto": {
+            "telefono": "+54 261 425-2895",
+            "email": "ies9019@insutec.edu.ar",
+            "direccion": "San Juan 467, Ciudad de Mendoza (también Rivadavia y Pablo Nogués)"
+        },
+        "carreras": [
+            {
+                "id": 22301,
+                "nombre_carrera": "Instalador de Sistemas Solares Fotovoltaicos y Térmicos (Formación Profesional Nivel 3)",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar",
+                "modalidad": "Presencial",
+                "facultad": "InSuTec 9-019",
+                "link_oficial": "https://www.insutec.edu.ar/tecnico-instalador-de-sistemas-solares-fotovoltaicos-y-termicos/"
+            }
+        ]
+    },
+    {
+        "id": 224,
+        "nombre": "UTN - Facultad Regional Mendoza (Extensión Universitaria)",
+        "nivel": "capacitación (extensión universitaria)",
+        "gestion": "pública",
+        "provincia": "Mendoza",
+        "contacto": {
+            "telefono": "261 466-6049",
+            "email": "capacitacion@frm.utn.edu.ar",
+            "direccion": "Rodríguez 273, Ciudad de Mendoza"
+        },
+        "carreras": [
+            {
+                "id": 22401,
+                "nombre_carrera": "Taller de Turismo Astronómico (Astro-guía)",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "16 horas reloj",
+                "modalidad": "Presencial (gratuito, con puntaje docente DGE)",
+                "facultad": "UTN FRM",
+                "link_oficial": "https://www4.frm.utn.edu.ar/taller-de-turismo-astronomico/"
+            }
+        ]
+    },
+    {
+        "id": 225,
+        "nombre": "AADIDESS - Delegación Las Leñas",
+        "nivel": "capacitación profesional",
+        "gestion": "privada (asociación)",
+        "provincia": "Mendoza",
+        "contacto": {
+            "telefono": "+54 9 2615 39-3410",
+            "email": "laslenas@aadidess.com",
+            "direccion": "Las Leñas, Malargüe, Mendoza"
+        },
+        "carreras": [
+            {
+                "id": 22501,
+                "nombre_carrera": "Instructorado Nacional de Esquí y Snowboard (Niveles 1 a 3)",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "Módulos metódico, técnico y pista (abril a agosto)",
+                "modalidad": "Presencial (pista) + campus virtual",
+                "facultad": "AADIDESS",
+                "link_oficial": "https://aadidess.com/delegacion-las-lenas/"
+            }
+        ]
+    },
+    {
+        "id": 226,
+        "nombre": "Fundación Seminare (Mendoza)",
+        "nivel": "capacitación profesional",
+        "gestion": "privada (fundación)",
+        "provincia": "Mendoza",
+        "contacto": {
+            "telefono": "+54 261 507-9445",
+            "email": "A confirmar",
+            "direccion": "Finca Escuela Oleovid, Mendoza"
+        },
+        "carreras": [
+            {
+                "id": 22601,
+                "nombre_carrera": "Sommelier de Aceites de Oliva",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "3 meses",
+                "modalidad": "Online + encuentros presenciales mensuales",
+                "facultad": "Fundación Seminare",
+                "link_oficial": "https://enolife.com.ar/es/hoy-13-5-inicia-un-curso-de-sommelier-de-aceite-de-oliva-para-sentir-degustar-y-comunicar-el-aove/"
+            }
+        ]
+    },
+    {
+        "id": 227,
+        "nombre": "Sky Tour - Escuela de Parapente Mendoza",
+        "nivel": "capacitación profesional",
+        "gestion": "privada",
+        "provincia": "Mendoza",
+        "contacto": {
+            "telefono": "A confirmar",
+            "email": "A confirmar",
+            "direccion": "El Challao / Cerro Arco, Mendoza"
+        },
+        "carreras": [
+            {
+                "id": 22701,
+                "nombre_carrera": "Curso de Iniciación al Parapente",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar (10-12 vuelos + teoría)",
+                "modalidad": "Presencial",
+                "facultad": "Sky Tour",
+                "link_oficial": "https://skytour.com.ar/escuela-de-parapente-mendoza/"
+            }
+        ]
+    },
+    {
+        "id": 228,
+        "nombre": "INTA Mendoza + ITU UNCuyo",
+        "nivel": "capacitación (extensión)",
+        "gestion": "pública",
+        "provincia": "Mendoza",
+        "contacto": {
+            "telefono": "A confirmar",
+            "email": "A confirmar",
+            "direccion": "INTA La Consulta / ITU UNCuyo, Luján de Cuyo, Mendoza"
+        },
+        "carreras": [
+            {
+                "id": 22801,
+                "nombre_carrera": "Microcredencial Agro 4.0: Agricultura de Precisión",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "3 meses y medio",
+                "modalidad": "Presencial / híbrida",
+                "facultad": "INTA + ITU UNCuyo",
+                "link_oficial": "https://campoandino.ar/agro-4-0-capacitacion-para-la-agricultura-de-precision-en-mendoza/"
+            }
+        ]
+    },
+    {
+        "id": 229,
+        "nombre": "Facultad de Educación - UNCuyo",
+        "nivel": "capacitación (extensión universitaria)",
+        "gestion": "pública",
+        "provincia": "Mendoza",
+        "contacto": {
+            "telefono": "A confirmar",
+            "email": "extension@fed.uncu.edu.ar",
+            "direccion": "Sobremonte 81, Ciudad de Mendoza"
+        },
+        "carreras": [
+            {
+                "id": 22901,
+                "nombre_carrera": "Lengua de Señas Argentina (LSA) y Cultura Sorda",
+                "categoria": "Curso / Idiomas",
+                "duracion": "Anual (marzo a octubre)",
+                "modalidad": "Presencial (niveles A1, A2 y B1)",
+                "facultad": "Facultad de Educación - UNCuyo",
+                "link_oficial": "https://educacion.uncuyo.edu.ar/cursos/curso/lengua-de-senas-argentina-lsa-y-cultura-sorda2473"
+            }
+        ]
+    },
+    {
+        "id": 230,
+        "nombre": "INTI - Instituto Nacional de Tecnología Industrial",
+        "nivel": "capacitación profesional",
+        "gestion": "pública",
+        "provincia": "Online (accesible desde Mendoza)",
+        "contacto": {
+            "telefono": "A confirmar",
+            "email": "A confirmar",
+            "direccion": "Campus virtual INTI"
+        },
+        "carreras": [
+            {
+                "id": 23001,
+                "nombre_carrera": "Taller de Elaboración de Quesos Artesanales",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar",
+                "modalidad": "Online (campus virtual)",
+                "facultad": "INTI",
+                "link_oficial": "https://www.inti.gob.ar/capacitaciones/curso/1908-taller-de-elaboracion-de-quesos-artesanales"
+            }
+        ]
+    },
+    {
+        "id": 231,
+        "nombre": "CIBART - Centro Integral de Bebidas Artesanales",
+        "nivel": "capacitación profesional",
+        "gestion": "privada",
+        "provincia": "Córdoba (con opción a distancia)",
+        "contacto": {
+            "telefono": "+54 9 351 518-3469",
+            "email": "info@cibart.com.ar",
+            "direccion": "Av. Juan B. Justo 5185, Córdoba"
+        },
+        "carreras": [
+            {
+                "id": 23101,
+                "nombre_carrera": "Curso de Destilación y Elaboración de Gin",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar",
+                "modalidad": "Teórico-práctico",
+                "facultad": "CIBART",
+                "link_oficial": "https://cibart.com.ar/producto/curso-de-destilacion-y-elaboracion-de-gin/"
+            }
+        ]
+    },
+    {
+        "id": 232,
+        "nombre": "Capacitaciones El Molino",
+        "nivel": "capacitación profesional",
+        "gestion": "privada",
+        "provincia": "Online (accesible desde Mendoza)",
+        "contacto": {
+            "telefono": "A confirmar",
+            "email": "A confirmar",
+            "direccion": "Online"
+        },
+        "carreras": [
+            {
+                "id": 23201,
+                "nombre_carrera": "Elaboración de Whisky, Gin y Vermut",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar",
+                "modalidad": "Online en vivo (clases grabadas)",
+                "facultad": "Capacitaciones El Molino",
+                "link_oficial": "https://capacitacioneselmolino.com/producto/whisky-gin-y-vermut/"
+            },
+            {
+                "id": 23202,
+                "nombre_carrera": "Destilación Expert",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "3 meses",
+                "modalidad": "Online en vivo",
+                "facultad": "Capacitaciones El Molino",
+                "link_oficial": "https://capacitacioneselmolino.com/producto/destilacion/"
+            }
+        ]
+    },
+    {
+        "id": 233,
+        "nombre": "Cruz Roja Argentina (Filial Mendoza)",
+        "nivel": "capacitación profesional",
+        "gestion": "privada (asociación)",
+        "provincia": "Mendoza",
+        "contacto": {
+            "telefono": "A confirmar",
+            "email": "A confirmar",
+            "direccion": "Calle San Juan 938, Ciudad de Mendoza"
+        },
+        "carreras": [
+            {
+                "id": 23301,
+                "nombre_carrera": "Curso de Primeros Auxilios, RCP y DEA",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar",
+                "modalidad": "Presencial / Virtual",
+                "facultad": "Cruz Roja Argentina",
+                "link_oficial": "https://www.cruzroja.org.ar/filialescra/mendoza"
+            },
+            {
+                "id": 23302,
+                "nombre_carrera": "Curso de Formación de Guardavidas",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "1 año",
+                "modalidad": "Presencial",
+                "facultad": "Cruz Roja Argentina",
+                "link_oficial": "https://www.cruzroja.org.ar/escuelas-guardavidas"
+            }
+        ]
+    },
+    {
+        "id": 234,
+        "nombre": "ASOLMEN - Asociación Olivícola de Mendoza",
+        "nivel": "capacitación profesional",
+        "gestion": "privada (asociación)",
+        "provincia": "Mendoza",
+        "contacto": {
+            "telefono": "A confirmar",
+            "email": "asolmen@asolmen.com.ar",
+            "direccion": "Sarmiento 199, 6° Piso, Of. 603, Ciudad de Mendoza"
+        },
+        "carreras": [
+            {
+                "id": 23401,
+                "nombre_carrera": "Curso de Cata y Maridaje de Aceite de Oliva",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar",
+                "modalidad": "Presencial",
+                "facultad": "ASOLMEN",
+                "link_oficial": "A confirmar"
+            }
+        ]
+    },
+    {
+        "id": 235,
+        "nombre": "Academia Manifiesto (Baristas)",
+        "nivel": "capacitación profesional",
+        "gestion": "privada",
+        "provincia": "Buenos Aires (online, accesible desde Mendoza)",
+        "contacto": {
+            "telefono": "A confirmar",
+            "email": "A confirmar",
+            "direccion": "Buenos Aires (presencial) / Online"
+        },
+        "carreras": [
+            {
+                "id": 23501,
+                "nombre_carrera": "Curso Barista Integral",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "2 semanas",
+                "modalidad": "Presencial / Online",
+                "facultad": "Academia Manifiesto",
+                "link_oficial": "https://academia.manifiestocafe.com.ar"
+            }
+        ]
+    },
+    {
+        "id": 236,
+        "nombre": "Capacitación en Energía Solar (Mendoza)",
+        "nivel": "capacitación profesional",
+        "gestion": "A confirmar",
+        "provincia": "Mendoza",
+        "contacto": {
+            "telefono": "A confirmar",
+            "email": "A confirmar",
+            "direccion": "A confirmar"
+        },
+        "carreras": [
+            {
+                "id": 23601,
+                "nombre_carrera": "Instalador de Sistemas de Energía Solar (Fotovoltaicos y Térmicos)",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar",
+                "modalidad": "A confirmar",
+                "facultad": "Capacitación en Energía Solar",
+                "link_oficial": "A confirmar"
+            }
+        ]
+    },
+    {
+        "id": 237,
+        "nombre": "Prefectura Naval Argentina (Certificaciones Náuticas)",
+        "nivel": "capacitación profesional",
+        "gestion": "pública",
+        "provincia": "A confirmar (accesible desde Mendoza)",
+        "contacto": {
+            "telefono": "A confirmar",
+            "email": "A confirmar",
+            "direccion": "A confirmar"
+        },
+        "carreras": [
+            {
+                "id": 23701,
+                "nombre_carrera": "Timonel de Yate",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar",
+                "modalidad": "Presencial",
+                "facultad": "Prefectura Naval Argentina",
+                "link_oficial": "https://www.argentina.gob.ar/servicio/obtener-el-certificado-de-timonel-de-yate"
+            },
+            {
+                "id": 23702,
+                "nombre_carrera": "Conductor Náutico (Patrón de Yate)",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar",
+                "modalidad": "Presencial",
+                "facultad": "Prefectura Naval Argentina",
+                "link_oficial": "https://www.argentina.gob.ar/servicio/obtener-el-certificado-de-conductor-nautico"
+            }
+        ]
+    },
+    {
+        "id": 238,
+        "nombre": "Administración de Parques Nacionales (APN)",
+        "nivel": "capacitación profesional",
+        "gestion": "pública",
+        "provincia": "Córdoba",
+        "contacto": {
+            "telefono": "A confirmar",
+            "email": "A confirmar",
+            "direccion": "Centro de Formación y Capacitación en Áreas Protegidas (CFyCAP), Embalse, Córdoba"
+        },
+        "carreras": [
+            {
+                "id": 23801,
+                "nombre_carrera": "Formación de Guardaparques Nacionales",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar (por concurso público)",
+                "modalidad": "Presencial",
+                "facultad": "Administración de Parques Nacionales",
+                "link_oficial": "https://www.argentina.gob.ar/parquesnacionales"
             }
         ]
     }

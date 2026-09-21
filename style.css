@@ -622,8 +622,20 @@ h1, h2, .section-tab-texto strong {
 .results-toolbar-bottom { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
 .results-count { margin: 0; color: var(--muted); font-size: var(--fs-base); font-weight: 600; }
 /* El ícono recuerda en qué sección está parado el usuario (la barra solo se ve
-   en Educación Formal; las plataformas tienen su propio encabezado). */
-.results-count::before { content: '🎓 '; }
+   en Educación Formal; las plataformas tienen su propio encabezado). Se dibuja
+   con una máscara para que herede el color del texto, igual que el resto de los
+   íconos SVG de línea del sitio. */
+.results-count::before {
+    content: '';
+    display: inline-block;
+    width: 1.05em;
+    height: 1.05em;
+    margin-right: .4em;
+    vertical-align: -.14em;
+    background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 10v6M2 10l10-5 10 5-10 5z'/%3E%3Cpath d='M6 12v5c3 3 9 3 12 0v-5'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 10v6M2 10l10-5 10 5-10 5z'/%3E%3Cpath d='M6 12v5c3 3 9 3 12 0v-5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
 /* Selector persistente de vista: se queda en el medio y el "Ordenar por" se
    pega a la derecha. Al activar "Por área" o "Instituciones" el sort se oculta
    (no hay carreras que ordenar), pero el selector sigue siempre visible. */
@@ -2023,15 +2035,18 @@ html[data-tts="true"] .btn-escuchar-card {
     transition: border-color var(--dur-base) ease, color var(--dur-base) ease, transform var(--dur-base) ease;
 }
 .bienvenida-catalogo:hover { border-color: var(--accent); color: var(--accent-ink); }
-/* Las tres vías secundarias además del Copiloto: se apilan en una columna. */
+/* Vía secundaria de la bienvenida: un único acceso directo al catálogo
+   completo ("Mostrar ofertas"). Se mantiene la columna para conservar el
+   reparto 62/38 con la tarjeta del Copiloto. */
 .bienvenida-opciones-secundarias {
     flex: 1 1 38%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    justify-content: center;
     gap: var(--space-3);
 }
-.bienvenida-opciones-secundarias .bienvenida-catalogo { text-align: left; }
+.bienvenida-opciones-secundarias .bienvenida-catalogo { text-align: center; align-self: center; }
 
 /* En pantallas angostas las dos opciones se apilan. */
 @media (max-width: 480px) {
@@ -3006,4 +3021,25 @@ html[data-contrast="high"] .btn-tipo-feedback.is-active {
 .grupo-instituciones-count {
     font-size: var(--fs-sm);
     color: var(--text-muted);
+}
+
+/* Nuevos estilos para Orientador Asertivo */
+.chat-resultado-explicacion {
+  font-size: 0.82rem;
+  color: var(--texto-secundario);
+  margin: 0.3em 0 0;
+  line-height: 1.35;
+}
+
+.chat-resultado-alerta,
+.mensaje-bot-alerta {
+  font-size: 0.82rem;
+  color: var(--color-alerta, #c0392b);
+  margin: 0.3em 0 0;
+  line-height: 1.35;
+}
+
+.chat-resultados-secundarios .chat-resultado-card {
+  opacity: 0.85;
+  border-left: 2px solid var(--borde-suave, #ddd);
 }

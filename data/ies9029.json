@@ -20,7 +20,55 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-029",
-     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/conservacion%20naturaleza/"
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/conservacion_naturaleza/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Comunicación, Comprensión y Producción de Textos",
+        "Primeros Auxilios",
+        "Arqueología Regional",
+        "Inglés Técnico",
+        "Problemática Sociocultural y del Trabajo",
+        "Historia Regional",
+        "Identificación de Flora y Fauna",
+        "Medio Físico",
+        "Autonomía en la Naturaleza",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Gestión y Liderazgo de Grupos",
+        "Educación Ambiental",
+        "Acondicionamiento Físico y Defensa Personal",
+        "Conservación del Patrimonio",
+        "Gestión de Proyectos de Conservación",
+        "Uso Público y Turístico",
+        "Manejo en el Medio Acuático",
+        "Relación con las Comunidades",
+        "Sistemas de Información Geográfica",
+        "Derecho Ambiental",
+        "Ecología",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Manejo de Especies y Ecosistemas",
+        "Ética y Procedimientos de Control",
+        "Manejo de Armas",
+        "Planificación de Espacios Naturales y Culturales",
+        "Logística y Mantenimiento de Unidades Operativas",
+        "Prevención y Control de Incendios",
+        "Biología de la Conservación",
+        "Autonomía en la Naturaleza",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ]
     },
     {
      "id": 3302,
@@ -30,7 +78,58 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-029",
-     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/enologia/"
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/enologia/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Química General e Inorgánica",
+        "Matemática",
+        "Higiene y Seguridad",
+        "Alfabetización Académica",
+        "Producciones Primarias",
+        "Introducción a la Vinificación e Industrializaciones",
+        "Práctica I",
+        "Física",
+        "Microbiología General",
+        "Química Orgánica",
+        "Análisis Sensorial I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Química Analítica e Instrumental",
+        "Estadística",
+        "Operaciones Unitarias",
+        "Química Biológica",
+        "Tecnología y Análisis de Productos Oleícolas",
+        "Microbiología Aplicada",
+        "Análisis Sensorial II",
+        "Vinificaciones I",
+        "Práctica II",
+        "Gestión de Calidad",
+        "Bromatología y Toxicología",
+        "Emprendedorismo y Agronegocios"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Tecnología y Análisis de Productos Frutihortícolas",
+        "Legislación Vitivinícola y Alimentaria",
+        "Inglés Técnico",
+        "Análisis de Bebidas Víncias y no Víncias",
+        "Vinificaciones II",
+        "Gestión de Emprendimientos",
+        "Análisis Sensorial III",
+        "Práctica III",
+        "Ética Profesional",
+        "Vinificaciones Especiales",
+        "Desarrollo Sostenible"
+       ]
+      }
+     ]
     },
     {
      "id": 3303,
@@ -40,7 +139,51 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-029",
-     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/turismo/"
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/turismo/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Fundamentos Turismo 4.0",
+        "Turismo Digital",
+        "Inglés Técnico",
+        "Marketing Digital",
+        "Sostenibilidad Turística",
+        "Datos Turísticos",
+        "Experiencia Cliente",
+        "Portugués Turístico",
+        "Destinos Inteligentes",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Gestión Hotelera Inteligente",
+        "Ciberseguridad Turismo",
+        "Eventos Híbridos",
+        "Gastronomía Experiencial",
+        "CRM Turístico",
+        "Analítica Turística",
+        "Smart Cities Turismo",
+        "Marca Territorio",
+        "Plataformas OTA",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Turismo Regenerativo",
+        "Transformación Digital Turismo",
+        "IA en Personalización Viajes",
+        "Employer Branding Turístico",
+        "Innovación Destinos",
+        "Vinculación Comunidad",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ]
     },
     {
      "id": 3304,
@@ -50,7 +193,55 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-029",
-     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/higiene%20ambiente/"
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/higiene_ambiente/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Alfabetización Académica",
+        "Tecnologías Digitales Aplicadas",
+        "Física",
+        "Inglés Técnico",
+        "Representación Técnica de Planos",
+        "Higiene Laboral I",
+        "Seguridad Laboral I",
+        "Liderazgo y Habilidades Interpersonales",
+        "Práctica I",
+        "Introducción a la Prevención 4.0",
+        "Química"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Estadística Aplicada",
+        "Ambiente y Sostenibilidad",
+        "Derecho y Legislación Aplicada",
+        "Sistemas de Gestión",
+        "Medicina del Trabajo y Toxicología",
+        "Higiene Laboral II",
+        "Seguridad Laboral II",
+        "Práctica II",
+        "Gestión de Emprendimientos",
+        "Derecho Ambiental"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Evaluación de Impacto Ambiental",
+        "Seguridad contra Incendios",
+        "Ergonomía",
+        "Higiene y Seguridad en Minería y Petróleo",
+        "Higiene y Seguridad Agropecuaria",
+        "Higiene y Seguridad en Industria de la Construcción",
+        "Higiene y Seguridad en Servicios TIC",
+        "Economía del Conocimiento e Industria 4.0",
+        "Práctica III",
+        "Especialización a elección (Seguridad Industrial y Riesgos Tecnológicos / Calidad, Ambiente y Sostenibilidad / Construcción y Obras Civiles / Minería y Energía / Higiene Hospitalaria)"
+       ]
+      }
+     ]
     },
     {
      "id": 3305,
@@ -60,7 +251,56 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-029",
-     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/recursos%20humanos/"
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/tecnicaturas/recursos_humanos/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Introducción a la Administración de los Recursos Humanos",
+        "Inglés Técnico",
+        "Comunicación Efectiva",
+        "Herramientas Digitales para la Gestión",
+        "Introducción a la Economía",
+        "Matemática Aplicada",
+        "Estadística y Análisis de Datos",
+        "Introducción a la Legislación",
+        "Desarrollo Regional y Contexto Laboral",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Psicología Organizacional",
+        "Derecho Laboral y de la Seguridad Social",
+        "Gestión del Talento Humano",
+        "Administración de Liquidaciones, Compensaciones y",
+        "Relaciones Laborales y Negociación Sindical",
+        "Diseño de puestos",
+        "Tecnologías Aplicadas a Recursos Humanos",
+        "Comunicación y Liderazgo Organizacional",
+        "Ética y Responsabilidad Social Corporativa",
+        "Capacitación y Desarrollo",
+        "Control de Gestión",
+        "Seguridad e Higiene Laboral",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Planeamiento estratégico y cultura organizacional",
+        "Selección avanzada y marca empleador",
+        "Gestión del cambio y clima organizacional",
+        "Analítica de personas y toma de decisiones",
+        "Sustentabilidad, diversidad e inclusión laboral",
+        "Innovación y transformación digital en Recursos Humanos",
+        "Empleabilidad y vinculación profesional",
+        "Práctica profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.ies9029.edu.ar/wp-content/uploads/RESOL-2026-696-E-GDEMZA-DGE-Aprobacion-del-plan-de-estudio-de-la-carrera-Tecnicatura-Superior-en-Gestion-de-Recursos-Humanos.pdf"
     },
     {
      "id": 3306,
@@ -70,7 +310,69 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-029",
-     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/profesorados/geografia/"
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/profesorados/geografia/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Introducción a la Historia y Geografía",
+        "Ciencias Política y Economía",
+        "Geografía Física I",
+        "Proceso Demográfico en el Tiempo y en el Espacio",
+        "Comprensión y Producción de Textos",
+        "Práctica Profesional I",
+        "Pedagogía"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Sujeto de la Educación",
+        "Epistemología de las Ciencias Sociales",
+        "Geografía de América I",
+        "Geografía Física II",
+        "Geografía Argentina I",
+        "Didáctica General",
+        "Pensamiento Filosófico",
+        "Práctica Profesional II",
+        "Didáctica de la Geografía I",
+        "Sistema Educativo"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Geografía de la Mundialización",
+        "Historia y Geografía de Mendoza I",
+        "Geografía Argentina II",
+        "Didáctica de la Geografía II",
+        "Problemática Ambiental",
+        "Geografía de América II",
+        "Educación en la Diversidad",
+        "Psicología Educacional",
+        "Práctica Profesional III",
+        "Historia y Geografía de Mendoza II",
+        "Técnicas y Herramientas de Trabajo en Geografía",
+        "Gestión y Evaluación de los Aprendizajes"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Geopolítica de los Espacios Mundiales",
+        "Investigación Geográfica",
+        "Educación Ambiental",
+        "Geografía de los Espacios Rurales y Urbanos",
+        "Técnicas y Herramientas",
+        "Práctica de Intervención Socioeducativa",
+        "Educación y Tecnologías Digitales",
+        "Práctica Profesional IV",
+        "Formación Complementaria Específica",
+        "Formación Complementaria General",
+        "Educación Sexual Integral"
+       ]
+      }
+     ]
     },
     {
      "id": 3307,
@@ -80,7 +382,69 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-029",
-     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/profesorados/primaria/"
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/profesorados/primaria/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Pensamiento Filosófico",
+        "Comprensión y Producción de Textos Académicos",
+        "Sistema Educativo",
+        "Pedagogía",
+        "Numeración",
+        "Lengua y Literatura Infantil y Juvenil",
+        "Educación Artística",
+        "Práctica Profesional Docente I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Didáctica",
+        "Sujetos de la Educación",
+        "Psicología Educacional",
+        "Instituciones Educativas",
+        "Números Racionales y su Didáctica",
+        "Cs. Sociales y su Didáctica I",
+        "Cs. Naturales y su Didáctica I",
+        "Lengua y su Didáctica",
+        "Literatura Infantil y Juvenil y su Didáctica",
+        "Espacio, Geometría y su Didáctica",
+        "Práctica Profesional Docente II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Gestión y Evaluación de los Aprendizajes",
+        "Proyectos de Intervención Estratégica",
+        "Educación en la Diversidad",
+        "Educación Tecnológica",
+        "Medida y su Didáctica",
+        "Cs. Sociales y su Didáctica II",
+        "Cs. Naturales y su Didáctica II",
+        "Alfabetización",
+        "Formación Ética y Ciudadana y su Didáctica",
+        "Álgebra, Funciones y su Didáctica",
+        "Práctica Profesional Docente III"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Educación Sexual Integral",
+        "Educación y Tecnologías Digitales",
+        "Historia y Patrimonio Cultural de Mendoza",
+        "Formación Complementaria General",
+        "Didáctica de la Lengua y de la Literatura Infantil y Juvenil",
+        "Didáctica de la Matemática",
+        "Didáctica de las Ciencias Sociales",
+        "Didáctica de las Ciencias Naturales",
+        "Formación Complementaria II",
+        "Práctica Profesional Docente IV"
+       ]
+      }
+     ]
     },
     {
      "id": 3308,
@@ -90,7 +454,41 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-029",
-     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/profesorados/tecnicos/"
+     "link_oficial": "https://www.ies9029.edu.ar/inicio/formacion/carreras/profesorados/tecnicos/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "La Enseñanza en la Escuela Secundaria Técnica I",
+        "Competencias Comunicacionales, Comprensión y Producción de Textos Técnicos y no Técnicos I",
+        "Contextos de y para el Aprendizaje I",
+        "Adolescencias y Educación Secundaria Técnica",
+        "Competencias Comunicacionales I y II",
+        "Práctica Profesional Docente I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "La Enseñanza en la Escuela Secundaria Técnica II",
+        "Competencias Comunicacionales, Comprensión y Producción de Textos Técnicos y no Técnicos II",
+        "Contextos de y para el Aprendizaje II",
+        "Condiciones del Ejercicio Profesional",
+        "Vinculación con el Sector Socio-productivo",
+        "Uso Didáctico de las TIC",
+        "Producción de Textos para la ETP Secundaria",
+        "Actualización Científico-tecnológica en Concurrencia con el Título de Base",
+        "Práctica Profesional Docente II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Profundización y Consolidación de Aprendizajes Pedagógicos",
+        "Práctica Profesional Docente III"
+       ]
+      }
+     ]
     }
    ],
    "departamento": "Luján de Cuyo"

@@ -1,0 +1,463 @@
+{
+    "instituciones": [
+        {
+            "id": 401,
+            "nombre": "ITU - Instituto Tecnológico Universitario (UNCuyo)",
+            "nivel": "universitario (pregrado)",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "A confirmar",
+                "direccion": "Predio UNCUYO, Ciudad de Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 166,
+                    "nombre_carrera": "Ciencia de Datos",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "Dos (2) años",
+                    "modalidad": "Presencial",
+                    "facultad": "Inst. Tecnológico Universitario",
+                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-ciencia-de-datos",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Cálculo y Álgebra Lineal Aplicados",
+                                "Inglés",
+                                "Probabilidad y Análisis Estadístico",
+                                "Introducción a la Programación",
+                                "Análisis y Diseño de Software",
+                                "Segundo Cuatrimestre",
+                                "Inglés Aplicado",
+                                "Gestión de Proyectos de Software",
+                                "Bases de Datos",
+                                "Introducción a Ciencia de Datos",
+                                "Taller de Programación"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Primer Cuatrimestre",
+                                "Captura y Análisis Exploratorio de Datos",
+                                "Aprendizaje Automático",
+                                "Infraestructura para Ciencia de Datos",
+                                "Visualización de Datos",
+                                "Regulación de la Inteligencia Artificial",
+                                "Comunicación en Ciencia de Datos",
+                                "Segundo Cuatrimestre",
+                                "Modelos Avanzados de Inteligencia Artificial",
+                                "Big Data",
+                                "Aprendizaje Automático Aplicado",
+                                "Inteligencia de Negocios",
+                                "Práctica Profesionalizante"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-ciencia-de-datos"
+                },
+                {
+                    "id": 167,
+                    "nombre_carrera": "Tecnicatura en Desarrollo de Software",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "La duración de la carrera es de dos años y medio.",
+                    "modalidad": "Presencial",
+                    "facultad": "Inst. Tecnológico Universitario",
+                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-desarrollo-de-software_4964",
+                    "plan_estudio": [
+                        {
+                            "anio": "1er año",
+                            "materias": [
+                                "Comprensión y Producción de Textos",
+                                "Desarrollo del Pensamiento y Desempeño de Roles",
+                                "Taller de Tecnología",
+                                "Lógica Matemática",
+                                "Sistemas y Paradigmas de Programación",
+                                "Introducción a los Sistemas Operativos",
+                                "Modelo de Datos",
+                                "Emprendedurismo",
+                                "Legislación de las TIC´s",
+                                "Introducción al Idioma Inglés",
+                                "Álgebra y Estadística",
+                                "Fundamentos de Análisis de Sistemas",
+                                "Arquitectura de Hardware Computacional",
+                                "Bases de Datos",
+                                "Programación Estructurada"
+                            ]
+                        },
+                        {
+                            "anio": "2do año",
+                            "materias": [
+                                "Interpretación de Textos en Inglés",
+                                "Taller de Tecnología Aplicada",
+                                "Diseño de Software",
+                                "Sistemas Operativos Aplicados",
+                                "Bases de Datos Aplicadas",
+                                "Metodologías y Testing",
+                                "Programación orientada a objetos, aspectos y eventos",
+                                "Tecnologías de Desarrollo en la Nube",
+                                "Comunicación en Idioma Inglés",
+                                "Minería de Datos",
+                                "Redes y Sistemas Distribuidos"
+                            ]
+                        },
+                        {
+                            "anio": "3er año",
+                            "materias": [
+                                "Técnicas Laborales para el Desarrollo de Software",
+                                "Programación de Aplicaciones Web",
+                                "Programación de Aplicaciones Móviles",
+                                "Optativo I",
+                                "Optativo II",
+                                "Práctica Profesionalizante"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-desarrollo-de-software_4964"
+                },
+                {
+                    "id": 168,
+                    "nombre_carrera": "Tecnicatura en Electricidad y Sistemas de Control Industriales",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "La carrera tiene una duración de dos años y medio. Además, tiene un cursado vespertino, adaptado para trabajadores.",
+                    "modalidad": "Presencial",
+                    "facultad": "Inst. Tecnológico Universitario",
+                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-electricidad-y-sistemas-de-control-industriales_8997",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan de estudios",
+                            "materias": [
+                                "Comprensión y Producción de Textos",
+                                "Inglés Técnico",
+                                "Desarrollo del Pensamiento y Desempeño de Roles",
+                                "Proyecto Tutorado",
+                                "Práctica Profesionalizante",
+                                "Proyecto Final",
+                                "Matemática y Estadística",
+                                "Ofimática",
+                                "Física",
+                                "Electrónica General",
+                                "Electrónica Digital",
+                                "Electrotecnia",
+                                "Arquitectura de Computadoras",
+                                "Técnicas de Representación Aplicadas",
+                                "Sistemas Operativos",
+                                "Bases de Datos",
+                                "Comunicación de Datos",
+                                "Algoritmia y Programación",
+                                "Introducción a los Sistemas Informáticos Industriales",
+                                "Máquinas Eléctricas",
+                                "Medidas Eléctricas",
+                                "Sistemas de Control",
+                                "Informática Industrial y SCADA",
+                                "Control Industrial Aplicado",
+                                "Higiene y Seguridad Eléctrica",
+                                "Legislación y Reglamentación Eléctrica",
+                                "Gestión de la Empresa y Personal del sector"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-electricidad-y-sistemas-de-control-industriales_8997"
+                },
+                {
+                    "id": 169,
+                    "nombre_carrera": "Tecnicatura en Gestión de Empresas",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "La carrera tiene una duración de dos años y medio. Además, tiene un cursado vespertino adaptado a los trabajadores.",
+                    "modalidad": "Presencial",
+                    "facultad": "Inst. Tecnológico Universitario",
+                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-gestion-de-empresas",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan de estudios",
+                            "materias": [
+                                "Administración General",
+                                "Comprensión y Producción de Textos",
+                                "Desarrollo de la Actitud Emprendedora",
+                                "Desarrollo del Pensamiento y Desempeño de Roles",
+                                "Economía",
+                                "Formulación y Evaluación de Proyectos",
+                                "Gestión Comercial",
+                                "Gestión Contable e Impositiva",
+                                "Gestión de Costos",
+                                "Gestión de la Calidad",
+                                "Gestión de la Producción",
+                                "Gestión del Capital Humano",
+                                "Gestión Financiera",
+                                "Gestión Jurídica",
+                                "Información Contable Básica",
+                                "Informática",
+                                "Inglés",
+                                "Introducción a la Administración",
+                                "Introducción a la Logística",
+                                "Introducción al Marketing",
+                                "Matemática y Estadística",
+                                "Orientación optativa",
+                                "Práctica Profesionalizante",
+                                "Sistemas de Información",
+                                "Taller de Integración",
+                                "Taller de Producción de Informes",
+                                "Taller Inicial"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-gestion-de-empresas"
+                },
+                {
+                    "id": 170,
+                    "nombre_carrera": "Tecnicatura en Higiene y Seguridad en el Trabajo",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "La carrera se cursa en dos años y medio.",
+                    "modalidad": "Presencial",
+                    "facultad": "Inst. Tecnológico Universitario",
+                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo_8442",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan de estudios",
+                            "materias": [
+                                "Comprensión y Producción de Textos",
+                                "Desarrollo del Pensamiento y Desempeño de Roles",
+                                "Psicología Laboral",
+                                "Sociología del Trabajo",
+                                "Análisis matemático",
+                                "Inglés",
+                                "Relaciones Humanas",
+                                "Informática",
+                                "Taller de Producción de Informes",
+                                "Estrategias de Capacitación en el Trabajo",
+                                "Física",
+                                "Química",
+                                "Estadística Aplicada",
+                                "Técnicas de Representación Gráfica",
+                                "Industria y Ambiente",
+                                "Organización de Empresas",
+                                "Higiene Industrial",
+                                "Higiene Industrial Aplicada",
+                                "Inducción a la Seguridad",
+                                "Patología Laboral",
+                                "Seguridad en el Trabajo",
+                                "Medicina del Trabajo y Primeros Auxilios",
+                                "Ergonomía",
+                                "Servicios Industriales",
+                                "Legislación Laboral",
+                                "Seguridad vial",
+                                "Optativo I",
+                                "Optativo II",
+                                "Electivo",
+                                "Taller Integrador",
+                                "Laboratorio de Práctica",
+                                "Práctica Profesionalizante"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-higiene-y-seguridad-en-el-trabajo_8442"
+                },
+                {
+                    "id": 171,
+                    "nombre_carrera": "Tecnicatura en Logística y Transporte",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "La carrera se cursa en dos años y medio.",
+                    "modalidad": "Presencial",
+                    "facultad": "Inst. Tecnológico Universitario",
+                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-logistica-y-transporte",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan de estudios",
+                            "materias": [
+                                "Comprensión y Producción de Textos",
+                                "Desarrollo de la Actitud Emprendedora",
+                                "Desarrollo del Pensamiento y Desempeño de Roles",
+                                "Economía",
+                                "Economía del Transporte",
+                                "Formulación y Evaluación de Proyectos",
+                                "Gestión de la Calidad en la cadena logística",
+                                "Gestión Empresaria",
+                                "Información Contable Básica",
+                                "Informática",
+                                "Inglés",
+                                "Introducción a la Administración",
+                                "Introducción a la Logística",
+                                "Introducción al Marketing",
+                                "Logística de Aprovisionamiento",
+                                "Logística de Distribución y Logística Internacional",
+                                "Logística de procesos productivos",
+                                "Matemática y Estadística",
+                                "Orientación optativa",
+                                "Práctica Profesionalizante",
+                                "Sistemas de información aplicados a la distribución y el transporte",
+                                "Sistemas de información logísticos",
+                                "Sistemas de Transporte",
+                                "Taller de Integración",
+                                "Taller de Producción de Informes",
+                                "Taller Inicial"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-logistica-y-transporte"
+                },
+                {
+                    "id": 172,
+                    "nombre_carrera": "Tecnicatura en Mantenimiento e Instalaciones Industriales",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "La carrera se cursa en dos años y medio.",
+                    "modalidad": "Presencial",
+                    "facultad": "Inst. Tecnológico Universitario",
+                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-mantenimiento-e-instalaciones-industriales_3181",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan de estudios",
+                            "materias": [
+                                "Automatismos e Informática Industrial",
+                                "Comprensión y Producción de Textos",
+                                "Desarrollo del Pensamiento y Desempeño de Roles",
+                                "Electricidad y Electrónica",
+                                "Electrotecnia",
+                                "Elementos de Máquinas y Montaje",
+                                "Ensayo de Materiales",
+                                "Gestión del Mantenimiento",
+                                "Gestión Empresario/Industrial",
+                                "Higiene y Seguridad Industrial",
+                                "Informática",
+                                "Inglés Técnico",
+                                "Instalaciones y Medios de Producción",
+                                "Legislación Laboral",
+                                "Matemática y Estadística",
+                                "Mecánica",
+                                "Práctica Profesionalizante",
+                                "Proyecto Tutorado",
+                                "Resistencia de Materiales",
+                                "Tecnologías Eléctricas, Electrónicas y de Automatización",
+                                "Termodinámica"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-mantenimiento-e-instalaciones-industriales_3181"
+                },
+                {
+                    "id": 173,
+                    "nombre_carrera": "Tecnicatura en Marketing",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "La carrera se cursa en dos años y medio.",
+                    "modalidad": "Presencial",
+                    "facultad": "Inst. Tecnológico Universitario",
+                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-marketing_5022",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan de estudios",
+                            "materias": [
+                                "Comercio Exterior y Marketing Internacional",
+                                "Comprensión y Producción de Textos",
+                                "Decisiones Comerciales",
+                                "Desarrollo de la Actitud Emprendedora",
+                                "Desarrollo del Pensamiento y Desempeño de Roles",
+                                "Economía",
+                                "Formulación y Evaluación de Proyectos",
+                                "Fundamentos de Marketing Estratégico",
+                                "Gestión Empresaria",
+                                "Gestión Jurídica",
+                                "Información Contable Básica",
+                                "Informática",
+                                "Inglés",
+                                "Introducción a la Administración",
+                                "Introducción a la Logística",
+                                "Introducción al Marketing",
+                                "Investigación de Mercados",
+                                "Matemática y Estadística",
+                                "Organización Estratégica de Negocios",
+                                "Práctica Profesionalizante",
+                                "Sociología y Empresa",
+                                "Taller de Integración",
+                                "Taller de Producción de Informes",
+                                "Taller Inicial",
+                                "Técnicas de Marketing",
+                                "Orientación optativa"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-marketing_5022"
+                },
+                {
+                    "id": 174,
+                    "nombre_carrera": "Tecnicatura en Producción Industrial y Automatización",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "La carrera se cursa en dos años y medio.",
+                    "modalidad": "Presencial",
+                    "facultad": "Inst. Tecnológico Universitario",
+                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-industrial-y-automatizacion_9658",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan de estudios",
+                            "materias": [
+                                "Aseguramiento de la Calidad Industrial",
+                                "Automatismo y Robótica",
+                                "Calor y Termodinámica",
+                                "Ciencia de los Materiales",
+                                "Comprensión y Producción de Textos",
+                                "Desarrollo del Pensamiento y Desempeño de Roles",
+                                "Electricidad y Electrónica",
+                                "Energía y Ambiente",
+                                "Gestión Empresario/Industrial",
+                                "Higiene y Seguridad Industrial",
+                                "Informática",
+                                "Inglés Técnico",
+                                "Matemática y Estadística",
+                                "Mecánica",
+                                "Planificación y Control de la Producción",
+                                "Práctica Profesionalizante",
+                                "Proyecto Tutorado",
+                                "Resistencia de Materiales",
+                                "Técnicas de Representación",
+                                "Tecnología de Construcción y Diseño Mecánico",
+                                "Tecnología y Métodos de Fabricación Mecánica"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-industrial-y-automatizacion_9658"
+                },
+                {
+                    "id": 175,
+                    "nombre_carrera": "Tecnicatura en Redes y Telecomunicaciones",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "La carrera tiene una duración de dos años y medio.",
+                    "modalidad": "Presencial",
+                    "facultad": "Inst. Tecnológico Universitario",
+                    "link_oficial": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-redes-de-datos-y-telecomunicaciones_7082",
+                    "plan_estudio": [
+                        {
+                            "anio": "Plan de estudios",
+                            "materias": [
+                                "Actualización Tecnológica",
+                                "Arquitectura de Computadoras",
+                                "Comprensión y Producción de Textos",
+                                "Desarrollo del Pensamiento y Desempeño de Roles",
+                                "Electrónica",
+                                "Física",
+                                "Gestión Empresaria",
+                                "Inglés Técnico",
+                                "Legislación de las TIC´s",
+                                "Matemática y Estadística",
+                                "Práctica Profesionalizante",
+                                "Programación",
+                                "Redes",
+                                "Redes Avanzadas",
+                                "Redes Inalámbricas",
+                                "Redes LAN Conmutadas",
+                                "Seguridad en Redes",
+                                "Sistemas de Comunicaciones",
+                                "Sistemas Operativos",
+                                "Sistemas Telefónicos",
+                                "Taller de Producción de Informes",
+                                "Taller de Tecnología Aplicada",
+                                "Transmisión de Datos",
+                                "Tratamiento de Señal"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-redes-de-datos-y-telecomunicaciones_7082"
+                }
+            ]
+        }
+    ]
+}

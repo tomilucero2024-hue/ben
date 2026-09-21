@@ -1,59 +1,222 @@
 {
- "instituciones": [
-  {
-   "id": 32,
-   "nombre": "IES 9-028 (Santa Rosa)",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "A confirmar",
-    "email": "contacto@ies9028.edu.ar",
-    "direccion": "Santa Rosa, Mendoza"
-   },
-   "carreras": [
+  "instituciones": [
     {
-     "id": 3201,
-     "nombre_carrera": "Profesorado en Educación Primaria",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-028",
-     "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/profesorado-en-educacion-primaria/"
-    },
-    {
-     "id": 3202,
-     "nombre_carrera": "Profesorado de Teatro",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-028",
-     "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/profesorado-de-teatro/"
-    },
-    {
-     "id": 3203,
-     "nombre_carrera": "Profesorado en Música",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-028",
-     "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/profesorado-de-musica/"
-    },
-    {
-     "id": 3204,
-     "nombre_carrera": "Tecnicatura Superior en Enología e Industrias de los Alimentos",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-028",
-     "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-industria-de-los-alimentos/"
+      "id": 32,
+      "nombre": "IES 9-028 (Santa Rosa)",
+      "nivel": "terciario",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "A confirmar",
+        "email": "contacto@ies9028.edu.ar",
+        "direccion": "Santa Rosa, Mendoza"
+      },
+      "carreras": [
+        {
+          "id": 3201,
+          "nombre_carrera": "Profesorado en Educación Primaria",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-028",
+          "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/profesorado-en-educacion-primaria/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Matemática",
+                "Literatura para Niños y Jóvenes",
+                "Lengua",
+                "Sujetos de la Educación Primaria",
+                "Psicología Educacional",
+                "Promoción de la Salud",
+                "Perspectiva Histórica, Política, Social y Cultural de América Latina",
+                "Tecnologías de la Información y la Comunicación",
+                "Prácticas de Lectura, Escritura y Oralidad",
+                "Pedagogía",
+                "Didáctica General",
+                "Práctica Profesional Docente 1"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica de la Matemática 1",
+                "Didáctica de la Lengua 1",
+                "Didáctica de la Literatura",
+                "Didáctica de las Cs. Naturales 1",
+                "Didáctica de las Cs. Sociales 1",
+                "Expresión Artística",
+                "Sociología de la Educación",
+                "Historia y Política de la Educación Argentina",
+                "Instituciones Educativas",
+                "Práctica Profesional Docente 2"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Didáctica de la Matemática 2",
+                "Problemática del Nivel Primario",
+                "Alfabetización Inicial",
+                "Didáctica de las Cs. Naturales 2",
+                "Didáctica de las Cs. Sociales 2",
+                "Didáctica de la Tecnología",
+                "Unidad de Definición Institucional",
+                "Formación Ética y Ciudadana",
+                "Filosofía",
+                "Práctica Profesional Docente 3"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Didáctica de la Matemática 3",
+                "Didáctica de las Cs. Naturales 3",
+                "Didáctica de las Cs. Sociales 3 (Mendoza)",
+                "Didáctica de la Lengua 2",
+                "Práctica Profesional Docente 4",
+                "Unidad de Definición Institucional"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3203,
+          "nombre_carrera": "Profesorado en Música",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-028",
+          "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/profesorado-de-musica/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Prácticas de Lectura, Escritura y Oralidad",
+                "Tecnologías de la Información y la Comunicación",
+                "Pedagogía",
+                "Didáctica General",
+                "Promoción de la Salud",
+                "Lenguaje Musical 1",
+                "Canto Individual y Grupal 1",
+                "Instrumento Armónico 1",
+                "Fundamentos de la Percepción y la Producción Musical",
+                "Historia Universal del Arte y la Cultura",
+                "Práctica Profesional Docente 1",
+                "Unidad de Definición Institucional",
+                "Electivas"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Lenguaje Musical 2",
+                "Canto Individual y Grupal 2",
+                "Instrumento Armónico 2",
+                "Historia de la Música 1",
+                "Didáctica de la Música 1",
+                "Sujetos de la Educación 1",
+                "Instituciones Educativas",
+                "Práctica Profesional Docente 2",
+                "Historia y Política de la Educación Argentina",
+                "Psicología Educacional",
+                "Unidad de Definición Institucional",
+                "Electivas"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Lenguaje Musical 3",
+                "Canto y Dirección Coral 1",
+                "Instrumento Armónico 3",
+                "Historia de la Música 2",
+                "Didáctica de la Música 2",
+                "Práctica de Conjuntos Vocales e Instrumentales",
+                "Sujetos de la Educación 2",
+                "Sociología de la Educación",
+                "Arte y Nuevas Tecnologías",
+                "Unidad de Definición Institucional",
+                "Práctica Profesional Docente 3",
+                "Electivas"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Lenguaje Musical 4",
+                "Canto y Dirección Coral 2",
+                "Instrumento Armónico 4",
+                "Lenguajes Artísticos",
+                "Producción Artística Contemporánea",
+                "Teoría del Arte",
+                "Didáctica de la Música 3",
+                "Unidad de Definición Institucional",
+                "Práctica Profesional Docente 4",
+                "Electivas"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3204,
+          "nombre_carrera": "Tecnicatura Superior en Enología e Industrias de los Alimentos",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-028",
+          "link_oficial": "https://ies9028-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-industria-de-los-alimentos/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Producción Vitícola",
+                "Producción Frutícola y Producción Hortícola",
+                "Producciones Porcina, Avícola, Apícola, Bovina y Caprina",
+                "Vinificación",
+                "Producción de Frutas y Hortalizas",
+                "Industrialización Oleícola",
+                "Industria Cárnica",
+                "Industria Láctea",
+                "Industria Apícola",
+                "Emprendedorismo y Agronegocio"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Gestión de Procesos Fermentativos",
+                "Gestión de Maquinarias Agroindustriales",
+                "Análisis de Productos Enológicos",
+                "Manejo de Cosecha y Poscosecha",
+                "Territorio y Desarrollo",
+                "Innovación y Gestión Empresarial"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Análisis de las Bebidas",
+                "Análisis de los Alimentos de Origen Vegetal",
+                "Análisis de los Alimentos de Origen Animal",
+                "Gestión del Desarrollo Sostenible",
+                "Gestión de Emprendimientos",
+                "Gestión de la Estabilización de los Alimentos",
+                "Gestión de la Estabilización del Vino",
+                "Gestión de la Crianza de Vinos",
+                "Análisis Sensorial de Vinos",
+                "Análisis Sensorial de Alimentos",
+                "Elaboración de Proyectos Productivos"
+              ]
+            }
+          ]
+        }
+      ],
+      "departamento": "Santa Rosa"
     }
-   ],
-   "departamento": "Santa Rosa"
-  }
- ]
+  ]
 }

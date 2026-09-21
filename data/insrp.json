@@ -20,7 +20,73 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto Superior",
-     "link_oficial": "https://insrp-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
+     "link_oficial": "https://insrp-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Pensamiento Filosófico",
+        "Comprensión y Producción de textos académicos",
+        "Sistema Educativo",
+        "Pedagogía",
+        "Numeración",
+        "Lengua y Literatura Infantil y Juvenil",
+        "Educación Artística",
+        "Práctica Profesional Docente I",
+        "Formación Humana Integral I (coprogramática)"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Didáctica",
+        "Psicología Educacional",
+        "Instituciones Educativas",
+        "Sujetos de la Educación",
+        "Números Racionales y su didáctica",
+        "Ciencias Sociales y su didáctica I",
+        "Ciencias Naturales y su didáctica I",
+        "Lengua y su didáctica",
+        "Literatura infantil y juvenil y su didáctica",
+        "Espacio, Geometría y su didáctica",
+        "Práctica Profesional Docente II",
+        "Formación Humana Integral II (coprogramática)"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Gestión y Evaluación de los aprendizajes",
+        "Proyectos de Intervención Estratégica",
+        "Educación en la diversidad",
+        "Educación Tecnológica",
+        "Medida y su didáctica",
+        "Ciencias Sociales y su didáctica II",
+        "Ciencias Naturales y su didáctica II",
+        "Alfabetización",
+        "Formación Ética y Ciudadana y su didáctica",
+        "Álgebra, Funciones y su didáctica",
+        "Práctica Profesional Docente III",
+        "Formación Humana Integral III (coprogramática)"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Educación Sexual Integral",
+        "Educación y tecnologías digitales",
+        "Historia y Patrimonio Cultural de Mendoza",
+        "Formación complementaria general",
+        "Didáctica de la Lengua y de la Literatura infantil y juvenil",
+        "Didáctica de la Matemática",
+        "Didáctica de las Ciencias Sociales",
+        "Didáctica de las Ciencias Naturales",
+        "Formación complementaria II",
+        "Práctica Profesional Docente IV"
+       ]
+      }
+     ],
+     "plan_fuente": "https://insrp-infd.mendoza.edu.ar/sitio/plan-de-estudios-2/"
     },
     {
      "id": 4602,
@@ -30,7 +96,60 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto Superior",
-     "link_oficial": "https://insrp-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-asistencia-gerontologica/"
+     "link_oficial": "https://insrp-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-asistencia-gerontologica/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Introducción y Fundamentos de Gerontología",
+        "Psicología del Envejecimiento",
+        "Comunicación",
+        "Informática",
+        "EDI: Pastoral de la Tercera Edad I",
+        "Problemática Sociocultural y del Conocimiento",
+        "Comprensión y Producción de Textos",
+        "Legislación para la tercera Edad",
+        "Las Artes Visuales en la tercera edad I",
+        "Nutrición en la tercera Edad I",
+        "Literatura para la tercera edad",
+        "Psicología Social y de Grupo",
+        "Actividades Motrices para la tercera edad",
+        "Administración y Gestión de instituciones geriátricas",
+        "Actividades Musicales para la tercera edad",
+        "La Familia: Cruce de Generaciones"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "EDI: Pastoral de la Tercera Edad II",
+        "Inglés",
+        "Filosofía de vida",
+        "Políticas Sociales y Sistema Sanitario para la tercera edad",
+        "Metodología de la Investigación social",
+        "Nutrición en la tercera Edad II",
+        "Actividades recreativas para la tercera edad",
+        "Atención Primaria del Anciano",
+        "Las Artes Visuales en la tercera edad II",
+        "Investigación Social",
+        "Los ancianos: Sujetos de Derechos",
+        "Ética Profesional",
+        "Formulación y Evaluación de Proyectos Institucionales",
+        "Higiene y Atención de los Ancianos",
+        "El Anciano y su relación con el Gerontólogo",
+        "Observación e Inserción Institucional"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Práctica Profesional",
+        "Protección y Cuidado del Asistente Gerontológico",
+        "Cooperativismo y Pymes"
+       ]
+      }
+     ],
+     "plan_fuente": "https://insrp-infd.mendoza.edu.ar/sitio/plan-de-estudios-3/"
     }
    ],
    "departamento": "Capital"

@@ -1,59 +1,298 @@
 {
- "instituciones": [
-  {
-   "id": 50,
-   "nombre": "IES 9-027 (Guaymallén)",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "261-4327633",
-    "email": "secretaria9027@gmail.com",
-    "direccion": "Joaquín V. González 429, Dorrego, Guaymallén, Mendoza"
-   },
-   "carreras": [
+  "instituciones": [
     {
-     "id": 5001,
-     "nombre_carrera": "Profesorado de Educación Primaria",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-027",
-     "link_oficial": "https://ies9027-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
-    },
-    {
-     "id": 5002,
-     "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-027",
-     "link_oficial": "https://ies9027-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/"
-    },
-    {
-     "id": 5003,
-     "nombre_carrera": "Profesorado de Inglés",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-027",
-     "link_oficial": "https://ies9027-infd.mendoza.edu.ar/sitio/profesorado-de-ingles/"
-    },
-    {
-     "id": 5004,
-     "nombre_carrera": "Tecnicatura Superior en Transporte Ferroviario",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-027",
-     "link_oficial": "https://ies9027-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-transporte-ferroviario/"
+      "id": 50,
+      "nombre": "IES 9-027 (Guaymallén)",
+      "nivel": "terciario",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "261-4327633",
+        "email": "secretaria9027@gmail.com",
+        "direccion": "Joaquín V. González 429, Dorrego, Guaymallén, Mendoza"
+      },
+      "carreras": [
+        {
+          "id": 5001,
+          "nombre_carrera": "Profesorado de Educación Primaria",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-027",
+          "link_oficial": "https://ies9027-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Comprensión y Producción de Textos Académicos",
+                "Sistema Educativo",
+                "Pedagogía",
+                "Numeración",
+                "Lengua y Literatura",
+                "Educación Artística",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Sujetos de la Educación",
+                "Psicología Educacional",
+                "Instituciones Educacionales",
+                "Números Racionales y su Didáctica",
+                "Cs. Sociales y su Didáctica I",
+                "Cs. Naturales y su Didáctica I",
+                "Lengua y su Didáctica",
+                "Literatura y su Didáctica",
+                "Espacio, Geometría y su Didáctica",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyectos de Intervención Socio-Educativa",
+                "Educación en la Diversidad",
+                "Educación Tecnológica",
+                "Medida y su Didáctica",
+                "Cs. Sociales y su Didáctica II",
+                "Cs. Naturales y su Didáctica II",
+                "Alfabetización",
+                "Formación Ética y Ciudadana y su Didáctica",
+                "Álgebra, Funciones y su Didáctica",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación Sexual Integral",
+                "Educación y Tecnologías Digitales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Formación Complementaria General",
+                "Didáctica de la Lengua y la Literatura",
+                "Didáctica de la Matemática",
+                "Didáctica de las Ciencias Sociales",
+                "Didáctica de las Ciencias Naturales",
+                "Formación Complementaria II",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-primaria-res-n-6868-dge-2023/"
+        },
+        {
+          "id": 5002,
+          "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-027",
+          "link_oficial": "https://ies9027-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Comprensión y Producción de Textos Académicos",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Pedagogía",
+                "Expresión Artística: Música",
+                "Neuropsicosociología del Desarrollo",
+                "Discapacidad Intelectual: características del desarrollo",
+                "Atención Temprana",
+                "Expresión Artística: Artes Visuales",
+                "Educación Especial Contemporánea",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Instituciones Educativas",
+                "Sujeto de la Educación I",
+                "Psicología Educacional",
+                "Abordaje Pedagógico Didáctico I",
+                "Psicomotricidad",
+                "Didáctica de la Matemática",
+                "Didáctica de la Lengua",
+                "Didáctica de la Literatura",
+                "Didáctica de las Ciencias Naturales",
+                "Sujeto de la Educación II",
+                "Discapacidad Motora y Abordaje Pedagógico Didáctico",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyecto de Intervención Estratégica",
+                "Abordaje Pedagógico Didáctico II",
+                "Didáctica de las Ciencias Sociales",
+                "Discapacidad Múltiple y Abordaje Pedagógico Didáctico",
+                "Perspectiva Social, Transición a la Vida Adulta y Ocupación",
+                "Alfabetización",
+                "Didáctica de la Formación Ética y Ciudadana",
+                "Comunicación y Desarrollo del Lenguaje en Personas con Discapacidad",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación y Tecnologías Digitales",
+                "Educación Sexual Integral",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "UCE Formación complementaria General",
+                "Expresión Artística: Teatro",
+                "UCE Formación complementaria Específica",
+                "Práctica Profesional IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2024/10/2023_-ANEXO-Profesorado-de-Educacion-Especial-con-Orientacion-en-Discapacidad-Intelectual.pdf"
+        },
+        {
+          "id": 5003,
+          "nombre_carrera": "Profesorado de Inglés",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-027",
+          "link_oficial": "https://ies9027-infd.mendoza.edu.ar/sitio/profesorado-de-ingles/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Lengua Inglesa",
+                "Gramática Inglesa",
+                "Fonética y Fonología Inglesa",
+                "Prácticas de Lengua Inglesa",
+                "Comprensión y Producción de Textos Académicos",
+                "Práctica Profesional Docente I",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Pedagogía",
+                "Prácticas de Gramática Inglesa"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Lengua Inglesa",
+                "Gramática Inglesa",
+                "Fonética y Fonología Inglesa",
+                "Didáctica del Inglés I",
+                "Práctica Profesional Docente II",
+                "Sujetos de la Educación I",
+                "Didáctica",
+                "Instituciones Educativas",
+                "Psicología Educacional",
+                "Sujetos de la Educación II",
+                "Prácticas de Fonética y Fonología Inglesa"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Lengua Inglesa III",
+                "Gramática Inglesa III",
+                "Fonética y Fonología Inglesa III",
+                "Didáctica del Inglés II",
+                "Práctica Profesional Docente III",
+                "Cultura y Literatura Británica I",
+                "Gestión y Evaluación de los Aprendizajes",
+                "Cultura y Literatura Británica II",
+                "Proyectos de Intervención Socioeducativa",
+                "Educación en la Diversidad"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Lengua Inglesa",
+                "Práctica Profesional Docente IV",
+                "Fonética y Fonología Inglesa IV",
+                "Cultura y Literatura norteamericana",
+                "Educación Sexual Integral",
+                "Educación y Tecnologías Digitales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Formación Complementaria General",
+                "Formación Complementaria Específica"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-ingles-2/"
+        },
+        {
+          "id": 5004,
+          "nombre_carrera": "Tecnicatura Superior en Transporte Ferroviario",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-027",
+          "link_oficial": "https://ies9027-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-transporte-ferroviario/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Introducción a vía, Obras y Señalamiento",
+                "Nociones Generales de Material Tractivo y Remolcado",
+                "Introducción a la Logística",
+                "Bases Físico Matemática Aplicadas",
+                "Comunicación y Comprensión de Textos",
+                "Problemática Sociocultural y del Trabajo",
+                "Informática Aplicada",
+                "Sistemas de Representación",
+                "Inglés Técnico",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Operaciones de Vía Obras y Señalamiento",
+                "Mecánica y Tecnología de Materiales Ferroviarios",
+                "Material Rodante",
+                "Circulación",
+                "Gestión de los servicios de cargas y transporte",
+                "Higiene y Seguridad Industrial Ferroviaria",
+                "Impacto y Gestión Ambiental",
+                "Gestión de Recursos Humanos en Ferrocarriles",
+                "Costos y Presupuestos",
+                "Electrotécnica Aplicada",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Ética y Legislación Profesional",
+                "ProyectoTecnológico",
+                "Motores diesel y sistemas auxiliares",
+                "Tracción Eléctrica",
+                "Sistemas de frenos en material rodante ferroviario",
+                "Circuitos Auxiliares",
+                "Sistemas lógicos de material rodante",
+                "Equipamiento, confortabilidad y climatización en ferrocarriles",
+                "Mecanizado, bogie, tracción y choque.",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9027-infd.mendoza.edu.ar/sitio/estructura-curricular-3/"
+        }
+      ],
+      "departamento": "Guaymallén"
     }
-   ],
-   "departamento": "Guaymallén"
-  }
- ]
+  ]
 }

@@ -20,7 +20,55 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-008 Manuel Belgrano",
-     "link_oficial": "https://www.iesmb.edu.ar/bel/desarrollo-de-software/"
+     "link_oficial": "https://www.iesmb.edu.ar/bel/desarrollo-de-software/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Programación I",
+        "Matemática Aplicada",
+        "Lógica Computacional",
+        "Inglés Técnico I",
+        "Alfabetización Académica",
+        "Arquitectura de Dispositivos",
+        "Seminario Nuevas Tecnologías",
+        "Sistemas Operativos I",
+        "Base de Datos I",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Programación II",
+        "Matemática Discreta",
+        "Administración de Servidores",
+        "Inglés Técnico II",
+        "Comunicación y Redes",
+        "Modelado de Software",
+        "Sistemas Operativos II",
+        "Análisis Matemático",
+        "Base de Datos II",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Programación III",
+        "Arquitectura y Diseño de Interfaces: UI y UX",
+        "Auditoría y Calidad de Sistema",
+        "Inglés Técnico III",
+        "Gestión de Proyectos de Software",
+        "Base de Datos III",
+        "Legislación Informática y Ética Profesional",
+        "Estadística y Probabilidades para el Desarrollo de Software",
+        "Ciberseguridad",
+        "Metodologías Ágiles",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ]
     },
     {
      "id": 1701,
@@ -30,7 +78,58 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-008 Manuel Belgrano",
-     "link_oficial": "https://www.iesmb.edu.ar/bel/diseno-grafico-y-publicitario/"
+     "link_oficial": "https://www.iesmb.edu.ar/bel/diseno-grafico-y-publicitario/",
+     "plan_estudio": [
+      {
+       "anio": "Primer año",
+       "materias": [
+        "Diseño de comunicación visual I",
+        "Técnicas de Representación I",
+        "Herramientas Digitales I",
+        "Historia del Arte y del Diseño I",
+        "Inglés Taller",
+        "Tipografía I",
+        "Problemáticas sociocultural y el Contexto",
+        "Prácticas de lectura, escritura y oralidad",
+        "Inglés técnico",
+        "E.I.O. (Espacio institucional Optativo I)",
+        "Percepción Visual",
+        "Práctica profesionalizante I"
+       ]
+      },
+      {
+       "anio": "Segundo año",
+       "materias": [
+        "Diseño de comunicación visual II",
+        "Técnicas de Representación II",
+        "Herramientas Digitales II",
+        "Fotografía Taller",
+        "Historia del Arte y del Diseño II",
+        "Semiología",
+        "Tecnología gráfica I",
+        "Tipografía I",
+        "Tecnología gráfica II",
+        "Práctica profesionalizante II"
+       ]
+      },
+      {
+       "anio": "Tercer año",
+       "materias": [
+        "Diseño de comunicación visual III",
+        "Técnicas de Representación III",
+        "Herramientas Digitales III",
+        "Comunicación; Medios y Nuevas Tecnologías",
+        "Mercadotecnia para PyMES",
+        "Gestión de microemprendimientos",
+        "E.I.O. (Espacio Institucional Optativo II)",
+        "Ética profesional",
+        "Formulación y evaluación de proyectos",
+        "Metodología de la Investigación",
+        "Práctica profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.iesmb.edu.ar/bel/diseno-grafico-y-publicitario/"
     },
     {
      "id": 1702,
@@ -40,7 +139,57 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-008 Manuel Belgrano",
-     "link_oficial": "https://www.iesmb.edu.ar/bel/ia-y-ciencia-de-datos/"
+     "link_oficial": "https://www.iesmb.edu.ar/bel/ia_y_ciencia_de_datos/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Programación I",
+        "Matemática Aplicada",
+        "Lógica Computacional",
+        "Inglés Técnico I",
+        "Alfabetización Académica",
+        "Arquitectura de Dispositivos",
+        "Base de Datos I",
+        "Práctica Profesionalizante I",
+        "Seminario Nuevas Tecnologías",
+        "Sistemas Operativos I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Programación Orientada al Análisis de Datos",
+        "Matemática Aplicada a la Ciencia de Datos",
+        "Estadística y Probabilidades para Gestión de Datos",
+        "Ciencia de Datos y Datos Masivos",
+        "Inglés Técnico II",
+        "Gestión de Proyectos",
+        "Comunicación de Resultados Analíticos",
+        "Minería de Datos",
+        "Práctica Profesionalizante II",
+        "Metodologías Ágiles",
+        "Ética y Legislación en el Tratamiento de Datos"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "IA Aplicada al Procesamiento del Lenguaje Natural",
+        "IA Aplicada al Procesamiento Digital de Imágenes",
+        "Inglés Técnico III",
+        "Matemática Aplicada a la IA",
+        "Redes Neuronales y Aprendizaje Automático",
+        "Seminario de Actualización",
+        "Sistemas de Inteligencia Artificial",
+        "Prompts para Inteligencia Artificial",
+        "Inteligencia Artificial Generativa",
+        "Fundamentos de Ciberseguridad",
+        "Grandes Modelos del Lenguaje",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ]
     },
     {
      "id": 1703,
@@ -50,7 +199,56 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-008 Manuel Belgrano",
-     "link_oficial": "https://www.iesmb.edu.ar/bel/redes-y-ciberseguridad/"
+     "link_oficial": "https://www.iesmb.edu.ar/bel/redes-y-ciberseguridad/",
+     "plan_estudio": [
+      {
+       "anio": "Primer año",
+       "materias": [
+        "Programación I",
+        "Matemática Aplicada",
+        "Lógica Computacional",
+        "Inglés técnico I",
+        "Alfabetización académica",
+        "Seminario Nuevas Tecnologías",
+        "Sistemas Operativos I",
+        "Base de Datos I",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "Segundo año",
+       "materias": [
+        "Mantenimiento de Instalaciones Informáticas",
+        "Matemática Aplicada II",
+        "Administración de Servidores",
+        "Inglés Técnico II",
+        "Higiene y Seguridad Informática",
+        "Taller de Instalación y Certificación de Redes",
+        "Automatización de Servicios Informáticos",
+        "Tecnologías IoT",
+        "Comunicación y Redes",
+        "Criptografía Aplicada",
+        "Electrónica Aplicada",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "Tercer año",
+       "materias": [
+        "Tratamiento de incidentes de continuidad de Negocio",
+        "Ciberseguridad",
+        "Inglés Técnico III",
+        "Videovigilancia y Control de Accesos",
+        "Auditoría de Seguridad Informática",
+        "Forense Digital",
+        "Legislación Informática y Ética Profesional",
+        "Investigación Digital y Cibercrimen",
+        "Ethical Hacking",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.iesmb.edu.ar/bel/redes-y-ciberseguridad/"
     },
     {
      "id": 1704,
@@ -60,7 +258,56 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-008 Manuel Belgrano",
-     "link_oficial": "https://www.iesmb.edu.ar/bel/indumentaria/"
+     "link_oficial": "https://www.iesmb.edu.ar/bel/indumentaria/",
+     "plan_estudio": [
+      {
+       "anio": "Primer año",
+       "materias": [
+        "Diseño de Indumentaria I",
+        "Moldería I",
+        "Dibujo aplicado a la Indumentaria I",
+        "Dibujo técnico asistido I",
+        "Ergonomía",
+        "Psicología de la Percepción",
+        "Práctica de lectura, escritura y oralidad",
+        "Administración de recursos",
+        "Historia de la Indumentaria I",
+        "Sociología y Cultura de la Indumentaria",
+        "Inglés",
+        "Práctica profesionalizante I"
+       ]
+      },
+      {
+       "anio": "Segundo año",
+       "materias": [
+        "Diseño de Indumentaria II",
+        "Moldería II",
+        "Dibujo aplicado a la indumentaria II",
+        "Dibujo técnico asistido II",
+        "Historia de la Indumentaria II",
+        "Tecnología I",
+        "Costos y Comercialización",
+        "Semiótica",
+        "Diseño textil",
+        "Práctica profesionalizante II"
+       ]
+      },
+      {
+       "anio": "Tercer año",
+       "materias": [
+        "Diseño de Indumentaria III",
+        "Moldería III",
+        "Dibujo técnico asistido y Comunicación del Proyecto",
+        "Diseño de Maroquinería y Accesorios",
+        "Ética profesional",
+        "Gestión de Calidad",
+        "Tecnología II",
+        "Emprendedorismo",
+        "Práctica profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.iesmb.edu.ar/bel/indumentaria/"
     },
     {
      "id": 1705,
@@ -70,7 +317,59 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-008 Manuel Belgrano",
-     "link_oficial": "https://www.iesmb.edu.ar/bel/diseno-multimedial/"
+     "link_oficial": "https://www.iesmb.edu.ar/bel/diseno-multimedial/",
+     "plan_estudio": [
+      {
+       "anio": "Primer año",
+       "materias": [
+        "Diseño en Comunicación Visual I",
+        "Técnicas de representación I",
+        "Herramientas digitales I",
+        "Inglés",
+        "Tipografía I",
+        "Historia del arte y del diseño I",
+        "Problemática Sociocultural y el contexto",
+        "Prácticas de lectura, escritura y oralidad",
+        "Inglés técnico",
+        "EIO (Espacio Institucional optativo I)",
+        "Percepción Visual I",
+        "Práctica profesionalizante I"
+       ]
+      },
+      {
+       "anio": "Segundo año",
+       "materias": [
+        "Diseño en Comunicación Visual II",
+        "Técnicas de representación II",
+        "Producción Web I",
+        "Fotografía publicitaria",
+        "Historia del Arte y del Diseño II",
+        "Semiología",
+        "Tecnología gráfica I",
+        "Práctica profesionalizante II",
+        "Introducción al Modelado 3D",
+        "Producción Web II",
+        "Tipografía II",
+        "Guión"
+       ]
+      },
+      {
+       "anio": "Tercer año",
+       "materias": [
+        "Diseño de Comunicación Audiovisual",
+        "Animación Computada",
+        "Edición de sonido",
+        "Comunicación, medios y nuevas tecnologías",
+        "Mercadotecnia para PyMES",
+        "Gestión de Microemprendimientos",
+        "Práctica Profesionalizante III",
+        "Ética Profesional",
+        "Formulación y evaluación de Proyectos",
+        "Proyecto integrado"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.iesmb.edu.ar/bel/diseno-multimedial/"
     }
    ],
    "departamento": "Godoy Cruz"

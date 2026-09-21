@@ -1,99 +1,514 @@
 {
- "instituciones": [
-  {
-   "id": 44,
-   "nombre": "IES 9-026 Instituto de la Patria Grande",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "261-5743937",
-    "email": "A confirmar",
-    "direccion": "Alte. Brown 2600, Las Heras, Mendoza"
-   },
-   "carreras": [
+  "instituciones": [
     {
-     "id": 4401,
-     "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-026",
-     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/"
-    },
-    {
-     "id": 4402,
-     "nombre_carrera": "Programa de Tec. Superior en Diálisis",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-026",
-     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-tec-superior-en-dialisis/"
-    },
-    {
-     "id": 4403,
-     "nombre_carrera": "Programa de Tec. Superior en Gestión de las Organizaciones de la Salud",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "2 1/2 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-026",
-     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-tec-superior-en-administracion-de-empresas-de-la-salud/"
-    },
-    {
-     "id": 4404,
-     "nombre_carrera": "Programa de la Tec. Superior en Laboratorio de Análisis Clínicos",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-026",
-     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-la-tec-superior-en-laboratorio-de-analisis-clinicos/"
-    },
-    {
-     "id": 4405,
-     "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-026",
-     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-enfermeria-profesional/"
-    },
-    {
-     "id": 4406,
-     "nombre_carrera": "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional",
-     "categoria": "Grado / Profesorado",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-026",
-     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-para-la-educacion-secundaria-de-la-modalidad-tecnico-profesional/"
-    },
-    {
-     "id": 4407,
-     "nombre_carrera": "Profesorado de Educación Primaria",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-026",
-     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
-    },
-    {
-     "id": 4408,
-     "nombre_carrera": "Profesorado de Educación Inicial",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-026",
-     "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/"
+      "id": 44,
+      "nombre": "IES 9-026 Instituto de la Patria Grande",
+      "nivel": "terciario",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "261-5743937",
+        "email": "A confirmar",
+        "direccion": "Alte. Brown 2600, Las Heras, Mendoza"
+      },
+      "carreras": [
+        {
+          "id": 4401,
+          "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-026",
+          "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Comprensión y Producción de Textos Académicos",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Pedagogía",
+                "Expresión Artística: Música",
+                "Neuropsicosociología del Desarrollo",
+                "Discapacidad Intelectual: características del desarrollo",
+                "Atención Temprana",
+                "Expresión Artística: Artes Visuales",
+                "Educación Especial Contemporánea",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Instituciones Educativas",
+                "Sujeto de la Educación I",
+                "Psicología Educacional",
+                "Abordaje Pedagógico Didáctico I",
+                "Psicomotricidad",
+                "Didáctica de la Matemática",
+                "Didáctica de la Lengua",
+                "Didáctica de la Literatura",
+                "Didáctica de las Ciencias Naturales",
+                "Sujeto de la Educación II",
+                "Discapacidad Motora y Abordaje Pedagógico Didáctico",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyecto de Intervención Estratégica",
+                "Abordaje Pedagógico Didáctico II",
+                "Didáctica de las Ciencias Sociales",
+                "Discapacidad Múltiple y Abordaje Pedagógico Didáctico",
+                "Perspectiva Social, Transición a la Vida Adulta y Ocupación",
+                "Alfabetización",
+                "Didáctica de la Formación Ética y Ciudadana",
+                "Comunicación y Desarrollo del Lenguaje en Personas con Discapacidad",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación y Tecnologías Digitales",
+                "Educación Sexual Integral",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "UCE Formación complementaria General",
+                "Expresión Artística: Teatro",
+                "UCE Formación complementaria Específica",
+                "Práctica Profesional IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2024/10/2023_-ANEXO-Profesorado-de-Educacion-Especial-con-Orientacion-en-Discapacidad-Intelectual.pdf"
+        },
+        {
+          "id": 4402,
+          "nombre_carrera": "Programa de Tec. Superior en Diálisis",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-026",
+          "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-tec-superior-en-dialisis/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "FUNDAMENTOS DE DIÁLISIS",
+                "PRIMEROS AUXILIOS Y TÉCNICAS SANITARIAS",
+                "ANTROPOLOGÍA SOCIOCULTURAL Y SALUD",
+                "PROCESOS PSICOLÓGICOS Y SOCIALES",
+                "MORFOFISIOLOGÍA DINÁMICA HUMANA",
+                "FÍSICA BIOLÓGICA",
+                "QUÍMICA BIOLÓGICA",
+                "HERRAMIENTAS DIGITALES EN SALUD",
+                "COMUNICACIÓN EN SALUD",
+                "PRÁCTICA PROFESIONALIZANTE I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "FISIOPATOLOGÍA HUMANA",
+                "TÉCNICAS DE DIÁLISIS I",
+                "PATOLOGÍA MÉDICA",
+                "PATOLOGÍA RENAL",
+                "MICROBIOLOGÍA, PARASITOLOGÍA E INMUNOLOGÍA",
+                "EPIDEMIOLOGÍA Y BIOESTADÍSTICA",
+                "FARMACOLOGÍA APLICADA",
+                "ESTERILIZACIÓN Y BIOSEGURIDAD",
+                "SALUD PÚBLICA Y PROMOCIÓN PARA LA SALUD",
+                "PRÁCTICA PROFESIONALIZANTE II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "TÉCNICAS DE DIÁLISIS II",
+                "COMPLICACIONES DIALÍTICAS",
+                "DIÁLISIS EN PACIENTES CRÍTICOS",
+                "NUTRICIÓN Y DIETOTERAPIA APLICADA",
+                "DIÁLISIS EN PEDIATRÍA",
+                "INGLÉS TÉCNICO",
+                "INVESTIGACIÓN EN SALUD",
+                "ÉTICA Y LEGISLACIÓN PROFESIONAL",
+                "GESTIÓN Y CALIDAD EN TRATAMIENTOS DIALÍTICOS",
+                "PRÁCTICA PROFESIONALIZANTE III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-tec-superior-en-dialisis/"
+        },
+        {
+          "id": 4403,
+          "nombre_carrera": "Programa de Tec. Superior en Gestión de las Organizaciones de la Salud",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "2 1/2 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-026",
+          "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-tec-superior-en-administracion-de-empresas-de-la-salud/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Administración General",
+                "Inglés técnico",
+                "Comunicación Efectiva",
+                "Herramientas Digitales para la Gestión",
+                "Introducción a la economía I",
+                "Introducción a la economía II",
+                "Matemática aplicada",
+                "Estadística y análisis de datos",
+                "Introducción a la legislación",
+                "Desarrollo regional y contexto laboral",
+                "Práctica profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Administración Financiera",
+                "Contabilidad Aplicada a la Salud",
+                "Gestión de Capital Humano",
+                "Epidemiología y Bioestadística",
+                "Legislación y Normativa Sanitaria",
+                "Administración de Establecimientos de la Salud I",
+                "Herramientas digitales para la gestión en Salud",
+                "Costos y Presupuestos en el Sistema de Salud",
+                "Gestión Financiera en Salud",
+                "Ética del Profesional en Salud",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Administración de Establecimientos de Salud II",
+                "Metodología de la investigación y estadística aplicada en Salud",
+                "Marketing en Salud y Comunicación Institucional",
+                "Gestión de Calidad y seguridad del paciente en Salud",
+                "Auditoría y Control de Gestión en Salud",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-tec-superior-en-administracion-de-empresas-de-la-salud/"
+        },
+        {
+          "id": 4404,
+          "nombre_carrera": "Programa de la Tec. Superior en Laboratorio de Análisis Clínicos",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-026",
+          "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/programa-de-la-tec-superior-en-laboratorio-de-analisis-clinicos/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "FUNDAMENTOS DE LABORATORIO",
+                "MORFOFISIOLOGÍA DINÁMICA HUMANA",
+                "FÍSICA BIOLÓGICA",
+                "QUÍMICA INORGÁNICA",
+                "HERRAMIENTAS DIGITALES EN SALUD",
+                "COMUNICACIÓN EN SALUD",
+                "ANTROPOLOGÍA SOCIO CULTURAL Y SALUD",
+                "PROCESOS PSICOLÓGICOS Y SOCIALES",
+                "PRIMEROS AUXILIOS Y TÉCNICAS SANITARIAS",
+                "SALUD PÚBLICA Y PROMOCIÓN PARA LA SALUD",
+                "PRÁCTICA PROFESIONALIZANTE I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "HEMATOLOGÍA",
+                "BIOQUÍMICA CLÍNICA I",
+                "QUÍMICA ORGÁNICA Y BIOLÓGICA",
+                "PATOLOGÍA MÉDICA APLICADA",
+                "MICROBIOLOGÍA GENERAL Y APLICADA",
+                "ANÁLISIS CLÍNICO MICROBIOLÓGICO",
+                "TOXICOLOGÍA",
+                "EPIDEMIOLOGÍA Y BIOESTADÍSTICA",
+                "PRÁCTICA PROFESIONALIZANTE II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "BIOQUÍMICA CLÍNICA II",
+                "INMUNOLOGÍA APLICADA",
+                "ENDOCRINOLOGÍA APLICADA",
+                "GESTIÓN, HIGIENE Y SEGURIDAD EN EL LABORATORIO",
+                "FARMACOLOGÍA GENERAL APLICADA",
+                "HISTOQUÍMICA Y GENÉTICA",
+                "INVESTIGACIÓN EN SALUD",
+                "ÉTICA Y LEGISLACIÓN PROFESIONAL",
+                "INGLÉS TÉCNICO",
+                "PRÁCTICA PROFESIONALIZANTE III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9026-infd.mendoza.edu.ar/sitio/wp-content/uploads/2026/03/ANEXO-RS-2025-6791-GDEMZA-DGE-Plan-de-estudio-d_260313_135755.pdf"
+        },
+        {
+          "id": 4405,
+          "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-026",
+          "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-enfermeria-profesional/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Antropología Sociocultural y Salud",
+                "Procesos psicológicos y sociales",
+                "Entornos Virtuales de la Salud y Herramientas Digitales",
+                "Comunicación en Salud",
+                "Bases del Cuidado en Enfermería",
+                "Morfofisiología Dinámica Humana",
+                "Físico Química Biológica",
+                "Enfermería Comunitaria y Salud Pública",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Educación para la Salud",
+                "Nutrición y Dietoterapia",
+                "Microbiología Parasitología e Inmunología",
+                "Epidemiología y Bioestadística",
+                "Farmacología Aplicada a la Enfermería",
+                "Fisiopatología Humana",
+                "Cuidados de Enfermería del Adulto",
+                "Aspectos Psicosociales y Culturales del Desarrollo",
+                "Cuidados de Enfermería en el Adulto Mayor",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Inglés Técnico",
+                "Investigación en Salud",
+                "Cuidados de Enfermería en Salud Mental",
+                "Cuidados de Enfermería en Emergencias y Catástrofes",
+                "Ética y Legislación Aplicada a la Enfermería",
+                "Gestión del Cuidado en Enfermería",
+                "Cuidados de Enfermería Materna y del Recién Nacido",
+                "Cuidados de Enfermería en las Infancias y Adolescencias",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9026-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/02/ANEXO-RESOL-2024-6679-E-GDEMZA-DGE-Plan-de-estudio-para-la-carrera-de-Enfermero-a-Profesional.pdf"
+        },
+        {
+          "id": 4406,
+          "nombre_carrera": "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional",
+          "categoria": "Grado / Profesorado",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-026",
+          "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-para-la-educacion-secundaria-de-la-modalidad-tecnico-profesional/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "La enseñanza en la Escuela Secundaria Técnica I",
+                "El aprendizaje en la escuela secundaria técnica",
+                "Competencias comunicacionales, comprensión de textos I",
+                "Competencias comunicacionales, comprensión de textos II",
+                "Actualización Científico - Tecnológica en concurrencia con el título",
+                "Práctica I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Contextos de y para la escuela secundaria técnica I",
+                "La enseñanza en la escuela secundaria técnica II",
+                "Condiciones del ejercicio profesional",
+                "Vinculación con el sector socio-productivo",
+                "Actualización Científico - Tecnológica en concurrencia con el título",
+                "Práctica II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Contextos de y para la escuela secundaria técnica II",
+                "Adolescencias y educación secundaria técnica",
+                "Producción de textos para la ETP secundaria",
+                "Uso didáctico de las TIC",
+                "Actualización Científico - Tecnológica en concurrencia con el título",
+                "Práctica III",
+                "Residencia",
+                "Reflexión sobre la problematización de la práctica"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9026-infd.mendoza.edu.ar/sitio/wp-content/uploads/2026/03/2025-RES-00801-Profesorado-para-Tecnicos_260313_140125.pdf"
+        },
+        {
+          "id": 4407,
+          "nombre_carrera": "Profesorado de Educación Primaria",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-026",
+          "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Comprensión y Producción de Textos Académicos",
+                "Sistema Educativo",
+                "Pedagogía",
+                "Numeración",
+                "Lengua y Literatura",
+                "Educación Artística",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Sujetos de la Educación",
+                "Psicología Educacional",
+                "Instituciones Educacionales",
+                "Números Racionales y su Didáctica",
+                "Cs. Sociales y su Didáctica I",
+                "Cs. Naturales y su Didáctica I",
+                "Lengua y su Didáctica",
+                "Literatura y su Didáctica",
+                "Espacio, Geometría y su Didáctica",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyectos de Intervención Socio-Educativa",
+                "Educación en la Diversidad",
+                "Educación Tecnológica",
+                "Medida y su Didáctica",
+                "Cs. Sociales y su Didáctica II",
+                "Cs. Naturales y su Didáctica II",
+                "Alfabetización",
+                "Formación Ética y Ciudadana y su Didáctica",
+                "Álgebra, Funciones y su Didáctica",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación Sexual Integral",
+                "Educación y Tecnologías Digitales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Formación Complementaria General",
+                "Didáctica de la Lengua y la Literatura",
+                "Didáctica de la Matemática",
+                "Didáctica de las Ciencias Sociales",
+                "Didáctica de las Ciencias Naturales",
+                "Formación Complementaria II",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-primaria-res-n-6868-dge-2023/"
+        },
+        {
+          "id": 4408,
+          "nombre_carrera": "Profesorado de Educación Inicial",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-026",
+          "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Comprensión y Producción de Textos Académicos",
+                "Pedagogía",
+                "Centralidad del Juego",
+                "Juego y Producción de Objetos Lúdicos",
+                "Lenguajes Artísticos Expresivos: Música",
+                "Lenguajes Artísticos Expresivos: Teatro",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Instituciones Educativas",
+                "Psicología Educacional",
+                "Educación y Atención Temprana al Desarrollo Infantil",
+                "Didáctica del Jardín Maternal",
+                "Prácticas Lingüísticas en Educación Inicial",
+                "Lenguajes Artísticos Expresivos: Artes Visuales",
+                "Educación Matemática Temprana e Inicial I",
+                "Sujetos de la Educación",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyectos de Intervención Socioeducativa",
+                "Educación en la Diversidad",
+                "Literatura Infantil",
+                "Didáctica de Jardín de Infantes",
+                "Educación Matemática Inicial II",
+                "Alfabetización Temprana e Inicial",
+                "Didáctica del Ambiente Natural",
+                "Didáctica del Ambiente Social",
+                "Motricidad en Jardín Maternal y en Jardín de Infantes",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "ESI",
+                "Educación y Tecnologías Digitales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Formación Complementaria General",
+                "Problemáticas de la Educación Inicial",
+                "Salud y Cultura del Cuidado",
+                "Formación Ética y Ciudadana y su Didáctica",
+                "Formación Complementaria Específica",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-inicial/"
+        }
+      ],
+      "departamento": "Las Heras"
     }
-   ],
-   "departamento": "Las Heras"
-  }
- ]
+  ]
 }

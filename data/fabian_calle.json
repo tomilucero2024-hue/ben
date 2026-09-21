@@ -20,7 +20,64 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto Fabián Calle",
-     "link_oficial": "https://institutocalle.edu.ar/oferta-educativa/locucion/"
+     "link_oficial": "https://institutocalle.edu.ar/oferta-educativa/locucion/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Locución I",
+        "Foniatría I",
+        "Práctica y producción integral de televisión I",
+        "Práctica y producción integral de radio I",
+        "Historia I",
+        "Expresión oral y escrita",
+        "Informática",
+        "Tecnología I",
+        "Teorías de la comunicación",
+        "Música",
+        "Expresión corporal",
+        "Pronunciación del francés",
+        "Pronunciación del alemán"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Locución II",
+        "Foniatría II",
+        "Práctica y producción integral de televisión II",
+        "Práctica y producción integral de radio II",
+        "Historia II",
+        "Interpretación",
+        "Publicidad",
+        "Literatura",
+        "Tecnología II",
+        "Investigación periodística",
+        "Pronunciación del italiano",
+        "Taller de libretos",
+        "Principios de estética e historia del arte"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Locución III",
+        "Foniatría III",
+        "Práctica Integral de Televisión III",
+        "Práctica Integral de Radio III",
+        "Redacción",
+        "Inglés",
+        "Portugués",
+        "Régimen legal de la radiodifusión",
+        "Doblaje",
+        "Oratoria",
+        "Geopolítica",
+        "Ética periodística",
+        "Planificación y gestión de medios"
+       ]
+      }
+     ],
+     "plan_fuente": "https://institutocalle.edu.ar/oferta-educativa/locucion/"
     }
    ],
    "departamento": "Capital"

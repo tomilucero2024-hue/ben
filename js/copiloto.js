@@ -129,20 +129,12 @@ export function configurarBienvenida() {
     }
 
     const btnCopiloto = document.getElementById('btnBienvenidaCopiloto');
-    const btnCarreras = document.getElementById('btnBienvenidaCarreras');
-    const btnInstituciones = document.getElementById('btnBienvenidaInstituciones');
-    const btnAreas = document.getElementById('btnBienvenidaAreas');
+    const btnOfertas = document.getElementById('btnBienvenidaOfertas');
     if (btnCopiloto) btnCopiloto.addEventListener('click', () => {
         salirDeBienvenida(() => abrirTestPantallaCompleta());
     });
-    if (btnCarreras) btnCarreras.addEventListener('click', () => {
+    if (btnOfertas) btnOfertas.addEventListener('click', () => {
         salirDeBienvenida(() => cambiarVista('carreras'));
-    });
-    if (btnInstituciones) btnInstituciones.addEventListener('click', () => {
-        salirDeBienvenida(() => cambiarVista('instituciones'));
-    });
-    if (btnAreas) btnAreas.addEventListener('click', () => {
-        salirDeBienvenida(() => cambiarVista('areas'));
     });
 }
 
@@ -319,7 +311,7 @@ function mensajeBienvenida() {
                 </span>
             </div>
             <ol class="cb-pasos">
-                ${pasoCopiloto(1, 'lista', 'Respondés 5 preguntas cortas')}
+                ${pasoCopiloto(1, 'lista', 'Respondés 7 preguntas cortas')}
                 ${pasoCopiloto(2, 'analisis', 'Analizamos tus intereses')}
                 ${pasoCopiloto(3, 'diana', 'Te mostramos las carreras que más encajan')}
             </ol>
@@ -356,7 +348,7 @@ async function iniciarTestVocacional() {
     enTestVocacional = true;
     procesandoPasoChat = false;
     historialChat.length = 0;
-    historialChat.push({ rol: 'bot', html: '<p>🎯 Perfecto. Te hago <strong>5 preguntas</strong> para mapear tu perfil multidimensional. Respondé eligiendo una de las opciones.</p>' });
+    historialChat.push({ rol: 'bot', html: '<p>🎯 Perfecto. Te hago <strong>7 preguntas</strong> para mapear tu perfil multidimensional. Respondé eligiendo una de las opciones.</p>' });
     
     // Asegurar que Orientador cargó los perfiles (lazy loading)
     mostrarEscribiendo();
@@ -998,17 +990,21 @@ function mostrarRecomendacion() {
             <button type="button" class="btn-chat-reset" data-chat-accion="reiniciar">Empezar el test de nuevo</button>`;
     } else {
         const mejor = todas[0];
-        const matchPct = mejor.compatibilidad ? ` (${mejor.compatibilidad}%)` : '';
-        const visibles = todas.slice(0, 6);
-        const tarjetas = visibles.map(c => tarjetaResultadoChat(c, rankings)).join('');
-        // Antes acá se decía "encontré N" con N = las que se muestran, que está
-        // recortado por 'limite'. rankings.total es cuántas superaron el umbral
-        // de compatibilidad de verdad.
-        const compatibles = rankings.total || todas.length;
+        const podio = todas.slice(0, 3);
+        const resto = todas.slice(3, 6);
+
         html = `
-            <p><img class="chat-bot-icon" src="/img/copiloto-icono.png" alt="" width="16" height="16"> <strong>Orientador:</strong> ¡Mapeo completo! Encontré <strong>${compatibles} carreras compatibles</strong> con tu perfil.${matchPct ? ' Tu mejor match: <strong>' + escaparHTML(mejor.nombre) + '</strong> con ' + mejor.compatibilidad + '%.' : ''}</p>
-            <div class="chat-resultados">${tarjetas}</div>
-            <p class="mensaje-bot-nota">Acá te muestro las ${visibles.length} de mejor match. Cerrá esta ventana y vas a encontrar ${todas.length} en la grilla, donde además podés filtrarlas sin perder el orden por compatibilidad.</p>
+            <p><img class="chat-bot-icon" src="/img/copiloto-icono.png" alt="" width="16" height="16"> <strong>Orientador:</strong> ¡Listo! Analicé tu perfil contra ${typeof Orientador !== 'undefined' && Orientador.perfilesCarreras ? Orientador.perfilesCarreras.length : 'cientos de'} carreras.</p>
+            
+            <p>Tu carrera más compatible es <strong>${escaparHTML(mejor.nombre)}</strong> con <strong>${mejor.compatibilidad}%</strong> de afinidad.</p>
+            ${mejor.explicacion ? `<p class="mensaje-bot-nota">${mejor.explicacion}</p>` : ''}
+            ${mejor.alertas?.length ? `<p class="mensaje-bot-alerta">⚠️ ${mejor.alertas[0].mensaje}</p>` : ''}
+            
+            <div class="chat-resultados">${podio.map(c => tarjetaResultadoChat(c, rankings)).join('')}</div>
+            
+            ${resto.length ? `<p class="mensaje-bot-nota">También podrían interesarte:</p><div class="chat-resultados chat-resultados-secundarios">${resto.map(c => tarjetaResultadoChat(c, rankings)).join('')}</div>` : ''}
+            
+            <p class="mensaje-bot-nota">Cerrá esta ventana para ver todas las opciones en la grilla con filtros.</p>
             <p class="mensaje-bot-nota"><small>⚖️ <em>Resultado de compatibilidad preliminar basado en intereses. Consultá siempre con un profesional de la orientación vocacional.</em></small></p>
             <button type="button" class="btn-chat-reset" data-chat-accion="reiniciar">Empezar el test de nuevo</button>`;
     }
@@ -1027,6 +1023,16 @@ function tarjetaResultadoChat(carrera, rankings) {
     else if (rankings.tecnicaturas.some(r => r.clave === carrera.clave)) tipoBadge = '<span class="tipo-badge tecnica">Tecnicatura</span>';
     else if (rankings.cursos.some(r => r.clave === carrera.clave)) tipoBadge = '<span class="tipo-badge curso">Curso</span>';
 
+    // Mostrar por qué encaja
+    const explicacionHTML = carrera.explicacion 
+        ? `<p class="chat-resultado-explicacion">${carrera.explicacion}</p>` 
+        : '';
+    
+    // Mostrar alertas si las hay
+    const alertaHTML = carrera.alertas?.length 
+        ? `<p class="chat-resultado-alerta">⚠️ ${escaparHTML(carrera.alertas[0].mensaje)}</p>` 
+        : '';
+
     return `
         <div class="chat-resultado-card ${matchClass}">
             <div class="chat-resultado-head">
@@ -1034,6 +1040,8 @@ function tarjetaResultadoChat(carrera, rankings) {
                 <span class="compatibilidad-badge ${matchClass}">${compat}% match</span>
             </div>
             ${tipoBadge || carrera.area ? '<div class="tipo-badges">' + tipoBadge + (carrera.area ? '<span class="tipo-badge area">' + capSeguro(carrera.area) + '</span>' : '') + '</div>' : ''}
+            ${explicacionHTML}
+            ${alertaHTML}
             <div class="chat-resultado-acciones">
                 <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(clave)}" aria-label="Escuchar carrera"><svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg> <span>Escuchar</span></button>
             </div>

@@ -20,7 +20,71 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Fundación Rayuela",
-     "link_oficial": "https://fundacionrayuela.org.ar/sitio/profesor-especial/"
+     "link_oficial": "https://fundacionrayuela.org.ar/sitio/profesor-especial/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Comprensión y Producción de textos académicos",
+        "Pensamiento Filosófico",
+        "Sistema educativo",
+        "Pedagogía",
+        "Educación Artística: música",
+        "Neuropsicosociología del desarrollo",
+        "Discapacidad Intelectual: características del desarrollo",
+        "Atención temprana",
+        "Educación Artística: artes visuales",
+        "Educación especial contemporánea",
+        "Práctica Profesional Docente I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Didáctica",
+        "Instituciones educativas",
+        "Sujetos de la Educación I",
+        "Psicología educacional",
+        "Abordaje pedagógico didáctico I",
+        "Psicomotricidad",
+        "Didáctica de la Matemática",
+        "Didáctica de la Lengua",
+        "Didáctica de la Literatura",
+        "Didáctica de las Ciencias Naturales",
+        "Sujeto de la Educación II",
+        "Discapacidad motora y abordaje pedagógico didáctico",
+        "Práctica Profesional Docente II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Gestión y Evaluación de los aprendizajes",
+        "Proyectos de Intervención Socioeducativa",
+        "Abordaje pedagógico didáctico II",
+        "Didáctica de las Ciencias Sociales",
+        "Discapacidad Múltiple y Abordaje Pedagógico Didáctico",
+        "Perspectiva Social Transición a la Vida Adulta y Ocupación Laboral",
+        "Alfabetización",
+        "Didáctica de la Formación Ética y Ciudadana",
+        "Comunicación y Desarrollo del Lenguaje en la Persona con Discapacidad",
+        "Práctica Profesional Docente III"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Educación y Tecnologías Digitales",
+        "Educación Sexual Integral",
+        "Historia y Patrimonio Cultural de Mendoza",
+        "UCE Formación complementaria general",
+        "Expresión Artística: Teatro",
+        "UCE Formación Complementaria Específica",
+        "Práctica Profesional Docente IV"
+       ]
+      }
+     ],
+     "plan_fuente": "https://fundacionrayuela.org.ar/sitio/profesor-especial/"
     },
     {
      "id": 3702,
@@ -30,7 +94,55 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Fundación Rayuela",
-     "link_oficial": "https://fundacionrayuela.org.ar/sitio/bibliotecario/"
+     "link_oficial": "https://fundacionrayuela.org.ar/sitio/bibliotecario/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Introducción a la Bibliotecología",
+        "Comprensión y producción de textos",
+        "Comportamiento creativo",
+        "Procesos técnicos: clasificación",
+        "Comunicación I",
+        "Problemática Sociocultural y del Conocimiento",
+        "Historia del conocimiento registrado",
+        "Comunicación II",
+        "Prácticas y proyectos de integración I",
+        "Tecnologías de la información y comunicación"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Procesos técnicos: catalogación",
+        "Gestión y evaluación de colecciones",
+        "Aproximación a la literatura",
+        "Conservación y preservación de recursos",
+        "Inglés técnico",
+        "Servicios a los usuarios",
+        "Prácticas y proyectos de integración II",
+        "Inglés",
+        "Sistemas de gestión de la información"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Procesos técnicos: indización",
+        "Literatura infantil y juvenil",
+        "Ética profesional",
+        "Bibliotecología social",
+        "Tecnología educativa",
+        "Animación a la lectura",
+        "Memoria, sociedad y cultura",
+        "Administración y gestión de unidades de información",
+        "Herramientas matemáticas y estadísticas",
+        "Prácticas y proyectos de integración III",
+        "Práctica profesionalizante"
+       ]
+      }
+     ],
+     "plan_fuente": "https://fundacionrayuela.org.ar/sitio/bibliotecario/"
     },
     {
      "id": 3703,
@@ -40,7 +152,46 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Fundación Rayuela",
-     "link_oficial": "https://fundacionrayuela.org.ar/sitio/acompanante-terapeutico/"
+     "link_oficial": "https://fundacionrayuela.org.ar/sitio/acompanante-terapeutico/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Salud Pública y Salud Mental",
+        "Contextualización del Campo Profesional del Acompañamiento Terapéutico",
+        "Principios Médicos y de Psicofarmacología",
+        "Fundamentos de Psicología General y de Intervención Sociocomunitaria",
+        "Psicología de los Ciclos Vitales",
+        "Psicopatología",
+        "Prácticas Profesionalizantes 1"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Investigación en Salud",
+        "Modelo de Ocupación Humana",
+        "Ética",
+        "Acompañamiento Terapéutico",
+        "Psicología de Grupos",
+        "Sistemas Familiares",
+        "Psicofarmacología",
+        "Prácticas Profesionalizantes 2"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Inglés",
+        "Organización y Gestión de los Servicios de Salud Mental",
+        "Intervención Comunitaria y Recursos Sociales",
+        "Acompañamiento Terapéutico en la Niñez y Adolescencia",
+        "Acompañamiento Terapéutico del Adulto y Adulto Mayor",
+        "Prácticas Profesionalizantes 3"
+       ]
+      }
+     ],
+     "plan_fuente": "https://fundacionrayuela.org.ar/sitio/acompanante-terapeutico/"
     },
     {
      "id": 3704,
@@ -50,7 +201,49 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Fundación Rayuela",
-     "link_oficial": "https://fundacionrayuela.org.ar/sitio/preceptor/"
+     "link_oficial": "https://fundacionrayuela.org.ar/sitio/preceptor/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Comprensión y Producción de Textos Académicos",
+        "Alfabetización Digital",
+        "Sujeto del Aprendizaje",
+        "Sociedad, Cultura y Educación",
+        "Inglés",
+        "Gestión de Proyectos",
+        "Educación y Tecnologías Digitales",
+        "Mediación Pedagógica",
+        "Animación Sociocultural",
+        "ESI",
+        "Práctica Profesional I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Sistema Educativo",
+        "Orientación y Tutoría Mediación Pedagógica",
+        "Estadística y Análisis de",
+        "Datos",
+        "Educación en la Diver",
+        "Gestión Normativa y Administración Educativa",
+        "Gestión Académica en elNivel Superior",
+        "Ética Profesional",
+        "Práctica Profesional II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Rol del Bedel en Educación Superior",
+        "Primeros Auxilios y Prevención de Accidentes",
+        "EDI",
+        "Práctica Profesional III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://fundacionrayuela.org.ar/sitio/preceptor/"
     },
     {
      "id": 3705,
@@ -60,7 +253,69 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Fundación Rayuela",
-     "link_oficial": "https://fundacionrayuela.org.ar/sitio/profesor-inicial/"
+     "link_oficial": "https://fundacionrayuela.org.ar/sitio/profesor-inicial/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Pensamiento Filosófico",
+        "Sistema educativo",
+        "Comprensión y Producción de textos académicos",
+        "Pedagogía",
+        "Centralidad del Juego",
+        "Juego y producción de objetos lúdicos",
+        "Lenguajes artísticos expresivos – teatro",
+        "Lenguajes artísticos expresivos – música",
+        "Práctica Profesional Docente I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Didáctica",
+        "Instituciones Educativas",
+        "Psicología Educacional",
+        "Educación y Atención Temprana al Desarrollo Infantil",
+        "Didáctica de Jardín Maternal",
+        "Prácticas Lingüísticas en Educación Inicial",
+        "Lenguajes artísticos expresivos – artes visuales",
+        "Educación Matemática Temprana e Inicial I",
+        "Sujetos de la Educación",
+        "Práctica Profesional Docente II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Gestión y evaluación de los aprendizajes",
+        "Proyectos de Intervención Socioeducativa",
+        "Educación en la diversidad",
+        "Literatura Infantil",
+        "Didáctica de Jardín de Infantes",
+        "Educación Matemática Inicial II",
+        "Alfabetización Temprana e Inicial",
+        "Didáctica del ambiente natural",
+        "Didáctica del ambiente social",
+        "Motricidad en JM y en JI",
+        "Práctica Profesional Docente III"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "ESI",
+        "Educación y tecnologías digitales",
+        "Historia y Patrimonio cultural de Mendoza",
+        "Espacio de Formación Complementaria General",
+        "Problemáticas de la Ed. Inicial",
+        "Salud y cultura del cuidado",
+        "Formación Ética y Ciudadana y su Didáctica",
+        "Formación complementaria Específica",
+        "Práctica Profesional Docente IV"
+       ]
+      }
+     ],
+     "plan_fuente": "https://fundacionrayuela.org.ar/sitio/profesor-inicial/"
     },
     {
      "id": 3706,
@@ -70,7 +325,70 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Fundación Rayuela",
-     "link_oficial": "https://fundacionrayuela.org.ar/sitio/profesor-primaria/"
+     "link_oficial": "https://fundacionrayuela.org.ar/sitio/profesor-primaria/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Pensamiento Filosófico",
+        "Comprensión y Producción de textos académicos",
+        "Sistema educativo",
+        "Pedagogía",
+        "Numeración",
+        "Lengua y literatura",
+        "Educación Artística",
+        "Práctica Profesional Docente I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Didáctica",
+        "Sujetos de la Educación",
+        "Psicología educacional",
+        "Instituciones educativas",
+        "Números Racionales y su didáctica",
+        "Sociales y su didáctica I",
+        "Naturales y su didáctica I",
+        "Lengua y su didáctica",
+        "Literatura y su didáctica",
+        "Espacio, Geometría y su didáctica",
+        "Práctica Profesional Docente II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Gestión y Evaluación de los aprendizajes",
+        "Proyectos de Intervención Socioeducativa",
+        "Educación en la diversidad",
+        "Educación Tecnológica",
+        "Medida y su didáctica",
+        "Cs Sociales y su didáctica II",
+        "Cs Sociales y su didáctica II",
+        "Alfabetización",
+        "Formación Ética y Ciudadana y su didáctica",
+        "Álgebra, Funciones y su didáctica",
+        "Práctica Profesional Docente III"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Educación Sexual Integral",
+        "Educación y tecnologías digitales",
+        "Historia y Patrimonio Cultural de Mendoza",
+        "Formación complementaria general",
+        "Didáctica de la Lengua y la Literatura",
+        "Didáctica de la Matemática",
+        "Didáctica de las Ciencias Sociales",
+        "Didáctica de las Ciencias Naturales",
+        "Formación complementaria II Taller",
+        "Práctica Profesional Docente IV"
+       ]
+      }
+     ],
+     "plan_fuente": "https://fundacionrayuela.org.ar/sitio/profesor-primaria/"
     }
    ],
    "departamento": "Capital"

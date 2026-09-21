@@ -1,109 +1,163 @@
 {
- "instituciones": [
-  {
-   "id": 49,
-   "nombre": "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "2625-423122",
-    "email": "ies9007@gmail.com",
-    "direccion": "Roca 327, Gral. Alvear, Mendoza"
-   },
-   "carreras": [
+  "instituciones": [
     {
-     "id": 4901,
-     "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-007",
-     "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/"
-    },
-    {
-     "id": 4902,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-007",
-     "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/"
-    },
-    {
-     "id": 4903,
-     "nombre_carrera": "Profesorado en Artes Visuales",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-007",
-     "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/"
-    },
-    {
-     "id": 4904,
-     "nombre_carrera": "Profesorado en Educación Secundaria para Técnicos",
-     "categoria": "Grado / Profesorado",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-007",
-     "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/"
-    },
-    {
-     "id": 4905,
-     "nombre_carrera": "Profesorado en Lengua y Literatura",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-007",
-     "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/"
-    },
-    {
-     "id": 4906,
-     "nombre_carrera": "Profesorado en Música",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-007",
-     "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/"
-    },
-    {
-     "id": 4907,
-     "nombre_carrera": "Tecnicatura Superior en Agronomía e Industrias Frutihortícolas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-007",
-     "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/"
-    },
-    {
-     "id": 4908,
-     "nombre_carrera": "Tecnicatura Superior en Comercio Internacional y Aduana",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "A Distancia",
-     "turno": "A confirmar",
-     "facultad": "IES 9-007",
-     "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/"
-    },
-    {
-     "id": 4909,
-     "nombre_carrera": "Tecnicatura Superior en Gestión de Recursos Humanos",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "A Distancia",
-     "turno": "A confirmar",
-     "facultad": "IES 9-007",
-     "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/"
+      "id": 49,
+      "nombre": "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)",
+      "nivel": "terciario",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "2625-423122",
+        "email": "ies9007@gmail.com",
+        "direccion": "Roca 327, Gral. Alvear, Mendoza"
+      },
+      "carreras": [
+        {
+          "id": 4901,
+          "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-007",
+          "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/",
+          "plan_estudio": [
+            {
+              "anio": "Plan de estudios",
+              "materias": [
+                "Sin información oficial (la institución no publica el plan de estudios)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4902,
+          "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-007",
+          "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/",
+          "plan_estudio": [
+            {
+              "anio": "Plan de estudios",
+              "materias": [
+                "Sin información oficial (la institución no publica el plan de estudios)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4903,
+          "nombre_carrera": "Profesorado en Artes Visuales",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-007",
+          "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/",
+          "plan_estudio": [
+            {
+              "anio": "Plan de estudios",
+              "materias": [
+                "Sin información oficial (la institución no publica el plan de estudios)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4904,
+          "nombre_carrera": "Profesorado en Educación Secundaria para Técnicos",
+          "categoria": "Grado / Profesorado",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-007",
+          "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/",
+          "plan_estudio": [
+            {
+              "anio": "Plan de estudios",
+              "materias": [
+                "Sin información oficial (la institución no publica el plan de estudios)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4905,
+          "nombre_carrera": "Profesorado en Lengua y Literatura",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-007",
+          "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/",
+          "plan_estudio": [
+            {
+              "anio": "Plan de estudios",
+              "materias": [
+                "Sin información oficial (la institución no publica el plan de estudios)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4906,
+          "nombre_carrera": "Profesorado en Música",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-007",
+          "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/",
+          "plan_estudio": [
+            {
+              "anio": "Plan de estudios",
+              "materias": [
+                "Sin información oficial (la institución no publica el plan de estudios)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4908,
+          "nombre_carrera": "Tecnicatura Superior en Comercio Internacional y Aduana",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "A Distancia",
+          "turno": "A confirmar",
+          "facultad": "IES 9-007",
+          "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/",
+          "plan_estudio": [
+            {
+              "anio": "Plan de estudios",
+              "materias": [
+                "Sin información oficial (la institución no publica el plan de estudios)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4909,
+          "nombre_carrera": "Tecnicatura Superior en Gestión de Recursos Humanos",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "A Distancia",
+          "turno": "A confirmar",
+          "facultad": "IES 9-007",
+          "link_oficial": "https://ies9007-infd.mendoza.edu.ar/sitio/",
+          "plan_estudio": [
+            {
+              "anio": "Plan de estudios",
+              "materias": [
+                "Sin información oficial (la institución no publica el plan de estudios)"
+              ]
+            }
+          ]
+        }
+      ],
+      "departamento": "General Alvear"
     }
-   ],
-   "departamento": "General Alvear"
-  }
- ]
+  ]
 }

@@ -1,169 +1,1127 @@
 {
- "instituciones": [
-  {
-   "id": 18,
-   "nombre": "IES 9-009 (Tupungato)",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "02622-488820",
-    "email": "ens9009@infd.edu.ar",
-    "direccion": "Secundino Gómez y Dr. Mathons, Tupungato"
-   },
-   "carreras": [
+  "instituciones": [
     {
-     "id": 1801,
-     "nombre_carrera": "Tecnicatura Superior en Energías Renovables",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-energias-renovables/"
-    },
-    {
-     "id": 1802,
-     "nombre_carrera": "Tecnicatura Superior en Enología e Industrias Frutihortícolas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/general-enologia/"
-    },
-    {
-     "id": 1803,
-     "nombre_carrera": "Tecnicatura Superior Agronómica (Sede Central)",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-sup-en-agronomia-sc/"
-    },
-    {
-     "id": 1804,
-     "nombre_carrera": "Tecnicatura Superior Agronómica (Sede Agrelo)",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/general-agronomica/"
-    },
-    {
-     "id": 1805,
-     "nombre_carrera": "Tecnicatura Superior en Petróleo y Gas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/t-s-en-petroleo-y-gas/"
-    },
-    {
-     "id": 1806,
-     "nombre_carrera": "Tecnicatura Superior en Diseño Multimedial",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/t-s-diseno-multimedial/"
-    },
-    {
-     "id": 1807,
-     "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "A Distancia",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-de-empresas-a-distancia/"
-    },
-    {
-     "id": 1808,
-     "nombre_carrera": "Tecnicatura Superior en Administración Pública (A Distancia)",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "A Distancia",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/t-adm-publica-a-distancia/"
-    },
-    {
-     "id": 1809,
-     "nombre_carrera": "Tecnicatura Superior en Administración Pública (INFOPE)",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/general-administracion/"
-    },
-    {
-     "id": 1810,
-     "nombre_carrera": "Tecnicatura Superior en Administración Pública (Legislatura)",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-publica-con-orientacion-en-instituciones-legislativas/"
-    },
-    {
-     "id": 1811,
-     "nombre_carrera": "Tecnicatura Superior en Logística",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-logistica/"
-    },
-    {
-     "id": 1812,
-     "nombre_carrera": "Profesorado de Educación Especial",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/general-profesorado-educacion-especial/"
-    },
-    {
-     "id": 1813,
-     "nombre_carrera": "Profesorado de Educación Primaria",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/profesorado-de-educacion-primaria/"
-    },
-    {
-     "id": 1814,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Química",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/profesorado-de-educacion-secundaria-en-quimica/"
-    },
-    {
-     "id": 1815,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-009",
-     "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/profesorado-de-educacion-secundaria-en-matematica/"
+      "id": 18,
+      "nombre": "IES 9-009 (Tupungato)",
+      "nivel": "terciario",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "02622-488820",
+        "email": "ens9009@infd.edu.ar",
+        "direccion": "Secundino Gómez y Dr. Mathons, Tupungato"
+      },
+      "carreras": [
+        {
+          "id": 1801,
+          "nombre_carrera": "Tecnicatura Superior en Energías Renovables",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicarura-superior-en-energias-renovables/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Energética y Fuentes de energía renovable",
+                "Generación solar Fotovoltaica",
+                "Instalaciones Eléctricas",
+                "Generación solar Fototérmica",
+                "Instalaciones Térmicas",
+                "Sistemas de Comunicación",
+                "Gestión de emprendimientos"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Generación Eólica",
+                "Generación Hidráulica",
+                "Generación Biomasa",
+                "Generación Geotérmica",
+                "Almacenamiento transformación y transporte",
+                "Gestión de la Energía",
+                "Mantenimiento de Sistemas Renovables"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Negocio Energético",
+                "Sistemas de Control Automático",
+                "Formación y Orientación",
+                "Laboral. Diseño de Centrales de Energías",
+                "Renovables",
+                "Proyecto de Generación",
+                "Energías Renovables y su Impacto"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/PLAN-DE-ESTUDIOS-TER.pdf"
+        },
+        {
+          "id": 1802,
+          "nombre_carrera": "Tecnicatura Superior en Enología e Industrias Frutihortícolas",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Producción Vitícola",
+                "Producción Frutícola",
+                "Producción Apícola",
+                "Vinificación",
+                "Industrialización de Frutas y Hortalizas",
+                "Industrialización Oleícola",
+                "Industria Cárnica",
+                "Industria Láctea",
+                "Industria Apícola",
+                "Emprendedorismo y Agronegocios"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Gestión de los Procesos Fermentativos",
+                "Gestión de Maquinarias Agroindustriales",
+                "Análisis de Productos Enológicos",
+                "Manejo de Cosecha y Postcosecha",
+                "Territorio y Desarrollo",
+                "Innovación y Gestión Empresarial"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Análisis de las Bebidas",
+                "Análisis de los Alimentos de Origen Vegetal",
+                "Análisis de los Alimentos de Origen Animal",
+                "Gestión del Desarrollo Sostenible",
+                "Gestión de Emprendimientos",
+                "Gestión de la Estabilización de los Alimentos",
+                "Gestión de la Estabilización del Vino",
+                "Gestión de la Crianza de Vinos",
+                "Análisis Sensorial de Vinos",
+                "Análisis Sensorial de Alimentos",
+                "Elaboración de Proyectos Productivos",
+                "Energías Renovables y su Impacto"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/PLAN-DE-ESTUDIOS-TENOL.pdf"
+        },
+        {
+          "id": 1803,
+          "nombre_carrera": "Tecnicatura Superior Agronómica (Sede Central)",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-agronomia/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Producción Vitícola",
+                "Producción Frutícola",
+                "Producción Hortícola",
+                "Producción Apícola",
+                "Producción Caprina",
+                "Emprendedorismo y Agronegocio",
+                "Gestión de Instalaciones y Maquinarias Agropecuarias",
+                "Ecofisiología de los Cultivos",
+                "Manejo Ecológico del Suelos"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Manejo Nutricional Animal",
+                "Territorio y Desarrollo",
+                "Manejo Reproductivo Animal",
+                "Innovación y Gestión Agropecuaria",
+                "Manejo Integrado de Plagas y Enfermedades",
+                "Manejo de Riego y Drenajes",
+                "Producción y Manejo de Viveros I",
+                "Manejo Sanitario Animal"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Elaboración de Proyectos Productivos",
+                "Manejo de Cosecha y Poscosecha",
+                "Vinificación",
+                "Gestión del Desarrollo Sostenible",
+                "Gestión de Emprendimientos",
+                "Producción y Manejo de Viveros II",
+                "Producción y Manejo de Viveros III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/PLAN-DE-ESTUDIOS-TAGRO.pdf"
+        },
+        {
+          "id": 1804,
+          "nombre_carrera": "Tecnicatura Superior Agronómica (Sede Agrelo)",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-agronomia/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Producción Vitícola",
+                "Producción Frutícola",
+                "Producción Hortícola",
+                "Producción Apícola",
+                "Producción Caprina",
+                "Emprendedorismo y Agronegocio",
+                "Gestión de Instalaciones y Maquinarias Agropecuarias",
+                "Ecofisiología de los Cultivos",
+                "Manejo Ecológico del Suelos"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Manejo Nutricional Animal",
+                "Territorio y Desarrollo",
+                "Manejo Reproductivo Animal",
+                "Innovación y Gestión Agropecuaria",
+                "Manejo Integrado de Plagas y Enfermedades",
+                "Manejo de Riego y Drenajes",
+                "Producción y Manejo de Viveros I",
+                "Manejo Sanitario Animal"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Elaboración de Proyectos Productivos",
+                "Manejo de Cosecha y Poscosecha",
+                "Vinificación",
+                "Gestión del Desarrollo Sostenible",
+                "Gestión de Emprendimientos",
+                "Producción y Manejo de Viveros II",
+                "Producción y Manejo de Viveros III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/PLAN-DE-ESTUDIOS-TAGRO.pdf"
+        },
+        {
+          "id": 1805,
+          "nombre_carrera": "Tecnicatura Superior en Petróleo y Gas",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-petroleo-y-gas/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Comunicación en la industria",
+                "Organización de empresas hidrocarburíferas",
+                "Reconocimiento geológico",
+                "Manejo, mantenimiento y reparación de máquinas y equipos de Prospección y Exploración",
+                "Aplicación de Métodos de exploración",
+                "La industria hidrocarburífera en el marco del desarrollo sostenible"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Análisis de la Geología de yacimientos petróleo y gas",
+                "Manejo, mantenimiento y reparación de máquinas, de equipos de Extracción y equipos de torre",
+                "Aplicación de Métodos de explotación",
+                "Manejo de métodos de Producción de Hidrocarburos",
+                "Procesamiento de Hidrocarburos y aguas industriales",
+                "Gestión Empresarial"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión de Proyectos de empresas hidrocarburíferas",
+                "Aplicación de Métodos de mejoramiento",
+                "Sistematización y control en la Industria petrolera",
+                "Energías limpias y su relación con la industria hidrocarburíifera"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/TECNICATURA-EN-PETROLEO-Plan-de-estudios.pdf"
+        },
+        {
+          "id": 1806,
+          "nombre_carrera": "Tecnicatura Superior en Diseño Multimedial",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-diseno-multimedial/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Diseño en comunicación visual I",
+                "Técnicas de representación I",
+                "Herramientas digitales I",
+                "Inglés",
+                "Tipografía I",
+                "Historia del arte y del diseño I. Problemática",
+                "sociocultural y del contexto. Prácticas de",
+                "lectura, escritura y oralidad. Percepción",
+                "visual I",
+                "Práctica profesionalizante I. Espacio",
+                "Institucional Optativo"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Diseño en comunicación visual II",
+                "Técnicas de representación II. Producción Web I",
+                "Fotografía publicitaria",
+                "Historia del arte y del diseño II. Semiología",
+                "Tecnología gráfica I",
+                "Introducción al modelado 3D",
+                "Producción Web II",
+                "Tipografía II",
+                "Guión",
+                "Práctica profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Diseño en comunicación audiovisual",
+                "Animación computada",
+                "Edición de sonido",
+                "Comunicación, medios y nuevas tecnologías",
+                "Mercadotecnia para PYMES",
+                "Gestión de microemprendimientos. Ética",
+                "profesional",
+                "Formulación y evaluación de proyectos",
+                "Proyecto integrado",
+                "Práctica profesionalizante III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/TECNICATURA-EN-DISENO-MULTIMEDIAL-Plan-de-estudios.pdf"
+        },
+        {
+          "id": 1807,
+          "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "A Distancia",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-administracion-de-empresas-distancia/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Informática y Tecnología I (Taller)",
+                "Inglés (Módulo)",
+                "Administración (Módulo)",
+                "Contabilidad (Módulo)",
+                "Microeconomía (Módulo)",
+                "Matemática (Módulo)",
+                "Estadística (Módulo)",
+                "Comunicación, comprensión y producción de Textos (Taller)",
+                "Oratoria (Taller)",
+                "Práctica Profesionalizante I (Taller)"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Informática y Tecnología II (Taller)",
+                "Inglés Técnico (Taller)",
+                "Macroeconomía (Módulo)",
+                "Comercialización (Módulo)",
+                "Estructura de Costos (Módulo)",
+                "Desarrollo Territorial (Taller)",
+                "Cálculo Financiero (Módulo)",
+                "Introducción al Derecho (Módulo)",
+                "Problemática Sociocultural y del Trabajo (Módulo)",
+                "Gestión Financiera (Módulo)",
+                "Derecho de la Empresa (Módulo)",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Formulación y Evaluación de Proyectos (Taller)",
+                "Producto y Servicio (Módulo)",
+                "Habilidades Interpersonales (Taller)",
+                "Ética Profesional (Módulo)",
+                "Control de Gestión (Módulo)",
+                "Derecho Laboral (Módulo)",
+                "Gestión de la Calidad (Módulo)",
+                "Logística Integral (Módulo)",
+                "Creatividad e Innovación (Taller)",
+                "Psicología Organizacional (Módulo)",
+                "Práctica Impositiva y de Liquidación de Sueldos (Taller)",
+                "Administración de Personal (Módulo)",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1808,
+          "nombre_carrera": "Tecnicatura Superior en Administración Pública (A Distancia)",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "A Distancia",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-administracion-publica-a-distancia/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Administración general",
+                "Matemática y estadística",
+                "Informática y tecnología",
+                "Inglés técnico",
+                "Comunicación, comprensión y producción de textos",
+                "Metodología de la investigación",
+                "Microeconomía",
+                "Práctica profesionalizante 1",
+                "Macroeconomía",
+                "Problemática sociocultural y del trabajo"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Desarrollo local sustentable",
+                "Inglés técnico II",
+                "Estado y sociedad",
+                "Administración pública",
+                "Formulación y evaluación de proyectos",
+                "Introducción al derecho",
+                "Introducción a la contabilidad",
+                "Práctica profesionalizante II",
+                "Derecho Constitucional",
+                "Contabilidad pública"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión de políticas públicas",
+                "Presupuesto y finanzas públicas",
+                "Derecho administrativo",
+                "Análisis y desarrollo organizacional",
+                "Ética profesional",
+                "Control de la gestión pública",
+                "Práctica profesionalizante III",
+                "Procedimiento de compras y contrataciones",
+                "Técnica legislativa",
+                "Gestión de personal",
+                "Comunicación organizacional",
+                "Informática y tecnología aplicada"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/Plan-de-estudios-Adm-Pub-distancia.pdf"
+        },
+        {
+          "id": 1809,
+          "nombre_carrera": "Tecnicatura Superior en Administración Pública (INFOPE)",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-administracion-publica-con-orientacion-en-gestion-penitenciaria/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Administración General",
+                "Economía",
+                "Matemática y Estadística",
+                "Informática y Tecnologías de Información",
+                "Estado y Sociedad",
+                "Comprensión y Producción de Textos",
+                "La Construcción del Sujeto en Contextos de Encierro",
+                "Introducción al Derecho y Derecho Constitucional",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Derecho Penal y Procesal Penal",
+                "Ejecución Penal",
+                "Derechos Humanos",
+                "Administración y Desarrollo de los Recursos Humanos en el Sector Público",
+                "Administración Pública",
+                "Derecho Público Provincial",
+                "Problemática Sociocultural y del Trabajo",
+                "Formulación y Evaluación de Proyectos",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión de Políticas Públicas",
+                "Comunicación Organizacional",
+                "Contabilidad Pública",
+                "Derecho Administrativo",
+                "Gestión Pública, Desarrollo de Proyectos y Programas",
+                "Ingles Técnico",
+                "Presupuesto y Finanzas Públicas",
+                "Ética de la Gestión Pública",
+                "Análisis y Desarrollo Organizacional",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/Plan-de-estudios-Adm-Pub-INFOPE.pdf"
+        },
+        {
+          "id": 1810,
+          "nombre_carrera": "Tecnicatura Superior en Administración Pública (Legislatura)",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-administracion-publica-con-orientacion-en-instituciones-legislativas/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Administración General",
+                "Economía",
+                "Matemática y Estadística",
+                "Informática y Tecnologías de Información",
+                "Estado y Sociedad",
+                "Análisis de las Instituciones de Mendoza",
+                "Comprensión y Producción de Textos",
+                "Comunicación Organizacional",
+                "Técnica Legislativa I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Problemática Sociocultural y del Trabajo",
+                "Inglés Técnico",
+                "Técnica Legislativa II",
+                "La Gestión Legislativa para el Desarrollo Local",
+                "Administración Pública",
+                "Introducción al Derecho y Derecho Constitucional",
+                "Derecho Público Provincial",
+                "Formulación y Evaluación de Proyectos",
+                "Sistemas de Gestión del Personal",
+                "Derecho Administrativo I"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión de Políticas Públicas",
+                "Contabilidad Pública",
+                "Presupuesto y Finanzas Públicas",
+                "Derecho Administrativo II",
+                "Ética de la Gestión Pública",
+                "Derecho Público Municipal",
+                "Análisis y Desarrollo Organizacional",
+                "Gestión Pública, Desarrollo de Proyectos y Programas",
+                "Técnica Legislativa III",
+                "Practica Profesionalizante"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/Plan-de-estudios-Adm-Pub-LEGIS.pdf"
+        },
+        {
+          "id": 1811,
+          "nombre_carrera": "Tecnicatura Superior en Logística",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-logistica-2/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Inglés I",
+                "Informática Administración de las Organizaciones",
+                "Matemática",
+                "Comprensión y Producción de Textos",
+                "Introducción a la Logística",
+                "Organización y Conducción Empresaria",
+                "Estadística",
+                "Geografía Económica",
+                "Transporte Terrestre",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Inglés II",
+                "Informática II",
+                "Estructura de Costos",
+                "Embalajes y Logística Inversa",
+                "Transporte Aéreo",
+                "Almacenamiento",
+                "Compras",
+                "Distribución",
+                "Transporte Marítimo y Fluvial",
+                "Administración de Inventarios",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Formulación y Evaluación de Proyectos",
+                "Marketing",
+                "Seguridad e Higiene Laboral",
+                "Logística Internacional",
+                "Ética Profesional",
+                "Electiva",
+                "Metodología de la Investigación",
+                "Gestión de la Calidad",
+                "Derecho Privado",
+                "Problemática Sociocultural y el Contexto",
+                "Práctica Profesionalizante III",
+                "*Electivas: Economía del Transporte",
+                "Felicidad y Bienestar Organizacional"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/PLAN-DE-ESTUDIOS-TLOGIS.pdf"
+        },
+        {
+          "id": 1812,
+          "nombre_carrera": "Profesorado de Educación Especial",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pedagogía",
+                "Didáctica General",
+                "Promoción de la salud",
+                "Práctica de lectura y oralidad",
+                "Tecnología de la información y comunicación",
+                "Sujeto de la Educación Especial",
+                "Bases Neuropsicofisiológicas del Desarrollo",
+                "Historia política, social y económica de América Latina",
+                "Psicoloqía educativa",
+                "Expresión artística",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica de la Educación Especial",
+                "Lengua y su didáctica",
+                "Matemática y su Didáctica",
+                "Tecnología y su Didáctica",
+                "Música y su Didáctica",
+                "Trastornos del Desarrollo en Sujetos con Discapacidad Intelectual",
+                "Problemática de la Subjetividad y la Discapacidad",
+                "Sociología de la Educación",
+                "Instituciones Educativas",
+                "Historia y Política de la Educación Argentina",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Filosofía",
+                "Educación Psicomotriz",
+                "Alfabetización",
+                "Educación Temprana",
+                "Alteraciones del Lenguaje en Sujetos con Discapacidad Intelectual",
+                "Formación Ética y Ciudadana",
+                "Ciencias Sociales y su Didáctica",
+                "Ciencias Naturales y su Didáctica",
+                "Literatura y su Didáctica",
+                "Artes Visuales y su Didáctica",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Trastornos Motores",
+                "Problemáticas de la Evaluación en la Educación Especial",
+                "Unidad de Definición Institucional CFE*",
+                "Unidad de Definición Institucional CFG*",
+                "Perspectiva Social: Transición y la Vida Adulta",
+                "Multidiscapacidad",
+                "Problemáticas Contemporáneas de la Educación Especial",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/PLAN-DE-ESTUDIOS-PEE.pdf"
+        },
+        {
+          "id": 1813,
+          "nombre_carrera": "Profesorado de Educación Primaria",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Comprensión y producción de textos",
+                "Sistema Educativo",
+                "Pedagogía",
+                "Numeración",
+                "Lengua y Literatura",
+                "Educación Artística",
+                "PPDI Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Psicología Educacional",
+                "Instituciones Educativas",
+                "Sujetos de la Educación",
+                "Números Racionales y su didáctica",
+                "Ciencias Sociales y su didáctica I",
+                "Ciencias Naturales y su didáctica I",
+                "Lengua y su didáctica",
+                "Literatura y su didáctica",
+                "Espacio, Geometría y su didáctica",
+                "PPDII Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los aprendizajes",
+                "Proyectos de Intervención Socioeducativas",
+                "Educación en la diversidad",
+                "Educación Tecnológica",
+                "Mediada y su didáctica",
+                "Ciencias Sociales y su didáctica II",
+                "Ciencias Naturales y su didáctica II",
+                "Alfabetización",
+                "Formación Ética y Ciudadana y su didáctica",
+                "Algebra, Funciones y su didáctica",
+                "PPDIII Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación Sexual Integral",
+                "Educación y tecnologías digitales",
+                "Historia y patrimonio cultural de Mendoza",
+                "Formación complementaria general",
+                "Didáctica de la Lengua y la Literatura",
+                "Didáctica de la Matemática",
+                "Didáctica de la Ciencias Sociales",
+                "Didáctica de las Ciencias Naturales",
+                "Formación complementaria II",
+                "PPDIV Práctica Profesional Docente IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/PLAN-DE-ESTUDIOS-PEP.pdf"
+        },
+        {
+          "id": 1814,
+          "nombre_carrera": "Profesorado de Educación Secundaria en Química",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorado-de-quimica/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Fundamentos de la Química",
+                "Laboratorio de Química l",
+                "Matemática",
+                "Psicología Educativa",
+                "Sujetos de la Educación",
+                "Promoción de la Salud",
+                "Historia Política, Social, Económica y Cultural de América Latina",
+                "Prácticas de Lectura, Escritura y Oralidad",
+                "Tecnologías de la Comunicación y la Información",
+                "Pedagogía",
+                "Didáctica General",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Química Orgánica",
+                "Laboratorio de Química II",
+                "Química Inorgánica",
+                "Didáctica de la Química",
+                "Probabilidad y Estadística",
+                "Física I",
+                "Física II",
+                "Historia y Política de la Educación Argentina",
+                "Instituciones Educativas",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Química Analítica",
+                "Laboratorio de Química III",
+                "Biología General",
+                "Didáctica de la Química II",
+                "Físico Química",
+                "Física III",
+                "Historia de la Química y su Epistomología",
+                "UDI-CFG*",
+                "Filosofía",
+                "Sociología de la Educación",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Química Aplicada e Industrial",
+                "Laboratorio de Química IV",
+                "Química Biológica",
+                "Química de los alimentos",
+                "Ciencias de la Tierra",
+                "Química Analítica Instrumental",
+                "Química Ambiental y Salud",
+                "UDI-CFG*",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/PLAN-DE-ESTUDIOS-QUIMICA.pdf"
+        },
+        {
+          "id": 1815,
+          "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorado-de-matematica/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento filosófico",
+                "Sistema educativo",
+                "Pedagogía",
+                "Comprensión y producción de textos académicos",
+                "El quehacer matemático",
+                "Cálculo I",
+                "Álgebra I",
+                "Geometría I",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Sujeto del aprendizaje",
+                "Cálculo II",
+                "Álgebra II",
+                "Geometría II",
+                "Didáctica de la matemática I",
+                "Didáctica de la matemática II",
+                "Instituciones educativas",
+                "Psicología Educacional",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y evaluación de los aprendizajes",
+                "Proyectos de intervención estratégica",
+                "Historia de la matemática",
+                "Geometría III",
+                "Física I",
+                "Didáctica de la matemática III",
+                "Didáctica de la matemática IV",
+                "Probabilidad y estadística I",
+                "Educación y tecnologías digitales",
+                "Complemento de la formación específica",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Historia y Patrimonio cultural de Mendoza",
+                "Educación en la diversidad",
+                "Cálculo III",
+                "Probabilidad y estadística II",
+                "Física II",
+                "Educación Sexual Integral",
+                "Complemento de la Formación general",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/PLAN-DE-ESTUDIOS-MATEMATICA.pdf"
+        },
+        {
+          "id": 1816,
+          "nombre_carrera": "Tecnicatura en Diseño Gráfico",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-diseno-grafico/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Diseño en Comunicación Visual I",
+                "Técnicas de Representación I",
+                "Herramientas Digitales I",
+                "Historia del Arte y del Diseño I",
+                "Inglés Técnico",
+                "Tipografía I",
+                "Problemática Sociocultural y el Contexto",
+                "Percepción Visual",
+                "Prácticas de Lectura, Escritura y Oralidad",
+                "Publicidad I",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Diseño en Comunicación Visual II",
+                "Técnicas de Representación II",
+                "Herramientas Digitales II",
+                "Fotografía",
+                "Historia del Arte y del Diseño II",
+                "Semiología",
+                "Tipografía II",
+                "Tecnología Gráfica I",
+                "Tecnología Gráfica II",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Diseño en Comunicación Visual III",
+                "Técnicas de Representación III",
+                "Herramientas Digitales III",
+                "Comunicación, Medios y Nuevas Tecnologías",
+                "Ética Profesional",
+                "Mercadotecnia para Pymes",
+                "Formulación y Evaluación de Proyectos",
+                "Gestión de Microemprendimientos",
+                "Metodología de la Investigación",
+                "Producción del Diseño Regional",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1817,
+          "nombre_carrera": "Tecnicatura Superior en Turismo",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-turismo-2/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Inglés I",
+                "Portugués I",
+                "Geografía y Ambiente de Mendoza",
+                "Recursos Turísticos de Argentina",
+                "Introducción al Turismo y la Hotelería",
+                "Producción de información Turística",
+                "Comunicación Oral",
+                "Historia y Cultura de Mendoza",
+                "Información Turística de Mendoza",
+                "Guiado y Coordinación",
+                "Gestión de Riesgos y Primeros Auxilios",
+                "Ética y Legislación Turística I",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Inglés II",
+                "Portugués II",
+                "Servicios de Hospedaje",
+                "Economía, Costos y Finanzas",
+                "Informática",
+                "Administración General",
+                "Gastronomía, Alimentos y Bebidas",
+                "Ética y Legislación Turística II",
+                "Gestión Pública del Turismo",
+                "Destinos, Circuitos y Productos Turísticos",
+                "Estadística Aplicada",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Inglés III",
+                "Portugués II",
+                "Formulación y Evaluación de Proyectos",
+                "Gestión de Empresas de Viajes",
+                "Electiva I",
+                "Recursos Humanos",
+                "Marketing Turístico",
+                "Organización de Eventos",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9009-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/08/PLAN-DE-ESTUDIOS-TTURISMO.pdf"
+        },
+        {
+          "id": 1818,
+          "nombre_carrera": "Tecnicatura en Guía de Turismo",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-guia-de-turismo/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Taller de Oratoria y Comunicación",
+                "Taller de Competencias Digitales",
+                "Gestión de Riesgos y Primeros Auxilios",
+                "Introducción al Turismo",
+                "Inglés I",
+                "Procesos Históricos y Patrimonio Cultural de Mendoza",
+                "Portugués I",
+                "Dinámica para la Recreación Grupal",
+                "Enoturismo",
+                "Espacios Turísticos de Mendoza",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Inglés II",
+                "Portugués II",
+                "Derecho y Ética para la Gestión del Turismo",
+                "Técnicas de Guiado y Coordinación Turística",
+                "Electiva (Arte y Cultura / Campamentismo - Senderismo)",
+                "Espacios Turísticos de Argentina",
+                "Prestación de Servicios Turísticos",
+                "Espacios Turísticos Mundiales",
+                "Guía de Sitio de Áreas Naturales Protegidas",
+                "Práctica Profesionalizante II"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1819,
+          "nombre_carrera": "Tecnicatura en Gestión de Alojamientos Turísticos",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-009",
+          "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-gestion-de-alojamientos-turisticos/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Taller de Oratoria y Comunicación",
+                "Taller de Competencias Digitales",
+                "Seguridad, Higiene y Mantenimiento",
+                "Introducción a los Alojamientos Turísticos",
+                "Inglés I",
+                "Procesos Históricos y Patrimonio Cultural de Mendoza",
+                "Portugués I",
+                "Protocolo y Ceremonial",
+                "Administración de Pisos",
+                "Estudio del espacio turístico de Mendoza y Argentina",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Inglés II",
+                "Portugués II",
+                "Derecho y Ética para la Gestión de Alojamientos Turísticos",
+                "Consejería y Recepción",
+                "Dirección y Gestión de empresas prestadoras del servicio de alojamiento turístico",
+                "Organización de Eventos y Convenciones",
+                "Gestión del personal de alojamiento",
+                "Estadística aplicada a los alojamientos",
+                "Comercialización de servicios de alojamientos turísticos",
+                "Práctica Profesionalizante II"
+              ]
+            }
+          ]
+        }
+      ]
     }
-   ],
-   "departamento": "Tupungato"
-  }
- ]
+  ]
 }

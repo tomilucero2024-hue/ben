@@ -101,29 +101,51 @@ function calcularCompatibilidad(perfilUsuario, carrera) {
 
   // 2. Reescalado del rango dinámico:
   // En vectores de preferencias positivos (0-5), el coseno rara vez baja de 0.45.
-  // Mapeamos el intervalo [0.45, 0.98] al rango [0, 95] para aprovechar todo el espectro.
-  let scoreBase = ((coseno - 0.45) / 0.53) * 95;
+  // Mapeamos el intervalo [0.55, 0.97] al rango [0, 95] para aprovechar todo el espectro.
+  let scoreBase = ((coseno - 0.55) / 0.42) * 95;
   scoreBase = Math.max(0, Math.min(95, scoreBase));
 
   // 3. Modificadores contextuales
   let bonus = 0;
   let penalizacion = 0;
 
+  // NUEVO: detectar perfil plano y penalizar cercanía al centro
+  const valores = DIMENSIONES.map(d => perfilUsuario[d] || 0);
+  const avg = valores.reduce((a,b) => a+b, 0) / valores.length;
+  const esPlano = valores.every(v => Math.abs(v - avg) <= 1);
+
   DIMENSIONES.forEach(d => {
     const u = perfilUsuario[d] || 0;
     const c = perfilCarrera[d] || 0;
 
     // Bonus por coincidencia en fortalezas destacadas
-    if (u >= 4 && c >= 4) bonus += 2;
-    else if (u >= 3 && c >= 3) bonus += 0.5;
+    if (u >= 4 && c >= 4) bonus += 3;
+    else if (u >= 3 && c >= 3) bonus += 1;
 
     // Penalización por discordancias críticas (la carrera exige mucho de algo que el usuario descartó)
     if (u <= 1 && c >= 4) {
-      penalizacion += (c >= 5) ? 6 : 4;
+      penalizacion += (c >= 5) ? 10 : 7;
     } else if (u === 0 && c >= 3) {
-      penalizacion += 3;
+      penalizacion += 5;
+    }
+
+    // Penalización adicional si la carrera requiere más de lo que el usuario tiene
+    if (c - u >= 3) penalizacion += 8;
+    else if (c - u >= 2) penalizacion += 3;
+
+    if (esPlano) {
+      // Amplificar las diferencias: penalizar fuertemente perfiles planos
+      // para forzarlos hacia abajo, premiando solo carreras muy especialistas
+      penalizacion += 5;
+      if (c >= 3 && c <= 4) penalizacion += 1; // genérica, no destaca
+      if (c >= 5) bonus += 5; // sí destaca en algo → más útil como recomendación
     }
   });
+
+  // Priorizar carreras formales sobre cursos cortos
+  if (carrera.formacion === 'cursos') {
+    penalizacion += 15; // Castigo para que queden por debajo de las carreras de grado/tecnicaturas
+  }
 
   // 4. Score final acotado entre 0 y 98% (evita saturación en 100% y preserva orden de mérito)
   let compatibilidad = Math.round(scoreBase + bonus - penalizacion);
@@ -199,14 +221,21 @@ function generarRanking(perfilUsuario, opciones = {}) {
   // Ordenar por compatibilidad descendente de forma estricta
   resultados.sort((a, b) => b.compatibilidad - a.compatibilidad);
 
-  // Filtrar solo las que tienen afinidad real (>= 45%).
-  // Si pocas superan 45%, relajar a >= 30% para asegurar recomendaciones.
-  let filtrados = resultados.filter(r => r.compatibilidad >= 45);
+  // Filtrar solo las que tienen afinidad real (>= 55%).
+  // Si pocas superan 55%, relajar a >= 40% para asegurar recomendaciones.
+  let filtrados = resultados.filter(r => r.compatibilidad >= 55);
   if (filtrados.length < 6) {
-    filtrados = resultados.filter(r => r.compatibilidad >= 30);
+    filtrados = resultados.filter(r => r.compatibilidad >= 40);
   }
   if (!filtrados.length) {
     filtrados = resultados.slice(0, limite);
+  }
+  
+  const totalCompatibles = filtrados.length;
+
+  // Acotar para no inundar con resultados tibios
+  if (filtrados.length > 30) {
+    filtrados = filtrados.slice(0, 30);
   }
 
   const grupos = {
@@ -230,7 +259,7 @@ function generarRanking(perfilUsuario, opciones = {}) {
       tecnicaturas: grupos.tecnicaturas,
       cursos: grupos.cursos,
       todas,
-      total: filtrados.length
+      total: totalCompatibles
     };
   }
 
@@ -241,7 +270,7 @@ function generarRanking(perfilUsuario, opciones = {}) {
     tecnicaturas: grupos.tecnicaturas,
     cursos: grupos.cursos,
     todas,
-    total: filtrados.length
+    total: totalCompatibles
   };
 }
 
@@ -273,24 +302,30 @@ function generarPerfilUsuarioDesdeRespuestas(respuestas) {
   });
 
   // Normalizar a escala 0-5 comparable con los perfiles de carrera.
-  // Cada dimensión tiene un máximo alcanzable distinto según las preguntas;
-  // escalamos contra ese máximo para que el perfil use todo el rango.
+  // Cada dimensión tiene un máximo y mínimo alcanzable distinto según las preguntas;
+  // escalamos contra ese rango para que el perfil use todo el espectro [0, 5].
+  const minPosible = {};
   const maxPosible = {};
-  DIMENSIONES.forEach(d => maxPosible[d] = 0);
+  DIMENSIONES.forEach(d => { minPosible[d] = 0; maxPosible[d] = 0; });
   PREGUNTAS_TEST.forEach(p => {
     DIMENSIONES.forEach(d => {
       let best = 0;
+      let worst = 0;
       p.opciones.forEach(op => {
         const v = op.dimensionScores[d] || 0;
         if (v > best) best = v;
+        if (v < worst) worst = v;
       });
       maxPosible[d] += best;
+      minPosible[d] += worst;
     });
   });
 
   DIMENSIONES.forEach(d => {
+    const min = minPosible[d] || 0;
     const max = maxPosible[d] || 15;
-    perfil[d] = Math.max(0, Math.min(5, Math.round((perfil[d] / max) * 5)));
+    const rango = max - min || 1;
+    perfil[d] = Math.max(0, Math.min(5, Math.round(((perfil[d] - min) / rango) * 5)));
   });
 
   return perfil;
@@ -417,6 +452,62 @@ const PREGUNTAS_TEST = [
       {
         texto: 'Ingresos altos, progresión rápida, responsabilidades de gestión y decisión.',
         dimensionScores: { liderazgo: 3, analitico: 1, matematico: 1, social: 1 }
+      }
+    ]
+  },
+  {
+    id: 'descarte',
+    texto: '¿Cuál de estas situaciones te costaría MÁS tolerar en tu trabajo?',
+    opciones: [
+      {
+        texto: 'Pasar muchas horas frente a una pantalla, solo con datos o código.',
+        dimensionScores: { tecnologico: -2, analitico: -1, matematico: -1 }
+      },
+      {
+        texto: 'Tratar con gente todo el día: pacientes, alumnos, clientes.',
+        dimensionScores: { social: -3, liderazgo: -1 }
+      },
+      {
+        texto: 'Trabajar al aire libre con frío, calor, cansancio físico.',
+        dimensionScores: { terreno: -3, movilidad: -1, practico: -1 }
+      },
+      {
+        texto: 'Estudiar teoría pura, leer papers, preparar exámenes escritos largos.',
+        dimensionScores: { teorico: -3, analitico: -1 }
+      },
+      {
+        texto: 'Trabajar en algo rutinario y previsible, sin espacio para crear o innovar.',
+        dimensionScores: { creativo: -2, practico: -1, movilidad: -1 }
+      }
+    ]
+  },
+  {
+    id: 'campo',
+    texto: '¿En cuál de estos campos te imaginarías trabajando?',
+    opciones: [
+      {
+        texto: 'Tecnología, datos, software, inteligencia artificial.',
+        dimensionScores: { tecnologico: 3, analitico: 2, matematico: 2 }
+      },
+      {
+        texto: 'Salud, cuidado, bienestar, investigación biomédica.',
+        dimensionScores: { social: 3, practico: 2, analitico: 2, teorico: 1 }
+      },
+      {
+        texto: 'Educación, comunicación, trabajo social, leyes.',
+        dimensionScores: { social: 3, liderazgo: 2, teorico: 2 }
+      },
+      {
+        texto: 'Construcción, campo, producción, oficios, energía.',
+        dimensionScores: { terreno: 3, practico: 3, movilidad: 2 }
+      },
+      {
+        texto: 'Diseño, arte, medios, gastronomía, turismo.',
+        dimensionScores: { creativo: 3, practico: 2, social: 1, movilidad: 1 }
+      },
+      {
+        texto: 'Negocios, finanzas, gestión, emprendimiento.',
+        dimensionScores: { liderazgo: 3, analitico: 2, matematico: 2, social: 1 }
       }
     ]
   }

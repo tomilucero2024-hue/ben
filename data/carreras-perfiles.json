@@ -205,6 +205,28 @@
       }
     },
     {
+      "clave": "albanileria (gratuito)",
+      "nombre": "Albañilería (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "Fundación UOCRA - Centro de Formación Profesional (Construcción)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
       "clave": "analista programador universitario",
       "nombre": "Analista Programador Universitario",
       "categoria": "Grado / Carrera",
@@ -246,6 +268,28 @@
         "teorico": 0,
         "matematico": 1,
         "movilidad": 2
+      }
+    },
+    {
+      "clave": "aprende un oficio en los cct (mapa y requisitos)",
+      "nombre": "Aprendé un oficio en los CCT (mapa y requisitos)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "DGE - Dirección de Técnica y Trabajo (CCT / DETyT)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -335,6 +379,28 @@
         "teorico": 1,
         "matematico": 2,
         "movilidad": 2
+      }
+    },
+    {
+      "clave": "autocad para soldadura (gratuito)",
+      "nombre": "AutoCAD para Soldadura (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "Escuela de Oficios de Godoy Cruz"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -432,7 +498,8 @@
       "area": "Gastronomía",
       "formacion": "grado",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "Universidad Nacional de Cuyo (UNCuyo)",
+        "Facultad de Ciencias Agrarias - UNCuyo"
       ],
       "perfil": {
         "analitico": 2,
@@ -484,6 +551,50 @@
         "practico": 5,
         "social": 1,
         "creativo": 2,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "carpinteria y reparacion de heladeras y aire acondicionado (gratuito)",
+      "nombre": "Carpintería y Reparación de Heladeras y Aire Acondicionado (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-206 \"1 de Mayo\" (San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "carpinteria y torneado/ensamblado de muebles de madera (gratuito)",
+      "nombre": "Carpintería y Torneado/Ensamblado de Muebles de Madera (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-017 \"Congreso de Tucumán\" (Dorrego, Guaymallén)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
         "terreno": 5,
         "liderazgo": 2,
         "teorico": 0,
@@ -652,7 +763,7 @@
       "area": "Tecnología",
       "formacion": "grado",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "ITU - Instituto Tecnológico Universitario (UNCuyo)"
       ],
       "perfil": {
         "analitico": 5,
@@ -712,13 +823,60 @@
       }
     },
     {
+      "clave": "cocina (gratuito)",
+      "nombre": "Cocina (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Gastronomía",
+      "formacion": "cursos",
+      "instituciones": [
+        "Escuela de Oficios de Maipú"
+      ],
+      "perfil": {
+        "analitico": 2,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 4,
+        "creativo": 5,
+        "terreno": 2,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "cocina y gastronomia (gratuito)",
+      "nombre": "Cocina y Gastronomía (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Turismo",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-017 \"Congreso de Tucumán\" (Dorrego, Guaymallén)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 5,
+        "terreno": 4,
+        "liderazgo": 2,
+        "teorico": 1,
+        "matematico": 1,
+        "movilidad": 4
+      }
+    },
+    {
       "clave": "cocinero / panadero / pastelero (gratuito)",
       "nombre": "Cocinero / Panadero / Pastelero (gratuito)",
       "categoria": "Oficio / Formación Profesional",
       "area": "Gastronomía",
       "formacion": "cursos",
       "instituciones": [
-        "Centro de Capacitación para el Trabajo N° 6-015 \"Cecilia Grierson\""
+        "Centro de Capacitación para el Trabajo N° 6-015 \"Cecilia Grierson\"",
+        "CCT N° 6-046 \"Hilda Edith Moyano\" (San Rafael)",
+        "CCT N° 6-024 \"Angelina de Olaguer Feliú\" (San Rafael)",
+        "CCT N° 6-056 (Monte Comán, San Rafael)"
       ],
       "perfil": {
         "analitico": 2,
@@ -729,6 +887,28 @@
         "terreno": 2,
         "liderazgo": 2,
         "teorico": 0,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "cocinero y textil (gratuito)",
+      "nombre": "Cocinero y Textil (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Arte",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-502 \"Dra. Carmen Castellarnau\" (Real del Padre, San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 2,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 4,
+        "creativo": 5,
+        "terreno": 2,
+        "liderazgo": 2,
+        "teorico": 1,
         "matematico": 1,
         "movilidad": 2
       }
@@ -841,6 +1021,50 @@
         "teorico": 0,
         "matematico": 2,
         "movilidad": 3
+      }
+    },
+    {
+      "clave": "construccion en seco, gas domiciliario e instalaciones sanitarias (gratuito)",
+      "nombre": "Construcción en Seco, Gas Domiciliario e Instalaciones Sanitarias (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-206 \"1 de Mayo\" (San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 4,
+        "practico": 5,
+        "social": 1,
+        "creativo": 5,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 4
+      }
+    },
+    {
+      "clave": "construccion en seco, gas domiciliario y soldador (gratuito)",
+      "nombre": "Construcción en Seco, Gas Domiciliario y Soldador (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-502 \"Dra. Carmen Castellarnau\" (Real del Padre, San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 4,
+        "practico": 5,
+        "social": 1,
+        "creativo": 5,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 4
       }
     },
     {
@@ -962,23 +1186,67 @@
       }
     },
     {
+      "clave": "cosmetologia, carpinteria e ingles (gratuito)",
+      "nombre": "Cosmetología, Carpintería e Inglés (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Salud",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-042 (Villa Atuel, San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 2,
+        "teorico": 4,
+        "matematico": 2,
+        "movilidad": 4
+      }
+    },
+    {
+      "clave": "costura y textil (gratuito)",
+      "nombre": "Costura y Textil (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Escuela de Oficios de Maipú"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "curso barista integral",
       "nombre": "Curso Barista Integral",
       "categoria": "Curso / Formación Profesional",
-      "area": "Ciencias sociales",
+      "area": "Gastronomía",
       "formacion": "cursos",
       "instituciones": [
         "Academia Manifiesto (Baristas)"
       ],
       "perfil": {
-        "analitico": 4,
+        "analitico": 1,
         "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
-        "creativo": 2,
+        "practico": 5,
+        "social": 3,
+        "creativo": 4,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 3,
+        "liderazgo": 2,
+        "teorico": 0,
         "matematico": 1,
         "movilidad": 2
       }
@@ -1031,20 +1299,20 @@
       "clave": "curso de cata y maridaje de aceite de oliva",
       "nombre": "Curso de Cata y Maridaje de Aceite de Oliva",
       "categoria": "Curso / Formación Profesional",
-      "area": "Ciencias sociales",
+      "area": "Gastronomía",
       "formacion": "cursos",
       "instituciones": [
         "ASOLMEN - Asociación Olivícola de Mendoza"
       ],
       "perfil": {
-        "analitico": 4,
+        "analitico": 1,
         "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
-        "creativo": 2,
+        "practico": 5,
+        "social": 3,
+        "creativo": 4,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 3,
+        "liderazgo": 2,
+        "teorico": 0,
         "matematico": 1,
         "movilidad": 2
       }
@@ -1056,7 +1324,7 @@
       "area": "Arte",
       "formacion": "cursos",
       "instituciones": [
-        "Facultad de Ciencias Agrarias - Extensión (UNCuyo)"
+        "Facultad de Ciencias Agrarias - UNCuyo"
       ],
       "perfil": {
         "analitico": 1,
@@ -1116,24 +1384,46 @@
       }
     },
     {
+      "clave": "curso de destilacion y elaboracion de gin",
+      "nombre": "Curso de Destilación y Elaboración de Gin",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Gastronomía",
+      "formacion": "cursos",
+      "instituciones": [
+        "CIBART - Centro Integral de Bebidas Artesanales"
+      ],
+      "perfil": {
+        "analitico": 1,
+        "tecnologico": 1,
+        "practico": 5,
+        "social": 3,
+        "creativo": 4,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "curso de formacion de guardavidas",
       "nombre": "Curso de Formación de Guardavidas",
       "categoria": "Curso / Formación Profesional",
-      "area": "Ciencias sociales",
+      "area": "Salud",
       "formacion": "cursos",
       "instituciones": [
         "Cruz Roja Argentina (Filial Mendoza)"
       ],
       "perfil": {
         "analitico": 4,
-        "tecnologico": 1,
-        "practico": 4,
+        "tecnologico": 2,
+        "practico": 5,
         "social": 5,
-        "creativo": 2,
+        "creativo": 1,
         "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 3,
-        "matematico": 1,
+        "liderazgo": 2,
+        "teorico": 2,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -1188,7 +1478,7 @@
       "area": "Ambiente",
       "formacion": "cursos",
       "instituciones": [
-        "INTA - Instituto Nacional de Tecnología Agropecuaria (Mendoza)"
+        "INTA Mendoza"
       ],
       "perfil": {
         "analitico": 5,
@@ -1289,6 +1579,28 @@
         "teorico": 4,
         "matematico": 1,
         "movilidad": 5
+      }
+    },
+    {
+      "clave": "curso de iniciacion al parapente",
+      "nombre": "Curso de Iniciación al Parapente",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "Sky Tour - Escuela de Parapente Mendoza"
+      ],
+      "perfil": {
+        "analitico": 2,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 1,
+        "creativo": 2,
+        "terreno": 4,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -1468,6 +1780,28 @@
       }
     },
     {
+      "clave": "cursos cortos de oficios (gratuitos)",
+      "nombre": "Cursos cortos de oficios (gratuitos)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-202 (Ciudad de Mendoza)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
       "clave": "cursos de buceo - certificacion internacional pda (alemania)",
       "nombre": "Cursos de Buceo - Certificación internacional PDA (Alemania)",
       "categoria": "Curso / Formación Profesional",
@@ -1578,6 +1912,50 @@
       }
     },
     {
+      "clave": "cursos de extension universitaria (presenciales)",
+      "nombre": "Cursos de Extensión Universitaria (presenciales)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "UTN Facultad Regional Mendoza - Extensión Universitaria"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 3,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "cursos de oficios (amplia oferta gratuita)",
+      "nombre": "Cursos de oficios (amplia oferta gratuita)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "Municipalidad de San Rafael - Educación y Capacitación para el Trabajo"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
       "clave": "cursos online",
       "nombre": "Cursos Online",
       "categoria": "Curso / Formación Profesional",
@@ -1623,6 +2001,28 @@
       }
     },
     {
+      "clave": "destilacion expert",
+      "nombre": "Destilación Expert",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Gastronomía",
+      "formacion": "cursos",
+      "instituciones": [
+        "Capacitaciones El Molino"
+      ],
+      "perfil": {
+        "analitico": 1,
+        "tecnologico": 1,
+        "practico": 5,
+        "social": 3,
+        "creativo": 4,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "diplomado en comercio exterior",
       "nombre": "Diplomado en Comercio Exterior",
       "categoria": "Diplomatura",
@@ -1641,6 +2041,28 @@
         "liderazgo": 4,
         "teorico": 1,
         "matematico": 3,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "diplomado en cultivo de cannabis sativa",
+      "nombre": "Diplomado en Cultivo de Cannabis Sativa",
+      "categoria": "Diplomatura",
+      "area": "Ambiente",
+      "formacion": "cursos",
+      "instituciones": [
+        "Facultad de Ciencias Agrarias - UNCuyo"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 2,
+        "creativo": 2,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 2,
+        "matematico": 2,
         "movilidad": 3
       }
     },
@@ -1708,6 +2130,28 @@
         "teorico": 4,
         "matematico": 3,
         "movilidad": 3
+      }
+    },
+    {
+      "clave": "diseno de indumentaria y mundo textil (gratuito)",
+      "nombre": "Diseño de Indumentaria y Mundo Textil (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Diseño",
+      "formacion": "cursos",
+      "instituciones": [
+        "Escuela de Oficios de Godoy Cruz"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 4,
+        "practico": 5,
+        "social": 2,
+        "creativo": 5,
+        "terreno": 2,
+        "liderazgo": 2,
+        "teorico": 1,
+        "matematico": 1,
+        "movilidad": 2
       }
     },
     {
@@ -1888,6 +2332,119 @@
       }
     },
     {
+      "clave": "elaboracion de whisky, gin y vermut",
+      "nombre": "Elaboración de Whisky, Gin y Vermut",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Gastronomía",
+      "formacion": "cursos",
+      "instituciones": [
+        "Capacitaciones El Molino"
+      ],
+      "perfil": {
+        "analitico": 1,
+        "tecnologico": 1,
+        "practico": 5,
+        "social": 3,
+        "creativo": 4,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "electricidad (domiciliaria, muy baja tension, montador e industrial) (gratuito)",
+      "nombre": "Electricidad (domiciliaria, muy baja tensión, montador e industrial) (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-206 \"1 de Mayo\" (San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "electricidad (gratuito)",
+      "nombre": "Electricidad (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-017 \"Congreso de Tucumán\" (Dorrego, Guaymallén)",
+        "Fundación UOCRA - Centro de Formación Profesional (Construcción)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "electricidad domiciliaria (gratuito)",
+      "nombre": "Electricidad Domiciliaria (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-057 (Rodeo de la Cruz, Guaymallén)",
+        "Escuela de Oficios de Maipú",
+        "Escuela de Oficios de Guaymallén"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "electricidad y construccion (gas, sanitaria y en seco) (gratuito)",
+      "nombre": "Electricidad y Construcción (gas, sanitaria y en seco) (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-056 (Monte Comán, San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 4,
+        "practico": 5,
+        "social": 1,
+        "creativo": 5,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 4
+      }
+    },
+    {
       "clave": "electricista domiciliario (hasta 3,7kw)",
       "nombre": "Electricista Domiciliario (hasta 3,7kW)",
       "categoria": "Oficio / Formación Profesional",
@@ -1902,6 +2459,28 @@
         "practico": 5,
         "social": 1,
         "creativo": 2,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "electromecanica (gratuito)",
+      "nombre": "Electromecánica (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "Municipalidad de Las Heras - Capacitación en Oficios (con UNCuyo)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
         "terreno": 5,
         "liderazgo": 2,
         "teorico": 0,
@@ -2069,22 +2648,22 @@
       "clave": "formacion de guardaparques nacionales",
       "nombre": "Formación de Guardaparques Nacionales",
       "categoria": "Curso / Formación Profesional",
-      "area": "Ciencias sociales",
+      "area": "Ambiente",
       "formacion": "cursos",
       "instituciones": [
         "Administración de Parques Nacionales (APN)"
       ],
       "perfil": {
         "analitico": 4,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 2,
         "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 3,
-        "matematico": 1,
-        "movilidad": 2
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 2,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -2133,6 +2712,50 @@
       }
     },
     {
+      "clave": "fotografia, ceramica y vitrofusion (gratuito)",
+      "nombre": "Fotografía, Cerámica y Vitrofusión (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Diseño",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-024 \"Angelina de Olaguer Feliú\" (San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 4,
+        "practico": 5,
+        "social": 3,
+        "creativo": 5,
+        "terreno": 2,
+        "liderazgo": 2,
+        "teorico": 1,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "gasista 2° categoria (gratuito)",
+      "nombre": "Gasista 2° Categoría (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-202 (Ciudad de Mendoza)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
       "clave": "gasista e instalaciones sanitarias + ia",
       "nombre": "Gasista e Instalaciones Sanitarias + IA",
       "categoria": "Oficio / Formación Profesional",
@@ -2155,25 +2778,50 @@
       }
     },
     {
-      "clave": "gasista matriculado categoria 3",
-      "nombre": "Gasista Matriculado Categoría 3",
+      "clave": "gasista matriculado (gratuito)",
+      "nombre": "Gasista Matriculado (gratuito)",
       "categoria": "Oficio / Formación Profesional",
       "area": "Oficios",
       "formacion": "cursos",
       "instituciones": [
-        "Instituto Tesla"
+        "CCT N° 6-057 (Rodeo de la Cruz, Guaymallén)",
+        "Escuela de Oficios de Guaymallén",
+        "Municipalidad de Las Heras - Capacitación en Oficios (con UNCuyo)"
       ],
       "perfil": {
         "analitico": 3,
         "tecnologico": 3,
         "practico": 5,
         "social": 1,
-        "creativo": 2,
+        "creativo": 4,
         "terreno": 5,
         "liderazgo": 2,
         "teorico": 0,
         "matematico": 2,
         "movilidad": 3
+      }
+    },
+    {
+      "clave": "gastronomia (gratuito)",
+      "nombre": "Gastronomía (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Turismo",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-057 (Rodeo de la Cruz, Guaymallén)",
+        "Escuela de Oficios de Guaymallén"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 5,
+        "terreno": 4,
+        "liderazgo": 2,
+        "teorico": 1,
+        "matematico": 1,
+        "movilidad": 4
       }
     },
     {
@@ -2305,6 +2953,28 @@
         "liderazgo": 3,
         "teorico": 3,
         "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "guardavidas profesional (salvamento acuatico)",
+      "nombre": "Guardavidas Profesional (Salvamento Acuático)",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Salud",
+      "formacion": "cursos",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza) - Escuela de Salvamento Acuático"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 1,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 2,
+        "matematico": 2,
         "movilidad": 2
       }
     },
@@ -2441,13 +3111,35 @@
       }
     },
     {
+      "clave": "informacion turistica y atencion al cliente (gratuito)",
+      "nombre": "Información Turística y Atención al Cliente (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Turismo",
+      "formacion": "cursos",
+      "instituciones": [
+        "Centro de Capacitación para el Trabajo N° 6-015 \"Cecilia Grierson\""
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 3,
+        "liderazgo": 2,
+        "teorico": 1,
+        "matematico": 1,
+        "movilidad": 4
+      }
+    },
+    {
       "clave": "ingenieria agronomica",
       "nombre": "Ingeniería Agronómica",
       "categoria": "Grado / Carrera",
       "area": "Ingeniería",
       "formacion": "grado",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "Facultad de Ciencias Agrarias - UNCuyo"
       ],
       "perfil": {
         "analitico": 5,
@@ -2892,7 +3584,7 @@
       "area": "Ingeniería",
       "formacion": "cursos",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "Facultad de Ciencias Agrarias - UNCuyo"
       ],
       "perfil": {
         "analitico": 5,
@@ -2925,6 +3617,28 @@
         "terreno": 1,
         "liderazgo": 1,
         "teorico": 4,
+        "matematico": 1,
+        "movilidad": 5
+      }
+    },
+    {
+      "clave": "ingles turistico (gratuito)",
+      "nombre": "Inglés Turístico (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Turismo",
+      "formacion": "cursos",
+      "instituciones": [
+        "Municipalidad de Las Heras - Capacitación en Oficios (con UNCuyo)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 5,
+        "terreno": 4,
+        "liderazgo": 2,
+        "teorico": 3,
         "matematico": 1,
         "movilidad": 5
       }
@@ -2977,44 +3691,66 @@
       "clave": "instalador de sistemas de energia solar (fotovoltaicos y termicos)",
       "nombre": "Instalador de Sistemas de Energía Solar (Fotovoltaicos y Térmicos)",
       "categoria": "Curso / Formación Profesional",
-      "area": "Tecnología",
+      "area": "Ambiente",
       "formacion": "cursos",
       "instituciones": [
         "Capacitación en Energía Solar (Mendoza)"
       ],
       "perfil": {
         "analitico": 5,
-        "tecnologico": 5,
+        "tecnologico": 4,
         "practico": 5,
-        "social": 1,
-        "creativo": 3,
-        "terreno": 1,
+        "social": 2,
+        "creativo": 2,
+        "terreno": 5,
         "liderazgo": 2,
-        "teorico": 1,
-        "matematico": 3,
-        "movilidad": 2
+        "teorico": 2,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "instalador de sistemas solares fotovoltaicos y termicos (formacion profesional nivel 3)",
+      "nombre": "Instalador de Sistemas Solares Fotovoltaicos y Térmicos (Formación Profesional Nivel 3)",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ambiente",
+      "formacion": "cursos",
+      "instituciones": [
+        "InSuTec - Instituto Superior Tecnológico N° 9-019"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 4,
+        "practico": 5,
+        "social": 2,
+        "creativo": 2,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 2,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
       "clave": "instructorado nacional de esqui y snowboard (niveles 1 a 3)",
       "nombre": "Instructorado Nacional de Esquí y Snowboard (Niveles 1 a 3)",
       "categoria": "Curso / Formación Profesional",
-      "area": "Ciencias sociales",
+      "area": "Turismo",
       "formacion": "cursos",
       "instituciones": [
-        "AADIDESS - Asociación Argentina de Instructores de Esquí y Snowboard"
+        "AADIDESS - Delegación Las Leñas"
       ],
       "perfil": {
-        "analitico": 4,
+        "analitico": 2,
         "tecnologico": 1,
         "practico": 5,
         "social": 5,
         "creativo": 4,
-        "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 3,
+        "terreno": 3,
+        "liderazgo": 2,
+        "teorico": 0,
         "matematico": 1,
-        "movilidad": 2
+        "movilidad": 4
       }
     },
     {
@@ -3080,6 +3816,28 @@
         "liderazgo": 4,
         "teorico": 1,
         "matematico": 3,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "introduccion al riego por goteo: instalacion, operacion y mantenimiento",
+      "nombre": "Introducción al Riego por Goteo: Instalación, Operación y Mantenimiento",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ambiente",
+      "formacion": "cursos",
+      "instituciones": [
+        "Facultad de Ciencias Agrarias - UNCuyo"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 2,
+        "creativo": 2,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 2,
+        "matematico": 2,
         "movilidad": 3
       }
     },
@@ -3201,6 +3959,28 @@
       "formacion": "cursos",
       "instituciones": [
         "Instituto Juan Gutenberg"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 1,
+        "liderazgo": 1,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 5
+      }
+    },
+    {
+      "clave": "lengua de senas argentina (lsa) y cultura sorda",
+      "nombre": "Lengua de Señas Argentina (LSA) y Cultura Sorda",
+      "categoria": "Curso / Idiomas",
+      "area": "Idiomas",
+      "formacion": "cursos",
+      "instituciones": [
+        "Facultad de Educación - UNCuyo"
       ],
       "perfil": {
         "analitico": 3,
@@ -3619,22 +4399,22 @@
       "clave": "licenciatura en administracion gastronomica",
       "nombre": "Licenciatura en Administración Gastronómica",
       "categoria": "Grado / Carrera",
-      "area": "Negocios",
+      "area": "Turismo",
       "formacion": "grado",
       "instituciones": [
         "Universidad del Aconcagua (UDA)"
       ],
       "perfil": {
-        "analitico": 5,
-        "tecnologico": 2,
+        "analitico": 4,
+        "tecnologico": 1,
         "practico": 5,
         "social": 5,
         "creativo": 4,
-        "terreno": 1,
-        "liderazgo": 5,
-        "teorico": 4,
-        "matematico": 3,
-        "movilidad": 3
+        "terreno": 3,
+        "liderazgo": 4,
+        "teorico": 3,
+        "matematico": 1,
+        "movilidad": 4
       }
     },
     {
@@ -3909,7 +4689,7 @@
       "area": "Gastronomía",
       "formacion": "grado",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "Facultad de Ciencias Agrarias - UNCuyo"
       ],
       "perfil": {
         "analitico": 2,
@@ -4879,23 +5659,23 @@
       "clave": "licenciatura en gastronomia",
       "nombre": "Licenciatura en Gastronomía",
       "categoria": "Grado / Carrera",
-      "area": "Gastronomía",
+      "area": "Turismo",
       "formacion": "grado",
       "instituciones": [
         "Universidad Juan Agustín Maza (UMaza)",
         "Escuela Internacional Islas Malvinas"
       ],
       "perfil": {
-        "analitico": 2,
+        "analitico": 3,
         "tecnologico": 1,
         "practico": 5,
-        "social": 4,
-        "creativo": 5,
-        "terreno": 1,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 3,
         "liderazgo": 2,
-        "teorico": 2,
+        "teorico": 3,
         "matematico": 1,
-        "movilidad": 2
+        "movilidad": 4
       }
     },
     {
@@ -6391,6 +7171,28 @@
       }
     },
     {
+      "clave": "marroquineria y talabarteria (gratuito)",
+      "nombre": "Marroquinería y Talabartería (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Arte",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-017 \"Congreso de Tucumán\" (Dorrego, Guaymallén)"
+      ],
+      "perfil": {
+        "analitico": 2,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 4,
+        "creativo": 5,
+        "terreno": 2,
+        "liderazgo": 2,
+        "teorico": 1,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "martillero publico",
       "nombre": "Martillero Público",
       "categoria": "Grado / Carrera",
@@ -6479,6 +7281,50 @@
       }
     },
     {
+      "clave": "mecanica del automotor y ciclomotor (gratuito)",
+      "nombre": "Mecánica del Automotor y Ciclomotor (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-039 \"Guillermo Catalán\" (San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "mecanica del ciclomotor (gratuito)",
+      "nombre": "Mecánica del Ciclomotor (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-056 (Monte Comán, San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
       "clave": "mecanica, electricidad y electronica de motos",
       "nombre": "Mecánica, Electricidad y Electrónica de Motos",
       "categoria": "Oficio / Formación Profesional",
@@ -6525,6 +7371,28 @@
       }
     },
     {
+      "clave": "microcredencial agro 4.0: agricultura de precision",
+      "nombre": "Microcredencial Agro 4.0: Agricultura de Precisión",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ambiente",
+      "formacion": "cursos",
+      "instituciones": [
+        "INTA Mendoza + ITU UNCuyo"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 2,
+        "creativo": 2,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 2,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
       "clave": "montador electricista domiciliario - electricista industrial",
       "nombre": "Montador Electricista Domiciliario - Electricista Industrial",
       "categoria": "Oficio / Formación Profesional",
@@ -6553,7 +7421,8 @@
       "area": "Oficios",
       "formacion": "cursos",
       "instituciones": [
-        "Centro de Capacitación para el Trabajo N° 6-015 \"Cecilia Grierson\""
+        "Centro de Capacitación para el Trabajo N° 6-015 \"Cecilia Grierson\"",
+        "CCT N° 6-502 \"Dra. Carmen Castellarnau\" (Real del Padre, San Rafael)"
       ],
       "perfil": {
         "analitico": 3,
@@ -6566,6 +7435,50 @@
         "teorico": 0,
         "matematico": 2,
         "movilidad": 3
+      }
+    },
+    {
+      "clave": "mozos y camareros / ceremonial y protocolo (gratuito)",
+      "nombre": "Mozos y Camareros / Ceremonial y Protocolo (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Centro de Capacitación para el Trabajo N° 6-015 \"Cecilia Grierson\""
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "mozos/as, informacion turistica y ceremonial (gratuito)",
+      "nombre": "Mozos/as, Información Turística y Ceremonial (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Turismo",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-046 \"Hilda Edith Moyano\" (San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 4,
+        "liderazgo": 2,
+        "teorico": 1,
+        "matematico": 1,
+        "movilidad": 4
       }
     },
     {
@@ -6614,6 +7527,117 @@
       }
     },
     {
+      "clave": "ofimatica nivel 3 - power bi (gratuito)",
+      "nombre": "Ofimática Nivel 3 - Power BI (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Escuela de Oficios de Godoy Cruz"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "operacion de autoelevadores (con credencial)",
+      "nombre": "Operación de Autoelevadores (con credencial)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "ITU - Instituto Tecnológico Universitario (UNCuyo)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 2,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "operador de pc (gratuito)",
+      "nombre": "Operador de PC (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-502 \"Dra. Carmen Castellarnau\" (Real del Padre, San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "operador de pc y secretariado (gratuito)",
+      "nombre": "Operador de PC y Secretariado (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Negocios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-046 \"Hilda Edith Moyano\" (San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 4,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 4,
+        "teorico": 2,
+        "matematico": 3,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "operador de pc y textil (gratuito)",
+      "nombre": "Operador de PC y Textil (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-017 \"Congreso de Tucumán\" (Dorrego, Guaymallén)",
+        "CCT N° 6-057 (Rodeo de la Cruz, Guaymallén)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "operador de servicios de rampa",
       "nombre": "Operador de Servicios de Rampa",
       "categoria": "Curso / Formación Profesional",
@@ -6655,6 +7679,94 @@
         "teorico": 3,
         "matematico": 1,
         "movilidad": 2
+      }
+    },
+    {
+      "clave": "panadero y textil (gratuito)",
+      "nombre": "Panadero y Textil (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Gastronomía",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-042 (Villa Atuel, San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 2,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 4,
+        "creativo": 5,
+        "terreno": 2,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "peluqueria (cortes y colorimetria) y cosmetologia (gratuito)",
+      "nombre": "Peluquería (cortes y colorimetría) y Cosmetología (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-017 \"Congreso de Tucumán\" (Dorrego, Guaymallén)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "peluqueria canina (teorico-practico)",
+      "nombre": "Peluquería Canina (teórico-práctico)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "Deacon - Peluqueras Caninas (Mendoza)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 2,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "peluqueria, cosmetologia y marroquineria (gratuito)",
+      "nombre": "Peluquería, Cosmetología y Marroquinería (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "Escuela de Oficios de Guaymallén"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -6788,6 +7900,28 @@
         "teorico": 5,
         "matematico": 2,
         "movilidad": 2
+      }
+    },
+    {
+      "clave": "practica guiada: instalacion y uso de opendronemap",
+      "nombre": "Práctica Guiada: Instalación y Uso de OpenDroneMap",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "Colegio de Agrimensura de Mendoza"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 5,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 5
       }
     },
     {
@@ -7648,7 +8782,6 @@
       "formacion": "profesorados",
       "instituciones": [
         "IES 9-014 Profesorado de Arte (IPA)",
-        "IES 9-028 (Santa Rosa)",
         "IES 9-030 (Instituto del Bicentenario)"
       ],
       "perfil": {
@@ -7679,6 +8812,28 @@
         "practico": 5,
         "social": 5,
         "creativo": 5,
+        "terreno": 1,
+        "liderazgo": 4,
+        "teorico": 5,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "profesorado educacion primaria",
+      "nombre": "Profesorado Educación Primaria",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "IES 9-004 Gral. Toribio de Luzuriaga"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 3,
         "terreno": 1,
         "liderazgo": 4,
         "teorico": 5,
@@ -7823,28 +8978,6 @@
       }
     },
     {
-      "clave": "profesorado en educacion inicial",
-      "nombre": "Profesorado en Educación Inicial",
-      "categoria": "Grado / Profesorado",
-      "area": "Educación",
-      "formacion": "profesorados",
-      "instituciones": [
-        "Instituto Maipú de Educación Integral (IMEI)"
-      ],
-      "perfil": {
-        "analitico": 3,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
-        "creativo": 3,
-        "terreno": 1,
-        "liderazgo": 4,
-        "teorico": 5,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "profesorado en educacion primaria",
       "nombre": "Profesorado en Educación Primaria",
       "categoria": "Grado / Profesorado",
@@ -7852,7 +8985,6 @@
       "formacion": "profesorados",
       "instituciones": [
         "IES 9-028 (Santa Rosa)",
-        "Instituto Maipú de Educación Integral (IMEI)",
         "Instituto Superior"
       ],
       "perfil": {
@@ -7985,8 +9117,7 @@
       "area": "Educación",
       "formacion": "profesorados",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)",
-        "Instituto Maipú de Educación Integral (IMEI)"
+        "Universidad Nacional de Cuyo (UNCuyo)"
       ],
       "perfil": {
         "analitico": 3,
@@ -8053,8 +9184,7 @@
       "formacion": "profesorados",
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)",
-        "IES 9-011 Del Atuel",
-        "Instituto Maipú de Educación Integral (IMEI)"
+        "IES 9-011 Del Atuel"
       ],
       "perfil": {
         "analitico": 3,
@@ -8493,28 +9623,6 @@
       }
     },
     {
-      "clave": "profesorados",
-      "nombre": "Profesorados",
-      "categoria": "Grado / Profesorado",
-      "area": "Educación",
-      "formacion": "profesorados",
-      "instituciones": [
-        "IES 9-006 Francisco H. Tolosa"
-      ],
-      "perfil": {
-        "analitico": 3,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
-        "creativo": 3,
-        "terreno": 1,
-        "liderazgo": 4,
-        "teorico": 5,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "profesorados universitarios en educacion primaria y en educacion inicial",
       "nombre": "Profesorados Universitarios en Educación Primaria y en Educación Inicial",
       "categoria": "Grado / Carrera",
@@ -8824,6 +9932,28 @@
       }
     },
     {
+      "clave": "reparacion de computadoras (gratuito)",
+      "nombre": "Reparación de Computadoras (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Tecnología",
+      "formacion": "cursos",
+      "instituciones": [
+        "Escuela de Oficios de Maipú"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 5,
+        "practico": 5,
+        "social": 1,
+        "creativo": 5,
+        "terreno": 2,
+        "liderazgo": 2,
+        "teorico": 2,
+        "matematico": 3,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "reparacion de electrodomesticos (certificacion camara argentina de refrigeracion)",
       "nombre": "Reparación de Electrodomésticos (certificación Cámara Argentina de Refrigeración)",
       "categoria": "Oficio / Formación Profesional",
@@ -8843,6 +9973,28 @@
         "teorico": 0,
         "matematico": 2,
         "movilidad": 3
+      }
+    },
+    {
+      "clave": "reparacion de electrodomesticos (gratuito)",
+      "nombre": "Reparación de Electrodomésticos (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Escuela de Oficios de Maipú"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
       }
     },
     {
@@ -8890,6 +10042,28 @@
       }
     },
     {
+      "clave": "seguridad en equipos de izaje - operacion de autoelevadores",
+      "nombre": "Seguridad en Equipos de Izaje - Operación de Autoelevadores",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "IRAM Nuevo Cuyo"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 2,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 3,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
       "clave": "senalero de aerodromo",
       "nombre": "Señalero de Aeródromo",
       "categoria": "Curso / Formación Profesional",
@@ -8909,6 +10083,53 @@
         "teorico": 3,
         "matematico": 1,
         "movilidad": 2
+      }
+    },
+    {
+      "clave": "soldador (gratuito)",
+      "nombre": "Soldador (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-039 \"Guillermo Catalán\" (San Rafael)",
+        "CCT N° 6-042 (Villa Atuel, San Rafael)",
+        "CCT N° 6-056 (Monte Comán, San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "soldadura (gratuito)",
+      "nombre": "Soldadura (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "Escuela de Oficios de Maipú",
+        "Fundación UOCRA - Centro de Formación Profesional (Construcción)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -8953,6 +10174,50 @@
         "teorico": 0,
         "matematico": 2,
         "movilidad": 3
+      }
+    },
+    {
+      "clave": "soldadura general basica (gratuito)",
+      "nombre": "Soldadura General Básica (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "Escuela de Oficios de Godoy Cruz"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "sommelier de aceites de oliva",
+      "nombre": "Sommelier de Aceites de Oliva",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Gastronomía",
+      "formacion": "cursos",
+      "instituciones": [
+        "Fundación Seminare (Mendoza)"
+      ],
+      "perfil": {
+        "analitico": 1,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 4,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 1,
+        "movilidad": 2
       }
     },
     {
@@ -9019,6 +10284,94 @@
         "teorico": 3,
         "matematico": 1,
         "movilidad": 2
+      }
+    },
+    {
+      "clave": "tallado en madera y reciclado (gratuito)",
+      "nombre": "Tallado en Madera y Reciclado (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-024 \"Angelina de Olaguer Feliú\" (San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "taller de cata de aceite de oliva virgen",
+      "nombre": "Taller de Cata de Aceite de Oliva Virgen",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Gastronomía",
+      "formacion": "cursos",
+      "instituciones": [
+        "Facultad de Ciencias Agrarias - UNCuyo"
+      ],
+      "perfil": {
+        "analitico": 1,
+        "tecnologico": 1,
+        "practico": 5,
+        "social": 3,
+        "creativo": 4,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "taller de elaboracion de quesos artesanales",
+      "nombre": "Taller de Elaboración de Quesos Artesanales",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Gastronomía",
+      "formacion": "cursos",
+      "instituciones": [
+        "INTI - Instituto Nacional de Tecnología Industrial"
+      ],
+      "perfil": {
+        "analitico": 1,
+        "tecnologico": 1,
+        "practico": 5,
+        "social": 4,
+        "creativo": 5,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "taller de turismo astronomico (astro-guia)",
+      "nombre": "Taller de Turismo Astronómico (Astro-guía)",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Turismo",
+      "formacion": "cursos",
+      "instituciones": [
+        "UTN - Facultad Regional Mendoza (Extensión Universitaria)"
+      ],
+      "perfil": {
+        "analitico": 2,
+        "tecnologico": 1,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 1,
+        "movilidad": 5
       }
     },
     {
@@ -9182,7 +10535,7 @@
       "area": "Tecnología",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "ITU - Instituto Tecnológico Universitario (UNCuyo)"
       ],
       "perfil": {
         "analitico": 5,
@@ -9286,6 +10639,28 @@
       }
     },
     {
+      "clave": "tecnicatura en diseno grafico",
+      "nombre": "Tecnicatura en Diseño Gráfico",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Diseño",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IES 9-009 (Tupungato)"
+      ],
+      "perfil": {
+        "analitico": 2,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 2,
+        "creativo": 5,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 1,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "tecnicatura en educacion social",
       "nombre": "Tecnicatura en Educación Social",
       "categoria": "Grado / Carrera",
@@ -9314,7 +10689,7 @@
       "area": "Tecnología",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "ITU - Instituto Tecnológico Universitario (UNCuyo)"
       ],
       "perfil": {
         "analitico": 5,
@@ -9358,7 +10733,8 @@
       "area": "Gastronomía",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "Universidad Nacional de Cuyo (UNCuyo)",
+        "Facultad de Ciencias Agrarias - UNCuyo"
       ],
       "perfil": {
         "analitico": 1,
@@ -9462,13 +10838,35 @@
       }
     },
     {
+      "clave": "tecnicatura en gestion de alojamientos turisticos",
+      "nombre": "Tecnicatura en Gestión de Alojamientos Turísticos",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Turismo",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IES 9-009 (Tupungato)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 1,
+        "practico": 4,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 3,
+        "liderazgo": 4,
+        "teorico": 1,
+        "matematico": 1,
+        "movilidad": 4
+      }
+    },
+    {
       "clave": "tecnicatura en gestion de empresas",
       "nombre": "Tecnicatura en Gestión de Empresas",
       "categoria": "Grado / Carrera",
       "area": "Negocios",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "ITU - Instituto Tecnológico Universitario (UNCuyo)"
       ],
       "perfil": {
         "analitico": 5,
@@ -9528,13 +10926,35 @@
       }
     },
     {
+      "clave": "tecnicatura en guia de turismo",
+      "nombre": "Tecnicatura en Guía de Turismo",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Turismo",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IES 9-009 (Tupungato)"
+      ],
+      "perfil": {
+        "analitico": 2,
+        "tecnologico": 1,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 1,
+        "matematico": 1,
+        "movilidad": 5
+      }
+    },
+    {
       "clave": "tecnicatura en higiene y seguridad en el trabajo",
       "nombre": "Tecnicatura en Higiene y Seguridad en el Trabajo",
       "categoria": "Grado / Carrera",
       "area": "Ambiente",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)",
+        "ITU - Instituto Tecnológico Universitario (UNCuyo)",
         "Universidad de la Defensa Nacional (UNDEF)"
       ],
       "perfil": {
@@ -9623,7 +11043,7 @@
       "area": "Negocios",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "ITU - Instituto Tecnológico Universitario (UNCuyo)"
       ],
       "perfil": {
         "analitico": 5,
@@ -9645,7 +11065,7 @@
       "area": "Oficios",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "ITU - Instituto Tecnológico Universitario (UNCuyo)"
       ],
       "perfil": {
         "analitico": 2,
@@ -9667,7 +11087,7 @@
       "area": "Negocios",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "ITU - Instituto Tecnológico Universitario (UNCuyo)"
       ],
       "perfil": {
         "analitico": 4,
@@ -9799,7 +11219,7 @@
       "area": "Oficios",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "ITU - Instituto Tecnológico Universitario (UNCuyo)"
       ],
       "perfil": {
         "analitico": 2,
@@ -9843,7 +11263,7 @@
       "area": "Tecnología",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Universidad Nacional de Cuyo (UNCuyo)"
+        "ITU - Instituto Tecnológico Universitario (UNCuyo)"
       ],
       "perfil": {
         "analitico": 5,
@@ -10132,28 +11552,6 @@
       }
     },
     {
-      "clave": "tecnicatura superior en administracion de empresas y microemprendimientos",
-      "nombre": "Tecnicatura Superior en Administración de Empresas y Microemprendimientos",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Negocios",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "Instituto Maipú de Educación Integral (IMEI)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 2,
-        "practico": 4,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 5,
-        "teorico": 2,
-        "matematico": 3,
-        "movilidad": 3
-      }
-    },
-    {
       "clave": "tecnicatura superior en administracion publica",
       "nombre": "Tecnicatura Superior en ADMINISTRACIÓN PÚBLICA",
       "categoria": "Pregrado / Tecnicatura",
@@ -10252,28 +11650,6 @@
       "instituciones": [
         "IESVU (IES 9-015 Valle de Uco)",
         "IES 9-021 Tecnológico"
-      ],
-      "perfil": {
-        "analitico": 4,
-        "tecnologico": 2,
-        "practico": 5,
-        "social": 2,
-        "creativo": 2,
-        "terreno": 5,
-        "liderazgo": 2,
-        "teorico": 3,
-        "matematico": 2,
-        "movilidad": 4
-      }
-    },
-    {
-      "clave": "tecnicatura superior en agronomia e industrias frutihorticolas",
-      "nombre": "Tecnicatura Superior en Agronomía e Industrias Frutihortícolas",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Ambiente",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
       ],
       "perfil": {
         "analitico": 4,
@@ -10949,7 +12325,7 @@
       "clave": "tecnicatura superior en gastronomia",
       "nombre": "Tecnicatura Superior en Gastronomia",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Gastronomía",
+      "area": "Turismo",
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-011 Del Atuel",
@@ -10957,16 +12333,16 @@
         "IES 9-021 Tecnológico"
       ],
       "perfil": {
-        "analitico": 1,
+        "analitico": 2,
         "tecnologico": 1,
         "practico": 5,
-        "social": 4,
-        "creativo": 5,
-        "terreno": 1,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 3,
         "liderazgo": 2,
-        "teorico": 0,
+        "teorico": 1,
         "matematico": 1,
-        "movilidad": 2
+        "movilidad": 4
       }
     },
     {
@@ -11111,7 +12487,6 @@
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-001 Gral. José de San Martín",
-        "IES 9-006 Francisco H. Tolosa",
         "IES 9-024 (Lavalle)"
       ],
       "perfil": {
@@ -11156,6 +12531,7 @@
       "area": "Ambiente",
       "formacion": "tecnicaturas",
       "instituciones": [
+        "IES 9-006 Francisco H. Tolosa",
         "IES 9-012 Informática",
         "IESVU (IES 9-015 Valle de Uco)",
         "INSUTEC (Instituto Superior de Educación Tecnológica)"
@@ -11379,6 +12755,50 @@
       }
     },
     {
+      "clave": "tecnicatura superior en ninez, adolescencia y familia a distancia",
+      "nombre": "Tecnicatura Superior En Ninez, Adolescencia Y Familia A Distancia",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Escuela de Psicología Social"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 0,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "tecnicatura superior en ninez, adolescencia y familia presencial",
+      "nombre": "Tecnicatura Superior En Ninez, Adolescencia Y Familia Presencial",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Escuela de Psicología Social"
+      ],
+      "perfil": {
+        "analitico": 4,
+        "tecnologico": 1,
+        "practico": 3,
+        "social": 5,
+        "creativo": 2,
+        "terreno": 1,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "tecnicatura superior en optica y contactologia",
       "nombre": "Tecnicatura Superior en Óptica y Contactología",
       "categoria": "Pregrado / Tecnicatura",
@@ -11444,28 +12864,6 @@
         "teorico": 3,
         "matematico": 5,
         "movilidad": 3
-      }
-    },
-    {
-      "clave": "tecnicatura superior en podologia",
-      "nombre": "Tecnicatura Superior en Podología",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Salud",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IES 9-021 Tecnológico"
-      ],
-      "perfil": {
-        "analitico": 4,
-        "tecnologico": 2,
-        "practico": 5,
-        "social": 5,
-        "creativo": 1,
-        "terreno": 1,
-        "liderazgo": 2,
-        "teorico": 3,
-        "matematico": 2,
-        "movilidad": 2
       }
     },
     {
@@ -11646,6 +13044,28 @@
       }
     },
     {
+      "clave": "tecnicatura superior en robotica",
+      "nombre": "Tecnicatura Superior en Robótica",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Tecnología",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IES 9-021 Tecnológico"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 5,
+        "practico": 5,
+        "social": 1,
+        "creativo": 3,
+        "terreno": 1,
+        "liderazgo": 2,
+        "teorico": 2,
+        "matematico": 3,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "tecnicatura superior en transporte ferroviario",
       "nombre": "Tecnicatura Superior en Transporte Ferroviario",
       "categoria": "Pregrado / Tecnicatura",
@@ -11674,6 +13094,7 @@
       "area": "Turismo",
       "formacion": "tecnicaturas",
       "instituciones": [
+        "IES 9-009 (Tupungato)",
         "IES 9-011 Del Atuel",
         "ISTEEC (IES 9-013)",
         "IES 9-029 (Luján de Cuyo)"
@@ -11700,8 +13121,7 @@
       "instituciones": [
         "IES 9-006 Francisco H. Tolosa",
         "IES 9-018 (Malargüe)",
-        "IES 9-024 (Lavalle)",
-        "Instituto Maipú de Educación Integral (IMEI)"
+        "IES 9-024 (Lavalle)"
       ],
       "perfil": {
         "analitico": 2,
@@ -12311,28 +13731,6 @@
       }
     },
     {
-      "clave": "tecnicaturas",
-      "nombre": "Tecnicaturas",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Ciencias sociales",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "IES 9-006 Francisco H. Tolosa"
-      ],
-      "perfil": {
-        "analitico": 4,
-        "tecnologico": 1,
-        "practico": 3,
-        "social": 5,
-        "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 4,
-        "matematico": 1,
-        "movilidad": 2
-      }
-    },
-    {
       "clave": "tecnico auxiliar en refrigeracion y aire acondicionado + ia",
       "nombre": "Técnico Auxiliar en Refrigeración y Aire Acondicionado + IA",
       "categoria": "Oficio / Formación Profesional",
@@ -12468,22 +13866,22 @@
       "clave": "tecnico superior en gastronomia",
       "nombre": "Técnico Superior en Gastronomía",
       "categoria": "Pregrado / Tecnicatura",
-      "area": "Gastronomía",
+      "area": "Turismo",
       "formacion": "tecnicaturas",
       "instituciones": [
         "Escuela Internacional Islas Malvinas"
       ],
       "perfil": {
-        "analitico": 1,
+        "analitico": 2,
         "tecnologico": 1,
         "practico": 5,
-        "social": 4,
-        "creativo": 5,
-        "terreno": 1,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 3,
         "liderazgo": 2,
-        "teorico": 0,
+        "teorico": 1,
         "matematico": 1,
-        "movilidad": 2
+        "movilidad": 4
       }
     },
     {
@@ -12641,28 +14039,6 @@
       }
     },
     {
-      "clave": "tecnico universitario en higiene y seguridad en el trabajo",
-      "nombre": "Técnico Universitario en Higiene y Seguridad en el Trabajo",
-      "categoria": "Pregrado / Tecnicatura",
-      "area": "Ambiente",
-      "formacion": "tecnicaturas",
-      "instituciones": [
-        "ITU - Instituto Tecnológico Universitario (UNCuyo)"
-      ],
-      "perfil": {
-        "analitico": 5,
-        "tecnologico": 2,
-        "practico": 5,
-        "social": 3,
-        "creativo": 2,
-        "terreno": 5,
-        "liderazgo": 3,
-        "teorico": 3,
-        "matematico": 2,
-        "movilidad": 3
-      }
-    },
-    {
       "clave": "tecnico universitario en marketing y ventas",
       "nombre": "Técnico Universitario en Marketing y Ventas",
       "categoria": "Pregrado",
@@ -12707,25 +14083,113 @@
       }
     },
     {
+      "clave": "textil (gratuito)",
+      "nombre": "Textil (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-046 \"Hilda Edith Moyano\" (San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "textil: operador de maquinas y modelista-patronista (gratuito)",
+      "nombre": "Textil: Operador de Máquinas y Modelista-Patronista (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-024 \"Angelina de Olaguer Feliú\" (San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
       "clave": "timonel de yate",
       "nombre": "Timonel de Yate",
       "categoria": "Curso / Formación Profesional",
-      "area": "Ciencias sociales",
+      "area": "Oficios",
       "formacion": "cursos",
       "instituciones": [
         "Prefectura Naval Argentina (Certificaciones Náuticas)"
       ],
       "perfil": {
-        "analitico": 4,
-        "tecnologico": 1,
-        "practico": 4,
-        "social": 5,
+        "analitico": 2,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 1,
         "creativo": 2,
-        "terreno": 1,
-        "liderazgo": 3,
-        "teorico": 3,
-        "matematico": 1,
-        "movilidad": 2
+        "terreno": 4,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
+      }
+    },
+    {
+      "clave": "topografia con drones en zonas de montana",
+      "nombre": "Topografía con Drones en Zonas de Montaña",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "Facultad de Filosofía y Letras - UNCuyo"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 5,
+        "practico": 5,
+        "social": 0,
+        "creativo": 2,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 5
+      }
+    },
+    {
+      "clave": "tornero y soldador (gratuito)",
+      "nombre": "Tornero y Soldador (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Oficios",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-206 \"1 de Mayo\" (San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 3,
+        "practico": 5,
+        "social": 1,
+        "creativo": 4,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 0,
+        "matematico": 2,
+        "movilidad": 3
       }
     },
     {
@@ -12949,6 +14413,28 @@
       }
     },
     {
+      "clave": "turismo e ingles (gratuito)",
+      "nombre": "Turismo e Inglés (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Turismo",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-017 \"Congreso de Tucumán\" (Dorrego, Guaymallén)"
+      ],
+      "perfil": {
+        "analitico": 3,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 5,
+        "terreno": 5,
+        "liderazgo": 2,
+        "teorico": 3,
+        "matematico": 1,
+        "movilidad": 5
+      }
+    },
+    {
       "clave": "veterinaria",
       "nombre": "Veterinaria",
       "categoria": "Grado / Carrera",
@@ -12989,6 +14475,50 @@
         "liderazgo": 2,
         "teorico": 2,
         "matematico": 3,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "vitrofusion (gratuito)",
+      "nombre": "Vitrofusión (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Centro de Capacitación para el Trabajo N° 6-015 \"Cecilia Grierson\""
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
+        "movilidad": 2
+      }
+    },
+    {
+      "clave": "vitrofusion y tapiceria (gratuito)",
+      "nombre": "Vitrofusión y Tapicería (gratuito)",
+      "categoria": "Oficio / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "CCT N° 6-046 \"Hilda Edith Moyano\" (San Rafael)"
+      ],
+      "perfil": {
+        "analitico": 5,
+        "tecnologico": 2,
+        "practico": 5,
+        "social": 5,
+        "creativo": 4,
+        "terreno": 2,
+        "liderazgo": 3,
+        "teorico": 4,
+        "matematico": 1,
         "movilidad": 2
       }
     }

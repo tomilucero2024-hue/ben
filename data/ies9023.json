@@ -1,119 +1,615 @@
 {
- "instituciones": [
-  {
-   "id": 30,
-   "nombre": "IES 9-023",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "A confirmar",
-    "email": "contacto@ies9023.edu.ar",
-    "direccion": "Maipú, Mendoza"
-   },
-   "carreras": [
+  "instituciones": [
     {
-     "id": 3000,
-     "nombre_carrera": "Profesorado de Educación Primaria",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-023",
-     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-primaria-res-n-6868-dge-2023/"
-    },
-    {
-     "id": 3001,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-023",
-     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-secundaria-matematica/"
-    },
-    {
-     "id": 3002,
-     "nombre_carrera": "Profesorado de Educación Secundaria Lengua y Literatura",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-023",
-     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-secundaria-lengua-y-literatura/"
-    },
-    {
-     "id": 3003,
-     "nombre_carrera": "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional en Concurrencia con el Título de Base",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-023",
-     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-para-la-educacion-secundaria-en-concurrencia-con-el-titulo-de-base/"
-    },
-    {
-     "id": 3004,
-     "nombre_carrera": "Tecnicatura Superior en Administración Pública",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-023",
-     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-administracion-publica-4/"
-    },
-    {
-     "id": 3005,
-     "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-023",
-     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-desarrollo-de-software/"
-    },
-    {
-     "id": 3006,
-     "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-023",
-     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-enfermeria-2/"
-    },
-    {
-     "id": 3007,
-     "nombre_carrera": "Tecnicatura Superior en Enología E Industrias Frutihortícolas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-023",
-     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-enologia-e-industrias-alimentarias/"
-    },
-    {
-     "id": 3008,
-     "nombre_carrera": "Tecnicatura Superior en Marketing Digital",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-023",
-     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-marketing-digital/"
-    },
-    {
-     "id": 3009,
-     "nombre_carrera": "Tecnicatura Superior en Mecatrónica",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-023",
-     "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-mecatronica-2/"
+      "id": 30,
+      "nombre": "IES 9-023",
+      "nivel": "terciario",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "A confirmar",
+        "email": "contacto@ies9023.edu.ar",
+        "direccion": "Maipú, Mendoza"
+      },
+      "carreras": [
+        {
+          "id": 3000,
+          "nombre_carrera": "Profesorado de Educación Primaria",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-023",
+          "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-primaria-res-n-6868-dge-2023/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Comprensión y Producción de Textos Académicos",
+                "Sistema Educativo",
+                "Pedagogía",
+                "Numeración",
+                "Lengua y Literatura",
+                "Educación Artística",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Sujetos de la Educación",
+                "Psicología Educacional",
+                "Instituciones Educacionales",
+                "Números Racionales y su Didáctica",
+                "Cs. Sociales y su Didáctica I",
+                "Cs. Naturales y su Didáctica I",
+                "Lengua y su Didáctica",
+                "Literatura y su Didáctica",
+                "Espacio, Geometría y su Didáctica",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyectos de Intervención Socio-Educativa",
+                "Educación en la Diversidad",
+                "Educación Tecnológica",
+                "Medida y su Didáctica",
+                "Cs. Sociales y su Didáctica II",
+                "Cs. Naturales y su Didáctica II",
+                "Alfabetización",
+                "Formación Ética y Ciudadana y su Didáctica",
+                "Álgebra, Funciones y su Didáctica",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación Sexual Integral",
+                "Educación y Tecnologías Digitales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Formación Complementaria General",
+                "Didáctica de la Lengua y la Literatura",
+                "Didáctica de la Matemática",
+                "Didáctica de las Ciencias Sociales",
+                "Didáctica de las Ciencias Naturales",
+                "Formación Complementaria II",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-primaria-res-n-6868-dge-2023/"
+        },
+        {
+          "id": 3001,
+          "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-023",
+          "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-secundaria-matematica/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Sistema educativo",
+                "Comprensión y producción de textos académicos",
+                "El quehacer matemático",
+                "Cálculo I",
+                "Álgebra I",
+                "Geometría I",
+                "Pedagogía",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Sujetos de la Educación",
+                "Cálculo II",
+                "Álgebra II",
+                "Geometría II",
+                "Didáctica de la Matemática I",
+                "Instituciones Educativas",
+                "Psicología educacional",
+                "Didáctica de la Matemática II",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y evaluación de los aprendizajes",
+                "Proyectos de intervención socioeducativa",
+                "Probabilidad y Estadística I",
+                "Didáctica de la Matemática III",
+                "Historia de la Matemática",
+                "Geometría III",
+                "Física I",
+                "Didáctica de la Matemática IV",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Historia y patrimonio cultural de Mendoza",
+                "Educación en la diversidad",
+                "Cálculo III",
+                "Probabilidad y Estadística II",
+                "Física II",
+                "Educación Sexual Integral (ESI)",
+                "Complemento de la Formación General",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-secundaria-matematica/"
+        },
+        {
+          "id": 3002,
+          "nombre_carrera": "Profesorado de Educación Secundaria Lengua y Literatura",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-023",
+          "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-secundaria-lengua-y-literatura/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "PENSAMIENTO FILOSÓFICO",
+                "SISTEMA EDUCATIVO",
+                "PEDAGOGÍA",
+                "COMPRENSIÓN Y PRODUCCIÓN DE TEXTOS ACADÉMICOS",
+                "LITERATURA UNIVERSAL I",
+                "MORFOLOGÍA Y SEMÁNTICA LÉXICA",
+                "LITERATURA Y CULTURA GRECOLATINA",
+                "FUNDAMENTOS DE LA LENGUA",
+                "FUNDAMENTOS DE LA LITERATURA"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "INSTITUCIONES EDUCATIVAS",
+                "DIDÁCTICA",
+                "PSICOLOGÍA EDUCACIONAL",
+                "SUJETOS DE LA EDUCACIÓN",
+                "LITERATURA ESPAÑOLA",
+                "SINTAXIS Y SEMÁNTICA PROPOSICIONAL",
+                "LINGÜÍSTICA DEL TEXTO Y ANÁLISIS DEL DISCURSO I",
+                "LITERATURA UNIVERSAL II",
+                "LITERATURA PARA JÓVENES",
+                "FONÉTICA, FONOLOGÍA Y GRAFEMÁTICA",
+                "LINGÜÍSTICA DEL TEXTO Y ANÁLISIS DEL DISCURSO II",
+                "LITERATURA LATINOAMERICANA I",
+                "PPD II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "GESTIÓN Y EVALUACIÓN DE LOS APRENDIZAJES",
+                "PROYECTOS DE INTERVENCIÓN SOCIOEDUCATIVA",
+                "EDUCACIÓN EN LA DIVERSIDAD",
+                "LITERATURA ARGENTINA I",
+                "LITERATURA LATINOAMERICANA II",
+                "PSICOLINGÜÍSTICA Y SOCIOLINGÜÍSTICA",
+                "DIDÁCTICA DE LA LENGUA",
+                "LITERATURA ARGENTINA II",
+                "ALFABETIZACIÓN",
+                "DIDÁCTICA DE LA LITERATURA"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "EDUCACIÓN SEXUAL INTEGRAL",
+                "EDUCACIÓN Y TECNOLOGÍAS DIGITALES",
+                "HISTORIA Y PATRIMONIO CULTURAL DE MENDOZA",
+                "FILOLOGÍA",
+                "LITERATURA ARGENTINA III",
+                "TEORÍA Y CRÍTICA LITERARIAS",
+                "PPD IV",
+                "Unidades curriculares electivas de Formación Complementaria Específica"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-secundaria-lengua-y-literatura/"
+        },
+        {
+          "id": 3003,
+          "nombre_carrera": "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional en Concurrencia con el Título de Base",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-023",
+          "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "La enseñanza en la Escuela Secundaria Técnica I",
+                "El aprendizaje en la escuela secundaria técnica",
+                "Competencias comunicacionales, comprensión de textos I",
+                "Competencias comunicacionales, comprensión de textos II",
+                "Actualización Científico - Tecnológica en concurrencia con el título",
+                "Práctica I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Contextos de y para la escuela secundaria técnica I",
+                "La enseñanza en la escuela secundaria técnica II",
+                "Condiciones del ejercicio profesional",
+                "Vinculación con el sector socio-productivo",
+                "Actualización Científico - Tecnológica en concurrencia con el título",
+                "Práctica II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Contextos de y para la escuela secundaria técnica II",
+                "Adolescencias y educación secundaria técnica",
+                "Producción de textos para la ETP secundaria",
+                "Uso didáctico de las TIC",
+                "Actualización Científico - Tecnológica en concurrencia con el título",
+                "Práctica III",
+                "Residencia",
+                "Reflexión sobre la problematización de la práctica"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/wp-content/uploads/2026/04/RESOL-DGE-2560-2018-4.5MB.pdf"
+        },
+        {
+          "id": 3004,
+          "nombre_carrera": "Tecnicatura Superior en Administración Pública",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-023",
+          "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Administración General",
+                "Matemática y Estadística",
+                "Informática y Tecnología",
+                "Inglés Técnico I",
+                "Comunicación, Comprensión y Producción de Textos",
+                "Metodología de la Investigación",
+                "Microeconomía",
+                "Macroeconomía",
+                "Problemática Sociocultural y el Contexto",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Desarrollo Local Sustentable",
+                "Inglés Técnico II",
+                "Estado y Sociedad",
+                "Administración Pública",
+                "Formulación y Evaluación de Proyectos",
+                "Introducción al Derecho",
+                "Introducción a la Contabilidad",
+                "Derecho Constitucional",
+                "Contabilidad Pública",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión de Políticas Públicas",
+                "Presupuesto y Finanzas Públicas",
+                "Derecho Administrativo",
+                "Análisis y Desarrollo Organizacional",
+                "Ética Profesional",
+                "Control en la Gestión Pública",
+                "Procedimientos de Compras y Contrataciones",
+                "Técnica Legislativa",
+                "Gestión de Personal",
+                "Comunicación Organizacional",
+                "Informática y Tecnología Aplicada",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/12/RESOL-2019-0697-DGE-TS-en-Administracion-Publica.pdf"
+        },
+        {
+          "id": 3005,
+          "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-023",
+          "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-desarrollo-de-software/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Programación I",
+                "Arquitectura de Computadoras",
+                "Requerimientos de Software",
+                "Álgebra",
+                "Inglés Técnico I",
+                "Comprensión y Producción de Textos",
+                "Lógica Computacional",
+                "Problemática Sociocultural y del Trabajo",
+                "Sistemas Administrativos Aplicados",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Comunicaciones y Redes",
+                "Programación II",
+                "Matemática Discreta",
+                "Análisis Matemático",
+                "Inglés Técnico II",
+                "Modelado de Software",
+                "Bases de Datos I",
+                "Sistemas Operativos",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Programación III",
+                "Arquitectura y Diseño de Interfaces",
+                "Auditoría y Calidad de Sistemas",
+                "Seguridad Informática",
+                "Inglés Técnico III",
+                "Bases de Datos II",
+                "Probabilidad y Estadística",
+                "Legislación Informática",
+                "Ética Profesional",
+                "Gestión de Proyectos de Software",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3006,
+          "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-023",
+          "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-enfermeria-2/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Antropología Sociocultural y Salud",
+                "Procesos psicológicos y sociales",
+                "Entornos Virtuales de la Salud y Herramientas Digitales",
+                "Comunicación en Salud",
+                "Bases del Cuidado en Enfermería",
+                "Morfofisiología Dinámica Humana",
+                "Físico Química Biológica",
+                "Enfermería Comunitaria y Salud Pública",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Educación para la Salud",
+                "Nutrición y Dietoterapia",
+                "Microbiología Parasitología e Inmunología",
+                "Epidemiología y Bioestadística",
+                "Farmacología Aplicada a la Enfermería",
+                "Fisiopatología Humana",
+                "Cuidados de Enfermería del Adulto",
+                "Aspectos Psicosociales y Culturales del Desarrollo",
+                "Cuidados de Enfermería en el Adulto Mayor",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Inglés Técnico",
+                "Investigación en Salud",
+                "Cuidados de Enfermería en Salud Mental",
+                "Cuidados de Enfermería en Emergencias y Catástrofes",
+                "Ética y Legislación Aplicada a la Enfermería",
+                "Gestión del Cuidado en Enfermería",
+                "Cuidados de Enfermería Materna y del Recién Nacido",
+                "Cuidados de Enfermería en las Infancias y Adolescencias",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/wp-content/uploads/2026/04/ANEXO-RESOL-2024-6679-E-GDEMZA-DGE-Plan-de-estudio-para-la-carrera-de-Enfermero-a-Profesional.pdf"
+        },
+        {
+          "id": 3007,
+          "nombre_carrera": "Tecnicatura Superior en Enología E Industrias Frutihortícolas",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-023",
+          "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-enologia-e-industrias-alimentarias/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "QUÍMICA GENERAL E INORGÁNICA",
+                "MATEMÁTICA",
+                "FÍSICA",
+                "HIGIENE Y SEGURIDAD",
+                "MICROBIOLOGÍA GENERAL",
+                "ALFABETIZACIÓN ACADÉMICA",
+                "QUÍMICA ORGÁNICA",
+                "PRODUCCIONES PRIMARIAS",
+                "INTRODUCCIÓN A LA VINIFICACIÓN E INDUSTRIALIZACIONES",
+                "ANÁLISIS SENSORIAL I",
+                "PRÁCTICA PROFESIONALIZANTE I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "QUÍMICA ANALÍTICA E INSTRUMENTAL",
+                "GESTIÓN DE CALIDAD",
+                "ESTADÍSTICA",
+                "BROMATOLOGÍA Y TOXICOLOGÍA",
+                "OPERACIONES UNITARIAS",
+                "QUÍMICA BIOLÓGICA",
+                "EMPRENDEDORISMO Y AGRONEGOCIOS",
+                "TECNOLOGÍA Y ANÁLISIS DE LOS PRODUCTOS OLEÍCOLAS",
+                "MICROBIOLOGÍA APLICADA",
+                "ANÁLISIS SENSORIAL II",
+                "VINIFICACIONES I",
+                "PRÁCTICA PROFESIONAL II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "TECNOLOGÍA Y ANÁLISIS DE LOS PRODUCTOS FRUTIHORTÍCOLAS",
+                "LEGISLACIÓN VITIVINÍCOLA Y ALIMENTARIA",
+                "ÉTICA PROFESIONAL",
+                "INGLÉS TÉCNICO",
+                "ANÁLISIS DE BEBIDAS VÍNICAS Y NO VÍNICAS",
+                "VINIFICACIONES ESPECIALES",
+                "VINIFICACIONES II",
+                "GESTIÓN DE EMPRENDIMIENTOS",
+                "DESARROLLO SOSTENIBLE",
+                "ANÁLISIS SENSORIAL III",
+                "PRÁCTICA PROFESIONAL III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-enologia-e-industrias-alimentarias/"
+        },
+        {
+          "id": 3008,
+          "nombre_carrera": "Tecnicatura Superior en Marketing Digital",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-023",
+          "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-marketing-digital/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Inglés",
+                "Informática Aplicada al Marketing",
+                "Fundamentos de Marketing",
+                "Comunicación y Redacción Digital",
+                "Planificación Estratégica del Marketing Digital",
+                "Comportamiento de Consumidores y Usuarios",
+                "Innovación, Creatividad y Transformación Digital",
+                "Generación de Contenidos y Gestión de Plataformas",
+                "Desarrollo y Experiencia de Marca",
+                "Diseño y Gestión de Campañas Digitales",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Inglés II",
+                "Posicionamiento y Analítica Web",
+                "Principios y Fundamentos Legales",
+                "Social Media y Community Management",
+                "Costos y Presupuestos de Campañas",
+                "Derecho de los Negocios Digitales",
+                "Gestión de Canales Digitales",
+                "E-commerce y Marketplaces",
+                "Ética Profesional",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Herramientas de Automatización",
+                "Desarrollo Emprendedor",
+                "Negociación y Marketing Relacional",
+                "Estrategias de Alcance y Fidelización",
+                "Proyecto Integrador Final",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3009,
+          "nombre_carrera": "Tecnicatura Superior en Mecatrónica",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-023",
+          "link_oficial": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/tecnicatura-superior-en-mecatronica-2/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Sistemas Mecánicos",
+                "Sistemas Eléctricos y Electrónicos",
+                "Sistemas de Control",
+                "Sistemas Informáticos",
+                "Elementos de Comunicación",
+                "Gestión de Emprendimientos"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Dispositivos Electromecánicos",
+                "Sistemas de Control Automático",
+                "Sistemas Informáticos de Control",
+                "Procesos de Fabricación",
+                "Representación de Sistemas Mecatrónicos",
+                "Sistemas CAD, CAM, CAE"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Proyecto de Mecatrónica (Orientación)",
+                "Simulación de Sistemas Mecatrónicos",
+                "Procesos y Gestión de Mantenimiento y Calidad",
+                "Configuración de Sistemas Mecatrónicos",
+                "Formación y Orientación Laboral"
+              ]
+            }
+          ]
+        }
+      ],
+      "departamento": "Maipú"
     }
-   ],
-   "departamento": "Maipú"
-  }
- ]
+  ]
 }

@@ -16,6 +16,18 @@ export const enlacesBEN = { carreras: {}, instituciones: {} };
 // Plataformas online: una entrada por plataforma, no por curso.
 export const plataformas = [];
 
+// Datos que no viven en data.json (su estructura no se toca): a dónde lleva cada
+// plataforma y, opcionalmente, su logo.
+//
+// ▼▼▼ PARA AGREGAR LOS LOGOS ▼▼▼
+// 1. Guardá cada imagen en  img/plataformas/  (ej: coderhouse.svg o .png).
+// 2. Escribí el nombre del archivo en el campo "logo" de la plataforma:
+//        'Coderhouse': { url: 'https://www.coderhouse.com/ar', logo: 'coderhouse.svg' },
+// La tarjeta lo dibuja sola. Si "logo" queda vacío, no se muestra imagen y no se
+// rompe nada: en su lugar aparece la inicial de la plataforma.
+// ▲▲▲ ------------------------ ▲▲▲
+//
+// OJO: revisá que estas URLs sigan siendo las oficiales antes de publicar.
 const PLATAFORMAS_INFO = {
     'Coderhouse':       { url: 'https://www.coderhouse.com/ar',    logo: '' },
     'Soy Henry':        { url: 'https://www.soyhenry.com',         logo: '' },
@@ -32,7 +44,34 @@ const PLATAFORMAS_INFO = {
     'Santander Open Academy':           { url: 'https://www.santanderopenacademy.com/es/index.html',              logo: '' },
     'ProgramON':                        { url: 'https://www.chicos.net/programon',                                logo: '' },
     'Microsoft Learn':                  { url: 'https://www.microsoft.com/es-ar/microsoft-learn',                 logo: '' },
-    'Enlace 2.0 (Gobierno de Mendoza)': { url: 'https://www.mendoza.gov.ar/economia/entornodecapacitacion-enlace/', logo: '' }
+    'Enlace 2.0 (Gobierno de Mendoza)': { url: 'https://www.mendoza.gov.ar/economia/entornodecapacitacion-enlace/', logo: '' },
+    // --- Nacionales / LatAm ---
+    'Platzi':                           { url: 'https://platzi.com',        logo: '' },
+    'Domestika':                        { url: 'https://www.domestika.org/es', logo: '' },
+    'Crehana':                          { url: 'https://www.crehana.com',    logo: '' },
+    'Open English':                     { url: 'https://www.openenglish.com', logo: '' },
+    'Capacitarte':                      { url: 'https://capacitarte.org',    logo: '' },
+    'Centro de e-Learning UTN BA':      { url: 'https://utnba.centrodeelearning.com', logo: '' },
+    'Google Actívate (Crece con Google)': { url: 'https://crece.withgoogle.com', logo: '' },
+    'Fundación Telefónica - Conecta Empleo': { url: 'https://conectaempleo-formacion.fundaciontelefonica.com', logo: '' },
+    // --- Internacionales gratuitas (con certificado) ---
+    'Coursera':                         { url: 'https://www.coursera.org',   logo: '' },
+    'edX':                              { url: 'https://www.edx.org',         logo: '' },
+    'freeCodeCamp':                     { url: 'https://www.freecodecamp.org', logo: '' },
+    'Khan Academy (español)':           { url: 'https://es.khanacademy.org', logo: '' },
+    'IBM SkillsBuild':                  { url: 'https://skillsbuild.org',    logo: '' },
+    'Cisco Networking Academy':         { url: 'https://www.netacad.com',    logo: '' },
+    'AWS Skill Builder':                { url: 'https://aws.amazon.com/training', logo: '' },
+    'Google Cloud Skills Boost':        { url: 'https://www.skills.google',  logo: '' },
+    'MIT OpenCourseWare':               { url: 'https://ocw.mit.edu',        logo: '' },
+    'OpenLearn (Open University)':      { url: 'https://www.open.edu/openlearn', logo: '' },
+    // --- Internacionales de pago ---
+    'Udemy':                            { url: 'https://www.udemy.com',      logo: '' },
+    'Udacity':                          { url: 'https://www.udacity.com',    logo: '' },
+    'FutureLearn':                      { url: 'https://www.futurelearn.com', logo: '' },
+    'Codecademy':                       { url: 'https://www.codecademy.com', logo: '' },
+    'DataCamp':                         { url: 'https://www.datacamp.com',   logo: '' },
+    'LinkedIn Learning':                { url: 'https://www.linkedin.com/learning', logo: '' }
 };
 
 const CARPETA_LOGOS = '/img/plataformas/';
@@ -177,6 +216,10 @@ function crearCursoAparte(carrera, institucion) {
     // Opcionales: solo los traen los catálogos de tarjeta simple (ver `simple`).
     const descripcion = limpiarTexto(carrera.descripcion || '');
     const nombreCompleto = limpiarTexto(carrera.nombre_completo || '');
+    // Sede/dirección del dato institucional. "A confirmar" no es una dirección:
+    // se descarta para no pintar una fila inútil en la tarjeta.
+    const direccionCruda = limpiarTexto((institucion.contacto && institucion.contacto.direccion) || '');
+    const sede = (/^a confirmar/i.test(direccionCruda) || /^online$/i.test(direccionCruda)) ? '' : direccionCruda;
     return {
         nombre,
         nombreCompleto,
@@ -186,8 +229,9 @@ function crearCursoAparte(carrera, institucion) {
         modalidad: limpiarTexto(carrera.modalidad || 'A confirmar'),
         duracion: limpiarTexto(carrera.duracion || 'A confirmar'),
         provincia: limpiarTexto(institucion.provincia || ''),
+        sede,
         link: carrera.link_oficial || '',
-        busqueda: normalizarTexto(`${nombre} ${nombreCompleto} ${descripcion} ${nombreInstitucion} ${categoria}`),
+        busqueda: normalizarTexto(`${nombre} ${nombreCompleto} ${descripcion} ${nombreInstitucion} ${categoria} ${sede}`),
         _clave: `aparte:${nombreInstitucion}:${nombre}`
     };
 }

@@ -1,59 +1,255 @@
 {
- "instituciones": [
-  {
-   "id": 25,
-   "nombre": "IEF - Instituto de Educación Física (IES 9-016)",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "A confirmar",
-    "email": "contacto@ief9016.edu.ar",
-    "direccion": "Godoy Cruz, Mendoza"
-   },
-   "carreras": [
+  "instituciones": [
     {
-     "id": 2501,
-     "nombre_carrera": "Profesorado de Educación Física",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IEF (IES 9-016)",
-     "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-fisica/"
-    },
-    {
-     "id": 2502,
-     "nombre_carrera": "Tecnicatura Superior en Actividades de Montaña",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IEF (IES 9-016)",
-     "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-actividades-de-montana-modalidad-presencial/"
-    },
-    {
-     "id": 2503,
-     "nombre_carrera": "Tecnicatura Superior en Preparación Física",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IEF (IES 9-016)",
-     "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-preparacion-fisica/"
-    },
-    {
-     "id": 2504,
-     "nombre_carrera": "Tecnicatura Superior en Conservación de la Naturaleza",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IEF (IES 9-016)",
-     "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-conservacion-de-la-naturaleza/"
+      "id": 25,
+      "nombre": "IEF - Instituto de Educación Física (IES 9-016)",
+      "nivel": "terciario",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "A confirmar",
+        "email": "contacto@ief9016.edu.ar",
+        "direccion": "Godoy Cruz, Mendoza"
+      },
+      "carreras": [
+        {
+          "id": 2501,
+          "nombre_carrera": "Profesorado de Educación Física",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IEF (IES 9-016)",
+          "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-fisica/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Actualización Formativa",
+                "Prácticas de Lectura, Escritura y Oralidad",
+                "Tecnologías de la Información y la Comunicación",
+                "Historia Política, Social, Económica y Cultural de América Latina",
+                "Pedagogía",
+                "Didáctica General",
+                "Fundamentos de la Motricidad",
+                "Anatomía Funcional",
+                "Juego Motor",
+                "Expresión y Comunicación Motriz",
+                "Deporte Psicomotriz I",
+                "Deporte Sociomotriz I",
+                "Práctica Profesional I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Psicología Educacional",
+                "Historia y Política de la Educación Argentina",
+                "Instituciones Educativas",
+                "Sujeto de las Acciones Motrices y su Aprendizaje",
+                "Sujeto de las Acciones Motrices y su Contexto",
+                "Fisiología de la Actividad Física",
+                "Vida en la Naturaleza y Acciones Motrices",
+                "Deporte Psicomotriz II",
+                "Deporte Sociomotriz II",
+                "Práctica Profesional II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Sociología de la Educación",
+                "Filosofía",
+                "Didáctica de la Educación Física para el Nivel Inicial y Primario",
+                "Didáctica de la Educación Física para el Nivel Secundario",
+                "Actividad Física para la Salud",
+                "Actividad Física para la Socio Recreación",
+                "Deporte Espacio Separado",
+                "Deporte Espacio Común",
+                "Práctica Profesional III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Ética Profesional y Práctica Docente",
+                "Educación Física para la Atención de Necesidades Educativas Especiales",
+                "Gestión de Proyectos de Actividades Físicas y Deportes",
+                "Dirección Técnica de Gimnasios",
+                "TIC Orientada",
+                "Opción Institucional I",
+                "Opción Institucional II",
+                "Práctica Profesional IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2502,
+          "nombre_carrera": "Tecnicatura Superior en Actividades de Montaña",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IEF (IES 9-016)",
+          "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-actividades-de-montana-modalidad-presencial/",
+          "plan_estudio": [
+            {
+              "anio": "Primer Año",
+              "materias": [
+                "Anatomía Descriptiva y Funicional",
+                "Fisiología Humana",
+                "Tecnica del Guia I",
+                "Servicios Turisticos",
+                "Ambiente Mendocino",
+                "Inglés Técnico I",
+                "Informática Aplicada",
+                "Comprensión y Producción de Textos",
+                "El Sujeto en los Contextos de Montaña",
+                "Problemática Sociocultural y del mundo del trabajo."
+              ]
+            },
+            {
+              "anio": "Segundo Año",
+              "materias": [
+                "Fisiología Aplicada al Trabajo Físico",
+                "Primeros auxilios",
+                "Técnicas del Guía II",
+                "Gestión y Comercialización de servicios.",
+                "Ambiente Argentino",
+                "Ingés Tecnico II",
+                "Liderazgo y Gestión de Grupos.",
+                "Legislación"
+              ]
+            },
+            {
+              "anio": "Tercer Año",
+              "materias": [
+                "Patología de los Deportes de Montaña",
+                "Ética Profesional",
+                "Teoría y Practica del Entrenamiento",
+                "Trabajos en Contexto Natural: Alta Montaña- Montaña – Trekking",
+                "Práctica Profesional: Alta Montaña- Montaña – Trekking"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-actividades-de-montana-modalidad-presencial/"
+        },
+        {
+          "id": 2503,
+          "nombre_carrera": "Tecnicatura Superior en Preparación Física",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IEF (IES 9-016)",
+          "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-preparacion-fisica/",
+          "plan_estudio": [
+            {
+              "anio": "Primer Año",
+              "materias": [
+                "Anatomía Funcional",
+                "Fisiología Aplicada I",
+                "Comprensión y Producción de Textos",
+                "Problemática Sociocultural y del Conocimiento",
+                "Fundamentos y manifestaciones de la motricidad",
+                "Entrenamiento de la Condición Fisica I",
+                "Estructura y Dinámica de los Deportes",
+                "Formación Deportiva",
+                "Práctica Profesional I"
+              ]
+            },
+            {
+              "anio": "Segundo Año",
+              "materias": [
+                "Fisiología Aplicada II",
+                "Biomecánica",
+                "Psicología de la Actividad Física y el Deporte",
+                "Informática",
+                "Tics para la Gestion del Entrenamiento",
+                "Ética Profesional",
+                "Actividad Fisica y Salud",
+                "Sociología de la Actividad Física y Deporte",
+                "Entrenamiento de la Condición Física II",
+                "Estrategia y Táctica Deportiva",
+                "Practica Profesional II"
+              ]
+            },
+            {
+              "anio": "Tercer Año",
+              "materias": [
+                "Organización, Administración y Legislación de las Instituciones Deportivas",
+                "Inglés Nivel I",
+                "Inglés Nivel II",
+                "Proyecto de Gestión",
+                "Espacio Abierto I",
+                "Entrenamiento Deportivo",
+                "Espacio Abierto II",
+                "Práctica Profesional III"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-preparacion-fisica/"
+        },
+        {
+          "id": 2504,
+          "nombre_carrera": "Tecnicatura Superior en Conservación de la Naturaleza",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IEF (IES 9-016)",
+          "link_oficial": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-conservacion-de-la-naturaleza/",
+          "plan_estudio": [
+            {
+              "anio": "Primer Año",
+              "materias": [
+                "Autonomia en la Naturaleza I",
+                "Conservación del patrimonio",
+                "Ecología general y aplicada",
+                "Historia y arqueologia regional",
+                "Informatica aplicada a la conservación",
+                "Marco Legal",
+                "Medio fisico",
+                "Primeros Auxilios",
+                "Problemàtica Sociocultural y del Conocimiento",
+                "Comunicación, Comprensión y Producción de Texto"
+              ]
+            },
+            {
+              "anio": "Segundo Año",
+              "materias": [
+                "Actividades acuáticas",
+                "Autonomía en la Naturaleza II",
+                "Biodiversidad",
+                "Defensa Personal",
+                "Inglés técnico",
+                "Manejo de Faula Silvestre",
+                "Manejo de la Flora Nativa",
+                "Mecánica ligera y mantenimiento",
+                "Prevención y control de incendios"
+              ]
+            },
+            {
+              "anio": "Tercer Año",
+              "materias": [
+                "Biología de la Conservación",
+                "Educación Ambiental",
+                "Etica profesional",
+                "Formulación y administración de proyectos",
+                "Manejo de armas",
+                "Planifiación de espacios naturales protegidos",
+                "Práctica Profesional I",
+                "Práctica Profesional II",
+                "Procedimientos administrativos y legales",
+                "Uso publico en ANP"
+              ]
+            }
+          ],
+          "plan_fuente": "https://ief9016-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-conservacion-de-la-naturaleza/"
+        }
+      ],
+      "departamento": "Godoy Cruz"
     }
-   ],
-   "departamento": "Godoy Cruz"
-  }
- ]
+  ]
 }

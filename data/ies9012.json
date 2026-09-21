@@ -1,69 +1,310 @@
 {
- "instituciones": [
-  {
-   "id": 21,
-   "nombre": "IES 9-012 Informática",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "0260-4422262",
-    "email": "contacto@ies9012.edu.ar",
-    "direccion": "Paunero 1124, San Rafael, Mendoza"
-   },
-   "carreras": [
-    {
-     "id": 2101,
-     "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-012 (San Rafael)",
-     "link_oficial": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-desarrollo-de-software"
-    },
-    {
-     "id": 2102,
-     "nombre_carrera": "Tecnicatura Superior en Gestión de Recursos Humanos",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-012 (San Rafael)",
-     "link_oficial": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-gestion-de-recursos-humanos"
-    },
-    {
-     "id": 2103,
-     "nombre_carrera": "Tecnicatura Superior en Higiene, Seguridad y Ambiente",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-012 (San Rafael)",
-     "link_oficial": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-higiene-seguridad-y-ambiente"
-    },
-    {
-     "id": 2104,
-     "nombre_carrera": "Tecnicatura Superior en Logística",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-012 (San Rafael)",
-     "link_oficial": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-logistica"
-    },
-    {
-     "id": 2105,
-     "nombre_carrera": "Tecnicatura Superior en Redes y Ciberseguridad",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-012 (San Rafael)",
-     "link_oficial": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-redes-y-ciberseguridad"
-    }
-   ],
-   "departamento": "San Rafael"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 21,
+            "nombre": "IES 9-012 Informática",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "0260-4422262",
+                "email": "contacto@ies9012.edu.ar",
+                "direccion": "Paunero 1124, San Rafael, Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 2101,
+                    "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-012 (San Rafael)",
+                    "link_oficial": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-desarrollo-de-software",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Programación I",
+                                "Matemática Aplicada",
+                                "Lógica Computacional",
+                                "Inglés Técnico I",
+                                "Alfabetización académica",
+                                "Seminario Nuevas Tecnologías",
+                                "Arquitectura de Dispositivos",
+                                "Sistemas Operativos I",
+                                "Base de Datos I",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Programación II",
+                                "Matemática Discreta",
+                                "Análisis Matemático",
+                                "Comunicación y Redes",
+                                "Inglés técnico II",
+                                "Modelado de Software",
+                                "Sistemas Operativos II",
+                                "Base de Datos II",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Programación III",
+                                "Arquitectura y Diseño de Interfaces: UI y UX",
+                                "Auditoría y Calidad de Sistemas",
+                                "Ciberseguridad",
+                                "Inglés técnico III",
+                                "Legislación Informática y Ética profesional",
+                                "Estadística y Probabilidades para el Desarrollo de Software",
+                                "Gestión de Proyectos de Software",
+                                "Metodologías Ágiles",
+                                "Base de Datos III",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-desarrollo-de-software"
+                },
+                {
+                    "id": 2102,
+                    "nombre_carrera": "Tecnicatura Superior en Gestión de Recursos Humanos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-012 (San Rafael)",
+                    "link_oficial": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-gestion-de-recursos-humanos",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Introducción a la administración de los Recursos Humanos",
+                                "Inglés técnico",
+                                "Comunicación efectiva",
+                                "Herramientas digitales para la gestión",
+                                "Introducción a la economía",
+                                "Matemática aplicada",
+                                "Estadística y análisis de datos",
+                                "Introducción a la legislación",
+                                "Desarrollo regional y contexto laboral",
+                                "Práctica profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Psicología organizacional",
+                                "Diseño de puestos",
+                                "Derecho laboral y de la seguridad social",
+                                "Tecnologías aplicadas a Recursos Humanos",
+                                "Gestión del talento humano",
+                                "Comunicación y liderazgo organizacional",
+                                "Administración de liquidaciones, compensaciones y beneficios",
+                                "Ética y responsabilidad social corporativa",
+                                "Relaciones laborales y negociación sindical",
+                                "Capacitación y desarrollo",
+                                "Seguridad e Higiene Laboral",
+                                "Control de Gestión",
+                                "Práctica profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Planeamiento estratégico y cultura organizacional",
+                                "Selección avanzada y marca empleadora",
+                                "Gestión del cambio y clima organizacional",
+                                "Analítica de personas y toma de decisiones",
+                                "Sustentabilidad, diversidad e inclusión laboral",
+                                "Innovación y transformación digital en Recursos Humanos",
+                                "Empleabilidad y vinculación profesional",
+                                "Práctica profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-gestion-de-recursos-humanos"
+                },
+                {
+                    "id": 2103,
+                    "nombre_carrera": "Tecnicatura Superior en Higiene, Seguridad y Ambiente",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-012 (San Rafael)",
+                    "link_oficial": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-higiene-seguridad-y-ambiente",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Alfabetización Académica",
+                                "Introducción a Prevención 4.0",
+                                "Tecnologías Digitales Aplicadas",
+                                "Física",
+                                "Química",
+                                "Inglés Técnico",
+                                "Representación Técnica de Planos",
+                                "Higiene Laboral I",
+                                "Seguridad Laboral I",
+                                "Liderazgo y habilidades interpersonales",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Estadística Aplicada",
+                                "Gestión de Emprendimientos",
+                                "Ambiente y Sostenibilidad",
+                                "Derecho y Legislación Aplicada a la Higiene y Seguridad Laboral",
+                                "Sistemas de Gestión",
+                                "Derecho Ambiental",
+                                "Medicina del trabajo y Toxicología",
+                                "Higiene Laboral II",
+                                "Seguridad Laboral II",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Seguridad Industrial Y Riesgos Tecnológicos",
+                                "Calidad, Ambiente Y Sostenibilidad",
+                                "Seguridad En La Construcción Y Obras Civiles",
+                                "Seguridad Minera Y Energética",
+                                "Higiene Y Seguridad Hospitalaria Y De Laboratorios"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-higiene-seguridad-y-ambiente"
+                },
+                {
+                    "id": 2104,
+                    "nombre_carrera": "Tecnicatura Superior en Logística",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-012 (San Rafael)",
+                    "link_oficial": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-logistica",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Inglés I",
+                                "Informática I",
+                                "Administración de las Organizaciones",
+                                "Organización y Conducción Empresaria",
+                                "Matemática",
+                                "Estadística",
+                                "Comprensión y Producción de Textos",
+                                "Geografía Económica",
+                                "Introducción a la Logística",
+                                "Transporte Terrestre",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Inglés II",
+                                "Informática II",
+                                "Estructura de Costos",
+                                "Compras",
+                                "Embalajes y Logística Inversa",
+                                "Distribución",
+                                "Transporte Aéreo",
+                                "Transporte Marítimo y Fluvial",
+                                "Almacenamiento",
+                                "Administración de Inventarios",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Formulación y Evaluación de Proyectos",
+                                "Marketing",
+                                "Metodología de la Investigación",
+                                "Seguridad e Higiene Laboral",
+                                "Gestión de la Calidad",
+                                "Logística Internacional",
+                                "Derecho Privado",
+                                "Ética Profesional",
+                                "Problemática Sociocultural y el Contexto",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-logistica"
+                },
+                {
+                    "id": 2105,
+                    "nombre_carrera": "Tecnicatura Superior en Redes y Ciberseguridad",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-012 (San Rafael)",
+                    "link_oficial": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-redes-y-ciberseguridad",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Programación I",
+                                "Matemática Aplicada",
+                                "Lógica Computacional",
+                                "Inglés técnico I",
+                                "Alfabetización académica",
+                                "Seminario Nuevas Tecnologías",
+                                "Arquitectura de Dispositivos",
+                                "Sistemas Operativos I",
+                                "Base de Datos I",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Mantenimiento de Instalaciones Informáticas",
+                                "Higiene y Seguridad Informática",
+                                "Matemática Aplicada II",
+                                "Administración de Servidores",
+                                "Inglés Técnico II",
+                                "Comunicación y Redes",
+                                "Taller de Instalación y Certificación de Redes",
+                                "Criptografía Aplicada",
+                                "Automatización de Servicios Informáticos",
+                                "Electrónica Aplicada",
+                                "Tecnologías IoT",
+                                "Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Tratamiento de Incidentes de Continuidad de Negocio",
+                                "Videovigilancia y Control de Accesos",
+                                "Ciberseguridad",
+                                "Inglés Técnico III",
+                                "Legislación Informática y Ética Profesional",
+                                "Auditoría de Seguridad Informática",
+                                "Investigación Digital y Cibercrimen",
+                                "Forense Digital",
+                                "Ethical Hacking",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-redes-y-ciberseguridad"
+                }
+            ],
+            "departamento": "San Rafael"
+        }
+    ]
 }

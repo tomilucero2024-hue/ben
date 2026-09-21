@@ -6,6 +6,47 @@ from bs4 import BeautifulSoup
 
 from scraper_utils import carreras_guardadas, guardar_json
 
+import json as _json
+import re as _re
+
+def extraer_plan_estudio(sopa):
+    """Extrae el plan de estudio real en texto cuando la pagina oficial lo
+    publica como texto: ya sea h3 (\"📘 Primer Año\" …) + <ul> de materias, o
+    una tabla con filas separadoras (\"Primer año:\"). Si el plan solo viene
+    como imagen o PDF, devuelve None (no se inventa)."""
+    plan = []
+    for h in sopa.find_all(['h3', 'h4']):
+        txt = h.get_text(' ', strip=True)
+        if not _re.search(r'(A[ñn]o|AÑO|año|semestre|Semestre|cuatrimestre|Cuatrimestre)', txt):
+            continue
+        ul = h.find_next('ul')
+        if not ul:
+            continue
+        materias = [li.get_text(' ', strip=True).strip() for li in ul.find_all('li')]
+        materias = [m for m in materias if m and m.lower() not in ('', 'menú')]
+        if materias:
+            plan.append({'anio': txt, 'materias': materias})
+    if plan:
+        return plan
+
+    # Tabla con filas separadoras del tipo "Primer año:" seguidas de materias
+    patron_anio = _re.compile(r'^(Primer|Segundo|Tercer|Cuarto|Quinto|Sexto|1er|2do|3ro|4to)\s*a[ñn]o\s*:?\s*$', _re.I)
+    for tabla in sopa.find_all('table'):
+        plan_tabla = []
+        for tr in tabla.find_all('tr'):
+            celdas = [c.get_text(' ', strip=True).strip() for c in tr.find_all(['td', 'th'])]
+            celdas = [c for c in celdas if c]
+            if not celdas:
+                continue
+            texto = ' '.join(celdas).strip()
+            if patron_anio.match(texto):
+                plan_tabla.append({'anio': texto.rstrip(':').strip(), 'materias': []})
+            elif plan_tabla:
+                plan_tabla[-1]['materias'].extend(celdas)
+        if plan_tabla and any(a['materias'] for a in plan_tabla):
+            return plan_tabla
+    return None
+
 
 print("🛠️ Encendiendo el escáner V15 para IES 9-005...")
 print("🔍 Set up: Profesorados (4 años) y Formación Profesional (1.5 años) detectados.\n")
@@ -55,7 +96,8 @@ try:
         if "profesorado" in nombre_lower or "formacion-profesional" in link_oficial.lower() or "apicultura" in nombre_lower or "software" in nombre_lower:
             carreras_procesadas.add(link_oficial)
             
-            if nombre_carrera in carreras_viejas and carreras_viejas[nombre_carrera].get("duracion") not in ["A confirmar"]:
+            _vieja = carreras_viejas.get(nombre_carrera)
+            if _vieja and _vieja.get("duracion") not in ["A confirmar"] and (_vieja.get("plan_estudio") or _vieja.get("plan_fuente")):
                 ies_data["carreras"].append(carreras_viejas[nombre_carrera])
                 print(f"  ⏭️ Recuperada: {nombre_carrera[:35]}...")
             else:
@@ -71,6 +113,7 @@ try:
                     
                 modalidad_texto = "Presencial"
                 turno_texto = "A confirmar"
+                plan_extraido = None
                 
                 try:
                     time.sleep(0.4)
@@ -81,12 +124,14 @@ try:
                     match_turno = re.search(r'Turno[s]?:\s*([^\n\.]+)', texto_completo, re.IGNORECASE)
                     if match_turno:
                         turno_texto = match_turno.group(1).strip()
+                    
+                    plan_extraido = extraer_plan_estudio(sopa_det)
                 except Exception as e:
                     pass
                     
-                print(f"   ✨ Ficha -> {categoria_actual} | Duración: [{duracion_texto}]")
+                print(f"   ✨ Ficha -> {categoria_actual} | Duración: [{duracion_texto}] | Plan: {'texto' if plan_extraido else 'oficial ↗'}")
                 
-                ies_data["carreras"].append({
+                ficha = {
                     "id": id_global,
                     "nombre_carrera": nombre_carrera,
                     "categoria": categoria_actual,
@@ -94,8 +139,12 @@ try:
                     "modalidad": modalidad_texto,
                     "turno": turno_texto,
                     "facultad": "IES 9-005",
-                    "link_oficial": link_oficial
-                })
+                    "link_oficial": link_oficial,
+                    "plan_fuente": link_oficial
+                }
+                if plan_extraido:
+                    ficha["plan_estudio"] = plan_extraido
+                ies_data["carreras"].append(ficha)
                 id_global += 1
                 contador += 1
                 

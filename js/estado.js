@@ -123,16 +123,3 @@ function sincronizarTabs() {
     });
 }
 
-// Datos que no viven en data.json (su estructura no se toca): a dónde lleva cada
-// plataforma y, opcionalmente, su logo.
-//
-// ▼▼▼ PARA AGREGAR LOS LOGOS ▼▼▼
-// 1. Guardá cada imagen en  img/plataformas/  (ej: coderhouse.svg o .png).
-// 2. Escribí el nombre del archivo en el campo "logo" de la plataforma:
-//        'Coderhouse': { url: 'https://www.coderhouse.com/ar', logo: 'coderhouse.svg' },
-// La tarjeta lo dibuja sola. Si "logo" queda vacío, no se muestra imagen y no se
-// rompe nada: en su lugar aparece la inicial de la plataforma.
-// ▲▲▲ ------------------------ ▲▲▲
-//
-// OJO: revisá que estas URLs sigan siendo las oficiales antes de publicar.
-

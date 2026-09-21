@@ -89,7 +89,68 @@
                     "modalidad": "Presencial",
                     "turno": "A confirmar",
                     "facultad": "IES 9-004 Toribio de Luzuriaga",
-                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/"
+                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pensamiento Filosófico",
+                                "Sistema Educativo",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Pedagogía",
+                                "Centralidad del Juego",
+                                "Juego y Producción de Objetos Lúdicos",
+                                "Lenguajes Artísticos Expresivos - Teatro",
+                                "Lenguajes Artísticos Expresivos - Música",
+                                "Práctica Profesional Docente I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Didáctica",
+                                "Instituciones Educativas",
+                                "Psicología Educacional",
+                                "Educación y Atención Temprana al Desarrollo Infantil",
+                                "Didáctica del Jardín Maternal",
+                                "Prácticas Lingüísticas en Ed. Inicial",
+                                "Lenguajes Artísticos Expresivos - Artes Visuales",
+                                "Educación Matemática Temprana e Inicial I",
+                                "Sujetos de la Educación",
+                                "Práctica Profesional Docente II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Proyectos de Intervención Socioeducativa",
+                                "Educación en la Diversidad",
+                                "Literatura Infantil",
+                                "Didáctica de Jardín de Infantes",
+                                "Educación Matemática Inicial II",
+                                "Alfabetización Temprana e Inicial",
+                                "Didáctica del Ambiente Natural",
+                                "Didáctica del Ambiente Social",
+                                "Motricidad en Jardín Maternal y en Jardín de Infantes",
+                                "Práctica Profesional Docente III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Educación Sexual Integral",
+                                "Educación y Tecnologías Digitales",
+                                "Historia y Patrimonio Cultural de Mendoza",
+                                "Formación Complementaria General",
+                                "Problemáticas de la Ed. Inicial",
+                                "Salud y Cultura del Cuidado",
+                                "Formación Ética y Ciudadana y su Didáctica",
+                                "Formación Complementaria Específica",
+                                "Práctica Profesional Docente IV"
+                            ]
+                        }
+                    ]
                 },
                 {
                     "id": 1402,
@@ -99,7 +160,72 @@
                     "modalidad": "Presencial",
                     "turno": "A confirmar",
                     "facultad": "IES 9-004 Toribio de Luzuriaga",
-                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-educacion-primaria/"
+                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-educacion-primaria/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Pensamiento Filosófico",
+                                "Comprensión y Producción de Textos Académicos",
+                                "Sistema Educativo",
+                                "Pedagogía",
+                                "Numeración",
+                                "Lengua y Literatura Infantil y Juvenil",
+                                "Educación Artística",
+                                "Práctica Profesional Docente I",
+                                "Didáctica",
+                                "Psicología Educacional",
+                                "Instituciones Educativas"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Didáctica",
+                                "Psicología Educacional",
+                                "Instituciones Educativas",
+                                "Sujetos de la Educación",
+                                "Números Racionales y su Didáctica",
+                                "Cs. Sociales y su Didáctica I",
+                                "Cs. Naturales y su Didáctica I",
+                                "Lengua y su Didáctica",
+                                "Literatura Infantil y Juvenil y su Didáctica",
+                                "Espacio, Geometría y su Didáctica",
+                                "Práctica Profesional Docente II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Gestión y Evaluación de los Aprendizajes",
+                                "Proyectos de Intervención Estratégica",
+                                "Educación en la Diversidad",
+                                "Educación Tecnológica",
+                                "Medida y su Didáctica",
+                                "Cs. Sociales y su Didáctica II",
+                                "Cs. Naturales y su Didáctica II",
+                                "Alfabetización",
+                                "Formación Ética y Ciudadana y su Didáctica",
+                                "Álgebra, Funciones y su Didáctica",
+                                "Práctica Profesional Docente III"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Educación Sexual Integral",
+                                "Educación y Tecnologías Digitales",
+                                "Historia y Patrimonio Cultural de Mendoza",
+                                "Formación Complementaria General",
+                                "Didáctica de la Lengua y de la Literatura Infantil y Juvenil",
+                                "Didáctica de la Matemática",
+                                "Didáctica de las Ciencias Sociales",
+                                "Didáctica de las Ciencias Naturales",
+                                "Formación Complementaria II",
+                                "Práctica Profesional Docente IV"
+                            ]
+                        }
+                    ]
                 },
                 {
                     "id": 1403,
@@ -119,7 +245,68 @@
                     "modalidad": "Presencial",
                     "turno": "A confirmar",
                     "facultad": "IES 9-004 Toribio de Luzuriaga",
-                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-geografia/"
+                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/profesorado-de-geografia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Geografía de la Población",
+                                "Geografía de los Sistemas Ambientales",
+                                "Geografía de Mendoza",
+                                "Sociedad, Cultura y Territorio",
+                                "Técnicas de Trabajo en Geografía I",
+                                "Didáctica General",
+                                "Pedagogía",
+                                "Promoción de la Salud",
+                                "Prácticas de la Lectura / Escritura y Oralidad",
+                                "Tecnologías de la Comunicación y la Información",
+                                "Práctica Profesional Docente"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Apropiación de los Recursos Naturales",
+                                "Economía, Estado y Territorio",
+                                "Geografía de la Argentina",
+                                "Problemática Ambiental",
+                                "Técnicas de Trabajo en Geografía II",
+                                "Filosofía, Historia y Política de la Educación Argentina",
+                                "Psicología Educacional",
+                                "Práctica Profesional Docente II",
+                                "Historia Política, Social, Cultural y Económica de Argentina",
+                                "Sujeto de Educación",
+                                "Instituciones Educativas",
+                                "UDI: Importancia de la Lectura N.S. Emociones, Motivación"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Didáctica de la Geografía I",
+                                "Epistemología de la Geografía",
+                                "Geografía de América Latina",
+                                "Geografía de la Mundialización",
+                                "Geografía de los Espacios Rurales",
+                                "Geografía de los Espacios Urbanos",
+                                "TICs Aplicadas a la Enseñanza de la Geografía",
+                                "Práctica Profesional Docente III",
+                                "UDI: Geografía de los Riesgos Naturales",
+                                "Historia Política, Social, Económica y Cultural de América Latina",
+                                "Sociología de la Educación"
+                            ]
+                        },
+                        {
+                            "anio": "4º año",
+                            "materias": [
+                                "Didáctica de la Geografía II",
+                                "Educación Ambiental",
+                                "Geopolítica de los Espacios Mundiales",
+                                "Investigación Geográfica",
+                                "Práctica Profesional Docente IV"
+                            ]
+                        }
+                    ]
                 },
                 {
                     "id": 1405,
@@ -201,7 +388,47 @@
                     "modalidad": "Presencial",
                     "turno": "A confirmar",
                     "facultad": "IES 9-004 Toribio de Luzuriaga",
-                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/"
+                    "link_oficial": "https://ens9004-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Problemáticas de la Educación Argentina",
+                                "Psicología General y del Desarrollo",
+                                "Fundamentos de Acompañamiento Terapéutico",
+                                "Salud Pública y Salud Mental",
+                                "Psicopatología",
+                                "Filosofía",
+                                "Taller de Comunicación Oral y Escrita",
+                                "Taller de Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Ética y Deontología Profesional",
+                                "Metodología de la Investigación",
+                                "Psicología Evolutiva",
+                                "Psicología Social y Comunitaria",
+                                "Didáctica y Estrategias de Intervención",
+                                "Acompañamiento Terapéutico en Discapacidad",
+                                "Acompañamiento Terapéutico en Salud Mental",
+                                "Taller de Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Políticas Públicas y Legislación",
+                                "Acompañamiento Terapéutico en Infancia y Adolescencia",
+                                "Acompañamiento Terapéutico en Adultos y Adultos Mayores",
+                                "Acompañamiento Terapéutico en Consumos Problemáticos",
+                                "Investigación Educativa",
+                                "Taller de Integración y Síntesis Final",
+                                "Taller de Práctica Profesionalizante III"
+                            ]
+                        }
+                    ]
                 }
             ]
         }

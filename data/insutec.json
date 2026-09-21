@@ -20,7 +20,57 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "INSUTEC",
-     "link_oficial": "https://www.insutec.edu.ar/"
+     "link_oficial": "https://www.insutec.edu.ar/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Comprensión y Producción de Textos",
+        "Problemática Sociocultural y del Conocimiento",
+        "Inglés Técnico",
+        "TIC",
+        "Matemática",
+        "Física",
+        "Geología General",
+        "Química General",
+        "Mineralogía y Petrología",
+        "Topografía Aplicada",
+        "Introducción a las Operaciones Mineras",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Inglés Comunicativo",
+        "Tecnología de la Información Aplicada a la Minería",
+        "Cartografía y Sensores Remotos",
+        "Organización y Legislación Minera",
+        "Prospección y Exploración Minera",
+        "Ética Profesional",
+        "Geología de Yacimientos",
+        "Química Aplicada",
+        "Perforaciones y Voladuras",
+        "Control y Gestión de Operaciones Mineras",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Máquinas y Equipos de Construcciones Mineras",
+        "Métodos de Explotación de Minas y Canteras",
+        "Análisis de Mena",
+        "Impacto Ambiental Minero",
+        "Tratamiento de Minerales",
+        "Higiene y Seguridad Minera",
+        "Gestión de Emprendimientos Mineros",
+        "Planificación, Mantenimiento y Servicios",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.insutec.edu.ar/mineria/plan-de-estudio/"
     },
     {
      "id": 2802,
@@ -30,7 +80,44 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "INSUTEC",
-     "link_oficial": "https://www.insutec.edu.ar/"
+     "link_oficial": "https://www.insutec.edu.ar/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Módulo 1: Comunicación en la industria",
+        "Módulo 2: Organización de empresas hidrocarburíferas",
+        "Módulo 3: Reconocimiento geológico",
+        "Módulo 4: Manejo, mantenimiento y reparación de máquinas y",
+        "equipos de Prospección y Exploración",
+        "Módulo 5: Aplicación de Métodos de exploración",
+        "Módulo 6: La industria hidrocarburífera en el marco del desarrollo sostenible"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Módulo 7: Análisis de la Geología de yacimientos petróleo y gas",
+        "Módulo 8: Manejo, mantenimiento y reparación de máquinas,",
+        "de equipos de Extracción y equipos de torre",
+        "Módulo 9: Aplicación de Métodos de explotación",
+        "Módulo 10: Manejo de métodos de Producción de Hidrocarburos",
+        "Módulo 11: Procesamiento de Hidrocarburos y aguas industriales",
+        "Módulo 12: Gestión Empresarial"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Módulo 13: Gestión de Proyectos de empresas hidrocarburíferas",
+        "Módulo 14: Aplicación de Métodos de mejoramiento",
+        "Módulo 15: Sistematización y control en la Industria petrolera",
+        "Módulo 16: Energías limpias y su relación con la industria",
+        "hidrocarburífera"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.insutec.edu.ar/petroleo/plan-de-estudios/"
     },
     {
      "id": 2803,
@@ -40,7 +127,36 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "INSUTEC",
-     "link_oficial": "https://www.insutec.edu.ar/"
+     "link_oficial": "https://www.insutec.edu.ar/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Sistemas Constructivos y Materiales Sustentables",
+        "Instalaciones y Climatización Sustentables",
+        "Diseño Bioambiental y Eficiencia Energética",
+        "Energías Renovables Aplicadas a la Construcción",
+        "BIM y Modelado Digital Aplicado",
+        "Documentación BIM e Integración Documental",
+        "Certificación y Ética Ambiental",
+        "Gestión de Obra Sustentable y Economía Circular",
+        "Práctica Profesionalizante I",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Iluminación, Domótica y Automatización Sustentable",
+        "Construcción Modular y Prefabricación Sustentable",
+        "Gestión Técnica y Normativa de Proyectos Sustentables",
+        "Análisis de Impacto Ambiental y Ciclo de Vida de Materiales (LCA)",
+        "Proyecto Integrador de Construcción Sustentable",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.insutec.edu.ar/nueva-carrera-tecnicactura-superior-en-construcciones-sustentables/"
     },
     {
      "id": 2804,
@@ -50,7 +166,44 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "INSUTEC",
-     "link_oficial": "https://www.insutec.edu.ar/"
+     "link_oficial": "https://www.insutec.edu.ar/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Representación Gráfica de Componentes de Máquinas I",
+        "Representación Gráfica de Componentes de Máquinas II",
+        "Insumos y Materiales",
+        "Logística de Materiales e Insumos de Fabricación",
+        "Proceso de Fabricación",
+        "Oficina Técnica, Gestión de Documentación y Resguardo de la Información"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Soldadura I",
+        "Soldadura II",
+        "Maquinarias y Métodos de Fabricación I",
+        "Maquinarias y Métodos de Fabricación II",
+        "Ensayo de Materiales y Productos Metalmecánicos I",
+        "Ensayo de Materiales y Productos Metalmecánicos II",
+        "Programación de la Producción"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Diseño de Partes Principales de una Máquina",
+        "Dimensionamiento de Componentes Mecánicos",
+        "Posventa, Despacho y Transporte de Productos Terminados",
+        "Gestión de Emprendimientos",
+        "Elaboración de Proyectos Productivos",
+        "Resolución 723 – DGE – 26"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.insutec.edu.ar/metalmecanica/"
     },
     {
      "id": 2805,
@@ -60,7 +213,49 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "INSUTEC",
-     "link_oficial": "https://www.insutec.edu.ar/"
+     "link_oficial": "https://www.insutec.edu.ar/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Generación Solar Fotovoltaica",
+        "Instalaciones Eléctricas",
+        "Generación Solar Fototérmica",
+        "Instalaciones Térmicas",
+        "Gestión de Emprendimientos",
+        "Sistemas de Comunicación",
+        "Certificaciones intermedias",
+        "Instalador de Sistemas Solares Fotovoltaicos",
+        "Instalador de Sistemas Solares Térmicos para Agua Caliente Sanitaria",
+        "Instalador de Sistemas Eléctricos de Energías Renovables"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Generación Eólica",
+        "Generación Hidráulica",
+        "Generación Biomasa",
+        "Generación Geotérmica",
+        "Almacenamiento, Transformación y Transporte",
+        "Gestión de la Energía",
+        "Mantenimiento de Sistemas Renovables"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Negocio Energético",
+        "Sistemas de Control Automático",
+        "Formación y Orientación Laboral",
+        "Diseño de Centrales de Energías Renovables",
+        "Proyecto de Generación",
+        "Energías Renovables y su Impacto",
+        "innovadores"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.insutec.edu.ar/tecnicatura-superior-en-energias-renovables-en-mendoza/"
     },
     {
      "id": 2806,
@@ -70,7 +265,55 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "INSUTEC",
-     "link_oficial": "https://www.insutec.edu.ar/"
+     "link_oficial": "https://www.insutec.edu.ar/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Alfabetización Académica",
+        "Tecnologías Digitales Aplicadas",
+        "Física",
+        "Inglés Técnico",
+        "Representación Técnica de Planos",
+        "Higiene Laboral I",
+        "Seguridad Laboral I",
+        "Liderazgo y Habilidades Interpersonales",
+        "Introducción a Prevención 4.0",
+        "Química",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Estadística Aplicada",
+        "Ambiente y Sostenibilidad",
+        "Derecho y Legislación Aplicada a la Higiene y Seguridad Laboral",
+        "Sistemas de Gestión",
+        "Medicina del Trabajo y Toxicología",
+        "Higiene Laboral II",
+        "Seguridad Laboral II",
+        "Gestión de Emprendimientos",
+        "Derecho Ambiental",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Evaluación de Impacto Ambiental",
+        "Seguridad contra Incendios",
+        "Ergonomía",
+        "Higiene y Seguridad en Minería y Petróleo",
+        "Higiene y Seguridad Agropecuaria",
+        "Higiene y Seguridad en la Industria de la Construcción",
+        "Higiene y Seguridad en Servicios TIC, Economía del Conocimiento e Industria 4.0",
+        "Práctica Profesionalizante III",
+        "Resolución 396-DGE-2025"
+       ]
+      }
+     ],
+     "plan_fuente": "https://www.insutec.edu.ar/higiene/plan-de-estudios/"
     }
    ],
    "departamento": "Capital"

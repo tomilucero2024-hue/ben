@@ -1,79 +1,6 @@
 {
     "instituciones": [
         {
-            "id": 401,
-            "nombre": "ITU - Instituto Tecnológico Universitario (UNCuyo)",
-            "nivel": "universitario (pregrado)",
-            "gestion": "pública",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "Predio UNCUYO, Ciudad de Mendoza"
-            },
-            "carreras": [
-                {
-                    "id": 40101,
-                    "nombre_carrera": "Técnico Universitario en Higiene y Seguridad en el Trabajo",
-                    "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
-                    "modalidad": "Presencial (lunes a viernes 18 a 23hs)",
-                    "facultad": "ITU-UNCuyo",
-                    "link_oficial": "https://itu.uncuyo.edu.ar/estudios/titulo/tecnico-universitario-en-higiene-y-seguridad-laboral",
-                    "plan_fuente": "https://itu.uncuyo.edu.ar/estudios/titulo/tecnico-universitario-en-higiene-y-seguridad-laboral",
-                    "plan_estudio": [
-                        {
-                            "anio": "1º año",
-                            "materias": [
-                                "Higiene Industrial",
-                                "Análisis matemático",
-                                "Física",
-                                "Química",
-                                "Desarrollo del Pensamiento y Desempeño de Roles",
-                                "Técnicas de Representación Gráfica",
-                                "Comprensión y Producción de Textos",
-                                "Estadística Aplicada",
-                                "Inglés",
-                                "Informática",
-                                "Taller Integrador"
-                            ]
-                        },
-                        {
-                            "anio": "2º año",
-                            "materias": [
-                                "Higiene Industrial Aplicada",
-                                "Industria y Ambiente",
-                                "Sociología del Trabajo",
-                                "Psicología Laboral",
-                                "Ergonomía",
-                                "Relaciones Humanas",
-                                "Inducción a la Seguridad",
-                                "Patología Laboral",
-                                "Laboratorio de Práctica"
-                            ]
-                        },
-                        {
-                            "anio": "3º año",
-                            "materias": [
-                                "Servicios Industriales",
-                                "Seguridad en el Trabajo",
-                                "Estrategias de Capacitación en el Trabajo",
-                                "Legislación Laboral",
-                                "Medicina del Trabajo y Primeros Auxilios",
-                                "Organización de Empresas",
-                                "Seguridad vial",
-                                "Taller de Producción de Informes",
-                                "Optativo I",
-                                "Optativo II",
-                                "Electivo",
-                                "Práctica Profesionalizante"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "id": 406,
             "nombre": "INSUTEC (Instituto Superior de Educación Tecnológica)",
             "nivel": "terciario",
@@ -92,7 +19,55 @@
                     "duracion": "3 años",
                     "modalidad": "Presencial",
                     "facultad": "INSUTEC",
-                    "link_oficial": "https://expoeducativa.mendoza.edu.ar/carreras/767/tecnicatura-superior-en-higiene-y-seguridad-laboral-con-orientaci%C3%B3n-en-calidad-y-medio-ambiente"
+                    "link_oficial": "https://expoeducativa.mendoza.edu.ar/carreras/767/tecnicatura-superior-en-higiene-y-seguridad-laboral-con-orientaci%C3%B3n-en-calidad-y-medio-ambiente",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Alfabetización Académica",
+                                "Tecnologías Digitales Aplicadas",
+                                "Física",
+                                "Inglés Técnico",
+                                "Representación Técnica de Planos",
+                                "Higiene Laboral I",
+                                "Seguridad Laboral I",
+                                "Liderazgo y Habilidades Interpersonales",
+                                "Introducción a Prevención 4.0",
+                                "Química",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Estadística Aplicada",
+                                "Ambiente y Sostenibilidad",
+                                "Derecho y Legislación Aplicada a la Higiene y Seguridad Laboral",
+                                "Sistemas de Gestión",
+                                "Medicina del Trabajo y Toxicología",
+                                "Higiene Laboral II",
+                                "Seguridad Laboral II",
+                                "Gestión de Emprendimientos",
+                                "Derecho Ambiental",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Evaluación de Impacto Ambiental",
+                                "Seguridad contra Incendios",
+                                "Ergonomía",
+                                "Higiene y Seguridad en Minería y Petróleo",
+                                "Higiene y Seguridad Agropecuaria",
+                                "Higiene y Seguridad en la Industria de la Construcción",
+                                "Higiene y Seguridad en Servicios TIC, Economía del Conocimiento e Industria 4.0",
+                                "Práctica Profesionalizante III",
+                                "Resolución 396-DGE-2025"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.insutec.edu.ar/higiene/plan-de-estudios/"
                 }
             ]
         }

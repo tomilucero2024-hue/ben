@@ -1,29 +1,101 @@
 {
- "instituciones": [
-  {
-   "id": 26,
-   "nombre": "Escuela Regional Cuyo de Cine y Video (IES 9-017)",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "A confirmar",
-    "email": "contacto@escueladecine9017.edu.ar",
-    "direccion": "Mendoza"
-   },
-   "carreras": [
-    {
-     "id": 2601,
-     "nombre_carrera": "Técnico Superior en Cine, Video y Televisión",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "Escuela de Cine (IES 9-017)",
-     "link_oficial": "https://escueladecine9017-infd.mendoza.edu.ar/sitio/catalogo/plan-de-estudio/"
-    }
-   ],
-   "departamento": "Capital"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 26,
+            "nombre": "Escuela Regional Cuyo de Cine y Video (IES 9-017)",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "contacto@escueladecine9017.edu.ar",
+                "direccion": "Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 2601,
+                    "nombre_carrera": "Técnico Superior en Cine, Video y Televisión",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "Escuela de Cine (IES 9-017)",
+                    "link_oficial": "https://escueladecine9017-infd.mendoza.edu.ar/sitio/catalogo/plan-de-estudio/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer Año",
+                            "materias": [
+                                "Lenguaje Audiovisual",
+                                "Guion I",
+                                "Realización I",
+                                "Producción I",
+                                "Teoría y Técnica del Montaje",
+                                "Sonido I",
+                                "Tecnología Audiovisual I",
+                                "Iluminación y Cámara",
+                                "Dirección de Actores ante Cámaras I",
+                                "Historia del Arte",
+                                "TIC",
+                                "Práctica Profesionalizante I (Tutoría en Campo)"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo Año",
+                            "materias": [
+                                "Guion II",
+                                "Realización II",
+                                "Producción II",
+                                "Dirección de Fotografía",
+                                "Historia del Lenguaje Cinematográfico",
+                                "Montaje",
+                                "Sonido II",
+                                "Tecnología Audiovisual II",
+                                "Dirección de Actores ante Cámaras II",
+                                "Dirección de Arte y Ambientación",
+                                "Maquillaje y Vestuario",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer Año",
+                            "materias": [
+                                "Guion III",
+                                "Realización III",
+                                "Inglés Técnico",
+                                "Realización de TV",
+                                "Producción de TV",
+                                "Teoría del Cine y la TV",
+                                "Dirección de Arte",
+                                "Escenografía y Utilería",
+                                "Maquillaje y Vestuario",
+                                "Semiótica",
+                                "Estética",
+                                "Problemática Socio Cultural y el Contexto",
+                                "Animación I",
+                                "Práctica Profesionalizante III"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto Año",
+                            "materias": [
+                                "Producción III",
+                                "Tutoría de Guion",
+                                "Tutoría de Dirección",
+                                "Postproducción de Imagen",
+                                "Animación II",
+                                "Géneros Visuales Contemporáneos",
+                                "Historia del Cine Argentino y Latinoamericano",
+                                "Historia de la Cultura Argentina",
+                                "Postproducción de Sonido",
+                                "Taller de Dirección de Actores",
+                                "Práctica Profesionalizante Final"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://escueladecine9017-infd.mendoza.edu.ar/sitio/catalogo/plan-de-estudio/"
+                }
+            ],
+            "departamento": "Capital"
+        }
+    ]
 }

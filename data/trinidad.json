@@ -20,7 +20,65 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto Santísima Trinidad",
-     "link_oficial": "https://santisimatrinidad.edu.ar/pce/"
+     "link_oficial": "https://santisimatrinidad.edu.ar/pce/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Comprensión y Producción de Textos Académicos",
+        "Pensamiento Filosófico",
+        "Contextos Educativos",
+        "Psicología General",
+        "Pedagogía",
+        "Didáctica General",
+        "Sistema Educativo",
+        "Metodología de la Investigación",
+        "Formación Práctica Profesional I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Sujeto del Aprendizaje I",
+        "Sujeto del Aprendizaje II",
+        "Gestión de la Enseñanza",
+        "Psicología de la Educación",
+        "Gestión de Proyectos",
+        "Neuroeducación",
+        "Educación Emocional",
+        "Unidad de Formación Complementaria General",
+        "Formación Práctica Profesional II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Tecno Aprendizajes",
+        "Diseño y Gestión de la Evaluación",
+        "Gestión y Administración Escolar",
+        "Epistemología",
+        "Política Educativa",
+        "Orientación y Asesoría Educativa",
+        "Didáctica de la Educación Superior",
+        "Educación para la Diversidad",
+        "Formación Práctica Profesional III"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Gestión De La Educación Digital",
+        "Neurodiversidad y Discapacidad",
+        "Planeamiento Educativo",
+        "Políticas Educativas Globales",
+        "UDJ Historia de la Educación de Mendoza",
+        "Unidad de Formación Complementaria Específica",
+        "Educación Sexual Integral",
+        "Formación Práctica Profesional IV"
+       ]
+      }
+     ],
+     "plan_fuente": "https://santisimatrinidad.edu.ar/pce/"
     },
     {
      "id": 4102,
@@ -30,7 +88,71 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto Santísima Trinidad",
-     "link_oficial": "https://santisimatrinidad.edu.ar/pef/"
+     "link_oficial": "https://santisimatrinidad.edu.ar/pef/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Prácticas de Lectura, Escritura y Oralidad",
+        "TIC",
+        "Pedagogía",
+        "Juego motor",
+        "Historia Política, Social. Económica y Cultural de",
+        "América Latina",
+        "Didáctica General",
+        "Fundamentos de la Motricidad",
+        "Anatomía Funcional",
+        "Deporte Psicomotriz I",
+        "Deporte Sociomotriz I",
+        "Expresión y Comunicación Motriz",
+        "Práctica Profesional Docente I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Historia y Política de la Educación Argentina",
+        "Sujeto de las Acciones Motrices y su Aprendizaje",
+        "Instituciones Educativas",
+        "Sujeto de las Acciones Motrices y su Contexto",
+        "Psicología Educacional",
+        "Fisiología de la Actividad Física",
+        "Vida en la Naturaleza y Acciones Motrices",
+        "Deporte Psicomotriz II",
+        "Deporte Sociomotriz II",
+        "Práctica Profesional Docente II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Sociología de la Educación",
+        "Didáctica de la Educación Física para Nivel Inicial Y Primario",
+        "Filosofía",
+        "Didáctica de la Educación Física para Nivel Secundario",
+        "Deporte Espacio Separado",
+        "Deporte Espacio Común",
+        "Actividad Física para la Salud",
+        "Actividad Física para la Socio Recreación",
+        "Práctica Profesional Docente III"
+       ]
+      },
+      {
+       "anio": "4º año",
+       "materias": [
+        "Ética Profesional y Práctica Docente",
+        "Dirección Técnica de Gimnasios",
+        "TICs Orientada",
+        "Opción Institucional I",
+        "Gestión de Proyectos de Activ. Física y Deportiva",
+        "Opción Institucional II",
+        "Educación Física para la Atención de Necesidades",
+        "Educativas Especiales",
+        "Práctica Profesional Docente IV"
+       ]
+      }
+     ],
+     "plan_fuente": "https://santisimatrinidad.edu.ar/pef/"
     },
     {
      "id": 4103,
@@ -40,7 +162,59 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto Santísima Trinidad",
-     "link_oficial": "https://santisimatrinidad.edu.ar/tpe/"
+     "link_oficial": "https://santisimatrinidad.edu.ar/tpe/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Inglés",
+        "Comprensión y producción de textos",
+        "Herramientas informáticas",
+        "Abordaje del Psiquismo Humano",
+        "Desarrollo de habilidades cognitivas",
+        "Comunicación interpersonal y animación de grupo",
+        "Problemática sociocultural y del conocimiento",
+        "Informática educativa",
+        "El púber y el adolescente",
+        "Comportamiento creativo",
+        "Gestión y administración institucional"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Práctica de integración I",
+        "Herramientas matemáticas y estadísticas",
+        "Aprendizaje",
+        "El sistema educativo",
+        "Escuela y contexto",
+        "Orientación",
+        "Psicología del joven adulto",
+        "Convivencia",
+        "Problemas de Aprendizaje en la Educación",
+        "Preceptoría",
+        "Estrategias y procesos de orientación en la institución I",
+        "Emprendimientos participativos",
+        "Mediación pedagógica"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Información y control en la institución escolar",
+        "Técnicas de expresión dramática",
+        "Estrategias y procesos de orientación en la institución II",
+        "Recreación y tiempo libre",
+        "Práctica de integración II",
+        "Gestión de la calidad",
+        "Ética profesional",
+        "Salud y primeros auxilios",
+        "Los jóvenes y los medios",
+        "Práctica profesional"
+       ]
+      }
+     ],
+     "plan_fuente": "https://santisimatrinidad.edu.ar/tpe/"
     },
     {
      "id": 4104,

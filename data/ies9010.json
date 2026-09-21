@@ -1,119 +1,671 @@
 {
- "instituciones": [
-  {
-   "id": 19,
-   "nombre": "IES 9-010 Rosario Vera Peñaloza",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "02622-451458",
-    "email": "ies9010@infd.edu.ar",
-    "direccion": "Ruta Nacional 40 Km 3193, Eugenio Bustos, San Carlos"
-   },
-   "carreras": [
+  "instituciones": [
     {
-     "id": 1900,
-     "nombre_carrera": "Profesorado de Artes Visuales",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-010 Rosario Vera Peñaloza",
-     "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/"
-    },
-    {
-     "id": 1901,
-     "nombre_carrera": "Profesorado de Educacion Inicial",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-010 Rosario Vera Peñaloza",
-     "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/"
-    },
-    {
-     "id": 1902,
-     "nombre_carrera": "Profesorado de Educacion Primaria",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-010 Rosario Vera Peñaloza",
-     "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
-    },
-    {
-     "id": 1903,
-     "nombre_carrera": "Profesorado de Ingles",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-010 Rosario Vera Peñaloza",
-     "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-ingles/"
-    },
-    {
-     "id": 1904,
-     "nombre_carrera": "Profesorado de Educacion Secundaria en Lengua y Literatura",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-010 Rosario Vera Peñaloza",
-     "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/"
-    },
-    {
-     "id": 1905,
-     "nombre_carrera": "Profesorado de Musica",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-010 Rosario Vera Peñaloza",
-     "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-musica/"
-    },
-    {
-     "id": 1906,
-     "nombre_carrera": "Tecnicatura Superior Agronomica",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-010 Rosario Vera Peñaloza",
-     "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/tecnicatura-superior-agronomica/"
-    },
-    {
-     "id": 1907,
-     "nombre_carrera": "Tecnicatura Superior en Computacion y Redes",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-010 Rosario Vera Peñaloza",
-     "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-computacion-y-redes-2/"
-    },
-    {
-     "id": 1908,
-     "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-010 Rosario Vera Peñaloza",
-     "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-desarrollo-de-software/"
-    },
-    {
-     "id": 1909,
-     "nombre_carrera": "Tecnicatura Superior en Gestion de Recursos Humanos",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-010 Rosario Vera Peñaloza",
-     "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gestion-de-recursos-humanos/"
+      "id": 19,
+      "nombre": "IES 9-010 Rosario Vera Peñaloza",
+      "nivel": "terciario",
+      "gestion": "pública",
+      "provincia": "Mendoza",
+      "contacto": {
+        "telefono": "02622-451458",
+        "email": "ies9010@infd.edu.ar",
+        "direccion": "Ruta Nacional 40 Km 3193, Eugenio Bustos, San Carlos"
+      },
+      "carreras": [
+        {
+          "id": 1900,
+          "nombre_carrera": "Profesorado de Artes Visuales",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Dibujo I",
+                "Bidimensión I",
+                "Tridimensión I",
+                "Lenguaje de las Artes Visuales I",
+                "Historia de las Artes Visuales I",
+                "Pedagogía",
+                "Comprensión y Producción de Textos Académicos",
+                "Formación Práctica Profesional I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Dibujo II",
+                "Bidimensión II",
+                "Tridimensión II",
+                "Lenguaje de las Artes Visuales II",
+                "Historia de las Artes Visuales II",
+                "Didáctica General",
+                "Sujeto de la Educación I",
+                "Didáctica de las Artes Visuales",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Formación Práctica Profesional II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Dibujo III",
+                "Producción Artística I: Bidimensión Grabado - Pintura",
+                "Producción Artística I: Tridimensión: Escultura - Cerámica",
+                "Lenguaje de las Artes Visuales III",
+                "Historia de las Artes Visuales III",
+                "Educación para la Diversidad",
+                "Didáctica de las Artes Visuales II",
+                "Sujeto de la Educación II",
+                "Gestión y Evaluación de los Aprendizajes",
+                "Psicología de la Educación",
+                "Formación Práctica Profesional III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Producción Artística II: Cerámica - Escultura - Grabado o Dibujo",
+                "Artes Visuales y Producción Audiovisual",
+                "Historia de las Artes Visuales IV",
+                "Teoría del Arte",
+                "Producción Artística Contemporánea",
+                "Formación Complementaria Específica",
+                "Educación y Tecnologías Digitales",
+                "Educación Sexual Integral",
+                "Formación Práctica Profesional IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1901,
+          "nombre_carrera": "Profesorado de Educacion Inicial",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Comprensión y Producción de Textos Académicos",
+                "Pedagogía",
+                "Centralidad del Juego",
+                "Juego y Producción de Objetos Lúdicos",
+                "Lenguajes Artísticos Expresivos - Teatro",
+                "Lenguajes Artísticos Expresivos - Música",
+                "Práctica Profesional Docente"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Instituciones Educativas",
+                "Psicología Educacional",
+                "Educación y Atención Temprana al Desarrollo Infantil",
+                "Didáctica del Jardín Maternal",
+                "Prácticas Lingüísticas en Educación Inicial",
+                "Lenguajes Artísticos Expresivos - Artes Visuales",
+                "Educación Matemática Temprana e Inicial I",
+                "Sujeto de la Educación",
+                "Práctica Profesional Docente"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyectos de Intervención Socioeducativa",
+                "Educación en la Diversidad",
+                "Literatura Infantil",
+                "Didáctica de Jardín de Infantes",
+                "Educación Matemática Inicial II",
+                "Alfabetización Temprana e Inicial",
+                "Didáctica del Ambiente Natural",
+                "Didáctica del Ambiente Social",
+                "Motricidad en Jardín Maternal y en Jardín de Infantes",
+                "Práctica Profesional Docente"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación Sexual Integral (ESI)",
+                "Educación y Tecnologías Digitales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Formación Complementaria General",
+                "Problemáticas de la Educación Inicial",
+                "Salud y Cultura del Cuidado",
+                "Formación Ética y Ciudadana y su Didáctica",
+                "Formación Complementaria Específica",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1902,
+          "nombre_carrera": "Profesorado de Educacion Primaria",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Comprensión y Producción de Textos Académicos",
+                "Sistema Educativo",
+                "Pedagogía",
+                "Numeración",
+                "Lengua y Literatura Infantil y Juvenil",
+                "Educación Artística",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Didáctica",
+                "Psicología Educacional",
+                "Instituciones Educativas",
+                "Sujetos de la Educación",
+                "Números Racionales y su didáctica",
+                "Ciencias Sociales y su didáctica I",
+                "Ciencias Naturales y su didáctica I",
+                "Lengua y su didáctica",
+                "Literatura infantil y juvenil y su didáctica",
+                "Espacio, Geometría y su Didáctica",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyectos de Intervención Estratégica",
+                "Educación en la Diversidad",
+                "Educación Tecnológica",
+                "Medida y su didáctica",
+                "Ciencias Naturales y su didáctica II",
+                "Ciencias Sociales y su didáctica II",
+                "Alfabetización",
+                "Formación Ética y Ciudadana y su didáctica",
+                "Álgebra, Funciones y su didáctica",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación Sexual Integral",
+                "Educación y Tecnologías Digitales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Formación Complementaria General",
+                "Didáctica de la Lengua y de la Literatura Infantil y Juvenil",
+                "Didáctica de la Matemática",
+                "Didáctica de las Ciencias Sociales",
+                "Didáctica de las Ciencias Naturales",
+                "Formación Complementaria II",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1903,
+          "nombre_carrera": "Profesorado de Ingles",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-ingles/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Lengua Inglesa I",
+                "Gramática Inglesa I",
+                "Fonética y Fonología Inglesa I",
+                "Prácticas de Lengua Inglesa",
+                "Comprensión y Producción de Textos Académicos",
+                "Práctica Profesional Docente I",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Pedagogía",
+                "Prácticas de Gramática Inglesa"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Lengua Inglesa II",
+                "Gramática Inglesa II",
+                "Fonética y Fonología Inglesa II",
+                "Didáctica del Inglés I",
+                "Práctica Profesional Docente II",
+                "Sujetos de la Educación I",
+                "Didáctica",
+                "Instituciones Educativas",
+                "Psicología Educacional",
+                "Sujeto de la Educación II",
+                "Prácticas de Fonética y Fonología Inglesa"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Lengua Inglesa III",
+                "Gramática Inglesa III",
+                "Fonética y Fonología Inglesa III",
+                "Didáctica del Inglés II",
+                "Práctica Profesional Docente III",
+                "Cultura y Literatura Británica I",
+                "Gestión y Evaluación de los Aprendizajes",
+                "Cultura y Literatura Británica II",
+                "Proyectos de Intervención Socioeducativa",
+                "Educación en la Diversidad"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Lengua Inglesa IV",
+                "Fonética y Fonología Inglesa IV",
+                "Cultura y Literatura Norteamericana",
+                "Educación Sexual Integral",
+                "Educación y Tecnologías Digitales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Formación Complementaria General",
+                "Formación Complementaria Específica",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1904,
+          "nombre_carrera": "Profesorado de Educacion Secundaria en Lengua y Literatura",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Pedagogía",
+                "Comprensión y Producción de Textos Académicos",
+                "Literatura Universal I",
+                "Morfología y Semántica Léxica",
+                "Literatura y Cultura Grecolatina",
+                "Fundamentos de la Lengua",
+                "Fundamentos de la Literatura",
+                "Práctica Profesional Docente I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Instituciones Educativas",
+                "Didáctica",
+                "Psicología Educacional",
+                "Sujetos de la Educación",
+                "Literatura Española",
+                "Sintaxis y Semántica Proposicional",
+                "Lingüística del texto y Análisis del Discurso I",
+                "Literatura Universal II",
+                "Literatura para jóvenes",
+                "Fonética, Fonología y Grafemática",
+                "Lingüística del texto y Análisis del Discurso II",
+                "Literatura Latinoamericana I",
+                "Práctica Profesional Docente II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Gestión y Evaluación de los Aprendizajes",
+                "Proyecto de Intervención Socioeducativa",
+                "Educación en la diversidad",
+                "Literatura Latinoamericana II",
+                "Alfabetización",
+                "Didáctica de la Literatura",
+                "Práctica Profesional Docente III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Educación Sexual Integral",
+                "Educación y Tecnologías Digitales",
+                "Historia y Patrimonio Cultural de Mendoza",
+                "Formación Complementaria General",
+                "Filología",
+                "Literatura Argentina III",
+                "Teoría y Crítica Literaria",
+                "Formación Complementaria Específica",
+                "Práctica Profesional Docente IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1905,
+          "nombre_carrera": "Profesorado de Musica",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/profesorado-de-musica/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Lenguaje Musical I",
+                "Canto Individual y Grupal I",
+                "Instrumento Individual Armónico I",
+                "FCE",
+                "Fundamentos de la Percepción y la Producción Sonora",
+                "Pedagogía",
+                "Comprensión y Producción de Textos Académicos",
+                "Formación Práctica Profesional I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Lenguaje Musical II",
+                "Canto Individual y Grupal II",
+                "Instrumento Individual Armónico II",
+                "Historia de la Música I",
+                "Sujeto del Aprendizaje I",
+                "Didáctica Específica I",
+                "Didáctica General",
+                "Pensamiento Filosófico",
+                "Sistema Educativo",
+                "Formación Práctica Profesional II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Lenguaje Musical III",
+                "Canto y Dirección Coral I",
+                "Instrumento Individual Armónico III",
+                "Didáctica Específica II",
+                "Historia de la Música II",
+                "Arreglos Musicales",
+                "Ensamble I",
+                "Educación para la Diversidad",
+                "Sujeto de Aprendizaje II",
+                "Gestión y Evaluación de los Aprendizajes",
+                "Psicología de la Educación",
+                "Formación Práctica Profesional III"
+              ]
+            },
+            {
+              "anio": "4º año",
+              "materias": [
+                "Lenguaje Musical IV",
+                "Canto y Dirección Coral II",
+                "Instrumento Individual Armónico IV",
+                "Ensamble II",
+                "Lenguajes Artísticos",
+                "Educación y Tecnologías Digitales",
+                "ESI",
+                "Formación Práctica Profesional IV"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1906,
+          "nombre_carrera": "Tecnicatura Superior Agronomica",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/tecnicatura-superior-agronomica/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Módulo 1. Producción Vitícola",
+                "Módulo 2 Producción Forestal",
+                "Módulo 3 Producción Hortícola",
+                "Módulo 4 Producción Porcina",
+                "Módulo 5 Producción Bovina",
+                "Módulo 6 Emprendedorismo",
+                "Módulo 7 Gestión de Instalaciones y Maquinarias Agropecuarias",
+                "Módulo 8 Ecofisiología de los Cultivos",
+                "Módulo 9 Manejo Ecológico del Suelo"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Módulo 10 Manejo Nutricional Animal",
+                "Módulo 11 Territorio y Desarrollo",
+                "Módulo 12 Manejo Reproductivo Animal",
+                "Módulo 13 Innovación y Gestión Agropecuaria",
+                "Módulo 14 Manejo Integrado de Plagas y Enfermedades",
+                "Módulo 15 Manejo de Riego y Drenajes",
+                "Módulo 16 Operaciones Silvícolas",
+                "Módulo 17 Manejo Sanitario Animal"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Módulo 18 Elaboración de Proyectos Productivos",
+                "Módulo 19 Manejo de Cosecha y Poscosecha",
+                "Módulo 20 Conservas de Frutas y Hortalizas",
+                "Módulo 21 Gestión de Desarrollo Sustentable",
+                "Módulo 22 Gestión de Microemprendimientos",
+                "Módulo 23 Gestión Forestal",
+                "Módulo 24 Operaciones de la Madera"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1907,
+          "nombre_carrera": "Tecnicatura Superior en Computacion y Redes",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-computacion-y-redes-2/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Programación I",
+                "Matemática Aplicada",
+                "Lógica Computacional",
+                "Inglés Técnico I",
+                "Alfabetización Académica",
+                "Seminario Nuevas Tecnologías",
+                "Arquitectura de Dispositivos",
+                "Sistemas Operativos I",
+                "Base de Datos I",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Mantenimiento de Instalaciones Informáticas",
+                "Higiene y Seguridad Informática",
+                "Matemática Aplicada",
+                "Administración de Servidores",
+                "Inglés Técnico II",
+                "Comunicación y Redes",
+                "Taller de Instalación y Certificación de Redes",
+                "Criptografía Aplicada",
+                "Automatización de Servicios Informáticos",
+                "Electrónica Aplicada",
+                "Tecnologías IoT",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Tratamiento de Incidentes de Continuidad de Negocio",
+                "Videovigilancia y Control de Accesos",
+                "Ciberseguridad",
+                "Inglés Técnico III",
+                "Legislación Informática y Ética Profesional",
+                "Auditoría de Seguridad Informática",
+                "Investigación Digital y Cibercrimen",
+                "Forense Digital",
+                "Ethical Hacking",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1908,
+          "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-desarrollo-de-software/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Programación I",
+                "Matemática Aplicada",
+                "Lógica Computacional",
+                "Inglés Técnico I",
+                "Alfabetización Académica",
+                "Seminario Nuevas Tecnologías",
+                "Arquitectura de Dispositivos",
+                "Sistemas Operativos I",
+                "Base de Datos I",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Programación II",
+                "Matemática Discreta",
+                "Análisis Matemático",
+                "Comunicación y Redes",
+                "Inglés Técnico II",
+                "Modelado de Software",
+                "Sistemas Operativos",
+                "Base de Datos II",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Programación III",
+                "Arquitectura y Diseño de Interfaces: UI y UX",
+                "Auditoría y Calidad de Sistemas",
+                "Ciberseguridad",
+                "Inglés Técnico III",
+                "Legislación Informática y Ética Profesional",
+                "Estadística y Probabilidades para el Desarrollo de Software",
+                "Gestión de Proyectos de Software",
+                "Metodologías Ágiles",
+                "Base de Datos III",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1909,
+          "nombre_carrera": "Tecnicatura Superior en Gestion de Recursos Humanos",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "turno": "A confirmar",
+          "facultad": "IES 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gestion-de-recursos-humanos/",
+          "plan_estudio": [
+            {
+              "anio": "1º año",
+              "materias": [
+                "Introducción a la Administración de los Recursos Humanos",
+                "Inglés Técnico",
+                "Comunicación Efectiva",
+                "Herramientas Digitales para la Gestión",
+                "Introducción a la Economía",
+                "Matemática Aplicada",
+                "Estadística y Análisis de Datos",
+                "Introducción a la Legislación",
+                "Desarrollo Regional y Contexto",
+                "Práctica Profesionalizante I"
+              ]
+            },
+            {
+              "anio": "2º año",
+              "materias": [
+                "Psicología Organizacional",
+                "Derecho Laboral y de la Seguridad Social",
+                "Gestión del Talento Humano",
+                "Administración de Liquidaciones, Compensaciones y Beneficios",
+                "Relaciones Laborales y Negociación Sindical",
+                "Seguridad e Higiene Laboral",
+                "Diseño de Puestos",
+                "Tecnologías Aplicadas a Recursos Humanos",
+                "Comunicación y Liderazgo Organizacional",
+                "Ética y Responsabilidad Social Cooperativa",
+                "Capacitación y Desarrollo",
+                "Control de Gestión",
+                "Práctica Profesionalizante II"
+              ]
+            },
+            {
+              "anio": "3º año",
+              "materias": [
+                "Planeamiento Estratégico y Cultura Organizacional",
+                "Selección Avanzada y Marca Empleadora (Employer Branding)",
+                "Gestión del Cambio y Clima Organizacional",
+                "Analítica de Personas y Toma de Decisiones",
+                "Sustentabilidad, Diversidad e Inclusión",
+                "Innovación y Transformación Digital en Recursos Humanos",
+                "Empleabilidad y Vinculación Profesional",
+                "Práctica Profesionalizante III"
+              ]
+            }
+          ]
+        }
+      ],
+      "departamento": "San Carlos"
     }
-   ],
-   "departamento": "San Carlos"
-  }
- ]
+  ]
 }

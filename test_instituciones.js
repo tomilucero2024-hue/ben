@@ -79,8 +79,8 @@ ok(['tipo-universidades', 'tipo-ies', 'tipo-centros'].every(id => document.getEl
 // 3. Todos visibles a la vez: los conteos por grupo y el total de tarjetas.
 const grupos = [...document.querySelectorAll('#cardContainer .grupo-instituciones')];
 const conteos = grupos.map(g => g.querySelectorAll('.card.career-group-card').length);
-ok(JSON.stringify(conteos) === JSON.stringify([12, 39, 2]),
-    '12 universidades + 39 IES + 2 centros, todos renderizados de una');
+ok(JSON.stringify(conteos) === JSON.stringify([13, 38, 2]),
+    '13 universidades + 38 IES + 2 centros, todos renderizados de una');
 const totalTarjetas = document.querySelectorAll('#cardContainer .card.career-group-card').length;
 ok(totalTarjetas === 53, 'total de 53 tarjetas de institución en el DOM');
 

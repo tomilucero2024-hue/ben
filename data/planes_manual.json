@@ -1,0 +1,2038 @@
+{
+  "ies9030.json": {
+    "Profesorado de Educacion Inicial": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Pensamiento Filosófico",
+          "Sistema Educativo",
+          "Comprensión y Producción de Textos Académicos",
+          "Pedagogía",
+          "Centralidad del Juego",
+          "Juego y Producción de Objetos Lúdicos",
+          "Lenguajes Artísticos Expresivos - Teatro",
+          "Lenguajes Artísticos Expresivos - Música",
+          "Práctica Profesional Docente I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Didáctica",
+          "Instituciones Educativas",
+          "Psicología Educacional",
+          "Educación y Atención Temprana al Desarrollo Infantil",
+          "Didáctica de Jardín Maternal",
+          "Prácticas Lingüísticas en Educación Inicial",
+          "Lenguajes Artísticos Expresivos - Artes Visuales",
+          "Educación Matemática Temprana e Inicial I",
+          "Sujetos de la Educación",
+          "Práctica Profesional Docente II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Gestión y Evaluación de los Aprendizajes",
+          "Proyectos de Intervención Socioeducativa",
+          "Educación en la Diversidad",
+          "Literatura Infantil",
+          "Didáctica de Jardín de Infantes",
+          "Educación Matemática Inicial II",
+          "Alfabetización Temprana e Inicial",
+          "Didáctica del Ambiente Natural",
+          "Didáctica del Ambiente Social",
+          "Motricidad en JM y en JI",
+          "Práctica Profesional Docente III"
+        ]
+      },
+      {
+        "anio": "4º año",
+        "materias": [
+          "ESI",
+          "Educación y Tecnologías Digitales",
+          "Historia y Patrimonio Cultural de Mendoza",
+          "Problemáticas de la Ed. Inicial",
+          "Formación Complementaria Específica",
+          "Salud y Cultura del Cuidado",
+          "Formación Ética y Ciudadana y su Didáctica",
+          "Práctica Profesional Docente IV",
+          "Formación Complementaria General"
+        ]
+      }
+    ],
+    "Tecnicatura Construcciones": [
+      {
+        "anio": "Plan de estudios",
+        "materias": [
+          "Plan no publicado en texto; verificar en la página oficial"
+        ]
+      }
+    ]
+  },
+  "ies9029.json": {
+    "Tecnicatura Superior en Turismo": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Fundamentos Turismo 4.0",
+          "Turismo Digital",
+          "Inglés Técnico",
+          "Marketing Digital",
+          "Sostenibilidad Turística",
+          "Datos Turísticos",
+          "Experiencia Cliente",
+          "Portugués Turístico",
+          "Destinos Inteligentes",
+          "Práctica Profesionalizante I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Gestión Hotelera Inteligente",
+          "Ciberseguridad Turismo",
+          "Eventos Híbridos",
+          "Gastronomía Experiencial",
+          "CRM Turístico",
+          "Analítica Turística",
+          "Smart Cities Turismo",
+          "Marca Territorio",
+          "Plataformas OTA",
+          "Práctica Profesionalizante II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Turismo Regenerativo",
+          "Transformación Digital Turismo",
+          "IA en Personalización Viajes",
+          "Employer Branding Turístico",
+          "Innovación Destinos",
+          "Vinculación Comunidad",
+          "Práctica Profesionalizante III"
+        ]
+      }
+    ],
+    "Tecnicatura Superior en Conservación de la Naturaleza": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Comunicación, Comprensión y Producción de Textos",
+          "Primeros Auxilios",
+          "Arqueología Regional",
+          "Inglés Técnico",
+          "Problemática Sociocultural y del Trabajo",
+          "Historia Regional",
+          "Identificación de Flora y Fauna",
+          "Medio Físico",
+          "Autonomía en la Naturaleza",
+          "Práctica Profesionalizante I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Gestión y Liderazgo de Grupos",
+          "Educación Ambiental",
+          "Acondicionamiento Físico y Defensa Personal",
+          "Conservación del Patrimonio",
+          "Gestión de Proyectos de Conservación",
+          "Uso Público y Turístico",
+          "Manejo en el Medio Acuático",
+          "Relación con las Comunidades",
+          "Sistemas de Información Geográfica",
+          "Derecho Ambiental",
+          "Ecología",
+          "Práctica Profesionalizante II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Manejo de Especies y Ecosistemas",
+          "Ética y Procedimientos de Control",
+          "Manejo de Armas",
+          "Planificación de Espacios Naturales y Culturales",
+          "Logística y Mantenimiento de Unidades Operativas",
+          "Prevención y Control de Incendios",
+          "Biología de la Conservación",
+          "Autonomía en la Naturaleza",
+          "Práctica Profesionalizante III"
+        ]
+      }
+    ],
+    "Tecnicatura Superior en Enología": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Química General e Inorgánica",
+          "Matemática",
+          "Higiene y Seguridad",
+          "Alfabetización Académica",
+          "Producciones Primarias",
+          "Introducción a la Vinificación e Industrializaciones",
+          "Práctica I",
+          "Física",
+          "Microbiología General",
+          "Química Orgánica",
+          "Análisis Sensorial I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Química Analítica e Instrumental",
+          "Estadística",
+          "Operaciones Unitarias",
+          "Química Biológica",
+          "Tecnología y Análisis de Productos Oleícolas",
+          "Microbiología Aplicada",
+          "Análisis Sensorial II",
+          "Vinificaciones I",
+          "Práctica II",
+          "Gestión de Calidad",
+          "Bromatología y Toxicología",
+          "Emprendedorismo y Agronegocios"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Tecnología y Análisis de Productos Frutihortícolas",
+          "Legislación Vitivinícola y Alimentaria",
+          "Inglés Técnico",
+          "Análisis de Bebidas Víncias y no Víncias",
+          "Vinificaciones II",
+          "Gestión de Emprendimientos",
+          "Análisis Sensorial III",
+          "Práctica III",
+          "Ética Profesional",
+          "Vinificaciones Especiales",
+          "Desarrollo Sostenible"
+        ]
+      }
+    ],
+    "Tecnicatura Superior en Higiene y Ambiente": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Alfabetización Académica",
+          "Tecnologías Digitales Aplicadas",
+          "Física",
+          "Inglés Técnico",
+          "Representación Técnica de Planos",
+          "Higiene Laboral I",
+          "Seguridad Laboral I",
+          "Liderazgo y Habilidades Interpersonales",
+          "Práctica I",
+          "Introducción a la Prevención 4.0",
+          "Química"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Estadística Aplicada",
+          "Ambiente y Sostenibilidad",
+          "Derecho y Legislación Aplicada",
+          "Sistemas de Gestión",
+          "Medicina del Trabajo y Toxicología",
+          "Higiene Laboral II",
+          "Seguridad Laboral II",
+          "Práctica II",
+          "Gestión de Emprendimientos",
+          "Derecho Ambiental"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Evaluación de Impacto Ambiental",
+          "Seguridad contra Incendios",
+          "Ergonomía",
+          "Higiene y Seguridad en Minería y Petróleo",
+          "Higiene y Seguridad Agropecuaria",
+          "Higiene y Seguridad en Industria de la Construcción",
+          "Higiene y Seguridad en Servicios TIC",
+          "Economía del Conocimiento e Industria 4.0",
+          "Práctica III",
+          "Especialización a elección (Seguridad Industrial y Riesgos Tecnológicos / Calidad, Ambiente y Sostenibilidad / Construcción y Obras Civiles / Minería y Energía / Higiene Hospitalaria)"
+        ]
+      }
+    ],
+    "Profesorado de Geografía": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Introducción a la Historia y Geografía",
+          "Ciencias Política y Economía",
+          "Geografía Física I",
+          "Proceso Demográfico en el Tiempo y en el Espacio",
+          "Comprensión y Producción de Textos",
+          "Práctica Profesional I",
+          "Pedagogía"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Sujeto de la Educación",
+          "Epistemología de las Ciencias Sociales",
+          "Geografía de América I",
+          "Geografía Física II",
+          "Geografía Argentina I",
+          "Didáctica General",
+          "Pensamiento Filosófico",
+          "Práctica Profesional II",
+          "Didáctica de la Geografía I",
+          "Sistema Educativo"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Geografía de la Mundialización",
+          "Historia y Geografía de Mendoza I",
+          "Geografía Argentina II",
+          "Didáctica de la Geografía II",
+          "Problemática Ambiental",
+          "Geografía de América II",
+          "Educación en la Diversidad",
+          "Psicología Educacional",
+          "Práctica Profesional III",
+          "Historia y Geografía de Mendoza II",
+          "Técnicas y Herramientas de Trabajo en Geografía",
+          "Gestión y Evaluación de los Aprendizajes"
+        ]
+      },
+      {
+        "anio": "4º año",
+        "materias": [
+          "Geopolítica de los Espacios Mundiales",
+          "Investigación Geográfica",
+          "Educación Ambiental",
+          "Geografía de los Espacios Rurales y Urbanos",
+          "Técnicas y Herramientas",
+          "Práctica de Intervención Socioeducativa",
+          "Educación y Tecnologías Digitales",
+          "Práctica Profesional IV",
+          "Formación Complementaria Específica",
+          "Formación Complementaria General",
+          "Educación Sexual Integral"
+        ]
+      }
+    ],
+    "Profesorado de Educación Primaria": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Pensamiento Filosófico",
+          "Comprensión y Producción de Textos Académicos",
+          "Sistema Educativo",
+          "Pedagogía",
+          "Numeración",
+          "Lengua y Literatura Infantil y Juvenil",
+          "Educación Artística",
+          "Práctica Profesional Docente I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Didáctica",
+          "Sujetos de la Educación",
+          "Psicología Educacional",
+          "Instituciones Educativas",
+          "Números Racionales y su Didáctica",
+          "Cs. Sociales y su Didáctica I",
+          "Cs. Naturales y su Didáctica I",
+          "Lengua y su Didáctica",
+          "Literatura Infantil y Juvenil y su Didáctica",
+          "Espacio, Geometría y su Didáctica",
+          "Práctica Profesional Docente II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Gestión y Evaluación de los Aprendizajes",
+          "Proyectos de Intervención Estratégica",
+          "Educación en la Diversidad",
+          "Educación Tecnológica",
+          "Medida y su Didáctica",
+          "Cs. Sociales y su Didáctica II",
+          "Cs. Naturales y su Didáctica II",
+          "Alfabetización",
+          "Formación Ética y Ciudadana y su Didáctica",
+          "Álgebra, Funciones y su Didáctica",
+          "Práctica Profesional Docente III"
+        ]
+      },
+      {
+        "anio": "4º año",
+        "materias": [
+          "Educación Sexual Integral",
+          "Educación y Tecnologías Digitales",
+          "Historia y Patrimonio Cultural de Mendoza",
+          "Formación Complementaria General",
+          "Didáctica de la Lengua y de la Literatura Infantil y Juvenil",
+          "Didáctica de la Matemática",
+          "Didáctica de las Ciencias Sociales",
+          "Didáctica de las Ciencias Naturales",
+          "Formación Complementaria II",
+          "Práctica Profesional Docente IV"
+        ]
+      }
+    ],
+    "Profesorado para Técnicos": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "La Enseñanza en la Escuela Secundaria Técnica I",
+          "Competencias Comunicacionales, Comprensión y Producción de Textos Técnicos y no Técnicos I",
+          "Contextos de y para el Aprendizaje I",
+          "Adolescencias y Educación Secundaria Técnica",
+          "Competencias Comunicacionales I y II",
+          "Práctica Profesional Docente I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "La Enseñanza en la Escuela Secundaria Técnica II",
+          "Competencias Comunicacionales, Comprensión y Producción de Textos Técnicos y no Técnicos II",
+          "Contextos de y para el Aprendizaje II",
+          "Condiciones del Ejercicio Profesional",
+          "Vinculación con el Sector Socio-productivo",
+          "Uso Didáctico de las TIC",
+          "Producción de Textos para la ETP Secundaria",
+          "Actualización Científico-tecnológica en Concurrencia con el Título de Base",
+          "Práctica Profesional Docente II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Profundización y Consolidación de Aprendizajes Pedagógicos",
+          "Práctica Profesional Docente III"
+        ]
+      }
+    ]
+  },
+  "ies9021.json": {
+    "Tecnicatura Superior en Agronomía": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Matemática Aplicada a la Agricultura",
+          "Estadística",
+          "Informática Aplicada",
+          "Emprendedorismo y Agronegocio",
+          "Alfabetización Académica",
+          "Físico-Química Agrícola",
+          "Sistema Suelo, Plantas y Atmósfera",
+          "Producción Animal I",
+          "Electiva I: Producción Animal II",
+          "Producción Hortícola",
+          "Inglés Técnico",
+          "Producción Frutícola",
+          "Práctica Profesionalizante I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Agroecología",
+          "Manejo Reproductivo, Sanitario y Nutricional Animal",
+          "Tecnología Agrícola I",
+          "Tecnología Agrícola II",
+          "Gestión y Mantenimiento de Maquinarias Agropecuarias",
+          "Formulación y Evaluación de Proyectos I",
+          "Sistema Suelo, Cultivo y Atmósfera",
+          "Administración Rural",
+          "Gestión de la Calidad",
+          "Manejo Integrado de Plagas y Enfermedades",
+          "Riego y Drenaje",
+          "Práctica Profesionalizante II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Formulación y Evaluación de Proyectos II",
+          "Intercambio y Comercialización",
+          "Extensión Rural",
+          "Electiva II: Procesamiento e Industrialización Agropecuaria",
+          "Desarrollo Sostenible",
+          "Desarrollo Territorial",
+          "Gestión de Sistema de Producción Integral",
+          "Práctica Profesionalizante III"
+        ]
+      }
+    ],
+    "Tecnicatura Superior en Enología": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Química General e Inorgánica",
+          "Matemática",
+          "Física",
+          "Higiene y Seguridad",
+          "Microbiología General",
+          "Alfabetización Académica",
+          "Química Orgánica",
+          "Producciones Primarias",
+          "Introducción a la Vinificación e Industrializaciones",
+          "Análisis Sensorial I",
+          "Práctica Profesional I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Química Analítica e Instrumental",
+          "Gestión de Calidad",
+          "Estadística",
+          "Bromatología y Toxicología",
+          "Operaciones Unitarias",
+          "Química Biológica",
+          "Emprendedorismo y Agronegocios",
+          "Tecnología y Análisis de Productos Oleícolas",
+          "Microbiología Aplicada",
+          "Análisis Sensorial II",
+          "Vinificaciones I",
+          "Práctica Profesional II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Tecnología y Análisis de Productos Frutihortícolas",
+          "Legislación Vitivinícola y Alimentaria",
+          "Ética Profesional",
+          "Inglés Técnico",
+          "Análisis de Bebidas Víncias y No Víncias",
+          "Vinificaciones Especiales",
+          "Vinificaciones II",
+          "Gestión de Emprendimientos",
+          "Desarrollo Sostenible",
+          "Análisis Sensorial III",
+          "Práctica Profesional III"
+        ]
+      }
+    ],
+    "Tecnicatura Superior en Farmacia": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Química Aplicada a Ciencias de la Salud I",
+          "Anatomía y Fisiología Humana I",
+          "Informática",
+          "Física Aplicada a Ciencias de la Salud",
+          "Farmacia y Salud Pública",
+          "Química Aplicada a Ciencias de la Salud II",
+          "Anatomía y Fisiología Humana II",
+          "Atención al Paciente",
+          "Higiene y Seguridad",
+          "Principios Básicos de los Medicamentos",
+          "Práctica Profesionalizante I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Inglés Técnico",
+          "Farmacotecnia",
+          "Microbiología y Parasitología I",
+          "Introducción a la Farmacología I",
+          "Productos Médicos",
+          "Microbiología y Parasitología II",
+          "Introducción a la Farmacología II",
+          "Fundamentos de Fisiopatología",
+          "Práctica Profesionalizante II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Gestión de Emprendimientos",
+          "Servicios Técnicos Farmacéuticos I",
+          "Epidemiología y Salud Pública",
+          "Problemática Sociocultural y de la Salud",
+          "Sistemas Informáticos Farmacéuticos",
+          "Servicios Técnicos Farmacéuticos II",
+          "Ética Profesional y Legislación Farmacéutica",
+          "Medicamentos de Origen Natural",
+          "Práctica Profesionalizante III"
+        ]
+      }
+    ],
+    "Tecnicatura Superior en Gastronomía": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Cocina I",
+          "Métodos Cuantitativos",
+          "Introducción a la Panadería y Repostería",
+          "Bromatología",
+          "Materias Primas e Insumos Gastronómicos",
+          "Inglés Técnico I",
+          "Alfabetización Académica",
+          "Nutrición",
+          "Servicio de Alimentos y Bebidas",
+          "Informática Gastronómica",
+          "Sistema de Gestión Gastronómica",
+          "Práctica Profesional I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Cocina II",
+          "Cocotelería",
+          "Organización de Eventos y Catering",
+          "Dietología",
+          "Cocina Regional",
+          "Administración y Comportamiento Organizacional",
+          "Toxicología de los Alimentos",
+          "Inglés Técnico II",
+          "Gestión de Costos y Presupuestos",
+          "Vinos y Maridaje",
+          "Gestión de Alimentos y Bebidas",
+          "Marketing Gastronómico",
+          "Práctica Profesional II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Cocina III",
+          "Cocina Internacional",
+          "Ética Profesional",
+          "Francés Técnico",
+          "Repostería Internacional",
+          "Gestión de Emprendimientos Gastronómicos",
+          "Práctica Profesional III"
+        ]
+      }
+    ],
+    "Tecnicatura Superior en Mecatrónica": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Sistemas Mecánicos",
+          "Sistemas Eléctricos I",
+          "Sistemas Electrónicos I",
+          "Sistemas Informáticos",
+          "Ciencias Aplicadas",
+          "Sistemas Eléctricos II",
+          "Sistemas Electrónicos II",
+          "Sistemas de Control",
+          "Representación de Sistemas Mecatrónicos",
+          "Alfabetización Académica",
+          "Prácticas Profesionalizantes I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Dispositivos Electromecánicos",
+          "Automatización e Instrumentación Industrial",
+          "Autómatas Programables",
+          "Sistemas Informáticos de Control",
+          "Procesos de Fabricación",
+          "CAD CAM y CAE",
+          "Sistemas Interfaces Humano Máquina",
+          "Prácticas Profesionalizantes II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Simulación de Sistemas Mecatrónicos",
+          "Procesos y Gestión de Mantenimiento y Calidad",
+          "Gestión de Emprendimiento",
+          "Electiva Institucional",
+          "Formación y Orientación Laboral",
+          "Inglés Técnico",
+          "Prácticas Profesionalizantes III",
+          "Proyecto Final de Mecatrónica"
+        ]
+      }
+    ],
+    "Tecnicatura Superior en Óptica y Contactología": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Química Aplicada",
+          "Matemática Aplicada",
+          "Anatomía del Sistema Visual",
+          "Física",
+          "Diseño y Geometría",
+          "Introducción a la Óptica",
+          "Óptica Oftálmica General",
+          "Entornos Virtuales de la Salud y Herramientas Digitales",
+          "Comunicación en Salud",
+          "Práctica Profesionalizante I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Óptica Oftálmica Especial",
+          "Óptica Instrumental",
+          "Óptica Oftálmica Aplicada",
+          "Histología y Fisiología del Sistema Visual",
+          "Patología del Sistema Visual",
+          "Práctica Profesionalizante II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Adaptación de Lentes de Contacto",
+          "Gabinete de Contactología",
+          "Gestión y Calidad en Óptica y Contactología",
+          "Gestión de Costos y Ventas",
+          "Ergonomía, Higiene y Seguridad",
+          "Ética y Legislación Profesional",
+          "Inglés Técnico",
+          "Práctica Profesionalizante III"
+        ]
+      }
+    ],
+    "Tecnicatura Superior en Desarrollo de Software": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Programación I",
+          "Matemática Aplicada",
+          "Lógica Computacional",
+          "Inglés Técnico I",
+          "Alfabetización Académica",
+          "Seminario Nuevas Tecnologías",
+          "Arquitectura de Dispositivos",
+          "Sistemas Operativos I",
+          "Base de Datos I",
+          "Práctica Profesionalizante I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Programación II",
+          "Matemática Discreta",
+          "Análisis Matemático",
+          "Comunicación y Redes",
+          "Inglés Técnico II",
+          "Modelado de Software",
+          "Sistemas Operativos II",
+          "Base de Datos II",
+          "Práctica Profesionalizante II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Programación III",
+          "Arquitectura y Diseño de Interfaces: UI y UX",
+          "Auditoría y Calidad de Sistemas",
+          "Ciberseguridad",
+          "Inglés Técnico III",
+          "Legislación Informática y Ética Profesional",
+          "Estadística y Probabilidades para el Desarrollo de Software",
+          "Gestión de Proyectos de Software",
+          "Metodologías Ágiles",
+          "Base de Datos III",
+          "Práctica Profesionalizante III"
+        ]
+      }
+    ],
+    "Tecnicatura Superior en Robótica": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Programación",
+          "Matemática Aplicada",
+          "Lógica Computacional",
+          "Inglés Técnico I",
+          "Alfabetización Académica",
+          "Arquitectura de Dispositivos",
+          "Sistemas Operativos",
+          "Base de Datos",
+          "Fundamentos Mecánicos y Eléctricos para Sistemas Robóticos",
+          "Taller de Electrónica",
+          "Práctica Profesionalizante I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Tecnología de Accionamientos y Mantenimiento de Sistemas Robóticos",
+          "Taller de Mecatrónica",
+          "Diseño e Integración de Nodos IoT para Robótica",
+          "Redes, Protocolos e Interfaces",
+          "Inglés Técnico II",
+          "Laboratorio de Diseño y Fabricación Digital I",
+          "Robótica I",
+          "Práctica Profesionalizante II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Testeo Avanzado y Diagnóstico Funcional de Sistemas Robóticos",
+          "Taller de Microelectrónica",
+          "Robótica II",
+          "Visión Computacional y Aprendizaje Automático",
+          "Inglés Técnico III",
+          "Ética, Legislación y Sustentabilidad Tecnológica",
+          "Ciberseguridad en Sistemas Robóticos e IoT",
+          "Laboratorio de Diseño y Fabricación Digital II",
+          "Práctica Profesionalizante III"
+        ]
+      }
+    ]
+  },
+  "ies9028.json": {
+    "Profesorado en Educación Primaria": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Matemática",
+          "Literatura para Niños y Jóvenes",
+          "Lengua",
+          "Sujetos de la Educación Primaria",
+          "Psicología Educacional",
+          "Promoción de la Salud",
+          "Perspectiva Histórica, Política, Social y Cultural de América Latina",
+          "Tecnologías de la Información y la Comunicación",
+          "Prácticas de Lectura, Escritura y Oralidad",
+          "Pedagogía",
+          "Didáctica General",
+          "Práctica Profesional Docente 1"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Didáctica de la Matemática 1",
+          "Didáctica de la Lengua 1",
+          "Didáctica de la Literatura",
+          "Didáctica de las Cs. Naturales 1",
+          "Didáctica de las Cs. Sociales 1",
+          "Expresión Artística",
+          "Sociología de la Educación",
+          "Historia y Política de la Educación Argentina",
+          "Instituciones Educativas",
+          "Práctica Profesional Docente 2"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Didáctica de la Matemática 2",
+          "Problemática del Nivel Primario",
+          "Alfabetización Inicial",
+          "Didáctica de las Cs. Naturales 2",
+          "Didáctica de las Cs. Sociales 2",
+          "Didáctica de la Tecnología",
+          "Unidad de Definición Institucional",
+          "Formación Ética y Ciudadana",
+          "Filosofía",
+          "Práctica Profesional Docente 3"
+        ]
+      },
+      {
+        "anio": "4º año",
+        "materias": [
+          "Didáctica de la Matemática 3",
+          "Didáctica de las Cs. Naturales 3",
+          "Didáctica de las Cs. Sociales 3 (Mendoza)",
+          "Didáctica de la Lengua 2",
+          "Práctica Profesional Docente 4",
+          "Unidad de Definición Institucional"
+        ]
+      }
+    ],
+    "Profesorado en Música": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Prácticas de Lectura, Escritura y Oralidad",
+          "Tecnologías de la Información y la Comunicación",
+          "Pedagogía",
+          "Didáctica General",
+          "Promoción de la Salud",
+          "Lenguaje Musical 1",
+          "Canto Individual y Grupal 1",
+          "Instrumento Armónico 1",
+          "Fundamentos de la Percepción y la Producción Musical",
+          "Historia Universal del Arte y la Cultura",
+          "Práctica Profesional Docente 1",
+          "Unidad de Definición Institucional",
+          "Electivas"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Lenguaje Musical 2",
+          "Canto Individual y Grupal 2",
+          "Instrumento Armónico 2",
+          "Historia de la Música 1",
+          "Didáctica de la Música 1",
+          "Sujetos de la Educación 1",
+          "Instituciones Educativas",
+          "Práctica Profesional Docente 2",
+          "Historia y Política de la Educación Argentina",
+          "Psicología Educacional",
+          "Unidad de Definición Institucional",
+          "Electivas"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Lenguaje Musical 3",
+          "Canto y Dirección Coral 1",
+          "Instrumento Armónico 3",
+          "Historia de la Música 2",
+          "Didáctica de la Música 2",
+          "Práctica de Conjuntos Vocales e Instrumentales",
+          "Sujetos de la Educación 2",
+          "Sociología de la Educación",
+          "Arte y Nuevas Tecnologías",
+          "Unidad de Definición Institucional",
+          "Práctica Profesional Docente 3",
+          "Electivas"
+        ]
+      },
+      {
+        "anio": "4º año",
+        "materias": [
+          "Lenguaje Musical 4",
+          "Canto y Dirección Coral 2",
+          "Instrumento Armónico 4",
+          "Lenguajes Artísticos",
+          "Producción Artística Contemporánea",
+          "Teoría del Arte",
+          "Didáctica de la Música 3",
+          "Unidad de Definición Institucional",
+          "Práctica Profesional Docente 4",
+          "Electivas"
+        ]
+      }
+    ],
+    "Tecnicatura Superior en Enología e Industrias de los Alimentos": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Producción Vitícola",
+          "Producción Frutícola y Producción Hortícola",
+          "Producciones Porcina, Avícola, Apícola, Bovina y Caprina",
+          "Vinificación",
+          "Producción de Frutas y Hortalizas",
+          "Industrialización Oleícola",
+          "Industria Cárnica",
+          "Industria Láctea",
+          "Industria Apícola",
+          "Emprendedorismo y Agronegocio"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Gestión de Procesos Fermentativos",
+          "Gestión de Maquinarias Agroindustriales",
+          "Análisis de Productos Enológicos",
+          "Manejo de Cosecha y Poscosecha",
+          "Territorio y Desarrollo",
+          "Innovación y Gestión Empresarial"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Análisis de las Bebidas",
+          "Análisis de los Alimentos de Origen Vegetal",
+          "Análisis de los Alimentos de Origen Animal",
+          "Gestión del Desarrollo Sostenible",
+          "Gestión de Emprendimientos",
+          "Gestión de la Estabilización de los Alimentos",
+          "Gestión de la Estabilización del Vino",
+          "Gestión de la Crianza de Vinos",
+          "Análisis Sensorial de Vinos",
+          "Análisis Sensorial de Alimentos",
+          "Elaboración de Proyectos Productivos"
+        ]
+      }
+    ]
+  },
+  "ies9023.json": {
+    "Tecnicatura Superior en Desarrollo de Software": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Programación I",
+          "Arquitectura de Computadoras",
+          "Requerimientos de Software",
+          "Álgebra",
+          "Inglés Técnico I",
+          "Comprensión y Producción de Textos",
+          "Lógica Computacional",
+          "Problemática Sociocultural y del Trabajo",
+          "Sistemas Administrativos Aplicados",
+          "Práctica Profesionalizante I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Comunicaciones y Redes",
+          "Programación II",
+          "Matemática Discreta",
+          "Análisis Matemático",
+          "Inglés Técnico II",
+          "Modelado de Software",
+          "Bases de Datos I",
+          "Sistemas Operativos",
+          "Práctica Profesionalizante II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Programación III",
+          "Arquitectura y Diseño de Interfaces",
+          "Auditoría y Calidad de Sistemas",
+          "Seguridad Informática",
+          "Inglés Técnico III",
+          "Bases de Datos II",
+          "Probabilidad y Estadística",
+          "Legislación Informática",
+          "Ética Profesional",
+          "Gestión de Proyectos de Software",
+          "Práctica Profesionalizante III"
+        ]
+      }
+    ],
+    "Tecnicatura Superior en Marketing Digital": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Inglés",
+          "Informática Aplicada al Marketing",
+          "Fundamentos de Marketing",
+          "Comunicación y Redacción Digital",
+          "Planificación Estratégica del Marketing Digital",
+          "Comportamiento de Consumidores y Usuarios",
+          "Innovación, Creatividad y Transformación Digital",
+          "Generación de Contenidos y Gestión de Plataformas",
+          "Desarrollo y Experiencia de Marca",
+          "Diseño y Gestión de Campañas Digitales",
+          "Práctica Profesionalizante I"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Inglés II",
+          "Posicionamiento y Analítica Web",
+          "Principios y Fundamentos Legales",
+          "Social Media y Community Management",
+          "Costos y Presupuestos de Campañas",
+          "Derecho de los Negocios Digitales",
+          "Gestión de Canales Digitales",
+          "E-commerce y Marketplaces",
+          "Ética Profesional",
+          "Práctica Profesionalizante II"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Herramientas de Automatización",
+          "Desarrollo Emprendedor",
+          "Negociación y Marketing Relacional",
+          "Estrategias de Alcance y Fidelización",
+          "Proyecto Integrador Final",
+          "Práctica Profesionalizante III"
+        ]
+      }
+    ],
+    "Tecnicatura Superior en Mecatrónica": [
+      {
+        "anio": "1º año",
+        "materias": [
+          "Sistemas Mecánicos",
+          "Sistemas Eléctricos y Electrónicos",
+          "Sistemas de Control",
+          "Sistemas Informáticos",
+          "Elementos de Comunicación",
+          "Gestión de Emprendimientos"
+        ]
+      },
+      {
+        "anio": "2º año",
+        "materias": [
+          "Dispositivos Electromecánicos",
+          "Sistemas de Control Automático",
+          "Sistemas Informáticos de Control",
+          "Procesos de Fabricación",
+          "Representación de Sistemas Mecatrónicos",
+          "Sistemas CAD, CAM, CAE"
+        ]
+      },
+      {
+        "anio": "3º año",
+        "materias": [
+          "Proyecto de Mecatrónica (Orientación)",
+          "Simulación de Sistemas Mecatrónicos",
+          "Procesos y Gestión de Mantenimiento y Calidad",
+          "Configuración de Sistemas Mecatrónicos",
+          "Formación y Orientación Laboral"
+        ]
+      }
+    ],
+    "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional en Concurrencia con el Título de Base": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "La enseñanza en la Escuela Secundaria Técnica I",
+            "El aprendizaje en la escuela secundaria técnica",
+            "Competencias comunicacionales, comprensión de textos I",
+            "Competencias comunicacionales, comprensión de textos II",
+            "Actualización Científico - Tecnológica en concurrencia con el título",
+            "Práctica I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Contextos de y para la escuela secundaria técnica I",
+            "La enseñanza en la escuela secundaria técnica II",
+            "Condiciones del ejercicio profesional",
+            "Vinculación con el sector socio-productivo",
+            "Actualización Científico - Tecnológica en concurrencia con el título",
+            "Práctica II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Contextos de y para la escuela secundaria técnica II",
+            "Adolescencias y educación secundaria técnica",
+            "Producción de textos para la ETP secundaria",
+            "Uso didáctico de las TIC",
+            "Actualización Científico - Tecnológica en concurrencia con el título",
+            "Práctica III",
+            "Residencia",
+            "Reflexión sobre la problematización de la práctica"
+          ]
+        }
+      ],
+      "fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/wp-content/uploads/2026/04/RESOL-DGE-2560-2018-4.5MB.pdf"
+    },
+    "Tecnicatura Superior en Administración Pública": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "Administración General",
+            "Matemática y Estadística",
+            "Informática y Tecnología",
+            "Inglés Técnico I",
+            "Comunicación, Comprensión y Producción de Textos",
+            "Metodología de la Investigación",
+            "Microeconomía",
+            "Macroeconomía",
+            "Problemática Sociocultural y el Contexto",
+            "Práctica Profesionalizante I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Desarrollo Local Sustentable",
+            "Inglés Técnico II",
+            "Estado y Sociedad",
+            "Administración Pública",
+            "Formulación y Evaluación de Proyectos",
+            "Introducción al Derecho",
+            "Introducción a la Contabilidad",
+            "Derecho Constitucional",
+            "Contabilidad Pública",
+            "Práctica Profesionalizante II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Gestión de Políticas Públicas",
+            "Presupuesto y Finanzas Públicas",
+            "Derecho Administrativo",
+            "Análisis y Desarrollo Organizacional",
+            "Ética Profesional",
+            "Control en la Gestión Pública",
+            "Procedimientos de Compras y Contrataciones",
+            "Técnica Legislativa",
+            "Gestión de Personal",
+            "Comunicación Organizacional",
+            "Informática y Tecnología Aplicada",
+            "Práctica Profesionalizante III"
+          ]
+        }
+      ],
+      "fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/wp-content/uploads/2025/12/RESOL-2019-0697-DGE-TS-en-Administracion-Publica.pdf"
+    },
+    "Profesorado de Educación Primaria": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "Pensamiento Filosófico",
+            "Comprensión y Producción de Textos Académicos",
+            "Sistema Educativo",
+            "Pedagogía",
+            "Numeración",
+            "Lengua y Literatura",
+            "Educación Artística",
+            "Práctica Profesional Docente I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Didáctica",
+            "Sujetos de la Educación",
+            "Psicología Educacional",
+            "Instituciones Educacionales",
+            "Números Racionales y su Didáctica",
+            "Cs. Sociales y su Didáctica I",
+            "Cs. Naturales y su Didáctica I",
+            "Lengua y su Didáctica",
+            "Literatura y su Didáctica",
+            "Espacio, Geometría y su Didáctica",
+            "Práctica Profesional Docente II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Gestión y Evaluación de los Aprendizajes",
+            "Proyectos de Intervención Socio-Educativa",
+            "Educación en la Diversidad",
+            "Educación Tecnológica",
+            "Medida y su Didáctica",
+            "Cs. Sociales y su Didáctica II",
+            "Cs. Naturales y su Didáctica II",
+            "Alfabetización",
+            "Formación Ética y Ciudadana y su Didáctica",
+            "Álgebra, Funciones y su Didáctica",
+            "Práctica Profesional Docente III"
+          ]
+        },
+        {
+          "anio": "4º año",
+          "materias": [
+            "Educación Sexual Integral",
+            "Educación y Tecnologías Digitales",
+            "Historia y Patrimonio Cultural de Mendoza",
+            "Formación Complementaria General",
+            "Didáctica de la Lengua y la Literatura",
+            "Didáctica de la Matemática",
+            "Didáctica de las Ciencias Sociales",
+            "Didáctica de las Ciencias Naturales",
+            "Formación Complementaria II",
+            "Práctica Profesional Docente IV"
+          ]
+        }
+      ],
+      "fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-primaria-res-n-6868-dge-2023/"
+    }
+  },
+  "ies9024.json": {
+    "Profesorado para la educación Secundaria de la modalidad Técnico Profesional, en concurrencia con el Título de Base": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "La enseñanza en la Escuela Secundaria Técnica I",
+            "El aprendizaje en la escuela secundaria técnica",
+            "Competencias comunicacionales, comprensión de textos I",
+            "Competencias comunicacionales, comprensión de textos II",
+            "Actualización Científico - Tecnológica en concurrencia con el título",
+            "Práctica I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Contextos de y para la escuela secundaria técnica I",
+            "La enseñanza en la escuela secundaria técnica II",
+            "Condiciones del ejercicio profesional",
+            "Vinculación con el sector socio-productivo",
+            "Actualización Científico - Tecnológica en concurrencia con el título",
+            "Práctica II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Contextos de y para la escuela secundaria técnica II",
+            "Adolescencias y educación secundaria técnica",
+            "Producción de textos para la ETP secundaria",
+            "Uso didáctico de las TIC",
+            "Actualización Científico - Tecnológica en concurrencia con el título",
+            "Práctica III",
+            "Residencia",
+            "Reflexión sobre la problematización de la práctica"
+          ]
+        }
+      ],
+      "fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2026/02/RESOL.-801-DGE-25-DGE-Plan-de-estudios-Profesorado-para-la-educacion-secundaria-de-la-modalidad-tecnico-profesionalANEXO.pdf"
+    },
+    "Tecnicatura Superior en Turismo y Hotelería": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "Inglés I",
+            "Portugués I",
+            "Práctica Profesionalizante I",
+            "Geografía y Ambiente de Mendoza",
+            "Recursos Turísticos de Argentina",
+            "Introducción al Turismo y la Hotelería",
+            "Producción de Información Turística",
+            "Historia y Cultura de Mendoza",
+            "Comunicación Oral",
+            "Información Turística de Mendoza",
+            "Guiado y Coordinación",
+            "Gestión de Riesgos y Primeros Auxilios",
+            "Ética y Legislación Turística I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Inglés II",
+            "Portugués II",
+            "Práctica Profesionalizante II",
+            "Servicios de Hospedaje",
+            "Economía, Costos y Finanzas",
+            "Informática",
+            "Administración General",
+            "Gastronomía, Alimentos y Bebidas",
+            "Destinos, Circuitos y Productos Turísticos",
+            "Estadística Aplicada",
+            "Ética y Legislación Turística II",
+            "Gestión Pública del Turismo"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Inglés III",
+            "Portugués III",
+            "Formulación y Evaluación de Proyectos",
+            "Gestión de Empresas de Viajes",
+            "Electiva I: Turismo con Identidad",
+            "Electiva II: Turismo Sostenible",
+            "Recursos Humanos",
+            "Marketing Turístico",
+            "Organización de Eventos",
+            "Práctica Profesionalizante III"
+          ]
+        }
+      ],
+      "fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2026/03/Res.885-2026-Tecnicatura-en-Turismo-y-Hoteleria-IES-9024.pdf"
+    },
+    "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "Comprensión y Producción de Textos Académicos",
+            "Pensamiento Filosófico",
+            "Sistema Educativo",
+            "Pedagogía",
+            "Expresión Artística: Música",
+            "Neuropsicosociología del Desarrollo",
+            "Discapacidad Intelectual: características del desarrollo",
+            "Atención Temprana",
+            "Expresión Artística: Artes Visuales",
+            "Educación Especial Contemporánea",
+            "Práctica Profesional Docente I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Didáctica",
+            "Instituciones Educativas",
+            "Sujeto de la Educación I",
+            "Psicología Educacional",
+            "Abordaje Pedagógico Didáctico I",
+            "Psicomotricidad",
+            "Didáctica de la Matemática",
+            "Didáctica de la Lengua",
+            "Didáctica de la Literatura",
+            "Didáctica de las Ciencias Naturales",
+            "Sujeto de la Educación II",
+            "Discapacidad Motora y Abordaje Pedagógico Didáctico",
+            "Práctica Profesional Docente II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Gestión y Evaluación de los Aprendizajes",
+            "Proyecto de Intervención Estratégica",
+            "Abordaje Pedagógico Didáctico II",
+            "Didáctica de las Ciencias Sociales",
+            "Discapacidad Múltiple y Abordaje Pedagógico Didáctico",
+            "Perspectiva Social, Transición a la Vida Adulta y Ocupación",
+            "Alfabetización",
+            "Didáctica de la Formación Ética y Ciudadana",
+            "Comunicación y Desarrollo del Lenguaje en Personas con Discapacidad",
+            "Práctica Profesional Docente III"
+          ]
+        },
+        {
+          "anio": "4º año",
+          "materias": [
+            "Educación y Tecnologías Digitales",
+            "Educación Sexual Integral",
+            "Historia y Patrimonio Cultural de Mendoza",
+            "UCE Formación complementaria General",
+            "Expresión Artística: Teatro",
+            "UCE Formación complementaria Específica",
+            "Práctica Profesional IV"
+          ]
+        }
+      ],
+      "fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2024/10/2023_-ANEXO-Profesorado-de-Educacion-Especial-con-Orientacion-en-Discapacidad-Intelectual.pdf"
+    },
+    "Profesorado de Educación Secundaria en Lengua y Literatura": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "Pensamiento Filosófico",
+            "Sistema educativo",
+            "Pedagogía",
+            "Comprensión y Producción de Textos Académicos",
+            "Literatura Universal I",
+            "Morfología y Semántica Léxica",
+            "Literatura y Cultura Grecolatina",
+            "Fundamentos de la Lengua",
+            "Fundamentos de la Literatura",
+            "Práctica profesional docente I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Instituciones educativas",
+            "Didáctica",
+            "Psicología educacional",
+            "Sujetos de la educación",
+            "Literatura Española",
+            "Sintaxis y Semántica Proposicional",
+            "Lingüística del texto y Análisis del Discurso I",
+            "Literatura Universal II",
+            "Literatura para jóvenes",
+            "Fonética, Fonología y Grafemática",
+            "Lingüística del texto y Análisis del Discurso II",
+            "Literatura Latinoamericana I",
+            "Práctica profesional docente II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Gestión y evaluación de los aprendizajes",
+            "Proyectos de intervención socioeducativa",
+            "Educación en la diversidad",
+            "Literatura Argentina I",
+            "Literatura Latinoamericana II",
+            "Psicolingüística y Sociolingüística",
+            "Didáctica de la Lengua",
+            "Literatura Argentina II",
+            "Alfabetización",
+            "Didáctica de la Literatura",
+            "Práctica profesional docente III"
+          ]
+        },
+        {
+          "anio": "4º año",
+          "materias": [
+            "Educación Sexual Integral",
+            "Educación y Tecnologías Digitales",
+            "Historia y Patrimonio Cultural de Mendoza",
+            "Formación Complementaria General",
+            "Filología",
+            "Literatura Argentina III",
+            "Teoría y Crítica Literarias",
+            "Formación Complementaria específica",
+            "Práctica profesional docente IV"
+          ]
+        }
+      ],
+      "fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2024/10/2023_-ANEXO-Profesorado-de-Educacion-Secundaria-en-Lengua-y-Literatura.pdf"
+    },
+    "Profesorado de Educación Secundaria en Matemática": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "Pensamiento Filosófico",
+            "Sistema Educativo",
+            "Comprensión y Producción de Textos Académicos",
+            "El Quehacer Matemático",
+            "Cálculo I",
+            "Álgebra I",
+            "Geometría I",
+            "Pedagogía",
+            "Práctica Profesional Docente I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Didáctica",
+            "Sujetos de la Educación",
+            "Cálculo II",
+            "Álgebra II",
+            "Geometría II",
+            "Didáctica de la Matemática I",
+            "Instituciones Educativas",
+            "Psicología Educacional",
+            "Didáctica de la Matemática II",
+            "Práctica Profesional Docente II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Gestión y evaluación de los aprendizajes",
+            "Proyectos de intervención socioeducativa",
+            "Probabilidad y Estadística I",
+            "Didáctica de la Matemática III",
+            "Historia de la Matemática",
+            "Geometría III",
+            "Física I",
+            "Educación y tecnologías digitales",
+            "Complemento de la Formación Específica (trayecto optativo: Cálculo numérico; Articulación de la enseñanza de la matemática entre primaria y secundaria; Trigonometría; Matemática financiera; Modelos matemáticos; Formas de razonamiento matemático; Juegos matemáticos; Introducción a la relatividad y Física cuántica; Enseñar y aprender matemática en la educación de adultos)",
+            "Didáctica de la Matemática IV",
+            "Práctica Profesional Docente III"
+          ]
+        },
+        {
+          "anio": "4º año",
+          "materias": [
+            "Historia y patrimonio cultural de Mendoza",
+            "Educación en la diversidad",
+            "Cálculo III",
+            "Probabilidad y Estadística II",
+            "Física II",
+            "Educación Sexual Integral (ESI)",
+            "Complemento de la Formación General",
+            "Práctica Profesional Docente IV"
+          ]
+        }
+      ],
+      "fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2024/10/2023_ANEXO-Profesorado-de-Educacion-Secundaria-en-Matematica.pdf"
+    }
+  },
+  "ies9026.json": {
+    "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "La enseñanza en la Escuela Secundaria Técnica I",
+            "El aprendizaje en la escuela secundaria técnica",
+            "Competencias comunicacionales, comprensión de textos I",
+            "Competencias comunicacionales, comprensión de textos II",
+            "Actualización Científico - Tecnológica en concurrencia con el título",
+            "Práctica I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Contextos de y para la escuela secundaria técnica I",
+            "La enseñanza en la escuela secundaria técnica II",
+            "Condiciones del ejercicio profesional",
+            "Vinculación con el sector socio-productivo",
+            "Actualización Científico - Tecnológica en concurrencia con el título",
+            "Práctica II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Contextos de y para la escuela secundaria técnica II",
+            "Adolescencias y educación secundaria técnica",
+            "Producción de textos para la ETP secundaria",
+            "Uso didáctico de las TIC",
+            "Actualización Científico - Tecnológica en concurrencia con el título",
+            "Práctica III",
+            "Residencia",
+            "Reflexión sobre la problematización de la práctica"
+          ]
+        }
+      ],
+      "fuente": "https://ies9026-infd.mendoza.edu.ar/sitio/wp-content/uploads/2026/03/2025-RES-00801-Profesorado-para-Tecnicos_260313_140125.pdf"
+    },
+    "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "Comprensión y Producción de Textos Académicos",
+            "Pensamiento Filosófico",
+            "Sistema Educativo",
+            "Pedagogía",
+            "Expresión Artística: Música",
+            "Neuropsicosociología del Desarrollo",
+            "Discapacidad Intelectual: características del desarrollo",
+            "Atención Temprana",
+            "Expresión Artística: Artes Visuales",
+            "Educación Especial Contemporánea",
+            "Práctica Profesional Docente I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Didáctica",
+            "Instituciones Educativas",
+            "Sujeto de la Educación I",
+            "Psicología Educacional",
+            "Abordaje Pedagógico Didáctico I",
+            "Psicomotricidad",
+            "Didáctica de la Matemática",
+            "Didáctica de la Lengua",
+            "Didáctica de la Literatura",
+            "Didáctica de las Ciencias Naturales",
+            "Sujeto de la Educación II",
+            "Discapacidad Motora y Abordaje Pedagógico Didáctico",
+            "Práctica Profesional Docente II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Gestión y Evaluación de los Aprendizajes",
+            "Proyecto de Intervención Estratégica",
+            "Abordaje Pedagógico Didáctico II",
+            "Didáctica de las Ciencias Sociales",
+            "Discapacidad Múltiple y Abordaje Pedagógico Didáctico",
+            "Perspectiva Social, Transición a la Vida Adulta y Ocupación",
+            "Alfabetización",
+            "Didáctica de la Formación Ética y Ciudadana",
+            "Comunicación y Desarrollo del Lenguaje en Personas con Discapacidad",
+            "Práctica Profesional Docente III"
+          ]
+        },
+        {
+          "anio": "4º año",
+          "materias": [
+            "Educación y Tecnologías Digitales",
+            "Educación Sexual Integral",
+            "Historia y Patrimonio Cultural de Mendoza",
+            "UCE Formación complementaria General",
+            "Expresión Artística: Teatro",
+            "UCE Formación complementaria Específica",
+            "Práctica Profesional IV"
+          ]
+        }
+      ],
+      "fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2024/10/2023_-ANEXO-Profesorado-de-Educacion-Especial-con-Orientacion-en-Discapacidad-Intelectual.pdf"
+    },
+    "Profesorado de Educación Primaria": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "Pensamiento Filosófico",
+            "Comprensión y Producción de Textos Académicos",
+            "Sistema Educativo",
+            "Pedagogía",
+            "Numeración",
+            "Lengua y Literatura",
+            "Educación Artística",
+            "Práctica Profesional Docente I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Didáctica",
+            "Sujetos de la Educación",
+            "Psicología Educacional",
+            "Instituciones Educacionales",
+            "Números Racionales y su Didáctica",
+            "Cs. Sociales y su Didáctica I",
+            "Cs. Naturales y su Didáctica I",
+            "Lengua y su Didáctica",
+            "Literatura y su Didáctica",
+            "Espacio, Geometría y su Didáctica",
+            "Práctica Profesional Docente II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Gestión y Evaluación de los Aprendizajes",
+            "Proyectos de Intervención Socio-Educativa",
+            "Educación en la Diversidad",
+            "Educación Tecnológica",
+            "Medida y su Didáctica",
+            "Cs. Sociales y su Didáctica II",
+            "Cs. Naturales y su Didáctica II",
+            "Alfabetización",
+            "Formación Ética y Ciudadana y su Didáctica",
+            "Álgebra, Funciones y su Didáctica",
+            "Práctica Profesional Docente III"
+          ]
+        },
+        {
+          "anio": "4º año",
+          "materias": [
+            "Educación Sexual Integral",
+            "Educación y Tecnologías Digitales",
+            "Historia y Patrimonio Cultural de Mendoza",
+            "Formación Complementaria General",
+            "Didáctica de la Lengua y la Literatura",
+            "Didáctica de la Matemática",
+            "Didáctica de las Ciencias Sociales",
+            "Didáctica de las Ciencias Naturales",
+            "Formación Complementaria II",
+            "Práctica Profesional Docente IV"
+          ]
+        }
+      ],
+      "fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-primaria-res-n-6868-dge-2023/"
+    },
+    "Profesorado de Educación Inicial": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "Pensamiento Filosófico",
+            "Sistema Educativo",
+            "Comprensión y Producción de Textos Académicos",
+            "Pedagogía",
+            "Centralidad del Juego",
+            "Juego y Producción de Objetos Lúdicos",
+            "Lenguajes Artísticos Expresivos: Música",
+            "Lenguajes Artísticos Expresivos: Teatro",
+            "Práctica Profesional Docente I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Didáctica",
+            "Instituciones Educativas",
+            "Psicología Educacional",
+            "Educación y Atención Temprana al Desarrollo Infantil",
+            "Didáctica del Jardín Maternal",
+            "Prácticas Lingüísticas en Educación Inicial",
+            "Lenguajes Artísticos Expresivos: Artes Visuales",
+            "Educación Matemática Temprana e Inicial I",
+            "Sujetos de la Educación",
+            "Práctica Profesional Docente II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Gestión y Evaluación de los Aprendizajes",
+            "Proyectos de Intervención Socioeducativa",
+            "Educación en la Diversidad",
+            "Literatura Infantil",
+            "Didáctica de Jardín de Infantes",
+            "Educación Matemática Inicial II",
+            "Alfabetización Temprana e Inicial",
+            "Didáctica del Ambiente Natural",
+            "Didáctica del Ambiente Social",
+            "Motricidad en Jardín Maternal y en Jardín de Infantes",
+            "Práctica Profesional Docente III"
+          ]
+        },
+        {
+          "anio": "4º año",
+          "materias": [
+            "ESI",
+            "Educación y Tecnologías Digitales",
+            "Historia y Patrimonio Cultural de Mendoza",
+            "Formación Complementaria General",
+            "Problemáticas de la Educación Inicial",
+            "Salud y Cultura del Cuidado",
+            "Formación Ética y Ciudadana y su Didáctica",
+            "Formación Complementaria Específica",
+            "Práctica Profesional Docente IV"
+          ]
+        }
+      ],
+      "fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-inicial/"
+    }
+  },
+  "ies9027.json": {
+    "Profesorado de Educación Primaria": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "Pensamiento Filosófico",
+            "Comprensión y Producción de Textos Académicos",
+            "Sistema Educativo",
+            "Pedagogía",
+            "Numeración",
+            "Lengua y Literatura",
+            "Educación Artística",
+            "Práctica Profesional Docente I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Didáctica",
+            "Sujetos de la Educación",
+            "Psicología Educacional",
+            "Instituciones Educacionales",
+            "Números Racionales y su Didáctica",
+            "Cs. Sociales y su Didáctica I",
+            "Cs. Naturales y su Didáctica I",
+            "Lengua y su Didáctica",
+            "Literatura y su Didáctica",
+            "Espacio, Geometría y su Didáctica",
+            "Práctica Profesional Docente II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Gestión y Evaluación de los Aprendizajes",
+            "Proyectos de Intervención Socio-Educativa",
+            "Educación en la Diversidad",
+            "Educación Tecnológica",
+            "Medida y su Didáctica",
+            "Cs. Sociales y su Didáctica II",
+            "Cs. Naturales y su Didáctica II",
+            "Alfabetización",
+            "Formación Ética y Ciudadana y su Didáctica",
+            "Álgebra, Funciones y su Didáctica",
+            "Práctica Profesional Docente III"
+          ]
+        },
+        {
+          "anio": "4º año",
+          "materias": [
+            "Educación Sexual Integral",
+            "Educación y Tecnologías Digitales",
+            "Historia y Patrimonio Cultural de Mendoza",
+            "Formación Complementaria General",
+            "Didáctica de la Lengua y la Literatura",
+            "Didáctica de la Matemática",
+            "Didáctica de las Ciencias Sociales",
+            "Didáctica de las Ciencias Naturales",
+            "Formación Complementaria II",
+            "Práctica Profesional Docente IV"
+          ]
+        }
+      ],
+      "fuente": "https://ies9023-infd.mendoza.edu.ar/sitio/oferta-academica-2/profesorado-de-educacion-primaria-res-n-6868-dge-2023/"
+    },
+    "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "Comprensión y Producción de Textos Académicos",
+            "Pensamiento Filosófico",
+            "Sistema Educativo",
+            "Pedagogía",
+            "Expresión Artística: Música",
+            "Neuropsicosociología del Desarrollo",
+            "Discapacidad Intelectual: características del desarrollo",
+            "Atención Temprana",
+            "Expresión Artística: Artes Visuales",
+            "Educación Especial Contemporánea",
+            "Práctica Profesional Docente I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Didáctica",
+            "Instituciones Educativas",
+            "Sujeto de la Educación I",
+            "Psicología Educacional",
+            "Abordaje Pedagógico Didáctico I",
+            "Psicomotricidad",
+            "Didáctica de la Matemática",
+            "Didáctica de la Lengua",
+            "Didáctica de la Literatura",
+            "Didáctica de las Ciencias Naturales",
+            "Sujeto de la Educación II",
+            "Discapacidad Motora y Abordaje Pedagógico Didáctico",
+            "Práctica Profesional Docente II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Gestión y Evaluación de los Aprendizajes",
+            "Proyecto de Intervención Estratégica",
+            "Abordaje Pedagógico Didáctico II",
+            "Didáctica de las Ciencias Sociales",
+            "Discapacidad Múltiple y Abordaje Pedagógico Didáctico",
+            "Perspectiva Social, Transición a la Vida Adulta y Ocupación",
+            "Alfabetización",
+            "Didáctica de la Formación Ética y Ciudadana",
+            "Comunicación y Desarrollo del Lenguaje en Personas con Discapacidad",
+            "Práctica Profesional Docente III"
+          ]
+        },
+        {
+          "anio": "4º año",
+          "materias": [
+            "Educación y Tecnologías Digitales",
+            "Educación Sexual Integral",
+            "Historia y Patrimonio Cultural de Mendoza",
+            "UCE Formación complementaria General",
+            "Expresión Artística: Teatro",
+            "UCE Formación complementaria Específica",
+            "Práctica Profesional IV"
+          ]
+        }
+      ],
+      "fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/wp-content/uploads/2024/10/2023_-ANEXO-Profesorado-de-Educacion-Especial-con-Orientacion-en-Discapacidad-Intelectual.pdf"
+    },
+    "Profesorado de Inglés": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "Lengua Inglesa",
+            "Gramática Inglesa",
+            "Fonética y Fonología Inglesa",
+            "Prácticas de Lengua Inglesa",
+            "Comprensión y Producción de Textos Académicos",
+            "Práctica Profesional Docente I",
+            "Pensamiento Filosófico",
+            "Sistema Educativo",
+            "Pedagogía",
+            "Prácticas de Gramática Inglesa"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Lengua Inglesa",
+            "Gramática Inglesa",
+            "Fonética y Fonología Inglesa",
+            "Didáctica del Inglés I",
+            "Práctica Profesional Docente II",
+            "Sujetos de la Educación I",
+            "Didáctica",
+            "Instituciones Educativas",
+            "Psicología Educacional",
+            "Sujetos de la Educación II",
+            "Prácticas de Fonética y Fonología Inglesa"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Lengua Inglesa III",
+            "Gramática Inglesa III",
+            "Fonética y Fonología Inglesa III",
+            "Didáctica del Inglés II",
+            "Práctica Profesional Docente III",
+            "Cultura y Literatura Británica I",
+            "Gestión y Evaluación de los Aprendizajes",
+            "Cultura y Literatura Británica II",
+            "Proyectos de Intervención Socioeducativa",
+            "Educación en la Diversidad"
+          ]
+        },
+        {
+          "anio": "4º año",
+          "materias": [
+            "Lengua Inglesa",
+            "Práctica Profesional Docente IV",
+            "Fonética y Fonología Inglesa IV",
+            "Cultura y Literatura norteamericana",
+            "Educación Sexual Integral",
+            "Educación y Tecnologías Digitales",
+            "Historia y Patrimonio Cultural de Mendoza",
+            "Formación Complementaria General",
+            "Formación Complementaria Específica"
+          ]
+        }
+      ],
+      "fuente": "https://ies9011-infd.mendoza.edu.ar/sitio/profesorado-en-ingles-2/"
+    },
+    "Tecnicatura Superior en Transporte Ferroviario": {
+      "plan": [
+        {
+          "anio": "1º año",
+          "materias": [
+            "Introducción a vía, Obras y Señalamiento",
+            "Nociones Generales de Material Tractivo y Remolcado",
+            "Introducción a la Logística",
+            "Bases Físico Matemática Aplicadas",
+            "Comunicación y Comprensión de Textos",
+            "Problemática Sociocultural y del Trabajo",
+            "Informática Aplicada",
+            "Sistemas de Representación",
+            "Inglés Técnico",
+            "Práctica Profesionalizante I"
+          ]
+        },
+        {
+          "anio": "2º año",
+          "materias": [
+            "Operaciones de Vía Obras y Señalamiento",
+            "Mecánica y Tecnología de Materiales Ferroviarios",
+            "Material Rodante",
+            "Circulación",
+            "Gestión de los servicios de cargas y transporte",
+            "Higiene y Seguridad Industrial Ferroviaria",
+            "Impacto y Gestión Ambiental",
+            "Gestión de Recursos Humanos en Ferrocarriles",
+            "Costos y Presupuestos",
+            "Electrotécnica Aplicada",
+            "Práctica Profesionalizante II"
+          ]
+        },
+        {
+          "anio": "3º año",
+          "materias": [
+            "Ética y Legislación Profesional",
+            "ProyectoTecnológico",
+            "Motores diesel y sistemas auxiliares",
+            "Tracción Eléctrica",
+            "Sistemas de frenos en material rodante ferroviario",
+            "Circuitos Auxiliares",
+            "Sistemas lógicos de material rodante",
+            "Equipamiento, confortabilidad y climatización en ferrocarriles",
+            "Mecanizado, bogie, tracción y choque.",
+            "Práctica Profesionalizante III"
+          ]
+        }
+      ],
+      "fuente": "https://ies9027-infd.mendoza.edu.ar/sitio/estructura-curricular-3/"
+    }
+  }
+}

@@ -20,7 +20,54 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto San Agustín",
-     "link_oficial": "https://instsanagustin.com/2024/09/22/tecnicatura-superior-en-anestesiologia/"
+     "link_oficial": "https://instsanagustin.com/2024/09/22/tecnicatura-superior-en-anestesiologia/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Anatomía",
+        "Química Biológica",
+        "Primeros Auxilios",
+        "Física Biológica",
+        "Antropología Sociocultural y Salud",
+        "Salud Pública",
+        "Fundamentos de Anestesia",
+        "Técnicas de Anestesiología I",
+        "Entornos Virtuales de Salud y Herramientas Digitales",
+        "Comunicación en Salud",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Fisiología",
+        "Patología Médica",
+        "Técnicas Anestésicas II",
+        "Farmacología Aplicada",
+        "Microbiología General",
+        "Epidemiología y Estadística",
+        "Práctica Profesional II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Bioseguridad",
+        "Anestesia de Alta Complejidad",
+        "Psicología Aplicada",
+        "Metodología de la Investigación",
+        "Ética y Aspectos Legales",
+        "Anestesia y Tratamiento del Dolor",
+        "Educación para la Salud",
+        "Técnicas Anestésicas III",
+        "Patología Quirúrgica",
+        "Inglés",
+        "Práctica Profesional III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://instsanagustin.com/planes-de-estudios/"
     },
     {
      "id": 4802,
@@ -30,7 +77,52 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto San Agustín",
-     "link_oficial": "https://instsanagustin.com/2024/10/01/tecnicatura-superior-en-enfermeria-profesional/"
+     "link_oficial": "https://instsanagustin.com/2024/10/01/tecnicatura-superior-en-enfermeria-profesional/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Antropología Sociocultural y Salud",
+        "Procesos Psicológicos y Sociales",
+        "Entornos Virtuales de la Salud y Herramientas Digitales",
+        "Comunicación en Salud",
+        "Bases del Cuidado en Enfermería",
+        "Morfofisiología Dinámica Humana",
+        "Físico Química Biológica",
+        "Enfermería Comunitaria y Salud Pública",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Educación para la Salud",
+        "Nutrición y Dietoterapia",
+        "Microbiología, Parasitología e Inmunología",
+        "Epidemiología y Bioestadística",
+        "Farmacología Aplicada a la Enfermería",
+        "Fisiopatología Humana",
+        "Cuidados de Enfermería en el Adulto",
+        "Aspectos Psicosociales y Culturales y del Desarrollo",
+        "Cuidados de Enfermeria en el Adulto Mayor",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Inglés Técnico",
+        "Ética y Legislación Aplicada",
+        "Cuidados en Salud Mental",
+        "Cuidado en Emergencias",
+        "Gestión y Autogestión en Enfermería",
+        "Cuidados de la Enfermería Materna y del Recién Nacido",
+        "Cuidados de Enfermería del Niño y del Adolescente",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://instsanagustin.com/planes-de-estudios/"
     },
     {
      "id": 4803,
@@ -40,7 +132,51 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto San Agustín",
-     "link_oficial": "https://instsanagustin.com/2024/10/01/tecnicatura-superior-en-esterilizacion/"
+     "link_oficial": "https://instsanagustin.com/2024/10/01/tecnicatura-superior-en-esterilizacion/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Comunicación y Comprensión de Textos",
+        "Bases Físico-Matemáticas",
+        "Entornos Virtuales de Información y Comunicación",
+        "Problemática Sociocultural y de la Salud",
+        "Química General",
+        "Primeros Auxilios",
+        "Morfofisiología Dinámica",
+        "Fundamentos de Esterilización",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Química Analítica Aplicada",
+        "Física Aplicada",
+        "Bioseguridad y Medio Ambiente Laboral",
+        "Farmacología Aplicada",
+        "Salud Pública y Epidemiología",
+        "Educación Para la Salud",
+        "Técnicas de Esterilización I",
+        "Microbiología",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Bioestadística",
+        "Central de Esterilización, Administración y Gerenciamiento",
+        "Metodología de la Investigación",
+        "Esterilización de Instrumental y Equipos de Prácticas Quirúrgicas Especiales",
+        "Ética y Legislación Profesional",
+        "Técnicas de Esterilización II",
+        "Inglés Técnico",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://instsanagustin.com/planes-de-estudios/"
     },
     {
      "id": 4804,
@@ -50,7 +186,56 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto San Agustín",
-     "link_oficial": "https://instsanagustin.com/2024/10/08/tecnicatura-superior-en-hemoterapia/"
+     "link_oficial": "https://instsanagustin.com/2024/10/08/tecnicatura-superior-en-hemoterapia/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Comprensión y Producción de textos",
+        "Matemática",
+        "Introducción a la Química",
+        "Fundamentos de Laboratorio",
+        "Salud Pública y Epidemiología",
+        "Primeros Auxilios",
+        "Física Biológica",
+        "Fisiopatología Sanguínea",
+        "Química Biológica",
+        "Problemática Sociocultural y del Trabajo",
+        "Morfología y Dinámica Humana I",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Patología Médica",
+        "Hemodonación",
+        "Microbiología",
+        "Farmacología",
+        "Informática",
+        "Banco de Sangre. Administración",
+        "Organización y Gestión en Instituciones de Salud",
+        "Morfología y Dinámica Humana II",
+        "Hemoterapia I",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Bioestadística",
+        "Cultura, Salud y Educación",
+        "Condiciones y Medio Ambiente de Trabajo",
+        "Ética y Aspectos Legales",
+        "Genética e Inmunohematología en Hemoterapia",
+        "Psicología General, Social e Institucional",
+        "Hemoterapia II",
+        "Inglés Técnico",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://instsanagustin.com/planes-de-estudios/"
     },
     {
      "id": 4805,
@@ -60,7 +245,57 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto San Agustín",
-     "link_oficial": "https://instsanagustin.com/2024/10/15/tecnicatura-superior-en-instrumentacion-quirurgica/"
+     "link_oficial": "https://instsanagustin.com/2024/10/15/tecnicatura-superior-en-instrumentacion-quirurgica/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Fundamentos de la Instrumentación Quirúrgica",
+        "Anatomía Humana",
+        "Fisiología Humana",
+        "Física – Química Biológica",
+        "Fundamentos de Esterilización",
+        "Entornos Virtuales de la Salud y Herramientas Digitales",
+        "Antropología Sociocultural y salud",
+        "Comunicación en Salud",
+        "Procesos Psicológicos y Sociales",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Farmacología",
+        "Microbiología, Parasitología e Inmulogía",
+        "Procedimientos Quirúrgicos Medios I",
+        "Primeros Auxilios",
+        "Salud Pública, Estado y Sociedad",
+        "Esterilización",
+        "Anestesiología",
+        "Procedimientos Quirúrgicos Medios II",
+        "Organización y Gestión de la Salud",
+        "Patología Quirúrgica",
+        "Inglés",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Procedimientos Quirúrgicos Mayores I",
+        "Transporte de Órganos y Reimplantes",
+        "Ética y Legislación Profesional",
+        "Psicología",
+        "Procedimientos Quirúrgicos Mayores II",
+        "Bioseguridad",
+        "Procesos en Cirugía Oftalmológica",
+        "Metodología de la Investigación Acción",
+        "Inglés Técnico",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://instsanagustin.com/planes-de-estudios/"
     },
     {
      "id": 4806,
@@ -70,7 +305,56 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto San Agustín",
-     "link_oficial": "https://instsanagustin.com/2025/04/16/tecnicatura-superior-en-laboratorio-de-analisis-clinicos/"
+     "link_oficial": "https://instsanagustin.com/2025/04/16/tecnicatura-superior-en-laboratorio-de-analisis-clinicos/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Fundamentos de Laboratorio",
+        "Morfofisiología Dinámica Humana",
+        "Física Biológica",
+        "Química Inorgánica",
+        "Herramientas Digitales en Salud",
+        "Comunicación en Salud",
+        "Antropología Socio Cultural y Salud",
+        "Procesos Psicológicos y Sociales",
+        "Primeros Auxilios y Técnicas Sanitarias",
+        "Salud Pública y Promoción para la Salud",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Salud Pública y Promoción para la Salud",
+        "Microbiología General",
+        "Toxicología",
+        "Epidemiología y Bioestadística",
+        "Psicología Social y Organizacional",
+        "Microbiología Aplicada",
+        "Patología Medica Aplicada",
+        "Hematología",
+        "Bioquímica Clínica I",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Gestión y Calidad en Laboratorio",
+        "Metodología de la Investigación",
+        "Farmacología General",
+        "Histoquímica y Genética",
+        "Higiene y Seguridad Laboral en la Salud",
+        "Ética y Legislación Profesional",
+        "Bioquímica Clínica II",
+        "Inglés Técnico",
+        "Inmunología",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://instsanagustin.com/planes-de-estudios/"
     },
     {
      "id": 4807,
@@ -80,7 +364,54 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto San Agustín",
-     "link_oficial": "https://instsanagustin.com/2024/09/12/tecnicatura-superior-en-radiologia-e-imagenes-para-el-diagnostico/"
+     "link_oficial": "https://instsanagustin.com/2024/09/12/tecnicatura-superior-en-radiologia-e-imagenes-para-el-diagnostico/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Fundamentos de Radiología",
+        "Procesamiento y Calidad de Imágenes",
+        "Anatomía Humana",
+        "Física Aplicada",
+        "Antropología Sociocultural y Salud",
+        "Procesos Psicológicos y Sociales",
+        "Herramientas Digitales en Salud",
+        "Comunicación en Salud",
+        "Matemática",
+        "Primeros Auxilios y Técnicas Sanitarias",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Salud Pública y Epidemiología",
+        "Psicología Social y Organizacional",
+        "Fisiología",
+        "Diagnóstico por Imágenes",
+        "Química Biológica",
+        "Radioprotección",
+        "Física II",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Relaciones Anátomo-Radiológicas",
+        "Microbiología y Farmacología",
+        "Gestión y Administración de las Instituciones de la Salud",
+        "Educación para la Salud",
+        "Procedimientos Radioterapéuticos",
+        "Inglés Técnico",
+        "Ética y Legislación Profesional",
+        "Investigación en Salud",
+        "Procedimientos Tecnológicos de Alta Complejidad",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://instsanagustin.com/planes-de-estudios/"
     },
     {
      "id": 4808,
@@ -90,7 +421,58 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto San Agustín",
-     "link_oficial": "https://instsanagustin.com/2025/04/16/tecnicatura-superior-en-cosmetologia-cosmiatria-y-estetica/"
+     "link_oficial": "https://instsanagustin.com/2025/04/16/tecnicatura-superior-en-cosmetologia-cosmiatria-y-estetica/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Matemática",
+        "Histología y Biología Celular",
+        "Entornos Virtuales de Información y Comunicación",
+        "Comprensión y Producción de Textos",
+        "Física Biológica",
+        "Epidemiología y Bioestadística",
+        "Estrategias de Aprendizaje",
+        "Primeros Auxilios",
+        "Anatomía",
+        "Química Biológica y Cosmiátrica",
+        "Fundamentos de Cosmiatría",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Farmacología General",
+        "Salud Pública, Estado y Sociedad",
+        "Microbiología",
+        "Administración y Marketing",
+        "Fisiología",
+        "Patología Cosmíatrica",
+        "Clínica Cosmiátrica Facial y de Anexos",
+        "Tecnologías Cosmetológicas",
+        "Farmacología Cosmetológica",
+        "Esterilización",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Bioseguridad",
+        "Tecnologías de Alta Complejidad",
+        "Psicología Aplicada",
+        "Metodología de la Investigación",
+        "Bioética y Deontología Cosmetológica",
+        "Nutrición Aplicada a la Cosmiatría",
+        "Educación para la Salud",
+        "Cosmiatría y Modelado Facial y Corporal",
+        "Inglés Técnico",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://instsanagustin.com/planes-de-estudios/"
     },
     {
      "id": 4809,
@@ -100,7 +482,55 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "Instituto San Agustín",
-     "link_oficial": "https://instsanagustin.com/2026/07/29/tecnicatura-superior-en-dialisis/"
+     "link_oficial": "https://instsanagustin.com/2026/07/29/tecnicatura-superior-en-dialisis/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Fundamentos de Diálisis",
+        "Primeros Auxilios y Técnicas Sanitarias",
+        "Antropología Sociocultural y Salud",
+        "Procesos Psicológicos y Sociales",
+        "Morfofisiología Dinámica Humana",
+        "Física Biológica",
+        "Química Biológica",
+        "Herramientas Digitales en Salud",
+        "Comunicación en Salud",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Fisiopatología Humana",
+        "Técnicas de Diálisis I",
+        "Patología Médica",
+        "Patología Renal",
+        "Microbiología, Parasitología e Inmunología",
+        "Epidemiología y Bioestadística",
+        "Farmacología Aplicada",
+        "Esterilización y Bioseguridad",
+        "Salud Pública y Promoción para la Salud",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Técnicas de Diálisis II",
+        "Complicaciones Dialíticas",
+        "Diálisis en Pacientes Críticos",
+        "Nutrición y Dietoterapia Aplicada",
+        "Diálisis en Pediatría",
+        "Inglés Técnico",
+        "Investigación en Salud",
+        "Ética y Legislación Profesional",
+        "Gestión y Calidad en Tratamientos Dialíticos",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://instsanagustin.com/planes-de-estudios/"
     }
    ],
    "departamento": "Godoy Cruz"

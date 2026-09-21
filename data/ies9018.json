@@ -1,79 +1,399 @@
 {
- "instituciones": [
-  {
-   "id": 27,
-   "nombre": "IES 9-018 (Malargüe)",
-   "nivel": "terciario",
-   "gestion": "pública",
-   "provincia": "Mendoza",
-   "contacto": {
-    "telefono": "A confirmar",
-    "email": "contacto@ies9018malargue.edu.ar",
-    "direccion": "Malargüe, Mendoza"
-   },
-   "carreras": [
-    {
-     "id": 2701,
-     "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-018 Malargüe",
-     "link_oficial": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-desarrollo-de-software/"
-    },
-    {
-     "id": 2702,
-     "nombre_carrera": "Tecnicatura Superior en Minería",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-018 Malargüe",
-     "link_oficial": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-mineria-2024/"
-    },
-    {
-     "id": 2703,
-     "nombre_carrera": "Tecnicatura Superior en Petróleo y Gas",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-018 Malargüe",
-     "link_oficial": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-petroleo-y-gas-2024/"
-    },
-    {
-     "id": 2704,
-     "nombre_carrera": "Tecnicatura Superior en Turismo y Hotelería",
-     "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-018 Malargüe",
-     "link_oficial": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-turismo-y-hoteleria-2024/"
-    },
-    {
-     "id": 2705,
-     "nombre_carrera": "Profesorado en Educación Secundaria de Biología",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-018 Malargüe",
-     "link_oficial": "https://ies9018malargue.edu.ar/profesorado-en-educacion-secundaria-de-biologia/"
-    },
-    {
-     "id": 2706,
-     "nombre_carrera": "Profesorado de Educación Secundaria en Lengua y Literatura",
-     "categoria": "Grado / Profesorado",
-     "duracion": "4 años",
-     "modalidad": "Presencial",
-     "turno": "A confirmar",
-     "facultad": "IES 9-018 Malargüe",
-     "link_oficial": "https://ies9018malargue.edu.ar/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/"
-    }
-   ],
-   "departamento": "Malargüe"
-  }
- ]
+    "instituciones": [
+        {
+            "id": 27,
+            "nombre": "IES 9-018 (Malargüe)",
+            "nivel": "terciario",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "contacto@ies9018malargue.edu.ar",
+                "direccion": "Malargüe, Mendoza"
+            },
+            "carreras": [
+                {
+                    "id": 2701,
+                    "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-018 Malargüe",
+                    "link_oficial": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-desarrollo-de-software/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Programación I",
+                                "Arquitectura de computadoras",
+                                "Requerimientos de software",
+                                "Álgebra",
+                                "Inglés técnico I",
+                                "Comprensión y producción de textos",
+                                "Lógica computacional",
+                                "Problemática sociocultural y del trabajo",
+                                "Sistemas administrativos aplicados",
+                                "Práctica profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Comunicaciones y redes",
+                                "Programación II",
+                                "Matemática discreta",
+                                "Análisis matemático",
+                                "Inglés técnico II",
+                                "Modelado de software",
+                                "Bases de datos I",
+                                "Sistemas operativos",
+                                "Práctica profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Programación III",
+                                "Arquitectura y diseño de interfaces",
+                                "Auditoría y calidad de sistemas",
+                                "Seguridad informática",
+                                "Inglés técnico III",
+                                "Bases de datos II",
+                                "Probabilidad y estadística",
+                                "Legislación informática",
+                                "Ética profesional",
+                                "Gestión de Proyectos de Software",
+                                "Práctica profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-desarrollo-de-software/"
+                },
+                {
+                    "id": 2702,
+                    "nombre_carrera": "Tecnicatura Superior en Minería",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-018 Malargüe",
+                    "link_oficial": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-mineria-2024/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Comunicación, Comprensión y Producción de Textos",
+                                "Problemática Sociocultural y del Contexto",
+                                "Inglés Técnico",
+                                "TIC",
+                                "Matemática",
+                                "Física",
+                                "Química General",
+                                "Geología General",
+                                "Mineralogía y Petrología",
+                                "Topografía Aplicada",
+                                "Introducción a las Operaciones Mineras",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Inglés Comunicativo",
+                                "Tecnología de la Información Aplicada a la Minería",
+                                "Cartografía y Sensores Remotos",
+                                "Organización y Legislación Minera",
+                                "Prospección y Exploración Minera",
+                                "Ética Profesional",
+                                "Geología de Yacimientos",
+                                "Química Aplicada",
+                                "Perforaciones y Voladuras",
+                                "Control y Gestión de Operaciones Mineras",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Máquinas y Equipos de Construcciones Mineras",
+                                "Métodos de Explotación de Minas y Canteras",
+                                "Análisis de Mena",
+                                "Impacto Ambiental Minero",
+                                "Tratamiento de Minerales",
+                                "Higiene y Seguridad Minera",
+                                "Gestión de Emprendimientos Mineros",
+                                "Planificación, Mantenimiento y Servicios",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-mineria-2024/"
+                },
+                {
+                    "id": 2703,
+                    "nombre_carrera": "Tecnicatura Superior en Petróleo y Gas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-018 Malargüe",
+                    "link_oficial": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-petroleo-y-gas-2024/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Módulo 1: Comunicación en la industria",
+                                "Módulo 2: Organización de empresas hidrocarburíferas",
+                                "Módulo 3: Reconocimiento geológico",
+                                "Módulo 4: Manejo, mantenimiento y reparación de máquinas y equipos de",
+                                "Módulo 5: Aplicación de métodos de exploración",
+                                "Módulo 6: La industria hidrocarburífera en el marco del desarrollo sostenible"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Módulo 7: Análisis de la geología de yacimientos de petróleo y gas",
+                                "Módulo 8: Manejo, mantenimiento y reparación de máquinas, equipos de Extracción y",
+                                "Módulo 9: Aplicación de métodos de explotación",
+                                "Módulo 10: Manejo de métodos de Producción de Hidrocarburos",
+                                "Módulo 11: Procesamiento de Hidrocarburos y aguas industriales",
+                                "Módulo 12: Gestión empresarial"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Módulo 13: Gestión de proyectos de empresas hidrocarburíferas",
+                                "Módulo 14: Aplicación de métodos de mejoramiento",
+                                "Módulo 15: Sistematización y control en la industria petrolera",
+                                "Módulo 16: Energías limpias y su relación con la industria hidrocarburífera"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-petroleo-y-gas-2024/"
+                },
+                {
+                    "id": 2704,
+                    "nombre_carrera": "Tecnicatura Superior en Turismo y Hotelería",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-018 Malargüe",
+                    "link_oficial": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-turismo-y-hoteleria-2024/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Inglés I",
+                                "Portugués I",
+                                "Geografía y Ambiente de Mendoza",
+                                "Recursos Turísticos de Argentina",
+                                "Introducción al Turismo y la Hotelería",
+                                "Producción de información Turística",
+                                "Comunicación Oral",
+                                "Historia y Cultura de Mendoza",
+                                "Información Turística de Mendoza",
+                                "Guiado y Coordinación",
+                                "Gestión de Riesgos y Primeros Auxilios",
+                                "Ética y Legislación Turística I",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Inglés II",
+                                "Portugués II",
+                                "Servicios de Hospedaje",
+                                "Economía, Costos y Finanzas",
+                                "Informática",
+                                "Administración General",
+                                "Gastronomía, Alimentos y Bebidas",
+                                "Ética y Legislación Turística II",
+                                "Gestión Pública del Turismo",
+                                "Destinos, Circuitos y Productos Turísticos",
+                                "Estadística Aplicada",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Inglés III",
+                                "Portugués III",
+                                "Formulación y Evaluación de Proyectos",
+                                "Gestión de Empresas de Viajes",
+                                "Electiva I",
+                                "Recursos Humanos",
+                                "Marketing Turístico",
+                                "Electiva II",
+                                "Organización de Eventos",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9018malargue.edu.ar/tecnicatura-superior-en-turismo-y-hoteleria-2024/"
+                },
+                {
+                    "id": 2705,
+                    "nombre_carrera": "Profesorado en Educación Secundaria de Biología",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-018 Malargüe",
+                    "link_oficial": "https://ies9018malargue.edu.ar/profesorado-en-educacion-secundaria-de-biologia/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Pedagogía",
+                                "Prácticas de Lectura, Escritura Y Oralidad",
+                                "Promoción de la Salud",
+                                "Tecnologías de la Información y la Comunicación",
+                                "Historia Política, Social, Cultural y Económica de América Latina",
+                                "Didáctica General",
+                                "Matemática",
+                                "Química General e Inorgánica",
+                                "Biología General",
+                                "Bioestadística",
+                                "Química Orgánica y Biológica",
+                                "Física General",
+                                "Biología Celular y Molecular",
+                                "Ensayos de Citogenética y Evolución",
+                                "Práctica Profesional Docente I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Psicología Educacional",
+                                "Historia y Política de la Educación Argentina",
+                                "Sujetos de la Educación",
+                                "Instituciones Educativas",
+                                "Biología de los Microorganismos y Hongos",
+                                "Morfofisiología Animal",
+                                "Morfofisiología Vegetal",
+                                "Diversidad Animal",
+                                "Física Biológica",
+                                "Genética",
+                                "Didáctica de la Biología I",
+                                "Práctica Profesional Docente II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Filosofía",
+                                "Sociología de la Educación",
+                                "Ciencias de la Tierra",
+                                "Historia de las Ciencias Biológicas y su Epistemología",
+                                "Diversidad Vegetal",
+                                "Biodiversidad y Evolución",
+                                "Biología Humana",
+                                "Ecología General",
+                                "Didáctica de la Biología II",
+                                "Práctica Profesional Docente III"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "Educación Sexual",
+                                "Bioética",
+                                "Educación para la Salud",
+                                "Educación Ambiental",
+                                "Unidad de Definición Institucional CFE",
+                                "Unidad de Definición Institucional CFG",
+                                "Unidad de Definición Institucional CFE",
+                                "Unidad de Definición Institucional CFG",
+                                "Práctica Profesional Docente III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9018malargue.edu.ar/profesorado-en-educacion-secundaria-de-biologia/"
+                },
+                {
+                    "id": 2706,
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Lengua y Literatura",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "IES 9-018 Malargüe",
+                    "link_oficial": "https://ies9018malargue.edu.ar/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/",
+                    "plan_estudio": [
+                        {
+                            "anio": "Primer año",
+                            "materias": [
+                                "Pensamiento Filosófico",
+                                "Sistema educativo",
+                                "Pedagogía",
+                                "Comprensión y Producción de textos académicos",
+                                "Literatura Universal I",
+                                "Morfología y Semántica Léxica",
+                                "Literatura y Cultura Grecolatina",
+                                "Fundamentos de la Lengua",
+                                "Fundamentos de la Literatura",
+                                "Práctica profesional docente I"
+                            ]
+                        },
+                        {
+                            "anio": "Segundo año",
+                            "materias": [
+                                "Instituciones educativas",
+                                "Didáctica",
+                                "Psicología educacional",
+                                "Sujetos de la educación",
+                                "Literatura Española",
+                                "Sintaxis y Semántica Proposicional",
+                                "Lingüística del texto y Análisis del Discurso I",
+                                "Literatura Universal II",
+                                "Literatura para jóvenes",
+                                "Fonética, Fonología y Grafemática",
+                                "Lingüística del texto y Análisis del Discurso II",
+                                "Literatura Latinoamericana I",
+                                "Práctica profesional docente II"
+                            ]
+                        },
+                        {
+                            "anio": "Tercer año",
+                            "materias": [
+                                "Gestión y evaluación de los aprendizajes",
+                                "Proyectos de intervención socioeducativa",
+                                "Educación en la diversidad",
+                                "Literatura Argentina I",
+                                "Literatura Latinoamericana II",
+                                "Psicolingüística y Sociolingüística",
+                                "Didáctica de la Lengua",
+                                "Literatura Argentina II",
+                                "Alfabetización",
+                                "Didáctica de la Literatura",
+                                "Práctica profesional docente III"
+                            ]
+                        },
+                        {
+                            "anio": "Cuarto año",
+                            "materias": [
+                                "Educación Sexual Integral",
+                                "Educación y Tecnologías Digitales",
+                                "Historia y Patrimonio Cultural de Mendoza",
+                                "Formación Complementaria General",
+                                "Filología",
+                                "Literatura Argentina III",
+                                "Teoría y Crítica Literarias",
+                                "Formación Complementaria específica",
+                                "Práctica profesional docente IV"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://ies9018malargue.edu.ar/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/"
+                }
+            ],
+            "departamento": "Malargüe"
+        }
+    ]
 }

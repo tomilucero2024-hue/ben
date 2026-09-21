@@ -20,7 +20,56 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IDESA (UGACOOP)",
-     "link_oficial": "https://idesaugacoop.com.ar/tecnicatura-superior-en-diseno-de-indumentaria-textil-y-accesorios/"
+     "link_oficial": "https://idesaugacoop.com.ar/tecnicatura-superior-en-diseno-de-indumentaria-textil-y-accesorios/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Diseño de Indumentaria I",
+        "Moldería I",
+        "Dibujo Aplicado a la Indumentaria I",
+        "Dibujo Técnico Asistido I",
+        "Ergonomía",
+        "Psicología de la Percepción",
+        "Práctica de Lectura, Escritura y Oralidad",
+        "Administración de Recursos",
+        "Historia de la Indumentaria I",
+        "Sociología y Cultura de la Indumentaria",
+        "Inglés",
+        "Práctica Profesionalizante I"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Diseño de Indumentaria II",
+        "Moldería II",
+        "Dibujo Aplicado a la Indumentaria II",
+        "Dibujo Técnico Asistido II",
+        "Historia de la Indumentaria II",
+        "Tecnología I",
+        "Costos y Comercialización",
+        "Semiótica",
+        "Diseño Textil",
+        "Práctica Profesionalizante II"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Diseño de Indumentaria III",
+        "Moldería III",
+        "Dibujo Técnico Asistido y Comunicación de Proyecto",
+        "Diseño de Marroquinería y Accesorios",
+        "Ética Profesional",
+        "Gestión de Calidad",
+        "Tecnología II",
+        "Emprendedorismo",
+        "Práctica Profesionalizante III"
+       ]
+      }
+     ],
+     "plan_fuente": "https://idesaugacoop.com.ar/tecnicatura-superior-en-diseno-de-indumentaria-textil-y-accesorios/"
     },
     {
      "id": 5102,
@@ -30,7 +79,57 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IDESA (UGACOOP)",
-     "link_oficial": "https://idesaugacoop.com.ar/tecnicatura-superior-en-biotecnologia/"
+     "link_oficial": "https://idesaugacoop.com.ar/tecnicatura-superior-en-biotecnologia/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Introducción a los Bioemprendimientos",
+        "Biología General",
+        "Análisis Matemático",
+        "Química General",
+        "Comprensión y Producción de Textos",
+        "Práctica Profesionalizante I",
+        "Física",
+        "Introducción a la Biotecnología",
+        "Química Orgánica y de los Alimentos",
+        "Microbiología General",
+        "Ecología"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Bioquímica",
+        "Genética",
+        "Biología Molecular y Celular",
+        "Gestión de Bioemprendimientos",
+        "Inglés",
+        "Práctica Profesionalizante II",
+        "Ingeniería Genética",
+        "Fisiología Animal",
+        "Fisiología Vegetal",
+        "Bioinformática"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Biotecnología Aplicado al Agro",
+        "Microbiología Aplicada",
+        "Bioprocesos",
+        "Desarrollo Territorial",
+        "Inmunología",
+        "Ética Profesional",
+        "Práctica Profesionalizante III",
+        "Recuperación y Purificación de Proteínas",
+        "Gestión de Calidad",
+        "Biotecnología de la Salud",
+        "Elementos de Higiene y Seguridad Industrial y Ambiental"
+       ]
+      }
+     ],
+     "plan_fuente": "https://idesaugacoop.com.ar/tecnicatura-superior-en-biotecnologia/"
     },
     {
      "id": 5103,
@@ -40,7 +139,41 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IDESA (UGACOOP)",
-     "link_oficial": "https://idesaugacoop.com.ar/tecnicatura-superior-en-mecatronica-aplicada-a-la-industria/"
+     "link_oficial": "https://idesaugacoop.com.ar/tecnicatura-superior-en-mecatronica-aplicada-a-la-industria/",
+     "plan_estudio": [
+      {
+       "anio": "1º año",
+       "materias": [
+        "Sistemas Mecánicos",
+        "Sistemas Eléctricos y Electrónicos",
+        "Sistema de Control",
+        "Sistemas Informáticos",
+        "Elementos de Comunicación",
+        "Gestión de Emprendimientos"
+       ]
+      },
+      {
+       "anio": "2º año",
+       "materias": [
+        "Dispositivos Electromecánicos",
+        "Circuitos de Control Automático",
+        "Sistemas Informáticos de Control",
+        "Procesos de Fabricación",
+        "Representación de Sistemas Mecatrónicos",
+        "Sistema CAD-CAM-CAE"
+       ]
+      },
+      {
+       "anio": "3º año",
+       "materias": [
+        "Proyecto de Mecatrónica",
+        "Simulación de Sistemas Mecatrónicos",
+        "Procesos y Gestión de Mantenimiento y Calidad",
+        "Configuración de Sistemas Mecatrónicos Formación y Orientación Laboral"
+       ]
+      }
+     ],
+     "plan_fuente": "https://idesaugacoop.com.ar/tecnicatura-superior-en-mecatronica-aplicada-a-la-industria/"
     }
    ],
    "departamento": "General Alvear"

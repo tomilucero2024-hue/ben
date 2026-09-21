@@ -12,7 +12,7 @@ carreras_ies9009 = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-energias-renovables/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicarura-superior-en-energias-renovables/"
     },
     {
         "id": 1802,
@@ -22,7 +22,7 @@ carreras_ies9009 = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/general-enologia/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/"
     },
     {
         "id": 1803,
@@ -32,7 +32,7 @@ carreras_ies9009 = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-sup-en-agronomia-sc/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-agronomia/"
     },
     {
         "id": 1804,
@@ -42,7 +42,7 @@ carreras_ies9009 = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/general-agronomica/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-agronomia/"
     },
     {
         "id": 1805,
@@ -52,7 +52,7 @@ carreras_ies9009 = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/t-s-en-petroleo-y-gas/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-petroleo-y-gas/"
     },
     {
         "id": 1806,
@@ -62,7 +62,7 @@ carreras_ies9009 = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/t-s-diseno-multimedial/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-diseno-multimedial/"
     },
     {
         "id": 1807,
@@ -72,7 +72,7 @@ carreras_ies9009 = [
         "modalidad": "A Distancia",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-de-empresas-a-distancia/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-administracion-de-empresas-distancia/"
     },
     {
         "id": 1808,
@@ -82,7 +82,7 @@ carreras_ies9009 = [
         "modalidad": "A Distancia",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/t-adm-publica-a-distancia/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-administracion-publica-a-distancia/"
     },
     {
         "id": 1809,
@@ -92,7 +92,7 @@ carreras_ies9009 = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/general-administracion/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-administracion-publica-con-orientacion-en-gestion-penitenciaria/"
     },
     {
         "id": 1810,
@@ -102,7 +102,7 @@ carreras_ies9009 = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-publica-con-orientacion-en-instituciones-legislativas/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-administracion-publica-con-orientacion-en-instituciones-legislativas/"
     },
     {
         "id": 1811,
@@ -112,7 +112,7 @@ carreras_ies9009 = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-logistica/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-logistica-2/"
     },
     {
         "id": 1812,
@@ -122,7 +122,7 @@ carreras_ies9009 = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/general-profesorado-educacion-especial/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/"
     },
     {
         "id": 1813,
@@ -132,7 +132,7 @@ carreras_ies9009 = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/profesorado-de-educacion-primaria/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/"
     },
     {
         "id": 1814,
@@ -142,7 +142,7 @@ carreras_ies9009 = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/profesorado-de-educacion-secundaria-en-quimica/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorado-de-quimica/"
     },
     {
         "id": 1815,
@@ -152,7 +152,47 @@ carreras_ies9009 = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-009",
-        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/profesorado-de-educacion-secundaria-en-matematica/"
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorado-de-matematica/"
+    },
+    {
+        "id": 1816,
+        "nombre_carrera": "Tecnicatura en Diseño Gráfico",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "IES 9-009",
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-diseno-grafico/"
+    },
+    {
+        "id": 1817,
+        "nombre_carrera": "Tecnicatura Superior en Turismo",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "3 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "IES 9-009",
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-turismo-2/"
+    },
+    {
+        "id": 1818,
+        "nombre_carrera": "Tecnicatura en Guía de Turismo",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "2 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "IES 9-009",
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-guia-de-turismo/"
+    },
+    {
+        "id": 1819,
+        "nombre_carrera": "Tecnicatura en Gestión de Alojamientos Turísticos",
+        "categoria": "Pregrado / Tecnicatura",
+        "duracion": "2 años",
+        "modalidad": "Presencial",
+        "turno": "A confirmar",
+        "facultad": "IES 9-009",
+        "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-en-gestion-de-alojamientos-turisticos/"
     }
 ]
 
