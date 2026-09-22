@@ -96,12 +96,29 @@
         }
 
         // Selección de tipo (Sugerencia vs Fallo)
-        tipoBotones.forEach(btn => {
+        tipoBotones.forEach((btn, indice) => {
             btn.addEventListener('click', () => {
                 const tipo = btn.dataset.tipo;
                 if (tipo && tipo !== tipoActual) {
                     cambiarTipo(tipo);
                 }
+            });
+            // WCAG 2.1 - 2.1.1 Teclado: en un radiogroup las flechas mueven la
+            // selección (y el foco), Home/End van a los extremos. Se activa al
+            // mover, que es el patrón esperado de un grupo de radios.
+            btn.addEventListener('keydown', (event) => {
+                const teclas = ['ArrowRight', 'ArrowDown', 'ArrowLeft', 'ArrowUp', 'Home', 'End'];
+                if (!teclas.includes(event.key)) return;
+                event.preventDefault();
+                let destino = indice;
+                if (event.key === 'ArrowRight' || event.key === 'ArrowDown') destino = (indice + 1) % tipoBotones.length;
+                if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') destino = (indice - 1 + tipoBotones.length) % tipoBotones.length;
+                if (event.key === 'Home') destino = 0;
+                if (event.key === 'End') destino = tipoBotones.length - 1;
+                const siguiente = tipoBotones[destino];
+                if (!siguiente) return;
+                cambiarTipo(siguiente.dataset.tipo);
+                siguiente.focus();
             });
         });
 
@@ -135,6 +152,9 @@
             const activo = btn.dataset.tipo === nuevoTipo;
             btn.classList.toggle('is-active', activo);
             btn.setAttribute('aria-checked', activo ? 'true' : 'false');
+            // Roving tabindex: dentro de un radiogroup el Tab entra una vez y las
+            // flechas hacen el resto (WCAG 2.1 - 2.1.1 / patrón ARIA de radios).
+            btn.tabIndex = activo ? 0 : -1;
         });
 
         if (labelMensaje) {
@@ -150,11 +170,25 @@
     /**
      * Abre el modal y prepara el foco
      */
+    // WCAG 2.1 - 4.1.2: el diálogo es aria-modal, así que lo de atrás queda
+    // inerte de verdad (mismo criterio que el test vocacional y Mi lista).
+    function alternarFondoInert(inert) {
+        ['#copilotoPanel', '.site-footer', '.a11y-widget'].forEach(sel => {
+            const el = document.querySelector(sel);
+            if (el) el.inert = inert;
+        });
+        const main = document.querySelector('.catalog-layout');
+        const hero = document.querySelector('.hero');
+        if (main) main.inert = inert;
+        if (hero) hero.inert = inert;
+    }
+
     function abrirModal() {
         elementoPrevioFoco = document.activeElement;
         modal.hidden = false;
         modal.classList.add('is-open');
         document.body.classList.add('modal-abierto');
+        alternarFondoInert(true);
 
         mostrarVistaFormulario();
         limpiarFormulario();
@@ -172,6 +206,7 @@
         modal.classList.remove('is-open');
         modal.hidden = true;
         document.body.classList.remove('modal-abierto');
+        alternarFondoInert(false);
 
         if (elementoPrevioFoco && typeof elementoPrevioFoco.focus === 'function') {
             elementoPrevioFoco.focus();

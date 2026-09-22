@@ -21,6 +21,9 @@ import { enlacesBEN } from '../datos.js';
 import { escaparHTML } from '../util.js';
 
 const CLAVE_PERFIL = 'ben-vocacional-perfil';
+// WCAG 2.1 - 2.2.6 / fatiga cognitiva: el avance se guarda respuesta por
+// respuesta para poder pausar y retomar donde se dejó. No hay límite de tiempo.
+const CLAVE_PROGRESO = 'ben-vocacional-progreso';
 
 let overlay = null;
 let cuerpo = null;
@@ -72,6 +75,39 @@ function numeroDePregunta(id) {
   return preguntas.findIndex(p => p.id === id) + 1;
 }
 
+// WCAG 2.1 - 4.1.3: la barra de progreso no se anuncia sola. Este texto va a la
+// región role="status" y se fuerza el re-anuncio borrando y reescribiendo.
+// La barra se actualiza desde un solo lugar: así el ancho, el aria-valuenow y el
+// texto en palabras nunca se desincronizan (p. ej. al retomar el test).
+function actualizarBarraProgreso(pagina) {
+  const total = preguntas.length || 65;
+  const respondidas = Object.keys(respuestas).length;
+  progresoBarra.style.width = `${Math.round((respondidas / total) * 100)}%`;
+  progreso.setAttribute('aria-valuemin', '0');
+  progreso.setAttribute('aria-valuemax', String(total));
+  progreso.setAttribute('aria-valuenow', String(respondidas));
+  progreso.setAttribute('aria-valuetext', `${respondidas} de ${total} respondidas`);
+  if (pagina) {
+    progresoTexto.textContent = `Parte ${pagina.seccion.parte} de 3 · ${pagina.seccion.titulo} · ${respondidas} de ${total} respondidas`;
+  }
+}
+
+// WCAG 2.1 - 2.4.3 Orden del foco: cada pantalla del test reemplaza el DOM
+// entero, así que el foco hay que devolverlo adentro. Sin esto, al pasar de
+// tanda el control enfocado desaparecía, el foco caía al <body> y la siguiente
+// tabulación volvía al principio de la página (afuera del diálogo).
+function enfocarDentroDe(preferido, respaldo) {
+  const destino = (preferido && preferido()) || (respaldo && respaldo()) || botonCerrar;
+  if (destino && typeof destino.focus === 'function') destino.focus({ preventScroll: true });
+}
+
+function anunciar(texto) {
+  const region = document.getElementById('tc-anuncio');
+  if (!region) return;
+  region.textContent = '';
+  window.setTimeout(() => { region.textContent = texto; }, 30);
+}
+
 function leerPerfilGuardado() {
   try {
     const crudo = localStorage.getItem(CLAVE_PERFIL);
@@ -80,6 +116,38 @@ function leerPerfilGuardado() {
   } catch (e) {
     return null;
   }
+}
+
+function leerProgresoGuardado() {
+  try {
+    const crudo = localStorage.getItem(CLAVE_PROGRESO);
+    const datos = crudo ? JSON.parse(crudo) : null;
+    if (!datos || !datos.respuestas || !Object.keys(datos.respuestas).length) return null;
+    return datos;
+  } catch (e) {
+    return null;
+  }
+}
+
+function guardarProgreso() {
+  try {
+    const total = preguntas.length || 65;
+    const respondidas = Object.keys(respuestas).length;
+    if (!respondidas) { localStorage.removeItem(CLAVE_PROGRESO); return; }
+    localStorage.setItem(CLAVE_PROGRESO, JSON.stringify({
+      version: 1,
+      fecha: new Date().toISOString(),
+      paginaActual,
+      total,
+      respuestas
+    }));
+  } catch (e) {
+    // Sin almacenamiento el test funciona igual; solo no se puede retomar.
+  }
+}
+
+function borrarProgreso() {
+  try { localStorage.removeItem(CLAVE_PROGRESO); } catch (e) {}
 }
 
 function guardarPerfil(perfilCalculado) {
@@ -141,8 +209,11 @@ export async function abrirTestCompleto() {
     console.error('[Test completo]', e);
     cuerpo.innerHTML = '<p class="empty-state">No se pudieron cargar las preguntas del test. Probá recargar la página.</p>';
   }
-  const foco = cuerpo.querySelector('button, a, input') || botonCerrar;
-  if (foco) foco.focus();
+  // renderIntro() deja el foco adentro; si algo falló, este respaldo lo asegura.
+  if (!overlay.contains(document.activeElement)) {
+    const foco = cuerpo.querySelector('button, a, input') || botonCerrar;
+    if (foco) foco.focus();
+  }
 }
 
 export function cerrarTestCompleto() {
@@ -160,6 +231,7 @@ function renderIntro() {
   progreso.hidden = true;
   pie.innerHTML = '';
   const guardado = leerPerfilGuardado();
+  const progresoGuardado = leerProgresoGuardado();
   const total = preguntas.length || 65;
 
   cuerpo.innerHTML = `
@@ -174,6 +246,14 @@ function renderIntro() {
         <li class="tc-paso"><span class="tc-paso-num">2</span><div><strong>Aptitudes.</strong> 15 preguntas sobre qué tan fácil te resulta cada tipo de tarea.</div></li>
         <li class="tc-paso"><span class="tc-paso-num">3</span><div><strong>Valores y contexto.</strong> 14 preguntas sobre lo que necesitás de tu trabajo y la presión que sentís hoy.</div></li>
       </ol>
+      ${progresoGuardado ? `
+      <div class="tc-ultimo tc-ultimo-progreso">
+        <div>
+          <strong>Tenés ${Object.keys(progresoGuardado.respuestas).length} de ${total} respuestas guardadas</strong>
+          <p>Podés seguir donde quedaste, sin repetir lo que ya respondiste.</p>
+        </div>
+        <button type="button" class="tc-btn-secundario" data-tc-accion="seguir">Seguir donde quedé</button>
+      </div>` : ''}
       ${guardado ? `
       <div class="tc-ultimo">
         <div>
@@ -189,16 +269,20 @@ function renderIntro() {
   pie.innerHTML = `
     <button type="button" class="tc-btn-secundario" data-tc-accion="cerrar">Cancelar</button>
     <button type="button" class="tc-btn-primario" data-tc-accion="empezar">Empezar el test</button>`;
+
+  // Prioridad del foco al abrir: retomar > último resultado > empezar > cerrar.
+  enfocarDentroDe(
+    () => cuerpo.querySelector('[data-tc-accion="seguir"]') || cuerpo.querySelector('[data-tc-accion="ultimo"]'),
+    () => pie.querySelector('[data-tc-accion="empezar"]')
+  );
 }
 
 function renderPagina() {
   const pagina = paginas[paginaActual];
   if (!pagina) return;
   const total = preguntas.length;
-  const respondidas = Object.keys(respuestas).length;
   progreso.hidden = false;
-  progresoBarra.style.width = `${Math.round((respondidas / total) * 100)}%`;
-  progresoTexto.textContent = `Parte ${pagina.seccion.parte} de 3 · ${pagina.seccion.titulo} · ${respondidas} de ${total} respondidas`;
+  actualizarBarraProgreso(pagina);
 
   const escala = escalaDe(pagina.seccion.id);
   const bloques = pagina.preguntas.map(p => {
@@ -208,17 +292,21 @@ function renderPagina() {
                aria-label="${escaparHTML(escala[v - 1])}">
         <span aria-hidden="true">${v}</span>
       </label>`).join('');
+    // WCAG 2.1 - 1.3.1 / 4.1.2: la leyenda lleva la pregunta EN CONTEXTO
+    // ("Pregunta N de total") y el fieldset describe la escala completa, así el
+    // lector anuncia "Pregunta 24 de 65: <texto>. Escala de 1 a 5..." al entrar.
     return `
-      <fieldset class="tc-pregunta">
-        <legend class="tc-pregunta-texto"><span class="tc-numero">${numeroDePregunta(p.id)}</span>${escaparHTML(p.texto)}</legend>
+      <fieldset class="tc-pregunta" aria-describedby="tc-escala-${paginaActual}">
+        <legend class="tc-pregunta-texto"><span class="sr-only">Pregunta ${numeroDePregunta(p.id)} de ${total}: </span><span class="tc-numero">${numeroDePregunta(p.id)}</span>${escaparHTML(p.texto)}</legend>
         <div class="tc-likert">${opciones}</div>
       </fieldset>`;
   }).join('');
 
   cuerpo.innerHTML = `
     <div class="tc-pagina">
+      <p class="sr-only" id="tc-escala-${paginaActual}">Escala de 1 a 5: 1 es ${escaparHTML(escala[0])}, 2 ${escaparHTML(escala[1])}, 3 ${escaparHTML(escala[2])}, 4 ${escaparHTML(escala[3])} y 5 ${escaparHTML(escala[4])}.</p>
       <h3 class="tc-instruccion">${escaparHTML(pagina.seccion.instruccion)}</h3>
-      <div class="tc-escala"><span>${escaparHTML(escala[0])}</span><span>${escaparHTML(escala[4])}</span></div>
+      <div class="tc-escala" aria-hidden="true"><span>${escaparHTML(escala[0])}</span><span>${escaparHTML(escala[4])}</span></div>
       ${bloques}
     </div>`;
 
@@ -230,6 +318,17 @@ function renderPagina() {
     </button>`;
 
   cuerpo.scrollTop = 0;
+  const desdeN = numeroDePregunta(pagina.preguntas[0].id);
+  const hastaN = numeroDePregunta(pagina.preguntas[pagina.preguntas.length - 1].id);
+  const completa = paginaCompleta() ? ' Tanda completa, podés continuar.' : '';
+  anunciar(`Parte ${pagina.seccion.parte} de 3, ${pagina.seccion.titulo}. Preguntas ${desdeN} a ${hastaN} de ${total}.${completa}`);
+  guardarProgreso();
+  // El foco arranca en la primera pregunta de la tanda nueva (o en la primera
+  // sin responder, al volver atrás).
+  enfocarDentroDe(
+    () => cuerpo.querySelector(`fieldset:nth-of-type(${(pagina.preguntas.findIndex(p => !respuestas[p.id]) + 1) || 1}) input[type="radio"]`),
+    () => cuerpo.querySelector('input[type="radio"], button, a')
+  );
 }
 
 function paginaCompleta() {
@@ -254,6 +353,7 @@ async function finalizarTest() {
     perfil = window.Vocacional.calcularPerfil(respuestas);
     ranking = window.Vocacional.generarRanking(perfil, window.Vocacional.perfiles, window.Vocacional.config, { limite: 150 });
     guardarPerfil(perfil);
+    borrarProgreso(); // el avance ya cumplió su función: queda el resultado
     renderResultados();
   } catch (e) {
     console.error('[Test completo]', e);
@@ -294,7 +394,7 @@ function renderResultados() {
   cuerpo.innerHTML = `
     <div class="tc-resultado">
       <p class="tc-eyebrow">Tu resultado</p>
-      <h3 class="tc-resumen">${escaparHTML(resumen)}</h3>
+      <h3 class="tc-resumen" tabindex="-1">${escaparHTML(resumen)}</h3>
       <p class="tc-codigo"><span>${escaparHTML(codigo)}</span> · presión externa ${perfil.contexto.presion}/10</p>
 
       ${alertas.length ? `
@@ -317,6 +417,9 @@ function renderResultados() {
         institución antes de inscribirte. La decisión final es tuya.</small></p>
     </div>`;
   cuerpo.scrollTop = 0;
+  // El resultado también se anuncia y recibe el foco: el resumen es lo primero
+  // que hay que leer/escuchar.
+  enfocarDentroDe(() => cuerpo.querySelector('.tc-resumen'), () => cuerpo.querySelector('button, a[href]'));
 }
 
 // ---------------------------------------------------------------------------
@@ -348,8 +451,17 @@ function manejarAccion(accion) {
     case 'empezar':
       respuestas = {};
       paginaActual = 0;
+      borrarProgreso();
       renderPagina();
       break;
+    case 'seguir': {
+      const guardado = leerProgresoGuardado();
+      if (!guardado) { renderIntro(); return; }
+      respuestas = guardado.respuestas;
+      paginaActual = Math.min(guardado.paginaActual || 0, Math.max(paginas.length - 1, 0));
+      renderPagina();
+      break;
+    }
     case 'atras':
       if (paginaActual > 0) { paginaActual--; renderPagina(); }
       break;
@@ -378,10 +490,12 @@ function manejarAccion(accion) {
       paginaActual = 0;
       perfil = null;
       ranking = null;
+      borrarProgreso();
       renderPagina();
       break;
     case 'borrar':
       try { localStorage.removeItem(CLAVE_PERFIL); } catch (e) {}
+      borrarProgreso();
       if (window.EventosVocacional) window.EventosVocacional.limpiar();
       respuestas = {};
       paginaActual = 0;
@@ -419,12 +533,11 @@ export function inicializarTestCompleto() {
     if (!input) return;
     respuestas[input.name] = Number(input.value);
     const pagina = paginas[paginaActual];
-    const respondidas = Object.keys(respuestas).length;
-    if (pagina) {
-      progresoBarra.style.width = `${Math.round((respondidas / preguntas.length) * 100)}%`;
-      progresoTexto.textContent = `Parte ${pagina.seccion.parte} de 3 · ${pagina.seccion.titulo} · ${respondidas} de ${preguntas.length} respondidas`;
-    }
+    // WCAG 2.1 - 4.1.2: el progressbar expone el valor real, no solo el ancho.
+    if (pagina) actualizarBarraProgreso(pagina);
     actualizarControlesPagina();
+    if (pagina && paginaCompleta()) anunciar('Tanda completa. Podés continuar.');
+    guardarProgreso();
   });
 
   document.addEventListener('keydown', event => {

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="manifest" href="/manifest.json?v=20260921_52">
+    <link rel="manifest" href="/manifest.json?v=20260921_54">
     <meta name="theme-color" content="#1d4ed8">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="BEN">
@@ -80,10 +80,16 @@
             document.head.appendChild(pre);
         })();
     </script>
-    <link rel="stylesheet" href="/style.css?v=20260921_52">
+    <link rel="stylesheet" href="/style.css?v=20260921_54">
 
 </head>
 <body>
+    <!-- WCAG 2.1 - 2.4.1 Evitar bloques: el catálogo repite 35 filtros y cientos
+         de tarjetas antes del pie. Los dos destinos llevan tabindex="-1" (más
+         abajo) para que el foco viaje de verdad, no solo el scroll: un div no
+         recibe foco por sí solo. El test y Mi lista no necesitan skip link: son
+         diálogos modales y al abrirse el foco ya entra en ellos. -->
+    <a class="skip-link" href="#filtersSidebar">Saltar a los filtros</a>
     <a class="skip-link" href="#cardContainer">Saltar a los resultados</a>
     <header class="hero">
         <button id="themeToggle" class="btn-theme-toggle" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
@@ -107,9 +113,15 @@
             </div>
             <!-- El botón de filtros vive acá y no en .hero-actions: ese bloque colapsa
                  al compactarse el header, y dejaba a los filtros inalcanzables en celular. -->
-            <div class="search-container">
+            <!-- WCAG 2.1 - 1.3.1: el buscador es una zona de búsqueda propia y se
+                 declara como landmark, igual que en las páginas estáticas. -->
+            <div class="search-container" role="search" aria-label="Buscar en el catálogo">
                 <label class="sr-only" for="searchInput">Buscar carrera o institución</label>
-                <input type="search" id="searchInput" class="search-input" placeholder="Buscar por institución o carrera…" autocomplete="off">
+                <!-- WCAG 2.1 - 4.1.2: el input pasa a ser un combobox que controla
+                     el listbox de sugerencias (el rol y el aria-controls que lleva el
+                     autocompletado). El label real está arriba, en <label class="sr-only">:
+                     el placeholder no reemplaza al label. -->
+                <input type="search" id="searchInput" class="search-input" placeholder="Buscar por institución o carrera…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="searchDropdown" aria-haspopup="listbox" aria-autocomplete="list">
                 <button id="mobileFilterButton" class="mobile-filter-button" type="button" aria-controls="filtersSidebar" aria-expanded="false" aria-label="Abrir filtros">
                     <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg><span class="mobile-filter-texto">Filtrar</span>
                 </button>
@@ -162,15 +174,15 @@
              panel fijo acá: es una burbuja flotante (ver #copilotoPanel, al final
              del <main>). -->
         <div class="catalog-side">
-        <aside id="filtersSidebar" class="filters-sidebar" aria-label="Filtros de búsqueda">
+        <aside id="filtersSidebar" class="filters-sidebar" aria-label="Filtros de búsqueda" tabindex="-1">
             <div class="filters-heading">
                 <h2>Filtrar por</h2>
                 <button id="closeFiltersButton" class="close-filters-button" type="button" aria-label="Cerrar filtros">×</button>
             </div>
 
             <section class="filter-group">
-                <h3>Tipo de formación</h3>
-                <div class="filter-options">
+                <h3 id="filtroFormacion">Tipo de formación</h3>
+                <div class="filter-options" role="group" aria-labelledby="filtroFormacion">
                     <button class="filter-option active" data-filter="formacion" data-value="todos" type="button">Todos</button>
                     <button class="filter-option" data-filter="formacion" data-value="grado" type="button">Grado</button>
                     <button class="filter-option" data-filter="formacion" data-value="tecnicaturas" type="button">Tecnicaturas</button>
@@ -180,8 +192,8 @@
             </section>
 
             <section class="filter-group">
-                <h3>Departamento</h3>
-                <div class="filter-options filter-options-compact">
+                <h3 id="filtroDepartamento">Departamento</h3>
+                <div class="filter-options filter-options-compact" role="group" aria-labelledby="filtroDepartamento">
                     <button class="filter-option active" data-filter="departamento" data-value="todos" type="button">Todos</button>
                     <button class="filter-option" data-filter="departamento" data-value="Capital" type="button">Capital</button>
                     <button class="filter-option" data-filter="departamento" data-value="Godoy Cruz" type="button">Godoy Cruz</button>
@@ -205,8 +217,8 @@
             </section>
 
             <section class="filter-group">
-                <h3>Gestión</h3>
-                <div class="filter-options filter-options-inline">
+                <h3 id="filtroGestion">Gestión</h3>
+                <div class="filter-options filter-options-inline" role="group" aria-labelledby="filtroGestion">
                     <button class="filter-option active" data-filter="gestion" data-value="todos" type="button">Todas</button>
                     <button class="filter-option" data-filter="gestion" data-value="pública" type="button">Públicas</button>
                     <button class="filter-option" data-filter="gestion" data-value="privada" type="button">Privadas</button>
@@ -214,8 +226,8 @@
             </section>
 
             <section class="filter-group">
-                <h3>Modalidad</h3>
-                <div class="filter-options filter-options-inline">
+                <h3 id="filtroModalidad">Modalidad</h3>
+                <div class="filter-options filter-options-inline" role="group" aria-labelledby="filtroModalidad">
                     <button class="filter-option active" data-filter="modalidad" data-value="todos" type="button">Todas</button>
                     <button class="filter-option" data-filter="modalidad" data-value="presencial" type="button">Presencial</button>
                     <button class="filter-option" data-filter="modalidad" data-value="online" type="button">Online</button>
@@ -224,8 +236,8 @@
             </section>
 
             <section class="filter-group">
-                <h3>Costos</h3>
-                <div class="filter-options filter-options-inline">
+                <h3 id="filtroCosto">Costos</h3>
+                <div class="filter-options filter-options-inline" role="group" aria-labelledby="filtroCosto">
                     <button class="filter-option active" data-filter="costo" data-value="todos" type="button">Todos</button>
                     <button class="filter-option" data-filter="costo" data-value="gratuito" type="button">Gratuito</button>
                     <button class="filter-option" data-filter="costo" data-value="arancelado" type="button">Arancelado</button>
@@ -233,8 +245,8 @@
             </section>
 
             <section class="filter-group">
-                <h3>Duración en años</h3>
-                <div class="filter-options">
+                <h3 id="filtroDuracion">Duración en años</h3>
+                <div class="filter-options" role="group" aria-labelledby="filtroDuracion">
                     <button class="filter-option active" data-filter="duracion" data-value="todos" type="button">Todas</button>
                     <button class="filter-option" data-filter="duracion" data-value="corta" type="button">Corta duración</button>
                     <button class="filter-option" data-filter="duracion" data-value="hasta-1" type="button">Hasta 1 año</button>
@@ -311,14 +323,17 @@
                 </div>
             </div>
             <h2 class="sr-only">Resultados de la búsqueda</h2>
-            <div id="cardContainer" class="results-grid"></div>
+            <!-- WCAG 2.1 - 1.3.1: los resultados son una lista real de tarjetas.
+                 El role="list" explícito es a propósito: Safari quita la semántica
+                 de lista cuando se apaga el bullet con list-style: none. -->
+            <ul id="cardContainer" class="results-grid" role="list" tabindex="-1"></ul>
             <button id="cargarMas" class="cargar-mas" type="button" hidden>Cargar más resultados ↓</button>
 
             <!-- Plataformas que coinciden con la búsqueda de texto, mostradas dentro
                  de Educación Formal pero visualmente separadas por ser otra sección. -->
             <section id="plataformas-coincidentes" class="platform-matches" hidden>
                 <h2><svg class="section-title-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="12.5" rx="2"/><path d="M8 20h8M12 16.5V20"/></svg> También hay plataformas online que coinciden</h2>
-                <div id="contenedor-plataformas-busqueda" class="platforms-grid"></div>
+                <ul id="contenedor-plataformas-busqueda" class="platforms-grid" role="list"></ul>
             </section>
 
             <!-- Sección propia de plataformas: una tarjeta simple por plataforma, sin
@@ -326,7 +341,7 @@
             <section id="seccion-plataformas" class="platforms-section" hidden>
                 <h2>Plataformas online</h2>
                 <p class="platforms-intro">Formación online por cuenta propia. Entrá al sitio de cada plataforma para ver su catálogo completo y actualizado.</p>
-                <div id="contenedor-plataformas" class="platforms-grid"></div>
+                <ul id="contenedor-plataformas" class="platforms-grid" role="list"></ul>
             </section>
 
             <!-- Formaciones alternativas: vista propia, no se mezclan con las carreras
@@ -334,21 +349,21 @@
             <section id="seccion-formaciones" class="catalog-aparte" hidden>
                 <h2><svg class="section-title-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.6 8.4-2.2 5-5 2.2 2.2-5z"/></svg> Formaciones Alternativas</h2>
                 <p class="catalog-aparte-intro">Cursos y formaciones de nicho: aeronáutica, buceo, montaña, apicultura, forense, cervecería artesanal y peritaje.</p>
-                <div id="contenedor-formaciones" class="cursos-grid"></div>
+                <ul id="contenedor-formaciones" class="cursos-grid" role="list"></ul>
             </section>
 
             <!-- Oficios técnicos: misma lógica, vista propia y separada. -->
             <section id="seccion-oficios" class="catalog-aparte" hidden>
                 <h2><svg class="section-title-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.6 3.2a5.5 5.5 0 0 0-6.9 6.9l-5.3 5.3a2 2 0 0 0 0 2.8l1.4 1.4a2 2 0 0 0 2.8 0l5.3-5.3a5.5 5.5 0 0 0 6.9-6.9l-3 3-2.6-.7-.7-2.6z"/></svg> Oficios Técnicos</h2>
                 <p class="catalog-aparte-intro">Oficios clásicos con salida laboral: electricidad, mecánica, soldadura, gas, refrigeración, herrería, carpintería y barbería.</p>
-                <div id="contenedor-oficios" class="cursos-grid"></div>
+                <ul id="contenedor-oficios" class="cursos-grid" role="list"></ul>
             </section>
 
             <!-- Terminalidad de secundaria y primaria para jóvenes y adultos. -->
             <section id="seccion-secundario" class="catalog-aparte" hidden>
                 <h2><svg class="section-title-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19v15H5.5A1.5 1.5 0 0 0 4 19.5z"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 18H19v3H5.5A1.5 1.5 0 0 1 4 19.5z"/></svg> Terminar el Secundario</h2>
                 <p class="catalog-aparte-intro">Opciones para completar los estudios: CENS presenciales y a distancia, CEPAS con bachiller profesional, Plan FinEs/TEM para quienes adeudan materias y CEBJA.</p>
-                <div id="contenedor-secundario" class="cursos-grid"></div>
+                <ul id="contenedor-secundario" class="cursos-grid" role="list"></ul>
             </section>
         </section>
     </main>
@@ -396,10 +411,14 @@
                 <h2 id="tc-titulo">Test Vocacional Completo <span class="badge-beta" title="Función en prueba: puede cambiar o fallar">Beta</span></h2>
                 <button id="tc-cerrar" type="button" aria-label="Cerrar el test">✕</button>
             </header>
-            <div id="tc-progreso" class="tc-progreso" hidden>
-                <div class="tc-progreso-barra"><span id="tc-progreso-relleno"></span></div>
+            <!-- WCAG 2.1 - 4.1.2 / 4.1.3: la barra es un progressbar con valor
+                 numérico y texto alternativo, y hay una región de estado que
+                 anuncia cada tanda de preguntas (la barra sola no se anuncia). -->
+            <div id="tc-progreso" class="tc-progreso" role="progressbar" aria-valuemin="0" aria-valuemax="65" aria-valuenow="0" hidden>
+                <div class="tc-progreso-barra" aria-hidden="true"><span id="tc-progreso-relleno"></span></div>
                 <p class="tc-progreso-texto" id="tc-progreso-texto"></p>
             </div>
+            <p id="tc-anuncio" class="sr-only" role="status" aria-live="polite"></p>
             <div id="tc-cuerpo" class="tc-cuerpo"></div>
             <footer id="tc-pie" class="tc-pie"></footer>
         </div>
@@ -432,6 +451,9 @@
             </div>
             <div class="modal-feedback-body">
                 <!-- Selector de tipo (Sugerencia vs Fallo) -->
+                <!-- WCAG 2.1 - 2.1.1: es un radiogroup de verdad: flechas para
+                     moverse entre opciones, Home/End en los extremos y roving
+                     tabindex (solo la opción elegida está en el orden de Tab). -->
                 <div class="feedback-tipo-selector" role="radiogroup" aria-label="Tipo de mensaje">
                     <button type="button" class="btn-tipo-feedback is-active" data-tipo="sugerencia" role="radio" aria-checked="true">
                         <span aria-hidden="true">💡</span> Sugerencia
@@ -445,16 +467,19 @@
                     <!-- Campo Mensaje -->
                     <div class="feedback-grupo">
                         <label for="feedbackMensaje" id="labelFeedbackMensaje">¿Qué te gustaría sugerir o mejorar en BEN?</label>
-                        <textarea id="feedbackMensaje" name="mensaje" rows="4" required placeholder="Escribí tu sugerencia o recomendación aquí..."></textarea>
-                        <span id="feedbackErrorMensaje" class="feedback-error-texto" hidden>Por favor, ingresá tu mensaje.</span>
+                        <!-- WCAG 2.1 - 3.3.1 / 3.3.3: el error va asociado al campo
+                             (aria-describedby) y con role="alert", así el lector lo
+                             anuncia apenas aparece en vez de dejarlo mudo. -->
+                        <textarea id="feedbackMensaje" name="mensaje" rows="4" required aria-describedby="feedbackErrorMensaje" placeholder="Escribí tu sugerencia o recomendación aquí..."></textarea>
+                        <span id="feedbackErrorMensaje" class="feedback-error-texto" role="alert" hidden>Por favor, ingresá tu mensaje.</span>
                     </div>
 
                     <!-- Campo Email (Opcional) -->
                     <div class="feedback-grupo">
                         <label for="feedbackEmail">Tu email <small>(opcional, por si querés respuesta)</small></label>
-                        <input type="email" id="feedbackEmail" name="email" placeholder="ejemplo@correo.com">
-                        <span id="feedbackErrorEmail" class="feedback-error-texto" hidden>Ingresá un correo electrónico válido.</span>
-                        <p class="feedback-privacidad-aviso">🔒 Tu email solo se utiliza para responderte. No enviamos spam ni compartimos datos con terceros.</p>
+                        <input type="email" id="feedbackEmail" name="email" aria-describedby="feedbackErrorEmail" placeholder="ejemplo@correo.com">
+                        <span id="feedbackErrorEmail" class="feedback-error-texto" role="alert" hidden>Ingresá un correo electrónico válido.</span>
+                        <p class="feedback-privacidad-aviso"><span aria-hidden="true">🔒</span> Tu email solo se utiliza para responderte. No enviamos spam ni compartimos datos con terceros.</p>
                     </div>
 
                     <!-- Botón Enviar -->
@@ -491,14 +516,17 @@
          eso vive fuera del <main>, junto a los otros overlays.
          Se muestra siempre que se entra SIN filtros en la URL; esa
          excepción la decide js/render.js. -->
-    <section id="pantallaBienvenida" class="pantalla-bienvenida" aria-label="Bienvenida a BEN">
+    <!-- WCAG 2.1 - 1.3.2 / 2.4.3: la portada cubre la pantalla y bloquea el
+         catálogo (inert), así que se declara como lo que es: un diálogo modal.
+         El nombre sale del texto visible, sin copia nueva. -->
+    <section id="pantallaBienvenida" class="pantalla-bienvenida" role="dialog" aria-modal="true" aria-labelledby="bienvenidaBajada">
         <div class="bienvenida-contenido">
             <img id="bienvenidaLogo" class="bienvenida-logo" width="1120" height="299" alt="BEN, Buscador Educativo Nacional">
             <!-- Igual que el logo del header: el archivo ya lo eligió el <head>. -->
             <script>
                 document.getElementById('bienvenidaLogo').src = window.LOGO_BEN;
             </script>
-            <p class="bienvenida-bajada">Carreras y oficios en Mendoza y Argentina · ¿Cómo querés empezar?</p>
+            <p class="bienvenida-bajada" id="bienvenidaBajada">Carreras y oficios en Mendoza y Argentina · ¿Cómo querés empezar?</p>
             <div class="bienvenida-opciones">
                 <!-- Dos caminos: el orientador (chat que lleva al test) o el
                      catálogo completo. Sin el número de preguntas en la
@@ -621,13 +649,13 @@
     <!-- Scripts clasicos: son autonomos (IIFE) y tienen que correr antes que el
          modulo. favoritos.js se autoinstala (delega los clicks de [data-favorito])
          y tambien lo cargan las paginas estaticas de carrera. -->
-    <script src="/js/vocacional/motor.js?v=20260921_52"></script>
-    <script src="/js/vocacional/eventos.js?v=20260921_52"></script>
-    <script src="/js/favoritos.js?v=20260921_52"></script>
-    <script src="/js/accesibilidad.js?v=20260921_52"></script>
-    <script src="/js/feedback.js?v=20260921_52"></script>
+    <script src="/js/vocacional/motor.js?v=20260921_54"></script>
+    <script src="/js/vocacional/eventos.js?v=20260921_54"></script>
+    <script src="/js/favoritos.js?v=20260921_54"></script>
+    <script src="/js/accesibilidad.js?v=20260921_54"></script>
+    <script src="/js/feedback.js?v=20260921_54"></script>
     <!-- El resto de la app vive en modulos ES; main.js es el punto de entrada. -->
-    <script type="module" src="/js/main.js?v=20260921_52"></script>
+    <script type="module" src="/js/main.js?v=20260921_54"></script>
 
     <!-- Service worker para que el sitio abra sin conexión. Vive en la raíz,
          igual que esta página, así su scope cubre todo el sitio: la app, los JSON

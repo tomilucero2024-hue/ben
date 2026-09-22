@@ -105,6 +105,7 @@ node test_vocacional.js       # Test Vocacional Completo: datos, perfiles genera
 node test_vocacional_ui.js    # recorrido de la ventana del Test Completo en jsdom
 node test_favoritos.js        # "Me interesa": storage, botones de las páginas estáticas y Fase B
 node test_mi_lista.js         # Mi lista y comparador: altas, selección, tabla y diferencias
+node test_accesibilidad.js    # WCAG 2.1 AA: estructura/ARIA, foco, contraste por tema y áreas táctiles
 ```
 
 `test_general.js` detecta, entre otras cosas, **imports que no se resuelven** entre módulos
@@ -116,6 +117,60 @@ páginas generadas.
 > cualquier navegación con el `index.html` cacheado; si alguien está en `/carrera/medicina/`
 > y se le corta la conexión, la app se dibuja en *esa* dirección y con rutas relativas iría a
 > buscar `/carrera/medicina/js/main.js`, que no existe.
+
+## Accesibilidad (WCAG 2.1 AA)
+
+El sitio apunta a **WCAG 2.1 AA** en las cuatro capas: perceptible, operable,
+comprensible y robusto. El panel flotante de accesibilidad cubre baja visión y
+dificultad de lectura (tamaño de texto, alto contraste, lector por voz, lectura
+fácil, destacar enlaces); el resto de los criterios se resolvió en el código:
+
+- **Teclado**: skip links "Saltar a los filtros" y "Saltar a los resultados" en
+  la app (el destino lleva `tabindex="-1"` para que el foco viaje de verdad) y
+  "Saltar al contenido" en las 566 fichas estáticas. Anillo de foco visible en
+  todo el sitio (`:focus-visible`, ≥3:1). Trampas de foco en los diálogos (test,
+  Mi lista, sugerencias, panel de accesibilidad) con devolución del foco al
+  control que los abrió.
+- **Lector de pantalla**: HTML semántico (un `h1`, jerarquía sin saltos,
+  `role="search"`, listas reales `<ul>/<li>` para las tarjetas), `aria-pressed`
+  en los filtros y las vistas, grupos de filtros con nombre, combobox válido en
+  el autocompletado (`aria-activedescendant` + `aria-selected`, sin controles
+  anidados), `role="status"` en el contador de resultados y en el anuncio de
+  cada tanda del test, `progressbar` con `aria-valuenow`/`valuetext`,
+  `role="alert"` + `aria-describedby` en los errores del formulario.
+- **Contraste**: los colores se miden con umbrales WCAG en los cuatro estados de
+  tema (claro/oscuro × alto contraste). Los pares críticos (acción sólida,
+  badges de compatibilidad y tipo, bordes de campos, tintes de pestaña activa)
+  pasan 4.5:1 de texto y 3:1 de elementos no textuales. El token
+  `--control-line` existe solo para la frontera de los campos de formulario.
+- **Discapacidad motriz**: áreas táctiles ≥24px (44px en puntero grueso), sin
+  gestos complejos, sin límites de tiempo.
+- **Cognitivo**: el Test Vocacional guarda el avance respuesta por respuesta
+  (`ben-vocacional-progreso`) y ofrece retomarlo desde la intro; los errores del
+  formulario dicen qué pasó y cómo corregirlo.
+
+`test_accesibilidad.js` es la red de seguridad: corre la app en jsdom y verifica
+estructura, ARIA, foco, contraste calculado sobre los tokens y áreas táctiles,
+además de auditar cuatro fichas estáticas generadas. Lo que **no** puede cubrir
+un test automatizado (queda como guion manual): Tab real en el navegador, zoom
+al 200%, y NVDA/JAWS/VoiceOver. Guion de 10 pasos:
+
+1. Cargar `/`: el foco arranca en "Orientador vocacional"; Tab recorre solo la
+   portada y el botón de accesibilidad (el catálogo y el pie están inert).
+2. Tab hasta el primer skip link, Enter: el foco cae en el panel de filtros.
+3. Segundo skip link, Enter: el foco cae en la grilla de resultados.
+4. Buscar "abogacía" con el teclado; con flechas bajar por las sugerencias y
+   elegir con Enter (Esc cierra el listbox).
+5. Aplicar un filtro con Enter y oír/ver el resumen nuevo en el contador.
+6. Abrir una ficha con Tab + Enter; volver con el botón Atrás del navegador.
+7. Abrir "Mi lista" con el corazón de una tarjeta: el foco entra en la ventana y
+   Escape la cierra devolviendo el foco a la tarjeta.
+8. Abrir el test con el Copiloto, responder una tanda con Tab + Espacio y cerrar
+   con Escape; volver a abrirlo y elegir "Seguir donde quedé".
+9. Enviar el formulario de sugerencias vacío: el lector anuncia el error y el
+   foco queda en el campo.
+10. Zoom del navegador al 200%: nada se corta ni aparece scroll horizontal; con
+    el panel de accesibilidad, "A++" y "Alto contraste" siguen funcionando.
 
 ## Test Vocacional Completo (beta)
 

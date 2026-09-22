@@ -323,7 +323,7 @@ ${contenido}
 ${cuerpo}`;
 
     return `<!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -384,6 +384,7 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : `<link rel="canon
 ${bloques}
 </head>
 <body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 <header class="cabecera">
     <div class="envoltorio">
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
@@ -427,7 +428,8 @@ ${bloques}
     </script>
 </header>
 
-<main class="envoltorio">
+<!-- WCAG 2.1 - 2.4.1: destino del skip link, enfocable para que el foco viaje. -->
+<main class="envoltorio" id="contenido" tabindex="-1">
     ${contenidoPagina}
 </main>
 

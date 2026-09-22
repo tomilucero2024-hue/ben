@@ -114,8 +114,13 @@ export function inicializarAutocompletado({ inputElem, dropdownElem, onSeleccion
     let itemsVisibles = [];
 
     inputElem.setAttribute('autocomplete', 'off');
+    // WCAG 2.1 - 4.1.2: patrón combobox: el input declara que controla el listbox
+    // de sugerencias y que la navegación por flechas mueve el resaltado.
+    inputElem.setAttribute('role', 'combobox');
+    inputElem.setAttribute('aria-haspopup', 'listbox');
     inputElem.setAttribute('aria-autocomplete', 'list');
     inputElem.setAttribute('aria-expanded', 'false');
+    if (dropdownElem.id) inputElem.setAttribute('aria-controls', dropdownElem.id);
 
     function cerrar() {
         dropdownElem.hidden = true;
@@ -136,36 +141,44 @@ export function inicializarAutocompletado({ inputElem, dropdownElem, onSeleccion
         itemsVisibles = [];
         let html = '';
 
+        // WCAG 2.1 - 4.1.2: los títulos de grupo eran hijos sueltos del listbox
+        // (no permitido) y cada opción llevaba adentro un enlace "Ficha ↗"
+        // (interacción anidada, tampoco válida para un role="option"). Ahora el
+        // grupo es role="group" con nombre accesible desde su título visible y la
+        // opción es solo texto: la ficha se sigue alcanzando desde la tarjeta del
+        // resultado, que ya tiene "Ver ficha en BEN".
         if (carreras.length) {
-            html += `<div class="search-dropdown-group-title">Carreras</div>`;
+            html += `<div class="search-dropdown-grupo" role="group" aria-labelledby="search-grupo-carreras">
+                <div class="search-dropdown-group-title" id="search-grupo-carreras" role="presentation">Carreras</div>`;
             carreras.forEach(c => {
                 const id = `search-opt-${itemsVisibles.length}`;
                 itemsVisibles.push({ tipo: 'carrera', dato: c });
                 html += `
-                <div class="search-dropdown-item" role="option" id="${id}" data-idx="${itemsVisibles.length - 1}">
+                <div class="search-dropdown-item" role="option" id="${id}" aria-selected="false" data-idx="${itemsVisibles.length - 1}">
                     <div class="search-dropdown-item-info">
-                        <span class="search-dropdown-item-title">🎓 ${escaparHTML(c.nombre)}</span>
+                        <span class="search-dropdown-item-title"><span aria-hidden="true">🎓</span> ${escaparHTML(c.nombre)}</span>
                         ${c.area ? `<span class="search-dropdown-item-sub">Área: ${escaparHTML(c.area)}</span>` : ''}
                     </div>
-                    ${c.slug ? `<a class="search-dropdown-ficha-link" href="/carrera/${c.slug}/" title="Ver ficha en BEN">Ficha ↗</a>` : ''}
                 </div>`;
             });
+            html += '</div>';
         }
 
         if (instituciones.length) {
-            html += `<div class="search-dropdown-group-title">Instituciones</div>`;
+            html += `<div class="search-dropdown-grupo" role="group" aria-labelledby="search-grupo-instituciones">
+                <div class="search-dropdown-group-title" id="search-grupo-instituciones" role="presentation">Instituciones</div>`;
             instituciones.forEach(i => {
                 const id = `search-opt-${itemsVisibles.length}`;
                 itemsVisibles.push({ tipo: 'institucion', dato: i });
                 html += `
-                <div class="search-dropdown-item" role="option" id="${id}" data-idx="${itemsVisibles.length - 1}">
+                <div class="search-dropdown-item" role="option" id="${id}" aria-selected="false" data-idx="${itemsVisibles.length - 1}">
                     <div class="search-dropdown-item-info">
-                        <span class="search-dropdown-item-title">🏛️ ${escaparHTML(i.nombre)}</span>
+                        <span class="search-dropdown-item-title"><span aria-hidden="true">🏛️</span> ${escaparHTML(i.nombre)}</span>
                         ${i.gestion ? `<span class="search-dropdown-item-sub">Gestión ${escaparHTML(i.gestion)}</span>` : ''}
                     </div>
-                    ${i.slug ? `<a class="search-dropdown-ficha-link" href="/institucion/${i.slug}/" title="Ver ficha en BEN">Ficha ↗</a>` : ''}
                 </div>`;
             });
+            html += '</div>';
         }
 
         dropdownElem.innerHTML = html;
@@ -175,7 +188,6 @@ export function inicializarAutocompletado({ inputElem, dropdownElem, onSeleccion
 
         dropdownElem.querySelectorAll('.search-dropdown-item').forEach(el => {
             el.addEventListener('mousedown', e => {
-                if (e.target.closest('.search-dropdown-ficha-link')) return;
                 e.preventDefault();
                 const idx = parseInt(el.dataset.idx, 10);
                 seleccionarItem(idx);
@@ -198,6 +210,9 @@ export function inicializarAutocompletado({ inputElem, dropdownElem, onSeleccion
         opciones.forEach((opc, i) => {
             const activo = i === indiceSeleccionado;
             opc.classList.toggle('is-selected', activo);
+            // WCAG 2.1 - 4.1.2: la opción resaltada tiene que estar marcada como
+            // seleccionada, no solo pintada.
+            opc.setAttribute('aria-selected', String(activo));
             if (activo) {
                 inputElem.setAttribute('aria-activedescendant', opc.id);
                 opc.scrollIntoView({ block: 'nearest' });

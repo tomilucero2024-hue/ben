@@ -27,6 +27,10 @@
 
     let estado = { ...estadoPorDefecto };
     let elementoPrevioFoco = null;
+    // Estado de inert de cada zona antes de abrir el panel. Se guarda para
+    // restaurarlo tal cual estaba: si la portada tiene el catálogo inerte y el
+    // panel se abre y cierra encima, el catálogo tiene que seguir inerte.
+    let inertPrevio = null;
     let vozEspanol = null;
     let reproduciendoId = null;
 
@@ -236,6 +240,29 @@
     // ================================================================
     // GESTIÓN DEL MODAL / PANEL DE ACCESIBILIDAD
     // ================================================================
+    // WCAG 2.1 - 4.1.2 / 1.3.2: el panel es aria-modal, así que lo de atrás queda
+    // inerte mientras está abierto (el trap de Tab ya existía; esto cubre además
+    // la navegación por lector de pantalla).
+    function alternarFondoInert(inert) {
+        const zonas = [
+            document.querySelector('.hero'),
+            document.querySelector('.catalog-layout'),
+            document.querySelector('.site-footer'),
+            document.getElementById('copilotoPanel'),
+            document.getElementById('pantallaBienvenida'),
+            document.getElementById('testCompleto'),
+            document.getElementById('miLista'),
+            document.getElementById('modalFeedback')
+        ].filter(Boolean);
+        if (inert) {
+            inertPrevio = new Map();
+            zonas.forEach(el => { inertPrevio.set(el, el.inert); el.inert = true; });
+        } else if (inertPrevio) {
+            inertPrevio.forEach((valor, el) => { el.inert = valor; });
+            inertPrevio = null;
+        }
+    }
+
     function abrirPanel() {
         const panel = document.getElementById('panelAccesibilidad');
         const btnToggle = document.getElementById('btnAccesibilidad');
@@ -245,6 +272,7 @@
         panel.hidden = false;
         panel.classList.add('is-open');
         btnToggle?.setAttribute('aria-expanded', 'true');
+        alternarFondoInert(true);
 
         // Foco al primer elemento accionable o botón de cierre
         const primerElemento = panel.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
@@ -261,6 +289,7 @@
         panel.classList.remove('is-open');
         panel.hidden = true;
         btnToggle?.setAttribute('aria-expanded', 'false');
+        alternarFondoInert(false);
 
         document.removeEventListener('keydown', manejarTrampaFoco);
 

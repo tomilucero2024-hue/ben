@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,10 +56,11 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260921_52">
+<link rel="stylesheet" href="/paginas.css?v=20260921_54">
 
 </head>
 <body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 <header class="cabecera">
     <div class="envoltorio">
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
@@ -103,7 +104,8 @@
     </script>
 </header>
 
-<main class="envoltorio">
+<!-- WCAG 2.1 - 2.4.1: destino del skip link, enfocable para que el foco viaje. -->
+<main class="envoltorio" id="contenido" tabindex="-1">
     <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <span aria-current="page">Página no encontrada</span></nav>
     <h1>Esta página no existe</h1>
     <p class="entrada">La dirección a la que llegaste no existe o dejó de existir. Puede que el enlace esté viejo, que la carrera haya cambiado de nombre o que sobre una letra en la barra del navegador.</p>
@@ -186,6 +188,6 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260921_52"></script>
+<script src="/js/favoritos.js?v=20260921_54"></script>
 </body>
 </html>

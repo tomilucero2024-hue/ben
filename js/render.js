@@ -189,12 +189,12 @@ export function mostrarCatalogoAparte(seccion) {
 
 export function renderizarCursosAparte(contenedor, lista, simple = false, tipo = 'curso') {
     if (!lista.length) {
-        contenedor.innerHTML = '<p class="empty-state">No hay formaciones que coincidan con esa búsqueda.</p>';
+        contenedor.innerHTML = avisoLista('No hay formaciones que coincidan con esa búsqueda.');
         return;
     }
     if (simple) { renderizarCursosSimples(contenedor, lista, tipo); return; }
     contenedor.innerHTML = lista.map(curso => `
-        <article class="curso-card">
+        <li class="curso-card">
             <div class="card-badges">
                 <span class="badge badge-seccion">${capSeguro(curso.categoria)}</span>
                 <span class="badge badge-modalidad">${capSeguro(curso.modalidad)}</span>
@@ -217,7 +217,7 @@ export function renderizarCursosAparte(contenedor, lista, simple = false, tipo =
                 })}
                 <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(curso._clave)}" aria-label="Escuchar formación">${ICONO_ESCUCHAR} <span>Escuchar</span></button>
             </div>
-        </article>`).join('');
+        </li>`).join('');
 }
 
 // Variante simple de tarjeta: mismo diseño (.curso-card, con el borde y el tinte
@@ -226,7 +226,7 @@ export function renderizarCursosAparte(contenedor, lista, simple = false, tipo =
 // primera letra y convertiría "CEBJA" en "Cebja".
 function renderizarCursosSimples(contenedor, lista, tipo = 'secundario') {
     contenedor.innerHTML = lista.map(curso => `
-        <article class="curso-card curso-card-simple">
+        <li class="curso-card curso-card-simple">
             <h3 class="curso-title">${escaparHTML(curso.nombre)}</h3>
             ${curso.nombreCompleto
                 ? `<p class="curso-subtitulo">${escaparHTML(curso.nombreCompleto)}</p>`
@@ -244,7 +244,7 @@ function renderizarCursosSimples(contenedor, lista, tipo = 'secundario') {
                     area: '', formacion: '', ficha: '', link: urlSegura(curso.link) || ''
                 })}
             </div>
-        </article>`).join('');
+        </li>`).join('');
 }
 
 function ocultarCatalogosAparte() {
@@ -271,11 +271,11 @@ export function mostrarPlataformas() {
 
 export function renderizarPlataformas(contenedor, lista) {
     if (!lista.length) {
-        contenedor.innerHTML = '<p class="empty-state">No hay plataformas que coincidan con esa búsqueda.</p>';
+        contenedor.innerHTML = avisoLista('No hay plataformas que coincidan con esa búsqueda.');
         return;
     }
     contenedor.innerHTML = lista.map(plataforma => `
-        <article class="platform-card">
+        <li class="platform-card">
             <div class="platform-head">
                 ${plataforma.logo
                     ? `<img class="platform-logo" src="${escaparHTML(CARPETA_LOGOS + plataforma.logo)}" alt="Logo de ${escaparHTML(plataforma.nombre)}" loading="lazy">`
@@ -298,7 +298,7 @@ export function renderizarPlataformas(contenedor, lista) {
                 })}
                 <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(plataforma._clave)}" aria-label="Escuchar plataforma">${ICONO_ESCUCHAR} <span>Escuchar</span></button>
             </div>
-        </article>`).join('');
+        </li>`).join('');
 }
 
 export // ==========================================
@@ -369,9 +369,9 @@ export function mostrarRecomendaciones() {
     }
 
     if (!visibles.length) {
-        document.getElementById('cardContainer').innerHTML =
-            '<p class="empty-state">Ninguna de las carreras que te recomendé entra en esos filtros. ' +
-            'Probá aflojar alguno, o volvé al catálogo completo con la chapita de arriba.</p>';
+        document.getElementById('cardContainer').innerHTML = avisoLista(
+            'Ninguna de las carreras que te recomendé entra en esos filtros. ' +
+            'Probá aflojar alguno, o volvé al catálogo completo con la chapita de arriba.');
     } else {
         renderizarTarjetasConCompatibilidad(visibles, rankings);
     }
@@ -491,8 +491,8 @@ export function mostrarResultados() {
             const escrito = (document.getElementById('searchInput')?.value || '').trim();
             if (contenedor) {
                 contenedor.innerHTML = escrito
-                    ? `<p class="empty-state">No encontramos nada parecido a <strong>«${escaparHTML(escrito)}»</strong>. Probá con otra palabra o revisá los filtros que tenés puestos.</p>`
-                    : '<p class="empty-state">No hay ofertas que cumplan todos esos filtros a la vez. Probá quitar alguno.</p>';
+                    ? avisoLista(`No encontramos nada parecido a <strong>«${escaparHTML(escrito)}»</strong>. Probá con otra palabra o revisá los filtros que tenés puestos.`)
+                    : avisoLista('No hay ofertas que cumplan todos esos filtros a la vez. Probá quitar alguno.');
             }
             if (contador) contador.textContent = '0 resultados encontrados';
         }
@@ -555,14 +555,20 @@ function chipDuracion(duracion) {
     return `<span${titulo}>${SVG_DURACION} ${escaparHTML(corta)}</span>`;
 }
 
+// WCAG 2.1 - 1.3.1: los contenedores de resultados ahora son <ul>, así que los
+// avisos (sin resultados, encabezados de sugerencias) tienen que ser <li>.
+function avisoLista(htmlInterior) {
+    return `<li class="results-aviso"><p class="empty-state">${htmlInterior}</p></li>`;
+}
+
 export function renderizarTarjetas(resultados, { mostrarMatch = false, encabezado = '' } = {}) {
     const contenedor = document.getElementById('cardContainer');
     if (!resultados.length) {
-        contenedor.innerHTML = '<p class="empty-state">No encontramos ofertas con esos filtros. Probá ampliar tu búsqueda.</p>';
+        contenedor.innerHTML = avisoLista('No encontramos ofertas con esos filtros. Probá ampliar tu búsqueda.');
         return;
     }
-    contenedor.innerHTML = encabezado + resultados.map(oferta => `
-        <article class="card">
+    contenedor.innerHTML = (encabezado ? `<li class="results-aviso">${encabezado}</li>` : '') + resultados.map(oferta => `
+        <li class="card">
             <div class="card-badges">
                 ${mostrarMatch ? `<span class="badge badge-match">${etiquetaCompatibilidad(oferta.score)}</span>` : ''}
                 <span class="badge badge-categoria">${capSeguro(oferta.categoria)}</span>
@@ -587,12 +593,12 @@ export function renderizarTarjetas(resultados, { mostrarMatch = false, encabezad
                 })}
                 <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(oferta._clave)}" aria-label="Escuchar carrera">${ICONO_ESCUCHAR} <span>Escuchar</span></button>
             </div>
-        </article>`).join('');
+        </li>`).join('');
 }
 export function renderizarTarjetasConCompatibilidad(resultados, rankings) {
     const contenedor = document.getElementById('cardContainer');
     if (!resultados.length) {
-        contenedor.innerHTML = '<p class="empty-state">No encontramos carreras compatibles con ese perfil. Probá rehacer el test.</p>';
+        contenedor.innerHTML = avisoLista('No encontramos carreras compatibles con ese perfil. Probá rehacer el test.');
         return;
     }
     
@@ -611,7 +617,7 @@ export function renderizarTarjetasConCompatibilidad(resultados, rankings) {
         else if (rankings.cursos.some(r => r.clave === carrera.clave)) tipoBadge = '<span class="tipo-badge curso">Curso</span>';
         
         return `
-        <article class="carrera-card ${matchClass}" data-carrera-id="${escaparHTML(clave)}">
+        <li class="carrera-card ${matchClass}" data-carrera-id="${escaparHTML(clave)}">
             <div class="card-header">
                 <h3>${capSeguro(carrera.nombre)}</h3>
                 <div class="compatibilidad-badge ${matchClass}">${compat}% match</div>
@@ -649,13 +655,18 @@ export function renderizarTarjetasConCompatibilidad(resultados, rankings) {
             })}
             <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(clave)}" aria-label="Escuchar carrera">${ICONO_ESCUCHAR} <span>Escuchar</span></button>
         </div>
-        </article>`;
+        </li>`;
     }).join('');
 }
 
 export function actualizarBotonesActivos() {
     document.querySelectorAll('.filter-option').forEach(boton => {
-        boton.classList.toggle('active', estado[boton.dataset.filter] === boton.dataset.value);
+        const activo = estado[boton.dataset.filter] === boton.dataset.value;
+        boton.classList.toggle('active', activo);
+        // WCAG 2.1 - 4.1.2 Nombre, función, valor: sin aria-pressed el estado del
+        // filtro viajaba solo en una clase CSS y un lector de pantalla leía
+        // "Tecnicaturas, botón" sin saber si estaba aplicado.
+        boton.setAttribute('aria-pressed', String(activo));
     });
 }
 
@@ -754,7 +765,7 @@ function renderizarListadoAreas() {
             .join('');
 
         return `
-            <article class="card area-card" data-area="${escaparHTML(area)}">
+            <li class="card area-card" data-area="${escaparHTML(area)}">
                 <div class="area-icon" aria-hidden="true">
                     ${ICONOS_AREAS[area] || ''}
                 </div>
@@ -763,7 +774,7 @@ function renderizarListadoAreas() {
                 <ul class="area-ejemplos-list">
                     ${topCarrerasHTML}
                 </ul>
-            </article>
+            </li>
         `;
     }).join('');
 
@@ -826,10 +837,10 @@ function renderizarCarrerasDeArea(area) {
     // Usar grid-column: 1 / -1 en el CSS es mejor.
     
     contenedor.innerHTML = `
-        <div class="area-header" style="grid-column: 1 / -1;">
+        <li class="area-header" style="grid-column: 1 / -1;">
             <button type="button" class="btn-volver-areas" id="btnVolverAreas">← Volver a todas las áreas</button>
             <h2 class="area-header-title">Área: ${escaparHTML(area)}</h2>
-        </div>
+        </li>
         ${listado.map(c => {
             const slug = enlacesBEN.carreras[normalizarTexto(c.nombre)];
             const enlace = slug ? '/carrera/' + slug + '/' : '';
@@ -854,7 +865,7 @@ function renderizarCarrerasDeArea(area) {
             }
 
             return `
-                <article class="card career-group-card">
+                <li class="card career-group-card">
                     <div class="card-badges">
                         <span class="badge badge-area">${escaparHTML(area)}</span>
                         ${badgeGestion}
@@ -865,7 +876,7 @@ function renderizarCarrerasDeArea(area) {
                         <p class="card-meta-row"><span>${SVG_MODALIDAD} ${escaparHTML(mods)}</span> <span class="card-meta-sep">·</span> <span>${SVG_DURACION} ${escaparHTML(durText)}</span></p>
                     </div>
                     ${enlace ? `<a class="card-link card-link-ben career-group-link" href="${escaparHTML(enlace)}">Ver lugares, info y plan de estudio →</a>` : '<span class="card-link card-link-muted">No hay ficha técnica</span>'}
-                </article>
+                </li>
             `;
         }).join('')}
     `;
@@ -930,7 +941,7 @@ function tarjetaInstitucion(inst) {
     // no se ve azul/subrayado en la tarjeta. El tipo no se repite (el h2 del
     // grupo que lo agrupa ya lo dice): solo queda el badge de gestión.
     return `
-        <article class="card career-group-card">
+        <li class="card career-group-card">
             <div class="card-badges">
                 ${badgeGestion}
             </div>
@@ -940,7 +951,7 @@ function tarjetaInstitucion(inst) {
                 <p class="card-meta-row">${SVG_DURACION} <span>${inst.nCarreras} ${inst.nCarreras === 1 ? 'carrera' : 'carreras'}</span></p>
             </div>
             ${cta}
-        </article>`;
+        </li>`;
 }
 
 function renderizarListadoInstituciones() {
@@ -961,15 +972,15 @@ function renderizarListadoInstituciones() {
             .slice()
             .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
         return `
-            <section class="grupo-instituciones${indice > 0 ? ' grupo-instituciones-separado' : ''}">
+            <li class="grupo-instituciones${indice > 0 ? ' grupo-instituciones-separado' : ''}">
                 <div class="area-header">
                     <h2 class="area-header-title" id="tipo-${escaparHTML(g.tipo)}">${escaparHTML(g.etiqueta)}</h2>
                     <span class="grupo-instituciones-count">${lista.length} ${lista.length === 1 ? 'institución' : 'instituciones'}</span>
                 </div>
-                <div class="career-group-grid">
+                <ul class="career-group-grid" role="list">
                     ${lista.map(tarjetaInstitucion).join('')}
-                </div>
-            </section>`;
+                </ul>
+            </li>`;
     }).join('');
 }
 

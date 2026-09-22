@@ -744,7 +744,15 @@ async function copiarComparacion() {
 function manejarClick(event) {
     const quitar = event.target.closest('[data-ml-quitar]');
     if (quitar) {
+        // WCAG 2.1 - 2.4.3: al quitar, el botón desaparece con la fila. Se guarda
+        // su posición para devolverle el foco al botón siguiente (o al anterior si
+        // era el último), y si la lista quedó vacía, al cierre de la ventana.
+        const botones = [...cuerpo.querySelectorAll('[data-ml-quitar]')];
+        const posicion = botones.indexOf(quitar);
         window.Favoritos.quitar(quitar.dataset.mlQuitar);
+        const restantes = [...cuerpo.querySelectorAll('[data-ml-quitar]')];
+        const destino = restantes[Math.min(posicion, restantes.length - 1)] || document.getElementById('ml-cerrar');
+        if (destino) destino.focus({ preventScroll: true });
         return;
     }
 
@@ -781,11 +789,16 @@ function manejarClick(event) {
             pantalla = 'comparacion';
             pintar();
             cuerpo.scrollTop = 0;
+            // El foco viaja a la comparación (si no, quedaría en un botón borrado).
+            const volver = cuerpo.querySelector('[data-ml-accion="volver"]');
+            if (volver) volver.focus({ preventScroll: true });
             break;
         }
         case 'volver':
             pantalla = 'lista';
             pintar();
+            const primerCheck = cuerpo.querySelector('[data-ml-marcar]');
+            if (primerCheck) primerCheck.focus({ preventScroll: true });
             break;
         case 'copiar':
             copiarComparacion();

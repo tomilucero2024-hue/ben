@@ -33,13 +33,19 @@
     --text: #1f1d1a;
     --muted: #6b6863;
     --blue-ink: #1d4ed8;
-    --orange-ink: #c2410c;
-    --green-ink: #15803d;
+    --orange-ink: #b23a0b;
+    --green-ink: #0f6b33;
     --accent: #6366f1;
     --accent-ink: #4338ca;
     /* Corazón de "Me interesa" marcado (misma señal roja que en la app). */
     --fav-rojo: #E11D48;
     --on-accent: #ffffff;
+    /* WCAG 2.1 - 1.4.11: frontera de los campos de formulario (>=3:1). */
+    --control-line: rgba(27, 24, 48, .52);
+    /* WCAG 2.1 - 1.4.3: par relleno/tinta de la acción sólida (--accent solo
+       daba 4.47:1 con texto blanco encima). */
+    --accion-fill: #4F46E5;
+    --accion-ink: #ffffff;
 }
 
 html[data-theme="dark"] {
@@ -56,9 +62,25 @@ html[data-theme="dark"] {
     --accent-ink: #818cf8;
     --fav-rojo: #FB7185;
     --on-accent: #09101c;
+    --control-line: rgba(255, 255, 255, .36);
+    --accion-fill: #818cf8;
+    --accion-ink: #09101c;
 }
 
 * { box-sizing: border-box; }
+
+/* WCAG 2.1 - 2.4.1 Evitar bloques: cada ficha repite cabecera, buscador y cientos
+   de enlaces. El skip link va oculto hasta que llega el foco. */
+.skip-link {
+    position: absolute; left: .5rem; top: -100px; z-index: 100;
+    padding: .7rem 1rem; border-radius: var(--radius-sm);
+    color: var(--accion-ink); background: var(--accion-fill);
+    font-weight: 700; text-decoration: none;
+}
+.skip-link:focus { top: .5rem; }
+/* El destino recibe el foco de verdad (un <main> no es enfocable por sí solo) y
+   no se le dibuja el anillo: es un contenedor, no un control. */
+main[tabindex="-1"]:focus { outline: none; }
 
 body {
     margin: 0;
@@ -121,7 +143,8 @@ html[data-theme="light"] .tema-luna { display: block; color: #6366f1; }
     flex: 1; min-width: 0;
     min-height: 44px;
     padding: var(--space-2) var(--space-4);
-    border: 1px solid var(--line); border-radius: var(--radius-pill);
+    /* WCAG 2.1 - 1.4.11: la frontera del campo es lo que lo identifica. */
+    border: 1px solid var(--control-line); border-radius: var(--radius-pill);
     background: var(--bg); color: var(--text);
     font: inherit; font-size: calc(.9375rem * var(--font-scale));
 }
@@ -129,7 +152,7 @@ html[data-theme="light"] .tema-luna { display: block; color: #6366f1; }
     min-height: 44px; min-width: 44px;
     padding: var(--space-2) var(--space-5);
     border: 0; border-radius: var(--radius-pill);
-    background: var(--accent); color: var(--on-accent);
+    background: var(--accion-fill); color: var(--accion-ink);
     font: inherit; font-weight: 600; cursor: pointer;
 }
 .buscador-mini button:hover { filter: brightness(1.08); }
@@ -344,7 +367,8 @@ a:hover { text-decoration: none; }
     min-height: 44px;
     margin: var(--space-3) 0 var(--space-8);
     padding: var(--space-3) var(--space-7);
-    background: var(--accent); color: var(--on-accent);
+    /* WCAG 2.1 - 1.4.3: el CTA iba en --accent, que con texto blanco da 4.47:1. */
+    background: var(--accion-fill); color: var(--accion-ink);
     border-radius: var(--radius-pill);
     font-weight: 700; text-decoration: none;
 }

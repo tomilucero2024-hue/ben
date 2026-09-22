@@ -68,11 +68,18 @@ export function salirDelCopilotoPantallaCompleta() {
     const limpiar = () => {
         if (terminado) return;
         terminado = true;
+        // Si un diálogo (el test, Mi lista) ya tomó el foco, la burbuja NO se lo
+        // roba: el panel queda inerte detrás y devolverle el foco sería un salto
+        // fuera del diálogo (WCAG 2.1 - 2.4.3 Orden del foco).
+        const hayDialogoEncima = panel.inert === true;
         panel.classList.remove('is-test-pantalla-completa', 'is-saliendo-test', 'is-abierto');
         const ventana = document.getElementById('ventana-chat');
         if (ventana) ventana.hidden = true;
         const boton = document.getElementById('btn-toggle-chat');
-        if (boton) { boton.setAttribute('aria-expanded', 'false'); boton.focus(); }
+        if (boton) {
+            boton.setAttribute('aria-expanded', 'false');
+            if (!hayDialogoEncima) boton.focus();
+        }
     };
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { limpiar(); return; }
     panel.addEventListener('transitionend', limpiar, { once: true });
@@ -119,6 +126,12 @@ export function configurarBienvenida() {
         ocultarBienvenidaInstantanea();
     } else {
         alternarInertDetrasDeBienvenida(true);
+        // WCAG 2.1 - 2.4.3 Orden del foco: es un diálogo modal, así que el foco
+        // arranca adentro (en la primera opción) y no en el pie que quedó detrás.
+        setTimeout(() => {
+            const primera = document.getElementById('btnBienvenidaCopiloto');
+            if (primera && !pantalla.hidden) primera.focus({ preventScroll: true });
+        }, 0);
     }
 
     // Las dos tarjetas de la portada: el orientador (que abre el chat y desde
@@ -129,7 +142,13 @@ export function configurarBienvenida() {
         salirDeBienvenida(() => abrirCopilotoPantallaCompleta());
     });
     if (btnOfertas) btnOfertas.addEventListener('click', () => {
-        salirDeBienvenida(() => cambiarVista('carreras'));
+        salirDeBienvenida(() => {
+            cambiarVista('carreras');
+            // El botón que disparó esto queda oculto: sin esto el foco se pierde
+            // en un elemento invisible y el teclado vuelve al principio.
+            const buscador = document.getElementById('searchInput');
+            if (buscador) buscador.focus({ preventScroll: true });
+        });
     });
 }
 
@@ -137,7 +156,10 @@ export function configurarBienvenida() {
 // está encima: no hay nada visible con lo que interactuar. La burbuja del
 // copiloto también: su botón de "Empezar" es el que está en la bienvenida.
 function alternarInertDetrasDeBienvenida(activo) {
-    [document.querySelector('.hero'), document.querySelector('.catalog-layout'), document.getElementById('copilotoPanel')]
+    // El pie también entra: es la otra zona interactiva visible detrás de la
+    // portada (el botón de sugerencias quedaba alcanzable con Tab).
+    [document.querySelector('.hero'), document.querySelector('.catalog-layout'),
+     document.getElementById('copilotoPanel'), document.querySelector('.site-footer')]
         .forEach(el => { if (el) el.inert = activo; });
     // Y con el catálogo inert tampoco tiene sentido que se pueda scrollear:
     // la clase apaga el scroll de la página entera (ver style.css).
