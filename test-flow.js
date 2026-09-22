@@ -1,7 +1,6 @@
-// Test suite for BEN core modules: util, filtros, estado, autocompletado, orientador.
+// Test suite for BEN core modules: util, filtros, estado, autocompletado.
 const fs = require('fs');
 const path = require('path');
-const O = require('./js/orientador.js');
 
 (async () => {
   console.log('🧪 Iniciando test-flow...');
@@ -40,28 +39,8 @@ const O = require('./js/orientador.js');
   assert(estadoModule.estado && typeof estadoModule.estado.orden === 'string', 'estado debe exportar objeto estado');
   assert(estadoModule.LIMITE_PAGINA === 24, 'LIMITE_PAGINA debe ser 24');
 
-  // 3. Test orientador.js
-  console.log('3. Probando js/orientador.js (compatibilidad vocacional)...');
-  const dataPerfiles = JSON.parse(fs.readFileSync('data/carreras-perfiles.json', 'utf8'));
-  global.fetch = async () => ({ ok: true, json: async () => dataPerfiles });
-  
-  const perfiles = await O.cargarPerfilesCarreras();
-  assert(perfiles.length > 500, `Debe haber más de 500 perfiles cargados (hay ${perfiles.length})`);
-  
-  const respuestas = O.PREGUNTAS_TEST.map(p => ({
-    preguntaId: p.id,
-    opcionTexto: p.opciones[0].texto,
-    dimensionScores: p.opciones[0].dimensionScores
-  }));
-  const perfil = O.generarPerfilUsuarioDesdeRespuestas(respuestas);
-  assert(typeof perfil === 'object' && perfil !== null, 'Perfil de usuario generado correctamente');
-  
-  const ranking = O.generarRanking(perfil, { limite: 12 });
-  assert(ranking.todas && ranking.todas.length > 0, 'El ranking debe contener recomendaciones');
-  assert(typeof ranking.todas[0].compatibilidad === 'number', 'La compatibilidad debe ser numérica');
-
-  // 4. Test autocompletado.js
-  console.log('4. Probando js/autocompletado.js (búsqueda de sugerencias)...');
+  // 3. Test autocompletado.js
+  console.log('3. Probando js/autocompletado.js (búsqueda de sugerencias)...');
   const autocompletado = await import('./js/autocompletado.js');
   assert(typeof autocompletado.buscarSugerencias === 'function', 'buscarSugerencias debe ser una función');
 

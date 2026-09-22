@@ -61,17 +61,23 @@ function exportesDe(codigo) {
 }
 
 const codigosJs = {};
-for (const archivo of fs.readdirSync(path.join(RAIZ, 'js'))) {
-    if (archivo.endsWith('.js')) codigosJs[archivo] = leer(`js/${archivo}`);
+function recorrerJs(dir, prefijo) {
+    for (const entrada of fs.readdirSync(dir, { withFileTypes: true })) {
+        if (entrada.isDirectory()) recorrerJs(path.join(dir, entrada.name), `${prefijo}${entrada.name}/`);
+        else if (entrada.name.endsWith('.js')) codigosJs[`${prefijo}${entrada.name}`] = leer(`js/${prefijo}${entrada.name}`);
+    }
 }
+recorrerJs(path.join(RAIZ, 'js'), '');
 const exportes = {};
 for (const [archivo, codigo] of Object.entries(codigosJs)) exportes[archivo] = exportesDe(codigo);
 
 let importsRevisados = 0, importsRotos = [];
 for (const [archivo, codigo] of Object.entries(codigosJs)) {
-    for (const m of codigo.matchAll(/import\s*\{([^}]*)\}\s*from\s*['"]\.\/([^'"]+)['"]/g)) {
-        const destino = m[2];
-        if (!exportes[destino]) { importsRotos.push(`${archivo} importa de ./${destino} que no existe`); continue; }
+    for (const m of codigo.matchAll(/import\s*\{([^}]*)\}\s*from\s*['"](\.[^'"]+)['"]/g)) {
+        // Las rutas son relativas al archivo que importa, no a js/: se resuelven
+        // con path.posix para que los submódulos (js/vocacional/...) funcionen.
+        const destino = path.posix.normalize(path.posix.join(path.posix.dirname(archivo), m[2]));
+        if (!exportes[destino]) { importsRotos.push(`${archivo} importa de ${m[2]} que no existe`); continue; }
         for (const parte of m[1].split(',')) {
             const original = parte.split(/\s+as\s+/)[0].trim();
             if (!original) continue;
@@ -95,6 +101,33 @@ check(/id="btnBienvenidaOfertas"/.test(htmlIndex) && /Mostrar ofertas/.test(html
 check(!/btnBienvenidaCarreras|btnBienvenidaInstituciones|btnBienvenidaAreas/.test(htmlIndex), 'no quedan los 3 botones viejos de la bienvenida');
 const sinColgadosBienvenida = Object.values(codigosJs).every(c => !/btnBienvenidaCarreras|btnBienvenidaInstituciones|btnBienvenidaAreas/.test(c));
 check(sinColgadosBienvenida, 'ningún JS referencia los botones eliminados');
+check(/id="btnBienvenidaCopiloto"/.test(htmlIndex) && /Orientador vocacional/.test(htmlIndex), 'la bienvenida ofrece el orientador vocacional (copiloto)');
+check(/id="btnBienvenidaOfertas"/.test(htmlIndex) && /Mostrar ofertas/.test(htmlIndex), 'y "Mostrar ofertas" para el catálogo');
+check(!/btnBienvenidaTestCompleto/.test(htmlIndex), 'la bienvenida no tiene una tarjeta aparte para el test');
+check(Object.values(codigosJs).every(c => !/btnBienvenidaTestCompleto/.test(c)), 'ningún JS referencia la tarjeta eliminada');
+const bloqueBienvenida = (htmlIndex.match(/id="pantallaBienvenida"([\s\S]*?)<\/section>/) || [])[1] || '';
+check(!/65 preguntas/.test(bloqueBienvenida), 'la portada (texto visible) no menciona las 65 preguntas');
+
+// ==========================================
+// 2b. MI LISTA (favoritos + comparador)
+// ==========================================
+console.log('\n2b. Mi lista');
+check(/id="btnMiLista"/.test(htmlIndex) && /id="miLista"/.test(htmlIndex), 'index.html tiene el botón y la ventana de Mi lista');
+check(scriptsIndex.includes('js/favoritos.js'), 'index.html carga js/favoritos.js (script clásico)');
+check(!/orientador\.js/.test(htmlIndex), 'index.html ya no carga el motor viejo (orientador.js)');
+const rutasShell2 = [...((leer('sw.js').match(/const SHELL = \[([^\]]+)\]/) || [])[1] || '').matchAll(/'([^']+)'/g)].map(m => m[1]);
+for (const ruta of ['js/favoritos.js', 'js/mi-lista.js']) {
+    check(rutasShell2.includes(ruta), `el shell del SW incluye ${ruta}`);
+}
+for (const ruta of ['js/orientador.js', 'data/carreras-perfiles.json']) {
+    check(!rutasShell2.includes(ruta), `el shell del SW ya no incluye ${ruta}`);
+}
+check(!existe('js/orientador.js') && !existe('data/carreras-perfiles.json'), 'los archivos del test viejo ya no están en el repo');
+const fichaEstatica = leer('carrera/abogacia/index.html');
+check(/data-fav-clave=/.test(fichaEstatica), 'las páginas estáticas generadas traen el botón "Me interesa"');
+check(/data-fav-solo-icono/.test(fichaEstatica), 'en las estáticas el corazón va solo (sin texto)');
+check(/class="btn-ver-mi-lista"/.test(fichaEstatica), 'y "Ver Mi lista" como botón propio');
+check(/--fav-rojo/.test(leer('style.css')) && /--fav-rojo/.test(leer('paginas.css')), 'el corazón marcado es rojo en la app y en las estáticas');
 
 // ==========================================
 // 3. SELLO DE CACHÉ (index.html ↔ sw.js ↔ páginas)

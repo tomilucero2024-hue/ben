@@ -3,13 +3,16 @@
 // a un innerHTML pasa por el escapado de util.js.
 // ==========================================
 
-import { etiquetaCompatibilidad } from './copiloto.js';
 import { ETIQUETAS_FUENTE, catalogosAparte, enlacesBEN, ofertas, plataformas } from './datos.js';
 import { estado, sincronizarURL } from './estado.js';
 import { FILTROS_SOLO_FORMALES, cumpleFiltros, filtrarYOrdenar, obtenerRelacionadas } from './filtros.js';
-import { capSeguro, duracionCorta, escaparHTML, formatearDuracionAnios, limpiarTexto, nombreSeguro, normalizarTexto, urlSegura } from './util.js';
+import { capSeguro, duracionCorta, escaparHTML, etiquetaCompatibilidad, formatearDuracionAnios, limpiarTexto, nombreSeguro, normalizarTexto, urlSegura } from './util.js';
 
 export const LIMITE_PAGINA = 24;
+
+function slugFicha(nombre) {
+    return enlacesBEN.carreras[normalizarTexto(nombre)] || '';
+}
 
 // Enlace interno a la ficha que BEN tiene de esa carrera. Va antes que el del
 // sitio oficial porque es el que mantiene a la persona adentro y el unico que
@@ -17,10 +20,20 @@ export const LIMITE_PAGINA = 24;
 // la pagina con mas peso del sitio, no enlazaba ni una sola de las suyas.
 // Devuelve '' cuando esa formacion no tiene pagina generada.
 function enlaceFichaBEN(nombre) {
-    const slug = enlacesBEN.carreras[normalizarTexto(nombre)];
+    const slug = slugFicha(nombre);
     return slug
         ? `<a class="card-link card-link-ben" href="/carrera/${slug}/">Ver más información →</a>`
         : '';
+}
+
+// Botón "Me interesa" de una tarjeta. El HTML y el comportamiento (guardar,
+// avisar, sincronizar) los pone js/favoritos.js, que también corre en las
+// páginas estáticas; acá solo se arma la ficha que viaja en el data-attribute.
+// "clave" es lo que se guarda (la oferta puntual en la grilla formal) y
+// "claveCarrera" el nombre normalizado que alimenta la Fase B del test.
+function botonFavorito(item) {
+    if (typeof window === 'undefined' || !window.Favoritos) return '';
+    return window.Favoritos.botonHTML(item);
 }
 
 function enlaceInstitucionBEN(nombre) {
@@ -170,15 +183,16 @@ export function mostrarCatalogoAparte(seccion) {
     const visibles = estado.texto
         ? catalogo.cursos.filter(c => c.busqueda.includes(estado.texto))
         : catalogo.cursos;
-    renderizarCursosAparte(document.getElementById(catalogo.contenedor), visibles, catalogo.simple);
+    const tipo = seccion === 'oficios-tecnicos' ? 'oficio' : 'curso';
+    renderizarCursosAparte(document.getElementById(catalogo.contenedor), visibles, catalogo.simple, tipo);
 }
 
-export function renderizarCursosAparte(contenedor, lista, simple = false) {
+export function renderizarCursosAparte(contenedor, lista, simple = false, tipo = 'curso') {
     if (!lista.length) {
         contenedor.innerHTML = '<p class="empty-state">No hay formaciones que coincidan con esa búsqueda.</p>';
         return;
     }
-    if (simple) { renderizarCursosSimples(contenedor, lista); return; }
+    if (simple) { renderizarCursosSimples(contenedor, lista, tipo); return; }
     contenedor.innerHTML = lista.map(curso => `
         <article class="curso-card">
             <div class="card-badges">
@@ -196,17 +210,21 @@ export function renderizarCursosAparte(contenedor, lista, simple = false) {
                 ? `<a class="card-link" href="${escaparHTML(urlSegura(curso.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ir al sitio oficial ↗</a>`
                 : '<span class="card-link card-link-muted">Sin link oficial</span>'}
             <div class="card-actions">
+                ${botonFavorito({
+                    clave: curso._clave, tipo, claveCarrera: '',
+                    nombre: curso.nombre, institucion: curso.institucion || '',
+                    area: '', formacion: '', ficha: '', link: urlSegura(curso.link) || ''
+                })}
                 <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(curso._clave)}" aria-label="Escuchar formación">${ICONO_ESCUCHAR} <span>Escuchar</span></button>
             </div>
         </article>`).join('');
 }
 
 // Variante simple de tarjeta: mismo diseño (.curso-card, con el borde y el tinte
-// de la sección) pero solo nombre, descripción y link. Sin badges, sin duración
-// ni modalidad, y sin botones.
+// de la sección) pero solo nombre, descripción y link. Sin badges ni duración.
 // Ojo: acá NO se usa capitalizar(), que pasa todo a minúscula después de la
 // primera letra y convertiría "CEBJA" en "Cebja".
-function renderizarCursosSimples(contenedor, lista) {
+function renderizarCursosSimples(contenedor, lista, tipo = 'secundario') {
     contenedor.innerHTML = lista.map(curso => `
         <article class="curso-card curso-card-simple">
             <h3 class="curso-title">${escaparHTML(curso.nombre)}</h3>
@@ -219,6 +237,13 @@ function renderizarCursosSimples(contenedor, lista) {
             ${urlSegura(curso.link)
                 ? `<a class="card-link" href="${escaparHTML(urlSegura(curso.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ver más en mendoza.edu.ar ↗</a>`
                 : '<span class="card-link card-link-muted">Sin link oficial</span>'}
+            <div class="card-actions">
+                ${botonFavorito({
+                    clave: curso._clave, tipo, claveCarrera: '',
+                    nombre: curso.nombre, institucion: curso.institucion || '',
+                    area: '', formacion: '', ficha: '', link: urlSegura(curso.link) || ''
+                })}
+            </div>
         </article>`).join('');
 }
 
@@ -266,6 +291,11 @@ export function renderizarPlataformas(contenedor, lista) {
                 ? `<a class="platform-link" href="${escaparHTML(urlSegura(plataforma.url))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ver oferta en ${nombreSeguro(plataforma.nombre)} ↗</a>`
                 : '<span class="platform-link platform-link-muted">Sitio oficial no disponible</span>'}
             <div class="card-actions">
+                ${botonFavorito({
+                    clave: plataforma._clave, tipo: 'plataforma', claveCarrera: '',
+                    nombre: plataforma.nombre, institucion: plataforma.nombre,
+                    area: '', formacion: '', ficha: '', link: urlSegura(plataforma.url) || ''
+                })}
                 <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(plataforma._clave)}" aria-label="Escuchar plataforma">${ICONO_ESCUCHAR} <span>Escuchar</span></button>
             </div>
         </article>`).join('');
@@ -275,13 +305,14 @@ export // ==========================================
 // 🧭 RECOMENDACIONES DEL COPILOTO
 // ==========================================
 
-// Índice nombre-normalizado -> ofertas formales con ese nombre. Las carreras que
-// devuelve el Orientador son "carreras" abstractas (de carreras-perfiles.json),
-// no ofertas de una institución concreta, así que para poder filtrarlas por
-// gestión, modalidad o duración hay que volver a las ofertas que las dictan.
+// Índice nombre-normalizado -> ofertas formales con ese nombre. Las carreras del
+// test vocacional son "carreras" abstractas (de perfiles-carreras.json), no
+// ofertas de una institución concreta, así que para poder filtrarlas por
+// gestión, modalidad o duración (y para compararlas en Mi lista) hay que volver
+// a las ofertas que las dictan.
 let indiceOfertasPorNombre = null;
 
-function ofertasDeCarrera(carrera) {
+export function ofertasDeCarrera(carrera) {
     if (!indiceOfertasPorNombre || indiceOfertasPorNombre.size !== ofertas.length) {
         indiceOfertasPorNombre = new Map();
         ofertas.forEach(oferta => {
@@ -548,6 +579,12 @@ export function renderizarTarjetas(resultados, { mostrarMatch = false, encabezad
                 ${urlSegura(oferta.link) ? `<a class="card-link-oficial" href="${escaparHTML(urlSegura(oferta.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Sitio oficial ↗</a>` : ''}
             </div>
             <div class="card-actions">
+                ${botonFavorito({
+                    clave: oferta._clave, tipo: 'carrera', claveCarrera: normalizarTexto(oferta.nombre),
+                    nombre: oferta.nombre, institucion: oferta.institucion,
+                    area: oferta.area || '', formacion: oferta.formacion || '',
+                    ficha: slugFicha(oferta.nombre), link: urlSegura(oferta.link) || ''
+                })}
                 <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(oferta._clave)}" aria-label="Escuchar carrera">${ICONO_ESCUCHAR} <span>Escuchar</span></button>
             </div>
         </article>`).join('');
@@ -603,6 +640,13 @@ export function renderizarTarjetasConCompatibilidad(resultados, rankings) {
             </div>` : ''}
             ${enlaceFichaBEN(carrera.nombre)}
 <div class="card-actions">
+            ${botonFavorito({
+                clave: clave, tipo: 'carrera', claveCarrera: clave,
+                nombre: carrera.nombre,
+                institucion: instituciones.length === 1 ? instituciones[0] : (instituciones.length > 1 ? `${instituciones.length} instituciones` : ''),
+                area: carrera.area || '', formacion: carrera.formacion || '',
+                ficha: slugFicha(carrera.nombre), link: ''
+            })}
             <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(clave)}" aria-label="Escuchar carrera">${ICONO_ESCUCHAR} <span>Escuchar</span></button>
         </div>
         </article>`;

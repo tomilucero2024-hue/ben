@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "comentario": "Parámetros del Test Vocacional Completo. Todo lo que se puede ajustar sin tocar código vive acá.",
+  "pesos_match": {
+    "comentario": "Cuánto pesa cada bloque en el cruce estudiante-carrera. Deben sumar 1.",
+    "riasec": 0.5,
+    "aptitudes": 0.3,
+    "valores": 0.2
+  },
+  "afinidad": {
+    "comentario": "El match mide distancia normalizada entre perfiles: 100% = idénticos. Se usa un techo de 97% para no prometer certeza absoluta. Se eligió distancia en vez de coseno porque el coseno amontonaba cientos de carreras en 90-95% y no discriminaba.",
+    "techo_porcentaje": 97
+  },
+  "uso": {
+    "comentario": "Ajuste progresivo con el uso real: peso_uso = min(interacciones / interacciones_tope, peso_maximo). El techo evita que un pico de uso distorsione el perfil.",
+    "interacciones_tope": 50,
+    "peso_maximo": 0.8
+  },
+  "ajustes_formacion": {
+    "comentario": "Ajuste automático según el tipo de formación, además del área y las palabras clave.",
+    "grado": { "riasec.I": 1, "riasec.C": 1 },
+    "profesorados": { "riasec.S": 1, "apt.verbal": 1 },
+    "tecnicaturas": { "riasec.R": 1 },
+    "cursos": { "riasec.R": 1, "val.estabilidad": -1 }
+  },
+  "test": {
+    "preguntas_por_pantalla": 9,
+    "resultados": 8
+  },
+  "eventos": {
+    "comentario": "Adaptador de eventos de uso. endpoint vacío = solo localStorage. Si se completa, además se intenta enviar por POST.",
+    "endpoint": "",
+    "max_local": 500
+  }
+}

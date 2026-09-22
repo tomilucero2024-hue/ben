@@ -1,22 +1,16 @@
 // ==========================================
-// Copiloto Vocacional: el chat, el test de orientacion y la busqueda por
-// texto libre.
+// Copiloto Vocacional: el chat que entiende texto libre y guía hacia el Test
+// Vocacional Completo (el cuestionario vive en js/vocacional/).
 // ==========================================
 
-import { ETIQUETAS_FUENTE, asegurarOrientadorListo, catalogosAparte, ofertas, plataformas } from './datos.js';
-import { LIMITE_PAGINA, estado } from './estado.js';
-import { cambiarSeccion, cambiarVista, mostrarResultados, renderizarCursosAparte, renderizarPlataformas, renderizarTarjetas, renderizarTarjetasConCompatibilidad } from './render.js';
+import { ETIQUETAS_FUENTE, catalogosAparte, ofertas, plataformas } from './datos.js';
+import { cambiarSeccion, cambiarVista, renderizarCursosAparte, renderizarPlataformas, renderizarTarjetas } from './render.js';
 import { capSeguro, escaparHTML, normalizarTexto, obtenerModalidades } from './util.js';
+import { abrirTestCompleto } from './vocacional/test-completo.js';
 
-let pasoActual = 0;
-let perfilUsuario = {}; // { analitico: 3, tecnologico: 2, ... } scores 0-5
-let respuestasTest = []; // Array de { preguntaId, opcionTexto, dimensionScores }
-let procesandoPasoChat = false;
-let enTestVocacional = false;
 // Historial de la conversación: cada entrada es { rol: 'bot'|'usuario', html }.
 const historialChat = [];
 let bubbleEscribiendo = null;
-let orientadorListo = false;
 
 // El copiloto es una burbuja flotante en la esquina inferior derecha, igual en
 // todos los tamaños de pantalla. Comportamiento uniforme: abre y cierra por
@@ -49,10 +43,9 @@ export function cerrarChat() {
     cambiarPanelCopiloto(false);
 }
 
-// Modo "test a pantalla completa": el panel se estira sobre el viewport y se
-// muestra la ventana de chat con el cuestionario guiado. Se entra desde la
-// bienvenida.
-function abrirTestPantallaCompleta() {
+// Modo "pantalla completa" del copiloto: el panel se estira sobre el viewport,
+// oscurece el sitio y centra la ventana de chat. Se entra desde la bienvenida.
+function abrirCopilotoPantallaCompleta() {
     const panel = document.getElementById('copilotoPanel');
     const ventana = document.getElementById('ventana-chat');
     if (!ventana || !panel) return;
@@ -65,9 +58,9 @@ function abrirTestPantallaCompleta() {
     cambiarPanelCopiloto(true, { foco: true });
 }
 
-// Salir del test a pantalla completa: fade-out del panel y vuelta a la burbuja
-// cerrada. Es la transición "test → interfaz principal".
-export function salirDelTest() {
+// Salir del copiloto a pantalla completa: fade-out del panel y vuelta a la
+// burbuja cerrada. Es la transición "copiloto → interfaz principal".
+export function salirDelCopilotoPantallaCompleta() {
     const panel = document.getElementById('copilotoPanel');
     if (!panel || !panel.classList.contains('is-test-pantalla-completa')) return;
     panel.classList.add('is-saliendo-test');
@@ -102,7 +95,7 @@ export function configurarChat() {
     abrir.addEventListener('click', () => cambiarPanelCopiloto(ventana.hidden));
     cerrar.addEventListener('click', () => {
         const panel = document.getElementById('copilotoPanel');
-        if (panel && panel.classList.contains('is-test-pantalla-completa')) salirDelTest();
+        if (panel && panel.classList.contains('is-test-pantalla-completa')) salirDelCopilotoPantallaCompleta();
         else cerrarChat();
     });
 }
@@ -128,10 +121,12 @@ export function configurarBienvenida() {
         alternarInertDetrasDeBienvenida(true);
     }
 
+    // Las dos tarjetas de la portada: el orientador (que abre el chat y desde
+    // el chat se llega al Test Vocacional Completo) y el catálogo completo.
     const btnCopiloto = document.getElementById('btnBienvenidaCopiloto');
     const btnOfertas = document.getElementById('btnBienvenidaOfertas');
     if (btnCopiloto) btnCopiloto.addEventListener('click', () => {
-        salirDeBienvenida(() => abrirTestPantallaCompleta());
+        salirDeBienvenida(() => abrirCopilotoPantallaCompleta());
     });
     if (btnOfertas) btnOfertas.addEventListener('click', () => {
         salirDeBienvenida(() => cambiarVista('carreras'));
@@ -184,28 +179,11 @@ function salirDeBienvenida(despues) {
     setTimeout(terminar, 450);
 }
 
-// Todo lo que entra a un innerHTML pasa por acá. Los textos vienen de scrapear
-// sitios de terceros, así que no son confiables: un nombre de carrera con un
-// "<img onerror=...>" se ejecutaría como HTML. Escapa también las comillas, así
-// que sirve igual para contenido de texto y para valores de atributo.
-// Las preguntas ya contestadas siguen en el chat como transcripcion, con sus
-// botones. Hay que dejarlos inertes: el handler aplica el INDICE del boton a la
-// pregunta en curso, asi que tocar la 5a opcion de la pregunta 1 mientras se
-// esta en la 2 contestaba la 2 con una opcion que el usuario nunca vio, y ademas
-// guardaba en el historial el texto del boton viejo junto al puntaje de la
-// pregunta nueva. Solo quedan vivos los controles del paso actual.
-function apagarControlesViejos(chatCaja) {
-    chatCaja.querySelectorAll('[data-chat-paso]').forEach(boton => {
-        boton.disabled = !enTestVocacional || Number(boton.dataset.chatPaso) !== pasoActual;
-    });
-}
-
 function renderizarChat() {
     const chatCaja = document.getElementById('chat-caja');
     chatCaja.innerHTML = historialChat.map(m => m.rol === 'bot'
         ? `<div class="mensaje-bot">${m.html}</div>`
         : `<div class="mensaje-usuario">${m.html}</div>`).join('');
-    apagarControlesViejos(chatCaja);
     chatCaja.scrollTop = chatCaja.scrollHeight;
 
     // Se anuncia solo la última respuesta del bot, no el historial entero.
@@ -216,26 +194,6 @@ function renderizarChat() {
         tmp.innerHTML = ultimoBot.html;
         anuncio.textContent = tmp.textContent.replace(/\s+/g, ' ').trim();
     }
-}
-
-// La barra de progreso del test vive arriba del chat, fuera del scroll.
-function actualizarProgresoChat() {
-    const barra = document.getElementById('chat-progreso');
-    if (!barra) return;
-    if (!enTestVocacional) {
-        barra.hidden = true;
-        return;
-    }
-    barra.hidden = false;
-    const preguntas = obtenerPreguntasTest();
-    const total = preguntas.length || 5;
-    const pasoVisible = Math.min(pasoActual + 1, total);
-    const porcentaje = Math.round((pasoActual / total) * 100);
-    barra.innerHTML = `
-        <div class="chat-progreso" role="progressbar" aria-valuenow="${porcentaje}" aria-valuemin="0" aria-valuemax="100" aria-label="Progreso del test">
-            <span style="width: ${porcentaje}%"></span>
-        </div>
-        <p class="chat-progreso-texto">Pregunta ${pasoVisible} de ${total}</p>`;
 }
 
 function mostrarEscribiendo() {
@@ -297,27 +255,25 @@ function pasoCopiloto(n, icono, texto) {
         </li>`;
 }
 
-// El camino recomendado es el test guiado, así que va primero y con el botón
-// destacado. La búsqueda libre queda como atajo para quien ya sabe qué busca:
-// el botón secundario delega en el ✕ del header, que ya sabe si hay que cerrar
-// la ventanita o salir del modo pantalla completa.
+// El camino recomendado es el Test Vocacional Completo, así que es la acción
+// destacada; la búsqueda libre queda para quien ya sabe qué busca.
 function mensajeBienvenida() {
     return `<div class="copiloto-bienvenida">
             <div class="cb-header">
                 <span class="cb-icono" aria-hidden="true">${iconoCopiloto('brujula')}</span>
                 <span class="cb-titulos">
-                    <h2 class="cb-titulo">Copiloto Vocacional</h2>
-                    <p class="cb-subtitulo">Encontrá tu carrera ideal en 2 minutos</p>
+                    <h2 class="cb-titulo">Copiloto Vocacional <span class="badge-beta" title="Función en prueba: puede cambiar o fallar">Beta</span></h2>
+                    <p class="cb-subtitulo">Tu guía por la oferta educativa de Mendoza</p>
                 </span>
             </div>
             <ol class="cb-pasos">
-                ${pasoCopiloto(1, 'lista', 'Respondés 7 preguntas cortas')}
-                ${pasoCopiloto(2, 'analisis', 'Analizamos tus intereses')}
-                ${pasoCopiloto(3, 'diana', 'Te mostramos las carreras que más encajan')}
+                ${pasoCopiloto(1, 'lista', 'Respondés el test completo (65 preguntas)')}
+                ${pasoCopiloto(2, 'analisis', 'Cruzamos tu perfil con 651 carreras')}
+                ${pasoCopiloto(3, 'diana', 'Guardás las que te interesan y las comparás')}
             </ol>
-            <p class="cb-tiempo">${iconoCopiloto('reloj')}<span>Toma menos de 2 minutos</span></p>
-            <button type="button" class="cb-cta" data-chat-accion="test">
-                <span>Empezar el test</span>${iconoCopiloto('flecha')}
+            <p class="cb-tiempo">${iconoCopiloto('reloj')}<span>Toma 4-6 minutos</span></p>
+            <button type="button" class="cb-cta" data-chat-accion="test-completo">
+                <span>Hacer el test completo</span>${iconoCopiloto('flecha')}
             </button>
             <button type="button" class="cb-salida"
                 data-chat-accion="cerrar">Prefiero buscar por mi cuenta</button>
@@ -336,136 +292,6 @@ function mensajeAyuda() {
         </ul>
         ${sugerenciasChips(['carreras de informática', '¿cuánto dura medicina?', 'qué ofrece la UNCuyo', 'hacer el test vocacional'])}`;
 }
-
-function obtenerPreguntasTest() {
-    return (typeof Orientador !== 'undefined' && Orientador.PREGUNTAS_TEST) ? Orientador.PREGUNTAS_TEST : [];
-}
-
-async function iniciarTestVocacional() {
-    pasoActual = 0;
-    perfilUsuario = {};
-    respuestasTest = [];
-    enTestVocacional = true;
-    procesandoPasoChat = false;
-    historialChat.length = 0;
-    historialChat.push({ rol: 'bot', html: '<p>🎯 Perfecto. Te hago <strong>7 preguntas</strong> para mapear tu perfil multidimensional. Respondé eligiendo una de las opciones.</p>' });
-    
-    // Asegurar que Orientador cargó los perfiles (lazy loading)
-    mostrarEscribiendo();
-    await asegurarOrientadorListo();
-    quitarEscribiendo();
-
-    actualizarProgresoChat();
-    mostrarPregunta();
-}
-
-function mostrarPregunta() {
-    const preguntasTest = obtenerPreguntasTest();
-    const preguntaObj = preguntasTest[pasoActual];
-    if (!preguntaObj) return;
-    const opciones = (preguntaObj.opciones || [])
-        .map((opcion, idx) => `<button type="button" class="btn-chat-opcion" data-chat-paso="${pasoActual}" data-chat-opcion="${idx}" data-chat-opcion-texto="${escaparHTML(opcion.texto)}">${escaparHTML(opcion.texto)}</button>`)
-        .join('');
-
-    historialChat.push({ rol: 'bot', html: `
-        <p><img class="chat-bot-icon" src="/img/copiloto-icono.png" alt="" width="16" height="16"> <strong>Orientador:</strong> ${escaparHTML(preguntaObj.texto)}</p>
-        <div class="opciones-usuario">${opciones}</div>
-        ${pasoActual > 0 ? `<button type="button" class="btn-chat-atras" data-chat-paso="${pasoActual}" data-chat-accion="atras">← Volver a la pregunta anterior</button>` : ''}` });
-    actualizarProgresoChat();
-    renderizarChat();
-}
-
-// Para que se pueda llamar desde los botones inyectados en el HTML
-function seleccionarOpcionChat(opcionIdx, textoOpcion, pasoOpcion) {
-    if (procesandoPasoChat) return;
-
-    // Las preguntas ya respondidas siguen en el historial del chat, con sus
-    // botones intactos: si el usuario sube y toca uno cuando el test ya terminó,
-    // preguntasTest[pasoActual] es undefined y reventaba con un TypeError.
-    // Fuera del test esos botones simplemente no hacen nada.
-    const preguntasTest = obtenerPreguntasTest();
-    const preguntaObj = preguntasTest[pasoActual];
-    if (!enTestVocacional || !preguntaObj) return;
-    // Y con el test en curso hay que mirar de QUÉ pregunta salió el botón: el
-    // índice de una opción solo significa algo dentro de su propia pregunta.
-    // apagarControlesViejos() ya los deja disabled; esto cubre el caso de que
-    // el clic llegue igual (por ejemplo si el bloque se pintó fuera de tiempo).
-    if (Number.isFinite(pasoOpcion) && pasoOpcion !== pasoActual) return;
-    const opcion = preguntaObj.opciones[opcionIdx];
-    if (!opcion) return;
-
-    procesandoPasoChat = true;
-    
-    // Acumular scores dimensionales
-    if (opcion.dimensionScores && typeof Orientador !== 'undefined') {
-        Orientador.DIMENSIONES.forEach(d => {
-            const val = opcion.dimensionScores[d] || 0;
-            perfilUsuario[d] = (perfilUsuario[d] || 0) + val;
-        });
-    }
-    
-    respuestasTest.push({
-        preguntaId: preguntaObj.id,
-        opcionTexto: textoOpcion,
-        dimensionScores: opcion.dimensionScores
-    });
-    
-    pasoActual++;
-
-    historialChat.push({ rol: 'usuario', html: '<p>' + escaparHTML(textoOpcion) + '</p>' });
-    mostrarEscribiendo();
-
-    setTimeout(() => {
-        quitarEscribiendo();
-        procesandoPasoChat = false;
-        if (pasoActual >= preguntasTest.length) {
-            mostrarRecomendacion();
-        } else {
-            mostrarPregunta();
-        }
-    }, 450);
-};
-
-function volverPreguntaChat() {
-    if (procesandoPasoChat || pasoActual === 0) return;
-    // Descarta del historial la pregunta actual, la respuesta del usuario Y la
-    // pregunta a la que se vuelve: mostrarPregunta() la vuelve a pintar al
-    // final. Con solo dos pop() quedaba la vieja + la nueva y la pregunta se
-    // veía repetida dos veces seguidas en el chat.
-    historialChat.pop();
-    historialChat.pop();
-    historialChat.pop();
-    pasoActual--;
-    
-    // Revertir scores dimensionales
-    const ultimaRespuesta = respuestasTest.pop();
-    if (ultimaRespuesta && ultimaRespuesta.dimensionScores) {
-        Orientador.DIMENSIONES.forEach(d => {
-            const val = ultimaRespuesta.dimensionScores[d] || 0;
-            perfilUsuario[d] = Math.max(0, (perfilUsuario[d] || 0) - val);
-        });
-    }
-    
-    actualizarProgresoChat();
-    mostrarPregunta();
-};
-
-function reiniciarChat() {
-    pasoActual = 0;
-    perfilUsuario = {};
-    respuestasTest = [];
-    enTestVocacional = false;
-    procesandoPasoChat = false;
-    historialChat.length = 0;
-    actualizarProgresoChat();
-    historialChat.push({ rol: 'bot', html: mensajeBienvenida() });
-    renderizarChat();
-};
-
-
-
-
-// Preguntas del test vocacional - Usando las del módulo Orientador
 
 const PALABRAS_VACIAS = new Set('a al algo alguna algunas algunos aunque asi bien como con contra cual cuales cuando cuanto cuantos de del desde donde el en entre eres es esa esas ese esos esta estas este esto estoy fue habia hay hasta la las lo los mas me mi mis muy ni no nos o para pero por porque que quien se segun ser si sin sobre su sus te tener todo todos tu tus un una uno unos va vos y ya quiero quiere necesito busco buscar encontrame mostrame estudiar estudio estudios carrera carreras algo tengo podrias podes puedo mejor tener queria gustaria otra tambien'.split(' '));
 
@@ -834,6 +660,18 @@ function renderResultadosChat(respuesta) {
     }
 }
 
+// Abre el Test Vocacional Completo desde el chat: se pliega la ventanita
+// primero para no dejar dos capas abiertas (el test ya desenfoca todo atrás).
+function abrirTestVocacional() {
+    const panel = document.getElementById('copilotoPanel');
+    if (panel && panel.classList.contains('is-test-pantalla-completa')) {
+        salirDelCopilotoPantallaCompleta();
+    } else {
+        cerrarChat();
+    }
+    abrirTestCompleto();
+}
+
 // Punto de entrada del texto libre (también lo usan los botones de sugerencias).
 function procesarEntradaUsuario(texto) {
     const limpio = normalizarTexto(texto);
@@ -846,7 +684,7 @@ function procesarEntradaUsuario(texto) {
         const respuesta = responderTextoLibre(limpio);
         if (!respuesta) return;
         if (respuesta.accion === 'test') {
-            iniciarTestVocacional();
+            abrirTestVocacional();
             return;
         }
         historialChat.push({ rol: 'bot', html: respuesta.html });
@@ -854,200 +692,6 @@ function procesarEntradaUsuario(texto) {
         if (respuesta.resultados) renderResultadosChat(respuesta);
     }, 450);
 };
-
-// --- Motor de recomendación --------------------------------------------
-// En vez de buscar palabras sueltas en cualquier lado (lo que daba falsos
-// positivos/negativos), usamos como señal principal el campo `area` que ya
-// calcula getArea() para cada carrera, y sumamos palabras clave puntuales
-// solo como desempate fino. Todo el matching es por palabra completa (\b)
-// para no enganchar coincidencias parciales dentro de otra palabra.
-
-const AREAS_POR_ENTORNO = {
-    oficina: ['Tecnología', 'Negocios', 'Ingeniería'],
-    terreno: ['Oficios', 'Turismo', 'Ambiente', 'Gastronomía'],
-    social: ['Salud', 'Educación', 'Ciencias sociales']
-};
-
-const AREAS_POR_HABILIDAD = {
-    analitico: ['Ingeniería', 'Tecnología', 'Salud', 'Negocios'],
-    creativo: ['Diseño', 'Arte', 'Idiomas'],
-    empatico: ['Salud', 'Educación', 'Ciencias sociales']
-};
-
-const PALABRAS_POR_ENTORNO = {
-    oficina: ['sistema', 'programacion', 'administracion', 'gestion', 'dato', 'contad'],
-    terreno: ['mecanic', 'turismo', 'agronom', 'ambiental', 'logistica', 'topograf', 'petroleo'],
-    social: ['profesorado', 'educacion', 'psicolog', 'salud', 'enfermer', 'medicin']
-};
-
-const PALABRAS_POR_HABILIDAD = {
-    analitico: ['ingenieria', 'dato', 'finanza', 'matematica', 'ciencia', 'software'],
-    creativo: ['diseno', 'arte', 'arquitect', 'multimedia', 'marketing', 'animacion', 'comunicacion'],
-    empatico: ['social', 'acompan', 'terapia', 'pedagog', 'psicolog', 'docencia']
-};
-
-const PALABRAS_DESCARTE = {
-    duro: ['matematica', 'calculo', 'ingenieria', 'contador', 'derecho', 'leyes'],
-    rutina: ['administracion', 'secretariado', 'archivo', 'contable'],
-    publico: ['turismo', 'marketing', 'comercio', 'venta', 'relaciones publicas']
-};
-
-const LIMITE_RECOMENDACIONES = 40;
-
-function contienePalabra(texto, palabra) {
-    return new RegExp(`\\b${palabra}`, 'i').test(texto);
-}
-
-function obtenerRecomendaciones() {
-    // Si el test ya se corrió antes en esta sesión, primero olvidamos esos puntajes.
-    ofertas.forEach(o => { delete o.score; delete o.motivos; });
-
-    // 1. Filtramos por el nivel de formación elegido (grado, tecnicatura o curso).
-    let posibles = ofertas.filter(c => {
-        if (perfilUsuario.nivel === 'grado') return c.formacion === 'grado' || c.formacion === 'profesorados';
-        if (perfilUsuario.nivel === 'tecnicatura') return c.formacion === 'tecnicaturas';
-        if (perfilUsuario.nivel === 'curso') return c.formacion === 'cursos';
-        return true;
-    });
-
-    // 2. Puntuamos cada carrera y guardamos por qué la recomendamos.
-    posibles.forEach(c => {
-        c.score = 0;
-        c.motivos = [];
-        const texto = normalizarTexto(`${c.nombre} ${c.categoria}`);
-
-        if ((AREAS_POR_ENTORNO[perfilUsuario.entorno] || []).includes(c.area)) {
-            c.score += 4;
-            c.motivos.push('encaja con el ambiente de trabajo que elegiste');
-        }
-        if ((AREAS_POR_HABILIDAD[perfilUsuario.habilidad] || []).includes(c.area)) {
-            c.score += 4;
-            c.motivos.push('aprovecha tu punto fuerte');
-        }
-        (PALABRAS_POR_ENTORNO[perfilUsuario.entorno] || []).forEach(p => { if (contienePalabra(texto, p)) c.score += 1; });
-        (PALABRAS_POR_HABILIDAD[perfilUsuario.habilidad] || []).forEach(p => { if (contienePalabra(texto, p)) c.score += 1; });
-
-        if (perfilUsuario.modalidad && perfilUsuario.modalidad !== 'cualquiera' && c.modalidades.includes(perfilUsuario.modalidad)) {
-            c.score += 2;
-            c.motivos.push(`es ${perfilUsuario.modalidad}, como preferís`);
-        }
-
-        (PALABRAS_DESCARTE[perfilUsuario.odio] || []).forEach(p => { if (contienePalabra(texto, p)) c.score -= 4; });
-    });
-
-    // 3. Nos quedamos solo con las que de verdad matchearon algo del perfil.
-    let recomendadas = posibles.filter(c => c.score > 0).sort((a, b) => b.score - a.score);
-
-    // 4. Si el cruce fue muy exigente y quedaron pocas opciones, relajamos el corte
-    //    (mejor mostrar las más cercanas que dejar a alguien sin nada).
-    if (recomendadas.length < 6 && posibles.length) {
-        recomendadas = posibles.slice().sort((a, b) => b.score - a.score).slice(0, 12);
-    }
-
-    return recomendadas.slice(0, LIMITE_RECOMENDACIONES);
-}
-
-export function etiquetaCompatibilidad(score) {
-    if (score >= 9) return '🎯 Muy compatible';
-    if (score >= 5) return '✔️ Compatible';
-    return '🔎 Podría interesarte';
-}
-
-function mostrarRecomendacion() {
-    enTestVocacional = false;
-    actualizarProgresoChat();
-
-    // Nos aseguramos de estar en la sección de Educación Formal (oculta plataformas)
-    // antes de pisar la grilla con los resultados del test.
-    cambiarSeccion('formal');
-
-    // Generar perfil usuario normalizado (0-5 cada dimensión)
-    const perfilNormalizado = Orientador.generarPerfilUsuarioDesdeRespuestas(respuestasTest);
-    
-    // Generar rankings agrupados por tipo de formación.
-    // El límite es una tanda (LIMITE_PAGINA) y no una docena: con 12 alcanzaba
-    // para mostrar, pero al filtrar por gestión o modalidad quedaban dos o tres
-    // tarjetas. Con una tanda entera los filtros tienen sobre qué trabajar.
-    const rankings = Orientador.generarRanking(perfilNormalizado, { limite: LIMITE_PAGINA });
-    const todas = rankings.todas;
-
-    // La grilla pasa a "modo recomendación": mostrarResultados() se encarga del
-    // contador y del pintado, y los filtros se aplican sobre estas carreras en
-    // vez de tirar el ranking a la basura.
-    estado.recomendacion = todas.length
-        ? { carreras: todas, rankings, total: rankings.total || todas.length }
-        : null;
-    mostrarResultados();
-    if (!todas.length) {
-        const contadorElem = document.getElementById('resultsCount');
-        if (contadorElem) contadorElem.textContent = '0 carreras compatibles con esa combinación';
-    }
-
-    let html;
-    if (!todas.length) {
-        html = `
-            <p><img class="chat-bot-icon" src="/img/copiloto-icono.png" alt="" width="16" height="16"> <strong>Orientador:</strong> No encontré carreras que combinen con esa mezcla de respuestas. ¡Probemos de nuevo con otra combinación!</p>
-            <button type="button" class="btn-chat-reset" data-chat-accion="reiniciar">Empezar el test de nuevo</button>`;
-    } else {
-        const mejor = todas[0];
-        const podio = todas.slice(0, 3);
-        const resto = todas.slice(3, 6);
-
-        html = `
-            <p><img class="chat-bot-icon" src="/img/copiloto-icono.png" alt="" width="16" height="16"> <strong>Orientador:</strong> ¡Listo! Analicé tu perfil contra ${typeof Orientador !== 'undefined' && Orientador.perfilesCarreras ? Orientador.perfilesCarreras.length : 'cientos de'} carreras.</p>
-            
-            <p>Tu carrera más compatible es <strong>${escaparHTML(mejor.nombre)}</strong> con <strong>${mejor.compatibilidad}%</strong> de afinidad.</p>
-            ${mejor.explicacion ? `<p class="mensaje-bot-nota">${mejor.explicacion}</p>` : ''}
-            ${mejor.alertas?.length ? `<p class="mensaje-bot-alerta">⚠️ ${mejor.alertas[0].mensaje}</p>` : ''}
-            
-            <div class="chat-resultados">${podio.map(c => tarjetaResultadoChat(c, rankings)).join('')}</div>
-            
-            ${resto.length ? `<p class="mensaje-bot-nota">También podrían interesarte:</p><div class="chat-resultados chat-resultados-secundarios">${resto.map(c => tarjetaResultadoChat(c, rankings)).join('')}</div>` : ''}
-            
-            <p class="mensaje-bot-nota">Cerrá esta ventana para ver todas las opciones en la grilla con filtros.</p>
-            <p class="mensaje-bot-nota"><small>⚖️ <em>Resultado de compatibilidad preliminar basado en intereses. Consultá siempre con un profesional de la orientación vocacional.</em></small></p>
-            <button type="button" class="btn-chat-reset" data-chat-accion="reiniciar">Empezar el test de nuevo</button>`;
-    }
-
-    historialChat.push({ rol: 'bot', html });
-    renderizarChat();
-}
-
-// Tarjeta compacta de resultado para el chat.
-function tarjetaResultadoChat(carrera, rankings) {
-    const compat = carrera.compatibilidad || 0;
-    const matchClass = compat >= 75 ? 'match-alto' : (compat >= 50 ? 'match-medio' : 'match-bajo');
-    const clave = carrera.clave || carrera.nombre;
-    let tipoBadge = '';
-    if (rankings.grados.some(r => r.clave === carrera.clave)) tipoBadge = '<span class="tipo-badge grado">Grado</span>';
-    else if (rankings.tecnicaturas.some(r => r.clave === carrera.clave)) tipoBadge = '<span class="tipo-badge tecnica">Tecnicatura</span>';
-    else if (rankings.cursos.some(r => r.clave === carrera.clave)) tipoBadge = '<span class="tipo-badge curso">Curso</span>';
-
-    // Mostrar por qué encaja
-    const explicacionHTML = carrera.explicacion 
-        ? `<p class="chat-resultado-explicacion">${carrera.explicacion}</p>` 
-        : '';
-    
-    // Mostrar alertas si las hay
-    const alertaHTML = carrera.alertas?.length 
-        ? `<p class="chat-resultado-alerta">⚠️ ${escaparHTML(carrera.alertas[0].mensaje)}</p>` 
-        : '';
-
-    return `
-        <div class="chat-resultado-card ${matchClass}">
-            <div class="chat-resultado-head">
-                <span class="chat-resultado-nombre">${capSeguro(carrera.nombre)}</span>
-                <span class="compatibilidad-badge ${matchClass}">${compat}% match</span>
-            </div>
-            ${tipoBadge || carrera.area ? '<div class="tipo-badges">' + tipoBadge + (carrera.area ? '<span class="tipo-badge area">' + capSeguro(carrera.area) + '</span>' : '') + '</div>' : ''}
-            ${explicacionHTML}
-            ${alertaHTML}
-            <div class="chat-resultado-acciones">
-                <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(clave)}" aria-label="Escuchar carrera"><svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg> <span>Escuchar</span></button>
-            </div>
-        </div>`;
-}
-
 
 // ==========================================
 // 🖱️ DELEGACIÓN DE EVENTOS DEL CHAT
@@ -1064,18 +708,11 @@ if (typeof document !== 'undefined') {
         const enviar = event.target.closest('[data-chat-enviar]');
         if (enviar) { procesarEntradaUsuario(enviar.dataset.chatEnviar); return; }
 
-        const opcion = event.target.closest('[data-chat-opcion]');
-        if (opcion) {
-            seleccionarOpcionChat(Number(opcion.dataset.chatOpcion), opcion.dataset.chatOpcionTexto, Number(opcion.dataset.chatPaso));
-            return;
-        }
-
         const accion = event.target.closest('[data-chat-accion]');
         if (!accion) return;
         switch (accion.dataset.chatAccion) {
-            case 'test': iniciarTestVocacional(); break;
-            case 'atras': volverPreguntaChat(); break;
-            case 'reiniciar': reiniciarChat(); break;
+            case 'test':
+            case 'test-completo': abrirTestVocacional(); break;
             case 'cerrar': document.getElementById('btn-cerrar-chat')?.click(); break;
         }
     });

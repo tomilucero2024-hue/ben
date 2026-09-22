@@ -79,6 +79,9 @@
     --purple: #9333EA;   /* violeta */
     --teal: #0D9488;     /* verde azulado */
     --accent: #059669;   /* verde jade: acción (CTAs, chat) */
+    /* Corazón de "Me interesa" marcado: es la única señal roja del sitio, a
+       propósito, porque un corazón guardado se lee rojo en todos lados. */
+    --fav-rojo: #E11D48;
     --shadow: rgba(40, 34, 90, .14);
 
     /* Tinta de los badges. El color puro sobre su propio tinte al 16% daba ~2.5:1
@@ -109,6 +112,7 @@ html[data-theme="dark"] {
 
     --accent: #818cf8; 
     --accent-ink: #818cf8;
+    --fav-rojo: #FB7185;
     --on-accent: #09101c;
     --shadow: rgba(0, 0, 0, 0.4);
 
@@ -1153,6 +1157,22 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     width: min(680px, calc(100vw - 2.5rem));
     height: min(520px, 70vh);
 }
+/* Test guiado: la ventana es más ancha que un chat común y las preguntas (con
+   opciones largas) quedaban pegadas a los bordes y muy justas. El hilo se
+   centra, se acota el ancho de lectura y se le da aire arriba y a los costados. */
+.copiloto-panel.is-test-pantalla-completa .chat-cuerpo {
+    align-items: center;
+    padding: 1.15rem 1.25rem 1.35rem;
+    gap: .7rem;
+}
+.copiloto-panel.is-test-pantalla-completa .chat-cuerpo > .mensaje-bot {
+    width: 100%;
+    max-width: 620px;
+    padding: .95rem 1.15rem;
+}
+.copiloto-panel.is-test-pantalla-completa .chat-cuerpo > .mensaje-usuario {
+    max-width: 80%;
+}
 /* Fade-out al salir del test (lo agrega app.js en salirDelTest). */
 .copiloto-panel.is-saliendo-test { opacity: 0; }
 
@@ -1163,7 +1183,6 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .chat-cuerpo { flex: 1; min-height: 0; padding: .9rem; overflow-y: auto; color: var(--muted); font-size: var(--fs-sm); display: flex; flex-direction: column; gap: .55rem; }
 
 /* Barra de progreso fija del test vocacional (arriba, fuera del scroll) */
-.chat-progreso-fijo { padding: .75rem .9rem .15rem; border-bottom: 1px solid var(--line); }
 
 /* Burbuja del usuario: a la derecha y con el acento de la sección */
 .mensaje-usuario { align-self: flex-end; max-width: 88%; padding: .7rem .85rem; border-radius: var(--radius-md) 12px 3px 12px; background: var(--accent); color: var(--on-accent); line-height: 1.4; }
@@ -1189,9 +1208,6 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .chat-resultado-acciones .tipo-badges { margin: 0; }
 
 /* Barra de progreso del test vocacional */
-.chat-progreso { height: 6px; border-radius: var(--radius-pill); background: var(--line); overflow: hidden; margin-bottom: .55rem; }
-.chat-progreso span { display: block; height: 100%; background: var(--accent); transition: width var(--dur-slow) ease; }
-.chat-progreso-texto { margin: 0 0 .75rem; color: var(--muted); font-family: var(--font-detail); font-size: var(--fs-2xs); letter-spacing: .07em; text-transform: uppercase; }
 
 /* Burbujas de mensaje del bot */
 .mensaje-bot { padding: .7rem .85rem; border-radius: var(--radius-md) 12px 12px 3px; background: var(--surface-soft); color: var(--text); }
@@ -1604,7 +1620,6 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     .btn-chat-toggle { width: 52px; height: 52px; font-size: 1.25rem; }
     .chat-header { padding: .6rem .75rem; font-size: var(--fs-xs); }
     .chat-cuerpo { padding: .6rem; font-size: var(--fs-2xs); gap: .4rem; }
-    .chat-progreso-fijo { padding: .5rem .7rem .1rem; }
 }
 
 /* 13. CELULARES MUY ANGOSTOS (hasta 360px): evita que los botones se corten. */
@@ -1834,18 +1849,21 @@ html[data-tts="true"] .btn-escuchar-card {
 }
 .opciones-usuario {
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-    margin: var(--space-3) 0;
+    flex-direction: column;
+    gap: .55rem;
+    margin: var(--space-3) 0 0;
 }
 .btn-chat-opcion {
+    min-height: 44px;
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: var(--radius-pill);
-    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-md);
+    padding: .7rem .9rem;
     font-size: var(--fs-sm);
+    line-height: 1.4;
+    text-align: left;
     cursor: pointer;
-    transition: all var(--dur-fast);
+    transition: border-color var(--dur-base) ease, background var(--dur-base) ease;
     color: var(--text);
 }
 .btn-chat-opcion:hover {
@@ -1945,34 +1963,56 @@ html[data-tts="true"] .btn-escuchar-card {
     animation: bienvenida-deslizar var(--dur-slow) ease backwards;
     animation-delay: .06s;
 }
+/* Dos tarjetas, un camino cada una: el orientador (violeta, con el ícono del
+   copiloto) y el catálogo completo (neutra). Entran con delay respecto al logo
+   y se asientan con un slide corto. */
 .bienvenida-opciones {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
-    gap: var(--space-6);
+    gap: var(--space-5);
+    flex-wrap: wrap;
 }
-/* La opción principal es una tarjeta clickeable: entra con delay
-   respecto al logo y se asienta con un slide corto. */
-.bienvenida-card-primaria {
-    flex: 1 1 62%;
+.bienvenida-card {
+    flex: 1 1 42%;
+    /* Con min-width, si las dos tarjetas no entran lado a lado (tablet chica),
+       envuelven solas sin media query. */
+    min-width: min(100%, 300px);
     display: flex;
     align-items: center;
     gap: var(--space-5);
     min-height: 132px;
     padding: var(--space-6);
-    border: 2px solid var(--purple);
+    border: 2px solid var(--line);
     border-radius: var(--radius-lg);
-    background: color-mix(in srgb, var(--purple) 12%, var(--surface));
+    background: var(--surface);
     color: var(--text);
     text-align: left;
+    cursor: pointer;
     animation: bienvenida-deslizar var(--dur-slow) ease backwards;
     animation-delay: .12s;
     transition: background-color var(--dur-base) ease, border-color var(--dur-base) ease;
+}
+.bienvenida-card-primaria {
+    border-color: var(--purple);
+    background: color-mix(in srgb, var(--purple) 12%, var(--surface));
 }
 /* Sin levantarse: en hover se profundiza el tinte violeta que ya tiene. */
 .bienvenida-card-primaria:hover {
     background: color-mix(in srgb, var(--purple) 20%, var(--surface));
 }
+.bienvenida-card-secundaria { animation-delay: .2s; }
+.bienvenida-card-secundaria:hover { border-color: var(--accent); background: var(--surface-soft); }
+
+/* Ícono de la tarjeta del catálogo: mismo círculo, sin la sombra del ícono del
+   copiloto (que es una imagen con volumen propio). */
+.bienvenida-icono-catalogo {
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    box-shadow: none;
+    color: var(--accent-ink);
+}
+.bienvenida-icono-catalogo svg { width: 34px; height: 34px; }
 .bienvenida-icono {
     flex: 0 0 auto;
     display: grid;
@@ -1998,6 +2038,23 @@ html[data-tts="true"] .btn-escuchar-card {
     vertical-align: middle;
     margin-right: 0.4rem;
 }
+/* Chapa "Beta" del Copiloto Vocacional: avisa que la función está en prueba. */
+.badge-beta {
+    display: inline-block;
+    margin-left: .45rem;
+    padding: .1rem .45rem;
+    border-radius: var(--radius-pill);
+    vertical-align: middle;
+    font-family: var(--font-text);
+    font-size: var(--fs-2xs);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    background: color-mix(in srgb, var(--accent) 16%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 42%, transparent);
+}
 .chat-bot-icon {
     width: 18px;
     height: 18px;
@@ -2015,46 +2072,16 @@ html[data-tts="true"] .btn-escuchar-card {
     display: block;
 }
 .bienvenida-card-texto { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
-.bienvenida-card-primaria strong { font-family: var(--font-title); font-size: var(--fs-xl); line-height: 1.2; letter-spacing: -.015em; color: var(--text); }
+.bienvenida-card strong { font-family: var(--font-title); font-size: var(--fs-xl); line-height: 1.2; letter-spacing: -.015em; color: var(--text); }
 .bienvenida-card-desc { color: var(--muted); font-size: var(--fs-sm); line-height: 1.5; }
 .bienvenida-cta { color: var(--purple-ink); font-size: var(--fs-xs); font-weight: 700; }
-/* La opción secundaria es deliberadamente más chica: un pill simple. */
-.bienvenida-catalogo {
-    flex: 0 1 auto;
-    min-height: 44px;
-    padding: .65rem 1.1rem;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-pill);
-    background: var(--surface);
-    color: var(--muted);
-    font-weight: 700;
-    font-size: var(--fs-xs);
-    white-space: nowrap;
-    animation: bienvenida-deslizar var(--dur-slow) ease backwards;
-    animation-delay: .22s;
-    transition: border-color var(--dur-base) ease, color var(--dur-base) ease, transform var(--dur-base) ease;
-}
-.bienvenida-catalogo:hover { border-color: var(--accent); color: var(--accent-ink); }
-/* Vía secundaria de la bienvenida: un único acceso directo al catálogo
-   completo ("Mostrar ofertas"). Se mantiene la columna para conservar el
-   reparto 62/38 con la tarjeta del Copiloto. */
-.bienvenida-opciones-secundarias {
-    flex: 1 1 38%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    gap: var(--space-3);
-}
-.bienvenida-opciones-secundarias .bienvenida-catalogo { text-align: center; align-self: center; }
-
+.bienvenida-card-secundaria .bienvenida-cta { color: var(--accent-ink); }
 /* En pantallas angostas las dos opciones se apilan. */
 @media (max-width: 480px) {
     .pantalla-bienvenida { padding: 1.5rem; }
     .bienvenida-logo { width: min(100%, 320px); }
     .bienvenida-opciones { flex-direction: column; align-items: stretch; }
-    .bienvenida-card-primaria { flex-direction: column; text-align: center; }
-    .bienvenida-catalogo { align-self: center; min-width: 200px; }
+    .bienvenida-card { flex-direction: column; text-align: center; }
 }
 
 /* ================================================================
@@ -3042,4 +3069,322 @@ html[data-contrast="high"] .btn-tipo-feedback.is-active {
 .chat-resultados-secundarios .chat-resultado-card {
   opacity: 0.85;
   border-left: 2px solid var(--borde-suave, #ddd);
+}
+
+/* ================================================================
+   17. TEST VOCACIONAL COMPLETO
+   Ventana flotante que desenfoca el sitio de atrás. Adentro vive el
+   recorrido intro → preguntas por tandas → resultados. Todo el HTML
+   lo arma js/vocacional/test-completo.js.
+   ================================================================ */
+.test-completo {
+    position: fixed; inset: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: center;
+    padding: var(--space-4);
+    background: rgba(2, 6, 23, .55);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+html.test-completo-abierto { overflow: hidden; }
+
+.tc-ventana {
+    display: flex; flex-direction: column;
+    width: min(860px, 100%);
+    height: min(680px, 92vh);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--elev-4);
+    overflow: hidden;
+    animation: chat-abrir var(--dur-slow) ease;
+}
+.tc-header { display: flex; align-items: center; justify-content: space-between; padding: .9rem 1.1rem; border-bottom: 1px solid var(--line); }
+.tc-header h2 { margin: 0; font-family: var(--font-title); font-size: var(--fs-lg); color: var(--text); letter-spacing: -.01em; }
+.tc-header button { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; border: 0; border-radius: var(--radius-sm); background: none; color: var(--muted); font-size: var(--fs-md); cursor: pointer; }
+.tc-header button:hover { color: var(--text); background: var(--surface-soft); }
+
+.tc-progreso { padding: .85rem 1.1rem .2rem; }
+.tc-progreso-barra { height: 6px; border-radius: var(--radius-pill); background: var(--line); overflow: hidden; }
+.tc-progreso-barra span { display: block; height: 100%; width: 0; background: var(--accent); transition: width var(--dur-slow) ease; }
+.tc-progreso-texto { margin: .5rem 0 .6rem; color: var(--muted); font-family: var(--font-detail); font-size: var(--fs-2xs); letter-spacing: .06em; text-transform: uppercase; }
+
+.tc-cuerpo { flex: 1; min-height: 0; overflow-y: auto; padding: 1.1rem 1.25rem 1.4rem; color: var(--text); }
+.tc-pie { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .9rem 1.1rem; border-top: 1px solid var(--line); background: var(--surface); }
+
+/* Botones del test */
+.tc-btn-primario, .tc-btn-secundario, .tc-btn-chico, .tc-btn-texto { font-family: var(--font-text); cursor: pointer; }
+.tc-btn-primario { min-height: 44px; padding: .65rem 1.15rem; border: 0; border-radius: var(--radius-pill); background: var(--accent); color: var(--on-accent); font-weight: 700; font-size: var(--fs-sm); }
+.tc-btn-primario:hover { filter: brightness(1.05); }
+.tc-btn-secundario { min-height: 44px; padding: .6rem 1rem; border: 1px solid var(--line); border-radius: var(--radius-pill); background: var(--surface); color: var(--muted); font-weight: 700; font-size: var(--fs-sm); }
+.tc-btn-secundario:hover { border-color: var(--accent); color: var(--accent-ink); }
+.tc-btn-primario:disabled, .tc-btn-secundario:disabled { opacity: .5; cursor: default; }
+.tc-btn-texto { border: 0; background: none; color: var(--muted); font-size: var(--fs-xs); text-decoration: underline; padding: .4rem; }
+.tc-btn-chico { min-height: 36px; padding: .4rem .8rem; border: 1px dashed var(--line); border-radius: var(--radius-pill); background: transparent; color: var(--muted); font-size: var(--fs-2xs); }
+.tc-btn-chico:hover { border-color: var(--accent); color: var(--accent-ink); }
+.tc-aviso { color: var(--muted); font-size: var(--fs-2xs); }
+
+/* Intro */
+.tc-intro { display: flex; flex-direction: column; gap: 1rem; max-width: 640px; margin: 0 auto; }
+.tc-eyebrow { margin: 0; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-size: var(--fs-2xs); font-family: var(--font-detail); }
+.tc-titulo-grande { margin: 0; font-family: var(--font-title); font-size: var(--fs-xl); line-height: 1.25; color: var(--text); letter-spacing: -.015em; }
+.tc-descripcion { margin: 0; color: var(--muted); font-size: var(--fs-sm); line-height: 1.55; }
+.tc-pasos { display: flex; flex-direction: column; gap: .6rem; margin: 0; padding: 0; list-style: none; }
+.tc-paso { display: flex; gap: .75rem; align-items: flex-start; border: 1px solid var(--line); border-radius: var(--radius-md); padding: .7rem .85rem; color: var(--muted); font-size: var(--fs-sm); line-height: 1.45; }
+.tc-paso strong { color: var(--text); }
+.tc-paso-num { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent-ink); font-weight: 700; font-size: var(--fs-xs); }
+.tc-ultimo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; border: 1px solid var(--line); border-radius: var(--radius-md); padding: .85rem .95rem; background: var(--surface-soft); }
+.tc-ultimo p { margin: .2rem 0 0; color: var(--muted); font-size: var(--fs-xs); }
+.tc-aviso-legal { margin: .4rem 0 0; color: var(--muted); }
+.tc-aviso-legal small { line-height: 1.5; }
+
+/* Preguntas */
+.tc-pagina { max-width: 720px; margin: 0 auto; }
+.tc-instruccion { margin: .1rem 0 .4rem; font-family: var(--font-title); font-size: var(--fs-lg); color: var(--text); }
+.tc-escala { display: flex; justify-content: space-between; color: var(--muted); font-size: var(--fs-2xs); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .75rem; }
+.tc-pregunta { border: 1px solid var(--line); border-radius: var(--radius-md); padding: .85rem .95rem; margin: 0 0 .7rem; }
+.tc-pregunta-texto { display: flex; gap: .6rem; align-items: flex-start; padding: 0; margin: 0 0 .6rem; color: var(--text); font-size: var(--fs-sm); line-height: 1.45; font-weight: 600; }
+.tc-numero { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--surface-soft); color: var(--muted); font-size: var(--fs-2xs); font-weight: 700; }
+.tc-likert { display: grid; grid-template-columns: repeat(5, 1fr); gap: .4rem; }
+.tc-opcion { position: relative; display: flex; }
+.tc-opcion input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.tc-opcion span { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 44px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); color: var(--muted); font-weight: 700; font-size: var(--fs-sm); cursor: pointer; transition: border-color var(--dur-base) ease, background var(--dur-base) ease, color var(--dur-base) ease; }
+.tc-opcion span:hover { border-color: var(--accent); }
+.tc-opcion input:checked + span { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent-ink); }
+.tc-opcion input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Cargando */
+.tc-cargando { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; min-height: 280px; color: var(--muted); }
+.tc-spinner { width: 34px; height: 34px; border-radius: 50%; border: 3px solid var(--line); border-top-color: var(--accent); animation: tc-girar .8s linear infinite; }
+@keyframes tc-girar { to { transform: rotate(360deg); } }
+
+/* Resultados */
+.tc-resultado { display: flex; flex-direction: column; gap: .9rem; max-width: 720px; margin: 0 auto; }
+.tc-resumen { margin: 0; font-family: var(--font-title); font-size: var(--fs-lg); line-height: 1.45; color: var(--text); }
+.tc-codigo { margin: 0; color: var(--muted); font-size: var(--fs-xs); }
+.tc-alertas { border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: var(--radius-md); padding: .8rem .95rem; background: var(--surface-soft); }
+.tc-alertas strong { display: block; margin-bottom: .35rem; font-size: var(--fs-sm); color: var(--text); }
+.tc-alertas ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: .45rem; color: var(--muted); font-size: var(--fs-xs); line-height: 1.5; }
+.tc-subtitulo { margin: .4rem 0 0; font-family: var(--font-title); font-size: var(--fs-md); color: var(--text); }
+.tc-cards { display: flex; flex-direction: column; gap: .7rem; }
+.tc-card { display: flex; flex-direction: column; gap: .5rem; border: 1px solid var(--line); border-radius: var(--radius-md); padding: .85rem .95rem; background: var(--surface); }
+.tc-card.match-alto { border-left: 3px solid var(--accent); }
+.tc-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: .6rem; }
+.tc-card-head h5 { margin: 0; font-size: var(--fs-base); color: var(--text); }
+.tc-card-why { margin: 0; color: var(--muted); font-size: var(--fs-sm); line-height: 1.45; }
+.tc-card .alertas-list { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: var(--fs-xs); display: flex; flex-direction: column; gap: .3rem; }
+.tc-card-acciones { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.tc-link { color: var(--accent-ink); font-size: var(--fs-xs); font-weight: 700; }
+.tc-acciones { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+
+@media (max-width: 600px) {
+    .test-completo { padding: 0; }
+    .tc-ventana { width: 100%; height: 100%; max-height: none; border: 0; border-radius: 0; }
+    .tc-cuerpo { padding: .9rem .85rem 1.2rem; }
+    .tc-pie { flex-wrap: wrap; }
+    .tc-pie .tc-btn-primario { flex: 1 1 auto; }
+    .tc-likert { gap: .3rem; }
+    .tc-opcion span { min-height: 42px; font-size: var(--fs-xs); }
+}
+
+/* ================================================================
+   18. FAVORITOS ("ME INTERESA") Y MI LISTA
+   El botón lo pinta js/favoritos.js en cada tarjeta; el apartado con la
+   lista y el comparador vive en js/mi-lista.js (overlay #miLista).
+   ================================================================ */
+.btn-favorito {
+    flex: 1 1 100%;
+    min-width: 0;
+    display: inline-flex; align-items: center; justify-content: center; gap: .35rem;
+    min-height: 36px; padding: .4rem .5rem; border: 1px solid var(--line);
+    border-radius: var(--radius-sm); color: var(--muted); background: var(--surface-soft);
+    font-family: var(--font-text); font-size: var(--fs-2xs); font-weight: 700; cursor: pointer;
+    white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+    transition: border-color var(--dur-base) ease, color var(--dur-base) ease, background var(--dur-base) ease;
+}
+.btn-favorito:hover { border-color: var(--accent); color: var(--accent-ink); }
+.btn-favorito .fav-svg { width: 14px; height: 14px; flex: none; }
+.btn-favorito.is-favorito { border-color: var(--fav-rojo); color: var(--text); background: var(--surface-soft); }
+.btn-favorito.is-favorito .fav-svg { color: var(--fav-rojo); fill: var(--fav-rojo); stroke: var(--fav-rojo); }
+/* Con el lector de texto activo, Escuchar ya ocupa la fila entera: el corazón
+   comparte el espacio para no empujar la tarjeta a una tercera línea. */
+html[data-tts="true"] .btn-favorito { flex: 1 1 calc(50% - .25rem); }
+
+.fav-toast {
+    position: fixed;
+    left: 50%; bottom: 1.1rem;
+    transform: translate(-50%, 1.2rem);
+    z-index: 130;
+    display: flex; align-items: center; gap: .6rem;
+    max-width: min(92vw, 26rem);
+    padding: .6rem .9rem;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--elev-3);
+    font-family: var(--font-text); font-size: var(--fs-sm);
+    opacity: 0; pointer-events: none;
+    transition: opacity var(--dur-base) ease, transform var(--dur-base) ease;
+}
+.fav-toast.is-visible { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+.fav-toast-texto { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fav-toast-accion { color: var(--accent-ink); font-weight: 700; flex: none; }
+
+/* --- Botón "Mi lista" de la barra de resultados --- */
+.btn-mi-lista {
+    display: inline-flex; align-items: center; gap: .4rem;
+    min-height: 38px; padding: .4rem .8rem;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: var(--surface-soft); color: var(--text);
+    font-family: var(--font-text); font-size: var(--fs-xs); font-weight: 700; cursor: pointer;
+    transition: border-color var(--dur-base) ease, color var(--dur-base) ease;
+}
+.btn-mi-lista:hover { border-color: var(--accent); color: var(--accent-ink); }
+.btn-mi-lista .fav-svg { width: 15px; height: 15px; fill: currentColor; }
+.btn-mi-lista[hidden] { display: none; }
+.btn-mi-lista .mi-lista-contador {
+    min-width: 1.35em; padding: 0 .3em;
+    border-radius: 999px; background: var(--accent); color: var(--on-accent);
+    font-size: .85em; text-align: center;
+}
+
+/* --- Ventana de Mi lista (misma receta que el test) --- */
+.mi-lista {
+    position: fixed; inset: 0; z-index: 110;
+    display: flex; align-items: center; justify-content: center;
+    padding: var(--space-4);
+    background: rgba(2, 6, 23, .55);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+html.mi-lista-abierta { overflow: hidden; }
+
+.ml-ventana {
+    display: flex; flex-direction: column;
+    width: min(940px, 100%);
+    height: min(720px, 92vh);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--elev-4);
+    overflow: hidden;
+    animation: chat-abrir var(--dur-slow) ease;
+}
+.ml-header { display: flex; align-items: center; justify-content: space-between; padding: .9rem 1.1rem; border-bottom: 1px solid var(--line); }
+.ml-header h2 { margin: 0; font-family: var(--font-title); font-size: var(--fs-lg); color: var(--text); letter-spacing: -.01em; }
+.ml-header button { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; border: 0; border-radius: var(--radius-sm); background: none; color: var(--muted); font-size: var(--fs-md); cursor: pointer; }
+.ml-header button:hover { color: var(--text); background: var(--surface-soft); }
+.ml-cuerpo { flex: 1; min-height: 0; overflow-y: auto; padding: 1.1rem 1.25rem 1.4rem; color: var(--text); }
+.ml-pie { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .9rem 1.1rem; border-top: 1px solid var(--line); background: var(--surface); flex-wrap: wrap; }
+.ml-pie-info { margin: 0; color: var(--muted); font-size: var(--fs-xs); }
+.ml-pie-acciones { display: flex; gap: .5rem; flex-wrap: wrap; }
+.ml-btn-primario, .ml-btn-secundario { font-family: var(--font-text); cursor: pointer; min-height: 42px; border-radius: var(--radius-pill); font-weight: 700; font-size: var(--fs-sm); padding: .6rem 1.1rem; }
+.ml-btn-primario { border: 0; background: var(--accent); color: var(--on-accent); }
+.ml-btn-primario:hover { filter: brightness(1.05); }
+.ml-btn-primario:disabled { opacity: .5; cursor: default; }
+.ml-btn-secundario { border: 1px solid var(--line); background: var(--surface); color: var(--muted); }
+.ml-btn-secundario:hover { border-color: var(--accent); color: var(--accent-ink); }
+.ml-btn-peligro { background: var(--orange); color: #fff; }
+.ml-btn-volver { border: 0; background: none; color: var(--accent-ink); font-weight: 700; font-size: var(--fs-sm); cursor: pointer; padding: .3rem 0; }
+
+/* Lista vacía */
+.ml-vacia { max-width: 30rem; margin: 2rem auto; text-align: center; display: flex; flex-direction: column; gap: .7rem; align-items: center; }
+.ml-vacia-titulo { margin: 0; font-family: var(--font-title); font-size: var(--fs-md); color: var(--text); }
+.ml-vacia-texto { margin: 0; color: var(--muted); font-size: var(--fs-sm); line-height: 1.5; }
+
+/* Grupos y filas */
+.ml-grupo { margin-bottom: 1.4rem; }
+.ml-grupo-titulo { display: flex; align-items: center; gap: .5rem; margin: 0 0 .6rem; font-family: var(--font-title); font-size: var(--fs-sm); color: var(--text); }
+.ml-grupo-titulo span { min-width: 1.5em; padding: 0 .4em; border-radius: 999px; background: var(--surface-soft); color: var(--muted); font-size: var(--fs-2xs); text-align: center; }
+.ml-items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .45rem; }
+.ml-item {
+    display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; gap: .7rem; align-items: center;
+    border: 1px solid var(--line); border-radius: var(--radius-md);
+    padding: .6rem .75rem; background: var(--surface);
+}
+.ml-item.is-seleccionada { border-color: var(--accent); background: var(--surface-soft); }
+.ml-item-huerfana { opacity: .75; }
+.ml-item-check { display: inline-flex; align-items: center; justify-content: center; }
+.ml-item-check input { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; }
+.ml-item-info { min-width: 0; }
+.ml-item-nombre { margin: 0; font-weight: 700; font-size: var(--fs-sm); color: var(--text); display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.ml-item-meta { margin: .15rem 0 0; color: var(--muted); font-size: var(--fs-xs); }
+.ml-item-afinidad { padding: .1em .5em; border-radius: 999px; background: var(--accent); color: var(--on-accent); font-size: var(--fs-2xs); }
+.ml-item-link { color: var(--accent-ink); font-size: var(--fs-xs); font-weight: 700; white-space: nowrap; }
+.ml-item-quitar { min-width: 36px; min-height: 36px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface-soft); color: var(--muted); cursor: pointer; }
+.ml-item-quitar:hover { border-color: var(--orange); color: var(--orange-ink); }
+
+/* Comparación */
+.ml-volver { margin: 0 0 .6rem; }
+.ml-tabla-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-md); }
+.ml-tabla { border-collapse: collapse; width: 100%; min-width: 100%; font-size: var(--fs-sm); }
+.ml-tabla th, .ml-tabla td { padding: .6rem .7rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.ml-tabla tbody th { position: sticky; left: 0; z-index: 1; background: var(--surface); color: var(--muted); font-weight: 700; font-size: var(--fs-xs); white-space: nowrap; }
+.ml-tabla thead th { background: var(--surface-soft); border-bottom: 1px solid var(--line-strong, var(--line)); }
+.ml-tabla-esquina { position: sticky; left: 0; z-index: 2; }
+.ml-tabla-titulo { display: block; font-family: var(--font-title); font-size: var(--fs-sm); color: var(--text); }
+.ml-tabla-sub { display: block; margin-top: .15rem; color: var(--muted); font-size: var(--fs-2xs); font-weight: 400; }
+.ml-tabla tbody tr:last-child th, .ml-tabla tbody tr:last-child td { border-bottom: 0; }
+.ml-vacio { color: var(--muted); }
+.ml-link { color: var(--accent-ink); font-weight: 700; font-size: var(--fs-xs); }
+.ml-costo { font-weight: 700; font-size: var(--fs-xs); }
+.ml-costo.gratuito { color: var(--accent-ink); }
+.ml-costo.arancelado { color: var(--orange-ink); }
+.ml-instituciones, .ml-planes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .2rem; }
+.ml-instituciones a, .ml-planes a { color: var(--accent-ink); font-size: var(--fs-xs); }
+
+.ml-afinidad { display: flex; flex-direction: column; gap: .3rem; min-width: 5.5rem; }
+.ml-afinidad-valor { font-weight: 800; font-size: var(--fs-md); }
+.ml-afinidad.alta .ml-afinidad-valor { color: var(--accent-ink); }
+.ml-afinidad.media .ml-afinidad-valor { color: var(--text); }
+.ml-afinidad.baja .ml-afinidad-valor { color: var(--muted); }
+.ml-afinidad-barra { height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.ml-afinidad-barra span { display: block; height: 100%; background: var(--accent); }
+
+.ml-riasec { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .25rem; min-width: 8rem; }
+.ml-riasec li { display: grid; grid-template-columns: 6.5rem 4rem 1.4rem; align-items: center; gap: .4rem; }
+.ml-riasec-nombre { color: var(--muted); font-size: var(--fs-2xs); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ml-riasec-barra { height: 5px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.ml-riasec-barra span { display: block; height: 100%; background: var(--accent); }
+.ml-riasec-valor { color: var(--muted); font-size: var(--fs-2xs); text-align: right; }
+
+/* Comparación en celular: una sola lista vertical, un bloque por atributo (con
+   las carreras adentro). Misma comparación que la tabla, sin scroll lateral. */
+.ml-lista { margin: 0; border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; background: var(--surface); }
+.ml-lista-grupo { border-bottom: 1px solid var(--line); }
+.ml-lista-grupo:last-child { border-bottom: 0; }
+.ml-lista-grupo-nombre {
+    padding: .5rem .85rem .4rem;
+    background: var(--surface-soft);
+    color: var(--muted); font-weight: 700; font-size: var(--fs-2xs);
+    letter-spacing: .05em; text-transform: uppercase;
+}
+.ml-lista-valores { margin: 0; }
+.ml-lista-valores ul { list-style: none; margin: 0; padding: .4rem .85rem .65rem; display: flex; flex-direction: column; gap: .5rem; }
+.ml-lista-item { display: flex; flex-direction: column; gap: .1rem; min-width: 0; }
+.ml-lista-item-nombre { font-weight: 700; font-size: var(--fs-xs); color: var(--text); }
+.ml-lista-item-dato { font-size: var(--fs-sm); color: var(--text); min-width: 0; }
+
+.ml-diferencias { margin-top: 1.2rem; border: 1px solid var(--line); border-radius: var(--radius-md); padding: .85rem .95rem; background: var(--surface-soft); }
+.ml-diferencias h3 { margin: 0 0 .5rem; font-family: var(--font-title); font-size: var(--fs-sm); color: var(--text); }
+.ml-diferencias-lista { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: .4rem; color: var(--text); font-size: var(--fs-sm); line-height: 1.45; }
+.ml-diferencias-vacio { margin: 0; color: var(--muted); font-size: var(--fs-sm); }
+
+@media (max-width: 640px) {
+    .mi-lista { padding: 0; }
+    .ml-ventana { width: 100%; height: 100%; max-height: none; border: 0; border-radius: 0; }
+    .ml-item { grid-template-columns: auto minmax(0, 1fr) auto; }
+    .ml-item-link { grid-column: 2; }
+    .ml-riasec li { grid-template-columns: 5.5rem 3rem 1.3rem; }
+}
+
+/* Impresión: solo la comparación, en una hoja legible. Sirve para "Imprimir /
+   PDF" y para llevarle la comparación a la familia o al colegio. */
+@media print {
+    body > *:not(#miLista) { display: none !important; }
+    .mi-lista { position: static; background: none; backdrop-filter: none; padding: 0; }
+    .ml-ventana { width: 100%; height: auto; max-height: none; border: 0; box-shadow: none; }
+    .ml-header button, .ml-pie, .ml-volver { display: none !important; }
+    .ml-cuerpo { overflow: visible; padding: 0; }
+    .ml-tabla-scroll { overflow: visible; border-color: #999; }
+    .ml-tabla th, .ml-tabla td { font-size: 10pt; }
+    .ml-tabla tbody th { position: static; }
+    .ml-diferencias { break-inside: avoid; }
 }

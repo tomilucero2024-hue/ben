@@ -138,40 +138,6 @@ export async function cargarOfertas() {
         document.getElementById('cardContainer').innerHTML = '<p class="empty-state">No se pudieron cargar las ofertas. Probá abrir la página con Live Server.</p>';
     }
 }
-let promesaOrientador = null;
-
-// Inicializar Orientador bajo demanda o en segundo plano (lazy loading de 322 KB)
-export async function asegurarOrientadorListo() {
-    if (promesaOrientador) return promesaOrientador;
-    promesaOrientador = (async () => {
-        try {
-            if (typeof Orientador === 'undefined') {
-                console.warn('[Orientador] Script global no disponible aún.');
-                return false;
-            }
-            await Orientador.cargarPerfilesCarreras();
-            Orientador.setOfertasIndex(ofertas);
-            return true;
-        } catch (e) {
-            console.warn('[Orientador] No se pudo inicializar:', e);
-            promesaOrientador = null; // permitir reintento
-            return false;
-        }
-    })();
-    return promesaOrientador;
-}
-
-export const inicializarOrientador = asegurarOrientadorListo;
-
-export function inicializarOrientadorDiferido() {
-    if ('requestIdleCallback' in window) {
-        window.requestIdleCallback(() => asegurarOrientadorListo(), { timeout: 3500 });
-    } else {
-        setTimeout(() => asegurarOrientadorListo(), 1500);
-    }
-}
-
-
 function crearOferta(carrera, institucion) {
     const nombre = limpiarTexto(carrera.nombre_carrera || 'Carrera sin nombre');
     const modalidad = carrera.modalidad || 'Presencial';
@@ -185,6 +151,11 @@ function crearOferta(carrera, institucion) {
         formacion: getFormacion(carrera), area: getArea({ nombre_carrera: nombre }),
         duracionAnios: obtenerDuracionEnAnios(carrera.duracion), modalidades: obtenerModalidades(modalidad),
         costo: esCarreraArancelada(institucion, nombre) ? 'arancelado' : (gestion === 'pública' ? 'gratuito' : 'arancelado'),
+        // Plan de estudios y su fuente oficial. Son la MISMA referencia que ya
+        // vive en data.json (no se copia nada): el comparador de Mi lista los
+        // muestra cuando la institución cargó el plan.
+        plan_estudio: carrera.plan_estudio || null,
+        plan_fuente: carrera.plan_fuente || '',
         _clave: `institucion:${limpiarTexto(institucion.nombre || '')}:${nombre}`
     };
 }

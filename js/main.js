@@ -3,12 +3,14 @@
 // delegacion de eventos.
 // ==========================================
 
-import { cerrarChat, configurarBienvenida, configurarChat, salirDelTest } from './copiloto.js';
-import { cargarOfertas, catalogosAparte, inicializarOrientadorDiferido } from './datos.js';
+import { cerrarChat, configurarBienvenida, configurarChat, salirDelCopilotoPantallaCompleta } from './copiloto.js';
+import { cargarOfertas, catalogosAparte } from './datos.js';
 import { estado, restaurarDesdeURL, sincronizarURL } from './estado.js';
 import { actualizarBotonesActivos, cambiarPanelFiltros, cambiarSeccion, cargarMas, configurarSwitcherVistas, limpiarRecomendacion, mostrarCatalogoAparte, mostrarPlataformas, mostrarResultados, sincronizarInertFiltros } from './render.js';
 import { normalizarTexto } from './util.js';
 import { inicializarAutocompletado } from './autocompletado.js';
+import { inicializarTestCompleto } from './vocacional/test-completo.js';
+import { cerrarMiLista, inicializarMiLista } from './mi-lista.js';
 
 async function arrancar() {
     document.body.dataset.seccion = estado.seccion;
@@ -20,11 +22,12 @@ async function arrancar() {
     configurarMedicionHeader();
     configurarHeaderScroll();
     await cargarOfertas();
-    inicializarOrientadorDiferido();
     configurarChat();
     sincronizarInertFiltros();
     configurarSwitcherVistas();
     configurarBienvenida();
+    inicializarTestCompleto();
+    inicializarMiLista();
 }
 
 // ==========================================
@@ -263,8 +266,10 @@ function configurarEventos() {
         if (event.key !== 'Escape') return;
         // De más superficial a más profundo: se cierra una capa por vez.
         if (document.body.classList.contains('filters-open')) { cambiarPanelFiltros(false); return; }
+        const lista = document.getElementById('miLista');
+        if (lista && !lista.hidden) { cerrarMiLista(); return; }
         const panel = document.getElementById('copilotoPanel');
-        if (panel && panel.classList.contains('is-test-pantalla-completa')) { salirDelTest(); return; }
+        if (panel && panel.classList.contains('is-test-pantalla-completa')) { salirDelCopilotoPantallaCompleta(); return; }
         const ventana = document.getElementById('ventana-chat');
         if (ventana && !ventana.hidden) { cerrarChat(); return; }
         // La bienvenida es la puerta de entrada del sitio y no se cierra con Escape.

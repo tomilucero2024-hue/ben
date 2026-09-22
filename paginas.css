@@ -37,6 +37,8 @@
     --green-ink: #15803d;
     --accent: #6366f1;
     --accent-ink: #4338ca;
+    /* Corazón de "Me interesa" marcado (misma señal roja que en la app). */
+    --fav-rojo: #E11D48;
     --on-accent: #ffffff;
 }
 
@@ -52,6 +54,7 @@ html[data-theme="dark"] {
     --green-ink: #86efac;
     --accent: #818cf8;
     --accent-ink: #818cf8;
+    --fav-rojo: #FB7185;
     --on-accent: #09101c;
 }
 
@@ -467,3 +470,54 @@ a:hover { text-decoration: none; }
     .ficha dd { margin-bottom: var(--space-4); }
     .cabecera .envoltorio { justify-content: center; }
 }
+
+/* --- Botón "Me interesa", "Ver Mi lista" y aviso (js/favoritos.js) ---
+   Mismo contrato que en la app: el script hidrata el botón, sincroniza el
+   estado guardado y maneja el clic. En estas páginas el corazón va solo, sin
+   texto, y se pone rojo al marcar. */
+.acciones-ficha { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; margin: var(--space-3) 0 var(--space-4); }
+.btn-favorito {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 46px; height: 46px; flex: none;
+    padding: 0;
+    border: 1px solid var(--line); border-radius: 50%;
+    background: var(--surface); color: var(--muted);
+    cursor: pointer;
+    transition: border-color .2s ease, color .2s ease, background-color .2s ease;
+}
+.btn-favorito:hover { border-color: var(--fav-rojo); color: var(--fav-rojo); }
+.btn-favorito .fav-svg { width: 21px; height: 21px; }
+.btn-favorito.is-favorito { border-color: var(--fav-rojo); background: var(--surface-soft); }
+.btn-favorito.is-favorito .fav-svg { color: var(--fav-rojo); fill: var(--fav-rojo); stroke: var(--fav-rojo); }
+
+/* "Ver Mi lista" al otro extremo de la fila, con el lenguaje de botones de la
+   página (borde + píldora) para que no parezca un enlace suelto. */
+.btn-ver-mi-lista {
+    display: inline-flex; align-items: center; gap: .45rem;
+    margin-left: auto;
+    min-height: 44px; padding: .55rem 1.1rem;
+    border: 1px solid var(--line); border-radius: var(--radius-pill);
+    background: var(--surface); color: var(--accent-ink);
+    font-weight: 700; font-size: calc(.875rem * var(--font-scale));
+    transition: border-color .2s ease, background-color .2s ease;
+}
+.btn-ver-mi-lista:hover { border-color: var(--accent-ink); background: var(--surface-soft); }
+.btn-ver-mi-lista svg { width: 17px; height: 17px; fill: var(--fav-rojo); stroke: var(--fav-rojo); }
+
+.fav-toast {
+    position: fixed; left: 50%; bottom: 1.1rem;
+    transform: translate(-50%, 1.2rem);
+    z-index: 130;
+    display: flex; align-items: center; gap: .6rem;
+    max-width: min(92vw, 26rem);
+    padding: .6rem .9rem;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: var(--surface); color: var(--text);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .18);
+    font-size: calc(.875rem * var(--font-scale));
+    opacity: 0; pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease;
+}
+.fav-toast.is-visible { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+.fav-toast-texto { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fav-toast-accion { color: var(--accent-ink); font-weight: 700; flex: none; }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="manifest" href="/manifest.json?v=20260921_42">
+    <link rel="manifest" href="/manifest.json?v=20260921_52">
     <meta name="theme-color" content="#1d4ed8">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="BEN">
@@ -80,7 +80,7 @@
             document.head.appendChild(pre);
         })();
     </script>
-    <link rel="stylesheet" href="/style.css?v=20260921_42">
+    <link rel="stylesheet" href="/style.css?v=20260921_52">
 
 </head>
 <body>
@@ -285,6 +285,15 @@
                         <button type="button" class="vistas-switcher-btn" data-vista="areas" aria-pressed="false">Por área</button>
                     </nav>
                     <div class="toolbar-actions">
+                        <!-- "Mi lista" vive acá y no en el conmutador de vistas: es un
+                             apartado transversal (guarda carreras de cualquier sección),
+                             no otra forma de explorar el catálogo. El contador aparece
+                             recién cuando hay algo guardado. -->
+                        <button id="btnMiLista" class="btn-mi-lista" type="button" data-abrir-mi-lista aria-haspopup="dialog" aria-controls="miLista">
+                            <svg class="fav-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+                            <span>Mi lista</span>
+                            <span id="miListaContador" class="mi-lista-contador" hidden></span>
+                        </button>
                         <!-- El rótulo va en un <span> propio para que en celular se pueda
                              esconder visualmente sin sacarlo del árbol de accesibilidad:
                              sigue siendo el nombre del <select> para un lector de pantalla. -->
@@ -369,8 +378,7 @@
          centrada, acotada. -->
     <aside id="copilotoPanel" class="copiloto-panel" aria-label="Copiloto vocacional">
         <div id="ventana-chat" class="ventana-chat" role="region" aria-labelledby="chat-titulo" hidden>
-            <div class="chat-header"><span id="chat-titulo"><img src="/img/copiloto-icono.png" alt="" class="chat-titulo-img" aria-hidden="true"> Copiloto Vocacional</span><button id="btn-cerrar-chat" type="button" aria-label="Cerrar el copiloto">✕</button></div>
-            <div id="chat-progreso" class="chat-progreso-fijo" hidden></div>
+            <div class="chat-header"><span id="chat-titulo"><img src="/img/copiloto-icono.png" alt="" class="chat-titulo-img" aria-hidden="true"> Copiloto Vocacional <span class="badge-beta" title="Función en prueba: puede cambiar o fallar">Beta</span></span><button id="btn-cerrar-chat" type="button" aria-label="Cerrar el copiloto">✕</button></div>
             <div id="chat-caja" class="chat-cuerpo"></div>
             <!-- Único punto de anuncio del chat: antes cada burbuja tenía su propio
                  aria-live y, como el historial se re-dibuja entero en cada turno,
@@ -378,6 +386,37 @@
             <p id="chat-anuncio" class="sr-only" role="status" aria-live="polite"></p>
         </div>
         <button id="btn-toggle-chat" class="btn-chat-toggle" type="button" aria-expanded="false" aria-controls="ventana-chat" aria-label="Abrir el copiloto vocacional"><img src="/img/copiloto-icono.png" alt="" class="btn-chat-icono-img" aria-hidden="true"></button>
+    </aside>
+
+    <!-- Test Vocacional Completo: ventana flotante que desenfoca lo que hay
+         detrás. Todo su contenido lo pinta js/vocacional/test-completo.js. -->
+    <aside id="testCompleto" class="test-completo" hidden aria-label="Test vocacional completo">
+        <div class="tc-ventana" role="dialog" aria-modal="true" aria-labelledby="tc-titulo">
+            <header class="tc-header">
+                <h2 id="tc-titulo">Test Vocacional Completo <span class="badge-beta" title="Función en prueba: puede cambiar o fallar">Beta</span></h2>
+                <button id="tc-cerrar" type="button" aria-label="Cerrar el test">✕</button>
+            </header>
+            <div id="tc-progreso" class="tc-progreso" hidden>
+                <div class="tc-progreso-barra"><span id="tc-progreso-relleno"></span></div>
+                <p class="tc-progreso-texto" id="tc-progreso-texto"></p>
+            </div>
+            <div id="tc-cuerpo" class="tc-cuerpo"></div>
+            <footer id="tc-pie" class="tc-pie"></footer>
+        </div>
+    </aside>
+
+    <!-- Mi lista: las carreras guardadas con el corazón y el comparador de a tres.
+         Mismo patrón que el test (overlay que desenfoca el fondo); el contenido lo
+         pinta js/mi-lista.js en dos pantallas: lista y comparación. -->
+    <aside id="miLista" class="mi-lista" hidden aria-label="Mi lista de carreras guardadas">
+        <div class="ml-ventana" role="dialog" aria-modal="true" aria-labelledby="ml-titulo">
+            <header class="ml-header">
+                <h2 id="ml-titulo">Mi lista</h2>
+                <button id="ml-cerrar" type="button" aria-label="Cerrar Mi lista">✕</button>
+            </header>
+            <div id="ml-cuerpo" class="ml-cuerpo"></div>
+            <footer id="ml-pie" class="ml-pie"></footer>
+        </div>
     </aside>
 
     <!-- Modal de Feedback (Sugerencias y Reporte de Fallos) -->
@@ -461,19 +500,29 @@
             </script>
             <p class="bienvenida-bajada">Carreras y oficios en Mendoza y Argentina · ¿Cómo querés empezar?</p>
             <div class="bienvenida-opciones">
-                <button id="btnBienvenidaCopiloto" class="bienvenida-card-primaria" type="button">
+                <!-- Dos caminos: el orientador (chat que lleva al test) o el
+                     catálogo completo. Sin el número de preguntas en la
+                     portada: la idea es que entrar no dé miedo. -->
+                <button id="btnBienvenidaCopiloto" class="bienvenida-card bienvenida-card-primaria" type="button">
                     <span class="bienvenida-icono" aria-hidden="true">
                         <img src="/img/copiloto-icono.png" alt="" class="bienvenida-copiloto-img">
                     </span>
                     <span class="bienvenida-card-texto">
-                        <strong>Copiloto vocacional</strong>
-                        <span class="bienvenida-card-desc">Respondé 5 preguntas cortas y te mostramos las carreras que mejor encajan con tu perfil.</span>
-                        <span class="bienvenida-cta">Empezar el test →</span>
+                        <strong>Orientador vocacional <span class="badge-beta" title="Función en prueba: puede cambiar o fallar">Beta</span></strong>
+                        <span class="bienvenida-card-desc">Respondé unas preguntas en menos de 5 minutos y mirá qué carreras van más con vos.</span>
+                        <span class="bienvenida-cta">Empezar →</span>
                     </span>
                 </button>
-                <div class="bienvenida-opciones-secundarias">
-                    <button id="btnBienvenidaOfertas" class="bienvenida-catalogo" type="button">Mostrar ofertas</button>
-                </div>
+                <button id="btnBienvenidaOfertas" class="bienvenida-card bienvenida-card-secundaria" type="button">
+                    <span class="bienvenida-icono bienvenida-icono-catalogo" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                    </span>
+                    <span class="bienvenida-card-texto">
+                        <strong>Mostrar ofertas</strong>
+                        <span class="bienvenida-card-desc">Explorá el catálogo completo de carreras, tecnicaturas y oficios con filtros por área, duración y modalidad.</span>
+                        <span class="bienvenida-cta">Ver el catálogo →</span>
+                    </span>
+                </button>
             </div>
         </div>
     </section>
@@ -570,12 +619,15 @@
     </aside>
 
     <!-- Scripts clasicos: son autonomos (IIFE) y tienen que correr antes que el
-         modulo, que espera encontrar window.Orientador ya definido. -->
-    <script src="/js/orientador.js?v=20260921_42"></script>
-    <script src="/js/accesibilidad.js?v=20260921_42"></script>
-    <script src="/js/feedback.js?v=20260921_42"></script>
+         modulo. favoritos.js se autoinstala (delega los clicks de [data-favorito])
+         y tambien lo cargan las paginas estaticas de carrera. -->
+    <script src="/js/vocacional/motor.js?v=20260921_52"></script>
+    <script src="/js/vocacional/eventos.js?v=20260921_52"></script>
+    <script src="/js/favoritos.js?v=20260921_52"></script>
+    <script src="/js/accesibilidad.js?v=20260921_52"></script>
+    <script src="/js/feedback.js?v=20260921_52"></script>
     <!-- El resto de la app vive en modulos ES; main.js es el punto de entrada. -->
-    <script type="module" src="/js/main.js?v=20260921_42"></script>
+    <script type="module" src="/js/main.js?v=20260921_52"></script>
 
     <!-- Service worker para que el sitio abra sin conexión. Vive en la raíz,
          igual que esta página, así su scope cubre todo el sitio: la app, los JSON

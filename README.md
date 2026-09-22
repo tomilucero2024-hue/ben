@@ -3,9 +3,12 @@
 Sitio estático (HTML/CSS/JavaScript vanilla, sin frameworks) que funciona como
 buscador/catálogo de oferta educativa: universidades, IES/institutos superiores, centros de
 formación y plataformas online. Hoy el catálogo es de Mendoza; el alcance previsto es
-nacional, y por eso ni las rutas ni los textos se atan a una provincia. Su pieza central es el "Copiloto Vocacional": un
-test de orientación que puntúa cada carrera contra el perfil de intereses de quien lo hace y
-deja el resultado en la grilla, ordenado por compatibilidad y filtrable sin perder ese orden.
+nacional, y por eso ni las rutas ni los textos se atan a una provincia. Su pieza central es el
+"Test Vocacional Completo": 65 preguntas que arman el perfil de la persona (intereses RIASEC,
+aptitudes y valores), lo cruzan contra las 651 carreras del catálogo y dejan el resultado en la
+grilla, ordenado por afinidad y filtrable sin perder ese orden. Alrededor hay un "Copiloto"
+(chat de búsqueda) y "Mi lista", el apartado donde se guardan las carreras que interesan y se
+comparan de a tres.
 
 ## Propósito
 
@@ -41,14 +44,23 @@ paginas.css  estilos de las páginas estáticas (mucho más liviano, ver más ab
     estado.js          filtros, búsqueda y estado (persistido en la URL)
     filtros.js         búsqueda difusa, filtrado y orden
     render.js          todo lo que pinta HTML
-    copiloto.js        chat, test vocacional y búsqueda por texto libre
+    copiloto.js        chat de búsqueda por texto libre (deriva al test completo)
     autocompletado.js  sugerencias en vivo al escribir en el buscador
     main.js            arranque y delegación de eventos
-    orientador.js      motor de compatibilidad (script clásico, expone window.Orientador)
+    favoritos.js       "Me interesa" + Mi lista: storage y botones (script clásico,
+                       también corre en las páginas estáticas)
+    mi-lista.js        ventana de Mi lista y comparador de carreras
+    vocacional/        Test Vocacional Completo
+      motor.js           banco de preguntas → perfil (RIASEC + aptitudes + valores) → ranking
+      test-completo.js   ventana flotante: intro, tandas de preguntas, resultados
+      eventos.js         registro de uso (localStorage + endpoint opcional) para la Fase B
     accesibilidad.js   panel de accesibilidad (script clásico, autónomo)
     feedback.js        modal de sugerencias (script clásico, autónomo)
-data/        los JSON generados (uno por institución) + los dos que consume el sitio:
-             data.json (catálogo) y carreras-perfiles.json (perfiles del Copiloto)
+data/        los JSON generados (uno por institución) + los que consume el sitio:
+             data.json (catálogo) y enlaces-ben.json (slugs de las fichas)
+  vocacional/  datos del Test Vocacional Completo (editables sin tocar código):
+               preguntas.json (banco de 65), areas-base.json, ajustes-palabras.json,
+               config.json, perfiles-carreras.json (generado), perfiles-uso.json (Fase B)
 scrapers/    los scripts Python que generan esos JSON
   scraper_utils.py   funciones compartidas por todos los scrapers
   unir_todo.py       consolida todo y encadena el resto del build
@@ -56,7 +68,9 @@ scrapers/    los scripts Python que generan esos JSON
   fuentes/           páginas guardadas que algún scraper usa como entrada offline
   inactivos/         funciones dormidas (feed de novedades, centros deportivos).
                      Ver scrapers/inactivos/LEEME.md
-generar-perfiles.js  calcula carreras-perfiles.json a partir de data.json
+generar-perfiles-vocacional.js  calcula data/vocacional/perfiles-carreras.json
+                                (área base + palabras clave + afinado por uso)
+generar-perfiles-uso.js  job de la Fase B: convierte eventos de uso en perfiles-uso.json
 generar-paginas.js   genera las ~650 páginas estáticas para buscadores
 
 carrera/  area/  institucion/  provincia/  carreras/  instituciones/
@@ -83,11 +97,14 @@ La suite se corre con Node y no necesita nada más allá de `npm install` (jsdom
 
 ```bash
 node test_general.js          # salud general: imports/exports, sello de caché, catálogos, render, SW y smoke HTTP
+node test_arranque.js         # smoke de arranque real: index.html + main.js en jsdom (grilla, Mi lista, copiloto)
 node test-flow.js             # flujo completo de la app en jsdom (búsqueda, filtros, copiloto)
 node test_instituciones.js    # vista de instituciones (agrupadas por tipo)
 node test_switcher.js         # conmutador de vistas Carreras / Instituciones / Por área
-node test-orientador.js       # test vocacional: perfiles, ranking y compatibilidad
-node verify-assertiveness.js  # asertividad del ranking del orientador
+node test_vocacional.js       # Test Vocacional Completo: datos, perfiles generados, match y asertividad
+node test_vocacional_ui.js    # recorrido de la ventana del Test Completo en jsdom
+node test_favoritos.js        # "Me interesa": storage, botones de las páginas estáticas y Fase B
+node test_mi_lista.js         # Mi lista y comparador: altas, selección, tabla y diferencias
 ```
 
 `test_general.js` detecta, entre otras cosas, **imports que no se resuelven** entre módulos
@@ -100,6 +117,58 @@ páginas generadas.
 > y se le corta la conexión, la app se dibuja en *esa* dirección y con rutas relativas iría a
 > buscar `/carrera/medicina/js/main.js`, que no existe.
 
+## Test Vocacional Completo (beta)
+
+Una ventana flotante con 65 preguntas en 3 partes
+(36 de intereses RIASEC + 15 de aptitudes + 14 de valores y contexto), que calcula un perfil
+numérico del estudiante y lo cruza contra el perfil de las 651 carreras del catálogo.
+
+- **Nada se cura a mano.** El perfil del estudiante sale de las respuestas (cada pregunta
+  pesa hacia una o más dimensiones, y ese peso vive en `data/vocacional/preguntas.json`).
+  El perfil de cada carrera sale de `areas-base.json` (perfil típico del área) + los ajustes
+  por palabra clave de `ajustes-palabras.json` + el tipo de formación. Una carrera nueva
+  queda perfilada sola en el próximo build.
+- **Match**: distancia normalizada entre perfiles (100% = idénticos, con techo de 97%).
+  Se descartó el coseno porque amontonaba cientos de carreras en 90-95%. Los pesos de
+  RIASEC / aptitudes / valores y el techo se ajustan en `config.json`.
+- **Aprendizaje por uso (Fase B)**: cada interacción con una carrera desde los resultados
+  registra el perfil del estudiante (`js/vocacional/eventos.js`, hoy en localStorage).
+  Con `node generar-perfiles-uso.js [eventos.json]` se obtiene el promedio por carrera, y
+  `generar-perfiles-vocacional.js` lo mezcla con
+  `peso_uso = min(interacciones / 50, 0.8)` (constantes en `config.json`): cuanto más uso,
+  más pesa el promedio real, pero nunca reemplaza del todo al perfil inicial.
+- **Resultados**: 8 carreras con % y explicación, resumen del perfil en lenguaje simple,
+  alertas de tensión (intereses vs. valores vs. presión externa) y un botón para volcar el
+  ranking a la grilla del sitio, donde siguen funcionando los filtros de siempre.
+- **Se entra** desde la tarjeta "Orientador vocacional" de la bienvenida (que abre el chat del
+  Copiloto y desde ahí se arranca el test), desde el propio chat o con el enlace directo
+  `/?test=1`, que es el que usan las páginas estáticas de carrera. La portada no menciona la
+  cantidad de preguntas a propósito.
+
+## Mi lista y comparador
+
+El corazón **"Me interesa"** está en todas las tarjetas (grilla, recomendaciones del test,
+cursos, oficios, plataformas y páginas estáticas de carrera) y guarda la ficha en
+`localStorage['ben-favoritos']`. En la grilla formal se guarda **la oferta puntual** (carrera +
+institución): así se puede guardar la misma carrera en dos instituciones y comparar dónde
+estudiarla.
+
+- **Dónde se ve**: botón "Mi lista (N)" en la barra de resultados (o `/?lista=1` desde las
+  páginas estáticas). La ventana lista las fichas agrupadas por tipo, con ficha, quitar y
+  selección múltiple.
+- **Comparador**: hasta 3 fichas, en columnas, con afinidad al perfil del test (si lo hizo),
+  intereses RIASEC, área, duración, modalidad, costo, dónde se cursa, instituciones con link,
+  plan de estudios y links. Abajo, un resumen automático de **"en qué se diferencian"**, más
+  "Copiar" e "Imprimir / PDF" para llevarlo a la familia o al colegio.
+- **Una sola definición del botón**: `js/favoritos.js` es un script clásico que se autoinstala
+  (delegación de clic en `[data-favorito]`) y lo cargan tanto la app como las ~650 páginas
+  estáticas generadas, que emiten el botón "vacío" y dejan que el script lo hidrate y
+  sincronice. Si una carrera guardada ya no está en el catálogo, Mi lista lo dice y ofrece
+  quitarla en vez de romperse.
+- **Fase B**: si la persona hizo el test, marcar "Me interesa" también registra el evento de
+  uso (igual que el botón dentro del test), así el promedio real de interés alimenta los
+  perfiles de carrera del próximo build.
+
 ## Regenerar los datos
 
 1. (Opcional) Correr los scrapers de las instituciones que quieras actualizar, por ejemplo
@@ -110,21 +179,22 @@ páginas generadas.
 
    1. regenera `data.json`,
    2. encadena `plataforma.py` para la sección `plataformas`,
-   3. encadena `generar-perfiles.js` para regenerar `carreras-perfiles.json` (los perfiles
-      del Copiloto Vocacional),
+   3. encadena `generar-perfiles-vocacional.js` para regenerar
+      `data/vocacional/perfiles-carreras.json` (los perfiles que usan el test y las
+      páginas estáticas),
    4. verifica que toda carrera con perfil exista en `data.json`, y
    5. encadena `generar-paginas.js` para rehacer las ~650 páginas estáticas.
 
    Los pasos 3 y 5 necesitan Node.js en el PATH. Si no lo encuentra, avisa y sigue:
    `data.json` queda actualizado igual y después se corren a mano con
-   `node generar-perfiles.js` y `node generar-paginas.js`.
+   `node generar-perfiles-vocacional.js` y `node generar-paginas.js`.
 
    El build es **idempotente**: correrlo dos veces seguidas produce archivos byte a byte
    idénticos, así que un `git status` limpio después de un build significa que no cambió nada
    de verdad.
 
    > Los perfiles se calculan **a partir de** `data.json`. Regenerar uno sin el otro deja al
-   > Copiloto recomendando carreras viejas o ignorando las nuevas, y por eso van encadenados.
+   > test recomendando carreras viejas o ignorando las nuevas, y por eso van encadenados.
 
 Los scripts resuelven sus rutas a partir de su propia ubicación, así que se pueden ejecutar
 desde cualquier carpeta.
@@ -219,7 +289,7 @@ Dos detalles más que conviene conocer antes de tocar nada:
   `history.replaceState` (`?q=`, `?area=`, `?gestion=`…), así que el mismo catálogo es
   alcanzable por miles de direcciones. La canónica fija en `index.html` hace que Google las
   cuente como una sola; el contenido "por tema" tiene su dirección de verdad en `/carrera/`.
-- **Los duplicados de los datos se fusionan.** Si dos entradas de `carreras-perfiles.json` son
+- **Los duplicados de los datos se fusionan.** Si dos entradas de los perfiles de carrera son
   el mismo nombre con distinta puntuación (pasa: una coma de más genera una clave nueva),
   `generar-paginas.js` las une en una página con las ofertas de las dos, en vez de publicar dos
   páginas casi idénticas.

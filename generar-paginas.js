@@ -36,7 +36,7 @@
 // robots.txt, que se reescriben enteros. Lo que se toca es este script.
 //
 // Se corre solo, encadenado desde scrapers/unir_todo.py, igual que
-// generar-perfiles.js. A mano:  node generar-paginas.js
+// los perfiles del test. A mano:  node generar-paginas.js
 // ============================================================================
 
 const fs = require('fs');
@@ -46,7 +46,10 @@ const RAIZ = __dirname;
 const DOMINIO = 'https://buscadoreducativo.com.ar';
 
 const RUTA_DATA = path.join(RAIZ, 'data', 'data.json');
-const RUTA_PERFILES = path.join(RAIZ, 'data', 'carreras-perfiles.json');
+// Los perfiles de carrera del test vocacional (clave, nombre, categoria, area,
+// formacion, instituciones). Antes salían de carreras-perfiles.json, el motor
+// viejo: mismo nombre de campos, una sola fuente de verdad.
+const RUTA_PERFILES = path.join(RAIZ, 'data', 'vocacional', 'perfiles-carreras.json');
 
 // Carpetas que este script es dueño de reescribir enteras.
 const SALIDAS = ['carrera', 'area', 'institucion', 'provincia', 'carreras', 'instituciones'];
@@ -79,31 +82,10 @@ const PLURALES_FORMACION = {
     cursos: 'Cursos y formación profesional'
 };
 
-const DIMENSION_LABELS = {
-    analitico: 'Pensamiento analítico',
-    tecnologico: 'Afinidad tecnológica',
-    practico: 'Trabajo práctico',
-    social: 'Interacción social',
-    creativo: 'Creatividad',
-    terreno: 'Trabajo de campo y al aire libre',
-    liderazgo: 'Liderazgo y gestión',
-    teorico: 'Base teórica y académica',
-    matematico: 'Carga matemática y cuantitativa',
-    movilidad: 'Movilidad geográfica'
-};
-
-const DIMENSION_DESC = {
-    analitico: 'Capacidad para resolver problemas complejos, razonamiento lógico y análisis de datos.',
-    tecnologico: 'Manejo e interés en herramientas digitales, innovación técnica y desarrollo.',
-    practico: 'Destreza manual, aplicación técnica y trabajo práctico experimental.',
-    social: 'Habilidad de trato con personas, trabajo en equipo, docencia y cuidado comunitario.',
-    creativo: 'Pensamiento lateral, diseño, creación de contenido y propuesta de soluciones originales.',
-    terreno: 'Gusto por el trabajo dinámico en territorio, obras o actividades al aire libre.',
-    liderazgo: 'Coordinación de proyectos, toma de decisiones estratégicas y liderazgo de grupos.',
-    teorico: 'Interés por el estudio conceptual profundo, la investigación y el rigor científico.',
-    matematico: 'Facilidad para el cálculo numérico, la estadística y el modelado cuantitativo.',
-    movilidad: 'Flexibilidad para traslados, viajes, trabajo remoto o adaptación a diferentes sedes.'
-};
+// Las etiquetas y descripciones de las dimensiones del test vocacional salen del
+// propio motor (js/vocacional/motor.js expone module.exports para Node): una
+// sola fuente de verdad para la app, las páginas y los tests.
+const { ETIQUETAS: ETIQUETAS_VOCACIONAL } = require('./js/vocacional/motor.js');
 
 // ---------------------------------------------------------------------------
 // Utilidades
@@ -517,6 +499,7 @@ ${bloques}
         });
     })();
 </script>
+<script src="/js/favoritos.js?v=${SELLO}"></script>
 </body>
 </html>
 `;
@@ -539,7 +522,7 @@ function escribirPagina(ruta, contenido) {
 // Misma carrera cargada dos veces con distinta puntuacion. Pasa de verdad:
 // "Profesorado ... Tecnico Profesional en Concurrencia con el Titulo de Base" y
 // "Profesorado ... Tecnico Profesional, en concurrencia con el Titulo de Base"
-// son dos entradas de carreras-perfiles.json porque su normalizacion conserva
+// son dos entradas de los perfiles de carrera porque su normalizacion conserva
 // las comas, pero son la misma carrera. Emitirlas como dos paginas casi
 // identicas es exactamente el contenido duplicado que Google castiga, asi que
 // se fusionan en una sola con las ofertas de las dos.
@@ -910,6 +893,20 @@ ${oferta.plan_fuente ? `        <p class="plan-fuente">Fuente: <a href="${esc(of
         </li>`;
 }
 
+// Botón "Me interesa" de las páginas estáticas. Emite solo los data-attributes
+// del contrato de js/favoritos.js: ese script (que estas páginas cargan) le
+// inyecta el ícono y el texto, sincroniza el estado guardado y maneja el clic.
+// Así hay una sola definición del botón para la app y para el HTML generado.
+function botonFavorito(item) {
+    const atr = (t) => String(t == null ? '' : t)
+        .replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    // data-fav-solo-icono: en las fichas estáticas el corazón va solo (sin
+    // "Me interesa" al lado); js/favoritos.js lo hidrata respetando el modo.
+    return `<button type="button" class="btn-favorito" data-favorito="${atr(JSON.stringify(item))}"` +
+        ` data-fav-clave="${atr(item.clave)}" data-fav-nombre="${atr(item.nombre)}"` +
+        ` data-fav-solo-icono title="Guardar en Mi lista" aria-pressed="false"></button>`;
+}
+
 function paginaCarrera(carrera) {
     const ruta = `/carrera/${carrera.slug}/`;
     const descripcion = resumenCarrera(carrera);
@@ -939,33 +936,37 @@ function paginaCarrera(carrera) {
         duraciones.length ? ['Duración', esc(duraciones.slice(0, 4).join(' · '))] : null
     ].filter(Boolean);
 
-    const dimensionesTop = carrera.perfil
-        ? Object.entries(carrera.perfil)
-            .filter(([, score]) => score >= 3)
+    // El perfil viene del Test Vocacional Completo: intereses RIASEC (0-10) +
+    // aptitudes + valores. Para la ficha alcanza con los intereses más altos,
+    // que son los que explican "por qué esta carrera".
+    const riasec = (carrera.perfil && carrera.perfil.riasec) || null;
+    const dimensionesTop = riasec
+        ? Object.entries(riasec)
+            .filter(([, score]) => score >= 5)
             .sort((a, b) => b[1] - a[1])
             .slice(0, 4)
             .map(([dim, score]) => ({
                 dim,
                 score,
-                nombre: DIMENSION_LABELS[dim] || dim,
-                desc: DIMENSION_DESC[dim] || ''
+                nombre: (ETIQUETAS_VOCACIONAL.riasec[dim] || {}).nombre || dim,
+                desc: (ETIQUETAS_VOCACIONAL.riasec[dim] || {}).desc || ''
             }))
         : [];
 
     const seccionPerfil = dimensionesTop.length ? `
-    <h2>Perfil y aptitudes recomendadas</h2>
-    <p>Quienes eligen estudiar <strong>${esc(carrera.nombre)}</strong> suelen presentar afinidad con las siguientes habilidades y características vocacionales:</p>
+    <h2>Perfil de intereses de ${esc(carrera.nombre)}</h2>
+    <p>El perfil de esta carrera, según el Test Vocacional de BEN, se inclina por estos intereses (escala 0 a 10):</p>
     <ul class="lista-aptitudes">
 ${dimensionesTop.map(d => `        <li class="aptitud-item">
             <div class="aptitud-encabezado">
                 <strong>${esc(d.nombre)}</strong>
-                <span class="aptitud-score">Nivel ${d.score}/5</span>
+                <span class="aptitud-score">Nivel ${d.score}/10</span>
             </div>
             <p class="aptitud-desc">${esc(d.desc)}</p>
         </li>`).join('\n')}
     </ul>
     <div class="nota-test">
-        <p>¿Querés saber qué tan compatible sos con esta carrera? <a href="/?copiloto=1">Hacé el test vocacional de BEN</a> para comparar tus intereses con más de 500 formaciones.</p>
+        <p>¿Querés saber qué tan compatible sos con esta carrera? <a href="/?test=1">Hacé el Test Vocacional Completo de BEN</a> (4-6 min) y compará tu perfil con las 651 formaciones del catálogo.</p>
     </div>` : '';
 
     // Generación dinámica de Preguntas Frecuentes para Google y usuarios
@@ -1034,7 +1035,26 @@ ${faqs.map(f => `        <details class="faq-item">
         </details>`).join('\n')}
     </div>`;
 
-    const cuerpo = `    <p class="entrada">${esc(descripcion)}</p>`;
+    // Guardar la carrera y compararla después. En las páginas estáticas la
+    // clave es la de la carrera agrupada, que Mi lista sabe resolver.
+    const cuerpo = `    <p class="entrada">${esc(descripcion)}</p>
+    <div class="acciones-ficha">
+        ${botonFavorito({
+            clave: carrera.clave,
+            tipo: 'carrera',
+            claveCarrera: carrera.clave,
+            nombre: carrera.nombre,
+            institucion: '',
+            area: carrera.area,
+            formacion: carrera.formacion,
+            ficha: carrera.slug,
+            link: ''
+        })}
+        <a class="btn-ver-mi-lista" href="/?lista=1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            Ver Mi lista
+        </a>
+    </div>`;
 
     const contenido = `    <h2>Dónde estudiar ${esc(carrera.nombre)}</h2>
     <ul class="ofertas">

@@ -133,19 +133,20 @@ def cargar_grupos_aparte():
 # Unificamos todo en el data.json maestro y encadenamos la inyección de
 # plataformas online para que data.json nunca quede sin la sección "plataformas".
 def normalizar_nombre(texto):
-    """Misma normalizacion que usa generar-perfiles.js para armar la clave."""
+    """Misma normalizacion que usan los generadores de perfiles para la clave."""
     texto = unicodedata.normalize("NFD", str(texto or ""))
     texto = "".join(c for c in texto if unicodedata.category(c) != "Mn")
     return re.sub(r"\s+", " ", texto).lower().strip()
 
 
-# Regenera data/carreras-perfiles.json, que es lo que consume el Copiloto
-# Vocacional. Va encadenado aca a proposito: los perfiles se calculan A PARTIR
-# de data.json, asi que si se regenera uno sin el otro el Copiloto queda
-# recomendando carreras viejas (o ignorando las nuevas) sin ningun aviso.
+# Regenera data/vocacional/perfiles-carreras.json, que es lo que consumen el
+# Test Vocacional Completo y las paginas estaticas de carrera. Va encadenado aca
+# a proposito: los perfiles se calculan A PARTIR de data.json, asi que si se
+# regenera uno sin el otro el test queda recomendando carreras viejas (o
+# ignorando las nuevas) sin ningun aviso.
 def regenerar_perfiles():
-    print("\n\U0001F9ED Regenerando perfiles de carrera para el Copiloto...")
-    guion = Path(__file__).resolve().parents[1] / "generar-perfiles.js"
+    print("\n\U0001F9E0 Regenerando perfiles del Test Vocacional Completo...")
+    guion = Path(__file__).resolve().parents[1] / "generar-perfiles-vocacional.js"
     if not guion.exists():
         print(f"\u26a0\ufe0f No encuentro {guion.name}. Los perfiles quedan como estaban.")
         return False
@@ -154,20 +155,21 @@ def regenerar_perfiles():
     if not node:
         print("\u26a0\ufe0f No encontre Node.js en el PATH, asi que NO se regeneraron los perfiles.")
         print("   data.json quedo actualizado igual; cuando instales Node corre:")
-        print("   node generar-perfiles.js")
+        print("   node generar-perfiles-vocacional.js")
         return False
 
     try:
         subprocess.run([node, str(guion)], check=True)
-        return True
     except subprocess.CalledProcessError as error:
-        print(f"\u26a0\ufe0f generar-perfiles.js fallo (codigo {error.returncode}). Los perfiles quedaron sin actualizar.")
+        print(f"\u26a0\ufe0f generar-perfiles-vocacional.js fallo (codigo {error.returncode}). Los perfiles quedaron sin actualizar.")
         return False
+
+    return True
 
 
 # Las ~650 paginas de /carrera/, /area/, /institucion/ y /provincia/ se arman a
-# partir de data.json + carreras-perfiles.json, asi que se rehacen DESPUES de
-# los dos. Son las paginas que lee Google: la app pinta el catalogo con
+# partir de data.json + perfiles-carreras.json del test, asi que se rehacen
+# DESPUES de los dos. Son las paginas que lee Google: la app pinta el catalogo con
 # JavaScript y para un buscador eso es una sola direccion casi vacia.
 #
 # Si este paso no corre, el sitio anda igual: lo que queda desactualizado es lo
@@ -196,9 +198,9 @@ def regenerar_paginas():
 # Red de seguridad: toda carrera con perfil tiene que existir en data.json. Si
 # los dos archivos se desincronizan, esto lo dice en vez de dejarlo pasar.
 def verificar_coherencia():
-    archivo_perfiles = DIR_DATOS / "carreras-perfiles.json"
+    archivo_perfiles = DIR_DATOS / "vocacional" / "perfiles-carreras.json"
     if not archivo_perfiles.exists():
-        print("\u26a0\ufe0f Todavia no hay carreras-perfiles.json.")
+        print("\u26a0\ufe0f Todavia no hay perfiles-carreras.json del test vocacional.")
         return
 
     with open(DIR_DATOS / "data.json", "r", encoding="utf-8") as f:

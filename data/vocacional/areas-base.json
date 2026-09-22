@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "comentario": "Perfil típico (0-10) de cada área del catálogo. Son las MISMAS 13 áreas que devuelve getArea() en js/util.js, para que el test siga siendo coherente con los filtros del sitio. Valores inspirados en la literatura de orientación vocacional (Holland / O*NET). Se define una sola vez: ninguna carrera individual se toca a mano.",
+  "areas": {
+    "Tecnología": {
+      "riasec": { "R": 4, "I": 7, "A": 4, "S": 2, "E": 3, "C": 5 },
+      "apt": { "logico_matematica": 7, "verbal": 4, "espacial": 6, "interpersonal": 3, "corporal": 2 },
+      "val": { "estabilidad": 5, "variedad": 6, "equipo": 5, "impacto": 4, "ingresos": 6, "movilidad": 4 }
+    },
+    "Ingeniería": {
+      "riasec": { "R": 7, "I": 8, "A": 3, "S": 3, "E": 5, "C": 6 },
+      "apt": { "logico_matematica": 8, "verbal": 4, "espacial": 7, "interpersonal": 4, "corporal": 4 },
+      "val": { "estabilidad": 6, "variedad": 5, "equipo": 5, "impacto": 5, "ingresos": 6, "movilidad": 5 }
+    },
+    "Salud": {
+      "riasec": { "R": 5, "I": 6, "A": 2, "S": 9, "E": 3, "C": 4 },
+      "apt": { "logico_matematica": 5, "verbal": 6, "espacial": 4, "interpersonal": 9, "corporal": 6 },
+      "val": { "estabilidad": 6, "variedad": 4, "equipo": 7, "impacto": 9, "ingresos": 4, "movilidad": 3 }
+    },
+    "Negocios": {
+      "riasec": { "R": 3, "I": 6, "A": 4, "S": 7, "E": 8, "C": 7 },
+      "apt": { "logico_matematica": 6, "verbal": 7, "espacial": 4, "interpersonal": 7, "corporal": 2 },
+      "val": { "estabilidad": 6, "variedad": 5, "equipo": 7, "impacto": 4, "ingresos": 8, "movilidad": 5 }
+    },
+    "Diseño": {
+      "riasec": { "R": 4, "I": 4, "A": 9, "S": 4, "E": 5, "C": 4 },
+      "apt": { "logico_matematica": 4, "verbal": 6, "espacial": 7, "interpersonal": 4, "corporal": 5 },
+      "val": { "estabilidad": 4, "variedad": 7, "equipo": 5, "impacto": 5, "ingresos": 5, "movilidad": 5 }
+    },
+    "Educación": {
+      "riasec": { "R": 3, "I": 5, "A": 5, "S": 9, "E": 4, "C": 4 },
+      "apt": { "logico_matematica": 4, "verbal": 8, "espacial": 3, "interpersonal": 9, "corporal": 4 },
+      "val": { "estabilidad": 7, "variedad": 5, "equipo": 8, "impacto": 9, "ingresos": 3, "movilidad": 2 }
+    },
+    "Ciencias sociales": {
+      "riasec": { "R": 2, "I": 7, "A": 4, "S": 8, "E": 5, "C": 5 },
+      "apt": { "logico_matematica": 4, "verbal": 8, "espacial": 2, "interpersonal": 7, "corporal": 2 },
+      "val": { "estabilidad": 6, "variedad": 6, "equipo": 6, "impacto": 8, "ingresos": 5, "movilidad": 3 }
+    },
+    "Ambiente": {
+      "riasec": { "R": 7, "I": 7, "A": 3, "S": 4, "E": 3, "C": 4 },
+      "apt": { "logico_matematica": 6, "verbal": 5, "espacial": 6, "interpersonal": 4, "corporal": 6 },
+      "val": { "estabilidad": 5, "variedad": 6, "equipo": 6, "impacto": 8, "ingresos": 4, "movilidad": 5 }
+    },
+    "Turismo": {
+      "riasec": { "R": 4, "I": 3, "A": 5, "S": 8, "E": 6, "C": 5 },
+      "apt": { "logico_matematica": 3, "verbal": 7, "espacial": 4, "interpersonal": 8, "corporal": 5 },
+      "val": { "estabilidad": 5, "variedad": 7, "equipo": 7, "impacto": 4, "ingresos": 5, "movilidad": 8 }
+    },
+    "Gastronomía": {
+      "riasec": { "R": 7, "I": 3, "A": 7, "S": 5, "E": 5, "C": 5 },
+      "apt": { "logico_matematica": 3, "verbal": 4, "espacial": 5, "interpersonal": 5, "corporal": 8 },
+      "val": { "estabilidad": 5, "variedad": 7, "equipo": 6, "impacto": 4, "ingresos": 5, "movilidad": 5 }
+    },
+    "Oficios": {
+      "riasec": { "R": 8, "I": 3, "A": 4, "S": 3, "E": 4, "C": 5 },
+      "apt": { "logico_matematica": 4, "verbal": 3, "espacial": 7, "interpersonal": 3, "corporal": 9 },
+      "val": { "estabilidad": 7, "variedad": 5, "equipo": 5, "impacto": 4, "ingresos": 5, "movilidad": 4 }
+    },
+    "Arte": {
+      "riasec": { "R": 4, "I": 4, "A": 9, "S": 5, "E": 4, "C": 3 },
+      "apt": { "logico_matematica": 3, "verbal": 6, "espacial": 6, "interpersonal": 5, "corporal": 6 },
+      "val": { "estabilidad": 4, "variedad": 8, "equipo": 5, "impacto": 5, "ingresos": 4, "movilidad": 5 }
+    },
+    "Idiomas": {
+      "riasec": { "R": 1, "I": 6, "A": 6, "S": 7, "E": 4, "C": 5 },
+      "apt": { "logico_matematica": 4, "verbal": 9, "espacial": 3, "interpersonal": 7, "corporal": 2 },
+      "val": { "estabilidad": 6, "variedad": 6, "equipo": 6, "impacto": 6, "ingresos": 5, "movilidad": 7 }
+    }
+  }
+}

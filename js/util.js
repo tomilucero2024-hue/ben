@@ -91,7 +91,7 @@ export function getArea(carrera) {
     if (tiene('administracion', 'administrat', 'contador', 'contad', 'contabilidad', 'contable', 'marketing', 'comercio', 'negocio', 'finanza', 'econom', 'recursos humanos', 'logistica', 'secretariado', 'gestion empresarial', 'gestion de empresas', 'direccion de empresas', 'ventas', 'seguros', 'banc', 'comercializacion', 'community manager', 'martillero', 'corredor inmobiliario', 'inmobiliari', 'aduan', 'despachante de aduana', 'gestion aeroportuaria', 'siniestro', 'emprendimiento', 'gestion del liderazgo')) return 'Negocios';
     if (tiene('diseno', 'arquitect', 'multimedia', 'interiorismo', 'indumentaria', 'animacion', 'fotograf', 'grafic', 'audiovisual', 'publicidad', 'gestion de moda')) return 'Diseño';
     if (tiene('profesorado', 'educacion', 'pedagog', 'didact', 'docencia', 'ensenanza', 'preceptoria')) return 'Educación';
-    if (tiene('gastronom', 'cocina', 'pasteler', 'panader', 'chef', 'sommelier', 'enolog', 'vino', 'cocteler', 'bartender', 'sensorial de vinos', 'cata de vinos', 'finca vitivinicola', 'vitivinicola', 'laboratorio vitivinicola', 'bromatolog', 'barista', 'destila', 'whisky', 'vermut', 'queso', 'aceite de oliva')) return 'Gastronomía';
+    if (tiene('gastronom', 'cocina', 'pasteler', 'panader', 'chef', 'sommelier', 'enolog', 'vino', 'cocteler', 'bartender', 'sensorial de vinos', 'cata de vinos', 'finca vitivinicola', 'vitivinicola', 'laboratorio vitivinicola', 'bromatolog', 'barista', 'cerveza', 'destila', 'whisky', 'vermut', 'queso', 'aceite de oliva')) return 'Gastronomía';
     if (tiene('ingles', 'idioma', 'portugues', 'frances', 'traduccion', 'interpretacion', 'italiano', 'chino', 'coreano', 'aleman', 'japones', 'lengua de senas', 'lengua extranjera')) return 'Idiomas';
     if (tiene('arte', 'musica', 'teatro', 'escenograf', 'danza', 'cine', 'ilustracion', 'canto', 'coral', 'organo', 'instrumento', 'ceramica artistica', 'actor', 'actriz', 'artes visuales', 'artes plasticas', 'piano', 'guitarra', 'composicion musical', 'bellas artes')) return 'Arte';
     if (tiene('ambient', 'agronom', 'biolog', 'biotecnolog', 'geolog', 'forestal', 'veterin', 'quimic', 'hidric', 'ecolog', 'apicultur', 'paisajis', 'agro', 'recursos naturales', 'botanica', 'zoolog', 'ciencias de la tierra', 'geografia', 'geografo', 'fisica', 'matematica', 'higiene y seguridad', 'geotecnolog', 'conservacion de la naturaleza', 'energias renovables', 'solar', 'fotovoltaic', 'riego', 'agricultur', 'cannabis', 'guardaparque')) return 'Ambiente';
@@ -224,3 +224,12 @@ export function urlSegura(url) {
     return limpia;
 }
 
+
+// Etiqueta legible del match de la búsqueda libre del copiloto (escala 0-10).
+// Vivía en copiloto.js, pero render.js la necesita para pintar el badge y así se
+// evita que render.js dependa del copiloto (import circular).
+export function etiquetaCompatibilidad(score) {
+    if (score >= 9) return '🎯 Muy compatible';
+    if (score >= 5) return '✔️ Compatible';
+    return '🔎 Podría interesarte';
+}
