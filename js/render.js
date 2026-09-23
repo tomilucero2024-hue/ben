@@ -170,7 +170,54 @@ export function mostrarCatalogoAparte(seccion) {
         ? catalogo.cursos.filter(c => c.busqueda.includes(estado.texto))
         : catalogo.cursos;
     const tipo = seccion === 'oficios-tecnicos' ? 'oficio' : 'curso';
-    renderizarCursosAparte(document.getElementById(catalogo.contenedor), visibles, catalogo.simple, tipo);
+    const contenedor = document.getElementById(catalogo.contenedor);
+    // Con rubros cargados (data/rubros-aparte.json), la sección se agrupa; si el
+    // archivo falta, cae a la grilla plana de siempre.
+    if (catalogo.rubros && catalogo.rubros.length) {
+        contenedor.classList.add('cursos-grid-agrupado');
+        renderizarCursosPorRubro(contenedor, visibles, catalogo, tipo);
+    } else {
+        contenedor.classList.remove('cursos-grid-agrupado');
+        renderizarCursosAparte(contenedor, visibles, catalogo.simple, tipo);
+    }
+}
+
+// Etiqueta del grupo final: los cursos sin rubro válido (archivo incompleto o
+// curso nuevo que todavía no se clasificó) no desaparecen de la vista.
+const SIN_RUBRO = 'sin-rubro';
+
+// Render agrupado por rubro: un <li> por rubro en el orden fijo de la lista
+// cerrada, con su h3, el contador y la grilla de tarjetas adentro. Los rubros
+// sin cursos no se pintan; al buscar, quedan solo los grupos con coincidencias.
+// Los títulos de curso bajan a h4 para no competir con el h3 del rubro.
+function renderizarCursosPorRubro(contenedor, lista, catalogo, tipo = 'curso') {
+    if (!lista.length) {
+        contenedor.innerHTML = avisoLista('No hay formaciones que coincidan con esa búsqueda.');
+        return;
+    }
+    const idsValidos = new Set(catalogo.rubros.map(r => r.id));
+    const porRubro = new Map();
+    lista.forEach(curso => {
+        const id = idsValidos.has(curso.rubro) ? curso.rubro : SIN_RUBRO;
+        if (!porRubro.has(id)) porRubro.set(id, []);
+        porRubro.get(id).push(curso);
+    });
+    const grupos = [...catalogo.rubros.map(r => [r.id, r.nombre]), [SIN_RUBRO, 'Otras formaciones']]
+        .filter(([id]) => porRubro.has(id));
+
+    contenedor.innerHTML = grupos.map(([id, nombre], indice) => {
+        const cursos = porRubro.get(id).slice().sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+        return `
+        <li class="grupo-rubro${indice > 0 ? ' grupo-rubro-separado' : ''}">
+            <div class="rubro-header">
+                <h3 class="rubro-header-title" id="rubro-${escaparHTML(id)}">${escaparHTML(nombre)}</h3>
+                <span class="rubro-count">${cursos.length} ${cursos.length === 1 ? 'curso' : 'cursos'}</span>
+            </div>
+            <ul class="cursos-grid" role="list">
+                ${cursos.map(curso => tarjetaCursoAparte(curso, tipo, 'h4')).join('')}
+            </ul>
+        </li>`;
+    }).join('');
 }
 
 export function renderizarCursosAparte(contenedor, lista, simple = false, tipo = 'curso') {
@@ -179,13 +226,23 @@ export function renderizarCursosAparte(contenedor, lista, simple = false, tipo =
         return;
     }
     if (simple) { renderizarCursosSimples(contenedor, lista, tipo); return; }
-    contenedor.innerHTML = lista.map(curso => `
+    contenedor.innerHTML = lista.map(curso => tarjetaCursoAparte(curso, tipo, 'h3')).join('');
+}
+
+// Tarjeta de un curso de los catálogos aparte. El nivel del encabezado es un
+// parámetro porque la misma tarjeta se usa en la grilla plana (h3, colgando del
+// h2 de la sección) y dentro de un grupo por rubro (h4, colgando del h3).
+function tarjetaCursoAparte(curso, tipo, etiquetaTitulo = 'h3') {
+    // El badge muestra el rubro cuando existe (la categoría es casi siempre la
+    // misma "Curso / Formación Profesional" y no informa nada).
+    const badge = curso.rubroNombre ? curso.rubroNombre : curso.categoria;
+    return `
         <li class="curso-card">
             <div class="card-badges">
-                <span class="badge badge-seccion">${capSeguro(curso.categoria)}</span>
+                <span class="badge badge-seccion">${capSeguro(badge)}</span>
                 <span class="badge badge-modalidad">${capSeguro(curso.modalidad)}</span>
             </div>
-            <h3 class="curso-title">${capSeguro(curso.nombre)}</h3>
+            <${etiquetaTitulo} class="curso-title">${capSeguro(curso.nombre)}</${etiquetaTitulo}>
             <div class="card-info">
                 <p class="card-institucion-row">${SVG_INSTITUCION} <strong>${enlaceInstitucionBEN(curso.institucion)}</strong></p>
                 ${curso.provincia ? `<p class="card-meta-row">${SVG_MODALIDAD} <span>${capSeguro(curso.provincia)}</span></p>` : ''}
@@ -203,7 +260,7 @@ export function renderizarCursosAparte(contenedor, lista, simple = false, tipo =
                 })}
                 <button type="button" class="btn-escuchar-card" data-card-id="${escaparHTML(curso._clave)}" aria-label="Escuchar formación">${ICONO_ESCUCHAR} <span>Escuchar</span></button>
             </div>
-        </li>`).join('');
+        </li>`;
 }
 
 // Variante simple de tarjeta: mismo diseño (.curso-card, con el borde y el tinte

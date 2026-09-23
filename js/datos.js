@@ -87,6 +87,13 @@ const PLATAFORMAS_INFO = {
 
 const CARPETA_LOGOS = '/img/plataformas/';
 
+// Rubros de los catálogos aparte (data/rubros-aparte.json): por catálogo, una
+// lista cerrada y ordenada de rubros + un mapa institución -> curso -> rubro.
+// Es contenido curado aparte de los scrapers, igual que los sectores de las
+// carreras formales. Si el archivo falta, las secciones se muestran planas
+// (una sola grilla) como antes.
+const RUBROS_APARTE = {};
+
 // Grupos que viven en su propia clave de data.json y tienen vista propia. No se
 // mezclan con las carreras de universidades ni con las plataformas, y NO pasan
 // por getFormacion()/getArea(): esa clasificación es de la lista "instituciones"
@@ -96,13 +103,19 @@ export const catalogosAparte = {
         clave: 'formaciones_alternativas',
         seccion: 'seccion-formaciones',
         contenedor: 'contenedor-formaciones',
-        cursos: []
+        cursos: [],
+        // Lista cerrada y ordenada de rubros + mapa institución -> curso -> rubro.
+        // Vacíos hasta que cargue data/rubros-aparte.json.
+        rubros: [],
+        rubrosCursos: {}
     },
     'oficios-tecnicos': {
         clave: 'oficios_tecnicos',
         seccion: 'seccion-oficios',
         contenedor: 'contenedor-oficios',
-        cursos: []
+        cursos: [],
+        rubros: [],
+        rubrosCursos: {}
     },
     'secundario': {
         clave: 'secundario',
@@ -148,6 +161,15 @@ export async function cargarOfertas() {
             console.warn('Sin lista de sectores ni mapa por carrera:', e);
         }
 
+        // Rubros de formaciones alternativas y oficios técnicos. Tolerante a
+        // fallas: sin el archivo, cada sección cae a su grilla plana de siempre.
+        try {
+            const respuestaRubros = await fetch('/data/rubros-aparte.json');
+            if (respuestaRubros.ok) Object.assign(RUBROS_APARTE, await respuestaRubros.json());
+        } catch (e) {
+            console.warn('Sin rubros de los catálogos aparte:', e);
+        }
+
         (data.instituciones || []).forEach(institucion => {
             (institucion.carreras || []).forEach(carrera => ofertas.push(crearOferta(carrera, institucion)));
         });
@@ -155,9 +177,14 @@ export async function cargarOfertas() {
         (data.plataformas || []).forEach(plataforma => plataformas.push(crearPlataforma(plataforma)));
         // Ídem los catálogos aparte: cada uno lee su propia clave de data.json.
         Object.values(catalogosAparte).forEach(catalogo => {
+            const rubros = RUBROS_APARTE[catalogo.clave];
+            if (rubros) {
+                catalogo.rubros = rubros.rubros || [];
+                catalogo.rubrosCursos = rubros.cursos || {};
+            }
             (data[catalogo.clave] || []).forEach(institucion => {
                 (institucion.carreras || []).forEach(carrera =>
-                    catalogo.cursos.push(crearCursoAparte(carrera, institucion)));
+                    catalogo.cursos.push(crearCursoAparte(carrera, institucion, catalogo)));
             });
         });
         // Ids de sector que ya no existen en la lista cerrada se descartan (un
@@ -239,10 +266,22 @@ function crearPlataforma(plataforma) {
 
 // Modelo de una formación de los catálogos aparte. Se queda con la "categoria"
 // que ya trae el dato en vez de recalcular el tipo de formación.
-function crearCursoAparte(carrera, institucion) {
+// Nombre visible de un rubro por id. Vacío si el id no está en la lista
+// cerrada (el curso cae al grupo final "Otras formaciones").
+function nombreDelRubro(catalogo, id) {
+    const rubro = (catalogo.rubros || []).find(r => r.id === id);
+    return rubro ? rubro.nombre : '';
+}
+
+export function crearCursoAparte(carrera, institucion, catalogo = {}) {
     const nombre = limpiarTexto(carrera.nombre_carrera || 'Formación sin nombre');
     const nombreInstitucion = limpiarTexto(institucion.nombre || 'Institución');
     const categoria = limpiarTexto(carrera.categoria || 'Formación');
+    // Rubro curado del curso (ver RUBROS_APARTE). El nombre del rubro entra en
+    // `busqueda` para que el buscador del encabezado encuentre "buceo" o
+    // "soldadura" aunque no estén en el nombre del curso.
+    const rubro = ((catalogo.rubrosCursos || {})[nombreInstitucion] || {})[nombre] || '';
+    const nombreRubro = nombreDelRubro(catalogo, rubro);
     // Opcionales: solo los traen los catálogos de tarjeta simple (ver `simple`).
     const descripcion = limpiarTexto(carrera.descripcion || '');
     const nombreCompleto = limpiarTexto(carrera.nombre_completo || '');
@@ -261,7 +300,9 @@ function crearCursoAparte(carrera, institucion) {
         provincia: limpiarTexto(institucion.provincia || ''),
         sede,
         link: carrera.link_oficial || '',
-        busqueda: normalizarTexto(`${nombre} ${nombreCompleto} ${descripcion} ${nombreInstitucion} ${categoria} ${sede}`),
+        rubro,
+        rubroNombre: nombreRubro,
+        busqueda: normalizarTexto(`${nombre} ${nombreCompleto} ${descripcion} ${nombreInstitucion} ${categoria} ${nombreRubro} ${sede}`),
         _clave: `aparte:${nombreInstitucion}:${nombre}`
     };
 }

@@ -1,0 +1,389 @@
+{
+    "formaciones_alternativas": {
+        "rubros": [
+            {
+                "id": "aeronautica",
+                "nombre": "Aeronáutica y vuelo"
+            },
+            {
+                "id": "agua",
+                "nombre": "Buceo y náutica"
+            },
+            {
+                "id": "montana",
+                "nombre": "Montaña, nieve y aire libre"
+            },
+            {
+                "id": "rescate",
+                "nombre": "Rescate y primeros auxilios"
+            },
+            {
+                "id": "vinos",
+                "nombre": "Vinos, gastronomía y bebidas"
+            },
+            {
+                "id": "agro",
+                "nombre": "Agro y ambiente"
+            },
+            {
+                "id": "forense",
+                "nombre": "Forense y peritaje"
+            },
+            {
+                "id": "energia",
+                "nombre": "Energía y técnica"
+            },
+            {
+                "id": "gestion",
+                "nombre": "Idiomas, gestión y turismo"
+            }
+        ],
+        "cursos": {
+            "ICA - Instituto de Capacitación Aeronáutica (Sede Mendoza)": {
+                "Tripulante de Cabina de Pasajeros": "aeronautica",
+                "Piloto Comercial de Avión": "aeronautica",
+                "Piloto Privado de Avión": "aeronautica",
+                "Piloto de Drone": "aeronautica",
+                "Despachante de Aeronaves": "aeronautica",
+                "Operador de Servicios de Rampa": "aeronautica",
+                "Supervisor de Servicio de Rampa": "aeronautica",
+                "Señalero de Aeródromo": "aeronautica",
+                "Diplomatura en Gestión Aeroportuaria": "aeronautica",
+                "Check In": "aeronautica",
+                "Operador Radiotelefonista Restringido": "aeronautica",
+                "Inglés Operacional": "aeronautica",
+                "Diplomatura en Primeros Auxilios y Maniobras de Rescate en Zonas Inhóspitas": "rescate",
+                "Diplomado en Comercio Exterior": "gestion",
+                "Asistente de Despachante de Aduana": "gestion"
+            },
+            "CENEAS - Centro Nacional de Estudios Aeronáuticos (Filial Mendoza + Virtual)": {
+                "Tripulante de Cabina de Pasajeros (TCP) - Curso Regular": "aeronautica",
+                "Tripulante de Cabina de Pasajeros (TCP) - Curso Intensivo Virtual": "aeronautica",
+                "Despachante de Aeronaves": "aeronautica"
+            },
+            "Campus Norte UNC": {
+                "Tripulante de Cabina de Pasajeros (TCP)": "aeronautica"
+            },
+            "DronesVIP - CIAC Tipo III": {
+                "Piloto de Drones (RPA) Multirrotor Categoría Abierta - Certificación ANAC": "aeronautica"
+            },
+            "Oceánica Buceo - Escuela de Buceo en Mendoza": {
+                "Cursos de Buceo (niveles inicial a Dive Master e Instructor)": "agua"
+            },
+            "Aquanautas MDZ": {
+                "Cursos de Buceo PADI (incluye Rescue Diver)": "agua"
+            },
+            "Escuela de Buceo Potrerillos": {
+                "Cursos de Buceo (incluye Nitrox)": "agua"
+            },
+            "PDA Argentina (Professional Diving Association) - Mendoza": {
+                "Cursos de Buceo - Certificación internacional PDA (Alemania)": "agua"
+            },
+            "SAK Wine & Travel": {
+                "Curso de Cata de Vinos": "vinos"
+            },
+            "Escuela Gourmet Online": {
+                "Sommelier de Vinos / Catador de Vinos": "vinos"
+            },
+            "IES 9016 \"Dr. Jorge Col\"": {
+                "Tecnicatura Superior en Actividades de Montaña": "montana"
+            },
+            "EPGAMT - Escuela de Guías de Alta Montaña y Trekking": {
+                "Guía de Alta Montaña y Trekking": "montana"
+            },
+            "IES 9-005 \"Fidela Amparán\"": {
+                "Formación Profesional en Apicultura": "agro"
+            },
+            "INTA Mendoza": {
+                "Curso de Apicultura Online (gratuito)": "agro",
+                "Curso de Huerta Orgánica y Agroecología": "agro"
+            },
+            "Instituto Ateneo": {
+                "Tanatopraxia y Tanatoestética - Certificación Nacional": "forense"
+            },
+            "Instituto CEF - Centro de Especialización Forense": {
+                "Tanatopraxia y su Aplicación Forense": "forense"
+            },
+            "ISE Cursos - Educación a Distancia": {
+                "Embalsamador y Taxidermizado + IA": "forense",
+                "Capacitación en Apicultura": "agro"
+            },
+            "ITU - Instituto Tecnológico Universitario (UNCuyo) / CIBART": {
+                "Elaboración de Cerveza Artesanal": "vinos"
+            },
+            "CESVI Argentina": {
+                "Introducción a la Peritación (Perito de Siniestros Automotor)": "forense"
+            },
+            "AALPS - Asociación Argentina de Liquidadores y Peritos de Seguros": {
+                "Curso de Gestión de Siniestros (Liquidador de Siniestros y Averías)": "forense"
+            },
+            "Universidad Juan Agustín Maza (UMaza) - Escuela de Salvamento Acuático": {
+                "Guardavidas Profesional (Salvamento Acuático)": "rescate"
+            },
+            "InSuTec - Instituto Superior Tecnológico N° 9-019": {
+                "Instalador de Sistemas Solares Fotovoltaicos y Térmicos (Formación Profesional Nivel 3)": "energia"
+            },
+            "UTN - Facultad Regional Mendoza (Extensión Universitaria)": {
+                "Taller de Turismo Astronómico (Astro-guía)": "gestion"
+            },
+            "AADIDESS - Delegación Las Leñas": {
+                "Instructorado Nacional de Esquí y Snowboard (Niveles 1 a 3)": "montana"
+            },
+            "Fundación Seminare (Mendoza)": {
+                "Sommelier de Aceites de Oliva": "vinos"
+            },
+            "Sky Tour - Escuela de Parapente Mendoza": {
+                "Curso de Iniciación al Parapente": "montana"
+            },
+            "INTA Mendoza + ITU UNCuyo": {
+                "Microcredencial Agro 4.0: Agricultura de Precisión": "agro"
+            },
+            "Facultad de Educación - UNCuyo": {
+                "Lengua de Señas Argentina (LSA) y Cultura Sorda": "gestion"
+            },
+            "INTI - Instituto Nacional de Tecnología Industrial": {
+                "Taller de Elaboración de Quesos Artesanales": "vinos"
+            },
+            "CIBART - Centro Integral de Bebidas Artesanales": {
+                "Curso de Destilación y Elaboración de Gin": "vinos"
+            },
+            "Capacitaciones El Molino": {
+                "Elaboración de Whisky, Gin y Vermut": "vinos",
+                "Destilación Expert": "vinos"
+            },
+            "Cruz Roja Argentina (Filial Mendoza)": {
+                "Curso de Primeros Auxilios, RCP y DEA": "rescate",
+                "Curso de Formación de Guardavidas": "rescate"
+            },
+            "ASOLMEN - Asociación Olivícola de Mendoza": {
+                "Curso de Cata y Maridaje de Aceite de Oliva": "vinos"
+            },
+            "Academia Manifiesto (Baristas)": {
+                "Curso Barista Integral": "vinos"
+            },
+            "Capacitación en Energía Solar (Mendoza)": {
+                "Instalador de Sistemas de Energía Solar (Fotovoltaicos y Térmicos)": "energia"
+            },
+            "Prefectura Naval Argentina (Certificaciones Náuticas)": {
+                "Timonel de Yate": "agua",
+                "Conductor Náutico (Patrón de Yate)": "agua"
+            },
+            "Administración de Parques Nacionales (APN)": {
+                "Formación de Guardaparques Nacionales": "montana"
+            }
+        }
+    },
+    "oficios_tecnicos": {
+        "rubros": [
+            {
+                "id": "electricidad",
+                "nombre": "Electricidad y electrónica"
+            },
+            {
+                "id": "metalmecanica",
+                "nombre": "Metalmecánica y soldadura"
+            },
+            {
+                "id": "mecanica",
+                "nombre": "Mecánica y máquinas"
+            },
+            {
+                "id": "gasclima",
+                "nombre": "Gas, climatización e instalaciones"
+            },
+            {
+                "id": "construccion",
+                "nombre": "Construcción"
+            },
+            {
+                "id": "madera",
+                "nombre": "Madera y muebles"
+            },
+            {
+                "id": "gastronomia",
+                "nombre": "Gastronomía"
+            },
+            {
+                "id": "textil",
+                "nombre": "Textil e indumentaria"
+            },
+            {
+                "id": "belleza",
+                "nombre": "Estética y belleza"
+            },
+            {
+                "id": "artesanias",
+                "nombre": "Artesanías y oficios artísticos"
+            },
+            {
+                "id": "informatica",
+                "nombre": "Informática y tecnología"
+            },
+            {
+                "id": "turismo",
+                "nombre": "Turismo e idiomas"
+            },
+            {
+                "id": "animales",
+                "nombre": "Oficios con animales"
+            },
+            {
+                "id": "varios",
+                "nombre": "Oficios varios"
+            }
+        ],
+        "cursos": {
+            "Escuelas Newton (Sede Mendoza)": {
+                "Montador Electricista Domiciliario - Electricista Industrial": "electricidad",
+                "Mecánica Automotriz": "mecanica",
+                "Mecánica, Electricidad y Electrónica de Motos": "mecanica",
+                "Soldadura en Aluminio (TIG)": "metalmecanica",
+                "Soldadura Alta Presión Combinado": "metalmecanica",
+                "Procesos Metalúrgicos y de Soldadura en General": "metalmecanica",
+                "Instalación de Gas (Instalador de Gas - Matrícula ECOGAS 2ª Categoría)": "gasclima",
+                "Refrigeración y Aire Acondicionado": "gasclima",
+                "Carpintería en Madera": "madera",
+                "Electrónica": "electricidad"
+            },
+            "Universidad de Congreso - Programa de Capacitación Laboral": {
+                "Electricista Domiciliario (hasta 3,7kW)": "electricidad"
+            },
+            "Centro de Capacitación para el Trabajo N° 6-015 \"Cecilia Grierson\"": {
+                "Montador Electricista Domiciliario (gratuito)": "electricidad",
+                "Cocinero / Panadero / Pastelero (gratuito)": "gastronomia",
+                "Mozos y Camareros / Ceremonial y Protocolo (gratuito)": "gastronomia",
+                "Información Turística y Atención al Cliente (gratuito)": "turismo",
+                "Vitrofusión (gratuito)": "artesanias"
+            },
+            "Cursos Técnicos y Oficios (con certificación Cámara Argentina de Refrigeración - Sede Mendoza)": {
+                "Instalador de Aire Acondicionado y Refrigeración Frío-Calor Sistema Inverter": "gasclima",
+                "Reparación de Electrodomésticos (certificación Cámara Argentina de Refrigeración)": "electricidad"
+            },
+            "IAP - Instituto Estilismo, Estética y Belleza (Sedes Mendoza)": {
+                "Barbería / Barber Shop": "belleza"
+            },
+            "ITU - Instituto Tecnológico Universitario (UNCuyo)": {
+                "Operación de Autoelevadores (con credencial)": "mecanica"
+            },
+            "IRAM Nuevo Cuyo": {
+                "Seguridad en Equipos de Izaje - Operación de Autoelevadores": "mecanica"
+            },
+            "Facultad de Filosofía y Letras - UNCuyo": {
+                "Topografía con Drones en Zonas de Montaña": "informatica"
+            },
+            "Deacon - Peluqueras Caninas (Mendoza)": {
+                "Peluquería Canina (teórico-práctico)": "animales"
+            },
+            "Colegio de Agrimensura de Mendoza": {
+                "Práctica Guiada: Instalación y Uso de OpenDroneMap": "informatica"
+            },
+            "CCT N° 6-202 (Ciudad de Mendoza)": {
+                "Gasista 2° Categoría (gratuito)": "gasclima",
+                "Cursos cortos de oficios (gratuitos)": "varios"
+            },
+            "CCT N° 6-017 \"Congreso de Tucumán\" (Dorrego, Guaymallén)": {
+                "Cocina y Gastronomía (gratuito)": "gastronomia",
+                "Electricidad (gratuito)": "electricidad",
+                "Carpintería y Torneado/Ensamblado de Muebles de Madera (gratuito)": "madera",
+                "Peluquería (cortes y colorimetría) y Cosmetología (gratuito)": "belleza",
+                "Marroquinería y Talabartería (gratuito)": "artesanias",
+                "Turismo e Inglés (gratuito)": "turismo",
+                "Operador de PC y Textil (gratuito)": "informatica"
+            },
+            "CCT N° 6-057 (Rodeo de la Cruz, Guaymallén)": {
+                "Gasista Matriculado (gratuito)": "gasclima",
+                "Electricidad Domiciliaria (gratuito)": "electricidad",
+                "Gastronomía (gratuito)": "gastronomia",
+                "Operador de PC y Textil (gratuito)": "informatica"
+            },
+            "CCT N° 6-046 \"Hilda Edith Moyano\" (San Rafael)": {
+                "Cocinero / Panadero / Pastelero (gratuito)": "gastronomia",
+                "Textil (gratuito)": "textil",
+                "Vitrofusión y Tapicería (gratuito)": "artesanias",
+                "Mozos/as, Información Turística y Ceremonial (gratuito)": "gastronomia",
+                "Operador de PC y Secretariado (gratuito)": "informatica"
+            },
+            "CCT N° 6-024 \"Angelina de Olaguer Feliú\" (San Rafael)": {
+                "Cocinero / Panadero / Pastelero (gratuito)": "gastronomia",
+                "Textil: Operador de Máquinas y Modelista-Patronista (gratuito)": "textil",
+                "Fotografía, Cerámica y Vitrofusión (gratuito)": "artesanias",
+                "Tallado en Madera y Reciclado (gratuito)": "madera"
+            },
+            "CCT N° 6-039 \"Guillermo Catalán\" (San Rafael)": {
+                "Soldador (gratuito)": "metalmecanica",
+                "Mecánica del Automotor y Ciclomotor (gratuito)": "mecanica"
+            },
+            "CCT N° 6-206 \"1 de Mayo\" (San Rafael)": {
+                "Electricidad (domiciliaria, muy baja tensión, montador e industrial) (gratuito)": "electricidad",
+                "Tornero y Soldador (gratuito)": "metalmecanica",
+                "Construcción en Seco, Gas Domiciliario e Instalaciones Sanitarias (gratuito)": "construccion",
+                "Carpintería y Reparación de Heladeras y Aire Acondicionado (gratuito)": "gasclima"
+            },
+            "CCT N° 6-042 (Villa Atuel, San Rafael)": {
+                "Soldador (gratuito)": "metalmecanica",
+                "Panadero y Textil (gratuito)": "gastronomia",
+                "Cosmetología, Carpintería e Inglés (gratuito)": "belleza"
+            },
+            "CCT N° 6-056 (Monte Comán, San Rafael)": {
+                "Cocinero / Panadero / Pastelero (gratuito)": "gastronomia",
+                "Soldador (gratuito)": "metalmecanica",
+                "Electricidad y Construcción (gas, sanitaria y en seco) (gratuito)": "electricidad",
+                "Mecánica del Ciclomotor (gratuito)": "mecanica"
+            },
+            "CCT N° 6-502 \"Dra. Carmen Castellarnau\" (Real del Padre, San Rafael)": {
+                "Cocinero y Textil (gratuito)": "gastronomia",
+                "Montador Electricista Domiciliario (gratuito)": "electricidad",
+                "Construcción en Seco, Gas Domiciliario y Soldador (gratuito)": "construccion",
+                "Operador de PC (gratuito)": "informatica"
+            },
+            "DGE - Dirección de Técnica y Trabajo (CCT / DETyT)": {
+                "Aprendé un oficio en los CCT (mapa y requisitos)": "varios"
+            },
+            "Escuela de Oficios de Godoy Cruz": {
+                "Soldadura General Básica (gratuito)": "metalmecanica",
+                "AutoCAD para Soldadura (gratuito)": "metalmecanica",
+                "Diseño de Indumentaria y Mundo Textil (gratuito)": "textil",
+                "Ofimática Nivel 3 - Power BI (gratuito)": "informatica"
+            },
+            "Escuela de Oficios de Maipú": {
+                "Cocina (gratuito)": "gastronomia",
+                "Costura y Textil (gratuito)": "textil",
+                "Reparación de Electrodomésticos (gratuito)": "electricidad",
+                "Soldadura (gratuito)": "metalmecanica",
+                "Electricidad Domiciliaria (gratuito)": "electricidad",
+                "Reparación de Computadoras (gratuito)": "informatica"
+            },
+            "Escuela de Oficios de Guaymallén": {
+                "Gasista Matriculado (gratuito)": "gasclima",
+                "Electricidad Domiciliaria (gratuito)": "electricidad",
+                "Gastronomía (gratuito)": "gastronomia",
+                "Peluquería, Cosmetología y Marroquinería (gratuito)": "belleza"
+            },
+            "Municipalidad de Las Heras - Capacitación en Oficios (con UNCuyo)": {
+                "Gasista Matriculado (gratuito)": "gasclima",
+                "Electromecánica (gratuito)": "mecanica",
+                "Inglés Turístico (gratuito)": "turismo"
+            },
+            "Municipalidad de San Rafael - Educación y Capacitación para el Trabajo": {
+                "Cursos de oficios (amplia oferta gratuita)": "varios"
+            },
+            "UTN Facultad Regional Mendoza - Extensión Universitaria": {
+                "Cursos de Extensión Universitaria (presenciales)": "varios"
+            },
+            "Fundación UOCRA - Centro de Formación Profesional (Construcción)": {
+                "Albañilería (gratuito)": "construccion",
+                "Electricidad (gratuito)": "electricidad",
+                "Soldadura (gratuito)": "metalmecanica"
+            },
+            "ISE Cursos - Educación a Distancia (Oficios)": {
+                "Gasista e Instalaciones Sanitarias + IA": "gasclima",
+                "Técnico Auxiliar en Refrigeración y Aire Acondicionado + IA": "gasclima",
+                "Herrería Artística + IA": "metalmecanica",
+                "Restauración Artesanal de Muebles + IA": "madera"
+            },
+            "Euroinnova / Zowa Vet (Herrería de Caballos - Online)": {
+                "Herrador de Caballos y Podólogo Equino": "animales"
+            }
+        }
+    }
+}

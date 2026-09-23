@@ -1141,6 +1141,14 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .catalog-aparte h2 { margin: 0 0 .4rem; font-size: var(--fs-xl); color: var(--seccion-ink); }
 .catalog-aparte-intro { margin: 0 0 1.4rem; color: var(--muted); font-size: var(--fs-base); }
 .cursos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(265px, 1fr)); gap: 1rem; }
+/* Cuando el catálogo viene agrupado por rubro, el contenedor deja de ser una
+   grilla y pasa a ser una columna de grupos: cada grupo trae su encabezado y su
+   propia .cursos-grid adentro. Mismo patrón que la vista Instituciones. */
+.cursos-grid-agrupado { display: block; }
+.rubro-header { display: flex; flex-direction: column; gap: .35rem; align-items: flex-start; margin-bottom: 1rem; }
+.rubro-header-title { margin: 0; font-size: var(--fs-lg); color: var(--seccion-ink); }
+.rubro-count { font-size: var(--fs-sm); color: var(--muted); }
+.grupo-rubro-separado { margin-top: 2.5rem; }
 .curso-card { display: flex; flex-direction: column; padding: 1.15rem; --card-tono: var(--seccion); }
 .curso-title { margin: var(--space-3) 0 var(--space-2); font-size: 1.0625rem; line-height: 1.35; overflow-wrap: anywhere; }
 

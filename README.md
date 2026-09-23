@@ -58,6 +58,9 @@ paginas.css  estilos de las páginas estáticas (mucho más liviano, ver más ab
     feedback.js        modal de sugerencias (script clásico, autónomo)
 data/        los JSON generados (uno por institución) + los que consume el sitio:
              data.json (catálogo) y enlaces-ben.json (slugs de las fichas)
+             rubros-aparte.json (curado a mano): rubros de Formaciones Alternativas
+             y Oficios Técnicos, con el orden de los grupos y la clasificación de
+             cada curso. Sin este archivo, esas secciones se ven en grilla plana.
   vocacional/  datos del Test Vocacional Completo (editables sin tocar código):
                preguntas.json (banco de 65), areas-base.json, ajustes-palabras.json,
                config.json, perfiles-carreras.json (generado), perfiles-uso.json (Fase B)
@@ -97,6 +100,9 @@ La suite se corre con Node y no necesita nada más allá de `npm install` (jsdom
 
 ```bash
 node test_general.js          # salud general: imports/exports, sello de caché, catálogos, render, SW y smoke HTTP
+node test_contenido.js        # contenido de las descripciones de carrera (largo, tono y términos excluidos)
+node test_titulos.js          # guía de títulos y niveles (/titulos/): datos, anclas, banner y aviso de costos
+node test_rubros.js           # rubros de los catálogos aparte: cobertura del mapa y render agrupado
 node test_arranque.js         # smoke de arranque real: index.html + main.js en jsdom (grilla, Mi lista, copiloto)
 node test-flow.js             # flujo completo de la app en jsdom (búsqueda, filtros, copiloto)
 node test_instituciones.js    # vista de instituciones (agrupadas por tipo)
