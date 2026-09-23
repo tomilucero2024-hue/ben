@@ -20,6 +20,7 @@ async function arrancar() {
     configurarTema();
     configurarEventos();
     configurarMedicionHeader();
+    configurarPlaceholderBuscador();
     configurarHeaderScroll();
     await cargarOfertas();
     configurarChat();
@@ -34,12 +35,14 @@ async function arrancar() {
 // 🪄 HEADER COLAPSABLE AL HACER SCROLL
 // ==========================================
 
-// El encogido sigue al scroll de forma continua (relación 1:1: hace falta 170px
-// para completar el pliegue), sin umbrales ni clases que flipen. Para que el
+// El encogido sigue al scroll de forma continua (relación 1:1: hacen falta 90px
+// para completar el pliegue), sin umbrales ni clases que flipen. Con el header
+// en una sola fila el achique es leve (~40px en escritorio), así que el rango
+// se acortó para que termine antes de que el contenido se mueva. Para que el
 // scroll rápido no teletransporte el layout (logo/buscador), el progreso visual
 // persigue al objetivo con un tope por frame: lento queda 1:1 con el dedo,
 // rápido se reparte en ~3-4 frames en vez de saltar de golpe.
-const RANGO_CONTRACCION = 170;
+const RANGO_CONTRACCION = 90;
 // Tope de avance del progreso visual por frame. Alto a propósito: si el tope es
 // demasiado bajo, el header va atrás del dedo y se siente "trabado". Este valor
 // solo frena los saltos brutos de un flick, no el scroll normal.
@@ -104,6 +107,22 @@ function medirAltoHeader() {
     raiz.style.setProperty('--scroll-progress', progresoActual || '0');
     raiz.style.transition = '';
     raiz.style.setProperty('--hero-alto', `${alto}px`);
+}
+
+// El placeholder del buscador se acorta en pantallas angostas: con el logo y el
+// botón de filtros en la misma fila, el texto largo se cortaba a mitad de
+// palabra ("Buscar car…"). El label real (sr-only) no cambia, así que un lector
+// de pantalla sigue escuchando "Buscar carrera o institución".
+const PLACEHOLDER_LARGO = 'Buscar carrera o institución…';
+const PLACEHOLDER_CORTO = 'Buscar carrera…';
+
+function configurarPlaceholderBuscador() {
+    const entrada = document.getElementById('searchInput');
+    if (!entrada) return;
+    const angosta = window.matchMedia('(max-width: 600px)');
+    const ajustar = () => { entrada.placeholder = angosta.matches ? PLACEHOLDER_CORTO : PLACEHOLDER_LARGO; };
+    ajustar();
+    angosta.addEventListener('change', ajustar);
 }
 
 function configurarMedicionHeader() {

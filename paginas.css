@@ -605,10 +605,23 @@ a:hover { text-decoration: none; }
 @media (max-width: 640px) {
     .ficha { grid-template-columns: 1fr; gap: var(--space-1) 0; }
     .ficha dd { margin-bottom: var(--space-4); }
-    /* Una sola columna centrada: Volver, logo, y el buscador + modo abajo. */
-    .cabecera .envoltorio { grid-template-columns: 1fr; justify-items: center; gap: var(--space-3); }
-    .cabecera-lado { justify-self: stretch; flex-wrap: wrap; justify-content: center; }
-    .cabecera-lado .buscador-mini { flex: 1 1 240px; max-width: none; }
+    /* Dos filas: "Volver", el logo (centrado en la página) y el botón de modo
+       comparten la primera, y el buscador baja a la segunda, a lo ancho. Antes
+       eran tres filas centradas y la cabecera se comía media pantalla.
+       display:contents borra la caja de .cabecera-lado para que sus dos piezas
+       entren como columnas de la cabecera, sin tocar el HTML generado. */
+    .cabecera .envoltorio {
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-areas:
+            "volver marca tema"
+            "buscador buscador buscador";
+        gap: var(--space-3) var(--space-4);
+    }
+    .btn-volver { grid-area: volver; }
+    .marca { grid-area: marca; }
+    .cabecera-lado { display: contents; }
+    .buscador-mini { grid-area: buscador; max-width: none; }
+    .tema-statico { grid-area: tema; justify-self: end; }
 }
 
 /* --- Botón "Me interesa", "Ver Mi lista" y aviso (js/favoritos.js) ---

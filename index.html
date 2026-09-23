@@ -80,7 +80,7 @@
             document.head.appendChild(pre);
         })();
     </script>
-    <link rel="stylesheet" href="/style.css?v=20260923_8">
+    <link rel="stylesheet" href="/style.css?v=20260923_11">
 
 </head>
 <body>
@@ -92,10 +92,6 @@
     <a class="skip-link" href="#filtersSidebar">Saltar a los filtros</a>
     <a class="skip-link" href="#cardContainer">Saltar a los resultados</a>
     <header class="hero">
-        <button id="themeToggle" class="btn-theme-toggle" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
-            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        </button>
         <div class="hero-content">
             <!-- El logo es el enlace principal al inicio que resetea la vista -->
             <h1 class="sr-only">BEN — Buscador Educativo Nacional: carreras, institutos, oficios y cursos</h1>
@@ -108,11 +104,8 @@
             <script>
                 document.getElementById('brandLogo').src = window.LOGO_BEN;
             </script>
-            <div class="hero-secondary">
-                <p class="hero-bajada">Carreras y oficios en Mendoza y Argentina</p>
-            </div>
-            <!-- El botón de filtros vive acá y no en .hero-actions: ese bloque colapsa
-                 al compactarse el header, y dejaba a los filtros inalcanzables en celular. -->
+            <!-- La bajada ("Carreras y oficios en Mendoza y Argentina") ya vive en la
+                 portada de bienvenida: repetirla acá era gastar alto del header. -->
             <!-- WCAG 2.1 - 1.3.1: el buscador es una zona de búsqueda propia y se
                  declara como landmark, igual que en las páginas estáticas. -->
             <div class="search-container" role="search" aria-label="Buscar en el catálogo">
@@ -121,12 +114,16 @@
                      el listbox de sugerencias (el rol y el aria-controls que lleva el
                      autocompletado). El label real está arriba, en <label class="sr-only">:
                      el placeholder no reemplaza al label. -->
-                <input type="search" id="searchInput" class="search-input" placeholder="Buscar por institución o carrera…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="searchDropdown" aria-haspopup="listbox" aria-autocomplete="list">
+                <input type="search" id="searchInput" class="search-input" placeholder="Buscar carrera o institución…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="searchDropdown" aria-haspopup="listbox" aria-autocomplete="list">
                 <button id="mobileFilterButton" class="mobile-filter-button" type="button" aria-controls="filtersSidebar" aria-expanded="false" aria-label="Abrir filtros">
                     <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg><span class="mobile-filter-texto">Filtrar</span>
                 </button>
                 <div id="searchDropdown" class="search-dropdown" role="listbox" hidden></div>
             </div>
+            <button id="themeToggle" class="btn-theme-toggle" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+                <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
         </div>
     </header>
 
