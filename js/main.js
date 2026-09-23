@@ -6,7 +6,7 @@
 import { cerrarChat, configurarBienvenida, configurarChat, salirDelCopilotoPantallaCompleta } from './copiloto.js';
 import { cargarOfertas, catalogosAparte } from './datos.js';
 import { estado, restaurarDesdeURL, sincronizarURL } from './estado.js';
-import { actualizarBotonesActivos, cambiarPanelFiltros, cambiarSeccion, cargarMas, configurarSwitcherVistas, limpiarRecomendacion, mostrarCatalogoAparte, mostrarPlataformas, mostrarResultados, sincronizarInertFiltros } from './render.js';
+import { actualizarBotonesActivos, cambiarPanelFiltros, cambiarSeccion, cargarMas, configurarSwitcherVistas, limpiarRecomendacion, mostrarCatalogoAparte, mostrarPlataformas, mostrarResultados, resetearFiltros, sincronizarInertFiltros } from './render.js';
 import { normalizarTexto } from './util.js';
 import { inicializarAutocompletado } from './autocompletado.js';
 import { inicializarTestCompleto } from './vocacional/test-completo.js';
@@ -211,7 +211,21 @@ function configurarEventos() {
 
     document.querySelectorAll('.filter-option').forEach(boton => {
         boton.addEventListener('click', () => {
-            estado[boton.dataset.filter] = boton.dataset.value;
+            // El departamento es multi-selección: cada chip agrega o saca su
+            // valor; "Todos" vacía la lista. El resto sigue siendo single-select.
+            if (boton.dataset.filter === 'departamento') {
+                const valor = boton.dataset.value;
+                if (valor === 'todos') {
+                    estado.departamentos = [];
+                } else {
+                    const seleccion = new Set(estado.departamentos);
+                    if (seleccion.has(valor)) seleccion.delete(valor);
+                    else seleccion.add(valor);
+                    estado.departamentos = [...seleccion];
+                }
+            } else {
+                estado[boton.dataset.filter] = boton.dataset.value;
+            }
             if (boton.dataset.filter === 'duracion') {
                 estado.duracionMin = null;
                 estado.duracionMax = null;
@@ -294,19 +308,9 @@ function aplicarRangoDuracion() {
 
 // Deja el estado y los controles del panel como si se acabara de entrar al
 // sitio, pero no pinta nada: cada quien decide con qué vista sigue. Lo usan el
-// botón "Limpiar filtros" y el logo de BEN, que antes duplicaban este bloque.
-function resetearFiltros() {
-    Object.assign(estado, {
-        texto: '', formacion: 'todos', institucion: 'todos', departamento: 'todos', gestion: 'todos', modalidad: 'todos',
-        costo: 'todos', duracion: 'todos', area: 'todos', duracionMin: null, duracionMax: null, orden: 'default'
-    });
-    document.getElementById('searchInput').value = '';
-    document.getElementById('durationMin').value = '';
-    document.getElementById('durationMax').value = '';
-    document.getElementById('sortSelect').value = 'default';
-    actualizarBotonesActivos();
-}
-
+// botón "Limpiar filtros" y el logo de BEN. Vive en render.js (junto al estado
+// y actualizarBotonesActivos) porque cambiarVista() también lo necesita para que
+// la vista de instituciones entre siempre limpia.
 function limpiarFiltros() {
     resetearFiltros();
     mostrarResultados();

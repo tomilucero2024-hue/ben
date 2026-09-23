@@ -313,7 +313,7 @@ function valorDelPar(token, tokens) {
     });
 
     const grupos = [...doc.querySelectorAll('.filter-options[role="group"]')];
-    ok(grupos.length === 6, `los 6 grupos de filtros están declarados como grupo (${grupos.length})`);
+    ok(grupos.length === 7, `los 7 grupos de filtros están declarados como grupo (${grupos.length})`);
     ok(grupos.every(g => doc.getElementById(g.getAttribute('aria-labelledby') || '')), 'cada grupo toma su nombre del h3 visible');
     const botonesFiltro = [...doc.querySelectorAll('.filter-option')];
     ok(botonesFiltro.every(b => b.hasAttribute('aria-pressed')), 'todos los filtros exponen aria-pressed');
@@ -322,13 +322,13 @@ function valorDelPar(token, tokens) {
     await new Promise(r => setTimeout(r, 250));
     ok(tecn.getAttribute('aria-pressed') === 'true', 'al aplicar un filtro, aria-pressed pasa a true');
     const marcadosPorGrupo = grupos.map(g => [...g.querySelectorAll('.filter-option')].filter(b => b.getAttribute('aria-pressed') === 'true').length);
-    ok(marcadosPorGrupo.length === 6 && marcadosPorGrupo.every(n => n === 1), 'exactamente un valor marcado por grupo (' + marcadosPorGrupo.join(',') + ')');
+    ok(marcadosPorGrupo.length === 7 && marcadosPorGrupo.every(n => n === 1), 'exactamente un valor marcado por grupo (' + marcadosPorGrupo.join(',') + ')');
     ok(doc.getElementById('resultsCount').getAttribute('role') === 'status' && doc.getElementById('resultsCount').getAttribute('aria-live') === 'polite', 'el contador de resultados se anuncia (role="status" + aria-live)');
     doc.getElementById('clearFiltersButton').click();
     await new Promise(r => setTimeout(r, 200));
-    ok(botonesFiltro.filter(b => b.getAttribute('aria-pressed') === 'true').length === 6, 'al limpiar, vuelve a estar marcado "todos" en cada grupo');
+    ok(botonesFiltro.filter(b => b.getAttribute('aria-pressed') === 'true').length === 7, 'al limpiar, vuelve a estar marcado "todos" en cada grupo');
     const vistas = [...doc.querySelectorAll('.vistas-switcher-btn')];
-    ok(vistas.every(b => b.hasAttribute('aria-pressed')), 'las vistas (Carreras / Instituciones / Por área) exponen su estado');
+    ok(vistas.every(b => b.hasAttribute('aria-pressed')), 'las vistas (Carreras / Instituciones) exponen su estado');
 
     seccion('4. Autocompletado (4.1.2)');
     const input = doc.getElementById('searchInput');

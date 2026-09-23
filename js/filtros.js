@@ -45,7 +45,7 @@ function puntuacionRelacion(oferta) {
     if (estado.gestion !== 'todos' && oferta.gestion === estado.gestion) score += 15;
     if (estado.modalidad !== 'todos' && oferta.modalidades.includes(estado.modalidad)) score += 15;
     if (estado.institucion !== 'todos' && oferta.tipoInstitucion === estado.institucion) score += 15;
-    if (estado.departamento !== 'todos' && oferta.departamento === estado.departamento) score += 15;
+    if (estado.departamentos.length && estado.departamentos.includes(oferta.departamento)) score += 15;
     if (estado.costo !== 'todos' && (oferta.costo || (oferta.gestion === 'pública' ? 'gratuito' : 'arancelado')) === estado.costo) score += 10;
     if (estado.duracion !== 'todos') {
         const grupo = getGrupoDuracion(oferta.duracionAnios);
@@ -145,7 +145,7 @@ export function cumpleFiltros(oferta) {
     return coincideTexto(oferta)
         && (estado.formacion === 'todos' || oferta.formacion === estado.formacion)
         && (estado.institucion === 'todos' || oferta.tipoInstitucion === estado.institucion)
-        && (estado.departamento === 'todos' || oferta.departamento === estado.departamento)
+        && (estado.departamentos.length === 0 || estado.departamentos.includes(oferta.departamento))
         && (estado.gestion === 'todos' || oferta.gestion === estado.gestion)
         && (estado.modalidad === 'todos' || oferta.modalidades.includes(estado.modalidad))
         && (estado.costo === 'todos' || (oferta.costo || (oferta.gestion === 'pública' ? 'gratuito' : 'arancelado')) === estado.costo)

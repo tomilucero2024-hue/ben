@@ -2,8 +2,8 @@ const fs = require('fs');
 const { JSDOM } = require('jsdom');
 
 // DOM mínimo con la toolbar del sitio: contador, chapa (oculta), selector de
-// vistas (Carreras/Instituciones/Área) y los chips de "Área" del sidebar,
-// necesario para que cambiarVista('areas') reinicie el drilldown.
+// vistas (Carreras/Instituciones) y los chips de "Área" del sidebar, que son
+// los que actualizarBotonesActivos() pinta tras limpiar los filtros.
 const dom = new JSDOM(`<!DOCTYPE html><html><body>
     <div id="resultsToolbar" class="results-toolbar">
         <div class="results-toolbar-top">
@@ -14,7 +14,6 @@ const dom = new JSDOM(`<!DOCTYPE html><html><body>
             <nav id="vistasSwitcher" aria-label="Forma de explorar las carreras">
                 <button type="button" class="vistas-switcher-btn" data-vista="carreras" aria-pressed="false">Carreras</button>
                 <button type="button" class="vistas-switcher-btn" data-vista="instituciones" aria-pressed="false">Instituciones</button>
-                <button type="button" class="vistas-switcher-btn" data-vista="areas" aria-pressed="false">Por área</button>
             </nav>
             <div class="toolbar-actions"></div>
         </div>
@@ -22,7 +21,7 @@ const dom = new JSDOM(`<!DOCTYPE html><html><body>
     <div id="cardContainer"></div>
     <button id="cargarMas"></button>
     <div class="filter-options">
-        <button class="filter-option active" data-filter="area" data-value="todos">Todos</button>
+        <button class="filter-option active" data-filter="area" data-value="todos">Todas las áreas</button>
         <button class="filter-option" data-filter="area" data-value="Tecnología">Tecnología</button>
     </div>
 </body></html>`);
@@ -72,7 +71,7 @@ ok(document.getElementById('vistasSwitcher').dataset.listos === '1', 'configurar
 actualizarSwitcherVistas();
 ok(document.querySelector('[data-vista="carreras"]').classList.contains('is-active'), 'Carreras nace activo (vista por defecto)');
 ok(document.querySelector('[data-vista="carreras"]').getAttribute('aria-pressed') === 'true', 'aria-pressed=true en la vista activa');
-ok(document.querySelector('[data-vista="areas"]').getAttribute('aria-pressed') === 'false', 'aria-pressed=false en las vistas inactivas');
+ok(document.querySelector('[data-vista="instituciones"]').getAttribute('aria-pressed') === 'false', 'aria-pressed=false en las vistas inactivas');
 
 // 2. Cambiar a instituciones resetea el drilldown de tipo.
 estado.tipoInstitucion = 'universidades';
@@ -81,14 +80,19 @@ ok(estado.vista === 'instituciones', 'cambiarVista(instituciones) actualiza esta
 ok(estado.tipoInstitucion === null, 'cambiarVista resetea tipoInstitucion');
 ok(document.querySelector('[data-vista="instituciones"]').classList.contains('is-active'), 'Instituciones queda activo tras el cambio');
 
-// 3. "Por área" reinicia el drilldown y limpia el chip de área activo.
-document.querySelector('[data-filter="area"][data-value="Tecnología"]').classList.add('active');
-document.querySelector('[data-filter="area"][data-value="todos"]').classList.remove('active');
+// 3. Entrar a Instituciones con búsqueda o filtros activos limpia el estado:
+//    la vista siempre cae en su raíz, sin filtros que no le aplican.
+estado.texto = 'derecho';
+estado.formacion = 'grado';
+estado.departamentos = ['Capital', 'Godoy Cruz'];
 estado.area = 'Tecnología';
-cambiarVista('areas');
-ok(estado.area === 'todos', 'cambiarVista(areas) vuelve a la raíz de áreas');
-ok(document.querySelector('[data-filter="area"][data-value="todos"]').classList.contains('active'), 'el chip "Todas" de área vuelve a estar activo');
-ok(!document.querySelector('[data-filter="area"][data-value="Tecnología"]').classList.contains('active'), 'el chip de la carrera previa se limpia');
+document.querySelector('[data-filter="area"][data-value="Tecnología"]').classList.add('active');
+cambiarVista('instituciones');
+ok(estado.texto === '' && estado.formacion === 'todos', 'la búsqueda y los filtros formales se limpian al entrar');
+ok(estado.departamentos.length === 0, 'la selección de departamentos se limpia');
+ok(estado.area === 'todos', 'el área vuelve a "todas"');
+ok(document.querySelector('[data-filter="area"][data-value="todos"]').classList.contains('active'), 'el chip "Todas las áreas" queda activo tras limpiar');
+ok(!document.querySelector('[data-filter="area"][data-value="Tecnología"]').classList.contains('active'), 'el chip de área previo se desactiva');
 
 // 4. Hacer click en un botón del selector cambia la vista (misma ruta que la
 //    bienvenida, así las dos entradas comparten comportamiento).

@@ -6,7 +6,7 @@
 import { ETIQUETAS_FUENTE, catalogosAparte, enlacesBEN, ofertas, plataformas } from './datos.js';
 import { estado, sincronizarURL } from './estado.js';
 import { FILTROS_SOLO_FORMALES, cumpleFiltros, filtrarYOrdenar, obtenerRelacionadas } from './filtros.js';
-import { capSeguro, duracionCorta, escaparHTML, etiquetaCompatibilidad, formatearDuracionAnios, limpiarTexto, nombreSeguro, normalizarTexto, urlSegura } from './util.js';
+import { capSeguro, duracionCorta, escaparHTML, etiquetaCompatibilidad, limpiarTexto, nombreSeguro, normalizarTexto, urlSegura } from './util.js';
 
 export const LIMITE_PAGINA = 24;
 
@@ -51,41 +51,6 @@ const SVG_MODALIDAD = `<svg class="meta-svg" width="14" height="14" viewBox="0 0
 const SVG_DURACION = `<svg class="meta-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><polyline points="12 6 12 12 16 14"/></svg>`;
 const ICONO_ESCUCHAR = `<svg class="btn-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>`;
 
-const ICONOS_AREAS = {
-    'Tecnología': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
-    'Ingeniería': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>',
-    'Salud': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
-    'Negocios': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>',
-    'Diseño': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"/><path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7"/><path d="M14.5 17.5 4.5 15"/></svg>',
-    'Educación': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
-    'Ciencias sociales': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
-    'Ambiente': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>',
-    'Turismo': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>',
-    'Gastronomía': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>',
-    'Oficios': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
-    'Arte': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>',
-    'Idiomas': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'
-};
-
-// Ejemplos curados para el listado de áreas: cuando un área tiene términos que
-// quedan mezclados (Ambiente junta física, química y agronomía), conviene elegir
-// a mano qué 3 carreras mostrar. El valor es una lista de términos que se buscan
-// dentro de los nombres reales agrupados de esa área.
-const AREAS_EJEMPLOS_CURADOS = {
-    'Ambiente': ['Gestión Ambiental', 'Física', 'Química'],
-    'Arte': ['Canto', 'Instrumento', 'Danza'],
-    'Diseño': ['Diseño Gráfico', 'Arquitectura', 'Publicidad'],
-    'Educación': ['Profesorados', 'Psicopedagogía', 'Educación social'],
-    'Gastronomía': ['Enología', 'Gastronomía', 'Bromatología'],
-    'Idiomas': ['Inglés', 'Italiano', 'Francés'],
-    'Ingeniería': ['Civil', 'Bioingeniería', 'Informática'],
-    'Negocios': ['Comercio Internacional', 'Contador Público', 'Administración'],
-    'Oficios': ['Metalmecánica', 'Construcciones', 'Mantenimiento'],
-    'Salud': ['Medicina', 'Farmacia', 'Psicología'],
-    'Tecnología': ['Ciberdefensa', 'Programación', 'Videojuegos'],
-    'Turismo': ['Hotelería', 'Turismo', 'Empresas hoteleras']
-};
-
 const SVG_ESCUCHAR = ICONO_ESCUCHAR;
 
 let resultadosActuales = [];
@@ -101,21 +66,42 @@ export function actualizarVista() {
 // 🔀 VISTAS DEL CATÁLOGO FORMAL
 // ==========================================
 
-// Las tres formas de explorar la Educación Formal. Es la misma fuente de verdad
-// que usan los botones de la bienvenida: entrar a una vista siempre cae en su
-// raíz (lista de áreas, grupos de instituciones), nunca en un drilldown viejo.
+// Las dos formas de explorar la Educación Formal: la grilla completa con
+// filtros (carreras) y el listado de instituciones. Es la misma fuente de
+// verdad que usan los botones de la bienvenida: entrar a una vista siempre cae
+// en su raíz, nunca en un drilldown viejo.
 export function cambiarVista(vista) {
-    if (vista !== 'carreras' && vista !== 'instituciones' && vista !== 'areas') return;
+    if (vista !== 'carreras' && vista !== 'instituciones') return;
+    // La vista de instituciones no se filtra con texto ni con los filtros de la
+    // grilla: si llega con búsqueda o filtros activos, se limpian y la vista
+    // muestra su raíz (todos los grupos por tipo). Es el mismo principio que el
+    // comentario de abajo, aplicado desde afuera en vez de depender de la URL.
+    if (vista === 'instituciones') resetearFiltros();
     estado.vista = vista;
     estado.tipoInstitucion = null;
-    if (vista === 'areas') {
-        estado.area = 'todos';
-        document.querySelectorAll('.filter-option[data-filter="area"]').forEach(btnFiltro => {
-            btnFiltro.classList.toggle('active', btnFiltro.dataset.value === 'todos');
-        });
-    }
     actualizarVista();
     sincronizarURL();
+}
+
+// Deja el estado y los controles del panel como si se acabara de entrar al
+// sitio, pero no pinta nada: cada quien decide con qué vista sigue. Lo usan el
+// botón "Limpiar filtros", el logo de BEN y cambiarVista() al entrar a la vista
+// de instituciones, que siempre cae limpia en su raíz.
+export function resetearFiltros() {
+    Object.assign(estado, {
+        texto: '', formacion: 'todos', institucion: 'todos', departamentos: [], gestion: 'todos',
+        modalidad: 'todos', costo: 'todos', duracion: 'todos', area: 'todos',
+        duracionMin: null, duracionMax: null, orden: 'default'
+    });
+    const input = document.getElementById('searchInput');
+    if (input) input.value = '';
+    const dMin = document.getElementById('durationMin');
+    const dMax = document.getElementById('durationMax');
+    if (dMin) dMin.value = '';
+    if (dMax) dMax.value = '';
+    const sort = document.getElementById('sortSelect');
+    if (sort) sort.value = 'default';
+    actualizarBotonesActivos();
 }
 
 // Cablea los botones del selector persistente (una sola vez). Vive arriba de la
@@ -130,8 +116,8 @@ export function configurarSwitcherVistas() {
     });
 }
 
-// Pinta cuál de las tres vistas está activa; se llama desde mostrarResultados()
-// para que acompañe a cualquier re-render (drilldowns incluidos).
+// Pinta cuál de las dos vistas está activa; se llama desde mostrarResultados()
+// para que acompañe a cualquier re-render.
 function actualizarSwitcherVistas() {
     const switcher = document.getElementById('vistasSwitcher');
     if (!switcher) return;
@@ -324,6 +310,13 @@ export function ofertasDeCarrera(carrera) {
     return indiceOfertasPorNombre.get(carrera.clave || normalizarTexto(carrera.nombre)) || [];
 }
 
+// Un filtro formal está "inactivo" si no aplica. Los departamentos son
+// multi-selección: inactivo = lista vacía. El resto son single-select: 'todos'.
+function filtroInactivo(campo) {
+    if (campo === 'departamento') return estado.departamentos.length === 0;
+    return estado[campo] === 'todos';
+}
+
 // Una carrera recomendada pasa los filtros si al menos una de las ofertas que la
 // dictan los pasa. Las que solo viven en los catálogos aparte (oficios,
 // formaciones alternativas) no tienen oferta formal: a esas se les aplican solo
@@ -338,7 +331,7 @@ function recomendacionCoincide(carrera) {
     return coincideNombre
         && (estado.area === 'todos' || carrera.area === estado.area)
         && (estado.formacion === 'todos' || carrera.formacion === estado.formacion)
-        && FILTROS_SOLO_FORMALES.every(f => estado[f] === 'todos')
+        && FILTROS_SOLO_FORMALES.every(filtroInactivo)
         && estado.duracionMin === null && estado.duracionMax === null;
 }
 
@@ -416,36 +409,26 @@ export function mostrarResultados() {
     const hayOtrosFiltros = estado.texto || 
         estado.formacion !== 'todos' || 
         estado.institucion !== 'todos' || 
-        estado.departamento !== 'todos' || 
+        estado.departamentos.length > 0 ||
         estado.gestion !== 'todos' || 
         estado.modalidad !== 'todos' || 
         estado.costo !== 'todos' || 
         estado.duracion !== 'todos';
 
-    // Vista de instituciones: solo cuando se eligió explícitamente y no hay
-    // búsqueda ni filtros. Si la persona escribe o filtra, eso manda a la
-    // grilla de carreras, no a la lista de instituciones. Muestra TODAS las
-    // instituciones de una, agrupadas por tipo bajo su h2, sin drilldown.
-    if (estado.vista === 'instituciones' && !hayOtrosFiltros) {
-        document.getElementById('filtersSidebar').hidden = true;
-        document.getElementById('mobileFilterButton').hidden = true;
-        const accionesInst = document.querySelector('#resultsToolbar .toolbar-actions');
-        if (accionesInst) accionesInst.hidden = true;
-        renderizarListadoInstituciones();
-        return;
-    }
-
-    // Drilldown por Áreas solo cuando ese es la vista elegida y no hay filtros
-    // ni búsqueda. "Mostrar todas las carreras" (vista 'carreras') cae directo a
-    // la grilla completa con filtros.
-    if (estado.vista !== 'carreras' && !hayOtrosFiltros) {
-        document.getElementById('filtersSidebar').hidden = true;
-        document.getElementById('mobileFilterButton').hidden = true;
-        if (estado.area === 'todos') {
-            renderizarListadoAreas();
-            return;
+    // Vista de instituciones: muestra TODAS las instituciones de una, agrupadas
+    // por tipo bajo su h2, sin drilldown. No admite los filtros de la grilla, así
+    // que si hay búsqueda o filtros puestos (por ejemplo, al tipear estando
+    // dentro de la vista) se pasa automáticamente a la grilla de carreras: el
+    // buscador y el panel de filtros viven ahí.
+    if (estado.vista === 'instituciones') {
+        if (hayOtrosFiltros) {
+            estado.vista = 'carreras';
         } else {
-            renderizarCarrerasDeArea(estado.area);
+            document.getElementById('filtersSidebar').hidden = true;
+            document.getElementById('mobileFilterButton').hidden = true;
+            const accionesInst = document.querySelector('#resultsToolbar .toolbar-actions');
+            if (accionesInst) accionesInst.hidden = true;
+            renderizarListadoInstituciones();
             return;
         }
     }
@@ -456,7 +439,7 @@ export function mostrarResultados() {
     // Restaurar clases de grilla por defecto
     const contenedorGlobal = document.getElementById('cardContainer');
     if (contenedorGlobal) {
-        contenedorGlobal.classList.remove('areas-grid', 'career-group-grid');
+        contenedorGlobal.classList.remove('career-group-grid');
         contenedorGlobal.classList.add('results-grid');
     }
 
@@ -661,7 +644,13 @@ export function renderizarTarjetasConCompatibilidad(resultados, rankings) {
 
 export function actualizarBotonesActivos() {
     document.querySelectorAll('.filter-option').forEach(boton => {
-        const activo = estado[boton.dataset.filter] === boton.dataset.value;
+        const campo = boton.dataset.filter;
+        const valor = boton.dataset.value;
+        // Los departamentos son multi-selección: un chip está activo si su valor
+        // está en estado.departamentos, y "Todos" si la lista está vacía.
+        const activo = campo === 'departamento'
+            ? (valor === 'todos' ? estado.departamentos.length === 0 : estado.departamentos.includes(valor))
+            : estado[campo] === valor;
         boton.classList.toggle('active', activo);
         // WCAG 2.1 - 4.1.2 Nombre, función, valor: sin aria-pressed el estado del
         // filtro viajaba solo en una clase CSS y un lector de pantalla leía
@@ -697,202 +686,6 @@ export function cambiarPanelFiltros(abrir) {
     // El foco sigue al panel al abrir y vuelve al botón al cerrar.
     const destino = document.getElementById(abrir ? 'closeFiltersButton' : 'mobileFilterButton');
     if (destino && mqCajonFiltros.matches) destino.focus();
-}
-
-// Comparador reutilizado por las vistas de drilldown (lista de áreas y carreras
-// de un área) para respetar el "Ordenar por:" de la toolbar. Recibe tanto
-// strings (nombres de área) como objetos de carrera agrupada.
-function compararPorOrden(a, b) {
-    const na = typeof a === 'string' ? a : a.nombre;
-    const nb = typeof b === 'string' ? b : b.nombre;
-    if (estado.orden === 'nombre-za') return nb.localeCompare(na, 'es');
-    if (estado.orden === 'publica-primero' || estado.orden === 'privada-primero') {
-        const ga = typeof a === 'string' ? null : a.gestiones;
-        const gb = typeof b === 'string' ? null : b.gestiones;
-        const target = estado.orden === 'publica-primero' ? 'pública' : 'privada';
-        const pa = ga ? Number(ga.has(target)) : 0;
-        const pb = gb ? Number(gb.has(target)) : 0;
-        return (pb - pa) || na.localeCompare(nb, 'es');
-    }
-    return na.localeCompare(nb, 'es');
-}
-
-function renderizarListadoAreas() {
-    const contador = document.getElementById('resultsCount');
-    if (contador) contador.textContent = 'Seleccioná un área para ver las carreras';
-    // En la vista de tarjetas de áreas el "Ordenar por" no aporta nada: no hay
-    // carreras que ordenar. Aparece recién adentro de cada área.
-    const accionesToolbar = document.querySelector('#resultsToolbar .toolbar-actions');
-    if (accionesToolbar) accionesToolbar.hidden = true;
-    const btnMas = document.getElementById('cargarMas');
-    if (btnMas) btnMas.hidden = true;
-
-    const areasObj = {};
-    ofertas.forEach(o => {
-        if (!areasObj[o.area]) {
-            areasObj[o.area] = { count: 0, carreras: {} };
-        }
-        areasObj[o.area].count++;
-        const nom = normalizarTexto(o.nombre);
-        if (!areasObj[o.area].carreras[nom]) {
-            areasObj[o.area].carreras[nom] = { nombre: o.nombre, count: 0 };
-        }
-        areasObj[o.area].carreras[nom].count++;
-    });
-    
-    const areas = Object.keys(areasObj).sort(compararPorOrden);
-
-    const contenedor = document.getElementById('cardContainer');
-    contenedor.classList.remove('results-grid'); // Opcional, pero mejor usar la clase existente
-    contenedor.classList.add('areas-grid');      // O agregar la nueva
-
-    contenedor.innerHTML = areas.map(area => {
-        const info = areasObj[area];
-        const count = Object.keys(info.carreras).length;
-        
-        const curados = AREAS_EJEMPLOS_CURADOS[area];
-        const topCarrerasHTML = ((curados ? curados : Object.values(info.carreras)
-                .sort((a, b) => b.count - a.count)
-                .slice(0, 3)
-                .map(c => c.nombre)))
-            .map(c => {
-                let nombre = c;
-                if (nombre === nombre.toUpperCase()) {
-                    nombre = nombre.toLowerCase();
-                }
-                return `<li class="area-ejemplo-item">• ${escaparHTML(capSeguro(nombre))}</li>`;
-            })
-            .join('');
-
-        return `
-            <li class="card area-card" data-area="${escaparHTML(area)}">
-                <div class="area-icon" aria-hidden="true">
-                    ${ICONOS_AREAS[area] || ''}
-                </div>
-                <h3 class="card-title area-title">${escaparHTML(area)}</h3>
-                <span class="area-count">${count} ${count === 1 ? 'carrera agrupada' : 'carreras agrupadas'}</span>
-                <ul class="area-ejemplos-list">
-                    ${topCarrerasHTML}
-                </ul>
-            </li>
-        `;
-    }).join('');
-
-    contenedor.querySelectorAll('.area-card').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const area = e.currentTarget.dataset.area;
-            estado.area = area;
-            document.querySelectorAll('.filter-option[data-filter="area"]').forEach(btnFiltro => {
-                if (btnFiltro.dataset.value === area) {
-                    btnFiltro.classList.add('active');
-                } else {
-                    btnFiltro.classList.remove('active');
-                }
-            });
-            actualizarVista();
-            sincronizarURL();
-            document.getElementById('cardContainer').scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-}
-
-function renderizarCarrerasDeArea(area) {
-    const btnMas = document.getElementById('cargarMas');
-    if (btnMas) btnMas.hidden = true;
-
-    const carrerasUnicas = {};
-    ofertas.forEach(o => {
-        if (o.area === area) {
-            const nomNorm = normalizarTexto(o.nombre);
-            if (!carrerasUnicas[nomNorm]) {
-                carrerasUnicas[nomNorm] = {
-                    nombre: o.nombre,
-                    instituciones: 1,
-                    modalidades: new Set(o.modalidades),
-                    gestiones: new Set([o.gestion]),
-                    duraciones: [o.duracionAnios]
-                };
-            } else {
-                carrerasUnicas[nomNorm].instituciones++;
-                if (o.modalidades) o.modalidades.forEach(m => carrerasUnicas[nomNorm].modalidades.add(m));
-                carrerasUnicas[nomNorm].gestiones.add(o.gestion);
-                carrerasUnicas[nomNorm].duraciones.push(o.duracionAnios);
-            }
-        }
-    });
-
-    const listado = Object.values(carrerasUnicas).sort(compararPorOrden);
-
-    const contador = document.getElementById('resultsCount');
-    if (contador) contador.textContent = `${listado.length} carreras en ${area}`;
-
-    const contenedor = document.getElementById('cardContainer');
-    
-    // Configurar clases para la grilla
-    contenedor.classList.remove('results-grid', 'areas-grid');
-    contenedor.classList.add('career-group-grid');
-
-    // Aquí no podemos poner el header y los cards al mismo nivel en una grilla si queremos que el header ocupe todo el ancho.
-    // O bien usamos grid-column: 1 / -1 para el header, o volvemos a usar results-grid como contenedor global.
-    // Usar grid-column: 1 / -1 en el CSS es mejor.
-    
-    contenedor.innerHTML = `
-        <li class="area-header" style="grid-column: 1 / -1;">
-            <button type="button" class="btn-volver-areas" id="btnVolverAreas">← Volver a todas las áreas</button>
-            <h2 class="area-header-title">Área: ${escaparHTML(area)}</h2>
-        </li>
-        ${listado.map(c => {
-            const slug = enlacesBEN.carreras[normalizarTexto(c.nombre)];
-            const enlace = slug ? '/carrera/' + slug + '/' : '';
-            const nInst = c.instituciones;
-            
-            const mods = Array.from(c.modalidades).map(m => capSeguro(m)).join(', ');
-            
-            const esPub = c.gestiones.has('pública');
-            const esPriv = c.gestiones.has('privada');
-            let badgeGestion = '';
-            if (esPub && esPriv) badgeGestion = '<span class="badge badge-publica">Pública y Privada</span>';
-            else if (esPub) badgeGestion = '<span class="badge badge-publica">Pública</span>';
-            else if (esPriv) badgeGestion = '<span class="badge badge-privada">Privada</span>';
-            
-            const durs = c.duraciones.filter(d => typeof d === 'number' && !isNaN(d) && d > 0);
-            let durText = "Duración variable";
-            if (durs.length) {
-                const min = Math.min(...durs);
-                const max = Math.max(...durs);
-                if (min === max) durText = formatearDuracionAnios(min);
-                else durText = `De ${formatearDuracionAnios(min)} a ${formatearDuracionAnios(max)}`;
-            }
-
-            return `
-                <li class="card career-group-card">
-                    <div class="card-badges">
-                        <span class="badge badge-area">${escaparHTML(area)}</span>
-                        ${badgeGestion}
-                    </div>
-                    <h3 class="card-title career-group-title">${escaparHTML(c.nombre)}</h3>
-                    <div class="card-info">
-                        <p class="card-institucion-row">${SVG_INSTITUCION} <strong>${nInst} ${nInst === 1 ? 'institución' : 'instituciones'}</strong></p>
-                        <p class="card-meta-row"><span>${SVG_MODALIDAD} ${escaparHTML(mods)}</span> <span class="card-meta-sep">·</span> <span>${SVG_DURACION} ${escaparHTML(durText)}</span></p>
-                    </div>
-                    ${enlace ? `<a class="card-link card-link-ben career-group-link" href="${escaparHTML(enlace)}">Ver lugares, info y plan de estudio →</a>` : '<span class="card-link card-link-muted">No hay ficha técnica</span>'}
-                </li>
-            `;
-        }).join('')}
-    `;
-
-    document.getElementById('btnVolverAreas').addEventListener('click', () => {
-        estado.area = 'todos';
-        document.querySelectorAll('.filter-option[data-filter="area"]').forEach(btnFiltro => {
-            if (btnFiltro.dataset.value === 'todos') {
-                btnFiltro.classList.add('active');
-            } else {
-                btnFiltro.classList.remove('active');
-            }
-        });
-        actualizarVista();
-        sincronizarURL();
-    });
 }
 
 // ==========================================
@@ -965,7 +758,7 @@ function renderizarListadoInstituciones() {
     instituciones.forEach(i => { (porTipo[i.tipo] = porTipo[i.tipo] || []).push(i); });
 
     const contenedor = document.getElementById('cardContainer');
-    contenedor.classList.remove('results-grid', 'areas-grid', 'career-group-grid');
+    contenedor.classList.remove('results-grid', 'career-group-grid');
 
     contenedor.innerHTML = TIPOS_INSTITUCION.filter(g => porTipo[g.tipo]).map((g, indice) => {
         const lista = porTipo[g.tipo]

@@ -787,11 +787,6 @@ h1, h2, .section-tab-texto strong {
     background: var(--badge-teal);
     border-color: color-mix(in srgb, var(--teal-ink) 35%, transparent);
 }
-.badge-area {
-    color: var(--orange-ink);
-    background: var(--badge-orange);
-    border-color: color-mix(in srgb, var(--orange-ink) 35%, transparent);
-}
 .badge-arancelada {
     color: var(--orange-ink);
     background: var(--badge-orange);
@@ -1062,7 +1057,7 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
    eran divs sueltos). Se les quita bullet, margen y padding para que la grilla
    quede exactamente igual. El role="list" va en el HTML porque Safari pierde la
    semántica de lista al apagar el bullet. */
-.results-grid, .areas-grid, .career-group-grid, .platforms-grid, .cursos-grid,
+.results-grid, .career-group-grid, .platforms-grid, .cursos-grid,
 .results-aviso { list-style: none; margin: 0; padding: 0; }
 .platforms-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1rem; }
 .platform-card { display: flex; flex-direction: column; padding: 1.15rem; --card-tono: var(--orange); }
@@ -2977,81 +2972,12 @@ html[data-contrast="high"] .btn-tipo-feedback.is-active {
 /* (El pie ancla al catálogo estático vía sitemap.xml: /carreras/, /instituciones/.
    El enlace "Todas las instituciones" del footer se retiró de index.html.) */
 
-/* Nuevas vistas de Áreas y Carreras Agrupadas */
-.areas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.25rem;
-}
-
-.area-card {
-    padding: 1.75rem 1rem;
-    text-align: center;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    min-height: 160px;
-}
-
-.area-icon {
-    width: 104px;
-    height: 104px;
-    margin-bottom: 1rem;
-    color: var(--accent);
-    background: color-mix(in srgb, var(--accent) 15%, transparent);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.area-icon svg {
-    width: 58px;
-    height: 58px;
-}
-
-/* Fix grid to use standard gap like .results-grid */
-
-
-
-.area-title {
-    font-size: var(--fs-lg);
-    font-weight: 600;
-    margin: 0;
-}
-
-.area-count {
-    font-size: var(--fs-sm);
-    color: var(--text-muted);
-}
-
 .area-header {
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     align-items: flex-start;
-}
-
-.btn-volver-areas {
-    display: inline-flex;
-    align-items: center;
-    gap: .35rem;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-pill);
-    background: var(--surface-soft);
-    color: var(--accent-ink);
-    font-weight: 600;
-    cursor: pointer;
-    padding: .35rem .75rem;
-    font-size: var(--fs-sm);
-    transition: border-color var(--dur-base) ease, color var(--dur-base) ease, background var(--dur-base) ease;
-}
-
-.btn-volver-areas:hover, .btn-volver-areas:focus-visible {
-    border-color: var(--accent);
-    background: var(--surface);
-    color: var(--accent);
 }
 
 .area-header-title {
@@ -3064,28 +2990,6 @@ html[data-contrast="high"] .btn-tipo-feedback.is-active {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1rem;
-}
-
-
-.area-ejemplos-list {
-    list-style: none;
-    padding: 0;
-    margin: 1rem auto 0;
-    font-size: var(--fs-xs);
-    color: var(--text-muted);
-    text-align: left;
-    line-height: 1.5;
-    width: 100%;
-    max-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.area-ejemplo-item {
-    margin-bottom: 0.25rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 /* Agrupación de instituciones por tipo en la vista "Instituciones": una

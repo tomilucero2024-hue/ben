@@ -80,7 +80,7 @@
             document.head.appendChild(pre);
         })();
     </script>
-    <link rel="stylesheet" href="/style.css?v=20260923_1">
+    <link rel="stylesheet" href="/style.css?v=20260923_2">
 
 </head>
 <body>
@@ -192,6 +192,26 @@
             </section>
 
             <section class="filter-group">
+                <h3 id="filtroArea">Área</h3>
+                <div class="filter-options filter-options-compact" role="group" aria-labelledby="filtroArea">
+                    <button class="filter-option active" data-filter="area" data-value="todos" type="button">Todas las áreas</button>
+                    <button class="filter-option" data-filter="area" data-value="Tecnología" type="button">Tecnología</button>
+                    <button class="filter-option" data-filter="area" data-value="Ingeniería" type="button">Ingeniería</button>
+                    <button class="filter-option" data-filter="area" data-value="Salud" type="button">Salud</button>
+                    <button class="filter-option" data-filter="area" data-value="Negocios" type="button">Negocios</button>
+                    <button class="filter-option" data-filter="area" data-value="Diseño" type="button">Diseño</button>
+                    <button class="filter-option" data-filter="area" data-value="Educación" type="button">Educación</button>
+                    <button class="filter-option" data-filter="area" data-value="Ciencias sociales" type="button">Ciencias sociales</button>
+                    <button class="filter-option" data-filter="area" data-value="Ambiente" type="button">Ambiente</button>
+                    <button class="filter-option" data-filter="area" data-value="Turismo" type="button">Turismo</button>
+                    <button class="filter-option" data-filter="area" data-value="Gastronomía" type="button">Gastronomía</button>
+                    <button class="filter-option" data-filter="area" data-value="Oficios" type="button">Oficios</button>
+                    <button class="filter-option" data-filter="area" data-value="Arte" type="button">Arte</button>
+                    <button class="filter-option" data-filter="area" data-value="Idiomas" type="button">Idiomas</button>
+                </div>
+            </section>
+
+            <section class="filter-group">
                 <h3 id="filtroDepartamento">Departamento</h3>
                 <div class="filter-options filter-options-compact" role="group" aria-labelledby="filtroDepartamento">
                     <button class="filter-option active" data-filter="departamento" data-value="todos" type="button">Todos</button>
@@ -288,13 +308,12 @@
                     </p>
                 </div>
                 <div class="results-toolbar-bottom">
-                    <!-- Forma de explorar el catálogo formal: grilla completa,
-                         instituciones por tipo o tarjetas por área. Se muestra
+                    <!-- Forma de explorar el catálogo formal: grilla completa
+                         con filtros o instituciones por tipo. Se muestra
                          siempre en esta sección, no solo en la bienvenida. -->
                     <nav id="vistasSwitcher" class="vistas-switcher" aria-label="Forma de explorar las carreras">
                         <button type="button" class="vistas-switcher-btn" data-vista="carreras" aria-pressed="false">Carreras</button>
                         <button type="button" class="vistas-switcher-btn" data-vista="instituciones" aria-pressed="false">Instituciones</button>
-                        <button type="button" class="vistas-switcher-btn" data-vista="areas" aria-pressed="false">Por área</button>
                     </nav>
                     <div class="toolbar-actions">
                         <!-- "Mi lista" vive acá y no en el conmutador de vistas: es un

@@ -6,12 +6,13 @@ import { normalizarTexto } from './util.js';
 
 export const estado = {
     seccion: 'formal',
-    texto: '', formacion: 'todos', institucion: 'todos', departamento: 'todos', gestion: 'todos',
+    texto: '', formacion: 'todos', institucion: 'todos', gestion: 'todos',
     modalidad: 'todos', costo: 'todos', duracion: 'todos', area: 'todos',
+    // Departamentos seleccionados (multi-selección): vacío = "Todos".
+    departamentos: [],
     duracionMin: null, duracionMax: null, orden: 'default',
     // Vista de entrada del catálogo formal: TODAS LAS CARRERAS (grilla con
-    // filtros) por defecto; alternativas: instituciones (agrupadas por tipo)
-    // o el drilldown por áreas.
+    // filtros) por defecto; alternativas: instituciones (agrupadas por tipo).
     vista: 'carreras',
     // Dentro de la vista de instituciones, el tipo abierto (o null = grupos).
     tipoInstitucion: null,
@@ -23,7 +24,7 @@ export const estado = {
 };
 
 const SECCIONES_PERMITIDAS = new Set(['formal', 'plataformas', 'formaciones-alternativas', 'oficios-tecnicos', 'secundario']);
-const VISTAS_PERMITIDAS = new Set(['areas', 'carreras', 'instituciones']);
+const VISTAS_PERMITIDAS = new Set(['carreras', 'instituciones']);
 const GESTIONES_PERMITIDAS = new Set(['todos', 'pública', 'privada']);
 const COSTOS_PERMITIDOS = new Set(['todos', 'gratuito', 'arancelado']);
 const MODALIDADES_PERMITIDAS = new Set(['todos', 'presencial', 'online', 'híbrida']);
@@ -50,14 +51,17 @@ export function sincronizarURL() {
     if (seccion !== 'formal') p.set('seccion', seccion);
     // La vista por defecto (todas las carreras) no se escribe en la URL: la
     // portada queda como "/" para que la bienvenida y los links limpios sigan
-    // funcionando igual que siempre. "Por área" se escribe como vista=area
-    // (singular, como pide la URL cuidada del sitio).
-    if (estado.vista && estado.vista !== 'carreras') p.set('vista', estado.vista === 'areas' ? 'area' : estado.vista);
+    // funcionando igual que siempre.
+    if (estado.vista && estado.vista !== 'carreras') p.set('vista', estado.vista);
     const searchInput = typeof document !== 'undefined' ? document.getElementById('searchInput') : null;
     const q = searchInput ? searchInput.value.trim() : '';
     if (q) p.set('q', q);
-    ['formacion', 'institucion', 'departamento', 'gestion', 'modalidad', 'costo', 'duracion', 'area', 'orden']
+    ['formacion', 'institucion', 'gestion', 'modalidad', 'costo', 'duracion', 'area', 'orden']
         .forEach(campo => { if (estado[campo] !== 'todos' && estado[campo] !== 'default') p.set(campo, estado[campo]); });
+    // Multi-selección de departamentos: un parámetro por cada uno. Los viejos
+    // links con un solo ?departamento= siguen entrando (restaurarDesdeURL lee
+    // getAll(), que para un único valor devuelve la misma lista).
+    estado.departamentos.forEach(d => { if (DEPARTAMENTOS_PERMITIDOS.has(d) && d !== 'todos') p.append('departamento', d); });
     if (estado.duracionMin !== null) p.set('dmin', estado.duracionMin);
     if (estado.duracionMax !== null) p.set('dmax', estado.duracionMax);
     const qs = p.toString();
@@ -71,11 +75,8 @@ export function restaurarDesdeURL() {
         const s = p.get('seccion');
         if (SECCIONES_PERMITIDAS.has(s)) estado.seccion = s;
     }
-    // El valor interno de la vista es 'areas' (plural, nombre del grupo); la
-    // URL usa 'area' por legibilidad. Se aceptan las dos: links compartidos
-    // viejos pueden traer 'areas'.
     if (p.has('vista')) {
-        const v = p.get('vista') === 'area' ? 'areas' : p.get('vista');
+        const v = p.get('vista');
         if (VISTAS_PERMITIDAS.has(v)) estado.vista = v;
     }
     if (p.has('q')) {
@@ -86,7 +87,10 @@ export function restaurarDesdeURL() {
     }
     if (p.has('formacion') && FORMACIONES_PERMITIDAS.has(p.get('formacion'))) estado.formacion = p.get('formacion');
     if (p.has('institucion') && INSTITUCIONES_PERMITIDAS.has(p.get('institucion'))) estado.institucion = p.get('institucion');
-    if (p.has('departamento') && DEPARTAMENTOS_PERMITIDOS.has(p.get('departamento'))) estado.departamento = p.get('departamento');
+    if (p.has('departamento')) {
+        estado.departamentos = p.getAll('departamento')
+            .filter(d => DEPARTAMENTOS_PERMITIDOS.has(d) && d !== 'todos');
+    }
     if (p.has('gestion') && GESTIONES_PERMITIDAS.has(p.get('gestion'))) estado.gestion = p.get('gestion');
     if (p.has('modalidad') && MODALIDADES_PERMITIDAS.has(p.get('modalidad'))) estado.modalidad = p.get('modalidad');
     if (p.has('costo') && COSTOS_PERMITIDOS.has(p.get('costo'))) estado.costo = p.get('costo');

@@ -349,7 +349,6 @@ a:hover { text-decoration: none; }
 
     .principal .entrada,
     .contenido-pagina > p,
-    .faq-respuesta p,
     .nota-test p { max-width: 68ch; }
 }
 
@@ -361,10 +360,12 @@ a:hover { text-decoration: none; }
 .etiqueta.publica { color: var(--green-ink); }
 .etiqueta.privada { color: var(--orange-ink); }
 
-/* ---- Listas de enlaces (índices, relacionadas) ------------------------- */
+/* ---- Listas de enlaces (índices, relacionadas) -------------------------
+   Cada ítem es una píldora con borde: antes eran los enlaces azules con
+   subrayado por defecto del navegador, fuera del lenguaje visual del sitio. */
 .enlaces {
     list-style: none; margin: 0 0 var(--space-7); padding: 0;
-    display: grid; gap: var(--space-2) var(--space-6);
+    display: grid; gap: var(--space-3) var(--space-6);
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     font-size: calc(.9375rem * var(--font-scale));
 }
@@ -372,10 +373,43 @@ a:hover { text-decoration: none; }
 .enlaces li a {
     display: inline-flex;
     align-items: center;
+    gap: .4rem;
     min-height: 44px;
-    padding: var(--space-1) 0;
+    padding: var(--space-2) var(--space-5);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    background: var(--surface);
+    color: var(--accent-ink);
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color .2s ease, background-color .2s ease;
+}
+.enlaces li a:hover, .enlaces li a:focus-visible {
+    border-color: var(--accent-ink);
+    background: var(--surface-soft);
 }
 .enlaces .cuantas { color: var(--muted); font-size: calc(.8125rem * var(--font-scale)); }
+
+/* El "Ver las N carreras del área" del bloque de relacionadas: misma píldora
+   que las de arriba, presentada como llamada de cierre del bloque. */
+.relacionadas-mas { margin: var(--space-4) 0 0; }
+.btn-enlace-mas {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    min-height: 44px;
+    padding: var(--space-3) var(--space-7);
+    border: 1px solid var(--accion-fill);
+    border-radius: var(--radius-pill);
+    background: var(--surface);
+    color: var(--accion-ink);
+    font-weight: 700;
+    text-decoration: none;
+    transition: border-color .2s ease, background-color .2s ease;
+}
+.btn-enlace-mas:hover, .btn-enlace-mas:focus-visible {
+    background: var(--surface-soft);
+}
 
 /* ---- Llamado a la acción ---------------------------------------------- */
 .cta {
@@ -432,36 +466,6 @@ a:hover { text-decoration: none; }
 }
 .nota-test p { margin: 0; }
 .nota-test a { font-weight: 700; color: var(--blue-ink); }
-
-/* ---- Preguntas Frecuentes (FAQ / Q&A) ---------------------------------- */
-.faq-lista {
-    display: flex; flex-direction: column; gap: var(--space-3);
-    margin: 0 0 var(--space-8);
-}
-.faq-item {
-    background: var(--surface);
-    border-radius: var(--radius-md);
-    padding: var(--space-4) var(--space-5);
-    transition: background .2s ease;
-}
-.faq-pregunta {
-    cursor: pointer; font-size: calc(1rem * var(--font-scale)); color: var(--text);
-    list-style: none; display: flex; justify-content: space-between; align-items: center;
-    user-select: none;
-}
-.faq-pregunta::-webkit-details-marker { display: none; }
-.faq-pregunta::after {
-    content: "+"; font-size: calc(1.25rem * var(--font-scale)); font-weight: 700; color: var(--muted);
-    transition: transform .2s ease;
-}
-.faq-item[open] .faq-pregunta::after {
-    content: "−";
-}
-.faq-respuesta {
-    margin-top: var(--space-3);
-    font-size: calc(.9375rem * var(--font-scale)); color: var(--text); line-height: 1.6;
-}
-.faq-respuesta p { margin: 0; }
 
 /* ---- Plan de estudio (dentro de cada oferta) --------------------------- */
 .plan-de-estudio {

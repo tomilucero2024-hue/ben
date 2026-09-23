@@ -990,76 +990,9 @@ ${dimensionesTop.map(d => `        <li class="aptitud-item">
         <p>¿Querés saber qué tan compatible sos con esta carrera? <a href="/?test=1">Hacé el Test Vocacional Completo de BEN</a> (4-6 min) y compará tu perfil con las 651 formaciones del catálogo.</p>
     </div>` : '';
 
-    // Generación dinámica de Preguntas Frecuentes para Google y usuarios
-    const nombresInst = [...new Set(carrera.ofertas.map(o => o.institucion.nombre))];
-    const provs = [...new Set(carrera.ofertas.map(o => o.institucion.provincia).filter(Boolean))];
-    const ubicacionStr = provs.length ? (provs.length === 1 ? `en ${provs[0]}` : `en ${listaEnEspanol(provs)}`) : 'en Argentina';
-    const listaInstTxt = listaEnEspanol(nombresInst);
-
-    const cuantasInstTxt = nombresInst.length === 1 ? 'la siguiente institución' : `${nombresInst.length} instituciones`;
-    const respDonde = `Podés estudiar ${carrera.nombre} ${ubicacionStr} en ${cuantasInstTxt}: ${listaInstTxt}. En la parte superior de esta página encontrás las sedes y enlaces a los sitios oficiales de cada una.`;
-
-    const anios = carrera.ofertas.map(o => obtenerDuracionEnAnios(o.duracion)).filter(a => a && a > 0);
-    let duracionesTxt = '';
-    if (anios.length) {
-        const min = Math.min(...anios);
-        const max = Math.max(...anios);
-        const fmt = a => a >= 1
-            ? `${Number.isInteger(a) ? a : a.toFixed(1)} ${a === 1 ? 'año' : 'años'}`
-            : `${Math.round(a * 12)} meses`;
-        const mismaUnidad = (min >= 1) === (max >= 1);
-        const desde = mismaUnidad ? fmt(min).replace(/ (años?|meses)$/, '') : fmt(min);
-        duracionesTxt = min === max
-            ? `La carrera tiene una duración estimada de ${fmt(min)}.`
-            : `La duración de la carrera varía de ${desde} a ${fmt(max)} según el plan de estudio de la institución elegida.`;
-    } else {
-        duracionesTxt = `La duración estimada depende de la institución y modalidad elegida (típicamente entre 4 y 5 años para carreras de grado, o de 2 a 3 años para tecnicaturas).`;
-    }
-
-    const modsTxt = modalidades.length
-        ? `Actualmente se puede cursar en modalidad ${listaEnEspanol(modalidades.map(m => m.toLowerCase()))}, según la institución que elijas.`
-        : `Las modalidades típicas son presencial o a distancia según la institución educativa.`;
-
-    const tipoTxt = NOMBRES_FORMACION[carrera.formacion] || carrera.categoria || 'carrera';
-    const afinesTxt = dimensionesTop.length
-        ? ` Entre sus aptitudes más afines se destacan: ${listaEnEspanol(dimensionesTop.map(d => d.nombre.toLowerCase()))}.`
-        : '';
-    const respTitulo = `${carrera.nombre} es una ${tipoTxt.toLowerCase()} perteneciente al área de ${carrera.area}.${afinesTxt}`;
-
-    const faqs = [
-        {
-            pregunta: `¿Dónde estudiar ${carrera.nombre} ${ubicacionStr}?`,
-            respuesta: respDonde
-        },
-        {
-            pregunta: `¿Cuánto dura la carrera de ${carrera.nombre}?`,
-            respuesta: duracionesTxt
-        },
-        {
-            pregunta: `¿Qué modalidades de cursado hay para ${carrera.nombre}?`,
-            respuesta: modsTxt
-        },
-        {
-            pregunta: `¿Qué perfil y habilidades se recomiendan para ${carrera.nombre}?`,
-            respuesta: respTitulo
-        }
-    ];
-
-    const seccionFaq = `
-    <h2>Preguntas frecuentes sobre ${esc(carrera.nombre)}</h2>
-    <div class="faq-lista">
-${faqs.map(f => `        <details class="faq-item">
-            <summary class="faq-pregunta"><strong>${esc(f.pregunta)}</strong></summary>
-            <div class="faq-respuesta">
-                <p>${esc(f.respuesta)}</p>
-            </div>
-        </details>`).join('\n')}
-    </div>`;
-
     // Guardar la carrera y compararla después. En las páginas estáticas la
     // clave es la de la carrera agrupada, que Mi lista sabe resolver.
-    const cuerpo = `    <p class="entrada">${esc(descripcion)}</p>
-    <div class="acciones-ficha">
+    const cuerpo = `    <div class="acciones-ficha">
         ${botonFavorito({
             clave: carrera.clave,
             tipo: 'carrera',
@@ -1082,14 +1015,13 @@ ${faqs.map(f => `        <details class="faq-item">
 ${carrera.ofertas.map((o, i) => tarjetaOferta(o, { id: `oferta-${i + 1}` })).join('\n')}
     </ul>
 ${seccionPerfil}
-${seccionFaq}
 ${relacionadas.length ? `
     <section class="relacionadas">
     <h2>Otras carreras del área ${esc(carrera.area)}</h2>
     <ul class="enlaces">
 ${relacionadas.map(c => `        <li><a href="/carrera/${c.slug}/">${esc(c.nombre)}</a> <span class="cuantas">(${c.ofertas.length})</span></li>`).join('\n')}
     </ul>
-    <p><a href="/area/${carrera.areaRef.slug}/">Ver las ${carrera.areaRef.carreras.length} carreras del área ${esc(carrera.area)} →</a></p>
+    <p class="relacionadas-mas"><a class="btn-enlace-mas" href="/area/${carrera.areaRef.slug}/">Ver las ${carrera.areaRef.carreras.length} carreras del área ${esc(carrera.area)} →</a></p>
     </section>` : ''}`;
 
     const lateral = `    <dl class="ficha">
@@ -1139,19 +1071,6 @@ ${ficha.map(([k, v]) => `        <dt>${k}</dt><dd>${v}</dd>`).join('\n')}
                 }))
         };
 
-    const faqSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map(f => ({
-            '@type': 'Question',
-            name: f.pregunta,
-            acceptedAnswer: {
-                '@type': 'Answer',
-                text: f.respuesta
-            }
-        }))
-    };
-
     const provincias = [...new Set(carrera.ofertas.map(o => o.institucion.provincia).filter(Boolean))].sort();
     const complementoTitulo = provincias.length === 1
         ? `: dónde estudiarla en ${provincias[0]}`
@@ -1173,7 +1092,7 @@ ${ficha.map(([k, v]) => `        <dt>${k}</dt><dd>${v}</dd>`).join('\n')}
                 { nombre: carrera.area, url: `/area/${carrera.areaRef ? carrera.areaRef.slug : ''}/` },
                 { nombre: carrera.nombre, url: ruta }
             ],
-            ldExtra: [ld, faqSchema]
+            ldExtra: [ld]
         })
     };
 }
