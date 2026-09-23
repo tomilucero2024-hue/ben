@@ -387,6 +387,25 @@ ${bloques}
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 <header class="cabecera">
     <div class="envoltorio">
+        <a class="btn-volver" href="/" aria-label="Volver a la página anterior">
+            <svg class="btn-volver-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            <span>Volver</span>
+        </a>
+        <script>
+            // El botón "Volver" va al lado del logo. Si la persona vino de una
+            // página del mismo sitio (la app con sus filtros, otra ficha, un
+            // índice), regresa ahí con history.back() y conserva el estado; si
+            // entró directo desde afuera, queda el <a href="/"> del buscador.
+            (() => {
+                const volver = document.querySelector('.btn-volver');
+                if (!volver) return;
+                let mismoOrigen = false;
+                try { mismoOrigen = new URL(document.referrer).origin === location.origin; } catch (e) {}
+                if (mismoOrigen) {
+                    volver.addEventListener('click', (ev) => { ev.preventDefault(); history.back(); });
+                }
+            })();
+        </script>
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>

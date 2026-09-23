@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260921_54">
+<link rel="stylesheet" href="/paginas.css?v=20260923_1">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ingeniería","item":"https://buscadoreducativo.com.ar/area/ingenieria/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Carreras del área Ingeniería","description":"28 carreras del área Ingeniería en BEN, dictadas por 13 instituciones. Mirá cuáles son, cuánto duran y dónde se cursan.","url":"https://buscadoreducativo.com.ar/area/ingenieria/"}</script>
 </head>
@@ -64,6 +64,25 @@
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 <header class="cabecera">
     <div class="envoltorio">
+        <a class="btn-volver" href="/" aria-label="Volver a la página anterior">
+            <svg class="btn-volver-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            <span>Volver</span>
+        </a>
+        <script>
+            // El botón "Volver" va al lado del logo. Si la persona vino de una
+            // página del mismo sitio (la app con sus filtros, otra ficha, un
+            // índice), regresa ahí con history.back() y conserva el estado; si
+            // entró directo desde afuera, queda el <a href="/"> del buscador.
+            (() => {
+                const volver = document.querySelector('.btn-volver');
+                if (!volver) return;
+                let mismoOrigen = false;
+                try { mismoOrigen = new URL(document.referrer).origin === location.origin; } catch (e) {}
+                if (mismoOrigen) {
+                    volver.addEventListener('click', (ev) => { ev.preventDefault(); history.back(); });
+                }
+            })();
+        </script>
         <a class="marca" href="/" aria-label="BEN, Buscador Educativo Nacional — ir al buscador">
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
@@ -223,6 +242,6 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260921_54"></script>
+<script src="/js/favoritos.js?v=20260923_1"></script>
 </body>
 </html>

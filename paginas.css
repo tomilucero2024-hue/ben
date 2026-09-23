@@ -107,6 +107,24 @@ body {
 .marca { display: inline-flex; align-items: center; }
 .marca img { height: 34px; width: auto; display: block; }
 
+/* Botón "Volver" de la cabecera: va al lado del logo y regresa a la página
+   anterior si se vino del mismo sitio (la app con sus filtros, otra ficha,
+   un índice); si no, lleva al buscador. Misma altura y píldora del botón de
+   tema para no romper el ritmo de la fila. */
+.btn-volver {
+    display: inline-flex; align-items: center; gap: .4rem;
+    flex: 0 0 auto;
+    min-height: 40px;
+    padding: 0 .8rem;
+    border: 1px solid transparent; border-radius: var(--radius-pill);
+    background: transparent; color: var(--text);
+    font: inherit; font-weight: 600; font-size: calc(.8125rem * var(--font-scale));
+    text-decoration: none; line-height: 1;
+    transition: background-color .2s ease, border-color .2s ease;
+}
+.btn-volver:hover { background: var(--surface-soft); border-color: var(--line); }
+.btn-volver svg { width: 18px; height: 18px; flex: none; }
+
 /* Botón de modo claro/oscuro de las páginas estáticas: vive en la cabecera
    como en la app, con los mismos ítems de color según el tema. */
 .tema-statico {
