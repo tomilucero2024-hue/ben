@@ -90,7 +90,7 @@ export function cambiarVista(vista) {
 export function resetearFiltros() {
     Object.assign(estado, {
         texto: '', formacion: 'todos', institucion: 'todos', departamentos: [], gestion: 'todos',
-        modalidad: 'todos', costo: 'todos', duracion: 'todos', area: 'todos',
+        modalidad: 'todos', duracion: 'todos', area: 'todos', sectores: [],
         duracionMin: null, duracionMax: null, orden: 'default'
     });
     const input = document.getElementById('searchInput');
@@ -310,10 +310,10 @@ export function ofertasDeCarrera(carrera) {
     return indiceOfertasPorNombre.get(carrera.clave || normalizarTexto(carrera.nombre)) || [];
 }
 
-// Un filtro formal está "inactivo" si no aplica. Los departamentos son
+// Un filtro formal está "inactivo" si no aplica. Departamentos y sectores son
 // multi-selección: inactivo = lista vacía. El resto son single-select: 'todos'.
 function filtroInactivo(campo) {
-    if (campo === 'departamento') return estado.departamentos.length === 0;
+    if (campo === 'departamento' || campo === 'sectores') return (estado[campo] || []).length === 0;
     return estado[campo] === 'todos';
 }
 
@@ -410,9 +410,9 @@ export function mostrarResultados() {
         estado.formacion !== 'todos' || 
         estado.institucion !== 'todos' || 
         estado.departamentos.length > 0 ||
+        estado.sectores.length > 0 ||
         estado.gestion !== 'todos' || 
         estado.modalidad !== 'todos' || 
-        estado.costo !== 'todos' || 
         estado.duracion !== 'todos';
 
     // Vista de instituciones: muestra TODAS las instituciones de una, agrupadas
@@ -555,7 +555,7 @@ export function renderizarTarjetas(resultados, { mostrarMatch = false, encabezad
             <div class="card-badges">
                 ${mostrarMatch ? `<span class="badge badge-match">${etiquetaCompatibilidad(oferta.score)}</span>` : ''}
                 <span class="badge badge-categoria">${capSeguro(oferta.categoria)}</span>
-                ${!oferta.fuente || oferta.fuente === 'formal' ? `<span class="badge badge-${oferta.gestion === 'pública' ? 'publica' : 'privada'}">${oferta.gestion === 'pública' ? (oferta.costo === 'arancelado' ? 'Pública · Aranc.' : 'Pública') : 'Privada'}</span>` : ''}
+                ${!oferta.fuente || oferta.fuente === 'formal' ? `<span class="badge badge-${oferta.gestion === 'pública' ? 'publica' : 'privada'}">${oferta.gestion === 'pública' ? 'Pública' : 'Privada'}</span>` : ''}
             </div>
             <h3 class="card-title">${capSeguro(oferta.nombre)}</h3>
             <div class="card-info">
@@ -646,10 +646,12 @@ export function actualizarBotonesActivos() {
     document.querySelectorAll('.filter-option').forEach(boton => {
         const campo = boton.dataset.filter;
         const valor = boton.dataset.value;
-        // Los departamentos son multi-selección: un chip está activo si su valor
-        // está en estado.departamentos, y "Todos" si la lista está vacía.
-        const activo = campo === 'departamento'
-            ? (valor === 'todos' ? estado.departamentos.length === 0 : estado.departamentos.includes(valor))
+        // Departamentos y sectores son multi-selección: un chip está activo si
+        // su valor está en la lista, y "Todos" si la lista está vacía.
+        const activo = (campo === 'departamento' || campo === 'sectores')
+            ? (valor === 'todos'
+                ? (estado[campo] || []).length === 0
+                : (estado[campo] || []).includes(valor))
             : estado[campo] === valor;
         boton.classList.toggle('active', activo);
         // WCAG 2.1 - 4.1.2 Nombre, función, valor: sin aria-pressed el estado del

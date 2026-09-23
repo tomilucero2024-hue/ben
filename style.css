@@ -599,7 +599,7 @@ h1, h2, .section-tab-texto strong {
 .close-filters-button { display: none; padding: 0; color: var(--muted); background: none; border: 0; font-size: var(--fs-xl); line-height: 1; }
 .filter-group { padding: 1rem; border-bottom: 1px solid var(--line); }
 .filter-group h3 { margin: 0 0 .55rem; color: var(--text); font-family: var(--font-detail); font-size: var(--fs-md); font-weight: 400; letter-spacing: .045em; }
-.filter-options { display: flex; flex-direction: column; align-items: flex-start; gap: .18rem; }
+.filter-options { display: flex; flex-direction: column; align-items: flex-start; gap: .25rem; }
 .filter-options-inline { gap: .12rem; }
 /* El padding horizontal va en TODAS las opciones, no solo en la activa: si se lo
    pusiera únicamente a la elegida, la lista entera se correría cada vez que
@@ -608,6 +608,11 @@ h1, h2, .section-tab-texto strong {
     width: 100%; min-height: 30px; padding: .28rem .5rem; border: 0; border-radius: var(--radius-sm);
     color: var(--muted); background: transparent;
     text-align: left; font-size: var(--fs-sm);
+    /* Los nombres largos (sectores, sobre todo) envuelven en dos líneas. El
+       line-height y el display van explícitos porque algunos navegadores no
+       heredan el line-height del body a través de `button { font: inherit }`,
+       y las líneas terminaban pisándose. */
+    display: block; height: auto; line-height: 1.35; overflow-wrap: anywhere;
     transition: color var(--dur-base) ease, background-color var(--dur-base) ease;
 }
 .filter-option:hover { color: var(--accent-ink); background: color-mix(in srgb, var(--accent) 9%, transparent); }
@@ -635,6 +640,50 @@ h1, h2, .section-tab-texto strong {
 
 /* 7. BARRA SOBRE LOS RESULTADOS: cantidad encontrada, selector de orden y las
       tres formas de explorar el catálogo (Carreras / Instituciones / Por área). */
+/* Banner hacia la guía de títulos (/titulos/): es el acceso llamativo a las
+   diferencias entre licenciatura, tecnicatura, profesorado y posgrado. Solo se
+   muestra en Educación Formal: las otras secciones tienen su propio encabezado
+   y el banner no aplica. */
+.banner-titulos {
+    display: none;
+    align-items: center; gap: .85rem;
+    margin: 0 0 1.1rem;
+    padding: .85rem 1rem;
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+    color: var(--text); text-decoration: none;
+    transition: background-color var(--dur-base) ease, border-color var(--dur-base) ease;
+}
+body[data-seccion="formal"] .banner-titulos { display: flex; }
+.banner-titulos:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 16%, var(--surface)); }
+.banner-titulos-icono { display: inline-flex; flex: none; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: 50%; background: var(--surface); color: var(--accent-ink); }
+.banner-titulos-icono svg { width: 22px; height: 22px; }
+.banner-titulos-texto { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+.banner-titulos-texto strong { font-family: var(--font-title); font-size: var(--fs-base); }
+.banner-titulos-texto > span { color: var(--muted); font-size: var(--fs-sm); line-height: 1.35; }
+.banner-titulos-corto { display: none; }
+.banner-titulos-cta { margin-left: auto; flex: none; color: var(--accent-ink); font-weight: 700; font-size: var(--fs-sm); white-space: nowrap; }
+/* En celular la franja se vuelve una píldora compacta: sin ícono ni bajada, con
+   el título corto y el CTA reducido a la flecha. Sigue siendo llamativa pero no
+   ocupa media pantalla. */
+@media (max-width: 600px) {
+    body[data-seccion="formal"] .banner-titulos {
+        display: inline-flex;
+        gap: .35rem;
+        padding: .5rem .9rem;
+        border-radius: var(--radius-pill);
+        margin: 0 0 .85rem;
+    }
+    .banner-titulos-icono { display: none; }
+    .banner-titulos-texto { flex-direction: row; align-items: center; }
+    .banner-titulos-texto strong { font-size: var(--fs-sm); }
+    .banner-titulos-texto > span { display: none; }
+    .banner-titulos-largo { display: none; }
+    .banner-titulos-corto { display: inline; }
+    .banner-titulos-cta { margin-left: 0; font-size: var(--fs-sm); }
+    .banner-titulos-cta-texto { display: none; }
+}
 .results-toolbar { display: flex; flex-direction: column; gap: .75rem; margin-bottom: 1.25rem; }
 .results-toolbar-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 .results-toolbar-bottom { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
@@ -1058,7 +1107,7 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
    quede exactamente igual. El role="list" va en el HTML porque Safari pierde la
    semántica de lista al apagar el bullet. */
 .results-grid, .career-group-grid, .platforms-grid, .cursos-grid,
-.results-aviso { list-style: none; margin: 0; padding: 0; }
+.results-aviso, #cardContainer { list-style: none; margin: 0; padding: 0; }
 .platforms-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1rem; }
 .platform-card { display: flex; flex-direction: column; padding: 1.15rem; --card-tono: var(--orange); }
 .platform-head { display: flex; align-items: center; gap: .7rem; margin-bottom: .7rem; }
@@ -1483,12 +1532,12 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     .filters-open .filters-overlay { display: block; opacity: 1; pointer-events: auto; }
     .filters-open { overflow: hidden; }
     .close-filters-button { display: block; min-width: 44px; min-height: 44px; }
-    .results-grid, .platforms-grid, .cursos-grid { grid-template-columns: 1fr; }
+    .results-grid, .platforms-grid, .cursos-grid, .career-group-grid { grid-template-columns: 1fr; }
     .card { min-height: 0; }
     /* Optimización móvil agresiva: touch targets mínimos de 44px garantizados en móvil */
     .filter-option {
         min-height: 44px;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         padding: .5rem .85rem;
     }
@@ -2534,6 +2583,9 @@ html[data-tts="true"] .btn-escuchar-card {
     gap: 0.75rem;
 }
 
+.enlace-footer { color: var(--muted); font-size: var(--fs-sm); text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 2px; }
+.enlace-footer:hover { color: var(--text); text-decoration-style: solid; }
+
 .btn-footer-feedback {
     display: inline-flex;
     align-items: center;
@@ -3281,9 +3333,6 @@ html.mi-lista-abierta { overflow: hidden; }
 .ml-tabla tbody tr:last-child th, .ml-tabla tbody tr:last-child td { border-bottom: 0; }
 .ml-vacio { color: var(--muted); }
 .ml-link { color: var(--accent-ink); font-weight: 700; font-size: var(--fs-xs); }
-.ml-costo { font-weight: 700; font-size: var(--fs-xs); }
-.ml-costo.gratuito { color: var(--accent-ink); }
-.ml-costo.arancelado { color: var(--orange-ink); }
 .ml-instituciones, .ml-planes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .2rem; }
 .ml-instituciones a, .ml-planes a { color: var(--accent-ink); font-size: var(--fs-xs); }
 

@@ -16,7 +16,7 @@
 // hace que un usuario con la versión vieja cacheada reciba la nueva: al cambiar
 // el nombre del caché, el activate de abajo borra todo lo anterior. Si se
 // actualiza el HTML y no esto, el service worker sigue sirviendo lo viejo.
-const VERSION = '20260923_2';
+const VERSION = '20260923_7';
 const CACHE = `ben-${VERSION}`;
 
 // El esqueleto mínimo para que la app abra sin red.
@@ -54,7 +54,9 @@ const SHELL = [
     'data/vocacional/config.json',
     'data/vocacional/preguntas.json',
     'data/vocacional/perfiles-carreras.json',
-    'data/enlaces-ben.json'
+    'data/enlaces-ben.json',
+    'data/sectores.json',
+    'data/sectores-carreras.json'
 ];
 
 const url = ruta => new URL(ruta, self.registration.scope).toString();

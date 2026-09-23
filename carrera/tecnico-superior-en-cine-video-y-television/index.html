@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260923_2">
+<link rel="stylesheet" href="/paginas.css?v=20260923_7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Arte","item":"https://buscadoreducativo.com.ar/area/arte/"},{"@type":"ListItem","position":4,"name":"Técnico Superior en Cine, Video y Televisión","item":"https://buscadoreducativo.com.ar/carrera/tecnico-superior-en-cine-video-y-television/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Técnico Superior en Cine, Video y Televisión","description":"Dónde estudiar Técnico Superior en Cine, Video y Televisión en Mendoza: tecnicatura del área Arte, dictada por 1 institución (1 pública). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnico-superior-en-cine-video-y-television/","provider":{"@type":"EducationalOrganization","name":"Escuela Regional Cuyo de Cine y Video (IES 9-017)","url":"https://buscadoreducativo.com.ar/institucion/escuela-regional-cuyo-de-cine-y-video-ies-9-017/"}}</script>
 </head>
@@ -87,15 +87,17 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
-        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
-            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        </button>
-        <form class="buscador-mini" action="/" method="get" role="search">
-            <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
-            <button type="submit">Buscar</button>
-            <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
-        </form>
+        <div class="cabecera-lado">
+            <form class="buscador-mini" action="/" method="get" role="search">
+                <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
+                <button type="submit">Buscar</button>
+                <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
+            </form>
+            <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+                <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+        </div>
     </div>
     <script>
         // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
@@ -130,22 +132,36 @@
     <div class="principal">
         <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/arte/">Arte</a> <span aria-hidden="true">›</span> <span aria-current="page">Técnico Superior en Cine, Video y Televisión</span></nav>
         <h1>Técnico Superior en Cine, Video y Televisión</h1>
-    <div class="acciones-ficha">
-        <button type="button" class="btn-favorito" data-favorito="{&quot;clave&quot;:&quot;tecnico superior en cine, video y television&quot;,&quot;tipo&quot;:&quot;carrera&quot;,&quot;claveCarrera&quot;:&quot;tecnico superior en cine, video y television&quot;,&quot;nombre&quot;:&quot;Técnico Superior en Cine, Video y Televisión&quot;,&quot;institucion&quot;:&quot;&quot;,&quot;area&quot;:&quot;Arte&quot;,&quot;formacion&quot;:&quot;tecnicaturas&quot;,&quot;ficha&quot;:&quot;tecnico-superior-en-cine-video-y-television&quot;,&quot;link&quot;:&quot;&quot;}" data-fav-clave="tecnico superior en cine, video y television" data-fav-nombre="Técnico Superior en Cine, Video y Televisión" data-fav-solo-icono title="Guardar en Mi lista" aria-pressed="false"></button>
+    <p class="entrada" data-revisado="false">Formación técnica en producción audiovisual: guion, planificación, cámara, iluminación, sonido, dirección y montaje. Se aprende el lenguaje audiovisual y el trabajo por etapas de una producción, con rodajes de práctica donde cada estudiante cumple distintos roles.</p>
+    <p class="entrada" data-revisado="false">El egresado trabaja en productoras, canales de televisión, agencias, plataformas digitales y proyectos independientes, en ficción, documental, publicidad, videoclips o contenidos para redes. Es un oficio de equipo, con jornadas intensas y plazos ajustados, donde la organización y la comunicación son tan importantes como la creatividad. Ideal para personas inquietas, observadoras y con ganas de contar historias con imágenes. La cursada se organiza alrededor de rodajes periódicos, donde se rota por los distintos roles y se completa una pieza audiovisual por ciclo.</p>
+    <section class="aplicacion" aria-labelledby="aplicacion-titulo" data-revisado="false">
+        <h2 id="aplicacion-titulo">Áreas donde podés desarrollarte</h2>
+        <ul class="chips-sectores">
+            <li><a class="etiqueta etiqueta-link" href="/?sector=medios">Comunicación y Medios</a></li>
+            <li><a class="etiqueta etiqueta-link" href="/?sector=arte-diseno">Arte y Diseño</a></li>
+        </ul>
+    </section>
+    </div>
+    <aside class="lateral">
+    <div class="lateral-caja">
+        <div class="ficha-caja">
+            <dl class="ficha">
+                <dt>Área</dt><dd class="ficha-area"><span>Arte</span><button type="button" class="btn-favorito" data-favorito="{&quot;clave&quot;:&quot;tecnico superior en cine, video y television&quot;,&quot;tipo&quot;:&quot;carrera&quot;,&quot;claveCarrera&quot;:&quot;tecnico superior en cine, video y television&quot;,&quot;nombre&quot;:&quot;Técnico Superior en Cine, Video y Televisión&quot;,&quot;institucion&quot;:&quot;&quot;,&quot;area&quot;:&quot;Arte&quot;,&quot;formacion&quot;:&quot;tecnicaturas&quot;,&quot;ficha&quot;:&quot;tecnico-superior-en-cine-video-y-television&quot;,&quot;link&quot;:&quot;&quot;}" data-fav-clave="tecnico superior en cine, video y television" data-fav-nombre="Técnico Superior en Cine, Video y Televisión" data-fav-solo-icono title="Guardar en Mi lista" aria-pressed="false"></button></dd>
+                <dt>Tipo de formación</dt><dd><a href="/titulos/#tecnicatura-superior">Tecnicatura</a></dd>
+                <dt>Dónde se dicta</dt><dd>1 institución</dd>
+                <dt>Modalidad</dt><dd>Presencial</dd>
+                <dt>Duración</dt><dd>4 años</dd>
+            </dl>
+            <p class="aviso-costos">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                <span>Los costos y aranceles los define cada institución. Para saber cuánto sale, comunicate con el establecimiento.</span>
+            </p>
+        </div>
         <a class="btn-ver-mi-lista" href="/?lista=1">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
             Ver Mi lista
         </a>
     </div>
-    </div>
-    <aside class="lateral">
-    <dl class="ficha">
-        <dt>Área</dt><dd>Arte</dd>
-        <dt>Tipo de formación</dt><dd>Tecnicatura</dd>
-        <dt>Dónde se dicta</dt><dd>1 institución</dd>
-        <dt>Modalidad</dt><dd>Presencial</dd>
-        <dt>Duración</dt><dd>4 años</dd>
-    </dl>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Técnico Superior en Cine, Video y Televisión</h2>
@@ -237,6 +253,7 @@
             <a href="/">Buscador</a>
             <a href="/carreras/">Todas las carreras</a>
             <a href="/instituciones/">Todas las instituciones</a>
+            <a href="/titulos/">Títulos y niveles</a>
         </nav>
     </div>
 </footer>
@@ -298,6 +315,6 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260923_2"></script>
+<script src="/js/favoritos.js?v=20260923_7"></script>
 </body>
 </html>

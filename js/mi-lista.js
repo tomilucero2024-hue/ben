@@ -7,7 +7,7 @@
 //   1. LISTA: las fichas guardadas con el corazón (js/favoritos.js), agrupadas
 //      por tipo, con selección múltiple (hasta 3) para comparar.
 //   2. COMPARACIÓN: una columna por ficha seleccionada, con las filas que
-//      importan para decidir (afinidad, duración, costo, dónde se cursa, plan)
+//      importan para decidir (afinidad, duración, dónde se cursa, plan)
 //      y un resumen automático de "en qué se diferencian".
 //
 // Cada columna es una ficha concreta, no una "carrera abstracta": en la grilla
@@ -218,13 +218,12 @@ function institucionesUnicas(lista) {
 }
 
 // Une los datos de las ofertas que dictan una carrera: qué duraciones,
-// modalidades, costos y planes aparecen entre todas las instituciones.
+// modalidades y planes aparecen entre todas las instituciones.
 function resumenDeOfertas(suyas) {
     const duraciones = institucionesUnicas(suyas.map(o => limpiarTexto(o.duracion)).filter(Boolean));
     const anios = suyas.map(o => o.duracionAnios).filter(n => Number.isFinite(n) && n > 0).sort((a, b) => a - b);
     const modalidades = institucionesUnicas(suyas.flatMap(o => o.modalidades && o.modalidades.length ? o.modalidades : [o.modalidad]).filter(Boolean));
     const instituciones = institucionesUnicas(suyas.map(o => o.institucion).filter(Boolean));
-    const gratuitas = suyas.filter(o => o.costo === 'gratuito').length;
     const planes = suyas
         .filter(o => o.plan_estudio && o.plan_estudio.length)
         .map(o => ({ institucion: o.institucion, fuente: urlSegura(o.plan_fuente) || '' }));
@@ -236,13 +235,7 @@ function resumenDeOfertas(suyas) {
         duracion = min === max ? min : `${min} a ${max}`;
     }
 
-    return {
-        duracion,
-        modalidades,
-        instituciones,
-        planes,
-        costo: !suyas.length ? '' : (gratuitas === suyas.length ? 'gratuito' : (gratuitas === 0 ? 'arancelado' : 'mixto'))
-    };
+    return { duracion, modalidades, instituciones, planes };
 }
 
 function fichaDeOferta(oferta) {
@@ -255,7 +248,6 @@ function fichaDeOferta(oferta) {
         formacion: oferta.formacion || '',
         duracion: limpiarTexto(oferta.duracion) || '',
         modalidades: oferta.modalidades && oferta.modalidades.length ? oferta.modalidades : [oferta.modalidad],
-        costo: oferta.costo || '',
         instituciones: oferta.institucion ? [oferta.institucion] : [],
         planes: oferta.plan_estudio && oferta.plan_estudio.length
             ? [{ institucion: oferta.institucion, fuente: urlSegura(oferta.plan_fuente) || '' }]
@@ -279,7 +271,6 @@ function fichaDeCarrera(perfil, item) {
         formacion: perfil.formacion || '',
         duracion: resumen.duracion,
         modalidades: resumen.modalidades,
-        costo: resumen.costo,
         instituciones,
         planes: resumen.planes,
         fichaSlug: enlacesBEN.carreras[perfil.clave] || '',
@@ -298,7 +289,6 @@ function fichaDeCurso(curso, item, tipo) {
         formacion: '',
         duracion: limpiarTexto(curso.duracion) || '',
         modalidades: curso.modalidad ? [curso.modalidad] : [],
-        costo: '',
         instituciones: curso.institucion ? [curso.institucion] : [],
         planes: [],
         fichaSlug: '',
@@ -317,7 +307,6 @@ function fichaDePlataforma(plataforma, item) {
         formacion: '',
         duracion: limpiarTexto(plataforma.duracion) || '',
         modalidades: [plataforma.modalidad || 'Online'],
-        costo: '',
         instituciones: [plataforma.nombre],
         planes: [],
         fichaSlug: '',
@@ -351,13 +340,6 @@ function resolver(item) {
 // Pantalla 1: la lista
 // ---------------------------------------------------------------------------
 
-function etiquetaCosto(costo) {
-    if (costo === 'gratuito') return 'Gratis';
-    if (costo === 'arancelado') return 'Arancelada';
-    if (costo === 'mixto') return 'Gratis y arancelada';
-    return '';
-}
-
 function filaLista(item) {
     const ficha = resolver(item);
     const seleccionada = seleccion.has(item.clave);
@@ -377,7 +359,7 @@ function filaLista(item) {
     const meta = [
         ficha.subtitulo,
         ficha.area,
-        [etiquetaCosto(ficha.costo), ficha.duracion].filter(Boolean).join(' · ')
+        ficha.duracion
     ].filter(Boolean).join(' · ');
 
     const fichaHTML = ficha.fichaSlug
@@ -529,14 +511,6 @@ const FILAS = [
             : '<span class="ml-vacio">—</span>'
     },
     {
-        etiqueta: 'Costo',
-        valor: ficha => {
-            const etiqueta = etiquetaCosto(ficha.costo);
-            if (!etiqueta) return '<span class="ml-vacio">—</span>';
-            return `<span class="ml-costo ${ficha.costo}">${etiqueta}</span>`;
-        }
-    },
-    {
         etiqueta: 'Instituciones',
         valor: ficha => ficha.instituciones.length ? enlacesInstituciones(ficha) : '<span class="ml-vacio">—</span>'
     },
@@ -562,13 +536,6 @@ function diferencias(fichas) {
         }
     }
 
-    const costos = new Set(fichas.map(f => f.costo).filter(Boolean));
-    if (costos.size > 1) {
-        const gratis = fichas.filter(f => f.costo === 'gratuito').map(f => f.nombre);
-        const pago = fichas.filter(f => f.costo === 'arancelado' || f.costo === 'mixto').map(f => f.nombre);
-        frases.push(`El costo no es el mismo: ${gratis.length ? `<strong>${gratis.map(escaparHTML).join(', ')}</strong> ${gratis.length === 1 ? 'es gratis' : 'son gratis'}` : ''}${gratis.length && pago.length ? ' y ' : ''}${pago.length ? `<strong>${pago.map(escaparHTML).join(', ')}</strong> ${pago.length === 1 ? 'es arancelada' : 'son aranceladas'}` : ''}.`);
-    }
-
     const duraciones = fichas.map(f => ({ nombre: f.nombre, anios: aniosDe(f) })).filter(x => x.anios);
     if (duraciones.length > 1 && new Set(duraciones.map(d => d.anios)).size > 1) {
         duraciones.sort((a, b) => a.anios - b.anios);
@@ -592,7 +559,7 @@ function diferencias(fichas) {
     }
 
     if (!frases.length) {
-        return '<p class="ml-diferencias-vacio">Se parecen en casi todo: misma área, duración, modalidad y costo. La diferencia va a estar en el plan de estudios y en la institución.</p>';
+        return '<p class="ml-diferencias-vacio">Se parecen en casi todo: misma área, duración y modalidad. La diferencia va a estar en el plan de estudios y en la institución.</p>';
     }
     return `<ul class="ml-diferencias-lista">${frases.slice(0, 4).map(f => `<li>${f}</li>`).join('')}</ul>`;
 }

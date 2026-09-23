@@ -170,7 +170,7 @@ const itemOferta = (nombre) => ({
     const etiquetas = [...cuerpo.querySelectorAll('tbody th')].map(th => th.textContent.trim());
     ok(etiquetas.includes('Afinidad con tu perfil'), 'compara afinidad');
     ok(etiquetas.includes('Duración'), 'compara duración');
-    ok(etiquetas.includes('Costo'), 'compara costo');
+    ok(!etiquetas.includes('Costo'), 'ya no compara costo (se quitó del sitio)');
     ok(etiquetas.includes('Plan de estudios'), 'compara plan de estudios');
     ok(!etiquetas.includes('Dónde se cursa'), 'no compara "Dónde se cursa" (se quitó de la lista)');
     ok(/En qué se diferencian/.test(cuerpo.innerHTML), 'trae el resumen de diferencias');

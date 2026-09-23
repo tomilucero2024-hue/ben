@@ -4,10 +4,21 @@
 // ==========================================
 
 import { actualizarVista } from './render.js';
-import { esCarreraArancelada, getArea, getFormacion, inferirGestion, inferirTipoInstitucion, limpiarTexto, normalizarTexto, obtenerDuracionEnAnios, obtenerModalidades } from './util.js';
+import { estado } from './estado.js';
+import { escaparHTML, getArea, getFormacion, inferirGestion, inferirTipoInstitucion, limpiarTexto, normalizarTexto, obtenerDuracionEnAnios, obtenerModalidades } from './util.js';
 
 // Carreras de instituciones formales (universidades, IES, terciarios).
 export const ofertas = [];
+// Sectores de aplicación laboral (data/sectores.json): lista cerrada que
+// alimenta el filtro del panel. Los chips se inyectan desde acá, no van
+// hardcodeados en index.html.
+export const SECTORES = [];
+// Sectores de aplicación laboral por carrera (data/sectores-carreras.json,
+// generado por generar-paginas.js): clave normalizada -> [ids]. Es un mapa
+// liviano a propósito: las descripciones completas viven en
+// data/contenido-carreras.json, que solo leen las páginas estáticas al
+// generarse. Acá las claves fusionadas ya vienen resueltas por el generador.
+const SECTORES_CARRERAS = {};
 // Diccionario nombre-normalizado -> slug que escribe generar-paginas.js. Es lo
 // que le permite a cada tarjeta enlazar la pagina propia de esa carrera en vez
 // de mandar a la persona (y al credito que reparte Google) derecho afuera del
@@ -120,6 +131,23 @@ export async function cargarOfertas() {
             console.warn('Sin mapa de enlaces internos:', e);
         }
 
+        // Sectores de aplicación (lista cerrada + mapa por carrera). Tolerante a
+        // fallas: sin esto, la grilla funciona igual y el filtro de sector
+        // simplemente no aparece.
+        try {
+            const [respuestaSectores, respuestaMapa] = await Promise.all([
+                fetch('/data/sectores.json'),
+                fetch('/data/sectores-carreras.json')
+            ]);
+            if (respuestaSectores.ok) {
+                const datos = await respuestaSectores.json();
+                (datos.sectores || []).forEach(s => SECTORES.push({ id: s.id, nombre: s.nombre }));
+            }
+            if (respuestaMapa.ok) Object.assign(SECTORES_CARRERAS, (await respuestaMapa.json()).carreras || {});
+        } catch (e) {
+            console.warn('Sin lista de sectores ni mapa por carrera:', e);
+        }
+
         (data.instituciones || []).forEach(institucion => {
             (institucion.carreras || []).forEach(carrera => ofertas.push(crearOferta(carrera, institucion)));
         });
@@ -132,6 +160,12 @@ export async function cargarOfertas() {
                     catalogo.cursos.push(crearCursoAparte(carrera, institucion)));
             });
         });
+        // Ids de sector que ya no existen en la lista cerrada se descartan (un
+        // link viejo puede traer cualquier cosa). Los chips se pintan recién
+        // ahora porque dependen de sectores.json.
+        const idsValidos = new Set(SECTORES.map(s => s.id));
+        estado.sectores = estado.sectores.filter(id => idsValidos.has(id));
+        renderizarFiltroSectores();
         actualizarVista();
     } catch (error) {
         console.error(error);
@@ -150,14 +184,39 @@ function crearOferta(carrera, institucion) {
         esPlataforma: false,
         formacion: getFormacion(carrera), area: getArea({ nombre_carrera: nombre }),
         duracionAnios: obtenerDuracionEnAnios(carrera.duracion), modalidades: obtenerModalidades(modalidad),
-        costo: esCarreraArancelada(institucion, nombre) ? 'arancelado' : (gestion === 'pública' ? 'gratuito' : 'arancelado'),
         // Plan de estudios y su fuente oficial. Son la MISMA referencia que ya
         // vive en data.json (no se copia nada): el comparador de Mi lista los
         // muestra cuando la institución cargó el plan.
         plan_estudio: carrera.plan_estudio || null,
         plan_fuente: carrera.plan_fuente || '',
+        // Sectores de aplicación laboral de la carrera (contenido generado por
+        // IA). Vacío si esa carrera todavía no tiene entrada: el filtro de
+        // sector simplemente la deja afuera cuando hay uno activo.
+        sectores: sectoresDeCarrera(nombre),
         _clave: `institucion:${limpiarTexto(institucion.nombre || '')}:${nombre}`
     };
+}
+
+// Sectores de una carrera por nombre normalizado. El mapa que escribe el
+// generador ya incluye las claves fusionadas, así que no hace falta resolver
+// alias acá.
+function sectoresDeCarrera(nombre) {
+    return SECTORES_CARRERAS[normalizarTexto(nombre)] || [];
+}
+
+// Chips del filtro "Sector de aplicación" en el panel: "Todos" + un chip por
+// sector de la lista cerrada, en orden alfabético (con 25 nombres largos, el
+// orden curado del JSON era difícil de recorrer). Se inyectan acá porque
+// index.html no puede hardcodear una lista que vive en data/sectores.json.
+function renderizarFiltroSectores() {
+    const contenedor = document.getElementById('sectorOptions');
+    if (!contenedor || !SECTORES.length) return;
+    const ordenados = [...SECTORES].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+    contenedor.innerHTML = '<button class="filter-option" data-filter="sectores" data-value="todos" type="button">Todos</button>'
+        + ordenados.map(s => `<button class="filter-option" data-filter="sectores" data-value="${escaparHTML(s.id)}" type="button">${escaparHTML(s.nombre)}</button>`).join('');
+    // El grupo vive oculto en index.html hasta que exista la lista real.
+    const grupo = contenedor.closest('.filter-group');
+    if (grupo) grupo.hidden = false;
 }
 
 function crearPlataforma(plataforma) {

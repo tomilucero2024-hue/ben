@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260923_2">
+<link rel="stylesheet" href="/paginas.css?v=20260923_7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ciencias sociales","item":"https://buscadoreducativo.com.ar/area/ciencias-sociales/"},{"@type":"ListItem","position":4,"name":"Comunicación","item":"https://buscadoreducativo.com.ar/carrera/comunicacion/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Comunicación","description":"Dónde estudiar Comunicación en Mendoza: carrera de grado del área Ciencias sociales, dictada por 1 institución (1 privada). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/comunicacion/","provider":{"@type":"EducationalOrganization","name":"Universidad de Congreso (UC)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-congreso-uc/"}}</script>
 </head>
@@ -87,15 +87,17 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
-        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
-            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        </button>
-        <form class="buscador-mini" action="/" method="get" role="search">
-            <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
-            <button type="submit">Buscar</button>
-            <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
-        </form>
+        <div class="cabecera-lado">
+            <form class="buscador-mini" action="/" method="get" role="search">
+                <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
+                <button type="submit">Buscar</button>
+                <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
+            </form>
+            <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+                <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+        </div>
     </div>
     <script>
         // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
@@ -130,22 +132,37 @@
     <div class="principal">
         <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/ciencias-sociales/">Ciencias sociales</a> <span aria-hidden="true">›</span> <span aria-current="page">Comunicación</span></nav>
         <h1>Comunicación</h1>
-    <div class="acciones-ficha">
-        <button type="button" class="btn-favorito" data-favorito="{&quot;clave&quot;:&quot;comunicacion&quot;,&quot;tipo&quot;:&quot;carrera&quot;,&quot;claveCarrera&quot;:&quot;comunicacion&quot;,&quot;nombre&quot;:&quot;Comunicación&quot;,&quot;institucion&quot;:&quot;&quot;,&quot;area&quot;:&quot;Ciencias sociales&quot;,&quot;formacion&quot;:&quot;grado&quot;,&quot;ficha&quot;:&quot;comunicacion&quot;,&quot;link&quot;:&quot;&quot;}" data-fav-clave="comunicacion" data-fav-nombre="Comunicación" data-fav-solo-icono title="Guardar en Mi lista" aria-pressed="false"></button>
+    <p class="entrada" data-revisado="false">Carrera dedicada a producir, analizar y gestionar mensajes en todos sus formatos: prensa, radio, televisión, redes sociales, publicidad, guiones y comunicación institucional. Se estudian teorías de la comunicación, redacción, producción audiovisual, opinión pública, planificación de campañas y análisis de audiencias.</p>
+    <p class="entrada" data-revisado="false">El comunicador trabaja en medios, áreas de comunicación de empresas y organismos, agencias, productoras y proyectos independientes, y su tarea combina creatividad con método: investigar, escribir, producir y medir resultados. Es una carrera para personas expresivas y curiosas, que lean y miren críticamente lo que pasa, y que sepan adaptar un mismo mensaje a públicos y soportes muy distintos.</p>
+    <section class="aplicacion" aria-labelledby="aplicacion-titulo" data-revisado="false">
+        <h2 id="aplicacion-titulo">Áreas donde podés desarrollarte</h2>
+        <ul class="chips-sectores">
+            <li><a class="etiqueta etiqueta-link" href="/?sector=medios">Comunicación y Medios</a></li>
+            <li><a class="etiqueta etiqueta-link" href="/?sector=servicios">Servicios Empresariales y Consultoría</a></li>
+            <li><a class="etiqueta etiqueta-link" href="/?sector=arte-diseno">Arte y Diseño</a></li>
+        </ul>
+    </section>
+    </div>
+    <aside class="lateral">
+    <div class="lateral-caja">
+        <div class="ficha-caja">
+            <dl class="ficha">
+                <dt>Área</dt><dd class="ficha-area"><span>Ciencias sociales</span><button type="button" class="btn-favorito" data-favorito="{&quot;clave&quot;:&quot;comunicacion&quot;,&quot;tipo&quot;:&quot;carrera&quot;,&quot;claveCarrera&quot;:&quot;comunicacion&quot;,&quot;nombre&quot;:&quot;Comunicación&quot;,&quot;institucion&quot;:&quot;&quot;,&quot;area&quot;:&quot;Ciencias sociales&quot;,&quot;formacion&quot;:&quot;grado&quot;,&quot;ficha&quot;:&quot;comunicacion&quot;,&quot;link&quot;:&quot;&quot;}" data-fav-clave="comunicacion" data-fav-nombre="Comunicación" data-fav-solo-icono title="Guardar en Mi lista" aria-pressed="false"></button></dd>
+                <dt>Tipo de formación</dt><dd><a href="/titulos/#titulo-profesional">Carrera de grado</a></dd>
+                <dt>Dónde se dicta</dt><dd>1 institución</dd>
+                <dt>Modalidad</dt><dd>Presencial</dd>
+                <dt>Duración</dt><dd>4 años</dd>
+            </dl>
+            <p class="aviso-costos">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                <span>Los costos y aranceles los define cada institución. Para saber cuánto sale, comunicate con el establecimiento.</span>
+            </p>
+        </div>
         <a class="btn-ver-mi-lista" href="/?lista=1">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
             Ver Mi lista
         </a>
     </div>
-    </div>
-    <aside class="lateral">
-    <dl class="ficha">
-        <dt>Área</dt><dd>Ciencias sociales</dd>
-        <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
-        <dt>Dónde se dicta</dt><dd>1 institución</dd>
-        <dt>Modalidad</dt><dd>Presencial</dd>
-        <dt>Duración</dt><dd>4 años</dd>
-    </dl>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Comunicación</h2>
@@ -252,6 +269,7 @@
             <a href="/">Buscador</a>
             <a href="/carreras/">Todas las carreras</a>
             <a href="/instituciones/">Todas las instituciones</a>
+            <a href="/titulos/">Títulos y niveles</a>
         </nav>
     </div>
 </footer>
@@ -313,6 +331,6 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260923_2"></script>
+<script src="/js/favoritos.js?v=20260923_7"></script>
 </body>
 </html>

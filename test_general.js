@@ -230,7 +230,7 @@ let baseUrl = 'http://localhost:8010';
 let servidorPropio = null;
 
 async function probarHttp() {
-    const rutas = ['/', '/data/data.json', '/js/main.js', '/sw.js', '/manifest.json', '/carrera/videojuegos/'];
+    const rutas = ['/', '/data/data.json', '/js/main.js', '/sw.js', '/manifest.json', '/carrera/videojuegos/', '/titulos/'];
     const resultados = [];
     for (const ruta of rutas) {
         try {

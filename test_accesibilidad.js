@@ -327,6 +327,22 @@ function valorDelPar(token, tokens) {
     doc.getElementById('clearFiltersButton').click();
     await new Promise(r => setTimeout(r, 200));
     ok(botonesFiltro.filter(b => b.getAttribute('aria-pressed') === 'true').length === 7, 'al limpiar, vuelve a estar marcado "todos" en cada grupo');
+
+    // Filtro de sector: los chips se inyectan desde data/sectores.json y filtran
+    // por los sectores generados de cada carrera (multi-selección).
+    const chipsSector = [...doc.querySelectorAll('#sectorOptions .filter-option')];
+    ok(chipsSector.length > 10, `el filtro de sector se inyectó desde el JSON (${chipsSector.length} chips)`);
+    ok(chipsSector.every(b => b.hasAttribute('aria-pressed')), 'los chips de sector exponen aria-pressed');
+    const salud = chipsSector.find(b => b.dataset.value === 'salud');
+    const contadorAntes = doc.getElementById('resultsCount').textContent;
+    salud.click();
+    await new Promise(r => setTimeout(r, 250));
+    ok(salud.getAttribute('aria-pressed') === 'true', 'al elegir un sector, el chip queda activo');
+    ok(doc.getElementById('resultsCount').textContent !== contadorAntes, 'el contador cambia al filtrar por sector');
+    ok(win.location.search.includes('sector=salud'), 'la URL guarda el sector elegido (' + win.location.search + ')');
+    doc.getElementById('clearFiltersButton').click();
+    await new Promise(r => setTimeout(r, 200));
+    ok(salud.getAttribute('aria-pressed') === 'false', 'al limpiar, el sector se desactiva');
     const vistas = [...doc.querySelectorAll('.vistas-switcher-btn')];
     ok(vistas.every(b => b.hasAttribute('aria-pressed')), 'las vistas (Carreras / Instituciones) exponen su estado');
 
@@ -441,8 +457,8 @@ function valorDelPar(token, tokens) {
 
     ok(errores.length === 0, 'sin errores de jsdom durante toda la corrida' + (errores.length ? ' → ' + errores[0] : ''));
 
-    seccion('10. Páginas estáticas generadas (566 fichas)');
-    const PAGINAS = ['carrera/abogacia/index.html', 'carreras/index.html', 'area/salud/index.html', 'instituciones/index.html'];
+    seccion('10. Páginas estáticas generadas (567 páginas)');
+    const PAGINAS = ['carrera/abogacia/index.html', 'carreras/index.html', 'area/salud/index.html', 'instituciones/index.html', 'titulos/index.html'];
     for (const rel of PAGINAS) {
         const ruta = path.join(RAIZ, rel);
         if (!fs.existsSync(ruta)) { ok(false, `${rel} no existe (¿falta correr generar-paginas.js?)`); continue; }

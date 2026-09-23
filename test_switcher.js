@@ -85,11 +85,13 @@ ok(document.querySelector('[data-vista="instituciones"]').classList.contains('is
 estado.texto = 'derecho';
 estado.formacion = 'grado';
 estado.departamentos = ['Capital', 'Godoy Cruz'];
+estado.sectores = ['salud', 'legal'];
 estado.area = 'Tecnología';
 document.querySelector('[data-filter="area"][data-value="Tecnología"]').classList.add('active');
 cambiarVista('instituciones');
 ok(estado.texto === '' && estado.formacion === 'todos', 'la búsqueda y los filtros formales se limpian al entrar');
 ok(estado.departamentos.length === 0, 'la selección de departamentos se limpia');
+ok(estado.sectores.length === 0, 'la selección de sectores se limpia');
 ok(estado.area === 'todos', 'el área vuelve a "todas"');
 ok(document.querySelector('[data-filter="area"][data-value="todos"]').classList.contains('active'), 'el chip "Todas las áreas" queda activo tras limpiar');
 ok(!document.querySelector('[data-filter="area"][data-value="Tecnología"]').classList.contains('active'), 'el chip de área previo se desactiva');

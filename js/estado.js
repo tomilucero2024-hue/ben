@@ -7,9 +7,13 @@ import { normalizarTexto } from './util.js';
 export const estado = {
     seccion: 'formal',
     texto: '', formacion: 'todos', institucion: 'todos', gestion: 'todos',
-    modalidad: 'todos', costo: 'todos', duracion: 'todos', area: 'todos',
+    modalidad: 'todos', duracion: 'todos', area: 'todos',
     // Departamentos seleccionados (multi-selección): vacío = "Todos".
     departamentos: [],
+    // Sectores de aplicación laboral seleccionados (multi-selección). Los ids
+    // válidos salen de data/sectores.json; la validación se completa al cargar
+    // los datos (datos.js descarta ids desconocidos).
+    sectores: [],
     duracionMin: null, duracionMax: null, orden: 'default',
     // Vista de entrada del catálogo formal: TODAS LAS CARRERAS (grilla con
     // filtros) por defecto; alternativas: instituciones (agrupadas por tipo).
@@ -26,7 +30,6 @@ export const estado = {
 const SECCIONES_PERMITIDAS = new Set(['formal', 'plataformas', 'formaciones-alternativas', 'oficios-tecnicos', 'secundario']);
 const VISTAS_PERMITIDAS = new Set(['carreras', 'instituciones']);
 const GESTIONES_PERMITIDAS = new Set(['todos', 'pública', 'privada']);
-const COSTOS_PERMITIDOS = new Set(['todos', 'gratuito', 'arancelado']);
 const MODALIDADES_PERMITIDAS = new Set(['todos', 'presencial', 'online', 'híbrida']);
 const ORDENES_PERMITIDOS = new Set(['default', 'relevancia', 'nombre-az', 'nombre-za', 'publica-primero', 'privada-primero']);
 const FORMACIONES_PERMITIDAS = new Set(['todos', 'grado', 'tecnicaturas', 'profesorados', 'cursos']);
@@ -56,12 +59,13 @@ export function sincronizarURL() {
     const searchInput = typeof document !== 'undefined' ? document.getElementById('searchInput') : null;
     const q = searchInput ? searchInput.value.trim() : '';
     if (q) p.set('q', q);
-    ['formacion', 'institucion', 'gestion', 'modalidad', 'costo', 'duracion', 'area', 'orden']
+    ['formacion', 'institucion', 'gestion', 'modalidad', 'duracion', 'area', 'orden']
         .forEach(campo => { if (estado[campo] !== 'todos' && estado[campo] !== 'default') p.set(campo, estado[campo]); });
     // Multi-selección de departamentos: un parámetro por cada uno. Los viejos
     // links con un solo ?departamento= siguen entrando (restaurarDesdeURL lee
     // getAll(), que para un único valor devuelve la misma lista).
     estado.departamentos.forEach(d => { if (DEPARTAMENTOS_PERMITIDOS.has(d) && d !== 'todos') p.append('departamento', d); });
+    estado.sectores.forEach(s => p.append('sector', s));
     if (estado.duracionMin !== null) p.set('dmin', estado.duracionMin);
     if (estado.duracionMax !== null) p.set('dmax', estado.duracionMax);
     const qs = p.toString();
@@ -91,9 +95,9 @@ export function restaurarDesdeURL() {
         estado.departamentos = p.getAll('departamento')
             .filter(d => DEPARTAMENTOS_PERMITIDOS.has(d) && d !== 'todos');
     }
+    if (p.has('sector')) estado.sectores = p.getAll('sector').filter(Boolean);
     if (p.has('gestion') && GESTIONES_PERMITIDAS.has(p.get('gestion'))) estado.gestion = p.get('gestion');
     if (p.has('modalidad') && MODALIDADES_PERMITIDAS.has(p.get('modalidad'))) estado.modalidad = p.get('modalidad');
-    if (p.has('costo') && COSTOS_PERMITIDOS.has(p.get('costo'))) estado.costo = p.get('costo');
     if (p.has('duracion') && DURACIONES_PERMITIDAS.has(p.get('duracion'))) estado.duracion = p.get('duracion');
     if (p.has('area') && AREAS_PERMITIDAS.has(p.get('area'))) estado.area = p.get('area');
     if (p.has('orden') && ORDENES_PERMITIDOS.has(p.get('orden'))) estado.orden = p.get('orden');

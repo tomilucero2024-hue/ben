@@ -56,7 +56,7 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260923_2">
+<link rel="stylesheet" href="/paginas.css?v=20260923_7">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Tecnología","item":"https://buscadoreducativo.com.ar/area/tecnologia/"},{"@type":"ListItem","position":4,"name":"Licenciatura en Informática","item":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-informatica/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Licenciatura en Informática","description":"Dónde estudiar Licenciatura en Informática en Mendoza: carrera de grado del área Tecnología, dictada por 1 institución (1 privada). Dura 5 años. Modalidades disponibles: a distancia.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-informatica/","provider":{"@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}}</script>
 </head>
@@ -87,15 +87,17 @@
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
-        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
-            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        </button>
-        <form class="buscador-mini" action="/" method="get" role="search">
-            <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
-            <button type="submit">Buscar</button>
-            <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
-        </form>
+        <div class="cabecera-lado">
+            <form class="buscador-mini" action="/" method="get" role="search">
+                <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
+                <button type="submit">Buscar</button>
+                <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
+            </form>
+            <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+                <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+        </div>
     </div>
     <script>
         // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
@@ -130,22 +132,36 @@
     <div class="principal">
         <nav class="miga" aria-label="Ruta de navegación"><a href="/">Inicio</a> <span aria-hidden="true">›</span> <a href="/carreras/">Carreras</a> <span aria-hidden="true">›</span> <a href="/area/tecnologia/">Tecnología</a> <span aria-hidden="true">›</span> <span aria-current="page">Licenciatura en Informática</span></nav>
         <h1>Licenciatura en Informática</h1>
-    <div class="acciones-ficha">
-        <button type="button" class="btn-favorito" data-favorito="{&quot;clave&quot;:&quot;licenciatura en informatica&quot;,&quot;tipo&quot;:&quot;carrera&quot;,&quot;claveCarrera&quot;:&quot;licenciatura en informatica&quot;,&quot;nombre&quot;:&quot;Licenciatura en Informática&quot;,&quot;institucion&quot;:&quot;&quot;,&quot;area&quot;:&quot;Tecnología&quot;,&quot;formacion&quot;:&quot;grado&quot;,&quot;ficha&quot;:&quot;licenciatura-en-informatica&quot;,&quot;link&quot;:&quot;&quot;}" data-fav-clave="licenciatura en informatica" data-fav-nombre="Licenciatura en Informática" data-fav-solo-icono title="Guardar en Mi lista" aria-pressed="false"></button>
+    <p class="entrada" data-revisado="false">Formación de grado en informática: programación, algoritmos, bases de datos, redes, sistemas y proyectos de desarrollo. Se estudian los fundamentos de la disciplina y se trabaja en equipos con metodologías actuales.</p>
+    <p class="entrada" data-revisado="false">El egresado trabaja en empresas, organismos y desarrollo de software, creando y manteniendo sistemas informáticos. Es una carrera para personas analíticas y prácticas, con lógica para resolver problemas, capacidad de aprender tecnologías nuevas y de trabajar en equipo, entendiendo que el software se construye entre varios y que la comunicación es tan importante como el código. La cursada combina programación, proyectos en equipo y prácticas profesionales, con un trabajo final que integra lo aprendido.</p>
+    <section class="aplicacion" aria-labelledby="aplicacion-titulo" data-revisado="false">
+        <h2 id="aplicacion-titulo">Áreas donde podés desarrollarte</h2>
+        <ul class="chips-sectores">
+            <li><a class="etiqueta etiqueta-link" href="/?sector=tecnologia">Tecnología e Informática</a></li>
+            <li><a class="etiqueta etiqueta-link" href="/?sector=servicios">Servicios Empresariales y Consultoría</a></li>
+        </ul>
+    </section>
+    </div>
+    <aside class="lateral">
+    <div class="lateral-caja">
+        <div class="ficha-caja">
+            <dl class="ficha">
+                <dt>Área</dt><dd class="ficha-area"><span>Tecnología</span><button type="button" class="btn-favorito" data-favorito="{&quot;clave&quot;:&quot;licenciatura en informatica&quot;,&quot;tipo&quot;:&quot;carrera&quot;,&quot;claveCarrera&quot;:&quot;licenciatura en informatica&quot;,&quot;nombre&quot;:&quot;Licenciatura en Informática&quot;,&quot;institucion&quot;:&quot;&quot;,&quot;area&quot;:&quot;Tecnología&quot;,&quot;formacion&quot;:&quot;grado&quot;,&quot;ficha&quot;:&quot;licenciatura-en-informatica&quot;,&quot;link&quot;:&quot;&quot;}" data-fav-clave="licenciatura en informatica" data-fav-nombre="Licenciatura en Informática" data-fav-solo-icono title="Guardar en Mi lista" aria-pressed="false"></button></dd>
+                <dt>Tipo de formación</dt><dd><a href="/titulos/#licenciatura">Carrera de grado</a></dd>
+                <dt>Dónde se dicta</dt><dd>1 institución</dd>
+                <dt>Modalidad</dt><dd>A distancia</dd>
+                <dt>Duración</dt><dd>5 años</dd>
+            </dl>
+            <p class="aviso-costos">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                <span>Los costos y aranceles los define cada institución. Para saber cuánto sale, comunicate con el establecimiento.</span>
+            </p>
+        </div>
         <a class="btn-ver-mi-lista" href="/?lista=1">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
             Ver Mi lista
         </a>
     </div>
-    </div>
-    <aside class="lateral">
-    <dl class="ficha">
-        <dt>Área</dt><dd>Tecnología</dd>
-        <dt>Tipo de formación</dt><dd>Carrera de grado</dd>
-        <dt>Dónde se dicta</dt><dd>1 institución</dd>
-        <dt>Modalidad</dt><dd>A distancia</dd>
-        <dt>Duración</dt><dd>5 años</dd>
-    </dl>
     </aside>
     <div class="contenido-pagina">
     <h2>Dónde estudiar Licenciatura en Informática</h2>
@@ -238,6 +254,7 @@
             <a href="/">Buscador</a>
             <a href="/carreras/">Todas las carreras</a>
             <a href="/instituciones/">Todas las instituciones</a>
+            <a href="/titulos/">Títulos y niveles</a>
         </nav>
     </div>
 </footer>
@@ -299,6 +316,6 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260923_2"></script>
+<script src="/js/favoritos.js?v=20260923_7"></script>
 </body>
 </html>

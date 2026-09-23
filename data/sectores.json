@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "generado": "2026-09-23",
+  "nota": "Lista CERRADA y reutilizable de sectores de aplicación laboral para el mercado argentino (con foco en Mendoza, que concentra la oferta del sitio). Es la única fuente de verdad: los chips del buscador se inyectan desde acá y las páginas estáticas resuelven los ids al generar. Si se agrega, renombra o quita un sector, actualizar también las asignaciones de data/contenido-carreras.json (test_contenido.js valida que no queden ids huérfanos).",
+  "sectores": [
+    { "id": "salud", "nombre": "Salud", "alcance": "Hospitales, clínicas, consultorios, laboratorios, farmacias y centros de atención." },
+    { "id": "educacion", "nombre": "Educación", "alcance": "Escuelas, jardines, institutos terciarios, universidades y espacios de formación no formal." },
+    { "id": "construccion", "nombre": "Construcción e Infraestructura", "alcance": "Obras, vivienda, caminos, desarrollos urbanos y estudios de proyecto." },
+    { "id": "mineria", "nombre": "Minería", "alcance": "Exploración, explotación y servicios mineros." },
+    { "id": "energia", "nombre": "Energía, Petróleo y Gas", "alcance": "Electricidad, gas, hidrocarburos y energías renovables." },
+    { "id": "agro", "nombre": "Agro, Agroindustria y Vitivinicultura", "alcance": "Producción agrícola y ganadera, bodegas, alimentos y exportación agropecuaria." },
+    { "id": "industria", "nombre": "Industria Manufacturera", "alcance": "Fábricas y plantas de producción y elaboración." },
+    { "id": "automotriz", "nombre": "Automotriz y Metalúrgica", "alcance": "Terminales, autopartes, talleres y metalmecánica." },
+    { "id": "tecnologia", "nombre": "Tecnología e Informática", "alcance": "Software, datos, redes, soporte técnico y servicios digitales." },
+    { "id": "turismo", "nombre": "Turismo y Hotelería", "alcance": "Hoteles, agencias, enoturismo, destinos y servicios de viaje." },
+    { "id": "gastronomia", "nombre": "Gastronomía", "alcance": "Restaurantes, catering, cocinas institucionales y elaboración de alimentos." },
+    { "id": "comercio", "nombre": "Comercio y Retail", "alcance": "Ventas, locales, distribución, importación y exportación." },
+    { "id": "publico", "nombre": "Sector Público y Administración", "alcance": "Estado nacional, provincial y municipal, y organismos públicos." },
+    { "id": "medios", "nombre": "Comunicación y Medios", "alcance": "Prensa, radio, televisión, redes sociales y comunicación institucional." },
+    { "id": "arte-diseno", "nombre": "Arte y Diseño", "alcance": "Estudios de diseño, productoras, industria creativa y espacios culturales." },
+    { "id": "legal", "nombre": "Sector Legal y Justicia", "alcance": "Estudios jurídicos, tribunales, notarías y asesoría legal." },
+    { "id": "finanzas", "nombre": "Finanzas y Seguros", "alcance": "Bancos, seguros, fintech, bolsa y administración financiera." },
+    { "id": "logistica", "nombre": "Logística y Transporte", "alcance": "Depósitos, flotas, distribución y comercio exterior." },
+    { "id": "deporte", "nombre": "Deporte y Recreación", "alcance": "Clubes, gimnasios, entrenamiento, actividad física y tiempo libre." },
+    { "id": "ambiente", "nombre": "Ambiente y Recursos Naturales", "alcance": "Gestión ambiental, residuos, agua, conservación y consultoría ambiental." },
+    { "id": "seguridad-higiene", "nombre": "Seguridad e Higiene", "alcance": "Prevención de riesgos laborales y cumplimiento de normas de seguridad." },
+    { "id": "ciencia", "nombre": "Ciencia e Investigación", "alcance": "Laboratorios, universidades, organismos científicos y desarrollo experimental." },
+    { "id": "social", "nombre": "Servicios Sociales y Comunitarios", "alcance": "Organizaciones sociales, programas comunitarios y acompañamiento de personas." },
+    { "id": "servicios", "nombre": "Servicios Empresariales y Consultoría", "alcance": "Estudios profesionales, consultoras, recursos humanos y servicios a empresas." },
+    { "id": "inmobiliario", "nombre": "Inmobiliario y Consorcios", "alcance": "Compraventa y alquiler de propiedades, tasaciones y administración de edificios." }
+  ]
+}

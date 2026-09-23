@@ -46,7 +46,7 @@ function puntuacionRelacion(oferta) {
     if (estado.modalidad !== 'todos' && oferta.modalidades.includes(estado.modalidad)) score += 15;
     if (estado.institucion !== 'todos' && oferta.tipoInstitucion === estado.institucion) score += 15;
     if (estado.departamentos.length && estado.departamentos.includes(oferta.departamento)) score += 15;
-    if (estado.costo !== 'todos' && (oferta.costo || (oferta.gestion === 'pública' ? 'gratuito' : 'arancelado')) === estado.costo) score += 10;
+    if ((estado.sectores || []).length && (oferta.sectores || []).some(s => estado.sectores.includes(s))) score += 10;
     if (estado.duracion !== 'todos') {
         const grupo = getGrupoDuracion(oferta.duracionAnios);
         if (grupo === estado.duracion) score += 10;
@@ -146,9 +146,9 @@ export function cumpleFiltros(oferta) {
         && (estado.formacion === 'todos' || oferta.formacion === estado.formacion)
         && (estado.institucion === 'todos' || oferta.tipoInstitucion === estado.institucion)
         && (estado.departamentos.length === 0 || estado.departamentos.includes(oferta.departamento))
+        && ((estado.sectores || []).length === 0 || (oferta.sectores || []).some(s => estado.sectores.includes(s)))
         && (estado.gestion === 'todos' || oferta.gestion === estado.gestion)
         && (estado.modalidad === 'todos' || oferta.modalidades.includes(estado.modalidad))
-        && (estado.costo === 'todos' || (oferta.costo || (oferta.gestion === 'pública' ? 'gratuito' : 'arancelado')) === estado.costo)
         && (estado.duracion === 'todos' || getGrupoDuracion(oferta.duracionAnios) === estado.duracion)
         && (estado.area === 'todos' || oferta.area === estado.area)
         && enRango;
@@ -156,9 +156,9 @@ export function cumpleFiltros(oferta) {
 
 // Filtros que solo tienen sentido sobre una oferta formal (una carrera dictada
 // por una institucion concreta). Una carrera que solo existe en los catalogos
-// aparte no tiene gestion, costo ni duracion en años: si alguno de estos esta
-// activo, simplemente no aplica.
-export const FILTROS_SOLO_FORMALES = ['institucion', 'departamento', 'gestion', 'modalidad', 'costo', 'duracion'];
+// aparte no tiene gestion, duracion en años ni sectores asignados: si
+// alguno de estos esta activo, simplemente no aplica.
+export const FILTROS_SOLO_FORMALES = ['institucion', 'departamento', 'gestion', 'modalidad', 'duracion', 'sectores'];
 
 export function filtrarYOrdenar() {
     const resultados = ofertas.filter(cumpleFiltros);

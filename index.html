@@ -80,7 +80,7 @@
             document.head.appendChild(pre);
         })();
     </script>
-    <link rel="stylesheet" href="/style.css?v=20260923_2">
+    <link rel="stylesheet" href="/style.css?v=20260923_7">
 
 </head>
 <body>
@@ -236,6 +236,14 @@
                 </div>
             </section>
 
+            <!-- Sector de aplicación laboral: los chips se inyectan desde
+                 data/sectores.json (js/datos.js), por eso el grupo arranca
+                 oculto y no tiene la lista hardcodeada acá. -->
+            <section class="filter-group" id="filtroSectorGroup" hidden>
+                <h3 id="filtroSector">Sector de aplicación</h3>
+                <div id="sectorOptions" class="filter-options filter-options-compact" role="group" aria-labelledby="filtroSector"></div>
+            </section>
+
             <section class="filter-group">
                 <h3 id="filtroGestion">Gestión</h3>
                 <div class="filter-options filter-options-inline" role="group" aria-labelledby="filtroGestion">
@@ -252,15 +260,6 @@
                     <button class="filter-option" data-filter="modalidad" data-value="presencial" type="button">Presencial</button>
                     <button class="filter-option" data-filter="modalidad" data-value="online" type="button">Online</button>
                     <button class="filter-option" data-filter="modalidad" data-value="híbrida" type="button">Híbrida</button>
-                </div>
-            </section>
-
-            <section class="filter-group">
-                <h3 id="filtroCosto">Costos</h3>
-                <div class="filter-options filter-options-inline" role="group" aria-labelledby="filtroCosto">
-                    <button class="filter-option active" data-filter="costo" data-value="todos" type="button">Todos</button>
-                    <button class="filter-option" data-filter="costo" data-value="gratuito" type="button">Gratuito</button>
-                    <button class="filter-option" data-filter="costo" data-value="arancelado" type="button">Arancelado</button>
                 </div>
             </section>
 
@@ -296,6 +295,20 @@
         <section class="results-area">
             <!-- Primera decisión sobre los resultados: qué tipo de oferta mirar.
                  Vive acá, arriba de la grilla, y no arriba de toda la página. -->
+
+            <a class="banner-titulos" href="/titulos/">
+                <span class="banner-titulos-icono" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/><path d="M22 10v6"/></svg>
+                </span>
+                <span class="banner-titulos-texto">
+                    <strong>
+                        <span class="banner-titulos-largo">¿Licenciatura, tecnicatura o profesorado?</span>
+                        <span class="banner-titulos-corto">¿Qué título te conviene?</span>
+                    </strong>
+                    <span>Conocé las diferencias entre los títulos y los niveles de formación.</span>
+                </span>
+                <span class="banner-titulos-cta"><span class="banner-titulos-cta-texto">Ver la guía</span> →</span>
+            </a>
 
             <div id="resultsToolbar" class="results-toolbar">
                 <div class="results-toolbar-top">
@@ -394,6 +407,7 @@
                 <strong>BEN</strong> — Buscador Educativo Nacional
             </p>
             <div class="footer-actions">
+                <a class="enlace-footer" href="/titulos/">Títulos y niveles</a>
                 <button id="btnAbrirFeedback" class="btn-footer-feedback" type="button" aria-haspopup="dialog" aria-controls="modalFeedback">
                     <span aria-hidden="true">💬</span> Sugerir mejora o reportar fallo
                 </button>

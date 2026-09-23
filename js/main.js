@@ -209,33 +209,38 @@ function configurarEventos() {
         }, 200);
     });
 
-    document.querySelectorAll('.filter-option').forEach(boton => {
-        boton.addEventListener('click', () => {
-            // El departamento es multi-selección: cada chip agrega o saca su
-            // valor; "Todos" vacía la lista. El resto sigue siendo single-select.
-            if (boton.dataset.filter === 'departamento') {
-                const valor = boton.dataset.value;
-                if (valor === 'todos') {
-                    estado.departamentos = [];
-                } else {
-                    const seleccion = new Set(estado.departamentos);
-                    if (seleccion.has(valor)) seleccion.delete(valor);
-                    else seleccion.add(valor);
-                    estado.departamentos = [...seleccion];
-                }
+    // Delegado en document: los chips de "Sector de aplicación" se inyectan
+    // recién cuando cargan los datos (js/datos.js), así que un listener por
+    // botón como el que había antes no los alcanzaba. Los departamentos y los
+    // sectores son multi-selección: cada chip agrega o saca su valor y "Todos"
+    // vacía la lista. El resto sigue siendo single-select.
+    document.addEventListener('click', event => {
+        const boton = event.target.closest && event.target.closest('.filter-option');
+        if (!boton) return;
+        const filtro = boton.dataset.filter;
+        const valor = boton.dataset.value;
+        if (filtro === 'departamento' || filtro === 'sectores') {
+            const campo = filtro === 'sectores' ? 'sectores' : 'departamentos';
+            if (valor === 'todos') {
+                estado[campo] = [];
             } else {
-                estado[boton.dataset.filter] = boton.dataset.value;
+                const seleccion = new Set(estado[campo]);
+                if (seleccion.has(valor)) seleccion.delete(valor);
+                else seleccion.add(valor);
+                estado[campo] = [...seleccion];
             }
-            if (boton.dataset.filter === 'duracion') {
-                estado.duracionMin = null;
-                estado.duracionMax = null;
-                document.getElementById('durationMin').value = '';
-                document.getElementById('durationMax').value = '';
-            }
-            actualizarBotonesActivos();
-            mostrarResultados();
-            sincronizarURL();
-        });
+        } else {
+            estado[filtro] = valor;
+        }
+        if (filtro === 'duracion') {
+            estado.duracionMin = null;
+            estado.duracionMax = null;
+            document.getElementById('durationMin').value = '';
+            document.getElementById('durationMax').value = '';
+        }
+        actualizarBotonesActivos();
+        mostrarResultados();
+        sincronizarURL();
     });
 
     document.getElementById('applyDurationButton').addEventListener('click', aplicarRangoDuracion);

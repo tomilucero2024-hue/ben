@@ -100,9 +100,21 @@ body {
     padding: var(--space-5) 0;
     margin-bottom: var(--space-7);
 }
+/* Tres columnas: "Volver" a la izquierda, logo centrado de verdad y el lado
+   derecho (buscador + botón de modo) pegado al borde. Con flex no se logra
+   centrar el logo cuando los costados miden distinto; con grid sí. */
 .cabecera .envoltorio {
-    display: flex; align-items: center; justify-content: space-between;
-    gap: var(--space-5); flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: var(--space-5);
+}
+.btn-volver { justify-self: start; }
+.marca { justify-self: center; }
+.cabecera-lado {
+    justify-self: end;
+    display: flex; align-items: center; gap: var(--space-4);
+    min-width: 0; max-width: 100%;
 }
 .marca { display: inline-flex; align-items: center; }
 .marca img { height: 34px; width: auto; display: block; }
@@ -125,8 +137,9 @@ body {
 .btn-volver:hover { background: var(--surface-soft); border-color: var(--line); }
 .btn-volver svg { width: 18px; height: 18px; flex: none; }
 
-/* Botón de modo claro/oscuro de las páginas estáticas: vive en la cabecera
-   como en la app, con los mismos ítems de color según el tema. */
+/* Botón de modo claro/oscuro de las páginas estáticas: solo el sol y la luna,
+   sin círculo ni fondo que los recubra (misma idea que el toggle de la app).
+   Se mantienen los 40px de área táctil aunque no se vea el borde. */
 .tema-statico {
     display: inline-flex;
     align-items: center;
@@ -137,14 +150,14 @@ body {
     padding: 0;
     margin: 0;
     line-height: 1;
-    border: 1px solid var(--line);
-    border-radius: 50%;
-    background: var(--surface);
+    border: 0;
+    border-radius: 0;
+    background: transparent;
     color: var(--text);
     cursor: pointer;
 }
 .tema-statico svg { width: 20px; height: 20px; display: block; }
-.tema-statico:hover { background: var(--surface-soft); }
+.tema-statico:hover { color: var(--accent-ink); }
 html[data-theme="dark"] .tema-sol { display: block; color: #facc15; }
 html[data-theme="dark"] .tema-luna { display: none; }
 html[data-theme="light"] .tema-sol { display: none; }
@@ -260,6 +273,40 @@ a:hover { text-decoration: none; }
 }
 .ficha dt { font-weight: 700; color: var(--muted); }
 .ficha dd { margin: 0; }
+/* En la ficha, el valor de "Tipo de formación" linkea a la guía de títulos. */
+.ficha dd a { text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 2px; }
+.ficha dd a:hover { text-decoration-style: solid; }
+
+/* ---- Guía de títulos y niveles (/titulos/) ----------------------------- */
+.niveles {
+    list-style: none; margin: 0 0 var(--space-8); padding: 0;
+    display: grid; gap: var(--space-5);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.nivel { background: var(--surface-soft); border-radius: var(--radius-md); padding: var(--space-6); }
+.nivel h3 { margin-top: 0; }
+.nivel-resumen { font-weight: 700; }
+.nivel-titulos { margin-bottom: 0; font-size: calc(.9375rem * var(--font-scale)); }
+.nivel-titulos a { text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 2px; }
+
+.titulo-bloque { margin: 0 0 var(--space-8); scroll-margin-top: var(--space-8); }
+.titulo-bloque h3 { margin-top: 0; font-size: calc(1.2rem * var(--font-scale)); }
+.titulo-etiqueta { color: var(--muted); font-size: calc(.8125rem * var(--font-scale)); text-transform: uppercase; letter-spacing: .04em; margin-bottom: var(--space-4); }
+.titulo-ficha { margin-bottom: var(--space-5); }
+.titulo-diferencia { background: var(--surface-soft); border-radius: var(--radius-md); padding: var(--space-5); }
+.titulo-ejemplos-titulo { font-weight: 700; margin-bottom: var(--space-3); }
+
+.tabla-scroll { overflow-x: auto; margin: 0 0 var(--space-8); }
+.tabla-titulos { width: 100%; min-width: 560px; border-collapse: collapse; font-size: calc(.875rem * var(--font-scale)); }
+.tabla-titulos caption { text-align: left; color: var(--muted); font-size: calc(.8125rem * var(--font-scale)); padding-bottom: var(--space-3); }
+.tabla-titulos th, .tabla-titulos td { text-align: left; padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--line); vertical-align: top; }
+.tabla-titulos thead th { border-bottom: 2px solid var(--line); }
+.tabla-titulos tbody th { font-weight: 700; }
+
+.glosario { margin: 0 0 var(--space-8); }
+.glosario dt { font-weight: 700; margin-top: var(--space-5); }
+.glosario dt:first-child { margin-top: 0; }
+.glosario dd { margin: var(--space-2) 0 0; }
 
 /* ---- Listado de ofertas ------------------------------------------------ */
 .ofertas { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); }
@@ -360,6 +407,50 @@ a:hover { text-decoration: none; }
 .etiqueta.publica { color: var(--green-ink); }
 .etiqueta.privada { color: var(--orange-ink); }
 
+/* Chips de sectores de aplicación: misma píldora que .etiqueta, pero son
+   enlaces al buscador filtrado (?sector=). Sin subrayado y con hover suave. */
+.etiqueta-link {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: var(--space-1) var(--space-4);
+    line-height: 1.35;
+    white-space: normal;
+    max-width: 100%;
+    transition: background-color .2s ease, color .2s ease;
+}
+.etiqueta-link:hover, .etiqueta-link:focus-visible {
+    background: var(--surface);
+    color: var(--accent-ink);
+    box-shadow: inset 0 0 0 1px var(--line);
+}
+
+/* ---- "Áreas donde podés desarrollarte": contenido generado por IA ------- */
+.aplicacion { margin: 0 0 var(--space-6); }
+.aplicacion h2 {
+    font-size: calc(1.05rem * var(--font-scale));
+    margin: 0 0 var(--space-3);
+}
+/* La separación va por margen en cada ítem y no por gap: el gap de flex no
+   existe en navegadores viejos y las píldoras quedaban pegadas (se pisaban
+   entre sí). Con margen, el espaciado es el mismo en todos lados. */
+.chips-sectores {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-wrap: wrap;
+}
+.chips-sectores li {
+    display: flex;
+    max-width: 100%;
+    margin: 0 var(--space-2) var(--space-2) 0;
+}
+/* Señal futura de "contenido sugerido": cuando exista revisión humana, alcanza
+   con pintar los bloques con data-revisado="false". Hoy no se dibuja nada para
+   no ensuciar el diseño.
+.aplicacion[data-revisado="false"] .etiqueta-link,
+.entrada[data-revisado="false"] { opacity: .92; }
+*/
+
 /* ---- Listas de enlaces (índices, relacionadas) -------------------------
    Cada ítem es una píldora con borde: antes eran los enlaces azules con
    subrayado por defecto del navegador, fuera del lenguaje visual del sitio. */
@@ -390,8 +481,9 @@ a:hover { text-decoration: none; }
 }
 .enlaces .cuantas { color: var(--muted); font-size: calc(.8125rem * var(--font-scale)); }
 
-/* El "Ver las N carreras del área" del bloque de relacionadas: misma píldora
-   que las de arriba, presentada como llamada de cierre del bloque. */
+/* El "Ver las N carreras del área" del bloque de relacionadas: acción sólida
+   de cierre, con el par relleno/tinta de .cta (--accion-ink sobre
+   --accion-fill), que es el que ya está validado en los 4 temas. */
 .relacionadas-mas { margin: var(--space-4) 0 0; }
 .btn-enlace-mas {
     display: inline-flex;
@@ -399,16 +491,15 @@ a:hover { text-decoration: none; }
     gap: .4rem;
     min-height: 44px;
     padding: var(--space-3) var(--space-7);
-    border: 1px solid var(--accion-fill);
     border-radius: var(--radius-pill);
-    background: var(--surface);
+    background: var(--accion-fill);
     color: var(--accion-ink);
     font-weight: 700;
     text-decoration: none;
-    transition: border-color .2s ease, background-color .2s ease;
+    transition: filter .2s ease;
 }
 .btn-enlace-mas:hover, .btn-enlace-mas:focus-visible {
-    background: var(--surface-soft);
+    filter: brightness(1.08);
 }
 
 /* ---- Llamado a la acción ---------------------------------------------- */
@@ -514,14 +605,42 @@ a:hover { text-decoration: none; }
 @media (max-width: 640px) {
     .ficha { grid-template-columns: 1fr; gap: var(--space-1) 0; }
     .ficha dd { margin-bottom: var(--space-4); }
-    .cabecera .envoltorio { justify-content: center; }
+    /* Una sola columna centrada: Volver, logo, y el buscador + modo abajo. */
+    .cabecera .envoltorio { grid-template-columns: 1fr; justify-items: center; gap: var(--space-3); }
+    .cabecera-lado { justify-self: stretch; flex-wrap: wrap; justify-content: center; }
+    .cabecera-lado .buscador-mini { flex: 1 1 240px; max-width: none; }
 }
 
 /* --- Botón "Me interesa", "Ver Mi lista" y aviso (js/favoritos.js) ---
    Mismo contrato que en la app: el script hidrata el botón, sincroniza el
    estado guardado y maneja el clic. En estas páginas el corazón va solo, sin
    texto, y se pone rojo al marcar. */
-.acciones-ficha { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; margin: var(--space-3) 0 var(--space-4); }
+/* Tarjeta lateral de la ficha de carrera: el corazón va en la misma línea del
+   "Área" (al final, más chico) y "Ver Mi lista" cierra debajo. */
+.lateral-caja { display: flex; flex-direction: column; gap: var(--space-4); }
+.ficha-caja {
+    display: flex; flex-direction: column; gap: var(--space-3);
+    background: var(--surface-soft);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+}
+.ficha-caja .ficha { background: transparent; padding: 0; margin: 0; }
+/* El corazón comparte la línea del "Área": el valor a la izquierda, el botón al
+   final (a la derecha). Va más chico para que la fila no crezca. */
+.ficha-caja .ficha dd.ficha-area { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
+.ficha-caja .ficha dd.ficha-area .btn-favorito { width: 34px; height: 34px; }
+.ficha-caja .ficha dd.ficha-area .btn-favorito .fav-svg { width: 17px; height: 17px; }
+/* Los costos no se muestran (los fija cada institución): en su lugar va este
+   aviso, dentro de la tarjeta y debajo de los datos. */
+.aviso-costos {
+    display: flex; align-items: flex-start; gap: .5rem;
+    margin: 0; padding-top: var(--space-4);
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: calc(.8125rem * var(--font-scale)); line-height: 1.4;
+}
+.aviso-costos svg { width: 16px; height: 16px; flex: none; margin-top: .15rem; color: var(--accent-ink); }
+.lateral-caja .btn-ver-mi-lista { margin-left: 0; width: 100%; justify-content: center; }
 .btn-favorito {
     display: inline-flex; align-items: center; justify-content: center;
     width: 46px; height: 46px; flex: none;

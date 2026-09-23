@@ -1,0 +1,266 @@
+{
+  "version": 1,
+  "nota": "Contenido editorial de /titulos/. Los 'ejemplos en BEN' no viven acá: el generador los calcula del catálogo real para que nunca queden desactualizados.",
+  "intro": [
+    "Si estás buscando qué estudiar, es probable que te topes con palabras que suenan parecidas pero significan cosas distintas: licenciatura, tecnicatura, profesorado, maestría, diplomatura. En la Argentina la educación superior se ordena en tres niveles (pregrado, grado y posgrado) y cada nivel agrupa títulos con duraciones, objetivos y alcances diferentes.",
+    "En BEN cada carrera está clasificada según su tipo de formación, y en esta página explicamos qué significa cada uno para que puedas comparar con criterio. Ninguna opción es mejor que otra: cambian el punto de partida, la duración y para qué te prepara."
+  ],
+  "niveles": [
+    {
+      "id": "pregrado",
+      "nombre": "Pregrado",
+      "resumen": "Formaciones cortas y prácticas, de 2 a 3 años, orientadas a la práctica profesional.",
+      "parrafos": [
+        "El pregrado reúne las tecnicaturas y los cursos de formación profesional. No requiere un título universitario previo: se entra con el secundario completo (o, en algunos casos, con el secundario en curso).",
+        "Su fuerte es lo aplicado: planes acotados, materias concretas y muchas horas de práctica, taller o residencia según la carrera."
+      ],
+      "titulos": ["tecnicatura-superior", "tecnicatura-universitaria", "curso"]
+    },
+    {
+      "id": "grado",
+      "nombre": "Grado",
+      "resumen": "El título de base de la universidad: de 4 a 6 años, con formación teórica y profesional.",
+      "parrafos": [
+        "El grado es el nivel clásico de la universidad. Incluye las licenciaturas, las ingenierías, los títulos profesionales (abogacía, medicina, contador, arquitectura) y los profesorados. Se entra con el secundario completo.",
+        "Al terminarlo obtenés un título habilitante para ejercer y, si querés, la base para seguir con un posgrado."
+      ],
+      "titulos": ["licenciatura", "ingenieria", "titulo-profesional", "profesorado", "ciclo-de-complementacion"]
+    },
+    {
+      "id": "posgrado",
+      "nombre": "Posgrado",
+      "resumen": "Lo que viene después del grado: especializaciones, maestrías y doctorados.",
+      "parrafos": [
+        "El posgrado no es un nivel de entrada: para cursarlo necesitás un título de grado (o, en algunos casos, un título de pregrado con trayectoria equivalente).",
+        "Sirve para especializarte en un área, actualizarte o dedicarte a la investigación. Se cursa en universidades e institutos universitarios y suele requerir un trabajo final, una tesina o una tesis."
+      ],
+      "titulos": ["especializacion", "maestria", "doctorado"]
+    }
+  ],
+  "titulos": [
+    {
+      "id": "licenciatura",
+      "nombre": "Licenciatura",
+      "nivel": "grado",
+      "etiqueta": "Título de grado",
+      "duracion": "4 a 5 años",
+      "donde": "Universidades e institutos superiores",
+      "otorga": "Licenciado/a en ...",
+      "queEs": [
+        "Es el título universitario más común de las carreras de grado. Combina una base teórica sólida con formación aplicada y, según la carrera, puede incluir trabajo final, tesina o práctica profesional.",
+        "Su nombre completo incluye la disciplina: Licenciatura en Psicología, en Administración, en Enfermería, en Sistemas."
+      ],
+      "diferencia": "A diferencia de una ingeniería o de un título profesional como abogacía o medicina, la licenciatura no siempre tiene una incumbencia profesional reservada por ley: el alcance de cada título lo define la normativa de su disciplina. Y a diferencia de una tecnicatura, dura más y profundiza mucho más en teoría e investigación."
+    },
+    {
+      "id": "ingenieria",
+      "nombre": "Ingeniería",
+      "nivel": "grado",
+      "etiqueta": "Título de grado",
+      "duracion": "5 a 6 años",
+      "donde": "Universidades",
+      "otorga": "Ingeniero/a en ...",
+      "queEs": [
+        "Es un título de grado profesional con incumbencia regulada: para firmar proyectos, dirigir obras o ejercer como ingeniero necesitás el título y la matriculación en el colegio profesional de tu jurisdicción.",
+        "Los planes son largos y exigentes en matemática, física y materias de proyecto, y suelen cerrar con un proyecto final integrador."
+      ],
+      "diferencia": "Comparte el nivel de grado con la licenciatura, pero se distingue por su enfoque en diseño y cálculo aplicado y por la habilitación profesional: hay tareas que solo puede firmar un ingeniero matriculado."
+    },
+    {
+      "id": "titulo-profesional",
+      "nombre": "Título profesional de grado (Abogacía, Medicina, Contador, Arquitectura...)",
+      "nivel": "grado",
+      "etiqueta": "Título de grado",
+      "duracion": "5 a 6 años",
+      "donde": "Universidades",
+      "otorga": "Abogado/a, Médico/a, Contador/a Público/a, Arquitecto/a...",
+      "queEs": [
+        "Son carreras de grado que otorgan un título habilitante para ejercer una profesión regulada. El plan de estudios suele ser más largo que una licenciatura y muchas veces incluye prácticas obligatorias (residencias, práctica profesional supervisada).",
+        "Algunas, como Medicina, incluyen además un ciclo de formación práctica posgradual obligatorio, la residencia."
+      ],
+      "diferencia": "La diferencia central con una licenciatura no es la duración sino la habilitación: son títulos con incumbencias definidas por ley y, en general, con matriculación obligatoria para ejercer."
+    },
+    {
+      "id": "profesorado",
+      "nombre": "Profesorado",
+      "nivel": "grado",
+      "etiqueta": "Título de grado",
+      "duracion": "4 años",
+      "donde": "Universidades, institutos superiores y escuelas normales",
+      "otorga": "Profesor/a en ...",
+      "queEs": [
+        "Forma para enseñar: combina el contenido de una disciplina con la formación pedagógica, la didáctica y las prácticas docentes en aulas reales.",
+        "Habilita a ejercer la docencia en el nivel y la disciplina del título, dentro del sistema educativo formal."
+      ],
+      "diferencia": "A diferencia de una licenciatura en la misma disciplina, el profesorado agrega la formación pedagógica y la habilitación docente. Si ya tenés un título afín, en muchos casos se puede completar con un ciclo de complementación pedagógica."
+    },
+    {
+      "id": "tecnicatura-superior",
+      "nombre": "Tecnicatura superior",
+      "nivel": "pregrado",
+      "etiqueta": "Título de pregrado",
+      "duracion": "2 a 3 años",
+      "donde": "Institutos de educación superior (terciarios), públicos y privados",
+      "otorga": "Técnico/a Superior en ...",
+      "queEs": [
+        "Se cursa en el nivel superior no universitario (los terciarios) y está orientada a la práctica profesional: planes cortos, materias aplicadas y muchas horas de práctica, taller o residencia según la carrera.",
+        "Algunas tecnicaturas superiores tienen alcance y matriculación propios, por ejemplo en salud (enfermería, radiología, anestesia)."
+      ],
+      "diferencia": "Con una tecnicatura universitaria comparte la duración y el enfoque práctico, pero se distingue por dónde se cursa y por quién otorga el título: el terciario, no la universidad. Muchas admiten después un ciclo de complementación para pasar al grado."
+    },
+    {
+      "id": "tecnicatura-universitaria",
+      "nombre": "Tecnicatura universitaria",
+      "nivel": "pregrado",
+      "etiqueta": "Título de pregrado",
+      "duracion": "2 a 3 años",
+      "donde": "Universidades e institutos universitarios",
+      "otorga": "Técnico/a Universitario/a en ...",
+      "queEs": [
+        "Es una carrera corta dictada por una universidad o instituto universitario. Tiene el mismo enfoque práctico que la tecnicatura superior, pero con el respaldo académico y los recursos de una universidad.",
+        "Suele incluir formación básica en ciencias, práctica en laboratorio o campo y un trabajo final."
+      ],
+      "diferencia": "La diferencia con la tecnicatura superior es la institución que la dicta y el título que otorga (universitario en lugar de superior). Eso facilita la articulación interna con las carreras de grado de la misma universidad."
+    },
+    {
+      "id": "curso",
+      "nombre": "Curso o formación profesional",
+      "nivel": "pregrado",
+      "etiqueta": "Formación profesional",
+      "duracion": "De pocos meses a 1 año",
+      "donde": "Centros de formación profesional, escuelas de oficios, universidades e institutos",
+      "otorga": "Certificado o constancia de formación",
+      "queEs": [
+        "Son formaciones cortas y muy específicas: un oficio, un programa, una herramienta o una técnica concreta. No otorgan un título de nivel superior, sino una certificación.",
+        "Sirven para aprender un oficio, actualizarse o dar los primeros pasos en un área."
+      ],
+      "diferencia": "No son un título de pregrado, grado ni posgrado: son formación continua. Si lo que buscás es un título con reconocimiento de nivel superior, tenés que mirar las tecnicaturas o las carreras de grado."
+    },
+    {
+      "id": "ciclo-de-complementacion",
+      "nombre": "Ciclo de complementación curricular (CCC)",
+      "nivel": "grado",
+      "etiqueta": "Título de grado, para quien ya tiene un pregrado",
+      "duracion": "2 a 3 años",
+      "donde": "Universidades e institutos superiores",
+      "otorga": "Licenciatura o título de grado equivalente",
+      "queEs": [
+        "Es una carrera pensada para quien ya tiene un título de pregrado (por ejemplo, una tecnicatura) y quiere obtener el título de grado en la misma área. En lugar de empezar de cero, se cursan las materias que faltan.",
+        "En el catálogo aparece como 'Ciclo de Licenciatura en ...' o 'Ciclo de Complementación Curricular en ...'."
+      ],
+      "diferencia": "No es un título distinto: es un camino de acortamiento hacia un título de grado. El título final es una licenciatura, con el mismo valor que si la hubieras cursado completa."
+    },
+    {
+      "id": "especializacion",
+      "nombre": "Especialización",
+      "nivel": "posgrado",
+      "etiqueta": "Posgrado",
+      "duracion": "1 a 2 años",
+      "donde": "Universidades e institutos universitarios",
+      "otorga": "Especialista en ...",
+      "queEs": [
+        "Es el posgrado más corto y más orientado a la práctica: profundiza en un área concreta de una profesión. Requiere título de grado.",
+        "Suele cerrar con un trabajo final integrador y, en muchas profesiones reguladas, es el camino obligatorio para ejercer una subespecialidad."
+      ],
+      "diferencia": "Frente a una maestría, es más corta y más práctica: no apunta a la investigación ni a la formación académica amplia, sino a dominar un campo específico."
+    },
+    {
+      "id": "maestria",
+      "nombre": "Maestría",
+      "nivel": "posgrado",
+      "etiqueta": "Posgrado",
+      "duracion": "2 años o más",
+      "donde": "Universidades e institutos universitarios",
+      "otorga": "Magíster en ...",
+      "queEs": [
+        "Es un posgrado de formación académica o profesional avanzada. Se cursa después del grado y termina con una tesis o un trabajo final de maestría.",
+        "Puede ser de orientación académica (apunta a la investigación o al doctorado) o profesional (apunta a la práctica especializada)."
+      ],
+      "diferencia": "Es más larga y más exigente que una especialización, y menos ambiciosa en investigación que un doctorado: queda en el medio, entre la profundización profesional y la formación para investigar."
+    },
+    {
+      "id": "doctorado",
+      "nombre": "Doctorado",
+      "nivel": "posgrado",
+      "etiqueta": "Posgrado",
+      "duracion": "4 a 5 años",
+      "donde": "Universidades e institutos universitarios",
+      "otorga": "Doctor/a en ...",
+      "queEs": [
+        "Es el nivel más alto del sistema universitario. Consiste en una investigación original que se presenta como tesis y se defiende ante un jurado.",
+        "Habilita a la carrera académica y a la investigación. Requiere una maestría o un título de grado con antecedentes equivalentes, según la universidad."
+      ],
+      "diferencia": "A diferencia de la maestría y de la especialización, el doctorado no es una formación de actualización profesional: su producto es conocimiento nuevo."
+    },
+    {
+      "id": "diplomatura",
+      "nombre": "Diplomatura",
+      "nivel": "extension",
+      "etiqueta": "Formación de extensión, no es un nivel académico",
+      "duracion": "De pocos meses a 1 año",
+      "donde": "Universidades, institutos y organismos de capacitación",
+      "otorga": "Certificado de diplomatura (no otorga grado ni posgrado)",
+      "queEs": [
+        "Es una formación de extensión o actualización, generalmente corta, que una universidad u otra institución ofrece sobre un tema específico. Acredita horas de capacitación, no un nivel del sistema educativo.",
+        "La diplomatura no está definida como nivel en la ley de educación superior: su alcance y su valor dependen de la institución que la dicta y de lo que diga el certificado."
+      ],
+      "diferencia": "No es equivalente a una especialización ni a una maestría, aunque a veces se presente con nombres parecidos. Si necesitás un título de posgrado acreditado, buscá especializaciones, maestrías o doctorados."
+    }
+  ],
+  "glosario": [
+    {
+      "termino": "Incumbencia profesional",
+      "definicion": "Las actividades y tareas que la ley reserva a quien tiene un título determinado. Sin esa incumbencia no se pueden firmar o asumir ciertas responsabilidades."
+    },
+    {
+      "termino": "Título intermedio",
+      "definicion": "Un título de pregrado que se obtiene en el camino hacia un título de grado, por ejemplo una tecnicatura dentro de una ingeniería. No es lo mismo que haber terminado la carrera."
+    },
+    {
+      "termino": "Ciclo de complementación curricular (CCC)",
+      "definicion": "El tramo de materias que convierte un título de pregrado en uno de grado. Está explicado más arriba, en su propia sección."
+    },
+    {
+      "termino": "Acreditación",
+      "definicion": "El proceso por el que la CONEAU evalúa y certifica la calidad de las carreras. Es obligatorio para las carreras de interés público, como Medicina o Ingeniería."
+    },
+    {
+      "termino": "Articulación",
+      "definicion": "Los acuerdos que permiten que un título de un nivel se tome como parte de otro, por ejemplo una tecnicatura que da créditos para una licenciatura."
+    },
+    {
+      "termino": "Modalidad",
+      "definicion": "Cómo se cursa: presencial, semipresencial o a distancia."
+    },
+    {
+      "termino": "Matriculación",
+      "definicion": "La inscripción obligatoria en un colegio o consejo profesional para poder ejercer una profesión regulada."
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Cuál es la diferencia entre una licenciatura y una ingeniería?",
+      "respuesta": "Las dos son carreras de grado. La ingeniería dura más (5 a 6 años), tiene más carga de matemática y cálculo, y otorga una incumbencia profesional regulada: solo un ingeniero matriculado puede firmar ciertos proyectos. La licenciatura suele durar 4 a 5 años y su alcance lo define la normativa de cada disciplina."
+    },
+    {
+      "pregunta": "¿Una tecnicatura superior es lo mismo que una tecnicatura universitaria?",
+      "respuesta": "No. Las dos duran 2 o 3 años y son de pregrado, pero la tecnicatura superior se cursa en un instituto terciario (título de Técnico Superior) y la universitaria en una universidad o instituto universitario (título de Técnico Universitario). Cambia la institución y el título, no el enfoque práctico."
+    },
+    {
+      "pregunta": "¿Una diplomatura es un posgrado?",
+      "respuesta": "No necesariamente. La diplomatura no es un nivel definido por la ley de educación superior: es formación de extensión o actualización. Algunas universidades le dan estatus de posgrado y otras no, así que hay que mirar qué certifica cada institución. Si buscás un posgrado acreditado, la referencia son las especializaciones, las maestrías y los doctorados."
+    },
+    {
+      "pregunta": "¿Puedo pasar de una tecnicatura a una licenciatura?",
+      "respuesta": "Sí. Muchas universidades ofrecen ciclos de complementación curricular (CCC) para quien ya tiene un título de pregrado: cursás las materias que faltan y obtenés el título de grado, sin empezar de cero."
+    },
+    {
+      "pregunta": "¿Se puede hacer un posgrado con cualquier título?",
+      "respuesta": "En general necesitás un título de grado (universitario o terciario). Algunas instituciones aceptan títulos de pregrado con trayectoria profesional equivalente. Conviene consultar el requisito de cada carrera en particular."
+    },
+    {
+      "pregunta": "¿Qué es un título habilitante?",
+      "respuesta": "Es un título que habilita legalmente a ejercer una profesión, muchas veces con matriculación obligatoria. Abogacía, Medicina, Ingeniería y Contador Público son ejemplos."
+    }
+  ]
+}

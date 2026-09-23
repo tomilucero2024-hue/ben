@@ -51,8 +51,85 @@ const RUTA_DATA = path.join(RAIZ, 'data', 'data.json');
 // viejo: mismo nombre de campos, una sola fuente de verdad.
 const RUTA_PERFILES = path.join(RAIZ, 'data', 'vocacional', 'perfiles-carreras.json');
 
+// Contenido generado por IA para las fichas de carrera: descripción breve de qué
+// trata la carrera y sectores de aplicación laboral. Se redactó a partir del
+// nombre, el área y los datos ya existentes en la base (el campo "metodo" del
+// JSON documenta el criterio completo); cada entrada queda con revisado=false
+// hasta su revisión humana. Los sectores viven en su propia lista cerrada
+// (data/sectores.json) para mostrarlos como chips y poder filtrar por ellos.
+const RUTA_CONTENIDO = path.join(RAIZ, 'data', 'contenido-carreras.json');
+const RUTA_SECTORES = path.join(RAIZ, 'data', 'sectores.json');
+// Contenido editorial de /titulos/: los tres niveles (pregrado, grado, posgrado),
+// el detalle de cada tipo de titulo, el glosario y las preguntas frecuentes.
+// Los "ejemplos en BEN" no estan en el JSON: se calculan del catalogo real.
+const RUTA_TITULOS = path.join(RAIZ, 'data', 'titulos-formacion.json');
+const CONTENIDO = JSON.parse(fs.readFileSync(RUTA_CONTENIDO, 'utf8'));
+const TITULOS = JSON.parse(fs.readFileSync(RUTA_TITULOS, 'utf8'));
+const SECTORES_POR_ID = new Map(
+    JSON.parse(fs.readFileSync(RUTA_SECTORES, 'utf8')).sectores.map(s => [s.id, s])
+);
+
+// Resuelve la entrada de contenido de una carrera del modelo: por su clave
+// directa o, si es una clave fusionada, por el alias que apunta a la canónica.
+function contenidoDe(carrera) {
+    const claves = carrera.clavesFusionadas || [carrera.clave];
+    for (const clave of claves) {
+        if (CONTENIDO.carreras[clave]) return CONTENIDO.carreras[clave];
+        const destino = CONTENIDO.alias[clave];
+        if (destino && CONTENIDO.carreras[destino]) return CONTENIDO.carreras[destino];
+    }
+    return null;
+}
+
 // Carpetas que este script es dueño de reescribir enteras.
-const SALIDAS = ['carrera', 'area', 'institucion', 'provincia', 'carreras', 'instituciones'];
+const SALIDAS = ['carrera', 'area', 'institucion', 'provincia', 'carreras', 'instituciones', 'titulos'];
+
+// Ancla de /titulos/ que le corresponde a una carrera segun su nombre y su tipo
+// de formacion. El valor de "Tipo de formacion" de cada ficha linkea ahi, que es
+// justo donde el usuario se pregunta que significa. Los ids tienen que existir
+// en data/titulos-formacion.json (test_titulos.js lo verifica).
+function anclaFormacion(carrera) {
+    const nombre = carrera.nombre;
+    if (/^Ingenier/i.test(nombre)) return 'ingenieria';
+    if (/^(Licenciatura|Lic\.|Licenciado)/i.test(nombre)) return 'licenciatura';
+    if (/^Ciclo de/i.test(nombre)) return 'ciclo-de-complementacion';
+    if (carrera.formacion === 'profesorados') return 'profesorado';
+    if (carrera.formacion === 'cursos') return 'curso';
+    if (carrera.formacion === 'tecnicaturas') {
+        if (/^Maestr/i.test(nombre)) return 'maestria';
+        if (/(Tecnicatura Universitaria|T[eé]cnico Universitario)/i.test(nombre)) return 'tecnicatura-universitaria';
+        return 'tecnicatura-superior';
+    }
+    return 'titulo-profesional';
+}
+
+// Hasta 6 carreras reales del catalogo para ilustrar cada tipo de titulo. No se
+// guardan en el JSON para que no queden desactualizadas: se recalculan del
+// modelo en cada build. Los titulos sin ejemplos (doctorado, especializacion,
+// diplomatura) no dibujan la linea.
+const MATCHERS_TITULO = {
+    licenciatura: c => /^(Licenciatura|Lic\.|Licenciado)/i.test(c.nombre),
+    ingenieria: c => /^Ingenier/i.test(c.nombre),
+    profesorado: c => c.formacion === 'profesorados',
+    'ciclo-de-complementacion': c => /^Ciclo de/i.test(c.nombre),
+    curso: c => c.formacion === 'cursos',
+    maestria: c => /^Maestr/i.test(c.nombre),
+    'tecnicatura-universitaria': c => /(Tecnicatura Universitaria|T[eé]cnico Universitario)/i.test(c.nombre),
+    'tecnicatura-superior': c => c.formacion === 'tecnicaturas' && !/^Maestr/i.test(c.nombre) &&
+        !/(Tecnicatura Universitaria|T[eé]cnico Universitario)/i.test(c.nombre),
+    'titulo-profesional': c => c.formacion === 'grado' &&
+        !/^(Ingenier|Licenciatura|Lic\.|Licenciado|Ciclo de)/i.test(c.nombre)
+};
+
+function ejemplosDeTitulo(id, modelo) {
+    const matcher = MATCHERS_TITULO[id];
+    if (!matcher) return [];
+    return modelo.carreras
+        .filter(matcher)
+        .sort((a, b) => b.ofertas.length - a.ofertas.length || a.nombre.localeCompare(b.nombre, 'es'))
+        .slice(0, 6);
+}
+
 
 // Provincias con menos oferta que esto no reciben página propia: una página con
 // una sola institución no le sirve a nadie y a Google le huele a relleno. El
@@ -410,15 +487,17 @@ ${bloques}
             <img id="marcaLogo" width="1120" height="299" alt="BEN — Buscador Educativo Nacional">
             <script>document.getElementById('marcaLogo').src = window.LOGO_BEN;</script>
         </a>
-        <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
-            <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-            <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        </button>
-        <form class="buscador-mini" action="/" method="get" role="search">
-            <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
-            <button type="submit">Buscar</button>
-            <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
-        </form>
+        <div class="cabecera-lado">
+            <form class="buscador-mini" action="/" method="get" role="search">
+                <input id="q" name="q" type="search" placeholder="Buscar una carrera…" aria-label="Buscar carreras" autocomplete="off">
+                <button type="submit">Buscar</button>
+                <div id="miniDropdown" class="mini-search-dropdown" role="listbox" hidden></div>
+            </form>
+            <button id="temaStatico" class="tema-statico" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
+                <svg class="tema-icono tema-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                <svg class="tema-icono tema-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+        </div>
     </div>
     <script>
         // Mismo tema que la app, con su mismo botón: alterna claro/oscuro,
@@ -459,6 +538,7 @@ ${bloques}
             <a href="/">Buscador</a>
             <a href="/carreras/">Todas las carreras</a>
             <a href="/instituciones/">Todas las instituciones</a>
+            <a href="/titulos/">Títulos y niveles</a>
         </nav>
     </div>
 </footer>
@@ -951,7 +1031,7 @@ function paginaCarrera(carrera) {
 
     const ficha = [
         ['Área', esc(carrera.area)],
-        ['Tipo de formación', esc(NOMBRES_FORMACION[carrera.formacion] || carrera.categoria)],
+        ['Tipo de formación', `<a href="/titulos/#${anclaFormacion(carrera)}">${esc(NOMBRES_FORMACION[carrera.formacion] || carrera.categoria)}</a>`],
         ['Dónde se dicta', plural(instituciones.length, 'institución', 'instituciones')],
         modalidades.length ? ['Modalidad', esc(listaEnEspanol(modalidades))] : null,
         duraciones.length ? ['Duración', esc(duraciones.slice(0, 4).join(' · '))] : null
@@ -990,25 +1070,39 @@ ${dimensionesTop.map(d => `        <li class="aptitud-item">
         <p>¿Querés saber qué tan compatible sos con esta carrera? <a href="/?test=1">Hacé el Test Vocacional Completo de BEN</a> (4-6 min) y compará tu perfil con las 651 formaciones del catálogo.</p>
     </div>` : '';
 
+    // Contenido de la ficha (generado por IA, pendiente de revisión): qué es la
+    // carrera en términos simples y en qué sectores se puede aplicar. Si falta
+    // cualquiera de los dos, esa parte no se emite (nunca una sección vacía).
+    const contenidoCarrera = contenidoDe(carrera);
+    const descripcionContenido = contenidoCarrera && contenidoCarrera.descripcion
+        ? String(contenidoCarrera.descripcion).trim()
+        : '';
+    const sectores = contenidoCarrera && Array.isArray(contenidoCarrera.sectores)
+        ? contenidoCarrera.sectores.map(id => SECTORES_POR_ID.get(id)).filter(Boolean)
+        : [];
+    const revisado = contenidoCarrera ? Boolean(contenidoCarrera.revisado) : true;
+    const atributoRevision = `data-revisado="${revisado ? 'true' : 'false'}"`;
+    // Las descripciones extensas vienen en párrafos separados por línea en
+    // blanco; cada uno sale como su propio <p class="entrada"> (el ancho de
+    // lectura lo sigue poniendo la hoja de estilos).
+    const parrafosDescripcion = descripcionContenido
+        ? descripcionContenido.split(/\n{2,}/).map(p => p.trim()).filter(Boolean)
+        : [];
+    const seccionContenido = [
+        ...parrafosDescripcion.map(p => `    <p class="entrada" ${atributoRevision}>${esc(p)}</p>`),
+        sectores.length
+            ? `    <section class="aplicacion" aria-labelledby="aplicacion-titulo" ${atributoRevision}>
+        <h2 id="aplicacion-titulo">Áreas donde podés desarrollarte</h2>
+        <ul class="chips-sectores">
+${sectores.map(s => `            <li><a class="etiqueta etiqueta-link" href="/?sector=${esc(s.id)}">${esc(s.nombre)}</a></li>`).join('\n')}
+        </ul>
+    </section>`
+            : ''
+    ].filter(Boolean).join('\n');
+
     // Guardar la carrera y compararla después. En las páginas estáticas la
     // clave es la de la carrera agrupada, que Mi lista sabe resolver.
-    const cuerpo = `    <div class="acciones-ficha">
-        ${botonFavorito({
-            clave: carrera.clave,
-            tipo: 'carrera',
-            claveCarrera: carrera.clave,
-            nombre: carrera.nombre,
-            institucion: '',
-            area: carrera.area,
-            formacion: carrera.formacion,
-            ficha: carrera.slug,
-            link: ''
-        })}
-        <a class="btn-ver-mi-lista" href="/?lista=1">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
-            Ver Mi lista
-        </a>
-    </div>`;
+    const cuerpo = seccionContenido;
 
     const contenido = `    <h2>Dónde estudiar ${esc(carrera.nombre)}</h2>
     <ul class="ofertas">
@@ -1024,9 +1118,40 @@ ${relacionadas.map(c => `        <li><a href="/carrera/${c.slug}/">${esc(c.nombr
     <p class="relacionadas-mas"><a class="btn-enlace-mas" href="/area/${carrera.areaRef.slug}/">Ver las ${carrera.areaRef.carreras.length} carreras del área ${esc(carrera.area)} →</a></p>
     </section>` : ''}`;
 
-    const lateral = `    <dl class="ficha">
-${ficha.map(([k, v]) => `        <dt>${k}</dt><dd>${v}</dd>`).join('\n')}
-    </dl>`;
+    // La tarjeta lateral es la "tarjeta" de la carrera. El corazón de guardar va
+    // en la misma línea del "Área" (al final, sin agregar una fila propia) y
+    // "Ver Mi lista" queda como cierre, debajo.
+    const corazon = botonFavorito({
+        clave: carrera.clave,
+        tipo: 'carrera',
+        claveCarrera: carrera.clave,
+        nombre: carrera.nombre,
+        institucion: '',
+        area: carrera.area,
+        formacion: carrera.formacion,
+        ficha: carrera.slug,
+        link: ''
+    });
+    const fichaHtml = ficha
+        .map(([k, v], i) => i === 0
+            ? `                <dt>${k}</dt><dd class="ficha-area"><span>${v}</span>${corazon}</dd>`
+            : `                <dt>${k}</dt><dd>${v}</dd>`)
+        .join('\n');
+    const lateral = `    <div class="lateral-caja">
+        <div class="ficha-caja">
+            <dl class="ficha">
+${fichaHtml}
+            </dl>
+            <p class="aviso-costos">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                <span>Los costos y aranceles los define cada institución. Para saber cuánto sale, comunicate con el establecimiento.</span>
+            </p>
+        </div>
+        <a class="btn-ver-mi-lista" href="/?lista=1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            Ver Mi lista
+        </a>
+    </div>`;
 
     const ld = carrera.ofertas.length >= 3
         ? {
@@ -1414,6 +1539,117 @@ ${[...lista].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')).map(c => `  
     };
 }
 
+// Guia editorial de /titulos/: explica los tres niveles del sistema (pregrado,
+// grado y posgrado) y cada tipo de titulo, con ejemplos reales del catalogo.
+// El contenido vive en data/titulos-formacion.json para poder editarlo sin
+// tocar codigo.
+function paginaTitulos(modelo) {
+    const ruta = '/titulos/';
+    const descripcion = 'Qué significa cada tipo de formación: licenciatura, ingeniería, profesorado, tecnicatura superior y universitaria, curso, ciclo de complementación, especialización, maestría, doctorado y diplomatura.';
+    const tituloPorId = new Map(TITULOS.titulos.map(t => [t.id, t]));
+
+    const nivelesHtml = TITULOS.niveles.map(n => `        <li class="nivel" id="nivel-${n.id}">
+            <h3>${esc(n.nombre)}</h3>
+            <p class="nivel-resumen">${esc(n.resumen)}</p>
+${n.parrafos.map(p => `            <p>${esc(p)}</p>`).join('\n')}
+            <p class="nivel-titulos">${n.titulos.map(id => {
+                const t = tituloPorId.get(id);
+                return `<a href="#${id}">${esc(t ? t.nombre : id)}</a>`;
+            }).join(' · ')}</p>
+        </li>`).join('\n');
+
+    const titulosHtml = TITULOS.titulos.map(t => {
+        const ejemplos = ejemplosDeTitulo(t.id, modelo);
+        const ejemplosHtml = ejemplos.length ? `
+        <p class="titulo-ejemplos-titulo">Ejemplos en BEN</p>
+        <ul class="enlaces">
+${ejemplos.map(c => `            <li><a href="/carrera/${c.slug}/">${esc(c.nombre)}</a> <span class="cuantas">(${c.ofertas.length})</span></li>`).join('\n')}
+        </ul>` : '';
+        return `
+    <section class="titulo-bloque" id="${t.id}">
+        <h3>${esc(t.nombre)}</h3>
+        <p class="titulo-etiqueta">${esc(t.etiqueta)}</p>
+        <dl class="ficha titulo-ficha">
+            <dt>Duración</dt><dd>${esc(t.duracion)}</dd>
+            <dt>Dónde se cursa</dt><dd>${esc(t.donde)}</dd>
+            <dt>Título que otorga</dt><dd>${esc(t.otorga)}</dd>
+        </dl>
+${t.queEs.map(p => `        <p>${esc(p)}</p>`).join('\n')}
+        <p class="titulo-diferencia"><strong>En qué se diferencia:</strong> ${esc(t.diferencia)}</p>${ejemplosHtml}
+    </section>`;
+    }).join('\n');
+
+    const tablaHtml = `    <div class="tabla-scroll">
+        <table class="tabla-titulos">
+            <caption>Comparación rápida de niveles y títulos</caption>
+            <thead>
+                <tr><th scope="col">Título</th><th scope="col">Nivel</th><th scope="col">Duración</th><th scope="col">Dónde se cursa</th></tr>
+            </thead>
+            <tbody>
+${TITULOS.titulos.map(t => `                <tr><th scope="row"><a href="#${t.id}">${esc(t.nombre)}</a></th><td>${esc(t.etiqueta)}</td><td>${esc(t.duracion)}</td><td>${esc(t.donde)}</td></tr>`).join('\n')}
+            </tbody>
+        </table>
+    </div>`;
+
+    const glosarioHtml = `    <dl class="glosario">
+${TITULOS.glosario.map(g => `        <dt>${esc(g.termino)}</dt>\n        <dd>${esc(g.definicion)}</dd>`).join('\n')}
+    </dl>`;
+
+    const faqHtml = TITULOS.faq.map(f => `    <h3>${esc(f.pregunta)}</h3>\n    <p>${esc(f.respuesta)}</p>`).join('\n');
+
+    const cuerpo = `    <p class="entrada">${TITULOS.intro.map(esc).join('</p>\n    <p class="entrada">')}</p>
+
+    <h2>Cómo se organiza la educación superior</h2>
+    <ul class="niveles">
+${nivelesHtml}
+    </ul>
+
+    <h2>Los títulos, uno por uno</h2>
+${titulosHtml}
+
+    <h2>Tabla comparativa</h2>
+${tablaHtml}
+
+    <h2>Glosario</h2>
+${glosarioHtml}
+
+    <h2>Preguntas frecuentes</h2>
+${faqHtml}
+
+    <p><a class="cta" href="/">Ir al buscador</a></p>
+`;
+
+    return {
+        ruta,
+        html: documento({
+            ruta,
+            titulo: 'Títulos y niveles: qué significa cada formación | BEN',
+            descripcion,
+            h1: 'Títulos y niveles: qué significa cada formación',
+            cuerpo,
+            pasos: [{ nombre: 'Inicio', url: '/' }, { nombre: 'Títulos y niveles', url: ruta }],
+            ldExtra: [
+                {
+                    '@context': 'https://schema.org',
+                    '@type': 'FAQPage',
+                    mainEntity: TITULOS.faq.map(f => ({
+                        '@type': 'Question',
+                        name: f.pregunta,
+                        acceptedAnswer: { '@type': 'Answer', text: f.respuesta }
+                    }))
+                },
+                {
+                    '@context': 'https://schema.org',
+                    '@type': 'WebPage',
+                    name: 'Títulos y niveles: qué significa cada formación',
+                    description: descripcion,
+                    url: DOMINIO + ruta
+                }
+            ]
+        })
+    };
+}
+
 function indiceCarreras(modelo) {
     const ruta = '/carreras/';
     const descripcion = `Listado completo de las ${modelo.carreras.length} carreras que reúne BEN, ordenadas por área: grado, tecnicaturas, profesorados, oficios y cursos.`;
@@ -1591,6 +1827,22 @@ function mapaAutocompletado(modelo) {
     return JSON.stringify({ carreras, instituciones }, null, 0);
 }
 
+// Sectores de aplicación laboral por carrera, para el filtro del buscador.
+// Va en su propio archivo y no dentro de contenido-carreras.json a propósito:
+// ese trae las descripciones completas (~600 KB con las descripciones largas) y
+// la app solo necesita los ids de sector para filtrar. Acá viaja el mapa
+// liviano (clave normalizada -> [ids]) con todas las claves fusionadas ya
+// resueltas, así la app no repite la lógica de alias.
+function mapaSectores(modelo) {
+    const carreras = {};
+    modelo.carreras.forEach(c => {
+        const entrada = contenidoDe(c);
+        if (!entrada || !Array.isArray(entrada.sectores)) return;
+        (c.clavesFusionadas || [c.clave]).forEach(k => { carreras[k] = entrada.sectores; });
+    });
+    return JSON.stringify({ carreras }, null, 0);
+}
+
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
@@ -1615,7 +1867,7 @@ async function main() {
         rutas.push({ ruta: p.ruta, prioridad });
     });
 
-    emitir([indiceCarreras(modelo), indiceInstituciones(modelo)], '0.9');
+    emitir([indiceCarreras(modelo), indiceInstituciones(modelo), paginaTitulos(modelo)], '0.9');
     emitir(modelo.areas.map(paginaArea), '0.8');
     emitir(modelo.provincias.map(paginaProvincia), '0.8');
     emitir(modelo.provincias.map(paginaProvinciaUniversidades), '0.8');
@@ -1625,6 +1877,7 @@ async function main() {
 
     escribir('data/enlaces-ben.json', mapaEnlaces(modelo));
     escribir('data/autocompletado-ben.json', mapaAutocompletado(modelo));
+    escribir('data/sectores-carreras.json', mapaSectores(modelo));
     escribir('404.html', paginaError());
     escribir('sitemap.xml', sitemap(rutas));
     escribir('robots.txt', robots());
