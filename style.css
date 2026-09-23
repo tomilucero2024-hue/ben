@@ -2159,6 +2159,94 @@ html[data-tts="true"] .btn-escuchar-card {
 }
 
 /* ================================================================
+   16b. TUTORIAL DE PRIMERA VISITA
+   Un foco sobre el elemento real (el resto se oscurece con el box-shadow) y una
+   tarjeta que lo explica. El contenido lo pinta js/tutorial.js; acá vive el
+   aspecto. z-index 82: arriba de la portada (80) y debajo del botón de
+   accesibilidad (85), que tiene que seguir alcanzable.
+   ================================================================ */
+/* Mismo bloqueo de scroll que la portada: el tour centra cada objetivo solo. */
+html.tutorial-abierto, html.tutorial-abierto body { overflow: hidden; }
+.tutorial { position: fixed; inset: 0; z-index: 82; }
+/* El "agujero" iluminado: la caja no tiene fondo y su sombra enorme oscurece
+   todo lo demás. Sin clip-path ni capas extra. */
+.tutorial-foco {
+    position: fixed;
+    border-radius: 14px;
+    box-shadow: 0 0 0 100vmax rgba(2, 6, 23, .62);
+    pointer-events: none;
+    transition: top var(--dur-base) ease, left var(--dur-base) ease,
+                width var(--dur-base) ease, height var(--dur-base) ease;
+}
+.tutorial-card {
+    position: fixed;
+    z-index: 1;
+    width: min(400px, calc(100vw - 2rem));
+    max-height: min(70vh, 420px);
+    overflow-y: auto;
+    padding: var(--space-6);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--elev-3);
+}
+.tutorial-paso {
+    margin: 0 0 var(--space-2);
+    color: var(--accent-ink);
+    font-family: var(--font-detail);
+    font-size: var(--fs-2xs);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.tutorial-titulo {
+    margin: 0 0 var(--space-3);
+    font-size: var(--fs-lg);
+    color: var(--text);
+    outline: none;
+}
+.tutorial-texto { margin: 0; color: var(--muted); font-size: var(--fs-base); line-height: 1.55; }
+/* Paso de cierre (sin objetivo): la tarjeta va centrada. En celular se queda
+   abajo como el resto, que es donde el pulgar la espera. */
+@media (min-width: 821px) {
+    .tutorial-card-centrada { left: 50%; top: 50%; transform: translate(-50%, -50%); }
+}
+.tutorial-acciones { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-top: var(--space-5); }
+.tutorial-acciones-fin { display: flex; gap: var(--space-3); }
+.tutorial-btn {
+    min-height: 40px;
+    padding: .5rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    cursor: pointer;
+}
+.tutorial-btn:hover { border-color: var(--line-strong); background: var(--surface-soft); }
+.tutorial-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tutorial-btn-primario { border-color: transparent; background: var(--accion-fill); color: var(--accion-ink); }
+.tutorial-btn-primario:hover { background: var(--accion-fill); filter: brightness(1.08); }
+/* En celular la tarjeta se fija abajo a lo ancho: anclarla al objetivo dejaría
+   el texto peleando con el teclado y con el borde de la pantalla. Cuando el
+   objetivo está en la mitad de abajo (las tarjetas del catálogo, el botón del
+   copiloto) el mensaje sube: js/tutorial.js agrega .tutorial-card-arriba y acá
+   se lo deja debajo del header fijo, que si no lo taparía. */
+@media (max-width: 820px) {
+    .tutorial-card {
+        left: 1rem; right: 1rem; bottom: 1rem;
+        width: auto;
+        top: auto !important;
+        max-height: 45vh;
+    }
+    .tutorial-card-arriba {
+        top: calc(var(--hero-alto, 90px) + .5rem) !important;
+        bottom: auto;
+    }
+}
+
+/* ================================================================
    17. ACCESIBILIDAD (A11Y) - WCAG 2.1 AA/AAA
    Botón flotante, panel de configuración, alto contraste,
    resaltado de enlaces y lector de voz.
@@ -2583,6 +2671,10 @@ html[data-tts="true"] .btn-escuchar-card {
 
 .enlace-footer { color: var(--muted); font-size: var(--fs-sm); text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 2px; }
 .enlace-footer:hover { color: var(--text); text-decoration-style: solid; }
+/* "¿Cómo funciona?" es un botón con la ropa del enlace: se le saca el aspecto
+   nativo para que la fila del pie no tenga dos lenguajes visuales. */
+button.enlace-footer { padding: 0; border: 0; background: none; font: inherit; font-size: var(--fs-sm); cursor: pointer; }
+button.enlace-footer:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .btn-footer-feedback {
     display: inline-flex;

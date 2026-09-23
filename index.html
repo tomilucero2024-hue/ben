@@ -80,7 +80,7 @@
             document.head.appendChild(pre);
         })();
     </script>
-    <link rel="stylesheet" href="/style.css?v=20260923_11">
+    <link rel="stylesheet" href="/style.css?v=20260923_14">
 
 </head>
 <body>
@@ -397,6 +397,25 @@
         </section>
     </main>
 
+    <!-- Tutorial de primera visita: recorre las partes de la página con un foco
+         sobre el elemento real y una tarjeta que lo explica. El contenido de cada
+         paso lo pinta js/tutorial.js; acá vive solo el cascarón. -->
+    <div id="tutorial" class="tutorial" hidden>
+        <div class="tutorial-foco" aria-hidden="true"></div>
+        <div id="tutorial-card" class="tutorial-card" role="dialog" aria-modal="true" aria-labelledby="tutorial-titulo" tabindex="-1">
+            <p id="tutorial-paso" class="tutorial-paso" role="status"></p>
+            <h2 id="tutorial-titulo" class="tutorial-titulo" tabindex="-1"></h2>
+            <p id="tutorial-texto" class="tutorial-texto"></p>
+            <div class="tutorial-acciones">
+                <button id="tutorial-saltear" class="tutorial-btn" type="button">Saltear</button>
+                <span class="tutorial-acciones-fin">
+                    <button id="tutorial-anterior" class="tutorial-btn" type="button">Anterior</button>
+                    <button id="tutorial-siguiente" class="tutorial-btn tutorial-btn-primario" type="button">Siguiente</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
     <!-- Pie de página con enlace de Feedback / Sugerencias -->
     <footer class="site-footer">
         <div class="footer-container">
@@ -405,6 +424,7 @@
             </p>
             <div class="footer-actions">
                 <a class="enlace-footer" href="/titulos/">Títulos y niveles</a>
+                <button id="btnAbrirTutorial" class="enlace-footer" type="button" aria-haspopup="dialog" aria-controls="tutorial">¿Cómo funciona?</button>
                 <button id="btnAbrirFeedback" class="btn-footer-feedback" type="button" aria-haspopup="dialog" aria-controls="modalFeedback">
                     <span aria-hidden="true">💬</span> Sugerir mejora o reportar fallo
                 </button>

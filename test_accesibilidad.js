@@ -54,6 +54,10 @@ const dom = new JSDOM(html, {
         window.scrollTo = () => {};
         window.requestIdleCallback = (fn) => setTimeout(fn, 10);
         window.HTMLElement.prototype.scrollIntoView = () => {};
+        // El tutorial de primera visita se abriría al entrar al catálogo y
+        // taparía lo que audita este test (el foco, los filtros, los contrastes).
+        // Se prueba aparte, en test_tutorial.js.
+        window.localStorage.setItem('ben-tutorial-visto', '1');
     }
 });
 const win = dom.window;

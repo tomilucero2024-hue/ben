@@ -46,6 +46,7 @@ paginas.css  estilos de las páginas estáticas (mucho más liviano, ver más ab
     render.js          todo lo que pinta HTML
     copiloto.js        chat de búsqueda por texto libre (deriva al test completo)
     autocompletado.js  sugerencias en vivo al escribir en el buscador
+    tutorial.js        tutorial de primera visita: 6 pasos con foco sobre la interfaz
     main.js            arranque y delegación de eventos
     favoritos.js       "Me interesa" + Mi lista: storage y botones (script clásico,
                        también corre en las páginas estáticas)
@@ -103,6 +104,7 @@ node test_general.js          # salud general: imports/exports, sello de caché,
 node test_contenido.js        # contenido de las descripciones de carrera (largo, tono y términos excluidos)
 node test_titulos.js          # guía de títulos y niveles (/titulos/): datos, anclas, banner y aviso de costos
 node test_rubros.js           # rubros de los catálogos aparte: cobertura del mapa y render agrupado
+node test_tutorial.js         # tutorial de primera visita: disparo, pasos, foco, Escape y bandera de visto
 node test_arranque.js         # smoke de arranque real: index.html + main.js en jsdom (grilla, Mi lista, copiloto)
 node test-flow.js             # flujo completo de la app en jsdom (búsqueda, filtros, copiloto)
 node test_instituciones.js    # vista de instituciones (agrupadas por tipo)

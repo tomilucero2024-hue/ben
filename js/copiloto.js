@@ -139,10 +139,14 @@ export function configurarBienvenida() {
     const btnCopiloto = document.getElementById('btnBienvenidaCopiloto');
     const btnOfertas = document.getElementById('btnBienvenidaOfertas');
     if (btnCopiloto) btnCopiloto.addEventListener('click', () => {
-        salirDeBienvenida(() => abrirCopilotoPantallaCompleta());
+        salirDeBienvenida(() => {
+            avisarBienvenidaCerrada('orientador');
+            abrirCopilotoPantallaCompleta();
+        });
     });
     if (btnOfertas) btnOfertas.addEventListener('click', () => {
         salirDeBienvenida(() => {
+            avisarBienvenidaCerrada('catalogo');
             cambiarVista('carreras');
             // El botón que disparó esto queda oculto: sin esto el foco se pierde
             // en un elemento invisible y el teclado vuelve al principio.
@@ -167,12 +171,20 @@ function alternarInertDetrasDeBienvenida(activo) {
     if (activo) window.scrollTo(0, 0);
 }
 
+// Avisa por dónde siguió la persona después de la portada. Lo escucha el
+// tutorial de primera visita (js/tutorial.js): solo arranca si fue al catálogo,
+// y con un link compartido ('url') no arranca ni se marca como visto.
+function avisarBienvenidaCerrada(destino) {
+    document.dispatchEvent(new CustomEvent('ben:bienvenida-cerrada', { detail: { destino } }));
+}
+
 function ocultarBienvenidaInstantanea() {
     const pantalla = document.getElementById('pantallaBienvenida');
     if (!pantalla) return;
     pantalla.hidden = true;
     pantalla.classList.remove('is-saliendo');
     alternarInertDetrasDeBienvenida(false);
+    avisarBienvenidaCerrada('url');
 }
 
 // Transición de salida de la bienvenida (fade + subida leve). Al terminar se

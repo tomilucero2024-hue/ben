@@ -41,6 +41,11 @@ const dom = new JSDOM(html, {
         window.scrollTo = () => {};
         window.requestIdleCallback = (fn) => setTimeout(fn, 10);
         window.HTMLElement.prototype.scrollIntoView = () => {};
+        // Este test recorre la app como una persona que ya conoce la página: con
+        // el tutorial de primera visita pendiente, se abriría encima del flujo
+        // (portada → chat → test) y lo taparía. El tutorial se prueba en
+        // test_tutorial.js, que arranca sin la bandera.
+        window.localStorage.setItem('ben-tutorial-visto', '1');
     }
 });
 const win = dom.window;

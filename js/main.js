@@ -11,6 +11,7 @@ import { normalizarTexto } from './util.js';
 import { inicializarAutocompletado } from './autocompletado.js';
 import { inicializarTestCompleto } from './vocacional/test-completo.js';
 import { cerrarMiLista, inicializarMiLista } from './mi-lista.js';
+import { configurarTutorial } from './tutorial.js';
 
 async function arrancar() {
     document.body.dataset.seccion = estado.seccion;
@@ -27,6 +28,7 @@ async function arrancar() {
     sincronizarInertFiltros();
     configurarSwitcherVistas();
     configurarBienvenida();
+    configurarTutorial();
     inicializarTestCompleto();
     inicializarMiLista();
 }
