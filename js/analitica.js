@@ -34,6 +34,11 @@
 // las respuestas del test vocacional nunca, ni ningún dato de contacto. La IP
 // la anonimiza GA4; queda dicho acá para que quede dicho si algún día se cambia
 // de herramienta.
+//
+// FALLAS (ver la sección de abajo): los dos errores que el sitio ya anticipa
+// (los datos no bajan, el test no calcula) avisan con su propio nombre de evento
+// porque hay que poder distinguirlos de un vistazo. Cualquier otro error —el que
+// nadie previó— lo escucha un listener global y sale como `error`.
 // ============================================================================
 
 (function () {
@@ -171,6 +176,88 @@
       if (destino.origin === location.origin) return;
       window.benTrack('salir', { url: destino.href, host: destino.hostname, pagina: paginaActual() });
     }, true);
+
+    // ── Fallas que nadie previó ────────────────────────────────────────────────
+    //
+    // Los dos errores que el sitio ya anticipa (los datos no bajan, el test no
+    // calcula) avisan con su propio nombre de evento desde el lugar que los
+    // detecta, porque hay que poder distinguirlos de un vistazo en el informe.
+    // Acá va el resto: lo que se rompe y nadie lo tiene controlado, que hoy
+    // vive únicamente en la consola del visitante — donde nadie lo mira.
+    //
+    // Lo que sale es el tipo, el archivo y el mensaje saneado. El mensaje es lo
+    // único que sirve para arreglar algo, pero un error de red puede traer
+    // adentro justo lo que no queremos mandar: la URL que alguien estaba
+    // mirando, con su ?q= adentro, o un email. Por eso `sanearError()` le saca
+    // el query string a toda URL y tapa los emails antes de que el mensaje llegue
+    // a Google.
+    //
+    // Un error puede repetirse miles de veces (un `catch` que reintenta en
+    // bucle, un script que falla en cada frame). Mandar eso infla los números y
+    // tapa el resto del informe, así que: un evento por error distinto en toda
+    // la sesión, y con tope. El conteo real de veces que falló algo lo da el
+    // navegador, no GA4.
+
+    function sanearError(texto) {
+      return String(texto == null ? '' : texto)
+        // Una URL a la que se le quita el query string y el fragmento: ahí es
+        // donde viaja lo que la persona escribió (/?q=..., /?area=...) y a
+        // veces un email o un teléfono.
+        .replace(/https?:\/\/[^\s'")\]>]+/gi, url => {
+          try {
+            const u = new URL(url);
+            return u.origin + u.pathname;
+          } catch (e) { return '[url]'; }
+        })
+        .replace(/[^\s@]+@[^\s@]+\.[A-Za-z]{2,}/g, '[email]')
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    // Qué archivo falló, sin la ruta: el error de un módulo llega con el path
+    // completo y lo único útil es el nombre.
+    function archivoDe(origen) {
+      if (!origen || origen === location.href) return 'documento';
+      try {
+        const u = new URL(origen, location.href);
+        const externo = u.origin !== location.origin;
+        const nombre = u.pathname.split('/').pop() || 'raiz';
+        return (externo ? 'externo/' : '') + nombre.replace(/\.\w+$/, '');
+      } catch (e) { return 'desconocido'; }
+    }
+
+    const erroresVistos = new Set();
+    const TOPE_ERRORES = 5;
+
+    function avisarFalla(tipo, mensaje, archivo) {
+      const limpio = sanearError(mensaje);
+      if (!limpio) return;
+      const clave = tipo + '|' + archivo + '|' + limpio;
+      if (erroresVistos.has(clave)) return;
+      if (erroresVistos.size >= TOPE_ERRORES) return;
+      erroresVistos.add(clave);
+      window.benTrack('error', { tipo, donde: archivo, mensaje: limpio });
+    }
+
+    // `error` también se dispara cuando falla un <script> o un <img>: en ese
+    // caso no hay mensaje, sino un elemento con su src.
+    window.addEventListener('error', function (evento) {
+      if (evento.target && evento.target !== window) {
+        const nodo = evento.target;
+        avisarFalla('recurso', nodo.src || nodo.href || 'sin ruta',
+            archivoDe(nodo.src || nodo.href));
+        return;
+      }
+      avisarFalla('js', evento.message || 'error sin mensaje', archivoDe(evento.filename));
+    });
+
+    // Una promesa rechazada y sin catch: en la consola es un warnings que casi
+    // nadie lee, pero es la forma más común de que algo se rompa en silencio.
+    window.addEventListener('unhandledrejection', function (evento) {
+      const razon = evento.reason;
+      const texto = razon && razon.message ? razon.message : String(razon || 'rechazo sin motivo');
+      avisarFalla('rechazo', texto, archivoDe(razon && razon.stack ? String(razon.stack).split('\n')[0] : ''));
+    });
   }
 
   // ═══════════════════════════════════════════════════════════════════════════

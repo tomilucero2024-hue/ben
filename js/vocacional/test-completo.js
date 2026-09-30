@@ -379,6 +379,11 @@ async function finalizarTest() {
     });
   } catch (e) {
     console.error('[Test completo]', e);
+    // Alguien responde las 65 preguntas, llega al final y le sale "No pudimos
+    // calcular tu resultado": es la peor falla posible del test y hasta ahora
+    // solo la veía esa persona, en su consola. Con un nombre propio en el
+    // informe, saber que pasó deja de depender de que alguien la reporte.
+    avisarEvento('test_falla', { donde: 'motor', mensaje: (e && e.message ? String(e.message) : 'sin mensaje').slice(0, 100) });
     cuerpo.innerHTML = '<p class="empty-state">No pudimos calcular tu resultado. Probá de nuevo.</p>';
     pie.innerHTML = '<button type="button" class="tc-btn-secundario" data-tc-accion="rehacer">Rehacer el test</button>';
   }

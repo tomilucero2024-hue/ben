@@ -407,10 +407,29 @@ otros orígenes sin cachearlos (los datos de una visita anterior no se reenvían
 | `test_vocacional` | `empezar`, `retomar`, `abandonar`, `completar` (con el código del perfil), `rever_resultado`, `resultados_al_buscador` | `vocacional/test-completo.js` |
 | `copiloto` | Lo que se le pregunta al chat, y si encontró resultados | `copiloto.js` |
 | `salir` | Clic en el link oficial de una institución (el resultado final del sitio) | `js/analitica.js`, por delegación |
+| `test_falla` | El test no pudo calcular el resultado (la persona llegó al final y se le apagó la pantalla) | `vocacional/test-completo.js` |
+| `datos_no_cargan` | Los JSON no bajaron y la grilla quedó vacía | `datos.js` |
+| `error` | Cualquier otra falla: JS que se rompe o una promesa rechazada sin `catch` | `js/analitica.js`, listener global |
 
 Los parámetros salen limpios: GA4 descarta el parámetro entero si el nombre tiene un guion o una
 tilde, así que `js/analitica.js` los normaliza y corta los valores a 100 caracteres. Un mismo
 `search_term` repetido (escribir "enfermería" produce un evento por palabra) se manda una sola vez.
+
+**Para leer estos números en GA4** (qué significa cada evento, dónde se mira y qué hacer cuando uno
+sube) está [`docs/GUIA_GA4.md`](docs/GUIA_GA4.md).
+
+### Fallas
+
+Las dos que el sitio anticipa tienen nombre propio y no van dentro del `error` genérico, para que en
+**Informes → Eventos** aparezcan como filas propias y se vea "hoy salieron 3 `test_falla`" sin abrir
+nada más. Antes de esto vivían únicamente en la consola del visitante: si al test le pasaba algo, la
+única forma de enterarse era que alguien escribiera un mail.
+
+El `error` global es para lo que nadie previó. Lo que sale es el tipo (`js`, `rechazo`, `recurso`), el
+archivo (sin la ruta) y el mensaje **saneado**: se le saca el query string a cualquier URL que venga
+dentro y se tapan los emails, porque un error de red puede llevar justamente lo que la persona
+escribió. Un error repetido en bucle se manda una sola vez por sesión, con un tope de 5 distintos: un
+`catch` que reintenta en loop no puede inflar el informe.
 
 ### Cómo se emiten
 

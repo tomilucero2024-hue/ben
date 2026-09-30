@@ -131,7 +131,69 @@ console.log('\n3. Parámetros que GA4 no acepta');
     check(lista.vacio === undefined && lista.nada === undefined, 'los valores vacíos no viajan');
 }
 
-console.log('\n4. Con el ID sin configurar (así se comporta el archivo antes de pegarlo)');
+console.log('\n4. Fallas que nadie previó (listener global)');
+{
+    const { window, dataLayer } = pagina();
+    const falla = eventos(dataLayer, 'error');
+
+    // Un TypeError de verdad: es el caso más común y el que hay que poder leer.
+    window.dispatchEvent(new window.ErrorEvent('error', {
+        message: 'x is not a function', filename: 'https://buscadoreducativo.com.ar/js/render.js', lineno: 120
+    }));
+    check(eventos(dataLayer, 'error').length === 1, 'un error no atrapado sale como evento error');
+    const primerError = eventos(dataLayer, 'error')[0][2];
+    check(primerError.tipo === 'js' && primerError.donde === 'render', 'el evento dice qué tipo de fallo es y en qué archivo');
+    check(primerError.mensaje === 'x is not a function', 'y trae el mensaje, que es lo único que sirve para arreglarlo');
+
+    // Lo que no se puede mandar: un error de red puede llevar adentro la URL que
+    // la persona estaba mirando, con lo que escribió en ella.
+    window.dispatchEvent(new window.ErrorEvent('error', {
+        message: 'Failed to fetch https://buscadoreducativo.com.ar/data/data.json?q=enfermeria&correo=ana@mail.com',
+        filename: 'https://buscadoreducativo.com.ar/js/datos.js'
+    }));
+    const saneado = eventos(dataLayer, 'error')[1][2].mensaje;
+    check(!saneado.includes('enfermeria') && !saneado.includes('ana@mail.com'),
+        'al error se le saca el query string: lo que la persona escribió no sale');
+    check(saneado.includes('data/data.json'), 'pero el archivo que falló sí se puede ver');
+
+    // Un mismo error en bucle no puede inflar el informe.
+    for (let i = 0; i < 40; i++) {
+        window.dispatchEvent(new window.ErrorEvent('error', {
+            message: 'x is not a function', filename: 'https://buscadoreducativo.com.ar/js/render.js'
+        }));
+    }
+    check(eventos(dataLayer, 'error').length === 2, 'el mismo error repetido no se manda 40 veces');
+
+    // Un rechazo de promesa sin catch es la forma más común de romperse en silencio.
+    window.dispatchEvent(Object.assign(new window.Event('unhandledrejection'),
+        { reason: new Error('No se pudo calcular') }));
+    const tipos = eventos(dataLayer, 'error').map(e => e[2].tipo);
+    check(tipos.includes('rechazo'), 'una promesa rechazada y sin catch también se mide');
+
+    // Y el tope, para que una página rota no mande 200 eventos distintos.
+    for (let i = 0; i < 20; i++) {
+        window.dispatchEvent(new window.ErrorEvent('error', {
+            message: 'fallo distinto ' + i, filename: 'https://buscadoreducativo.com.ar/js/main.js'
+        }));
+    }
+    check(eventos(dataLayer, 'error').length <= 5, 'hay un tope de errores distintos por sesión');
+}
+
+console.log('\n5. Los dos errores que el sitio ya anticipa');
+{
+    // Van con nombre propio y no dentro del 'error' genérico: en GA4 cada
+    // nombre de evento es una fila del informe, y hay que poder ver "hoy
+    // salieron 3 test_falla" sin abrir Explorar.
+    const test = fs.readFileSync(path.join(RAIZ, 'js/vocacional/test-completo.js'), 'utf8');
+    check(/avisarEvento\('test_falla'/.test(test) || /registrarEvento\('test_falla'/.test(test),
+        'el test avisa test_falla cuando no puede calcular el resultado');
+
+    const datos = fs.readFileSync(path.join(RAIZ, 'js/datos.js'), 'utf8');
+    check(/registrarEvento\('datos_no_cargan'/.test(datos), 'la carga de datos avisa datos_no_cargan si falla');
+    check(/import \{ registrarEvento \} from '\.\/medicion\.js'/.test(datos), 'y datos.js importa el helper para poder avisar');
+}
+
+console.log('\n6. Con el ID sin configurar (así se comporta el archivo antes de pegarlo)');
 {
     // Se fuerza el placeholder para probar ese camino aunque el repo ya tenga el
     // ID real puesto: si algún día se borra, el sitio tiene que seguir
@@ -158,13 +220,13 @@ console.log('\n4. Con el ID sin configurar (así se comporta el archivo antes de
     check(typeof dom.window.benTrack === 'function', 'window.benTrack existe igual, para que nadie tenga que preguntar si la analítica está viva');
 }
 
-console.log('\n4b. El archivo del repo tiene un ID real');
+console.log('\n7. El archivo del repo tiene un ID real');
 {
     const id = (CODIGO.match(/const MEDICION = '([^']*)'/) || [])[1] || '';
     check(/^G-[A-Z0-9]{10}$/.test(id), `js/analitica.js tiene un ID de medición con formato G-XXXXXXXXXX (${id})`);
 }
 
-console.log('\n5. Respetar "No quiero ser rastreado" y el apagado manual');
+console.log('\n8. Respetar "No quiero ser rastreado" y el apagado manual');
 {
     const { dataLayer, pedidos } = pagina({ dnt: '1' });
     check(pedidos.length === 0 && dataLayer.length === 0, 'con DNT activado no se mide nada');
@@ -176,7 +238,7 @@ console.log('\n5. Respetar "No quiero ser rastreado" y el apagado manual');
     check(dataLayer.length === 0, 'y tampoco los eventos que llegan después');
 }
 
-console.log('\n6. El archivo está en todas las páginas');
+console.log('\n9. El archivo está en todas las páginas');
 {
     const index = fs.readFileSync(path.join(RAIZ, 'index.html'), 'utf8');
     check(/<script src="\/js\/analitica\.js\?v=[\w-]+"><\/script>/.test(index), 'index.html carga js/analitica.js');

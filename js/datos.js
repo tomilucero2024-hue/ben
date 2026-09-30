@@ -5,6 +5,7 @@
 
 import { actualizarVista } from './render.js';
 import { estado } from './estado.js';
+import { registrarEvento } from './medicion.js';
 import { escaparHTML, getArea, getFormacion, inferirGestion, inferirTipoInstitucion, limpiarTexto, normalizarTexto, obtenerDuracionEnAnios, obtenerModalidades } from './util.js';
 
 // Carreras de instituciones formales (universidades, IES, terciarios).
@@ -196,6 +197,12 @@ export async function cargarOfertas() {
         actualizarVista();
     } catch (error) {
         console.error(error);
+        // El sitio queda con la grilla vacía y un cartel de "abrí con Live
+        // Server". Para el operador esto era invisible: solo lo veía el
+        // visitante, en su consola. Es la falla más probable del sitio (un JSON
+        // que no baja, un deploy a medio hacer) y por eso tiene nombre propio y
+        // no sale dentro del 'error' genérico.
+        registrarEvento('datos_no_cargan', { motivo: 'error_inesperado' });
         document.getElementById('cardContainer').innerHTML = '<p class="empty-state">No se pudieron cargar las ofertas. Probá abrir la página con Live Server.</p>';
     }
 }
