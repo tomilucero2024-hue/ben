@@ -17,3 +17,10 @@ node_modules/
 patch_*.js
 check_braces.js
 update_settings.js
+
+# Credenciales de servicio de Google (Google Analytics, Search Console). Nunca
+# se versionan: son una llave privada. El script que las usa explica cómo
+# generarlas (registrar-dimensiones-ga4.js).
+*-service-account*.json
+ga4-*.json
+.clave-ga4.json
