@@ -185,6 +185,26 @@ const explicacion = Vocacional.explicarMatch(camila, enfermeria.perfil, Vocacion
 ok(typeof explicacion === 'string' && explicacion.length > 10, 'la explicación del match es una frase (' + explicacion.slice(0, 60) + '…)');
 ok(Vocacional.etiquetasCodigo(camila.codigo).includes('·'), 'el código se muestra con etiquetas legibles');
 
+// Los drivers son lo que sale a la analítica en lugar de las respuestas: 3
+// etiquetas legibles sacadas de la carrera mejor rankeada. Tienen que ser
+// etiquetas humanas (nunca el código crudo) y coincidir con lo que la persona
+// ve en pantalla.
+const drivers = Vocacional.driversDelMatch(ranking);
+const etiquetasRiasec = drivers.driver_riasec.split('-');
+ok(etiquetasRiasec.length >= 1 && etiquetasRiasec.length <= 2 && etiquetasRiasec.every(t => /^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+$/.test(t)),
+    `el driver RIASEC son 1 o 2 etiquetas legibles (${drivers.driver_riasec})`);
+ok(drivers.driver_riasec.split('-').length <= 2, 'el driver RIASEC nunca trae más de 2 (lo que muestra la tarjeta)');
+ok(!/^[A-Z]{3}$/.test(drivers.driver_riasec), 'el driver RIASEC no es el código pelado');
+ok(drivers.driver_apt === '' || drivers.driver_apt === drivers.driver_apt.toLowerCase(),
+    `el driver de aptitud viene como etiqueta, no como id (${drivers.driver_apt || 'vacío'})`);
+// Las coincidencias de la carrera #1 son las mismas que alimentan la
+// explicación en pantalla, y salen ordenadas por fuerza.
+ok(drivers.driver_riasec === ranking.todas[0].coincidencias.filter(c => c.dimension.startsWith('riasec.')).slice(0, 2).map(c => c.label).join('-'),
+    'el driver RIASEC coincide con la carrera mejor rankeada');
+// Un ranking vacío o ausente no puede romper el aviso (el test puede fallar
+// antes de generarlo).
+ok(Object.values(Vocacional.driversDelMatch(null)).every(v => v === ''), 'sin ranking, los drivers salen vacíos en vez de tirar error');
+
 // ---------------------------------------------------------------------------
 seccion('7. Soporte de la Fase B (perfiles por uso)');
 const uso = leer('perfiles-uso.json');

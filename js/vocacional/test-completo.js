@@ -371,11 +371,16 @@ async function finalizarTest() {
     // El código del perfil (SIE, AIN, ERI…) es el resultado del test en una
     // palabra: con esto se ve qué perfiles terminan el test y cuántos
     // candidatos les salen.
+    // Los drivers son el "hacia dónde se orienta" en 3 etiquetas (las mismas
+    // que la persona ve en pantalla: "Calza con tu perfil Social-Emprendedor y
+    // tu aptitud interpersonal alta"). Agregado, dice a qué se inclina la gente
+    // que termina el test sin publicar ni una respuesta.
     avisarEvento('test_vocacional', {
       accion: 'completar',
       codigo: perfil.codigo,
       candidatas: ranking.total,
-      preguntadas: Object.keys(respuestas).length
+      preguntadas: Object.keys(respuestas).length,
+      ...window.Vocacional.driversDelMatch(ranking)
     });
   } catch (e) {
     console.error('[Test completo]', e);

@@ -269,6 +269,28 @@ function explicarMatch(perfilEstudiante, perfilCarrera, coincidencias) {
   return `Calza con ${partes.join(' y ')}.`;
 }
 
+// Las dimensiones que hicieron calzar la carrera mejor rankeada, en etiquetas
+// legibles. Sintetiza las 65 respuestas en 3 datos ("hacia dónde se orienta
+// esta persona") SIN mandar ni una respuesta, que es lo que la analítica nunca
+// publica. Son las mismas que `explicarMatch` le muestra en pantalla, así que
+// lo que sale a Google es exactamente lo que la persona leyó.
+// Devuelve strings vacíos cuando ese bloque no llegó al umbral del match (una
+// carrera puede calzar por intereses y no por valores); js/analitica.js los
+// descarta al limpiar los parámetros.
+function driversDelMatch(ranking) {
+  const primera = ranking && ranking.todas && ranking.todas[0];
+  const coincidencias = (primera && primera.coincidencias) || [];
+  const porBloque = bloque => coincidencias
+    .filter(c => c.dimension.startsWith(bloque + '.'))
+    .map(c => c.label);
+  const riasec = porBloque('riasec').slice(0, 2);
+  return {
+    driver_riasec: riasec.length ? riasec.join('-') : '',
+    driver_apt: porBloque('apt')[0] || '',
+    driver_val: porBloque('val')[0] || ''
+  };
+}
+
 // ---------------------------------------------------------------------------
 // 3) ALERTAS DE TENSIÓN (intereses vs. valores vs. contexto)
 // ---------------------------------------------------------------------------
@@ -375,7 +397,7 @@ if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
     ETIQUETAS, FRASES_RIASEC, BLOQUES,
     cargarDatos, setDatos, calcularPerfil, codigoRiasec, calcularAfinidad,
-    calcularCoincidencias, calcularAlertasCarrera, explicarMatch, alertasTension,
+    calcularCoincidencias, calcularAlertasCarrera, explicarMatch, driversDelMatch, alertasTension,
     resumenPerfil, etiquetasCodigo, generarRanking,
     get config() { return config; },
     get preguntas() { return preguntas; },
@@ -386,7 +408,7 @@ if (typeof module !== 'undefined' && module.exports) {
   window.Vocacional = {
     ETIQUETAS, FRASES_RIASEC, BLOQUES,
     cargarDatos, setDatos, calcularPerfil, codigoRiasec, calcularAfinidad,
-    calcularCoincidencias, calcularAlertasCarrera, explicarMatch, alertasTension,
+    calcularCoincidencias, calcularAlertasCarrera, explicarMatch, driversDelMatch, alertasTension,
     resumenPerfil, etiquetasCodigo, generarRanking,
     get config() { return config; },
     get preguntas() { return preguntas; },

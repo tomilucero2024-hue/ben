@@ -193,6 +193,22 @@ console.log('\n5. Los dos errores que el sitio ya anticipa');
     check(/import \{ registrarEvento \} from '\.\/medicion\.js'/.test(datos), 'y datos.js importa el helper para poder avisar');
 }
 
+console.log('\n5b. Los drivers del test (hacia dónde se orienta la gente)');
+{
+    // La analítica no publica ni una respuesta: publica las 3 etiquetas que
+    // resumen hacia dónde se orienta la persona, y que son las mismas que ve
+    // en pantalla. El helper vive en el motor, que es donde está el match.
+    const motor = fs.readFileSync(path.join(RAIZ, 'js/vocacional/motor.js'), 'utf8');
+    check(/function driversDelMatch\(/.test(motor), 'el motor calcula los drivers del match');
+    check(/driversDelMatch, alertasTension/.test(motor), 'y lo expone para que el test lo use');
+
+    const test = fs.readFileSync(path.join(RAIZ, 'js/vocacional/test-completo.js'), 'utf8');
+    check(/\.\.\.window\.Vocacional\.driversDelMatch\(ranking\)/.test(test),
+        'el evento completar del test manda los drivers junto al código del perfil');
+    check(!/driver[^\n]*perfil\.respuestas|respuestas[^\n]*driver/i.test(test),
+        'y nunca manda las respuestas crudas');
+}
+
 console.log('\n6. Con el ID sin configurar (así se comporta el archivo antes de pegarlo)');
 {
     // Se fuerza el placeholder para probar ese camino aunque el repo ya tenga el

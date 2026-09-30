@@ -404,7 +404,7 @@ otros orígenes sin cachearlos (los datos de una visita anterior no se reenvían
 | `seccion` | Cambio de pestaña (Grado, Plataformas, Formaciones, Oficios, Secundario) | `render.js` → `cambiarSeccion()` |
 | `favorito` | El corazón, con `agregado`/`quitado`, tipo, área y si hizo el test | `favoritos.js` |
 | `mi_lista` | Abrir, comparar, copiar, imprimir o vaciar la lista | `mi-lista.js` |
-| `test_vocacional` | `empezar`, `retomar`, `abandonar`, `completar` (con el código del perfil), `rever_resultado`, `resultados_al_buscador` | `vocacional/test-completo.js` |
+| `test_vocacional` | `empezar`, `retomar`, `abandonar`, `completar` (con el código del perfil y los drivers), `rever_resultado`, `resultados_al_buscador` | `vocacional/test-completo.js` |
 | `copiloto` | Lo que se le pregunta al chat, y si encontró resultados | `copiloto.js` |
 | `salir` | Clic en el link oficial de una institución (el resultado final del sitio) | `js/analitica.js`, por delegación |
 | `test_falla` | El test no pudo calcular el resultado (la persona llegó al final y se le apagó la pantalla) | `vocacional/test-completo.js` |
@@ -417,6 +417,18 @@ tilde, así que `js/analitica.js` los normaliza y corta los valores a 100 caract
 
 **Para leer estos números en GA4** (qué significa cada evento, dónde se mira y qué hacer cuando uno
 sube) está [`docs/GUIA_GA4.md`](docs/GUIA_GA4.md).
+
+### El test: hacia dónde se orienta la gente
+
+La analítica **no publica ni una respuesta** del test. Lo que publica al `completar` son tres
+etiquetas que sintetizan en qué se fija el match: `driver_riasec` (hasta 2, ej. `Social-Emprendedor`),
+`driver_apt` (ej. `interpersonal`) y `driver_val` (ej. `impacto social`). Salen de `driversDelMatch()`
+en `vocacional/motor.js`, que lee las coincidencias de la carrera mejor rankeada — las mismas que la
+persona ve en pantalla en *"Calza con tu perfil Social y tu aptitud interpersonal alta"*.
+
+Agregado en un informe, eso dice a qué se orienta la gente que termina el test. La dimensión
+`contexto.presion` (cuánta presión familiar o por decidir siente la persona) **queda afuera a
+propósito**: es el dato más sensible del test y no se manda individual.
 
 ### Fallas
 
