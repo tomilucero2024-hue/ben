@@ -399,6 +399,7 @@ otros orígenes sin cachearlos (los datos de una visita anterior no se reenvían
 |---|---|---|
 | `page_view` | Cada página del sitio (automático) | `js/analitica.js` |
 | `search` | Lo que se busca, con `search_term`, sección y de dónde salió | `main.js` (buscador y autocompletado) y la cabecera de las estáticas |
+| `search_sin_resultado` | La búsqueda no encontró nada exacto: `sugerencias` (cuántas parecidas se mostraron) y `origen` (`texto` / `filtros` / `texto_y_filtros`) | `render.js` → `mostrarResultados()` |
 | `filtro` | Área, gestión, modalidad, duración, rango de años, orden, sector… | `main.js` (chips, rango, orden) |
 | `filtros_limpiados` | Cuándo se abandona un filtro y se vuelve a ver todo | `main.js` |
 | `seccion` | Cambio de pestaña (Grado, Plataformas, Formaciones, Oficios, Secundario) | `render.js` → `cambiarSeccion()` |
