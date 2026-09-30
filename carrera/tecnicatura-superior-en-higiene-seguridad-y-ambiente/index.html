@@ -56,7 +56,11 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260923_14">
+<link rel="stylesheet" href="/paginas.css?v=20260930_16">
+<!-- Medir las fichas: son la mayor parte del tráfico del sitio (llegan desde
+     Google) y sin esto los informes verían solo la portada. El mismo archivo
+     carga la app en index.html. -->
+<script src="/js/analitica.js?v=20260930_16"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ambiente","item":"https://buscadoreducativo.com.ar/area/ambiente/"},{"@type":"ListItem","position":4,"name":"Tecnicatura Superior en Higiene, Seguridad y Ambiente","item":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-seguridad-y-ambiente/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Dónde estudiar Tecnicatura Superior en Higiene, Seguridad y Ambiente","numberOfItems":4,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-seguridad-y-ambiente/#oferta-1","item":{"@type":"Course","name":"Tecnicatura Superior en Higiene, Seguridad y Ambiente — IES 9-006 Francisco H. Tolosa","description":"Tecnicatura Superior en Higiene, Seguridad y Ambiente en IES 9-006 Francisco H. Tolosa. Duración: 3 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-seguridad-y-ambiente/#oferta-1","sameAs":"https://ens9006-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-seguridad-ambiente/","provider":{"@type":"EducationalOrganization","name":"IES 9-006 Francisco H. Tolosa","url":"https://buscadoreducativo.com.ar/institucion/ies-9-006-francisco-h-tolosa/"}}},{"@type":"ListItem","position":2,"url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-seguridad-y-ambiente/#oferta-2","item":{"@type":"Course","name":"Tecnicatura Superior en Higiene, Seguridad y Ambiente — IES 9-012 Informática","description":"Tecnicatura Superior en Higiene, Seguridad y Ambiente en IES 9-012 Informática. Duración: 3 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-seguridad-y-ambiente/#oferta-2","sameAs":"https://ies9012.edu.ar/sigeaweb/index.php/oferta-academica/tecnicatura-superior-en-higiene-seguridad-y-ambiente","provider":{"@type":"EducationalOrganization","name":"IES 9-012 Informática","url":"https://buscadoreducativo.com.ar/institucion/ies-9-012-informatica/"}}},{"@type":"ListItem","position":3,"url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-seguridad-y-ambiente/#oferta-3","item":{"@type":"Course","name":"Tecnicatura Superior en Higiene, Seguridad y Ambiente — IESVU (IES 9-015 Valle de Uco)","description":"Tecnicatura Superior en Higiene, Seguridad y Ambiente en IESVU (IES 9-015 Valle de Uco). Duración: 2 años y medio. Modalidad: A confirmar.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-seguridad-y-ambiente/#oferta-3","sameAs":"https://iesvu.edu.ar/estudio/tecnicatura-superior-en-higiene-seguridad-y-ambiente/","provider":{"@type":"EducationalOrganization","name":"IESVU (IES 9-015 Valle de Uco)","url":"https://buscadoreducativo.com.ar/institucion/iesvu-ies-9-015-valle-de-uco/"}}},{"@type":"ListItem","position":4,"url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-seguridad-y-ambiente/#oferta-4","item":{"@type":"Course","name":"Tecnicatura Superior en Higiene, Seguridad y Ambiente — INSUTEC (Instituto Superior de Educación Tecnológica)","description":"Tecnicatura Superior en Higiene, Seguridad y Ambiente en INSUTEC (Instituto Superior de Educación Tecnológica). Duración: 3 años. Modalidad: Presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-superior-en-higiene-seguridad-y-ambiente/#oferta-4","sameAs":"https://www.insutec.edu.ar/","provider":{"@type":"EducationalOrganization","name":"INSUTEC (Instituto Superior de Educación Tecnológica)","url":"https://buscadoreducativo.com.ar/institucion/insutec-instituto-superior-de-educacion-tecnologica/"}}}]}</script>
 </head>
@@ -340,6 +344,20 @@
             return dataIndex;
         }
 
+        // La búsqueda de la cabecera manda a la portada con un ?q= y se pierde
+        // al cambiar de página: se avisa antes de irse (lo escucha
+        // js/analitica.js). Es un script clásico y no puede importar el helper de
+        // los módulos ES, así que dispara el CustomEvent a mano.
+        inp.form && inp.form.addEventListener('submit', () => {
+            const termino = inp.value.trim();
+            if (!termino) return;
+            try {
+                window.dispatchEvent(new CustomEvent('ben:evento', { detail: {
+                    tipo: 'search', search_term: termino, seccion: 'formal', via: 'cabecera_estatica'
+                } }));
+            } catch (e) {}
+        });
+
         inp.addEventListener('input', async () => {
             const val = inp.value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
             if (val.length < 2) { drop.hidden = true; drop.innerHTML = ''; return; }
@@ -381,6 +399,6 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260923_14"></script>
+<script src="/js/favoritos.js?v=20260930_16"></script>
 </body>
 </html>

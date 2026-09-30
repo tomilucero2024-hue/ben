@@ -4,6 +4,7 @@
 // ==========================================
 
 import { ETIQUETAS_FUENTE, catalogosAparte, ofertas, plataformas } from './datos.js';
+import { registrarEvento } from './medicion.js';
 import { cambiarSeccion, cambiarVista, renderizarCursosAparte, renderizarPlataformas, renderizarTarjetas } from './render.js';
 import { capSeguro, escaparHTML, normalizarTexto, obtenerModalidades } from './util.js';
 import { abrirTestCompleto } from './vocacional/test-completo.js';
@@ -716,6 +717,15 @@ function procesarEntradaUsuario(texto) {
     setTimeout(() => {
         quitarEscribiendo();
         const respuesta = responderTextoLibre(limpio);
+        // Todo lo que se le pregunta al Copiloto pasa por acá (el chat y los
+        // chips de sugerencia), así que es el único punto donde se puede saber
+        // qué le preguntan y si encontró algo. El texto es una búsqueda, como
+        // la del buscador: es lo más interesante que se puede aprender del sitio.
+        registrarEvento('copiloto', {
+            texto: limpio,
+            con_resultados: Boolean(respuesta && respuesta.resultados),
+            lleva_a_test: Boolean(respuesta && respuesta.accion === 'test')
+        });
         if (!respuesta) return;
         if (respuesta.accion === 'test') {
             abrirTestVocacional();

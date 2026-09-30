@@ -224,6 +224,16 @@ export function urlSegura(url) {
     return limpia;
 }
 
+// Dominio de un link oficial, para la etiqueta de la tarjeta ("Ver más en
+// mendoza.edu.ar"). Devuelve '' si la URL no es http(s) o no se puede leer.
+export function hostLegible(url) {
+    try {
+        return new URL(urlSegura(url)).hostname.replace(/^www\./, '');
+    } catch (e) {
+        return '';
+    }
+}
+
 
 // Etiqueta legible del match de la búsqueda libre del copiloto (escala 0-10).
 // Vivía en copiloto.js, pero render.js la necesita para pintar el badge y así se

@@ -5,8 +5,9 @@
 
 import { ETIQUETAS_FUENTE, catalogosAparte, enlacesBEN, ofertas, plataformas } from './datos.js';
 import { estado, sincronizarURL } from './estado.js';
+import { registrarEvento } from './medicion.js';
 import { FILTROS_SOLO_FORMALES, cumpleFiltros, filtrarYOrdenar, obtenerRelacionadas } from './filtros.js';
-import { capSeguro, duracionCorta, escaparHTML, etiquetaCompatibilidad, limpiarTexto, nombreSeguro, normalizarTexto, urlSegura } from './util.js';
+import { capSeguro, duracionCorta, escaparHTML, etiquetaCompatibilidad, hostLegible, limpiarTexto, nombreSeguro, normalizarTexto, urlSegura } from './util.js';
 
 export const LIMITE_PAGINA = 24;
 
@@ -134,6 +135,11 @@ function actualizarSwitcherVistas() {
 
 export function cambiarSeccion(seccion) {
     ocultarCargarMas();
+    // Las cinco pestañas de arriba (y el logo, y el Copiloto, y el test) pasan
+    // todos por acá, así que es el único lugar del que se puede saber en qué
+    // pestaña terminó la persona. No se dispara al arrancar la app: cambiarSeccion
+    // solo se llama desde una acción.
+    registrarEvento('seccion', { seccion });
     estado.seccion = seccion;
     document.body.dataset.seccion = seccion;
     document.querySelectorAll('.section-tab').forEach(boton => {
@@ -264,11 +270,15 @@ function tarjetaCursoAparte(curso, tipo, etiquetaTitulo = 'h3') {
 }
 
 // Variante simple de tarjeta: mismo diseño (.curso-card, con el borde y el tinte
-// de la sección) pero solo nombre, descripción y link. Sin badges ni duración.
+// de la sección) pero solo nombre, descripción, requisitos y link. Sin badges ni
+// duración. La etiqueta del link usa el dominio real del dato (no todas estas
+// opciones viven en mendoza.edu.ar).
 // Ojo: acá NO se usa capitalizar(), que pasa todo a minúscula después de la
 // primera letra y convertiría "CEBJA" en "Cebja".
 function renderizarCursosSimples(contenedor, lista, tipo = 'secundario') {
-    contenedor.innerHTML = lista.map(curso => `
+    contenedor.innerHTML = lista.map(curso => {
+        const host = hostLegible(curso.link);
+        return `
         <li class="curso-card curso-card-simple">
             <h3 class="curso-title">${escaparHTML(curso.nombre)}</h3>
             ${curso.nombreCompleto
@@ -277,8 +287,11 @@ function renderizarCursosSimples(contenedor, lista, tipo = 'secundario') {
             ${curso.descripcion
                 ? `<p class="curso-descripcion">${escaparHTML(curso.descripcion)}</p>`
                 : ''}
+            ${curso.requisitos
+                ? `<p class="curso-requisitos"><strong>Necesitás:</strong> ${escaparHTML(curso.requisitos)}</p>`
+                : ''}
             ${urlSegura(curso.link)
-                ? `<a class="card-link" href="${escaparHTML(urlSegura(curso.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ver más en mendoza.edu.ar ↗</a>`
+                ? `<a class="card-link" href="${escaparHTML(urlSegura(curso.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ver más${host ? ` en ${escaparHTML(host)}` : ''} ↗</a>`
                 : '<span class="card-link card-link-muted">Sin link oficial</span>'}
             <div class="card-actions">
                 ${botonFavorito({
@@ -287,7 +300,8 @@ function renderizarCursosSimples(contenedor, lista, tipo = 'secundario') {
                     area: '', formacion: '', ficha: '', link: urlSegura(curso.link) || ''
                 })}
             </div>
-        </li>`).join('');
+        </li>`;
+    }).join('');
 }
 
 function ocultarCatalogosAparte() {

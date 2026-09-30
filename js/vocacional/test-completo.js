@@ -16,6 +16,10 @@
 // ============================================================================
 
 import { estado } from '../estado.js';
+// Con alias porque en este archivo ya hay otra `registrarEvento` (más abajo):
+// la que guarda el interés post-test en localStorage para la Fase B. Esta es
+// la genérica de js/medicion.js, que solo avisa y no guarda nada.
+import { registrarEvento as avisarEvento } from '../medicion.js';
 import { cambiarSeccion, mostrarResultados } from '../render.js';
 import { enlacesBEN } from '../datos.js';
 import { escaparHTML } from '../util.js';
@@ -218,6 +222,15 @@ export async function abrirTestCompleto() {
 
 export function cerrarTestCompleto() {
   if (!overlay || overlay.hidden) return;
+  // Un test a medio hacer que se cierra es el dato que dice cuántas preguntas
+  // son demasiadas: se manda solo si el estudiante no llegó al resultado.
+  if (!perfil && Object.keys(respuestas).length) {
+    avisarEvento('test_vocacional', {
+      accion: 'abandonar',
+      avance: `${Object.keys(respuestas).length}/${preguntas.length}`,
+      preguntas: preguntas.length
+    });
+  }
   overlay.hidden = true;
   alternarDetras(false);
   if (focoPrevio && typeof focoPrevio.focus === 'function') focoPrevio.focus();
@@ -355,6 +368,15 @@ async function finalizarTest() {
     guardarPerfil(perfil);
     borrarProgreso(); // el avance ya cumplió su función: queda el resultado
     renderResultados();
+    // El código del perfil (SIE, AIN, ERI…) es el resultado del test en una
+    // palabra: con esto se ve qué perfiles terminan el test y cuántos
+    // candidatos les salen.
+    avisarEvento('test_vocacional', {
+      accion: 'completar',
+      codigo: perfil.codigo,
+      candidatas: ranking.total,
+      preguntadas: Object.keys(respuestas).length
+    });
   } catch (e) {
     console.error('[Test completo]', e);
     cuerpo.innerHTML = '<p class="empty-state">No pudimos calcular tu resultado. Probá de nuevo.</p>';
@@ -428,6 +450,8 @@ function renderResultados() {
 
 function aplicarAlBuscador() {
   if (!ranking || !perfil) return;
+  // El salto del resultado a la grilla con filtros: el final del recorrido.
+  avisarEvento('test_vocacional', { accion: 'resultados_al_buscador', codigo: perfil.codigo });
   estado.recomendacion = { carreras: ranking.todas, rankings: ranking, total: ranking.total };
   estado.vista = 'carreras';
   cambiarSeccion('formal');
@@ -453,6 +477,7 @@ function manejarAccion(accion) {
       paginaActual = 0;
       borrarProgreso();
       renderPagina();
+      avisarEvento('test_vocacional', { accion: 'empezar', preguntas: preguntas.length });
       break;
     case 'seguir': {
       const guardado = leerProgresoGuardado();
@@ -460,6 +485,8 @@ function manejarAccion(accion) {
       respuestas = guardado.respuestas;
       paginaActual = Math.min(guardado.paginaActual || 0, Math.max(paginas.length - 1, 0));
       renderPagina();
+      // Retomar vale distinto de arrancar: es alguien que volvió solo.
+      avisarEvento('test_vocacional', { accion: 'retomar', avance: `${Object.keys(respuestas).length}/${preguntas.length}` });
       break;
     }
     case 'atras':
@@ -477,6 +504,9 @@ function manejarAccion(accion) {
       try {
         ranking = window.Vocacional.generarRanking(perfil, window.Vocacional.perfiles, window.Vocacional.config, { limite: 150 });
         renderResultados();
+        // Volver a mirar un resultado guardado (sin haber hecho el test de nuevo)
+        // es señal de que el resultado le sirvió: vale más que el 'completar'.
+        avisarEvento('test_vocacional', { accion: 'rever_resultado', codigo: perfil.codigo });
       } catch (e) {
         console.error('[Test completo]', e);
       }

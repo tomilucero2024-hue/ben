@@ -127,17 +127,39 @@
     }
     guardar(lista);
     notificar();
+    avisarInteres(accion, ficha);
     if (accion === 'agregado') registrarInteres(ficha);
     return accion;
   }
 
   function quitar(clave) {
     const lista = leer();
+    const indice = lista.findIndex(f => f.clave === clave);
     const siguientes = lista.filter(f => f.clave !== clave);
     if (siguientes.length === lista.length) return false;
     guardar(siguientes);
     notificar();
+    // El mismo aviso que en toggle(): quitar desde Mi lista es la misma decisión
+    // que desmarcar el corazón, solo que desde otro lugar.
+    if (indice !== -1) avisarInteres('quitado', lista[indice]);
     return true;
+  }
+
+  // El corazón es LA conversión del sitio: el estudiante que lo marca ya dijo
+  // qué le interesa. Se avisa como un CustomEvent (lo escucha js/analitica.js)
+  // para que este archivo no tenga que saber que hay una analítica.
+  function avisarInteres(accion, ficha) {
+    try {
+      window.dispatchEvent(new CustomEvent('ben:evento', { detail: {
+        tipo: 'favorito',
+        accion,
+        item: ficha.tipo || 'carrera',
+        nombre: ficha.nombre,
+        area: ficha.area,
+        formacion: ficha.formacion,
+        con_test: Boolean(perfilGuardado())
+      } }));
+    } catch (e) {}
   }
 
   function vaciar() {

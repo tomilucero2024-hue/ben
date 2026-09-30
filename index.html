@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="manifest" href="/manifest.json?v=20260921_54">
+    <link rel="manifest" href="/manifest.json?v=20260930_16">
     <meta name="theme-color" content="#1d4ed8">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="BEN">
@@ -80,7 +80,14 @@
             document.head.appendChild(pre);
         })();
     </script>
-    <link rel="stylesheet" href="/style.css?v=20260923_14">
+    <link rel="stylesheet" href="/style.css?v=20260930_16">
+
+    <!-- La analítica va PRIMERO en el <head> y no al final del body con los
+         demás scripts: gtag.js se baja con async (no frena el render) pero el
+         pageview se encola apenas se ejecuta analitica.js, antes de que la
+         persona llegue a tocar nada. Es el mismo archivo que cargan las
+         páginas estáticas generadas (generar-paginas.js → documento()). -->
+    <script src="/js/analitica.js?v=20260930_16"></script>
 
 </head>
 <body>
@@ -391,7 +398,7 @@
             <!-- Terminalidad de secundaria y primaria para jóvenes y adultos. -->
             <section id="seccion-secundario" class="catalog-aparte" hidden>
                 <h2><svg class="section-title-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19v15H5.5A1.5 1.5 0 0 0 4 19.5z"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 18H19v3H5.5A1.5 1.5 0 0 1 4 19.5z"/></svg> Terminar el Secundario</h2>
-                <p class="catalog-aparte-intro">Opciones para completar los estudios: CENS presenciales y a distancia, CEPAS con bachiller profesional, Plan FinEs/TEM para quienes adeudan materias y CEBJA.</p>
+                <p class="catalog-aparte-intro">Opciones para completar los estudios: CENS presenciales y a distancia (CENS-EAD), CEPAS con bachiller profesional, Plan FinEs/TEM para quienes adeudan materias y CEBJA.</p>
                 <ul id="contenedor-secundario" class="cursos-grid" role="list"></ul>
             </section>
         </section>
@@ -699,13 +706,13 @@
     <!-- Scripts clasicos: son autonomos (IIFE) y tienen que correr antes que el
          modulo. favoritos.js se autoinstala (delega los clicks de [data-favorito])
          y tambien lo cargan las paginas estaticas de carrera. -->
-    <script src="/js/vocacional/motor.js?v=20260921_54"></script>
-    <script src="/js/vocacional/eventos.js?v=20260921_54"></script>
-    <script src="/js/favoritos.js?v=20260921_54"></script>
-    <script src="/js/accesibilidad.js?v=20260921_54"></script>
-    <script src="/js/feedback.js?v=20260921_54"></script>
+    <script src="/js/vocacional/motor.js?v=20260930_16"></script>
+    <script src="/js/vocacional/eventos.js?v=20260930_16"></script>
+    <script src="/js/favoritos.js?v=20260930_16"></script>
+    <script src="/js/accesibilidad.js?v=20260930_16"></script>
+    <script src="/js/feedback.js?v=20260930_16"></script>
     <!-- El resto de la app vive en modulos ES; main.js es el punto de entrada. -->
-    <script type="module" src="/js/main.js?v=20260921_54"></script>
+    <script type="module" src="/js/main.js?v=20260930_16"></script>
 
     <!-- Service worker para que el sitio abra sin conexión. Vive en la raíz,
          igual que esta página, así su scope cubre todo el sitio: la app, los JSON

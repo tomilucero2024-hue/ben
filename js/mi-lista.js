@@ -21,6 +21,7 @@
 // ============================================================================
 
 import { enlacesBEN, ofertas, plataformas, catalogosAparte } from './datos.js';
+import { registrarEvento } from './medicion.js';
 import { ofertasDeCarrera } from './render.js';
 import { capSeguro, escaparHTML, formatearDuracionAnios, limpiarTexto, normalizarTexto, urlSegura } from './util.js';
 
@@ -147,6 +148,14 @@ export function abrirMiLista(pantallaInicial = 'lista') {
     const foco = cuerpo.querySelector('button, a[href], input') || document.getElementById('ml-cerrar');
     if (foco) foco.focus();
     cargarDatosVocacional();
+    // Cuántas fichas tiene la persona y desde dónde la abrió (el botón del
+    // header, o "Ver Mi lista" desde una ficha): dice si la lista se usa para
+    // comparar de verdad o quedó en un favorito y nada más.
+    registrarEvento('mi_lista', {
+        accion: 'abrir',
+        pantalla: pantallaInicial,
+        total: window.Favoritos ? window.Favoritos.contar() : 0
+    });
 }
 
 // La afinidad y las barras de intereses necesitan los perfiles del test
@@ -759,6 +768,7 @@ function manejarClick(event) {
             // El foco viaja a la comparación (si no, quedaría en un botón borrado).
             const volver = cuerpo.querySelector('[data-ml-accion="volver"]');
             if (volver) volver.focus({ preventScroll: true });
+            registrarEvento('mi_lista', { accion: 'comparar', total: comparadas.length });
             break;
         }
         case 'volver':
@@ -768,9 +778,11 @@ function manejarClick(event) {
             if (primerCheck) primerCheck.focus({ preventScroll: true });
             break;
         case 'copiar':
+            registrarEvento('mi_lista', { accion: 'copiar' });
             copiarComparacion();
             break;
         case 'imprimir':
+            registrarEvento('mi_lista', { accion: 'imprimir' });
             window.print();
             break;
         case 'vaciar':
@@ -784,6 +796,7 @@ function manejarClick(event) {
         case 'confirmar-vaciar':
             confirmandoVaciar = false;
             seleccion.clear();
+            registrarEvento('mi_lista', { accion: 'vaciar' });
             window.Favoritos.vaciar();
             break;
         case 'cerrar-e-ir':

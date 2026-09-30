@@ -122,9 +122,9 @@ export const catalogosAparte = {
         seccion: 'seccion-secundario',
         contenedor: 'contenedor-secundario',
         cursos: [],
-        // Tarjeta simple: son cuatro puertas de entrada institucionales, no cursos
-        // concretos. No tienen duración ni modalidad únicas (cada sede varía), así
-        // que se muestran solo con nombre, descripción y link.
+        // Tarjeta simple: son puertas de entrada institucionales (hoy seis), no
+        // cursos concretos. No tienen duración ni modalidad únicas (cada sede
+        // varía), así que se muestran con nombre, descripción, requisitos y link.
         simple: true
     }
 };
@@ -285,6 +285,8 @@ export function crearCursoAparte(carrera, institucion, catalogo = {}) {
     // Opcionales: solo los traen los catálogos de tarjeta simple (ver `simple`).
     const descripcion = limpiarTexto(carrera.descripcion || '');
     const nombreCompleto = limpiarTexto(carrera.nombre_completo || '');
+    // Edad y documentación de la opción de terminalidad ("Necesitás…").
+    const requisitos = limpiarTexto(carrera.requisitos || '');
     // Sede/dirección del dato institucional. "A confirmar" no es una dirección:
     // se descarta para no pintar una fila inútil en la tarjeta.
     const direccionCruda = limpiarTexto((institucion.contacto && institucion.contacto.direccion) || '');
@@ -293,6 +295,7 @@ export function crearCursoAparte(carrera, institucion, catalogo = {}) {
         nombre,
         nombreCompleto,
         descripcion,
+        requisitos,
         institucion: nombreInstitucion,
         categoria,
         modalidad: limpiarTexto(carrera.modalidad || 'A confirmar'),
@@ -302,7 +305,7 @@ export function crearCursoAparte(carrera, institucion, catalogo = {}) {
         link: carrera.link_oficial || '',
         rubro,
         rubroNombre: nombreRubro,
-        busqueda: normalizarTexto(`${nombre} ${nombreCompleto} ${descripcion} ${nombreInstitucion} ${categoria} ${nombreRubro} ${sede}`),
+        busqueda: normalizarTexto(`${nombre} ${nombreCompleto} ${descripcion} ${requisitos} ${nombreInstitucion} ${categoria} ${nombreRubro} ${sede}`),
         _clave: `aparte:${nombreInstitucion}:${nombre}`
     };
 }

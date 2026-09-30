@@ -16,7 +16,7 @@
 // hace que un usuario con la versión vieja cacheada reciba la nueva: al cambiar
 // el nombre del caché, el activate de abajo borra todo lo anterior. Si se
 // actualiza el HTML y no esto, el service worker sigue sirviendo lo viejo.
-const VERSION = '20260923_14';
+const VERSION = '20260930_16';
 const CACHE = `ben-${VERSION}`;
 
 // El esqueleto mínimo para que la app abra sin red.
@@ -29,6 +29,14 @@ const SHELL = [
     'style.css',
     'paginas.css',
     'manifest.json',
+    // La analítica también va en el shell. Sola no mide nada sin red (gtag.js es
+    // de Google y los pedidos a otros orígenes ni pasan por acá), pero así el
+    // <head> no queda con un 404 y el sitio se comporta igual con y sin
+    // conexión. medicion.js la acompaña porque main.js lo importa: sin ese
+    // archivo en caché, sin red, el grafo de módulos no carga y la app no
+    // arranca.
+    'js/analitica.js',
+    'js/medicion.js',
     'js/vocacional/motor.js',
     'js/vocacional/eventos.js',
     'js/vocacional/test-completo.js',

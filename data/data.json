@@ -46846,6 +46846,7 @@
                     "nombre_completo": "Centros Educativos de Educación Básica de Jóvenes y Adultos",
                     "descripcion": "Para personas mayores de 14 años que no completaron la primaria o necesitan alfabetización. Permite finalizar la primaria y cursar el ciclo básico del nivel secundario.",
                     "categoria": "Terminalidad Primaria",
+                    "requisitos": "Primaria: desde los 14 años; ciclo básico del secundario: desde los 16. DNI, partida de nacimiento y certificado de trayectorias escolares (libretas o certificado de la última escuela, si lo tenés); para el ciclo básico, además, certificado de 7° grado y analítico incompleto (si corresponde).",
                     "link_oficial": "https://www.mendoza.edu.ar/cebja/"
                 }
             ]
@@ -46868,12 +46869,36 @@
                     "nombre_completo": "Centros Educativos de Nivel Secundario",
                     "descripcion": "Para personas mayores de 18 años (o desde 16 con evaluación) que quieran terminar la secundaria. Se obtiene el título secundario en 3 años, con formato flexible (no graduado) que permite avanzar por módulos según el ritmo de cada estudiante.",
                     "categoria": "Terminalidad Secundaria",
+                    "requisitos": "Tener 18 años o más. DNI, partida de nacimiento y analítico incompleto o constancia de analítico en trámite, o certificado de finalización de primaria.",
                     "link_oficial": "https://www.mendoza.edu.ar/cens/"
                 }
             ]
         },
         {
             "id": 995003,
+            "nombre": "CENS-EAD",
+            "nivel": "terminalidad secundaria a distancia",
+            "gestion": "pública",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "(0261) 429-9280",
+                "email": "depjasecretaria@mendoza.edu.ar",
+                "direccion": "Ocho centros: Godoy Cruz (San Francisco del Monte), Junín, San Rafael, Lavalle, Capital (Alto Godoy), San Martín, Tunuyán (Colonia de las Rosas) y Maipú. Cada centro tiene su dirección y su correo; el listado completo está en la página oficial."
+            },
+            "carreras": [
+                {
+                    "id": 99500301,
+                    "nombre_carrera": "CENS-EAD",
+                    "nombre_completo": "Centros Educativos de Nivel Secundario - Educación a Distancia",
+                    "descripcion": "Se trata de los centros educativos que posibilitan finalizar los estudios secundarios a través de la modalidad 100% virtual, que se puede realizar por medio de la plataforma de Escuela Digital Mendoza.",
+                    "categoria": "Terminalidad Secundaria a Distancia",
+                    "requisitos": "Tener 18 años o más. Se pide la misma documentación que en el CENS: DNI, partida de nacimiento y analítico incompleto o constancia de analítico en trámite, o certificado de finalización de primaria.",
+                    "link_oficial": "https://www.mendoza.edu.ar/subsecretaria-de-educacion/direccion-de-educ-permanente-de-jovenes-y-adultos/cens-ead/"
+                }
+            ]
+        },
+        {
+            "id": 995004,
             "nombre": "CEPAS",
             "nivel": "terminalidad secundaria + formación profesional",
             "gestion": "pública",
@@ -46885,17 +46910,18 @@
             },
             "carreras": [
                 {
-                    "id": 99500301,
+                    "id": 99500401,
                     "nombre_carrera": "CEPAS",
                     "nombre_completo": "Centros de Educación Profesional para Adultos",
-                    "descripcion": "Para personas mayores de 18 años que quieran terminar la secundaria y formarse en un oficio. Se obtiene el título secundario con certificación profesional, en una modalidad flexible y adaptada a trayectorias personalizadas.",
+                    "descripcion": "Para personas mayores de 18 años que quieran terminar la secundaria y formarse en un oficio. Se obtiene el título secundario con certificación profesional, en una modalidad flexible y adaptada a trayectorias personalizadas. Las formaciones disponibles son diseño multimedial, turismo y hotelería, gastronomía, programación y energía e instalador en energías renovables.",
                     "categoria": "Terminalidad Secundaria con Formación Profesional",
+                    "requisitos": "Tener 18 años o más. DNI, partida de nacimiento y analítico incompleto o constancia de analítico en trámite, o certificado de finalización de primaria.",
                     "link_oficial": "https://www.mendoza.edu.ar/cepas/"
                 }
             ]
         },
         {
-            "id": 995004,
+            "id": 995005,
             "nombre": "Terminalidad Educativa",
             "nivel": "terminalidad secundaria (adeuda materias)",
             "gestion": "pública",
@@ -46907,12 +46933,36 @@
             },
             "carreras": [
                 {
-                    "id": 99500401,
+                    "id": 99500501,
                     "nombre_carrera": "Terminalidad Educativa",
                     "nombre_completo": "Programa TEM - Terminalidad Educativa Mendoza",
                     "descripcion": "Si cursaste todo el secundario pero todavía debés materias, el programa TEM te ayuda a rendir y obtener tu título. Está destinado a jóvenes y adultos mayores de 18 años que adeudan espacios curriculares y cursaron el último año como alumnos regulares. Podés acceder luego de transcurrido un año o más de haber terminado de cursar.",
                     "categoria": "Terminalidad Secundaria",
+                    "requisitos": "Tener 18 años o más, haber cursado el último año como alumno regular y adeudar espacios curriculares. Se puede acceder después de un año o más de haber terminado de cursar.",
                     "link_oficial": "https://www.mendoza.edu.ar/terminalidad-educativa/"
+                }
+            ]
+        },
+        {
+            "id": 995006,
+            "nombre": "Plan FinEs",
+            "nivel": "terminalidad primaria y secundaria (programa nacional)",
+            "gestion": "pública",
+            "provincia": "Nacional",
+            "contacto": {
+                "telefono": "(0261) 429-9280",
+                "email": "depjasecretaria@mendoza.edu.ar",
+                "direccion": "En Mendoza se cursa en las sedes TEM, que funcionan en los CENS de la provincia; el listado con referente, correo y horarios está en la página de Terminalidad Educativa."
+            },
+            "carreras": [
+                {
+                    "id": 99500601,
+                    "nombre_carrera": "Plan FinEs",
+                    "nombre_completo": "Plan de Finalización de Estudios Primarios y Secundarios",
+                    "descripcion": "Si tenés 18 años o más y no iniciaste o no terminaste los estudios obligatorios (nivel primario o secundario), el Plan FinEs te permite hacerlo. Podés cursar el trayecto que te falte o rendir las materias que tengas pendientes, acompañado de docentes tutores. En Mendoza se cursa en las sedes TEM.",
+                    "categoria": "Terminalidad Primaria y Secundaria",
+                    "requisitos": "Tener 18 años o más y no haber terminado la primaria o la secundaria.",
+                    "link_oficial": "https://www.argentina.gob.ar/educacion/fines"
                 }
             ]
         }

@@ -180,6 +180,17 @@ const formaciones = data.formaciones_alternativas || [];
 check(formaciones.length >= 37 && formaciones.flatMap(i => i.carreras).length >= 58, `formaciones alternativas: ${formaciones.length} instituciones / ${formaciones.flatMap(i => i.carreras).length} carreras`);
 check(Array.isArray(data.secundario) && data.secundario.length > 0, `catálogo secundario presente (${data.secundario.length} entradas)`);
 
+// Terminalidad: cada opción explica a quién está dirigida (edad y documentación)
+// y lleva a una página oficial. CENS-EAD y Plan FinEs son las dos que viven
+// fuera de la portada "Terminá de Estudiar" y se sumaron después.
+const carrerasSecundario = (data.secundario || []).flatMap(i => i.carreras || []);
+check(carrerasSecundario.length >= 6, `las opciones de terminalidad están (${carrerasSecundario.map(c => c.nombre_carrera).join(', ')})`);
+check(carrerasSecundario.some(c => c.nombre_carrera === 'CENS-EAD') && carrerasSecundario.some(c => c.nombre_carrera === 'Plan FinEs'), 'CENS-EAD y Plan FinEs están en el catálogo');
+const sinRequisitos = carrerasSecundario.filter(c => !(c.requisitos || '').trim());
+check(sinRequisitos.length === 0, `todas las opciones traen requisitos${sinRequisitos.length ? ' → faltan: ' + sinRequisitos.map(c => c.nombre_carrera).join(', ') : ''}`);
+const linksSecundario = carrerasSecundario.filter(c => !/^https:\/\//.test(c.link_oficial || ''));
+check(linksSecundario.length === 0, `los ${carrerasSecundario.length} links de terminalidad son https${linksSecundario.length ? ' → ' + linksSecundario.map(c => c.nombre_carrera).join(', ') : ''}`);
+
 // El clasificador de áreas no puede devolver algo que la URL no acepta.
 const permitidasEstado = new Set([...(codigosJs['estado.js'].match(/const AREAS_PERMITIDAS = new Set\(\[([^\]]*)\]/) || [])[1].matchAll(/'([^']+)'/g)].map(m => m[1]));
 const nombresTodos = [];
@@ -209,6 +220,27 @@ renderizarCursosAparte(contenedorSinSede, [{
     sede: '', duracion: 'A confirmar', link: 'https://example.com', _clave: 't2'
 }]);
 check(!/card-meta-row[^>]*>\s*<svg[^>]*>?\s*<\/p>/.test(contenedorSinSede.innerHTML), 'la tarjeta no pinta una fila de sede vacía');
+
+// Tarjeta simple (terminalidad): línea "Necesitás…" y etiqueta del link con el
+// dominio real del dato (Plan FinEs vive en argentina.gob.ar, no en Mendoza).
+const cursoSimple = {
+    nombre: 'CENS-EAD', nombreCompleto: 'Centros Educativos de Nivel Secundario - Educación a Distancia',
+    descripcion: 'Modalidad 100% virtual.', requisitos: 'Tener 18 años o más.',
+    categoria: 'Terminalidad Secundaria a Distancia', modalidad: 'A confirmar', duracion: 'A confirmar',
+    institucion: 'CENS-EAD', provincia: 'Mendoza', sede: '', link: 'https://www.mendoza.edu.ar/cens-ead/', _clave: 't3'
+};
+const contenedorSimple = { innerHTML: '' };
+renderizarCursosAparte(contenedorSimple, [cursoSimple], true);
+check(contenedorSimple.innerHTML.includes('Necesitás:') && contenedorSimple.innerHTML.includes('Tener 18 años o más'), 'la tarjeta simple pinta los requisitos');
+check(contenedorSimple.innerHTML.includes('Ver más en mendoza.edu.ar'), 'la etiqueta del link usa el dominio del dato');
+
+const contenedorNacional = { innerHTML: '' };
+renderizarCursosAparte(contenedorNacional, [{ ...cursoSimple, link: 'https://www.argentina.gob.ar/educacion/fines' }], true);
+check(contenedorNacional.innerHTML.includes('Ver más en argentina.gob.ar'), 'un link nacional no dice "mendoza.edu.ar"');
+
+const contenedorSinRequisitos = { innerHTML: '' };
+renderizarCursosAparte(contenedorSinRequisitos, [{ ...cursoSimple, requisitos: '' }], true);
+check(!contenedorSinRequisitos.innerHTML.includes('Necesitás:'), 'sin requisitos no queda el renglón vacío');
 
 // ==========================================
 // 6. SHELL DEL SERVICE WORKER

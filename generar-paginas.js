@@ -458,6 +458,10 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : `<link rel="canon
     })();
 </script>
 <link rel="stylesheet" href="/paginas.css?v=${SELLO}">
+<!-- Medir las fichas: son la mayor parte del tráfico del sitio (llegan desde
+     Google) y sin esto los informes verían solo la portada. El mismo archivo
+     carga la app en index.html. -->
+<script src="/js/analitica.js?v=${SELLO}"></script>
 ${bloques}
 </head>
 <body>
@@ -558,6 +562,20 @@ ${bloques}
             } catch (e) {}
             return dataIndex;
         }
+
+        // La búsqueda de la cabecera manda a la portada con un ?q= y se pierde
+        // al cambiar de página: se avisa antes de irse (lo escucha
+        // js/analitica.js). Es un script clásico y no puede importar el helper de
+        // los módulos ES, así que dispara el CustomEvent a mano.
+        inp.form && inp.form.addEventListener('submit', () => {
+            const termino = inp.value.trim();
+            if (!termino) return;
+            try {
+                window.dispatchEvent(new CustomEvent('ben:evento', { detail: {
+                    tipo: 'search', search_term: termino, seccion: 'formal', via: 'cabecera_estatica'
+                } }));
+            } catch (e) {}
+        });
 
         inp.addEventListener('input', async () => {
             const val = inp.value.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');

@@ -1125,6 +1125,11 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
 .curso-card-simple .curso-title { margin-top: 0; margin-bottom: var(--space-1); }
 .curso-subtitulo { margin: 0 0 var(--space-3); color: var(--seccion-ink); font-family: var(--font-detail); font-size: var(--fs-base); letter-spacing: .03em; }
 .curso-descripcion { margin: 0 0 var(--space-5); color: var(--muted); font-size: var(--fs-sm); line-height: 1.5; }
+/* Edad y documentación de la opción de terminalidad ("Necesitás…"): es el dato
+   que define si alguien puede anotarse, así que va en un bloque propio sobre el
+   link y no enterrado dentro de la descripción. */
+.curso-requisitos { margin: 0 0 var(--space-5); padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); background: color-mix(in srgb, var(--seccion) 10%, transparent); color: var(--muted); font-size: var(--fs-sm); line-height: 1.5; }
+.curso-requisitos strong { color: var(--seccion-ink); }
 .badge-seccion { color: var(--seccion-ink); background: color-mix(in srgb, var(--seccion) 22%, transparent); border-color: color-mix(in srgb, var(--seccion-ink) 35%, transparent); }
 
 /* Plataformas que aparecen al buscar dentro de Educación Formal. */

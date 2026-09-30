@@ -11,6 +11,7 @@ import { normalizarTexto } from './util.js';
 import { inicializarAutocompletado } from './autocompletado.js';
 import { inicializarTestCompleto } from './vocacional/test-completo.js';
 import { cerrarMiLista, inicializarMiLista } from './mi-lista.js';
+import { registrarEvento } from './medicion.js';
 import { configurarTutorial } from './tutorial.js';
 
 async function arrancar() {
@@ -213,6 +214,10 @@ function configurarEventos() {
                 else if (catalogosAparte[estado.seccion]) mostrarCatalogoAparte(estado.seccion);
                 else mostrarResultados();
                 sincronizarURL();
+                // Elegir una sugerencia del autocompletado es la forma más
+                // limpia de buscar: el término ya viene completo y no pasa por
+                // el debounce de abajo.
+                registrarEvento('search', { search_term: textoSeleccionado, seccion: estado.seccion, via: 'autocompletado' });
             }
         });
     }
@@ -221,12 +226,14 @@ function configurarEventos() {
     inputBusqueda.addEventListener('input', event => {
         clearTimeout(esperaBusqueda);
         esperaBusqueda = setTimeout(() => {
-            estado.texto = normalizarTexto(event.target.value.trim());
+            const termino = event.target.value.trim();
+            estado.texto = normalizarTexto(termino);
             // Buscar dentro de la sección en la que está parado el usuario.
             if (estado.seccion === 'plataformas') mostrarPlataformas();
             else if (catalogosAparte[estado.seccion]) mostrarCatalogoAparte(estado.seccion);
             else mostrarResultados();
             sincronizarURL();
+            registrarEvento('search', { search_term: termino, seccion: estado.seccion, via: 'buscador' });
         }, 200);
     });
 
@@ -259,6 +266,7 @@ function configurarEventos() {
             document.getElementById('durationMin').value = '';
             document.getElementById('durationMax').value = '';
         }
+        registrarEvento('filtro', { filtro, valor, multi: filtro === 'departamento' || filtro === 'sectores' });
         actualizarBotonesActivos();
         mostrarResultados();
         sincronizarURL();
@@ -273,6 +281,7 @@ function configurarEventos() {
         estado.orden = event.target.value;
         mostrarResultados();
         sincronizarURL();
+        registrarEvento('filtro', { filtro: 'orden', valor: event.target.value });
     });
     document.getElementById('clearFiltersButton').addEventListener('click', limpiarFiltros);
 
@@ -327,6 +336,10 @@ function aplicarRangoDuracion() {
         document.getElementById('durationMax').value = estado.duracionMax;
     }
     estado.duracion = 'todos';
+    registrarEvento('filtro', {
+        filtro: 'duracion_rango',
+        valor: `${estado.duracionMin === null ? '' : estado.duracionMin}-${estado.duracionMax === null ? '' : estado.duracionMax}`
+    });
     actualizarBotonesActivos();
     mostrarResultados();
     sincronizarURL();
@@ -338,6 +351,7 @@ function aplicarRangoDuracion() {
 // y actualizarBotonesActivos) porque cambiarVista() también lo necesita para que
 // la vista de instituciones entre siempre limpia.
 function limpiarFiltros() {
+    registrarEvento('filtros_limpiados', {});
     resetearFiltros();
     mostrarResultados();
     sincronizarURL();

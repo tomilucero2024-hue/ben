@@ -51,6 +51,9 @@ paginas.css  estilos de las páginas estáticas (mucho más liviano, ver más ab
     favoritos.js       "Me interesa" + Mi lista: storage y botones (script clásico,
                        también corre en las páginas estáticas)
     mi-lista.js        ventana de Mi lista y comparador de carreras
+    medicion.js        registrarEvento(): avisa qué pasó y lo escucha la analítica
+    analitica.js       Google Analytics 4: carga gtag.js y traduce los avisos a
+                      eventos (script clásico, lo cargan TODAS las páginas)
     vocacional/        Test Vocacional Completo
       motor.js           banco de preguntas → perfil (RIASEC + aptitudes + valores) → ranking
       test-completo.js   ventana flotante: intro, tandas de preguntas, resultados
@@ -62,6 +65,10 @@ data/        los JSON generados (uno por institución) + los que consume el siti
              rubros-aparte.json (curado a mano): rubros de Formaciones Alternativas
              y Oficios Técnicos, con el orden de los grupos y la clasificación de
              cada curso. Sin este archivo, esas secciones se ven en grilla plana.
+             secundario.json (curado a mano): las seis opciones de terminalidad
+             (CEBJA, CENS, CENS-EAD, CEPAS, TEM y Plan FinEs) con descripción,
+             requisitos (edad y documentación) y link oficial. Ningún scraper lo
+             genera: se edita a mano y se copia a data.json con unir_todo.py.
   vocacional/  datos del Test Vocacional Completo (editables sin tocar código):
                preguntas.json (banco de 65), areas-base.json, ajustes-palabras.json,
                config.json, perfiles-carreras.json (generado), perfiles-uso.json (Fase B)
@@ -101,6 +108,7 @@ La suite se corre con Node y no necesita nada más allá de `npm install` (jsdom
 
 ```bash
 node test_general.js          # salud general: imports/exports, sello de caché, catálogos, render, SW y smoke HTTP
+node test_analitica.js       # GA4: carga, eventos, parámetros inválidos, DNT y apagado con ?sin-analitica
 node test_contenido.js        # contenido de las descripciones de carrera (largo, tono y términos excluidos)
 node test_titulos.js          # guía de títulos y niveles (/titulos/): datos, anclas, banner y aviso de costos
 node test_rubros.js           # rubros de los catálogos aparte: cobertura del mapa y render agrupado
@@ -356,6 +364,77 @@ Dos detalles más que conviene conocer antes de tocar nada:
   el mismo nombre con distinta puntuación (pasa: una coma de más genera una clave nueva),
   `generar-paginas.js` las une en una página con las ofertas de las dos, en vez de publicar dos
   páginas casi idénticas.
+
+## Analítica (Google Analytics 4)
+
+`js/analitica.js` mide el sitio con GA4. Mide **las dos mitades**: la app (una sola página) y
+las ~590 páginas estáticas de `/carrera/`, `/area/`, `/institucion/`, `/provincia/` y `/titulos/`,
+que son la mayor parte del tráfico y llegan desde Google.
+
+> El **ID de medición** (`G-JCNCMH202B`) está en la constante `MEDICION` de `js/analitica.js`, y es
+> el único valor que hay que cambiar si algún día se crea otra propiedad: se copia el `G-XXXXXXXXXX`
+> de [Administración → Flujos de datos → Web] y listo. `PLACEHOLDER`, la constante de al lado, **no
+> se toca**: es la que hace que el archivo se apague solo (con un aviso en la consola) si el ID
+> llegara a quedar vacío, en vez de mandarle datos a una propiedad inexistente sin decir nada.
+
+> En **Administración → Flujos de datos → (tu flujo web) → Medición mejorada** hay que apagar
+> **dos** palanquitas:
+>
+> - **Clics salientes.** GA4 mide eso por su cuenta y, si queda prendida, cada clic a una
+>   institución se cuenta dos veces (una como evento `salir`, que trae la URL, y otra como
+>   `click` genérico).
+> - **Cambios en la página de salida.** La app reescribe la URL con `replaceState` para los
+>   filtros: si queda prendida, cada cambio de filtro se cuenta como una página nueva.
+>
+> El resto de las opciones se dejan como están. "Búsqueda en el sitio" en particular conviene
+> dejarla prendida: el buscador de las páginas estáticas entra por `/?q=...` y GA4 lo detecta solo
+> (los dos eventos no se pisan porque el nuestro se llama `search` y el de GA4 `view_search_results`).
+
+gtag.js se baja con `async` y no frena el render, y el service worker deja pasar los pedidos a
+otros orígenes sin cachearlos (los datos de una visita anterior no se reenvían).
+
+### Qué se mide
+
+| Evento | Qué es | Se dispara en |
+|---|---|---|
+| `page_view` | Cada página del sitio (automático) | `js/analitica.js` |
+| `search` | Lo que se busca, con `search_term`, sección y de dónde salió | `main.js` (buscador y autocompletado) y la cabecera de las estáticas |
+| `filtro` | Área, gestión, modalidad, duración, rango de años, orden, sector… | `main.js` (chips, rango, orden) |
+| `filtros_limpiados` | Cuándo se abandona un filtro y se vuelve a ver todo | `main.js` |
+| `seccion` | Cambio de pestaña (Grado, Plataformas, Formaciones, Oficios, Secundario) | `render.js` → `cambiarSeccion()` |
+| `favorito` | El corazón, con `agregado`/`quitado`, tipo, área y si hizo el test | `favoritos.js` |
+| `mi_lista` | Abrir, comparar, copiar, imprimir o vaciar la lista | `mi-lista.js` |
+| `test_vocacional` | `empezar`, `retomar`, `abandonar`, `completar` (con el código del perfil), `rever_resultado`, `resultados_al_buscador` | `vocacional/test-completo.js` |
+| `copiloto` | Lo que se le pregunta al chat, y si encontró resultados | `copiloto.js` |
+| `salir` | Clic en el link oficial de una institución (el resultado final del sitio) | `js/analitica.js`, por delegación |
+
+Los parámetros salen limpios: GA4 descarta el parámetro entero si el nombre tiene un guion o una
+tilde, así que `js/analitica.js` los normaliza y corta los valores a 100 caracteres. Un mismo
+`search_term` repetido (escribir "enfermería" produce un evento por palabra) se manda una sola vez.
+
+### Cómo se emiten
+
+Ningún módulo sabe que hay Google Analytics. Anuncia lo que pasó y `js/analitica.js` decide:
+
+```js
+import { registrarEvento } from './medicion.js';
+
+registrarEvento('favorito', { accion: 'agregado', nombre: 'Medicina' });
+```
+
+`registrarEvento()` lanza un `CustomEvent` `ben:evento` en `window`; los scripts clásicos
+(`favoritos.js`) y los `<script>` inline de las páginas generadas hacen lo mismo a mano, porque no
+pueden importar nada. Si `js/analitica.js` no está cargado, el aviso se pierde y no se rompe nada.
+
+### Cuándo NO se mide
+
+- **ID sin configurar** (`G-PORDEFINIR`): noop silencioso, con un aviso en la consola.
+- **`?sin-analitica` en la URL** (o `window.__BEN_SIN_ANALITICA = true`): para probar en producción
+  sin tocar el código.
+- **DNT activado** ("No quiero ser rastreado"): en Argentina no hay una ley de cookies que obligue
+  a un banner de consentimiento, y entre los usuarios hay gente de 16 años; el DNT es la única
+  palanca de privacidad que el sitio se da. Si algún día se quiere lo contrario, es borrar una
+  línea en `js/analitica.js`.
 
 ## Cómo está organizado un scraper
 
