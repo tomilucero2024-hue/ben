@@ -477,14 +477,18 @@ export function mostrarResultados() {
     const accionesToolbar = document.querySelector('#resultsToolbar .toolbar-actions');
     if (accionesToolbar) accionesToolbar.hidden = false;
 
-    const hayOtrosFiltros = estado.texto || 
-        estado.formacion !== 'todos' || 
-        estado.institucion !== 'todos' || 
+    // "¿Hay algo más que el texto buscado?" se pregunta en dos lugares: acá
+    // (para el enrutado) y al medir una búsqueda sin resultados, que distingue
+    // si falló el texto, los filtros o los dos. El texto no cuenta como filtro.
+    const hayFiltrosSinTexto = Boolean(
+        estado.formacion !== 'todos' ||
+        estado.institucion !== 'todos' ||
         estado.departamentos.length > 0 ||
         estado.sectores.length > 0 ||
-        estado.gestion !== 'todos' || 
-        estado.modalidad !== 'todos' || 
-        estado.duracion !== 'todos';
+        estado.gestion !== 'todos' ||
+        estado.modalidad !== 'todos' ||
+        estado.duracion !== 'todos');
+    const hayOtrosFiltros = Boolean(estado.texto) || hayFiltrosSinTexto;
 
     // Vista de instituciones: muestra TODAS las instituciones de una, agrupadas
     // por tipo bajo su h2, sin drilldown. No admite los filtros de la grilla, así
@@ -525,6 +529,18 @@ export function mostrarResultados() {
         if (btnMas) btnMas.hidden = true;
         const contenedor = document.getElementById('cardContainer');
         const relacionadas = obtenerRelacionadas();
+        // Una búsqueda que no encuentra nada es el dato más accionable del
+        // sitio: dice qué falta en el catálogo. Hasta ahora el informe solo veía
+        // que alguien buscó "enfermería", sin saber si encontró o se fue con las
+        // manos vacías. `sugerencias` es cuántas parecidas igual le mostramos
+        // (0 = pantalla vacía) y `origen` si falló el texto, los filtros o los
+        // dos: son tres problemas distintos y se arreglan distinto.
+        registrarEvento('search_sin_resultado', {
+            search_term: estado.texto,
+            seccion: estado.seccion,
+            sugerencias: relacionadas.length,
+            origen: estado.texto ? (hayFiltrosSinTexto ? 'texto_y_filtros' : 'texto') : 'filtros'
+        });
         if (relacionadas.length) {
             const n = relacionadas.length;
             if (contador) contador.textContent = `0 resultados exactos · ${n} ${n === 1 ? 'sugerencia parecida' : 'sugerencias parecidas'}`;

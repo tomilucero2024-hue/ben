@@ -144,16 +144,30 @@
     // Último término de búsqueda enviado: escribir "enfer" en el buscador pasa
     // por un evento por palabra tipeada. Solo sale el primero y el que cambió de
     // verdad, que es lo que después se quiere leer ("¿qué buscan?").
-    let ultimaBusqueda = null;
+    //
+    // Lo mismo vale para la búsqueda sin resultados: se vuelve a disparar en
+    // cada letra que se agrega, y de un "no encontré nada" ya alcanza uno. Se
+    // identifica por la firma completa (término + origen + sección), así que la
+    // misma palabra fallando por texto y después por filtros sí sale dos veces:
+    // son dos problemas distintos.
+    const ANTIRREPETIDOS = {
+      search: ['search_term'],
+      search_sin_resultado: ['search_term', 'origen', 'seccion']
+    };
+    const ultimaFirma = {};
 
     window.benTrack = function (tipo, datos) {
       if (!tipo) return;
       const parametros = limpiarParametros(datos);
 
-      if (tipo === 'search') {
-        const termino = parametros.search_term || '';
-        if (!termino || termino === ultimaBusqueda) return;
-        ultimaBusqueda = termino;
+      const claves = ANTIRREPETIDOS[tipo];
+      if (claves) {
+        const firma = claves.map(clave => parametros[clave] || '').join('|');
+        // Sin el dato que identifica al evento (una búsqueda vacía, por ejemplo)
+        // se repetiría el anterior sin agregar nada.
+        if (!firma.replace(/\|/g, '')) return;
+        if (ultimaFirma[tipo] === firma) return;
+        ultimaFirma[tipo] = firma;
       }
 
       window.gtag('event', tipo, parametros);

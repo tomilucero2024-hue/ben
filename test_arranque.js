@@ -108,7 +108,30 @@ global.IntersectionObserver = win.IntersectionObserver = class { observe() {} un
     win.document.getElementById('ml-cerrar').click();
     ok(win.document.getElementById('miLista').hidden, 'la ✕ la cierra');
 
-    console.log('4. Bienvenida y copiloto');
+    console.log('4. Una búsqueda que no encuentra nada avisa a la analítica');
+    {
+        // El sitio anuncia con un CustomEvent 'ben:evento' y js/analitica.js lo
+        // traduce. Acá se escucha el aviso crudo: es el único test que prueba el
+        // disparo real de mostrarResultados(), no la regex sobre el archivo.
+        const avisos = [];
+        win.addEventListener('ben:evento', e => { if (e.detail && e.detail.tipo) avisos.push(e.detail); });
+        const input = win.document.getElementById('searchInput');
+        input.value = 'zzzq una carrera que no existe';
+        input.dispatchEvent(new win.Event('input', { bubbles: true }));
+        await new Promise(r => setTimeout(r, 400)); // el buscador espera 200 ms
+        const sinResultado = avisos.filter(a => a.tipo === 'search_sin_resultado');
+        ok(sinResultado.length === 1, `la búsqueda sin resultados avisa (${sinResultado.length} aviso/s)`);
+        ok(sinResultado[0] && sinResultado[0].search_term === 'zzzq una carrera que no existe', 'con el término que se buscó');
+        ok(sinResultado[0] && sinResultado[0].origen === 'texto', 'y con el origen del fallo');
+        ok(sinResultado[0] && typeof sinResultado[0].sugerencias === 'number',
+            `y cuántas parecidas se mostraron (${sinResultado[0] && sinResultado[0].sugerencias})`);
+        input.value = '';
+        input.dispatchEvent(new win.Event('input', { bubbles: true }));
+        await new Promise(r => setTimeout(r, 400));
+        ok(win.document.querySelectorAll('#cardContainer .card').length > 0, 'al limpiar el buscador vuelven las tarjetas');
+    }
+
+    console.log('5. Bienvenida y copiloto');
     const bienvenida = win.document.getElementById('pantallaBienvenida');
     const tarjetaOrientador = win.document.getElementById('btnBienvenidaCopiloto');
     ok(win.document.querySelectorAll('#pantallaBienvenida .bienvenida-card').length === 2, 'la portada tiene exactamente dos tarjetas');

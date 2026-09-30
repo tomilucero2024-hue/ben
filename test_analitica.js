@@ -131,6 +131,34 @@ console.log('\n3. Parámetros que GA4 no acepta');
     check(lista.vacio === undefined && lista.nada === undefined, 'los valores vacíos no viajan');
 }
 
+console.log('\n3b. La búsqueda que no encuentra nada');
+{
+    const { window, dataLayer } = pagina();
+    const sinResultado = () => eventos(dataLayer, 'search_sin_resultado');
+
+    window.benTrack('search_sin_resultado', { search_term: 'enfermeria', seccion: 'formal', sugerencias: 0, origen: 'texto' });
+    check(sinResultado().length === 1, 'una búsqueda sin resultados se mide');
+    check(sinResultado()[0][2].sugerencias === 0 && sinResultado()[0][2].origen === 'texto',
+        'y dice cuántas parecidas mostró y de dónde vino el fallo');
+
+    // Tipear "enfermeri", "enfermeria"… vuelve a disparar en cada letra: de un
+    // "no encontré nada" ya alcanza uno.
+    window.benTrack('search_sin_resultado', { search_term: 'enfermeria', seccion: 'formal', sugerencias: 0, origen: 'texto' });
+    check(sinResultado().length === 1, 'la misma búsqueda vacía repetida no se manda dos veces');
+
+    // El mismo término fallando ahora por filtros es otro problema: merece su
+    // propio evento.
+    window.benTrack('search_sin_resultado', { search_term: 'enfermeria', seccion: 'formal', sugerencias: 0, origen: 'texto_y_filtros' });
+    check(sinResultado().length === 2, 'el mismo término fallando por otra causa sí se manda');
+
+    // El evento de búsqueda normal y el de búsqueda vacía no se pisan entre sí:
+    // son dos datos distintos del mismo término.
+    check(eventos(dataLayer, 'search').length === 0, 'la búsqueda vacía no cuenta como una búsqueda común');
+    window.benTrack('search', { search_term: 'enfermeria', seccion: 'formal' });
+    check(eventos(dataLayer, 'search').length === 1 && sinResultado().length === 2,
+        'una búsqueda con resultados no pisa el registro de la que no encontró nada');
+}
+
 console.log('\n4. Fallas que nadie previó (listener global)');
 {
     const { window, dataLayer } = pagina();
