@@ -69,6 +69,38 @@ pueden promediar ni sumar.
 > sitio mandó antes no se recupera. Por eso conviene registrarlas **antes** de que el sitio empiece a
 > usarlas en serio.
 
+### La vía rápida: el script (esto es lo que se usó)
+
+Cargar una veintena de dimensiones a mano es donde se cuela un error de tipeo que recién se nota
+semanas después, cuando el parámetro no aparece. Por eso hay un script que las registra todas de una:
+`registrar-dimensiones-ga4.js`. La tabla de arriba y el catálogo del script son la misma lista.
+
+**Necesita una credencial de servicio de Google**, que se genera una sola vez en Google Cloud (no en
+GA4):
+
+1. Entrá a https://console.cloud.google.com y logueate con tu cuenta de Google.
+2. Arriba dice "Seleccionar un proyecto" → **"Proyecto nuevo"** → nombre `ben-analitica` → **Crear**.
+3. En la barra de búsqueda: `Google Analytics Admin API` → **"Habilitar"**.
+4. Menú ☰ → **"IAM y administración" → "Cuentas de servicio"** → **"Crear cuenta de servicio"**:
+   nombre `ben-ga4` → "Crear y continuar" → sin roles → "Continuar" → "Listo".
+5. Entrá a esa cuenta → pestaña **"Claves" → "Agregar clave" → "Crear clave nueva" → JSON → Crear**.
+   Se descarga un `.json`. **Es una llave privada: no se comparte ni se versiona** (ya está en
+   `.gitignore`; se guarda fuera del repo, ej. en `Documentos/`).
+6. Copiá el email de esa cuenta de servicio (termina en `...@...iam.gserviceaccount.com`).
+7. En **GA4 → Administrar → Acceso a la propiedad → "+" → Agregar usuarios**: pegá ese email, rol
+   **Editor**, destildá el aviso por correo. Sin este paso la API responde "403 Permission denied".
+
+Con la credencial guardada, una sola orden:
+
+```bash
+node registrar-dimensiones-ga4.js 556804277 /ruta/al/archivo.json
+```
+
+El `556804277` es el **ID de la propiedad** del sitio (Administrar → Configuración de la propiedad),
+que **no** es el `G-JCNCMH202B`. El script saltea las que ya existen, así que se puede correr de nuevo
+sin miedo cuando se agregue un evento nuevo. En esta propiedad ya quedaron registradas las 24
+dimensiones y las 5 métricas.
+
 ---
 
 ## 2. Dónde mirar cada cosa
