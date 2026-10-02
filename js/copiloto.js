@@ -303,7 +303,7 @@ function mensajeBienvenida() {
             </div>
             <ol class="cb-pasos">
                 ${pasoCopiloto(1, 'lista', 'Respondés el test completo (65 preguntas)')}
-                ${pasoCopiloto(2, 'analisis', 'Cruzamos tu perfil con 651 carreras')}
+                ${pasoCopiloto(2, 'analisis', 'Cruzamos tu perfil con 672 carreras')}
                 ${pasoCopiloto(3, 'diana', 'Guardás las que te interesan y las comparás')}
             </ol>
             <p class="cb-tiempo">${iconoCopiloto('reloj')}<span>Toma 4-6 minutos</span></p>

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generado": "2026-09-21T22:54:16.214Z",
+  "generado": "2026-10-02T17:54:13.600Z",
   "dimensiones": {
     "riasec": [
       "R",
@@ -128,6 +128,50 @@
       "formacion": "cursos",
       "instituciones": [
         "Instituto Juan Gutenberg"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 6,
+          "I": 6,
+          "A": 2,
+          "S": 10,
+          "E": 3,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 6,
+          "espacial": 4,
+          "interpersonal": 10,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 4,
+          "equipo": 7,
+          "impacto": 10,
+          "ingresos": 4,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Salud",
+        "ajustes": [
+          "enfermer",
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "actualizacion en medicina del trabajo",
+      "nombre": "Actualización en Medicina del Trabajo",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Salud",
+      "formacion": "cursos",
+      "instituciones": [
+        "Facultad de Ciencias Médicas - UNCuyo (Posgrado)"
       ],
       "perfil": {
         "riasec": {
@@ -827,6 +871,51 @@
       }
     },
     {
+      "clave": "auxiliar de esterilizacion y bioseguridad hospitalaria",
+      "nombre": "Auxiliar de Esterilización y Bioseguridad Hospitalaria",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Salud",
+      "formacion": "cursos",
+      "instituciones": [
+        "Loopian"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 7,
+          "I": 7,
+          "A": 2,
+          "S": 9,
+          "E": 3,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 6,
+          "espacial": 5,
+          "interpersonal": 9,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 4,
+          "equipo": 7,
+          "impacto": 9,
+          "ingresos": 4,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Salud",
+        "ajustes": [
+          "seguridad",
+          "optica",
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "auxiliar de farmacia",
       "nombre": "Auxiliar de Farmacia",
       "categoria": "Curso / Formación Profesional",
@@ -1002,6 +1091,51 @@
       }
     },
     {
+      "clave": "bioseguridad en laboratorios y bioterios",
+      "nombre": "Bioseguridad en Laboratorios y Bioterios",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Aula CEIBA - Capacitaciones ambientales"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 4,
+          "I": 9,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "matematic",
+          "seguridad",
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "bromatologia",
       "nombre": "Bromatología",
       "categoria": "Grado / Carrera",
@@ -1083,6 +1217,50 @@
         "area_base": "Ambiente",
         "ajustes": [
           "agronom",
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "capacitacion en bioseguridad en la salud",
+      "nombre": "Capacitación en Bioseguridad en la Salud",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Salud",
+      "formacion": "cursos",
+      "instituciones": [
+        "ISE Cursos - Educación a Distancia"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 7,
+          "I": 6,
+          "A": 2,
+          "S": 9,
+          "E": 3,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 6,
+          "espacial": 4,
+          "interpersonal": 9,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 4,
+          "equipo": 7,
+          "impacto": 9,
+          "ingresos": 4,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Salud",
+        "ajustes": [
+          "seguridad",
           "formacion:cursos"
         ],
         "interacciones": 0,
@@ -3566,6 +3744,50 @@
       }
     },
     {
+      "clave": "curso superior de medicina laboral",
+      "nombre": "Curso Superior de Medicina Laboral",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Salud",
+      "formacion": "cursos",
+      "instituciones": [
+        "MSK - Medical & Scientific Knowledge"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 6,
+          "I": 6,
+          "A": 2,
+          "S": 10,
+          "E": 3,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 6,
+          "espacial": 4,
+          "interpersonal": 10,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 4,
+          "equipo": 7,
+          "impacto": 10,
+          "ingresos": 4,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Salud",
+        "ajustes": [
+          "enfermer",
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "cursos cortos de oficios (gratuitos)",
       "nombre": "Cursos cortos de oficios (gratuitos)",
       "categoria": "Oficio / Formación Profesional",
@@ -4127,6 +4349,49 @@
         "ajustes": [
           "agronom",
           "cannabis",
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "diplomado en ergonomia laboral 1° ano 2026",
+      "nombre": "Diplomado en Ergonomía Laboral 1° Año 2026",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Escuela Argentina de Ergonomía"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
           "formacion:cursos"
         ],
         "interacciones": 0,
@@ -5063,6 +5328,50 @@
       }
     },
     {
+      "clave": "enfermeria laboral",
+      "nombre": "Enfermería Laboral",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Salud",
+      "formacion": "cursos",
+      "instituciones": [
+        "Centro de e-Learning - UTN Buenos Aires"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 6,
+          "I": 6,
+          "A": 2,
+          "S": 10,
+          "E": 3,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 6,
+          "espacial": 4,
+          "interpersonal": 10,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 4,
+          "equipo": 7,
+          "impacto": 10,
+          "ingresos": 4,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Salud",
+        "ajustes": [
+          "enfermer",
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "enfermeria profesional",
       "nombre": "Enfermería Profesional",
       "categoria": "Pregrado / Tecnicatura",
@@ -5191,6 +5500,51 @@
         "ajustes": [
           "derecho",
           "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "esterilizacion e higiene de material hospitalario",
+      "nombre": "Esterilización e Higiene de Material Hospitalario",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Salud",
+      "formacion": "cursos",
+      "instituciones": [
+        "ISE Cursos - Educación a Distancia"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 7,
+          "I": 7,
+          "A": 2,
+          "S": 9,
+          "E": 3,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 6,
+          "espacial": 5,
+          "interpersonal": 9,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 4,
+          "equipo": 7,
+          "impacto": 9,
+          "ingresos": 4,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Salud",
+        "ajustes": [
+          "seguridad",
+          "optica",
+          "formacion:cursos"
         ],
         "interacciones": 0,
         "peso_uso": 0
@@ -5864,6 +6218,51 @@
       }
     },
     {
+      "clave": "gestion de residuos biopatogenicos",
+      "nombre": "Gestión de Residuos Biopatogénicos",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Aula CEIBA - Capacitaciones ambientales"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 4,
+          "I": 8,
+          "A": 4,
+          "S": 8,
+          "E": 6,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 9,
+          "ingresos": 6,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "gestion",
+          "ambient",
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "gestor de industrias culturales y creativas",
       "nombre": "Gestor de Industrias Culturales y Creativas",
       "categoria": "Curso / Formación Profesional",
@@ -5899,6 +6298,49 @@
       },
       "origen": {
         "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "ghs (sga) - clasificacion y etiquetado de productos quimicos - mezclas",
+      "nombre": "GHS (SGA) - Clasificación y etiquetado de productos químicos - Mezclas",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ambiente",
+      "formacion": "cursos",
+      "instituciones": [
+        "INTI - Instituto Nacional de Tecnología Industrial"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 8,
+          "I": 7,
+          "A": 3,
+          "S": 4,
+          "E": 3,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 6,
+          "verbal": 5,
+          "espacial": 6,
+          "interpersonal": 4,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 4,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 4,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Ambiente",
         "ajustes": [
           "formacion:cursos"
         ],
@@ -5994,6 +6436,50 @@
       }
     },
     {
+      "clave": "guia para la implementacion de la resolucion srt n° 886/15",
+      "nombre": "Guía para la implementación de la Resolución SRT N° 886/15",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Aula Virtual SRT - Superintendencia de Riesgos del Trabajo"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 9,
+          "E": 6,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "turismo",
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "herrador de caballos y podologo equino",
       "nombre": "Herrador de Caballos y Podólogo Equino",
       "categoria": "Oficio / Formación Profesional",
@@ -6075,6 +6561,52 @@
         "ajustes": [
           "mecanic",
           "musica",
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "higiene hospitalaria: limpieza de superficies y gestion de residuos",
+      "nombre": "Higiene Hospitalaria: Limpieza de Superficies y Gestión de Residuos",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "CODEINEP - Control de Infecciones y Epidemiología"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 8,
+          "A": 4,
+          "S": 8,
+          "E": 6,
+          "C": 7
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 9,
+          "ingresos": 6,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "gestion",
+          "ambient",
+          "seguridad",
           "formacion:cursos"
         ],
         "interacciones": 0,
@@ -7594,6 +8126,92 @@
       }
     },
     {
+      "clave": "introduccion a la ergonomia",
+      "nombre": "Introducción a la Ergonomía",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Aula Virtual SRT - Superintendencia de Riesgos del Trabajo"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "introduccion a la ergonomia laboral",
+      "nombre": "Introducción a la Ergonomía Laboral",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Escuela Argentina de Ergonomía"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "introduccion a la peritacion (perito de siniestros automotor)",
       "nombre": "Introducción a la Peritación (Perito de Siniestros Automotor)",
       "categoria": "Curso / Formación Profesional",
@@ -7631,6 +8249,49 @@
         "area_base": "Negocios",
         "ajustes": [
           "mecanic",
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "introduccion a la toxicologia laboral",
+      "nombre": "Introducción a la toxicología laboral",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Aula Virtual SRT - Superintendencia de Riesgos del Trabajo"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
           "formacion:cursos"
         ],
         "interacciones": 0,
@@ -14222,6 +14883,49 @@
       }
     },
     {
+      "clave": "manipulacion manual de cargas",
+      "nombre": "Manipulación manual de cargas",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Aula Virtual SRT - Superintendencia de Riesgos del Trabajo"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "marketing digital",
       "nombre": "Marketing Digital",
       "categoria": "Grado / Carrera",
@@ -15755,6 +16459,50 @@
         "area_base": "Salud",
         "ajustes": [
           "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "postitulo en enfermeria laboral",
+      "nombre": "Postítulo en Enfermería Laboral",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Salud",
+      "formacion": "cursos",
+      "instituciones": [
+        "Instituto de la Sanidad - Mendoza (IDICSA)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 6,
+          "I": 6,
+          "A": 2,
+          "S": 10,
+          "E": 3,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 6,
+          "espacial": 4,
+          "interpersonal": 10,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 4,
+          "equipo": 7,
+          "impacto": 10,
+          "ingresos": 4,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Salud",
+        "ajustes": [
+          "enfermer",
+          "formacion:cursos"
         ],
         "interacciones": 0,
         "peso_uso": 0
@@ -19440,6 +20188,49 @@
       }
     },
     {
+      "clave": "protocolos de ergonomia de la resolucion 886/15 srt",
+      "nombre": "Protocolos de Ergonomía de la Resolución 886/15 SRT",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ciencias sociales",
+      "formacion": "cursos",
+      "instituciones": [
+        "Escuela Argentina de Ergonomía"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "psicologia",
       "nombre": "Psicología",
       "categoria": "Grado / Carrera",
@@ -19965,6 +20756,96 @@
       }
     },
     {
+      "clave": "riesgo biologico",
+      "nombre": "Riesgo biológico",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ambiente",
+      "formacion": "cursos",
+      "instituciones": [
+        "Aula Virtual SRT - Superintendencia de Riesgos del Trabajo"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 10,
+          "I": 8,
+          "A": 3,
+          "S": 4,
+          "E": 3,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 6,
+          "verbal": 5,
+          "espacial": 6,
+          "interpersonal": 4,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 9,
+          "ingresos": 4,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Ambiente",
+        "ajustes": [
+          "ambient",
+          "seguridad",
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "riesgos biologicos",
+      "nombre": "Riesgos Biológicos",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ambiente",
+      "formacion": "cursos",
+      "instituciones": [
+        "Instituto Superior Paramédico"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 10,
+          "I": 8,
+          "A": 3,
+          "S": 4,
+          "E": 3,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 6,
+          "verbal": 5,
+          "espacial": 6,
+          "interpersonal": 4,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 9,
+          "ingresos": 4,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Ambiente",
+        "ajustes": [
+          "ambient",
+          "seguridad",
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "secretariado medico",
       "nombre": "Secretariado Médico",
       "categoria": "Curso / Formación Profesional",
@@ -20089,6 +20970,49 @@
       },
       "origen": {
         "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "sga - clasificacion y etiquetado de productos quimicos",
+      "nombre": "SGA - Clasificación y Etiquetado de Productos Químicos",
+      "categoria": "Curso / Formación Profesional",
+      "area": "Ambiente",
+      "formacion": "cursos",
+      "instituciones": [
+        "Aula Virtual SRT - Superintendencia de Riesgos del Trabajo"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 8,
+          "I": 7,
+          "A": 3,
+          "S": 4,
+          "E": 3,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 6,
+          "verbal": 5,
+          "espacial": 6,
+          "interpersonal": 4,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 4,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 4,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Ambiente",
         "ajustes": [
           "formacion:cursos"
         ],

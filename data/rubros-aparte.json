@@ -36,6 +36,10 @@
             {
                 "id": "gestion",
                 "nombre": "Idiomas, gestión y turismo"
+            },
+            {
+                "id": "salud-laboral",
+                "nombre": "Salud y seguridad en el trabajo"
             }
         ],
         "cursos": {
@@ -106,7 +110,9 @@
             },
             "ISE Cursos - Educación a Distancia": {
                 "Embalsamador y Taxidermizado + IA": "forense",
-                "Capacitación en Apicultura": "agro"
+                "Capacitación en Apicultura": "agro",
+                "Capacitación en Bioseguridad en la Salud": "salud-laboral",
+                "Esterilización e Higiene de Material Hospitalario": "salud-laboral"
             },
             "ITU - Instituto Tecnológico Universitario (UNCuyo) / CIBART": {
                 "Elaboración de Cerveza Artesanal": "vinos"
@@ -142,7 +148,8 @@
                 "Lengua de Señas Argentina (LSA) y Cultura Sorda": "gestion"
             },
             "INTI - Instituto Nacional de Tecnología Industrial": {
-                "Taller de Elaboración de Quesos Artesanales": "vinos"
+                "Taller de Elaboración de Quesos Artesanales": "vinos",
+                "GHS (SGA) - Clasificación y etiquetado de productos químicos - Mezclas": "salud-laboral"
             },
             "CIBART - Centro Integral de Bebidas Artesanales": {
                 "Curso de Destilación y Elaboración de Gin": "vinos"
@@ -170,6 +177,50 @@
             },
             "Administración de Parques Nacionales (APN)": {
                 "Formación de Guardaparques Nacionales": "montana"
+            },
+            "Facultad de Ciencias Agrarias - UNCuyo": {
+                "Curso de Cerveza Artesanal": "vinos",
+                "Diplomado en Cultivo de Cannabis Sativa": "agro",
+                "Taller de Cata de Aceite de Oliva Virgen": "vinos",
+                "Introducción al Riego por Goteo: Instalación, Operación y Mantenimiento": "agro"
+            },
+            "Instituto de la Sanidad - Mendoza (IDICSA)": {
+                "Postítulo en Enfermería Laboral": "salud-laboral"
+            },
+            "Facultad de Ciencias Médicas - UNCuyo (Posgrado)": {
+                "Actualización en Medicina del Trabajo": "salud-laboral"
+            },
+            "Escuela Argentina de Ergonomía": {
+                "Diplomado en Ergonomía Laboral 1° Año 2026": "salud-laboral",
+                "Introducción a la Ergonomía Laboral": "salud-laboral",
+                "Protocolos de Ergonomía de la Resolución 886/15 SRT": "salud-laboral"
+            },
+            "CODEINEP - Control de Infecciones y Epidemiología": {
+                "Higiene Hospitalaria: Limpieza de Superficies y Gestión de Residuos": "salud-laboral"
+            },
+            "Instituto Superior Paramédico": {
+                "Riesgos Biológicos": "salud-laboral"
+            },
+            "MSK - Medical & Scientific Knowledge": {
+                "Curso Superior de Medicina Laboral": "salud-laboral"
+            },
+            "Centro de e-Learning - UTN Buenos Aires": {
+                "Enfermería Laboral": "salud-laboral"
+            },
+            "Loopian": {
+                "Auxiliar de Esterilización y Bioseguridad Hospitalaria": "salud-laboral"
+            },
+            "Aula CEIBA - Capacitaciones ambientales": {
+                "Gestión de Residuos Biopatogénicos": "salud-laboral",
+                "Bioseguridad en Laboratorios y Bioterios": "salud-laboral"
+            },
+            "Aula Virtual SRT - Superintendencia de Riesgos del Trabajo": {
+                "Riesgo biológico": "salud-laboral",
+                "Introducción a la Ergonomía": "salud-laboral",
+                "Guía para la implementación de la Resolución SRT N° 886/15": "salud-laboral",
+                "SGA - Clasificación y Etiquetado de Productos Químicos": "salud-laboral",
+                "Introducción a la toxicología laboral": "salud-laboral",
+                "Manipulación manual de cargas": "salud-laboral"
             }
         }
     },

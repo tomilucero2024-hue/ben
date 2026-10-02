@@ -5,7 +5,7 @@ buscador/catálogo de oferta educativa: universidades, IES/institutos superiores
 formación y plataformas online. Hoy el catálogo es de Mendoza; el alcance previsto es
 nacional, y por eso ni las rutas ni los textos se atan a una provincia. Su pieza central es el
 "Test Vocacional Completo": 65 preguntas que arman el perfil de la persona (intereses RIASEC,
-aptitudes y valores), lo cruzan contra las 651 carreras del catálogo y dejan el resultado en la
+aptitudes y valores), lo cruzan contra las 672 carreras del catálogo y dejan el resultado en la
 grilla, ordenado por afinidad y filtrable sin perder ese orden. Alrededor hay un "Copiloto"
 (chat de búsqueda) y "Mi lista", el apartado donde se guardan las carreras que interesan y se
 comparan de a tres.
@@ -192,7 +192,7 @@ al 200%, y NVDA/JAWS/VoiceOver. Guion de 10 pasos:
 
 Una ventana flotante con 65 preguntas en 3 partes
 (36 de intereses RIASEC + 15 de aptitudes + 14 de valores y contexto), que calcula un perfil
-numérico del estudiante y lo cruza contra el perfil de las 651 carreras del catálogo.
+numérico del estudiante y lo cruza contra el perfil de las 672 carreras del catálogo.
 
 - **Nada se cura a mano.** El perfil del estudiante sale de las respuestas (cada pregunta
   pesa hacia una o más dimensiones, y ese peso vive en `data/vocacional/preguntas.json`).

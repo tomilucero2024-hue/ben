@@ -1085,7 +1085,7 @@ ${dimensionesTop.map(d => `        <li class="aptitud-item">
         </li>`).join('\n')}
     </ul>
     <div class="nota-test">
-        <p>¿Querés saber qué tan compatible sos con esta carrera? <a href="/?test=1">Hacé el Test Vocacional Completo de BEN</a> (4-6 min) y compará tu perfil con las 651 formaciones del catálogo.</p>
+        <p>¿Querés saber qué tan compatible sos con esta carrera? <a href="/?test=1">Hacé el Test Vocacional Completo de BEN</a> (4-6 min) y compará tu perfil con las 672 formaciones del catálogo.</p>
     </div>` : '';
 
     // Contenido de la ficha (generado por IA, pendiente de revisión): qué es la

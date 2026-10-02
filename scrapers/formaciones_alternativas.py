@@ -2,7 +2,7 @@ from scraper_utils import guardar_json
 
 
 print("🛠️ Encendiendo inyección manual para Formaciones Alternativas...")
-print("🔍 Set up: cursos de nicho: aeronáutica, buceo, montaña, apicultura, forense, cervecería y peritaje.")
+print("🔍 Set up: cursos de nicho: aeronáutica, buceo, montaña, apicultura, forense, cervecería, peritaje y salud y seguridad en el trabajo.")
 
 # Datos cargados a mano (no hay una web única que scrapear para este grupo).
 # Los contactos que dicen "A confirmar" son reales pero incompletos: no se
@@ -558,6 +558,24 @@ formaciones_alternativas = [
                 "modalidad": "Online",
                 "facultad": "ISE Cursos",
                 "link_oficial": "https://www.isecursos.com/detalle-272"
+            },
+            {
+                "id": 21703,
+                "nombre_carrera": "Capacitación en Bioseguridad en la Salud",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "40 horas cátedra - 1 mes (365 días de acceso)",
+                "modalidad": "Online (a ritmo propio)",
+                "facultad": "ISE Cursos",
+                "link_oficial": "https://www.isecursos.com.ar/detalle-2218"
+            },
+            {
+                "id": 21704,
+                "nombre_carrera": "Esterilización e Higiene de Material Hospitalario",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "180 horas cátedra - 9 meses (9 módulos)",
+                "modalidad": "Online (a ritmo propio)",
+                "facultad": "ISE Cursos",
+                "link_oficial": "https://www.isecursos.com.ar/detalle-1045"
             }
         ]
     },
@@ -884,6 +902,15 @@ formaciones_alternativas = [
                 "modalidad": "Online (campus virtual)",
                 "facultad": "INTI",
                 "link_oficial": "https://www.inti.gob.ar/capacitaciones/curso/1908-taller-de-elaboracion-de-quesos-artesanales"
+            },
+            {
+                "id": 23002,
+                "nombre_carrera": "GHS (SGA) - Clasificación y etiquetado de productos químicos - Mezclas",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "Del 13/10/2026 al 24/11/2026",
+                "modalidad": "A distancia (campus virtual INTI)",
+                "facultad": "INTI",
+                "link_oficial": "https://www.inti.gob.ar/capacitaciones/curso/683-ghs-sga-sistema-globalmente-armonizado-de-clasificacion-y-etiquetado-de-productos-quimicos-mezclas"
             }
         ]
     },
@@ -1095,6 +1122,308 @@ formaciones_alternativas = [
                 "modalidad": "Presencial",
                 "facultad": "Administración de Parques Nacionales",
                 "link_oficial": "https://www.argentina.gob.ar/parquesnacionales"
+            }
+        ]
+    },
+    {
+        "id": 239,
+        "nombre": "Instituto de la Sanidad - Mendoza (IDICSA)",
+        "nivel": "capacitación profesional",
+        "gestion": "privada",
+        "provincia": "Mendoza",
+        "contacto": {
+            "telefono": "261 714 3690 (WhatsApp) / 261 591 0709",
+            "email": "idicsa@institutosanidadmza.com.ar",
+            "direccion": "Morón 265, Ciudad de Mendoza"
+        },
+        "carreras": [
+            {
+                "id": 23901,
+                "nombre_carrera": "Postítulo en Enfermería Laboral",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "400 horas reloj (inicio 09/04/2026)",
+                "modalidad": "Semipresencial (clases presenciales + campus virtual)",
+                "facultad": "Instituto de la Sanidad - Mendoza",
+                "link_oficial": "https://institutosanidadmza.com.ar/idicsa/postitulo-en-enfermeria-laboral/"
+            }
+        ]
+    },
+    {
+        "id": 240,
+        "nombre": "Facultad de Ciencias Médicas - UNCuyo (Posgrado)",
+        "nivel": "capacitación (extensión universitaria)",
+        "gestion": "pública",
+        "provincia": "Mendoza",
+        "contacto": {
+            "telefono": "+54 261 413-5000",
+            "email": "posgrado@fcm.uncu.edu.ar",
+            "direccion": "Facultad de Ciencias Médicas, Ciudad de Mendoza"
+        },
+        "carreras": [
+            {
+                "id": 24001,
+                "nombre_carrera": "Actualización en Medicina del Trabajo",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "10 módulos - 1 encuentro por mes (edición vigente A confirmar)",
+                "modalidad": "Semipresencial (viernes y sábado + aula virtual Moodle)",
+                "facultad": "Facultad de Ciencias Médicas - UNCuyo",
+                "link_oficial": "https://fcm.uncuyo.edu.ar/estudios/posgrado/202"
+            }
+        ]
+    },
+    {
+        "id": 241,
+        "nombre": "Escuela Argentina de Ergonomía",
+        "nivel": "capacitación profesional",
+        "gestion": "privada",
+        "provincia": "Online (accesible desde Mendoza)",
+        "contacto": {
+            "telefono": "+54 9 11 5121-1533 (WhatsApp)",
+            "email": "info@ergonomia.org.ar",
+            "direccion": "Online (Buenos Aires)"
+        },
+        "carreras": [
+            {
+                "id": 24101,
+                "nombre_carrera": "Diplomado en Ergonomía Laboral 1° Año 2026",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "7 meses (06/05/2026 al 04/11/2026)",
+                "modalidad": "Online (1 encuentro en vivo mensual por Meet)",
+                "facultad": "Escuela Argentina de Ergonomía",
+                "link_oficial": "https://ergonomia.org.ar/courses/diploergo2026/"
+            },
+            {
+                "id": 24102,
+                "nombre_carrera": "Introducción a la Ergonomía Laboral",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar (60 días de acceso al campus)",
+                "modalidad": "Online (asincrónico, a ritmo propio)",
+                "facultad": "Escuela Argentina de Ergonomía",
+                "link_oficial": "https://ergonomia.org.ar/courses/introduccion-a-la-ergonomia-laboral/"
+            },
+            {
+                "id": 24103,
+                "nombre_carrera": "Protocolos de Ergonomía de la Resolución 886/15 SRT",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "4 horas (60 días de acceso al campus)",
+                "modalidad": "Online (asincrónico, a ritmo propio)",
+                "facultad": "Escuela Argentina de Ergonomía",
+                "link_oficial": "https://ergonomia.org.ar/courses/res-88615-srt/"
+            }
+        ]
+    },
+    {
+        "id": 242,
+        "nombre": "CODEINEP - Control de Infecciones y Epidemiología",
+        "nivel": "capacitación profesional",
+        "gestion": "privada",
+        "provincia": "Online (accesible desde Mendoza)",
+        "contacto": {
+            "telefono": "+54 11 5665-4869",
+            "email": "A confirmar",
+            "direccion": "Online (Buenos Aires)"
+        },
+        "carreras": [
+            {
+                "id": 24201,
+                "nombre_carrera": "Higiene Hospitalaria: Limpieza de Superficies y Gestión de Residuos",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "5 semanas (37 lecciones)",
+                "modalidad": "Online (modalidad autogestionada)",
+                "facultad": "CODEINEP",
+                "link_oficial": "https://campus.codeinep.org/courses/buenas-practicas-en-higiene-hospitalaria/"
+            }
+        ]
+    },
+    {
+        "id": 243,
+        "nombre": "Instituto Superior Paramédico",
+        "nivel": "capacitación profesional",
+        "gestion": "privada",
+        "provincia": "Online (accesible desde Mendoza)",
+        "contacto": {
+            "telefono": "+54 9 11 2479-8496 (WhatsApp)",
+            "email": "consultas@isparamedico.com.ar",
+            "direccion": "Online (San Miguel, Buenos Aires)"
+        },
+        "carreras": [
+            {
+                "id": 24301,
+                "nombre_carrera": "Riesgos Biológicos",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "15 horas",
+                "modalidad": "A distancia (disponible 24 h)",
+                "facultad": "Instituto Superior Paramédico",
+                "link_oficial": "https://isparamedico.com.ar/course/riesgos-biologicos/"
+            }
+        ]
+    },
+    {
+        "id": 244,
+        "nombre": "MSK - Medical & Scientific Knowledge",
+        "nivel": "capacitación profesional",
+        "gestion": "privada",
+        "provincia": "Online (accesible desde Mendoza)",
+        "contacto": {
+            "telefono": "+54 9 11 5217-0771 (WhatsApp)",
+            "email": "hola@msklatam.com",
+            "direccion": "Online"
+        },
+        "carreras": [
+            {
+                "id": 24401,
+                "nombre_carrera": "Curso Superior de Medicina Laboral",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "200 horas estimadas (10 módulos)",
+                "modalidad": "Online (a distancia)",
+                "facultad": "MSK",
+                "link_oficial": "https://msklatam.com/curso/medicina-laboral/"
+            }
+        ]
+    },
+    {
+        "id": 245,
+        "nombre": "Centro de e-Learning - UTN Buenos Aires",
+        "nivel": "capacitación (extensión universitaria)",
+        "gestion": "pública",
+        "provincia": "Online (accesible desde Mendoza)",
+        "contacto": {
+            "telefono": "A confirmar",
+            "email": "A confirmar",
+            "direccion": "Campus virtual UTN Buenos Aires"
+        },
+        "carreras": [
+            {
+                "id": 24501,
+                "nombre_carrera": "Enfermería Laboral",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "75 horas (inicio 27/11/2026)",
+                "modalidad": "A distancia (campus virtual 24 h)",
+                "facultad": "Centro de e-Learning - UTN Buenos Aires",
+                "link_oficial": "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/2832/enfermeria-laboral"
+            }
+        ]
+    },
+    {
+        "id": 246,
+        "nombre": "Loopian",
+        "nivel": "capacitación profesional",
+        "gestion": "privada",
+        "provincia": "Online (accesible desde Mendoza)",
+        "contacto": {
+            "telefono": "+54 9 351 259-0001 (WhatsApp)",
+            "email": "A confirmar",
+            "direccion": "Online (Villa Allende, Córdoba)"
+        },
+        "carreras": [
+            {
+                "id": 24601,
+                "nombre_carrera": "Auxiliar de Esterilización y Bioseguridad Hospitalaria",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "4 meses - 125 horas",
+                "modalidad": "Online (a ritmo propio)",
+                "facultad": "Loopian",
+                "link_oficial": "https://www.loopian.com.ar/curso/auxiliar-de-esterilizacion-y-bioseguridad-hospitalaria"
+            }
+        ]
+    },
+    {
+        "id": 247,
+        "nombre": "Aula CEIBA - Capacitaciones ambientales",
+        "nivel": "capacitación profesional",
+        "gestion": "privada",
+        "provincia": "Online (accesible desde Mendoza)",
+        "contacto": {
+            "telefono": "+54 9 341 304-5156",
+            "email": "info@ceibaambiental.com.ar",
+            "direccion": "Online (Rosario, Santa Fe)"
+        },
+        "carreras": [
+            {
+                "id": 24701,
+                "nombre_carrera": "Gestión de Residuos Biopatogénicos",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "2 meses (convocatoria permanente)",
+                "modalidad": "Virtual asincrónico",
+                "facultad": "Aula CEIBA",
+                "link_oficial": "https://capacitaciones.aulaceiba.com.ar/producto/gestion-de-residuos-biopatogenicos/"
+            },
+            {
+                "id": 24702,
+                "nombre_carrera": "Bioseguridad en Laboratorios y Bioterios",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "2 meses (convocatoria permanente)",
+                "modalidad": "Virtual asincrónico",
+                "facultad": "Aula CEIBA",
+                "link_oficial": "https://capacitaciones.aulaceiba.com.ar/producto/bioseguridad-en-laboratorios-y-bioterios/"
+            }
+        ]
+    },
+    {
+        "id": 248,
+        "nombre": "Aula Virtual SRT - Superintendencia de Riesgos del Trabajo",
+        "nivel": "capacitación profesional",
+        "gestion": "pública (nacional)",
+        "provincia": "Online (accesible desde Mendoza)",
+        "contacto": {
+            "telefono": "A confirmar",
+            "email": "A confirmar",
+            "direccion": "Campus virtual SRT (aula institucional)"
+        },
+        "carreras": [
+            {
+                "id": 24801,
+                "nombre_carrera": "Riesgo biológico",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar (autogestionado)",
+                "modalidad": "Online (gratuito)",
+                "facultad": "Aula Virtual SRT",
+                "link_oficial": "https://www.argentina.gob.ar/files/riesgobiologico"
+            },
+            {
+                "id": 24802,
+                "nombre_carrera": "Introducción a la Ergonomía",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar (autogestionado)",
+                "modalidad": "Online (gratuito)",
+                "facultad": "Aula Virtual SRT",
+                "link_oficial": "https://www.argentina.gob.ar/files/introduccionalaergonomia"
+            },
+            {
+                "id": 24803,
+                "nombre_carrera": "Guía para la implementación de la Resolución SRT N° 886/15",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar (autogestionado)",
+                "modalidad": "Online (gratuito)",
+                "facultad": "Aula Virtual SRT",
+                "link_oficial": "https://www.argentina.gob.ar/files/guiaparalaimplementaciondelprotocolodeergonomia"
+            },
+            {
+                "id": 24804,
+                "nombre_carrera": "SGA - Clasificación y Etiquetado de Productos Químicos",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar (autogestionado)",
+                "modalidad": "Online (gratuito)",
+                "facultad": "Aula Virtual SRT",
+                "link_oficial": "https://www.argentina.gob.ar/files/sgaclasificacionyetiquetadodeproductosquimicos"
+            },
+            {
+                "id": 24805,
+                "nombre_carrera": "Introducción a la toxicología laboral",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar (autogestionado)",
+                "modalidad": "Online (gratuito)",
+                "facultad": "Aula Virtual SRT",
+                "link_oficial": "https://www.argentina.gob.ar/files/introduccionalatoxicologialaboral"
+            },
+            {
+                "id": 24806,
+                "nombre_carrera": "Manipulación manual de cargas",
+                "categoria": "Curso / Formación Profesional",
+                "duracion": "A confirmar (autogestionado)",
+                "modalidad": "Online (gratuito)",
+                "facultad": "Aula Virtual SRT",
+                "link_oficial": "https://www.argentina.gob.ar/files/manipulacionmanualdecargas"
             }
         ]
     }
