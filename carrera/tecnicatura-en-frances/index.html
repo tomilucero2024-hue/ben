@@ -23,9 +23,7 @@
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/montserrat.css?v=20261004_6">
 <script>
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
@@ -56,11 +54,13 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260930_17">
+<link rel="stylesheet" href="/paginas.css?v=20261004_6">
+<!-- Estilos de la ventana de Mi lista, que estas páginas abren sin salir. -->
+<link rel="stylesheet" href="/mi-lista.css?v=20261004_6">
 <!-- Medir las fichas: son la mayor parte del tráfico del sitio (llegan desde
      Google) y sin esto los informes verían solo la portada. El mismo archivo
      carga la app en index.html. -->
-<script src="/js/analitica.js?v=20260930_17"></script>
+<script src="/js/analitica.js?v=20261004_6"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Idiomas","item":"https://buscadoreducativo.com.ar/area/idiomas/"},{"@type":"ListItem","position":4,"name":"Tecnicatura en Francés","item":"https://buscadoreducativo.com.ar/carrera/tecnicatura-en-frances/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Tecnicatura en Francés","description":"Dónde estudiar Tecnicatura en Francés en Mendoza: tecnicatura del área Idiomas, dictada por 1 institución (1 pública). Dura 3 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-en-frances/","provider":{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"}}</script>
 </head>
@@ -161,7 +161,7 @@
                 <span>Los costos y aranceles los define cada institución. Para saber cuánto sale, comunicate con el establecimiento.</span>
             </p>
         </div>
-        <a class="btn-ver-mi-lista" href="/?lista=1">
+        <a class="btn-ver-mi-lista" href="/?lista=1" data-abrir-mi-lista>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
             Ver Mi lista
         </a>
@@ -171,7 +171,7 @@
     <h2>Dónde estudiar Tecnicatura en Francés</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
-            <h3><span class="etiqueta publica">pública</span> <a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
+            <h3><span class="etiqueta publica">Pública</span> <a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio — 3 años</summary>
@@ -188,10 +188,10 @@
             <h4>3er año</h4>
             <ul><li>Lengua Francesa V</li><li>Gramática de la Lengua Francesa V</li><li>Mediación Lingüística-Cultural II</li><li>Francés con orientación en Gestión de Empresas</li><li>Lengua Extranjera IV (Inglés o Portugués)</li><li>Práctica Profesional II</li><li>Optativa II</li><li>Práctica Profesional III</li><li>Práctica de la Actividad Física Saludable II</li><li>Prácticas Socioeducativas</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-frances_2614" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-frances_2614" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-frances_2614" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-frances_2614" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -247,7 +247,7 @@
         <li><a href="/carrera/curso-de-portugues/">Curso de Portugués</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/curso-de-portugues-a-1-1/">Curso de Portugués A 1.1</a> <span class="cuantas">(1)</span></li>
     </ul>
-    <p class="relacionadas-mas"><a class="btn-enlace-mas" href="/area/idiomas/">Ver las 24 carreras del área Idiomas →</a></p>
+    <p class="relacionadas-mas"><a class="btn-enlace-mas" href="/area/idiomas/">Ver las 25 carreras del área Idiomas →</a></p>
     </section>
     </div>
 </div>
@@ -336,6 +336,11 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260930_17"></script>
+<script src="/js/favoritos.js?v=20261004_6"></script>
+<!-- Vuelve a la posición donde estabas al usar Atrás (la app avisa cuándo
+     terminó de pintar; en estas páginas el HTML ya está listo). -->
+<script src="/js/restaurar-scroll.js?v=20261004_6"></script>
+<!-- Mi lista se abre como ventana flotante sin salir de la ficha. -->
+<script src="/js/mi-lista-loader.js?v=20261004_6"></script>
 </body>
 </html>

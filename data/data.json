@@ -860,6 +860,24 @@
                         }
                     ],
                     "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-en-desarrollo-y-produccion-de-videojuegos/"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo - (A distancia)",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A distancia",
+                    "facultad": "Facultad Regional Mendoza",
+                    "link_oficial": "http://www4.frm.utn.edu.ar/",
+                    "id": 15
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Desarrollo y Producción de Videojuegos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "A distancia",
+                    "facultad": "Facultad Regional Mendoza",
+                    "link_oficial": "http://www4.frm.utn.edu.ar/",
+                    "id": 16
                 }
             ]
         },
@@ -7975,6 +7993,78 @@
                         }
                     ],
                     "plan_fuente": "https://www.uncuyo.edu.ar/estudios/carrera/traductorado-publico-en-ingles"
+                },
+                {
+                    "nombre_carrera": "Ciclo de Profesorado para Profesionales Universitarios (Sede Central y San Rafael)",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Filosofía y Letras",
+                    "link_oficial": "https://ffyl.uncuyo.edu.ar",
+                    "id": 221
+                },
+                {
+                    "nombre_carrera": "Licenciatura en Ciencia Política y Administración Pública",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Políticas y Sociales",
+                    "link_oficial": "https://fcp.uncuyo.edu.ar/",
+                    "id": 222
+                },
+                {
+                    "nombre_carrera": "Licenciatura en Historia de las Artes Plásticas",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Artes y Diseño",
+                    "link_oficial": "https://fad.uncuyo.edu.ar",
+                    "id": 223
+                },
+                {
+                    "nombre_carrera": "Profesorado Universitario en Historia",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Filosofía y Letras",
+                    "link_oficial": "https://ffyl.uncuyo.edu.ar",
+                    "id": 224
+                },
+                {
+                    "nombre_carrera": "Profesorado Universitario en Lengua Inglesa",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Filosofía y Letras",
+                    "link_oficial": "https://ffyl.uncuyo.edu.ar",
+                    "id": 225
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Administración de Edificios de Propiedad Horizontal y Conjuntos Inmobiliarios",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Derecho",
+                    "link_oficial": "https://derecho.uncuyo.edu.ar/",
+                    "id": 226
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Producción Audiovisual",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Políticas y Sociales",
+                    "link_oficial": "https://fcp.uncuyo.edu.ar/",
+                    "id": 227
+                },
+                {
+                    "nombre_carrera": "Traductorado Público en Inglés (Zona Este: Sede Junín)",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Filosofía y Letras",
+                    "link_oficial": "https://ffyl.uncuyo.edu.ar",
+                    "id": 228
                 }
             ]
         },
@@ -8434,6 +8524,15 @@
                         }
                     ],
                     "plan_fuente": "https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-redes-de-datos-y-telecomunicaciones_7082"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Redes de Datos y Telecomunicaciones",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Tecnológico Universitario",
+                    "link_oficial": "https://itu.uncuyo.edu.ar/",
+                    "id": 176
                 }
             ]
         },
@@ -10732,6 +10831,15 @@
                         }
                     ],
                     "plan_fuente": "https://um.edu.ar/wp-content/uploads/PLAN-DE-ESTUDIO-2022.pdf"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Programación de Videojuegos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ingeniería",
+                    "link_oficial": "https://um.edu.ar/ingenieria/",
+                    "id": 331
                 }
             ]
         },
@@ -14104,6 +14212,132 @@
                         }
                     ],
                     "plan_fuente": "https://www.umaza.edu.ar/landings/veterinaria/inicio"
+                },
+                {
+                    "nombre_carrera": "CCC Licenciatura en Ciencia de Datos e IA",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ingeniería y Enología",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-INE",
+                    "id": 453
+                },
+                {
+                    "nombre_carrera": "Cerámica Artesanal",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "7 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 454
+                },
+                {
+                    "nombre_carrera": "Electricidad Doméstica y Comercial",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "5 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 455
+                },
+                {
+                    "nombre_carrera": "Fotografía Aplicada al Ceremonial y Protocolo",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "4 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 456
+                },
+                {
+                    "nombre_carrera": "Gestión de Redes Sociales y Marketing Digital",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 457
+                },
+                {
+                    "nombre_carrera": "Ingeniería en Dirección de Empresas",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Sociales y Comunicación",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-CSC",
+                    "id": 458
+                },
+                {
+                    "nombre_carrera": "Licenciatura en Agroindustrias",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ingeniería y Enología",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-INE",
+                    "id": 459
+                },
+                {
+                    "nombre_carrera": "Profesorado en Ciencias Naturales",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Educación",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-educacion",
+                    "id": 460
+                },
+                {
+                    "nombre_carrera": "Profesorado y Licenciatura en Matemática",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Educación",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-educacion",
+                    "id": 461
+                },
+                {
+                    "nombre_carrera": "Refrigeración Industrial",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 462
+                },
+                {
+                    "nombre_carrera": "Refrigeración doméstica y comercial",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "6 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 463
+                },
+                {
+                    "nombre_carrera": "Soldadura y Herrería Artística",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "8 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 464
+                },
+                {
+                    "nombre_carrera": "Sommelier Universitario",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ingeniería y Enología",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-INE",
+                    "id": 465
+                },
+                {
+                    "nombre_carrera": "Técnico en Cartografía y Teledetección",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ingeniería y Enología",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-INE",
+                    "id": 466
                 }
             ]
         },
@@ -16850,6 +17084,15 @@
                         }
                     ],
                     "plan_fuente": "https://www.ucongreso.edu.ar/carrera/abogacia/"
+                },
+                {
+                    "nombre_carrera": "Lic. en Producción de Bio-Imágenes",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias de la Salud",
+                    "link_oficial": "https://www.ucongreso.edu.ar/facultad/ciencias-de-la-salud/",
+                    "id": 536
                 }
             ]
         },
@@ -19822,6 +20065,42 @@
                         }
                     ],
                     "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-turismo"
+                },
+                {
+                    "nombre_carrera": "Licenciatura en Administración Gastronómica (Ciclo de Complementación Curricular)",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Cs. Sociales y Administrativas",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/institucional-fcsa-2025",
+                    "id": 652
+                },
+                {
+                    "nombre_carrera": "Licenciatura en Administración Hotelera (Ciclo de Complementación Curricular)",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Cs. Sociales y Administrativas",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/institucional-fcsa-2025",
+                    "id": 653
+                },
+                {
+                    "nombre_carrera": "Licenciatura en Administración de Salud (Ciclo de Complementación Curricular) Presencial y a Distancia",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "1 año y medio",
+                    "modalidad": "A distancia",
+                    "facultad": "Facultad de Cs. Económicas y Jurídicas",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/institucional-fcej-2025",
+                    "id": 654
+                },
+                {
+                    "nombre_carrera": "Profesorado de Grado Universitario (Ciclo de Complementación Curricular)",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Psicología",
+                    "link_oficial": "https://www.uda.edu.ar/index.php/institucional-fpsi-2025",
+                    "id": 655
                 }
             ],
             "provincia": "Mendoza",
@@ -20836,6 +21115,150 @@
                         }
                     ],
                     "plan_fuente": "https://www.uch.edu.ar/docs/educacion_primaria.pdf"
+                },
+                {
+                    "nombre_carrera": "Abogacía",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Derecho",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/abogacia",
+                    "id": 714
+                },
+                {
+                    "nombre_carrera": "Analista Administrativo Contable",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/contador-publico",
+                    "id": 715
+                },
+                {
+                    "nombre_carrera": "Guía de Turismo y Coordinador de Viajes",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "A distancia",
+                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-turismo",
+                    "id": 716
+                },
+                {
+                    "nombre_carrera": "Martillero Público",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/corredor-publico-inmobiliario-y-martillero",
+                    "id": 717
+                },
+                {
+                    "nombre_carrera": "Procuración",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Derecho",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/abogacia",
+                    "id": 718
+                },
+                {
+                    "nombre_carrera": "Profesorado Universitario en Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "A distancia",
+                    "facultad": "Facultad de Educación",
+                    "link_oficial": "http://www.uch.edu.ar/",
+                    "id": 719
+                },
+                {
+                    "nombre_carrera": "Profesorado Universitario en Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "A distancia",
+                    "facultad": "Facultad de Educación",
+                    "link_oficial": "http://www.uch.edu.ar/",
+                    "id": 720
+                },
+                {
+                    "nombre_carrera": "Profesorado para Profesionales",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "1 año",
+                    "modalidad": "A distancia",
+                    "facultad": "Facultad de Educación",
+                    "link_oficial": "http://www.uch.edu.ar/",
+                    "id": 721
+                },
+                {
+                    "nombre_carrera": "Social Media Manager",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Educación",
+                    "link_oficial": "http://www.uch.edu.ar/",
+                    "id": 722
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Comunicación Digital",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Educación",
+                    "link_oficial": "http://www.uch.edu.ar/",
+                    "id": 723
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Desarrollo de Software",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años",
+                    "modalidad": "A distancia",
+                    "facultad": "Facultad de Informática y Diseño",
+                    "link_oficial": "https://www.uch.edu.ar/",
+                    "id": 724
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Diseño Gráfico",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Informática y Diseño",
+                    "link_oficial": "https://uch.edu.ar/carrera/licenciatura-en-dise%C3%B1o",
+                    "id": 725
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Producción Musical",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+                    "link_oficial": "https://www.uch.edu.ar/",
+                    "id": 726
+                },
+                {
+                    "nombre_carrera": "Técnico Universitario en Comercio Exterior y Aduanas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+                    "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-comercio-internacional",
+                    "id": 727
+                },
+                {
+                    "nombre_carrera": "UX Writer",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "4 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Educación",
+                    "link_oficial": "http://www.uch.edu.ar/",
+                    "id": 728
+                },
+                {
+                    "nombre_carrera": "Web Developer",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "8 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Educación",
+                    "link_oficial": "http://www.uch.edu.ar/",
+                    "id": 729
                 }
             ],
             "departamento": "Godoy Cruz"
@@ -22096,6 +22519,15 @@
                         }
                     ],
                     "plan_fuente": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas/ciclo-de-complementacion-curricular/licenciatura-en-higiene-y-seguridad-en-el-trabajo-calidad-y-medio-ambiente-ciclo-de-complementacion-curricular-ccc/plan-de-estudio"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura en Marketing Digital",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Humanidades y Ciencias Económicas",
+                    "link_oficial": "https://uca.edu.ar/es/facultades/facultad-de-humanidades-y-ciencias-economicas",
+                    "id": 817
                 }
             ],
             "departamento": "Godoy Cruz"
@@ -22572,6 +23004,15 @@
                         }
                     ],
                     "plan_fuente": "https://i-uce.edu.ar/careers/uce-logistica-y-transporte"
+                },
+                {
+                    "nombre_carrera": "Ciclos de Licenciaturas en Administración de Empresas",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Nuestras carreras",
+                    "link_oficial": "https://i-uce.edu.ar/",
+                    "id": 906
                 }
             ]
         },
@@ -28877,6 +29318,15 @@
                         }
                     ],
                     "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/"
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior y Técnico Nº 9-001 Gral. José de San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-especial/",
+                    "id": 1114
                 }
             ]
         },
@@ -29648,6 +30098,15 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "nombre_carrera": "Profesorado en Educación Especial con Orientación en Discapacidad Intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES N° 9-002 Tomás Godoy Cruz",
+                    "link_oficial": "https://institutotomasgodoycruz.com/",
+                    "id": 1211
                 }
             ],
             "departamento": "Capital"
@@ -29947,6 +30406,24 @@
                         }
                     ],
                     "plan_fuente": "https://ens9003-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico-2/"
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de Formación Docente y Técnica N° 9-003 Normal Superior",
+                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/",
+                    "id": 1305
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Informática",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de Formación Docente y Técnica N° 9-003 Normal Superior",
+                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/",
+                    "id": 1306
                 }
             ],
             "departamento": "San Rafael"
@@ -30731,6 +31208,42 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Química",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-005 Fidela Amparán",
+                    "link_oficial": "https://ens9005-infd.mendoza.edu.ar/",
+                    "id": 1506
+                },
+                {
+                    "nombre_carrera": "Profesorado para la Educación Secundaria en Geografía",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-005 Fidela Amparán",
+                    "link_oficial": "https://ens9005-infd.mendoza.edu.ar/",
+                    "id": 1507
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Agronomía",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-005 Fidela Amparán",
+                    "link_oficial": "https://ens9005-infd.mendoza.edu.ar/",
+                    "id": 1508
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-005 Fidela Amparán",
+                    "link_oficial": "https://ens9005-infd.mendoza.edu.ar/",
+                    "id": 1509
                 }
             ]
         },
@@ -31422,16 +31935,16 @@
                     "modalidad": "Presencial",
                     "turno": "A confirmar",
                     "facultad": "IES 9-008 Manuel Belgrano",
-                    "link_oficial": "https://www.iesmb.edu.ar/bel/desarrollo-de-software/",
+                    "link_oficial": "https://www.iesmb.edu.ar/bel/desarrollo_de_software/",
                     "plan_estudio": [
                         {
-                            "anio": "1º año",
+                            "anio": "Primer año",
                             "materias": [
                                 "Programación I",
                                 "Matemática Aplicada",
                                 "Lógica Computacional",
-                                "Inglés Técnico I",
-                                "Alfabetización Académica",
+                                "Inglés técnico I",
+                                "Alfabetización académica",
                                 "Arquitectura de Dispositivos",
                                 "Seminario Nuevas Tecnologías",
                                 "Sistemas Operativos I",
@@ -31440,7 +31953,7 @@
                             ]
                         },
                         {
-                            "anio": "2º año",
+                            "anio": "Segundo año",
                             "materias": [
                                 "Programación II",
                                 "Matemática Discreta",
@@ -31455,7 +31968,7 @@
                             ]
                         },
                         {
-                            "anio": "3º año",
+                            "anio": "Tercer año",
                             "materias": [
                                 "Programación III",
                                 "Arquitectura y Diseño de Interfaces: UI y UX",
@@ -31464,17 +31977,18 @@
                                 "Gestión de Proyectos de Software",
                                 "Base de Datos III",
                                 "Legislación Informática y Ética Profesional",
-                                "Estadística y Probabilidades para el Desarrollo de Software",
+                                "Estadística y probabilidades para el Desarrollo de Software",
                                 "Ciberseguridad",
                                 "Metodologías Ágiles",
                                 "Práctica Profesionalizante III"
                             ]
                         }
-                    ]
+                    ],
+                    "plan_fuente": "https://www.iesmb.edu.ar/bel/desarrollo_de_software/"
                 },
                 {
                     "id": 1701,
-                    "nombre_carrera": "Técnico Superior en Diseño Diseño Gráfico",
+                    "nombre_carrera": "Técnico Superior en Diseño Gráfico",
                     "categoria": "Pregrado / Tecnicatura",
                     "duracion": "3 años",
                     "modalidad": "Presencial",
@@ -31544,12 +32058,12 @@
                     "link_oficial": "https://www.iesmb.edu.ar/bel/ia_y_ciencia_de_datos/",
                     "plan_estudio": [
                         {
-                            "anio": "1º año",
+                            "anio": "Primer año",
                             "materias": [
                                 "Programación I",
                                 "Matemática Aplicada",
                                 "Lógica Computacional",
-                                "Inglés Técnico I",
+                                "Inglés técnico I",
                                 "Alfabetización Académica",
                                 "Arquitectura de Dispositivos",
                                 "Base de Datos I",
@@ -31559,13 +32073,13 @@
                             ]
                         },
                         {
-                            "anio": "2º año",
+                            "anio": "Segundo año",
                             "materias": [
                                 "Programación Orientada al Análisis de Datos",
                                 "Matemática Aplicada a la Ciencia de Datos",
                                 "Estadística y Probabilidades para Gestión de Datos",
                                 "Ciencia de Datos y Datos Masivos",
-                                "Inglés Técnico II",
+                                "Inglés técnico II",
                                 "Gestión de Proyectos",
                                 "Comunicación de Resultados Analíticos",
                                 "Minería de Datos",
@@ -31575,10 +32089,10 @@
                             ]
                         },
                         {
-                            "anio": "3º año",
+                            "anio": "Tercer año",
                             "materias": [
-                                "IA Aplicada al Procesamiento del Lenguaje Natural",
-                                "IA Aplicada al Procesamiento Digital de Imágenes",
+                                "IA aplicada al Procesamiento del Lenguaje Natural",
+                                "IA aplicada al Procesamiento Digital de Imágenes",
                                 "Inglés Técnico III",
                                 "Matemática Aplicada a la IA",
                                 "Redes Neuronales y Aprendizaje Automático",
@@ -31591,7 +32105,8 @@
                                 "Práctica Profesionalizante III"
                             ]
                         }
-                    ]
+                    ],
+                    "plan_fuente": "https://www.iesmb.edu.ar/bel/ia_y_ciencia_de_datos/"
                 },
                 {
                     "id": 1703,
@@ -31713,68 +32228,63 @@
                 },
                 {
                     "id": 1705,
-                    "nombre_carrera": "Técnico Superior en Diseño Multimedial",
+                    "nombre_carrera": "Técnico Superior en Diseño Digital e Interactivo",
                     "categoria": "Pregrado / Tecnicatura",
-                    "duracion": "3 años",
+                    "duracion": "2 años y medio",
                     "modalidad": "Presencial",
                     "turno": "A confirmar",
                     "facultad": "IES 9-008 Manuel Belgrano",
-                    "link_oficial": "https://www.iesmb.edu.ar/bel/diseno-multimedial/",
+                    "link_oficial": "https://www.iesmb.edu.ar/bel/diseno-digital-interactivo/",
                     "plan_estudio": [
                         {
                             "anio": "Primer año",
                             "materias": [
-                                "Diseño en Comunicación Visual I",
-                                "Técnicas de representación I",
-                                "Herramientas digitales I",
-                                "Inglés",
-                                "Tipografía I",
-                                "Historia del arte y del diseño I",
-                                "Problemática Sociocultural y el contexto",
-                                "Prácticas de lectura, escritura y oralidad",
+                                "Introducción al Diseño",
+                                "Herramientas Digitales",
+                                "Técnicas de Representación",
+                                "Historia, Cultura y Sociología de la Imagen y el Diseño",
+                                "Psicología de la Percepción y Semiótica Visual",
+                                "Metodología del Diseño y Técnicas de Creatividad",
+                                "Tecnología Básica",
                                 "Inglés técnico",
-                                "EIO (Espacio Institucional optativo I)",
-                                "Percepción Visual I",
+                                "Comunicación, Medios y Nuevas Tecnologías",
+                                "Comunicación y Alfabetización Académica y Digital",
+                                "Tipografía Básica",
                                 "Práctica profesionalizante I"
                             ]
                         },
                         {
                             "anio": "Segundo año",
                             "materias": [
-                                "Diseño en Comunicación Visual II",
-                                "Técnicas de representación II",
-                                "Producción Web I",
-                                "Fotografía publicitaria",
-                                "Historia del Arte y del Diseño II",
-                                "Semiología",
-                                "Tecnología gráfica I",
+                                "Diseño de Interfaces (UX/UI)",
+                                "Motion Graphics y Animación 2D/3D",
+                                "Fotografía y Producción Audiovisual",
+                                "Tecnología Web Front- End I",
+                                "Tecnología Web Front- End II",
+                                "Edición y Composición Digital (VFX y Sonido)",
+                                "Guión y Narrativa Transmedia",
                                 "Práctica profesionalizante II",
-                                "Introducción al Modelado 3D",
-                                "Producción Web II",
-                                "Tipografía II",
-                                "Guión"
+                                "Gestión de Proyectos y Metodologías Ágiles",
+                                "Ética Profesional y Legislación",
+                                "Práctica profesionalizante III"
                             ]
                         },
                         {
                             "anio": "Tercer año",
                             "materias": [
-                                "Diseño de Comunicación Audiovisual",
-                                "Animación Computada",
-                                "Edición de sonido",
+                                "Diseño de Videojuegos y Entornos Interactivos",
+                                "Diseño Experimental y Tendencias Emergentes",
+                                "Portfolio Profesional y Marca Personal",
                                 "Comunicación, medios y nuevas tecnologías",
-                                "Mercadotecnia para PyMES",
+                                "Marketing Digital y Social Media",
                                 "Gestión de Microemprendimientos",
-                                "Práctica Profesionalizante III",
-                                "Ética Profesional",
-                                "Formulación y evaluación de Proyectos",
-                                "Proyecto integrado"
+                                "Práctica Profesionalizante IV"
                             ]
                         }
                     ],
-                    "plan_fuente": "https://www.iesmb.edu.ar/bel/diseno-multimedial/"
+                    "plan_fuente": "https://www.iesmb.edu.ar/bel/diseno-digital-interactivo/"
                 }
-            ],
-            "departamento": "Godoy Cruz"
+            ]
         },
         {
             "id": 18,
@@ -32896,6 +33406,15 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Especial con orientación en Discapacidad Intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-009 Tupungato",
+                    "link_oficial": "https://ies9009-infd.mendoza.edu.ar/sitio/profesorados/general-profesorado-educacion-especial/",
+                    "id": 1820
                 }
             ]
         },
@@ -33562,6 +34081,60 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "nombre_carrera": "Actualización Académica en Legislación y Administración Escolar",
+                    "categoria": "Posgrado / Especialización",
+                    "duracion": "1 año",
+                    "modalidad": "Presencial",
+                    "facultad": "IES N° 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/",
+                    "id": 1910
+                },
+                {
+                    "nombre_carrera": "Actualización Académica en la Enseñanza Permanente de Jóvenes y Adultos",
+                    "categoria": "Posgrado / Especialización",
+                    "duracion": "20 horas reloj",
+                    "modalidad": "Presencial",
+                    "facultad": "IES N° 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/",
+                    "id": 1911
+                },
+                {
+                    "nombre_carrera": "Actualización Académica en la Enseñanza de la Lengua y la Literatura, con opción a Especialización docente de nivel superior en la Enseñanza de la Lengua y la Literatura",
+                    "categoria": "Posgrado / Especialización",
+                    "duracion": "20 horas reloj",
+                    "modalidad": "Presencial",
+                    "facultad": "IES N° 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/",
+                    "id": 1912
+                },
+                {
+                    "nombre_carrera": "Especialización Docente de Nivel Superior en Género y Educación",
+                    "categoria": "Posgrado / Especialización",
+                    "duracion": "40 horas reloj",
+                    "modalidad": "Presencial",
+                    "facultad": "IES N° 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/",
+                    "id": 1913
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Agronomía",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES N° 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/",
+                    "id": 1914
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Redes y Ciberseguridad",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES N° 9-010 Rosario Vera Peñaloza",
+                    "link_oficial": "https://ies9010-infd.mendoza.edu.ar/",
+                    "id": 1915
                 }
             ],
             "departamento": "San Carlos"
@@ -34205,6 +34778,15 @@
                         }
                     ],
                     "plan_fuente": "https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gastronomia/"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Obras Viales",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-011 Del Atuel",
+                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/",
+                    "id": 2009
                 }
             ]
         },
@@ -34781,6 +35363,15 @@
                         }
                     ],
                     "plan_fuente": "https://isteec.edu.ar/turismo/"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Administración Pública",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "ISTEEC 9-013",
+                    "link_oficial": "http://isteec.edu.ar",
+                    "id": 2210
                 }
             ],
             "departamento": "Capital"
@@ -35154,6 +35745,24 @@
                         }
                     ],
                     "plan_fuente": "https://profesoradodearte.edu.ar/profesorado-para-tecnicos/"
+                },
+                {
+                    "nombre_carrera": "Profesorado de Danza",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Profesorado de Arte N° 9-014 IPA",
+                    "link_oficial": "http://profesoradodearte.edu.ar/",
+                    "id": 2307
+                },
+                {
+                    "nombre_carrera": "Profesorado para la Educación Secundaria de la modalidad Técnico Profesional (en concurrencia con el título de base)",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Profesorado de Arte N° 9-014 IPA",
+                    "link_oficial": "http://profesoradodearte.edu.ar/",
+                    "id": 2308
                 }
             ],
             "departamento": "San Rafael"
@@ -36032,6 +36641,24 @@
                     "turno": "A confirmar",
                     "facultad": "IESVU (IES 9-015)",
                     "link_oficial": "https://iesvu.edu.ar/estudio/curso-de-portugues-a-1-1/"
+                },
+                {
+                    "nombre_carrera": "Postítulo en Enfermería de la Salud Mental",
+                    "categoria": "Posgrado / Especialización",
+                    "duracion": "50 horas reloj",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-015 Valle de Uco",
+                    "link_oficial": "https://iesvu.edu.ar",
+                    "id": 2413
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Higiene y Seguridad con Orientación en Calidad y Medio Ambiente",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-015 Valle de Uco",
+                    "link_oficial": "https://iesvu.edu.ar",
+                    "id": 2414
                 }
             ]
         },
@@ -36379,6 +37006,15 @@
                         }
                     ],
                     "plan_fuente": "https://escueladecine9017-infd.mendoza.edu.ar/sitio/catalogo/plan-de-estudio/"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Fotografía Creativa y Diseño Fotográfico",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Escuela Regional Cuyo de Cine y Video IES N° 9-017",
+                    "link_oficial": "https://escueladecinemza.com.ar/web/",
+                    "id": 2602
                 }
             ],
             "departamento": "Capital"
@@ -36774,6 +37410,42 @@
                         }
                     ],
                     "plan_fuente": "https://ies9018malargue.edu.ar/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/"
+                },
+                {
+                    "nombre_carrera": "Especialización Docente del Nivel Superior en Pedagogía para la Docencia en el Nivel Superior",
+                    "categoria": "Posgrado / Especialización",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Nº 9-018 Gdor. Celso Alejandro Jaque",
+                    "link_oficial": "http://ies9018malargue.edu.ar",
+                    "id": 2707
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Nº 9-018 Gdor. Celso Alejandro Jaque",
+                    "link_oficial": "http://ies9018malargue.edu.ar",
+                    "id": 2708
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Informática",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Nº 9-018 Gdor. Celso Alejandro Jaque",
+                    "link_oficial": "http://ies9018malargue.edu.ar",
+                    "id": 2709
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Nº 9-018 Gdor. Celso Alejandro Jaque",
+                    "link_oficial": "http://ies9018malargue.edu.ar",
+                    "id": 2710
                 }
             ],
             "departamento": "Malargüe"
@@ -37092,6 +37764,24 @@
                         }
                     ],
                     "plan_fuente": "https://www.insutec.edu.ar/higiene/plan-de-estudios/"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Obras Viales",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Tecnológico Nº 9-019 INSUTEC",
+                    "link_oficial": "http://www.insutec.edu.ar/",
+                    "id": 2807
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Servicios Básicos y Construcciones Livianas Industrializadas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Tecnológico Nº 9-019 INSUTEC",
+                    "link_oficial": "http://www.insutec.edu.ar/",
+                    "id": 2808
                 },
                 {
                     "id": 40601,
@@ -37617,6 +38307,15 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Podología",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Nº 9-021 Tecnológico Junín",
+                    "link_oficial": "https://ies9021.edu.ar",
+                    "id": 2908
                 }
             ],
             "departamento": "Junín"
@@ -38808,6 +39507,15 @@
                         }
                     ],
                     "plan_fuente": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Higiene y Seguridad con orientación en calidad y medioambiente",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-024 Lavalle",
+                    "link_oficial": "https://ies9024-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio-ambiente/",
+                    "id": 3109
                 }
             ],
             "departamento": "Lavalle"
@@ -39026,6 +39734,15 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "nombre_carrera": "Profesorado de Teatro",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES N° 9-028 Prof. Estela Susana Quiroga",
+                    "link_oficial": "https://ies9028-infd.mendoza.edu.ar/",
+                    "id": 3205
                 }
             ],
             "departamento": "Santa Rosa"
@@ -39519,6 +40236,24 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Enología e Industrias de los Alimentos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-029",
+                    "link_oficial": "https://www.ies9029.edu.ar",
+                    "id": 3309
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Higiene y Seguridad con Orientación en Calidad y Medio Ambiente",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-029",
+                    "link_oficial": "https://www.ies9029.edu.ar",
+                    "id": 3310
                 }
             ],
             "departamento": "Luján de Cuyo"
@@ -40259,6 +40994,15 @@
                         }
                     ],
                     "plan_fuente": "https://institutocalle.edu.ar/oferta-educativa/locucion/"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Comunicación Social",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Fundación Fabián Calle",
+                    "link_oficial": "http://institutocalle.edu.ar",
+                    "id": 3502
                 }
             ],
             "departamento": "Capital"
@@ -40757,6 +41501,24 @@
                         }
                     ],
                     "plan_fuente": "https://fundacionrayuela.org.ar/sitio/profesor-primaria/"
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Rayuela PT 181",
+                    "link_oficial": "http://fundacionrayuela.org.ar",
+                    "id": 3707
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Comunicación y Gestión de Bibliotecas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A distancia",
+                    "facultad": "Instituto Rayuela PT 181",
+                    "link_oficial": "http://fundacionrayuela.org.ar",
+                    "id": 3708
                 }
             ],
             "departamento": "Capital"
@@ -41235,6 +41997,51 @@
                         }
                     ],
                     "plan_fuente": "https://arteschopin.edu.ar/tecnicatura-superior-en-gestion-de-industrias-culturales-y-creativas/"
+                },
+                {
+                    "nombre_carrera": "Coreógrafo e intérprete en Danza",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "5 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto ARTES F. Chopin PT-146",
+                    "link_oficial": "http://arteschopin.edu.ar",
+                    "id": 3913
+                },
+                {
+                    "nombre_carrera": "Interprete en canto",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "5 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto ARTES F. Chopin PT-146",
+                    "link_oficial": "http://arteschopin.edu.ar",
+                    "id": 3914
+                },
+                {
+                    "nombre_carrera": "Interprete en teatro musical",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "5 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto ARTES F. Chopin PT-146",
+                    "link_oficial": "http://arteschopin.edu.ar",
+                    "id": 3915
+                },
+                {
+                    "nombre_carrera": "Preparador de ensambles corales",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "5 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto ARTES F. Chopin PT-146",
+                    "link_oficial": "http://arteschopin.edu.ar",
+                    "id": 3916
+                },
+                {
+                    "nombre_carrera": "Productor y Gestor Cultural",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "5 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto ARTES F. Chopin PT-146",
+                    "link_oficial": "http://arteschopin.edu.ar",
+                    "id": 3917
                 }
             ],
             "departamento": "Godoy Cruz"
@@ -41545,6 +42352,15 @@
                         }
                     ],
                     "plan_fuente": "https://epdmendoza.com.ar/plan-de-estudio/"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Comunicación Deportiva",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Escuela Superior de Periodismo Deportivo de Mendoza",
+                    "link_oficial": "http://epdmendoza.com.ar",
+                    "id": 4202
                 }
             ],
             "departamento": "Capital"
@@ -42240,6 +43056,15 @@
                         }
                     ],
                     "plan_fuente": "https://insrp-infd.mendoza.edu.ar/sitio/plan-de-estudios-3/"
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Ntra Sra. del Rosario de Pompeya PT 068",
+                    "link_oficial": "https://insrp-infd.mendoza.edu.ar/",
+                    "id": 4603
                 }
             ],
             "departamento": "Capital"
@@ -42265,6 +43090,15 @@
                     "turno": "A confirmar",
                     "facultad": "Cultural Mendoza",
                     "link_oficial": "https://culturalmendoza.com/ensenanza-de-ingles/"
+                },
+                {
+                    "nombre_carrera": "Profesorado de Inglés",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Cultural de Mendoza PT 153",
+                    "link_oficial": "https://culturalmendoza.com/traductorado-y-profesorado/#profesorado de-ingl%C3%A9s",
+                    "id": 4702
                 }
             ],
             "departamento": "Capital"
@@ -43375,6 +44209,33 @@
                         }
                     ],
                     "plan_fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-inicial/"
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Geografía",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de la Patria Grande N° 9-026",
+                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/",
+                    "id": 4409
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Administración de Empresas de la Salud",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de la Patria Grande N° 9-026",
+                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/",
+                    "id": 4410
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Laboratorio de Análisis Clínicos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de la Patria Grande N° 9-026",
+                    "link_oficial": "https://ies9026-infd.mendoza.edu.ar/",
+                    "id": 4411
                 }
             ],
             "departamento": "Las Heras"
@@ -44204,6 +45065,15 @@
                         }
                     ],
                     "plan_fuente": "https://ies9027-infd.mendoza.edu.ar/sitio/estructura-curricular-3/"
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior Nº 9-027",
+                    "link_oficial": "https://ies9027-infd.mendoza.edu.ar/",
+                    "id": 5005
                 }
             ],
             "departamento": "Guaymallén"
@@ -44541,9 +45411,742 @@
                         }
                     ],
                     "plan_fuente": "https://idesaugacoop.com.ar/tecnicatura-superior-en-mecatronica-aplicada-a-la-industria/"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Mecatrónica",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior Alvear IdESA UGACOOP",
+                    "link_oficial": "http://idesaugacoop.com.ar/",
+                    "id": 5104
                 }
             ],
             "departamento": "General Alvear"
+        },
+        {
+            "id": 52,
+            "nombre": "Don Bosco (PT-021)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "abaroni@donbosco.org",
+                "direccion": "Ruta Provincial 50 Nº 6772, Rodeo del Medio, Maipú, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Enología e Industrias Frutihortícolas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Don Bosco PT- 021",
+                    "link_oficial": "https://tecsupdonbosco.edu.ar/",
+                    "id": 5201
+                }
+            ],
+            "departamento": "Maipú"
+        },
+        {
+            "id": 53,
+            "nombre": "IES Nuevo Cuyo Mendoza (PT-169)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "incuyo@gmail.com",
+                "direccion": "Rioja 612-614, Ciudad de Mendoza, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Nuevo Cuyo Mendoza PT 169",
+                    "link_oficial": "http://incuyo.edu.ar/",
+                    "id": 5301
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 54,
+            "nombre": "IES PT-160 Agentes de Propaganda Médica",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "pt160apmmendoza@gmail.com",
+                "direccion": "Córdoba 249, Ciudad de Mendoza, Mendoza"
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Agente de Propaganda Médica",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES PT-160 Agentes de Propaganda Médica",
+                    "link_oficial": "http://institutoapmza.com.ar",
+                    "id": 5401
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 55,
+            "nombre": "Instituto Alfredo Bufano (PT-215)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "institutosuperiorbufano@ive.org",
+                "direccion": "Ortubia 2435 - San Rafael https://maps.app.goo.gl/HKCZST4miVwWeGK96"
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Filosofía",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Alfredo Bufano PT 215",
+                    "link_oficial": "https://institutobufano.org/",
+                    "id": 5501
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Historia",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Alfredo Bufano PT 215",
+                    "link_oficial": "https://institutobufano.org/",
+                    "id": 5502
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Lengua y Literatura",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Alfredo Bufano PT 215",
+                    "link_oficial": "https://institutobufano.org/",
+                    "id": 5503
+                }
+            ],
+            "departamento": "San Rafael"
+        },
+        {
+            "id": 56,
+            "nombre": "Instituto Arrayanes",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "info@institutoarrayanes.com",
+                "direccion": "Tiburcio Benegas 748, Ciudad de Mendoza, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Dirección Gastronómica",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Arrayanes",
+                    "link_oficial": "https://institutoarrayanes.com.ar/",
+                    "id": 5601
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 57,
+            "nombre": "Instituto Cruz Roja Argentina Filial San Rafael (PT-071)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "educa.srafael@cruzroja.org",
+                "direccion": "Godoy Cruz 270, San Rafael, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Enfermería Profesional",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Cruz Roja Argentina Filial San Rafael PT-071",
+                    "link_oficial": "https://cruzrojasanrafael.edu.ar/",
+                    "id": 5701
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Instrumentación Quirúrgica",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Cruz Roja Argentina Filial San Rafael PT-071",
+                    "link_oficial": "https://cruzrojasanrafael.edu.ar/",
+                    "id": 5702
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Laboratorio de Análisis Clínicos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Cruz Roja Argentina Filial San Rafael PT-071",
+                    "link_oficial": "https://cruzrojasanrafael.edu.ar/",
+                    "id": 5703
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Radiología e Imágenes para el Diagnóstico",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Cruz Roja Argentina Filial San Rafael PT-071",
+                    "link_oficial": "https://cruzrojasanrafael.edu.ar/",
+                    "id": 5704
+                }
+            ],
+            "departamento": "San Rafael"
+        },
+        {
+            "id": 58,
+            "nombre": "Instituto Fundación por el Arte",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "contacto@fporelarte.edu",
+                "direccion": "Calle Patricias Mendocinas 805, esquina San Lorenzo, Ciudad de Mendoza, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Danza",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Fundación por el Arte",
+                    "link_oficial": "http://fporelarte.edu.ar/",
+                    "id": 5801
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Danza",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Fundación por el Arte",
+                    "link_oficial": "http://fporelarte.edu.ar/",
+                    "id": 5802
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 59,
+            "nombre": "Instituto IDICSA",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "A confirmar",
+                "direccion": "Sede central: Morón 265, Ciudad, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto IDICSA",
+                    "link_oficial": "http://institutosanidadmza.com.ar/curso/enfermeria-profesional/",
+                    "id": 5901
+                },
+                {
+                    "nombre_carrera": "Tecnicatura en Administración en Empresas de la Salud",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto IDICSA",
+                    "link_oficial": "http://institutosanidadmza.com.ar/curso/tecnicatura-superior-en-administracion-de-la-salud/",
+                    "id": 5902
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 60,
+            "nombre": "Instituto Nuestra Señora del Rosario (PT-094)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "rosario94secretaria@gmail.com",
+                "direccion": "Mathus Hoyos 3715, El Bermejo, Guaymallén."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Filosofía",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Nuestra Señora del Rosario PT 094",
+                    "link_oficial": "http://delrosario.milaulas.com/",
+                    "id": 6001
+                }
+            ],
+            "departamento": "Guaymallén"
+        },
+        {
+            "id": 61,
+            "nombre": "Instituto San Antonio (PT-030)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "nivelsuperior@isaalvear.edu",
+                "direccion": "Roque S. Peña y 26 de julio, General Alvear, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto San Antonio PT 30",
+                    "link_oficial": "http://isaalvear.edu.ar/",
+                    "id": 6101
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto San Antonio PT 30",
+                    "link_oficial": "http://isaalvear.edu.ar/",
+                    "id": 6102
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto San Antonio PT 30",
+                    "link_oficial": "http://isaalvear.edu.ar/",
+                    "id": 6103
+                }
+            ],
+            "departamento": "General Alvear"
+        },
+        {
+            "id": 62,
+            "nombre": "Instituto Superior Diocesano San José (PT-164)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "isdsj.malargue.mza.ar@gmail.com",
+                "direccion": "Capdeville Este N°115, Malargüe, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Educación Especial con orientación en discapacidad intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Diocesano San José PT 164",
+                    "link_oficial": "http://sanjosemalargue.net",
+                    "id": 6201
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Diocesano San José PT 164",
+                    "link_oficial": "http://sanjosemalargue.net",
+                    "id": 6202
+                }
+            ],
+            "departamento": "Malargüe"
+        },
+        {
+            "id": 63,
+            "nombre": "Instituto Superior ESAPA (PT-166)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "nivelsuperior@esapa.edu",
+                "direccion": "Maipú 324, Ciudad de Mendoza, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Farmacia",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior ESAPA PT 166",
+                    "link_oficial": "https://esapa.edu.ar/",
+                    "id": 6301
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Sanidad y Bienestar Animal",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior ESAPA PT 166",
+                    "link_oficial": "https://esapa.edu.ar/",
+                    "id": 6302
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 64,
+            "nombre": "Instituto Superior Isabel La Católica",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "terciarioisabel@servidoras.org",
+                "direccion": "Av. Rawson 4011, San Rafael, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Isabel La Católica",
+                    "link_oficial": "http://colegioisabellacatolica.wordpress.com",
+                    "id": 6401
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Isabel La Católica",
+                    "link_oficial": "http://colegioisabellacatolica.wordpress.com",
+                    "id": 6402
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Isabel La Católica",
+                    "link_oficial": "http://colegioisabellacatolica.wordpress.com",
+                    "id": 6403
+                }
+            ],
+            "departamento": "San Rafael"
+        },
+        {
+            "id": 65,
+            "nombre": "Instituto Superior Juan Vucetich (PT-177)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "isjuanvucetich@gmail.com",
+                "direccion": "Rioja 944, Ciudad, Mendoza"
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Investigación Criminalística",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A distancia",
+                    "facultad": "Instituto Superior Juan Vucetich PT-177",
+                    "link_oficial": "https://isjv.com.ar/",
+                    "id": 6501
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Siniestrología Vial",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A distancia",
+                    "facultad": "Instituto Superior Juan Vucetich PT-177",
+                    "link_oficial": "https://isjv.com.ar/",
+                    "id": 6502
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 66,
+            "nombre": "Instituto Superior Nicolás Avellaneda",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "avellanedainstitucional@gmail.com",
+                "direccion": "Av. San Martin 1154, Godoy Cruz, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Nicolás Avellaneda",
+                    "link_oficial": "https://instituto.instavellaneda.com.ar/",
+                    "id": 6601
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Diseño de Interiores",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Nicolás Avellaneda",
+                    "link_oficial": "https://instituto.instavellaneda.com.ar/",
+                    "id": 6602
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Gestión de Recursos Humanos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Nicolás Avellaneda",
+                    "link_oficial": "https://instituto.instavellaneda.com.ar/",
+                    "id": 6603
+                }
+            ],
+            "departamento": "Godoy Cruz"
+        },
+        {
+            "id": 67,
+            "nombre": "Instituto Superior Reinalda Balancini",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "institutobalancini@gmail.com",
+                "direccion": "Juan de Garay 115, Godoy Cruz, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Inst. Sup. Reinalda Balancini",
+                    "link_oficial": "https://sites.google.com/view/irbmendoza?usp=sharing",
+                    "id": 6701
+                }
+            ],
+            "departamento": "Godoy Cruz"
+        },
+        {
+            "id": 68,
+            "nombre": "Instituto Superior de Educación Mendoza (ISEM)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "isem.secretaria2023@gmail.com",
+                "direccion": "Sede Central: Alfonsina Storni 228, San José, Guaymallen, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de Educación Mendoza ISEM PT 252",
+                    "link_oficial": "http://isem.edu.ar",
+                    "id": 6801
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Geografía",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de Educación Mendoza ISEM PT 252",
+                    "link_oficial": "http://isem.edu.ar",
+                    "id": 6802
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Historia",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de Educación Mendoza ISEM PT 252",
+                    "link_oficial": "http://isem.edu.ar",
+                    "id": 6803
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Preceptoría Escolar",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de Educación Mendoza ISEM PT 252",
+                    "link_oficial": "http://isem.edu.ar",
+                    "id": 6804
+                }
+            ],
+            "departamento": "Guaymallén"
+        },
+        {
+            "id": 69,
+            "nombre": "Instituto Superior de la UTHGRA (PT-283)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "ies@uthgramendoza.com",
+                "direccion": "A confirmar"
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Gastronomía",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de la Uthgra (PT283) Unión de Trabajadores del Turismo, Hoteleros y Gastronómicos de la República Argentina.",
+                    "link_oficial": "https://uthgramendoza.com.ar/centro-de-formacion/",
+                    "id": 6901
+                }
+            ]
+        },
+        {
+            "id": 70,
+            "nombre": "Instituto Tomás Alva Edison (PT-113)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "superior@fundcaionedison.org",
+                "direccion": "A confirmar"
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "PT 113 Tomás Alva Edison",
+                    "link_oficial": "https://superior.fundacionedison.org.ar/",
+                    "id": 7001
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "PT 113 Tomás Alva Edison",
+                    "link_oficial": "https://superior.fundacionedison.org.ar/",
+                    "id": 7002
+                }
+            ]
+        },
+        {
+            "id": 71,
+            "nombre": "Instituto Técnico Superior de Medicina China",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "info@medicinachina.com",
+                "direccion": "Cervantes 2116, Godoy Cruz, Mendoza, Argentina."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Acupuntura",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Técnico Superior de Medicina China",
+                    "link_oficial": "http://www.medicinachina.com.ar/",
+                    "id": 7101
+                }
+            ],
+            "departamento": "Godoy Cruz"
+        },
+        {
+            "id": 72,
+            "nombre": "Instituto de Ciencias Junín",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "info@institutodejunin.edu",
+                "direccion": "Calle Luis Marcó 106, Junin, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Preceptoría Escolar",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Ciencias Junín",
+                    "link_oficial": "https://www.institutodejunin.edu.ar/",
+                    "id": 7201
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Psicomotricidad",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Ciencias Junín",
+                    "link_oficial": "https://www.institutodejunin.edu.ar/",
+                    "id": 7202
+                }
+            ],
+            "departamento": "Junín"
+        },
+        {
+            "id": 73,
+            "nombre": "NEOCAST (PT-145)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "institutoneocast@gmail.com",
+                "direccion": "Anatole France 451, Barrio Bancario, Godoy Cruz, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Prótesis Dental",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "NEOCAST PT 145",
+                    "link_oficial": "http://mendozaneocast.com",
+                    "id": 7301
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Óptica y Contactología",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "NEOCAST PT 145",
+                    "link_oficial": "http://mendozaneocast.com",
+                    "id": 7302
+                }
+            ],
+            "departamento": "Godoy Cruz"
         }
     ],
     "formaciones_alternativas": [
@@ -45009,7 +46612,7 @@
                     "duracion": "A confirmar",
                     "modalidad": "Online",
                     "facultad": "INTA Mendoza",
-                    "link_oficial": "https://www.facebook.com/INTA.Mendoza/photos/curso-de-apicultura-online-gratuito"
+                    "link_oficial": "https://formacion.inta.gob.ar/"
                 },
                 {
                     "id": 21402,
@@ -45018,7 +46621,7 @@
                     "duracion": "A confirmar",
                     "modalidad": "Online (gratuito)",
                     "facultad": "INTA Mendoza",
-                    "link_oficial": "https://inta.gob.ar"
+                    "link_oficial": "https://formacion.inta.gob.ar/"
                 }
             ]
         },
@@ -45559,7 +47162,7 @@
                     "duracion": "A confirmar",
                     "modalidad": "Presencial",
                     "facultad": "ASOLMEN",
-                    "link_oficial": "A confirmar"
+                    "link_oficial": "https://somosoliva.com.ar/noticias/capacitaciones-para-gastronomicos-2026/"
                 }
             ]
         },
@@ -45583,29 +47186,6 @@
                     "modalidad": "Presencial / Online",
                     "facultad": "Academia Manifiesto",
                     "link_oficial": "https://academia.manifiestocafe.com.ar"
-                }
-            ]
-        },
-        {
-            "id": 236,
-            "nombre": "Capacitación en Energía Solar (Mendoza)",
-            "nivel": "capacitación profesional",
-            "gestion": "A confirmar",
-            "provincia": "Mendoza",
-            "contacto": {
-                "telefono": "A confirmar",
-                "email": "A confirmar",
-                "direccion": "A confirmar"
-            },
-            "carreras": [
-                {
-                    "id": 23601,
-                    "nombre_carrera": "Instalador de Sistemas de Energía Solar (Fotovoltaicos y Térmicos)",
-                    "categoria": "Curso / Formación Profesional",
-                    "duracion": "A confirmar",
-                    "modalidad": "A confirmar",
-                    "facultad": "Capacitación en Energía Solar",
-                    "link_oficial": "A confirmar"
                 }
             ]
         },

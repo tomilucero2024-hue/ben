@@ -470,7 +470,7 @@ formaciones_alternativas = [
                 "duracion": "A confirmar",
                 "modalidad": "Online",
                 "facultad": "INTA Mendoza",
-                "link_oficial": "https://www.facebook.com/INTA.Mendoza/photos/curso-de-apicultura-online-gratuito"
+                "link_oficial": "https://formacion.inta.gob.ar/"
             },
             {
                 "id": 21402,
@@ -479,7 +479,7 @@ formaciones_alternativas = [
                 "duracion": "A confirmar",
                 "modalidad": "Online (gratuito)",
                 "facultad": "INTA Mendoza",
-                "link_oficial": "https://inta.gob.ar"
+                "link_oficial": "https://formacion.inta.gob.ar/"
             }
         ]
     },
@@ -1020,7 +1020,7 @@ formaciones_alternativas = [
                 "duracion": "A confirmar",
                 "modalidad": "Presencial",
                 "facultad": "ASOLMEN",
-                "link_oficial": "A confirmar"
+                "link_oficial": "https://somosoliva.com.ar/noticias/capacitaciones-para-gastronomicos-2026/"
             }
         ]
     },
@@ -1044,29 +1044,6 @@ formaciones_alternativas = [
                 "modalidad": "Presencial / Online",
                 "facultad": "Academia Manifiesto",
                 "link_oficial": "https://academia.manifiestocafe.com.ar"
-            }
-        ]
-    },
-    {
-        "id": 236,
-        "nombre": "Capacitación en Energía Solar (Mendoza)",
-        "nivel": "capacitación profesional",
-        "gestion": "A confirmar",
-        "provincia": "Mendoza",
-        "contacto": {
-            "telefono": "A confirmar",
-            "email": "A confirmar",
-            "direccion": "A confirmar"
-        },
-        "carreras": [
-            {
-                "id": 23601,
-                "nombre_carrera": "Instalador de Sistemas de Energía Solar (Fotovoltaicos y Térmicos)",
-                "categoria": "Curso / Formación Profesional",
-                "duracion": "A confirmar",
-                "modalidad": "A confirmar",
-                "facultad": "Capacitación en Energía Solar",
-                "link_oficial": "A confirmar"
             }
         ]
     },

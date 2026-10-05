@@ -489,6 +489,24 @@
        ]
       }
      ]
+    },
+    {
+     "nombre_carrera": "Tecnicatura Superior en Enología e Industrias de los Alimentos",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "Instituto de Educación Superior N° 9-029",
+     "link_oficial": "https://www.ies9029.edu.ar",
+     "id": 3309
+    },
+    {
+     "nombre_carrera": "Tecnicatura Superior en Higiene y Seguridad con Orientación en Calidad y Medio Ambiente",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "Instituto de Educación Superior N° 9-029",
+     "link_oficial": "https://www.ies9029.edu.ar",
+     "id": 3310
     }
    ],
    "departamento": "Luján de Cuyo"

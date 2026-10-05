@@ -23,9 +23,7 @@
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/montserrat.css?v=20261004_6">
 <script>
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
@@ -56,11 +54,13 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260930_17">
+<link rel="stylesheet" href="/paginas.css?v=20261004_6">
+<!-- Estilos de la ventana de Mi lista, que estas páginas abren sin salir. -->
+<link rel="stylesheet" href="/mi-lista.css?v=20261004_6">
 <!-- Medir las fichas: son la mayor parte del tráfico del sitio (llegan desde
      Google) y sin esto los informes verían solo la portada. El mismo archivo
      carga la app en index.html. -->
-<script src="/js/analitica.js?v=20260930_17"></script>
+<script src="/js/analitica.js?v=20261004_6"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"Universidad Siglo 21 (S21)","item":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad Siglo 21 (S21)","url":"https://buscadoreducativo.com.ar/institucion/universidad-siglo-21-s21/","email":"informes@21.edu.ar","telephone":"0810-555-0202","address":{"@type":"PostalAddress","streetAddress":"San Lorenzo 258, Ciudad (Sede Mendoza)","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -140,8 +140,8 @@
     </div>
     <aside class="lateral">
     <dl class="ficha">
-        <dt>Gestión</dt><dd>privada</dd>
-        <dt>Nivel</dt><dd>universidad</dd>
+        <dt>Gestión</dt><dd>Privada</dd>
+        <dt>Nivel</dt><dd>Universidad</dd>
         <dt>Provincia</dt><dd><a href="/provincia/mendoza/">Mendoza</a></dd>
         <dt>Oferta en BEN</dt><dd>76 carreras</dd>
         <dt>Dirección</dt><dd>San Lorenzo 258, Ciudad (Sede Mendoza)</dd>
@@ -179,10 +179,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/contador-publico?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/contador-publico?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/contador-publico?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/contador-publico?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a></h3>
@@ -210,10 +210,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-comercio-internacional/">Licenciatura en Comercio Internacional</a></h3>
@@ -237,10 +237,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Transporte, Cargas y Seguros</li><li>Procesos de Integración Regional</li><li>Emprendimientos Universitarios</li><li>Idioma Extranjero VII</li><li>Práctica Profesional de Comercio Internacional</li><li>Instituciones Políticas y Gubernamentales</li><li>Idioma Extranjero VIII</li><li>Seminario Final de Comercio Internacional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercio-internacional?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercio-internacional?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercio-internacional?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercio-internacional?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion-agraria/">Licenciatura en Administración Agraria</a></h3>
@@ -268,10 +268,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-agraria?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-agraria?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-agraria?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-agraria?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-comercializacion-marketing/">Licenciatura en Comercialización - Marketing</a></h3>
@@ -299,10 +299,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia Electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercializacion-marketing?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercializacion-marketing?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercializacion-marketing?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-comercializacion-marketing?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-finanzas/">Licenciatura en Finanzas</a></h3>
@@ -330,10 +330,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-finanzas?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-finanzas?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-finanzas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-finanzas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-gestion-de-recursos-humanos/">Licenciatura en Gestión de Recursos Humanos</a></h3>
@@ -361,10 +361,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-de-recursos-humanos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-de-recursos-humanos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-de-recursos-humanos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-de-recursos-humanos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-inteligencia-de-negocios-digitales/">Licenciatura en Inteligencia de Negocios Digitales</a></h3>
@@ -392,10 +392,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materias electivas</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-de-negocios-digitales?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-de-negocios-digitales?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-de-negocios-digitales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-de-negocios-digitales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-logistica-global/">Licenciatura en Logística Global</a></h3>
@@ -423,10 +423,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria.</li><li>Materia Electiva I.</li><li>Materia Electiva II.</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-logistica-global?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-logistica-global?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-logistica-global?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-logistica-global?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion-de-infraestructura-tecnologica/">Licenciatura en Administración de Infraestructura Tecnológica</a></h3>
@@ -454,10 +454,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materias electivas</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-infraestructura-tecnologica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-infraestructura-tecnologica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-infraestructura-tecnologica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-de-infraestructura-tecnologica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion-publica/">Licenciatura en Administración Pública</a></h3>
@@ -485,10 +485,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-publica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-publica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-publica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-publica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/martillero-corredor-publico-y-corredor-inmobiliario/">Martillero, Corredor Público Y Corredor Inmobiliario</a></h3>
@@ -508,10 +508,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: el Estudio del Caso</li><li>Intermediación Inmobiliaria</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/martillero-corredor-publico-y-corredor-inmobiliario?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/martillero-corredor-publico-y-corredor-inmobiliario?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/martillero-corredor-publico-y-corredor-inmobiliario?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/martillero-corredor-publico-y-corredor-inmobiliario?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-administracion-y-gestion-tributaria/">Tecnicatura en Administración y Gestión Tributaria</a></h3>
@@ -531,10 +531,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: El estudio del Caso</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-administracion-y-gestion-tributaria?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-administracion-y-gestion-tributaria?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-administracion-y-gestion-tributaria?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-administracion-y-gestion-tributaria?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-direccion-de-equipos-de-ventas/">Tecnicatura en Dirección de Equipos de Ventas</a></h3>
@@ -554,10 +554,10 @@
             <h4>Tercer año</h4>
             <ul><li>Seminario de Practica Profesional</li><li>Integración Profesional: El estudio de Caso</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-equipos-de-ventas?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-equipos-de-ventas?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-equipos-de-ventas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-equipos-de-ventas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-gestion-contable-e-impositiva/">Tecnicatura en Gestión Contable e Impositiva</a></h3>
@@ -577,10 +577,10 @@
             <h4>Tercer año</h4>
             <ul><li>Seminario de Práctica Profesional</li><li>Integración Profesional - El Estudio del Caso</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-contable-e-impositiva?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-contable-e-impositiva?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-contable-e-impositiva?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-contable-e-impositiva?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-gestion-de-empresas-familiares/">Tecnicatura en Gestión de Empresas Familiares</a></h3>
@@ -600,10 +600,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: El Estudio del Caso (Empresas Familiares)</li><li>Seminario de Práctica Profesional de Empresas Familiares</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-empresas-familiares?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-empresas-familiares?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-empresas-familiares?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-empresas-familiares?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-administracion-y-gestion-de-politicas-publicas/">Tecnicatura Universitaria En Administración Y Gestión De Políticas Públicas</a></h3>
@@ -623,10 +623,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: El Estudio Del Caso</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-administracion-publica-y-gestion-de-politicas-publicas?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-administracion-publica-y-gestion-de-politicas-publicas?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-administracion-publica-y-gestion-de-politicas-publicas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-administracion-publica-y-gestion-de-politicas-publicas?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-marketing-y-publicidad-digital/">Tecnicatura Universitaria en Marketing y Publicidad Digital</a></h3>
@@ -646,10 +646,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: el Estudio de Caso</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-marketing-y-publicidad-digital?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-marketing-y-publicidad-digital?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-marketing-y-publicidad-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-marketing-y-publicidad-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-negocios-agroecologicos/">Tecnicatura en Negocios Agroecológicos</a></h3>
@@ -669,10 +669,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: El Estudio del Caso</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-negocios-agroecologicos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-negocios-agroecologicos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-negocios-agroecologicos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-negocios-agroecologicos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -704,10 +704,10 @@
             <h4>Quinto año</h4>
             <ul><li>Práctica Profesional – Abogacía</li><li>Seminario Final - Abogacía</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/abogacia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/abogacia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/abogacia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/abogacia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-criminologia-y-seguridad/">Licenciatura en Criminología y Seguridad</a></h3>
@@ -735,10 +735,10 @@
             <h4>Materias Adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-criminologia-y-seguridad?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-criminologia-y-seguridad?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-criminologia-y-seguridad?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-criminologia-y-seguridad?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-relaciones-publicas-e-institucionales/">Licenciatura en Relaciones Públicas e Institucionales</a></h3>
@@ -762,10 +762,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Emprendimientos Universitarios</li><li>Gestión Ambiental</li><li>Organismos Internacionales y Transnacionales</li><li>Práctica Profesional de Relaciones Públicas e Institucionales</li><li>Sociología de los Medios de Comunicación Social</li><li>Gestión de Prensa</li><li>Instituciones Políticas y Gubernamentales</li><li>Opinión Pública y Comportamiento Político Electoral</li><li>Práctica Solidaria</li><li>Seminario Final de Relaciones Públicas e Institucionales</li><li>Sociología del Poder</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-relaciones-publicas-e-institucionales?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-relaciones-publicas-e-institucionales?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-relaciones-publicas-e-institucionales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-relaciones-publicas-e-institucionales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/actuario/">Actuario</a></h3>
@@ -793,10 +793,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/actuario?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/actuario?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/actuario?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/actuario?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/escribania/">Escribanía</a></h3>
@@ -808,10 +808,10 @@
             <h4>Primer año</h4>
             <ul><li>Derecho Administrativo Notarial</li><li>Derecho Notarial I</li><li>Derecho Registral I</li><li>Teoría General del Negocio Jurídico</li><li>Derecho Notarial II</li><li>Derecho Registral II</li><li>Nuevas Manifestaciones de la Propiedad</li><li>Seminario de Práctica Notarial y Registral</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/escribania?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/escribania?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/escribania?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/escribania?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-ciencia-politica-y-gobierno/">Licenciatura En Ciencia Política Y Gobierno</a></h3>
@@ -839,10 +839,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li><li>Examen de Suficiencia de Idiomas</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ciencia-politica-y-gobierno?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ciencia-politica-y-gobierno?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ciencia-politica-y-gobierno?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ciencia-politica-y-gobierno?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-periodismo/">Licenciatura en Periodismo</a></h3>
@@ -866,10 +866,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Análisis Político</li><li>Economía y Finanzas Públicas</li><li>Organización y Gestión de Empresas -Periodísticas</li><li>Periodismo de Espectáculos y Entretenimiento</li><li>Emprendimientos Universitarios</li><li>Práctica Profesional</li><li>Sistema Jurídico Argentino</li><li>Administración e Innovación en Modelos de Negocios</li><li>Ética y Deontología Profesional del Periodista</li><li>Open Government y Transparencia Política</li><li>Idioma Extranjero VI</li><li>Seminario Final</li><li>Práctica Solidaria</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-periodismo?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-periodismo?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-periodismo?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-periodismo?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-relaciones-internacionales/">Licenciatura en Relaciones Internacionales</a></h3>
@@ -897,10 +897,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materias Electivas</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-relaciones-internacionales?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-relaciones-internacionales?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-relaciones-internacionales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-relaciones-internacionales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-gestion-deportiva/">Licenciatura en Gestión Deportiva</a></h3>
@@ -928,10 +928,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-deportiva?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-deportiva?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-deportiva?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-deportiva?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-antropologia-organizacional/">Licenciatura en Antropología Organizacional</a></h3>
@@ -959,10 +959,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materias electivas</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-antropologia-organizacional?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-antropologia-organizacional?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-antropologia-organizacional?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-antropologia-organizacional?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/procurador/">Procurador</a></h3>
@@ -982,10 +982,10 @@
             <h4>Tercer año</h4>
             <ul><li>Derecho Privado IV (Contrato de Empresa)</li><li>Derecho del Trabajo y Seguridad Social</li><li>Derecho Administrativo</li><li>Derecho Internacional Público</li><li>Derecho Procesal III (Procesal Penal)</li><li>Derecho Privado V (Derechos Reales)</li><li>Derecho Privado VI (Derecho de Familia)</li><li>Derecho Tributario</li><li>Sociedades</li><li>Derecho Procesal IV (Procesal Público)</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/procurador?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/procurador?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/procurador?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/procurador?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-direccion-de-protocolo-organizacion-de-eventos-y-relaciones/">Tecnicatura en Dirección de Protocolo, Organización de Eventos y Relaciones Públicas</a></h3>
@@ -1005,10 +1005,10 @@
             <h4>Tercer año</h4>
             <ul><li>Seminario de Práctica Profesional</li><li>Integración Profesional: El Estudio de Caso</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-protocolo-organizacion-de-eventos-y-rrpp?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-protocolo-organizacion-de-eventos-y-rrpp?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-protocolo-organizacion-de-eventos-y-rrpp?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-direccion-de-protocolo-organizacion-de-eventos-y-rrpp?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-investigacion-de-la-escena-del-crimen/">Tecnicatura en Investigación de la Escena del Crimen</a></h3>
@@ -1028,10 +1028,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: El Estudio del Caso</li><li>Seminario de Práctica Profesional de Investigación de la Escena del Crimen</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-investigacion-de-la-escena-del-crimen?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-investigacion-de-la-escena-del-crimen?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-investigacion-de-la-escena-del-crimen?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-investigacion-de-la-escena-del-crimen?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-relaciones-laborales/">Tecnicatura en Relaciones Laborales</a></h3>
@@ -1051,10 +1051,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: El Estudio del Caso</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-relaciones-laborales?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-relaciones-laborales?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-relaciones-laborales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-relaciones-laborales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-promocion-comunitaria-en-ninez-y-adolescencia/">Tecnicatura Universitaria en Promoción Comunitaria en Niñez y Adolescencia</a></h3>
@@ -1074,10 +1074,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: El Estudio del Caso</li><li>Seminario de Práctica profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-promoci%C3%B3n-comunitaria-en-ni%C3%B1ez-y-adolescencia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-promoci%C3%B3n-comunitaria-en-ni%C3%B1ez-y-adolescencia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-promoci%C3%B3n-comunitaria-en-ni%C3%B1ez-y-adolescencia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-promoci%C3%B3n-comunitaria-en-ni%C3%B1ez-y-adolescencia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-gestion-de-clima-laboral-en-la-organizacion/">Tecnicatura Universitaria en Gestión de Clima Laboral en la Organización</a></h3>
@@ -1097,10 +1097,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: el Estudio del Caso</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-de-clima-laboral-en-la-organizacion?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-de-clima-laboral-en-la-organizacion?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-de-clima-laboral-en-la-organizacion?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-de-clima-laboral-en-la-organizacion?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-en-responsabilidad-y-gestion-social/">Tecnicatura en Responsabilidad y Gestión Social</a></h3>
@@ -1120,10 +1120,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: el Estudio del Caso</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-responsabilidad-y-gestion-social?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-responsabilidad-y-gestion-social?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-responsabilidad-y-gestion-social?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-responsabilidad-y-gestion-social?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-estadistica-aplicada-y-analisis/">Tecnicatura Universitaria en Estadística Aplicada y Análisis</a></h3>
@@ -1143,10 +1143,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: El Estudio del Caso</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-estadistica-aplicada-y-analisis-avanzado?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-estadistica-aplicada-y-analisis-avanzado?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-estadistica-aplicada-y-analisis-avanzado?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-estadistica-aplicada-y-analisis-avanzado?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -1182,10 +1182,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria.</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-psicologia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-psicologia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-psicologia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-psicologia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-instrumentacion-quirurgica/">Licenciatura en Instrumentación Quirúrgica</a></h3>
@@ -1209,10 +1209,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Epidemiología</li><li>Salud Pública</li><li>Bioestadística</li><li>Estrategia</li><li>Atención al Paciente Crítico</li><li>Práctica Profesional de Instrumentación Quirúrgica</li><li>Calidad y Seguridad del Paciente</li><li>Estrategias y Métodos de Capacitación en Salud</li><li>Investigación en Salud</li><li>Comunicación Organizacional</li><li>Desarrollo Emprendedor</li><li>Seminario Final de Instrumentación Quirúrgica</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-instrumentacion-quirurgica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-instrumentacion-quirurgica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-instrumentacion-quirurgica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-instrumentacion-quirurgica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-kinesiologia-y-fisioterapia/">Licenciatura en Kinesiología y Fisioterapia</a></h3>
@@ -1240,10 +1240,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-kinesiologia-y-fisioterapia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-kinesiologia-y-fisioterapia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-kinesiologia-y-fisioterapia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-kinesiologia-y-fisioterapia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-nutricion/">Licenciatura en Nutrición</a></h3>
@@ -1271,10 +1271,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materias Electivas I y II</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-nutricion?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-nutricion?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-nutricion?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-nutricion?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-produccion-de-bioimagenes/">Licenciatura en Producción de Bioimágenes</a></h3>
@@ -1298,10 +1298,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Administración</li><li>Fundamentos de Medicina Nuclear</li><li>Métodos y Técnicas de Investigación Social</li><li>Gestión de Servicios de Diagnóstico por Imágenes</li><li>Administración de Recursos Humanos</li><li>Práctica Profesional de Producción de Bioimágenes</li><li>Fundamentos de Radioterapia</li><li>Metodología de Administración de Proyectos</li><li>Comunicación Organizacional</li><li>Práctica Supervisada en Medicina Nuclear</li><li>Desarrollo Emprendedor</li><li>Seminario Final en Producción de Bioimágenes</li><li>Práctica Solidaria</li><li>Materia/s Electiva/s</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-produccion-de-bioimagenes?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-produccion-de-bioimagenes?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-produccion-de-bioimagenes?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-produccion-de-bioimagenes?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-terapia-ocupacional-y-desarrollo-humano/">Licenciatura en Terapia Ocupacional y Desarrollo Humano</a></h3>
@@ -1329,10 +1329,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria.</li><li>Materia Electiva I.</li><li>Materia Electiva II.</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-terapia-ocupacional-y-desarrollo-humano?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-terapia-ocupacional-y-desarrollo-humano?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-terapia-ocupacional-y-desarrollo-humano?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-terapia-ocupacional-y-desarrollo-humano?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/medicina/">Carrera de Medicina</a></h3>
@@ -1380,10 +1380,10 @@
             <h4>Décimo Cuatrimestre</h4>
             <ul><li>Medicina Interna IV</li><li>Pediatría II</li><li>Medicina Legal y Toxicología</li><li>Salud y cuidados gerontológicos</li><li>Nutrición en Medicina</li><li>Seminario de práctica Integradora X</li><li>Práctica Final Obligatoria 40 semanas (1840 h) Práctica Solidaria (22 h)</li><li>40 semanas (1840 h)</li><li>Práctica Solidaria (22 h)</li><li>Materias Electivas Medicina del Ejercicio Trasplante de Órganos y Tejidos Anestesia Gestión en Salud</li><li>Medicina del Ejercicio</li><li>Trasplante de Órganos y Tejidos</li><li>Anestesia</li><li>Gestión en Salud</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/medicina?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/medicina?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/medicina?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/medicina?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-fonoaudiologia/">Licenciatura en Fonoaudiología</a></h3>
@@ -1407,10 +1407,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Neuroanatomía y Neurofisiología</li><li>Clínica Neurológica en Fonoaudiología</li><li>Neurorehabilitación del Lenguaje</li><li>Audiología Aplicada</li><li>Psicopatología General</li><li>Práctica Profesional de Licenciatura en Fonoaudiología</li><li>Neurorehabilitación de la Voz y Laringectomizados</li><li>Neurorehabilitación Odontoestomatológica</li><li>La Evaluación del Aprendizaje</li><li>Nuevas Tecnologías en Entornos de Aprendizaje</li><li>Desarrollo Emprendedor</li><li>Seminario Final de Licenciatura en Fonoaudiología</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-fonoaudiologia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-fonoaudiologia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-fonoaudiologia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-fonoaudiologia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-atencion-prehospitalaria-de-emergencias/">Tecnicatura Universitaria en Atención Prehospitalaria de Emergencias</a></h3>
@@ -1430,10 +1430,10 @@
             <h4>Tercer año</h4>
             <ul><li>Atención Prehospitalaria en Actividad Física y Deporte</li><li>Operaciones en Centrales de Emergencias Médicas</li><li>Atención Prehospitalaria Aplicada</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-atencion-prehospitalaria-de-emergencias?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-atencion-prehospitalaria-de-emergencias?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-atencion-prehospitalaria-de-emergencias?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-atencion-prehospitalaria-de-emergencias?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-enfermeria/">Tecnicatura Universitaria en Enfermería</a></h3>
@@ -1453,10 +1453,10 @@
             <h4>Tercer año</h4>
             <ul><li>Enfermería Infanto Pediátrica</li><li>Enfermería en Psiquiatría</li><li>Enfermería en Gerontología</li><li>Grupo y Liderazgo</li><li>Investigación en Enfermería</li><li>Práctica Integradora Clínica y Comunidad</li><li>Enfermería en el Adolescente</li><li>Gestión de Servicios de Enfermería</li><li>Cultura Organizacional</li><li>Práctica Integradora en Áreas Especiales</li><li>Estrategia y Métodos de Capacitación en Salud</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-enfermeria?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-enfermeria?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-enfermeria?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-enfermeria?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-gestion-administrativa-de-servicios-de-salud/">Tecnicatura Universitaria en Gestión Administrativa de Servicios De Salud</a></h3>
@@ -1476,10 +1476,10 @@
             <h4>Tercer año</h4>
             <ul><li>Seminario de práctica profesional</li><li>Integración profesional – &quot;El estudio del caso&quot;</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-administrativa-de-servicios-de-salud?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-administrativa-de-servicios-de-salud?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-administrativa-de-servicios-de-salud?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-administrativa-de-servicios-de-salud?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -1511,10 +1511,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>2 materias electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-diseno-de-indumentaria-y-textil/">Licenciatura en Diseño de Indumentaria y Textil</a></h3>
@@ -1538,10 +1538,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Diseño de Indumentaria Asistido por Computadora II</li><li>Diseño de Indumentaria IV (Armado de Colección III, Diseño Teatral y Cinematográfico)</li><li>Emprendimientos Universitarios</li><li>Práctica Profesional de Diseño de Indumentaria y Textil</li><li>Diseño de Calzado</li><li>Diseño de Packaging</li><li>Gestión Empresarial</li><li>Gestión Ambiental</li><li>Práctica Solidaria</li><li>Seminario Final de Diseño de Indumentaria y Textil</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-de-indumentaria-y-textil?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-de-indumentaria-y-textil?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-de-indumentaria-y-textil?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-de-indumentaria-y-textil?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/lic-en-diseno-grafico/">Lic. en Diseño Gráfico</a></h3>
@@ -1569,10 +1569,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-grafico?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-grafico?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-grafico?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-grafico?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-diseno-industrial/">Licenciatura en Diseño Industrial</a></h3>
@@ -1596,10 +1596,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Diseño Asistido por Computadora V</li><li>Diseño Industrial V</li><li>Emprendimientos Universitarios</li><li>Práctica Profesional de Diseño Industrial</li><li>Tecnología y sus Aplicaciones IV</li><li>Gestión Empresarial</li><li>Gestión Ambiental</li><li>Legislación</li><li>Práctica Solidaria</li><li>Seminario Final de Diseño Industrial</li><li>Tecnología y sus Aplicaciones V</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-industrial?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-industrial?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-industrial?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-diseno-industrial?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-publicidad/">Licenciatura en Publicidad</a></h3>
@@ -1623,10 +1623,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Diseño Interactivo</li><li>Emprendimientos Universitarios</li><li>Estrategias de Comunicaciones Integradas</li><li>Práctica Profesional de Publicidad</li><li>Campañas Publicitarias</li><li>Gestión Ambiental</li><li>Práctica Solidaria</li><li>Seminario Final de Publicidad</li><li>Sociología de los Medios de Comunicación Social</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-publicidad?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-publicidad?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-publicidad?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-publicidad?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-diseno-y-animacion-digital/">Tecnicatura Universitaria en Diseño y Animación Digital</a></h3>
@@ -1646,10 +1646,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: El Estudio de Caso</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-animacion-digital?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-gestion-de-moda/">Tecnicatura Universitaria en Gestión de Moda</a></h3>
@@ -1669,10 +1669,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: El Estudio Del Caso</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-moda?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-moda?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-moda?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-de-moda?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -1704,10 +1704,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-artificial-y-robotica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-artificial-y-robotica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-artificial-y-robotica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-inteligencia-artificial-y-robotica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-bioinformatica/">Licenciatura en Bioinformática</a></h3>
@@ -1735,10 +1735,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materias electivas</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-bioinformatica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-bioinformatica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-bioinformatica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-bioinformatica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-ciencia-de-datos/">Licenciatura en Ciencia de Datos</a></h3>
@@ -1766,10 +1766,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materias electivas</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ciencia-de-datos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ciencia-de-datos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ciencia-de-datos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ciencia-de-datos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-informatica/">Licenciatura en Informática</a></h3>
@@ -1801,10 +1801,10 @@
             <h4>Otros requisitos</h4>
             <ul><li>Práctica Solidaria</li><li>Materias Electivas</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-informatica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-informatica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-informatica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-informatica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-seguridad-informatica/">Licenciatura en Seguridad Informática</a></h3>
@@ -1832,10 +1832,10 @@
             <h4>Materias Adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-seguridad-informatica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-seguridad-informatica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-seguridad-informatica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-seguridad-informatica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-diseno-y-desarrollo-de-videojuegos/">Tecnicatura Universitaria en Diseño y Desarrollo de Videojuegos</a></h3>
@@ -1855,10 +1855,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración profesional: el estudio del caso</li><li>Seminario de práctica profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-desarrollo-de-videojuegos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-desarrollo-de-videojuegos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-desarrollo-de-videojuegos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-diseno-y-desarrollo-de-videojuegos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-redes-informaticas-y-telecomunicaciones/">Tecnicatura Universitaria en Redes Informáticas y Telecomunicaciones</a></h3>
@@ -1878,10 +1878,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: El Estudio de Caso</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-redes-informaticas-y-telecomunicaciones?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-redes-informaticas-y-telecomunicaciones?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-redes-informaticas-y-telecomunicaciones?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-redes-informaticas-y-telecomunicaciones?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -1909,10 +1909,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Emprendimientos Universitarios</li><li>Gestión Ambiental Rural y Urbana</li><li>Gestión Ambiental</li><li>Gestión de Operaciones Agroambientales</li><li>Práctica Profesional de Gestión Ambiental</li><li>Auditoria Ambiental</li><li>Instituciones Políticas y Gubernamentales</li><li>Ordenamiento Ambiental</li><li>Política y Economía Ambiental</li><li>Seminario Final de Gestión Ambiental</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-ambiental?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-ambiental?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-ambiental?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-ambiental?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-higiene-seguridad-y-medio-ambiente-del-trabajo/">Licenciatura en Higiene, Seguridad y Medio Ambiente del Trabajo</a></h3>
@@ -1936,10 +1936,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Emprendimientos Universitarios</li><li>Riesgo Eléctrico en Edificios e Instalaciones</li><li>Gestión de Residuos I</li><li>Riesgos Especiales en Laboratorio y Agrario</li><li>Idioma Extranjero VI</li><li>Práctica Profesional en Higiene, Seguridad y Medio Ambiente del Trabajo</li><li>Evaluación del Impacto Ambiental</li><li>Implementación Normas de Calidad</li><li>Responsabilidad Social</li><li>Legislación Laboral Internacional</li><li>Diseño de Procesos</li><li>Seminario Final en Higiene, Seguridad y Medio</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-higiene-seguridad-y-medio-ambiente-del-trabajo?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-higiene-seguridad-y-medio-ambiente-del-trabajo?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-higiene-seguridad-y-medio-ambiente-del-trabajo?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-higiene-seguridad-y-medio-ambiente-del-trabajo?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-matematica/">Licenciatura en Matemática</a></h3>
@@ -1967,10 +1967,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materias electivas</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-matematica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-matematica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-matematica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-matematica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-ambiente-y-energias-renovables/">Licenciatura en Ambiente y Energías Renovables</a></h3>
@@ -1994,10 +1994,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Seguridad e Higiene Laboral</li><li>Salud y Ambiente</li><li>Desarrollo Sustentable</li><li>Comunicación y Educación Medioambiental</li><li>Emprendimientos Universitarios</li><li>Práctica Profesional</li><li>Gestión de Proyectos de Energías Renovables</li><li>Proyectos de Reducción y Reutilización de Recursos</li><li>Políticas Energéticas Internacionales</li><li>Gestión de los Alimentos</li><li>Idioma Extranjero VI</li><li>Seminario Final</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ambiente-y-energias-renovables?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ambiente-y-energias-renovables?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ambiente-y-energias-renovables?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-ambiente-y-energias-renovables?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-gestion-y-auditorias-ambientales/">Tecnicatura Universitaria en Gestión y Auditorías Ambientales</a></h3>
@@ -2017,10 +2017,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: El Estudio de Caso</li><li>Seminario de Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-y-auditorias-ambientales?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-y-auditorias-ambientales?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-y-auditorias-ambientales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-gestion-y-auditorias-ambientales?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -2048,10 +2048,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Diseño y Evaluación de Proyectos basados en las TICS</li><li>Gestión Educativa</li><li>Cultura Organizacional</li><li>Sistemas de Información Organizacionales</li><li>Política y Legislación de la Educación</li><li>Práctica Profesional en Educación y Nuevas Tecnologías</li><li>Las Plataformas de E-learning</li><li>La Evaluación del Aprendizaje</li><li>Investigación Socioeducativa</li><li>Sustentabilidad Educativa</li><li>Emprendimientos Universitarios</li><li>Seminario Final en Educación y Nuevas Tecnologías</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-educacion-y-nuevas-tecnologias?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-educacion-y-nuevas-tecnologias?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-educacion-y-nuevas-tecnologias?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-educacion-y-nuevas-tecnologias?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-psicopedagogia/">Licenciatura en Psicopedagogía</a></h3>
@@ -2079,10 +2079,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria.</li><li>Materia Electiva I.</li><li>Materia Electiva II.</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-psicopedagogia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-psicopedagogia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-psicopedagogia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-psicopedagogia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-universitario-para-el-nivel-secundario-y-superior-ccc/">Profesorado Universitario para el Nivel Secundario y Superior (CCC)</a></h3>
@@ -2098,10 +2098,10 @@
             <h4>Segundo año</h4>
             <ul><li>Bases para la Transformación Educativa</li><li>Evaluación Formativa</li><li>Espacios de Aprendizaje</li><li>Práctica Docente</li><li>Desarrollo Emprendedor</li><li>Seminario Final de Profesorado Universitario</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/profesorado-universitario-para-el-nivel-secundario-y-superior?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/profesorado-universitario-para-el-nivel-secundario-y-superior?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/profesorado-universitario-para-el-nivel-secundario-y-superior?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/profesorado-universitario-para-el-nivel-secundario-y-superior?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -2133,10 +2133,10 @@
             <h4>Quinto año</h4>
             <ul><li>Emprendimientos Universitarios</li><li>Métodos Formales</li><li>Práctica Profesional de Ingeniería en Software</li><li>Práctica Solidaria</li><li>Seminario Final de Ingeniería en Software</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/ingenieria-en-software?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/ingenieria-en-software?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/ingenieria-en-software?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/ingenieria-en-software?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/ingenieria-en-innovacion-y-desarrollo/">Ingeniería en Innovación y Desarrollo</a></h3>
@@ -2168,10 +2168,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/ingenieria-en-innovacion-y-desarrollo?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/ingenieria-en-innovacion-y-desarrollo?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/ingenieria-en-innovacion-y-desarrollo?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/ingenieria-en-innovacion-y-desarrollo?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-hidrocarburos-y-geociencia/">Tecnicatura Universitaria en Hidrocarburos y Geociencia</a></h3>
@@ -2191,10 +2191,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración profesional el estudio del caso</li><li>Seminario de práctica profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-hidrocarburos-y-geociencia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-hidrocarburos-y-geociencia?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-hidrocarburos-y-geociencia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/tecnicatura-en-hidrocarburos-y-geociencia?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -2226,10 +2226,10 @@
             <h4>Materias adicionales</h4>
             <ul><li>Práctica Solidaria</li><li>Materia electiva</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-turistica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-turistica?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-turistica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-gestion-turistica?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion-hotelera/">Licenciatura en Administración Hotelera</a></h3>
@@ -2253,10 +2253,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Emprendimientos Universitarios</li><li>Gestión Ambiental</li><li>Gestión de Turismo de Negocios y de Tiempo Libre</li><li>Idioma Extranjero VII</li><li>Práctica Profesional de Administración Hotelera</li><li>Turismo y Mercado</li><li>Idioma Extranjero VIII</li><li>Instituciones Políticas y Gubernamentales</li><li>Pisos y Habitaciones - Mantenimiento y Seguridad</li><li>Hotelera</li><li>Planificación Turística</li><li>Seminario Final de Administración Hotelera</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-hotelera?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-hotelera?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-hotelera?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://21.edu.ar/carreras-y-programas/licenciatura-en-administracion-hotelera?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-universitaria-en-gestion-de-recursos-turisticos/">Tecnicatura Universitaria en Gestión de Recursos Turísticos</a></h3>
@@ -2276,10 +2276,10 @@
             <h4>Tercer año</h4>
             <ul><li>Integración Profesional: El Estudio De Caso</li><li>Seminario De Práctica Profesional</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="http://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-de-recursos-turisticos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="http://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-de-recursos-turisticos?hsLang=es" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="http://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-de-recursos-turisticos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="http://21.edu.ar/carreras-y-programas/tecnicatura-universitaria-en-gestion-de-recursos-turisticos?hsLang=es" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
     </div>
@@ -2369,6 +2369,11 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260930_17"></script>
+<script src="/js/favoritos.js?v=20261004_6"></script>
+<!-- Vuelve a la posición donde estabas al usar Atrás (la app avisa cuándo
+     terminó de pintar; en estas páginas el HTML ya está listo). -->
+<script src="/js/restaurar-scroll.js?v=20261004_6"></script>
+<!-- Mi lista se abre como ventana flotante sin salir de la ficha. -->
+<script src="/js/mi-lista-loader.js?v=20261004_6"></script>
 </body>
 </html>

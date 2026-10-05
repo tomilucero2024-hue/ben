@@ -163,6 +163,32 @@ const focoTop = () => doc.querySelector('.tutorial-foco').style.top;
     focales[0].focus();
     doc.dispatchEvent(new win.KeyboardEvent('keydown', { key: 'Tab', shiftKey: true, bubbles: true }));
     ok(doc.activeElement === focales[focales.length - 1], 'Shift+Tab desde el primero salta al último');
+    doc.dispatchEvent(new win.KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+    await esperar(60);
+
+    console.log('7. En celular el paso de filtros señala la card');
+    // Se fuerza el modo angosto y se le da a la card una caja única: así el test
+    // comprueba que el foco se coloca sobre ELLA y no sobre otro objetivo.
+    const rectOriginal = win.Element.prototype.getBoundingClientRect;
+    win.Element.prototype.getBoundingClientRect = function () {
+        if (this.id === 'mobileFilterButton') {
+            return { top: 500, left: 40, width: 160, height: 44, right: 200, bottom: 544, x: 40, y: 500, toJSON() { return {}; } };
+        }
+        return rectOriginal.call(this);
+    };
+    win.matchMedia = () => ({ matches: true, addEventListener() {}, removeEventListener() {} });
+    doc.getElementById('btnAbrirTutorial').click();
+    await esperar(80);
+    doc.getElementById('tutorial-siguiente').click();
+    await esperar(80);
+    doc.getElementById('tutorial-siguiente').click();
+    await esperar(80);
+    const foco = doc.querySelector('.tutorial-foco');
+    ok(paso() === 'Paso 3 de 6', `el paso de filtros sigue siendo el 3 (${paso()})`);
+    ok(titulo() === 'Acá abrís los filtros', `en celular el paso apunta a la card (${titulo()})`);
+    ok(focoTop() === '492px' && foco.style.left === '32px' && foco.style.width === '176px', `el foco se coloca sobre la card de filtros (top ${focoTop()}, left ${foco.style.left}, ancho ${foco.style.width})`);
+    doc.dispatchEvent(new win.KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+    await esperar(60);
 
     console.log(`\n${fallos === 0 ? '✅' : '❌'} test_tutorial.js ${fallos === 0 ? 'OK' : 'FALLÓ'} (${aserciones} aserciones)`);
     if (fallos) process.exit(1);

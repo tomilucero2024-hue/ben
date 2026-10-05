@@ -874,6 +874,24 @@
                     "turno": "A confirmar",
                     "facultad": "IESVU (IES 9-015)",
                     "link_oficial": "https://iesvu.edu.ar/estudio/curso-de-portugues-a-1-1/"
+                },
+                {
+                    "nombre_carrera": "Postítulo en Enfermería de la Salud Mental",
+                    "categoria": "Posgrado / Especialización",
+                    "duracion": "50 horas reloj",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-015 Valle de Uco",
+                    "link_oficial": "https://iesvu.edu.ar",
+                    "id": 2413
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Higiene y Seguridad con Orientación en Calidad y Medio Ambiente",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-015 Valle de Uco",
+                    "link_oficial": "https://iesvu.edu.ar",
+                    "id": 2414
                 }
             ]
         }

@@ -23,9 +23,7 @@
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/montserrat.css?v=20261004_6">
 <script>
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
@@ -56,11 +54,13 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260930_17">
+<link rel="stylesheet" href="/paginas.css?v=20261004_6">
+<!-- Estilos de la ventana de Mi lista, que estas páginas abren sin salir. -->
+<link rel="stylesheet" href="/mi-lista.css?v=20261004_6">
 <!-- Medir las fichas: son la mayor parte del tráfico del sitio (llegan desde
      Google) y sin esto los informes verían solo la portada. El mismo archivo
      carga la app en index.html. -->
-<script src="/js/analitica.js?v=20260930_17"></script>
+<script src="/js/analitica.js?v=20261004_6"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Ambiente","item":"https://buscadoreducativo.com.ar/area/ambiente/"},{"@type":"ListItem","position":4,"name":"Licenciatura en Higiene y Seguridad en el Trabajo","item":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-higiene-y-seguridad-en-el-trabajo/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Licenciatura en Higiene y Seguridad en el Trabajo","description":"Dónde estudiar Licenciatura en Higiene y Seguridad en el Trabajo en Mendoza: carrera de grado del área Ambiente, dictada por 1 institución (1 pública). Dura 2 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/licenciatura-en-higiene-y-seguridad-en-el-trabajo/","provider":{"@type":"EducationalOrganization","name":"Universidad Nacional de Cuyo (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/universidad-nacional-de-cuyo-uncuyo/"}}</script>
 </head>
@@ -163,7 +163,7 @@
                 <span>Los costos y aranceles los define cada institución. Para saber cuánto sale, comunicate con el establecimiento.</span>
             </p>
         </div>
-        <a class="btn-ver-mi-lista" href="/?lista=1">
+        <a class="btn-ver-mi-lista" href="/?lista=1" data-abrir-mi-lista>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
             Ver Mi lista
         </a>
@@ -173,7 +173,7 @@
     <h2>Dónde estudiar Licenciatura en Higiene y Seguridad en el Trabajo</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
-            <h3><span class="etiqueta publica">pública</span> <a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
+            <h3><span class="etiqueta publica">Pública</span> <a href="/institucion/universidad-nacional-de-cuyo-uncuyo/">Universidad Nacional de Cuyo (UNCuyo)</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio</summary>
@@ -182,10 +182,10 @@
             <h4>Plan de estudios</h4>
             <ul><li>Matemática Aplicada y Estadística</li><li>Representación Gráfica e Interpretación de Planos</li><li>Integridad y Ética Profesional</li><li>Metodología de la Investigación</li><li>Incendio: Cálculo y Proyecto</li><li>Toxicología Laboral</li><li>Saneamiento Ambiental</li><li>Prevención de Riesgos</li><li>Salud Ocupacional</li><li>Seguridad Minera, Agraria y en la Construcción</li><li>Ambiente y Sustentabilidad</li><li>Estudio del Trabajo</li><li>Gestión de Costos y Presupuestos</li><li>Gestión Integrada: Calidad, Seguridad y Ambiente</li><li>Formulación y Evaluación de Proyectos</li><li>Gestión de Recursos Humanos</li><li>Estado y Economía</li><li>Taller de Producción de Tesis</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-en-el-trabajo_6922" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-en-el-trabajo_6922" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-en-el-trabajo_6922" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-en-el-trabajo_6922" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -221,20 +221,20 @@
     <section class="relacionadas">
     <h2>Otras carreras del área Ambiente</h2>
     <ul class="enlaces">
+        <li><a href="/carrera/tecnicatura-superior-en-agronomia/">Tecnicatura Superior en Agronomía</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio/">Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-higiene-seguridad-y-ambiente/">Tecnicatura Superior en Higiene, Seguridad y Ambiente</a> <span class="cuantas">(4)</span></li>
         <li><a href="/carrera/licenciatura-en-fisica/">Licenciatura en Física</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/licenciatura-en-matematica/">Licenciatura en Matemática</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/tecnicatura-en-higiene-y-seguridad-en-el-trabajo/">Tecnicatura en Higiene y Seguridad en el Trabajo</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-agronomia/">Tecnicatura Superior en Agronomía</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-conservacion-de-la-naturaleza/">Tecnicatura Superior en Conservación de la Naturaleza</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-energias-renovables/">Tecnicatura Superior en Energías Renovables</a> <span class="cuantas">(2)</span></li>
-        <li><a href="/carrera/tecnicatura-superior-en-higiene-y-seguridad-con-orientacion-en-calidad-y-medio/">Tecnicatura Superior en HIGIENE y SEGURIDAD con ORIENTACIÓN en CALIDAD y MEDIO AMBIENTE</a> <span class="cuantas">(2)</span></li>
         <li><a href="/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-calidad-y-medio-ambiente/">Ciclo de Licenciatura en Higiene y Seguridad, Calidad y Medio Ambiente</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/diplomado-en-cultivo-de-cannabis-sativa/">Diplomado en Cultivo de Cannabis Sativa</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/formacion-profesional-en-apicultura/">Formación Profesional en Apicultura</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/geografo-a/">Geógrafo/a</a> <span class="cuantas">(1)</span></li>
     </ul>
-    <p class="relacionadas-mas"><a class="btn-enlace-mas" href="/area/ambiente/">Ver las 38 carreras del área Ambiente →</a></p>
+    <p class="relacionadas-mas"><a class="btn-enlace-mas" href="/area/ambiente/">Ver las 41 carreras del área Ambiente →</a></p>
     </section>
     </div>
 </div>
@@ -323,6 +323,11 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260930_17"></script>
+<script src="/js/favoritos.js?v=20261004_6"></script>
+<!-- Vuelve a la posición donde estabas al usar Atrás (la app avisa cuándo
+     terminó de pintar; en estas páginas el HTML ya está listo). -->
+<script src="/js/restaurar-scroll.js?v=20261004_6"></script>
+<!-- Mi lista se abre como ventana flotante sin salir de la ficha. -->
+<script src="/js/mi-lista-loader.js?v=20261004_6"></script>
 </body>
 </html>

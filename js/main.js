@@ -6,7 +6,7 @@
 import { cerrarChat, configurarBienvenida, configurarChat, salirDelCopilotoPantallaCompleta } from './copiloto.js';
 import { cargarOfertas, catalogosAparte } from './datos.js';
 import { estado, restaurarDesdeURL, sincronizarURL } from './estado.js';
-import { actualizarBotonesActivos, cambiarPanelFiltros, cambiarSeccion, cargarMas, configurarSwitcherVistas, limpiarRecomendacion, mostrarCatalogoAparte, mostrarPlataformas, mostrarResultados, resetearFiltros, sincronizarInertFiltros } from './render.js';
+import { actualizarBotonesActivos, actualizarVista, cambiarPanelFiltros, cambiarSeccion, cargarMas, configurarSwitcherVistas, limpiarRecomendacion, mostrarCatalogoAparte, mostrarPlataformas, mostrarResultados, resetearFiltros, sincronizarInertFiltros } from './render.js';
 import { normalizarTexto } from './util.js';
 import { inicializarAutocompletado } from './autocompletado.js';
 import { inicializarTestCompleto } from './vocacional/test-completo.js';
@@ -15,20 +15,31 @@ import { registrarEvento } from './medicion.js';
 import { configurarTutorial } from './tutorial.js';
 
 async function arrancar() {
-    document.body.dataset.seccion = estado.seccion;
     // Restaura filtros/sección/búsqueda desde la URL ANTES de arrancar, para que
     // el primer render ya respete un link compartido.
     restaurarDesdeURL();
+    // Recién ahora estado.seccion es el definitivo: la URL pudo cambiarlo. El
+    // atributo del <body> decide el color de sección y qué bloques se muestran
+    // (por ejemplo la guía de títulos), así que setearlo antes dejaba un link
+    // compartido a Plataformas/Oficios pintado como Educación Formal.
+    document.body.dataset.seccion = estado.seccion;
+    // Primer pintado: con data.json todavía en camino deja el aviso de carga y
+    // ordena el chrome según la sección restaurada (el panel de filtros, por
+    // ejemplo, no debe asomarse en Oficios). cargarOfertas() repinta al llegar.
+    actualizarVista();
     configurarTema();
     configurarEventos();
     configurarMedicionHeader();
     configurarPlaceholderBuscador();
     configurarHeaderScroll();
+    // La portada se cablea ANTES de esperar data.json: sus botones no dependen
+    // de los datos. Antes se hacía después del await y en una conexión lenta
+    // (data.json pesa MBs) se podía tocar "Mostrar ofertas" sin que pase nada.
+    configurarBienvenida();
     await cargarOfertas();
     configurarChat();
     sincronizarInertFiltros();
     configurarSwitcherVistas();
-    configurarBienvenida();
     configurarTutorial();
     inicializarTestCompleto();
     inicializarMiLista();
@@ -112,10 +123,10 @@ function medirAltoHeader() {
     raiz.style.setProperty('--hero-alto', `${alto}px`);
 }
 
-// El placeholder del buscador se acorta en pantallas angostas: con el logo y el
-// botón de filtros en la misma fila, el texto largo se cortaba a mitad de
-// palabra ("Buscar car…"). El label real (sr-only) no cambia, así que un lector
-// de pantalla sigue escuchando "Buscar carrera o institución".
+// En pantallas angostas el placeholder largo no entra completo en el buscador
+// ("Buscar carrera o ins…"): el corto se entiende igual y no queda una palabra
+// partida. El label real (sr-only) no cambia, así que un lector de pantalla
+// sigue escuchando "Buscar carrera o institución".
 const PLACEHOLDER_LARGO = 'Buscar carrera o institución…';
 const PLACEHOLDER_CORTO = 'Buscar carrera…';
 

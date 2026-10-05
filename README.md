@@ -5,7 +5,7 @@ buscador/catálogo de oferta educativa: universidades, IES/institutos superiores
 formación y plataformas online. Hoy el catálogo es de Mendoza; el alcance previsto es
 nacional, y por eso ni las rutas ni los textos se atan a una provincia. Su pieza central es el
 "Test Vocacional Completo": 65 preguntas que arman el perfil de la persona (intereses RIASEC,
-aptitudes y valores), lo cruzan contra las 672 carreras del catálogo y dejan el resultado en la
+aptitudes y valores), lo cruzan contra las ~750 carreras del catálogo y dejan el resultado en la
 grilla, ordenado por afinidad y filtrable sin perder ese orden. Alrededor hay un "Copiloto"
 (chat de búsqueda) y "Mi lista", el apartado donde se guardan las carreras que interesan y se
 comparan de a tres.
@@ -38,6 +38,11 @@ eliminó: era un puente para enlaces viejos que ya solo armaba rebotes.)
 index.html   la aplicación
 style.css    estilos de la aplicación
 paginas.css  estilos de las páginas estáticas (mucho más liviano, ver más abajo)
+mi-lista.css estilos de la ventana de Mi lista (los carga la app y también las
+             estáticas, que la abren como overlay sin salir de la ficha)
+fonts/       Montserrat auto-hospedada (variable, latin + latin-ext) y su
+             montserrat.css. La app no depende de Google Fonts: un pedido
+             externo colgado bloqueaba la ejecución de todo el JavaScript.
   js/                la aplicación, en módulos ES (main.js es el punto de entrada)
     util.js            texto, clasificadores y escapado de HTML
     datos.js           carga de data.json y armado de ofertas/plataformas/catálogos
@@ -50,7 +55,14 @@ paginas.css  estilos de las páginas estáticas (mucho más liviano, ver más ab
     main.js            arranque y delegación de eventos
     favoritos.js       "Me interesa" + Mi lista: storage y botones (script clásico,
                        también corre en las páginas estáticas)
-    mi-lista.js        ventana de Mi lista y comparador de carreras
+    mi-lista.js        ventana de Mi lista y comparador de carreras (inyecta su
+                       propio overlay si la página no lo trae, como las fichas, y
+                       ahí baja el catálogo en segundo plano para completar la
+                       comparación)
+    mi-lista-loader.js abre esa ventana desde las estáticas sin salir de la página
+                       (solo en las fichas generadas; script clásico)
+    restaurar-scroll.js devuelve la posición al volver con Atrás: en la app
+                       espera el primer render con datos; en las estáticas, el DOM
     medicion.js        registrarEvento(): avisa qué pasó y lo escucha la analítica
     analitica.js       Google Analytics 4: carga gtag.js y traduce los avisos a
                       eventos (script clásico, lo cargan TODAS las páginas)
@@ -76,13 +88,21 @@ scrapers/    los scripts Python que generan esos JSON
   scraper_utils.py   funciones compartidas por todos los scrapers
   unir_todo.py       consolida todo y encadena el resto del build
   plataforma.py      agrega las plataformas online a data.json
+  expo_educativa.py  releva Expo Educativa 2026 (la oferta oficial de la DGE):
+                     da de alta las instituciones que faltan (data/expo-instituciones.json),
+                     suma carreras a las existentes y deja lo incompleto o duplicado
+                     en data/expo-pendientes.json. Solo agrega fichas con nombre,
+                     duración, modalidad y link oficial verificados.
+  verificar_enlaces.py  audita todos los link_oficial de data.json: distingue ok /
+                     bloqueado (403, timeout) / roto (404, dominio caído) / sin link.
+                     Sale con código 1 si hay rotos o sin link.
   fuentes/           páginas guardadas que algún scraper usa como entrada offline
   inactivos/         funciones dormidas (feed de novedades, centros deportivos).
                      Ver scrapers/inactivos/LEEME.md
 generar-perfiles-vocacional.js  calcula data/vocacional/perfiles-carreras.json
                                 (área base + palabras clave + afinado por uso)
 generar-perfiles-uso.js  job de la Fase B: convierte eventos de uso en perfiles-uso.json
-generar-paginas.js   genera las ~650 páginas estáticas para buscadores
+generar-paginas.js   genera las ~665 páginas estáticas para buscadores
 
 carrera/  area/  institucion/  provincia/  carreras/  instituciones/
              GENERADAS. Se borran y se rehacen enteras en cada build:
@@ -110,10 +130,11 @@ La suite se corre con Node y no necesita nada más allá de `npm install` (jsdom
 node test_general.js          # salud general: imports/exports, sello de caché, catálogos, render, SW y smoke HTTP
 node test_analitica.js       # GA4: carga, eventos, parámetros inválidos, DNT y apagado con ?sin-analitica
 node test_contenido.js        # contenido de las descripciones de carrera (largo, tono y términos excluidos)
-node test_titulos.js          # guía de títulos y niveles (/titulos/): datos, anclas, banner y aviso de costos
+node test_titulos.js          # guía de títulos y niveles (/titulos/): datos, anclas, acceso en el panel y aviso de costos
 node test_rubros.js           # rubros de los catálogos aparte: cobertura del mapa y render agrupado
 node test_tutorial.js         # tutorial de primera visita: disparo, pasos, foco, Escape y bandera de visto
 node test_arranque.js         # smoke de arranque real: index.html + main.js en jsdom (grilla, Mi lista, copiloto)
+node test_mobile.js           # smoke mobile: link a una sección, placeholder corto, carga diferida y guía de títulos
 node test-flow.js             # flujo completo de la app en jsdom (búsqueda, filtros, copiloto)
 node test_instituciones.js    # vista de instituciones (agrupadas por tipo)
 node test_switcher.js         # conmutador de vistas Carreras / Instituciones / Por área
@@ -143,7 +164,7 @@ fácil, destacar enlaces); el resto de los criterios se resolvió en el código:
 
 - **Teclado**: skip links "Saltar a los filtros" y "Saltar a los resultados" en
   la app (el destino lleva `tabindex="-1"` para que el foco viaje de verdad) y
-  "Saltar al contenido" en las 566 fichas estáticas. Anillo de foco visible en
+  "Saltar al contenido" en las 571 fichas estáticas. Anillo de foco visible en
   todo el sitio (`:focus-visible`, ≥3:1). Trampas de foco en los diálogos (test,
   Mi lista, sugerencias, panel de accesibilidad) con devolución del foco al
   control que los abrió.
@@ -192,7 +213,7 @@ al 200%, y NVDA/JAWS/VoiceOver. Guion de 10 pasos:
 
 Una ventana flotante con 65 preguntas en 3 partes
 (36 de intereses RIASEC + 15 de aptitudes + 14 de valores y contexto), que calcula un perfil
-numérico del estudiante y lo cruza contra el perfil de las 672 carreras del catálogo.
+numérico del estudiante y lo cruza contra el perfil de las ~750 carreras del catálogo.
 
 - **Nada se cura a mano.** El perfil del estudiante sale de las respuestas (cada pregunta
   pesa hacia una o más dimensiones, y ese peso vive en `data/vocacional/preguntas.json`).
@@ -232,7 +253,7 @@ estudiarla.
   plan de estudios y links. Abajo, un resumen automático de **"en qué se diferencian"**, más
   "Copiar" e "Imprimir / PDF" para llevarlo a la familia o al colegio.
 - **Una sola definición del botón**: `js/favoritos.js` es un script clásico que se autoinstala
-  (delegación de clic en `[data-favorito]`) y lo cargan tanto la app como las ~650 páginas
+  (delegación de clic en `[data-favorito]`) y lo cargan tanto la app como las ~665 páginas
   estáticas generadas, que emiten el botón "vacío" y dejan que el script lo hidrate y
   sincronice. Si una carrera guardada ya no está en el catálogo, Mi lista lo dice y ofrece
   quitarla en vez de romperse.
@@ -244,6 +265,9 @@ estudiarla.
 
 1. (Opcional) Correr los scrapers de las instituciones que quieras actualizar, por ejemplo
    `python scrapers/utn.py`. Requiere `pip install -r requirements.txt`.
+   Para relevar la oferta oficial de la DGE (instituciones y carreras que falten),
+   `python scrapers/expo_educativa.py`; para auditar los links del catálogo,
+   `python scrapers/verificar_enlaces.py` (sale con error si hay rotos o sin link).
 2. Correr `python scrapers/unir_todo.py`. Es **el único comando que hace falta**: lee los
    JSON individuales que ya estén en `data/` (no hace falta volver a scrapear todo) y, en una
    sola pasada,
@@ -254,7 +278,7 @@ estudiarla.
       `data/vocacional/perfiles-carreras.json` (los perfiles que usan el test y las
       páginas estáticas),
    4. verifica que toda carrera con perfil exista en `data.json`, y
-   5. encadena `generar-paginas.js` para rehacer las ~650 páginas estáticas.
+   5. encadena `generar-paginas.js` para rehacer las ~665 páginas estáticas.
 
    Los pasos 3 y 5 necesitan Node.js en el PATH. Si no lo encuentra, avisa y sigue:
    `data.json` queda actualizado igual y después se corren a mano con
@@ -309,7 +333,7 @@ puede buscar:
 
 | Ruta | Cuántas | Qué tiene |
 |---|---|---|
-| `/carrera/<slug>/` | ~554 | Quién la dicta, duración, modalidad, gestión, link oficial y carreras del mismo área |
+| `/carrera/<slug>/` | ~571 | Quién la dicta, duración, modalidad, gestión, link oficial y carreras del mismo área |
 | `/institucion/<slug>/` | ~80 | Ficha de contacto y toda su oferta agrupada por área |
 | `/area/<slug>/` | 13 | Las carreras del área, separadas por tipo de formación |
 | `/provincia/<slug>/` | 1 (hoy) | Las instituciones de esa provincia, por gestión |
@@ -368,7 +392,7 @@ Dos detalles más que conviene conocer antes de tocar nada:
 ## Analítica (Google Analytics 4)
 
 `js/analitica.js` mide el sitio con GA4. Mide **las dos mitades**: la app (una sola página) y
-las ~590 páginas estáticas de `/carrera/`, `/area/`, `/institucion/`, `/provincia/` y `/titulos/`,
+las ~600 páginas estáticas de `/carrera/`, `/area/`, `/institucion/`, `/provincia/` y `/titulos/`,
 que son la mayor parte del tráfico y llegan desde Google.
 
 > El **ID de medición** (`G-JCNCMH202B`) está en la constante `MEDICION` de `js/analitica.js`, y es

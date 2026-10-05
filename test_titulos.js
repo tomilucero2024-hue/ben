@@ -101,8 +101,9 @@ const estatica = leer('carreras/index.html');
 ok(estatica.includes('<a href="/titulos/">Títulos y niveles</a>'), 'el footer de las estáticas enlaza la guía');
 ok(leer('carrera/abogacia/index.html').includes('class="aviso-costos"'), 'la ficha avisa que los costos los define la institución');
 const app = leer('index.html');
-ok(app.includes('class="banner-titulos"') && app.includes('href="/titulos/"'), 'la app tiene el banner hacia la guía');
-ok(/body\[data-seccion="formal"\] \.banner-titulos/.test(leer('style.css')), 'el banner solo se muestra en Educación Formal');
+ok(app.includes('class="filtro-guia"') && app.includes('href="/titulos/"') && app.includes('Títulos y niveles'), 'la app tiene la guía "Títulos y niveles" hacia la guía');
+ok(/id="filtersSidebar"[\s\S]*class="filtro-guia"[\s\S]*id="filtroFormacion"/.test(app), 'la guía vive en el panel de filtros, arriba de "Tipo de formación"');
+ok(!/<h2>Los títulos, uno por uno<\/h2>/.test(leer('titulos/index.html')), 'la guía ya no repite "Los títulos, uno por uno" como encabezado');
 ok(!/data-filter="costo"/.test(app), 'la app ya no ofrece el filtro de costos');
 
 console.log(`\n✅ test_titulos.js: ${aserciones} aserciones OK, ${fallos} fallidas`);

@@ -295,6 +295,24 @@
                         }
                     ],
                     "plan_fuente": "https://ens9003-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico-2/"
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de Formación Docente y Técnica N° 9-003 Normal Superior",
+                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/",
+                    "id": 1305
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Informática",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de Formación Docente y Técnica N° 9-003 Normal Superior",
+                    "link_oficial": "https://ens9003-infd.mendoza.edu.ar/sitio/",
+                    "id": 1306
                 }
             ],
             "departamento": "San Rafael"

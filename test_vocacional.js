@@ -67,7 +67,7 @@ ok(areasOk, 'todos los perfiles de área tienen dimensiones válidas y valores 0
 
 // ---------------------------------------------------------------------------
 seccion('3. Perfiles de carrera generados');
-ok(perfilesFile.carreras.length === 672, `perfiles para las 672 carreras (${perfilesFile.carreras.length})`);
+ok(perfilesFile.carreras.length >= 672, `perfiles para las 672+ carreras del catálogo (${perfilesFile.carreras.length})`);
 const perfilesOk = perfilesFile.carreras.every(c =>
     c.clave && c.nombre && c.area && c.formacion && Array.isArray(c.instituciones) &&
     ['riasec', 'apt', 'val'].every(b => Object.values(c.perfil[b] || {}).every(v => v >= 0 && v <= 10))
@@ -148,7 +148,7 @@ const posIngenieria = ranking.todas.findIndex(r => r.clave === 'ingenieria civil
 ok(posEnfermeria >= 0 && posPsicologia >= 0 && posIngenieria >= 0, 'las 3 carreras de prueba tienen perfil');
 ok(posEnfermeria < posIngenieria, `Enfermería (puesto ${posEnfermeria + 1}) queda arriba de Ingeniería Civil (puesto ${posIngenieria + 1})`);
 ok(posPsicologia < posIngenieria, `Psicología (puesto ${posPsicologia + 1}) queda arriba de Ingeniería Civil (puesto ${posIngenieria + 1})`);
-ok(posEnfermeria <= 250 && posPsicologia <= 250, 'Enfermería y Psicología quedan entre las primeras 250 de 672');
+ok(posEnfermeria <= 250 && posPsicologia <= 250, `Enfermería y Psicología quedan entre las primeras 250 de ${perfilesFile.carreras.length}`);
 ok(ranking.todas[0].compatibilidad > ranking.todas[ranking.todas.length - 1].compatibilidad, 'el ranking está ordenado de mayor a menor');
 
 // Un perfil técnico no debe recomendar carreras artísticas y viceversa.

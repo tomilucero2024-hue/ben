@@ -118,6 +118,10 @@ const data = leerJson('data/data.json');
 
     const { estado } = await import(pathToFileURL(path.join(RAIZ, 'js/estado.js')).href);
     const { mostrarCatalogoAparte } = await import(pathToFileURL(path.join(RAIZ, 'js/render.js')).href);
+    // Este test arma el catálogo a mano y llama al render directo: sin marcar
+    // los datos como listos, el render devolvería el aviso de "Cargando…".
+    const { marcarDatosListos } = await import(pathToFileURL(path.join(RAIZ, 'js/datos.js')).href);
+    marcarDatosListos();
 
     // Cursos reales del catálogo, armados con la misma función que usa la app.
     const catalogo = catalogosAparte['formaciones-alternativas'];

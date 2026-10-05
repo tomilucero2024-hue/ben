@@ -1,0 +1,728 @@
+{
+    "instituciones": [
+        {
+            "id": 52,
+            "nombre": "Don Bosco (PT-021)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "abaroni@donbosco.org",
+                "direccion": "Ruta Provincial 50 Nº 6772, Rodeo del Medio, Maipú, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Enología e Industrias Frutihortícolas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Don Bosco PT- 021",
+                    "link_oficial": "https://tecsupdonbosco.edu.ar/",
+                    "id": 5201
+                }
+            ],
+            "departamento": "Maipú"
+        },
+        {
+            "id": 53,
+            "nombre": "IES Nuevo Cuyo Mendoza (PT-169)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "incuyo@gmail.com",
+                "direccion": "Rioja 612-614, Ciudad de Mendoza, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Nuevo Cuyo Mendoza PT 169",
+                    "link_oficial": "http://incuyo.edu.ar/",
+                    "id": 5301
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 54,
+            "nombre": "IES PT-160 Agentes de Propaganda Médica",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "pt160apmmendoza@gmail.com",
+                "direccion": "Córdoba 249, Ciudad de Mendoza, Mendoza"
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Agente de Propaganda Médica",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES PT-160 Agentes de Propaganda Médica",
+                    "link_oficial": "http://institutoapmza.com.ar",
+                    "id": 5401
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 55,
+            "nombre": "Instituto Alfredo Bufano (PT-215)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "institutosuperiorbufano@ive.org",
+                "direccion": "Ortubia 2435 - San Rafael https://maps.app.goo.gl/HKCZST4miVwWeGK96"
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Filosofía",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Alfredo Bufano PT 215",
+                    "link_oficial": "https://institutobufano.org/",
+                    "id": 5501
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Historia",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Alfredo Bufano PT 215",
+                    "link_oficial": "https://institutobufano.org/",
+                    "id": 5502
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Lengua y Literatura",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Alfredo Bufano PT 215",
+                    "link_oficial": "https://institutobufano.org/",
+                    "id": 5503
+                }
+            ],
+            "departamento": "San Rafael"
+        },
+        {
+            "id": 56,
+            "nombre": "Instituto Arrayanes",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "info@institutoarrayanes.com",
+                "direccion": "Tiburcio Benegas 748, Ciudad de Mendoza, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Dirección Gastronómica",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Arrayanes",
+                    "link_oficial": "https://institutoarrayanes.com.ar/",
+                    "id": 5601
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 57,
+            "nombre": "Instituto Cruz Roja Argentina Filial San Rafael (PT-071)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "educa.srafael@cruzroja.org",
+                "direccion": "Godoy Cruz 270, San Rafael, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Enfermería Profesional",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Cruz Roja Argentina Filial San Rafael PT-071",
+                    "link_oficial": "https://cruzrojasanrafael.edu.ar/",
+                    "id": 5701
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Instrumentación Quirúrgica",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Cruz Roja Argentina Filial San Rafael PT-071",
+                    "link_oficial": "https://cruzrojasanrafael.edu.ar/",
+                    "id": 5702
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Laboratorio de Análisis Clínicos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Cruz Roja Argentina Filial San Rafael PT-071",
+                    "link_oficial": "https://cruzrojasanrafael.edu.ar/",
+                    "id": 5703
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Radiología e Imágenes para el Diagnóstico",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Cruz Roja Argentina Filial San Rafael PT-071",
+                    "link_oficial": "https://cruzrojasanrafael.edu.ar/",
+                    "id": 5704
+                }
+            ],
+            "departamento": "San Rafael"
+        },
+        {
+            "id": 58,
+            "nombre": "Instituto Fundación por el Arte",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "contacto@fporelarte.edu",
+                "direccion": "Calle Patricias Mendocinas 805, esquina San Lorenzo, Ciudad de Mendoza, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Danza",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Fundación por el Arte",
+                    "link_oficial": "http://fporelarte.edu.ar/",
+                    "id": 5801
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Danza",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Fundación por el Arte",
+                    "link_oficial": "http://fporelarte.edu.ar/",
+                    "id": 5802
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 59,
+            "nombre": "Instituto IDICSA",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "A confirmar",
+                "direccion": "Sede central: Morón 265, Ciudad, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto IDICSA",
+                    "link_oficial": "http://institutosanidadmza.com.ar/curso/enfermeria-profesional/",
+                    "id": 5901
+                },
+                {
+                    "nombre_carrera": "Tecnicatura en Administración en Empresas de la Salud",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto IDICSA",
+                    "link_oficial": "http://institutosanidadmza.com.ar/curso/tecnicatura-superior-en-administracion-de-la-salud/",
+                    "id": 5902
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 60,
+            "nombre": "Instituto Nuestra Señora del Rosario (PT-094)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "rosario94secretaria@gmail.com",
+                "direccion": "Mathus Hoyos 3715, El Bermejo, Guaymallén."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Filosofía",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Nuestra Señora del Rosario PT 094",
+                    "link_oficial": "http://delrosario.milaulas.com/",
+                    "id": 6001
+                }
+            ],
+            "departamento": "Guaymallén"
+        },
+        {
+            "id": 61,
+            "nombre": "Instituto San Antonio (PT-030)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "nivelsuperior@isaalvear.edu",
+                "direccion": "Roque S. Peña y 26 de julio, General Alvear, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto San Antonio PT 30",
+                    "link_oficial": "http://isaalvear.edu.ar/",
+                    "id": 6101
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto San Antonio PT 30",
+                    "link_oficial": "http://isaalvear.edu.ar/",
+                    "id": 6102
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto San Antonio PT 30",
+                    "link_oficial": "http://isaalvear.edu.ar/",
+                    "id": 6103
+                }
+            ],
+            "departamento": "General Alvear"
+        },
+        {
+            "id": 62,
+            "nombre": "Instituto Superior Diocesano San José (PT-164)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "isdsj.malargue.mza.ar@gmail.com",
+                "direccion": "Capdeville Este N°115, Malargüe, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Educación Especial con orientación en discapacidad intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Diocesano San José PT 164",
+                    "link_oficial": "http://sanjosemalargue.net",
+                    "id": 6201
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Diocesano San José PT 164",
+                    "link_oficial": "http://sanjosemalargue.net",
+                    "id": 6202
+                }
+            ],
+            "departamento": "Malargüe"
+        },
+        {
+            "id": 63,
+            "nombre": "Instituto Superior ESAPA (PT-166)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "nivelsuperior@esapa.edu",
+                "direccion": "Maipú 324, Ciudad de Mendoza, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Farmacia",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior ESAPA PT 166",
+                    "link_oficial": "https://esapa.edu.ar/",
+                    "id": 6301
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Sanidad y Bienestar Animal",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior ESAPA PT 166",
+                    "link_oficial": "https://esapa.edu.ar/",
+                    "id": 6302
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 64,
+            "nombre": "Instituto Superior Isabel La Católica",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "terciarioisabel@servidoras.org",
+                "direccion": "Av. Rawson 4011, San Rafael, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Isabel La Católica",
+                    "link_oficial": "http://colegioisabellacatolica.wordpress.com",
+                    "id": 6401
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Isabel La Católica",
+                    "link_oficial": "http://colegioisabellacatolica.wordpress.com",
+                    "id": 6402
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Matemática",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Isabel La Católica",
+                    "link_oficial": "http://colegioisabellacatolica.wordpress.com",
+                    "id": 6403
+                }
+            ],
+            "departamento": "San Rafael"
+        },
+        {
+            "id": 65,
+            "nombre": "Instituto Superior Juan Vucetich (PT-177)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "isjuanvucetich@gmail.com",
+                "direccion": "Rioja 944, Ciudad, Mendoza"
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Investigación Criminalística",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A distancia",
+                    "facultad": "Instituto Superior Juan Vucetich PT-177",
+                    "link_oficial": "https://isjv.com.ar/",
+                    "id": 6501
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Siniestrología Vial",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A distancia",
+                    "facultad": "Instituto Superior Juan Vucetich PT-177",
+                    "link_oficial": "https://isjv.com.ar/",
+                    "id": 6502
+                }
+            ],
+            "departamento": "Capital"
+        },
+        {
+            "id": 66,
+            "nombre": "Instituto Superior Nicolás Avellaneda",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "avellanedainstitucional@gmail.com",
+                "direccion": "Av. San Martin 1154, Godoy Cruz, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Nicolás Avellaneda",
+                    "link_oficial": "https://instituto.instavellaneda.com.ar/",
+                    "id": 6601
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Diseño de Interiores",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Nicolás Avellaneda",
+                    "link_oficial": "https://instituto.instavellaneda.com.ar/",
+                    "id": 6602
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Gestión de Recursos Humanos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior Nicolás Avellaneda",
+                    "link_oficial": "https://instituto.instavellaneda.com.ar/",
+                    "id": 6603
+                }
+            ],
+            "departamento": "Godoy Cruz"
+        },
+        {
+            "id": 67,
+            "nombre": "Instituto Superior Reinalda Balancini",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "institutobalancini@gmail.com",
+                "direccion": "Juan de Garay 115, Godoy Cruz, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Enfermería Profesional",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Inst. Sup. Reinalda Balancini",
+                    "link_oficial": "https://sites.google.com/view/irbmendoza?usp=sharing",
+                    "id": 6701
+                }
+            ],
+            "departamento": "Godoy Cruz"
+        },
+        {
+            "id": 68,
+            "nombre": "Instituto Superior de Educación Mendoza (ISEM)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "isem.secretaria2023@gmail.com",
+                "direccion": "Sede Central: Alfonsina Storni 228, San José, Guaymallen, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Profesorado de Educación Inicial",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de Educación Mendoza ISEM PT 252",
+                    "link_oficial": "http://isem.edu.ar",
+                    "id": 6801
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Geografía",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de Educación Mendoza ISEM PT 252",
+                    "link_oficial": "http://isem.edu.ar",
+                    "id": 6802
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Historia",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de Educación Mendoza ISEM PT 252",
+                    "link_oficial": "http://isem.edu.ar",
+                    "id": 6803
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Preceptoría Escolar",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de Educación Mendoza ISEM PT 252",
+                    "link_oficial": "http://isem.edu.ar",
+                    "id": 6804
+                }
+            ],
+            "departamento": "Guaymallén"
+        },
+        {
+            "id": 69,
+            "nombre": "Instituto Superior de la UTHGRA (PT-283)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "ies@uthgramendoza.com",
+                "direccion": "A confirmar"
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Gastronomía",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Superior de la Uthgra (PT283) Unión de Trabajadores del Turismo, Hoteleros y Gastronómicos de la República Argentina.",
+                    "link_oficial": "https://uthgramendoza.com.ar/centro-de-formacion/",
+                    "id": 6901
+                }
+            ]
+        },
+        {
+            "id": 70,
+            "nombre": "Instituto Tomás Alva Edison (PT-113)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "superior@fundcaionedison.org",
+                "direccion": "A confirmar"
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "PT 113 Tomás Alva Edison",
+                    "link_oficial": "https://superior.fundacionedison.org.ar/",
+                    "id": 7001
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "PT 113 Tomás Alva Edison",
+                    "link_oficial": "https://superior.fundacionedison.org.ar/",
+                    "id": 7002
+                }
+            ]
+        },
+        {
+            "id": 71,
+            "nombre": "Instituto Técnico Superior de Medicina China",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "info@medicinachina.com",
+                "direccion": "Cervantes 2116, Godoy Cruz, Mendoza, Argentina."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Acupuntura",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Técnico Superior de Medicina China",
+                    "link_oficial": "http://www.medicinachina.com.ar/",
+                    "id": 7101
+                }
+            ],
+            "departamento": "Godoy Cruz"
+        },
+        {
+            "id": 72,
+            "nombre": "Instituto de Ciencias Junín",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "info@institutodejunin.edu",
+                "direccion": "Calle Luis Marcó 106, Junin, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Preceptoría Escolar",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Ciencias Junín",
+                    "link_oficial": "https://www.institutodejunin.edu.ar/",
+                    "id": 7201
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Psicomotricidad",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Ciencias Junín",
+                    "link_oficial": "https://www.institutodejunin.edu.ar/",
+                    "id": 7202
+                }
+            ],
+            "departamento": "Junín"
+        },
+        {
+            "id": 73,
+            "nombre": "NEOCAST (PT-145)",
+            "nivel": "terciario",
+            "gestion": "privada",
+            "provincia": "Mendoza",
+            "contacto": {
+                "telefono": "A confirmar",
+                "email": "institutoneocast@gmail.com",
+                "direccion": "Anatole France 451, Barrio Bancario, Godoy Cruz, Mendoza."
+            },
+            "carreras": [
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Prótesis Dental",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "NEOCAST PT 145",
+                    "link_oficial": "http://mendozaneocast.com",
+                    "id": 7301
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Óptica y Contactología",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "NEOCAST PT 145",
+                    "link_oficial": "http://mendozaneocast.com",
+                    "id": 7302
+                }
+            ],
+            "departamento": "Godoy Cruz"
+        }
+    ]
+}

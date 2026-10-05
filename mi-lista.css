@@ -1,0 +1,149 @@
+/* ================================================================
+   VENTANA DE MI LISTA + COMPARADOR
+   Vive aparte de style.css porque también la cargan las páginas
+   estáticas: desde una ficha, "Ver Mi lista" abre esta ventana
+   flotante sin salir de la página. La app la usa igual.
+   ================================================================ */
+
+/* --- Ventana de Mi lista (misma receta que el test) --- */
+.mi-lista {
+    position: fixed; inset: 0; z-index: 110;
+    display: flex; align-items: center; justify-content: center;
+    padding: var(--space-4);
+    background: rgba(2, 6, 23, .55);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+html.mi-lista-abierta { overflow: hidden; }
+
+.ml-ventana {
+    display: flex; flex-direction: column;
+    width: min(940px, 100%);
+    height: min(720px, 92vh);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--elev-4);
+    overflow: hidden;
+    animation: chat-abrir var(--dur-slow) ease;
+}
+.ml-header { display: flex; align-items: center; justify-content: space-between; padding: .9rem 1.1rem; border-bottom: 1px solid var(--line); }
+.ml-header h2 { margin: 0; font-family: var(--font-title); font-size: var(--fs-lg); color: var(--text); letter-spacing: -.01em; }
+.ml-header button { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; border: 0; border-radius: var(--radius-sm); background: none; color: var(--muted); font-size: var(--fs-md); cursor: pointer; }
+.ml-header button:hover { color: var(--text); background: var(--surface-soft); }
+.ml-cuerpo { flex: 1; min-height: 0; overflow-y: auto; padding: 1.1rem 1.25rem 1.4rem; color: var(--text); }
+.ml-pie { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .9rem 1.1rem; border-top: 1px solid var(--line); background: var(--surface); flex-wrap: wrap; }
+.ml-pie-info { margin: 0; color: var(--muted); font-size: var(--fs-xs); }
+.ml-pie-acciones { display: flex; gap: .5rem; flex-wrap: wrap; }
+.ml-btn-primario, .ml-btn-secundario { font-family: var(--font-text); cursor: pointer; min-height: 42px; border-radius: var(--radius-pill); font-weight: 700; font-size: var(--fs-sm); padding: .6rem 1.1rem; }
+.ml-btn-primario { border: 0; background: var(--accion-fill); color: var(--accion-ink); }
+.ml-btn-primario:hover { filter: brightness(1.05); }
+.ml-btn-primario:disabled { opacity: .5; cursor: default; }
+.ml-btn-secundario { border: 1px solid var(--line); background: var(--surface); color: var(--muted); }
+.ml-btn-secundario:hover { border-color: var(--accent); color: var(--accent-ink); }
+/* WCAG 2.1 - 1.4.3: blanco sobre naranja daba 2.80:1 (claro) y 2.26:1 (oscuro). */
+.ml-btn-peligro { background: var(--orange); color: var(--on-vivid); }
+.ml-btn-volver { border: 0; background: none; color: var(--accent-ink); font-weight: 700; font-size: var(--fs-sm); cursor: pointer; padding: .3rem 0; }
+
+/* Lista vacía */
+.ml-vacia { max-width: 30rem; margin: 2rem auto; text-align: center; display: flex; flex-direction: column; gap: .7rem; align-items: center; }
+.ml-vacia-titulo { margin: 0; font-family: var(--font-title); font-size: var(--fs-md); color: var(--text); }
+.ml-vacia-texto { margin: 0; color: var(--muted); font-size: var(--fs-sm); line-height: 1.5; }
+
+/* Grupos y filas */
+.ml-grupo { margin-bottom: 1.4rem; }
+.ml-grupo-titulo { display: flex; align-items: center; gap: .5rem; margin: 0 0 .6rem; font-family: var(--font-title); font-size: var(--fs-sm); color: var(--text); }
+.ml-grupo-titulo span { min-width: 1.5em; padding: 0 .4em; border-radius: 999px; background: var(--surface-soft); color: var(--muted); font-size: var(--fs-2xs); text-align: center; }
+.ml-items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .45rem; }
+.ml-item {
+    display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; gap: .7rem; align-items: center;
+    border: 1px solid var(--line); border-radius: var(--radius-md);
+    padding: .6rem .75rem; background: var(--surface);
+}
+.ml-item.is-seleccionada { border-color: var(--accent); background: var(--surface-soft); }
+.ml-item-huerfana { opacity: .75; }
+/* WCAG 2.5.8 (y el pedido explícito de 24x24): el área táctil real es el input,
+   así que el cuadradito mide 24px y la fila lo acompaña. */
+.ml-item-check { display: inline-flex; align-items: center; justify-content: center; min-width: 24px; min-height: 24px; }
+.ml-item-check input { width: 24px; height: 24px; accent-color: var(--accent); cursor: pointer; }
+.ml-item-info { min-width: 0; }
+.ml-item-nombre { margin: 0; font-weight: 700; font-size: var(--fs-sm); color: var(--text); display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.ml-item-meta { margin: .15rem 0 0; color: var(--muted); font-size: var(--fs-xs); }
+.ml-item-afinidad { padding: .1em .5em; border-radius: 999px; background: var(--accion-fill); color: var(--accion-ink); font-size: var(--fs-2xs); }
+.ml-item-link { color: var(--accent-ink); font-size: var(--fs-xs); font-weight: 700; white-space: nowrap; }
+.ml-item-quitar { min-width: 36px; min-height: 36px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface-soft); color: var(--muted); cursor: pointer; }
+.ml-item-quitar:hover { border-color: var(--orange); color: var(--orange-ink); }
+
+/* Comparación */
+.ml-volver { margin: 0 0 .6rem; }
+.ml-tabla-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-md); }
+.ml-tabla { border-collapse: collapse; width: 100%; min-width: 100%; font-size: var(--fs-sm); }
+.ml-tabla th, .ml-tabla td { padding: .6rem .7rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.ml-tabla tbody th { position: sticky; left: 0; z-index: 1; background: var(--surface); color: var(--muted); font-weight: 700; font-size: var(--fs-xs); white-space: nowrap; }
+.ml-tabla thead th { background: var(--surface-soft); border-bottom: 1px solid var(--line-strong, var(--line)); }
+.ml-tabla-esquina { position: sticky; left: 0; z-index: 2; }
+.ml-tabla-titulo { display: block; font-family: var(--font-title); font-size: var(--fs-sm); color: var(--text); }
+.ml-tabla-sub { display: block; margin-top: .15rem; color: var(--muted); font-size: var(--fs-2xs); font-weight: 400; }
+.ml-tabla tbody tr:last-child th, .ml-tabla tbody tr:last-child td { border-bottom: 0; }
+.ml-vacio { color: var(--muted); }
+.ml-link { color: var(--accent-ink); font-weight: 700; font-size: var(--fs-xs); }
+.ml-instituciones, .ml-planes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .2rem; }
+.ml-instituciones a, .ml-planes a { color: var(--accent-ink); font-size: var(--fs-xs); }
+
+.ml-afinidad { display: flex; flex-direction: column; gap: .3rem; min-width: 5.5rem; }
+.ml-afinidad-valor { font-weight: 800; font-size: var(--fs-md); }
+.ml-afinidad.alta .ml-afinidad-valor { color: var(--accent-ink); }
+.ml-afinidad.media .ml-afinidad-valor { color: var(--text); }
+.ml-afinidad.baja .ml-afinidad-valor { color: var(--muted); }
+.ml-afinidad-barra { height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.ml-afinidad-barra span { display: block; height: 100%; background: var(--accent); }
+
+.ml-riasec { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .25rem; min-width: 8rem; }
+.ml-riasec li { display: grid; grid-template-columns: 6.5rem 4rem 1.4rem; align-items: center; gap: .4rem; }
+.ml-riasec-nombre { color: var(--muted); font-size: var(--fs-2xs); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ml-riasec-barra { height: 5px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.ml-riasec-barra span { display: block; height: 100%; background: var(--accent); }
+.ml-riasec-valor { color: var(--muted); font-size: var(--fs-2xs); text-align: right; }
+
+/* Comparación en celular: una sola lista vertical, un bloque por atributo (con
+   las carreras adentro). Misma comparación que la tabla, sin scroll lateral. */
+.ml-lista { margin: 0; border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; background: var(--surface); }
+.ml-lista-grupo { border-bottom: 1px solid var(--line); }
+.ml-lista-grupo:last-child { border-bottom: 0; }
+.ml-lista-grupo-nombre {
+    padding: .5rem .85rem .4rem;
+    background: var(--surface-soft);
+    color: var(--muted); font-weight: 700; font-size: var(--fs-2xs);
+    letter-spacing: .05em; text-transform: uppercase;
+}
+.ml-lista-valores { margin: 0; }
+.ml-lista-valores ul { list-style: none; margin: 0; padding: .4rem .85rem .65rem; display: flex; flex-direction: column; gap: .5rem; }
+.ml-lista-item { display: flex; flex-direction: column; gap: .1rem; min-width: 0; }
+.ml-lista-item-nombre { font-weight: 700; font-size: var(--fs-xs); color: var(--text); }
+.ml-lista-item-dato { font-size: var(--fs-sm); color: var(--text); min-width: 0; }
+
+.ml-diferencias { margin-top: 1.2rem; border: 1px solid var(--line); border-radius: var(--radius-md); padding: .85rem .95rem; background: var(--surface-soft); }
+.ml-diferencias h3 { margin: 0 0 .5rem; font-family: var(--font-title); font-size: var(--fs-sm); color: var(--text); }
+.ml-diferencias-lista { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: .4rem; color: var(--text); font-size: var(--fs-sm); line-height: 1.45; }
+.ml-diferencias-vacio { margin: 0; color: var(--muted); font-size: var(--fs-sm); }
+
+@media (max-width: 640px) {
+    .mi-lista { padding: 0; }
+    .ml-ventana { width: 100%; height: 100%; max-height: none; border: 0; border-radius: 0; }
+    .ml-item { grid-template-columns: auto minmax(0, 1fr) auto; }
+    .ml-item-link { grid-column: 2; }
+    .ml-riasec li { grid-template-columns: 5.5rem 3rem 1.3rem; }
+}
+
+/* Impresión: solo la comparación, en una hoja legible. Sirve para "Imprimir /
+   PDF" y para llevarle la comparación a la familia o al colegio. */
+@media print {
+    html.mi-lista-abierta body > *:not(#miLista) { display: none !important; }
+    .mi-lista { position: static; background: none; backdrop-filter: none; padding: 0; }
+    .ml-ventana { width: 100%; height: auto; max-height: none; border: 0; box-shadow: none; }
+    .ml-header button, .ml-pie, .ml-volver { display: none !important; }
+    .ml-cuerpo { overflow: visible; padding: 0; }
+    .ml-tabla-scroll { overflow: visible; border-color: #999; }
+    .ml-tabla th, .ml-tabla td { font-size: 10pt; }
+    .ml-tabla tbody th { position: static; }
+    .ml-diferencias { break-inside: avoid; }
+}

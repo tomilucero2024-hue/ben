@@ -116,7 +116,7 @@ check(/id="btnMiLista"/.test(htmlIndex) && /id="miLista"/.test(htmlIndex), 'inde
 check(scriptsIndex.includes('js/favoritos.js'), 'index.html carga js/favoritos.js (script clásico)');
 check(!/orientador\.js/.test(htmlIndex), 'index.html ya no carga el motor viejo (orientador.js)');
 const rutasShell2 = [...((leer('sw.js').match(/const SHELL = \[([^\]]+)\]/) || [])[1] || '').matchAll(/'([^']+)'/g)].map(m => m[1]);
-for (const ruta of ['js/favoritos.js', 'js/mi-lista.js']) {
+for (const ruta of ['js/favoritos.js', 'js/mi-lista.js', 'js/mi-lista-loader.js', 'js/restaurar-scroll.js', 'mi-lista.css']) {
     check(rutasShell2.includes(ruta), `el shell del SW incluye ${ruta}`);
 }
 for (const ruta of ['js/orientador.js', 'data/carreras-perfiles.json']) {
@@ -127,6 +127,11 @@ const fichaEstatica = leer('carrera/abogacia/index.html');
 check(/data-fav-clave=/.test(fichaEstatica), 'las páginas estáticas generadas traen el botón "Me interesa"');
 check(/data-fav-solo-icono/.test(fichaEstatica), 'en las estáticas el corazón va solo (sin texto)');
 check(/class="btn-ver-mi-lista"/.test(fichaEstatica), 'y "Ver Mi lista" como botón propio');
+check(/data-abrir-mi-lista/.test(fichaEstatica), 'el botón "Ver Mi lista" abre la ventana sin salir de la ficha');
+check(fichaEstatica.includes('/mi-lista.css?v='), 'la ficha carga los estilos de la ventana de Mi lista');
+check(fichaEstatica.includes('/js/mi-lista-loader.js?v='), 'la ficha carga el loader de Mi lista');
+check(fichaEstatica.includes('/js/restaurar-scroll.js?v='), 'y el restaurador de scroll al volver con Atrás');
+check(htmlIndex.includes('/mi-lista.css?v=') && htmlIndex.includes('/js/restaurar-scroll.js?v='), 'la app también carga ambos');
 check(/--fav-rojo/.test(leer('style.css')) && /--fav-rojo/.test(leer('paginas.css')), 'el corazón marcado es rojo en la app y en las estáticas');
 
 // ==========================================
@@ -144,11 +149,27 @@ check(selloIndex === selloSW, `sw.js usa el mismo sello (${selloSW})`);
 const desincronizadas = [];
 for (const ruta of paginasHtml(RAIZ)) {
     const codigo = fs.readFileSync(ruta, 'utf8');
-    for (const m of codigo.matchAll(/(?:style|paginas)\.css\?v=([\w-]+)/g)) {
+    for (const m of codigo.matchAll(/(?:style|paginas|mi-lista)\.css\?v=([\w-]+)/g)) {
         if (m[1] !== selloIndex) desincronizadas.push(`${path.relative(RAIZ, ruta)} (v=${m[1]})`);
     }
 }
 check(desincronizadas.length === 0, `las ${paginasHtml(RAIZ).length} páginas .html usan el mismo sello${desincronizadas.length ? ' → ' + desincronizadas.slice(0, 3).join(' | ') : ''}`);
+
+// ==========================================
+// 3b. TIPOGRAFÍAS AUTO-HOSPEDADAS
+// ==========================================
+// Google Fonts bloqueaba la app ENTERA cuando la red no tenía salida a
+// internet: el <link> del <head> quedaba colgado y los scripts esperan a las
+// hojas de estilo. Todo tiene que ser local.
+console.log('\n3b. Tipografías auto-hospedadas');
+const sinGoogleFonts = (codigo) => !/fonts\.googleapis\.com|fonts\.gstatic\.com/.test(codigo);
+check(sinGoogleFonts(htmlIndex), 'index.html no depende de Google Fonts');
+check(sinGoogleFonts(leer('404.html')), '404.html tampoco');
+check(sinGoogleFonts(leer('generar-paginas.js')), 'el generador no las inyecta en las páginas estáticas');
+check(existe('fonts/montserrat.css') && existe('fonts/montserrat-latin.woff2') && existe('fonts/montserrat-latin-ext.woff2'), 'la tipografía local está completa');
+check(htmlIndex.includes('/fonts/montserrat.css'), 'index.html carga la hoja local');
+const swFuentes = leer('sw.js');
+check(swFuentes.includes('fonts/montserrat.css') && swFuentes.includes('fonts/montserrat-latin.woff2'), 'el service worker la precachea para offline');
 
 // ==========================================
 // 4. CATÁLOGOS DE data.json

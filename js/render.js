@@ -3,7 +3,7 @@
 // a un innerHTML pasa por el escapado de util.js.
 // ==========================================
 
-import { ETIQUETAS_FUENTE, catalogosAparte, enlacesBEN, ofertas, plataformas } from './datos.js';
+import { ETIQUETAS_FUENTE, catalogosAparte, datosListos, enlacesBEN, ofertas, plataformas } from './datos.js';
 import { estado, sincronizarURL } from './estado.js';
 import { registrarEvento } from './medicion.js';
 import { FILTROS_SOLO_FORMALES, cumpleFiltros, filtrarYOrdenar, obtenerRelacionadas } from './filtros.js';
@@ -53,6 +53,10 @@ const SVG_DURACION = `<svg class="meta-svg" width="14" height="14" viewBox="0 0 
 const ICONO_ESCUCHAR = `<svg class="btn-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>`;
 
 const SVG_ESCUCHAR = ICONO_ESCUCHAR;
+
+// Icono de enlace externo. Reemplaza a la flecha ↗ (un carácter que en varias
+// plataformas se renderiza como emoji): mismo trazo que el resto de los iconos.
+export const ICONO_EXTERNO = '<svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
 
 let resultadosActuales = [];
 export let visibles = LIMITE_PAGINA;
@@ -158,6 +162,21 @@ export function cambiarSeccion(seccion) {
 // 🧭 / 🔧 CATÁLOGOS APARTE (formaciones alternativas y oficios técnicos)
 // ==========================================
 
+// Mientras baja data.json cualquier vista del catálogo muestra este aviso en
+// vez de su estado vacío. cargarOfertas() llama a actualizarVista() al
+// terminar, así que el render real llega solo.
+function mostrarCargando(contenedorId = 'cardContainer') {
+    const contenedor = document.getElementById(contenedorId);
+    if (contenedor) contenedor.innerHTML = '<p class="empty-state">Cargando catálogo…</p>';
+    // El contador es de la grilla formal: en los catálogos aparte nadie lo
+    // actualiza después, así que el aviso quedaría pegado (el toolbar está
+    // oculto, pero el texto igual molesta al volver a Educación Formal).
+    if (contenedorId === 'cardContainer') {
+        const contador = document.getElementById('resultsCount');
+        if (contador) contador.textContent = 'Cargando catálogo…';
+    }
+}
+
 export function mostrarCatalogoAparte(seccion) {
     const catalogo = catalogosAparte[seccion];
     document.getElementById('seccion-plataformas').hidden = true;
@@ -171,6 +190,8 @@ export function mostrarCatalogoAparte(seccion) {
     Object.entries(catalogosAparte).forEach(([nombre, otro]) => {
         document.getElementById(otro.seccion).hidden = nombre !== seccion;
     });
+
+    if (!datosListos) { mostrarCargando(catalogo.contenedor); return; }
 
     const visibles = estado.texto
         ? catalogo.cursos.filter(c => c.busqueda.includes(estado.texto))
@@ -256,7 +277,7 @@ function tarjetaCursoAparte(curso, tipo, etiquetaTitulo = 'h3') {
                 <p class="card-meta-row">${SVG_DURACION} <span>${capSeguro(curso.duracion)}</span></p>
             </div>
             ${urlSegura(curso.link)
-                ? `<a class="card-link" href="${escaparHTML(urlSegura(curso.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ir al sitio oficial ↗</a>`
+                ? `<a class="card-link" href="${escaparHTML(urlSegura(curso.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ir al sitio oficial ${ICONO_EXTERNO}</a>`
                 : '<span class="card-link card-link-muted">Sin link oficial</span>'}
             <div class="card-actions">
                 ${botonFavorito({
@@ -291,7 +312,7 @@ function renderizarCursosSimples(contenedor, lista, tipo = 'secundario') {
                 ? `<p class="curso-requisitos"><strong>Necesitás:</strong> ${escaparHTML(curso.requisitos)}</p>`
                 : ''}
             ${urlSegura(curso.link)
-                ? `<a class="card-link" href="${escaparHTML(urlSegura(curso.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ver más${host ? ` en ${escaparHTML(host)}` : ''} ↗</a>`
+                ? `<a class="card-link" href="${escaparHTML(urlSegura(curso.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ver más${host ? ` en ${escaparHTML(host)}` : ''} ${ICONO_EXTERNO}</a>`
                 : '<span class="card-link card-link-muted">Sin link oficial</span>'}
             <div class="card-actions">
                 ${botonFavorito({
@@ -320,6 +341,8 @@ export function mostrarPlataformas() {
     document.getElementById('mobileFilterButton').hidden = true;
     document.getElementById('seccion-plataformas').hidden = false;
 
+    if (!datosListos) { mostrarCargando('contenedor-plataformas'); return; }
+
     const visibles = estado.texto
         ? plataformas.filter(p => p.busqueda.includes(estado.texto))
         : plataformas;
@@ -345,7 +368,7 @@ export function renderizarPlataformas(contenedor, lista) {
                 <span class="badge">${SVG_DURACION} ${capSeguro(plataforma.duracion)}</span>
             </div>
             ${urlSegura(plataforma.url)
-                ? `<a class="platform-link" href="${escaparHTML(urlSegura(plataforma.url))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ver oferta en ${nombreSeguro(plataforma.nombre)} ↗</a>`
+                ? `<a class="platform-link" href="${escaparHTML(urlSegura(plataforma.url))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Ver oferta en ${nombreSeguro(plataforma.nombre)} ${ICONO_EXTERNO}</a>`
                 : '<span class="platform-link platform-link-muted">Sitio oficial no disponible</span>'}
             <div class="card-actions">
                 ${botonFavorito({
@@ -381,10 +404,17 @@ export function ofertasDeCarrera(carrera) {
     return indiceOfertasPorNombre.get(carrera.clave || normalizarTexto(carrera.nombre)) || [];
 }
 
+// Los chips de departamento llevan data-filter="departamento" (singular) pero
+// el estado vive en estado.departamentos (plural). Sin este mapa, el panel leía
+// undefined: "Todos" quedaba marcado aunque hubiera departamentos elegidos y
+// ninguno recibía el tilde. El filtro de recomendaciones leía lo mismo.
+const CAMPO_ESTADO = { departamento: 'departamentos', sectores: 'sectores' };
+function campoEstado(campo) { return CAMPO_ESTADO[campo] || campo; }
+
 // Un filtro formal está "inactivo" si no aplica. Departamentos y sectores son
 // multi-selección: inactivo = lista vacía. El resto son single-select: 'todos'.
 function filtroInactivo(campo) {
-    if (campo === 'departamento' || campo === 'sectores') return (estado[campo] || []).length === 0;
+    if (campo === 'departamento' || campo === 'sectores') return (estado[campoEstado(campo)] || []).length === 0;
     return estado[campo] === 'todos';
 }
 
@@ -476,6 +506,15 @@ export function mostrarResultados() {
     actualizarSwitcherVistas();
     const accionesToolbar = document.querySelector('#resultsToolbar .toolbar-actions');
     if (accionesToolbar) accionesToolbar.hidden = false;
+
+    // Con data.json todavía en camino no hay nada que filtrar: se avisa en la
+    // grilla y se sale. cargarOfertas() vuelve a llamar a actualizarVista().
+    if (!datosListos) {
+        document.getElementById('filtersSidebar').hidden = false;
+        document.getElementById('mobileFilterButton').hidden = false;
+        mostrarCargando();
+        return;
+    }
 
     // "¿Hay algo más que el texto buscado?" se pregunta en dos lugares: acá
     // (para el enrutado) y al medir una búsqueda sin resultados, que distingue
@@ -652,7 +691,7 @@ export function renderizarTarjetas(resultados, { mostrarMatch = false, encabezad
             </div>
             <div class="card-cta-group">
                 ${enlaceFichaBEN(oferta.nombre)}
-                ${urlSegura(oferta.link) ? `<a class="card-link-oficial" href="${escaparHTML(urlSegura(oferta.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Sitio oficial ↗</a>` : ''}
+                ${urlSegura(oferta.link) ? `<a class="card-link-oficial" href="${escaparHTML(urlSegura(oferta.link))}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Sitio oficial ${ICONO_EXTERNO}</a>` : ''}
             </div>
             <div class="card-actions">
                 ${botonFavorito({
@@ -732,13 +771,14 @@ export function renderizarTarjetasConCompatibilidad(resultados, rankings) {
 export function actualizarBotonesActivos() {
     document.querySelectorAll('.filter-option').forEach(boton => {
         const campo = boton.dataset.filter;
+        const clave = campoEstado(campo);
         const valor = boton.dataset.value;
         // Departamentos y sectores son multi-selección: un chip está activo si
         // su valor está en la lista, y "Todos" si la lista está vacía.
         const activo = (campo === 'departamento' || campo === 'sectores')
             ? (valor === 'todos'
-                ? (estado[campo] || []).length === 0
-                : (estado[campo] || []).includes(valor))
+                ? (estado[clave] || []).length === 0
+                : (estado[clave] || []).includes(valor))
             : estado[campo] === valor;
         boton.classList.toggle('active', activo);
         // WCAG 2.1 - 4.1.2 Nombre, función, valor: sin aria-pressed el estado del

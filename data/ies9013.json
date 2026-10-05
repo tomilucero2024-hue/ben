@@ -267,6 +267,15 @@
                         }
                     ],
                     "plan_fuente": "https://isteec.edu.ar/turismo/"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Administración Pública",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "ISTEEC 9-013",
+                    "link_oficial": "http://isteec.edu.ar",
+                    "id": 2210
                 }
             ],
             "departamento": "Capital"

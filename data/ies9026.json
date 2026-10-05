@@ -506,6 +506,33 @@
             }
           ],
           "plan_fuente": "https://ens9006-infd.mendoza.edu.ar/sitio/educacion-inicial/"
+        },
+        {
+          "nombre_carrera": "Profesorado de Educación Secundaria en Geografía",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "Instituto de la Patria Grande N° 9-026",
+          "link_oficial": "https://ies9026-infd.mendoza.edu.ar/sitio/",
+          "id": 4409
+        },
+        {
+          "nombre_carrera": "Tecnicatura Superior en Administración de Empresas de la Salud",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "facultad": "Instituto de la Patria Grande N° 9-026",
+          "link_oficial": "https://ies9026-infd.mendoza.edu.ar/",
+          "id": 4410
+        },
+        {
+          "nombre_carrera": "Tecnicatura Superior en Laboratorio de Análisis Clínicos",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "facultad": "Instituto de la Patria Grande N° 9-026",
+          "link_oficial": "https://ies9026-infd.mendoza.edu.ar/",
+          "id": 4411
         }
       ],
       "departamento": "Las Heras"

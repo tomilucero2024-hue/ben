@@ -16,7 +16,7 @@
 // hace que un usuario con la versión vieja cacheada reciba la nueva: al cambiar
 // el nombre del caché, el activate de abajo borra todo lo anterior. Si se
 // actualiza el HTML y no esto, el service worker sigue sirviendo lo viejo.
-const VERSION = '20260930_17';
+const VERSION = '20261004_6';
 const CACHE = `ben-${VERSION}`;
 
 // El esqueleto mínimo para que la app abra sin red.
@@ -28,6 +28,9 @@ const SHELL = [
     'index.html',
     'style.css',
     'paginas.css',
+    // Ventana de Mi lista: la app la usa siempre y las fichas estáticas la
+    // cargan para abrirla como overlay sin salir de la página.
+    'mi-lista.css',
     'manifest.json',
     // La analítica también va en el shell. Sola no mide nada sin red (gtag.js es
     // de Google y los pedidos a otros orígenes ni pasan por acá), pero así el
@@ -42,6 +45,8 @@ const SHELL = [
     'js/vocacional/test-completo.js',
     'js/favoritos.js',
     'js/mi-lista.js',
+    'js/mi-lista-loader.js',
+    'js/restaurar-scroll.js',
     'js/accesibilidad.js',
     'js/feedback.js',
     'js/util.js',
@@ -58,6 +63,11 @@ const SHELL = [
     'icon-512.png',
     'logo-ben-dark.png',
     'logo-ben-light.png',
+    // Tipografías auto-hospedadas: sin esto, offline la app cae a la fuente del
+    // sistema (y antes, con Google Fonts, sin internet ni siquiera arrancaba).
+    'fonts/montserrat.css',
+    'fonts/montserrat-latin.woff2',
+    'fonts/montserrat-latin-ext.woff2',
     'img/copiloto-icono.png',
     'data/data.json',
     'data/vocacional/config.json',

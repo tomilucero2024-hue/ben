@@ -23,9 +23,7 @@
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/montserrat.css?v=20261004_6">
 <script>
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
@@ -56,11 +54,13 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260930_17">
+<link rel="stylesheet" href="/paginas.css?v=20261004_6">
+<!-- Estilos de la ventana de Mi lista, que estas páginas abren sin salir. -->
+<link rel="stylesheet" href="/mi-lista.css?v=20261004_6">
 <!-- Medir las fichas: son la mayor parte del tráfico del sitio (llegan desde
      Google) y sin esto los informes verían solo la portada. El mismo archivo
      carga la app en index.html. -->
-<script src="/js/analitica.js?v=20260930_17"></script>
+<script src="/js/analitica.js?v=20261004_6"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"IES 9-030 (Instituto del Bicentenario)","item":"https://buscadoreducativo.com.ar/institucion/ies-9-030-instituto-del-bicentenario/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"IES 9-030 (Instituto del Bicentenario)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-030-instituto-del-bicentenario/","email":"contacto@institutodelbicentenario.edu.ar","address":{"@type":"PostalAddress","streetAddress":"Godoy Cruz, Mendoza","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -140,8 +140,8 @@
     </div>
     <aside class="lateral">
     <dl class="ficha">
-        <dt>Gestión</dt><dd>pública</dd>
-        <dt>Nivel</dt><dd>terciario</dd>
+        <dt>Gestión</dt><dd>Pública</dd>
+        <dt>Nivel</dt><dd>Terciario</dd>
         <dt>Provincia</dt><dd><a href="/provincia/mendoza/">Mendoza</a></dd>
         <dt>Oferta en BEN</dt><dd>10 carreras</dd>
         <dt>Dirección</dt><dd>Godoy Cruz, Mendoza</dd>
@@ -174,10 +174,10 @@
             <h4>4º año</h4>
             <ul><li>EDUCACIÓN SEXUAL INTEGRAL</li><li>EDUCACIÓN Y TECNOLOGÍAS DIGITALES</li><li>HISTORIA Y PATRIMONIO CULTURAL DE MENDOZA</li><li>FILOLOGÍA</li><li>LITERATURA ARGENTINA III</li><li>TEORÍA Y CRÍTICA LITERARIAS</li><li>PPD IV</li><li>Unidades curriculares electivas de Formación Complementaria Específica</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-lengua-y-literatura/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-teatro/">Profesorado de Teatro</a></h3>
@@ -201,10 +201,10 @@
             <h4>4º año</h4>
             <ul><li>DIRECCIÓN Y PUESTA EN ESCENA</li><li>PRODUCCIÓN ARTÍSTICA CONTEMPORÁNEA</li><li>FORMACIÓN COMPLEMENTARIA ESPECÍFICA</li><li>DISEÑO Y GESTIÓN DE PROYECTOS TEATRALES</li><li>FORMACIÓN COMPLEMENTARIA GENERAL: Historia de los lenguajes</li><li>EDUCACIÓN Y TECNOLOGÍAS DIGITALES</li><li>EDUCACIÓN SEXUAL INTEGRAL</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-teatro/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-teatro/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-teatro/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-teatro/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-secundaria-en-historia/">Profesorado de Educacion Secundaria en Historia</a></h3>
@@ -228,10 +228,10 @@
             <h4>4º año</h4>
             <ul><li>Historia del arte argentino</li><li>Investigación histórica</li><li>Arqueología</li><li>Formación Complementaria Específica</li><li>Historia Americana III (1960 a la actualidad)</li><li>Historia Universal IV</li><li>Proyecto de Intervención Socioeducativa</li><li>Formación Complementaria General</li><li>Educación y Tecnologías Digitales</li><li>Educación Sexual Integral</li><li>Formación Práctica Profesional IV</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-secundaria-en-historia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-especial/">Profesorado de Educacion Especial</a></h3>
@@ -255,10 +255,10 @@
             <h4>4º año</h4>
             <ul><li>Educación y Tecnologías Digitales</li><li>Educación Sexual Integral</li><li>Historia y Patrimonio Cultural de Mendoza</li><li>UCE Formación complementaria General</li><li>Expresión Artística: Teatro</li><li>Práctica Profesional IV</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-especial/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-artes-visuales/">Profesorado de Artes Visuales</a></h3>
@@ -282,10 +282,10 @@
             <h4>4º año</h4>
             <ul><li>PRODUCCIÓN ARTÍSTICA II: PINTURA – CERÁMICA – ESCULTURA – GRABADO – DIBUJO</li><li>ARTES VISUALES Y PRODUCCIÓN AUDIOVISUAL</li><li>HISTORIA DE LAS ARTES VISUALES IV</li><li>TEORÍA DEL ARTE</li><li>PRODUCCIÓN ARTÍSTICA CONTEMPORÁNEA</li><li>FORMACIÓN COMPLEMENTARIA ESPECÍFICA</li><li>EDUCACIÓN Y TECNOLOGÍAS DIGITALES</li><li>EDUCACIÓN SEXUAL INTEGRAL</li><li>FORMACIÓN PRÁCTICA PROFESIONAL IV</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-artes-visuales/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-primaria/">Profesorado de Educacion Primaria</a></h3>
@@ -309,10 +309,10 @@
             <h4>4º año</h4>
             <ul><li>Educación Sexual Integral</li><li>Educación con tecnologías digitales</li><li>Historia y Patrimonio Cultural de Mendoza</li><li>Formación complementaria General</li><li>Didáctica de la Lengua y la Literatura infantil y juvenil</li><li>Didáctica de la Matemática</li><li>Didáctica de las Ciencias Sociales III</li><li>Didáctica de las Ciencias Naturales III</li><li>Formación complementaria Específica</li><li>Práctica Profesional Docente IV. Residencia docente</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-primaria/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-de-educacion-inicial/">Profesorado de Educacion Inicial</a></h3>
@@ -339,7 +339,7 @@
 
     </div>
 </details>
-            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-educacion-inicial/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/profesorado-en-ingles/">Profesorado de Ingles</a></h3>
@@ -363,10 +363,10 @@
             <h4>4º año</h4>
             <ul><li>LENGUA INGLESA IV</li><li>PRÁCTICA PROFESIONAL DOCENTE IV: Residencia Docente</li><li>FONÉTICA Y FONOLOGÍA INGLESA IV</li><li>CULTURA Y LITERATURA NORTEAMERICANA</li><li>EDUCACIÓN SEXUAL INTEGRAL</li><li>EDUCACIÓN Y TECNOLOGÍAS DIGITALES</li><li>HISTORIA Y PATRIMONIO CULTURAL DE MENDOZA</li><li>FORMACIÓN COMPLEMENTARIA GENERAL</li><li>UNIDAD DE DISEÑO JURISDICCIONAL ELECTIVA</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-ingles/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-ingles/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-ingles/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/profesorado-de-ingles/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -390,10 +390,10 @@
             <h4>3º año</h4>
             <ul><li>Formulación y Evaluación de Proyectos</li><li>Marketing</li><li>Seguridad e Higiene Laboral</li><li>Logística Internacional</li><li>Ética Profesional</li><li>Electiva</li><li>Metodología de la Investigación</li><li>Gestión de la Calidad</li><li>Derecho Privado</li><li>Problemática Sociocultural y el Contexto</li><li>Práctica Profesionalizante III</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-logistica/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-logistica/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-logistica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-logistica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -412,7 +412,7 @@
 
     </div>
 </details>
-            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/tecnicatura-construcciones/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://institutodelbicentenario-infd.mendoza.edu.ar/sitio/tecnicatura-construcciones/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
     </div>
@@ -502,6 +502,11 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260930_17"></script>
+<script src="/js/favoritos.js?v=20261004_6"></script>
+<!-- Vuelve a la posición donde estabas al usar Atrás (la app avisa cuándo
+     terminó de pintar; en estas páginas el HTML ya está listo). -->
+<script src="/js/restaurar-scroll.js?v=20261004_6"></script>
+<!-- Mi lista se abre como ventana flotante sin salir de la ficha. -->
+<script src="/js/mi-lista-loader.js?v=20261004_6"></script>
 </body>
 </html>

@@ -369,6 +369,24 @@
                         }
                     ],
                     "plan_fuente": "https://profesoradodearte.edu.ar/profesorado-para-tecnicos/"
+                },
+                {
+                    "nombre_carrera": "Profesorado de Danza",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Profesorado de Arte N° 9-014 IPA",
+                    "link_oficial": "http://profesoradodearte.edu.ar/",
+                    "id": 2307
+                },
+                {
+                    "nombre_carrera": "Profesorado para la Educación Secundaria de la modalidad Técnico Profesional (en concurrencia con el título de base)",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto Profesorado de Arte N° 9-014 IPA",
+                    "link_oficial": "http://profesoradodearte.edu.ar/",
+                    "id": 2308
                 }
             ],
             "departamento": "San Rafael"

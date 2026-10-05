@@ -61,8 +61,9 @@ function ok(cond, msg) {
 }
 
 // 1. El contador resume total de instituciones, sin pedir click en un tipo.
-ok(document.getElementById('resultsCount').textContent === '53 instituciones · por tipo',
-    'el contador dice "53 instituciones · por tipo"');
+const totalInstituciones = new Set(global.ofertas.map(o => o.institucion)).size;
+ok(document.getElementById('resultsCount').textContent === `${totalInstituciones} instituciones · por tipo`,
+    `el contador dice "${totalInstituciones} instituciones · por tipo"`);
 ok(!document.querySelector('#cardContainer .area-card[data-tipo]'),
     'no hay tarjetas de "tipo" que exijan click (drilldown eliminado)');
 ok(!document.getElementById('cardContainer').classList.contains('areas-grid'),
@@ -79,14 +80,14 @@ ok(['tipo-universidades', 'tipo-ies', 'tipo-centros'].every(id => document.getEl
 // 3. Todos visibles a la vez: los conteos por grupo y el total de tarjetas.
 const grupos = [...document.querySelectorAll('#cardContainer .grupo-instituciones')];
 const conteos = grupos.map(g => g.querySelectorAll('.card.career-group-card').length);
-ok(JSON.stringify(conteos) === JSON.stringify([13, 38, 2]),
-    '13 universidades + 38 IES + 2 centros, todos renderizados de una');
+ok(conteos.length === 3 && conteos.reduce((a, b) => a + b, 0) === totalInstituciones,
+    `las ${totalInstituciones} instituciones se reparten en los 3 grupos (${conteos.join(' + ')})`);
 const totalTarjetas = document.querySelectorAll('#cardContainer .card.career-group-card').length;
-ok(totalTarjetas === 53, 'total de 53 tarjetas de institución en el DOM');
+ok(totalTarjetas === totalInstituciones, `total de ${totalInstituciones} tarjetas de institución en el DOM`);
 
 // 4. Cada tarjeta tiene su único CTA, con href a una página estática real.
 const ctaLinks = [...document.querySelectorAll('#cardContainer .card.career-group-card .card-link')];
-ok(ctaLinks.length === 53, 'una sola acción por tarjeta (link o "Sin ficha en BEN")');
+ok(ctaLinks.length === totalInstituciones, 'una sola acción por tarjeta (link o "Sin ficha en BEN")');
 let hrefsNulos = 0;
 ctaLinks.forEach(el => {
     const href = el.getAttribute('href');

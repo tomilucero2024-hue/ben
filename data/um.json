@@ -1954,6 +1954,15 @@
                         }
                     ],
                     "plan_fuente": "https://um.edu.ar/wp-content/uploads/PLAN-DE-ESTUDIO-2022.pdf"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Programación de Videojuegos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ingeniería",
+                    "link_oficial": "https://um.edu.ar/ingenieria/",
+                    "id": 331
                 }
             ]
         }

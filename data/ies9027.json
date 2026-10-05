@@ -290,6 +290,15 @@
             }
           ],
           "plan_fuente": "https://ies9027-infd.mendoza.edu.ar/sitio/estructura-curricular-3/"
+        },
+        {
+          "nombre_carrera": "Profesorado de Educación Inicial",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "Instituto de Educación Superior Nº 9-027",
+          "link_oficial": "https://ies9027-infd.mendoza.edu.ar/",
+          "id": 5005
         }
       ],
       "departamento": "Guaymallén"

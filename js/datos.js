@@ -27,6 +27,13 @@ const SECTORES_CARRERAS = {};
 export const enlacesBEN = { carreras: {}, instituciones: {} };
 // Plataformas online: una entrada por plataforma, no por curso.
 export const plataformas = [];
+// data.json llegó (o falló y ya se avisó). Mientras esté en false, las vistas
+// del catálogo muestran "Cargando catálogo…" en vez de su estado vacío: en una
+// conexión lenta se puede entrar a la grilla antes de que termine la descarga.
+export let datosListos = false;
+// La llama cargarOfertas() al terminar y los tests que ejercitan el render con
+// datos armados a mano (no pueden reasignar un binding importado).
+export function marcarDatosListos() { datosListos = true; }
 
 // Datos que no viven en data.json (su estructura no se toca): a dónde lleva cada
 // plataforma y, opcionalmente, su logo.
@@ -130,17 +137,33 @@ export const catalogosAparte = {
     }
 };
 
-export async function cargarOfertas() {
+// Carga data.json y arma las estructuras que consume la vista (ofertas,
+// plataformas, catálogos aparte). No pinta nada: la app la usa desde
+// cargarOfertas() y Mi lista la llama desde las páginas estáticas para
+// completar la comparación sin depender del DOM de la app.
+// Devuelve true si el catálogo quedó cargado.
+export async function cargarCatalogo() {
+    if (datosListos) return true;
     try {
-        const respuesta = await fetch('/data/data.json');
+        // Todos los pedidos arrancan juntos: data.json es el pesado y los JSON
+        // auxiliares son chicos. Pedirlos en serie sumaba varios segundos en
+        // celulares lentos antes de poder pintar la primera tarjeta. Los
+        // auxiliares toleran fallas (null): la grilla anda igual sin ellos.
+        const pedirSiSePuede = (ruta) => fetch(ruta).catch(() => null);
+        const [respuesta, respEnlaces, respSectores, respMapa, respuestaRubros] = await Promise.all([
+            fetch('/data/data.json'),
+            pedirSiSePuede('/data/enlaces-ben.json'),
+            pedirSiSePuede('/data/sectores.json'),
+            pedirSiSePuede('/data/sectores-carreras.json'),
+            pedirSiSePuede('/data/rubros-aparte.json')
+        ]);
         if (!respuesta.ok) throw new Error('No se pudo cargar data.json');
         const data = await respuesta.json();
 
         // Tolerante a fallas a proposito: es una mejora del enlazado interno,
         // no un dato del que dependa la grilla.
         try {
-            const mapa = await fetch('/data/enlaces-ben.json');
-            if (mapa.ok) Object.assign(enlacesBEN, await mapa.json());
+            if (respEnlaces && respEnlaces.ok) Object.assign(enlacesBEN, await respEnlaces.json());
         } catch (e) {
             console.warn('Sin mapa de enlaces internos:', e);
         }
@@ -149,15 +172,12 @@ export async function cargarOfertas() {
         // fallas: sin esto, la grilla funciona igual y el filtro de sector
         // simplemente no aparece.
         try {
-            const [respuestaSectores, respuestaMapa] = await Promise.all([
-                fetch('/data/sectores.json'),
-                fetch('/data/sectores-carreras.json')
+            const [datos, mapa] = await Promise.all([
+                respSectores && respSectores.ok ? respSectores.json() : Promise.resolve(null),
+                respMapa && respMapa.ok ? respMapa.json() : Promise.resolve(null)
             ]);
-            if (respuestaSectores.ok) {
-                const datos = await respuestaSectores.json();
-                (datos.sectores || []).forEach(s => SECTORES.push({ id: s.id, nombre: s.nombre }));
-            }
-            if (respuestaMapa.ok) Object.assign(SECTORES_CARRERAS, (await respuestaMapa.json()).carreras || {});
+            ((datos && datos.sectores) || []).forEach(s => SECTORES.push({ id: s.id, nombre: s.nombre }));
+            if (mapa) Object.assign(SECTORES_CARRERAS, mapa.carreras || {});
         } catch (e) {
             console.warn('Sin lista de sectores ni mapa por carrera:', e);
         }
@@ -165,8 +185,7 @@ export async function cargarOfertas() {
         // Rubros de formaciones alternativas y oficios técnicos. Tolerante a
         // fallas: sin el archivo, cada sección cae a su grilla plana de siempre.
         try {
-            const respuestaRubros = await fetch('/data/rubros-aparte.json');
-            if (respuestaRubros.ok) Object.assign(RUBROS_APARTE, await respuestaRubros.json());
+            if (respuestaRubros && respuestaRubros.ok) Object.assign(RUBROS_APARTE, await respuestaRubros.json());
         } catch (e) {
             console.warn('Sin rubros de los catálogos aparte:', e);
         }
@@ -194,18 +213,39 @@ export async function cargarOfertas() {
         const idsValidos = new Set(SECTORES.map(s => s.id));
         estado.sectores = estado.sectores.filter(id => idsValidos.has(id));
         renderizarFiltroSectores();
-        actualizarVista();
+        marcarDatosListos();
+        return true;
     } catch (error) {
         console.error(error);
-        // El sitio queda con la grilla vacía y un cartel de "abrí con Live
-        // Server". Para el operador esto era invisible: solo lo veía el
-        // visitante, en su consola. Es la falla más probable del sitio (un JSON
-        // que no baja, un deploy a medio hacer) y por eso tiene nombre propio y
-        // no sale dentro del 'error' genérico.
+        // Para el operador esta falla era invisible: solo la veía el visitante,
+        // en su consola. Es la más probable del sitio (un JSON que no baja, un
+        // deploy a medio hacer) y por eso tiene nombre propio y no sale dentro
+        // del 'error' genérico.
         registrarEvento('datos_no_cargan', { motivo: 'error_inesperado' });
-        document.getElementById('cardContainer').innerHTML = '<p class="empty-state">No se pudieron cargar las ofertas. Probá abrir la página con Live Server.</p>';
+        return false;
     }
 }
+
+export async function cargarOfertas() {
+    const cargado = await cargarCatalogo();
+    if (!cargado) {
+        // El sitio queda con la grilla vacía y un cartel de "abrí con Live
+        // Server". En las estáticas no hay grilla: se sigue con el snapshot.
+        const contenedor = document.getElementById('cardContainer');
+        if (contenedor) {
+            contenedor.innerHTML = '<p class="empty-state">No se pudieron cargar las ofertas. Probá abrir la página con Live Server.</p>';
+        }
+        // También se da por terminada la carga: si no, cada interacción
+        // volvería a "Cargando catálogo…" en vez de mostrar el aviso real.
+        marcarDatosListos();
+        return;
+    }
+    actualizarVista();
+    // Primer render con datos: lo esperan la restauración de scroll y Mi lista,
+    // que repinta los snapshots con la información viva.
+    document.dispatchEvent(new CustomEvent('ben:datos-listos'));
+}
+
 function crearOferta(carrera, institucion) {
     const nombre = limpiarTexto(carrera.nombre_carrera || 'Carrera sin nombre');
     const modalidad = carrera.modalidad || 'Presencial';

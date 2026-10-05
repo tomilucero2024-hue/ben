@@ -7112,6 +7112,78 @@
                         }
                     ],
                     "plan_fuente": "https://www.uncuyo.edu.ar/estudios/carrera/traductorado-publico-en-ingles"
+                },
+                {
+                    "nombre_carrera": "Ciclo de Profesorado para Profesionales Universitarios (Sede Central y San Rafael)",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Filosofía y Letras",
+                    "link_oficial": "https://ffyl.uncuyo.edu.ar",
+                    "id": 221
+                },
+                {
+                    "nombre_carrera": "Licenciatura en Ciencia Política y Administración Pública",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Políticas y Sociales",
+                    "link_oficial": "https://fcp.uncuyo.edu.ar/",
+                    "id": 222
+                },
+                {
+                    "nombre_carrera": "Licenciatura en Historia de las Artes Plásticas",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "5 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Artes y Diseño",
+                    "link_oficial": "https://fad.uncuyo.edu.ar",
+                    "id": 223
+                },
+                {
+                    "nombre_carrera": "Profesorado Universitario en Historia",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Filosofía y Letras",
+                    "link_oficial": "https://ffyl.uncuyo.edu.ar",
+                    "id": 224
+                },
+                {
+                    "nombre_carrera": "Profesorado Universitario en Lengua Inglesa",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Filosofía y Letras",
+                    "link_oficial": "https://ffyl.uncuyo.edu.ar",
+                    "id": 225
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Administración de Edificios de Propiedad Horizontal y Conjuntos Inmobiliarios",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Derecho",
+                    "link_oficial": "https://derecho.uncuyo.edu.ar/",
+                    "id": 226
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Producción Audiovisual",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Políticas y Sociales",
+                    "link_oficial": "https://fcp.uncuyo.edu.ar/",
+                    "id": 227
+                },
+                {
+                    "nombre_carrera": "Traductorado Público en Inglés (Zona Este: Sede Junín)",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Filosofía y Letras",
+                    "link_oficial": "https://ffyl.uncuyo.edu.ar",
+                    "id": 228
                 }
             ]
         }

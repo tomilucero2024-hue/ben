@@ -23,9 +23,7 @@
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/montserrat.css?v=20261004_6">
 <script>
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
@@ -56,11 +54,13 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260930_17">
+<link rel="stylesheet" href="/paginas.css?v=20261004_6">
+<!-- Estilos de la ventana de Mi lista, que estas páginas abren sin salir. -->
+<link rel="stylesheet" href="/mi-lista.css?v=20261004_6">
 <!-- Medir las fichas: son la mayor parte del tráfico del sitio (llegan desde
      Google) y sin esto los informes verían solo la portada. El mismo archivo
      carga la app en index.html. -->
-<script src="/js/analitica.js?v=20260930_17"></script>
+<script src="/js/analitica.js?v=20261004_6"></script>
 
 </head>
 <body>
@@ -228,6 +228,11 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260930_17"></script>
+<script src="/js/favoritos.js?v=20261004_6"></script>
+<!-- Vuelve a la posición donde estabas al usar Atrás (la app avisa cuándo
+     terminó de pintar; en estas páginas el HTML ya está listo). -->
+<script src="/js/restaurar-scroll.js?v=20261004_6"></script>
+<!-- Mi lista se abre como ventana flotante sin salir de la ficha. -->
+<script src="/js/mi-lista-loader.js?v=20261004_6"></script>
 </body>
 </html>

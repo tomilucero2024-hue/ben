@@ -23,9 +23,7 @@
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/montserrat.css?v=20261004_6">
 <script>
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
@@ -56,11 +54,13 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260930_17">
+<link rel="stylesheet" href="/paginas.css?v=20261004_6">
+<!-- Estilos de la ventana de Mi lista, que estas páginas abren sin salir. -->
+<link rel="stylesheet" href="/mi-lista.css?v=20261004_6">
 <!-- Medir las fichas: son la mayor parte del tráfico del sitio (llegan desde
      Google) y sin esto los informes verían solo la portada. El mismo archivo
      carga la app en index.html. -->
-<script src="/js/analitica.js?v=20260930_17"></script>
+<script src="/js/analitica.js?v=20261004_6"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Oficios","item":"https://buscadoreducativo.com.ar/area/oficios/"},{"@type":"ListItem","position":4,"name":"Tecnicatura en Producción Industrial y Automatización","item":"https://buscadoreducativo.com.ar/carrera/tecnicatura-en-produccion-industrial-y-automatizacion/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Tecnicatura en Producción Industrial y Automatización","description":"Dónde estudiar Tecnicatura en Producción Industrial y Automatización en Mendoza: tecnicatura del área Oficios, dictada por 1 institución (1 pública). Dura 2 años y medio. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/tecnicatura-en-produccion-industrial-y-automatizacion/","provider":{"@type":"EducationalOrganization","name":"ITU - Instituto Tecnológico Universitario (UNCuyo)","url":"https://buscadoreducativo.com.ar/institucion/itu-instituto-tecnologico-universitario-uncuyo/"}}</script>
 </head>
@@ -162,7 +162,7 @@
                 <span>Los costos y aranceles los define cada institución. Para saber cuánto sale, comunicate con el establecimiento.</span>
             </p>
         </div>
-        <a class="btn-ver-mi-lista" href="/?lista=1">
+        <a class="btn-ver-mi-lista" href="/?lista=1" data-abrir-mi-lista>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
             Ver Mi lista
         </a>
@@ -172,7 +172,7 @@
     <h2>Dónde estudiar Tecnicatura en Producción Industrial y Automatización</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
-            <h3><span class="etiqueta publica">pública</span> <a href="/institucion/itu-instituto-tecnologico-universitario-uncuyo/">ITU - Instituto Tecnológico Universitario (UNCuyo)</a></h3>
+            <h3><span class="etiqueta publica">Pública</span> <a href="/institucion/itu-instituto-tecnologico-universitario-uncuyo/">ITU - Instituto Tecnológico Universitario (UNCuyo)</a></h3>
             <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Mendoza</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio</summary>
@@ -181,10 +181,10 @@
             <h4>Plan de estudios</h4>
             <ul><li>Aseguramiento de la Calidad Industrial</li><li>Automatismo y Robótica</li><li>Calor y Termodinámica</li><li>Ciencia de los Materiales</li><li>Comprensión y Producción de Textos</li><li>Desarrollo del Pensamiento y Desempeño de Roles</li><li>Electricidad y Electrónica</li><li>Energía y Ambiente</li><li>Gestión Empresario/Industrial</li><li>Higiene y Seguridad Industrial</li><li>Informática</li><li>Inglés Técnico</li><li>Matemática y Estadística</li><li>Mecánica</li><li>Planificación y Control de la Producción</li><li>Práctica Profesionalizante</li><li>Proyecto Tutorado</li><li>Resistencia de Materiales</li><li>Técnicas de Representación</li><li>Tecnología de Construcción y Diseño Mecánico</li><li>Tecnología y Métodos de Fabricación Mecánica</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-industrial-y-automatizacion_9658" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-industrial-y-automatizacion_9658" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-industrial-y-automatizacion_9658" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.uncuyo.edu.ar/estudios/carrera/tecnicatura-universitaria-en-produccion-industrial-y-automatizacion_9658" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -213,14 +213,19 @@
     <section class="relacionadas">
     <h2>Otras carreras del área Oficios</h2>
     <ul class="enlaces">
+        <li><a href="/carrera/electricidad-domestica-y-comercial/">Electricidad Doméstica y Comercial</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/licenciatura-en-ceramica-industrial/">Licenciatura en Cerámica Industrial</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/refrigeracion-domestica-y-comercial/">Refrigeración doméstica y comercial</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/refrigeracion-industrial/">Refrigeración Industrial</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/soldadura-y-herreria-artistica/">Soldadura y Herrería Artística</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-construcciones/">Tecnicatura Construcciones</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-en-mantenimiento-e-instalaciones-industriales/">Tecnicatura en Mantenimiento e Instalaciones Industriales</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-construcciones-sustentables/">Tecnicatura Superior en Construcciones Sustentables</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-metalmecanica/">Tecnicatura Superior en Metalmecánica</a> <span class="cuantas">(1)</span></li>
+        <li><a href="/carrera/tecnicatura-superior-en-servicios-basicos-y-construcciones-livianas/">Tecnicatura Superior en Servicios Básicos y Construcciones Livianas Industrializadas</a> <span class="cuantas">(1)</span></li>
         <li><a href="/carrera/tecnicatura-superior-en-transporte-ferroviario/">Tecnicatura Superior en Transporte Ferroviario</a> <span class="cuantas">(1)</span></li>
     </ul>
-    <p class="relacionadas-mas"><a class="btn-enlace-mas" href="/area/oficios/">Ver las 7 carreras del área Oficios →</a></p>
+    <p class="relacionadas-mas"><a class="btn-enlace-mas" href="/area/oficios/">Ver las 12 carreras del área Oficios →</a></p>
     </section>
     </div>
 </div>
@@ -309,6 +314,11 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260930_17"></script>
+<script src="/js/favoritos.js?v=20261004_6"></script>
+<!-- Vuelve a la posición donde estabas al usar Atrás (la app avisa cuándo
+     terminó de pintar; en estas páginas el HTML ya está listo). -->
+<script src="/js/restaurar-scroll.js?v=20261004_6"></script>
+<!-- Mi lista se abre como ventana flotante sin salir de la ficha. -->
+<script src="/js/mi-lista-loader.js?v=20261004_6"></script>
 </body>
 </html>

@@ -73,6 +73,7 @@ ARCHIVOS_SIMPLES = [
     ("ies9027.json", "✅ Datos del IES 9-027 (Guaymallén) cargados al chasis.", "⚠️ Faltan los datos del IES 9-027. Corré el script correspondiente primero."),
     ("ies9007.json", "✅ Datos del IES 9-007 (Dr. Salvador Calafat) cargados al chasis.", "⚠️ Faltan los datos del IES 9-007. Corré el script correspondiente primero."),
     ("idesa.json", "✅ Datos del IDESA (Instituto de Educación Superior Alvear) cargados al chasis.", "⚠️ Faltan los datos del IDESA. Corré el script correspondiente primero."),
+    ("expo-instituciones.json", "✅ Instituciones nuevas de Expo Educativa 2026 cargadas al chasis.", "⚠️ Falta expo-instituciones.json. Corré scrapers/expo_educativa.py primero."),
 ]
 
 

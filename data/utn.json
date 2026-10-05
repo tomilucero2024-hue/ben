@@ -860,6 +860,24 @@
                         }
                     ],
                     "plan_fuente": "https://frm.utn.edu.ar/plan-de-estudio-tec-univ-en-desarrollo-y-produccion-de-videojuegos/"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo - (A distancia)",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "A distancia",
+                    "facultad": "Facultad Regional Mendoza",
+                    "link_oficial": "http://www4.frm.utn.edu.ar/",
+                    "id": 15
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Universitaria en Desarrollo y Producción de Videojuegos",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "A distancia",
+                    "facultad": "Facultad Regional Mendoza",
+                    "link_oficial": "http://www4.frm.utn.edu.ar/",
+                    "id": 16
                 }
             ]
         }

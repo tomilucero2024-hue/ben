@@ -2969,6 +2969,42 @@
             }
           ],
           "plan_fuente": "https://www.uda.edu.ar/index.php/oferta-educativa-fcsa-2025/ciclos-de-complementacion-curricular/licenciatura-en-turismo"
+        },
+        {
+          "nombre_carrera": "Licenciatura en Administración Gastronómica (Ciclo de Complementación Curricular)",
+          "categoria": "Grado / Licenciatura",
+          "duracion": "1 año y medio",
+          "modalidad": "Presencial",
+          "facultad": "Facultad de Cs. Sociales y Administrativas",
+          "link_oficial": "https://www.uda.edu.ar/index.php/institucional-fcsa-2025",
+          "id": 652
+        },
+        {
+          "nombre_carrera": "Licenciatura en Administración Hotelera (Ciclo de Complementación Curricular)",
+          "categoria": "Grado / Licenciatura",
+          "duracion": "1 año y medio",
+          "modalidad": "Presencial",
+          "facultad": "Facultad de Cs. Sociales y Administrativas",
+          "link_oficial": "https://www.uda.edu.ar/index.php/institucional-fcsa-2025",
+          "id": 653
+        },
+        {
+          "nombre_carrera": "Licenciatura en Administración de Salud (Ciclo de Complementación Curricular) Presencial y a Distancia",
+          "categoria": "Grado / Licenciatura",
+          "duracion": "1 año y medio",
+          "modalidad": "A distancia",
+          "facultad": "Facultad de Cs. Económicas y Jurídicas",
+          "link_oficial": "https://www.uda.edu.ar/index.php/institucional-fcej-2025",
+          "id": 654
+        },
+        {
+          "nombre_carrera": "Profesorado de Grado Universitario (Ciclo de Complementación Curricular)",
+          "categoria": "Grado / Profesorado",
+          "duracion": "2 años",
+          "modalidad": "Presencial",
+          "facultad": "Facultad de Psicología",
+          "link_oficial": "https://www.uda.edu.ar/index.php/institucional-fpsi-2025",
+          "id": 655
         }
       ],
       "provincia": "Mendoza",

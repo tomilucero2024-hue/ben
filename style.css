@@ -513,18 +513,18 @@ h1, h2, .section-tab-texto strong {
    sugerencias no era válido para un role="option" —interacción anidada— y la
    ficha se alcanza desde la tarjeta del resultado.) */
 
+/* Card de filtros de mobile: único acceso al cajón (ver breakpoints). */
 .mobile-filter-button {
-    min-height: 42px; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .62rem .85rem;
-    color: var(--text); background: var(--surface-soft); font-family: var(--font-detail); font-size: var(--fs-base); letter-spacing: .035em;
+    display: none; align-items: center; justify-content: center; gap: .4rem;
+    flex: 0 0 auto; white-space: nowrap; min-height: 42px; padding: .5rem .9rem;
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+    border-radius: var(--radius-md);
+    color: var(--text); background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+    font-family: var(--font-title); font-size: var(--fs-sm); font-weight: 700;
+    transition: background-color var(--dur-base) ease, border-color var(--dur-base) ease;
 }
-.mobile-filter-button:hover { border-color: var(--accent); color: var(--accent-ink); }
-/* Solo aparece en celular (ver breakpoints). No se encoge: es el único acceso
-   a los filtros y tiene que sobrevivir a que el buscador se angoste. */
-.mobile-filter-button { display: none; flex-shrink: 0; align-items: center; gap: .35rem; white-space: nowrap; }
-/* El texto se oculta por opacidad (no display): ocultarlo durante el scroll
-   reflotaba el layout del botón en el mismo frame y contribuía a que el header
-   se viera bugueado al bajar rápido. Al desvanecer, el botón conserva su ancho. */
-.mobile-filter-texto { display: inline; transition: opacity var(--dur-base) ease; }
+.mobile-filter-button:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 16%, var(--surface)); }
+.mobile-filter-button .btn-svg { width: 16px; height: 16px; }
 
 /* ================================================================
    5. ESTRUCTURA DEL CATÁLOGO
@@ -565,6 +565,18 @@ h1, h2, .section-tab-texto strong {
 .filters-heading { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1rem .8rem; border-bottom: 1px solid var(--line); }
 .filters-heading h2 { margin: 0; font-size: var(--fs-md); }
 .close-filters-button { display: none; padding: 0; color: var(--muted); background: none; border: 0; font-size: var(--fs-xl); line-height: 1; }
+/* Guía de títulos dentro del panel: "¿Qué es eso?" lleva a /titulos/. Es una
+   entrada más del panel, arriba de "Tipo de formación", y solo existe en
+   Educación Formal porque el panel entero se oculta en las otras secciones. */
+.filtro-guia {
+    display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+    min-height: 44px; padding: .85rem 1rem; border-bottom: 1px solid var(--line);
+    color: var(--accent-ink); background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+    font-family: var(--font-title); font-size: var(--fs-sm); font-weight: 700; text-decoration: none;
+    transition: background-color var(--dur-base) ease;
+}
+.filtro-guia:hover { background: color-mix(in srgb, var(--accent) 16%, var(--surface)); }
+.filtro-guia-flecha { flex: none; }
 .filter-group { padding: 1rem; border-bottom: 1px solid var(--line); }
 .filter-group h3 { margin: 0 0 .55rem; color: var(--text); font-family: var(--font-detail); font-size: var(--fs-md); font-weight: 400; letter-spacing: .045em; }
 .filter-options { display: flex; flex-direction: column; align-items: flex-start; gap: .25rem; }
@@ -608,50 +620,9 @@ h1, h2, .section-tab-texto strong {
 
 /* 7. BARRA SOBRE LOS RESULTADOS: cantidad encontrada, selector de orden y las
       tres formas de explorar el catálogo (Carreras / Instituciones / Por área). */
-/* Banner hacia la guía de títulos (/titulos/): es el acceso llamativo a las
-   diferencias entre licenciatura, tecnicatura, profesorado y posgrado. Solo se
-   muestra en Educación Formal: las otras secciones tienen su propio encabezado
-   y el banner no aplica. */
-.banner-titulos {
-    display: none;
-    align-items: center; gap: .85rem;
-    margin: 0 0 1.1rem;
-    padding: .85rem 1rem;
-    border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
-    border-radius: var(--radius-md);
-    background: color-mix(in srgb, var(--accent) 10%, var(--surface));
-    color: var(--text); text-decoration: none;
-    transition: background-color var(--dur-base) ease, border-color var(--dur-base) ease;
-}
-body[data-seccion="formal"] .banner-titulos { display: flex; }
-.banner-titulos:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 16%, var(--surface)); }
-.banner-titulos-icono { display: inline-flex; flex: none; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: 50%; background: var(--surface); color: var(--accent-ink); }
-.banner-titulos-icono svg { width: 22px; height: 22px; }
-.banner-titulos-texto { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
-.banner-titulos-texto strong { font-family: var(--font-title); font-size: var(--fs-base); }
-.banner-titulos-texto > span { color: var(--muted); font-size: var(--fs-sm); line-height: 1.35; }
-.banner-titulos-corto { display: none; }
-.banner-titulos-cta { margin-left: auto; flex: none; color: var(--accent-ink); font-weight: 700; font-size: var(--fs-sm); white-space: nowrap; }
-/* En celular la franja se vuelve una píldora compacta: sin ícono ni bajada, con
-   el título corto y el CTA reducido a la flecha. Sigue siendo llamativa pero no
-   ocupa media pantalla. */
-@media (max-width: 600px) {
-    body[data-seccion="formal"] .banner-titulos {
-        display: inline-flex;
-        gap: .35rem;
-        padding: .5rem .9rem;
-        border-radius: var(--radius-pill);
-        margin: 0 0 .85rem;
-    }
-    .banner-titulos-icono { display: none; }
-    .banner-titulos-texto { flex-direction: row; align-items: center; }
-    .banner-titulos-texto strong { font-size: var(--fs-sm); }
-    .banner-titulos-texto > span { display: none; }
-    .banner-titulos-largo { display: none; }
-    .banner-titulos-corto { display: inline; }
-    .banner-titulos-cta { margin-left: 0; font-size: var(--fs-sm); }
-    .banner-titulos-cta-texto { display: none; }
-}
+/* La guía de títulos (/titulos/) se mudó al panel de filtros como entrada
+   "¿Qué es eso?": solo Educación Formal, porque el panel entero se oculta en
+   las otras secciones (ver .filtro-guia, arriba, junto a .filters-heading). */
 .results-toolbar { display: flex; flex-direction: column; gap: .75rem; margin-bottom: 1.25rem; }
 .results-toolbar-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 .results-toolbar-bottom { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
@@ -897,6 +868,16 @@ body[data-seccion="formal"] .banner-titulos { display: flex; }
     flex-shrink: 0;
     vertical-align: -2px;
 }
+/* Icono de enlace externo (reemplaza la flecha ↗): sigue el color del texto y
+   se alinea con la línea base. */
+.icono-externo {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    flex: none;
+    margin-left: .3em;
+    vertical-align: -1.5px;
+}
 .badge .meta-svg {
     width: 13px;
     height: 13px;
@@ -917,6 +898,9 @@ body[data-seccion="formal"] .banner-titulos { display: flex; }
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* Si los dos botones no entran, baja el grupo entero: nunca un botón
+       partido en dos filas (le pasaba a "Sitio oficial" con el icono). */
+    flex-wrap: wrap;
     gap: var(--space-3);
     margin-top: var(--space-4);
     padding-top: var(--space-3);
@@ -925,7 +909,13 @@ body[data-seccion="formal"] .banner-titulos { display: flex; }
 .card-cta-group .card-link-ben {
     margin-top: 0;
 }
+.card-cta-group .card-link-ben,
 .card-link-oficial {
+    white-space: nowrap;
+}
+.card-link-oficial {
+    display: inline-flex;
+    align-items: center;
     font-size: var(--fs-2xs);
     color: var(--muted);
     text-decoration: none;
@@ -1508,11 +1498,8 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
        max-content (que arrastra el max-width:100% de la imagen) se resuelve
        contra el espacio disponible y se come la fila entera. */
     .hero-content { grid-template-columns: var(--logo-w) minmax(0, 1fr) auto; }
-    .mobile-filter-button { display: inline-flex; justify-content: center; min-width: 44px; min-height: 44px; }
-    /* Compactado queda poco ancho al lado del logo: se deja solo el ícono. El
-       texto se desvanece (opacity) sin tocar el layout, para no reflotar el
-       botón en el mismo frame del encogido. */
-    .hero--compacto .mobile-filter-texto { opacity: 0; }
+    /* La card de filtros es el único acceso al cajón: ocupa toda la fila. */
+    .mobile-filter-button { display: inline-flex; width: 100%; min-height: 44px; margin: 0 0 .85rem; }
     
     .catalog-layout {
         display: grid;
@@ -1616,15 +1603,13 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
         --blur-max: 16px;
         padding-inline: 1rem;
     }
-    /* El botón de filtros se queda solo con el ícono: en 360px cada píxel de la
-       fila cuenta y ese ancho se lo lleva el buscador. */
-    .mobile-filter-texto { display: none; }
     /* El padding izquierdo NO baja a 1rem: la lupa sigue estando y el texto le
        quedaba encima. Solo se ajusta lo demás. */
     .search-input { min-height: 44px; padding: .75rem 1rem .75rem 2.6rem; font-size: var(--fs-sm); }
     .search-container::before { left: .85rem; width: 16px; height: 16px; margin-top: -8px; }
-    /* El de filtros vive en la fila del buscador y conserva su ancho propio. */
-    .mobile-filter-button { padding-inline: .6rem; font-size: var(--fs-xs); }
+    /* Pantallas de 360px: la card es de ancho completo, solo se recorta el
+       padding lateral. El nombre "Filtros" se mantiene en su tamaño. */
+    .mobile-filter-button { padding-inline: .75rem; }
     
     .catalog-layout {
         width: min(100% - 1.5rem, var(--container));
@@ -3345,147 +3330,4 @@ html[data-tts="true"] .btn-favorito { flex: 1 1 calc(50% - .25rem); }
     min-width: 1.35em; padding: 0 .3em;
     border-radius: 999px; background: var(--accion-fill); color: var(--accion-ink);
     font-size: .85em; text-align: center;
-}
-
-/* --- Ventana de Mi lista (misma receta que el test) --- */
-.mi-lista {
-    position: fixed; inset: 0; z-index: 110;
-    display: flex; align-items: center; justify-content: center;
-    padding: var(--space-4);
-    background: rgba(2, 6, 23, .55);
-    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
-}
-html.mi-lista-abierta { overflow: hidden; }
-
-.ml-ventana {
-    display: flex; flex-direction: column;
-    width: min(940px, 100%);
-    height: min(720px, 92vh);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    background: var(--surface);
-    box-shadow: var(--elev-4);
-    overflow: hidden;
-    animation: chat-abrir var(--dur-slow) ease;
-}
-.ml-header { display: flex; align-items: center; justify-content: space-between; padding: .9rem 1.1rem; border-bottom: 1px solid var(--line); }
-.ml-header h2 { margin: 0; font-family: var(--font-title); font-size: var(--fs-lg); color: var(--text); letter-spacing: -.01em; }
-.ml-header button { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; border: 0; border-radius: var(--radius-sm); background: none; color: var(--muted); font-size: var(--fs-md); cursor: pointer; }
-.ml-header button:hover { color: var(--text); background: var(--surface-soft); }
-.ml-cuerpo { flex: 1; min-height: 0; overflow-y: auto; padding: 1.1rem 1.25rem 1.4rem; color: var(--text); }
-.ml-pie { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .9rem 1.1rem; border-top: 1px solid var(--line); background: var(--surface); flex-wrap: wrap; }
-.ml-pie-info { margin: 0; color: var(--muted); font-size: var(--fs-xs); }
-.ml-pie-acciones { display: flex; gap: .5rem; flex-wrap: wrap; }
-.ml-btn-primario, .ml-btn-secundario { font-family: var(--font-text); cursor: pointer; min-height: 42px; border-radius: var(--radius-pill); font-weight: 700; font-size: var(--fs-sm); padding: .6rem 1.1rem; }
-.ml-btn-primario { border: 0; background: var(--accion-fill); color: var(--accion-ink); }
-.ml-btn-primario:hover { filter: brightness(1.05); }
-.ml-btn-primario:disabled { opacity: .5; cursor: default; }
-.ml-btn-secundario { border: 1px solid var(--line); background: var(--surface); color: var(--muted); }
-.ml-btn-secundario:hover { border-color: var(--accent); color: var(--accent-ink); }
-/* WCAG 2.1 - 1.4.3: blanco sobre naranja daba 2.80:1 (claro) y 2.26:1 (oscuro). */
-.ml-btn-peligro { background: var(--orange); color: var(--on-vivid); }
-.ml-btn-volver { border: 0; background: none; color: var(--accent-ink); font-weight: 700; font-size: var(--fs-sm); cursor: pointer; padding: .3rem 0; }
-
-/* Lista vacía */
-.ml-vacia { max-width: 30rem; margin: 2rem auto; text-align: center; display: flex; flex-direction: column; gap: .7rem; align-items: center; }
-.ml-vacia-titulo { margin: 0; font-family: var(--font-title); font-size: var(--fs-md); color: var(--text); }
-.ml-vacia-texto { margin: 0; color: var(--muted); font-size: var(--fs-sm); line-height: 1.5; }
-
-/* Grupos y filas */
-.ml-grupo { margin-bottom: 1.4rem; }
-.ml-grupo-titulo { display: flex; align-items: center; gap: .5rem; margin: 0 0 .6rem; font-family: var(--font-title); font-size: var(--fs-sm); color: var(--text); }
-.ml-grupo-titulo span { min-width: 1.5em; padding: 0 .4em; border-radius: 999px; background: var(--surface-soft); color: var(--muted); font-size: var(--fs-2xs); text-align: center; }
-.ml-items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .45rem; }
-.ml-item {
-    display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; gap: .7rem; align-items: center;
-    border: 1px solid var(--line); border-radius: var(--radius-md);
-    padding: .6rem .75rem; background: var(--surface);
-}
-.ml-item.is-seleccionada { border-color: var(--accent); background: var(--surface-soft); }
-.ml-item-huerfana { opacity: .75; }
-/* WCAG 2.5.8 (y el pedido explícito de 24x24): el área táctil real es el input,
-   así que el cuadradito mide 24px y la fila lo acompaña. */
-.ml-item-check { display: inline-flex; align-items: center; justify-content: center; min-width: 24px; min-height: 24px; }
-.ml-item-check input { width: 24px; height: 24px; accent-color: var(--accent); cursor: pointer; }
-.ml-item-info { min-width: 0; }
-.ml-item-nombre { margin: 0; font-weight: 700; font-size: var(--fs-sm); color: var(--text); display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
-.ml-item-meta { margin: .15rem 0 0; color: var(--muted); font-size: var(--fs-xs); }
-.ml-item-afinidad { padding: .1em .5em; border-radius: 999px; background: var(--accion-fill); color: var(--accion-ink); font-size: var(--fs-2xs); }
-.ml-item-link { color: var(--accent-ink); font-size: var(--fs-xs); font-weight: 700; white-space: nowrap; }
-.ml-item-quitar { min-width: 36px; min-height: 36px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface-soft); color: var(--muted); cursor: pointer; }
-.ml-item-quitar:hover { border-color: var(--orange); color: var(--orange-ink); }
-
-/* Comparación */
-.ml-volver { margin: 0 0 .6rem; }
-.ml-tabla-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-md); }
-.ml-tabla { border-collapse: collapse; width: 100%; min-width: 100%; font-size: var(--fs-sm); }
-.ml-tabla th, .ml-tabla td { padding: .6rem .7rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
-.ml-tabla tbody th { position: sticky; left: 0; z-index: 1; background: var(--surface); color: var(--muted); font-weight: 700; font-size: var(--fs-xs); white-space: nowrap; }
-.ml-tabla thead th { background: var(--surface-soft); border-bottom: 1px solid var(--line-strong, var(--line)); }
-.ml-tabla-esquina { position: sticky; left: 0; z-index: 2; }
-.ml-tabla-titulo { display: block; font-family: var(--font-title); font-size: var(--fs-sm); color: var(--text); }
-.ml-tabla-sub { display: block; margin-top: .15rem; color: var(--muted); font-size: var(--fs-2xs); font-weight: 400; }
-.ml-tabla tbody tr:last-child th, .ml-tabla tbody tr:last-child td { border-bottom: 0; }
-.ml-vacio { color: var(--muted); }
-.ml-link { color: var(--accent-ink); font-weight: 700; font-size: var(--fs-xs); }
-.ml-instituciones, .ml-planes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .2rem; }
-.ml-instituciones a, .ml-planes a { color: var(--accent-ink); font-size: var(--fs-xs); }
-
-.ml-afinidad { display: flex; flex-direction: column; gap: .3rem; min-width: 5.5rem; }
-.ml-afinidad-valor { font-weight: 800; font-size: var(--fs-md); }
-.ml-afinidad.alta .ml-afinidad-valor { color: var(--accent-ink); }
-.ml-afinidad.media .ml-afinidad-valor { color: var(--text); }
-.ml-afinidad.baja .ml-afinidad-valor { color: var(--muted); }
-.ml-afinidad-barra { height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; }
-.ml-afinidad-barra span { display: block; height: 100%; background: var(--accent); }
-
-.ml-riasec { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .25rem; min-width: 8rem; }
-.ml-riasec li { display: grid; grid-template-columns: 6.5rem 4rem 1.4rem; align-items: center; gap: .4rem; }
-.ml-riasec-nombre { color: var(--muted); font-size: var(--fs-2xs); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.ml-riasec-barra { height: 5px; border-radius: 999px; background: var(--line); overflow: hidden; }
-.ml-riasec-barra span { display: block; height: 100%; background: var(--accent); }
-.ml-riasec-valor { color: var(--muted); font-size: var(--fs-2xs); text-align: right; }
-
-/* Comparación en celular: una sola lista vertical, un bloque por atributo (con
-   las carreras adentro). Misma comparación que la tabla, sin scroll lateral. */
-.ml-lista { margin: 0; border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; background: var(--surface); }
-.ml-lista-grupo { border-bottom: 1px solid var(--line); }
-.ml-lista-grupo:last-child { border-bottom: 0; }
-.ml-lista-grupo-nombre {
-    padding: .5rem .85rem .4rem;
-    background: var(--surface-soft);
-    color: var(--muted); font-weight: 700; font-size: var(--fs-2xs);
-    letter-spacing: .05em; text-transform: uppercase;
-}
-.ml-lista-valores { margin: 0; }
-.ml-lista-valores ul { list-style: none; margin: 0; padding: .4rem .85rem .65rem; display: flex; flex-direction: column; gap: .5rem; }
-.ml-lista-item { display: flex; flex-direction: column; gap: .1rem; min-width: 0; }
-.ml-lista-item-nombre { font-weight: 700; font-size: var(--fs-xs); color: var(--text); }
-.ml-lista-item-dato { font-size: var(--fs-sm); color: var(--text); min-width: 0; }
-
-.ml-diferencias { margin-top: 1.2rem; border: 1px solid var(--line); border-radius: var(--radius-md); padding: .85rem .95rem; background: var(--surface-soft); }
-.ml-diferencias h3 { margin: 0 0 .5rem; font-family: var(--font-title); font-size: var(--fs-sm); color: var(--text); }
-.ml-diferencias-lista { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: .4rem; color: var(--text); font-size: var(--fs-sm); line-height: 1.45; }
-.ml-diferencias-vacio { margin: 0; color: var(--muted); font-size: var(--fs-sm); }
-
-@media (max-width: 640px) {
-    .mi-lista { padding: 0; }
-    .ml-ventana { width: 100%; height: 100%; max-height: none; border: 0; border-radius: 0; }
-    .ml-item { grid-template-columns: auto minmax(0, 1fr) auto; }
-    .ml-item-link { grid-column: 2; }
-    .ml-riasec li { grid-template-columns: 5.5rem 3rem 1.3rem; }
-}
-
-/* Impresión: solo la comparación, en una hoja legible. Sirve para "Imprimir /
-   PDF" y para llevarle la comparación a la familia o al colegio. */
-@media print {
-    body > *:not(#miLista) { display: none !important; }
-    .mi-lista { position: static; background: none; backdrop-filter: none; padding: 0; }
-    .ml-ventana { width: 100%; height: auto; max-height: none; border: 0; box-shadow: none; }
-    .ml-header button, .ml-pie, .ml-volver { display: none !important; }
-    .ml-cuerpo { overflow: visible; padding: 0; }
-    .ml-tabla-scroll { overflow: visible; border-color: #999; }
-    .ml-tabla th, .ml-tabla td { font-size: 10pt; }
-    .ml-tabla tbody th { position: static; }
-    .ml-diferencias { break-inside: avoid; }
 }

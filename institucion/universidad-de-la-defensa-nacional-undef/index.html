@@ -23,9 +23,7 @@
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/montserrat.css?v=20261004_6">
 <script>
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
@@ -56,11 +54,13 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260930_17">
+<link rel="stylesheet" href="/paginas.css?v=20261004_6">
+<!-- Estilos de la ventana de Mi lista, que estas páginas abren sin salir. -->
+<link rel="stylesheet" href="/mi-lista.css?v=20261004_6">
 <!-- Medir las fichas: son la mayor parte del tráfico del sitio (llegan desde
      Google) y sin esto los informes verían solo la portada. El mismo archivo
      carga la app en index.html. -->
-<script src="/js/analitica.js?v=20260930_17"></script>
+<script src="/js/analitica.js?v=20261004_6"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Universidad de la Defensa Nacional (UNDEF)","item":"https://buscadoreducativo.com.ar/institucion/universidad-de-la-defensa-nacional-undef/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Universidad de la Defensa Nacional (UNDEF)","url":"https://buscadoreducativo.com.ar/institucion/universidad-de-la-defensa-nacional-undef/","email":"informes@iua.edu.ar","address":{"@type":"PostalAddress","streetAddress":"Modalidad a distancia - Sede central Córdoba","addressCountry":"AR"}}</script>
 </head>
@@ -140,8 +140,8 @@
     </div>
     <aside class="lateral">
     <dl class="ficha">
-        <dt>Gestión</dt><dd>pública</dd>
-        <dt>Nivel</dt><dd>universidad</dd>
+        <dt>Gestión</dt><dd>Pública</dd>
+        <dt>Nivel</dt><dd>Universidad</dd>
         <dt>Provincia</dt><dd>Nacional (a distancia)</dd>
         <dt>Oferta en BEN</dt><dd>9 carreras</dd>
         <dt>Dirección</dt><dd>Modalidad a distancia - Sede central Córdoba</dd>
@@ -178,10 +178,10 @@
             <h4>5º año</h4>
             <ul><li>Historia Económica y Social</li><li>Auditoria II</li><li>Técnica Impositiva III</li><li>Control de Gestión</li><li>Prácticas Profesionales Supervisadas</li><li>Contador Público</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://fca.iua.edu.ar/?page_id=3279" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://fca.iua.edu.ar/?page_id=3279" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://fca.iua.edu.ar/?page_id=3279" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://fca.iua.edu.ar/?page_id=3279" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-administracion/">Licenciatura en Administración</a></h3>
@@ -209,10 +209,10 @@
             <h4>5º año</h4>
             <ul><li>Administración VI</li><li>Ética y Deontología Profesional</li><li>Proyecto de Grado</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.iua.edu.ar/?page_id=384" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://www.iua.edu.ar/?page_id=384" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.iua.edu.ar/?page_id=384" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.iua.edu.ar/?page_id=384" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-logistica/">Licenciatura en Logística</a></h3>
@@ -236,10 +236,10 @@
             <h4>4º año</h4>
             <ul><li>Administración Estratégica y Control de Gestión</li><li>Modelos Cuantitativos II</li><li>Gestión Ambiental y Logística Verde</li><li>Administración de Operaciones II</li><li>Logística Pública</li><li>Portugués</li><li>Etica y Ejercicio Profesional</li><li>Diseño y Gestión de la Cadena de Suministro</li><li>Formulación, Evaluación y Gestión de Proyectos</li><li>Práctica Profesional Supervisada</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.iua.edu.ar/?page_id=388" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://www.iua.edu.ar/?page_id=388" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.iua.edu.ar/?page_id=388" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.iua.edu.ar/?page_id=388" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-recursos-humanos/">Licenciatura en Recursos Humanos</a></h3>
@@ -267,10 +267,10 @@
             <h4>5º año</h4>
             <ul><li>Etica y Deontología Profesional</li><li>Métodos y Técnicas de Investigación Social</li><li>Estrategia</li><li>Auditoría de Recursos Humanos</li><li>Proyecto de Grado</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.iua.edu.ar/?page_id=386" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://www.iua.edu.ar/?page_id=386" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.iua.edu.ar/?page_id=386" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.iua.edu.ar/?page_id=386" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -298,10 +298,10 @@
             <h4>4º año</h4>
             <ul><li>Política Internacional Contemporánea</li><li>Política Internacional Latinoamericana</li><li>Derecho Internacional de los Conflictos Armados</li><li>Escenario de Conflictos Internacionales</li><li>Seguridad Internacional</li><li>Misiones de paz y desarme</li><li>Defensa Nacional y Regional (1er C)</li><li>Metodología de la Investigación en RRII (2do C)</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://fe.undef.edu.ar/esg/of_rrii.php" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://fe.undef.edu.ar/esg/of_rrii.php" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://fe.undef.edu.ar/esg/of_rrii.php" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://fe.undef.edu.ar/esg/of_rrii.php" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-gestion-publica/">Licenciatura en Gestión Pública</a></h3>
@@ -325,10 +325,10 @@
             <h4>4º año</h4>
             <ul><li>Electiva 2* 32 32 64 Primer ciclo aprobado</li><li>Finanzas Públicas y Federalismo Fiscal 40 40 80 21- Primer ciclo aprobado</li><li>Gestión y Desarrollo de Recursos Humanos 40 40 80 Tercer año aprobado</li><li>Sistemas de Gestión y Administración 40 40 80 Primer ciclo aprobado</li><li>Sostenibilidad Social y Ambiente 40 40 80 Primer ciclo aprobado</li><li>Auditoría, Control y Gestión de Calidad 40 40 80 Primer ciclo aprobado</li><li>Taller de Evaluación de Proyectos 28 100 128 Tercer año aprobado</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://undef.edu.ar/fadena/wp-content/uploads/2026/02/Licenciatura-en-Gestion-Publica.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://undef.edu.ar/fadena/wp-content/uploads/2026/02/Licenciatura-en-Gestion-Publica.pdf" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://undef.edu.ar/fadena/carreras-de-grado/licgestionpublica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://undef.edu.ar/fadena/carreras-de-grado/licgestionpublica/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -352,10 +352,10 @@
             <h4>3º año</h4>
             <ul><li>Electiva III (Web / Móviles/IA)</li><li>Seguridad y Protección de la Información</li><li>Comercio Electrónico y Marketing Digital</li><li>Taller de Desarrollo de Aplicaciones</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.iua.edu.ar/?page_id=6268" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://www.iua.edu.ar/?page_id=6268" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.iua.edu.ar/?page_id=6268" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.iua.edu.ar/?page_id=6268" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/licenciatura-en-ciberdefensa/">Licenciatura en Ciberdefensa</a></h3>
@@ -379,10 +379,10 @@
             <h4>4º año</h4>
             <ul><li>Sistema de Inteligencia Nacional</li><li>Investigación Operativa</li><li>Criptografía Aplicada</li><li>Gestión de Proyectos</li><li>Instrumento Militar y su Sistema de Armas</li><li>Modelos y Simulación</li><li>Prospectiva Estratégica y Táctica</li><li>Actores en el Quinto Dominio</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://undef.edu.ar/fadena/wp-content/uploads/2026/02/Licenciatura-en-Ciberdefensa.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://undef.edu.ar/fadena/wp-content/uploads/2026/02/Licenciatura-en-Ciberdefensa.pdf" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://undef.edu.ar/fadena/carreras-de-grado/licciberdefensa/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://undef.edu.ar/fadena/carreras-de-grado/licciberdefensa/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -406,10 +406,10 @@
             <h4>3º año</h4>
             <ul><li>Ambientes de Trabajo III (Ventilación)</li><li>Seguridad contra Accidentes en ámbitos no laborales y accidentología vial</li><li>Estudio del Trabajo (Ergonomía)</li><li>Seguridad Industrial V (Equipos y Elementos de Protección Personal)</li><li>Trabajo Final Integrador</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.fie.undef.edu.ar/wp-content/uploads/2026/06/PlanEstudioTecSeg.pdf" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://www.fie.undef.edu.ar/wp-content/uploads/2026/06/PlanEstudioTecSeg.pdf" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.fie.undef.edu.ar/tecnicatura-higiene-y-seguridad-en-el-trabajo/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.fie.undef.edu.ar/tecnicatura-higiene-y-seguridad-en-el-trabajo/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
     </div>
@@ -499,6 +499,11 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260930_17"></script>
+<script src="/js/favoritos.js?v=20261004_6"></script>
+<!-- Vuelve a la posición donde estabas al usar Atrás (la app avisa cuándo
+     terminó de pintar; en estas páginas el HTML ya está listo). -->
+<script src="/js/restaurar-scroll.js?v=20261004_6"></script>
+<!-- Mi lista se abre como ventana flotante sin salir de la ficha. -->
+<script src="/js/mi-lista-loader.js?v=20261004_6"></script>
 </body>
 </html>

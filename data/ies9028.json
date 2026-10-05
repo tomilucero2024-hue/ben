@@ -214,6 +214,15 @@
               ]
             }
           ]
+        },
+        {
+          "nombre_carrera": "Profesorado de Teatro",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "IES N° 9-028 Prof. Estela Susana Quiroga",
+          "link_oficial": "https://ies9028-infd.mendoza.edu.ar/",
+          "id": 3205
         }
       ],
       "departamento": "Santa Rosa"

@@ -314,6 +314,24 @@
       }
      ],
      "plan_fuente": "https://www.insutec.edu.ar/higiene/plan-de-estudios/"
+    },
+    {
+     "nombre_carrera": "Tecnicatura Superior en Obras Viales",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "Instituto Superior Tecnológico Nº 9-019 INSUTEC",
+     "link_oficial": "http://www.insutec.edu.ar/",
+     "id": 2807
+    },
+    {
+     "nombre_carrera": "Tecnicatura Superior en Servicios Básicos y Construcciones Livianas Industrializadas",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "Instituto Superior Tecnológico Nº 9-019 INSUTEC",
+     "link_oficial": "http://www.insutec.edu.ar/",
+     "id": 2808
     }
    ],
    "departamento": "Capital"

@@ -120,10 +120,17 @@ export function configurarBienvenida() {
     if (!pantalla) return;
 
     // La bienvenida es la puerta de entrada del sitio y se muestra en CADA
-    // visita, no solo en la primera. La unica excepcion es un link compartido o
-    // una busqueda con parametros en la URL (?q=, ?area=…): ahi el visitante
-    // quiere los resultados, no la portada.
-    if (location.search.length > 0) {
+    // visita, no solo en la primera. Las dos excepciones son un link compartido
+    // o una busqueda con parametros en la URL (?q=, ?area=…), y volver con
+    // Atras a una pagina donde ya estabas: ahi se saltea para caer directo en
+    // la posicion guardada, no en la portada.
+    const volviendo = (() => {
+        try {
+            const mapa = JSON.parse(sessionStorage.getItem('ben-scroll') || '{}') || {};
+            return mapa[location.href] > 0;
+        } catch (e) { return false; }
+    })();
+    if (location.search.length > 0 || volviendo) {
         ocultarBienvenidaInstantanea();
     } else {
         alternarInertDetrasDeBienvenida(true);

@@ -189,6 +189,18 @@ function esc(texto) {
         .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
+// Los valores de data.json vienen en minúscula ("privada", "terciario"). Para
+// las etiquetas visibles (badge y ficha de la institución) van capitalizados;
+// dentro de una oración ("gestión privada") se dejan como están.
+function cap(texto) {
+    const t = limpiar(texto);
+    return t ? t.charAt(0).toUpperCase() + t.slice(1) : t;
+}
+
+// Icono de enlace externo: reemplaza a la flecha ↗ en los links que salen del
+// sitio, con el mismo trazo que el resto de los iconos.
+const ICONO_EXTERNO = '<svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
+
 // Solo http/https. Los links salen de scrapers y terminan en una página
 // pública: un javascript: o un data: acá sería un agujero abierto.
 function urlSegura(url) {
@@ -424,9 +436,7 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : `<link rel="canon
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/montserrat.css?v=${SELLO}">
 <script>
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
@@ -458,6 +468,8 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : `<link rel="canon
     })();
 </script>
 <link rel="stylesheet" href="/paginas.css?v=${SELLO}">
+<!-- Estilos de la ventana de Mi lista, que estas páginas abren sin salir. -->
+<link rel="stylesheet" href="/mi-lista.css?v=${SELLO}">
 <!-- Medir las fichas: son la mayor parte del tráfico del sitio (llegan desde
      Google) y sin esto los informes verían solo la portada. El mismo archivo
      carga la app en index.html. -->
@@ -619,6 +631,11 @@ ${bloques}
     })();
 </script>
 <script src="/js/favoritos.js?v=${SELLO}"></script>
+<!-- Vuelve a la posición donde estabas al usar Atrás (la app avisa cuándo
+     terminó de pintar; en estas páginas el HTML ya está listo). -->
+<script src="/js/restaurar-scroll.js?v=${SELLO}"></script>
+<!-- Mi lista se abre como ventana flotante sin salir de la ficha. -->
+<script src="/js/mi-lista-loader.js?v=${SELLO}"></script>
 </body>
 </html>
 `;
@@ -981,11 +998,11 @@ function tarjetaOferta(oferta, { mostrarInstitucion = true, id = null } = {}) {
 
     const gestion = normalizar(inst.gestion);
     const etiqueta = mostrarInstitucion && gestion
-        ? `<span class="etiqueta ${/publica/.test(gestion) ? 'publica' : 'privada'}">${esc(inst.gestion)}</span> `
+        ? `<span class="etiqueta ${/publica/.test(gestion) ? 'publica' : 'privada'}">${esc(cap(inst.gestion))}</span> `
         : '';
 
     const oficial = oferta.link
-        ? `<a class="oficial" href="${esc(oferta.link)}" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>`
+        ? `<a class="oficial" href="${esc(oferta.link)}" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ${ICONO_EXTERNO}</a>`
         : '';
 
     const descripcion = oferta.descripcion ? `<p>${esc(oferta.descripcion)}</p>` : '';
@@ -1000,7 +1017,7 @@ ${plan.map(a => `        <div class="plan-anio">
             <h4>${esc(a.anio)}</h4>
             <ul>${(a.materias || []).map(m => `<li>${esc(m)}</li>`).join('')}</ul>
         </div>`).join('\n')}
-${oferta.plan_fuente ? `        <p class="plan-fuente">Fuente: <a href="${esc(oferta.plan_fuente)}" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>` : ''}
+${oferta.plan_fuente ? `        <p class="plan-fuente">Fuente: <a href="${esc(oferta.plan_fuente)}" rel="noopener nofollow" target="_blank">plan oficial ${ICONO_EXTERNO}</a></p>` : ''}
     </div>
 </details>` : '';
 
@@ -1165,7 +1182,7 @@ ${fichaHtml}
                 <span>Los costos y aranceles los define cada institución. Para saber cuánto sale, comunicate con el establecimiento.</span>
             </p>
         </div>
-        <a class="btn-ver-mi-lista" href="/?lista=1">
+        <a class="btn-ver-mi-lista" href="/?lista=1" data-abrir-mi-lista>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
             Ver Mi lista
         </a>
@@ -1304,8 +1321,8 @@ function paginaInstitucion(institucion) {
     const descripcion = `${institucion.nombre}: ${plural(institucion.ofertas.length, 'carrera', 'carreras')}${institucion.provincia ? ` en ${institucion.provincia}` : ''}${institucion.gestion ? `, gestión ${institucion.gestion}` : ''}. Duración, modalidad y links oficiales de cada una.`;
 
     const ficha = [
-        institucion.gestion ? ['Gestión', esc(institucion.gestion)] : null,
-        institucion.nivel ? ['Nivel', esc(institucion.nivel)] : null,
+        institucion.gestion ? ['Gestión', esc(cap(institucion.gestion))] : null,
+        institucion.nivel ? ['Nivel', esc(cap(institucion.nivel))] : null,
         institucion.provinciaCruda ? ['Provincia', institucion.provinciaRef
             ? `<a href="/provincia/${institucion.provinciaRef.slug}/">${esc(institucion.provinciaCruda)}</a>`
             : esc(institucion.provinciaCruda)] : null,
@@ -1622,7 +1639,6 @@ ${TITULOS.glosario.map(g => `        <dt>${esc(g.termino)}</dt>\n        <dd>${e
 ${nivelesHtml}
     </ul>
 
-    <h2>Los títulos, uno por uno</h2>
 ${titulosHtml}
 
     <h2>Tabla comparativa</h2>

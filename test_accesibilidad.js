@@ -157,6 +157,7 @@ const interactivosAnidados = (doc) => {
 // Contraste: lee los tokens de style.css y calcula ratios WCAG
 // ---------------------------------------------------------------------------
 const css = fs.readFileSync(path.join(RAIZ, 'style.css'), 'utf8');
+const cssMiLista = fs.readFileSync(path.join(RAIZ, 'mi-lista.css'), 'utf8');
 const bloqueDe = (sel) => {
     const m = css.match(new RegExp(sel.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*\\{([\\s\\S]*?)\\}'));
     return m ? m[1] : '';
@@ -316,6 +317,14 @@ function valorDelPar(token, tokens) {
         ok(el && el.tagName === 'UL' && el.getAttribute('role') === 'list', `#${id} es una lista real`);
     });
 
+    const botonFiltros = doc.getElementById('mobileFilterButton');
+    ok(!doc.querySelector('.search-container #mobileFilterButton'), 'la card de filtros ya no vive en la fila del buscador');
+    ok(!botonFiltros.closest('#filtersSidebar') && Boolean(botonFiltros.closest('.results-area')), 'la card de filtros vive en el área de resultados y abre el cajón');
+    const guia = doc.querySelector('#filtersSidebar .filtro-guia');
+    ok(guia && guia.getAttribute('href') === '/titulos/', 'la guía "Títulos y niveles" vive dentro del panel de filtros');
+    const ordenGuia = [...doc.querySelectorAll('#filtersSidebar .filtro-guia, #filtersSidebar #filtroFormacion')];
+    ok(ordenGuia[0] && ordenGuia[0].classList.contains('filtro-guia') && ordenGuia[1] && ordenGuia[1].id === 'filtroFormacion', 'la guía queda arriba de "Tipo de formación"');
+
     const grupos = [...doc.querySelectorAll('.filter-options[role="group"]')];
     ok(grupos.length === 7, `los 7 grupos de filtros están declarados como grupo (${grupos.length})`);
     ok(grupos.every(g => doc.getElementById(g.getAttribute('aria-labelledby') || '')), 'cada grupo toma su nombre del h3 visible');
@@ -327,6 +336,22 @@ function valorDelPar(token, tokens) {
     ok(tecn.getAttribute('aria-pressed') === 'true', 'al aplicar un filtro, aria-pressed pasa a true');
     const marcadosPorGrupo = grupos.map(g => [...g.querySelectorAll('.filter-option')].filter(b => b.getAttribute('aria-pressed') === 'true').length);
     ok(marcadosPorGrupo.length === 7 && marcadosPorGrupo.every(n => n === 1), 'exactamente un valor marcado por grupo (' + marcadosPorGrupo.join(',') + ')');
+
+    // Multi-selección de departamentos: se eligen dos y los dos quedan marcados
+    // (con su tilde, que es la clase .active), mientras "Todos" se apaga. Antes
+    // el panel leía estado.departamento (inexistente) y solo "Todos" quedaba
+    // activo: ningún departamento elegido mostraba el tilde.
+    const capital = botonesFiltro.find(b => b.dataset.filter === 'departamento' && b.dataset.value === 'Capital');
+    const godoyCruz = botonesFiltro.find(b => b.dataset.filter === 'departamento' && b.dataset.value === 'Godoy Cruz');
+    const todosDeptos = botonesFiltro.find(b => b.dataset.filter === 'departamento' && b.dataset.value === 'todos');
+    capital.click();
+    await new Promise(r => setTimeout(r, 250));
+    godoyCruz.click();
+    await new Promise(r => setTimeout(r, 250));
+    ok(capital.getAttribute('aria-pressed') === 'true' && capital.classList.contains('active'), 'el primer departamento elegido queda marcado con su tilde');
+    ok(godoyCruz.getAttribute('aria-pressed') === 'true' && godoyCruz.classList.contains('active'), 'el segundo departamento elegido también queda marcado');
+    ok(todosDeptos.getAttribute('aria-pressed') === 'false', 'con departamentos elegidos, "Todos" deja de estar activo');
+    ok(win.location.search.includes('departamento=Capital') && win.location.search.includes('departamento=Godoy+Cruz'), 'la URL guarda los dos departamentos (' + win.location.search + ')');
     ok(doc.getElementById('resultsCount').getAttribute('role') === 'status' && doc.getElementById('resultsCount').getAttribute('aria-live') === 'polite', 'el contador de resultados se anuncia (role="status" + aria-live)');
     doc.getElementById('clearFiltersButton').click();
     await new Promise(r => setTimeout(r, 200));
@@ -426,7 +451,10 @@ function valorDelPar(token, tokens) {
     }
 
     seccion('8. Áreas táctiles (2.5.8)');
-    ok(/\.ml-item-check input \{[^}]*width: 24px/.test(css.replace(/\n/g, ' ')), 'checkbox de comparar en Mi lista: 24px');
+    ok(/\.ml-item-check input \{[^}]*width: 24px/.test(cssMiLista.replace(/\n/g, ' ')), 'checkbox de comparar en Mi lista: 24px');
+    ok(/\.mi-lista \{[^}]*display: flex/.test(cssMiLista.replace(/\n/g, ' ')), 'la ventana de Mi lista es un overlay (display: flex)');
+    ok(/\[hidden\] \{ display: none !important; \}/.test(fs.readFileSync(path.join(RAIZ, 'paginas.css'), 'utf8')), 'las estáticas ocultan con [hidden] como la app (la ✕ de Mi lista cierra)');
+    ok(/\.card-link-oficial \{[\s\S]*?white-space: nowrap/.test(css), 'el botón "Sitio oficial" no se parte en dos filas');
     ok(/\.chapa-recomendacion button \{[\s\S]*?width: 24px/.test(css), '✕ de recomendaciones: 24px');
     ok(/\.a11y-close-btn \{[\s\S]*?min-height: 24px/.test(css), '✕ del panel de accesibilidad: ≥24px');
     ok(/@media \(pointer: coarse\)[\s\S]*?\.filter-option \{ min-height: 44px/.test(css), 'en pantallas táctiles los filtros suben a 44px');

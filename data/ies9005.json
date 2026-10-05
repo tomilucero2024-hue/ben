@@ -348,6 +348,42 @@
               ]
             }
           ]
+        },
+        {
+          "nombre_carrera": "Profesorado de Educación Secundaria en Química",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "Instituto de Educación Superior N° 9-005 Fidela Amparán",
+          "link_oficial": "https://ens9005-infd.mendoza.edu.ar/",
+          "id": 1506
+        },
+        {
+          "nombre_carrera": "Profesorado para la Educación Secundaria en Geografía",
+          "categoria": "Grado / Profesorado",
+          "duracion": "4 años",
+          "modalidad": "Presencial",
+          "facultad": "Instituto de Educación Superior N° 9-005 Fidela Amparán",
+          "link_oficial": "https://ens9005-infd.mendoza.edu.ar/",
+          "id": 1507
+        },
+        {
+          "nombre_carrera": "Tecnicatura Superior en Agronomía",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "facultad": "Instituto de Educación Superior N° 9-005 Fidela Amparán",
+          "link_oficial": "https://ens9005-infd.mendoza.edu.ar/",
+          "id": 1508
+        },
+        {
+          "nombre_carrera": "Tecnicatura Superior en Desarrollo de Software",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "facultad": "Instituto de Educación Superior N° 9-005 Fidela Amparán",
+          "link_oficial": "https://ens9005-infd.mendoza.edu.ar/",
+          "id": 1509
         }
       ]
     }

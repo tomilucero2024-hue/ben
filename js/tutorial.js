@@ -18,6 +18,7 @@
 //   - Con prefers-reduced-motion no hay transición ni scroll suave.
 
 import { cambiarSeccion, cambiarVista } from './render.js';
+import { datosListos } from './datos.js';
 import { estado } from './estado.js';
 
 // Clave y versión: si algún día cambia la interfaz de forma grande, subir la
@@ -29,8 +30,10 @@ const VERSION_TUTORIAL = '1';
 // lista que usa la portada de bienvenida (ver copiloto.js).
 const ZONAS_INERTES = ['.hero', '.catalog-layout', '#copilotoPanel', '.site-footer'];
 
-// En celular el panel de filtros vive detrás del botón "Filtrar" y la sidebar
-// está oculta: el paso apunta al botón que lo abre.
+// En celular el panel de filtros vive detrás de la card "Filtros" (al lado del
+// banner de títulos) y la sidebar está oculta: el paso apunta a la card que lo
+// abre. El título se resuelve al pintar, no al importar, para que acompañe un
+// cambio de tamaño de ventana.
 const ES_ANGOSTO = () => typeof window !== 'undefined'
     && typeof window.matchMedia === 'function'
     && window.matchMedia('(max-width: 820px)').matches;
@@ -51,7 +54,7 @@ const PASOS = [
     },
     {
         objetivo: () => (ES_ANGOSTO() ? '#mobileFilterButton' : '#filtersSidebar'),
-        titulo: ES_ANGOSTO() ? 'Acá abrís los filtros' : 'Filtrá lo que te interesa',
+        titulo: () => (ES_ANGOSTO() ? 'Acá abrís los filtros' : 'Filtrá lo que te interesa'),
         texto: 'Tipo de formación, área, sector, gestión, modalidad, duración y departamento. Se combinan entre sí y el contador te dice cuántas carreras quedan.'
     },
     {
@@ -228,7 +231,7 @@ function pintar() {
     const nodo = objetivoDe(paso);
 
     el('tutorial-paso').textContent = `Paso ${indice + 1} de ${pasosActivos.length}`;
-    el('tutorial-titulo').textContent = paso.titulo;
+    el('tutorial-titulo').textContent = typeof paso.titulo === 'function' ? paso.titulo() : paso.titulo;
     el('tutorial-texto').textContent = paso.texto;
     el('tutorial-anterior').hidden = indice === 0;
     el('tutorial-siguiente').textContent = indice === pasosActivos.length - 1 ? 'Terminar' : 'Siguiente';
@@ -350,7 +353,13 @@ export function configurarTutorial() {
         const destino = evento.detail && evento.detail.destino;
         if (destino !== 'catalogo' || yaVisto()) return;
         // Un respiro para que termine la salida de la portada y el foco llegue
-        // al buscador antes de que el tutorial se ponga encima.
-        setTimeout(() => iniciarTutorial(el('searchInput')), 260);
+        // al buscador antes de que el tutorial se ponga encima. Si data.json
+        // todavía está bajando se espera: con la grilla vacía el paso de la
+        // tarjeta no existiría y el recorrido quedaría con un paso menos.
+        const arrancarCuandoHayaDatos = () => {
+            if (!datosListos) { setTimeout(arrancarCuandoHayaDatos, 150); return; }
+            iniciarTutorial(el('searchInput'));
+        };
+        setTimeout(arrancarCuandoHayaDatos, 260);
     });
 }

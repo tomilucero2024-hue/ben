@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generado": "2026-10-02T17:54:13.600Z",
+  "generado": "2026-10-04T16:26:22.759Z",
   "dimensiones": {
     "riasec": [
       "R",
@@ -39,6 +39,7 @@
         "Universidad Juan Agustín Maza (UMaza)",
         "Universidad de Congreso (UC)",
         "Universidad del Aconcagua (UDA)",
+        "Universidad Champagnat (UCh)",
         "Universidad Siglo 21 (S21)"
       ],
       "perfil": {
@@ -159,6 +160,140 @@
         "ajustes": [
           "enfermer",
           "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "actualizacion academica en la ensenanza de la lengua y la literatura, con opcion a especializacion docente de nivel superior en la ensenanza de la lengua y la literatura",
+      "nombre": "Actualización Académica en la Enseñanza de la Lengua y la Literatura, con opción a Especialización docente de nivel superior en la Enseñanza de la Lengua y la Literatura",
+      "categoria": "Posgrado / Especialización",
+      "area": "Educación",
+      "formacion": "grado",
+      "instituciones": [
+        "IES 9-010 Rosario Vera Peñaloza"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 7,
+          "S": 10,
+          "E": 4,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "musica",
+          "idioma",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "actualizacion academica en la ensenanza permanente de jovenes y adultos",
+      "nombre": "Actualización Académica en la Enseñanza Permanente de Jóvenes y Adultos",
+      "categoria": "Posgrado / Especialización",
+      "area": "Educación",
+      "formacion": "grado",
+      "instituciones": [
+        "IES 9-010 Rosario Vera Peñaloza"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 6,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 9,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "actualizacion academica en legislacion y administracion escolar",
+      "nombre": "Actualización Académica en Legislación y Administración Escolar",
+      "categoria": "Posgrado / Especialización",
+      "area": "Negocios",
+      "formacion": "grado",
+      "instituciones": [
+        "IES 9-010 Rosario Vera Peñaloza"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 7,
+          "E": 9,
+          "C": 9
+        },
+        "apt": {
+          "logico_matematica": 6,
+          "verbal": 7,
+          "espacial": 4,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 5,
+          "equipo": 7,
+          "impacto": 4,
+          "ingresos": 9,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Negocios",
+        "ajustes": [
+          "gestion",
+          "formacion:grado"
         ],
         "interacciones": 0,
         "peso_uso": 0
@@ -430,6 +565,49 @@
       }
     },
     {
+      "clave": "agente de propaganda medica",
+      "nombre": "Agente de Propaganda Médica",
+      "categoria": "Grado / Carrera",
+      "area": "Ciencias sociales",
+      "formacion": "grado",
+      "instituciones": [
+        "IES PT-160 Agentes de Propaganda Médica"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 2,
+          "I": 8,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "agronegocios",
       "nombre": "Agronegocios",
       "categoria": "Grado / Carrera",
@@ -513,6 +691,51 @@
         "ajustes": [
           "construccion",
           "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "analista administrativo contable",
+      "nombre": "Analista Administrativo Contable",
+      "categoria": "Grado / Carrera",
+      "area": "Negocios",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad Champagnat (UCh)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 7,
+          "E": 9,
+          "C": 10
+        },
+        "apt": {
+          "logico_matematica": 7,
+          "verbal": 7,
+          "espacial": 4,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 7,
+          "impacto": 4,
+          "ingresos": 9,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Negocios",
+        "ajustes": [
+          "gestion",
+          "contador",
+          "formacion:grado"
         ],
         "interacciones": 0,
         "peso_uso": 0
@@ -1444,6 +1667,94 @@
       }
     },
     {
+      "clave": "ccc licenciatura en ciencia de datos e ia",
+      "nombre": "CCC Licenciatura en Ciencia de Datos e IA",
+      "categoria": "Grado / Licenciatura",
+      "area": "Tecnología",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 4,
+          "I": 9,
+          "A": 4,
+          "S": 2,
+          "E": 3,
+          "C": 7
+        },
+        "apt": {
+          "logico_matematica": 8,
+          "verbal": 4,
+          "espacial": 6,
+          "interpersonal": 3,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 5,
+          "impacto": 4,
+          "ingresos": 6,
+          "movilidad": 4
+        }
+      },
+      "origen": {
+        "area_base": "Tecnología",
+        "ajustes": [
+          "programacion",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "ceramica artesanal",
+      "nombre": "Cerámica Artesanal",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Arte",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 4,
+          "A": 10,
+          "S": 5,
+          "E": 4,
+          "C": 3
+        },
+        "apt": {
+          "logico_matematica": 3,
+          "verbal": 6,
+          "espacial": 6,
+          "interpersonal": 5,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 4,
+          "variedad": 8,
+          "equipo": 5,
+          "impacto": 5,
+          "ingresos": 4,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Arte",
+        "ajustes": [
+          "musica",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "check in",
       "nombre": "Check In",
       "categoria": "Curso / Formación Profesional",
@@ -1704,6 +2015,94 @@
           "docencia",
           "musica",
           "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "ciclo de profesorado para profesionales universitarios (sede central y san rafael)",
+      "nombre": "Ciclo de Profesorado para Profesionales Universitarios (Sede Central y San Rafael)",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "Universidad Nacional de Cuyo (UNCuyo)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 5,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "ciclos de licenciaturas en administracion de empresas",
+      "nombre": "Ciclos de Licenciaturas en Administración de Empresas",
+      "categoria": "Grado / Licenciatura",
+      "area": "Negocios",
+      "formacion": "grado",
+      "instituciones": [
+        "Instituto Univ. de Ciencias Empresariales (IUCE)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 7,
+          "E": 9,
+          "C": 9
+        },
+        "apt": {
+          "logico_matematica": 6,
+          "verbal": 7,
+          "espacial": 4,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 5,
+          "equipo": 7,
+          "impacto": 4,
+          "ingresos": 9,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Negocios",
+        "ajustes": [
+          "gestion",
+          "formacion:grado"
         ],
         "interacciones": 0,
         "peso_uso": 0
@@ -2375,6 +2774,50 @@
         "ajustes": [
           "contador",
           "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "coreografo e interprete en danza",
+      "nombre": "Coreógrafo e intérprete en Danza",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Arte",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto de Arte Chopin"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 4,
+          "A": 10,
+          "S": 5,
+          "E": 4,
+          "C": 3
+        },
+        "apt": {
+          "logico_matematica": 3,
+          "verbal": 6,
+          "espacial": 6,
+          "interpersonal": 5,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 4,
+          "variedad": 8,
+          "equipo": 5,
+          "impacto": 5,
+          "ingresos": 4,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Arte",
+        "ajustes": [
+          "musica",
+          "formacion:tecnicaturas"
         ],
         "interacciones": 0,
         "peso_uso": 0
@@ -5063,6 +5506,51 @@
       }
     },
     {
+      "clave": "electricidad domestica y comercial",
+      "nombre": "Electricidad Doméstica y Comercial",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Oficios",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 10,
+          "I": 3,
+          "A": 4,
+          "S": 3,
+          "E": 5,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 3,
+          "espacial": 7,
+          "interpersonal": 3,
+          "corporal": 10
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 5,
+          "impacto": 4,
+          "ingresos": 6,
+          "movilidad": 4
+        }
+      },
+      "origen": {
+        "area_base": "Oficios",
+        "ajustes": [
+          "gestion",
+          "mecanic",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "electricidad domiciliaria (gratuito)",
       "nombre": "Electricidad Domiciliaria (gratuito)",
       "categoria": "Oficio / Formación Profesional",
@@ -5378,7 +5866,8 @@
       "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "IESVU (IES 9-015 Valle de Uco)"
+        "IESVU (IES 9-015 Valle de Uco)",
+        "Instituto Cruz Roja Argentina Filial San Rafael (PT-071)"
       ],
       "perfil": {
         "riasec": {
@@ -5499,6 +5988,94 @@
         "area_base": "Ciencias sociales",
         "ajustes": [
           "derecho",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "especializacion docente de nivel superior en genero y educacion",
+      "nombre": "Especialización Docente de Nivel Superior en Género y Educación",
+      "categoria": "Posgrado / Especialización",
+      "area": "Educación",
+      "formacion": "grado",
+      "instituciones": [
+        "IES 9-010 Rosario Vera Peñaloza"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 6,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 9,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "especializacion docente del nivel superior en pedagogia para la docencia en el nivel superior",
+      "nombre": "Especialización Docente del Nivel Superior en Pedagogía para la Docencia en el Nivel Superior",
+      "categoria": "Posgrado / Especialización",
+      "area": "Educación",
+      "formacion": "grado",
+      "instituciones": [
+        "IES 9-018 (Malargüe)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 6,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 9,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
           "formacion:grado"
         ],
         "interacciones": 0,
@@ -5766,6 +6343,50 @@
         "ajustes": [
           "programacion",
           "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "fotografia aplicada al ceremonial y protocolo",
+      "nombre": "Fotografía Aplicada al Ceremonial y Protocolo",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Diseño",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 4,
+          "A": 10,
+          "S": 4,
+          "E": 5,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 6,
+          "espacial": 7,
+          "interpersonal": 4,
+          "corporal": 5
+        },
+        "val": {
+          "estabilidad": 4,
+          "variedad": 7,
+          "equipo": 5,
+          "impacto": 5,
+          "ingresos": 5,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Diseño",
+        "ajustes": [
+          "musica",
+          "formacion:tecnicaturas"
         ],
         "interacciones": 0,
         "peso_uso": 0
@@ -6218,6 +6839,51 @@
       }
     },
     {
+      "clave": "gestion de redes sociales y marketing digital",
+      "nombre": "Gestión de Redes Sociales y Marketing Digital",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Negocios",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 4,
+          "I": 7,
+          "A": 4,
+          "S": 7,
+          "E": 9,
+          "C": 9
+        },
+        "apt": {
+          "logico_matematica": 7,
+          "verbal": 7,
+          "espacial": 4,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 5,
+          "equipo": 7,
+          "impacto": 4,
+          "ingresos": 9,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Negocios",
+        "ajustes": [
+          "programacion",
+          "gestion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "gestion de residuos biopatogenicos",
       "nombre": "Gestión de Residuos Biopatogénicos",
       "categoria": "Curso / Formación Profesional",
@@ -6430,6 +7096,50 @@
         "ajustes": [
           "turismo",
           "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "guia de turismo y coordinador de viajes",
+      "nombre": "Guía de Turismo y Coordinador de Viajes",
+      "categoria": "Grado / Carrera",
+      "area": "Turismo",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad Champagnat (UCh)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 4,
+          "I": 4,
+          "A": 5,
+          "S": 9,
+          "E": 7,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 3,
+          "verbal": 7,
+          "espacial": 4,
+          "interpersonal": 8,
+          "corporal": 5
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 7,
+          "equipo": 7,
+          "impacto": 4,
+          "ingresos": 5,
+          "movilidad": 10
+        }
+      },
+      "origen": {
+        "area_base": "Turismo",
+        "ajustes": [
+          "turismo",
+          "formacion:grado"
         ],
         "interacciones": 0,
         "peso_uso": 0
@@ -7140,6 +7850,51 @@
         "area_base": "Ingeniería",
         "ajustes": [
           "ingenier",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "ingenieria en direccion de empresas",
+      "nombre": "Ingeniería en Dirección de Empresas",
+      "categoria": "Grado / Licenciatura",
+      "area": "Ingeniería",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 8,
+          "I": 10,
+          "A": 3,
+          "S": 3,
+          "E": 6,
+          "C": 8
+        },
+        "apt": {
+          "logico_matematica": 9,
+          "verbal": 4,
+          "espacial": 8,
+          "interpersonal": 4,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 5,
+          "equipo": 5,
+          "impacto": 5,
+          "ingresos": 7,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Ingeniería",
+        "ajustes": [
+          "ingenier",
+          "gestion",
           "formacion:grado"
         ],
         "interacciones": 0,
@@ -7906,50 +8661,6 @@
       }
     },
     {
-      "clave": "instalador de sistemas de energia solar (fotovoltaicos y termicos)",
-      "nombre": "Instalador de Sistemas de Energía Solar (Fotovoltaicos y Térmicos)",
-      "categoria": "Curso / Formación Profesional",
-      "area": "Ambiente",
-      "formacion": "cursos",
-      "instituciones": [
-        "Capacitación en Energía Solar (Mendoza)"
-      ],
-      "perfil": {
-        "riasec": {
-          "R": 8,
-          "I": 8,
-          "A": 3,
-          "S": 4,
-          "E": 3,
-          "C": 5
-        },
-        "apt": {
-          "logico_matematica": 7,
-          "verbal": 5,
-          "espacial": 6,
-          "interpersonal": 4,
-          "corporal": 6
-        },
-        "val": {
-          "estabilidad": 4,
-          "variedad": 6,
-          "equipo": 6,
-          "impacto": 8,
-          "ingresos": 4,
-          "movilidad": 5
-        }
-      },
-      "origen": {
-        "area_base": "Ambiente",
-        "ajustes": [
-          "programacion",
-          "formacion:cursos"
-        ],
-        "interacciones": 0,
-        "peso_uso": 0
-      }
-    },
-    {
       "clave": "instalador de sistemas solares fotovoltaicos y termicos (formacion profesional nivel 3)",
       "nombre": "Instalador de Sistemas Solares Fotovoltaicos y Térmicos (Formación Profesional Nivel 3)",
       "categoria": "Curso / Formación Profesional",
@@ -8038,6 +8749,50 @@
       }
     },
     {
+      "clave": "interprete en canto",
+      "nombre": "Interprete en canto",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Arte",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto de Arte Chopin"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 4,
+          "A": 10,
+          "S": 5,
+          "E": 4,
+          "C": 3
+        },
+        "apt": {
+          "logico_matematica": 3,
+          "verbal": 6,
+          "espacial": 6,
+          "interpersonal": 5,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 4,
+          "variedad": 8,
+          "equipo": 5,
+          "impacto": 5,
+          "ingresos": 4,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Arte",
+        "ajustes": [
+          "musica",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "interprete en guitarra y lectura musical",
       "nombre": "Intérprete en Guitarra y Lectura Musical",
       "categoria": "Curso / Formación Profesional",
@@ -8120,6 +8875,50 @@
         "ajustes": [
           "musica",
           "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "interprete en teatro musical",
+      "nombre": "Interprete en teatro musical",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Arte",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto de Arte Chopin"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 4,
+          "A": 10,
+          "S": 5,
+          "E": 4,
+          "C": 3
+        },
+        "apt": {
+          "logico_matematica": 3,
+          "verbal": 6,
+          "espacial": 6,
+          "interpersonal": 5,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 4,
+          "variedad": 8,
+          "equipo": 5,
+          "impacto": 5,
+          "ingresos": 4,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Arte",
+        "ajustes": [
+          "musica",
+          "formacion:tecnicaturas"
         ],
         "interacciones": 0,
         "peso_uso": 0
@@ -8734,6 +9533,50 @@
         "area_base": "Tecnología",
         "ajustes": [
           "programacion",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "lic. en produccion de bio-imagenes",
+      "nombre": "Lic. en Producción de Bio-Imágenes",
+      "categoria": "Grado / Licenciatura",
+      "area": "Ciencias sociales",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad de Congreso (UC)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 2,
+          "I": 9,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 7
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 3,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "optica",
           "formacion:grado"
         ],
         "interacciones": 0,
@@ -9449,9 +10292,98 @@
       }
     },
     {
+      "clave": "licenciatura en administracion de salud (ciclo de complementacion curricular) presencial y a distancia",
+      "nombre": "Licenciatura en Administración de Salud (Ciclo de Complementación Curricular) Presencial y a Distancia",
+      "categoria": "Grado / Licenciatura",
+      "area": "Salud",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad del Aconcagua (UDA)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 7,
+          "A": 2,
+          "S": 9,
+          "E": 4,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 6,
+          "espacial": 4,
+          "interpersonal": 9,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 4,
+          "equipo": 7,
+          "impacto": 9,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Salud",
+        "ajustes": [
+          "gestion",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "licenciatura en administracion gastronomica",
       "nombre": "Licenciatura en Administración Gastronómica",
       "categoria": "Grado / Carrera",
+      "area": "Turismo",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad del Aconcagua (UDA)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 4,
+          "I": 4,
+          "A": 7,
+          "S": 8,
+          "E": 7,
+          "C": 7
+        },
+        "apt": {
+          "logico_matematica": 3,
+          "verbal": 7,
+          "espacial": 4,
+          "interpersonal": 8,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 8,
+          "equipo": 7,
+          "impacto": 4,
+          "ingresos": 6,
+          "movilidad": 8
+        }
+      },
+      "origen": {
+        "area_base": "Turismo",
+        "ajustes": [
+          "gestion",
+          "gastronom",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "licenciatura en administracion gastronomica (ciclo de complementacion curricular)",
+      "nombre": "Licenciatura en Administración Gastronómica (Ciclo de Complementación Curricular)",
+      "categoria": "Grado / Licenciatura",
       "area": "Turismo",
       "formacion": "grado",
       "instituciones": [
@@ -9540,6 +10472,51 @@
       }
     },
     {
+      "clave": "licenciatura en administracion hotelera (ciclo de complementacion curricular)",
+      "nombre": "Licenciatura en Administración Hotelera (Ciclo de Complementación Curricular)",
+      "categoria": "Grado / Licenciatura",
+      "area": "Turismo",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad del Aconcagua (UDA)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 4,
+          "I": 4,
+          "A": 5,
+          "S": 9,
+          "E": 8,
+          "C": 7
+        },
+        "apt": {
+          "logico_matematica": 3,
+          "verbal": 7,
+          "espacial": 4,
+          "interpersonal": 8,
+          "corporal": 5
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 7,
+          "equipo": 7,
+          "impacto": 4,
+          "ingresos": 6,
+          "movilidad": 10
+        }
+      },
+      "origen": {
+        "area_base": "Turismo",
+        "ajustes": [
+          "gestion",
+          "turismo",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "licenciatura en administracion publica",
       "nombre": "Licenciatura en Administración Pública",
       "categoria": "Grado / Carrera",
@@ -9577,6 +10554,50 @@
         "area_base": "Negocios",
         "ajustes": [
           "gestion",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "licenciatura en agroindustrias",
+      "nombre": "Licenciatura en Agroindustrias",
+      "categoria": "Grado / Licenciatura",
+      "area": "Ambiente",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 8,
+          "I": 9,
+          "A": 3,
+          "S": 4,
+          "E": 3,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 6,
+          "verbal": 5,
+          "espacial": 6,
+          "interpersonal": 4,
+          "corporal": 7
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 9,
+          "ingresos": 4,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Ambiente",
+        "ajustes": [
+          "agronom",
           "formacion:grado"
         ],
         "interacciones": 0,
@@ -15063,7 +16084,8 @@
       "area": "Negocios",
       "formacion": "grado",
       "instituciones": [
-        "Universidad de Mendoza (UM)"
+        "Universidad de Mendoza (UM)",
+        "Universidad Champagnat (UCh)"
       ],
       "perfil": {
         "riasec": {
@@ -16465,6 +17487,51 @@
       }
     },
     {
+      "clave": "postitulo en enfermeria de la salud mental",
+      "nombre": "Postítulo en Enfermería de la Salud Mental",
+      "categoria": "Posgrado / Especialización",
+      "area": "Salud",
+      "formacion": "grado",
+      "instituciones": [
+        "IESVU (IES 9-015 Valle de Uco)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 8,
+          "A": 2,
+          "S": 10,
+          "E": 3,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 6,
+          "espacial": 4,
+          "interpersonal": 10,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 4,
+          "equipo": 7,
+          "impacto": 10,
+          "ingresos": 4,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Salud",
+        "ajustes": [
+          "psicolog",
+          "enfermer",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "postitulo en enfermeria laboral",
       "nombre": "Postítulo en Enfermería Laboral",
       "categoria": "Curso / Formación Profesional",
@@ -16554,6 +17621,50 @@
       }
     },
     {
+      "clave": "preceptoria escolar",
+      "nombre": "Preceptoría Escolar",
+      "categoria": "Grado / Carrera",
+      "area": "Educación",
+      "formacion": "grado",
+      "instituciones": [
+        "Instituto de Ciencias Junín"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 6,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 9,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "preparacion fisica y entrenamiento deportivo",
       "nombre": "Preparación Física y Entrenamiento Deportivo",
       "categoria": "Grado / Carrera",
@@ -16593,6 +17704,50 @@
           "matematic",
           "deporte",
           "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "preparador de ensambles corales",
+      "nombre": "Preparador de ensambles corales",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Arte",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto de Arte Chopin"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 4,
+          "A": 10,
+          "S": 5,
+          "E": 4,
+          "C": 3
+        },
+        "apt": {
+          "logico_matematica": 3,
+          "verbal": 6,
+          "espacial": 6,
+          "interpersonal": 5,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 4,
+          "variedad": 8,
+          "equipo": 5,
+          "impacto": 5,
+          "ingresos": 4,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Arte",
+        "ajustes": [
+          "musica",
+          "formacion:tecnicaturas"
         ],
         "interacciones": 0,
         "peso_uso": 0
@@ -16649,7 +17804,8 @@
       "area": "Ciencias sociales",
       "formacion": "grado",
       "instituciones": [
-        "Universidad de Mendoza (UM)"
+        "Universidad de Mendoza (UM)",
+        "Universidad Champagnat (UCh)"
       ],
       "perfil": {
         "riasec": {
@@ -16694,6 +17850,49 @@
       "formacion": "tecnicaturas",
       "instituciones": [
         "Universidad Siglo 21 (S21)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "productor y gestor cultural",
+      "nombre": "Productor y Gestor Cultural",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto de Arte Chopin"
       ],
       "perfil": {
         "riasec": {
@@ -16816,6 +18015,52 @@
         "ajustes": [
           "docencia",
           "ambient",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "profesorado de danza",
+      "nombre": "Profesorado de Danza",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "IES 9-014 Profesorado de Arte (IPA)",
+        "Instituto Fundación por el Arte"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 5,
+          "A": 7,
+          "S": 10,
+          "E": 4,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "musica",
           "formacion:profesorados"
         ],
         "interacciones": 0,
@@ -17010,9 +18255,15 @@
       "area": "Educación",
       "formacion": "profesorados",
       "instituciones": [
+        "IES 9-001 Gral. José de San Martín",
+        "IES 9-003 Normal (San Rafael)",
+        "IES 9-009 (Tupungato)",
         "IES 9-024 (Lavalle)",
+        "Fundación Rayuela",
         "IES 9-026 Instituto de la Patria Grande",
-        "IES 9-027 (Guaymallén)"
+        "IES 9-027 (Guaymallén)",
+        "Instituto San Antonio (PT-030)",
+        "Instituto Superior Diocesano San José (PT-164)"
       ],
       "perfil": {
         "riasec": {
@@ -17111,7 +18362,12 @@
         "IES 9-010 Rosario Vera Peñaloza",
         "IES 9-030 (Instituto del Bicentenario)",
         "Fundación Rayuela",
-        "IES 9-026 Instituto de la Patria Grande"
+        "Instituto Superior",
+        "IES 9-026 Instituto de la Patria Grande",
+        "IES 9-027 (Guaymallén)",
+        "Instituto San Antonio (PT-030)",
+        "Instituto Superior Isabel La Católica",
+        "Instituto Superior de Educación Mendoza (ISEM)"
       ],
       "perfil": {
         "riasec": {
@@ -17207,12 +18463,16 @@
         "IES 9-006 Francisco H. Tolosa",
         "IES 9-009 (Tupungato)",
         "IES 9-010 Rosario Vera Peñaloza",
+        "IES 9-018 (Malargüe)",
         "IES 9-023",
         "IES 9-029 (Luján de Cuyo)",
         "IES 9-030 (Instituto del Bicentenario)",
         "Fundación Rayuela",
         "IES 9-026 Instituto de la Patria Grande",
-        "IES 9-027 (Guaymallén)"
+        "IES 9-027 (Guaymallén)",
+        "Instituto San Antonio (PT-030)",
+        "Instituto Superior Diocesano San José (PT-164)",
+        "Instituto Superior Isabel La Católica"
       ],
       "perfil": {
         "riasec": {
@@ -17386,6 +18646,51 @@
       }
     },
     {
+      "clave": "profesorado de educacion secundaria en filosofia",
+      "nombre": "Profesorado de Educación Secundaria en Filosofía",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "Instituto Alfredo Bufano (PT-215)",
+        "Instituto Nuestra Señora del Rosario (PT-094)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 5,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "profesorado de educacion secundaria en fisica",
       "nombre": "Profesorado de Educación Secundaria en Física",
       "categoria": "Grado / Profesorado",
@@ -17439,7 +18744,9 @@
       "formacion": "profesorados",
       "instituciones": [
         "IES 9-001 Gral. José de San Martín",
-        "IES 9-011 Del Atuel"
+        "IES 9-011 Del Atuel",
+        "IES 9-026 Instituto de la Patria Grande",
+        "Instituto Superior de Educación Mendoza (ISEM)"
       ],
       "perfil": {
         "riasec": {
@@ -17485,7 +18792,9 @@
       "instituciones": [
         "IES 9-001 Gral. José de San Martín",
         "IES 9-011 Del Atuel",
-        "IES 9-030 (Instituto del Bicentenario)"
+        "IES 9-030 (Instituto del Bicentenario)",
+        "Instituto Alfredo Bufano (PT-215)",
+        "Instituto Superior de Educación Mendoza (ISEM)"
       ],
       "perfil": {
         "riasec": {
@@ -17523,6 +18832,52 @@
       }
     },
     {
+      "clave": "profesorado de educacion secundaria en informatica",
+      "nombre": "Profesorado de Educación Secundaria en Informática",
+      "categoria": "Grado / Profesorado",
+      "area": "Tecnología",
+      "formacion": "profesorados",
+      "instituciones": [
+        "IES 9-003 Normal (San Rafael)",
+        "IES 9-018 (Malargüe)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 4,
+          "I": 8,
+          "A": 4,
+          "S": 5,
+          "E": 3,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 8,
+          "verbal": 6,
+          "espacial": 6,
+          "interpersonal": 3,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 5,
+          "impacto": 5,
+          "ingresos": 6,
+          "movilidad": 4
+        }
+      },
+      "origen": {
+        "area_base": "Tecnología",
+        "ajustes": [
+          "programacion",
+          "docencia",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "profesorado de educacion secundaria en lengua y literatura",
       "nombre": "Profesorado de Educación Secundaria en LENGUA y LITERATURA",
       "categoria": "Grado / Profesorado",
@@ -17535,7 +18890,8 @@
         "IES 9-011 Del Atuel",
         "IES 9-018 (Malargüe)",
         "IES 9-024 (Lavalle)",
-        "IES 9-030 (Instituto del Bicentenario)"
+        "IES 9-030 (Instituto del Bicentenario)",
+        "Instituto Alfredo Bufano (PT-215)"
       ],
       "perfil": {
         "riasec": {
@@ -17587,7 +18943,8 @@
         "IES 9-011 Del Atuel",
         "IES 9-023",
         "IES 9-024 (Lavalle)",
-        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
+        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)",
+        "Instituto Superior Isabel La Católica"
       ],
       "perfil": {
         "riasec": {
@@ -17633,6 +18990,7 @@
       "formacion": "profesorados",
       "instituciones": [
         "IES 9-002 Tomás Godoy Cruz",
+        "IES 9-005",
         "IES 9-006 Francisco H. Tolosa",
         "IES 9-009 (Tupungato)"
       ],
@@ -17852,6 +19210,50 @@
       }
     },
     {
+      "clave": "profesorado de grado universitario (ciclo de complementacion curricular)",
+      "nombre": "Profesorado de Grado Universitario (Ciclo de Complementación Curricular)",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "Universidad del Aconcagua (UDA)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 5,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "profesorado de grado universitario en diseno",
       "nombre": "Profesorado de Grado Universitario en Diseño",
       "categoria": "Grado / Carrera",
@@ -17996,6 +19398,7 @@
         "IES 9-002 Tomás Godoy Cruz",
         "IES 9-010 Rosario Vera Peñaloza",
         "IES 9-030 (Instituto del Bicentenario)",
+        "Cultural Mendoza",
         "IES 9-027 (Guaymallén)"
       ],
       "perfil": {
@@ -18222,6 +19625,7 @@
       "formacion": "profesorados",
       "instituciones": [
         "IES 9-014 Profesorado de Arte (IPA)",
+        "IES 9-028 (Santa Rosa)",
         "IES 9-030 (Instituto del Bicentenario)"
       ],
       "perfil": {
@@ -18532,6 +19936,50 @@
       }
     },
     {
+      "clave": "profesorado en ciencias naturales",
+      "nombre": "Profesorado en Ciencias Naturales",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 5,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "profesorado en danza",
       "nombre": "Profesorado en Danza",
       "categoria": "Grado / Profesorado",
@@ -18570,6 +20018,50 @@
         "ajustes": [
           "docencia",
           "musica",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "profesorado en educacion especial con orientacion en discapacidad intelectual",
+      "nombre": "Profesorado en Educación Especial con Orientación en Discapacidad Intelectual",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "IES 9-002 Tomás Godoy Cruz"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 5,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
           "formacion:profesorados"
         ],
         "interacciones": 0,
@@ -19434,6 +20926,50 @@
       }
     },
     {
+      "clave": "profesorado para la educacion secundaria de la modalidad tecnico profesional (en concurrencia con el titulo de base)",
+      "nombre": "Profesorado para la Educación Secundaria de la modalidad Técnico Profesional (en concurrencia con el título de base)",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "IES 9-014 Profesorado de Arte (IPA)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 5,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "profesorado para la educacion secundaria de la modalidad tecnico profesional en concurrencia con el titulo de base",
       "nombre": "Profesorado para la Educación Secundaria de la Modalidad Técnico Profesional en Concurrencia con el Título de Base",
       "categoria": "Grado / Profesorado",
@@ -19522,6 +21058,50 @@
       }
     },
     {
+      "clave": "profesorado para la educacion secundaria en geografia",
+      "nombre": "Profesorado para la Educación Secundaria en Geografía",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "IES 9-005"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 5,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "profesorado para profesionales",
       "nombre": "Profesorado para profesionales",
       "categoria": "Grado / Carrera",
@@ -19529,7 +21109,8 @@
       "formacion": "profesorados",
       "instituciones": [
         "Universidad Nacional de Cuyo (UNCuyo)",
-        "Universidad Juan Agustín Maza (UMaza)"
+        "Universidad Juan Agustín Maza (UMaza)",
+        "Universidad Champagnat (UCh)"
       ],
       "perfil": {
         "riasec": {
@@ -19790,6 +21371,183 @@
       }
     },
     {
+      "clave": "profesorado universitario en educacion inicial",
+      "nombre": "Profesorado Universitario en Educación Inicial",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "Universidad Champagnat (UCh)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 5,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "profesorado universitario en educacion primaria",
+      "nombre": "Profesorado Universitario en Educación Primaria",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "Universidad Champagnat (UCh)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 5,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "profesorado universitario en historia",
+      "nombre": "Profesorado Universitario en Historia",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "Universidad Nacional de Cuyo (UNCuyo)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 5,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "profesorado universitario en lengua inglesa",
+      "nombre": "Profesorado Universitario en Lengua Inglesa",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "Universidad Nacional de Cuyo (UNCuyo)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 6,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "docencia",
+          "idioma",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "profesorado universitario en lengua y cultura inglesa",
       "nombre": "Profesorado Universitario en Lengua y Cultura Inglesa",
       "categoria": "Grado / Carrera",
@@ -19915,6 +21673,51 @@
       "origen": {
         "area_base": "Educación",
         "ajustes": [
+          "docencia",
+          "formacion:profesorados"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "profesorado y licenciatura en matematica",
+      "nombre": "Profesorado y Licenciatura en Matemática",
+      "categoria": "Grado / Profesorado",
+      "area": "Educación",
+      "formacion": "profesorados",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 5,
+          "S": 10,
+          "E": 4,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 9,
+          "corporal": 4
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 8,
+          "impacto": 10,
+          "ingresos": 3,
+          "movilidad": 2
+        }
+      },
+      "origen": {
+        "area_base": "Educación",
+        "ajustes": [
+          "matematic",
           "docencia",
           "formacion:profesorados"
         ],
@@ -20496,6 +22299,95 @@
       }
     },
     {
+      "clave": "refrigeracion domestica y comercial",
+      "nombre": "Refrigeración doméstica y comercial",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Oficios",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 10,
+          "I": 3,
+          "A": 4,
+          "S": 3,
+          "E": 5,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 3,
+          "espacial": 7,
+          "interpersonal": 3,
+          "corporal": 10
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 5,
+          "impacto": 4,
+          "ingresos": 6,
+          "movilidad": 4
+        }
+      },
+      "origen": {
+        "area_base": "Oficios",
+        "ajustes": [
+          "gestion",
+          "mecanic",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "refrigeracion industrial",
+      "nombre": "Refrigeración Industrial",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Oficios",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 10,
+          "I": 3,
+          "A": 4,
+          "S": 3,
+          "E": 4,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 3,
+          "espacial": 7,
+          "interpersonal": 3,
+          "corporal": 10
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 5,
+          "impacto": 4,
+          "ingresos": 5,
+          "movilidad": 4
+        }
+      },
+      "origen": {
+        "area_base": "Oficios",
+        "ajustes": [
+          "mecanic",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "refrigeracion y aire acondicionado",
       "nombre": "Refrigeración y Aire Acondicionado",
       "categoria": "Oficio / Formación Profesional",
@@ -21021,6 +22913,49 @@
       }
     },
     {
+      "clave": "social media manager",
+      "nombre": "Social Media Manager",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Champagnat (UCh)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "soldador (gratuito)",
       "nombre": "Soldador (gratuito)",
       "categoria": "Oficio / Formación Profesional",
@@ -21243,6 +23178,51 @@
       }
     },
     {
+      "clave": "soldadura y herreria artistica",
+      "nombre": "Soldadura y Herrería Artística",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Oficios",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 10,
+          "I": 3,
+          "A": 6,
+          "S": 3,
+          "E": 4,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 3,
+          "espacial": 7,
+          "interpersonal": 3,
+          "corporal": 10
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 5,
+          "impacto": 4,
+          "ingresos": 5,
+          "movilidad": 4
+        }
+      },
+      "origen": {
+        "area_base": "Oficios",
+        "ajustes": [
+          "mecanic",
+          "musica",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "sommelier de aceites de oliva",
       "nombre": "Sommelier de Aceites de Oliva",
       "categoria": "Curso / Formación Profesional",
@@ -21334,20 +23314,21 @@
     {
       "clave": "sommelier universitario",
       "nombre": "Sommelier Universitario",
-      "categoria": "Pregrado",
+      "categoria": "Grado / Carrera",
       "area": "Gastronomía",
-      "formacion": "tecnicaturas",
+      "formacion": "grado",
       "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)",
         "Universidad del Aconcagua (UDA)"
       ],
       "perfil": {
         "riasec": {
-          "R": 8,
-          "I": 3,
+          "R": 7,
+          "I": 4,
           "A": 9,
           "S": 5,
           "E": 5,
-          "C": 5
+          "C": 6
         },
         "apt": {
           "logico_matematica": 3,
@@ -21369,7 +23350,7 @@
         "area_base": "Gastronomía",
         "ajustes": [
           "gastronom",
-          "formacion:tecnicaturas"
+          "formacion:grado"
         ],
         "interacciones": 0,
         "peso_uso": 0
@@ -21765,6 +23746,50 @@
         "area_base": "Salud",
         "ajustes": [
           "enfermer",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnicatura en administracion en empresas de la salud",
+      "nombre": "Tecnicatura en Administración en Empresas de la Salud",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Salud",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto IDICSA"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 6,
+          "I": 6,
+          "A": 2,
+          "S": 9,
+          "E": 4,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 6,
+          "espacial": 4,
+          "interpersonal": 9,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 4,
+          "equipo": 7,
+          "impacto": 9,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Salud",
+        "ajustes": [
+          "gestion",
           "formacion:tecnicaturas"
         ],
         "interacciones": 0,
@@ -23051,6 +25076,50 @@
       }
     },
     {
+      "clave": "tecnicatura en marketing digital",
+      "nombre": "Tecnicatura en Marketing Digital",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Negocios",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Católica Argentina (UCA)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 4,
+          "I": 6,
+          "A": 4,
+          "S": 7,
+          "E": 9,
+          "C": 8
+        },
+        "apt": {
+          "logico_matematica": 6,
+          "verbal": 7,
+          "espacial": 4,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 5,
+          "equipo": 7,
+          "impacto": 4,
+          "ingresos": 9,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Negocios",
+        "ajustes": [
+          "gestion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura en negocios agroecologicos",
       "nombre": "Tecnicatura en Negocios Agroecológicos",
       "categoria": "Pregrado",
@@ -23891,6 +25960,49 @@
       }
     },
     {
+      "clave": "tecnicatura superior en acupuntura",
+      "nombre": "Tecnicatura Superior en Acupuntura",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto Técnico Superior de Medicina China"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura superior en administracion de empresas",
       "nombre": "Tecnicatura Superior en Administración de Empresas",
       "categoria": "Pregrado / Tecnicatura",
@@ -23901,7 +26013,9 @@
         "IES 9-009 (Tupungato)",
         "ISTEEC (IES 9-013)",
         "IESVU (IES 9-015 Valle de Uco)",
-        "IES 9-024 (Lavalle)"
+        "IES 9-018 (Malargüe)",
+        "IES 9-024 (Lavalle)",
+        "Instituto Superior Nicolás Avellaneda"
       ],
       "perfil": {
         "riasec": {
@@ -23939,6 +26053,50 @@
       }
     },
     {
+      "clave": "tecnicatura superior en administracion de empresas de la salud",
+      "nombre": "Tecnicatura Superior en Administración de Empresas de la Salud",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Salud",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IES 9-026 Instituto de la Patria Grande"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 6,
+          "I": 6,
+          "A": 2,
+          "S": 9,
+          "E": 4,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 6,
+          "espacial": 4,
+          "interpersonal": 9,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 4,
+          "equipo": 7,
+          "impacto": 9,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Salud",
+        "ajustes": [
+          "gestion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura superior en administracion publica",
       "nombre": "Tecnicatura Superior en ADMINISTRACIÓN PÚBLICA",
       "categoria": "Pregrado / Tecnicatura",
@@ -23946,6 +26104,7 @@
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-001 Gral. José de San Martín",
+        "ISTEEC (IES 9-013)",
         "IESVU (IES 9-015 Valle de Uco)",
         "IES 9-023"
       ],
@@ -24123,6 +26282,8 @@
       "area": "Ambiente",
       "formacion": "tecnicaturas",
       "instituciones": [
+        "IES 9-005",
+        "IES 9-010 Rosario Vera Peñaloza",
         "IESVU (IES 9-015 Valle de Uco)",
         "IES 9-021 Tecnológico"
       ],
@@ -24338,6 +26499,50 @@
       }
     },
     {
+      "clave": "tecnicatura superior en ciencia de datos e inteligencia artificial",
+      "nombre": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Tecnología",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto Tomás Alva Edison (PT-113)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 8,
+          "A": 4,
+          "S": 2,
+          "E": 3,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 8,
+          "verbal": 4,
+          "espacial": 6,
+          "interpersonal": 3,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 5,
+          "impacto": 4,
+          "ingresos": 6,
+          "movilidad": 4
+        }
+      },
+      "origen": {
+        "area_base": "Tecnología",
+        "ajustes": [
+          "programacion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura superior en comercio internacional y aduana",
       "nombre": "Tecnicatura Superior en Comercio Internacional y Aduana",
       "categoria": "Pregrado / Tecnicatura",
@@ -24428,6 +26633,50 @@
       }
     },
     {
+      "clave": "tecnicatura superior en comunicacion deportiva",
+      "nombre": "Tecnicatura Superior en Comunicación Deportiva",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Escuela de Periodismo Deportivo de Mendoza (EPD)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 5,
+          "S": 9,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 7,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "=comunicacion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura superior en comunicacion digital convergente",
       "nombre": "Tecnicatura Superior en Comunicación Digital Convergente",
       "categoria": "Pregrado / Tecnicatura",
@@ -24478,7 +26727,8 @@
       "area": "Ciencias sociales",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "IES 9-001 Gral. José de San Martín"
+        "IES 9-001 Gral. José de San Martín",
+        "Instituto Fabián Calle"
       ],
       "perfil": {
         "riasec": {
@@ -24509,6 +26759,52 @@
         "area_base": "Ciencias sociales",
         "ajustes": [
           "=comunicacion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnicatura superior en comunicacion y gestion de bibliotecas",
+      "nombre": "Tecnicatura Superior en Comunicación y Gestión de Bibliotecas",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Fundación Rayuela"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 5,
+          "S": 9,
+          "E": 6,
+          "C": 8
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 7,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 6,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "=comunicacion",
+          "gestion",
+          "secretariado",
           "formacion:tecnicaturas"
         ],
         "interacciones": 0,
@@ -24701,7 +26997,8 @@
       "area": "Arte",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Instituto de Arte Chopin"
+        "Instituto de Arte Chopin",
+        "Instituto Fundación por el Arte"
       ],
       "perfil": {
         "riasec": {
@@ -24745,13 +27042,16 @@
       "area": "Tecnología",
       "formacion": "tecnicaturas",
       "instituciones": [
+        "IES 9-005",
         "IES 9-008 Manuel Belgrano",
         "IES 9-010 Rosario Vera Peñaloza",
         "IES 9-012 Informática",
         "IES 9-018 (Malargüe)",
         "IES 9-021 Tecnológico",
         "IES 9-023",
-        "IES 9-024 (Lavalle)"
+        "IES 9-024 (Lavalle)",
+        "IES Nuevo Cuyo Mendoza (PT-169)",
+        "Instituto Tomás Alva Edison (PT-113)"
       ],
       "perfil": {
         "riasec": {
@@ -24920,6 +27220,50 @@
       }
     },
     {
+      "clave": "tecnicatura superior en direccion gastronomica",
+      "nombre": "Tecnicatura Superior en Dirección Gastronómica",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Turismo",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto Arrayanes"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 3,
+          "A": 7,
+          "S": 8,
+          "E": 6,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 3,
+          "verbal": 7,
+          "espacial": 4,
+          "interpersonal": 8,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 8,
+          "equipo": 7,
+          "impacto": 4,
+          "ingresos": 5,
+          "movilidad": 8
+        }
+      },
+      "origen": {
+        "area_base": "Turismo",
+        "ajustes": [
+          "gastronom",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura superior en diseno de indumentaria, textil y accesorios",
       "nombre": "Tecnicatura Superior en DISEÑO DE INDUMENTARIA, TEXTIL y ACCESORIOS",
       "categoria": "Pregrado / Tecnicatura",
@@ -24928,6 +27272,50 @@
       "instituciones": [
         "IES 9-001 Gral. José de San Martín",
         "IDESA - Instituto de Educación Superior Alvear (UGACOOP)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 4,
+          "A": 10,
+          "S": 4,
+          "E": 5,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 6,
+          "espacial": 8,
+          "interpersonal": 4,
+          "corporal": 5
+        },
+        "val": {
+          "estabilidad": 4,
+          "variedad": 7,
+          "equipo": 5,
+          "impacto": 5,
+          "ingresos": 5,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Diseño",
+        "ajustes": [
+          "diseno",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnicatura superior en diseno de interiores",
+      "nombre": "Tecnicatura Superior en Diseño de Interiores",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Diseño",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto Superior Nicolás Avellaneda"
       ],
       "perfil": {
         "riasec": {
@@ -25064,7 +27452,9 @@
         "IES 9-023",
         "IES 9-026 Instituto de la Patria Grande",
         "Instituto San Agustín",
-        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
+        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)",
+        "Instituto IDICSA",
+        "Instituto Superior Reinalda Balancini"
       ],
       "perfil": {
         "riasec": {
@@ -25198,7 +27588,8 @@
       "area": "Gastronomía",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "IES 9-028 (Santa Rosa)"
+        "IES 9-028 (Santa Rosa)",
+        "IES 9-029 (Luján de Cuyo)"
       ],
       "perfil": {
         "riasec": {
@@ -25246,7 +27637,8 @@
         "IES 9-009 (Tupungato)",
         "IESVU (IES 9-015 Valle de Uco)",
         "IES 9-023",
-        "IES 9-024 (Lavalle)"
+        "IES 9-024 (Lavalle)",
+        "Don Bosco (PT-021)"
       ],
       "perfil": {
         "riasec": {
@@ -25379,7 +27771,8 @@
       "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "IES 9-021 Tecnológico"
+        "IES 9-021 Tecnológico",
+        "Instituto Superior ESAPA (PT-166)"
       ],
       "perfil": {
         "riasec": {
@@ -25461,6 +27854,51 @@
       }
     },
     {
+      "clave": "tecnicatura superior en fotografia creativa y diseno fotografico",
+      "nombre": "Tecnicatura Superior en Fotografía Creativa y Diseño Fotográfico",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Diseño",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Escuela Regional Cuyo de Cine y Video (IES 9-017)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 4,
+          "A": 10,
+          "S": 4,
+          "E": 5,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 6,
+          "espacial": 8,
+          "interpersonal": 4,
+          "corporal": 5
+        },
+        "val": {
+          "estabilidad": 4,
+          "variedad": 7,
+          "equipo": 5,
+          "impacto": 5,
+          "ingresos": 5,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Diseño",
+        "ajustes": [
+          "diseno",
+          "musica",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura superior en gastronomia",
       "nombre": "Tecnicatura Superior en Gastronomia",
       "categoria": "Pregrado / Tecnicatura",
@@ -25469,7 +27907,8 @@
       "instituciones": [
         "IES 9-011 Del Atuel",
         "IESVU (IES 9-015 Valle de Uco)",
-        "IES 9-021 Tecnológico"
+        "IES 9-021 Tecnológico",
+        "Instituto Superior de la UTHGRA (PT-283)"
       ],
       "perfil": {
         "riasec": {
@@ -25559,7 +27998,8 @@
       "instituciones": [
         "IES 9-010 Rosario Vera Peñaloza",
         "IES 9-012 Informática",
-        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)"
+        "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)",
+        "Instituto Superior Nicolás Avellaneda"
       ],
       "perfil": {
         "riasec": {
@@ -25782,6 +28222,53 @@
       "formacion": "tecnicaturas",
       "instituciones": [
         "IES 9-001 Gral. José de San Martín",
+        "IESVU (IES 9-015 Valle de Uco)",
+        "IES 9-024 (Lavalle)",
+        "IES 9-029 (Luján de Cuyo)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 10,
+          "I": 8,
+          "A": 3,
+          "S": 4,
+          "E": 3,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 6,
+          "verbal": 5,
+          "espacial": 6,
+          "interpersonal": 4,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 9,
+          "ingresos": 4,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Ambiente",
+        "ajustes": [
+          "ambient",
+          "seguridad",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnicatura superior en higiene y seguridad con orientacion en calidad y medioambiente",
+      "nombre": "Tecnicatura Superior en Higiene y Seguridad con orientación en calidad y medioambiente",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ambiente",
+      "formacion": "tecnicaturas",
+      "instituciones": [
         "IES 9-024 (Lavalle)"
       ],
       "perfil": {
@@ -25920,7 +28407,8 @@
       "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Instituto San Agustín"
+        "Instituto San Agustín",
+        "Instituto Cruz Roja Argentina Filial San Rafael (PT-071)"
       ],
       "perfil": {
         "riasec": {
@@ -25958,6 +28446,49 @@
       }
     },
     {
+      "clave": "tecnicatura superior en investigacion criminalistica",
+      "nombre": "Tecnicatura Superior en Investigación Criminalística",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto Superior Juan Vucetich (PT-177)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura superior en laboratorio de analisis clinicos",
       "nombre": "Tecnicatura Superior en Laboratorio de Análisis Clínicos",
       "categoria": "Pregrado / Tecnicatura",
@@ -25965,7 +28496,9 @@
       "formacion": "tecnicaturas",
       "instituciones": [
         "IESVU (IES 9-015 Valle de Uco)",
-        "Instituto San Agustín"
+        "IES 9-026 Instituto de la Patria Grande",
+        "Instituto San Agustín",
+        "Instituto Cruz Roja Argentina Filial San Rafael (PT-071)"
       ],
       "perfil": {
         "riasec": {
@@ -26147,7 +28680,8 @@
       "instituciones": [
         "IESVU (IES 9-015 Valle de Uco)",
         "IES 9-021 Tecnológico",
-        "IES 9-023"
+        "IES 9-023",
+        "IDESA - Instituto de Educación Superior Alvear (UGACOOP)"
       ],
       "perfil": {
         "riasec": {
@@ -26401,13 +28935,59 @@
       }
     },
     {
+      "clave": "tecnicatura superior en obras viales",
+      "nombre": "Tecnicatura Superior en Obras Viales",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IES 9-011 Del Atuel",
+        "INSUTEC (Instituto Superior de Educación Tecnológica)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 8,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 4,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 7,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "construccion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura superior en optica y contactologia",
       "nombre": "Tecnicatura Superior en Óptica y Contactología",
       "categoria": "Pregrado / Tecnicatura",
       "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "IES 9-021 Tecnológico"
+        "IES 9-021 Tecnológico",
+        "NEOCAST (PT-145)"
       ],
       "perfil": {
         "riasec": {
@@ -26534,13 +29114,57 @@
       }
     },
     {
+      "clave": "tecnicatura superior en podologia",
+      "nombre": "Tecnicatura Superior en Podología",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Salud",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "IES 9-021 Tecnológico"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 6,
+          "I": 6,
+          "A": 2,
+          "S": 9,
+          "E": 3,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 5,
+          "verbal": 6,
+          "espacial": 4,
+          "interpersonal": 9,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 4,
+          "equipo": 7,
+          "impacto": 9,
+          "ingresos": 4,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Salud",
+        "ajustes": [
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura superior en preceptoria escolar",
       "nombre": "Tecnicatura Superior en Preceptoría Escolar",
       "categoria": "Pregrado / Tecnicatura",
       "area": "Educación",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Instituto Santísima Trinidad"
+        "Instituto Santísima Trinidad",
+        "Instituto Superior de Educación Mendoza (ISEM)"
       ],
       "perfil": {
         "riasec": {
@@ -26667,6 +29291,49 @@
       }
     },
     {
+      "clave": "tecnicatura superior en protesis dental",
+      "nombre": "Tecnicatura Superior en Prótesis Dental",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "NEOCAST (PT-145)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura superior en psicologia social a distancia",
       "nombre": "Tecnicatura Superior En Psicologia Social A Distancia",
       "categoria": "Pregrado / Tecnicatura",
@@ -26755,13 +29422,57 @@
       }
     },
     {
+      "clave": "tecnicatura superior en psicomotricidad",
+      "nombre": "Tecnicatura Superior en Psicomotricidad",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto de Ciencias Junín"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura superior en radiologia e imagenes para el diagnostico",
       "nombre": "Tecnicatura Superior en Radiología e Imágenes para el Diagnóstico",
       "categoria": "Pregrado / Tecnicatura",
       "area": "Salud",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Instituto San Agustín"
+        "Instituto San Agustín",
+        "Instituto Cruz Roja Argentina Filial San Rafael (PT-071)"
       ],
       "perfil": {
         "riasec": {
@@ -26851,6 +29562,7 @@
       "area": "Tecnología",
       "formacion": "tecnicaturas",
       "instituciones": [
+        "IES 9-010 Rosario Vera Peñaloza",
         "IES 9-012 Informática"
       ],
       "perfil": {
@@ -26927,6 +29639,136 @@
         "area_base": "Tecnología",
         "ajustes": [
           "programacion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnicatura superior en sanidad y bienestar animal",
+      "nombre": "Tecnicatura Superior en Sanidad y Bienestar Animal",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto Superior ESAPA (PT-166)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnicatura superior en servicios basicos y construcciones livianas industrializadas",
+      "nombre": "Tecnicatura Superior en Servicios Básicos y Construcciones Livianas Industrializadas",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Oficios",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "INSUTEC (Instituto Superior de Educación Tecnológica)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 10,
+          "I": 4,
+          "A": 4,
+          "S": 3,
+          "E": 4,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 3,
+          "espacial": 9,
+          "interpersonal": 3,
+          "corporal": 9
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 6,
+          "equipo": 5,
+          "impacto": 4,
+          "ingresos": 5,
+          "movilidad": 4
+        }
+      },
+      "origen": {
+        "area_base": "Oficios",
+        "ajustes": [
+          "construccion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnicatura superior en siniestrologia vial",
+      "nombre": "Tecnicatura Superior en Siniestrología Vial",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Negocios",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Instituto Superior Juan Vucetich (PT-177)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 4,
+          "I": 6,
+          "A": 4,
+          "S": 7,
+          "E": 8,
+          "C": 7
+        },
+        "apt": {
+          "logico_matematica": 6,
+          "verbal": 7,
+          "espacial": 4,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 5,
+          "equipo": 7,
+          "impacto": 4,
+          "ingresos": 8,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Negocios",
+        "ajustes": [
           "formacion:tecnicaturas"
         ],
         "interacciones": 0,
@@ -27157,6 +29999,52 @@
       }
     },
     {
+      "clave": "tecnicatura universitaria en administracion de edificios de propiedad horizontal y conjuntos inmobiliarios",
+      "nombre": "Tecnicatura Universitaria en Administración de Edificios de Propiedad Horizontal y Conjuntos Inmobiliarios",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Negocios",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Nacional de Cuyo (UNCuyo)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 6,
+          "I": 7,
+          "A": 5,
+          "S": 7,
+          "E": 10,
+          "C": 8
+        },
+        "apt": {
+          "logico_matematica": 6,
+          "verbal": 8,
+          "espacial": 6,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 7,
+          "impacto": 4,
+          "ingresos": 9,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Negocios",
+        "ajustes": [
+          "construccion",
+          "gestion",
+          "publicidad",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura universitaria en administracion y gestion de politicas publicas",
       "nombre": "Tecnicatura Universitaria En Administración Y Gestión De Políticas Públicas",
       "categoria": "Pregrado",
@@ -27245,6 +30133,50 @@
       }
     },
     {
+      "clave": "tecnicatura universitaria en comunicacion digital",
+      "nombre": "Tecnicatura Universitaria en Comunicación Digital",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Champagnat (UCh)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 5,
+          "S": 9,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 7,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "=comunicacion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura universitaria en desarrollo de aplicaciones informaticas",
       "nombre": "Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas",
       "categoria": "Pregrado / Tecnicatura",
@@ -27295,7 +30227,52 @@
       "area": "Tecnología",
       "formacion": "tecnicaturas",
       "instituciones": [
-        "Universidad de Mendoza (UM)"
+        "Universidad de Mendoza (UM)",
+        "Universidad Champagnat (UCh)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 8,
+          "A": 4,
+          "S": 2,
+          "E": 3,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 8,
+          "verbal": 4,
+          "espacial": 6,
+          "interpersonal": 3,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 5,
+          "impacto": 4,
+          "ingresos": 6,
+          "movilidad": 4
+        }
+      },
+      "origen": {
+        "area_base": "Tecnología",
+        "ajustes": [
+          "programacion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnicatura universitaria en desarrollo y produccion de videojuegos",
+      "nombre": "Tecnicatura Universitaria en Desarrollo y Producción de Videojuegos",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Tecnología",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "UTN Facultad Regional Mendoza"
       ],
       "perfil": {
         "riasec": {
@@ -27370,6 +30347,50 @@
         "area_base": "Diseño",
         "ajustes": [
           "=comunicacion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnicatura universitaria en diseno grafico",
+      "nombre": "Tecnicatura Universitaria en Diseño Gráfico",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Diseño",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Champagnat (UCh)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 4,
+          "A": 10,
+          "S": 4,
+          "E": 5,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 6,
+          "espacial": 8,
+          "interpersonal": 4,
+          "corporal": 5
+        },
+        "val": {
+          "estabilidad": 4,
+          "variedad": 7,
+          "equipo": 5,
+          "impacto": 5,
+          "ingresos": 5,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Diseño",
+        "ajustes": [
+          "diseno",
           "formacion:tecnicaturas"
         ],
         "interacciones": 0,
@@ -27908,6 +30929,50 @@
       }
     },
     {
+      "clave": "tecnicatura universitaria en higiene y seguridad en el trabajo - (a distancia)",
+      "nombre": "Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo - (A distancia)",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ambiente",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "UTN Facultad Regional Mendoza"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 9,
+          "I": 7,
+          "A": 3,
+          "S": 4,
+          "E": 3,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 6,
+          "verbal": 5,
+          "espacial": 6,
+          "interpersonal": 4,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 4,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Ambiente",
+        "ajustes": [
+          "seguridad",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura universitaria en instrumentacion quirurgica",
       "nombre": "Tecnicatura Universitaria en Instrumentación Quirúrgica",
       "categoria": "Grado / Carrera",
@@ -28040,6 +31105,138 @@
       }
     },
     {
+      "clave": "tecnicatura universitaria en produccion audiovisual",
+      "nombre": "Tecnicatura Universitaria en Producción Audiovisual",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Diseño",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Nacional de Cuyo (UNCuyo)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 4,
+          "A": 10,
+          "S": 5,
+          "E": 5,
+          "C": 4
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 7,
+          "interpersonal": 4,
+          "corporal": 5
+        },
+        "val": {
+          "estabilidad": 4,
+          "variedad": 8,
+          "equipo": 5,
+          "impacto": 5,
+          "ingresos": 5,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Diseño",
+        "ajustes": [
+          "=comunicacion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnicatura universitaria en produccion musical",
+      "nombre": "Tecnicatura Universitaria en Producción Musical",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Arte",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Champagnat (UCh)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 4,
+          "A": 10,
+          "S": 5,
+          "E": 4,
+          "C": 3
+        },
+        "apt": {
+          "logico_matematica": 3,
+          "verbal": 6,
+          "espacial": 6,
+          "interpersonal": 5,
+          "corporal": 6
+        },
+        "val": {
+          "estabilidad": 4,
+          "variedad": 8,
+          "equipo": 5,
+          "impacto": 5,
+          "ingresos": 4,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Arte",
+        "ajustes": [
+          "musica",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnicatura universitaria en programacion de videojuegos",
+      "nombre": "Tecnicatura Universitaria en Programación de Videojuegos",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Tecnología",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad de Mendoza (UM)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 8,
+          "A": 4,
+          "S": 2,
+          "E": 3,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 8,
+          "verbal": 4,
+          "espacial": 6,
+          "interpersonal": 3,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 5,
+          "impacto": 4,
+          "ingresos": 6,
+          "movilidad": 4
+        }
+      },
+      "origen": {
+        "area_base": "Tecnología",
+        "ajustes": [
+          "programacion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnicatura universitaria en promocion comunitaria en ninez y adolescencia",
       "nombre": "Tecnicatura Universitaria en Promoción Comunitaria en Niñez y Adolescencia",
       "categoria": "Pregrado",
@@ -28120,6 +31317,50 @@
         "area_base": "Salud",
         "ajustes": [
           "enfermer",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnicatura universitaria en redes de datos y telecomunicaciones",
+      "nombre": "Tecnicatura Universitaria en Redes de Datos y Telecomunicaciones",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Tecnología",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "ITU - Instituto Tecnológico Universitario (UNCuyo)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 8,
+          "A": 4,
+          "S": 2,
+          "E": 3,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 8,
+          "verbal": 4,
+          "espacial": 6,
+          "interpersonal": 3,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 5,
+          "impacto": 4,
+          "ingresos": 6,
+          "movilidad": 4
+        }
+      },
+      "origen": {
+        "area_base": "Tecnología",
+        "ajustes": [
+          "programacion",
           "formacion:tecnicaturas"
         ],
         "interacciones": 0,
@@ -28303,6 +31544,49 @@
       }
     },
     {
+      "clave": "tecnico en cartografia y teledeteccion",
+      "nombre": "Técnico en Cartografía y Teledetección",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Juan Agustín Maza (UMaza)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tecnico en telecomunicaciones",
       "nombre": "Técnico en Telecomunicaciones",
       "categoria": "Pregrado",
@@ -28435,8 +31719,8 @@
       }
     },
     {
-      "clave": "tecnico superior en diseno diseno grafico",
-      "nombre": "Técnico Superior en Diseño Diseño Gráfico",
+      "clave": "tecnico superior en diseno digital e interactivo",
+      "nombre": "Técnico Superior en Diseño Digital e Interactivo",
       "categoria": "Pregrado / Tecnicatura",
       "area": "Diseño",
       "formacion": "tecnicaturas",
@@ -28479,8 +31763,8 @@
       }
     },
     {
-      "clave": "tecnico superior en diseno multimedial",
-      "nombre": "Técnico Superior en Diseño Multimedial",
+      "clave": "tecnico superior en diseno grafico",
+      "nombre": "Técnico Superior en Diseño Gráfico",
       "categoria": "Pregrado / Tecnicatura",
       "area": "Diseño",
       "formacion": "tecnicaturas",
@@ -28781,6 +32065,50 @@
         "area_base": "Turismo",
         "ajustes": [
           "turismo",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnico universitario en comercio exterior y aduanas",
+      "nombre": "Técnico Universitario en Comercio Exterior y Aduanas",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Negocios",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Champagnat (UCh)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 4,
+          "I": 6,
+          "A": 4,
+          "S": 7,
+          "E": 9,
+          "C": 8
+        },
+        "apt": {
+          "logico_matematica": 6,
+          "verbal": 7,
+          "espacial": 4,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 5,
+          "equipo": 7,
+          "impacto": 4,
+          "ingresos": 9,
+          "movilidad": 5
+        }
+      },
+      "origen": {
+        "area_base": "Negocios",
+        "ajustes": [
+          "gestion",
           "formacion:tecnicaturas"
         ],
         "interacciones": 0,
@@ -29401,6 +32729,50 @@
       }
     },
     {
+      "clave": "traductorado publico en ingles (zona este: sede junin)",
+      "nombre": "Traductorado Público en Inglés (Zona Este: Sede Junín)",
+      "categoria": "Grado / Carrera",
+      "area": "Idiomas",
+      "formacion": "grado",
+      "instituciones": [
+        "Universidad Nacional de Cuyo (UNCuyo)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 1,
+          "I": 8,
+          "A": 6,
+          "S": 7,
+          "E": 4,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 10,
+          "espacial": 3,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 6,
+          "ingresos": 5,
+          "movilidad": 8
+        }
+      },
+      "origen": {
+        "area_base": "Idiomas",
+        "ajustes": [
+          "idioma",
+          "formacion:grado"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "tripulante de cabina de pasajeros",
       "nombre": "Tripulante de Cabina de Pasajeros",
       "categoria": "Curso / Formación Profesional",
@@ -29662,6 +33034,49 @@
       }
     },
     {
+      "clave": "ux writer",
+      "nombre": "UX Writer",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Ciencias sociales",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Champagnat (UCh)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 3,
+          "I": 7,
+          "A": 4,
+          "S": 8,
+          "E": 5,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 8,
+          "espacial": 2,
+          "interpersonal": 7,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 6,
+          "variedad": 6,
+          "equipo": 6,
+          "impacto": 8,
+          "ingresos": 5,
+          "movilidad": 3
+        }
+      },
+      "origen": {
+        "area_base": "Ciencias sociales",
+        "ajustes": [
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
       "clave": "veterinaria",
       "nombre": "Veterinaria",
       "categoria": "Grado / Carrera",
@@ -29830,6 +33245,50 @@
         "area_base": "Ciencias sociales",
         "ajustes": [
           "formacion:cursos"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "web developer",
+      "nombre": "Web Developer",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Tecnología",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "Universidad Champagnat (UCh)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 5,
+          "I": 8,
+          "A": 4,
+          "S": 2,
+          "E": 3,
+          "C": 6
+        },
+        "apt": {
+          "logico_matematica": 8,
+          "verbal": 4,
+          "espacial": 6,
+          "interpersonal": 3,
+          "corporal": 2
+        },
+        "val": {
+          "estabilidad": 5,
+          "variedad": 6,
+          "equipo": 5,
+          "impacto": 4,
+          "ingresos": 6,
+          "movilidad": 4
+        }
+      },
+      "origen": {
+        "area_base": "Tecnología",
+        "ajustes": [
+          "programacion",
+          "formacion:tecnicaturas"
         ],
         "interacciones": 0,
         "peso_uso": 0

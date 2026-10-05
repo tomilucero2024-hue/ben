@@ -23,9 +23,7 @@
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/montserrat.css?v=20261004_6">
 <script>
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
@@ -56,11 +54,13 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260930_17">
+<link rel="stylesheet" href="/paginas.css?v=20261004_6">
+<!-- Estilos de la ventana de Mi lista, que estas páginas abren sin salir. -->
+<link rel="stylesheet" href="/mi-lista.css?v=20261004_6">
 <!-- Medir las fichas: son la mayor parte del tráfico del sitio (llegan desde
      Google) y sin esto los informes verían solo la portada. El mismo archivo
      carga la app en index.html. -->
-<script src="/js/analitica.js?v=20260930_17"></script>
+<script src="/js/analitica.js?v=20261004_6"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Instituciones","item":"https://buscadoreducativo.com.ar/instituciones/"},{"@type":"ListItem","position":3,"name":"Mendoza","item":"https://buscadoreducativo.com.ar/provincia/mendoza/"},{"@type":"ListItem","position":4,"name":"IES 9-008 Manuel Belgrano","item":"https://buscadoreducativo.com.ar/institucion/ies-9-008-manuel-belgrano/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"IES 9-008 Manuel Belgrano","url":"https://buscadoreducativo.com.ar/institucion/ies-9-008-manuel-belgrano/","email":"contacto@iesmb.edu.ar","telephone":"0261-4233545","address":{"@type":"PostalAddress","streetAddress":"Mendoza, Argentina","addressRegion":"Mendoza","addressCountry":"AR"}}</script>
 </head>
@@ -140,8 +140,8 @@
     </div>
     <aside class="lateral">
     <dl class="ficha">
-        <dt>Gestión</dt><dd>pública</dd>
-        <dt>Nivel</dt><dd>terciario</dd>
+        <dt>Gestión</dt><dd>Pública</dd>
+        <dt>Nivel</dt><dd>Terciario</dd>
         <dt>Provincia</dt><dd><a href="/provincia/mendoza/">Mendoza</a></dd>
         <dt>Oferta en BEN</dt><dd>6 carreras</dd>
         <dt>Dirección</dt><dd>Mendoza, Argentina</dd>
@@ -154,7 +154,7 @@
     <h2>Diseño (3)</h2>
     <ul class="ofertas">
         <li class="oferta">
-            <h3><a href="/carrera/tecnico-superior-en-diseno-diseno-grafico/">Técnico Superior en Diseño Diseño Gráfico</a></h3>
+            <h3><a href="/carrera/tecnico-superior-en-diseno-grafico/">Técnico Superior en Diseño Gráfico</a></h3>
             <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio — 3 años</summary>
@@ -171,10 +171,10 @@
             <h4>Tercer año</h4>
             <ul><li>Diseño de comunicación visual III</li><li>Técnicas de Representación III</li><li>Herramientas Digitales III</li><li>Comunicación; Medios y Nuevas Tecnologías</li><li>Mercadotecnia para PyMES</li><li>Gestión de microemprendimientos</li><li>E.I.O. (Espacio Institucional Optativo II)</li><li>Ética profesional</li><li>Formulación y evaluación de proyectos</li><li>Metodología de la Investigación</li><li>Práctica profesionalizante III</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.iesmb.edu.ar/bel/diseno-grafico-y-publicitario/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://www.iesmb.edu.ar/bel/diseno-grafico-y-publicitario/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.iesmb.edu.ar/bel/diseno-grafico-y-publicitario/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.iesmb.edu.ar/bel/diseno-grafico-y-publicitario/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnico-superior-en-diseno-de-indumentaria-textil-y-accesorios/">Técnico Superior en Diseño de Indumentaria, Textil y Accesorios</a></h3>
@@ -194,33 +194,33 @@
             <h4>Tercer año</h4>
             <ul><li>Diseño de Indumentaria III</li><li>Moldería III</li><li>Dibujo técnico asistido y Comunicación del Proyecto</li><li>Diseño de Maroquinería y Accesorios</li><li>Ética profesional</li><li>Gestión de Calidad</li><li>Tecnología II</li><li>Emprendedorismo</li><li>Práctica profesionalizante III</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.iesmb.edu.ar/bel/indumentaria/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://www.iesmb.edu.ar/bel/indumentaria/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.iesmb.edu.ar/bel/indumentaria/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.iesmb.edu.ar/bel/indumentaria/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
-            <h3><a href="/carrera/tecnicatura-superior-en-diseno-multimedial/">Técnico Superior en Diseño Multimedial</a></h3>
-            <ul class="oferta-datos"><li>Duración: 3 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
+            <h3><a href="/carrera/tecnico-superior-en-diseno-digital-e-interactivo/">Técnico Superior en Diseño Digital e Interactivo</a></h3>
+            <ul class="oferta-datos"><li>Duración: 2 años y medio</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Pregrado / Tecnicatura</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio — 3 años</summary>
     <div class="plan-contenido">
         <div class="plan-anio">
             <h4>Primer año</h4>
-            <ul><li>Diseño en Comunicación Visual I</li><li>Técnicas de representación I</li><li>Herramientas digitales I</li><li>Inglés</li><li>Tipografía I</li><li>Historia del arte y del diseño I</li><li>Problemática Sociocultural y el contexto</li><li>Prácticas de lectura, escritura y oralidad</li><li>Inglés técnico</li><li>EIO (Espacio Institucional optativo I)</li><li>Percepción Visual I</li><li>Práctica profesionalizante I</li></ul>
+            <ul><li>Introducción al Diseño</li><li>Herramientas Digitales</li><li>Técnicas de Representación</li><li>Historia, Cultura y Sociología de la Imagen y el Diseño</li><li>Psicología de la Percepción y Semiótica Visual</li><li>Metodología del Diseño y Técnicas de Creatividad</li><li>Tecnología Básica</li><li>Inglés técnico</li><li>Comunicación, Medios y Nuevas Tecnologías</li><li>Comunicación y Alfabetización Académica y Digital</li><li>Tipografía Básica</li><li>Práctica profesionalizante I</li></ul>
         </div>
         <div class="plan-anio">
             <h4>Segundo año</h4>
-            <ul><li>Diseño en Comunicación Visual II</li><li>Técnicas de representación II</li><li>Producción Web I</li><li>Fotografía publicitaria</li><li>Historia del Arte y del Diseño II</li><li>Semiología</li><li>Tecnología gráfica I</li><li>Práctica profesionalizante II</li><li>Introducción al Modelado 3D</li><li>Producción Web II</li><li>Tipografía II</li><li>Guión</li></ul>
+            <ul><li>Diseño de Interfaces (UX/UI)</li><li>Motion Graphics y Animación 2D/3D</li><li>Fotografía y Producción Audiovisual</li><li>Tecnología Web Front- End I</li><li>Tecnología Web Front- End II</li><li>Edición y Composición Digital (VFX y Sonido)</li><li>Guión y Narrativa Transmedia</li><li>Práctica profesionalizante II</li><li>Gestión de Proyectos y Metodologías Ágiles</li><li>Ética Profesional y Legislación</li><li>Práctica profesionalizante III</li></ul>
         </div>
         <div class="plan-anio">
             <h4>Tercer año</h4>
-            <ul><li>Diseño de Comunicación Audiovisual</li><li>Animación Computada</li><li>Edición de sonido</li><li>Comunicación, medios y nuevas tecnologías</li><li>Mercadotecnia para PyMES</li><li>Gestión de Microemprendimientos</li><li>Práctica Profesionalizante III</li><li>Ética Profesional</li><li>Formulación y evaluación de Proyectos</li><li>Proyecto integrado</li></ul>
+            <ul><li>Diseño de Videojuegos y Entornos Interactivos</li><li>Diseño Experimental y Tendencias Emergentes</li><li>Portfolio Profesional y Marca Personal</li><li>Comunicación, medios y nuevas tecnologías</li><li>Marketing Digital y Social Media</li><li>Gestión de Microemprendimientos</li><li>Práctica Profesionalizante IV</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.iesmb.edu.ar/bel/diseno-multimedial/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://www.iesmb.edu.ar/bel/diseno-digital-interactivo/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.iesmb.edu.ar/bel/diseno-multimedial/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.iesmb.edu.ar/bel/diseno-digital-interactivo/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -233,21 +233,21 @@
     <summary>Plan de estudio — 3 años</summary>
     <div class="plan-contenido">
         <div class="plan-anio">
-            <h4>1º año</h4>
-            <ul><li>Programación I</li><li>Matemática Aplicada</li><li>Lógica Computacional</li><li>Inglés Técnico I</li><li>Alfabetización Académica</li><li>Arquitectura de Dispositivos</li><li>Seminario Nuevas Tecnologías</li><li>Sistemas Operativos I</li><li>Base de Datos I</li><li>Práctica Profesionalizante I</li></ul>
+            <h4>Primer año</h4>
+            <ul><li>Programación I</li><li>Matemática Aplicada</li><li>Lógica Computacional</li><li>Inglés técnico I</li><li>Alfabetización académica</li><li>Arquitectura de Dispositivos</li><li>Seminario Nuevas Tecnologías</li><li>Sistemas Operativos I</li><li>Base de Datos I</li><li>Práctica Profesionalizante I</li></ul>
         </div>
         <div class="plan-anio">
-            <h4>2º año</h4>
+            <h4>Segundo año</h4>
             <ul><li>Programación II</li><li>Matemática Discreta</li><li>Administración de Servidores</li><li>Inglés Técnico II</li><li>Comunicación y Redes</li><li>Modelado de Software</li><li>Sistemas Operativos II</li><li>Análisis Matemático</li><li>Base de Datos II</li><li>Práctica Profesionalizante II</li></ul>
         </div>
         <div class="plan-anio">
-            <h4>3º año</h4>
-            <ul><li>Programación III</li><li>Arquitectura y Diseño de Interfaces: UI y UX</li><li>Auditoría y Calidad de Sistema</li><li>Inglés Técnico III</li><li>Gestión de Proyectos de Software</li><li>Base de Datos III</li><li>Legislación Informática y Ética Profesional</li><li>Estadística y Probabilidades para el Desarrollo de Software</li><li>Ciberseguridad</li><li>Metodologías Ágiles</li><li>Práctica Profesionalizante III</li></ul>
+            <h4>Tercer año</h4>
+            <ul><li>Programación III</li><li>Arquitectura y Diseño de Interfaces: UI y UX</li><li>Auditoría y Calidad de Sistema</li><li>Inglés Técnico III</li><li>Gestión de Proyectos de Software</li><li>Base de Datos III</li><li>Legislación Informática y Ética Profesional</li><li>Estadística y probabilidades para el Desarrollo de Software</li><li>Ciberseguridad</li><li>Metodologías Ágiles</li><li>Práctica Profesionalizante III</li></ul>
         </div>
-
+        <p class="plan-fuente">Fuente: <a href="https://www.iesmb.edu.ar/bel/desarrollo_de_software/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.iesmb.edu.ar/bel/desarrollo-de-software/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.iesmb.edu.ar/bel/desarrollo_de_software/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnico-superior-en-ia-y-ciencia-de-datos/">Técnico Superior en IA y Ciencia de Datos</a></h3>
@@ -256,21 +256,21 @@
     <summary>Plan de estudio — 3 años</summary>
     <div class="plan-contenido">
         <div class="plan-anio">
-            <h4>1º año</h4>
-            <ul><li>Programación I</li><li>Matemática Aplicada</li><li>Lógica Computacional</li><li>Inglés Técnico I</li><li>Alfabetización Académica</li><li>Arquitectura de Dispositivos</li><li>Base de Datos I</li><li>Práctica Profesionalizante I</li><li>Seminario Nuevas Tecnologías</li><li>Sistemas Operativos I</li></ul>
+            <h4>Primer año</h4>
+            <ul><li>Programación I</li><li>Matemática Aplicada</li><li>Lógica Computacional</li><li>Inglés técnico I</li><li>Alfabetización Académica</li><li>Arquitectura de Dispositivos</li><li>Base de Datos I</li><li>Práctica Profesionalizante I</li><li>Seminario Nuevas Tecnologías</li><li>Sistemas Operativos I</li></ul>
         </div>
         <div class="plan-anio">
-            <h4>2º año</h4>
-            <ul><li>Programación Orientada al Análisis de Datos</li><li>Matemática Aplicada a la Ciencia de Datos</li><li>Estadística y Probabilidades para Gestión de Datos</li><li>Ciencia de Datos y Datos Masivos</li><li>Inglés Técnico II</li><li>Gestión de Proyectos</li><li>Comunicación de Resultados Analíticos</li><li>Minería de Datos</li><li>Práctica Profesionalizante II</li><li>Metodologías Ágiles</li><li>Ética y Legislación en el Tratamiento de Datos</li></ul>
+            <h4>Segundo año</h4>
+            <ul><li>Programación Orientada al Análisis de Datos</li><li>Matemática Aplicada a la Ciencia de Datos</li><li>Estadística y Probabilidades para Gestión de Datos</li><li>Ciencia de Datos y Datos Masivos</li><li>Inglés técnico II</li><li>Gestión de Proyectos</li><li>Comunicación de Resultados Analíticos</li><li>Minería de Datos</li><li>Práctica Profesionalizante II</li><li>Metodologías Ágiles</li><li>Ética y Legislación en el Tratamiento de Datos</li></ul>
         </div>
         <div class="plan-anio">
-            <h4>3º año</h4>
-            <ul><li>IA Aplicada al Procesamiento del Lenguaje Natural</li><li>IA Aplicada al Procesamiento Digital de Imágenes</li><li>Inglés Técnico III</li><li>Matemática Aplicada a la IA</li><li>Redes Neuronales y Aprendizaje Automático</li><li>Seminario de Actualización</li><li>Sistemas de Inteligencia Artificial</li><li>Prompts para Inteligencia Artificial</li><li>Inteligencia Artificial Generativa</li><li>Fundamentos de Ciberseguridad</li><li>Grandes Modelos del Lenguaje</li><li>Práctica Profesionalizante III</li></ul>
+            <h4>Tercer año</h4>
+            <ul><li>IA aplicada al Procesamiento del Lenguaje Natural</li><li>IA aplicada al Procesamiento Digital de Imágenes</li><li>Inglés Técnico III</li><li>Matemática Aplicada a la IA</li><li>Redes Neuronales y Aprendizaje Automático</li><li>Seminario de Actualización</li><li>Sistemas de Inteligencia Artificial</li><li>Prompts para Inteligencia Artificial</li><li>Inteligencia Artificial Generativa</li><li>Fundamentos de Ciberseguridad</li><li>Grandes Modelos del Lenguaje</li><li>Práctica Profesionalizante III</li></ul>
         </div>
-
+        <p class="plan-fuente">Fuente: <a href="https://www.iesmb.edu.ar/bel/ia_y_ciencia_de_datos/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.iesmb.edu.ar/bel/ia_y_ciencia_de_datos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.iesmb.edu.ar/bel/ia_y_ciencia_de_datos/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
         <li class="oferta">
             <h3><a href="/carrera/tecnicatura-superior-en-redes-y-ciberseguridad/">Técnico Superior en Redes y Ciberseguridad</a></h3>
@@ -290,10 +290,10 @@
             <h4>Tercer año</h4>
             <ul><li>Tratamiento de incidentes de continuidad de Negocio</li><li>Ciberseguridad</li><li>Inglés Técnico III</li><li>Videovigilancia y Control de Accesos</li><li>Auditoría de Seguridad Informática</li><li>Forense Digital</li><li>Legislación Informática y Ética Profesional</li><li>Investigación Digital y Cibercrimen</li><li>Ethical Hacking</li><li>Práctica Profesionalizante III</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://www.iesmb.edu.ar/bel/redes-y-ciberseguridad/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://www.iesmb.edu.ar/bel/redes-y-ciberseguridad/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://www.iesmb.edu.ar/bel/redes-y-ciberseguridad/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://www.iesmb.edu.ar/bel/redes-y-ciberseguridad/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
     </div>
@@ -383,6 +383,11 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260930_17"></script>
+<script src="/js/favoritos.js?v=20261004_6"></script>
+<!-- Vuelve a la posición donde estabas al usar Atrás (la app avisa cuándo
+     terminó de pintar; en estas páginas el HTML ya está listo). -->
+<script src="/js/restaurar-scroll.js?v=20261004_6"></script>
+<!-- Mi lista se abre como ventana flotante sin salir de la ficha. -->
+<script src="/js/mi-lista-loader.js?v=20261004_6"></script>
 </body>
 </html>

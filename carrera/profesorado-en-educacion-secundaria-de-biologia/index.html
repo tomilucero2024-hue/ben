@@ -23,9 +23,7 @@
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/montserrat.css?v=20261004_6">
 <script>
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
@@ -56,11 +54,13 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260930_17">
+<link rel="stylesheet" href="/paginas.css?v=20261004_6">
+<!-- Estilos de la ventana de Mi lista, que estas páginas abren sin salir. -->
+<link rel="stylesheet" href="/mi-lista.css?v=20261004_6">
 <!-- Medir las fichas: son la mayor parte del tráfico del sitio (llegan desde
      Google) y sin esto los informes verían solo la portada. El mismo archivo
      carga la app en index.html. -->
-<script src="/js/analitica.js?v=20260930_17"></script>
+<script src="/js/analitica.js?v=20261004_6"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Carreras","item":"https://buscadoreducativo.com.ar/carreras/"},{"@type":"ListItem","position":3,"name":"Educación","item":"https://buscadoreducativo.com.ar/area/educacion/"},{"@type":"ListItem","position":4,"name":"Profesorado en Educación Secundaria de Biología","item":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-secundaria-de-biologia/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Profesorado en Educación Secundaria de Biología","description":"Dónde estudiar Profesorado en Educación Secundaria de Biología en Mendoza: profesorado del área Educación, dictada por 1 institución (1 pública). Dura 4 años. Modalidades disponibles: presencial.","url":"https://buscadoreducativo.com.ar/carrera/profesorado-en-educacion-secundaria-de-biologia/","provider":{"@type":"EducationalOrganization","name":"IES 9-018 (Malargüe)","url":"https://buscadoreducativo.com.ar/institucion/ies-9-018-malargue/"}}</script>
 </head>
@@ -161,7 +161,7 @@
                 <span>Los costos y aranceles los define cada institución. Para saber cuánto sale, comunicate con el establecimiento.</span>
             </p>
         </div>
-        <a class="btn-ver-mi-lista" href="/?lista=1">
+        <a class="btn-ver-mi-lista" href="/?lista=1" data-abrir-mi-lista>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
             Ver Mi lista
         </a>
@@ -171,7 +171,7 @@
     <h2>Dónde estudiar Profesorado en Educación Secundaria de Biología</h2>
     <ul class="ofertas">
         <li class="oferta" id="oferta-1">
-            <h3><span class="etiqueta publica">pública</span> <a href="/institucion/ies-9-018-malargue/">IES 9-018 (Malargüe)</a></h3>
+            <h3><span class="etiqueta publica">Pública</span> <a href="/institucion/ies-9-018-malargue/">IES 9-018 (Malargüe)</a></h3>
             <ul class="oferta-datos"><li>Duración: 4 años</li><li>Modalidad: Presencial</li><li>Turno: A confirmar</li><li>Mendoza</li></ul>
             <details class="plan-de-estudio">
     <summary>Plan de estudio — 4 años</summary>
@@ -192,10 +192,10 @@
             <h4>Cuarto año</h4>
             <ul><li>Educación Sexual</li><li>Bioética</li><li>Educación para la Salud</li><li>Educación Ambiental</li><li>Unidad de Definición Institucional CFE</li><li>Unidad de Definición Institucional CFG</li><li>Unidad de Definición Institucional CFE</li><li>Unidad de Definición Institucional CFG</li><li>Práctica Profesional Docente III</li></ul>
         </div>
-        <p class="plan-fuente">Fuente: <a href="https://ies9018malargue.edu.ar/profesorado-en-educacion-secundaria-de-biologia/" rel="noopener nofollow" target="_blank">plan oficial ↗</a></p>
+        <p class="plan-fuente">Fuente: <a href="https://ies9018malargue.edu.ar/profesorado-en-educacion-secundaria-de-biologia/" rel="noopener nofollow" target="_blank">plan oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></p>
     </div>
 </details>
-            <a class="oficial" href="https://ies9018malargue.edu.ar/profesorado-en-educacion-secundaria-de-biologia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ↗</a>
+            <a class="oficial" href="https://ies9018malargue.edu.ar/profesorado-en-educacion-secundaria-de-biologia/" rel="noopener nofollow" target="_blank">Ver en el sitio oficial <svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
         </li>
     </ul>
 
@@ -231,20 +231,20 @@
     <section class="relacionadas">
     <h2>Otras carreras del área Educación</h2>
     <ul class="enlaces">
-        <li><a href="/carrera/profesorado-de-educacion-primaria/">Profesorado de Educación Primaria</a> <span class="cuantas">(17)</span></li>
-        <li><a href="/carrera/profesorado-de-educacion-inicial/">Profesorado de Educación Inicial</a> <span class="cuantas">(10)</span></li>
+        <li><a href="/carrera/profesorado-de-educacion-primaria/">Profesorado de Educación Primaria</a> <span class="cuantas">(21)</span></li>
+        <li><a href="/carrera/profesorado-de-educacion-inicial/">Profesorado de Educación Inicial</a> <span class="cuantas">(15)</span></li>
+        <li><a href="/carrera/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual/">Profesorado de Educación Especial con Orientación en Discapacidad Intelectual</a> <span class="cuantas">(11)</span></li>
+        <li><a href="/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/">Profesorado de Educación Secundaria en LENGUA y LITERATURA</a> <span class="cuantas">(8)</span></li>
+        <li><a href="/carrera/profesorado-de-educacion-secundaria-en-matematica/">Profesorado de Educación Secundaria en Matemática</a> <span class="cuantas">(8)</span></li>
         <li><a href="/carrera/profesorado-en-educacion-fisica/">Profesorado en Educación Física</a> <span class="cuantas">(8)</span></li>
+        <li><a href="/carrera/profesorado-en-ingles/">Profesorado en Inglés</a> <span class="cuantas">(8)</span></li>
         <li><a href="/carrera/profesorado-de-artes-visuales/">Profesorado de Artes Visuales</a> <span class="cuantas">(7)</span></li>
-        <li><a href="/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/">Profesorado de Educación Secundaria en LENGUA y LITERATURA</a> <span class="cuantas">(7)</span></li>
-        <li><a href="/carrera/profesorado-de-educacion-secundaria-en-matematica/">Profesorado de Educación Secundaria en Matemática</a> <span class="cuantas">(7)</span></li>
-        <li><a href="/carrera/profesorado-en-ingles/">Profesorado en Inglés</a> <span class="cuantas">(7)</span></li>
         <li><a href="/carrera/profesorado-en-musica/">Profesorado en Música</a> <span class="cuantas">(6)</span></li>
         <li><a href="/carrera/profesorado-de-educacion-especial/">Profesorado de Educación Especial</a> <span class="cuantas">(5)</span></li>
-        <li><a href="/carrera/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual/">Profesorado de Educación Especial con Orientación en Discapacidad Intelectual</a> <span class="cuantas">(4)</span></li>
+        <li><a href="/carrera/profesorado-de-educacion-secundaria-en-historia/">Profesorado de Educación Secundaria en HISTORIA</a> <span class="cuantas">(5)</span></li>
         <li><a href="/carrera/profesorado-de-educacion-secundaria-en-biologia/">Profesorado de Educación Secundaria en BIOLOGÍA</a> <span class="cuantas">(4)</span></li>
-        <li><a href="/carrera/profesorado-de-educacion-secundaria-en-historia/">Profesorado de Educación Secundaria en HISTORIA</a> <span class="cuantas">(3)</span></li>
     </ul>
-    <p class="relacionadas-mas"><a class="btn-enlace-mas" href="/area/educacion/">Ver las 68 carreras del área Educación →</a></p>
+    <p class="relacionadas-mas"><a class="btn-enlace-mas" href="/area/educacion/">Ver las 83 carreras del área Educación →</a></p>
     </section>
     </div>
 </div>
@@ -333,6 +333,11 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260930_17"></script>
+<script src="/js/favoritos.js?v=20261004_6"></script>
+<!-- Vuelve a la posición donde estabas al usar Atrás (la app avisa cuándo
+     terminó de pintar; en estas páginas el HTML ya está listo). -->
+<script src="/js/restaurar-scroll.js?v=20261004_6"></script>
+<!-- Mi lista se abre como ventana flotante sin salir de la ficha. -->
+<script src="/js/mi-lista-loader.js?v=20261004_6"></script>
 </body>
 </html>

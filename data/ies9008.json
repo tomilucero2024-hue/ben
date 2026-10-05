@@ -20,16 +20,16 @@
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-008 Manuel Belgrano",
-     "link_oficial": "https://www.iesmb.edu.ar/bel/desarrollo-de-software/",
+     "link_oficial": "https://www.iesmb.edu.ar/bel/desarrollo_de_software/",
      "plan_estudio": [
       {
-       "anio": "1º año",
+       "anio": "Primer año",
        "materias": [
         "Programación I",
         "Matemática Aplicada",
         "Lógica Computacional",
-        "Inglés Técnico I",
-        "Alfabetización Académica",
+        "Inglés técnico I",
+        "Alfabetización académica",
         "Arquitectura de Dispositivos",
         "Seminario Nuevas Tecnologías",
         "Sistemas Operativos I",
@@ -38,7 +38,7 @@
        ]
       },
       {
-       "anio": "2º año",
+       "anio": "Segundo año",
        "materias": [
         "Programación II",
         "Matemática Discreta",
@@ -53,7 +53,7 @@
        ]
       },
       {
-       "anio": "3º año",
+       "anio": "Tercer año",
        "materias": [
         "Programación III",
         "Arquitectura y Diseño de Interfaces: UI y UX",
@@ -62,17 +62,18 @@
         "Gestión de Proyectos de Software",
         "Base de Datos III",
         "Legislación Informática y Ética Profesional",
-        "Estadística y Probabilidades para el Desarrollo de Software",
+        "Estadística y probabilidades para el Desarrollo de Software",
         "Ciberseguridad",
         "Metodologías Ágiles",
         "Práctica Profesionalizante III"
        ]
       }
-     ]
+     ],
+     "plan_fuente": "https://www.iesmb.edu.ar/bel/desarrollo_de_software/"
     },
     {
      "id": 1701,
-     "nombre_carrera": "Técnico Superior en Diseño Diseño Gráfico",
+     "nombre_carrera": "Técnico Superior en Diseño Gráfico",
      "categoria": "Pregrado / Tecnicatura",
      "duracion": "3 años",
      "modalidad": "Presencial",
@@ -142,12 +143,12 @@
      "link_oficial": "https://www.iesmb.edu.ar/bel/ia_y_ciencia_de_datos/",
      "plan_estudio": [
       {
-       "anio": "1º año",
+       "anio": "Primer año",
        "materias": [
         "Programación I",
         "Matemática Aplicada",
         "Lógica Computacional",
-        "Inglés Técnico I",
+        "Inglés técnico I",
         "Alfabetización Académica",
         "Arquitectura de Dispositivos",
         "Base de Datos I",
@@ -157,13 +158,13 @@
        ]
       },
       {
-       "anio": "2º año",
+       "anio": "Segundo año",
        "materias": [
         "Programación Orientada al Análisis de Datos",
         "Matemática Aplicada a la Ciencia de Datos",
         "Estadística y Probabilidades para Gestión de Datos",
         "Ciencia de Datos y Datos Masivos",
-        "Inglés Técnico II",
+        "Inglés técnico II",
         "Gestión de Proyectos",
         "Comunicación de Resultados Analíticos",
         "Minería de Datos",
@@ -173,10 +174,10 @@
        ]
       },
       {
-       "anio": "3º año",
+       "anio": "Tercer año",
        "materias": [
-        "IA Aplicada al Procesamiento del Lenguaje Natural",
-        "IA Aplicada al Procesamiento Digital de Imágenes",
+        "IA aplicada al Procesamiento del Lenguaje Natural",
+        "IA aplicada al Procesamiento Digital de Imágenes",
         "Inglés Técnico III",
         "Matemática Aplicada a la IA",
         "Redes Neuronales y Aprendizaje Automático",
@@ -189,7 +190,8 @@
         "Práctica Profesionalizante III"
        ]
       }
-     ]
+     ],
+     "plan_fuente": "https://www.iesmb.edu.ar/bel/ia_y_ciencia_de_datos/"
     },
     {
      "id": 1703,
@@ -311,68 +313,63 @@
     },
     {
      "id": 1705,
-     "nombre_carrera": "Técnico Superior en Diseño Multimedial",
+     "nombre_carrera": "Técnico Superior en Diseño Digital e Interactivo",
      "categoria": "Pregrado / Tecnicatura",
-     "duracion": "3 años",
+     "duracion": "2 años y medio",
      "modalidad": "Presencial",
      "turno": "A confirmar",
      "facultad": "IES 9-008 Manuel Belgrano",
-     "link_oficial": "https://www.iesmb.edu.ar/bel/diseno-multimedial/",
+     "link_oficial": "https://www.iesmb.edu.ar/bel/diseno-digital-interactivo/",
      "plan_estudio": [
       {
        "anio": "Primer año",
        "materias": [
-        "Diseño en Comunicación Visual I",
-        "Técnicas de representación I",
-        "Herramientas digitales I",
-        "Inglés",
-        "Tipografía I",
-        "Historia del arte y del diseño I",
-        "Problemática Sociocultural y el contexto",
-        "Prácticas de lectura, escritura y oralidad",
+        "Introducción al Diseño",
+        "Herramientas Digitales",
+        "Técnicas de Representación",
+        "Historia, Cultura y Sociología de la Imagen y el Diseño",
+        "Psicología de la Percepción y Semiótica Visual",
+        "Metodología del Diseño y Técnicas de Creatividad",
+        "Tecnología Básica",
         "Inglés técnico",
-        "EIO (Espacio Institucional optativo I)",
-        "Percepción Visual I",
+        "Comunicación, Medios y Nuevas Tecnologías",
+        "Comunicación y Alfabetización Académica y Digital",
+        "Tipografía Básica",
         "Práctica profesionalizante I"
        ]
       },
       {
        "anio": "Segundo año",
        "materias": [
-        "Diseño en Comunicación Visual II",
-        "Técnicas de representación II",
-        "Producción Web I",
-        "Fotografía publicitaria",
-        "Historia del Arte y del Diseño II",
-        "Semiología",
-        "Tecnología gráfica I",
+        "Diseño de Interfaces (UX/UI)",
+        "Motion Graphics y Animación 2D/3D",
+        "Fotografía y Producción Audiovisual",
+        "Tecnología Web Front- End I",
+        "Tecnología Web Front- End II",
+        "Edición y Composición Digital (VFX y Sonido)",
+        "Guión y Narrativa Transmedia",
         "Práctica profesionalizante II",
-        "Introducción al Modelado 3D",
-        "Producción Web II",
-        "Tipografía II",
-        "Guión"
+        "Gestión de Proyectos y Metodologías Ágiles",
+        "Ética Profesional y Legislación",
+        "Práctica profesionalizante III"
        ]
       },
       {
        "anio": "Tercer año",
        "materias": [
-        "Diseño de Comunicación Audiovisual",
-        "Animación Computada",
-        "Edición de sonido",
+        "Diseño de Videojuegos y Entornos Interactivos",
+        "Diseño Experimental y Tendencias Emergentes",
+        "Portfolio Profesional y Marca Personal",
         "Comunicación, medios y nuevas tecnologías",
-        "Mercadotecnia para PyMES",
+        "Marketing Digital y Social Media",
         "Gestión de Microemprendimientos",
-        "Práctica Profesionalizante III",
-        "Ética Profesional",
-        "Formulación y evaluación de Proyectos",
-        "Proyecto integrado"
+        "Práctica Profesionalizante IV"
        ]
       }
      ],
-     "plan_fuente": "https://www.iesmb.edu.ar/bel/diseno-multimedial/"
+     "plan_fuente": "https://www.iesmb.edu.ar/bel/diseno-digital-interactivo/"
     }
-   ],
-   "departamento": "Godoy Cruz"
+   ]
   }
  ]
 }

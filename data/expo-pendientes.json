@@ -1,0 +1,1749 @@
+{
+  "generado_por": "scrapers/expo_educativa.py",
+  "pendientes": [
+    {
+      "nombre": "Tecnicatura Superior en Gastronomía",
+      "destino": "Escuela Internacional Islas Malvinas",
+      "unidad": "Escuela  Internacional Islas Malvinas PT 077",
+      "faltan": [
+        "posible duplicado de «Técnico Superior en Gastronomía»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Hotelería",
+      "destino": "Escuela Internacional Islas Malvinas",
+      "unidad": "Escuela  Internacional Islas Malvinas PT 077",
+      "faltan": [
+        "posible duplicado de «Técnico Superior en Hotelería»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Turismo",
+      "destino": "Escuela Internacional Islas Malvinas",
+      "unidad": "Escuela  Internacional Islas Malvinas PT 077",
+      "faltan": [
+        "posible duplicado de «Técnico Superior en Turismo»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Cine, Video y Televisión",
+      "destino": "Escuela Regional Cuyo de Cine y Video (IES 9-017)",
+      "unidad": "Escuela Regional Cuyo de Cine y Video IES N° 9-017",
+      "faltan": [
+        "posible duplicado de «Técnico Superior en Cine, Video y Televisión»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Psicología Social",
+      "destino": "Escuela de Psicología Social",
+      "unidad": "Escuela Superior de Psicología Social Mendoza",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior En Psicologia Social Presencial»"
+      ]
+    },
+    {
+      "nombre": "Ingeniería en Recursos Naturales Renovables",
+      "destino": "Facultad de Ciencias Agrarias - UNCuyo",
+      "unidad": "Facultad de Ciencias Agrarias",
+      "faltan": [
+        "posible duplicado de «Ingeniería Recursos Naturales Renovables»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Bromatología",
+      "destino": "Facultad de Ciencias Agrarias - UNCuyo",
+      "unidad": "Facultad de Ciencias Agrarias",
+      "faltan": [
+        "posible duplicado de «Bromatología»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria  en Enología y Viticultura",
+      "destino": "Facultad de Ciencias Agrarias - UNCuyo",
+      "unidad": "Facultad de Ciencias Agrarias",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Enología y Viticultura»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Preceptoría Escolar",
+      "destino": "Fundación Rayuela",
+      "unidad": "Instituto Rayuela PT 181",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Preceptoría Escolar»"
+      ]
+    },
+    {
+      "expo_id": 1171,
+      "nombre": "Profesorado de Educación Secundaria de la Modalidad Técnico Profesional en concurrencia con el Título de Base",
+      "destino": "IES 9-001 Gral. José de San Martín",
+      "unidad": "Instituto de Educación Superior y Técnico Nº 9-001 Gral. José de San Martín",
+      "faltan": [
+        "duracion"
+      ],
+      "duracion_bruta": "Duración años",
+      "web": "https://ens9001-infd.mendoza.edu.ar/"
+    },
+    {
+      "expo_id": 1191,
+      "nombre": "Profesorado en Educ. Secundaria para Técnicos",
+      "destino": "IES 9-001 Gral. José de San Martín",
+      "unidad": "IESDyT 9-001 - Gral. J. de San Martín",
+      "faltan": [
+        "duracion"
+      ],
+      "duracion_bruta": "Duración N",
+      "web": "https://ens9001-infd.mendoza.edu.ar/"
+    },
+    {
+      "nombre": "Profesorado en Educación Inicial",
+      "destino": "IES 9-002 Tomás Godoy Cruz",
+      "unidad": "IES N° 9-002 Tomás Godoy Cruz",
+      "faltan": [
+        "posible duplicado de «Profesorado de Educación Inicial»"
+      ]
+    },
+    {
+      "nombre": "Profesorado en Educación Primaria",
+      "destino": "IES 9-002 Tomás Godoy Cruz",
+      "unidad": "IES N° 9-002 Tomás Godoy Cruz",
+      "faltan": [
+        "posible duplicado de «Profesorado de Educación Primaria»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Producción Artística Artesanal",
+      "destino": "IES 9-002 Tomás Godoy Cruz",
+      "unidad": "IES N° 9-002 Tomás Godoy Cruz",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Producción Artística y Artesanal»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Nivel Inicial",
+      "destino": "IES 9-003 Normal (San Rafael)",
+      "unidad": "Instituto Superior de Formación Docente y Técnica N° 9-003 Normal Superior",
+      "faltan": [
+        "posible duplicado de «Profesorado de Educación Inicial»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Educación Primaria",
+      "destino": "IES 9-004 Gral. Toribio de Luzuriaga",
+      "unidad": "IES N° 9-004 Gral. Toribio de Luzuriaga",
+      "faltan": [
+        "posible duplicado de «Profesorado Educación Primaria»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Educación Secundaria en Geografía",
+      "destino": "IES 9-004 Gral. Toribio de Luzuriaga",
+      "unidad": "IES N° 9-004 Gral. Toribio de Luzuriaga",
+      "faltan": [
+        "posible duplicado de «Profesorado de Geografía»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Educación Secundaria en Historia",
+      "destino": "IES 9-004 Gral. Toribio de Luzuriaga",
+      "unidad": "IES N° 9-004 Gral. Toribio de Luzuriaga",
+      "faltan": [
+        "posible duplicado de «Profesorado de Historia»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura en Acompañamiento Terapéutico",
+      "destino": "IES 9-004 Gral. Toribio de Luzuriaga",
+      "unidad": "IES N° 9-004 Gral. Toribio de Luzuriaga",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Acompañamiento Terapéutico»"
+      ]
+    },
+    {
+      "expo_id": 718,
+      "nombre": "Tecnicatura Superior en Servicios básicos y construcciones livianas industrializadas",
+      "destino": "IES 9-006 Francisco H. Tolosa",
+      "unidad": "IFDyT N° 9-006 Prof. Francisco Humberto Tolosa",
+      "faltan": [
+        "duracion"
+      ],
+      "duracion_bruta": "Duración 2/3 Años según el trayecto formativo previo",
+      "web": "https://ens9006-infd.mendoza.edu.ar/sitio/"
+    },
+    {
+      "nombre": "Enfermería Profesional",
+      "destino": "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)",
+      "unidad": "Instituto de Educación Superior 9-007 Dr. Salvador Calafat",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Enfermería Profesional»"
+      ]
+    },
+    {
+      "expo_id": 1195,
+      "nombre": "Profesorado en Educ. Secundaria para Técnicos",
+      "destino": "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)",
+      "unidad": "Instituto de Educación Superior 9-007 Dr. Salvador Calafat",
+      "faltan": [
+        "duracion",
+        "link roto"
+      ],
+      "duracion_bruta": "Duración N",
+      "web": "http://ies9-007calafat.edu.ar/"
+    },
+    {
+      "expo_id": 1198,
+      "nombre": "Tecnicatura Superior en Agronomía e Industrias Frutihortícolas",
+      "destino": "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)",
+      "unidad": "Instituto de Educación Superior 9-007 Dr. Salvador Calafat",
+      "faltan": [
+        "duracion",
+        "link roto"
+      ],
+      "duracion_bruta": "Duración N",
+      "web": "http://ies9-007calafat.edu.ar/"
+    },
+    {
+      "nombre": "Tecnicatura Superior en Gestión de Recursos Humanos (a distancia)",
+      "destino": "IES 9-007 Dr. Salvador Calafat (Gral. Alvear)",
+      "unidad": "Instituto de Educación Superior 9-007 Dr. Salvador Calafat",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Gestión de Recursos Humanos»"
+      ]
+    },
+    {
+      "expo_id": 1194,
+      "nombre": "TS en CIENCIA de DATOS e INTELIGENCIA ARTIFICIAL",
+      "destino": "IES 9-008 Manuel Belgrano",
+      "unidad": "IES N° 9-008 Manuel Belgrano",
+      "faltan": [
+        "duracion"
+      ],
+      "duracion_bruta": "Duración N",
+      "web": "http://iesmb.edu.ar"
+    },
+    {
+      "nombre": "TS en REDES y CIBERSEGURIDAD",
+      "destino": "IES 9-008 Manuel Belgrano",
+      "unidad": "IES N° 9-008 Manuel Belgrano",
+      "faltan": [
+        "posible duplicado de «Técnico Superior en Redes y Ciberseguridad»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Diseño Gráfico",
+      "destino": "IES 9-008 Manuel Belgrano",
+      "unidad": "IES N° 9-008 Manuel Belgrano",
+      "faltan": [
+        "posible duplicado de «Técnico Superior en Diseño Gráfico»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Diseño de Indumentaria, Textil y Accesorios",
+      "destino": "IES 9-008 Manuel Belgrano",
+      "unidad": "IES N° 9-008 Manuel Belgrano",
+      "faltan": [
+        "posible duplicado de «Técnico Superior en Diseño de Indumentaria, Textil y Accesorios»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Administración Pública",
+      "destino": "IES 9-009 (Tupungato)",
+      "unidad": "Instituto de Educación Superior N° 9-009 Tupungato",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Administración Pública (A Distancia)»"
+      ]
+    },
+    {
+      "expo_id": 679,
+      "nombre": "Tecnicatura Superior en Administración Pública con Orientación en Gestión Penitenciaria",
+      "destino": "IES 9-009 (Tupungato)",
+      "unidad": "Instituto de Educación Superior N° 9-009 Tupungato",
+      "faltan": [
+        "link roto"
+      ],
+      "duracion_bruta": "Duración Tres años",
+      "web": "https://ies9009-infd.mendoza.edu.ar/sitio/general-administracion/"
+    },
+    {
+      "expo_id": 678,
+      "nombre": "Tecnicatura Superior en Administración Pública con Orientación en Instituciones Legislativas",
+      "destino": "IES 9-009 (Tupungato)",
+      "unidad": "Instituto de Educación Superior N° 9-009 Tupungato",
+      "faltan": [
+        "link roto"
+      ],
+      "duracion_bruta": "Duración Tres años",
+      "web": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-administracion-publica-con-orientacion-en-instituciones-legislativas/"
+    },
+    {
+      "expo_id": 666,
+      "nombre": "Tecnicatura Superior en Agronomía",
+      "destino": "IES 9-009 (Tupungato)",
+      "unidad": "Instituto de Educación Superior N° 9-009 Tupungato",
+      "faltan": [
+        "link roto"
+      ],
+      "duracion_bruta": "Duración Tres años",
+      "web": "https://ies9009-infd.mendoza.edu.ar/sitio/tecnicatura-sup-en-agronomia-sc/"
+    },
+    {
+      "nombre": "Tecnicatura Superior en Enología e Industrias de los Alimentos",
+      "destino": "IES 9-009 (Tupungato)",
+      "unidad": "Instituto de Educación Superior N° 9-009 Tupungato",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Enología e Industrias Frutihortícolas»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Logística Presencial",
+      "destino": "IES 9-009 (Tupungato)",
+      "unidad": "Instituto de Educación Superior N° 9-009 Tupungato",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Logística»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Turismo y Hotelería",
+      "destino": "IES 9-009 (Tupungato)",
+      "unidad": "Instituto de Educación Superior N° 9-009 Tupungato",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Turismo»"
+      ]
+    },
+    {
+      "expo_id": 1163,
+      "nombre": "Actualización Académica en Nuevas tendencias en la enseñanza del Inglés en la era digital",
+      "destino": "IES 9-010 Rosario Vera Peñaloza",
+      "unidad": "IES N° 9-010 Rosario Vera Peñaloza",
+      "faltan": [
+        "duracion"
+      ],
+      "duracion_bruta": "Duración 220hs reloj. Cursado modalidad combinada: 2 sábados (en la mañana) al mes presencial, y trabajo en plataforma.",
+      "web": "https://ies9010-infd.mendoza.edu.ar/"
+    },
+    {
+      "nombre": "Tecnicatura Superior en Turismo y Hotelería",
+      "destino": "IES 9-011 Del Atuel",
+      "unidad": "Instituto de Educación Superior N° 9-011 Del Atuel",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Turismo»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Higiene y Seguridad Ambiental",
+      "destino": "IES 9-012 Informática",
+      "unidad": "Instituto de Educación Superior Nº 9-012 San Rafael en Informática",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Higiene, Seguridad y Ambiente»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Educación Secundaria en Lengua y Literatura",
+      "destino": "IES 9-023",
+      "unidad": "Instituto de Educación Superior Nº 9-023",
+      "faltan": [
+        "posible duplicado de «Profesorado de Educación Secundaria Lengua y Literatura»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Enología e Industrias de los Alimentos",
+      "destino": "IES 9-023",
+      "unidad": "Instituto de Educación Superior Nº 9-023",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Enología E Industrias Frutihortícolas»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior Desarrollo de Software",
+      "destino": "IES 9-024 (Lavalle)",
+      "unidad": "Instituto de Educación Superior N° 9-024 Lavalle",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Desarrollo de Software»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Enología e Industrias de los Alimentos",
+      "destino": "IES 9-024 (Lavalle)",
+      "unidad": "Instituto de Educación Superior N° 9-024 Lavalle",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Enología e Industrias Frutihortícolas»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Educación Especial en Discapacidad Intelectual",
+      "destino": "IES 9-027 (Guaymallén)",
+      "unidad": "Instituto de Educación Superior Nº 9-027",
+      "faltan": [
+        "posible duplicado de «Profesorado de Educación Especial con Orientación en Discapacidad Intelectual»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Educación Primaria",
+      "destino": "IES 9-028 (Santa Rosa)",
+      "unidad": "IES N° 9-028 Prof. Estela Susana Quiroga",
+      "faltan": [
+        "posible duplicado de «Profesorado en Educación Primaria»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Música",
+      "destino": "IES 9-028 (Santa Rosa)",
+      "unidad": "IES N° 9-028 Prof. Estela Susana Quiroga",
+      "faltan": [
+        "posible duplicado de «Profesorado en Música»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Educación Secundaria en Geografía",
+      "destino": "IES 9-029 (Luján de Cuyo)",
+      "unidad": "Instituto de Educación Superior N° 9-029",
+      "faltan": [
+        "posible duplicado de «Profesorado de Geografía»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Gestión de Recursos Humanos",
+      "destino": "IES 9-029 (Luján de Cuyo)",
+      "unidad": "Instituto de Educación Superior N° 9-029",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Recursos Humanos»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Turismo y Hotelería",
+      "destino": "IES 9-029 (Luján de Cuyo)",
+      "unidad": "Instituto de Educación Superior N° 9-029",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Turismo»"
+      ]
+    },
+    {
+      "nombre": "Profesorado en Educación Inicial",
+      "destino": "IES 9-030 (Instituto del Bicentenario)",
+      "unidad": "ISFDyT Nº T-030 DEL BICENTENARIO",
+      "faltan": [
+        "posible duplicado de «Profesorado de Educacion Inicial»"
+      ]
+    },
+    {
+      "nombre": "Profesorado en Educación Primaria",
+      "destino": "IES 9-030 (Instituto del Bicentenario)",
+      "unidad": "ISFDyT Nº T-030 DEL BICENTENARIO",
+      "faltan": [
+        "posible duplicado de «Profesorado de Educacion Primaria»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Enología e Industrias de los Alimentos",
+      "destino": "IESVU (IES 9-015 Valle de Uco)",
+      "unidad": "Instituto de Educación Superior N° 9-015 Valle de Uco",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Enología e Industrias Frutihortícolas»"
+      ]
+    },
+    {
+      "expo_id": 1174,
+      "nombre": "Tecnicatura Superior en Estadística Social",
+      "destino": "IESVU (IES 9-015 Valle de Uco)",
+      "unidad": "Instituto de Educación Superior N° 9-015 Valle de Uco",
+      "faltan": [
+        "duracion"
+      ],
+      "duracion_bruta": "Duración años",
+      "web": "https://iesvu.edu.ar"
+    },
+    {
+      "nombre": "Tecnicatura Superior en Higiene y Seguridad con orientación en Calidad y Medio Ambiente.",
+      "destino": "INSUTEC (Instituto Superior de Educación Tecnológica)",
+      "unidad": "Instituto Superior Tecnológico Nº 9-019 INSUTEC",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Higiene y Seguridad Laboral con Orientación en Calidad y Medio Ambiente»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Gestión de Marketing",
+      "destino": "ISTEEC (IES 9-013)",
+      "unidad": "ISTEEC 9-013",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Marketing»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Turismo y Hotelería",
+      "destino": "ISTEEC (IES 9-013)",
+      "unidad": "ISTEEC 9-013",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Superior en Turismo»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Ciencia de Datos",
+      "destino": "ITU - Instituto Tecnológico Universitario (UNCuyo)",
+      "unidad": "Instituto Tecnológico Universitario",
+      "faltan": [
+        "posible duplicado de «Ciencia de Datos»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Desarrollo de Software",
+      "destino": "ITU - Instituto Tecnológico Universitario (UNCuyo)",
+      "unidad": "Instituto Tecnológico Universitario",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Desarrollo de Software»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Electricidad y Sistemas de Control Industriales",
+      "destino": "ITU - Instituto Tecnológico Universitario (UNCuyo)",
+      "unidad": "Instituto Tecnológico Universitario",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Electricidad y Sistemas de Control Industriales»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Gestión de Empresas",
+      "destino": "ITU - Instituto Tecnológico Universitario (UNCuyo)",
+      "unidad": "Instituto Tecnológico Universitario",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Gestión de Empresas»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo",
+      "destino": "ITU - Instituto Tecnológico Universitario (UNCuyo)",
+      "unidad": "Instituto Tecnológico Universitario",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Higiene y Seguridad en el Trabajo»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Logística y Transporte",
+      "destino": "ITU - Instituto Tecnológico Universitario (UNCuyo)",
+      "unidad": "Instituto Tecnológico Universitario",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Logística y Transporte»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Mantenimiento e Instalaciones Industriales",
+      "destino": "ITU - Instituto Tecnológico Universitario (UNCuyo)",
+      "unidad": "Instituto Tecnológico Universitario",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Mantenimiento e Instalaciones Industriales»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Marketing",
+      "destino": "ITU - Instituto Tecnológico Universitario (UNCuyo)",
+      "unidad": "Instituto Tecnológico Universitario",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Marketing»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Producción Industrial y Automatización",
+      "destino": "ITU - Instituto Tecnológico Universitario (UNCuyo)",
+      "unidad": "Instituto Tecnológico Universitario",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Producción Industrial y Automatización»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Superior en Locución de Radio y Televisión",
+      "destino": "Instituto Fabián Calle",
+      "unidad": "Fundación Fabián Calle",
+      "faltan": [
+        "posible duplicado de «Técnico Superior en Locución de Radio y Televisión»"
+      ]
+    },
+    {
+      "expo_id": 1188,
+      "nombre": "Tecnicatura Superior en Gestión de Recursos Humanos",
+      "destino": "Instituto IDICSA",
+      "unidad": "Instituto IDICSA",
+      "faltan": [
+        "duracion"
+      ],
+      "duracion_bruta": "Duración n",
+      "web": "https://institutosanidadmza.com.ar/"
+    },
+    {
+      "expo_id": 357,
+      "nombre": "Profesorado de Educación Primaria",
+      "destino": "Instituto Parroquial Nuestra Señora del Rosario (PT-005)",
+      "unidad": "Instituto Parroquial Nuestra Señora del Rosario Nivel Superior PT 005",
+      "faltan": [
+        "web (o no institucional)"
+      ],
+      "duracion_bruta": "Duración La oferta formativa del Profesorado de Educación Primaria en el Instituto Ntra. Sra. del Rosario tiene una dura",
+      "web": null
+    },
+    {
+      "expo_id": 1160,
+      "nombre": "Tecnicatura Superior en Cosmetología, Cosmiatría y Estética",
+      "destino": "Instituto San Agustín",
+      "unidad": "Instituto Superior de Ciencias Biomédicas San Agustín",
+      "faltan": [
+        "duracion"
+      ],
+      "duracion_bruta": "Duración años",
+      "web": "http://instsanagustin.com/"
+    },
+    {
+      "nombre": "Profesorado de Educación Física",
+      "destino": "Instituto Santísima Trinidad",
+      "unidad": "Fundación Educativa Santísima Trinidad PT 155",
+      "faltan": [
+        "posible duplicado de «Profesorado en Educación Física»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Educación Primaria",
+      "destino": "Instituto Superior",
+      "unidad": "IES Ntra Sra. del Rosario de Pompeya PT 068",
+      "faltan": [
+        "posible duplicado de «Profesorado en Educación Primaria»"
+      ]
+    },
+    {
+      "expo_id": 742,
+      "nombre": "Tecnicatura Superior en Administración de Empresas",
+      "destino": "Instituto Superior Fundación Universitas",
+      "unidad": "Instituto Superior Fundación Universitas",
+      "faltan": [
+        "link roto"
+      ],
+      "duracion_bruta": "Duración 3 años.",
+      "web": "https://www.funiversitas.org/"
+    },
+    {
+      "expo_id": 748,
+      "nombre": "Tecnicatura Superior en Comercio Internacional y Aduana",
+      "destino": "Instituto Superior Fundación Universitas",
+      "unidad": "Instituto Superior Fundación Universitas",
+      "faltan": [
+        "link roto"
+      ],
+      "duracion_bruta": "Duración 3 años.",
+      "web": "https://www.funiversitas.org/"
+    },
+    {
+      "expo_id": 746,
+      "nombre": "Tecnicatura Superior en Logística",
+      "destino": "Instituto Superior Fundación Universitas",
+      "unidad": "Instituto Superior Fundación Universitas",
+      "faltan": [
+        "link roto"
+      ],
+      "duracion_bruta": "Duración 3 años.",
+      "web": "https://www.funiversitas.org/"
+    },
+    {
+      "expo_id": 741,
+      "nombre": "Tecnicatura Superior en Marketing",
+      "destino": "Instituto Superior Fundación Universitas",
+      "unidad": "Instituto Superior Fundación Universitas",
+      "faltan": [
+        "link roto"
+      ],
+      "duracion_bruta": "Duración A DISTANCIA 3 años.",
+      "web": "https://www.funiversitas.org/"
+    },
+    {
+      "expo_id": 743,
+      "nombre": "Tecnicatura Superior en Recursos Humanos",
+      "destino": "Instituto Superior Fundación Universitas",
+      "unidad": "Instituto Superior Fundación Universitas",
+      "faltan": [
+        "link roto"
+      ],
+      "duracion_bruta": "Duración 3 años.",
+      "web": "https://www.funiversitas.org/"
+    },
+    {
+      "expo_id": 1179,
+      "nombre": "Tecnicatura Superior en Robótica (EN PROCESO)",
+      "destino": "Instituto Tomás Alva Edison (PT-113)",
+      "unidad": "PT 113 Tomás Alva Edison",
+      "faltan": [
+        "oferta no vigente"
+      ],
+      "web": null
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Comercialización",
+      "destino": "Instituto Univ. de Ciencias Empresariales (IUCE)",
+      "unidad": "Nuestras carreras",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Comercialización»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Comercio Exterior y Aduanas",
+      "destino": "Instituto Univ. de Ciencias Empresariales (IUCE)",
+      "unidad": "Nuestras carreras",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Comercio Exterior y Aduanas»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Logística y Transporte",
+      "destino": "Instituto Univ. de Ciencias Empresariales (IUCE)",
+      "unidad": "Nuestras carreras",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Logística y Transporte»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Recursos Humanos",
+      "destino": "Instituto Univ. de Ciencias Empresariales (IUCE)",
+      "unidad": "Nuestras carreras",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Recursos Humanos»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Relaciones Públicas e Institucionales",
+      "destino": "Instituto Univ. de Ciencias Empresariales (IUCE)",
+      "unidad": "Nuestras carreras",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Relaciones Públicas e Institucionales»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Danza",
+      "destino": "Instituto de Arte Chopin",
+      "unidad": "Instituto ARTES F. Chopin PT-146",
+      "faltan": [
+        "posible duplicado de «Profesorado en Danza»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Música",
+      "destino": "Instituto de Arte Chopin",
+      "unidad": "Instituto ARTES F. Chopin PT-146",
+      "faltan": [
+        "posible duplicado de «Profesorado en Música»"
+      ]
+    },
+    {
+      "expo_id": 838,
+      "nombre": "Tecnicatura Superior en Higiene y Seguridad con orientación en Calidad y Medio Ambiente",
+      "destino": "Instituto de Desarrollo Laboral y Profesional (PT-274)",
+      "unidad": "Instituto de Desarrollo Laboral y Profesional PT-274",
+      "faltan": [
+        "link roto"
+      ],
+      "duracion_bruta": "Duración 3 años",
+      "web": "https://www.idelp.com.ar"
+    },
+    {
+      "nombre": "Ingeniería Eletromecánica",
+      "destino": "UTN Facultad Regional Mendoza",
+      "unidad": "Facultad Regional Mendoza",
+      "faltan": [
+        "posible duplicado de «Ingeniería Electromecánica»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Administración",
+      "destino": "UTN Facultad Regional Mendoza",
+      "unidad": "Facultad Regional Mendoza",
+      "faltan": [
+        "posible duplicado de «Administración»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Programación",
+      "destino": "UTN Facultad Regional Mendoza",
+      "unidad": "Facultad Regional Mendoza",
+      "faltan": [
+        "posible duplicado de «Programación»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura en Enología",
+      "destino": "UTN Facultad Regional Mendoza",
+      "unidad": "Facultad Regional Mendoza",
+      "faltan": [
+        "posible duplicado de «Enología»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura en Gestión  de Empresas Hoteleras",
+      "destino": "UTN Facultad Regional Mendoza",
+      "unidad": "Facultad Regional Mendoza",
+      "faltan": [
+        "posible duplicado de «Gestión de Empresas Hoteleras»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura en Gestión de Empresas Turísticas",
+      "destino": "UTN Facultad Regional Mendoza",
+      "unidad": "Facultad Regional Mendoza",
+      "faltan": [
+        "posible duplicado de «Gestión de Empresas Turísticas»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Comunicación Digital e Interactiva",
+      "destino": "Universidad Católica Argentina (UCA)",
+      "unidad": "Facultad de Humanidades y Ciencias Económicas",
+      "faltan": [
+        "posible duplicado de «Ciclo de Licenciatura en Comunicación Digital e Interactiva»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Gestión de Liderazgo y Desarrollo Organizacional",
+      "destino": "Universidad Católica Argentina (UCA)",
+      "unidad": "Facultad de Humanidades y Ciencias Económicas",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Gestión del Liderazgo y Desarrollo Organizacional»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario en Educación Inicial",
+      "destino": "Universidad Católica Argentina (UCA)",
+      "unidad": "Facultad de Humanidades y Ciencias Económicas",
+      "faltan": [
+        "posible duplicado de «Profesorado Universitario de Educación Inicial»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario en Educación Primaria",
+      "destino": "Universidad Católica Argentina (UCA)",
+      "unidad": "Facultad de Humanidades y Ciencias Económicas",
+      "faltan": [
+        "posible duplicado de «Profesorado Universitario de Educación Primaria»"
+      ]
+    },
+    {
+      "nombre": "Analista y Programador/a Universitario/a de Sistemas",
+      "destino": "Universidad Champagnat (UCh)",
+      "unidad": "Facultad de Informática y Diseño",
+      "faltan": [
+        "posible duplicado de «Analista Programador Universitario»"
+      ]
+    },
+    {
+      "nombre": "Corredor/a Público/a Inmobiliario/a",
+      "destino": "Universidad Champagnat (UCh)",
+      "unidad": "Facultad de Ciencias Empresariales y Gestión Pública",
+      "faltan": [
+        "posible duplicado de «Corredor Público Inmobiliario y Martillero»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Administración de Empresas",
+      "destino": "Universidad Champagnat (UCh)",
+      "unidad": "Facultad de Ciencias Empresariales y Gestión Pública",
+      "faltan": [
+        "posible duplicado de «Licenciado en Administración de Empresas»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Comercio Internacional",
+      "destino": "Universidad Champagnat (UCh)",
+      "unidad": "Facultad de Ciencias Empresariales y Gestión Pública",
+      "faltan": [
+        "posible duplicado de «Licenciado en Comercio Internacional»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Relaciones Humanas",
+      "destino": "Universidad Champagnat (UCh)",
+      "unidad": "Facultad de Ciencias Empresariales y Gestión Pública",
+      "faltan": [
+        "posible duplicado de «Licenciado en Relaciones Humanas»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Relaciones Internacionales",
+      "destino": "Universidad Champagnat (UCh)",
+      "unidad": "Facultad de Derecho",
+      "faltan": [
+        "posible duplicado de «Licenciado en Relaciones Internacionales»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Relaciones Públicas",
+      "destino": "Universidad Champagnat (UCh)",
+      "unidad": "Facultad de Ciencias Empresariales y Gestión Pública",
+      "faltan": [
+        "posible duplicado de «Licenciado en Relaciones Públicas»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Sistemas de Información",
+      "destino": "Universidad Champagnat (UCh)",
+      "unidad": "Facultad de Informática y Diseño",
+      "faltan": [
+        "posible duplicado de «Licenciado en Sistemas de Información»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Turismo",
+      "destino": "Universidad Champagnat (UCh)",
+      "unidad": "Facultad de Ciencias Empresariales y Gestión Pública",
+      "faltan": [
+        "posible duplicado de «Licenciado en Turismo»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Análisis y Programación de sistemas",
+      "destino": "Universidad Champagnat (UCh)",
+      "unidad": "Facultad de Informática y Diseño",
+      "faltan": [
+        "posible duplicado de «Analista Programador Universitario»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Anatomía Patológica",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Farmacia y Bioquímica",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Anatomía Patológica a distancia»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Anestesiología",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Farmacia y Bioquímica",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Anestesiología a distancia»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Educación Física -a distancia-",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Educación",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Educación Física a Distancia»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Gastronomía",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Ciencias de la Nutrición",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Gastronomía»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Hemoterapia",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Farmacia y Bioquímica",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Hemoterapia a distancia»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Instrumentación Quirúrgica",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Farmacia y Bioquímica",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Instrumentación Quirúrgica a distancia»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Podología",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Kinesiología y Fisioterapia",
+      "faltan": [
+        "posible duplicado de «Podología Universitaria»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Profesorado Universitario para Profesionales",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Educación",
+      "faltan": [
+        "posible duplicado de «Profesorado para Profesionales»"
+      ]
+    },
+    {
+      "nombre": "Licenciado en Enología",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Ingeniería y Enología",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Enología»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Educación Inicial",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Educación",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Educación Inicial a distancia»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Kinesiología y Fisioterapia",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Kinesiología y Fisioterapia",
+      "faltan": [
+        "posible duplicado de «Kinesiología y Fisioterapia»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Musicoterapia",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Kinesiología y Fisioterapia",
+      "faltan": [
+        "posible duplicado de «Musicoterapia»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario y Licenciatura en Educación Física",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Educación",
+      "faltan": [
+        "posible duplicado de «Profesorado en Educación Física»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura en Podología Universitaria",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Kinesiología y Fisioterapia",
+      "faltan": [
+        "posible duplicado de «Podología Universitaria»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura en Puericultura",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Ciencias de la Nutrición",
+      "faltan": [
+        "posible duplicado de «Puericultura a Distancia»"
+      ]
+    },
+    {
+      "nombre": "Técnico Universitario en Cosmetología y Cosmiatría",
+      "destino": "Universidad Juan Agustín Maza (UMaza)",
+      "unidad": "Facultad de Farmacia y Bioquímica",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Cosmetología y Cosmiatría»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Gestión de Negocios Regionales",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Económicas",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Gestión de Negocios Regionales»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Licenciatura en Higiene y Seguridad en el Trabajo",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Médicas",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Higiene y Seguridad en el Trabajo»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Profesorado de Grado Universitario de Diseño",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Artes y Diseño",
+      "faltan": [
+        "posible duplicado de «Profesorado de Grado Universitario en Diseño»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Profesorado de Grado Universitario en Escenografía",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Artes y Diseño",
+      "faltan": [
+        "posible duplicado de «Ciclo de Profesorado en Escenografía»"
+      ]
+    },
+    {
+      "nombre": "Ciclo de Profesorado de Grado Universitario en Música (Orientación: Canto, Instrumentos, Dirección Coral, Composición y Música Popular)",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Artes y Diseño",
+      "faltan": [
+        "posible duplicado de «Ciclo de Profesorado en Música»"
+      ]
+    },
+    {
+      "nombre": "Ingeniería Mecatrónica",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ingeniería",
+      "faltan": [
+        "posible duplicado de «Ingeniería en Mecatrónica»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Ciencias Básicas con Orientación en Biología",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Exactas y Naturales",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Biología»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Ciencias Básicas con Orientación en Física",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Exactas y Naturales",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Física»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Ciencias Básicas con Orientación en Matemática",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Exactas y Naturales",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Matemática»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Ciencias Básicas con Orientación en Química",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Exactas y Naturales",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Química»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Ciencias de la Computación",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ingeniería",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Computación»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Instrumento Violín, Viola, Violoncello, Contrabajo, Arpa, Flauta, Oboe, Clarinete, Fagot, Saxofón, Trompa, Trompeta, Trombón o Percusión",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Artes y Diseño",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Instrumento»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario de Educación Inicial",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Educación",
+      "faltan": [
+        "posible duplicado de «Profesorado de Educación Inicial»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario de Educación Primaria",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Educación",
+      "faltan": [
+        "posible duplicado de «Profesorado de Educación Primaria»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario de Educación para Personas Sordas",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Educación",
+      "faltan": [
+        "posible duplicado de «Profesorado de Educación para Personas Sordas»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario de Pedagogía Terapéutica en Discapacidad Intelectual con Orientación en Discapacidad Motora",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Educación",
+      "faltan": [
+        "posible duplicado de «Profesorado de Pedagogía Terapéutica en Discapacidad Intelectual - Motora»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario de Pedagogía Terapéutica en Discapacidad Visual",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Educación",
+      "faltan": [
+        "posible duplicado de «Profesorado de Pedagogía Terapéutica en Discapacidad Visual»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario en Ciencias de la Educación",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Filosofía y Letras",
+      "faltan": [
+        "posible duplicado de «Profesorado de Educación Inicial»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario en Filosofía",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Filosofía y Letras",
+      "faltan": [
+        "posible duplicado de «Profesorado en Filosofía»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario en Geografía",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Filosofía y Letras",
+      "faltan": [
+        "posible duplicado de «Profesorado en Geografía»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario en Lengua y Literatura Francesas",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Filosofía y Letras",
+      "faltan": [
+        "posible duplicado de «Profesorado de Lengua y Literatura Francesas»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario en Letras",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Filosofía y Letras",
+      "faltan": [
+        "posible duplicado de «Profesorado en Letras»"
+      ]
+    },
+    {
+      "nombre": "Profesorado Universitario en Química",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Aplicadas a la Industria",
+      "faltan": [
+        "posible duplicado de «Profesorado en Química»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Grado Universitario de Teorías Musicales",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Artes y Diseño",
+      "faltan": [
+        "posible duplicado de «Profesorado de Teorías Musicales»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Grado Universitario en Artes Visuales",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Artes y Diseño",
+      "faltan": [
+        "posible duplicado de «Profesorado en Artes Visuales»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Grado Universitario en Cerámica Artística",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Artes y Diseño",
+      "faltan": [
+        "posible duplicado de «Profesorado en Cerámica Artística»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Grado Universitario en Ciencias Básicas con Orientación en Biología",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Exactas y Naturales",
+      "faltan": [
+        "posible duplicado de «Profesorado en Biología»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Grado Universitario en Ciencias Básicas con Orientación en Física",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Exactas y Naturales",
+      "faltan": [
+        "posible duplicado de «Profesorado en Física»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Grado Universitario en Ciencias Básicas con Orientación en Matemática",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Exactas y Naturales",
+      "faltan": [
+        "posible duplicado de «Profesorado en Matemática»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Grado Universitario en Ciencias Básicas con Orientación en Química",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Exactas y Naturales",
+      "faltan": [
+        "posible duplicado de «Profesorado en Química»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Grado Universitario en Historia del Arte",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Artes y Diseño",
+      "faltan": [
+        "posible duplicado de «Profesorado en Historia del Arte»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Grado Universitario en Música",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Artes y Diseño",
+      "faltan": [
+        "posible duplicado de «Ciclo de Profesorado en Música»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Grado Universitario en Portugués",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Filosofía y Letras",
+      "faltan": [
+        "posible duplicado de «Profesorado en Portugués»"
+      ]
+    },
+    {
+      "nombre": "Profesorado de Grado Universitario en Teatro",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Artes y Diseño",
+      "faltan": [
+        "posible duplicado de «Profesorado en Teatro»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Anestesia",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Médicas",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Anestesia»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Diagnóstico por Imágenes",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Médicas",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Diagnóstico por Imágenes»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Educación Social",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Educación",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Educación Social»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Enología y Viticultura",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Aplicadas a la Industria",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Enología y Viticultura»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Francés",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Filosofía y Letras",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Francés»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Geotecnologías",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Filosofía y Letras",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Geotecnologías»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Gestión de Políticas Públicas",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Políticas y Sociales",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Gestión de Políticas Públicas»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Laboratorio",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Médicas",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Laboratorio»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Operaciones Mineras",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Aplicadas a la Industria",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Operaciones Mineras»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Quirófano",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Ciencias Médicas",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Quirófano»"
+      ]
+    },
+    {
+      "nombre": "Traductorado Público en Inglés",
+      "destino": "Universidad Nacional de Cuyo (UNCuyo)",
+      "unidad": "Facultad de Filosofía y Letras",
+      "faltan": [
+        "posible duplicado de «Traductorado en Inglés»"
+      ]
+    },
+    {
+      "nombre": "Contador Público Nacional",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Ciencias Económicas y de Administración",
+      "faltan": [
+        "posible duplicado de «Contador Público»"
+      ]
+    },
+    {
+      "nombre": "Lic. en Instrumentación Quirúrgica",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Ciencias de la Salud",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Instrumentación Quirúrgica»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura Ciencias de la Educación",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Humanidades",
+      "faltan": [
+        "posible duplicado de «Ciencias de la Educación»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en  Relaciones Internacionales",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Estudios Internacionales",
+      "faltan": [
+        "posible duplicado de «Relaciones Internacionales»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Administración",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Ciencias Económicas y de Administración",
+      "faltan": [
+        "posible duplicado de «Administración»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Comercialización",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Ciencias Económicas y de Administración",
+      "faltan": [
+        "posible duplicado de «Comercialización»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Comercialización con Orientación Internacionales",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Estudios Internacionales",
+      "faltan": [
+        "posible duplicado de «Marketing Internacional»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Comercio Exterior",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Estudios Internacionales",
+      "faltan": [
+        "posible duplicado de «Comercio Exterior»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Comunicación",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Humanidades",
+      "faltan": [
+        "posible duplicado de «Comunicación»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Economía",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Ciencias Económicas y de Administración",
+      "faltan": [
+        "posible duplicado de «Economía»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Fonoaudiología y Clínica del Lenguaje",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Ciencias de la Salud",
+      "faltan": [
+        "posible duplicado de «Fonoaudiología y Clínica del Lenguaje»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Gestión Ambiental",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Ambiente, Arquitectura y Urbanismo",
+      "faltan": [
+        "posible duplicado de «Gestión Ambiental»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Gestión de Recursos Humanos",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Ciencias Económicas y de Administración",
+      "faltan": [
+        "posible duplicado de «Recursos Humanos»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Hotelería",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Ciencias Económicas y de Administración",
+      "faltan": [
+        "posible duplicado de «Hotelería»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Psicología",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Ciencias de la Salud",
+      "faltan": [
+        "posible duplicado de «Psicología»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Psicopedagogía.",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Humanidades",
+      "faltan": [
+        "posible duplicado de «Psicopedagogía»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Turismo",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Ciencias Económicas y de Administración",
+      "faltan": [
+        "posible duplicado de «Turismo»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Locución de Radio y Televisión",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Humanidades",
+      "faltan": [
+        "posible duplicado de «Locución»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura en Acompañamiento Terapéutico",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Ciencias de la Salud",
+      "faltan": [
+        "posible duplicado de «Tecnicatura en Acompañante Terapéutico»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura en Dirección y Producción Audiovisual",
+      "destino": "Universidad de Congreso (UC)",
+      "unidad": "Facultad de Humanidades",
+      "faltan": [
+        "posible duplicado de «Tecnicatura Universitaria en Dirección y Producción Audiovisual»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Administración de Negocios",
+      "destino": "Universidad de Mendoza (UM)",
+      "unidad": "Facultad de Ciencias Económicas",
+      "faltan": [
+        "posible duplicado de «Licenciado en Administración de Negocios»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Analítica de Negocios (Ciclo de Complementación Curricular)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Económicas y Jurídicas",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Analítica de Negocios»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Dirección Creativa de Diseño y Publicidad (C.C.C.)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Sociales y Administrativas",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Dirección Creativa de Diseño y Publicidad»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Educación Física con Orientación en Fisiología del Trabajo Físico y Rendimiento Humano (Ciclo de Complementación Curricular)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Médicas",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Educación Física con Orientación en Fisiología del Trabajo Físico y Rendimiento Humano»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Educación Física con Orientación en Salud (Ciclo de Complementación Curricular)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Médicas",
+      "faltan": [
+        "posible duplicado de «Licenciado en Educación Física (Salud)»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Enfermería (Ciclo de Complementación Curricular)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Médicas",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Enfermería»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Fonoaudiología (C.C.C.)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Médicas",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Fonoaudiología»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Informática y Desarrollo en Software",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Sociales y Administrativas",
+      "faltan": [
+        "posible duplicado de «Lic. en Informática y Desarrollo de Software»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Inglés (Ciclo de Complementación Curricular)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Escuela Superior de Lenguas Extranjeras",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Inglés»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Niñez, Adolescencia y Familia (A distancia)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Psicología",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Niñez, Adolescencia y Familia»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Niñez, Adolescencia y Familia (A distancia) - (Ciclo de Complementación Curricular)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Psicología",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Niñez, Adolescencia y Familia»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Producción de Bioimágenes (Ciclo de Complementación Curricular)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Médicas",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Producción de Bioimágenes»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Relaciones Institucionales, Ceremonial y Comunicación Corporativa",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Sociales y Administrativas",
+      "faltan": [
+        "posible duplicado de «Lic. en Relaciones Institucionales, Ceremonial y Comunicación Corporativa»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Seguridad Ciudadana Integral (Ciclo de Complementación Curricular)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Psicología",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Seguridad Ciudadana Integral - Modalidad a distancia»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Tecnologías de la Salud (Ciclo de Complementación Curricular)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Médicas",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Tecnologías de la Salud»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Turismo (Ciclo de Complementación Curricular)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Sociales y Administrativas",
+      "faltan": [
+        "posible duplicado de «Lic. en Turismo y Hotelería»"
+      ]
+    },
+    {
+      "nombre": "Licenciatura en Turismo y Hotelería",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Sociales y Administrativas",
+      "faltan": [
+        "posible duplicado de «Lic. en Turismo y Hotelería»"
+      ]
+    },
+    {
+      "nombre": "Lienciatura en Comercio Internacional",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Sociales y Administrativas",
+      "faltan": [
+        "posible duplicado de «Licenciatura en Comercio Internacional»"
+      ]
+    },
+    {
+      "nombre": "Sommelier Universitario/a",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Escuela Superior de Lenguas Extranjeras",
+      "faltan": [
+        "posible duplicado de «Sommelier Universitario»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Ceremonial y Organización de Eventos",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Sociales y Administrativas",
+      "faltan": [
+        "posible duplicado de «Técnico/a Universitario/a en Ceremonial y Organización de Eventos»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Desarrollo de Software",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Sociales y Administrativas",
+      "faltan": [
+        "posible duplicado de «Técnico Universitario en Desarrollo de Software»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Diseño Gráfico y Publicidad",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Sociales y Administrativas",
+      "faltan": [
+        "posible duplicado de «Técnico Universitario en Diseño Gráfico y Publicidad»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura Universitaria en Marketing y Ventas",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Sociales y Administrativas",
+      "faltan": [
+        "posible duplicado de «Técnico Universitario en Marketing y Ventas»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura en Telecomunicaciones",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Cs. Sociales y Administrativas",
+      "faltan": [
+        "posible duplicado de «Técnico en Telecomunicaciones»"
+      ]
+    },
+    {
+      "nombre": "Tecnicatura universitaria en Niñez, Adolescencia y Familia (a distancia)",
+      "destino": "Universidad del Aconcagua (UDA)",
+      "unidad": "Facultad de Psicología",
+      "faltan": [
+        "posible duplicado de «Tecnicatura universitaria en Niñez, Adolescencia y Familia - Modalidad a Distancia»"
+      ]
+    }
+  ]
+}

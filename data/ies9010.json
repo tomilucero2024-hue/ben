@@ -663,6 +663,60 @@
               ]
             }
           ]
+        },
+        {
+          "nombre_carrera": "Actualización Académica en Legislación y Administración Escolar",
+          "categoria": "Posgrado / Especialización",
+          "duracion": "1 año",
+          "modalidad": "Presencial",
+          "facultad": "IES N° 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/",
+          "id": 1910
+        },
+        {
+          "nombre_carrera": "Actualización Académica en la Enseñanza Permanente de Jóvenes y Adultos",
+          "categoria": "Posgrado / Especialización",
+          "duracion": "20 horas reloj",
+          "modalidad": "Presencial",
+          "facultad": "IES N° 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/",
+          "id": 1911
+        },
+        {
+          "nombre_carrera": "Actualización Académica en la Enseñanza de la Lengua y la Literatura, con opción a Especialización docente de nivel superior en la Enseñanza de la Lengua y la Literatura",
+          "categoria": "Posgrado / Especialización",
+          "duracion": "20 horas reloj",
+          "modalidad": "Presencial",
+          "facultad": "IES N° 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/",
+          "id": 1912
+        },
+        {
+          "nombre_carrera": "Especialización Docente de Nivel Superior en Género y Educación",
+          "categoria": "Posgrado / Especialización",
+          "duracion": "40 horas reloj",
+          "modalidad": "Presencial",
+          "facultad": "IES N° 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/",
+          "id": 1913
+        },
+        {
+          "nombre_carrera": "Tecnicatura Superior en Agronomía",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "facultad": "IES N° 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/",
+          "id": 1914
+        },
+        {
+          "nombre_carrera": "Tecnicatura Superior en Redes y Ciberseguridad",
+          "categoria": "Pregrado / Tecnicatura",
+          "duracion": "3 años",
+          "modalidad": "Presencial",
+          "facultad": "IES N° 9-010 Rosario Vera Peñaloza",
+          "link_oficial": "https://ies9010-infd.mendoza.edu.ar/",
+          "id": 1915
         }
       ],
       "departamento": "San Carlos"

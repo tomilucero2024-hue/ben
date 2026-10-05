@@ -1005,6 +1005,150 @@
       }
      ],
      "plan_fuente": "https://www.uch.edu.ar/docs/educacion_primaria.pdf"
+    },
+    {
+     "nombre_carrera": "Abogacía",
+     "categoria": "Grado / Carrera",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Derecho",
+     "link_oficial": "https://www.uch.edu.ar/carrera/abogacia",
+     "id": 714
+    },
+    {
+     "nombre_carrera": "Analista Administrativo Contable",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+     "link_oficial": "https://www.uch.edu.ar/carrera/contador-publico",
+     "id": 715
+    },
+    {
+     "nombre_carrera": "Guía de Turismo y Coordinador de Viajes",
+     "categoria": "Grado / Carrera",
+     "duracion": "2 años",
+     "modalidad": "A distancia",
+     "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+     "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-turismo",
+     "id": 716
+    },
+    {
+     "nombre_carrera": "Martillero Público",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+     "link_oficial": "https://www.uch.edu.ar/carrera/corredor-publico-inmobiliario-y-martillero",
+     "id": 717
+    },
+    {
+     "nombre_carrera": "Procuración",
+     "categoria": "Grado / Carrera",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Derecho",
+     "link_oficial": "https://www.uch.edu.ar/carrera/abogacia",
+     "id": 718
+    },
+    {
+     "nombre_carrera": "Profesorado Universitario en Educación Inicial",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "A distancia",
+     "facultad": "Facultad de Educación",
+     "link_oficial": "http://www.uch.edu.ar/",
+     "id": 719
+    },
+    {
+     "nombre_carrera": "Profesorado Universitario en Educación Primaria",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "A distancia",
+     "facultad": "Facultad de Educación",
+     "link_oficial": "http://www.uch.edu.ar/",
+     "id": 720
+    },
+    {
+     "nombre_carrera": "Profesorado para Profesionales",
+     "categoria": "Grado / Profesorado",
+     "duracion": "1 año",
+     "modalidad": "A distancia",
+     "facultad": "Facultad de Educación",
+     "link_oficial": "http://www.uch.edu.ar/",
+     "id": 721
+    },
+    {
+     "nombre_carrera": "Social Media Manager",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 meses",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Educación",
+     "link_oficial": "http://www.uch.edu.ar/",
+     "id": 722
+    },
+    {
+     "nombre_carrera": "Tecnicatura Universitaria en Comunicación Digital",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Educación",
+     "link_oficial": "http://www.uch.edu.ar/",
+     "id": 723
+    },
+    {
+     "nombre_carrera": "Tecnicatura Universitaria en Desarrollo de Software",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 años",
+     "modalidad": "A distancia",
+     "facultad": "Facultad de Informática y Diseño",
+     "link_oficial": "https://www.uch.edu.ar/",
+     "id": 724
+    },
+    {
+     "nombre_carrera": "Tecnicatura Universitaria en Diseño Gráfico",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Informática y Diseño",
+     "link_oficial": "https://uch.edu.ar/carrera/licenciatura-en-dise%C3%B1o",
+     "id": 725
+    },
+    {
+     "nombre_carrera": "Tecnicatura Universitaria en Producción Musical",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "2 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+     "link_oficial": "https://www.uch.edu.ar/",
+     "id": 726
+    },
+    {
+     "nombre_carrera": "Técnico Universitario en Comercio Exterior y Aduanas",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Ciencias Empresariales y Gestión Pública",
+     "link_oficial": "https://www.uch.edu.ar/carrera/licenciatura-en-comercio-internacional",
+     "id": 727
+    },
+    {
+     "nombre_carrera": "UX Writer",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "4 meses",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Educación",
+     "link_oficial": "http://www.uch.edu.ar/",
+     "id": 728
+    },
+    {
+     "nombre_carrera": "Web Developer",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "8 meses",
+     "modalidad": "Presencial",
+     "facultad": "Facultad de Educación",
+     "link_oficial": "http://www.uch.edu.ar/",
+     "id": 729
     }
    ],
    "departamento": "Godoy Cruz"

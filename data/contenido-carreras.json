@@ -26,7 +26,50 @@
     "tecnico superior en redes y ciberseguridad": "tecnicatura superior en redes y ciberseguridad",
     "tecnico superior en turismo": "tecnicatura superior en turismo",
     "tecnico universitario en desarrollo de software": "tecnicatura universitaria en desarrollo de software",
-    "tecnico superior en diseno de indumentaria, textil y accesorios": "tecnicatura superior en diseno de indumentaria, textil y accesorios"
+    "tecnico superior en diseno de indumentaria, textil y accesorios": "tecnicatura superior en diseno de indumentaria, textil y accesorios",
+    "ciclos de licenciaturas en administracion de empresas": "licenciado en administracion de empresas",
+    "gestion de redes sociales y marketing digital": "marketing digital",
+    "guia de turismo y coordinador de viajes": "tecnicatura en guia de turismo",
+    "lic en produccion de bio imagenes": "licenciatura en produccion de bioimagenes",
+    "profesorado en educacion especial con orientacion en discapacidad intelectual": "profesorado de educacion especial con orientacion en discapacidad intelect ual",
+    "tecnicatura superior en higiene y seguridad con orientacion en calidad y medioambiente": "tecnicatura superior en higiene y seguridad con orientacion en calidad y medio ambiente",
+    "tecnicatura superior en investigacion criminalistica": "licenciatura en criminalistica",
+    "tecnicatura superior en ciencia de datos e inteligencia artificial": "ciencia de datos",
+    "tecnicatura universitaria en programacion de videojuegos": "videojuegos",
+    "interprete en canto": "licenciatura en canto",
+    "coreografo e interprete en danza": "tecnicatura superior en danza",
+    "tecnicatura superior en siniestrologia vial": "tecnicatura universitaria en accidentologia vial",
+    "profesorado universitario en educacion inicial": "profesorado de educacion inicial",
+    "profesorado universitario en educacion primaria": "profesorado de educacion primaria",
+    "profesorado universitario en lengua inglesa": "profesorado de ingles",
+    "ceramica artesanal": "licenciatura en ceramica artistica",
+    "tecnicatura superior en direccion gastronomica": "tecnicatura superior en gastronomia",
+    "tecnicatura universitaria en redes de datos y telecomunicaciones": "tecnicatura en redes y telecomunicaciones",
+    "ingenieria en direccion de empresas": "direccion de empresas",
+    "preceptoria escolar": "tecnicatura superior en preceptoria escolar",
+    "tecnicatura universitaria en produccion audiovisual": "tecnicatura en produccion audiovisual tupa",
+    "profesorado de grado universitario (ciclo de complementacion curricular)": "profesorado de grado universitario",
+    "traductorado publico en ingles (zona este: sede junin)": "traductorado en ingles",
+    "ccc licenciatura en ciencia de datos e ia": "licenciatura en ciencia de datos",
+    "licenciatura en administracion gastronomica (ciclo de complementacion curricular)": "licenciatura en administracion gastronomica",
+    "licenciatura en administracion hotelera (ciclo de complementacion curricular)": "licenciatura en administracion hotelera",
+    "licenciatura en administracion de salud (ciclo de complementacion curricular) presencial y a distancia": "licenciatura en administracion de salud",
+    "profesorado universitario en historia": "profesorado de historia",
+    "profesorado de educacion secundaria en filosofia": "profesorado en filosofia",
+    "profesorado para la educacion secundaria en geografia": "profesorado de educacion secundaria en geografia",
+    "profesorado y licenciatura en matematica": "profesorado en matematica",
+    "tecnicatura superior en diseno de interiores": "diseno de interiores",
+    "tecnicatura superior en podologia": "podologia universitaria",
+    "tecnicatura universitaria en comunicacion digital": "licenciatura en comunicacion digital",
+    "tecnicatura universitaria en desarrollo y produccion de videojuegos": "tecnicatura en desarrollo de videojuegos",
+    "tecnicatura universitaria en diseno grafico": "tecnicatura en diseno grafico",
+    "tecnicatura universitaria en higiene y seguridad en el trabajo - (a distancia)": "tecnicatura universitaria en higiene y seguridad en el trabajo",
+    "tecnicatura en administracion en empresas de la salud": "tecnicatura superior en administracion de empresas de la salud",
+    "tecnicatura en marketing digital": "tecnicatura superior en marketing digital",
+    "tecnico universitario en comercio exterior y aduanas": "licenciatura en comercio exterior y aduanas",
+    "lic. en produccion de bio-imagenes": "licenciatura en produccion de bioimagenes",
+    "profesorado de danza": "profesorado en danza",
+    "profesorado para la educacion secundaria de la modalidad tecnico profesional (en concurrencia con el titulo de base)": "profesorado para la educacion secundaria de la modalidad tecnico profesional en concurrencia con el titulo de base"
   },
   "carreras": {
     "ciclo de licenciatura en higiene y seguridad, calidad y medio ambiente": {
@@ -1396,15 +1439,6 @@
         "arte-diseno",
         "comercio",
         "industria"
-      ],
-      "revisado": false
-    },
-    "tecnico superior en diseno diseno grafico": {
-      "descripcion": "Formación técnica en diseño gráfico: identidad visual, tipografía, piezas editoriales, packaging y gráfica digital, con manejo de software profesional y proyectos de taller. Se estudian los fundamentos del diseño y la preparación de archivos para imprenta y pantalla.\n\nEl egresado trabaja en estudios, agencias, imprentas, áreas de comunicación y como profesional independiente, resolviendo piezas de comunicación visual para empresas y organizaciones. Es una carrera para personas creativas y detallistas, con sensibilidad estética y capacidad de entender un pedido, proponer alternativas y entregar un trabajo prolijo en tiempo y forma. La cursada es práctica, con proyectos de identidad, editorial y packaging que se resuelven con software profesional y se preparan para producción.",
-      "sectores": [
-        "arte-diseno",
-        "medios",
-        "servicios"
       ],
       "revisado": false
     },
@@ -4191,6 +4225,335 @@
         "turismo",
         "servicios",
         "publico"
+      ],
+      "revisado": false
+    },
+    "tecnico superior en diseno grafico": {
+      "descripcion": "Formación técnica en diseño gráfico: identidad visual, tipografía, piezas editoriales, packaging y gráfica digital, con manejo de software profesional y proyectos de taller. Se estudian los fundamentos del diseño y la preparación de archivos para imprenta y pantalla.\n\nEl egresado trabaja en estudios, agencias, imprentas, áreas de comunicación y como profesional independiente, resolviendo piezas de comunicación visual para empresas y organizaciones. Es una carrera para personas creativas y detallistas, con sensibilidad estética y capacidad de entender un pedido, proponer alternativas y entregar un trabajo prolijo en tiempo y forma. La cursada es práctica, con proyectos de identidad, editorial y packaging que se resuelven con software profesional y se preparan para producción.",
+      "sectores": [
+        "arte-diseno",
+        "medios",
+        "servicios"
+      ],
+      "revisado": false
+    },
+    "tecnico superior en diseno digital e interactivo": {
+      "descripcion": "Formación técnica para diseñar piezas y experiencias digitales en múltiples soportes: sitios web, aplicaciones, videojuegos, animación y contenido interactivo. Se estudian tipografía, color y composición junto con herramientas digitales, diseño de interfaces y criterios de usabilidad, con proyectos que integran texto, imagen, sonido y movimiento.\n\nEl plan suma motion graphics, animación 2D y 3D, producción audiovisual, desarrollo web y narrativa transmedia, además de metodologías ágiles y gestión de proyectos. El egresado trabaja en estudios, agencias, áreas de comunicación y equipos de producto, produciendo piezas que se adaptan a pantallas y formatos distintos. Es una carrera para personas creativas y versátiles, cómodas con la tecnología y con capacidad de aprender herramientas nuevas.",
+      "sectores": [
+        "arte-diseno",
+        "tecnologia",
+        "medios"
+      ],
+      "revisado": false
+    },
+    "actualizacion academica en legislacion y administracion escolar": {
+      "descripcion": "Para quienes ya trabajan en gestión educativa y necesitan actualizar el marco normativo que ordena el sistema: leyes de educación, régimen laboral docente, administración de recursos y organización de instituciones. Se estudian también los circuitos administrativos, la documentación escolar y el rol del directivo frente a los cambios de normativa.\n\nLa propuesta es una actualización de posgrado para supervisores, directores, secretarios y docentes con funciones jerárquicas que buscan ordenar el día a día de una escuela dentro del marco legal vigente. El trabajo final integra normativa y práctica institucional en un caso concreto, y el cursado invita a contrastar la propia experiencia con la de colegas de otras escuelas de la provincia.",
+      "sectores": [
+        "educacion",
+        "publico",
+        "legal"
+      ],
+      "revisado": false
+    },
+    "actualizacion academica en la ensenanza permanente de jovenes y adultos": {
+      "descripcion": "Formación pensada para docentes que trabajan con jóvenes y adultos que retoman o continúan sus estudios: características de ese estudiantado, trayectorias interrumpidas y estrategias de enseñanza en formatos flexibles. Se abordan la planificación por proyectos, la evaluación en contextos heterogéneos y el trabajo con saberes previos.\n\nLa actualización invita a revisar el propio rol frente a grupos con recorridos diversos y a diseñar propuestas que sostengan la permanencia. Incluye el análisis de la normativa específica de la modalidad y de experiencias institucionales de Mendoza, con espacio para producir materiales y secuencias didácticas propias.",
+      "sectores": [
+        "educacion",
+        "social",
+        "publico"
+      ],
+      "revisado": false
+    },
+    "agente de propaganda medica": {
+      "descripcion": "Formación para quienes visitan profesionales de la salud como enlace entre los laboratorios y los consultorios. Se aprenden nociones de anatomía, farmacología y productos medicinales, junto con técnicas de comunicación, preparación de presentaciones y organización de la agenda de visitas.\n\nLa carrera combina fundamentos científicos con práctica de comunicación, porque el rol exige explicar información técnica a médicos, farmacéuticos y otros profesionales. Se estudian la industria farmacéutica, la ética de la actividad y el marco regulatorio que ordena la promoción de medicamentos en el país, además de estrategias para relevar la información del territorio.",
+      "sectores": [
+        "salud",
+        "comercio",
+        "social"
+      ],
+      "revisado": false
+    },
+    "actualizacion academica en la ensenanza de la lengua y la literatura, con opcion a especializacion docente de nivel superior en la ensenanza de la lengua y la literatura": {
+      "descripcion": "Recorrido de actualización para docentes de Lengua y Literatura que quieren renovar criterios de selección de textos, secuencias didácticas y evaluación de la escritura. Se trabaja sobre comprensión lectora, escritura académica, literatura en el aula y uso de recursos digitales.\n\nQuienes optan por la especialización suman un seminario de investigación y un trabajo final que sistematiza una propuesta didáctica propia. Está pensado para profesores de nivel secundario y superior que buscan profundizar sin abandonar el aula, con lecturas actualizadas y producción de materiales para sus propios estudiantes. El recorrido incluye talleres de escritura, análisis de textos literarios y no literarios, y discusión de criterios de corrección, para que cada docente revise sus secuencias con fundamentos y las lleve al aula.",
+      "sectores": [
+        "educacion",
+        "medios"
+      ],
+      "revisado": false
+    },
+    "electricidad domestica y comercial": {
+      "descripcion": "Cuando algo falla en una instalación eléctrica hacen falta criterio, seguridad y método: este es el terreno de quien se especializa en electricidad domiciliaria y comercial. Se ven circuitos, tableros, llaves, tomas, luminarias y normas de seguridad para trabajar con energía eléctrica.\n\nEs una formación breve, con fuerte carga de taller, en la que se interpretan planos y se practica el conexionado, la detección de fallas y el montaje de instalaciones típicas. Al terminar, la persona está en condiciones de resolver instalaciones y reparaciones en viviendas, locales y oficinas, y de presupuestar el trabajo con criterios profesionales. El curso hace hincapié en las normas de seguridad y en el uso correcto de herramientas y protecciones, porque la electricidad no admite improvisaciones.",
+      "sectores": [
+        "construccion",
+        "energia",
+        "servicios"
+      ],
+      "revisado": false
+    },
+    "especializacion docente de nivel superior en genero y educacion": {
+      "descripcion": "Trayectoria de posgrado que pone la perspectiva de género en el centro de la vida escolar: derechos, educación sexual integral, prevención de violencias y construcción de vínculos igualitarios. Se analizan currículas, prácticas institucionales y materiales didácticos con esta mirada.\n\nEstá destinada a docentes, directivos y equipos de orientación que buscan herramientas concretas para intervenir en el aula y en la institución, y para acompañar trayectorias escolares con equidad. Incluye legislación vigente, análisis de casos y el diseño de un proyecto institucional que se pone en práctica durante el cursado. Culmina con un trabajo integrador que puede ser una propuesta de intervención, un material didáctico o un proyecto de capacitación para la propia institución.",
+      "sectores": [
+        "educacion",
+        "social",
+        "publico"
+      ],
+      "revisado": false
+    },
+    "especializacion docente del nivel superior en pedagogia para la docencia en el nivel superior": {
+      "descripcion": "Propuesta para quienes ya dan clase en el nivel superior y quieren revisar su práctica con herramientas de la pedagogía. Se ven diseño de programas, evaluación de aprendizajes, estrategias de enseñanza y dinámicas de trabajo con estudiantes adultos.\n\nLa especialización combina teoría didáctica con el propio espacio de trabajo: cada cursante analiza sus clases y prepara una propuesta de mejora. Es una trayectoria de posgrado para docentes de institutos y universidades que buscan fundamentos para decidir mejor en el aula y para coordinar equipos docentes. Se analizan también las condiciones del trabajo docente en el nivel superior, los marcos normativos y el acompañamiento de estudiantes que ingresan, permanecen y egresan.",
+      "sectores": [
+        "educacion",
+        "ciencia"
+      ],
+      "revisado": false
+    },
+    "fotografia aplicada al ceremonial y protocolo": {
+      "descripcion": "Fotografía orientada a eventos institucionales: actos, ceremonias, homenajes y visitas oficiales, donde importan el orden protocolar, los momentos clave y la representación de las autoridades. Se trabaja composición, luz disponible y retrato, junto con criterios de protocolo.\n\nEl programa enseña a anticipar el desarrollo de un evento para cubrir los momentos que no se repiten, a editar las imágenes y a organizar el archivo fotográfico de una institución o empresa. Se practica con casos reales y se analiza el uso de la imagen en la comunicación institucional y en la prensa. El trabajo con instituciones exige puntualidad, criterio para elegir los momentos y cuidado con la circulación de las imágenes, temas que se abordan durante el programa.",
+      "sectores": [
+        "medios",
+        "arte-diseno",
+        "turismo"
+      ],
+      "revisado": false
+    },
+    "interprete en teatro musical": {
+      "descripcion": "Formación en canto, actuación y movimiento para quien quiere desempeñarse en teatro musical. Se trabaja técnica vocal, interpretación de partituras, presencia escénica, danza y trabajo con combos musicales, con repertorio del género.\n\nEl programa integra las tres áreas que el escenario exige a la vez y culmina en montajes donde se pone a prueba el trabajo del elenco. Se estudian también audiciones, rutinas de ensayo y los distintos roles que conviven en una producción musical, para comprender el oficio más allá de la función. Las clases combinan técnica individual y ensayo grupal, con presentaciones periódicas frente a público que permiten medir avances y ajustar el repertorio.",
+      "sectores": [
+        "arte-diseno",
+        "medios"
+      ],
+      "revisado": false
+    },
+    "licenciatura en agroindustrias": {
+      "descripcion": "Carrera que cruza producción agropecuaria con proceso industrial: cómo se transforman granos, frutas, hortalizas y otros productos primarios en alimentos y bienes elaborados. Se estudia tecnología de procesos, calidad, costos, logística y comercialización.\n\nEl egresado comprende la cadena completa, desde la materia prima hasta el producto terminado, y puede intervenir en la planificación de plantas, el control de calidad y la mejora de procesos. Es una carrera con mirada regional, atenta a los complejos frutihortícolas, vitivinícolas y alimentarios de Mendoza y al cuidado de los recursos. La formación incluye prácticas de laboratorio y visitas a plantas, donde se observan líneas de producción, controles de calidad y los problemas concretos que la industria resuelve a diario.",
+      "sectores": [
+        "agro",
+        "industria",
+        "ambiente"
+      ],
+      "revisado": false
+    },
+    "postitulo en enfermeria de la salud mental": {
+      "descripcion": "Especialización para enfermeros que trabajan o quieren trabajar en salud mental. Se abordan diagnósticos, tratamientos, marcos legales y modelos de cuidado centrados en la persona, en un campo que va del hospital a los dispositivos comunitarios.\n\nEl postítulo hace foco en la comunicación, la contención y el trabajo interdisciplinario con psicólogos, psiquiatras y trabajadores sociales. Se estudian también los derechos de las personas con padecimiento mental, la organización de la red de servicios y las intervenciones en crisis, con espacios de práctica supervisada. El enfoque apunta a desarmar prejuicios y a construir prácticas de cuidado que respeten la autonomía de las personas y su entorno familiar.",
+      "sectores": [
+        "salud",
+        "social"
+      ],
+      "revisado": false
+    },
+    "productor y gestor cultural": {
+      "descripcion": "Formación para quienes hacen realidad proyectos culturales: festivales, espectáculos, muestras, talleres y giras. Se aprende a armar un presupuesto, buscar financiamiento, organizar equipos, difundir y resolver la logística de un evento.\n\nEl programa combina planificación con el contacto permanente con artistas, espacios e instituciones. Se estudian políticas culturales, derechos y contratos, comunicación y evaluación de proyectos, con casos del ecosistema cultural mendocino y espacio para desarrollar una propuesta propia de gestión. El programa se dicta con fuerte trabajo sobre casos: presupuestos, cronogramas y planes de comunicación se construyen en clase y se confrontan con proyectos reales.",
+      "sectores": [
+        "arte-diseno",
+        "medios",
+        "social"
+      ],
+      "revisado": false
+    },
+    "profesorado en ciencias naturales": {
+      "descripcion": "Carrera docente centrada en la enseñanza de biología, física y química en el nivel secundario. Se estudian los contenidos disciplinares, las didácticas específicas, el trabajo experimental en el laboratorio y la alfabetización científica de los estudiantes.\n\nEl futuro profesor aprende a seleccionar y organizar contenidos, diseñar secuencias que partan de problemas, evaluar de manera formativa y usar el laboratorio y los recursos digitales con sentido. Incluye prácticas en escuelas desde los primeros años y una mirada sobre el ambiente y la vida cotidiana como puntos de partida. El profesorado pone atención especial al laboratorio y al trabajo de campo como espacios de aprendizaje, y a la seguridad en el manejo de materiales.",
+      "sectores": [
+        "educacion",
+        "ciencia",
+        "ambiente"
+      ],
+      "revisado": false
+    },
+    "refrigeracion industrial": {
+      "descripcion": "Formación técnica en sistemas de refrigeración de mayor escala: cámaras frigoríficas, equipos de proceso, compresores, válvulas y control automático. Se estudia el ciclo frigorífico, los refrigerantes, los instrumentos de medición y las normas de seguridad.\n\nEl trabajo combina diagnóstico de fallas, mantenimiento preventivo, montaje e interpretación de planos. Es una especialidad para quienes ya tienen base en electricidad o mecánica y quieren trabajar en la industria alimenticia, frigoríficos, bodegas o climatización de grandes instalaciones. Se practica sobre bancos de prueba y equipos reales, con mediciones de presión y temperatura que permiten interpretar el comportamiento del sistema.",
+      "sectores": [
+        "industria",
+        "energia",
+        "construccion"
+      ],
+      "revisado": false
+    },
+    "refrigeracion domestica y comercial": {
+      "descripcion": "Formación práctica para instalar, mantener y reparar heladeras, freezers, exhibidores y equipos de aire acondicionado de viviendas y comercios. Se ven circuitos de refrigeración, electricidad aplicada, soldadura, carga de gas y detección de fugas.\n\nEl programa avanza sobre problemas reales del oficio: equipos que enfrían de menos, consumen de más o directamente no arrancan. Incluye herramientas de medición, buenas prácticas de seguridad y trato con el cliente, con taller y práctica sobre equipos en funcionamiento. El aprendizaje avanza de la teoría del frío a la práctica concreta: soldar, vaciar el circuito, cargar el refrigerante y verificar que el equipo vuelva a cumplir su función.",
+      "sectores": [
+        "industria",
+        "construccion",
+        "servicios"
+      ],
+      "revisado": false
+    },
+    "social media manager": {
+      "descripcion": "Formación para gestionar la presencia de una marca en redes sociales: estrategia de contenidos, calendario, redacción, comunidad y medición de resultados. Se aprenden las lógicas de las principales plataformas y el uso de herramientas de programación y análisis.\n\nEl programa combina planificación con producción: guiones breves, placas y videos pensados para cada red, y respuestas a una comunidad que comenta y consulta. Se trabajan también colaboraciones, publicidad y reportes para justificar decisiones y ajustar la estrategia. Los proyectos de clase parten de casos reales, de manera que el estudiante arme un plan completo para una marca y lo defienda con datos.",
+      "sectores": [
+        "comercio",
+        "medios",
+        "tecnologia"
+      ],
+      "revisado": false
+    },
+    "soldadura y herreria artistica": {
+      "descripcion": "Oficio que combina técnica y diseño para fabricar rejas, portones, barandas, muebles y piezas ornamentales de metal. Se aprenden procesos de soldadura, corte, armado de estructuras, tratamiento de superficies y lectura de planos.\n\nEl taller prioriza la práctica: preparar el material, soldar con distintos métodos, controlar medidas y terminaciones, y resolver el montaje en obra. Se estudian también seguridad, protección personal y criterios de diseño aplicados al hierro, para pasar de la idea al objeto terminado. El diseño de rejas, portones y mobiliario obliga a pensar medidas, proporciones y refuerzos, y a dialogar con el cliente para transformar un boceto en una pieza concreta.",
+      "sectores": [
+        "industria",
+        "construccion",
+        "arte-diseno"
+      ],
+      "revisado": false
+    },
+    "tecnicatura superior en acupuntura": {
+      "descripcion": "Formación en medicina tradicional china orientada a la práctica de la acupuntura. Se estudian los meridianos, la energetización, la ubicación de los puntos, las técnicas de aguja y las bases filosóficas de esta medicina, junto con nociones de anatomía y bioseguridad.\n\nLa carrera integra teoría y práctica en gabinete, con seguimiento de casos y criterios de derivación. Está destinada a personas del área de la salud que buscan incorporar esta técnica a su actividad y comprender el diagnóstico desde el enfoque de la medicina china. El programa dedica especial atención a la bioseguridad, al manejo del material descartable y a los límites de la práctica, con derivación a otros profesionales cuando corresponde.",
+      "sectores": [
+        "salud"
+      ],
+      "revisado": false
+    },
+    "tecnicatura superior en comunicacion deportiva": {
+      "descripcion": "Formación para comunicar el deporte en sus distintos formatos: relato, panel, entrevista, redes y prensa. Se trabajan redacción periodística, locución, producción de contenidos, cobertura de eventos y relación con clubes e instituciones deportivas.\n\nEl programa pone el foco en el oficio: armar una agenda, preparar una entrevista, cubrir un partido y contar lo que pasa dentro y fuera de la cancha. Se estudian también derechos de transmisión, ética periodística y el ecosistema del deporte profesional y amateur. Se completa con producción de contenidos para redes de clubes y organizaciones, un terreno donde la comunicación deportiva trabaja cada vez más.",
+      "sectores": [
+        "medios",
+        "deporte"
+      ],
+      "revisado": false
+    },
+    "tecnicatura superior en comunicacion y gestion de bibliotecas": {
+      "descripcion": "Formación para organizar y dinamizar bibliotecas: catalogación, clasificación, gestión de colecciones, atención de usuarios y promoción de la lectura. Se estudian también repositorios digitales, derechos de autor y preservación del material.\n\nLa carrera apunta a bibliotecas escolares, populares, universitarias y especializadas, con herramientas de gestión y proyectos de extensión. El egresado puede administrar el catálogo, planificar servicios, acompañar a distintos públicos en el acceso a la información y trabajar junto a equipos docentes. La carrera incluye prácticas en bibliotecas reales y proyectos de animación a la lectura, con herramientas para trabajar con públicos infantiles, juveniles y adultos.",
+      "sectores": [
+        "medios",
+        "educacion",
+        "publico"
+      ],
+      "revisado": false
+    },
+    "tecnicatura superior en obras viales": {
+      "descripcion": "Formación técnica para intervenir en la construcción y el mantenimiento de rutas, caminos y obras viales: movimiento de suelos, pavimentos, drenajes, señalización y control de calidad de materiales. Se estudian planos, cómputos y mediciones.\n\nEl técnico colabora en la planificación de la obra, el control de avance y la verificación de condiciones de seguridad en el frente de trabajo. La carrera articula con el sector vial provincial y con las demandas de la actividad minera y productiva, e incluye prácticas de campo y de laboratorio. Se estudian también los equipos viales, la organización de cuadrillas y la lectura de antecedentes de obra, para comprender cómo se planifica una intervención de principio a fin.",
+      "sectores": [
+        "construccion",
+        "logistica",
+        "mineria"
+      ],
+      "revisado": false
+    },
+    "tecnicatura superior en protesis dental": {
+      "descripcion": "Formación para diseñar y fabricar prótesis dentales en el laboratorio: coronas, puentes, prótesis removibles y estructuras. Se estudian anatomía dental, materiales, técnicas de modelado, cerámica y tecnología CAD/CAM.\n\nEl trabajo es minucioso y combina precisión con estética: reproducir la forma, el color y la función de las piezas que el odontólogo indica. La carrera incluye prácticas de laboratorio y criterios de bioseguridad, con seguimiento de casos reales y uso de equipamiento específico. El egresado conoce los materiales y los equipos del laboratorio, y puede incorporarse a un equipo odontológico comprendiendo la indicación clínica de cada trabajo.",
+      "sectores": [
+        "salud",
+        "industria"
+      ],
+      "revisado": false
+    },
+    "tecnicatura superior en psicomotricidad": {
+      "descripcion": "Formación sobre el cuerpo en movimiento como vía de desarrollo, aprendizaje y expresión. Se estudian el desarrollo motor, el juego, la tonicidad y la relación entre cuerpo, emoción y pensamiento, con miradas de la educación y la salud.\n\nEl egresado interviene con niños, adolescentes y adultos en espacios educativos, de salud y comunitarios, diseñando dispositivos que usan el movimiento con intención. La carrera combina observación, práctica y fundamentos teóricos, y enseña a registrar y evaluar procesos. La formación incluye la observación del movimiento infantil, la planificación de sesiones y el registro de avances, con espacios de discusión sobre la propia práctica.",
+      "sectores": [
+        "salud",
+        "educacion",
+        "social"
+      ],
+      "revisado": false
+    },
+    "tecnicatura superior en servicios basicos y construcciones livianas industrializadas": {
+      "descripcion": "Formación en instalaciones y construcciones de bajo peso: paneles, estructuras livianas, cubiertas, instalaciones de servicios y terminaciones. Se estudia el montaje en seco, la coordinación de gremios y la eficiencia energética de estas soluciones.\n\nLa propuesta responde a obras que se resuelven rápido y con menor costo, desde ampliaciones hasta módulos habitacionales. El técnico interpreta planos, programa tareas, controla calidad y seguridad, y participa del proceso completo con materiales industrializados y criterios de sustentabilidad. El programa combina taller, lectura de planos y visitas a obras, para seguir de cerca cómo se coordinan las distintas especialidades en una construcción liviana.",
+      "sectores": [
+        "construccion",
+        "industria",
+        "energia"
+      ],
+      "revisado": false
+    },
+    "tecnicatura universitaria en administracion de edificios de propiedad horizontal y conjuntos inmobiliarios": {
+      "descripcion": "Formación para administrar consorcios y barrios cerrados: régimen legal de la propiedad horizontal, liquidación de expensas, presupuesto, contrataciones, morosidad y gestión de mantenimiento. Se estudian también asambleas, reglamentos y convivencia.\n\nEl programa prepara para el rol de administrador con herramientas contables, legales y de comunicación: atender reclamos, coordinar reparaciones, rendir cuentas y planificar mejoras. Incluye normativa específica, análisis de casos reales de gestión y práctica de armado de presupuestos y balances. El trabajo del administrador exige equilibrio entre lo legal, lo contable y lo humano, y el programa lo entrena con situaciones cotidianas de consorcios y barrios privados.",
+      "sectores": [
+        "inmobiliario",
+        "servicios",
+        "legal"
+      ],
+      "revisado": false
+    },
+    "tecnicatura universitaria en produccion musical": {
+      "descripcion": "Formación en el detrás de escena de la música: grabación, edición, mezcla, masterización y producción artística. Se estudian acústica, equipamiento de estudio, software de audio, micrófonos y monitoreo, aplicados a distintos géneros.\n\nEl programa apunta a producir discos y música para medios, con criterios estéticos y técnicos: elegir tomas, editar, ordenar arreglos y llevar el material a su versión final. Incluye práctica de sesiones y proyectos propios, con espacios para experimentar y para entender los tiempos y costos de una producción. La formación culmina con una producción propia, que puede ser un EP, una banda sonora o un proyecto para un artista, grabada y mezclada con equipamiento profesional.",
+      "sectores": [
+        "arte-diseno",
+        "medios",
+        "tecnologia"
+      ],
+      "revisado": false
+    },
+    "tecnico en cartografia y teledeteccion": {
+      "descripcion": "Formación en la producción y lectura de mapas a partir de datos satelitales, drones y sistemas de información geográfica. Se aprenden geodesia, proyecciones, teledetección, procesamiento digital de imágenes y elaboración de cartografía temática.\n\nEl técnico puede aplicarlo al ordenamiento territorial, la agricultura, la minería, la gestión de riesgos y el ambiente, transformando datos en mapas útiles para decidir. La carrera incluye software específico, trabajo de campo y criterios para elegir la fuente y la escala adecuadas a cada problema. El programa también introduce el uso de drones y de datos abiertos, fuentes cada vez más presentes en los proyectos de cartografía aplicada.",
+      "sectores": [
+        "tecnologia",
+        "ambiente",
+        "mineria"
+      ],
+      "revisado": false
+    },
+    "ux writer": {
+      "descripcion": "Formación para escribir los textos que acompañan productos digitales: botones, mensajes de error, formularios, avisos y asistentes. Se aprende a redactar claro, breve y en el tono de la marca, siempre pensando cómo lee una persona en una pantalla.\n\nEl programa combina escritura, experiencia de usuario e investigación: cómo probar si un texto se entiende, cómo detectar confusiones y cómo simplificar sin perder información. Es una especialidad para personas que escriben bien y les interesa la tecnología, con proyectos sobre productos reales. El egresado puede trabajar junto a equipos de diseño y desarrollo, aportando textos claros y un sistema de contenidos coherente para un producto digital.",
+      "sectores": [
+        "tecnologia",
+        "medios",
+        "comercio"
+      ],
+      "revisado": false
+    },
+    "web developer": {
+      "descripcion": "Formación para construir sitios y aplicaciones web: estructura con HTML, estilos con CSS, interactividad con JavaScript y consumo de datos desde servicios. Se trabaja en proyectos completos, desde la maqueta hasta la puesta en línea.\n\nEl programa incluye herramientas de código, control de versiones, adaptación a distintos tamaños de pantalla y buenas prácticas de accesibilidad. Está pensado para quienes quieren programar con foco en el producto web y seguir aprendiendo nuevas tecnologías a medida que el ecosistema cambia. El cursado combina clases guiadas con proyectos propios, y exige dedicar tiempo extra a la práctica de programación, porque el aprendizaje se consolida escribiendo código.",
+      "sectores": [
+        "tecnologia",
+        "comercio",
+        "servicios"
+      ],
+      "revisado": false
+    },
+    "analista administrativo contable": {
+      "descripcion": "Formación corta en administración y contabilidad para trabajar en el circuito administrativo de cualquier organización: registración de operaciones, liquidación de haberes, facturación, conciliaciones y control de cuentas. Se aprende el uso de planillas de cálculo y de sistemas de gestión.\n\nEl enfoque es práctico: se resuelven casos de compras, ventas, cobros y pagos, y se estudia la documentación comercial y contable que respalda cada movimiento. Complementa con nociones tributarias básicas y de costos, para comprender cómo se organiza la información económica de una empresa o institución y poder asistir a los responsables de cada área. El cursado combina teoría con ejercitación intensiva en computadora, para terminar con un manejo fluido de las herramientas que se usan a diario en una oficina administrativa.",
+      "sectores": [
+        "finanzas",
+        "comercio",
+        "servicios"
+      ],
+      "revisado": false
+    },
+    "preparador de ensambles corales": {
+      "descripcion": "Formación para dirigir y preparar grupos corales: técnica vocal, afinación, empaste, lectura musical y elección de repertorio. Se trabaja sobre la conducción del ensayo, la corrección del sonido colectivo y la afinación por cuerdas.\n\nEstá pensada para músicos, coreutas y docentes que quieren estar al frente de un ensamble con herramientas de dirección. Se analizan partituras corales de distintos géneros y se practica con el propio grupo en el aula, planificando ensayos y armando un programa de concierto. También se trabaja la relación del coro con el público y el armado de programas, desde la elección de obras hasta el orden del concierto. El trabajo con voces requiere paciencia y oído, y se aprende ensayando.",
+      "sectores": [
+        "arte-diseno",
+        "educacion"
+      ],
+      "revisado": false
+    },
+    "tecnicatura superior en fotografia creativa y diseno fotografico": {
+      "descripcion": "Formación integral en imagen fotográfica: cámara, luz, composición, edición y producción. Se recorre el retrato, el producto, la moda y el ensayo autoral, con laboratorio digital y salidas de práctica.\n\nLa carrera hace foco en el diseño de la imagen, es decir, en decidir qué contar y cómo, y culmina en un portfolio propio. Se estudian referentes, historia de la fotografía, tratamiento del color y preparación de archivos para distintos soportes, desde la impresión hasta las pantallas. El estudio de la luz natural y artificial, y el trabajo con modelos y objetos, permiten construir un estilo propio que se refleja en el portfolio final. La práctica constante con la cámara es la base de todo el programa.",
+      "sectores": [
+        "arte-diseno",
+        "medios"
+      ],
+      "revisado": false
+    },
+    "tecnicatura superior en sanidad y bienestar animal": {
+      "descripcion": "Formación para el cuidado de animales de compañía y de producción: sanidad, alimentación, manejo, primeros auxilios y bienestar. Se estudian anatomía y fisiología básicas, zoonosis, higiene y normativa sobre tenencia responsable.\n\nEl técnico puede desempeñarse en veterinarias, criaderos, refugios, establecimientos productivos y espacios de conservación, trabajando junto a profesionales veterinarios. La carrera incluye práctica con animales y una fuerte impronta en trato respetuoso y manejo de bajo estrés. La carrera pone el foco en el trato respetuoso y en la prevención, dos ejes del bienestar animal que atraviesan todas las materias. Se trabaja con criterios de manejo y sujeción que cuidan al animal y a quien lo atiende.",
+      "sectores": [
+        "agro",
+        "salud",
+        "ambiente"
+      ],
+      "revisado": false
+    },
+    "ciclo de profesorado para profesionales universitarios (sede central y san rafael)": {
+      "descripcion": "Ciclo de complementación pedagógica para graduados universitarios que quieren enseñar en el nivel medio y superior. Se cursan didáctica, psicología del aprendizaje, evaluación, curriculum y prácticas docentes, con un enfoque que parte de la experiencia profesional de cada estudiante.\n\nEl ciclo se organiza en torno a espacios de práctica en instituciones educativas, donde se planifican y dictan clases bajo supervisión. Está pensado para abogados, contadores, ingenieros, psicólogos y otros profesionales que buscan sumar el título docente a su formación de origen y comprender las lógicas propias de la escuela. Los espacios de práctica se distribuyen entre observación, ayudantía y clases a cargo, con un tutor que acompaña la planificación y la evaluación de cada intervención.",
+      "sectores": [
+        "educacion"
+      ],
+      "revisado": false
+    },
+    "profesorado de educacion secundaria en informatica": {
+      "descripcion": "Formación docente para enseñar informática y tecnología en la escuela secundaria. Se estudian los contenidos de la disciplina —programación, redes, datos, ciudadanía digital— junto con las didácticas específicas para convertir ese saber en propuestas de aula.\n\nEl futuro profesor aprende a diseñar secuencias, elegir herramientas y evaluar aprendizajes en un campo que cambia rápido, y a trabajar la seguridad, el pensamiento computacional y el uso crítico de la tecnología con adolescentes. La carrera incluye prácticas en escuelas y proyectos que integran software y hardware. El programa también aborda el rol del docente como guía en proyectos tecnológicos, la coordinación con otras áreas y el armado de talleres y clubes de programación dentro de la escuela.",
+      "sectores": [
+        "educacion",
+        "tecnologia"
+      ],
+      "revisado": false
+    },
+    "tecnicatura superior en administracion de empresas de la salud": {
+      "descripcion": "Formación para organizar el funcionamiento administrativo de instituciones de salud: turnos, historias clínicas, facturación, compras, stock e insumos. Se estudia la estructura del sistema sanitario, sus normativas y el financiamiento de las prestaciones.\n\nEl programa combina administración general con las particularidades del sector: calidad de atención, bioseguridad administrativa, trato con obras sociales y coordinación de equipos de salud. El egresado colabora con la gestión de clínicas, sanatorios, centros de salud y consultorios, y comprende los circuitos que sostienen la atención. La formación incluye herramientas de gestión, planillas y sistemas de información que se usan a diario en una institución sanitaria, y prácticas en circuitos administrativos reales.",
+      "sectores": [
+        "salud",
+        "comercio",
+        "servicios"
       ],
       "revisado": false
     }

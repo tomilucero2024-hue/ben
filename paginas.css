@@ -24,7 +24,20 @@
     --space-4: .75rem;  --space-5: 1rem;    --space-6: 1.25rem;
     --space-7: 1.5rem;  --space-8: 2rem;    --space-9: 2.5rem;
 
-    --radius-sm: 8px;   --radius-md: 12px;  --radius-pill: 999px;
+    --radius-sm: 8px;   --radius-md: 12px;  --radius-lg: 16px; --radius-pill: 999px;
+
+    /* Tokens que usa la ventana de Mi lista (mi-lista.css), que ahora también
+       se carga en estas páginas. */
+    --fs-2xs: calc(.75rem * var(--font-scale, 1));
+    --fs-xs: calc(.8125rem * var(--font-scale, 1));
+    --fs-sm: calc(.875rem * var(--font-scale, 1));
+    --fs-md: calc(1rem * var(--font-scale, 1));
+    --fs-lg: calc(1.125rem * var(--font-scale, 1));
+    --dur-slow: 260ms;
+    --shadow: rgba(40, 34, 90, .14);
+    --elev-4: 0 22px 60px var(--shadow);
+    --orange: #F97316;
+    --on-vivid: #14121F;
 
     --bg: #fdfaf5;
     --surface: #ffffff;
@@ -49,6 +62,7 @@
 }
 
 html[data-theme="dark"] {
+    --shadow: rgba(0, 0, 0, 0.4);
     --bg: #09101c;
     --surface: #121c2f;
     --surface-soft: #1e293b;
@@ -68,6 +82,11 @@ html[data-theme="dark"] {
 }
 
 * { box-sizing: border-box; }
+
+/* El atributo hidden tiene que ganarle a cualquier display de una clase: sin
+   esta regla, la ventana de Mi lista (display: flex) no se ocultaba al cerrarla
+   con la ✕ desde una ficha. Igual que en style.css. */
+[hidden] { display: none !important; }
 
 /* WCAG 2.1 - 2.4.1 Evitar bloques: cada ficha repite cabecera, buscador y cientos
    de enlaces. El skip link va oculto hasta que llega el foco. */
@@ -325,9 +344,19 @@ a:hover { text-decoration: none; }
 }
 .oferta-datos li::before { content: "· "; }
 .oferta-datos li:first-child::before { content: ""; }
+/* Icono de enlace externo (reemplaza la flecha ↗). */
+.icono-externo {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    flex: none;
+    margin-left: .3em;
+    vertical-align: -1.5px;
+}
 .oferta .oficial {
     display: inline-flex;
     align-items: center;
+    white-space: nowrap;
     min-height: 44px;
     margin-top: var(--space-4);
     padding: var(--space-2) var(--space-5);

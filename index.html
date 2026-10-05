@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="manifest" href="/manifest.json?v=20260930_17">
+    <link rel="manifest" href="/manifest.json?v=20261004_6">
     <meta name="theme-color" content="#1d4ed8">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="BEN">
@@ -57,9 +57,11 @@
         }
     }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Montserrat auto-hospedada: sin pedidos a terceros. Antes este link iba a
+         Google Fonts y, en una red sin salida a internet, quedaba colgado y
+         bloqueaba la ejecución de TODO el JavaScript (los scripts esperan a las
+         hojas de estilo): la portada se quedaba congelada. -->
+    <link rel="stylesheet" href="/fonts/montserrat.css?v=20261004_6">
     <script>
         (() => {
             const guardado = localStorage.getItem('ben-theme');
@@ -80,14 +82,15 @@
             document.head.appendChild(pre);
         })();
     </script>
-    <link rel="stylesheet" href="/style.css?v=20260930_17">
+    <link rel="stylesheet" href="/style.css?v=20261004_6">
+    <link rel="stylesheet" href="/mi-lista.css?v=20261004_6">
 
     <!-- La analítica va PRIMERO en el <head> y no al final del body con los
          demás scripts: gtag.js se baja con async (no frena el render) pero el
          pageview se encola apenas se ejecuta analitica.js, antes de que la
          persona llegue a tocar nada. Es el mismo archivo que cargan las
          páginas estáticas generadas (generar-paginas.js → documento()). -->
-    <script src="/js/analitica.js?v=20260930_17"></script>
+    <script src="/js/analitica.js?v=20261004_6"></script>
 
 </head>
 <body>
@@ -122,9 +125,6 @@
                      autocompletado). El label real está arriba, en <label class="sr-only">:
                      el placeholder no reemplaza al label. -->
                 <input type="search" id="searchInput" class="search-input" placeholder="Buscar carrera o institución…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="searchDropdown" aria-haspopup="listbox" aria-autocomplete="list">
-                <button id="mobileFilterButton" class="mobile-filter-button" type="button" aria-controls="filtersSidebar" aria-expanded="false" aria-label="Abrir filtros">
-                    <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg><span class="mobile-filter-texto">Filtrar</span>
-                </button>
                 <div id="searchDropdown" class="search-dropdown" role="listbox" hidden></div>
             </div>
             <button id="themeToggle" class="btn-theme-toggle" type="button" aria-label="Cambiar tema de color" aria-pressed="false" title="Cambiar tema de color">
@@ -183,6 +183,14 @@
                 <h2>Filtrar por</h2>
                 <button id="closeFiltersButton" class="close-filters-button" type="button" aria-label="Cerrar filtros">×</button>
             </div>
+
+            <!-- Guía de títulos. Vive dentro del panel a propósito: solo tiene
+                 sentido en Educación Formal y acá el panel entero desaparece en
+                 las otras secciones. -->
+            <a class="filtro-guia" href="/titulos/">
+                <span>Títulos y niveles</span>
+                <span class="filtro-guia-flecha" aria-hidden="true">→</span>
+            </a>
 
             <section class="filter-group">
                 <h3 id="filtroFormacion">Tipo de formación</h3>
@@ -296,23 +304,16 @@
              plataformas, así que cada cambio de filtro hacía que un lector de
              pantalla intentara leer cientos de tarjetas.
              Va sobre el contador, que es el resumen que interesa escuchar. -->
-        <section class="results-area">
+            <section class="results-area">
             <!-- Primera decisión sobre los resultados: qué tipo de oferta mirar.
                  Vive acá, arriba de la grilla, y no arriba de toda la página. -->
 
-            <a class="banner-titulos" href="/titulos/">
-                <span class="banner-titulos-icono" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/><path d="M22 10v6"/></svg>
-                </span>
-                <span class="banner-titulos-texto">
-                    <strong>
-                        <span class="banner-titulos-largo">¿Licenciatura, tecnicatura o profesorado?</span>
-                        <span class="banner-titulos-corto">¿Qué título te conviene?</span>
-                    </strong>
-                    <span>Conocé las diferencias entre los títulos y los niveles de formación.</span>
-                </span>
-                <span class="banner-titulos-cta"><span class="banner-titulos-cta-texto">Ver la guía</span> →</span>
-            </a>
+            <!-- En mobile el panel de filtros es un cajón: esta card es su
+                 único acceso. En escritorio el panel ya está a la vista, así
+                 que se oculta (≤820px, ver breakpoints). -->
+            <button id="mobileFilterButton" class="mobile-filter-button" type="button" aria-controls="filtersSidebar" aria-expanded="false">
+                <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg><span class="mobile-filter-texto">Filtros</span>
+            </button>
 
             <div id="resultsToolbar" class="results-toolbar">
                 <div class="results-toolbar-top">
@@ -706,13 +707,15 @@
     <!-- Scripts clasicos: son autonomos (IIFE) y tienen que correr antes que el
          modulo. favoritos.js se autoinstala (delega los clicks de [data-favorito])
          y tambien lo cargan las paginas estaticas de carrera. -->
-    <script src="/js/vocacional/motor.js?v=20260930_17"></script>
-    <script src="/js/vocacional/eventos.js?v=20260930_17"></script>
-    <script src="/js/favoritos.js?v=20260930_17"></script>
-    <script src="/js/accesibilidad.js?v=20260930_17"></script>
-    <script src="/js/feedback.js?v=20260930_17"></script>
+    <script src="/js/vocacional/motor.js?v=20261004_6"></script>
+    <script src="/js/vocacional/eventos.js?v=20261004_6"></script>
+    <script src="/js/favoritos.js?v=20261004_6"></script>
+    <script src="/js/accesibilidad.js?v=20261004_6"></script>
+    <script src="/js/feedback.js?v=20261004_6"></script>
+    <!-- Restaura la posición al volver con Atrás (espera el primer render). -->
+    <script src="/js/restaurar-scroll.js?v=20261004_6"></script>
     <!-- El resto de la app vive en modulos ES; main.js es el punto de entrada. -->
-    <script type="module" src="/js/main.js?v=20260930_17"></script>
+    <script type="module" src="/js/main.js?v=20261004_6"></script>
 
     <!-- Service worker para que el sitio abra sin conexión. Vive en la raíz,
          igual que esta página, así su scope cubre todo el sitio: la app, los JSON

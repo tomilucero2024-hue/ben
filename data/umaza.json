@@ -3369,6 +3369,132 @@
                         }
                     ],
                     "plan_fuente": "https://www.umaza.edu.ar/landings/veterinaria/inicio"
+                },
+                {
+                    "nombre_carrera": "CCC Licenciatura en Ciencia de Datos e IA",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "1 año y medio",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ingeniería y Enología",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-INE",
+                    "id": 453
+                },
+                {
+                    "nombre_carrera": "Cerámica Artesanal",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "7 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 454
+                },
+                {
+                    "nombre_carrera": "Electricidad Doméstica y Comercial",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "5 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 455
+                },
+                {
+                    "nombre_carrera": "Fotografía Aplicada al Ceremonial y Protocolo",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "4 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 456
+                },
+                {
+                    "nombre_carrera": "Gestión de Redes Sociales y Marketing Digital",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 457
+                },
+                {
+                    "nombre_carrera": "Ingeniería en Dirección de Empresas",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ciencias Sociales y Comunicación",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-CSC",
+                    "id": 458
+                },
+                {
+                    "nombre_carrera": "Licenciatura en Agroindustrias",
+                    "categoria": "Grado / Licenciatura",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ingeniería y Enología",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-INE",
+                    "id": 459
+                },
+                {
+                    "nombre_carrera": "Profesorado en Ciencias Naturales",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Educación",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-educacion",
+                    "id": 460
+                },
+                {
+                    "nombre_carrera": "Profesorado y Licenciatura en Matemática",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Educación",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-educacion",
+                    "id": 461
+                },
+                {
+                    "nombre_carrera": "Refrigeración Industrial",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 462
+                },
+                {
+                    "nombre_carrera": "Refrigeración doméstica y comercial",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "6 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 463
+                },
+                {
+                    "nombre_carrera": "Soldadura y Herrería Artística",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "8 meses",
+                    "modalidad": "Presencial",
+                    "facultad": "Centro de Artes y Oficios",
+                    "link_oficial": "https://www.umaza.edu.ar/oficios",
+                    "id": 464
+                },
+                {
+                    "nombre_carrera": "Sommelier Universitario",
+                    "categoria": "Grado / Carrera",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ingeniería y Enología",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-INE",
+                    "id": 465
+                },
+                {
+                    "nombre_carrera": "Técnico en Cartografía y Teledetección",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Facultad de Ingeniería y Enología",
+                    "link_oficial": "http://www.umaza.edu.ar/facultad-de-INE",
+                    "id": 466
                 }
             ]
         }

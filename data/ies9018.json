@@ -391,6 +391,42 @@
                         }
                     ],
                     "plan_fuente": "https://ies9018malargue.edu.ar/profesorado-de-educacion-secundaria-en-lengua-y-literatura-2/"
+                },
+                {
+                    "nombre_carrera": "Especialización Docente del Nivel Superior en Pedagogía para la Docencia en el Nivel Superior",
+                    "categoria": "Posgrado / Especialización",
+                    "duracion": "2 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Nº 9-018 Gdor. Celso Alejandro Jaque",
+                    "link_oficial": "http://ies9018malargue.edu.ar",
+                    "id": 2707
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Primaria",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Nº 9-018 Gdor. Celso Alejandro Jaque",
+                    "link_oficial": "http://ies9018malargue.edu.ar",
+                    "id": 2708
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Secundaria en Informática",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Nº 9-018 Gdor. Celso Alejandro Jaque",
+                    "link_oficial": "http://ies9018malargue.edu.ar",
+                    "id": 2709
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Administración de Empresas",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "IES Nº 9-018 Gdor. Celso Alejandro Jaque",
+                    "link_oficial": "http://ies9018malargue.edu.ar",
+                    "id": 2710
                 }
             ],
             "departamento": "Malargüe"

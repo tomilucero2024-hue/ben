@@ -639,6 +639,15 @@
                         }
                     ],
                     "plan_fuente": "https://ies9011-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-gastronomia/"
+                },
+                {
+                    "nombre_carrera": "Tecnicatura Superior en Obras Viales",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "3 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior N° 9-011 Del Atuel",
+                    "link_oficial": "https://ies9011-infd.mendoza.edu.ar/",
+                    "id": 2009
                 }
             ]
         }

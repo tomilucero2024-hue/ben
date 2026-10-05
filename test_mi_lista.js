@@ -67,7 +67,8 @@ dom.window.matchMedia = (consulta) => ({
 
 dom.window.eval(fs.readFileSync(path.join(RAIZ, 'js/vocacional/eventos.js'), 'utf8'));
 dom.window.eval(fs.readFileSync(path.join(RAIZ, 'js/favoritos.js'), 'utf8'));
-dom.window.eval(fs.readFileSync(path.join(RAIZ, 'js/vocacional/motor.js'), 'utf8'));
+// motor.js se evalúa más abajo a propósito: el primer escenario (ficha
+// estática) necesita que no haya ni catálogo ni motor vocacional.
 
 const PERFIL_PRUEBA = {
     riasec: { R: 2, I: 8, A: 6, S: 5, E: 2, C: 4 },
@@ -85,15 +86,35 @@ const itemOferta = (nombre) => ({
 (async () => {
     console.log('🧪 Iniciando test_mi_lista...\n');
 
+    // ---- 0. Sin catálogo cargado (como una ficha estática) ----
+    // El overlay se inyecta si la página no lo trae y la lista se resuelve con
+    // el snapshot que guardó el corazón, sin tocar data.json.
+    document.getElementById('miLista').remove();
+    const { abrirMiLista, cerrarMiLista, inicializarMiLista } = await import('./js/mi-lista.js');
+    inicializarMiLista();
+    ok(Boolean(document.getElementById('miLista')), 'si la página no trae el overlay, se inyecta');
+    const Favoritos = dom.window.Favoritos;
+    Favoritos.toggle({
+        clave: 'abogacia', tipo: 'carrera', claveCarrera: 'abogacia',
+        nombre: 'Abogacía', institucion: '', area: 'Ciencias sociales',
+        formacion: 'grado', ficha: 'abogacia', link: ''
+    });
+    abrirMiLista();
+    const cuerpo = document.getElementById('ml-cuerpo');
+    ok(document.querySelectorAll('.ml-item').length === 1, 'la lista abre con la ficha guardada');
+    ok(/Ficha/.test(cuerpo.innerHTML) && !/Ya no está en el catálogo/.test(cuerpo.innerHTML), 'sin catálogo resuelve con el snapshot guardado');
+    await new Promise(r => setTimeout(r, 300));
+    ok(/años/.test(cuerpo.innerHTML), 'al llegar el catálogo en segundo plano la ficha se completa (duración)');
+    cerrarMiLista();
+    Favoritos.quitar('abogacia');
+
     // Carga el catálogo real (ofertas) y los datos del test.
+    dom.window.eval(fs.readFileSync(path.join(RAIZ, 'js/vocacional/motor.js'), 'utf8'));
     const { cargarOfertas, ofertas } = await import('./js/datos.js');
     await cargarOfertas();
     await dom.window.Vocacional.cargarDatos();
-    const { abrirMiLista, cerrarMiLista, inicializarMiLista } = await import('./js/mi-lista.js');
     inicializarMiLista();
 
-    const Favoritos = dom.window.Favoritos;
-    const cuerpo = document.getElementById('ml-cuerpo');
     const pie = document.getElementById('ml-pie');
     const contador = document.getElementById('miListaContador');
 
@@ -173,6 +194,9 @@ const itemOferta = (nombre) => ({
     ok(!etiquetas.includes('Costo'), 'ya no compara costo (se quitó del sitio)');
     ok(etiquetas.includes('Plan de estudios'), 'compara plan de estudios');
     ok(!etiquetas.includes('Dónde se cursa'), 'no compara "Dónde se cursa" (se quitó de la lista)');
+    const filasVacias = [...cuerpo.querySelectorAll('tbody tr')]
+        .filter(tr => [...tr.querySelectorAll('td')].every(td => td.textContent.trim() === '—'));
+    ok(filasVacias.length === 0, 'ninguna fila queda entera en blanco');
     ok(/En qué se diferencian/.test(cuerpo.innerHTML), 'trae el resumen de diferencias');
     ok(/<li>/.test(document.querySelector('.ml-diferencias').innerHTML), 'el resumen tiene al menos una diferencia');
 

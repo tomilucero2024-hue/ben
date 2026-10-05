@@ -128,6 +128,15 @@ function sincronizarTabs() {
         const activa = boton.dataset.seccion === estado.seccion;
         boton.classList.toggle('is-active', activa);
         boton.setAttribute('aria-pressed', String(activa));
+        // En mobile las pestañas son un carrusel horizontal: si se entra por un
+        // link compartido a una sección que arranca fuera de la vista (Secundario
+        // es la quinta), hay que acercarla para que se note cuál quedó activa.
+        // Solo corre al restaurar (no en cada click: ahí ya está a la vista).
+        if (activa && typeof boton.scrollIntoView === 'function') {
+            const suave = !(typeof window !== 'undefined' && typeof window.matchMedia === 'function'
+                && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+            boton.scrollIntoView({ inline: 'center', block: 'nearest', behavior: suave ? 'smooth' : 'auto' });
+        }
     });
 }
 

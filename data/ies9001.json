@@ -926,6 +926,15 @@
                         }
                     ],
                     "plan_fuente": "https://ens9001-infd.mendoza.edu.ar/sitio/tecnicatura-superior-en-acompanamiento-terapeutico/"
+                },
+                {
+                    "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+                    "categoria": "Grado / Profesorado",
+                    "duracion": "4 años",
+                    "modalidad": "Presencial",
+                    "facultad": "Instituto de Educación Superior y Técnico Nº 9-001 Gral. José de San Martín",
+                    "link_oficial": "https://ens9001-infd.mendoza.edu.ar/sitio/educacion-especial/",
+                    "id": 1114
                 }
             ]
         }

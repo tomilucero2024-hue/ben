@@ -20,10 +20,14 @@
 // muestra como "ya no está en el catálogo" con la opción de quitarla.
 // ============================================================================
 
-import { enlacesBEN, ofertas, plataformas, catalogosAparte } from './datos.js';
+import { cargarCatalogo, catalogosAparte, datosListos, enlacesBEN, ofertas, plataformas } from './datos.js';
 import { registrarEvento } from './medicion.js';
-import { ofertasDeCarrera } from './render.js';
+import { ICONO_EXTERNO, ofertasDeCarrera } from './render.js';
 import { capSeguro, escaparHTML, formatearDuracionAnios, limpiarTexto, normalizarTexto, urlSegura } from './util.js';
+
+// Las páginas estáticas no cargan main.js: el loader las detecta por esta marca
+// para no pisar el manejo del click de la app cuando el módulo ya está.
+if (typeof window !== 'undefined') window.__benMiLista = true;
 
 const MAX_COMPARAR = 3;
 const CLAVE_PERFIL = 'ben-vocacional-perfil';
@@ -57,6 +61,9 @@ function elementosDetras() {
         document.getElementById('copilotoPanel'),
         document.getElementById('testCompleto'),
         document.querySelector('header.header'),
+        // Cabecera y pie de las páginas estáticas (fichas e instituciones).
+        document.querySelector('.cabecera'),
+        document.querySelector('.pie'),
         document.querySelector('.site-footer'),
         document.querySelector('.a11y-widget')
     ];
@@ -67,9 +74,32 @@ function alternarDetras(inert) {
     document.documentElement.classList.toggle('mi-lista-abierta', inert);
 }
 
+// El overlay vive en index.html, pero las fichas estáticas no lo traen: si no
+// está en el DOM se inyecta con el mismo markup (misma receta que el test).
+function asegurarOverlay() {
+    let nodo = document.getElementById('miLista');
+    if (nodo) return nodo;
+    nodo = document.createElement('aside');
+    nodo.id = 'miLista';
+    nodo.className = 'mi-lista';
+    nodo.hidden = true;
+    nodo.setAttribute('aria-label', 'Mi lista de carreras guardadas');
+    nodo.innerHTML = `
+        <div class="ml-ventana" role="dialog" aria-modal="true" aria-labelledby="ml-titulo">
+            <header class="ml-header">
+                <h2 id="ml-titulo">Mi lista</h2>
+                <button id="ml-cerrar" type="button" aria-label="Cerrar Mi lista">✕</button>
+            </header>
+            <div id="ml-cuerpo" class="ml-cuerpo"></div>
+            <footer id="ml-pie" class="ml-pie"></footer>
+        </div>`;
+    document.body.appendChild(nodo);
+    return nodo;
+}
+
 export function inicializarMiLista() {
     if (inicializado) return;
-    raiz = document.getElementById('miLista');
+    raiz = asegurarOverlay();
     if (!raiz) return;
     inicializado = true;
     cuerpo = document.getElementById('ml-cuerpo');
@@ -102,6 +132,12 @@ export function inicializarMiLista() {
 
     document.addEventListener('keydown', event => {
         if (event.key === 'Escape' && raiz && !raiz.hidden) cerrarMiLista();
+    });
+
+    // Si el catálogo termina de llegar con la ventana abierta, se repinta para
+    // pasar de los snapshots a los datos vivos (duración, modalidad, planes).
+    document.addEventListener('ben:datos-listos', () => {
+        if (raiz && !raiz.hidden) pintar();
     });
 
     if (window.Favoritos) {
@@ -148,6 +184,7 @@ export function abrirMiLista(pantallaInicial = 'lista') {
     const foco = cuerpo.querySelector('button, a[href], input') || document.getElementById('ml-cerrar');
     if (foco) foco.focus();
     cargarDatosVocacional();
+    cargarCatalogoSiHaceFalta();
     // Cuántas fichas tiene la persona y desde dónde la abrió (el botón del
     // header, o "Ver Mi lista" desde una ficha): dice si la lista se usa para
     // comparar de verdad o quedó en un favorito y nada más.
@@ -162,6 +199,18 @@ export function abrirMiLista(pantallaInicial = 'lista') {
 // vocacional (data/vocacional/perfiles-carreras.json). Se cargan a demanda la
 // primera vez que se abre Mi lista: si el estudiante ya hizo el test, el motor
 // los tiene en memoria y esto no hace nada.
+// En las páginas estáticas no hay catálogo cargado: se baja en segundo plano y
+// al llegar se repinta para completar duración, modalidad, instituciones y
+// plan. La ventana ya abrió con el snapshot, así que a nadie se le hace esperar.
+let catalogoPedido = false;
+async function cargarCatalogoSiHaceFalta() {
+    if (datosListos || catalogoPedido) return;
+    catalogoPedido = true;
+    const cargado = await cargarCatalogo();
+    if (!cargado) { catalogoPedido = false; return; } // el próximo intento reintenta
+    if (raiz && !raiz.hidden) pintar();
+}
+
 let datosVocacionalListos = false;
 async function cargarDatosVocacional() {
     if (datosVocacionalListos || !window.Vocacional) return;
@@ -324,6 +373,27 @@ function fichaDePlataforma(plataforma, item) {
     };
 }
 
+// Ficha armada con el snapshot que guardó el corazón. Se usa cuando el catálogo
+// todavía no está cargado (páginas estáticas): alcanza para mostrar nombre,
+// área, formación y el enlace a la ficha sin depender de data.json.
+function fichaDeSnapshot(item) {
+    return {
+        clave: item.clave,
+        tipo: item.tipo || 'carrera',
+        nombre: item.nombre,
+        subtitulo: item.institucion || '',
+        area: item.area || '',
+        formacion: item.formacion || '',
+        duracion: '',
+        modalidades: [],
+        instituciones: item.institucion ? [item.institucion] : [],
+        planes: [],
+        fichaSlug: item.ficha || '',
+        linkOficial: urlSegura(item.link) || '',
+        perfil: null
+    };
+}
+
 // Devuelve la ficha resuelta contra el catálogo, o null si ya no existe.
 function resolver(item) {
     const oferta = ofertas.find(o => o._clave === item.clave);
@@ -337,10 +407,33 @@ function resolver(item) {
         if (curso) return fichaDeCurso(curso, item, seccion === 'oficios-tecnicos' ? 'oficio' : (seccion === 'secundario' ? 'secundario' : 'curso'));
     }
 
+    // Fichas guardadas desde las páginas estáticas de carrera: su clave es la
+    // de la carrera agrupada, así que se buscan las ofertas del catálogo por
+    // nombre y se muestra el resumen (duración, modalidad, instituciones y
+    // plan incluidos). También cubre las recomendaciones del test.
+    const nombre = item.nombre || '';
+    if (nombre && ofertasDeCarrera({ clave: normalizarTexto(nombre), nombre }).length) {
+        const agregada = fichaDeCarrera({
+            clave: item.clave || normalizarTexto(nombre),
+            nombre,
+            area: item.area || '',
+            formacion: item.formacion || '',
+            instituciones: []
+        }, item);
+        // Afinidad: solo con el perfil real del test (si está cargado).
+        agregada.perfil = perfilDeCarrera(nombre);
+        return agregada;
+    }
+
     // Carreras "abstractas": las que se guardan desde las recomendaciones del
     // test o desde las páginas estáticas de carrera.
     const perfil = perfilesVocacionales().find(p => p.clave === item.clave);
     if (perfil) return fichaDeCarrera(perfil, item);
+
+    // Sin catálogo cargado (fichas estáticas, o la app abierta antes del fetch)
+    // se muestra el snapshot. Con catálogo manda el catálogo, que es lo que
+    // detecta las carreras dadas de baja.
+    if (!datosListos && item.nombre) return fichaDeSnapshot(item);
 
     return null;
 }
@@ -373,7 +466,7 @@ function filaLista(item) {
 
     const fichaHTML = ficha.fichaSlug
         ? `<a class="ml-item-link" href="/carrera/${escaparHTML(ficha.fichaSlug)}/">Ficha →</a>`
-        : (ficha.linkOficial ? `<a class="ml-item-link" href="${escaparHTML(ficha.linkOficial)}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Sitio oficial ↗</a>` : '');
+        : (ficha.linkOficial ? `<a class="ml-item-link" href="${escaparHTML(ficha.linkOficial)}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Sitio oficial ${ICONO_EXTERNO}</a>` : '');
 
     const afinidad = afinidadDe(ficha);
     const marca = afinidad !== null ? `<span class="ml-item-afinidad">${afinidad}%</span>` : '';
@@ -486,7 +579,7 @@ function celdaPlan(ficha) {
     if (!ficha.planes.length) return '<span class="ml-vacio">Sin plan cargado</span>';
     return `<ul class="ml-planes">${ficha.planes.slice(0, 4).map(p => {
         const etiqueta = p.institucion ? `Plan de ${escaparHTML(p.institucion)}` : 'Ver plan de estudios';
-        return `<li>${p.fuente ? `<a href="${escaparHTML(p.fuente)}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">${etiqueta} ↗</a>` : etiqueta}</li>`;
+        return `<li>${p.fuente ? `<a href="${escaparHTML(p.fuente)}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">${etiqueta} ${ICONO_EXTERNO}</a>` : etiqueta}</li>`;
     }).join('')}</ul>`;
 }
 
@@ -497,6 +590,7 @@ const FILAS = [
     {
         etiqueta: 'Afinidad con tu perfil',
         soloConPerfil: true,
+        hayDato: ficha => afinidadDe(ficha) !== null,
         valor: ficha => {
             const afinidad = afinidadDe(ficha);
             if (afinidad === null) return '<span class="ml-vacio">—</span>';
@@ -507,28 +601,44 @@ const FILAS = [
             </div>`;
         }
     },
-    { etiqueta: 'Intereses que pide', valor: ficha => barrasRiasec(ficha) || '<span class="ml-vacio">—</span>' },
+    {
+        etiqueta: 'Intereses que pide',
+        hayDato: ficha => Boolean(ficha.perfil && ficha.perfil.perfil && ficha.perfil.perfil.riasec),
+        valor: ficha => barrasRiasec(ficha) || '<span class="ml-vacio">—</span>'
+    },
     {
         etiqueta: 'Área y formación',
+        hayDato: ficha => Boolean(ficha.area || ficha.formacion),
         valor: ficha => [ficha.area, ficha.formacion].filter(Boolean).map(capSeguro).join(' · ') || '<span class="ml-vacio">—</span>'
     },
-    { etiqueta: 'Duración', valor: ficha => escaparHTML(ficha.duracion) || '<span class="ml-vacio">—</span>' },
+    {
+        etiqueta: 'Duración',
+        hayDato: ficha => Boolean(ficha.duracion),
+        valor: ficha => escaparHTML(ficha.duracion) || '<span class="ml-vacio">—</span>'
+    },
     {
         etiqueta: 'Modalidad',
+        hayDato: ficha => ficha.modalidades.length > 0,
         valor: ficha => ficha.modalidades.length
             ? ficha.modalidades.map(m => capSeguro(m)).join(' · ')
             : '<span class="ml-vacio">—</span>'
     },
     {
         etiqueta: 'Instituciones',
+        hayDato: ficha => ficha.instituciones.length > 0,
         valor: ficha => ficha.instituciones.length ? enlacesInstituciones(ficha) : '<span class="ml-vacio">—</span>'
     },
-    { etiqueta: 'Plan de estudios', valor: celdaPlan },
+    {
+        etiqueta: 'Plan de estudios',
+        hayDato: ficha => ficha.planes.length > 0,
+        valor: celdaPlan
+    },
     {
         etiqueta: 'Más info',
+        hayDato: ficha => Boolean(ficha.fichaSlug || ficha.linkOficial),
         valor: ficha => [
             ficha.fichaSlug ? `<a class="ml-link" href="/carrera/${escaparHTML(ficha.fichaSlug)}/">Ficha completa →</a>` : '',
-            ficha.linkOficial ? `<a class="ml-link" href="${escaparHTML(ficha.linkOficial)}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Sitio oficial ↗</a>` : ''
+            ficha.linkOficial ? `<a class="ml-link" href="${escaparHTML(ficha.linkOficial)}" target="_blank" rel="noopener nofollow" referrerpolicy="no-referrer">Sitio oficial ${ICONO_EXTERNO}</a>` : ''
         ].filter(Boolean).join('<br>') || '<span class="ml-vacio">—</span>'
     }
 ];
@@ -647,7 +757,12 @@ function pintarComparacion() {
     if (!fichas.length) { pantalla = 'lista'; pintarLista(); return; }
 
     const conPerfil = fichas.some(f => afinidadDe(f) !== null);
-    const filas = FILAS.filter(fila => !fila.soloConPerfil || conPerfil);
+    // Fuera las filas donde ninguna carrera tiene dato: sin esto quedaban
+    // hileras enteras de "—" que solo ensuciaban la comparación.
+    const filas = FILAS.filter(fila =>
+        (!fila.soloConPerfil || conPerfil) &&
+        fichas.some(ficha => !fila.hayDato || fila.hayDato(ficha))
+    );
     const comparacion = esPantallaAngosta() ? vistaLista(fichas, filas) : vistaTabla(fichas, filas);
 
     cuerpo.innerHTML = `

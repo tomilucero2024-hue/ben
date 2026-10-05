@@ -12,11 +12,11 @@ carreras_belgrano = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-008 Manuel Belgrano",
-        "link_oficial": "https://www.iesmb.edu.ar/bel/desarrollo-de-software/"
+        "link_oficial": "https://www.iesmb.edu.ar/bel/desarrollo_de_software/"
     },
     {
         "id": 1701,
-        "nombre_carrera": "Técnico Superior en Diseño Diseño Gráfico",
+        "nombre_carrera": "Técnico Superior en Diseño Gráfico",
         "categoria": "Pregrado / Tecnicatura",
         "duracion": "3 años",
         "modalidad": "Presencial",
@@ -32,7 +32,7 @@ carreras_belgrano = [
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-008 Manuel Belgrano",
-        "link_oficial": "https://www.iesmb.edu.ar/bel/ia-y-ciencia-de-datos/"
+        "link_oficial": "https://www.iesmb.edu.ar/bel/ia_y_ciencia_de_datos/"
     },
     {
         "id": 1703,
@@ -56,13 +56,13 @@ carreras_belgrano = [
     },
     {
         "id": 1705,
-        "nombre_carrera": "Técnico Superior en Diseño Multimedial",
+        "nombre_carrera": "Técnico Superior en Diseño Digital e Interactivo",
         "categoria": "Pregrado / Tecnicatura",
-        "duracion": "3 años",
+        "duracion": "2 años y medio",
         "modalidad": "Presencial",
         "turno": "A confirmar",
         "facultad": "IES 9-008 Manuel Belgrano",
-        "link_oficial": "https://www.iesmb.edu.ar/bel/diseno-multimedial/"
+        "link_oficial": "https://www.iesmb.edu.ar/bel/diseno-digital-interactivo/"
     }
 ]
 

@@ -23,9 +23,7 @@
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/montserrat.css?v=20261004_6">
 <script>
     // Mismo tema que la app: si alguien la dejó en oscuro, estas páginas
     // abren en oscuro. Va inline y antes del CSS para que no parpadee.
@@ -56,11 +54,13 @@
         document.head.appendChild(pre);
     })();
 </script>
-<link rel="stylesheet" href="/paginas.css?v=20260930_17">
+<link rel="stylesheet" href="/paginas.css?v=20261004_6">
+<!-- Estilos de la ventana de Mi lista, que estas páginas abren sin salir. -->
+<link rel="stylesheet" href="/mi-lista.css?v=20261004_6">
 <!-- Medir las fichas: son la mayor parte del tráfico del sitio (llegan desde
      Google) y sin esto los informes verían solo la portada. El mismo archivo
      carga la app en index.html. -->
-<script src="/js/analitica.js?v=20260930_17"></script>
+<script src="/js/analitica.js?v=20261004_6"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://buscadoreducativo.com.ar/"},{"@type":"ListItem","position":2,"name":"Títulos y niveles","item":"https://buscadoreducativo.com.ar/titulos/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuál es la diferencia entre una licenciatura y una ingeniería?","acceptedAnswer":{"@type":"Answer","text":"Las dos son carreras de grado. La ingeniería dura más (5 a 6 años), tiene más carga de matemática y cálculo, y otorga una incumbencia profesional regulada: solo un ingeniero matriculado puede firmar ciertos proyectos. La licenciatura suele durar 4 a 5 años y su alcance lo define la normativa de cada disciplina."}},{"@type":"Question","name":"¿Una tecnicatura superior es lo mismo que una tecnicatura universitaria?","acceptedAnswer":{"@type":"Answer","text":"No. Las dos duran 2 o 3 años y son de pregrado, pero la tecnicatura superior se cursa en un instituto terciario (título de Técnico Superior) y la universitaria en una universidad o instituto universitario (título de Técnico Universitario). Cambia la institución y el título, no el enfoque práctico."}},{"@type":"Question","name":"¿Una diplomatura es un posgrado?","acceptedAnswer":{"@type":"Answer","text":"No necesariamente. La diplomatura no es un nivel definido por la ley de educación superior: es formación de extensión o actualización. Algunas universidades le dan estatus de posgrado y otras no, así que hay que mirar qué certifica cada institución. Si buscás un posgrado acreditado, la referencia son las especializaciones, las maestrías y los doctorados."}},{"@type":"Question","name":"¿Puedo pasar de una tecnicatura a una licenciatura?","acceptedAnswer":{"@type":"Answer","text":"Sí. Muchas universidades ofrecen ciclos de complementación curricular (CCC) para quien ya tiene un título de pregrado: cursás las materias que faltan y obtenés el título de grado, sin empezar de cero."}},{"@type":"Question","name":"¿Se puede hacer un posgrado con cualquier título?","acceptedAnswer":{"@type":"Answer","text":"En general necesitás un título de grado (universitario o terciario). Algunas instituciones aceptan títulos de pregrado con trayectoria profesional equivalente. Conviene consultar el requisito de cada carrera en particular."}},{"@type":"Question","name":"¿Qué es un título habilitante?","acceptedAnswer":{"@type":"Answer","text":"Es un título que habilita legalmente a ejercer una profesión, muchas veces con matriculación obligatoria. Abogacía, Medicina, Ingeniería y Contador Público son ejemplos."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Títulos y niveles: qué significa cada formación","description":"Qué significa cada tipo de formación: licenciatura, ingeniería, profesorado, tecnicatura superior y universitaria, curso, ciclo de complementación, especialización, maestría, doctorado y diplomatura.","url":"https://buscadoreducativo.com.ar/titulos/"}</script>
@@ -163,7 +163,6 @@
         </li>
     </ul>
 
-    <h2>Los títulos, uno por uno</h2>
 
     <section class="titulo-bloque" id="licenciatura">
         <h3>Licenciatura</h3>
@@ -223,7 +222,7 @@
         <p class="titulo-ejemplos-titulo">Ejemplos en BEN</p>
         <ul class="enlaces">
             <li><a href="/carrera/contador-publico/">Contador Público</a> <span class="cuantas">(10)</span></li>
-            <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(7)</span></li>
+            <li><a href="/carrera/abogacia/">Abogacía</a> <span class="cuantas">(8)</span></li>
             <li><a href="/carrera/medicina/">Medicina</a> <span class="cuantas">(4)</span></li>
             <li><a href="/carrera/direccion-de-empresas/">Dirección de Empresas</a> <span class="cuantas">(3)</span></li>
             <li><a href="/carrera/escribania/">Escribanía</a> <span class="cuantas">(3)</span></li>
@@ -244,12 +243,12 @@
         <p class="titulo-diferencia"><strong>En qué se diferencia:</strong> A diferencia de una licenciatura en la misma disciplina, el profesorado agrega la formación pedagógica y la habilitación docente. Si ya tenés un título afín, en muchos casos se puede completar con un ciclo de complementación pedagógica.</p>
         <p class="titulo-ejemplos-titulo">Ejemplos en BEN</p>
         <ul class="enlaces">
-            <li><a href="/carrera/profesorado-de-educacion-primaria/">Profesorado de Educación Primaria</a> <span class="cuantas">(17)</span></li>
-            <li><a href="/carrera/profesorado-de-educacion-inicial/">Profesorado de Educación Inicial</a> <span class="cuantas">(10)</span></li>
+            <li><a href="/carrera/profesorado-de-educacion-primaria/">Profesorado de Educación Primaria</a> <span class="cuantas">(21)</span></li>
+            <li><a href="/carrera/profesorado-de-educacion-inicial/">Profesorado de Educación Inicial</a> <span class="cuantas">(15)</span></li>
+            <li><a href="/carrera/profesorado-de-educacion-especial-con-orientacion-en-discapacidad-intelectual/">Profesorado de Educación Especial con Orientación en Discapacidad Intelectual</a> <span class="cuantas">(11)</span></li>
+            <li><a href="/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/">Profesorado de Educación Secundaria en LENGUA y LITERATURA</a> <span class="cuantas">(8)</span></li>
+            <li><a href="/carrera/profesorado-de-educacion-secundaria-en-matematica/">Profesorado de Educación Secundaria en Matemática</a> <span class="cuantas">(8)</span></li>
             <li><a href="/carrera/profesorado-en-educacion-fisica/">Profesorado en Educación Física</a> <span class="cuantas">(8)</span></li>
-            <li><a href="/carrera/profesorado-de-artes-visuales/">Profesorado de Artes Visuales</a> <span class="cuantas">(7)</span></li>
-            <li><a href="/carrera/profesorado-de-educacion-secundaria-en-lengua-y-literatura/">Profesorado de Educación Secundaria en LENGUA y LITERATURA</a> <span class="cuantas">(7)</span></li>
-            <li><a href="/carrera/profesorado-de-educacion-secundaria-en-matematica/">Profesorado de Educación Secundaria en Matemática</a> <span class="cuantas">(7)</span></li>
         </ul>
     </section>
 
@@ -266,12 +265,12 @@
         <p class="titulo-diferencia"><strong>En qué se diferencia:</strong> Con una tecnicatura universitaria comparte la duración y el enfoque práctico, pero se distingue por dónde se cursa y por quién otorga el título: el terciario, no la universidad. Muchas admiten después un ciclo de complementación para pasar al grado.</p>
         <p class="titulo-ejemplos-titulo">Ejemplos en BEN</p>
         <ul class="enlaces">
-            <li><a href="/carrera/tecnicatura-superior-en-desarrollo-de-software/">Tecnicatura Superior en Desarrollo de Software</a> <span class="cuantas">(7)</span></li>
+            <li><a href="/carrera/tecnicatura-superior-en-desarrollo-de-software/">Tecnicatura Superior en Desarrollo de Software</a> <span class="cuantas">(10)</span></li>
+            <li><a href="/carrera/tecnicatura-superior-en-administracion-de-empresas/">Tecnicatura Superior en Administración de Empresas</a> <span class="cuantas">(7)</span></li>
+            <li><a href="/carrera/tecnicatura-superior-en-enfermeria-profesional/">Tecnicatura Superior en Enfermería Profesional</a> <span class="cuantas">(6)</span></li>
             <li><a href="/carrera/tecnicatura-superior-en-acompanamiento-terapeutico/">Tecnicatura Superior en Acompañamiento Terapéutico</a> <span class="cuantas">(5)</span></li>
-            <li><a href="/carrera/tecnicatura-superior-en-administracion-de-empresas/">Tecnicatura Superior en Administración de Empresas</a> <span class="cuantas">(5)</span></li>
-            <li><a href="/carrera/tecnicatura-superior-en-turismo/">Tecnicatura Superior en Turismo</a> <span class="cuantas">(5)</span></li>
-            <li><a href="/carrera/tecnicatura-superior-en-enfermeria-profesional/">Tecnicatura Superior en Enfermería Profesional</a> <span class="cuantas">(4)</span></li>
-            <li><a href="/carrera/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/">Tecnicatura Superior en Enología e Industrias Frutihortícolas</a> <span class="cuantas">(4)</span></li>
+            <li><a href="/carrera/tecnicatura-superior-en-enologia-e-industrias-frutihorticolas/">Tecnicatura Superior en Enología e Industrias Frutihortícolas</a> <span class="cuantas">(5)</span></li>
+            <li><a href="/carrera/tecnicatura-superior-en-gastronomia/">Tecnicatura Superior en Gastronomia</a> <span class="cuantas">(5)</span></li>
         </ul>
     </section>
 
@@ -288,12 +287,12 @@
         <p class="titulo-diferencia"><strong>En qué se diferencia:</strong> La diferencia con la tecnicatura superior es la institución que la dicta y el título que otorga (universitario en lugar de superior). Eso facilita la articulación interna con las carreras de grado de la misma universidad.</p>
         <p class="titulo-ejemplos-titulo">Ejemplos en BEN</p>
         <ul class="enlaces">
-            <li><a href="/carrera/tecnicatura-universitaria-en-desarrollo-de-software/">Tecnicatura Universitaria en Desarrollo de Software</a> <span class="cuantas">(2)</span></li>
+            <li><a href="/carrera/tecnicatura-universitaria-en-desarrollo-de-software/">Tecnicatura Universitaria en Desarrollo de Software</a> <span class="cuantas">(3)</span></li>
             <li><a href="/carrera/tecnicatura-universitaria-en-accidentologia-vial/">Tecnicatura universitaria en Accidentología Vial</a> <span class="cuantas">(1)</span></li>
+            <li><a href="/carrera/tecnicatura-universitaria-en-administracion-de-edificios-de-propiedad/">Tecnicatura Universitaria en Administración de Edificios de Propiedad Horizontal y Conjuntos Inmobiliarios</a> <span class="cuantas">(1)</span></li>
             <li><a href="/carrera/tecnicatura-universitaria-en-administracion-y-gestion-de-politicas-publicas/">Tecnicatura Universitaria En Administración Y Gestión De Políticas Públicas</a> <span class="cuantas">(1)</span></li>
             <li><a href="/carrera/tecnicatura-universitaria-en-atencion-prehospitalaria-de-emergencias/">Tecnicatura Universitaria en Atención Prehospitalaria de Emergencias</a> <span class="cuantas">(1)</span></li>
-            <li><a href="/carrera/tecnicatura-universitaria-en-desarrollo-de-aplicaciones-informaticas/">Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas</a> <span class="cuantas">(1)</span></li>
-            <li><a href="/carrera/tecnicatura-universitaria-en-direccion-y-produccion-audiovisual/">Tecnicatura Universitaria en Dirección y Producción Audiovisual</a> <span class="cuantas">(1)</span></li>
+            <li><a href="/carrera/tecnicatura-universitaria-en-comunicacion-digital/">Tecnicatura Universitaria en Comunicación Digital</a> <span class="cuantas">(1)</span></li>
         </ul>
     </section>
 
@@ -337,6 +336,7 @@
             <li><a href="/carrera/ciclo-de-licenciatura-en-higiene-y-seguridad-calidad-y-medio-ambiente/">Ciclo de Licenciatura en Higiene y Seguridad, Calidad y Medio Ambiente</a> <span class="cuantas">(1)</span></li>
             <li><a href="/carrera/ciclo-de-profesorado-en-escenografia/">Ciclo de Profesorado en Escenografía</a> <span class="cuantas">(1)</span></li>
             <li><a href="/carrera/ciclo-de-profesorado-en-musica/">Ciclo de Profesorado en Música</a> <span class="cuantas">(1)</span></li>
+            <li><a href="/carrera/ciclo-de-profesorado-para-profesionales-universitarios-sede-central-y-san-rafael/">Ciclo de Profesorado para Profesionales Universitarios (Sede Central y San Rafael)</a> <span class="cuantas">(1)</span></li>
         </ul>
     </section>
 
@@ -540,6 +540,11 @@
         });
     })();
 </script>
-<script src="/js/favoritos.js?v=20260930_17"></script>
+<script src="/js/favoritos.js?v=20261004_6"></script>
+<!-- Vuelve a la posición donde estabas al usar Atrás (la app avisa cuándo
+     terminó de pintar; en estas páginas el HTML ya está listo). -->
+<script src="/js/restaurar-scroll.js?v=20261004_6"></script>
+<!-- Mi lista se abre como ventana flotante sin salir de la ficha. -->
+<script src="/js/mi-lista-loader.js?v=20261004_6"></script>
 </body>
 </html>

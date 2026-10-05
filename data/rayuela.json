@@ -389,6 +389,24 @@
       }
      ],
      "plan_fuente": "https://fundacionrayuela.org.ar/sitio/profesor-primaria/"
+    },
+    {
+     "nombre_carrera": "Profesorado de Educación Especial con Orientación en Discapacidad Intelectual",
+     "categoria": "Grado / Profesorado",
+     "duracion": "4 años",
+     "modalidad": "Presencial",
+     "facultad": "Instituto Rayuela PT 181",
+     "link_oficial": "http://fundacionrayuela.org.ar",
+     "id": 3707
+    },
+    {
+     "nombre_carrera": "Tecnicatura Superior en Comunicación y Gestión de Bibliotecas",
+     "categoria": "Pregrado / Tecnicatura",
+     "duracion": "3 años",
+     "modalidad": "A distancia",
+     "facultad": "Instituto Rayuela PT 181",
+     "link_oficial": "http://fundacionrayuela.org.ar",
+     "id": 3708
     }
    ],
    "departamento": "Capital"
