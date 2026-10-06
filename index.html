@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="manifest" href="/manifest.json?v=20261004_6">
+    <link rel="manifest" href="/manifest.json?v=20261004_16">
     <meta name="theme-color" content="#1d4ed8">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="BEN">
@@ -61,7 +61,7 @@
          Google Fonts y, en una red sin salida a internet, quedaba colgado y
          bloqueaba la ejecución de TODO el JavaScript (los scripts esperan a las
          hojas de estilo): la portada se quedaba congelada. -->
-    <link rel="stylesheet" href="/fonts/montserrat.css?v=20261004_6">
+    <link rel="stylesheet" href="/fonts/montserrat.css?v=20261004_16">
     <script>
         (() => {
             const guardado = localStorage.getItem('ben-theme');
@@ -82,15 +82,15 @@
             document.head.appendChild(pre);
         })();
     </script>
-    <link rel="stylesheet" href="/style.css?v=20261004_6">
-    <link rel="stylesheet" href="/mi-lista.css?v=20261004_6">
+    <link rel="stylesheet" href="/style.css?v=20261004_16">
+    <link rel="stylesheet" href="/mi-lista.css?v=20261004_16">
 
     <!-- La analítica va PRIMERO en el <head> y no al final del body con los
          demás scripts: gtag.js se baja con async (no frena el render) pero el
          pageview se encola apenas se ejecuta analitica.js, antes de que la
          persona llegue a tocar nada. Es el mismo archivo que cargan las
          páginas estáticas generadas (generar-paginas.js → documento()). -->
-    <script src="/js/analitica.js?v=20261004_6"></script>
+    <script src="/js/analitica.js?v=20261004_16"></script>
 
 </head>
 <body>
@@ -590,23 +590,23 @@
                      catálogo completo. Sin el número de preguntas en la
                      portada: la idea es que entrar no dé miedo. -->
                 <button id="btnBienvenidaCopiloto" class="bienvenida-card bienvenida-card-primaria" type="button">
-                    <span class="bienvenida-icono" aria-hidden="true">
-                        <img src="/img/copiloto-icono.png" alt="" class="bienvenida-copiloto-img">
-                    </span>
                     <span class="bienvenida-card-texto">
-                        <strong>Orientador vocacional <span class="badge-beta" title="Función en prueba: puede cambiar o fallar">Beta</span></strong>
-                        <span class="bienvenida-card-desc">Respondé unas preguntas en menos de 5 minutos y mirá qué carreras van más con vos.</span>
-                        <span class="bienvenida-cta">Empezar →</span>
+                        <span class="bienvenida-titulo-fila">
+                            <strong>¿No sabés qué estudiar? <span class="badge-beta" title="Función en prueba: puede cambiar o fallar">Beta</span></strong>
+                            <span class="bienvenida-icono bienvenida-icono-copiloto" aria-hidden="true">
+                                <img src="/img/copiloto-icono.png" alt="" class="bienvenida-copiloto-img">
+                            </span>
+                        </span>
+                        <span class="bienvenida-card-sub">Empezá por acá.</span>
+                        <span class="bienvenida-card-desc">Respondé unas preguntas y BEN va a analizar tus respuestas para mostrarte opciones educativas que pueden encajar con vos.</span>
+                        <span class="bienvenida-cta">Hacer el test →</span>
                     </span>
                 </button>
                 <button id="btnBienvenidaOfertas" class="bienvenida-card bienvenida-card-secundaria" type="button">
-                    <span class="bienvenida-icono bienvenida-icono-catalogo" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
-                    </span>
                     <span class="bienvenida-card-texto">
-                        <strong>Mostrar ofertas</strong>
-                        <span class="bienvenida-card-desc">Explorá el catálogo completo de carreras, tecnicaturas y oficios con filtros por área, duración y modalidad.</span>
-                        <span class="bienvenida-cta">Ver el catálogo →</span>
+                        <strong>¿Ya sabés qué estás buscando?</strong>
+                        <span class="bienvenida-card-desc">Explorá carreras, tecnicaturas, cursos y oficios utilizando los filtros.</span>
+                        <span class="bienvenida-cta">Explorar ofertas →</span>
                     </span>
                 </button>
             </div>
@@ -707,15 +707,15 @@
     <!-- Scripts clasicos: son autonomos (IIFE) y tienen que correr antes que el
          modulo. favoritos.js se autoinstala (delega los clicks de [data-favorito])
          y tambien lo cargan las paginas estaticas de carrera. -->
-    <script src="/js/vocacional/motor.js?v=20261004_6"></script>
-    <script src="/js/vocacional/eventos.js?v=20261004_6"></script>
-    <script src="/js/favoritos.js?v=20261004_6"></script>
-    <script src="/js/accesibilidad.js?v=20261004_6"></script>
-    <script src="/js/feedback.js?v=20261004_6"></script>
+    <script src="/js/vocacional/motor.js?v=20261004_16"></script>
+    <script src="/js/vocacional/eventos.js?v=20261004_16"></script>
+    <script src="/js/favoritos.js?v=20261004_16"></script>
+    <script src="/js/accesibilidad.js?v=20261004_16"></script>
+    <script src="/js/feedback.js?v=20261004_16"></script>
     <!-- Restaura la posición al volver con Atrás (espera el primer render). -->
-    <script src="/js/restaurar-scroll.js?v=20261004_6"></script>
+    <script src="/js/restaurar-scroll.js?v=20261004_16"></script>
     <!-- El resto de la app vive en modulos ES; main.js es el punto de entrada. -->
-    <script type="module" src="/js/main.js?v=20261004_6"></script>
+    <script type="module" src="/js/main.js?v=20261004_16"></script>
 
     <!-- Service worker para que el sitio abra sin conexión. Vive en la raíz,
          igual que esta página, así su scope cubre todo el sitio: la app, los JSON

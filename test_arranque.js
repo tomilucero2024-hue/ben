@@ -135,9 +135,12 @@ global.IntersectionObserver = win.IntersectionObserver = class { observe() {} un
     const bienvenida = win.document.getElementById('pantallaBienvenida');
     const tarjetaOrientador = win.document.getElementById('btnBienvenidaCopiloto');
     ok(win.document.querySelectorAll('#pantallaBienvenida .bienvenida-card').length === 2, 'la portada tiene exactamente dos tarjetas');
-    ok(Boolean(tarjetaOrientador) && /Orientador vocacional/.test(tarjetaOrientador.textContent), 'la primera es el orientador vocacional');
-    ok(/menos de 5 minutos/.test(tarjetaOrientador.textContent), 'con la promesa de menos de 5 minutos');
-    ok(Boolean(win.document.getElementById('btnBienvenidaOfertas')), 'la segunda es "Mostrar ofertas"');
+    ok(Boolean(tarjetaOrientador) && /¿No sabés qué estudiar\?/.test(tarjetaOrientador.textContent), 'la primera es el test de orientación');
+    ok(/Empezá por acá\./.test(tarjetaOrientador.textContent) && /BEN va a analizar tus respuestas/.test(tarjetaOrientador.textContent), 'con la bajada y la promesa de analizar las respuestas');
+    ok(/Hacer el test/.test(tarjetaOrientador.textContent), 'y el botón "Hacer el test"');
+    const tarjetaCatalogo = win.document.getElementById('btnBienvenidaOfertas');
+    ok(Boolean(tarjetaCatalogo) && /¿Ya sabés qué estás buscando\?/.test(tarjetaCatalogo.textContent) && /Explorar ofertas/.test(tarjetaCatalogo.textContent), 'la segunda es "Explorar ofertas"');
+    ok(!/🔎/.test(bienvenida.textContent), 'la portada no usa emojis');
     ok(!/65 preguntas/.test(bienvenida.textContent), 'la portada no menciona las 65 preguntas');
     tarjetaOrientador.click();
     await new Promise(r => setTimeout(r, 600));

@@ -459,6 +459,37 @@ function valorDelPar(token, tokens) {
     ok(/\.a11y-close-btn \{[\s\S]*?min-height: 24px/.test(css), '✕ del panel de accesibilidad: ≥24px');
     ok(/@media \(pointer: coarse\)[\s\S]*?\.filter-option \{ min-height: 44px/.test(css), 'en pantallas táctiles los filtros suben a 44px');
 
+    // Los nombres de los filtros (sobre todo los 26 sectores) son largos: "Agro,
+    // Agroindustria y Vitivinicultura" necesita ~265px y la columna da ~244px de
+    // texto. Antes la columna medía 280px y el corte caía en cualquier parte.
+    seccion('8b. Legibilidad de los nombres largos de los filtros y check dentro de la etiqueta (1.4.4 / 1.4.10)');
+    // Sin comentarios: varios explican por qué NO se usa `anywhere` o `grid`, y
+    // si el texto se buscara en el CSS crudo esas palabras darían un falso ok.
+    const cssSinComentarios = css.replace(/\/\*[\s\S]*?\*\//g, '');
+    const bloqueFiltro = (cssSinComentarios.match(/\.filter-option \{[^}]*\}/) || [''])[0].replace(/\s+/g, ' ');
+    ok(/grid-template-columns: 320px minmax\(0, 1fr\)/.test(css), 'la columna de filtros mide 320px (la misma que el drawer móvil, que ya se veía bien)');
+    ok(/overflow-wrap: break-word/.test(bloqueFiltro) && !/overflow-wrap: anywhere/.test(bloqueFiltro),
+        'los nombres parten en un espacio, nunca en mitad de una palabra');
+    ok(/font-size: calc\(\.9375rem/.test(bloqueFiltro), 'el texto de los filtros es de 15px, no más chico');
+    // El tilde tiene que quedar DENTRO de la caja de la etiqueta. La sangría
+    // francesa que había antes (text-indent negativo) lo sacaba del borde y se
+    // veía colgando afuera: esto lo prohibited para que no vuelva.
+    ok(!/text-indent/.test(bloqueFiltro),
+        'sin sangría francesa: el tilde no se sale de la caja de la etiqueta');
+    ok(/display: flex/.test(bloqueFiltro) && /align-items: flex-start/.test(bloqueFiltro),
+        'el filtro es flex con el tilde arriba: el texto es una caja propia y sus Continuaciones arrancan donde el texto');
+    const tickActivo = (cssSinComentarios.match(/\.filter-option\.active::before \{[^}]*\}/) || [''])[0].replace(/\s+/g, ' ');
+    const tickInactivo = (cssSinComentarios.match(/\.filter-option:not\(\.active\)::before \{[^}]*\}/) || [''])[0].replace(/\s+/g, ' ');
+    ok(/width: \.8rem/.test(tickActivo) && /flex: none/.test(tickActivo)
+        && /width: \.8rem/.test(tickInactivo) && /flex: none/.test(tickInactivo),
+        'el tilde es un ítem de ancho fijo que no se encoge (queda siempre al mismo lado)');
+    // En móvil el chip se mantiene en flex: el texto suele ocupar una línea, así
+    // que se centra verticalmente. Con grid el ::before se apila arriba del texto.
+    const tras820 = cssSinComentarios.split('@media (max-width: 820px)')[1] || '';
+    const bloqueMovil = (tras820.match(/\.filter-option \{[^}]*\}/) || [''])[0].replace(/\s+/g, ' ');
+    ok(!/display: grid/.test(bloqueMovil), 'en móvil el filtro no pasa a grilla (ahí el tilde se apila sobre el texto)');
+    ok(/align-items: center/.test(bloqueMovil), 'en móvil el tilde queda centrado con su única línea de texto');
+
     seccion('9. Regresiones del panel de accesibilidad (no romper lo que ya había)');
     const panel = doc.getElementById('panelAccesibilidad');
     doc.getElementById('btnAccesibilidad').click();

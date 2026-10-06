@@ -169,6 +169,11 @@ const itemOferta = (nombre) => ({
     ok(document.querySelectorAll('.ml-item').length === 2, `dos filas (${document.querySelectorAll('.ml-item').length})`);
     ok(/%\s*<\/span>/.test(cuerpo.innerHTML) || /ml-item-afinidad/.test(cuerpo.innerHTML), 'muestra afinidad (hay perfil de test)');
     ok(cuerpo.querySelectorAll('.ml-grupo').length === 1, 'agrupa por tipo');
+    const aviso = cuerpo.querySelector('.ml-aviso');
+    ok(Boolean(aviso) && cuerpo.firstElementChild === aviso, 'el aviso de datos va primero, arriba del título del grupo');
+    ok(/BEN organiza la información para facilitar la búsqueda\./.test(cuerpo.textContent) && /consultá siempre la institución/.test(cuerpo.textContent), 'el aviso aclara que la fuente oficial es la institución');
+    ok(cuerpo.querySelector('.ml-grupo-titulo').textContent.includes('Carreras'), 'el primer grupo es "Carreras"');
+    ok(!/🔎/.test(cuerpo.textContent), 'el aviso no usa emojis');
 
     // ---- 5. Selección y tope de 3 ----
     console.log('5. Selección');
@@ -236,6 +241,7 @@ const itemOferta = (nombre) => ({
     pie.querySelector('[data-ml-accion="confirmar-vaciar"]').click();
     ok(Favoritos.contar() === 0, 'confirmar vacía la lista');
     ok(/Todavía no guardaste/.test(cuerpo.innerHTML), 'muestra el estado vacío');
+    ok(Boolean(cuerpo.querySelector('.ml-aviso')), 'el aviso de datos también aparece con la lista vacía');
     ok(contador.hidden, 'el contador se esconde cuando está vacía');
 
     // ---- 8. Ficha que ya no está en el catálogo ----

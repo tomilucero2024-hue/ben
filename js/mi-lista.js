@@ -39,6 +39,15 @@ const ETIQUETAS_TIPO = {
     plataforma: 'Plataformas online'
 };
 
+// Aviso de la cabecera de Mi lista: los datos que BEN muestra los carga cada
+// institución y cambian, así que la fuente oficial es la institución. Se pinta
+// arriba del contenido (ver pintarLista) con el mismo tono de los avisos de las
+// fichas estáticas.
+const AVISO_DATOS = `<p class="ml-aviso">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        <span>BEN organiza la información para facilitar la búsqueda. Para requisitos, fechas de inscripción, aranceles y condiciones actualizadas, consultá siempre la institución.</span>
+    </p>`;
+
 let raiz = null;
 let cuerpo = null;
 let pie = null;
@@ -489,7 +498,7 @@ function filaLista(item) {
 function pintarLista() {
     const lista = window.Favoritos ? window.Favoritos.leer() : [];
     if (!lista.length) {
-        cuerpo.innerHTML = `
+        cuerpo.innerHTML = `${AVISO_DATOS}
         <div class="ml-vacia">
             <p class="ml-vacia-titulo">Todavía no guardaste ninguna carrera</p>
             <p class="ml-vacia-texto">Tocá el corazón <strong>♡ Me interesa</strong> en cualquier tarjeta para guardarla acá.
@@ -508,7 +517,9 @@ function pintarLista() {
         grupos.get(tipo).push(item);
     });
 
-    cuerpo.innerHTML = [...grupos.entries()].map(([tipo, items]) => `
+    // El aviso va primero: arriba del título del grupo ("Carreras") y no se
+    // muestra en el comparador, que es otra pantalla con su propio encabezado.
+    cuerpo.innerHTML = AVISO_DATOS + [...grupos.entries()].map(([tipo, items]) => `
         <section class="ml-grupo">
             <h3 class="ml-grupo-titulo">${escaparHTML(ETIQUETAS_TIPO[tipo] || 'Otros')} <span>${items.length}</span></h3>
             <ul class="ml-items">${items.map(filaLista).join('')}</ul>

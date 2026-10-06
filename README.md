@@ -192,7 +192,7 @@ además de auditar cuatro fichas estáticas generadas. Lo que **no** puede cubri
 un test automatizado (queda como guion manual): Tab real en el navegador, zoom
 al 200%, y NVDA/JAWS/VoiceOver. Guion de 10 pasos:
 
-1. Cargar `/`: el foco arranca en "Orientador vocacional"; Tab recorre solo la
+1. Cargar `/`: el foco arranca en "¿No sabés qué estudiar?"; Tab recorre solo la
    portada y el botón de accesibilidad (el catálogo y el pie están inert).
 2. Tab hasta el primer skip link, Enter: el foco cae en el panel de filtros.
 3. Segundo skip link, Enter: el foco cae en la grilla de resultados.
@@ -232,7 +232,7 @@ numérico del estudiante y lo cruza contra el perfil de las ~750 carreras del ca
 - **Resultados**: 8 carreras con % y explicación, resumen del perfil en lenguaje simple,
   alertas de tensión (intereses vs. valores vs. presión externa) y un botón para volcar el
   ranking a la grilla del sitio, donde siguen funcionando los filtros de siempre.
-- **Se entra** desde la tarjeta "Orientador vocacional" de la bienvenida (que abre el chat del
+- **Se entra** desde la tarjeta "¿No sabés qué estudiar?" de la bienvenida (que abre el chat del
   Copiloto y desde ahí se arranca el test), desde el propio chat o con el enlace directo
   `/?test=1`, que es el que usan las páginas estáticas de carrera. La portada no menciona la
   cantidad de preguntas a propósito.

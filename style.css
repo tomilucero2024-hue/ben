@@ -534,7 +534,7 @@ h1, h2, .section-tab-texto strong {
    ================================================================ */
 .catalog-layout {
     display: grid; 
-    grid-template-columns: 280px minmax(0, 1fr); 
+    grid-template-columns: 320px minmax(0, 1fr); 
     grid-template-areas: 
         "tabs tabs"
         "sidebar results";
@@ -585,14 +585,29 @@ h1, h2, .section-tab-texto strong {
    pusiera únicamente a la elegida, la lista entera se correría cada vez que
    cambiás de filtro. */
 .filter-option {
-    width: 100%; min-height: 30px; padding: .28rem .5rem; border: 0; border-radius: var(--radius-sm);
+    width: 100%; min-height: 30px;
+    padding: .28rem .5rem;
+    border: 0; border-radius: var(--radius-sm);
     color: var(--muted); background: transparent;
-    text-align: left; font-size: var(--fs-sm);
-    /* Los nombres largos (sectores, sobre todo) envuelven en dos líneas. El
-       line-height y el display van explícitos porque algunos navegadores no
+    text-align: left; font-size: calc(.9375rem * var(--font-scale, 1));
+    /* El line-height y el display van explícitos porque algunos navegadores no
        heredan el line-height del body a través de `button { font: inherit }`,
        y las líneas terminaban pisándose. */
-    display: block; height: auto; line-height: 1.35; overflow-wrap: anywhere;
+    /* Flex para que el tilde sea un ítem DENTRO de la caja. Antes era una sangría
+       francesa (text-indent negativo) y el tilde quedaba colgando del lado
+       equivocado, fuera de la etiqueta. Con flex el tilde entra, y el texto pasa
+       a ser una caja propia cuyas líneas de continuación arrancan donde el texto
+       y no bajo el tilde. `align-items: flex-start` y no `center` para que, si el
+       nombre parte en dos líneas, el tilde quede junto a la primera. */
+    display: flex; align-items: flex-start; gap: .4rem;
+    height: auto; line-height: 1.35;
+    /* break-word y NO anywhere: anywhere parte DENTRO de la palabra y además
+       achica el min-content de la caja. break-word corta solo cuando la palabra
+       no entra de ninguna otra forma, y siempre cae en un espacio. */
+    overflow-wrap: break-word;
+    /* Evita la línea final huérfana de una sola palabra (Chrome 117+; donde no
+       exista se ignora sin efecto). */
+    text-wrap: pretty;
     transition: color var(--dur-base) ease, background-color var(--dur-base) ease;
 }
 .filter-option:hover { color: var(--accent-ink); background: color-mix(in srgb, var(--accent) 9%, transparent); }
@@ -608,8 +623,8 @@ h1, h2, .section-tab-texto strong {
    se ve. */
 /* WCAG 2.1 - 1.4.1 Uso del color: el elegido no se distingue SOLO por el tinte;
    el tilde es una señal de forma además del color y la negrita. */
-.filter-option.active::before { content: '✓'; display: inline-block; width: .8rem; font-weight: 700; color: var(--accent-ink); }
-.filter-option:not(.active)::before { content: ''; display: inline-block; width: .8rem; }
+.filter-option.active::before { content: '✓'; display: block; width: .8rem; flex: none; font-weight: 700; color: var(--accent-ink); }
+.filter-option:not(.active)::before { content: ''; display: block; width: .8rem; flex: none; }
 .filter-options-compact { max-height: 186px; overflow-y: auto; scrollbar-width: thin; }
 .duration-range { display: grid; grid-template-columns: 1fr auto 1fr 30px; align-items: center; gap: .35rem; margin-top: .8rem; color: var(--muted); }
 .duration-range input { min-width: 0; width: 100%; min-height: 34px; padding: .42rem .35rem; /* WCAG 2.1 - 1.4.11 */ border: 1px solid var(--control-line); border-radius: var(--radius-xs); color: var(--text); background: var(--bg); font-size: var(--fs-2xs); }
@@ -1529,7 +1544,11 @@ body[data-seccion="secundario"]                { --seccion: var(--teal);   --sec
     /* Optimización móvil agresiva: touch targets mínimos de 44px garantizados en móvil */
     .filter-option {
         min-height: 44px;
-        display: flex;
+        /* Sigue en flex a propósito: con `display: grid` el ::before del tilde
+           deja de ser contenido en línea y pasa a ser un ítem de grilla, que
+           se apila ARRIBA del texto en vez de acompañarlo. En flex el tilde es
+           un ítem más y el texto queda en su propia caja, ya alineado. Acá el
+           texto ocupa una sola línea, así que se centra verticalmente. */
         align-items: center;
         padding: .5rem .85rem;
     }
@@ -1985,7 +2004,16 @@ html[data-tts="true"] .btn-escuchar-card {
     inset: 0;
     z-index: 80;
     display: grid;
+    /* place-items centra el contenido DENTRO de su pista; place-content centra la
+       PISTA dentro de la pantalla. Las dos hacen falta: si va solo place-content,
+       el bloque queda pegado al inicio de la pista (a la izquierda). El "safe"
+       del place-content evita que al desbordar el contenido quede cortado arriba:
+       con las tarjetas más largas, en un celular chico ya no entraba todo y no
+       había forma de scrollear. */
     place-items: center;
+    place-content: safe center;
+    overflow-y: auto;
+    overscroll-behavior: contain;
     padding: 2rem;
     background:
         radial-gradient(circle at 50% -35%, color-mix(in srgb, var(--purple) 24%, transparent) 0, transparent 58%),
@@ -2027,9 +2055,9 @@ html[data-tts="true"] .btn-escuchar-card {
     animation: bienvenida-deslizar var(--dur-slow) ease backwards;
     animation-delay: .06s;
 }
-/* Dos tarjetas, un camino cada una: el orientador (violeta, con el ícono del
-   copiloto) y el catálogo completo (neutra). Entran con delay respecto al logo
-   y se asientan con un slide corto. */
+/* Dos tarjetas, un camino cada una: el orientador (violeta) y el catálogo
+   completo (neutra). Entran con delay respecto al logo y se asientan con un
+   slide corto. */
 .bienvenida-opciones {
     display: flex;
     align-items: stretch;
@@ -2043,10 +2071,17 @@ html[data-tts="true"] .btn-escuchar-card {
        envuelven solas sin media query. */
     min-width: min(100%, 300px);
     display: flex;
-    align-items: center;
-    gap: var(--space-5);
-    min-height: 132px;
-    padding: var(--space-6);
+    /* Columna: el título ocupa todo el ancho de la tarjeta (de punta a punta) y
+       el ícono va en la línea del título, al otro extremo, así no queda una
+       columna vacía al lado del texto. */
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: var(--space-4);
+    /* Alto mínimo deliberado: sin esto las tarjetas quedarían más bajas en vez
+       de más largas, y las dos tienen que verse igual de altas. */
+    min-height: 300px;
+    padding: var(--space-8);
     border: 2px solid var(--line);
     border-radius: var(--radius-lg);
     background: var(--surface);
@@ -2055,9 +2090,22 @@ html[data-tts="true"] .btn-escuchar-card {
     cursor: pointer;
     animation: bienvenida-deslizar var(--dur-slow) ease backwards;
     animation-delay: .12s;
-    transition: background-color var(--dur-base) ease, border-color var(--dur-base) ease;
+    transition: background-color var(--dur-base) ease, border-color var(--dur-base) ease,
+        box-shadow var(--dur-base) ease;
 }
+/* Foco: la tarjeta ya tiene borde propio, así que en lugar del recuadro global de
+   2px se marca el borde y se suma un halo suave. No se puede eliminar el
+   indicador (sin él el sitio no se puede usar con teclado), pero tampoco hace
+   falta que sea una caja alrededor de la tarjeta. */
+.bienvenida-card:focus-visible {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+/* La del test pesa más que la del catálogo: más ancha y con el título un escalón
+   más grande. Las dos comparten el alto porque el contenedor estira la fila. */
 .bienvenida-card-primaria {
+    flex: 1 1 54%;
     border-color: var(--purple);
     background: color-mix(in srgb, var(--purple) 12%, var(--surface));
 }
@@ -2068,25 +2116,28 @@ html[data-tts="true"] .btn-escuchar-card {
 .bienvenida-card-secundaria { animation-delay: .2s; }
 .bienvenida-card-secundaria:hover { border-color: var(--accent); background: var(--surface-soft); }
 
-/* Ícono de la tarjeta del catálogo: mismo círculo, sin la sombra del ícono del
-   copiloto (que es una imagen con volumen propio). */
-.bienvenida-icono-catalogo {
-    background: var(--surface-soft);
-    border: 1px solid var(--line);
-    box-shadow: none;
-    color: var(--accent-ink);
+/* Título e ícono en la misma línea: el texto a la izquierda, el ícono al otro
+   extremo de la fila. `flex-start` y no `center` a propósito: si el título parte
+   en dos líneas (que pasa en móvil), el ícono queda junto a la PRIMERA en vez de
+   flotar en el medio del título. */
+.bienvenida-titulo-fila {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-4);
 }
-.bienvenida-icono-catalogo svg { width: 34px; height: 34px; }
+/* El ícono acompaña al título, no flota: es un ítem más de la fila. `flex: none`
+   para que no se aplaste cuando el título ocupa todo el ancho. 40px es el tamaño
+   que se ve cómodo en la línea del título; como marca de agua pesaba más. */
 .bienvenida-icono {
-    flex: 0 0 auto;
+    flex: none;
     display: grid;
     place-items: center;
-    width: 66px;
-    height: 66px;
+    width: 40px;
+    height: 40px;
     border-radius: var(--radius-round);
     background: transparent;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .bienvenida-copiloto-img {
     width: 100%;
@@ -2094,6 +2145,9 @@ html[data-tts="true"] .btn-escuchar-card {
     object-fit: cover;
     display: block;
 }
+/* El avatar del copiloto va un poco más grande que el ícono de línea (~20%): es
+   una foto y al tamaño de la base se le pierde detalle de la cara. */
+.bienvenida-icono-copiloto { width: 48px; height: 48px; }
 .chat-titulo-img {
     width: 24px;
     height: 24px;
@@ -2135,17 +2189,32 @@ html[data-tts="true"] .btn-escuchar-card {
     border-radius: 50%;
     display: block;
 }
-.bienvenida-card-texto { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
+/* El texto se estira al ancho de la tarjeta y lleva más aire entre líneas: es lo
+   que hace que las tarjetas se lean más largas. */
+.bienvenida-card-texto { display: flex; flex-direction: column; gap: var(--space-3); min-width: 0; flex: 1; justify-content: center; }
 .bienvenida-card strong { font-family: var(--font-title); font-size: var(--fs-xl); line-height: 1.2; letter-spacing: -.015em; color: var(--text); }
+/* Va después de la regla general porque tiene la misma especificidad: el título
+   de "¿No sabés qué estudiar?" es un escalón más grande que el del catálogo. */
+.bienvenida-card-primaria strong { font-size: var(--fs-2xl); }
+/* "Empezá por acá.": un escalón debajo del título y por encima de la
+   descripción, para que la tarjeta del test diga dónde se arranca. */
+.bienvenida-card-sub { font-family: var(--font-title); font-size: var(--fs-md); line-height: 1.3; color: var(--text); }
 .bienvenida-card-desc { color: var(--muted); font-size: var(--fs-sm); line-height: 1.5; }
 .bienvenida-cta { color: var(--purple-ink); font-size: var(--fs-xs); font-weight: 700; }
 .bienvenida-card-secundaria .bienvenida-cta { color: var(--accent-ink); }
-/* En pantallas angostas las dos opciones se apilan. */
+/* En pantallas angostas las dos opciones se apilan. La tarjeta sigue siendo
+   columna y el texto sigue alineado a la izquierda, IGUAL que en escritorio: lo
+   único que cambia es el padding y el tamaño del ícono. */
 @media (max-width: 480px) {
     .pantalla-bienvenida { padding: 1.5rem; }
     .bienvenida-logo { width: min(100%, 320px); }
     .bienvenida-opciones { flex-direction: column; align-items: stretch; }
-    .bienvenida-card { flex-direction: column; text-align: center; }
+    /* Apiladas a todo el ancho: el alto mínimo baja porque el texto largo ya
+       estira cada tarjeta. Sin `text-align: center` a propósito, para que mobile
+       se lea igual que escritorio. */
+    .bienvenida-card { padding: var(--space-7) var(--space-6); min-height: 0; }
+    .bienvenida-icono { width: 32px; height: 32px; }
+    .bienvenida-icono-copiloto { width: 38px; height: 38px; }
 }
 
 /* ================================================================

@@ -674,14 +674,19 @@ a:hover { text-decoration: none; }
 .ficha-caja .ficha dd.ficha-area .btn-favorito .fav-svg { width: 17px; height: 17px; }
 /* Los costos no se muestran (los fija cada institución): en su lugar va este
    aviso, dentro de la tarjeta y debajo de los datos. */
-.aviso-costos {
+.aviso-costos,
+.aviso-datos {
     display: flex; align-items: flex-start; gap: .5rem;
     margin: 0; padding-top: var(--space-4);
     border-top: 1px solid var(--line);
     color: var(--muted);
     font-size: calc(.8125rem * var(--font-scale)); line-height: 1.4;
 }
-.aviso-costos svg { width: 16px; height: 16px; flex: none; margin-top: .15rem; color: var(--accent-ink); }
+.aviso-costos svg,
+.aviso-datos svg { width: 16px; height: 16px; flex: none; margin-top: .15rem; color: var(--accent-ink); }
+/* El aviso de datos cierra el bloque de ofertas: un poco de aire arriba para
+   que no se lea como la última fila de la lista. */
+.aviso-datos { margin-top: var(--space-4); }
 .lateral-caja .btn-ver-mi-lista { margin-left: 0; width: 100%; justify-content: center; }
 .btn-favorito {
     display: inline-flex; align-items: center; justify-content: center;

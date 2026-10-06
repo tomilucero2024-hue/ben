@@ -2,7 +2,7 @@
 // 🧪 TEST DEL TUTORIAL DE PRIMERA VISITA
 // ==========================================
 // El tutorial se abre una sola vez, después de la portada de bienvenida y solo
-// si la persona eligió "Mostrar ofertas". Acá se recorre el circuito completo:
+// si la persona eligió "Explorar ofertas". Acá se recorre el circuito completo:
 // arranque, pasos, contador, anterior/siguiente, Escape, bandera de visto y
 // relanzado desde el pie.
 //
@@ -105,7 +105,7 @@ const focoTop = () => doc.querySelector('.tutorial-foco').style.top;
     console.log('2. La portada lleva al catálogo y arranca el tutorial');
     doc.getElementById('btnBienvenidaOfertas').click();
     await esperar(900);
-    ok(visible(tutorial()), 'al elegir "Mostrar ofertas" arranca el tutorial');
+    ok(visible(tutorial()), 'al elegir "Explorar ofertas" arranca el tutorial');
     ok(tarjeta().getAttribute('role') === 'dialog' && tarjeta().getAttribute('aria-modal') === 'true', 'la tarjeta es un diálogo modal declarado');
     ok(Boolean(doc.getElementById(tarjeta().getAttribute('aria-labelledby'))), 'el diálogo tiene nombre accesible');
     ok(paso() === 'Paso 1 de 6', `el contador arranca en el paso 1 de 6 (${paso()})`);

@@ -201,6 +201,15 @@ function cap(texto) {
 // sitio, con el mismo trazo que el resto de los iconos.
 const ICONO_EXTERNO = '<svg class="icono-externo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
 
+// Aviso único por ficha: los datos (requisitos, fechas, aranceles) los carga
+// cada institución y cambian. Va debajo del bloque de ofertas, que es donde
+// están los botones "Verificar información oficial". Comparte estilo con el
+// aviso de costos, así que el lector ve los dos avisos con el mismo formato.
+const AVISO_DATOS = `    <p class="aviso-datos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        <span>La información puede cambiar: chequeá en la página oficial.</span>
+    </p>`;
+
 // Solo http/https. Los links salen de scrapers y terminan en una página
 // pública: un javascript: o un data: acá sería un agujero abierto.
 function urlSegura(url) {
@@ -1002,7 +1011,7 @@ function tarjetaOferta(oferta, { mostrarInstitucion = true, id = null } = {}) {
         : '';
 
     const oficial = oferta.link
-        ? `<a class="oficial" href="${esc(oferta.link)}" rel="noopener nofollow" target="_blank">Ver en el sitio oficial ${ICONO_EXTERNO}</a>`
+        ? `<a class="oficial" href="${esc(oferta.link)}" rel="noopener nofollow" target="_blank">Verificar información oficial ${ICONO_EXTERNO}</a>`
         : '';
 
     const descripcion = oferta.descripcion ? `<p>${esc(oferta.descripcion)}</p>` : '';
@@ -1143,6 +1152,7 @@ ${sectores.map(s => `            <li><a class="etiqueta etiqueta-link" href="/?s
     <ul class="ofertas">
 ${carrera.ofertas.map((o, i) => tarjetaOferta(o, { id: `oferta-${i + 1}` })).join('\n')}
     </ul>
+${AVISO_DATOS}
 ${seccionPerfil}
 ${relacionadas.length ? `
     <section class="relacionadas">
@@ -1338,7 +1348,8 @@ function paginaInstitucion(institucion) {
     <h2>${esc(area)} (${lista.length})</h2>
     <ul class="ofertas">
 ${lista.map(o => tarjetaOferta(o, { mostrarInstitucion: false })).join('\n')}
-    </ul>`).join('\n')}`;
+    </ul>`).join('\n')}
+${AVISO_DATOS}`;
 
     const lateral = `    <dl class="ficha">
 ${ficha.map(([k, v]) => `        <dt>${k}</dt><dd>${v}</dd>`).join('\n')}

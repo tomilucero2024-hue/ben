@@ -31,6 +31,18 @@ html.mi-lista-abierta { overflow: hidden; }
 .ml-header button { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; border: 0; border-radius: var(--radius-sm); background: none; color: var(--muted); font-size: var(--fs-md); cursor: pointer; }
 .ml-header button:hover { color: var(--text); background: var(--surface-soft); }
 .ml-cuerpo { flex: 1; min-height: 0; overflow-y: auto; padding: 1.1rem 1.25rem 1.4rem; color: var(--text); }
+/* Aviso de datos: primer bloque del cuerpo, arriba del título del grupo. Es
+   informativo, así que no compite con el contenido: mismo tono apagado que los
+   avisos de las fichas estáticas. */
+.ml-aviso {
+    display: flex; align-items: flex-start; gap: .5rem;
+    margin: 0 0 1.1rem; padding: .7rem .85rem;
+    border: 1px solid var(--line); border-radius: var(--radius-md);
+    background: var(--surface-soft);
+    color: var(--muted);
+    font-size: var(--fs-xs); line-height: 1.45;
+}
+.ml-aviso svg { width: 16px; height: 16px; flex: none; margin-top: .1rem; color: var(--accent-ink); }
 .ml-pie { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .9rem 1.1rem; border-top: 1px solid var(--line); background: var(--surface); flex-wrap: wrap; }
 .ml-pie-info { margin: 0; color: var(--muted); font-size: var(--fs-xs); }
 .ml-pie-acciones { display: flex; gap: .5rem; flex-wrap: wrap; }

@@ -97,16 +97,62 @@ check(scriptsIndex.length > 0 && scriptsIndex.every(s => existe(s)), `los ${scri
 // 2. PANTALLA DE BIENVENIDA
 // ==========================================
 console.log('\n2. Pantalla de bienvenida');
-check(/id="btnBienvenidaOfertas"/.test(htmlIndex) && /Mostrar ofertas/.test(htmlIndex), 'index.html tiene el botón "Mostrar ofertas"');
+check(/id="btnBienvenidaOfertas"/.test(htmlIndex) && /Explorar ofertas/.test(htmlIndex), 'index.html tiene el botón "Explorar ofertas"');
 check(!/btnBienvenidaCarreras|btnBienvenidaInstituciones|btnBienvenidaAreas/.test(htmlIndex), 'no quedan los 3 botones viejos de la bienvenida');
 const sinColgadosBienvenida = Object.values(codigosJs).every(c => !/btnBienvenidaCarreras|btnBienvenidaInstituciones|btnBienvenidaAreas/.test(c));
 check(sinColgadosBienvenida, 'ningún JS referencia los botones eliminados');
-check(/id="btnBienvenidaCopiloto"/.test(htmlIndex) && /Orientador vocacional/.test(htmlIndex), 'la bienvenida ofrece el orientador vocacional (copiloto)');
-check(/id="btnBienvenidaOfertas"/.test(htmlIndex) && /Mostrar ofertas/.test(htmlIndex), 'y "Mostrar ofertas" para el catálogo');
+check(/id="btnBienvenidaCopiloto"/.test(htmlIndex) && /¿No sabés qué estudiar\?/.test(htmlIndex), 'la bienvenida ofrece el test de orientación (copiloto)');
+check(/id="btnBienvenidaOfertas"/.test(htmlIndex) && /Explorar ofertas/.test(htmlIndex), 'y "Explorar ofertas" para el catálogo');
 check(!/btnBienvenidaTestCompleto/.test(htmlIndex), 'la bienvenida no tiene una tarjeta aparte para el test');
 check(Object.values(codigosJs).every(c => !/btnBienvenidaTestCompleto/.test(c)), 'ningún JS referencia la tarjeta eliminada');
 const bloqueBienvenida = (htmlIndex.match(/id="pantallaBienvenida"([\s\S]*?)<\/section>/) || [])[1] || '';
 check(!/65 preguntas/.test(bloqueBienvenida), 'la portada (texto visible) no menciona las 65 preguntas');
+check(/Empezá por acá\./.test(bloqueBienvenida) && /Hacer el test/.test(bloqueBienvenida), 'la tarjeta del test dice por dónde empezar y qué hacer');
+check(/¿Ya sabés qué estás buscando\?/.test(bloqueBienvenida) && /utilizando los filtros/.test(bloqueBienvenida), 'la del catálogo pregunta y menciona los filtros');
+check(!/bienvenida-titulo-icono/.test(bloqueBienvenida), 'el catálogo ya no lleva la lupa en el título');
+check(!/🔎/.test(bloqueBienvenida), 'la portada no usa emojis');
+check(/\.bienvenida-card-sub\s*\{/.test(leer('style.css')), 'la bajada "Empezá por acá." tiene su estilo');
+const cssPortada = (leer('style.css').match(/\.pantalla-bienvenida \{([\s\S]*?)\n\}/) || [])[1] || '';
+check(/overflow-y: auto/.test(cssPortada) && /place-content: safe center/.test(cssPortada), 'la portada scrollea y centra sin cortar arriba si no entra');
+// Sin place-items el bloque queda pegado al inicio de la pista (izquierda): el
+// centrado horizontal depende de place-items, no solo de place-content.
+check(/place-items: center/.test(cssPortada), 'el contenido de la portada queda centrado horizontalmente');
+const cssTarjeta = (leer('style.css').match(/\.bienvenida-card \{([\s\S]*?)\n\}/) || [])[1] || '';
+check(/flex-direction: column/.test(cssTarjeta), 'la tarjeta es columna para que el título ocupe todo el ancho');
+// El ícono acompaña al título en la misma línea (no es una marca de agua en la
+// esquina), así que la tarjeta ya no necesita position: relative.
+const cssIcono = (leer('style.css').match(/\.bienvenida-icono \{([\s\S]*?)\n\}/) || [])[1] || '';
+check(!/position: absolute/.test(cssIcono) && /flex: none/.test(cssIcono), 'el ícono es un ítem de la fila del título, no una marca de agua absoluta');
+// Solo la tarjeta del test lleva ícono (el avatar del copiloto). La del catálogo
+// quedó sin ícono: se pidió así, así que no debe volver a aparecer ni el SVG de
+// los cuadritos ni el wrapper de fila que lo sostenía.
+const filasTitulo = bloqueBienvenida.match(/class="bienvenida-titulo-fila"/g) || [];
+check(filasTitulo.length === 1, `solo la tarjeta del test tiene fila de título con ícono (${filasTitulo.length})`);
+const iconosBienvenida = bloqueBienvenida.match(/class="bienvenida-icono/g) || [];
+check(iconosBienvenida.length === 1, `la tarjeta del catálogo quedó sin ícono (${iconosBienvenida.length} ícono/s)`);
+check(!/bienvenida-icono-catalogo/.test(bloqueBienvenida) && !/bienvenida-icono-catalogo/.test(leer('style.css')),
+    'no quedó rastro del ícono de cuadritos ni de su CSS');
+// El avatar del copiloto va un poco más grande que el ícono de línea base.
+check(/class="bienvenida-icono bienvenida-icono-copiloto"/.test(bloqueBienvenida), 'el avatar del copiloto lleva su propia variante de tamaño');
+const baseIcono = leer('style.css').match(/\.bienvenida-icono \{ width: (\d+)px/);
+const copilotoIcono = leer('style.css').match(/\.bienvenida-icono-copiloto \{ width: (\d+)px/);
+check(!!baseIcono && !!copilotoIcono && Number(copilotoIcono[1]) > Number(baseIcono[1]), `el avatar del copiloto es más grande que el ícono de línea (${copilotoIcono && copilotoIcono[1]}px vs ${baseIcono && baseIcono[1]}px)`);
+// Foco de las tarjetas: sin el recuadro global de 2px, que se veía feo sobre la
+// tarjeta entera. El indicador no se borra (sin él no se navega con teclado):
+// se marca el borde de la tarjeta y se suma un halo.
+const cssFoco = leer('style.css').match(/\.bienvenida-card:focus-visible \{([\s\S]*?)\n\}/);
+check(!!cssFoco && /border-color: var\(--accent\)/.test(cssFoco[1]) && /box-shadow/.test(cssFoco[1]),
+    'el foco de las tarjetas marca el borde y un halo, en vez del recuadro global');
+const bloqueMovil = (leer('style.css').split('@media (max-width: 480px)')[1] || '').match(/\.bienvenida-card \{[^}]*\}/);
+check(!!bloqueMovil && !/text-align: center/.test(bloqueMovil[0]), 'en mobile el texto no se centra: se lee igual que en escritorio');
+check(/\.bienvenida-card-primaria \{[\s\S]*?flex: 1 1 54%/.test(leer('style.css')), 'la tarjeta del test es más ancha que la del catálogo');
+// La regla del título grande tiene que ir DESPUÉS de la general: si el orden se
+// invierte, el fs-2xl no aplica (misma especificidad) y las dos tarjetas quedan
+// con el mismo tamaño, que es justo lo que no queremos.
+const css = leer('style.css');
+const posGeneral = css.indexOf('.bienvenida-card strong {');
+const posPrimaria = css.indexOf('.bienvenida-card-primaria strong {');
+check(posGeneral !== -1 && posPrimaria > posGeneral, 'el título de la tarjeta del test se impone por orden, no por especificidad');
 
 // ==========================================
 // 2b. MI LISTA (favoritos + comparador)
@@ -133,6 +179,10 @@ check(fichaEstatica.includes('/js/mi-lista-loader.js?v='), 'la ficha carga el lo
 check(fichaEstatica.includes('/js/restaurar-scroll.js?v='), 'y el restaurador de scroll al volver con Atrás');
 check(htmlIndex.includes('/mi-lista.css?v=') && htmlIndex.includes('/js/restaurar-scroll.js?v='), 'la app también carga ambos');
 check(/--fav-rojo/.test(leer('style.css')) && /--fav-rojo/.test(leer('paginas.css')), 'el corazón marcado es rojo en la app y en las estáticas');
+check(/Verificar información oficial/.test(fichaEstatica), 'la ficha ofrece "Verificar información oficial"');
+check((fichaEstatica.match(/class="aviso-datos"/g) || []).length === 1, 'y un único aviso de datos por ficha');
+check(/La información puede cambiar: chequeá en la página oficial\./.test(fichaEstatica), 'el aviso dice que la información puede cambiar');
+check(!/Ver en el sitio oficial/.test(fichaEstatica), 'el texto viejo del enlace externo ya no está');
 
 // ==========================================
 // 3. SELLO DE CACHÉ (index.html ↔ sw.js ↔ páginas)
