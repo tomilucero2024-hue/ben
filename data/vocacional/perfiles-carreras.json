@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generado": "2026-10-04T16:26:22.759Z",
+  "generado": "2026-10-14T20:11:51.931Z",
   "dimensiones": {
     "riasec": [
       "R",
@@ -28577,6 +28577,50 @@
         "area_base": "Negocios",
         "ajustes": [
           "gestion",
+          "formacion:tecnicaturas"
+        ],
+        "interacciones": 0,
+        "peso_uso": 0
+      }
+    },
+    {
+      "clave": "tecnicatura superior en mantenimiento electromecanico de vehiculos pesados",
+      "nombre": "Tecnicatura Superior en Mantenimiento Electromecánico de Vehículos Pesados",
+      "categoria": "Pregrado / Tecnicatura",
+      "area": "Oficios",
+      "formacion": "tecnicaturas",
+      "instituciones": [
+        "INSUTEC (Instituto Superior de Educación Tecnológica)"
+      ],
+      "perfil": {
+        "riasec": {
+          "R": 10,
+          "I": 3,
+          "A": 4,
+          "S": 3,
+          "E": 4,
+          "C": 5
+        },
+        "apt": {
+          "logico_matematica": 4,
+          "verbal": 3,
+          "espacial": 7,
+          "interpersonal": 3,
+          "corporal": 10
+        },
+        "val": {
+          "estabilidad": 7,
+          "variedad": 5,
+          "equipo": 5,
+          "impacto": 4,
+          "ingresos": 5,
+          "movilidad": 4
+        }
+      },
+      "origen": {
+        "area_base": "Oficios",
+        "ajustes": [
+          "mecanic",
           "formacion:tecnicaturas"
         ],
         "interacciones": 0,

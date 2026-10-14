@@ -37784,6 +37784,56 @@
                     "id": 2808
                 },
                 {
+                    "id": 2809,
+                    "nombre_carrera": "Tecnicatura Superior en Mantenimiento Electromecánico de Vehículos Pesados",
+                    "categoria": "Pregrado / Tecnicatura",
+                    "duracion": "2 años y medio",
+                    "modalidad": "Presencial",
+                    "turno": "A confirmar",
+                    "facultad": "INSUTEC",
+                    "link_oficial": "https://www.insutec.edu.ar/tecnicatura-superior-en-mantenimiento-electromecanico-de-vehiculos-pesados/",
+                    "plan_estudio": [
+                        {
+                            "anio": "1º año",
+                            "materias": [
+                                "Ciencias Aplicadas para Vehículos Pesados",
+                                "Representación Técnica y Documentación de Mantenimiento",
+                                "Sistemas de Transmisión y Tren Motriz",
+                                "Comunicación y Alfabetización Académica",
+                                "Seguridad Industrial, Medio Ambiente y Ergonomía",
+                                "Fundamentos de Mecánica y Motores Diésel Pesados",
+                                "Fundamentos de los Sistemas Eléctricos del Vehículo Pesado",
+                                "Inglés Técnico",
+                                "Práctica Profesionalizante I"
+                            ]
+                        },
+                        {
+                            "anio": "2º año",
+                            "materias": [
+                                "Sistemas de Inyección Electrónica Diésel",
+                                "Sistemas de Frenado, Neumática y Seguridad Activa",
+                                "Sistemas de Dirección y Suspensión",
+                                "Electricidad, Electrónica y Diagnóstico",
+                                "Transmisiones Automatizadas, Frenado Auxiliar y Retardadores",
+                                "Chasis, Dirección, Suspensión e Hidráulica",
+                                "Gestión del Mantenimiento y Organización de Flotas",
+                                "Tecnologías de Emisiones y Combustibles Alternativos",
+                                "Práctica Profesionalizante II"
+                            ]
+                        },
+                        {
+                            "anio": "3º año",
+                            "materias": [
+                                "Configuraciones y Equipamiento de Vehículos Pesados",
+                                "Gestión Avanzada del Mantenimiento, Telemetría y ADAS",
+                                "Electromovilidad, Hibridación y Nuevas Tecnologías",
+                                "Práctica Profesionalizante III"
+                            ]
+                        }
+                    ],
+                    "plan_fuente": "https://www.insutec.edu.ar/wp-content/uploads/2026/10/Brochure-TS-Mantenimiento-Electromecanico-de-Vehiculos-Pesados.pdf.pdf"
+                },
+                {
                     "id": 40601,
                     "nombre_carrera": "Tecnicatura Superior en Higiene y Seguridad Laboral con Orientación en Calidad y Medio Ambiente",
                     "categoria": "Pregrado / Tecnicatura",
